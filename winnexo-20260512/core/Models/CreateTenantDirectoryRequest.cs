@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateTenantDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>目录描述</para>
+        /// <para>The description of the to-do card type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>Sample description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>SampleName.pdf</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>父目录内部主键；不传表示创建企业知识库根目录</para>
+        /// <para>The ID of the parent node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? ParentId { get; set; }
 
         /// <summary>
-        /// <para>文件 OSS URL</para>
+        /// <para>The path of the node.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The ID of the effective tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

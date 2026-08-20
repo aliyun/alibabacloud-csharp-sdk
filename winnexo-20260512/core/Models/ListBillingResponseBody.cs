@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListBillingResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -19,12 +19,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The details of the list.</para>
+        /// </summary>
         [NameInMap("list")]
         [Validation(Required=false)]
         public List<ListBillingResponseBodyList> List { get; set; }
         public class ListBillingResponseBodyList : TeaModel {
             /// <summary>
-            /// <para>账单业务ID</para>
+            /// <para>The billing ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleBillingId</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string BillingId { get; set; }
 
             /// <summary>
-            /// <para>业务来源ID</para>
+            /// <para>The file ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleBizId</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string BizId { get; set; }
 
             /// <summary>
-            /// <para>业务来源类型</para>
+            /// <para>The business type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> CostSourceDisplayName { get; set; }
 
             /// <summary>
-            /// <para>结束时间</para>
+            /// <para>The end timestamp, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-01T12:00:00Z</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>入口对象ID</para>
+            /// <para>The entry object ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleEntryObjectId</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string EntryObjectId { get; set; }
 
             /// <summary>
-            /// <para>入口对象类型</para>
+            /// <para>The entry object type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string EntryObjectType { get; set; }
 
             /// <summary>
-            /// <para>是否影子账单</para>
+            /// <para>Indicates whether the bill is a shadow bill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsShadow { get; set; }
 
             /// <summary>
-            /// <para>操作类型</para>
+            /// <para>The operation type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -124,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>操作类型展示名称</para>
+            /// <para>The display name of the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -134,7 +137,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OperationDisplayName { get; set; }
 
             /// <summary>
-            /// <para>开始时间</para>
+            /// <para>The start timestamp, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-01T12:00:00Z</para>
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>状态</para>
+            /// <para>The task status. Running is returned upon submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -154,7 +157,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>状态展示名称</para>
+            /// <para>The display name of the status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -164,7 +167,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string StatusDisplayName { get; set; }
 
             /// <summary>
-            /// <para>租户ID</para>
+            /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -174,7 +177,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>汇总 credit 消耗</para>
+            /// <para>The total credit consumption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -184,7 +187,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string TotalCreditCost { get; set; }
 
             /// <summary>
-            /// <para>WINNEXO 平台用户ID</para>
+            /// <para>The WINNEXO platform user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -196,14 +199,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The prompt message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>页码</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -213,7 +219,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -223,7 +229,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -233,7 +239,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>总数</para>
+        /// <para>The total number of bills.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

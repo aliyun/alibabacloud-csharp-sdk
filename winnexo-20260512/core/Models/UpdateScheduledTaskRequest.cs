@@ -9,22 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateScheduledTaskRequest : TeaModel {
+        /// <summary>
+        /// <para>The description information.</para>
+        /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public List<UpdateScheduledTaskRequestDescription> Description { get; set; }
         public class UpdateScheduledTaskRequestDescription : TeaModel {
             /// <summary>
-            /// <para>文本内容，type=text 时必填</para>
+            /// <para>The text content. Required when type is set to text.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例内容</para>
+            /// <para>Sample content</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>功能开关，type=web_search 时可选</para>
+            /// <para>The feature switch. Optional when type is set to web_search.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -34,17 +37,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>对象 ID，type=mention 时有值</para>
+            /// <para>The object ID. This parameter has a value when type is set to mention.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>对象类型如 customer，type=mention 时有值</para>
+            /// <para>The object type, such as customer. This parameter has a value when type is set to mention.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectType { get; set; }
 
             /// <summary>
-            /// <para>技能编码，type=skill 时有值</para>
+            /// <para>The skill code. This parameter has a value when type is set to skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SkillCode { get; set; }
 
             /// <summary>
-            /// <para>元素类型：text|web_search|mention|skill</para>
+            /// <para>The element type. Valid values: text, web_search, mention, and skill.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>数字员工名称列表</para>
+        /// <para>The list of digital human names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>是否公开访问</para>
+        /// <para>Specifies whether the task is publicly accessible.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsOpen { get; set; }
 
         /// <summary>
-        /// <para>执行模型档位；不传则不更新</para>
+        /// <para>The execution model tier. If not specified, the model tier is not updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quick</para>
@@ -117,31 +120,34 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>SampleName.pdf</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        /// <summary>
+        /// <para>The segments.</para>
+        /// </summary>
         [NameInMap("segments")]
         [Validation(Required=false)]
         public List<UpdateScheduledTaskRequestSegments> Segments { get; set; }
         public class UpdateScheduledTaskRequestSegments : TeaModel {
             /// <summary>
-            /// <para>文本内容，type=text 时必填</para>
+            /// <para>The text content. Required when type is set to text.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例内容</para>
+            /// <para>Sample content</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>功能开关，type=web_search 时可选</para>
+            /// <para>The feature switch. Optional when type is set to web_search.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -151,17 +157,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>对象 ID，type=mention 时有值</para>
+            /// <para>The object ID. This parameter has a value when type is set to mention.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -171,7 +177,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>对象类型如 customer，type=mention 时有值</para>
+            /// <para>The object type, such as customer. This parameter has a value when type is set to mention.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -181,7 +187,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectType { get; set; }
 
             /// <summary>
-            /// <para>技能编码，type=skill 时有值</para>
+            /// <para>The skill code. This parameter has a value when type is set to skill.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -191,7 +197,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SkillCode { get; set; }
 
             /// <summary>
-            /// <para>元素类型：text|web_search|mention|skill</para>
+            /// <para>The element type. Valid values: text, web_search, mention, and skill.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -203,16 +209,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 
         }
 
+        /// <summary>
+        /// <para>The task details.</para>
+        /// </summary>
         [NameInMap("taskDetail")]
         [Validation(Required=false)]
         public UpdateScheduledTaskRequestTaskDetail TaskDetail { get; set; }
         public class UpdateScheduledTaskRequestTaskDetail : TeaModel {
+            /// <summary>
+            /// <para>The related objects.</para>
+            /// </summary>
             [NameInMap("relatedObjects")]
             [Validation(Required=false)]
             public List<UpdateScheduledTaskRequestTaskDetailRelatedObjects> RelatedObjects { get; set; }
             public class UpdateScheduledTaskRequestTaskDetailRelatedObjects : TeaModel {
                 /// <summary>
-                /// <para>提及类型，如 objects</para>
+                /// <para>The mention type, such as objects.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -222,17 +234,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string MentionType { get; set; }
 
                 /// <summary>
-                /// <para>文件名</para>
+                /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>示例名称.pdf</para>
+                /// <para>SampleName.pdf</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>对象 ID（@指定时有值）</para>
+                /// <para>The object ID. This parameter has a value when an object is mentioned using @.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exampleObjectId</para>
@@ -242,7 +254,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ObjectId { get; set; }
 
                 /// <summary>
-                /// <para>对象类型，如 customer、company</para>
+                /// <para>The object type, such as customer or company.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -253,12 +265,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 
             }
 
+            /// <summary>
+            /// <para>The related semantics.</para>
+            /// </summary>
             [NameInMap("relatedSemantics")]
             [Validation(Required=false)]
             public List<UpdateScheduledTaskRequestTaskDetailRelatedSemantics> RelatedSemantics { get; set; }
             public class UpdateScheduledTaskRequestTaskDetailRelatedSemantics : TeaModel {
                 /// <summary>
-                /// <para>语义属性（JSON 字符串），用于语义检索时过滤</para>
+                /// <para>The semantic attributes (JSON string) used for filtering during semantic retrieval.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;level&quot;: &quot;VIP&quot;}</para>
@@ -268,7 +283,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string Attributes { get; set; }
 
                 /// <summary>
-                /// <para>语义实体名，如客户/机会</para>
+                /// <para>The semantic entity name, such as customer or opportunity.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>customer</para>
@@ -279,12 +294,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 
             }
 
+            /// <summary>
+            /// <para>The related skills.</para>
+            /// </summary>
             [NameInMap("relatedSkills")]
             [Validation(Required=false)]
             public List<UpdateScheduledTaskRequestTaskDetailRelatedSkills> RelatedSkills { get; set; }
             public class UpdateScheduledTaskRequestTaskDetailRelatedSkills : TeaModel {
                 /// <summary>
-                /// <para>技能展示名称</para>
+                /// <para>The display name of the skill.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -294,17 +312,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>文件名</para>
+                /// <para>The file name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>示例名称.pdf</para>
+                /// <para>SampleName.pdf</para>
                 /// </summary>
                 [NameInMap("name")]
                 [Validation(Required=false)]
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>技能代码</para>
+                /// <para>The skill code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -326,8 +344,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>LLM 润色后的任务理解描述</para>
-            /// <para>This parameter is required.</para>
+            /// <para>The task understanding description polished by the LLM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -339,7 +356,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>任务 ID</para>
+        /// <para>The task ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -350,7 +367,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -359,12 +376,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
+        /// <summary>
+        /// <para>The trigger configuration. The configuration varies depending on the trigger type.</para>
+        /// </summary>
         [NameInMap("triggerConfig")]
         [Validation(Required=false)]
         public UpdateScheduledTaskRequestTriggerConfig TriggerConfig { get; set; }
         public class UpdateScheduledTaskRequestTriggerConfig : TeaModel {
             /// <summary>
-            /// <para>Cron 表达式，trigger_mode=scheduled 时必填，如 &quot;00 09 * * *&quot;</para>
+            /// <para>The cron expression. Required when trigger_mode is set to scheduled. Example: \&quot;00 09 * * *\&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -374,7 +394,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Cron { get; set; }
 
             /// <summary>
-            /// <para>语言如 zh-CN|en-US，由服务端自动注入</para>
+            /// <para>The language, such as zh-CN or en-US. Automatically injected by the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zh-CN</para>
@@ -384,14 +404,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>任务推送频道列表；为空或无启用频道时不推送</para>
+            /// <para>The list of push channels for the task. No push notifications are sent if the list is empty or no channel is enabled.</para>
             /// </summary>
             [NameInMap("pushConfig")]
             [Validation(Required=false)]
             public List<UpdateScheduledTaskRequestTriggerConfigPushConfig> PushConfig { get; set; }
             public class UpdateScheduledTaskRequestTriggerConfigPushConfig : TeaModel {
                 /// <summary>
-                /// <para>推送渠道</para>
+                /// <para>The push channel type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DINGTALK</para>
@@ -401,7 +421,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ChannelType { get; set; }
 
                 /// <summary>
-                /// <para>推送内容范围，默认 all_replies</para>
+                /// <para>The scope of push content. Default value: all_replies.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>all_replies</para>
@@ -411,7 +431,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ContentScope { get; set; }
 
                 /// <summary>
-                /// <para>推送方式，默认 channel_bot</para>
+                /// <para>The push method. Default value: channel_bot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>channel_bot</para>
@@ -421,7 +441,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string DeliveryMethod { get; set; }
 
                 /// <summary>
-                /// <para>是否推送该频道，默认关闭</para>
+                /// <para>Specifies whether to push to this channel. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -431,7 +451,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>产出文件推送格式，默认 file</para>
+                /// <para>The format for pushing output files. Default value: file.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>file</para>
@@ -441,7 +461,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string FileFormat { get; set; }
 
                 /// <summary>
-                /// <para>发送机器人所属数字员工，必传且不可为空</para>
+                /// <para>The digital human to which the sending bot belongs. This parameter is required and cannot be empty.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -451,7 +471,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string OperatingObjectName { get; set; }
 
                 /// <summary>
-                /// <para>接收人，当前仅支持 self</para>
+                /// <para>The receiver type. Currently only self is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -463,7 +483,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>时区如 Asia/Shanghai，由服务端自动注入</para>
+            /// <para>The time zone, such as Asia/Shanghai. Automatically injected by the server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
@@ -473,7 +493,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Timezone { get; set; }
 
             /// <summary>
-            /// <para>触发模式：manual|scheduled</para>
+            /// <para>The trigger mode. Valid values: manual and scheduled.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -484,6 +504,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string TriggerMode { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The visibility scope for group tasks. Valid values: PRIVATE (visible only to the creator and group owner), COLLABORATIVE (visible to specified collaborators), and PUBLIC (visible to all group members). If not specified, the visibility is not updated. This parameter is ignored for personal tasks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>COLLABORATIVE</para>
+        /// </summary>
+        [NameInMap("visibility")]
+        [Validation(Required=false)]
+        public string Visibility { get; set; }
+
+        /// <summary>
+        /// <para>The full replacement list of collaborator member user IDs. This parameter takes effect only when visibility is set to COLLABORATIVE. The list is cleared when switching away from the COLLABORATIVE tier. A maximum of 1000 members are supported. If not specified, the member list is not updated. The task creator and group creator do not need to be included because they are covered by the authentication layer. This parameter is ignored for personal tasks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>string_value</para>
+        /// </summary>
+        [NameInMap("visibleMemberUserIds")]
+        [Validation(Required=false)]
+        public List<string> VisibleMemberUserIds { get; set; }
 
     }
 

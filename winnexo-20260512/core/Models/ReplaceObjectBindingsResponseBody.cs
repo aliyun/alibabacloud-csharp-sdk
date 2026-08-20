@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ReplaceObjectBindingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,18 +20,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The object binding.</para>
+        /// </summary>
         [NameInMap("objectBindings")]
         [Validation(Required=false)]
         public List<ReplaceObjectBindingsResponseBodyObjectBindings> ObjectBindings { get; set; }
         public class ReplaceObjectBindingsResponseBodyObjectBindings : TeaModel {
             /// <summary>
-            /// <para>绑定对象归属的语义图谱名（object_id 在该 graph 下唯一，必填）</para>
+            /// <para>The semantic graph name to which the binding object belongs (object_id is unique within this graph. Required).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GraphName { get; set; }
 
             /// <summary>
-            /// <para>绑定对象 ID</para>
+            /// <para>The binding object ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>绑定对象类型（如 customer / project）</para>
+            /// <para>The binding object type (such as customer or project).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -63,7 +69,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -73,7 +79,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>数据源 ID</para>
+        /// <para>The ID of the personal FILE data source to be replaced (unique within the tenant).</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceId</para>

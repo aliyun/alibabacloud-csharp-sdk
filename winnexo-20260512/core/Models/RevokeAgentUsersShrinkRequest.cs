@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class RevokeAgentUsersShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>数字员工名称</para>
+        /// <para>The name of the digital human.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>被撤销的用户组 ID 列表（16位 hex 字符串）</para>
+        /// <para>The list of user group IDs to be revoked (16-character hex strings).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string UserGroupIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>被撤销的用户 ID 列表</para>
+        /// <para>The list of user IDs to be revoked.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

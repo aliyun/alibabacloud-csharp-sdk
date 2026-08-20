@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateUserRequest : TeaModel {
         /// <summary>
-        /// <para>新的显示名称（不传不修改，传则不可为空，最多100字）</para>
+        /// <para>The display name of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>启用/停用状态（不传不修改）。false=停用，true=启用</para>
+        /// <para>Specifies whether the account is activated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Activated.</description></item>
+        /// <item><description><b>false</b>: Not activated.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsActive { get; set; }
 
         /// <summary>
-        /// <para>新的系统角色 code 列表（全量替换，至少包含一个角色）。可选值: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER</para>
+        /// <para>The new list of system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> RoleCodes { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The ID of the effective tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>新的用户组ID列表（全量替换，不传不修改）</para>
+        /// <para>The new list of user group IDs (full replacement. If not specified, the value is not modified).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>目标用户ID（WINNEXO 平台用户ID）</para>
+        /// <para>The ID of the target user (WINNEXO platform user ID).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

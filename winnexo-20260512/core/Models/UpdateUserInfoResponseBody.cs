@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateUserInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The current zone list is illegal.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -36,12 +39,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The user information.</para>
+        /// </summary>
         [NameInMap("user")]
         [Validation(Required=false)]
         public UpdateUserInfoResponseBodyUser User { get; set; }
         public class UpdateUserInfoResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>用户头像URL</para>
+            /// <para>The user profile picture URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Avatar { get; set; }
 
             /// <summary>
-            /// <para>是否为超级管理员</para>
+            /// <para>Indicates whether the user is a super administrator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsAdmin { get; set; }
 
             /// <summary>
-            /// <para>当前登录租户是否为系统租户</para>
+            /// <para>Indicates whether the current logged-in tenant is a system tenant.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsSystemTenant { get; set; }
 
             /// <summary>
-            /// <para>用户语言偏好</para>
+            /// <para>The user language preference.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -81,17 +87,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string LanguagePreference { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>用户服务描述</para>
+            /// <para>The user service description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Offering { get; set; }
 
             /// <summary>
-            /// <para>用户服务解析结果（JSON格式）</para>
+            /// <para>The parsed user service result in JSON format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -111,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ParsedOffering { get; set; }
 
             /// <summary>
-            /// <para>用户角色</para>
+            /// <para>The user role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ProfileRole { get; set; }
 
             /// <summary>
-            /// <para>用户角色描述</para>
+            /// <para>The user role description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -131,7 +137,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ProfileRoleInfo { get; set; }
 
             /// <summary>
-            /// <para>用户自我介绍</para>
+            /// <para>The user self-introduction.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SelfIntroduction { get; set; }
 
             /// <summary>
-            /// <para>当前租户ID</para>
+            /// <para>The current tenant ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10000</para>
@@ -150,12 +156,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             [Validation(Required=false)]
             public long? TenantId { get; set; }
 
+            /// <summary>
+            /// <para>The list of tenants to which the user belongs.</para>
+            /// </summary>
             [NameInMap("tenantList")]
             [Validation(Required=false)]
             public List<UpdateUserInfoResponseBodyUserTenantList> TenantList { get; set; }
             public class UpdateUserInfoResponseBodyUserTenantList : TeaModel {
                 /// <summary>
-                /// <para>租户ID</para>
+                /// <para>The tenant ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10000</para>
@@ -165,7 +174,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? TenantId { get; set; }
 
                 /// <summary>
-                /// <para>租户名称</para>
+                /// <para>The tenant name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -177,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>当前租户名称</para>
+            /// <para>The current tenant name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -187,7 +196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string TenantName { get; set; }
 
             /// <summary>
-            /// <para>用户代码</para>
+            /// <para>The user code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -197,7 +206,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string UserCode { get; set; }
 
             /// <summary>
-            /// <para>用户ID</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

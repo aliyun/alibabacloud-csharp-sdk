@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateKnowledgeBaseAliDingDocResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The result code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>绑定的目录 ID</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>文档公开 URL（echo 回入参）</para>
+        /// <para>The public URL of the document (echoes the input parameter).</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -40,67 +40,78 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>创建时间 ISO8601</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>2026-05-22 16:03:27</para>
         /// </summary>
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The error details.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>资源显示名称</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>p-toolset-b8a1de80-e9f5-49f3-8a12-873d378889c6</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>F42FC60B-C54D-5DFB-A8EC-04625BFFF1F7</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>资源 scope，固定为 TENANT</para>
+        /// <para>The permission scope.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PERSONAL</para>
+        /// <para>repo</para>
         /// </summary>
         [NameInMap("scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>新建资源 ID</para>
+        /// <para>The unique identifier on the business system side, which is the business ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleSourceId</para>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("sourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>资源状态</para>
+        /// <para>The refund status. Query this field to confirm the refund status during processing. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>SUCCESS: All refunds are successful.</description></item>
+        /// <item><description>FAIL: The refund failed.</description></item>
+        /// <item><description>WAIT_PAY: Waiting for refund.</description></item>
+        /// <item><description>EXPIRE: The refund has expired.</description></item>
+        /// <item><description>PAYING: The refund is being processed.</description></item>
+        /// <item><description>TERMINATE: The refund is terminated.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>READY</para>
+        /// <para>{\&quot;observedGeneration\&quot;: 7, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-12-17T11:57:07Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1765972627273-k7GZvr\&quot;}</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

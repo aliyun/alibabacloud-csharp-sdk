@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetUserCreditUsageRequest : TeaModel {
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The ID of the tenant to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

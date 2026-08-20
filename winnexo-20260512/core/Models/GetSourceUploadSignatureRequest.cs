@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetSourceUploadSignatureRequest : TeaModel {
         /// <summary>
-        /// <para>文件 Content-Type（可选，不传则自动推断）</para>
+        /// <para>The content type. Valid values: Text and Markdown.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>签名 URL 过期时间（秒），默认 3600</para>
+        /// <para>The expiration time of the signed URL, in seconds. Default value: 3600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Expires { get; set; }
 
         /// <summary>
-        /// <para>文件名（含后缀，如 report.pdf）</para>
+        /// <para>The file name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Filename { get; set; }
 
         /// <summary>
-        /// <para>Agent 命名空间标识（数字员工名称）</para>
+        /// <para>The name of the digital employee (operating object name). This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>数据源归属范围: source（个人数据源，映射 PERSONAL）/ knowledge（企业知识库，映射 TENANT）</para>
+        /// <para>The permission scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>source</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

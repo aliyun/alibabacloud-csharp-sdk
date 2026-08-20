@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ReplaceObjectBindingsRequest : TeaModel {
         /// <summary>
-        /// <para>新的对象绑定列表（全量替换；传空列表表示清空所有绑定）</para>
+        /// <para>The new list of object bindings (full replacement. Pass an empty list to clear all bindings).</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("objectBindings")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<ReplaceObjectBindingsRequestObjectBindings> ObjectBindings { get; set; }
         public class ReplaceObjectBindingsRequestObjectBindings : TeaModel {
             /// <summary>
-            /// <para>绑定对象归属的语义图谱名（object_id 在该 graph 下唯一，必填）</para>
+            /// <para>The semantic graph name to which the binding object belongs (object_id is unique within this graph. Required).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GraphName { get; set; }
 
             /// <summary>
-            /// <para>绑定对象 ID</para>
+            /// <para>The binding object ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>绑定对象类型（如 customer / project）</para>
+            /// <para>The binding object type (such as customer or project).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>数据源 ID（租户内唯一）</para>
+        /// <para>The ID of the personal FILE data source to be replaced (unique within the tenant).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID. This is a common parameter. Pass it explicitly through winnexo-cli using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

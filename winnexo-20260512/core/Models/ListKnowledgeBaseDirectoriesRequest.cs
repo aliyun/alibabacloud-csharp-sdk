@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListKnowledgeBaseDirectoriesRequest : TeaModel {
         /// <summary>
-        /// <para>父分类 ID；不传时返回企业知识库根目录下的所有分类树</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -20,7 +20,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>排序字段：name / gmt_create / gmt_modified</para>
+        /// <para>The field by which the results are sorted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>event_time: event creation time</description></item>
+        /// <item><description>event_execute_start_time: event execution time</description></item>
+        /// <item><description>event_execute_finish_time: event completion time</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -30,7 +35,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortField { get; set; }
 
         /// <summary>
-        /// <para>排序方向：asc / desc</para>
+        /// <para>The sort order. This parameter takes effect only when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -40,7 +45,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID. This is a common parameter. You can pass it explicitly by using --tenant-id in winnexo-cli.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

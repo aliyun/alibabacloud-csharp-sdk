@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalAlidingDocRequest : TeaModel {
         /// <summary>
-        /// <para>资源描述（可选）</para>
+        /// <para>The pipeline description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>controll service user</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时绑定到该目录（必须是当前用户在当前数字员工下的已有个人目录）</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>阿里钉在线文档的可公开访问 URL</para>
+        /// <para>The publicly accessible URL of the AliDing online document.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,18 +41,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The customer group name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>issue_research</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Agent 命名空间标识，可选</para>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>1729094555111072</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

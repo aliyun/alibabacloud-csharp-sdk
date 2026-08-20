@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetSkillRequest : TeaModel {
         /// <summary>
-        /// <para>是否返回完整文件树（默认 False，避免大体积响应）</para>
+        /// <para>Specifies whether to return the complete file tree. Default value: False. This avoids large response payloads.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IncludeSkillFiles { get; set; }
 
         /// <summary>
-        /// <para>技能编码（全局唯一），优先级高于 skillName</para>
+        /// <para>The skill code. This parameter has a value when type is set to skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SkillCode { get; set; }
 
         /// <summary>
-        /// <para>技能名称，未传 skillCode 时使用；租户范围内必须唯一</para>
+        /// <para>The skill name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>视角：draft（草稿/编辑视角）或 published（已发布视角，默认）</para>
+        /// <para>The view mode. Valid values: draft (draft/editing view) or published (published view, default).</para>
         /// 
         /// <b>Example:</b>
         /// <para>draft</para>

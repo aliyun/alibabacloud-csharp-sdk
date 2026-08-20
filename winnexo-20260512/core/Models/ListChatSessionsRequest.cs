@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListChatSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>数字员工名称筛选（逗号分隔，如 sales_agent,service_agent）</para>
+        /// <para>The list of digital employee names. A single string can be passed for backward compatibility with the legacy format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -20,28 +20,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>标题模糊搜索</para>
+        /// <para>The rule name keyword for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例关键词</para>
+        /// <para>SampleKeyword</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>页码，从 1 开始</para>
+        /// <para>The page number. Default value: 1. Pages start from page 1.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of data records to read in this request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>租户ID</para>
+        /// <para>The tenant ID to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

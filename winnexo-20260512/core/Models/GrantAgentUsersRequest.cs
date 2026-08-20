@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GrantAgentUsersRequest : TeaModel {
         /// <summary>
-        /// <para>授权截止时间戳（毫秒），不传表示永不过期</para>
+        /// <para>The authorization expiration timestamp in milliseconds. If this parameter is not specified, the authorization never expires.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? ExpireDate { get; set; }
 
         /// <summary>
-        /// <para>数字员工名称</para>
+        /// <para>The name of the digital human.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>权限列表：USE（使用权限）和/或 MANAGE（管理权限），不传时默认仅 USE；不得为空列表</para>
+        /// <para>The permission items.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> Permissions { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>676577544219585</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>被授权的用户组 ID 列表（16位 hex 字符串）</para>
+        /// <para>The list of user group IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>被授权的用户 ID 列表</para>
+        /// <para>The list of user IDs to be authorized.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

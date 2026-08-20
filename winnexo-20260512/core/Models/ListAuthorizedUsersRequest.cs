@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAuthorizedUsersRequest : TeaModel {
         /// <summary>
-        /// <para>筛选类型：USER / USER_GROUP / 不传则返回全部</para>
+        /// <para>The filter type. Valid values: USER, USER_GROUP. If not specified, all types are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GranteeType { get; set; }
 
         /// <summary>
-        /// <para>搜索关键词，按用户名或组名模糊匹配</para>
+        /// <para>The search keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例关键词</para>
+        /// <para>SampleKeyword</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>数字员工名称</para>
+        /// <para>The name of the digital employee.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>权限类型过滤：USE=使用权限 / MANAGE=管理权限</para>
+        /// <para>Permission</para>
         /// 
         /// <b>Example:</b>
         /// <para>USE</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Permission { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

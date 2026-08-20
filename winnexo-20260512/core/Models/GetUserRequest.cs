@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetUserRequest : TeaModel {
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The ID of the tenant to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>WINNEXO 登录账号（与 wnUserId 二选一）</para>
+        /// <para>The WINNEXO logon account. This is a unique identifier and cannot be empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleAccountId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string WnAccountId { get; set; }
 
         /// <summary>
-        /// <para>WINNEXO 平台用户ID（与 accountId 二选一）</para>
+        /// <para>The WINNEXO platform user ID. Specify either this parameter or accountId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

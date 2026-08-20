@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalFeishuMinuteRequest : TeaModel {
         /// <summary>
-        /// <para>凭证 ID（关联 rbj_credential 表，必填）</para>
+        /// <para>The credential ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CredentialId { get; set; }
 
         /// <summary>
-        /// <para>资源描述（可选）</para>
+        /// <para>The resource description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>created by eventbridge</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前用户在当前数字员工下的已有个人目录</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>飞书妙记 token（妙记唯一标识符，必填）</para>
+        /// <para>The Lark Minutes token (unique identifier of the minutes record, required).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,18 +52,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string MinuteToken { get; set; }
 
         /// <summary>
-        /// <para>资源显示名称</para>
+        /// <para>The resource name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>_DevsAF_19df1a74-a740-449a-bd7a-9acb39e00f25</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</para>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -73,10 +73,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>1iSgnW4pARwoPUd5D5nuCNwiEiE</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

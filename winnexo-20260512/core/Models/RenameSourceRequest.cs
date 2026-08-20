@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class RenameSourceRequest : TeaModel {
         /// <summary>
-        /// <para>新的数据源名称</para>
+        /// <para>The new name of the data source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string NewName { get; set; }
 
         /// <summary>
-        /// <para>数据源 ID（租户内唯一）</para>
+        /// <para>The data source ID, which is unique within the tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID. This is a common parameter. You can pass this parameter explicitly by using --tenant-id in winnexo-cli.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListSkillsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>技能列表</para>
+        /// <para>The list of skill cards.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListSkillsResponseBodyItems> Items { get; set; }
         public class ListSkillsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>创建时间，ISO8601 格式</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-01T12:00:00Z</para>
@@ -37,17 +37,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CreatedTime { get; set; }
 
             /// <summary>
-            /// <para>技能描述（已 i18n 解析）</para>
+            /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例描述</para>
+            /// <para>Sample description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>执行模式：CODE_AGENT / SYSTEM 等</para>
+            /// <para>The execution mode, such as CODE_AGENT or SYSTEM.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ExecuteMode { get; set; }
 
             /// <summary>
-            /// <para>是否全局可访问</para>
+            /// <para>Indicates whether the skill is globally accessible.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? GlobalAccess { get; set; }
 
             /// <summary>
-            /// <para>是否存在未发布的草稿修改</para>
+            /// <para>Indicates whether unpublished draft modifications exist.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -77,17 +77,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? HasDraftChanges { get; set; }
 
             /// <summary>
-            /// <para>技能名称（已 i18n 解析）</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>技能编码（全局唯一）</para>
+            /// <para>The actual skill code for execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SkillCode { get; set; }
 
             /// <summary>
-            /// <para>技能定义 ID</para>
+            /// <para>The skill definition ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SkillHubDefinitionId { get; set; }
 
             /// <summary>
-            /// <para>来源类型：BUILTIN / CUSTOM</para>
+            /// <para>The data source type. Fixed value: FILE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>BUILTIN</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceType { get; set; }
 
             /// <summary>
-            /// <para>技能状态：ACTIVE / DRAFT</para>
+            /// <para>The task status. Returns Running upon submission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>标签列表（已 i18n 解析）</para>
+            /// <para>The keys.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> Tags { get; set; }
 
             /// <summary>
-            /// <para>修改时间，ISO8601 格式</para>
+            /// <para>The update timestamp, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-01T12:00:00Z</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string UpdatedTime { get; set; }
 
             /// <summary>
-            /// <para>版本号</para>
+            /// <para>The workflow definition version number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -159,28 +159,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The prompt message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>当前页码</para>
+        /// <para>The page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>每页数量</para>
+        /// <para>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 50.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -190,7 +199,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>符合条件的技能总数</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

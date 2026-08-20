@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetGraphSchemaResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>图谱名称</para>
+        /// <para>The knowledge graph name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,14 +31,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GraphName { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -48,7 +51,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>当前 active Graph Schema 版本</para>
+        /// <para>The version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SchemaVersion { get; set; }
 
         /// <summary>
-        /// <para>按 READ 权限裁剪的 Graph Schema 原始 YAML 文本，保留授权子图内的 $ref</para>
+        /// <para>The raw YAML text of the Graph Schema trimmed by READ permissions, retaining $ref references within the authorized subgraph.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

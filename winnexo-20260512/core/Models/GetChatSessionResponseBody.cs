@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetChatSessionResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,28 +20,34 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The message data detail structure.</para>
+        /// </summary>
         [NameInMap("messages")]
         [Validation(Required=false)]
         public List<GetChatSessionResponseBodyMessages> Messages { get; set; }
         public class GetChatSessionResponseBodyMessages : TeaModel {
             /// <summary>
-            /// <para>消息内容</para>
+            /// <para>The message content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例内容</para>
+            /// <para>Sample content</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>该消息之后 LLM 上下文是否已清空</para>
+            /// <para>Indicates whether the LLM context has been cleared after this message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? ContextCleared { get; set; }
 
             /// <summary>
-            /// <para>是否来自分享续聊复制的消息</para>
+            /// <para>Indicates whether the message is copied from a shared conversation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? FromShare { get; set; }
 
             /// <summary>
-            /// <para>消息ID</para>
+            /// <para>The message ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleId</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>更新时间</para>
+            /// <para>The message metadata.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>类型</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -91,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Object { get; set; }
 
             /// <summary>
-            /// <para>角色</para>
+            /// <para>The role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>分享来源用户名称</para>
+            /// <para>The username of the sharing source. This parameter has a value only when from_share=True.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -111,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ShareUserName { get; set; }
 
             /// <summary>
-            /// <para>消息状态</para>
+            /// <para>The message status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>追踪ID</para>
+            /// <para>The trace ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleTraceId</para>
@@ -130,12 +136,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             [Validation(Required=false)]
             public string TraceId { get; set; }
 
+            /// <summary>
+            /// <para>The update time.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>20240101</para>
+            /// </summary>
             [NameInMap("updateAt")]
             [Validation(Required=false)]
             public long? UpdateAt { get; set; }
 
             /// <summary>
-            /// <para>用户反馈类型</para>
+            /// <para>The user feedback type: LIKE | DISLIKE | CANCEL.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -147,7 +159,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -156,12 +168,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The session ID.</para>
+        /// </summary>
         [NameInMap("session")]
         [Validation(Required=false)]
         public GetChatSessionResponseBodySession Session { get; set; }
         public class GetChatSessionResponseBodySession : TeaModel {
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -171,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>消息ID</para>
+            /// <para>The message ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleId</para>
@@ -181,7 +196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>创建时间是否超过30天</para>
+            /// <para>Indicates whether the creation time exceeds 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -191,7 +206,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsExpired { get; set; }
 
             /// <summary>
-            /// <para>关联对象ID</para>
+            /// <para>The session metadata.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -201,7 +216,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public Dictionary<string, object> Metadata { get; set; }
 
             /// <summary>
-            /// <para>会话使用的抽象模型名（quick/standard/flagship）</para>
+            /// <para>The abstract model name used by the session (quick/standard/flagship).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -211,7 +226,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Model { get; set; }
 
             /// <summary>
-            /// <para>类型</para>
+            /// <para>The type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -220,12 +235,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             [Validation(Required=false)]
             public string Object { get; set; }
 
+            /// <summary>
+            /// <para>The associated object ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2676</para>
+            /// </summary>
             [NameInMap("objectId")]
             [Validation(Required=false)]
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>operatingObjectName</para>
+            /// <para>The list of digital employee names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -235,17 +256,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> OperatingObjectName { get; set; }
 
             /// <summary>
-            /// <para>标题</para>
+            /// <para>The title.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例标题</para>
+            /// <para>Sample title</para>
             /// </summary>
             [NameInMap("title")]
             [Validation(Required=false)]
             public string Title { get; set; }
 
             /// <summary>
-            /// <para>更新时间</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>

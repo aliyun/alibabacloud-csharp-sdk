@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class MoveResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,24 +20,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>E68654BD-F7BA-5837-8686-5645D739A47C</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>源目录 ID（echo 回入参）</para>
+        /// <para>The source directory ID, which echoes the input parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceDirectoryId</para>
@@ -47,27 +50,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>资源 ID（echo 回入参）</para>
+        /// <para>The resource ID, which echoes the input parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleSourceId</para>
+        /// <para>2000627</para>
         /// </summary>
         [NameInMap("sourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>操作是否成功</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>True</para>
         /// </summary>
         [NameInMap("success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>目标目录 ID（echo 回入参）</para>
+        /// <para>The target directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleTargetDirectoryId</para>

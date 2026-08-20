@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CheckHealthRequest : TeaModel {
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>692318833855074</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

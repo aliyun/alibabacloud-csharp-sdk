@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListOutputFilesRequest : TeaModel {
         /// <summary>
-        /// <para>产出明细类型: ppt/html/document/picture/slides/video/audio/email/others</para>
+        /// <para>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ppt</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ItemType { get; set; }
 
         /// <summary>
-        /// <para>关键词搜索，匹配产出标题或明细名称</para>
+        /// <para>The keyword for searching. Matches output titles or item names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>数字员工（运营对象）名称，按名称过滤</para>
+        /// <para>The name of the digital employee (operating object). Used to filter results by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>页码，从 1 开始</para>
+        /// <para>The page number, starting from 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页数量，范围 1-100</para>
+        /// <para>The number of entries per page. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>是否仅展示开启分享的产出和产出明细</para>
+        /// <para>Specifies whether to display only outputs and output items that have sharing enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>False</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? SharedOnly { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

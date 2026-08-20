@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("winnexo", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务健康检查</para>
+        /// <para>Performs a service health check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -292,7 +292,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务健康检查</para>
+        /// <para>Performs a service health check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -338,7 +338,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务健康检查</para>
+        /// <para>Performs a service health check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -357,7 +357,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务健康检查</para>
+        /// <para>Performs a service health check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话</para>
+        /// <para>Creates a session.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -442,7 +442,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话</para>
+        /// <para>Creates a session.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -508,7 +508,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话</para>
+        /// <para>Creates a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -527,7 +527,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建会话</para>
+        /// <para>Creates a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -546,17 +546,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册纯自定义组织</para>
+        /// <para>Registers a custom-only organization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>注册一个纯自定义组织，用于后续通过 syncOrgStructure 推送部门树。
-        ///     注册逻辑：
-        ///     1. 校验 corpId 格式（小写字母/数字开头，3-64 位，允许中划线）
-        ///     2. 委托 OrgSyncAuthorizedService 执行注册（内含权限校验 + 租户内唯一性检查）
-        ///     3. 返回注册结果
-        ///     注意：纯自定义组织仅支持部门树同步，不支持成员关系同步。</para>
+        /// <para>Registers a custom-only organization for subsequent department tree push through syncOrgStructure.
+        ///     Registration logic:
+        ///     1. Validates the corpId format (must start with a lowercase letter or digit, 3-64 characters, hyphens allowed).
+        ///     2. Delegates to OrgSyncAuthorizedService to execute registration (includes permission verification and tenant-level uniqueness check).
+        ///     3. Returns the registration result.
+        ///     Note: Custom-only organizations support only department tree synchronization. Member relationship synchronization is not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -612,17 +612,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册纯自定义组织</para>
+        /// <para>Registers a custom-only organization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>注册一个纯自定义组织，用于后续通过 syncOrgStructure 推送部门树。
-        ///     注册逻辑：
-        ///     1. 校验 corpId 格式（小写字母/数字开头，3-64 位，允许中划线）
-        ///     2. 委托 OrgSyncAuthorizedService 执行注册（内含权限校验 + 租户内唯一性检查）
-        ///     3. 返回注册结果
-        ///     注意：纯自定义组织仅支持部门树同步，不支持成员关系同步。</para>
+        /// <para>Registers a custom-only organization for subsequent department tree push through syncOrgStructure.
+        ///     Registration logic:
+        ///     1. Validates the corpId format (must start with a lowercase letter or digit, 3-64 characters, hyphens allowed).
+        ///     2. Delegates to OrgSyncAuthorizedService to execute registration (includes permission verification and tenant-level uniqueness check).
+        ///     3. Returns the registration result.
+        ///     Note: Custom-only organizations support only department tree synchronization. Member relationship synchronization is not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -678,17 +678,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册纯自定义组织</para>
+        /// <para>Registers a custom-only organization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>注册一个纯自定义组织，用于后续通过 syncOrgStructure 推送部门树。
-        ///     注册逻辑：
-        ///     1. 校验 corpId 格式（小写字母/数字开头，3-64 位，允许中划线）
-        ///     2. 委托 OrgSyncAuthorizedService 执行注册（内含权限校验 + 租户内唯一性检查）
-        ///     3. 返回注册结果
-        ///     注意：纯自定义组织仅支持部门树同步，不支持成员关系同步。</para>
+        /// <para>Registers a custom-only organization for subsequent department tree push through syncOrgStructure.
+        ///     Registration logic:
+        ///     1. Validates the corpId format (must start with a lowercase letter or digit, 3-64 characters, hyphens allowed).
+        ///     2. Delegates to OrgSyncAuthorizedService to execute registration (includes permission verification and tenant-level uniqueness check).
+        ///     3. Returns the registration result.
+        ///     Note: Custom-only organizations support only department tree synchronization. Member relationship synchronization is not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -707,17 +707,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>注册纯自定义组织</para>
+        /// <para>Registers a custom-only organization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>注册一个纯自定义组织，用于后续通过 syncOrgStructure 推送部门树。
-        ///     注册逻辑：
-        ///     1. 校验 corpId 格式（小写字母/数字开头，3-64 位，允许中划线）
-        ///     2. 委托 OrgSyncAuthorizedService 执行注册（内含权限校验 + 租户内唯一性检查）
-        ///     3. 返回注册结果
-        ///     注意：纯自定义组织仅支持部门树同步，不支持成员关系同步。</para>
+        /// <para>Registers a custom-only organization for subsequent department tree push through syncOrgStructure.
+        ///     Registration logic:
+        ///     1. Validates the corpId format (must start with a lowercase letter or digit, 3-64 characters, hyphens allowed).
+        ///     2. Delegates to OrgSyncAuthorizedService to execute registration (includes permission verification and tenant-level uniqueness check).
+        ///     3. Returns the registration result.
+        ///     Note: Custom-only organizations support only department tree synchronization. Member relationship synchronization is not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -736,20 +736,294 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉在线文档上传到企业知识库，需管理权限。</para>
+        /// <para>Creates a DingTalk group chat knowledge resource in a group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将阿里钉在线文档添加到指定的企业知识库中。</description></item>
-        /// <item><description>调用者必须具备<c>DEVELOPMENT_KB_MANAGE</c>功能权限。</description></item>
-        /// <item><description><c>source_type</c>固定为<c>ONLINE_DOC</c>，<c>platform</c>固定为<c>ALI_DING</c>，<c>scope</c>固定为<c>TENANT</c>。</description></item>
-        /// <item><description>如果不提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供，则必须是当前租户下的有效目录ID。</description></item>
-        /// <item><description><c>filePublicUrl</c>参数是必需的，表示要上传的阿里钉在线文档的公开访问URL。</description></item>
-        /// <item><description>可选参数包括<c>operatingObjectName</c>（数字员工名称）、<c>description</c>（资源描述）、<c>knowledgeId</c>（知识库ID）和<c>sourceTags</c>（资源标签）等。</description></item>
-        /// <item><description>成功响应会返回新创建资源的相关信息，如<c>sourceId</c>、<c>name</c>、<c>status</c>、<c>directoryId</c>及创建时间等。</description></item>
+        /// <item><description>Connects a specified DingTalk group chat to a group knowledge base that the caller has joined.</description></item>
+        /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to GROUP, and the owning user is resolved from the gateway authentication identity.</description></item>
+        /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
+        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group membership, the target group directory permissions, and the uniqueness of chatId within the scope.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateGroupAliDingChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupAliDingChatResponse
+        /// </returns>
+        public CreateGroupAliDingChatResponse CreateGroupAliDingChatWithOptions(CreateGroupAliDingChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGroupAliDingChatShrinkRequest request = new CreateGroupAliDingChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatName))
+            {
+                body["chatName"] = request.ChatName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupAliDingChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupAliDingChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupAliDingChatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a DingTalk group chat knowledge resource in a group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk group chat to a group knowledge base that the caller has joined.</description></item>
+        /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to GROUP, and the owning user is resolved from the gateway authentication identity.</description></item>
+        /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
+        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group membership, the target group directory permissions, and the uniqueness of chatId within the scope.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateGroupAliDingChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupAliDingChatResponse
+        /// </returns>
+        public async Task<CreateGroupAliDingChatResponse> CreateGroupAliDingChatWithOptionsAsync(CreateGroupAliDingChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGroupAliDingChatShrinkRequest request = new CreateGroupAliDingChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatName))
+            {
+                body["chatName"] = request.ChatName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupAliDingChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupAliDingChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupAliDingChatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a DingTalk group chat knowledge resource in a group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk group chat to a group knowledge base that the caller has joined.</description></item>
+        /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to GROUP, and the owning user is resolved from the gateway authentication identity.</description></item>
+        /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
+        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group membership, the target group directory permissions, and the uniqueness of chatId within the scope.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupAliDingChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupAliDingChatResponse
+        /// </returns>
+        public CreateGroupAliDingChatResponse CreateGroupAliDingChat(CreateGroupAliDingChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGroupAliDingChatWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a DingTalk group chat knowledge resource in a group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk group chat to a group knowledge base that the caller has joined.</description></item>
+        /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to GROUP, and the owning user is resolved from the gateway authentication identity.</description></item>
+        /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
+        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group membership, the target group directory permissions, and the uniqueness of chatId within the scope.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupAliDingChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupAliDingChatResponse
+        /// </returns>
+        public async Task<CreateGroupAliDingChatResponse> CreateGroupAliDingChatAsync(CreateGroupAliDingChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGroupAliDingChatWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads an AliDing online document to the enterprise knowledge base. Management permissions are required.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation adds an AliDing online document to a specified enterprise knowledge base.</description></item>
+        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the document is bound to the root directory of the current digital employee by default. If provided, it must be a valid directory ID under the current tenant.</description></item>
+        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the publicly accessible URL of the AliDing online document to upload.</description></item>
+        /// <item><description>Optional parameters include <c>operatingObjectName</c> (digital employee name), <c>description</c> (resource description), <c>knowledgeId</c> (knowledge base ID), and <c>sourceTags</c> (resource tags).</description></item>
+        /// <item><description>A successful response returns information about the newly created resource, such as <c>sourceId</c>, <c>name</c>, <c>status</c>, <c>directoryId</c>, and creation time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -826,20 +1100,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉在线文档上传到企业知识库，需管理权限。</para>
+        /// <para>Uploads an AliDing online document to the enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将阿里钉在线文档添加到指定的企业知识库中。</description></item>
-        /// <item><description>调用者必须具备<c>DEVELOPMENT_KB_MANAGE</c>功能权限。</description></item>
-        /// <item><description><c>source_type</c>固定为<c>ONLINE_DOC</c>，<c>platform</c>固定为<c>ALI_DING</c>，<c>scope</c>固定为<c>TENANT</c>。</description></item>
-        /// <item><description>如果不提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供，则必须是当前租户下的有效目录ID。</description></item>
-        /// <item><description><c>filePublicUrl</c>参数是必需的，表示要上传的阿里钉在线文档的公开访问URL。</description></item>
-        /// <item><description>可选参数包括<c>operatingObjectName</c>（数字员工名称）、<c>description</c>（资源描述）、<c>knowledgeId</c>（知识库ID）和<c>sourceTags</c>（资源标签）等。</description></item>
-        /// <item><description>成功响应会返回新创建资源的相关信息，如<c>sourceId</c>、<c>name</c>、<c>status</c>、<c>directoryId</c>及创建时间等。</description></item>
+        /// <item><description>This operation adds an AliDing online document to a specified enterprise knowledge base.</description></item>
+        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the document is bound to the root directory of the current digital employee by default. If provided, it must be a valid directory ID under the current tenant.</description></item>
+        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the publicly accessible URL of the AliDing online document to upload.</description></item>
+        /// <item><description>Optional parameters include <c>operatingObjectName</c> (digital employee name), <c>description</c> (resource description), <c>knowledgeId</c> (knowledge base ID), and <c>sourceTags</c> (resource tags).</description></item>
+        /// <item><description>A successful response returns information about the newly created resource, such as <c>sourceId</c>, <c>name</c>, <c>status</c>, <c>directoryId</c>, and creation time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -916,20 +1190,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉在线文档上传到企业知识库，需管理权限。</para>
+        /// <para>Uploads an AliDing online document to the enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将阿里钉在线文档添加到指定的企业知识库中。</description></item>
-        /// <item><description>调用者必须具备<c>DEVELOPMENT_KB_MANAGE</c>功能权限。</description></item>
-        /// <item><description><c>source_type</c>固定为<c>ONLINE_DOC</c>，<c>platform</c>固定为<c>ALI_DING</c>，<c>scope</c>固定为<c>TENANT</c>。</description></item>
-        /// <item><description>如果不提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供，则必须是当前租户下的有效目录ID。</description></item>
-        /// <item><description><c>filePublicUrl</c>参数是必需的，表示要上传的阿里钉在线文档的公开访问URL。</description></item>
-        /// <item><description>可选参数包括<c>operatingObjectName</c>（数字员工名称）、<c>description</c>（资源描述）、<c>knowledgeId</c>（知识库ID）和<c>sourceTags</c>（资源标签）等。</description></item>
-        /// <item><description>成功响应会返回新创建资源的相关信息，如<c>sourceId</c>、<c>name</c>、<c>status</c>、<c>directoryId</c>及创建时间等。</description></item>
+        /// <item><description>This operation adds an AliDing online document to a specified enterprise knowledge base.</description></item>
+        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the document is bound to the root directory of the current digital employee by default. If provided, it must be a valid directory ID under the current tenant.</description></item>
+        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the publicly accessible URL of the AliDing online document to upload.</description></item>
+        /// <item><description>Optional parameters include <c>operatingObjectName</c> (digital employee name), <c>description</c> (resource description), <c>knowledgeId</c> (knowledge base ID), and <c>sourceTags</c> (resource tags).</description></item>
+        /// <item><description>A successful response returns information about the newly created resource, such as <c>sourceId</c>, <c>name</c>, <c>status</c>, <c>directoryId</c>, and creation time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -949,20 +1223,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉在线文档上传到企业知识库，需管理权限。</para>
+        /// <para>Uploads an AliDing online document to the enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将阿里钉在线文档添加到指定的企业知识库中。</description></item>
-        /// <item><description>调用者必须具备<c>DEVELOPMENT_KB_MANAGE</c>功能权限。</description></item>
-        /// <item><description><c>source_type</c>固定为<c>ONLINE_DOC</c>，<c>platform</c>固定为<c>ALI_DING</c>，<c>scope</c>固定为<c>TENANT</c>。</description></item>
-        /// <item><description>如果不提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供，则必须是当前租户下的有效目录ID。</description></item>
-        /// <item><description><c>filePublicUrl</c>参数是必需的，表示要上传的阿里钉在线文档的公开访问URL。</description></item>
-        /// <item><description>可选参数包括<c>operatingObjectName</c>（数字员工名称）、<c>description</c>（资源描述）、<c>knowledgeId</c>（知识库ID）和<c>sourceTags</c>（资源标签）等。</description></item>
-        /// <item><description>成功响应会返回新创建资源的相关信息，如<c>sourceId</c>、<c>name</c>、<c>status</c>、<c>directoryId</c>及创建时间等。</description></item>
+        /// <item><description>This operation adds an AliDing online document to a specified enterprise knowledge base.</description></item>
+        /// <item><description>The caller must have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>ONLINE_DOC</c>, <c>platform</c> is fixed to <c>ALI_DING</c>, and <c>scope</c> is fixed to <c>TENANT</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the document is bound to the root directory of the current digital employee by default. If provided, it must be a valid directory ID under the current tenant.</description></item>
+        /// <item><description>The <c>filePublicUrl</c> parameter is required and specifies the publicly accessible URL of the AliDing online document to upload.</description></item>
+        /// <item><description>Optional parameters include <c>operatingObjectName</c> (digital employee name), <c>description</c> (resource description), <c>knowledgeId</c> (knowledge base ID), and <c>sourceTags</c> (resource tags).</description></item>
+        /// <item><description>A successful response returns information about the newly created resource, such as <c>sourceId</c>, <c>name</c>, <c>status</c>, <c>directoryId</c>, and creation time.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -982,18 +1256,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于在企业知识库中创建新的分类目录。</para>
+        /// <para>Creates a category directory in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口允许具有<c>DEVELOPMENT_KB_MANAGE</c>权限的用户为企业知识库创建新的分类。</description></item>
-        /// <item><description>创建时可指定父分类ID，若未指定，则新分类将直接挂载于企业知识库根目录下。</description></item>
-        /// <item><description>系统会自动检查同名冲突及目录深度限制等问题。</description></item>
-        /// <item><description><c>tenant_id</c>和<c>user_id</c>仅通过鉴权身份获取，请求体中即使提供也会被忽略。</description></item>
-        /// <item><description>需要确保提供的<c>parentDirectoryId</c>（如果有的话）属于当前租户。</description></item>
+        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a category for the enterprise knowledge base.</description></item>
+        /// <item><description>You can specify a parent category ID when creating a category. If no parent category ID is specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
+        /// <item><description>The system automatically checks for name conflicts and directory depth limits.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are obtained only through authentication. These parameters are ignored even if they are provided in the request body.</description></item>
+        /// <item><description>Ensure that the specified <c>parentDirectoryId</c> (if any) belongs to the current tenant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1054,18 +1328,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于在企业知识库中创建新的分类目录。</para>
+        /// <para>Creates a category directory in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口允许具有<c>DEVELOPMENT_KB_MANAGE</c>权限的用户为企业知识库创建新的分类。</description></item>
-        /// <item><description>创建时可指定父分类ID，若未指定，则新分类将直接挂载于企业知识库根目录下。</description></item>
-        /// <item><description>系统会自动检查同名冲突及目录深度限制等问题。</description></item>
-        /// <item><description><c>tenant_id</c>和<c>user_id</c>仅通过鉴权身份获取，请求体中即使提供也会被忽略。</description></item>
-        /// <item><description>需要确保提供的<c>parentDirectoryId</c>（如果有的话）属于当前租户。</description></item>
+        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a category for the enterprise knowledge base.</description></item>
+        /// <item><description>You can specify a parent category ID when creating a category. If no parent category ID is specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
+        /// <item><description>The system automatically checks for name conflicts and directory depth limits.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are obtained only through authentication. These parameters are ignored even if they are provided in the request body.</description></item>
+        /// <item><description>Ensure that the specified <c>parentDirectoryId</c> (if any) belongs to the current tenant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1126,18 +1400,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于在企业知识库中创建新的分类目录。</para>
+        /// <para>Creates a category directory in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口允许具有<c>DEVELOPMENT_KB_MANAGE</c>权限的用户为企业知识库创建新的分类。</description></item>
-        /// <item><description>创建时可指定父分类ID，若未指定，则新分类将直接挂载于企业知识库根目录下。</description></item>
-        /// <item><description>系统会自动检查同名冲突及目录深度限制等问题。</description></item>
-        /// <item><description><c>tenant_id</c>和<c>user_id</c>仅通过鉴权身份获取，请求体中即使提供也会被忽略。</description></item>
-        /// <item><description>需要确保提供的<c>parentDirectoryId</c>（如果有的话）属于当前租户。</description></item>
+        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a category for the enterprise knowledge base.</description></item>
+        /// <item><description>You can specify a parent category ID when creating a category. If no parent category ID is specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
+        /// <item><description>The system automatically checks for name conflicts and directory depth limits.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are obtained only through authentication. These parameters are ignored even if they are provided in the request body.</description></item>
+        /// <item><description>Ensure that the specified <c>parentDirectoryId</c> (if any) belongs to the current tenant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1157,18 +1431,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于在企业知识库中创建新的分类目录。</para>
+        /// <para>Creates a category directory in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口允许具有<c>DEVELOPMENT_KB_MANAGE</c>权限的用户为企业知识库创建新的分类。</description></item>
-        /// <item><description>创建时可指定父分类ID，若未指定，则新分类将直接挂载于企业知识库根目录下。</description></item>
-        /// <item><description>系统会自动检查同名冲突及目录深度限制等问题。</description></item>
-        /// <item><description><c>tenant_id</c>和<c>user_id</c>仅通过鉴权身份获取，请求体中即使提供也会被忽略。</description></item>
-        /// <item><description>需要确保提供的<c>parentDirectoryId</c>（如果有的话）属于当前租户。</description></item>
+        /// <item><description>This operation allows users with the <c>DEVELOPMENT_KB_MANAGE</c> permission to create a category for the enterprise knowledge base.</description></item>
+        /// <item><description>You can specify a parent category ID when creating a category. If no parent category ID is specified, the new category is mounted directly under the root directory of the enterprise knowledge base.</description></item>
+        /// <item><description>The system automatically checks for name conflicts and directory depth limits.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are obtained only through authentication. These parameters are ignored even if they are provided in the request body.</description></item>
+        /// <item><description>Ensure that the specified <c>parentDirectoryId</c> (if any) belongs to the current tenant.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1188,20 +1462,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定文件上传至企业知识库，需具备管理权限。</para>
+        /// <para>Uploads a specified file to the enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于向企业知识库中上传文件。</description></item>
-        /// <item><description>需要拥有<c>DEVELOPMENT_KB_MANAGE</c>功能权限才能调用此API。</description></item>
-        /// <item><description>文件上传时必须提供文件的OSS持久化地址(<c>filePath</c>)。</description></item>
-        /// <item><description>可选参数包括文件公开访问URL、原始文件名等，以增强文件信息的完整性。</description></item>
-        /// <item><description>如果指定了<c>directoryId</c>，则文件会被放置在对应的企业知识库目录下；否则，默认绑定到当前数字员工默认根目录。</description></item>
-        /// <item><description>支持通过<c>sourceTags</c>为资源添加标签，便于后续管理和检索。</description></item>
-        /// <item><description>本操作会启动计费账单（UNSTRUCTURED_PARSE），请确保账户余额充足。</description></item>
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this operation.</description></item>
+        /// <item><description>You must provide the Object Storage Service (OSS) persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add labels to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1294,20 +1568,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定文件上传至企业知识库，需具备管理权限。</para>
+        /// <para>Uploads a specified file to the enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于向企业知识库中上传文件。</description></item>
-        /// <item><description>需要拥有<c>DEVELOPMENT_KB_MANAGE</c>功能权限才能调用此API。</description></item>
-        /// <item><description>文件上传时必须提供文件的OSS持久化地址(<c>filePath</c>)。</description></item>
-        /// <item><description>可选参数包括文件公开访问URL、原始文件名等，以增强文件信息的完整性。</description></item>
-        /// <item><description>如果指定了<c>directoryId</c>，则文件会被放置在对应的企业知识库目录下；否则，默认绑定到当前数字员工默认根目录。</description></item>
-        /// <item><description>支持通过<c>sourceTags</c>为资源添加标签，便于后续管理和检索。</description></item>
-        /// <item><description>本操作会启动计费账单（UNSTRUCTURED_PARSE），请确保账户余额充足。</description></item>
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this operation.</description></item>
+        /// <item><description>You must provide the Object Storage Service (OSS) persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add labels to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1400,20 +1674,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定文件上传至企业知识库，需具备管理权限。</para>
+        /// <para>Uploads a specified file to the enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于向企业知识库中上传文件。</description></item>
-        /// <item><description>需要拥有<c>DEVELOPMENT_KB_MANAGE</c>功能权限才能调用此API。</description></item>
-        /// <item><description>文件上传时必须提供文件的OSS持久化地址(<c>filePath</c>)。</description></item>
-        /// <item><description>可选参数包括文件公开访问URL、原始文件名等，以增强文件信息的完整性。</description></item>
-        /// <item><description>如果指定了<c>directoryId</c>，则文件会被放置在对应的企业知识库目录下；否则，默认绑定到当前数字员工默认根目录。</description></item>
-        /// <item><description>支持通过<c>sourceTags</c>为资源添加标签，便于后续管理和检索。</description></item>
-        /// <item><description>本操作会启动计费账单（UNSTRUCTURED_PARSE），请确保账户余额充足。</description></item>
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this operation.</description></item>
+        /// <item><description>You must provide the Object Storage Service (OSS) persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add labels to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1433,20 +1707,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将指定文件上传至企业知识库，需具备管理权限。</para>
+        /// <para>Uploads a specified file to the enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于向企业知识库中上传文件。</description></item>
-        /// <item><description>需要拥有<c>DEVELOPMENT_KB_MANAGE</c>功能权限才能调用此API。</description></item>
-        /// <item><description>文件上传时必须提供文件的OSS持久化地址(<c>filePath</c>)。</description></item>
-        /// <item><description>可选参数包括文件公开访问URL、原始文件名等，以增强文件信息的完整性。</description></item>
-        /// <item><description>如果指定了<c>directoryId</c>，则文件会被放置在对应的企业知识库目录下；否则，默认绑定到当前数字员工默认根目录。</description></item>
-        /// <item><description>支持通过<c>sourceTags</c>为资源添加标签，便于后续管理和检索。</description></item>
-        /// <item><description>本操作会启动计费账单（UNSTRUCTURED_PARSE），请确保账户余额充足。</description></item>
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this operation.</description></item>
+        /// <item><description>You must provide the Object Storage Service (OSS) persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add labels to resources for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1466,19 +1740,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将纯文本内容添加至指定的企业知识库中。</para>
+        /// <para>Adds plain text content to a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于向企业知识库上传纯文本信息，要求调用者具备相应的管理权限。</description></item>
-        /// <item><description><c>textContent</c>字段为必填项，代表要上传的纯文本内容。</description></item>
-        /// <item><description>可选参数包括数字员工名称(<c>operatingObjectName</c>)、资源描述(<c>description</c>)等，允许用户自定义更多细节。</description></item>
-        /// <item><description>如果提供了<c>directoryId</c>，则会将上传的文本绑定到指定的知识库目录下；若未提供，则默认绑定到当前数字员工的根目录。</description></item>
-        /// <item><description>支持通过<c>sourceTags</c>给资源打标签，方便后续管理和检索。</description></item>
-        /// <item><description>调用此接口前，请确保已正确配置身份验证方式（支持AK、BearerToken及APP认证）并拥有<c>DEVELOPMENT_KB_MANAGE</c>权限。</description></item>
+        /// <item><description>This API is used to upload plain text information to an enterprise knowledge base. The caller must have the required management permissions.</description></item>
+        /// <item><description>The <c>textContent</c> field is required and represents the plain text content to upload.</description></item>
+        /// <item><description>Optional parameters include the digital employee name (<c>operatingObjectName</c>) and resource description (<c>description</c>), which allow users to customize additional details.</description></item>
+        /// <item><description>If <c>directoryId</c> is provided, the uploaded text is attached to the specified knowledge base folder. If not provided, the text is attached to the root folder of the current digital employee by default.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add labels to resources for easier management and retrieval.</description></item>
+        /// <item><description>Before invoking this operation, make sure that you have correctly configured the authentication method (AK, BearerToken, and APP authentication are supported) and have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1555,19 +1829,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将纯文本内容添加至指定的企业知识库中。</para>
+        /// <para>Adds plain text content to a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于向企业知识库上传纯文本信息，要求调用者具备相应的管理权限。</description></item>
-        /// <item><description><c>textContent</c>字段为必填项，代表要上传的纯文本内容。</description></item>
-        /// <item><description>可选参数包括数字员工名称(<c>operatingObjectName</c>)、资源描述(<c>description</c>)等，允许用户自定义更多细节。</description></item>
-        /// <item><description>如果提供了<c>directoryId</c>，则会将上传的文本绑定到指定的知识库目录下；若未提供，则默认绑定到当前数字员工的根目录。</description></item>
-        /// <item><description>支持通过<c>sourceTags</c>给资源打标签，方便后续管理和检索。</description></item>
-        /// <item><description>调用此接口前，请确保已正确配置身份验证方式（支持AK、BearerToken及APP认证）并拥有<c>DEVELOPMENT_KB_MANAGE</c>权限。</description></item>
+        /// <item><description>This API is used to upload plain text information to an enterprise knowledge base. The caller must have the required management permissions.</description></item>
+        /// <item><description>The <c>textContent</c> field is required and represents the plain text content to upload.</description></item>
+        /// <item><description>Optional parameters include the digital employee name (<c>operatingObjectName</c>) and resource description (<c>description</c>), which allow users to customize additional details.</description></item>
+        /// <item><description>If <c>directoryId</c> is provided, the uploaded text is attached to the specified knowledge base folder. If not provided, the text is attached to the root folder of the current digital employee by default.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add labels to resources for easier management and retrieval.</description></item>
+        /// <item><description>Before invoking this operation, make sure that you have correctly configured the authentication method (AK, BearerToken, and APP authentication are supported) and have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1644,19 +1918,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将纯文本内容添加至指定的企业知识库中。</para>
+        /// <para>Adds plain text content to a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于向企业知识库上传纯文本信息，要求调用者具备相应的管理权限。</description></item>
-        /// <item><description><c>textContent</c>字段为必填项，代表要上传的纯文本内容。</description></item>
-        /// <item><description>可选参数包括数字员工名称(<c>operatingObjectName</c>)、资源描述(<c>description</c>)等，允许用户自定义更多细节。</description></item>
-        /// <item><description>如果提供了<c>directoryId</c>，则会将上传的文本绑定到指定的知识库目录下；若未提供，则默认绑定到当前数字员工的根目录。</description></item>
-        /// <item><description>支持通过<c>sourceTags</c>给资源打标签，方便后续管理和检索。</description></item>
-        /// <item><description>调用此接口前，请确保已正确配置身份验证方式（支持AK、BearerToken及APP认证）并拥有<c>DEVELOPMENT_KB_MANAGE</c>权限。</description></item>
+        /// <item><description>This API is used to upload plain text information to an enterprise knowledge base. The caller must have the required management permissions.</description></item>
+        /// <item><description>The <c>textContent</c> field is required and represents the plain text content to upload.</description></item>
+        /// <item><description>Optional parameters include the digital employee name (<c>operatingObjectName</c>) and resource description (<c>description</c>), which allow users to customize additional details.</description></item>
+        /// <item><description>If <c>directoryId</c> is provided, the uploaded text is attached to the specified knowledge base folder. If not provided, the text is attached to the root folder of the current digital employee by default.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add labels to resources for easier management and retrieval.</description></item>
+        /// <item><description>Before invoking this operation, make sure that you have correctly configured the authentication method (AK, BearerToken, and APP authentication are supported) and have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1676,19 +1950,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将纯文本内容添加至指定的企业知识库中。</para>
+        /// <para>Adds plain text content to a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于向企业知识库上传纯文本信息，要求调用者具备相应的管理权限。</description></item>
-        /// <item><description><c>textContent</c>字段为必填项，代表要上传的纯文本内容。</description></item>
-        /// <item><description>可选参数包括数字员工名称(<c>operatingObjectName</c>)、资源描述(<c>description</c>)等，允许用户自定义更多细节。</description></item>
-        /// <item><description>如果提供了<c>directoryId</c>，则会将上传的文本绑定到指定的知识库目录下；若未提供，则默认绑定到当前数字员工的根目录。</description></item>
-        /// <item><description>支持通过<c>sourceTags</c>给资源打标签，方便后续管理和检索。</description></item>
-        /// <item><description>调用此接口前，请确保已正确配置身份验证方式（支持AK、BearerToken及APP认证）并拥有<c>DEVELOPMENT_KB_MANAGE</c>权限。</description></item>
+        /// <item><description>This API is used to upload plain text information to an enterprise knowledge base. The caller must have the required management permissions.</description></item>
+        /// <item><description>The <c>textContent</c> field is required and represents the plain text content to upload.</description></item>
+        /// <item><description>Optional parameters include the digital employee name (<c>operatingObjectName</c>) and resource description (<c>description</c>), which allow users to customize additional details.</description></item>
+        /// <item><description>If <c>directoryId</c> is provided, the uploaded text is attached to the specified knowledge base folder. If not provided, the text is attached to the root folder of the current digital employee by default.</description></item>
+        /// <item><description>You can use <c>sourceTags</c> to add labels to resources for easier management and retrieval.</description></item>
+        /// <item><description>Before invoking this operation, make sure that you have correctly configured the authentication method (AK, BearerToken, and APP authentication are supported) and have the <c>DEVELOPMENT_KB_MANAGE</c> permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1708,19 +1982,285 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉会议文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Creates a personal AliDing group chat knowledge resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将阿里钉会议相关资料（如音视频、闪记链接等）上传至指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>ALI_DING_MEETING</c>，且作用范围 <c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>必须提供公开的音视频OSS地址 (<c>ossUrl</c>) 和原始的闪记链接 (<c>shanjiUrl</c>)。</description></item>
-        /// <item><description>可选地，可以指定目标个人目录ID (<c>directoryId</c>)；若未指定，则自动绑定到当前数字员工默认根目录。</description></item>
-        /// <item><description>支持添加资源描述 (<c>description</c>) 和会议笔记内容 (<c>notes</c>)，其中会议笔记可用于辅助分析。</description></item>
-        /// <item><description>此操作需要相应的权限认证，支持AK、BearerToken和APP三种认证方式之一。</description></item>
+        /// <item><description>Connects the specified AliDing group chat to the current user\&quot;s personal knowledge base.</description></item>
+        /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>chatId must be unique within the target personal scope.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePersonalAliDingChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalAliDingChatResponse
+        /// </returns>
+        public CreatePersonalAliDingChatResponse CreatePersonalAliDingChatWithOptions(CreatePersonalAliDingChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePersonalAliDingChatShrinkRequest request = new CreatePersonalAliDingChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatName))
+            {
+                body["chatName"] = request.ChatName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalAliDingChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalAliDingChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalAliDingChatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal AliDing group chat knowledge resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects the specified AliDing group chat to the current user\&quot;s personal knowledge base.</description></item>
+        /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>chatId must be unique within the target personal scope.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePersonalAliDingChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalAliDingChatResponse
+        /// </returns>
+        public async Task<CreatePersonalAliDingChatResponse> CreatePersonalAliDingChatWithOptionsAsync(CreatePersonalAliDingChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePersonalAliDingChatShrinkRequest request = new CreatePersonalAliDingChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatName))
+            {
+                body["chatName"] = request.ChatName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalAliDingChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalAliDingChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalAliDingChatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal AliDing group chat knowledge resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects the specified AliDing group chat to the current user\&quot;s personal knowledge base.</description></item>
+        /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>chatId must be unique within the target personal scope.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalAliDingChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalAliDingChatResponse
+        /// </returns>
+        public CreatePersonalAliDingChatResponse CreatePersonalAliDingChat(CreatePersonalAliDingChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreatePersonalAliDingChatWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal AliDing group chat knowledge resource.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects the specified AliDing group chat to the current user\&quot;s personal knowledge base.</description></item>
+        /// <item><description>The resource type is fixed to ALI_DING, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>chatId must be unique within the target personal scope.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalAliDingChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalAliDingChatResponse
+        /// </returns>
+        public async Task<CreatePersonalAliDingChatResponse> CreatePersonalAliDingChatAsync(CreatePersonalAliDingChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreatePersonalAliDingChatWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads an AliDing meeting file to the personal resource library of the current digital employee.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API uploads AliDing meeting materials (such as audio/video files and Shanji links) to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>The <c>source_type</c> is fixed to <c>ALI_DING_MEETING</c>, and the <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>You must provide a public audio/video OSS URL (<c>ossUrl</c>) and the original Shanji link (<c>shanjiUrl</c>).</description></item>
+        /// <item><description>Optionally, you can specify a target personal directory ID (<c>directoryId</c>). If not specified, the resource is automatically bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add a resource description (<c>description</c>) and meeting notes (<c>notes</c>). The meeting notes can be used for auxiliary analysis.</description></item>
+        /// <item><description>This operation requires authentication. AK, BearerToken, and APP authentication methods are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1793,19 +2333,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉会议文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads an AliDing meeting file to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将阿里钉会议相关资料（如音视频、闪记链接等）上传至指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>ALI_DING_MEETING</c>，且作用范围 <c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>必须提供公开的音视频OSS地址 (<c>ossUrl</c>) 和原始的闪记链接 (<c>shanjiUrl</c>)。</description></item>
-        /// <item><description>可选地，可以指定目标个人目录ID (<c>directoryId</c>)；若未指定，则自动绑定到当前数字员工默认根目录。</description></item>
-        /// <item><description>支持添加资源描述 (<c>description</c>) 和会议笔记内容 (<c>notes</c>)，其中会议笔记可用于辅助分析。</description></item>
-        /// <item><description>此操作需要相应的权限认证，支持AK、BearerToken和APP三种认证方式之一。</description></item>
+        /// <item><description>This API uploads AliDing meeting materials (such as audio/video files and Shanji links) to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>The <c>source_type</c> is fixed to <c>ALI_DING_MEETING</c>, and the <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>You must provide a public audio/video OSS URL (<c>ossUrl</c>) and the original Shanji link (<c>shanjiUrl</c>).</description></item>
+        /// <item><description>Optionally, you can specify a target personal directory ID (<c>directoryId</c>). If not specified, the resource is automatically bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add a resource description (<c>description</c>) and meeting notes (<c>notes</c>). The meeting notes can be used for auxiliary analysis.</description></item>
+        /// <item><description>This operation requires authentication. AK, BearerToken, and APP authentication methods are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1878,19 +2418,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉会议文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads an AliDing meeting file to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将阿里钉会议相关资料（如音视频、闪记链接等）上传至指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>ALI_DING_MEETING</c>，且作用范围 <c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>必须提供公开的音视频OSS地址 (<c>ossUrl</c>) 和原始的闪记链接 (<c>shanjiUrl</c>)。</description></item>
-        /// <item><description>可选地，可以指定目标个人目录ID (<c>directoryId</c>)；若未指定，则自动绑定到当前数字员工默认根目录。</description></item>
-        /// <item><description>支持添加资源描述 (<c>description</c>) 和会议笔记内容 (<c>notes</c>)，其中会议笔记可用于辅助分析。</description></item>
-        /// <item><description>此操作需要相应的权限认证，支持AK、BearerToken和APP三种认证方式之一。</description></item>
+        /// <item><description>This API uploads AliDing meeting materials (such as audio/video files and Shanji links) to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>The <c>source_type</c> is fixed to <c>ALI_DING_MEETING</c>, and the <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>You must provide a public audio/video OSS URL (<c>ossUrl</c>) and the original Shanji link (<c>shanjiUrl</c>).</description></item>
+        /// <item><description>Optionally, you can specify a target personal directory ID (<c>directoryId</c>). If not specified, the resource is automatically bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add a resource description (<c>description</c>) and meeting notes (<c>notes</c>). The meeting notes can be used for auxiliary analysis.</description></item>
+        /// <item><description>This operation requires authentication. AK, BearerToken, and APP authentication methods are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1910,19 +2450,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉会议文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads an AliDing meeting file to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将阿里钉会议相关资料（如音视频、闪记链接等）上传至指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>ALI_DING_MEETING</c>，且作用范围 <c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>必须提供公开的音视频OSS地址 (<c>ossUrl</c>) 和原始的闪记链接 (<c>shanjiUrl</c>)。</description></item>
-        /// <item><description>可选地，可以指定目标个人目录ID (<c>directoryId</c>)；若未指定，则自动绑定到当前数字员工默认根目录。</description></item>
-        /// <item><description>支持添加资源描述 (<c>description</c>) 和会议笔记内容 (<c>notes</c>)，其中会议笔记可用于辅助分析。</description></item>
-        /// <item><description>此操作需要相应的权限认证，支持AK、BearerToken和APP三种认证方式之一。</description></item>
+        /// <item><description>This API uploads AliDing meeting materials (such as audio/video files and Shanji links) to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>The <c>source_type</c> is fixed to <c>ALI_DING_MEETING</c>, and the <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>You must provide a public audio/video OSS URL (<c>ossUrl</c>) and the original Shanji link (<c>shanjiUrl</c>).</description></item>
+        /// <item><description>Optionally, you can specify a target personal directory ID (<c>directoryId</c>). If not specified, the resource is automatically bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add a resource description (<c>description</c>) and meeting notes (<c>notes</c>). The meeting notes can be used for auxiliary analysis.</description></item>
+        /// <item><description>This operation requires authentication. AK, BearerToken, and APP authentication methods are supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1942,19 +2482,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉在线文档上传至当前数字员工的个人资源中。</para>
+        /// <para>Uploads an AliDing online document to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将阿里钉在线文档添加到指定数字员工的&quot;我的资源&quot;中。</description></item>
-        /// <item><description>固定参数包括 <c>source_type=ONLINE_DOC</c>、<c>platform=ALI_DING</c> 和 <c>scope=PERSONAL</c>。</description></item>
-        /// <item><description>如果未提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供了，则需确保该目录属于当前用户且在当前数字员工下存在。</description></item>
-        /// <item><description>调用过程中会启动计量并记录相关操作日志。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>和<c>user_id</c>仅从鉴权身份获取，调用方提供的这些字段值将被忽略。</description></item>
-        /// <item><description>任何校验或执行失败都会通过服务抛出异常，并转换为POP错误码返回给调用者。</description></item>
+        /// <item><description>This API is used to add an AliDing online document to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>Fixed parameters include <c>source_type=ONLINE_DOC</c>, <c>platform=ALI_DING</c>, and <c>scope=PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the document is attached to the root folder of the current digital employee by default. If provided, ensure that the folder belongs to the current user and exists under the current digital employee.</description></item>
+        /// <item><description>During the invoke process, metering is started and related operation logs are recorded.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authentication identity. Values provided by the caller for these fields are ignored.</description></item>
+        /// <item><description>Any validation or execute failure is thrown as an exception by the service and transformed into a POP error code returned to the caller.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2023,19 +2563,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉在线文档上传至当前数字员工的个人资源中。</para>
+        /// <para>Uploads an AliDing online document to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将阿里钉在线文档添加到指定数字员工的&quot;我的资源&quot;中。</description></item>
-        /// <item><description>固定参数包括 <c>source_type=ONLINE_DOC</c>、<c>platform=ALI_DING</c> 和 <c>scope=PERSONAL</c>。</description></item>
-        /// <item><description>如果未提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供了，则需确保该目录属于当前用户且在当前数字员工下存在。</description></item>
-        /// <item><description>调用过程中会启动计量并记录相关操作日志。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>和<c>user_id</c>仅从鉴权身份获取，调用方提供的这些字段值将被忽略。</description></item>
-        /// <item><description>任何校验或执行失败都会通过服务抛出异常，并转换为POP错误码返回给调用者。</description></item>
+        /// <item><description>This API is used to add an AliDing online document to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>Fixed parameters include <c>source_type=ONLINE_DOC</c>, <c>platform=ALI_DING</c>, and <c>scope=PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the document is attached to the root folder of the current digital employee by default. If provided, ensure that the folder belongs to the current user and exists under the current digital employee.</description></item>
+        /// <item><description>During the invoke process, metering is started and related operation logs are recorded.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authentication identity. Values provided by the caller for these fields are ignored.</description></item>
+        /// <item><description>Any validation or execute failure is thrown as an exception by the service and transformed into a POP error code returned to the caller.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2104,19 +2644,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉在线文档上传至当前数字员工的个人资源中。</para>
+        /// <para>Uploads an AliDing online document to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将阿里钉在线文档添加到指定数字员工的&quot;我的资源&quot;中。</description></item>
-        /// <item><description>固定参数包括 <c>source_type=ONLINE_DOC</c>、<c>platform=ALI_DING</c> 和 <c>scope=PERSONAL</c>。</description></item>
-        /// <item><description>如果未提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供了，则需确保该目录属于当前用户且在当前数字员工下存在。</description></item>
-        /// <item><description>调用过程中会启动计量并记录相关操作日志。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>和<c>user_id</c>仅从鉴权身份获取，调用方提供的这些字段值将被忽略。</description></item>
-        /// <item><description>任何校验或执行失败都会通过服务抛出异常，并转换为POP错误码返回给调用者。</description></item>
+        /// <item><description>This API is used to add an AliDing online document to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>Fixed parameters include <c>source_type=ONLINE_DOC</c>, <c>platform=ALI_DING</c>, and <c>scope=PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the document is attached to the root folder of the current digital employee by default. If provided, ensure that the folder belongs to the current user and exists under the current digital employee.</description></item>
+        /// <item><description>During the invoke process, metering is started and related operation logs are recorded.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authentication identity. Values provided by the caller for these fields are ignored.</description></item>
+        /// <item><description>Any validation or execute failure is thrown as an exception by the service and transformed into a POP error code returned to the caller.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2136,19 +2676,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉在线文档上传至当前数字员工的个人资源中。</para>
+        /// <para>Uploads an AliDing online document to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将阿里钉在线文档添加到指定数字员工的&quot;我的资源&quot;中。</description></item>
-        /// <item><description>固定参数包括 <c>source_type=ONLINE_DOC</c>、<c>platform=ALI_DING</c> 和 <c>scope=PERSONAL</c>。</description></item>
-        /// <item><description>如果未提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供了，则需确保该目录属于当前用户且在当前数字员工下存在。</description></item>
-        /// <item><description>调用过程中会启动计量并记录相关操作日志。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>和<c>user_id</c>仅从鉴权身份获取，调用方提供的这些字段值将被忽略。</description></item>
-        /// <item><description>任何校验或执行失败都会通过服务抛出异常，并转换为POP错误码返回给调用者。</description></item>
+        /// <item><description>This API is used to add an AliDing online document to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description>Fixed parameters include <c>source_type=ONLINE_DOC</c>, <c>platform=ALI_DING</c>, and <c>scope=PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the document is attached to the root folder of the current digital employee by default. If provided, ensure that the folder belongs to the current user and exists under the current digital employee.</description></item>
+        /// <item><description>During the invoke process, metering is started and related operation logs are recorded.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authentication identity. Values provided by the caller for these fields are ignored.</description></item>
+        /// <item><description>Any validation or execute failure is thrown as an exception by the service and transformed into a POP error code returned to the caller.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2168,21 +2708,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉整体知识库添加到当前数字员工的个人资源中。</para>
+        /// <para>Adds an AliDing knowledge base to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于创建一个阿里钉知识库，并将其挂载到指定数字员工的个人资源目录下。</description></item>
-        /// <item><description><c>platform</c>固定为<c>ALI_DING</c>，<c>directory_type</c>固定为<c>PERSONAL</c>。</description></item>
-        /// <item><description>如果提供了<c>directoryId</c>，则会验证该目录是否存在且属于当前租户和个人类型。</description></item>
-        /// <item><description>创建过程中会初始化知识库根目录（状态设置为<c>RUNNING</c>），并根据提供的同步配置派发后台任务以拉取远程目录树和创建子节点。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>与<c>user_id</c>仅从鉴权身份获取，请求体中的这些字段会被忽略。</description></item>
-        /// <item><description>同步配置可选，若启用需提供cron表达式；未传或禁用时，默认不进行定时同步。</description></item>
-        /// <item><description>知识库名称可以自定义，如果不提供，则会在后台同步后自动填充。</description></item>
-        /// <item><description>支持多值对象绑定，相关信息将被序列化并存储于知识库元数据中。</description></item>
+        /// <item><description>This API creates an AliDing knowledge base and mounts it to the personal resource directory of the specified digital employee.</description></item>
+        /// <item><description><c>platform</c> is fixed to <c>ALI_DING</c>, and <c>directory_type</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is provided, the system verifies that the directory exists and belongs to the current tenant and is of the personal type.</description></item>
+        /// <item><description>During creation, the knowledge base root directory is initialized (with the status set to <c>RUNNING</c>), and background tasks are dispatched based on the provided synchronization configuration to pull the remote directory tree and create child nodes.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields in the request body are ignored.</description></item>
+        /// <item><description>The synchronization configuration is optional. If enabled, a cron expression must be provided. If not provided or disabled, scheduled synchronization is not performed by default.</description></item>
+        /// <item><description>The knowledge base name can be customized. If not provided, it is automatically populated after background synchronization.</description></item>
+        /// <item><description>Multi-value object binding is supported. Related information is serialized and stored in the knowledge base metadata.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2265,21 +2805,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉整体知识库添加到当前数字员工的个人资源中。</para>
+        /// <para>Adds an AliDing knowledge base to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于创建一个阿里钉知识库，并将其挂载到指定数字员工的个人资源目录下。</description></item>
-        /// <item><description><c>platform</c>固定为<c>ALI_DING</c>，<c>directory_type</c>固定为<c>PERSONAL</c>。</description></item>
-        /// <item><description>如果提供了<c>directoryId</c>，则会验证该目录是否存在且属于当前租户和个人类型。</description></item>
-        /// <item><description>创建过程中会初始化知识库根目录（状态设置为<c>RUNNING</c>），并根据提供的同步配置派发后台任务以拉取远程目录树和创建子节点。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>与<c>user_id</c>仅从鉴权身份获取，请求体中的这些字段会被忽略。</description></item>
-        /// <item><description>同步配置可选，若启用需提供cron表达式；未传或禁用时，默认不进行定时同步。</description></item>
-        /// <item><description>知识库名称可以自定义，如果不提供，则会在后台同步后自动填充。</description></item>
-        /// <item><description>支持多值对象绑定，相关信息将被序列化并存储于知识库元数据中。</description></item>
+        /// <item><description>This API creates an AliDing knowledge base and mounts it to the personal resource directory of the specified digital employee.</description></item>
+        /// <item><description><c>platform</c> is fixed to <c>ALI_DING</c>, and <c>directory_type</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is provided, the system verifies that the directory exists and belongs to the current tenant and is of the personal type.</description></item>
+        /// <item><description>During creation, the knowledge base root directory is initialized (with the status set to <c>RUNNING</c>), and background tasks are dispatched based on the provided synchronization configuration to pull the remote directory tree and create child nodes.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields in the request body are ignored.</description></item>
+        /// <item><description>The synchronization configuration is optional. If enabled, a cron expression must be provided. If not provided or disabled, scheduled synchronization is not performed by default.</description></item>
+        /// <item><description>The knowledge base name can be customized. If not provided, it is automatically populated after background synchronization.</description></item>
+        /// <item><description>Multi-value object binding is supported. Related information is serialized and stored in the knowledge base metadata.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2362,21 +2902,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉整体知识库添加到当前数字员工的个人资源中。</para>
+        /// <para>Adds an AliDing knowledge base to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于创建一个阿里钉知识库，并将其挂载到指定数字员工的个人资源目录下。</description></item>
-        /// <item><description><c>platform</c>固定为<c>ALI_DING</c>，<c>directory_type</c>固定为<c>PERSONAL</c>。</description></item>
-        /// <item><description>如果提供了<c>directoryId</c>，则会验证该目录是否存在且属于当前租户和个人类型。</description></item>
-        /// <item><description>创建过程中会初始化知识库根目录（状态设置为<c>RUNNING</c>），并根据提供的同步配置派发后台任务以拉取远程目录树和创建子节点。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>与<c>user_id</c>仅从鉴权身份获取，请求体中的这些字段会被忽略。</description></item>
-        /// <item><description>同步配置可选，若启用需提供cron表达式；未传或禁用时，默认不进行定时同步。</description></item>
-        /// <item><description>知识库名称可以自定义，如果不提供，则会在后台同步后自动填充。</description></item>
-        /// <item><description>支持多值对象绑定，相关信息将被序列化并存储于知识库元数据中。</description></item>
+        /// <item><description>This API creates an AliDing knowledge base and mounts it to the personal resource directory of the specified digital employee.</description></item>
+        /// <item><description><c>platform</c> is fixed to <c>ALI_DING</c>, and <c>directory_type</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is provided, the system verifies that the directory exists and belongs to the current tenant and is of the personal type.</description></item>
+        /// <item><description>During creation, the knowledge base root directory is initialized (with the status set to <c>RUNNING</c>), and background tasks are dispatched based on the provided synchronization configuration to pull the remote directory tree and create child nodes.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields in the request body are ignored.</description></item>
+        /// <item><description>The synchronization configuration is optional. If enabled, a cron expression must be provided. If not provided or disabled, scheduled synchronization is not performed by default.</description></item>
+        /// <item><description>The knowledge base name can be customized. If not provided, it is automatically populated after background synchronization.</description></item>
+        /// <item><description>Multi-value object binding is supported. Related information is serialized and stored in the knowledge base metadata.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2396,21 +2936,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将阿里钉整体知识库添加到当前数字员工的个人资源中。</para>
+        /// <para>Adds an AliDing knowledge base to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于创建一个阿里钉知识库，并将其挂载到指定数字员工的个人资源目录下。</description></item>
-        /// <item><description><c>platform</c>固定为<c>ALI_DING</c>，<c>directory_type</c>固定为<c>PERSONAL</c>。</description></item>
-        /// <item><description>如果提供了<c>directoryId</c>，则会验证该目录是否存在且属于当前租户和个人类型。</description></item>
-        /// <item><description>创建过程中会初始化知识库根目录（状态设置为<c>RUNNING</c>），并根据提供的同步配置派发后台任务以拉取远程目录树和创建子节点。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>与<c>user_id</c>仅从鉴权身份获取，请求体中的这些字段会被忽略。</description></item>
-        /// <item><description>同步配置可选，若启用需提供cron表达式；未传或禁用时，默认不进行定时同步。</description></item>
-        /// <item><description>知识库名称可以自定义，如果不提供，则会在后台同步后自动填充。</description></item>
-        /// <item><description>支持多值对象绑定，相关信息将被序列化并存储于知识库元数据中。</description></item>
+        /// <item><description>This API creates an AliDing knowledge base and mounts it to the personal resource directory of the specified digital employee.</description></item>
+        /// <item><description><c>platform</c> is fixed to <c>ALI_DING</c>, and <c>directory_type</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is provided, the system verifies that the directory exists and belongs to the current tenant and is of the personal type.</description></item>
+        /// <item><description>During creation, the knowledge base root directory is initialized (with the status set to <c>RUNNING</c>), and background tasks are dispatched based on the provided synchronization configuration to pull the remote directory tree and create child nodes.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields in the request body are ignored.</description></item>
+        /// <item><description>The synchronization configuration is optional. If enabled, a cron expression must be provided. If not provided or disabled, scheduled synchronization is not performed by default.</description></item>
+        /// <item><description>The knowledge base name can be customized. If not provided, it is automatically populated after background synchronization.</description></item>
+        /// <item><description>Multi-value object binding is supported. Related information is serialized and stored in the knowledge base metadata.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2428,20 +2968,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return await CreatePersonalAlidingKnowledgeBaseWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreatePersonalDingtalkMeeting is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将钉钉会议上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a DingTalk meeting to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将钉钉会议作为资源上传到指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>DINGTALK_MEETING</c>，<c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>如果不提供 <c>credentialId</c>，则使用系统默认配置。</description></item>
-        /// <item><description>当未指定 <c>directoryId</c> 时，资源将自动绑定到当前数字员工的默认根目录下；若指定，则必须是调用者在该数字员工下的已有个人目录。</description></item>
-        /// <item><description>可选参数 <c>description</c> 和 <c>notes</c> 分别用于描述资源和记录会议笔记，其中 <c>notes</c> 会参与辅助分析。</description></item>
+        /// <item><description>This operation uploads a DingTalk meeting as a resource to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>DINGTALK_MEETING</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>credentialId</c> is not provided, the system default configurations are used.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the resource is automatically attached to the default root folder of the current digital employee. If specified, it must be an existing personal folder of the invoker under the digital employee.</description></item>
+        /// <item><description>The optional parameters <c>description</c> and <c>notes</c> are used to describe the resource and record meeting notes, respectively. The <c>notes</c> value is used for auxiliary analysis.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2458,6 +3002,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// CreatePersonalDingtalkMeetingResponse
         /// </returns>
+        [Obsolete("OpenAPI CreatePersonalDingtalkMeeting is deprecated")]
+        // Deprecated
         public CreatePersonalDingtalkMeetingResponse CreatePersonalDingtalkMeetingWithOptions(CreatePersonalDingtalkMeetingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2516,20 +3062,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return TeaModel.ToObject<CreatePersonalDingtalkMeetingResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreatePersonalDingtalkMeeting is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将钉钉会议上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a DingTalk meeting to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将钉钉会议作为资源上传到指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>DINGTALK_MEETING</c>，<c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>如果不提供 <c>credentialId</c>，则使用系统默认配置。</description></item>
-        /// <item><description>当未指定 <c>directoryId</c> 时，资源将自动绑定到当前数字员工的默认根目录下；若指定，则必须是调用者在该数字员工下的已有个人目录。</description></item>
-        /// <item><description>可选参数 <c>description</c> 和 <c>notes</c> 分别用于描述资源和记录会议笔记，其中 <c>notes</c> 会参与辅助分析。</description></item>
+        /// <item><description>This operation uploads a DingTalk meeting as a resource to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>DINGTALK_MEETING</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>credentialId</c> is not provided, the system default configurations are used.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the resource is automatically attached to the default root folder of the current digital employee. If specified, it must be an existing personal folder of the invoker under the digital employee.</description></item>
+        /// <item><description>The optional parameters <c>description</c> and <c>notes</c> are used to describe the resource and record meeting notes, respectively. The <c>notes</c> value is used for auxiliary analysis.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2546,6 +3096,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// CreatePersonalDingtalkMeetingResponse
         /// </returns>
+        [Obsolete("OpenAPI CreatePersonalDingtalkMeeting is deprecated")]
+        // Deprecated
         public async Task<CreatePersonalDingtalkMeetingResponse> CreatePersonalDingtalkMeetingWithOptionsAsync(CreatePersonalDingtalkMeetingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
@@ -2604,20 +3156,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return TeaModel.ToObject<CreatePersonalDingtalkMeetingResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreatePersonalDingtalkMeeting is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将钉钉会议上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a DingTalk meeting to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将钉钉会议作为资源上传到指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>DINGTALK_MEETING</c>，<c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>如果不提供 <c>credentialId</c>，则使用系统默认配置。</description></item>
-        /// <item><description>当未指定 <c>directoryId</c> 时，资源将自动绑定到当前数字员工的默认根目录下；若指定，则必须是调用者在该数字员工下的已有个人目录。</description></item>
-        /// <item><description>可选参数 <c>description</c> 和 <c>notes</c> 分别用于描述资源和记录会议笔记，其中 <c>notes</c> 会参与辅助分析。</description></item>
+        /// <item><description>This operation uploads a DingTalk meeting as a resource to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>DINGTALK_MEETING</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>credentialId</c> is not provided, the system default configurations are used.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the resource is automatically attached to the default root folder of the current digital employee. If specified, it must be an existing personal folder of the invoker under the digital employee.</description></item>
+        /// <item><description>The optional parameters <c>description</c> and <c>notes</c> are used to describe the resource and record meeting notes, respectively. The <c>notes</c> value is used for auxiliary analysis.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2628,6 +3184,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// CreatePersonalDingtalkMeetingResponse
         /// </returns>
+        [Obsolete("OpenAPI CreatePersonalDingtalkMeeting is deprecated")]
+        // Deprecated
         public CreatePersonalDingtalkMeetingResponse CreatePersonalDingtalkMeeting(CreatePersonalDingtalkMeetingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2635,20 +3193,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return CreatePersonalDingtalkMeetingWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI CreatePersonalDingtalkMeeting is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将钉钉会议上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a DingTalk meeting to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于将钉钉会议作为资源上传到指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>DINGTALK_MEETING</c>，<c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>如果不提供 <c>credentialId</c>，则使用系统默认配置。</description></item>
-        /// <item><description>当未指定 <c>directoryId</c> 时，资源将自动绑定到当前数字员工的默认根目录下；若指定，则必须是调用者在该数字员工下的已有个人目录。</description></item>
-        /// <item><description>可选参数 <c>description</c> 和 <c>notes</c> 分别用于描述资源和记录会议笔记，其中 <c>notes</c> 会参与辅助分析。</description></item>
+        /// <item><description>This operation uploads a DingTalk meeting as a resource to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>DINGTALK_MEETING</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>credentialId</c> is not provided, the system default configurations are used.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the resource is automatically attached to the default root folder of the current digital employee. If specified, it must be an existing personal folder of the invoker under the digital employee.</description></item>
+        /// <item><description>The optional parameters <c>description</c> and <c>notes</c> are used to describe the resource and record meeting notes, respectively. The <c>notes</c> value is used for auxiliary analysis.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2659,6 +3221,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// CreatePersonalDingtalkMeetingResponse
         /// </returns>
+        [Obsolete("OpenAPI CreatePersonalDingtalkMeeting is deprecated")]
+        // Deprecated
         public async Task<CreatePersonalDingtalkMeetingResponse> CreatePersonalDingtalkMeetingAsync(CreatePersonalDingtalkMeetingRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -2668,17 +3232,251 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在我的资源下创建个人目录（分类）</para>
+        /// <para>Uploads a meeting to the current user\&quot;s personal knowledge base by using a standard DingTalk Shanji URL.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于在“我的资源”下创建个人目录（分类）。</description></item>
-        /// <item><description>若未传 <c>parentDirectoryId</c>，系统将自动使用或创建当前数字员工的默认根目录作为父目录。</description></item>
-        /// <item><description>若传入 <c>parentDirectoryId</c>，则必须是当前用户在当前数字员工下的已有个人目录。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份，调用方在请求体中传入这些字段会被忽略。</description></item>
+        /// <item><description>This API creates a meeting resource by using a standard DingTalk Shanji link. The collection method is fixed to the DWS corresponding to personal OAuth.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>DINGTALK_MEETING</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>You must provide a standard DingTalk Shanji link or taskUuid (<c>shanjiUrl</c>).</description></item>
+        /// <item><description>Optionally specify a target personal directory ID (<c>directoryId</c>). If not specified, the default root directory of the current digital employee is used.</description></item>
+        /// <item><description>You can add a resource description (<c>description</c>) and meeting notes (<c>notes</c>).</description></item>
+        /// <item><description>This operation supports one of the following authentication methods: AK, BearerToken, or APP.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalDingtalkMinutesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalDingtalkMinutesResponse
+        /// </returns>
+        public CreatePersonalDingtalkMinutesResponse CreatePersonalDingtalkMinutesWithOptions(CreatePersonalDingtalkMinutesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShanjiUrl))
+            {
+                body["shanjiUrl"] = request.ShanjiUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalDingtalkMinutes",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalDingtalkMinutes",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalDingtalkMinutesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a meeting to the current user\&quot;s personal knowledge base by using a standard DingTalk Shanji URL.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API creates a meeting resource by using a standard DingTalk Shanji link. The collection method is fixed to the DWS corresponding to personal OAuth.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>DINGTALK_MEETING</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>You must provide a standard DingTalk Shanji link or taskUuid (<c>shanjiUrl</c>).</description></item>
+        /// <item><description>Optionally specify a target personal directory ID (<c>directoryId</c>). If not specified, the default root directory of the current digital employee is used.</description></item>
+        /// <item><description>You can add a resource description (<c>description</c>) and meeting notes (<c>notes</c>).</description></item>
+        /// <item><description>This operation supports one of the following authentication methods: AK, BearerToken, or APP.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalDingtalkMinutesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalDingtalkMinutesResponse
+        /// </returns>
+        public async Task<CreatePersonalDingtalkMinutesResponse> CreatePersonalDingtalkMinutesWithOptionsAsync(CreatePersonalDingtalkMinutesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShanjiUrl))
+            {
+                body["shanjiUrl"] = request.ShanjiUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalDingtalkMinutes",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalDingtalkMinutes",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalDingtalkMinutesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a meeting to the current user\&quot;s personal knowledge base by using a standard DingTalk Shanji URL.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API creates a meeting resource by using a standard DingTalk Shanji link. The collection method is fixed to the DWS corresponding to personal OAuth.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>DINGTALK_MEETING</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>You must provide a standard DingTalk Shanji link or taskUuid (<c>shanjiUrl</c>).</description></item>
+        /// <item><description>Optionally specify a target personal directory ID (<c>directoryId</c>). If not specified, the default root directory of the current digital employee is used.</description></item>
+        /// <item><description>You can add a resource description (<c>description</c>) and meeting notes (<c>notes</c>).</description></item>
+        /// <item><description>This operation supports one of the following authentication methods: AK, BearerToken, or APP.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalDingtalkMinutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalDingtalkMinutesResponse
+        /// </returns>
+        public CreatePersonalDingtalkMinutesResponse CreatePersonalDingtalkMinutes(CreatePersonalDingtalkMinutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreatePersonalDingtalkMinutesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a meeting to the current user\&quot;s personal knowledge base by using a standard DingTalk Shanji URL.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API creates a meeting resource by using a standard DingTalk Shanji link. The collection method is fixed to the DWS corresponding to personal OAuth.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>DINGTALK_MEETING</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>You must provide a standard DingTalk Shanji link or taskUuid (<c>shanjiUrl</c>).</description></item>
+        /// <item><description>Optionally specify a target personal directory ID (<c>directoryId</c>). If not specified, the default root directory of the current digital employee is used.</description></item>
+        /// <item><description>You can add a resource description (<c>description</c>) and meeting notes (<c>notes</c>).</description></item>
+        /// <item><description>This operation supports one of the following authentication methods: AK, BearerToken, or APP.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalDingtalkMinutesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalDingtalkMinutesResponse
+        /// </returns>
+        public async Task<CreatePersonalDingtalkMinutesResponse> CreatePersonalDingtalkMinutesAsync(CreatePersonalDingtalkMinutesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreatePersonalDingtalkMinutesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal folder (category) under My Resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API is used to create a personal folder (category) under &quot;My Resources&quot;.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital human as the parent folder.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital human.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authentication identity only. These fields are ignored if included in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2743,17 +3541,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在我的资源下创建个人目录（分类）</para>
+        /// <para>Creates a personal folder (category) under My Resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于在“我的资源”下创建个人目录（分类）。</description></item>
-        /// <item><description>若未传 <c>parentDirectoryId</c>，系统将自动使用或创建当前数字员工的默认根目录作为父目录。</description></item>
-        /// <item><description>若传入 <c>parentDirectoryId</c>，则必须是当前用户在当前数字员工下的已有个人目录。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份，调用方在请求体中传入这些字段会被忽略。</description></item>
+        /// <item><description>This API is used to create a personal folder (category) under &quot;My Resources&quot;.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital human as the parent folder.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital human.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authentication identity only. These fields are ignored if included in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2818,17 +3616,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在我的资源下创建个人目录（分类）</para>
+        /// <para>Creates a personal folder (category) under My Resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于在“我的资源”下创建个人目录（分类）。</description></item>
-        /// <item><description>若未传 <c>parentDirectoryId</c>，系统将自动使用或创建当前数字员工的默认根目录作为父目录。</description></item>
-        /// <item><description>若传入 <c>parentDirectoryId</c>，则必须是当前用户在当前数字员工下的已有个人目录。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份，调用方在请求体中传入这些字段会被忽略。</description></item>
+        /// <item><description>This API is used to create a personal folder (category) under &quot;My Resources&quot;.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital human as the parent folder.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital human.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authentication identity only. These fields are ignored if included in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2848,17 +3646,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在我的资源下创建个人目录（分类）</para>
+        /// <para>Creates a personal folder (category) under My Resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于在“我的资源”下创建个人目录（分类）。</description></item>
-        /// <item><description>若未传 <c>parentDirectoryId</c>，系统将自动使用或创建当前数字员工的默认根目录作为父目录。</description></item>
-        /// <item><description>若传入 <c>parentDirectoryId</c>，则必须是当前用户在当前数字员工下的已有个人目录。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份，调用方在请求体中传入这些字段会被忽略。</description></item>
+        /// <item><description>This API is used to create a personal folder (category) under &quot;My Resources&quot;.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is not specified, the system automatically uses or creates the default root folder of the current digital human as the parent folder.</description></item>
+        /// <item><description>If <c>parentDirectoryId</c> is specified, it must be an existing personal folder of the current user under the current digital human.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived from the authentication identity only. These fields are ignored if included in the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2878,23 +3676,289 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将飞书妙记会议文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Creates a personal knowledge resource from a single Lark group chat using the current user\&quot;s Lark authorization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于将飞书妙记中的会议记录上传至指定数字员工的&quot;我的资源&quot;中。通过提供必要的参数，如飞书妙记的唯一标识符（<c>minuteToken</c>）和凭证 ID（<c>credentialId</c>），可以实现会议内容的迁移与保存。若未指定目标目录，则默认绑定到当前数字员工下的根目录。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API uses the Lark application connection managed by the user corresponding to the current OpenAPI identity. It pulls the name and historical messages of the specified group chat through the built-in CLI of the project and creates a knowledge resource in the user\&quot;s personal knowledge base.</para>
         /// <list type="bullet">
-        /// <item><description><c>operatingObjectName</c>：执行操作的数字员工名称。</description></item>
-        /// <item><description><c>name</c>：上传后资源在系统内的显示名称。</description></item>
-        /// <item><description><c>minuteToken</c>：来自飞书妙记平台的会议唯一标识符。</description></item>
-        /// <item><description><c>credentialId</c>：关联到特定认证信息的ID，用于验证请求合法性。</description></item>
-        /// <item><description><c>directoryId</c>（可选）：指定要存放资源的目标个人目录ID；如果省略此字段，则资源将被自动放置于默认位置。</description></item>
-        /// <item><description><c>description</c>（可选）：对所上传资源的简短描述或备注。
-        /// 注意事项：</description></item>
-        /// <item><description>确保提供的 <c>minuteToken</c> 和 <c>credentialId</c> 的有效性。</description></item>
-        /// <item><description>当指定了 <c>directoryId</c> 时，请确认其属于调用者在当前数字员工环境下的可用个人目录之一。</description></item>
+        /// <item><description><c>chatId</c>: The Lark group chat ID. Must start with <c>oc_</c>.</description></item>
+        /// <item><description><c>directoryId</c> (optional): The target personal directory ID. If omitted, the current user\&quot;s default personal root directory is used.</description></item>
+        /// <item><description><c>historyStartTime</c> (optional): The start time for historical messages. Supports <c>YYYY-MM-DD</c> or <c>YYYY-MM-DD HH:MM:SS</c>.</description></item>
+        /// <item><description><c>updateFrequency</c> (optional): The Source-level scheduled synchronization configuration. Supports preset frequencies or five-field cron expressions.</description></item>
+        /// <item><description><c>description</c>, <c>operatingObjectName</c>, <c>notes</c>, <c>sourceTags</c>: Optional Source metadata.
+        /// Security constraints: The Source Type is fixed to FEISHU, and the knowledge scope is fixed to PERSONAL. The Lark connector user is determined by the POP trusted identity. Credentials or user IDs passed by the caller are not accepted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePersonalFeishuChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalFeishuChatResponse
+        /// </returns>
+        public CreatePersonalFeishuChatResponse CreatePersonalFeishuChatWithOptions(CreatePersonalFeishuChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePersonalFeishuChatShrinkRequest request = new CreatePersonalFeishuChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalFeishuChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalFeishuChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalFeishuChatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal knowledge resource from a single Lark group chat using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API uses the Lark application connection managed by the user corresponding to the current OpenAPI identity. It pulls the name and historical messages of the specified group chat through the built-in CLI of the project and creates a knowledge resource in the user\&quot;s personal knowledge base.</para>
+        /// <list type="bullet">
+        /// <item><description><c>chatId</c>: The Lark group chat ID. Must start with <c>oc_</c>.</description></item>
+        /// <item><description><c>directoryId</c> (optional): The target personal directory ID. If omitted, the current user\&quot;s default personal root directory is used.</description></item>
+        /// <item><description><c>historyStartTime</c> (optional): The start time for historical messages. Supports <c>YYYY-MM-DD</c> or <c>YYYY-MM-DD HH:MM:SS</c>.</description></item>
+        /// <item><description><c>updateFrequency</c> (optional): The Source-level scheduled synchronization configuration. Supports preset frequencies or five-field cron expressions.</description></item>
+        /// <item><description><c>description</c>, <c>operatingObjectName</c>, <c>notes</c>, <c>sourceTags</c>: Optional Source metadata.
+        /// Security constraints: The Source Type is fixed to FEISHU, and the knowledge scope is fixed to PERSONAL. The Lark connector user is determined by the POP trusted identity. Credentials or user IDs passed by the caller are not accepted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePersonalFeishuChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalFeishuChatResponse
+        /// </returns>
+        public async Task<CreatePersonalFeishuChatResponse> CreatePersonalFeishuChatWithOptionsAsync(CreatePersonalFeishuChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePersonalFeishuChatShrinkRequest request = new CreatePersonalFeishuChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalFeishuChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalFeishuChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalFeishuChatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal knowledge resource from a single Lark group chat using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API uses the Lark application connection managed by the user corresponding to the current OpenAPI identity. It pulls the name and historical messages of the specified group chat through the built-in CLI of the project and creates a knowledge resource in the user\&quot;s personal knowledge base.</para>
+        /// <list type="bullet">
+        /// <item><description><c>chatId</c>: The Lark group chat ID. Must start with <c>oc_</c>.</description></item>
+        /// <item><description><c>directoryId</c> (optional): The target personal directory ID. If omitted, the current user\&quot;s default personal root directory is used.</description></item>
+        /// <item><description><c>historyStartTime</c> (optional): The start time for historical messages. Supports <c>YYYY-MM-DD</c> or <c>YYYY-MM-DD HH:MM:SS</c>.</description></item>
+        /// <item><description><c>updateFrequency</c> (optional): The Source-level scheduled synchronization configuration. Supports preset frequencies or five-field cron expressions.</description></item>
+        /// <item><description><c>description</c>, <c>operatingObjectName</c>, <c>notes</c>, <c>sourceTags</c>: Optional Source metadata.
+        /// Security constraints: The Source Type is fixed to FEISHU, and the knowledge scope is fixed to PERSONAL. The Lark connector user is determined by the POP trusted identity. Credentials or user IDs passed by the caller are not accepted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalFeishuChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalFeishuChatResponse
+        /// </returns>
+        public CreatePersonalFeishuChatResponse CreatePersonalFeishuChat(CreatePersonalFeishuChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreatePersonalFeishuChatWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal knowledge resource from a single Lark group chat using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API uses the Lark application connection managed by the user corresponding to the current OpenAPI identity. It pulls the name and historical messages of the specified group chat through the built-in CLI of the project and creates a knowledge resource in the user\&quot;s personal knowledge base.</para>
+        /// <list type="bullet">
+        /// <item><description><c>chatId</c>: The Lark group chat ID. Must start with <c>oc_</c>.</description></item>
+        /// <item><description><c>directoryId</c> (optional): The target personal directory ID. If omitted, the current user\&quot;s default personal root directory is used.</description></item>
+        /// <item><description><c>historyStartTime</c> (optional): The start time for historical messages. Supports <c>YYYY-MM-DD</c> or <c>YYYY-MM-DD HH:MM:SS</c>.</description></item>
+        /// <item><description><c>updateFrequency</c> (optional): The Source-level scheduled synchronization configuration. Supports preset frequencies or five-field cron expressions.</description></item>
+        /// <item><description><c>description</c>, <c>operatingObjectName</c>, <c>notes</c>, <c>sourceTags</c>: Optional Source metadata.
+        /// Security constraints: The Source Type is fixed to FEISHU, and the knowledge scope is fixed to PERSONAL. The Lark connector user is determined by the POP trusted identity. Credentials or user IDs passed by the caller are not accepted.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalFeishuChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalFeishuChatResponse
+        /// </returns>
+        public async Task<CreatePersonalFeishuChatResponse> CreatePersonalFeishuChatAsync(CreatePersonalFeishuChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreatePersonalFeishuChatWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a Lark Minutes meeting file to the personal resource library of the current digital employee.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API uploads a meeting record from Lark Minutes to the &quot;My Resources&quot; section of a specified digital employee. By providing the required parameters, such as the unique identifier of the Lark Minutes record (<c>minuteToken</c>) and the credential ID (<c>credentialId</c>), you can migrate and save meeting content. If no target directory is specified, the resource is bound to the root directory of the current digital employee by default.</para>
+        /// <list type="bullet">
+        /// <item><description><c>operatingObjectName</c>: The name of the digital employee that performs the operation.</description></item>
+        /// <item><description><c>name</c>: The display name of the uploaded resource in the system.</description></item>
+        /// <item><description><c>minuteToken</c>: The unique identifier of the meeting from the Lark Minutes platform.</description></item>
+        /// <item><description><c>credentialId</c>: The ID associated with specific authentication information, used to verify the validity of the request.</description></item>
+        /// <item><description><c>directoryId</c> (optional): The ID of the target personal directory where the resource is stored. If this field is omitted, the resource is automatically placed in the default location.</description></item>
+        /// <item><description><c>description</c> (optional): A brief description or note about the uploaded resource.
+        /// Precautions:</description></item>
+        /// <item><description>Ensure that the provided <c>minuteToken</c> and <c>credentialId</c> are valid.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, confirm that it belongs to one of the available personal directories of the caller in the current digital employee environment.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2967,23 +4031,23 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将飞书妙记会议文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a Lark Minutes meeting file to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于将飞书妙记中的会议记录上传至指定数字员工的&quot;我的资源&quot;中。通过提供必要的参数，如飞书妙记的唯一标识符（<c>minuteToken</c>）和凭证 ID（<c>credentialId</c>），可以实现会议内容的迁移与保存。若未指定目标目录，则默认绑定到当前数字员工下的根目录。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API uploads a meeting record from Lark Minutes to the &quot;My Resources&quot; section of a specified digital employee. By providing the required parameters, such as the unique identifier of the Lark Minutes record (<c>minuteToken</c>) and the credential ID (<c>credentialId</c>), you can migrate and save meeting content. If no target directory is specified, the resource is bound to the root directory of the current digital employee by default.</para>
         /// <list type="bullet">
-        /// <item><description><c>operatingObjectName</c>：执行操作的数字员工名称。</description></item>
-        /// <item><description><c>name</c>：上传后资源在系统内的显示名称。</description></item>
-        /// <item><description><c>minuteToken</c>：来自飞书妙记平台的会议唯一标识符。</description></item>
-        /// <item><description><c>credentialId</c>：关联到特定认证信息的ID，用于验证请求合法性。</description></item>
-        /// <item><description><c>directoryId</c>（可选）：指定要存放资源的目标个人目录ID；如果省略此字段，则资源将被自动放置于默认位置。</description></item>
-        /// <item><description><c>description</c>（可选）：对所上传资源的简短描述或备注。
-        /// 注意事项：</description></item>
-        /// <item><description>确保提供的 <c>minuteToken</c> 和 <c>credentialId</c> 的有效性。</description></item>
-        /// <item><description>当指定了 <c>directoryId</c> 时，请确认其属于调用者在当前数字员工环境下的可用个人目录之一。</description></item>
+        /// <item><description><c>operatingObjectName</c>: The name of the digital employee that performs the operation.</description></item>
+        /// <item><description><c>name</c>: The display name of the uploaded resource in the system.</description></item>
+        /// <item><description><c>minuteToken</c>: The unique identifier of the meeting from the Lark Minutes platform.</description></item>
+        /// <item><description><c>credentialId</c>: The ID associated with specific authentication information, used to verify the validity of the request.</description></item>
+        /// <item><description><c>directoryId</c> (optional): The ID of the target personal directory where the resource is stored. If this field is omitted, the resource is automatically placed in the default location.</description></item>
+        /// <item><description><c>description</c> (optional): A brief description or note about the uploaded resource.
+        /// Precautions:</description></item>
+        /// <item><description>Ensure that the provided <c>minuteToken</c> and <c>credentialId</c> are valid.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, confirm that it belongs to one of the available personal directories of the caller in the current digital employee environment.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3056,23 +4120,23 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将飞书妙记会议文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a Lark Minutes meeting file to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于将飞书妙记中的会议记录上传至指定数字员工的&quot;我的资源&quot;中。通过提供必要的参数，如飞书妙记的唯一标识符（<c>minuteToken</c>）和凭证 ID（<c>credentialId</c>），可以实现会议内容的迁移与保存。若未指定目标目录，则默认绑定到当前数字员工下的根目录。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API uploads a meeting record from Lark Minutes to the &quot;My Resources&quot; section of a specified digital employee. By providing the required parameters, such as the unique identifier of the Lark Minutes record (<c>minuteToken</c>) and the credential ID (<c>credentialId</c>), you can migrate and save meeting content. If no target directory is specified, the resource is bound to the root directory of the current digital employee by default.</para>
         /// <list type="bullet">
-        /// <item><description><c>operatingObjectName</c>：执行操作的数字员工名称。</description></item>
-        /// <item><description><c>name</c>：上传后资源在系统内的显示名称。</description></item>
-        /// <item><description><c>minuteToken</c>：来自飞书妙记平台的会议唯一标识符。</description></item>
-        /// <item><description><c>credentialId</c>：关联到特定认证信息的ID，用于验证请求合法性。</description></item>
-        /// <item><description><c>directoryId</c>（可选）：指定要存放资源的目标个人目录ID；如果省略此字段，则资源将被自动放置于默认位置。</description></item>
-        /// <item><description><c>description</c>（可选）：对所上传资源的简短描述或备注。
-        /// 注意事项：</description></item>
-        /// <item><description>确保提供的 <c>minuteToken</c> 和 <c>credentialId</c> 的有效性。</description></item>
-        /// <item><description>当指定了 <c>directoryId</c> 时，请确认其属于调用者在当前数字员工环境下的可用个人目录之一。</description></item>
+        /// <item><description><c>operatingObjectName</c>: The name of the digital employee that performs the operation.</description></item>
+        /// <item><description><c>name</c>: The display name of the uploaded resource in the system.</description></item>
+        /// <item><description><c>minuteToken</c>: The unique identifier of the meeting from the Lark Minutes platform.</description></item>
+        /// <item><description><c>credentialId</c>: The ID associated with specific authentication information, used to verify the validity of the request.</description></item>
+        /// <item><description><c>directoryId</c> (optional): The ID of the target personal directory where the resource is stored. If this field is omitted, the resource is automatically placed in the default location.</description></item>
+        /// <item><description><c>description</c> (optional): A brief description or note about the uploaded resource.
+        /// Precautions:</description></item>
+        /// <item><description>Ensure that the provided <c>minuteToken</c> and <c>credentialId</c> are valid.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, confirm that it belongs to one of the available personal directories of the caller in the current digital employee environment.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3092,23 +4156,23 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将飞书妙记会议文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a Lark Minutes meeting file to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于将飞书妙记中的会议记录上传至指定数字员工的&quot;我的资源&quot;中。通过提供必要的参数，如飞书妙记的唯一标识符（<c>minuteToken</c>）和凭证 ID（<c>credentialId</c>），可以实现会议内容的迁移与保存。若未指定目标目录，则默认绑定到当前数字员工下的根目录。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API uploads a meeting record from Lark Minutes to the &quot;My Resources&quot; section of a specified digital employee. By providing the required parameters, such as the unique identifier of the Lark Minutes record (<c>minuteToken</c>) and the credential ID (<c>credentialId</c>), you can migrate and save meeting content. If no target directory is specified, the resource is bound to the root directory of the current digital employee by default.</para>
         /// <list type="bullet">
-        /// <item><description><c>operatingObjectName</c>：执行操作的数字员工名称。</description></item>
-        /// <item><description><c>name</c>：上传后资源在系统内的显示名称。</description></item>
-        /// <item><description><c>minuteToken</c>：来自飞书妙记平台的会议唯一标识符。</description></item>
-        /// <item><description><c>credentialId</c>：关联到特定认证信息的ID，用于验证请求合法性。</description></item>
-        /// <item><description><c>directoryId</c>（可选）：指定要存放资源的目标个人目录ID；如果省略此字段，则资源将被自动放置于默认位置。</description></item>
-        /// <item><description><c>description</c>（可选）：对所上传资源的简短描述或备注。
-        /// 注意事项：</description></item>
-        /// <item><description>确保提供的 <c>minuteToken</c> 和 <c>credentialId</c> 的有效性。</description></item>
-        /// <item><description>当指定了 <c>directoryId</c> 时，请确认其属于调用者在当前数字员工环境下的可用个人目录之一。</description></item>
+        /// <item><description><c>operatingObjectName</c>: The name of the digital employee that performs the operation.</description></item>
+        /// <item><description><c>name</c>: The display name of the uploaded resource in the system.</description></item>
+        /// <item><description><c>minuteToken</c>: The unique identifier of the meeting from the Lark Minutes platform.</description></item>
+        /// <item><description><c>credentialId</c>: The ID associated with specific authentication information, used to verify the validity of the request.</description></item>
+        /// <item><description><c>directoryId</c> (optional): The ID of the target personal directory where the resource is stored. If this field is omitted, the resource is automatically placed in the default location.</description></item>
+        /// <item><description><c>description</c> (optional): A brief description or note about the uploaded resource.
+        /// Precautions:</description></item>
+        /// <item><description>Ensure that the provided <c>minuteToken</c> and <c>credentialId</c> are valid.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, confirm that it belongs to one of the available personal directories of the caller in the current digital employee environment.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3128,19 +4192,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a file to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将文件上传到指定数字员工的&quot;我的资源&quot;中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>FILE</c>，<c>scope</c> 固定为 <c>PERSONAL</c>，<c>platform</c> 固定为 <c>LOCAL</c>。</description></item>
-        /// <item><description>文件必须提供OSS持久化地址 (<c>filePath</c>)，其他如公开访问URL、原始文件名等信息可选提供。</description></item>
-        /// <item><description>如果不指定目标目录ID (<c>directoryId</c>)，则文件会被自动绑定到当前数字员工默认根目录下；如果指定，则需确保该目录属于调用者的个人目录。</description></item>
-        /// <item><description>支持通过多种认证方式（AK、BearerToken、APP）进行安全验证。</description></item>
-        /// <item><description>操作类型为写入(<c>write</c>)，并记录操作日志以供后续审计使用。</description></item>
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple authentication methods (AK, BearerToken, and APP) to authenticate requests.</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.
+        /// To invoke this operation, you can use AK, BearerToken, or APP authentication.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3225,19 +4290,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a file to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将文件上传到指定数字员工的&quot;我的资源&quot;中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>FILE</c>，<c>scope</c> 固定为 <c>PERSONAL</c>，<c>platform</c> 固定为 <c>LOCAL</c>。</description></item>
-        /// <item><description>文件必须提供OSS持久化地址 (<c>filePath</c>)，其他如公开访问URL、原始文件名等信息可选提供。</description></item>
-        /// <item><description>如果不指定目标目录ID (<c>directoryId</c>)，则文件会被自动绑定到当前数字员工默认根目录下；如果指定，则需确保该目录属于调用者的个人目录。</description></item>
-        /// <item><description>支持通过多种认证方式（AK、BearerToken、APP）进行安全验证。</description></item>
-        /// <item><description>操作类型为写入(<c>write</c>)，并记录操作日志以供后续审计使用。</description></item>
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple authentication methods (AK, BearerToken, and APP) to authenticate requests.</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.
+        /// To invoke this operation, you can use AK, BearerToken, or APP authentication.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3322,19 +4388,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a file to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将文件上传到指定数字员工的&quot;我的资源&quot;中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>FILE</c>，<c>scope</c> 固定为 <c>PERSONAL</c>，<c>platform</c> 固定为 <c>LOCAL</c>。</description></item>
-        /// <item><description>文件必须提供OSS持久化地址 (<c>filePath</c>)，其他如公开访问URL、原始文件名等信息可选提供。</description></item>
-        /// <item><description>如果不指定目标目录ID (<c>directoryId</c>)，则文件会被自动绑定到当前数字员工默认根目录下；如果指定，则需确保该目录属于调用者的个人目录。</description></item>
-        /// <item><description>支持通过多种认证方式（AK、BearerToken、APP）进行安全验证。</description></item>
-        /// <item><description>操作类型为写入(<c>write</c>)，并记录操作日志以供后续审计使用。</description></item>
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple authentication methods (AK, BearerToken, and APP) to authenticate requests.</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.
+        /// To invoke this operation, you can use AK, BearerToken, or APP authentication.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3354,19 +4421,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将文件上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads a file to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将文件上传到指定数字员工的&quot;我的资源&quot;中。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>FILE</c>，<c>scope</c> 固定为 <c>PERSONAL</c>，<c>platform</c> 固定为 <c>LOCAL</c>。</description></item>
-        /// <item><description>文件必须提供OSS持久化地址 (<c>filePath</c>)，其他如公开访问URL、原始文件名等信息可选提供。</description></item>
-        /// <item><description>如果不指定目标目录ID (<c>directoryId</c>)，则文件会被自动绑定到当前数字员工默认根目录下；如果指定，则需确保该目录属于调用者的个人目录。</description></item>
-        /// <item><description>支持通过多种认证方式（AK、BearerToken、APP）进行安全验证。</description></item>
-        /// <item><description>操作类型为写入(<c>write</c>)，并记录操作日志以供后续审计使用。</description></item>
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the personal folder of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple authentication methods (AK, BearerToken, and APP) to authenticate requests.</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.
+        /// To invoke this operation, you can use AK, BearerToken, or APP authentication.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3386,20 +4454,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将纯文本内容上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads plain text content to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于向指定数字员工的个人资源中添加纯文本内容。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>TEXT</c>，<c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>如果不提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供，则必须是调用者在该数字员工下的已有个人目录。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份信息，通过请求体传递这些参数将被忽略。</description></item>
-        /// <item><description>调用过程中会启动计量并生成相应的<c>billing_id</c>。</description></item>
-        /// <item><description>文本内容将被写入<c>unstructured_docs</c>，并生成初始资源记录。</description></item>
-        /// <item><description>任何校验或执行失败都将抛出<c>RobjectException</c>异常，并由全局中间件转换为POP错误码返回给调用方。</description></item>
+        /// <item><description>This API is used to add plain text content to the personal resources of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>TEXT</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the content is bound to the root directory of the current digital employee by default. If provided, it must be an existing personal directory of the caller under the digital employee.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed in the request body.</description></item>
+        /// <item><description>The call initiates metering and generates a corresponding <c>billing_id</c>.</description></item>
+        /// <item><description>The text content is written to <c>unstructured_docs</c>, and an initial resource record is generated.</description></item>
+        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code by the global middleware and returned to the caller.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3468,20 +4536,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将纯文本内容上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads plain text content to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于向指定数字员工的个人资源中添加纯文本内容。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>TEXT</c>，<c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>如果不提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供，则必须是调用者在该数字员工下的已有个人目录。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份信息，通过请求体传递这些参数将被忽略。</description></item>
-        /// <item><description>调用过程中会启动计量并生成相应的<c>billing_id</c>。</description></item>
-        /// <item><description>文本内容将被写入<c>unstructured_docs</c>，并生成初始资源记录。</description></item>
-        /// <item><description>任何校验或执行失败都将抛出<c>RobjectException</c>异常，并由全局中间件转换为POP错误码返回给调用方。</description></item>
+        /// <item><description>This API is used to add plain text content to the personal resources of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>TEXT</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the content is bound to the root directory of the current digital employee by default. If provided, it must be an existing personal directory of the caller under the digital employee.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed in the request body.</description></item>
+        /// <item><description>The call initiates metering and generates a corresponding <c>billing_id</c>.</description></item>
+        /// <item><description>The text content is written to <c>unstructured_docs</c>, and an initial resource record is generated.</description></item>
+        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code by the global middleware and returned to the caller.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3550,20 +4618,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将纯文本内容上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads plain text content to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于向指定数字员工的个人资源中添加纯文本内容。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>TEXT</c>，<c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>如果不提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供，则必须是调用者在该数字员工下的已有个人目录。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份信息，通过请求体传递这些参数将被忽略。</description></item>
-        /// <item><description>调用过程中会启动计量并生成相应的<c>billing_id</c>。</description></item>
-        /// <item><description>文本内容将被写入<c>unstructured_docs</c>，并生成初始资源记录。</description></item>
-        /// <item><description>任何校验或执行失败都将抛出<c>RobjectException</c>异常，并由全局中间件转换为POP错误码返回给调用方。</description></item>
+        /// <item><description>This API is used to add plain text content to the personal resources of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>TEXT</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the content is bound to the root directory of the current digital employee by default. If provided, it must be an existing personal directory of the caller under the digital employee.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed in the request body.</description></item>
+        /// <item><description>The call initiates metering and generates a corresponding <c>billing_id</c>.</description></item>
+        /// <item><description>The text content is written to <c>unstructured_docs</c>, and an initial resource record is generated.</description></item>
+        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code by the global middleware and returned to the caller.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3583,20 +4651,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将纯文本内容上传至当前数字员工的个人资源库。</para>
+        /// <para>Uploads plain text content to the personal resource library of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于向指定数字员工的个人资源中添加纯文本内容。</description></item>
-        /// <item><description><c>source_type</c> 固定为 <c>TEXT</c>，<c>scope</c> 固定为 <c>PERSONAL</c>。</description></item>
-        /// <item><description>如果不提供<c>directoryId</c>，则默认绑定到当前数字员工的根目录；若提供，则必须是调用者在该数字员工下的已有个人目录。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份信息，通过请求体传递这些参数将被忽略。</description></item>
-        /// <item><description>调用过程中会启动计量并生成相应的<c>billing_id</c>。</description></item>
-        /// <item><description>文本内容将被写入<c>unstructured_docs</c>，并生成初始资源记录。</description></item>
-        /// <item><description>任何校验或执行失败都将抛出<c>RobjectException</c>异常，并由全局中间件转换为POP错误码返回给调用方。</description></item>
+        /// <item><description>This API is used to add plain text content to the personal resources of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>TEXT</c>, and <c>scope</c> is fixed to <c>PERSONAL</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided, the content is bound to the root directory of the current digital employee by default. If provided, it must be an existing personal directory of the caller under the digital employee.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> can only be obtained from the authentication identity information. These parameters are ignored if passed in the request body.</description></item>
+        /// <item><description>The call initiates metering and generates a corresponding <c>billing_id</c>.</description></item>
+        /// <item><description>The text content is written to <c>unstructured_docs</c>, and an initial resource record is generated.</description></item>
+        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code by the global middleware and returned to the caller.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3616,19 +4684,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将离线会议音频文件上传至当前数字员工的个人资源中。</para>
+        /// <para>Uploads an offline meeting audio file to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将离线会议的音频文件上传到指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c>固定为<c>VOICE_MEETING</c>，<c>scope</c>固定为<c>PERSONAL</c>，且<c>voice_meeting_type</c>固定为<c>OFFLINE</c>。</description></item>
-        /// <item><description>如果请求体中未提供<c>directoryId</c>，则资源将自动绑定到默认根目录；若提供了<c>directoryId</c>，则必须是当前用户在当前数字员工下的已有个人目录。</description></item>
-        /// <item><description>调用此接口会启动一个后台流程来处理音频文件转写，并返回新建资源的相关信息。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>和<c>user_id</c>仅从鉴权身份获取，即使请求体中包含这些字段也会被忽略。</description></item>
-        /// <item><description>任何校验或执行失败都会抛出<c>RobjectException</c>，并通过全局中间件转换为POP错误码。</description></item>
+        /// <item><description>This API operation uploads an offline meeting audio file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>VOICE_MEETING</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>voice_meeting_type</c> is fixed to <c>OFFLINE</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided in the request body, the resource is automatically bound to the default root directory. If <c>directoryId</c> is provided, it must be an existing personal directory of the current user under the current digital employee.</description></item>
+        /// <item><description>Calling this operation starts a background process to transcribe the audio file and returns information about the newly created resource.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields are ignored even if they are included in the request body.</description></item>
+        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code through the global middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3706,19 +4774,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将离线会议音频文件上传至当前数字员工的个人资源中。</para>
+        /// <para>Uploads an offline meeting audio file to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将离线会议的音频文件上传到指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c>固定为<c>VOICE_MEETING</c>，<c>scope</c>固定为<c>PERSONAL</c>，且<c>voice_meeting_type</c>固定为<c>OFFLINE</c>。</description></item>
-        /// <item><description>如果请求体中未提供<c>directoryId</c>，则资源将自动绑定到默认根目录；若提供了<c>directoryId</c>，则必须是当前用户在当前数字员工下的已有个人目录。</description></item>
-        /// <item><description>调用此接口会启动一个后台流程来处理音频文件转写，并返回新建资源的相关信息。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>和<c>user_id</c>仅从鉴权身份获取，即使请求体中包含这些字段也会被忽略。</description></item>
-        /// <item><description>任何校验或执行失败都会抛出<c>RobjectException</c>，并通过全局中间件转换为POP错误码。</description></item>
+        /// <item><description>This API operation uploads an offline meeting audio file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>VOICE_MEETING</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>voice_meeting_type</c> is fixed to <c>OFFLINE</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided in the request body, the resource is automatically bound to the default root directory. If <c>directoryId</c> is provided, it must be an existing personal directory of the current user under the current digital employee.</description></item>
+        /// <item><description>Calling this operation starts a background process to transcribe the audio file and returns information about the newly created resource.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields are ignored even if they are included in the request body.</description></item>
+        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code through the global middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3796,19 +4864,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将离线会议音频文件上传至当前数字员工的个人资源中。</para>
+        /// <para>Uploads an offline meeting audio file to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将离线会议的音频文件上传到指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c>固定为<c>VOICE_MEETING</c>，<c>scope</c>固定为<c>PERSONAL</c>，且<c>voice_meeting_type</c>固定为<c>OFFLINE</c>。</description></item>
-        /// <item><description>如果请求体中未提供<c>directoryId</c>，则资源将自动绑定到默认根目录；若提供了<c>directoryId</c>，则必须是当前用户在当前数字员工下的已有个人目录。</description></item>
-        /// <item><description>调用此接口会启动一个后台流程来处理音频文件转写，并返回新建资源的相关信息。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>和<c>user_id</c>仅从鉴权身份获取，即使请求体中包含这些字段也会被忽略。</description></item>
-        /// <item><description>任何校验或执行失败都会抛出<c>RobjectException</c>，并通过全局中间件转换为POP错误码。</description></item>
+        /// <item><description>This API operation uploads an offline meeting audio file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>VOICE_MEETING</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>voice_meeting_type</c> is fixed to <c>OFFLINE</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided in the request body, the resource is automatically bound to the default root directory. If <c>directoryId</c> is provided, it must be an existing personal directory of the current user under the current digital employee.</description></item>
+        /// <item><description>Calling this operation starts a background process to transcribe the audio file and returns information about the newly created resource.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields are ignored even if they are included in the request body.</description></item>
+        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code through the global middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3828,19 +4896,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将离线会议音频文件上传至当前数字员工的个人资源中。</para>
+        /// <para>Uploads an offline meeting audio file to the personal resources of the current digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将离线会议的音频文件上传到指定数字员工的“我的资源”中。</description></item>
-        /// <item><description><c>source_type</c>固定为<c>VOICE_MEETING</c>，<c>scope</c>固定为<c>PERSONAL</c>，且<c>voice_meeting_type</c>固定为<c>OFFLINE</c>。</description></item>
-        /// <item><description>如果请求体中未提供<c>directoryId</c>，则资源将自动绑定到默认根目录；若提供了<c>directoryId</c>，则必须是当前用户在当前数字员工下的已有个人目录。</description></item>
-        /// <item><description>调用此接口会启动一个后台流程来处理音频文件转写，并返回新建资源的相关信息。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>和<c>user_id</c>仅从鉴权身份获取，即使请求体中包含这些字段也会被忽略。</description></item>
-        /// <item><description>任何校验或执行失败都会抛出<c>RobjectException</c>，并通过全局中间件转换为POP错误码。</description></item>
+        /// <item><description>This API operation uploads an offline meeting audio file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>VOICE_MEETING</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>voice_meeting_type</c> is fixed to <c>OFFLINE</c>.</description></item>
+        /// <item><description>If <c>directoryId</c> is not provided in the request body, the resource is automatically bound to the default root directory. If <c>directoryId</c> is provided, it must be an existing personal directory of the current user under the current digital employee.</description></item>
+        /// <item><description>Calling this operation starts a background process to transcribe the audio file and returns information about the newly created resource.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. These fields are ignored even if they are included in the request body.</description></item>
+        /// <item><description>Any validation or execution failure throws a <c>RobjectException</c>, which is converted to a POP error code through the global middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3860,8 +4928,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Creates a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to upload files to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to resources by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateScheduledTaskRequest
@@ -3901,6 +4983,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 request.TriggerConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConfig, "triggerConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VisibleMemberUserIds))
+            {
+                request.VisibleMemberUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibleMemberUserIds, "visibleMemberUserIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -3943,6 +5029,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["triggerConfig"] = request.TriggerConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
+            {
+                body["visibility"] = request.Visibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibleMemberUserIdsShrink))
+            {
+                body["visibleMemberUserIds"] = request.VisibleMemberUserIdsShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -3966,8 +5060,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Creates a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to upload files to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to resources by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateScheduledTaskRequest
@@ -4007,6 +5115,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 request.TriggerConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConfig, "triggerConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VisibleMemberUserIds))
+            {
+                request.VisibleMemberUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibleMemberUserIds, "visibleMemberUserIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -4049,6 +5161,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["triggerConfig"] = request.TriggerConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
+            {
+                body["visibility"] = request.Visibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibleMemberUserIdsShrink))
+            {
+                body["visibleMemberUserIds"] = request.VisibleMemberUserIdsShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -4072,8 +5192,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Creates a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to upload files to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to resources by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScheduledTaskRequest
@@ -4091,8 +5225,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建定时任务</para>
+        /// <para>Creates a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation is used to upload files to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to resources by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateScheduledTaskRequest
@@ -4110,18 +5258,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用租户和用户信息创建企业知识库目录。</para>
+        /// <para>Adds a knowledge base and knowledge base categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于在指定租户下创建新的企业知识库目录。</description></item>
-        /// <item><description>可以通过设置 <c>parentId</c> 参数来指定新目录的父目录，如果不传则默认创建为根目录。</description></item>
-        /// <item><description><c>path</c> 参数可选，不提供时系统会根据父目录自动计算路径。</description></item>
-        /// <item><description>调用此接口需要具备相应的权限，并且支持多种认证方式包括 AK、BearerToken 和 APP 认证。</description></item>
-        /// <item><description>创建成功后返回新目录的相关信息，如目录 ID、名称等。</description></item>
+        /// <item><description>This API is used to create a new enterprise knowledge base directory under a specified tenant.</description></item>
+        /// <item><description>You can specify the parent directory of the new directory by setting the <c>parentId</c> parameter. If this parameter is not specified, the directory is created as a root directory by default.</description></item>
+        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent directory.</description></item>
+        /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>After the directory is created, the related information of the new directory is returned, such as the directory ID and name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4186,18 +5334,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用租户和用户信息创建企业知识库目录。</para>
+        /// <para>Adds a knowledge base and knowledge base categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于在指定租户下创建新的企业知识库目录。</description></item>
-        /// <item><description>可以通过设置 <c>parentId</c> 参数来指定新目录的父目录，如果不传则默认创建为根目录。</description></item>
-        /// <item><description><c>path</c> 参数可选，不提供时系统会根据父目录自动计算路径。</description></item>
-        /// <item><description>调用此接口需要具备相应的权限，并且支持多种认证方式包括 AK、BearerToken 和 APP 认证。</description></item>
-        /// <item><description>创建成功后返回新目录的相关信息，如目录 ID、名称等。</description></item>
+        /// <item><description>This API is used to create a new enterprise knowledge base directory under a specified tenant.</description></item>
+        /// <item><description>You can specify the parent directory of the new directory by setting the <c>parentId</c> parameter. If this parameter is not specified, the directory is created as a root directory by default.</description></item>
+        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent directory.</description></item>
+        /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>After the directory is created, the related information of the new directory is returned, such as the directory ID and name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4262,18 +5410,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用租户和用户信息创建企业知识库目录。</para>
+        /// <para>Adds a knowledge base and knowledge base categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于在指定租户下创建新的企业知识库目录。</description></item>
-        /// <item><description>可以通过设置 <c>parentId</c> 参数来指定新目录的父目录，如果不传则默认创建为根目录。</description></item>
-        /// <item><description><c>path</c> 参数可选，不提供时系统会根据父目录自动计算路径。</description></item>
-        /// <item><description>调用此接口需要具备相应的权限，并且支持多种认证方式包括 AK、BearerToken 和 APP 认证。</description></item>
-        /// <item><description>创建成功后返回新目录的相关信息，如目录 ID、名称等。</description></item>
+        /// <item><description>This API is used to create a new enterprise knowledge base directory under a specified tenant.</description></item>
+        /// <item><description>You can specify the parent directory of the new directory by setting the <c>parentId</c> parameter. If this parameter is not specified, the directory is created as a root directory by default.</description></item>
+        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent directory.</description></item>
+        /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>After the directory is created, the related information of the new directory is returned, such as the directory ID and name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4293,18 +5441,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>使用租户和用户信息创建企业知识库目录。</para>
+        /// <para>Adds a knowledge base and knowledge base categories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于在指定租户下创建新的企业知识库目录。</description></item>
-        /// <item><description>可以通过设置 <c>parentId</c> 参数来指定新目录的父目录，如果不传则默认创建为根目录。</description></item>
-        /// <item><description><c>path</c> 参数可选，不提供时系统会根据父目录自动计算路径。</description></item>
-        /// <item><description>调用此接口需要具备相应的权限，并且支持多种认证方式包括 AK、BearerToken 和 APP 认证。</description></item>
-        /// <item><description>创建成功后返回新目录的相关信息，如目录 ID、名称等。</description></item>
+        /// <item><description>This API is used to create a new enterprise knowledge base directory under a specified tenant.</description></item>
+        /// <item><description>You can specify the parent directory of the new directory by setting the <c>parentId</c> parameter. If this parameter is not specified, the directory is created as a root directory by default.</description></item>
+        /// <item><description>The <c>path</c> parameter is optional. If this parameter is not specified, the system automatically calculates the path based on the parent directory.</description></item>
+        /// <item><description>Calling this operation requires the corresponding permissions. Multiple authentication methods are supported, including AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>After the directory is created, the related information of the new directory is returned, such as the directory ID and name.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4324,21 +5472,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户并加入租户</para>
+        /// <para>Creates a user and adds the user to a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 创建用户。
-        ///     业务编排：
-        ///     1. 解析 roleCodes → role_ids（系统角色枚举校验）
-        ///     2. 判断用户是否已存在（用于返回 isNewUser 标记）
-        ///     3. 调用 UserManagementService.add_tenant_member 完成创建/加入（密码由调用方强制传入 RSA 密文）
-        ///     4. 返回创建结果（含 isNewUser 标记）
-        ///     错误码：
-        ///     - ERR.User.DeactivatedInTenant: 用户在租户中已停用，请使用 updateUser 恢复
-        ///     - ERR.User.AlreadyInTenant: 用户已是租户活跃成员
-        ///     - ERR.User.DisplayNameDuplicateInTenant: 租户内显示名重复</para>
+        /// <para>Creates a user by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parses roleCodes → role_ids (validates against system role enumerations).
+        ///     2. Checks whether the user already exists (used to return the isNewUser flag).
+        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed in as an RSA ciphertext by the caller).
+        ///     4. Returns the creation result (including the isNewUser flag).
+        ///     Error codes:
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
+        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
+        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4408,21 +5556,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户并加入租户</para>
+        /// <para>Creates a user and adds the user to a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 创建用户。
-        ///     业务编排：
-        ///     1. 解析 roleCodes → role_ids（系统角色枚举校验）
-        ///     2. 判断用户是否已存在（用于返回 isNewUser 标记）
-        ///     3. 调用 UserManagementService.add_tenant_member 完成创建/加入（密码由调用方强制传入 RSA 密文）
-        ///     4. 返回创建结果（含 isNewUser 标记）
-        ///     错误码：
-        ///     - ERR.User.DeactivatedInTenant: 用户在租户中已停用，请使用 updateUser 恢复
-        ///     - ERR.User.AlreadyInTenant: 用户已是租户活跃成员
-        ///     - ERR.User.DisplayNameDuplicateInTenant: 租户内显示名重复</para>
+        /// <para>Creates a user by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parses roleCodes → role_ids (validates against system role enumerations).
+        ///     2. Checks whether the user already exists (used to return the isNewUser flag).
+        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed in as an RSA ciphertext by the caller).
+        ///     4. Returns the creation result (including the isNewUser flag).
+        ///     Error codes:
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
+        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
+        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -4492,21 +5640,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户并加入租户</para>
+        /// <para>Creates a user and adds the user to a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 创建用户。
-        ///     业务编排：
-        ///     1. 解析 roleCodes → role_ids（系统角色枚举校验）
-        ///     2. 判断用户是否已存在（用于返回 isNewUser 标记）
-        ///     3. 调用 UserManagementService.add_tenant_member 完成创建/加入（密码由调用方强制传入 RSA 密文）
-        ///     4. 返回创建结果（含 isNewUser 标记）
-        ///     错误码：
-        ///     - ERR.User.DeactivatedInTenant: 用户在租户中已停用，请使用 updateUser 恢复
-        ///     - ERR.User.AlreadyInTenant: 用户已是租户活跃成员
-        ///     - ERR.User.DisplayNameDuplicateInTenant: 租户内显示名重复</para>
+        /// <para>Creates a user by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parses roleCodes → role_ids (validates against system role enumerations).
+        ///     2. Checks whether the user already exists (used to return the isNewUser flag).
+        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed in as an RSA ciphertext by the caller).
+        ///     4. Returns the creation result (including the isNewUser flag).
+        ///     Error codes:
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
+        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
+        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4525,21 +5673,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户并加入租户</para>
+        /// <para>Creates a user and adds the user to a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 创建用户。
-        ///     业务编排：
-        ///     1. 解析 roleCodes → role_ids（系统角色枚举校验）
-        ///     2. 判断用户是否已存在（用于返回 isNewUser 标记）
-        ///     3. 调用 UserManagementService.add_tenant_member 完成创建/加入（密码由调用方强制传入 RSA 密文）
-        ///     4. 返回创建结果（含 isNewUser 标记）
-        ///     错误码：
-        ///     - ERR.User.DeactivatedInTenant: 用户在租户中已停用，请使用 updateUser 恢复
-        ///     - ERR.User.AlreadyInTenant: 用户已是租户活跃成员
-        ///     - ERR.User.DisplayNameDuplicateInTenant: 租户内显示名重复</para>
+        /// <para>Creates a user by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parses roleCodes → role_ids (validates against system role enumerations).
+        ///     2. Checks whether the user already exists (used to return the isNewUser flag).
+        ///     3. Calls UserManagementService.add_tenant_member to create or add the user (the password must be passed in as an RSA ciphertext by the caller).
+        ///     4. Returns the creation result (including the isNewUser flag).
+        ///     Error codes:
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume the user.
+        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
+        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4558,8 +5706,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除会话</para>
+        /// <para>Deletes a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the personal directory of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatSessionRequest
@@ -4608,8 +5769,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除会话</para>
+        /// <para>Deletes a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the personal directory of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatSessionRequest
@@ -4658,8 +5832,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除会话</para>
+        /// <para>Deletes a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the personal directory of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatSessionRequest
@@ -4677,8 +5864,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除会话</para>
+        /// <para>Deletes a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target directory ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root directory of the current digital employee. If specified, ensure that the directory belongs to the personal directory of the caller.</description></item>
+        /// <item><description>Security authentication is supported through multiple methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteChatSessionRequest
@@ -4696,16 +5896,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除当前租户内的指定资源（知识）。</para>
+        /// <para>Deletes a specified source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenantId</c> 仅来自鉴权身份；调用方传入会被忽略。</description></item>
-        /// <item><description><c>sourceId</c> 通过 body 传递，注册路径为扁平的 <c>/openapi/deleteSource</c>，不含 <c>{sourceId}</c> 路径模板；请勿以路径段形式追加资源 ID，网关按扁平 URI 精确路由，会回 <c>InvalidAction.NotFound</c>。</description></item>
-        /// <item><description>删除为不可逆操作，资源关联的解析结果与绑定关系会一并失效。</description></item>
+        /// <item><description><c>tenantId</c> is derived from the authenticated identity only. Any value passed by the caller is ignored.</description></item>
+        /// <item><description><c>sourceId</c> is passed through the request body. The registration path is the flat URI <c>/openapi/deleteSource</c> and does not contain a <c>{sourceId}</c> path template. Do not append the resource ID as a path segment. The gateway performs exact routing based on the flat URI and returns <c>InvalidAction.NotFound</c> if the path does not match.</description></item>
+        /// <item><description>Deletion is irreversible. The parsing results and bindings associated with the resource are invalidated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4758,16 +5958,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除当前租户内的指定资源（知识）。</para>
+        /// <para>Deletes a specified source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenantId</c> 仅来自鉴权身份；调用方传入会被忽略。</description></item>
-        /// <item><description><c>sourceId</c> 通过 body 传递，注册路径为扁平的 <c>/openapi/deleteSource</c>，不含 <c>{sourceId}</c> 路径模板；请勿以路径段形式追加资源 ID，网关按扁平 URI 精确路由，会回 <c>InvalidAction.NotFound</c>。</description></item>
-        /// <item><description>删除为不可逆操作，资源关联的解析结果与绑定关系会一并失效。</description></item>
+        /// <item><description><c>tenantId</c> is derived from the authenticated identity only. Any value passed by the caller is ignored.</description></item>
+        /// <item><description><c>sourceId</c> is passed through the request body. The registration path is the flat URI <c>/openapi/deleteSource</c> and does not contain a <c>{sourceId}</c> path template. Do not append the resource ID as a path segment. The gateway performs exact routing based on the flat URI and returns <c>InvalidAction.NotFound</c> if the path does not match.</description></item>
+        /// <item><description>Deletion is irreversible. The parsing results and bindings associated with the resource are invalidated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4820,16 +6020,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除当前租户内的指定资源（知识）。</para>
+        /// <para>Deletes a specified source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenantId</c> 仅来自鉴权身份；调用方传入会被忽略。</description></item>
-        /// <item><description><c>sourceId</c> 通过 body 传递，注册路径为扁平的 <c>/openapi/deleteSource</c>，不含 <c>{sourceId}</c> 路径模板；请勿以路径段形式追加资源 ID，网关按扁平 URI 精确路由，会回 <c>InvalidAction.NotFound</c>。</description></item>
-        /// <item><description>删除为不可逆操作，资源关联的解析结果与绑定关系会一并失效。</description></item>
+        /// <item><description><c>tenantId</c> is derived from the authenticated identity only. Any value passed by the caller is ignored.</description></item>
+        /// <item><description><c>sourceId</c> is passed through the request body. The registration path is the flat URI <c>/openapi/deleteSource</c> and does not contain a <c>{sourceId}</c> path template. Do not append the resource ID as a path segment. The gateway performs exact routing based on the flat URI and returns <c>InvalidAction.NotFound</c> if the path does not match.</description></item>
+        /// <item><description>Deletion is irreversible. The parsing results and bindings associated with the resource are invalidated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4849,16 +6049,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除当前租户内的指定资源（知识）。</para>
+        /// <para>Deletes a specified source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenantId</c> 仅来自鉴权身份；调用方传入会被忽略。</description></item>
-        /// <item><description><c>sourceId</c> 通过 body 传递，注册路径为扁平的 <c>/openapi/deleteSource</c>，不含 <c>{sourceId}</c> 路径模板；请勿以路径段形式追加资源 ID，网关按扁平 URI 精确路由，会回 <c>InvalidAction.NotFound</c>。</description></item>
-        /// <item><description>删除为不可逆操作，资源关联的解析结果与绑定关系会一并失效。</description></item>
+        /// <item><description><c>tenantId</c> is derived from the authenticated identity only. Any value passed by the caller is ignored.</description></item>
+        /// <item><description><c>sourceId</c> is passed through the request body. The registration path is the flat URI <c>/openapi/deleteSource</c> and does not contain a <c>{sourceId}</c> path template. Do not append the resource ID as a path segment. The gateway performs exact routing based on the flat URI and returns <c>InvalidAction.NotFound</c> if the path does not match.</description></item>
+        /// <item><description>Deletion is irreversible. The parsing results and bindings associated with the resource are invalidated.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4878,17 +6078,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除指定的企业知识库目录，支持不同删除模式。</para>
+        /// <para>Deletes an enterprise knowledge base and its subdirectories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API允许用户删除特定的企业知识库目录。</description></item>
-        /// <item><description>用户可以通过设置<c>deleteMode</c>参数来选择不同的删除策略，包括拒绝删除（reject）、递归删除（recursive）或将目录移动到根目录（move_to_root）。</description></item>
-        /// <item><description>如果不提供<c>deleteMode</c>，默认行为是拒绝删除。</description></item>
-        /// <item><description>删除操作前会校验企业目录边界。</description></item>
+        /// <item><description>This API allows you to delete a specific enterprise knowledge base directory.</description></item>
+        /// <item><description>Set the <c>deleteMode</c> parameter to select different deletion strategies, including reject deletion (reject), recursive deletion (recursive), or move the directory to the root directory (move_to_root).</description></item>
+        /// <item><description>If <c>deleteMode</c> is not provided, the default behavior is to reject deletion.</description></item>
+        /// <item><description>The enterprise directory boundary is validated before the deletion operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4945,17 +6145,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除指定的企业知识库目录，支持不同删除模式。</para>
+        /// <para>Deletes an enterprise knowledge base and its subdirectories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API允许用户删除特定的企业知识库目录。</description></item>
-        /// <item><description>用户可以通过设置<c>deleteMode</c>参数来选择不同的删除策略，包括拒绝删除（reject）、递归删除（recursive）或将目录移动到根目录（move_to_root）。</description></item>
-        /// <item><description>如果不提供<c>deleteMode</c>，默认行为是拒绝删除。</description></item>
-        /// <item><description>删除操作前会校验企业目录边界。</description></item>
+        /// <item><description>This API allows you to delete a specific enterprise knowledge base directory.</description></item>
+        /// <item><description>Set the <c>deleteMode</c> parameter to select different deletion strategies, including reject deletion (reject), recursive deletion (recursive), or move the directory to the root directory (move_to_root).</description></item>
+        /// <item><description>If <c>deleteMode</c> is not provided, the default behavior is to reject deletion.</description></item>
+        /// <item><description>The enterprise directory boundary is validated before the deletion operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5012,17 +6212,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除指定的企业知识库目录，支持不同删除模式。</para>
+        /// <para>Deletes an enterprise knowledge base and its subdirectories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API允许用户删除特定的企业知识库目录。</description></item>
-        /// <item><description>用户可以通过设置<c>deleteMode</c>参数来选择不同的删除策略，包括拒绝删除（reject）、递归删除（recursive）或将目录移动到根目录（move_to_root）。</description></item>
-        /// <item><description>如果不提供<c>deleteMode</c>，默认行为是拒绝删除。</description></item>
-        /// <item><description>删除操作前会校验企业目录边界。</description></item>
+        /// <item><description>This API allows you to delete a specific enterprise knowledge base directory.</description></item>
+        /// <item><description>Set the <c>deleteMode</c> parameter to select different deletion strategies, including reject deletion (reject), recursive deletion (recursive), or move the directory to the root directory (move_to_root).</description></item>
+        /// <item><description>If <c>deleteMode</c> is not provided, the default behavior is to reject deletion.</description></item>
+        /// <item><description>The enterprise directory boundary is validated before the deletion operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5042,17 +6242,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除指定的企业知识库目录，支持不同删除模式。</para>
+        /// <para>Deletes an enterprise knowledge base and its subdirectories.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API允许用户删除特定的企业知识库目录。</description></item>
-        /// <item><description>用户可以通过设置<c>deleteMode</c>参数来选择不同的删除策略，包括拒绝删除（reject）、递归删除（recursive）或将目录移动到根目录（move_to_root）。</description></item>
-        /// <item><description>如果不提供<c>deleteMode</c>，默认行为是拒绝删除。</description></item>
-        /// <item><description>删除操作前会校验企业目录边界。</description></item>
+        /// <item><description>This API allows you to delete a specific enterprise knowledge base directory.</description></item>
+        /// <item><description>Set the <c>deleteMode</c> parameter to select different deletion strategies, including reject deletion (reject), recursive deletion (recursive), or move the directory to the root directory (move_to_root).</description></item>
+        /// <item><description>If <c>deleteMode</c> is not provided, the default behavior is to reject deletion.</description></item>
+        /// <item><description>The enterprise directory boundary is validated before the deletion operation.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5072,18 +6272,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭 API Token</para>
+        /// <para>Disables an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关闭用户的 INSTANCE Token。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 disable_token（ACTIVE → INACTIVE）
-        ///     4. 返回 disabled=True
-        ///     幂等性：若当前无 ACTIVE Token，deactivate_all 影响 0 行，不报错。</para>
+        /// <para>Disables the INSTANCE token of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is enforced).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls disable_token (ACTIVE → INACTIVE).
+        ///     4. Returns disabled=True.
+        ///     Idempotence: If no ACTIVE token exists, deactivate_all affects 0 rows and does not return an error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5135,18 +6335,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭 API Token</para>
+        /// <para>Disables an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关闭用户的 INSTANCE Token。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 disable_token（ACTIVE → INACTIVE）
-        ///     4. 返回 disabled=True
-        ///     幂等性：若当前无 ACTIVE Token，deactivate_all 影响 0 行，不报错。</para>
+        /// <para>Disables the INSTANCE token of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is enforced).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls disable_token (ACTIVE → INACTIVE).
+        ///     4. Returns disabled=True.
+        ///     Idempotence: If no ACTIVE token exists, deactivate_all affects 0 rows and does not return an error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5198,18 +6398,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭 API Token</para>
+        /// <para>Disables an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关闭用户的 INSTANCE Token。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 disable_token（ACTIVE → INACTIVE）
-        ///     4. 返回 disabled=True
-        ///     幂等性：若当前无 ACTIVE Token，deactivate_all 影响 0 行，不报错。</para>
+        /// <para>Disables the INSTANCE token of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is enforced).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls disable_token (ACTIVE → INACTIVE).
+        ///     4. Returns disabled=True.
+        ///     Idempotence: If no ACTIVE token exists, deactivate_all affects 0 rows and does not return an error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5228,18 +6428,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>关闭 API Token</para>
+        /// <para>Disables an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>关闭用户的 INSTANCE Token。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 disable_token（ACTIVE → INACTIVE）
-        ///     4. 返回 disabled=True
-        ///     幂等性：若当前无 ACTIVE Token，deactivate_all 影响 0 行，不报错。</para>
+        /// <para>Disables the INSTANCE token of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is enforced).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls disable_token (ACTIVE → INACTIVE).
+        ///     4. Returns disabled=True.
+        ///     Idempotence: If no ACTIVE token exists, deactivate_all affects 0 rows and does not return an error.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5258,20 +6458,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启 API Token</para>
+        /// <para>Enables an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>开启用户的 INSTANCE Token（幂等）。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 enable_token：
-        ///        - 已有 ACTIVE → 幂等返回（仅脱敏值，不重复下发明文）
-        ///        - 有 INACTIVE → 重新激活（返回明文）
-        ///        - 都没有 → 新建（返回明文）
-        ///     安全约束：Token 明文仅在首次开启时返回一次，后续幂等调用不再下发明文。</para>
+        /// <para>Enables the INSTANCE token for a user (idempotent).
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls enable_token:
+        ///        - If an ACTIVE token exists, returns idempotently (only the masked value is returned, and the plaintext is not issued again).
+        ///        - If an INACTIVE token exists, reactivates it (returns the plaintext).
+        ///        - If no token exists, creates one (returns the plaintext).
+        ///     Security constraint: The token plaintext is returned only once when the token is first enabled. Subsequent idempotent calls do not return the plaintext.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5323,20 +6523,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启 API Token</para>
+        /// <para>Enables an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>开启用户的 INSTANCE Token（幂等）。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 enable_token：
-        ///        - 已有 ACTIVE → 幂等返回（仅脱敏值，不重复下发明文）
-        ///        - 有 INACTIVE → 重新激活（返回明文）
-        ///        - 都没有 → 新建（返回明文）
-        ///     安全约束：Token 明文仅在首次开启时返回一次，后续幂等调用不再下发明文。</para>
+        /// <para>Enables the INSTANCE token for a user (idempotent).
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls enable_token:
+        ///        - If an ACTIVE token exists, returns idempotently (only the masked value is returned, and the plaintext is not issued again).
+        ///        - If an INACTIVE token exists, reactivates it (returns the plaintext).
+        ///        - If no token exists, creates one (returns the plaintext).
+        ///     Security constraint: The token plaintext is returned only once when the token is first enabled. Subsequent idempotent calls do not return the plaintext.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5388,20 +6588,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启 API Token</para>
+        /// <para>Enables an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>开启用户的 INSTANCE Token（幂等）。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 enable_token：
-        ///        - 已有 ACTIVE → 幂等返回（仅脱敏值，不重复下发明文）
-        ///        - 有 INACTIVE → 重新激活（返回明文）
-        ///        - 都没有 → 新建（返回明文）
-        ///     安全约束：Token 明文仅在首次开启时返回一次，后续幂等调用不再下发明文。</para>
+        /// <para>Enables the INSTANCE token for a user (idempotent).
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls enable_token:
+        ///        - If an ACTIVE token exists, returns idempotently (only the masked value is returned, and the plaintext is not issued again).
+        ///        - If an INACTIVE token exists, reactivates it (returns the plaintext).
+        ///        - If no token exists, creates one (returns the plaintext).
+        ///     Security constraint: The token plaintext is returned only once when the token is first enabled. Subsequent idempotent calls do not return the plaintext.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5420,20 +6620,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>开启 API Token</para>
+        /// <para>Enables an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>开启用户的 INSTANCE Token（幂等）。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 enable_token：
-        ///        - 已有 ACTIVE → 幂等返回（仅脱敏值，不重复下发明文）
-        ///        - 有 INACTIVE → 重新激活（返回明文）
-        ///        - 都没有 → 新建（返回明文）
-        ///     安全约束：Token 明文仅在首次开启时返回一次，后续幂等调用不再下发明文。</para>
+        /// <para>Enables the INSTANCE token for a user (idempotent).
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls enable_token:
+        ///        - If an ACTIVE token exists, returns idempotently (only the masked value is returned, and the plaintext is not issued again).
+        ///        - If an INACTIVE token exists, reactivates it (returns the plaintext).
+        ///        - If no token exists, creates one (returns the plaintext).
+        ///     Security constraint: The token plaintext is returned only once when the token is first enabled. Subsequent idempotent calls do not return the plaintext.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5452,8 +6652,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话详情</para>
+        /// <para>Retrieves session details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API uploads a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Security verification is supported through multiple authenticate methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetChatSessionRequest
@@ -5506,8 +6719,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话详情</para>
+        /// <para>Retrieves session details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API uploads a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Security verification is supported through multiple authenticate methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetChatSessionRequest
@@ -5560,8 +6786,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话详情</para>
+        /// <para>Retrieves session details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API uploads a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Security verification is supported through multiple authenticate methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetChatSessionRequest
@@ -5579,8 +6818,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取会话详情</para>
+        /// <para>Retrieves session details.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API uploads a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>The file must include an OSS persistent address (<c>filePath</c>). Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If no target folder ID (<c>directoryId</c>) is specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Security verification is supported through multiple authenticate methods (AK, BearerToken, APP).</description></item>
+        /// <item><description>The operation type is write (<c>write</c>), and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetChatSessionRequest
@@ -5598,12 +6850,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户可读的 active Graph Schema</para>
+        /// <para>Retrieves the active Graph Schema that is readable by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>读取 active schema_content，并按 Token 用户的语义资源 READ 权限安全裁剪。</para>
+        /// <para>Reads the active schema_content and securely trims it based on the token user\&quot;s semantic resource READ permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5655,12 +6907,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户可读的 active Graph Schema</para>
+        /// <para>Retrieves the active Graph Schema that is readable by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>读取 active schema_content，并按 Token 用户的语义资源 READ 权限安全裁剪。</para>
+        /// <para>Reads the active schema_content and securely trims it based on the token user\&quot;s semantic resource READ permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5712,12 +6964,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户可读的 active Graph Schema</para>
+        /// <para>Retrieves the active Graph Schema that is readable by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>读取 active schema_content，并按 Token 用户的语义资源 READ 权限安全裁剪。</para>
+        /// <para>Reads the active schema_content and securely trims it based on the token user\&quot;s semantic resource READ permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5736,12 +6988,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前用户可读的 active Graph Schema</para>
+        /// <para>Retrieves the active Graph Schema that is readable by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>读取 active schema_content，并按 Token 用户的语义资源 READ 权限安全裁剪。</para>
+        /// <para>Reads the active schema_content and securely trims it based on the token user\&quot;s semantic resource READ permissions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5760,18 +7012,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户最新创建的标准包实例的过期时间。</para>
+        /// <para>Queries the expiration time of the most recently created standard package instance for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于查询指定租户下最新创建的标准包实例的过期时间。</description></item>
-        /// <item><description>如果未找到相关标准包实例，<c>found</c> 字段将返回 <c>False</c>。</description></item>
-        /// <item><description>支持通过 <c>tenantId</c> 参数指定查询的租户ID，默认使用调用方的租户ID。</description></item>
-        /// <item><description>请求方法为 POST，且需要通过 HTTPS 协议进行调用。</description></item>
-        /// <item><description>需要提供有效的认证信息（如 AK、BearerToken 或 APP）以完成请求。</description></item>
+        /// <item><description>This API operation queries the expiration time of the most recently created standard package instance for a specified tenant.</description></item>
+        /// <item><description>If no standard package instance is found, the <c>found</c> field returns <c>False</c>.</description></item>
+        /// <item><description>You can use the <c>tenantId</c> parameter to specify the tenant ID. By default, the tenant ID of the caller is used.</description></item>
+        /// <item><description>The request method is POST and must be called over HTTPS.</description></item>
+        /// <item><description>Valid authentication information (such as AK, BearerToken, or APP) is required to complete the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5818,18 +7070,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户最新创建的标准包实例的过期时间。</para>
+        /// <para>Queries the expiration time of the most recently created standard package instance for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于查询指定租户下最新创建的标准包实例的过期时间。</description></item>
-        /// <item><description>如果未找到相关标准包实例，<c>found</c> 字段将返回 <c>False</c>。</description></item>
-        /// <item><description>支持通过 <c>tenantId</c> 参数指定查询的租户ID，默认使用调用方的租户ID。</description></item>
-        /// <item><description>请求方法为 POST，且需要通过 HTTPS 协议进行调用。</description></item>
-        /// <item><description>需要提供有效的认证信息（如 AK、BearerToken 或 APP）以完成请求。</description></item>
+        /// <item><description>This API operation queries the expiration time of the most recently created standard package instance for a specified tenant.</description></item>
+        /// <item><description>If no standard package instance is found, the <c>found</c> field returns <c>False</c>.</description></item>
+        /// <item><description>You can use the <c>tenantId</c> parameter to specify the tenant ID. By default, the tenant ID of the caller is used.</description></item>
+        /// <item><description>The request method is POST and must be called over HTTPS.</description></item>
+        /// <item><description>Valid authentication information (such as AK, BearerToken, or APP) is required to complete the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5876,18 +7128,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户最新创建的标准包实例的过期时间。</para>
+        /// <para>Queries the expiration time of the most recently created standard package instance for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于查询指定租户下最新创建的标准包实例的过期时间。</description></item>
-        /// <item><description>如果未找到相关标准包实例，<c>found</c> 字段将返回 <c>False</c>。</description></item>
-        /// <item><description>支持通过 <c>tenantId</c> 参数指定查询的租户ID，默认使用调用方的租户ID。</description></item>
-        /// <item><description>请求方法为 POST，且需要通过 HTTPS 协议进行调用。</description></item>
-        /// <item><description>需要提供有效的认证信息（如 AK、BearerToken 或 APP）以完成请求。</description></item>
+        /// <item><description>This API operation queries the expiration time of the most recently created standard package instance for a specified tenant.</description></item>
+        /// <item><description>If no standard package instance is found, the <c>found</c> field returns <c>False</c>.</description></item>
+        /// <item><description>You can use the <c>tenantId</c> parameter to specify the tenant ID. By default, the tenant ID of the caller is used.</description></item>
+        /// <item><description>The request method is POST and must be called over HTTPS.</description></item>
+        /// <item><description>Valid authentication information (such as AK, BearerToken, or APP) is required to complete the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5907,18 +7159,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户最新创建的标准包实例的过期时间。</para>
+        /// <para>Queries the expiration time of the most recently created standard package instance for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于查询指定租户下最新创建的标准包实例的过期时间。</description></item>
-        /// <item><description>如果未找到相关标准包实例，<c>found</c> 字段将返回 <c>False</c>。</description></item>
-        /// <item><description>支持通过 <c>tenantId</c> 参数指定查询的租户ID，默认使用调用方的租户ID。</description></item>
-        /// <item><description>请求方法为 POST，且需要通过 HTTPS 协议进行调用。</description></item>
-        /// <item><description>需要提供有效的认证信息（如 AK、BearerToken 或 APP）以完成请求。</description></item>
+        /// <item><description>This API operation queries the expiration time of the most recently created standard package instance for a specified tenant.</description></item>
+        /// <item><description>If no standard package instance is found, the <c>found</c> field returns <c>False</c>.</description></item>
+        /// <item><description>You can use the <c>tenantId</c> parameter to specify the tenant ID. By default, the tenant ID of the caller is used.</description></item>
+        /// <item><description>The request method is POST and must be called over HTTPS.</description></item>
+        /// <item><description>Valid authentication information (such as AK, BearerToken, or APP) is required to complete the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5938,20 +7190,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定知识在企业知识库中的详细信息。</para>
+        /// <para>Queries the details of a specified knowledge item in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于获取企业知识库下特定知识的详情。</description></item>
-        /// <item><description>调用此接口需要具备 <c>DEVELOPMENT_KB_VIEW</c> 功能权限。</description></item>
-        /// <item><description>知识详情包括但不限于知识类型、名称、描述等。</description></item>
-        /// <item><description>请求时必须提供 <c>sourceId</c> 参数，标识要查询的知识。</description></item>
-        /// <item><description><c>tenantId</c> 是可选参数，默认使用调用方的租户ID。</description></item>
-        /// <item><description>支持通过 <c>AK</c>、<c>BearerToken</c> 或 <c>APP</c> 方式进行鉴权。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份。</description></item>
+        /// <item><description>This API operation retrieves the details of a specific knowledge item in the enterprise knowledge base.</description></item>
+        /// <item><description>Calling this operation requires the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>Knowledge details include but are not limited to the knowledge type, name, and description.</description></item>
+        /// <item><description>The <c>sourceId</c> parameter is required to identify the knowledge item to query.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter. The tenant ID of the caller is used by default.</description></item>
+        /// <item><description>Authentication is supported through <c>AK</c>, <c>BearerToken</c>, or <c>APP</c> methods.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> can only be derived from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6004,20 +7256,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定知识在企业知识库中的详细信息。</para>
+        /// <para>Queries the details of a specified knowledge item in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于获取企业知识库下特定知识的详情。</description></item>
-        /// <item><description>调用此接口需要具备 <c>DEVELOPMENT_KB_VIEW</c> 功能权限。</description></item>
-        /// <item><description>知识详情包括但不限于知识类型、名称、描述等。</description></item>
-        /// <item><description>请求时必须提供 <c>sourceId</c> 参数，标识要查询的知识。</description></item>
-        /// <item><description><c>tenantId</c> 是可选参数，默认使用调用方的租户ID。</description></item>
-        /// <item><description>支持通过 <c>AK</c>、<c>BearerToken</c> 或 <c>APP</c> 方式进行鉴权。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份。</description></item>
+        /// <item><description>This API operation retrieves the details of a specific knowledge item in the enterprise knowledge base.</description></item>
+        /// <item><description>Calling this operation requires the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>Knowledge details include but are not limited to the knowledge type, name, and description.</description></item>
+        /// <item><description>The <c>sourceId</c> parameter is required to identify the knowledge item to query.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter. The tenant ID of the caller is used by default.</description></item>
+        /// <item><description>Authentication is supported through <c>AK</c>, <c>BearerToken</c>, or <c>APP</c> methods.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> can only be derived from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6070,20 +7322,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定知识在企业知识库中的详细信息。</para>
+        /// <para>Queries the details of a specified knowledge item in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于获取企业知识库下特定知识的详情。</description></item>
-        /// <item><description>调用此接口需要具备 <c>DEVELOPMENT_KB_VIEW</c> 功能权限。</description></item>
-        /// <item><description>知识详情包括但不限于知识类型、名称、描述等。</description></item>
-        /// <item><description>请求时必须提供 <c>sourceId</c> 参数，标识要查询的知识。</description></item>
-        /// <item><description><c>tenantId</c> 是可选参数，默认使用调用方的租户ID。</description></item>
-        /// <item><description>支持通过 <c>AK</c>、<c>BearerToken</c> 或 <c>APP</c> 方式进行鉴权。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份。</description></item>
+        /// <item><description>This API operation retrieves the details of a specific knowledge item in the enterprise knowledge base.</description></item>
+        /// <item><description>Calling this operation requires the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>Knowledge details include but are not limited to the knowledge type, name, and description.</description></item>
+        /// <item><description>The <c>sourceId</c> parameter is required to identify the knowledge item to query.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter. The tenant ID of the caller is used by default.</description></item>
+        /// <item><description>Authentication is supported through <c>AK</c>, <c>BearerToken</c>, or <c>APP</c> methods.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> can only be derived from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6103,20 +7355,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定知识在企业知识库中的详细信息。</para>
+        /// <para>Queries the details of a specified knowledge item in the enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于获取企业知识库下特定知识的详情。</description></item>
-        /// <item><description>调用此接口需要具备 <c>DEVELOPMENT_KB_VIEW</c> 功能权限。</description></item>
-        /// <item><description>知识详情包括但不限于知识类型、名称、描述等。</description></item>
-        /// <item><description>请求时必须提供 <c>sourceId</c> 参数，标识要查询的知识。</description></item>
-        /// <item><description><c>tenantId</c> 是可选参数，默认使用调用方的租户ID。</description></item>
-        /// <item><description>支持通过 <c>AK</c>、<c>BearerToken</c> 或 <c>APP</c> 方式进行鉴权。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份。</description></item>
+        /// <item><description>This API operation retrieves the details of a specific knowledge item in the enterprise knowledge base.</description></item>
+        /// <item><description>Calling this operation requires the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
+        /// <item><description>Knowledge details include but are not limited to the knowledge type, name, and description.</description></item>
+        /// <item><description>The <c>sourceId</c> parameter is required to identify the knowledge item to query.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter. The tenant ID of the caller is used by default.</description></item>
+        /// <item><description>Authentication is supported through <c>AK</c>, <c>BearerToken</c>, or <c>APP</c> methods.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> can only be derived from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6136,8 +7388,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务执行详情</para>
+        /// <para>Retrieves the execution details of a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduledTaskExecutionDetailRequest
@@ -6186,8 +7452,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务执行详情</para>
+        /// <para>Retrieves the execution details of a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduledTaskExecutionDetailRequest
@@ -6236,8 +7516,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务执行详情</para>
+        /// <para>Retrieves the execution details of a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduledTaskExecutionDetailRequest
@@ -6255,8 +7549,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务执行详情</para>
+        /// <para>Retrieves the execution details of a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduledTaskExecutionDetailRequest
@@ -6274,8 +7582,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务执行记录</para>
+        /// <para>Retrieves execution records of scheduled tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> feature permission is required to call this API.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduledTaskExecutionRecordsRequest
@@ -6298,6 +7620,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiatorUserId))
+            {
+                query["initiatorUserId"] = request.InitiatorUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["page"] = request.Page;
@@ -6305,6 +7631,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -6332,8 +7666,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务执行记录</para>
+        /// <para>Retrieves execution records of scheduled tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> feature permission is required to call this API.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduledTaskExecutionRecordsRequest
@@ -6356,6 +7704,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InitiatorUserId))
+            {
+                query["initiatorUserId"] = request.InitiatorUserId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
             {
                 query["page"] = request.Page;
@@ -6363,6 +7715,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
+            {
+                query["taskId"] = request.TaskId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -6390,8 +7750,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务执行记录</para>
+        /// <para>Retrieves execution records of scheduled tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> feature permission is required to call this API.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduledTaskExecutionRecordsRequest
@@ -6409,8 +7783,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务执行记录</para>
+        /// <para>Retrieves execution records of scheduled tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> feature permission is required to call this API.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduledTaskExecutionRecordsRequest
@@ -6426,10 +7814,28 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return await GetScheduledTaskExecutionRecordsWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetScheduledTaskUnderstandDetail is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务理解详情</para>
+        /// <para>Retrieves the details of scheduled task understanding.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetScheduledTaskUnderstandDetailRequest
@@ -6444,6 +7850,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// GetScheduledTaskUnderstandDetailResponse
         /// </returns>
+        [Obsolete("OpenAPI GetScheduledTaskUnderstandDetail is deprecated")]
+        // Deprecated
         public GetScheduledTaskUnderstandDetailResponse GetScheduledTaskUnderstandDetailWithOptions(GetScheduledTaskUnderstandDetailRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6498,10 +7906,28 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return TeaModel.ToObject<GetScheduledTaskUnderstandDetailResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetScheduledTaskUnderstandDetail is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务理解详情</para>
+        /// <para>Retrieves the details of scheduled task understanding.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// GetScheduledTaskUnderstandDetailRequest
@@ -6516,6 +7942,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// GetScheduledTaskUnderstandDetailResponse
         /// </returns>
+        [Obsolete("OpenAPI GetScheduledTaskUnderstandDetail is deprecated")]
+        // Deprecated
         public async Task<GetScheduledTaskUnderstandDetailResponse> GetScheduledTaskUnderstandDetailWithOptionsAsync(GetScheduledTaskUnderstandDetailRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
@@ -6570,10 +7998,28 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return TeaModel.ToObject<GetScheduledTaskUnderstandDetailResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetScheduledTaskUnderstandDetail is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务理解详情</para>
+        /// <para>Retrieves the details of scheduled task understanding.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduledTaskUnderstandDetailRequest
@@ -6582,6 +8028,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// GetScheduledTaskUnderstandDetailResponse
         /// </returns>
+        [Obsolete("OpenAPI GetScheduledTaskUnderstandDetail is deprecated")]
+        // Deprecated
         public GetScheduledTaskUnderstandDetailResponse GetScheduledTaskUnderstandDetail(GetScheduledTaskUnderstandDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6589,10 +8037,28 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return GetScheduledTaskUnderstandDetailWithOptions(request, headers, runtime);
         }
 
+        /// <term><b>Deprecated</b></term>
+        /// 
+        /// OpenAPI GetScheduledTaskUnderstandDetail is deprecated
+        /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务理解详情</para>
+        /// <para>Retrieves the details of scheduled task understanding.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL of the file and the original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee by default.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Ensure that your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetScheduledTaskUnderstandDetailRequest
@@ -6601,6 +8067,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// GetScheduledTaskUnderstandDetailResponse
         /// </returns>
+        [Obsolete("OpenAPI GetScheduledTaskUnderstandDetail is deprecated")]
+        // Deprecated
         public async Task<GetScheduledTaskUnderstandDetailResponse> GetScheduledTaskUnderstandDetailAsync(GetScheduledTaskUnderstandDetailRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
@@ -6610,19 +8078,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能详情。</para>
+        /// <para>Retrieves skill details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>根据 SkillCode 或 SkillName 查询技能详情，包括元数据、入参 Schema、SKILL.md 摘要等。</para>
+        /// <h2>Request description</h2>
+        /// <para>Queries skill details by SkillCode or SkillName, including metadata, input parameter schema, and SKILL.md summary.</para>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传到后端 Header；不传时使用当前调用方的默认租户。</description></item>
-        /// <item><description><b>SkillCode</b>：与 SkillName 二选一；同时传入时 SkillCode 优先。</description></item>
-        /// <item><description><b>SkillName</b>：与 SkillCode 二选一；租户内不唯一时返回 <c>ERR.SkillHub.SkillNameAmbiguous</c>。</description></item>
-        /// <item><description><b>ViewMode</b>：可选，<c>draft</c>（草稿/编辑视角）或 <c>published</c>（已发布视角，默认）。</description></item>
-        /// <item><description><b>IncludeSkillFiles</b>：可选，是否返回完整技能文件树（SKILL.md / scripts / templates），默认 <c>false</c>。</description></item>
+        /// <item><description><b>TenantId</b>: Optional common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>SkillCode</b>: Mutually exclusive with SkillName. If both are specified, SkillCode takes precedence.</description></item>
+        /// <item><description><b>SkillName</b>: Mutually exclusive with SkillCode. If the name is not unique within the tenant, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
+        /// <item><description><b>ViewMode</b>: Optional. Valid values: <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
+        /// <item><description><b>IncludeSkillFiles</b>: Optional. Specifies whether to return the complete skill file tree (SKILL.md / scripts / templates). Default value: <c>false</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6687,19 +8155,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能详情。</para>
+        /// <para>Retrieves skill details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>根据 SkillCode 或 SkillName 查询技能详情，包括元数据、入参 Schema、SKILL.md 摘要等。</para>
+        /// <h2>Request description</h2>
+        /// <para>Queries skill details by SkillCode or SkillName, including metadata, input parameter schema, and SKILL.md summary.</para>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传到后端 Header；不传时使用当前调用方的默认租户。</description></item>
-        /// <item><description><b>SkillCode</b>：与 SkillName 二选一；同时传入时 SkillCode 优先。</description></item>
-        /// <item><description><b>SkillName</b>：与 SkillCode 二选一；租户内不唯一时返回 <c>ERR.SkillHub.SkillNameAmbiguous</c>。</description></item>
-        /// <item><description><b>ViewMode</b>：可选，<c>draft</c>（草稿/编辑视角）或 <c>published</c>（已发布视角，默认）。</description></item>
-        /// <item><description><b>IncludeSkillFiles</b>：可选，是否返回完整技能文件树（SKILL.md / scripts / templates），默认 <c>false</c>。</description></item>
+        /// <item><description><b>TenantId</b>: Optional common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>SkillCode</b>: Mutually exclusive with SkillName. If both are specified, SkillCode takes precedence.</description></item>
+        /// <item><description><b>SkillName</b>: Mutually exclusive with SkillCode. If the name is not unique within the tenant, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
+        /// <item><description><b>ViewMode</b>: Optional. Valid values: <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
+        /// <item><description><b>IncludeSkillFiles</b>: Optional. Specifies whether to return the complete skill file tree (SKILL.md / scripts / templates). Default value: <c>false</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6764,19 +8232,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能详情。</para>
+        /// <para>Retrieves skill details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>根据 SkillCode 或 SkillName 查询技能详情，包括元数据、入参 Schema、SKILL.md 摘要等。</para>
+        /// <h2>Request description</h2>
+        /// <para>Queries skill details by SkillCode or SkillName, including metadata, input parameter schema, and SKILL.md summary.</para>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传到后端 Header；不传时使用当前调用方的默认租户。</description></item>
-        /// <item><description><b>SkillCode</b>：与 SkillName 二选一；同时传入时 SkillCode 优先。</description></item>
-        /// <item><description><b>SkillName</b>：与 SkillCode 二选一；租户内不唯一时返回 <c>ERR.SkillHub.SkillNameAmbiguous</c>。</description></item>
-        /// <item><description><b>ViewMode</b>：可选，<c>draft</c>（草稿/编辑视角）或 <c>published</c>（已发布视角，默认）。</description></item>
-        /// <item><description><b>IncludeSkillFiles</b>：可选，是否返回完整技能文件树（SKILL.md / scripts / templates），默认 <c>false</c>。</description></item>
+        /// <item><description><b>TenantId</b>: Optional common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>SkillCode</b>: Mutually exclusive with SkillName. If both are specified, SkillCode takes precedence.</description></item>
+        /// <item><description><b>SkillName</b>: Mutually exclusive with SkillCode. If the name is not unique within the tenant, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
+        /// <item><description><b>ViewMode</b>: Optional. Valid values: <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
+        /// <item><description><b>IncludeSkillFiles</b>: Optional. Specifies whether to return the complete skill file tree (SKILL.md / scripts / templates). Default value: <c>false</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6796,19 +8264,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取技能详情。</para>
+        /// <para>Retrieves skill details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>根据 SkillCode 或 SkillName 查询技能详情，包括元数据、入参 Schema、SKILL.md 摘要等。</para>
+        /// <h2>Request description</h2>
+        /// <para>Queries skill details by SkillCode or SkillName, including metadata, input parameter schema, and SKILL.md summary.</para>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传到后端 Header；不传时使用当前调用方的默认租户。</description></item>
-        /// <item><description><b>SkillCode</b>：与 SkillName 二选一；同时传入时 SkillCode 优先。</description></item>
-        /// <item><description><b>SkillName</b>：与 SkillCode 二选一；租户内不唯一时返回 <c>ERR.SkillHub.SkillNameAmbiguous</c>。</description></item>
-        /// <item><description><b>ViewMode</b>：可选，<c>draft</c>（草稿/编辑视角）或 <c>published</c>（已发布视角，默认）。</description></item>
-        /// <item><description><b>IncludeSkillFiles</b>：可选，是否返回完整技能文件树（SKILL.md / scripts / templates），默认 <c>false</c>。</description></item>
+        /// <item><description><b>TenantId</b>: Optional common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>SkillCode</b>: Mutually exclusive with SkillName. If both are specified, SkillCode takes precedence.</description></item>
+        /// <item><description><b>SkillName</b>: Mutually exclusive with SkillCode. If the name is not unique within the tenant, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
+        /// <item><description><b>ViewMode</b>: Optional. Valid values: <c>draft</c> (draft/editing view) or <c>published</c> (published view, default).</description></item>
+        /// <item><description><b>IncludeSkillFiles</b>: Optional. Specifies whether to return the complete skill file tree (SKILL.md / scripts / templates). Default value: <c>false</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6828,18 +8296,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能执行结果。</para>
+        /// <para>Queries the execution result of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过 <c>RunId</c> 查询异步任务的当前状态与结果。</para>
+        /// <h2>Request description</h2>
+        /// <para>Queries the current status and result of an asynchronous task by <c>RunId</c>.</para>
         /// <list type="bullet">
-        /// <item><description><b>状态机</b>：Running（PENDING/RUNNING）→ Succeeded / Failed / Cancelled</description></item>
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传；后端会校验 RunId 必须属于当前租户，否则统一返回 <c>ERR.SkillHub.RunNotFound</c>（避免泄漏存在性）。</description></item>
-        /// <item><description><b>IncludeLogs</b>：可选，是否返回执行日志，默认 <c>false</c>。
-        /// 执行成功时 <c>Result.Content[]</c> 为 MCP 风格 Content 块数组（Text / File / Image）。</description></item>
+        /// <item><description><b>State machine</b>: Running (PENDING/RUNNING) → Succeeded / Failed / Cancelled</description></item>
+        /// <item><description><b>TenantId</b>: An optional common parameter passed through by the gateway. The backend verifies that the RunId belongs to the current tenant. Otherwise, <c>ERR.SkillHub.RunNotFound</c> is returned to avoid exposing existence information.</description></item>
+        /// <item><description><b>IncludeLogs</b>: Optional. Specifies whether to return execution logs. Default value: <c>false</c>.
+        /// When execution succeeds, <c>Result.Content[]</c> is an MCP-style Content block array (Text / File / Image).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6896,18 +8364,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能执行结果。</para>
+        /// <para>Queries the execution result of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过 <c>RunId</c> 查询异步任务的当前状态与结果。</para>
+        /// <h2>Request description</h2>
+        /// <para>Queries the current status and result of an asynchronous task by <c>RunId</c>.</para>
         /// <list type="bullet">
-        /// <item><description><b>状态机</b>：Running（PENDING/RUNNING）→ Succeeded / Failed / Cancelled</description></item>
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传；后端会校验 RunId 必须属于当前租户，否则统一返回 <c>ERR.SkillHub.RunNotFound</c>（避免泄漏存在性）。</description></item>
-        /// <item><description><b>IncludeLogs</b>：可选，是否返回执行日志，默认 <c>false</c>。
-        /// 执行成功时 <c>Result.Content[]</c> 为 MCP 风格 Content 块数组（Text / File / Image）。</description></item>
+        /// <item><description><b>State machine</b>: Running (PENDING/RUNNING) → Succeeded / Failed / Cancelled</description></item>
+        /// <item><description><b>TenantId</b>: An optional common parameter passed through by the gateway. The backend verifies that the RunId belongs to the current tenant. Otherwise, <c>ERR.SkillHub.RunNotFound</c> is returned to avoid exposing existence information.</description></item>
+        /// <item><description><b>IncludeLogs</b>: Optional. Specifies whether to return execution logs. Default value: <c>false</c>.
+        /// When execution succeeds, <c>Result.Content[]</c> is an MCP-style Content block array (Text / File / Image).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6964,18 +8432,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能执行结果。</para>
+        /// <para>Queries the execution result of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过 <c>RunId</c> 查询异步任务的当前状态与结果。</para>
+        /// <h2>Request description</h2>
+        /// <para>Queries the current status and result of an asynchronous task by <c>RunId</c>.</para>
         /// <list type="bullet">
-        /// <item><description><b>状态机</b>：Running（PENDING/RUNNING）→ Succeeded / Failed / Cancelled</description></item>
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传；后端会校验 RunId 必须属于当前租户，否则统一返回 <c>ERR.SkillHub.RunNotFound</c>（避免泄漏存在性）。</description></item>
-        /// <item><description><b>IncludeLogs</b>：可选，是否返回执行日志，默认 <c>false</c>。
-        /// 执行成功时 <c>Result.Content[]</c> 为 MCP 风格 Content 块数组（Text / File / Image）。</description></item>
+        /// <item><description><b>State machine</b>: Running (PENDING/RUNNING) → Succeeded / Failed / Cancelled</description></item>
+        /// <item><description><b>TenantId</b>: An optional common parameter passed through by the gateway. The backend verifies that the RunId belongs to the current tenant. Otherwise, <c>ERR.SkillHub.RunNotFound</c> is returned to avoid exposing existence information.</description></item>
+        /// <item><description><b>IncludeLogs</b>: Optional. Specifies whether to return execution logs. Default value: <c>false</c>.
+        /// When execution succeeds, <c>Result.Content[]</c> is an MCP-style Content block array (Text / File / Image).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6995,18 +8463,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询技能执行结果。</para>
+        /// <para>Queries the execution result of a skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过 <c>RunId</c> 查询异步任务的当前状态与结果。</para>
+        /// <h2>Request description</h2>
+        /// <para>Queries the current status and result of an asynchronous task by <c>RunId</c>.</para>
         /// <list type="bullet">
-        /// <item><description><b>状态机</b>：Running（PENDING/RUNNING）→ Succeeded / Failed / Cancelled</description></item>
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传；后端会校验 RunId 必须属于当前租户，否则统一返回 <c>ERR.SkillHub.RunNotFound</c>（避免泄漏存在性）。</description></item>
-        /// <item><description><b>IncludeLogs</b>：可选，是否返回执行日志，默认 <c>false</c>。
-        /// 执行成功时 <c>Result.Content[]</c> 为 MCP 风格 Content 块数组（Text / File / Image）。</description></item>
+        /// <item><description><b>State machine</b>: Running (PENDING/RUNNING) → Succeeded / Failed / Cancelled</description></item>
+        /// <item><description><b>TenantId</b>: An optional common parameter passed through by the gateway. The backend verifies that the RunId belongs to the current tenant. Otherwise, <c>ERR.SkillHub.RunNotFound</c> is returned to avoid exposing existence information.</description></item>
+        /// <item><description><b>IncludeLogs</b>: Optional. Specifies whether to return execution logs. Default value: <c>false</c>.
+        /// When execution succeeds, <c>Result.Content[]</c> is an MCP-style Content block array (Text / File / Image).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7026,16 +8494,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定资源（知识）的详细信息，支持按需返回大体积明细字段。</para>
+        /// <para>Queries the details of a specified resource (knowledge), with support for returning large detail fields on demand.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenant_id</c> 仅来自鉴权身份；调用方在 body 中传入会被忽略。</description></item>
-        /// <item><description>出参不暴露 <c>creator</c> / <c>modifier</c> 等审计字段；<c>unstructured_docs[ ].content</c> 默认不返回，以避免大体积响应。</description></item>
-        /// <item><description>通过设置 <c>includeDetails</c> 参数为 <c>True</c> 可以获取包括 <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, 和 <c>unstructuredDocs</c> 在内的更多细节信息。</description></item>
+        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the body is ignored.</description></item>
+        /// <item><description>Response parameters do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
+        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7092,16 +8560,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定资源（知识）的详细信息，支持按需返回大体积明细字段。</para>
+        /// <para>Queries the details of a specified resource (knowledge), with support for returning large detail fields on demand.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenant_id</c> 仅来自鉴权身份；调用方在 body 中传入会被忽略。</description></item>
-        /// <item><description>出参不暴露 <c>creator</c> / <c>modifier</c> 等审计字段；<c>unstructured_docs[ ].content</c> 默认不返回，以避免大体积响应。</description></item>
-        /// <item><description>通过设置 <c>includeDetails</c> 参数为 <c>True</c> 可以获取包括 <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, 和 <c>unstructuredDocs</c> 在内的更多细节信息。</description></item>
+        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the body is ignored.</description></item>
+        /// <item><description>Response parameters do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
+        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7158,16 +8626,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定资源（知识）的详细信息，支持按需返回大体积明细字段。</para>
+        /// <para>Queries the details of a specified resource (knowledge), with support for returning large detail fields on demand.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenant_id</c> 仅来自鉴权身份；调用方在 body 中传入会被忽略。</description></item>
-        /// <item><description>出参不暴露 <c>creator</c> / <c>modifier</c> 等审计字段；<c>unstructured_docs[ ].content</c> 默认不返回，以避免大体积响应。</description></item>
-        /// <item><description>通过设置 <c>includeDetails</c> 参数为 <c>True</c> 可以获取包括 <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, 和 <c>unstructuredDocs</c> 在内的更多细节信息。</description></item>
+        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the body is ignored.</description></item>
+        /// <item><description>Response parameters do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
+        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7187,16 +8655,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定资源（知识）的详细信息，支持按需返回大体积明细字段。</para>
+        /// <para>Queries the details of a specified resource (knowledge), with support for returning large detail fields on demand.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><c>tenant_id</c> 仅来自鉴权身份；调用方在 body 中传入会被忽略。</description></item>
-        /// <item><description>出参不暴露 <c>creator</c> / <c>modifier</c> 等审计字段；<c>unstructured_docs[ ].content</c> 默认不返回，以避免大体积响应。</description></item>
-        /// <item><description>通过设置 <c>includeDetails</c> 参数为 <c>True</c> 可以获取包括 <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, 和 <c>unstructuredDocs</c> 在内的更多细节信息。</description></item>
+        /// <item><description><c>tenant_id</c> is derived from the authenticated identity only. Any value passed in the body is ignored.</description></item>
+        /// <item><description>Response parameters do not expose audit fields such as <c>creator</c> or <c>modifier</c>. The <c>unstructured_docs[ ].content</c> field is not returned by default to avoid large responses.</description></item>
+        /// <item><description>Set the <c>includeDetails</c> parameter to <c>True</c> to retrieve additional details including <c>settings</c>, <c>notes</c>, <c>structuredTables</c>, and <c>unstructuredDocs</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7216,18 +8684,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成用于直接上传文件到OSS的签名URL。</para>
+        /// <para>Generates a signed URL for directly uploading files to OSS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API允许调用方根据提供的文件名等信息，获取一个可用于直接上传文件至阿里云OSS（对象存储服务）的签名URL。通过此URL，用户可以将文件直接上传至指定的OSS位置而无需经过中间服务器转发，从而提高效率和安全性。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API allows callers to obtain a signed URL for directly uploading files to Alibaba Cloud Object Storage Service (OSS) based on the provided file name and other information. With this URL, users can upload files directly to the specified OSS location without routing through an intermediate server, which improves efficiency and security.</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c>/<c>user_id</c>仅来自鉴权身份，即使在请求体中提供也会被忽略。</description></item>
-        /// <item><description><b>默认值</b>：如果未指定<c>expires</c>参数，则默认过期时间为3600秒（即1小时）。</description></item>
-        /// <item><description><b>Content-Type</b>：如果不提供<c>contentType</c>，系统会尝试自动推断文件类型。</description></item>
-        /// <item><description><b>归属范围</b>：通过<c>scope</c>参数定义数据源是属于个人还是企业知识库，默认情况下可能不需要设置。</description></item>
+        /// <item><description><b>Security constraint</b>: <c>tenant_id</c>/<c>user_id</c> are derived only from the authenticated identity. Values provided in the request body are ignored.</description></item>
+        /// <item><description><b>Default value</b>: If the <c>expires</c> parameter is not specified, the default expiration time is 3600 seconds (1 hour).</description></item>
+        /// <item><description><b>Content-Type</b>: If <c>contentType</c> is not provided, the system attempts to automatically infer the file type.</description></item>
+        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. In most cases, this does not need to be set.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7296,18 +8764,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成用于直接上传文件到OSS的签名URL。</para>
+        /// <para>Generates a signed URL for directly uploading files to OSS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API允许调用方根据提供的文件名等信息，获取一个可用于直接上传文件至阿里云OSS（对象存储服务）的签名URL。通过此URL，用户可以将文件直接上传至指定的OSS位置而无需经过中间服务器转发，从而提高效率和安全性。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API allows callers to obtain a signed URL for directly uploading files to Alibaba Cloud Object Storage Service (OSS) based on the provided file name and other information. With this URL, users can upload files directly to the specified OSS location without routing through an intermediate server, which improves efficiency and security.</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c>/<c>user_id</c>仅来自鉴权身份，即使在请求体中提供也会被忽略。</description></item>
-        /// <item><description><b>默认值</b>：如果未指定<c>expires</c>参数，则默认过期时间为3600秒（即1小时）。</description></item>
-        /// <item><description><b>Content-Type</b>：如果不提供<c>contentType</c>，系统会尝试自动推断文件类型。</description></item>
-        /// <item><description><b>归属范围</b>：通过<c>scope</c>参数定义数据源是属于个人还是企业知识库，默认情况下可能不需要设置。</description></item>
+        /// <item><description><b>Security constraint</b>: <c>tenant_id</c>/<c>user_id</c> are derived only from the authenticated identity. Values provided in the request body are ignored.</description></item>
+        /// <item><description><b>Default value</b>: If the <c>expires</c> parameter is not specified, the default expiration time is 3600 seconds (1 hour).</description></item>
+        /// <item><description><b>Content-Type</b>: If <c>contentType</c> is not provided, the system attempts to automatically infer the file type.</description></item>
+        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. In most cases, this does not need to be set.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7376,18 +8844,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成用于直接上传文件到OSS的签名URL。</para>
+        /// <para>Generates a signed URL for directly uploading files to OSS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API允许调用方根据提供的文件名等信息，获取一个可用于直接上传文件至阿里云OSS（对象存储服务）的签名URL。通过此URL，用户可以将文件直接上传至指定的OSS位置而无需经过中间服务器转发，从而提高效率和安全性。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API allows callers to obtain a signed URL for directly uploading files to Alibaba Cloud Object Storage Service (OSS) based on the provided file name and other information. With this URL, users can upload files directly to the specified OSS location without routing through an intermediate server, which improves efficiency and security.</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c>/<c>user_id</c>仅来自鉴权身份，即使在请求体中提供也会被忽略。</description></item>
-        /// <item><description><b>默认值</b>：如果未指定<c>expires</c>参数，则默认过期时间为3600秒（即1小时）。</description></item>
-        /// <item><description><b>Content-Type</b>：如果不提供<c>contentType</c>，系统会尝试自动推断文件类型。</description></item>
-        /// <item><description><b>归属范围</b>：通过<c>scope</c>参数定义数据源是属于个人还是企业知识库，默认情况下可能不需要设置。</description></item>
+        /// <item><description><b>Security constraint</b>: <c>tenant_id</c>/<c>user_id</c> are derived only from the authenticated identity. Values provided in the request body are ignored.</description></item>
+        /// <item><description><b>Default value</b>: If the <c>expires</c> parameter is not specified, the default expiration time is 3600 seconds (1 hour).</description></item>
+        /// <item><description><b>Content-Type</b>: If <c>contentType</c> is not provided, the system attempts to automatically infer the file type.</description></item>
+        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. In most cases, this does not need to be set.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7407,18 +8875,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>生成用于直接上传文件到OSS的签名URL。</para>
+        /// <para>Generates a signed URL for directly uploading files to OSS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API允许调用方根据提供的文件名等信息，获取一个可用于直接上传文件至阿里云OSS（对象存储服务）的签名URL。通过此URL，用户可以将文件直接上传至指定的OSS位置而无需经过中间服务器转发，从而提高效率和安全性。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API allows callers to obtain a signed URL for directly uploading files to Alibaba Cloud Object Storage Service (OSS) based on the provided file name and other information. With this URL, users can upload files directly to the specified OSS location without routing through an intermediate server, which improves efficiency and security.</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c>/<c>user_id</c>仅来自鉴权身份，即使在请求体中提供也会被忽略。</description></item>
-        /// <item><description><b>默认值</b>：如果未指定<c>expires</c>参数，则默认过期时间为3600秒（即1小时）。</description></item>
-        /// <item><description><b>Content-Type</b>：如果不提供<c>contentType</c>，系统会尝试自动推断文件类型。</description></item>
-        /// <item><description><b>归属范围</b>：通过<c>scope</c>参数定义数据源是属于个人还是企业知识库，默认情况下可能不需要设置。</description></item>
+        /// <item><description><b>Security constraint</b>: <c>tenant_id</c>/<c>user_id</c> are derived only from the authenticated identity. Values provided in the request body are ignored.</description></item>
+        /// <item><description><b>Default value</b>: If the <c>expires</c> parameter is not specified, the default expiration time is 3600 seconds (1 hour).</description></item>
+        /// <item><description><b>Content-Type</b>: If <c>contentType</c> is not provided, the system attempts to automatically infer the file type.</description></item>
+        /// <item><description><b>Scope</b>: The <c>scope</c> parameter defines whether the data source belongs to a personal or enterprise knowledge base. In most cases, this does not need to be set.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7438,18 +8906,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的 Token 状态</para>
+        /// <para>Queries the token status of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询用户的 INSTANCE Token 状态。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 查询 ACTIVE INSTANCE Token
-        ///     4. 存在 → 返回 enabled=True + 脱敏值 + 创建时间
-        ///     5. 不存在 → 返回 enabled=False</para>
+        /// <para>Queries the INSTANCE token status of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Queries the ACTIVE INSTANCE token.
+        ///     4. If the token exists, returns enabled=True with the masked value and creation time.
+        ///     5. If the token does not exist, returns enabled=False.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7501,18 +8969,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的 Token 状态</para>
+        /// <para>Queries the token status of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询用户的 INSTANCE Token 状态。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 查询 ACTIVE INSTANCE Token
-        ///     4. 存在 → 返回 enabled=True + 脱敏值 + 创建时间
-        ///     5. 不存在 → 返回 enabled=False</para>
+        /// <para>Queries the INSTANCE token status of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Queries the ACTIVE INSTANCE token.
+        ///     4. If the token exists, returns enabled=True with the masked value and creation time.
+        ///     5. If the token does not exist, returns enabled=False.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7564,18 +9032,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的 Token 状态</para>
+        /// <para>Queries the token status of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询用户的 INSTANCE Token 状态。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 查询 ACTIVE INSTANCE Token
-        ///     4. 存在 → 返回 enabled=True + 脱敏值 + 创建时间
-        ///     5. 不存在 → 返回 enabled=False</para>
+        /// <para>Queries the INSTANCE token status of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Queries the ACTIVE INSTANCE token.
+        ///     4. If the token exists, returns enabled=True with the masked value and creation time.
+        ///     5. If the token does not exist, returns enabled=False.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7594,18 +9062,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户的 Token 状态</para>
+        /// <para>Queries the token status of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询用户的 INSTANCE Token 状态。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 查询 ACTIVE INSTANCE Token
-        ///     4. 存在 → 返回 enabled=True + 脱敏值 + 创建时间
-        ///     5. 不存在 → 返回 enabled=False</para>
+        /// <para>Queries the INSTANCE token status of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Queries the ACTIVE INSTANCE token.
+        ///     4. If the token exists, returns enabled=True with the masked value and creation time.
+        ///     5. If the token does not exist, returns enabled=False.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7624,21 +9092,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户详情</para>
+        /// <para>Queries user details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 查询用户详情。
-        ///     业务编排：
-        ///     1. 按 wnUserId 或 accountId 定位用户
-        ///     2. 查询用户在当前租户的映射信息（状态、加入时间、最后登录）
-        ///     3. 查询用户在当前租户的角色列表
-        ///     4. 查询用户在当前租户的用户组列表
-        ///     5. 组装响应
-        ///     错误码：
-        ///     - ERR.User.NotFound: 用户不存在
-        ///     - ERR.User.NotInTenant: 用户不在当前租户下</para>
+        /// <para>Queries user details through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Locate the user by wnUserId or accountId.
+        ///     2. Query the user mapping information in the current tenant (status, join time, and last logon time).
+        ///     3. Query the role list of the user in the current tenant.
+        ///     4. Query the user group list of the user in the current tenant.
+        ///     5. Assemble the response.
+        ///     Error codes:
+        ///     - ERR.User.NotFound: The user does not exist.
+        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7692,21 +9160,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户详情</para>
+        /// <para>Queries user details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 查询用户详情。
-        ///     业务编排：
-        ///     1. 按 wnUserId 或 accountId 定位用户
-        ///     2. 查询用户在当前租户的映射信息（状态、加入时间、最后登录）
-        ///     3. 查询用户在当前租户的角色列表
-        ///     4. 查询用户在当前租户的用户组列表
-        ///     5. 组装响应
-        ///     错误码：
-        ///     - ERR.User.NotFound: 用户不存在
-        ///     - ERR.User.NotInTenant: 用户不在当前租户下</para>
+        /// <para>Queries user details through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Locate the user by wnUserId or accountId.
+        ///     2. Query the user mapping information in the current tenant (status, join time, and last logon time).
+        ///     3. Query the role list of the user in the current tenant.
+        ///     4. Query the user group list of the user in the current tenant.
+        ///     5. Assemble the response.
+        ///     Error codes:
+        ///     - ERR.User.NotFound: The user does not exist.
+        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7760,21 +9228,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户详情</para>
+        /// <para>Queries user details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 查询用户详情。
-        ///     业务编排：
-        ///     1. 按 wnUserId 或 accountId 定位用户
-        ///     2. 查询用户在当前租户的映射信息（状态、加入时间、最后登录）
-        ///     3. 查询用户在当前租户的角色列表
-        ///     4. 查询用户在当前租户的用户组列表
-        ///     5. 组装响应
-        ///     错误码：
-        ///     - ERR.User.NotFound: 用户不存在
-        ///     - ERR.User.NotInTenant: 用户不在当前租户下</para>
+        /// <para>Queries user details through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Locate the user by wnUserId or accountId.
+        ///     2. Query the user mapping information in the current tenant (status, join time, and last logon time).
+        ///     3. Query the role list of the user in the current tenant.
+        ///     4. Query the user group list of the user in the current tenant.
+        ///     5. Assemble the response.
+        ///     Error codes:
+        ///     - ERR.User.NotFound: The user does not exist.
+        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7793,21 +9261,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户详情</para>
+        /// <para>Queries user details.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 查询用户详情。
-        ///     业务编排：
-        ///     1. 按 wnUserId 或 accountId 定位用户
-        ///     2. 查询用户在当前租户的映射信息（状态、加入时间、最后登录）
-        ///     3. 查询用户在当前租户的角色列表
-        ///     4. 查询用户在当前租户的用户组列表
-        ///     5. 组装响应
-        ///     错误码：
-        ///     - ERR.User.NotFound: 用户不存在
-        ///     - ERR.User.NotInTenant: 用户不在当前租户下</para>
+        /// <para>Queries user details through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Locate the user by wnUserId or accountId.
+        ///     2. Query the user mapping information in the current tenant (status, join time, and last logon time).
+        ///     3. Query the role list of the user in the current tenant.
+        ///     4. Query the user group list of the user in the current tenant.
+        ///     5. Assemble the response.
+        ///     Error codes:
+        ///     - ERR.User.NotFound: The user does not exist.
+        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7826,17 +9294,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前登录用户的实时信用消耗、限额及剩余情况。</para>
+        /// <para>Queries the real-time credit consumption, limit, and remaining balance of the current logged-on user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取当前登录用户的信用使用详情，包括信用限额、已消耗的信用额度以及剩余信用额度。</description></item>
-        /// <item><description>数据来源于Redis实时缓存，确保了信息的即时性。</description></item>
-        /// <item><description>支持通过租户ID来指定查询特定租户下的用户信用使用情况，默认情况下将使用调用方的默认租户。</description></item>
-        /// <item><description>请求时可选择提供<c>RequestId</c>作为请求标识符，但这不是必需的。</description></item>
+        /// <item><description>This API is used to retrieve the credit usage details of the current logged-on user, including the credit limit, consumed credits, and remaining credits.</description></item>
+        /// <item><description>Data is sourced from a real-time Redis cache, ensuring information immediacy.</description></item>
+        /// <item><description>You can specify a tenant ID to query the credit usage of a user under a specific tenant. By default, the caller\&quot;s default tenant is used.</description></item>
+        /// <item><description>You can optionally provide a <c>RequestId</c> as a request identifier, but this is not required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7883,17 +9351,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前登录用户的实时信用消耗、限额及剩余情况。</para>
+        /// <para>Queries the real-time credit consumption, limit, and remaining balance of the current logged-on user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取当前登录用户的信用使用详情，包括信用限额、已消耗的信用额度以及剩余信用额度。</description></item>
-        /// <item><description>数据来源于Redis实时缓存，确保了信息的即时性。</description></item>
-        /// <item><description>支持通过租户ID来指定查询特定租户下的用户信用使用情况，默认情况下将使用调用方的默认租户。</description></item>
-        /// <item><description>请求时可选择提供<c>RequestId</c>作为请求标识符，但这不是必需的。</description></item>
+        /// <item><description>This API is used to retrieve the credit usage details of the current logged-on user, including the credit limit, consumed credits, and remaining credits.</description></item>
+        /// <item><description>Data is sourced from a real-time Redis cache, ensuring information immediacy.</description></item>
+        /// <item><description>You can specify a tenant ID to query the credit usage of a user under a specific tenant. By default, the caller\&quot;s default tenant is used.</description></item>
+        /// <item><description>You can optionally provide a <c>RequestId</c> as a request identifier, but this is not required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7940,17 +9408,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前登录用户的实时信用消耗、限额及剩余情况。</para>
+        /// <para>Queries the real-time credit consumption, limit, and remaining balance of the current logged-on user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取当前登录用户的信用使用详情，包括信用限额、已消耗的信用额度以及剩余信用额度。</description></item>
-        /// <item><description>数据来源于Redis实时缓存，确保了信息的即时性。</description></item>
-        /// <item><description>支持通过租户ID来指定查询特定租户下的用户信用使用情况，默认情况下将使用调用方的默认租户。</description></item>
-        /// <item><description>请求时可选择提供<c>RequestId</c>作为请求标识符，但这不是必需的。</description></item>
+        /// <item><description>This API is used to retrieve the credit usage details of the current logged-on user, including the credit limit, consumed credits, and remaining credits.</description></item>
+        /// <item><description>Data is sourced from a real-time Redis cache, ensuring information immediacy.</description></item>
+        /// <item><description>You can specify a tenant ID to query the credit usage of a user under a specific tenant. By default, the caller\&quot;s default tenant is used.</description></item>
+        /// <item><description>You can optionally provide a <c>RequestId</c> as a request identifier, but this is not required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -7970,17 +9438,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前登录用户的实时信用消耗、限额及剩余情况。</para>
+        /// <para>Queries the real-time credit consumption, limit, and remaining balance of the current logged-on user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取当前登录用户的信用使用详情，包括信用限额、已消耗的信用额度以及剩余信用额度。</description></item>
-        /// <item><description>数据来源于Redis实时缓存，确保了信息的即时性。</description></item>
-        /// <item><description>支持通过租户ID来指定查询特定租户下的用户信用使用情况，默认情况下将使用调用方的默认租户。</description></item>
-        /// <item><description>请求时可选择提供<c>RequestId</c>作为请求标识符，但这不是必需的。</description></item>
+        /// <item><description>This API is used to retrieve the credit usage details of the current logged-on user, including the credit limit, consumed credits, and remaining credits.</description></item>
+        /// <item><description>Data is sourced from a real-time Redis cache, ensuring information immediacy.</description></item>
+        /// <item><description>You can specify a tenant ID to query the credit usage of a user under a specific tenant. By default, the caller\&quot;s default tenant is used.</description></item>
+        /// <item><description>You can optionally provide a <c>RequestId</c> as a request identifier, but this is not required.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8000,19 +9468,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过OpenAPI获取鉴权用户的完整信息，包括基本信息、租户列表等。</para>
+        /// <para>Retrieves the complete information of the authenticated user through OpenAPI, including basic information and tenant list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于返回当前鉴权用户的详细信息。</description></item>
-        /// <item><description>当租户信息失效时，将返回对应的错误信息。</description></item>
-        /// <item><description><c>tenantId</c>为可选参数，若未提供，则使用调用方默认的租户ID。</description></item>
-        /// <item><description>支持多种认证方式：AK、BearerToken和APP认证。</description></item>
-        /// <item><description>返回的数据中包含了用户的个人资料（如用户名、头像链接）、角色偏好设置以及所属的所有租户详情。</description></item>
-        /// <item><description>特别注意，如果当前登录的租户是系统租户（即<c>tenantId=10000</c>），则会在响应中明确标识出来。</description></item>
+        /// <item><description>This operation returns the detailed information of the current authenticated user.</description></item>
+        /// <item><description>If the tenant information is invalid, the corresponding error message is returned.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter. If not provided, the default tenant ID of the caller is used.</description></item>
+        /// <item><description>Multiple authentication methods are supported: AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>The returned data includes the user profile (such as username and profile picture URL), role preference settings, and details of all tenants to which the user belongs.</description></item>
+        /// <item><description>If the current logon tenant is the system tenant (that is, <c>tenantId=10000</c>), this is explicitly indicated in the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8059,19 +9527,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过OpenAPI获取鉴权用户的完整信息，包括基本信息、租户列表等。</para>
+        /// <para>Retrieves the complete information of the authenticated user through OpenAPI, including basic information and tenant list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于返回当前鉴权用户的详细信息。</description></item>
-        /// <item><description>当租户信息失效时，将返回对应的错误信息。</description></item>
-        /// <item><description><c>tenantId</c>为可选参数，若未提供，则使用调用方默认的租户ID。</description></item>
-        /// <item><description>支持多种认证方式：AK、BearerToken和APP认证。</description></item>
-        /// <item><description>返回的数据中包含了用户的个人资料（如用户名、头像链接）、角色偏好设置以及所属的所有租户详情。</description></item>
-        /// <item><description>特别注意，如果当前登录的租户是系统租户（即<c>tenantId=10000</c>），则会在响应中明确标识出来。</description></item>
+        /// <item><description>This operation returns the detailed information of the current authenticated user.</description></item>
+        /// <item><description>If the tenant information is invalid, the corresponding error message is returned.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter. If not provided, the default tenant ID of the caller is used.</description></item>
+        /// <item><description>Multiple authentication methods are supported: AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>The returned data includes the user profile (such as username and profile picture URL), role preference settings, and details of all tenants to which the user belongs.</description></item>
+        /// <item><description>If the current logon tenant is the system tenant (that is, <c>tenantId=10000</c>), this is explicitly indicated in the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8118,19 +9586,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过OpenAPI获取鉴权用户的完整信息，包括基本信息、租户列表等。</para>
+        /// <para>Retrieves the complete information of the authenticated user through OpenAPI, including basic information and tenant list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于返回当前鉴权用户的详细信息。</description></item>
-        /// <item><description>当租户信息失效时，将返回对应的错误信息。</description></item>
-        /// <item><description><c>tenantId</c>为可选参数，若未提供，则使用调用方默认的租户ID。</description></item>
-        /// <item><description>支持多种认证方式：AK、BearerToken和APP认证。</description></item>
-        /// <item><description>返回的数据中包含了用户的个人资料（如用户名、头像链接）、角色偏好设置以及所属的所有租户详情。</description></item>
-        /// <item><description>特别注意，如果当前登录的租户是系统租户（即<c>tenantId=10000</c>），则会在响应中明确标识出来。</description></item>
+        /// <item><description>This operation returns the detailed information of the current authenticated user.</description></item>
+        /// <item><description>If the tenant information is invalid, the corresponding error message is returned.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter. If not provided, the default tenant ID of the caller is used.</description></item>
+        /// <item><description>Multiple authentication methods are supported: AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>The returned data includes the user profile (such as username and profile picture URL), role preference settings, and details of all tenants to which the user belongs.</description></item>
+        /// <item><description>If the current logon tenant is the system tenant (that is, <c>tenantId=10000</c>), this is explicitly indicated in the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8150,19 +9618,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过OpenAPI获取鉴权用户的完整信息，包括基本信息、租户列表等。</para>
+        /// <para>Retrieves the complete information of the authenticated user through OpenAPI, including basic information and tenant list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于返回当前鉴权用户的详细信息。</description></item>
-        /// <item><description>当租户信息失效时，将返回对应的错误信息。</description></item>
-        /// <item><description><c>tenantId</c>为可选参数，若未提供，则使用调用方默认的租户ID。</description></item>
-        /// <item><description>支持多种认证方式：AK、BearerToken和APP认证。</description></item>
-        /// <item><description>返回的数据中包含了用户的个人资料（如用户名、头像链接）、角色偏好设置以及所属的所有租户详情。</description></item>
-        /// <item><description>特别注意，如果当前登录的租户是系统租户（即<c>tenantId=10000</c>），则会在响应中明确标识出来。</description></item>
+        /// <item><description>This operation returns the detailed information of the current authenticated user.</description></item>
+        /// <item><description>If the tenant information is invalid, the corresponding error message is returned.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter. If not provided, the default tenant ID of the caller is used.</description></item>
+        /// <item><description>Multiple authentication methods are supported: AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>The returned data includes the user profile (such as username and profile picture URL), role preference settings, and details of all tenants to which the user belongs.</description></item>
+        /// <item><description>If the current logon tenant is the system tenant (that is, <c>tenantId=10000</c>), this is explicitly indicated in the response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8182,18 +9650,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权用户/用户组使用数字员工</para>
+        /// <para>Grants authorization to authorized users or user groups to use a digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>授权用户或用户组使用指定数字员工。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 请求体互斥校验：userIds / userGroupIds 二选一
-        ///     3. 委托 AgentAuthorizationAuthorizedService.grant_authorization 执行
-        ///     4. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     5. 已存在的授权记录会被更新（expire_date / permissions）</para>
+        /// <para>Grants authorization to authorized users or user groups to use a specified digital human.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from identity.
+        ///     2. Performs mutual exclusion validation on the request body: specify either userIds or userGroupIds.
+        ///     3. Delegates to AgentAuthorizationAuthorizedService.grant_authorization to execute.
+        ///     4. Pre-validation: verifies MANAGE permission and agent existence (performed at the AuthorizedService layer, which performs authentication first before it exposes existence).
+        ///     5. Existing authorization records are updated (expire_date / permissions).</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8275,18 +9743,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权用户/用户组使用数字员工</para>
+        /// <para>Grants authorization to authorized users or user groups to use a digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>授权用户或用户组使用指定数字员工。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 请求体互斥校验：userIds / userGroupIds 二选一
-        ///     3. 委托 AgentAuthorizationAuthorizedService.grant_authorization 执行
-        ///     4. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     5. 已存在的授权记录会被更新（expire_date / permissions）</para>
+        /// <para>Grants authorization to authorized users or user groups to use a specified digital human.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from identity.
+        ///     2. Performs mutual exclusion validation on the request body: specify either userIds or userGroupIds.
+        ///     3. Delegates to AgentAuthorizationAuthorizedService.grant_authorization to execute.
+        ///     4. Pre-validation: verifies MANAGE permission and agent existence (performed at the AuthorizedService layer, which performs authentication first before it exposes existence).
+        ///     5. Existing authorization records are updated (expire_date / permissions).</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -8368,18 +9836,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权用户/用户组使用数字员工</para>
+        /// <para>Grants authorization to authorized users or user groups to use a digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>授权用户或用户组使用指定数字员工。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 请求体互斥校验：userIds / userGroupIds 二选一
-        ///     3. 委托 AgentAuthorizationAuthorizedService.grant_authorization 执行
-        ///     4. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     5. 已存在的授权记录会被更新（expire_date / permissions）</para>
+        /// <para>Grants authorization to authorized users or user groups to use a specified digital human.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from identity.
+        ///     2. Performs mutual exclusion validation on the request body: specify either userIds or userGroupIds.
+        ///     3. Delegates to AgentAuthorizationAuthorizedService.grant_authorization to execute.
+        ///     4. Pre-validation: verifies MANAGE permission and agent existence (performed at the AuthorizedService layer, which performs authentication first before it exposes existence).
+        ///     5. Existing authorization records are updated (expire_date / permissions).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8398,18 +9866,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>授权用户/用户组使用数字员工</para>
+        /// <para>Grants authorization to authorized users or user groups to use a digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>授权用户或用户组使用指定数字员工。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 请求体互斥校验：userIds / userGroupIds 二选一
-        ///     3. 委托 AgentAuthorizationAuthorizedService.grant_authorization 执行
-        ///     4. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     5. 已存在的授权记录会被更新（expire_date / permissions）</para>
+        /// <para>Grants authorization to authorized users or user groups to use a specified digital human.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from identity.
+        ///     2. Performs mutual exclusion validation on the request body: specify either userIds or userGroupIds.
+        ///     3. Delegates to AgentAuthorizationAuthorizedService.grant_authorization to execute.
+        ///     4. Pre-validation: verifies MANAGE permission and agent existence (performed at the AuthorizedService layer, which performs authentication first before it exposes existence).
+        ///     5. Existing authorization records are updated (expire_date / permissions).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8428,19 +9896,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查询或下钻查看租户的企业知识库列表。</para>
+        /// <para>Queries or drills down into the enterprise knowledge base list of a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持两种模式：当 <c>directoryId</c> 为空或为 &#39;root&#39; 时，返回知识库的顶层列表；当 <c>directoryId</c> 有具体值时，则进行下钻操作，返回指定目录下的子目录和资源。</description></item>
-        /// <item><description><c>tenantId</c> 作为公共参数，若未提供则默认使用调用方的租户 ID。</description></item>
-        /// <item><description>在下钻模式下（即 <c>directoryId</c> 非空），可以通过 <c>sourceTypes</c> 参数来过滤特定类型的资源。</description></item>
-        /// <item><description>排序字段 (<c>sortField</c>) 和排序方向 (<c>sortOrder</c>) 可以自定义，但非法值将被重置为默认设置。</description></item>
-        /// <item><description>搜索功能仅在获取顶层列表时有效，并且只支持模糊匹配名称或描述。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c> 严格从鉴权身份中获取，不允许通过请求体传递。</description></item>
+        /// <item><description>This API supports two modes: when <c>directoryId</c> is empty or set to \&quot;root\&quot;, the top-level knowledge base list is returned. When <c>directoryId</c> has a specific value, a drill-down operation is performed to return subdirectories and resources under the specified directory.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If not provided, the caller\&quot;s tenant ID is used by default.</description></item>
+        /// <item><description>In drill-down mode (when <c>directoryId</c> is not empty), use the <c>sourceTypes</c> parameter to filter resources by specific types.</description></item>
+        /// <item><description>The sort field (<c>sortField</c>) and sort order (<c>sortOrder</c>) can be customized. Invalid values are reset to default settings.</description></item>
+        /// <item><description>The search feature is only effective when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> is strictly obtained from the authenticated identity and cannot be passed through the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8523,19 +9991,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查询或下钻查看租户的企业知识库列表。</para>
+        /// <para>Queries or drills down into the enterprise knowledge base list of a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持两种模式：当 <c>directoryId</c> 为空或为 &#39;root&#39; 时，返回知识库的顶层列表；当 <c>directoryId</c> 有具体值时，则进行下钻操作，返回指定目录下的子目录和资源。</description></item>
-        /// <item><description><c>tenantId</c> 作为公共参数，若未提供则默认使用调用方的租户 ID。</description></item>
-        /// <item><description>在下钻模式下（即 <c>directoryId</c> 非空），可以通过 <c>sourceTypes</c> 参数来过滤特定类型的资源。</description></item>
-        /// <item><description>排序字段 (<c>sortField</c>) 和排序方向 (<c>sortOrder</c>) 可以自定义，但非法值将被重置为默认设置。</description></item>
-        /// <item><description>搜索功能仅在获取顶层列表时有效，并且只支持模糊匹配名称或描述。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c> 严格从鉴权身份中获取，不允许通过请求体传递。</description></item>
+        /// <item><description>This API supports two modes: when <c>directoryId</c> is empty or set to \&quot;root\&quot;, the top-level knowledge base list is returned. When <c>directoryId</c> has a specific value, a drill-down operation is performed to return subdirectories and resources under the specified directory.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If not provided, the caller\&quot;s tenant ID is used by default.</description></item>
+        /// <item><description>In drill-down mode (when <c>directoryId</c> is not empty), use the <c>sourceTypes</c> parameter to filter resources by specific types.</description></item>
+        /// <item><description>The sort field (<c>sortField</c>) and sort order (<c>sortOrder</c>) can be customized. Invalid values are reset to default settings.</description></item>
+        /// <item><description>The search feature is only effective when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> is strictly obtained from the authenticated identity and cannot be passed through the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8618,19 +10086,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查询或下钻查看租户的企业知识库列表。</para>
+        /// <para>Queries or drills down into the enterprise knowledge base list of a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持两种模式：当 <c>directoryId</c> 为空或为 &#39;root&#39; 时，返回知识库的顶层列表；当 <c>directoryId</c> 有具体值时，则进行下钻操作，返回指定目录下的子目录和资源。</description></item>
-        /// <item><description><c>tenantId</c> 作为公共参数，若未提供则默认使用调用方的租户 ID。</description></item>
-        /// <item><description>在下钻模式下（即 <c>directoryId</c> 非空），可以通过 <c>sourceTypes</c> 参数来过滤特定类型的资源。</description></item>
-        /// <item><description>排序字段 (<c>sortField</c>) 和排序方向 (<c>sortOrder</c>) 可以自定义，但非法值将被重置为默认设置。</description></item>
-        /// <item><description>搜索功能仅在获取顶层列表时有效，并且只支持模糊匹配名称或描述。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c> 严格从鉴权身份中获取，不允许通过请求体传递。</description></item>
+        /// <item><description>This API supports two modes: when <c>directoryId</c> is empty or set to \&quot;root\&quot;, the top-level knowledge base list is returned. When <c>directoryId</c> has a specific value, a drill-down operation is performed to return subdirectories and resources under the specified directory.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If not provided, the caller\&quot;s tenant ID is used by default.</description></item>
+        /// <item><description>In drill-down mode (when <c>directoryId</c> is not empty), use the <c>sourceTypes</c> parameter to filter resources by specific types.</description></item>
+        /// <item><description>The sort field (<c>sortField</c>) and sort order (<c>sortOrder</c>) can be customized. Invalid values are reset to default settings.</description></item>
+        /// <item><description>The search feature is only effective when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> is strictly obtained from the authenticated identity and cannot be passed through the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8650,19 +10118,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查询或下钻查看租户的企业知识库列表。</para>
+        /// <para>Queries or drills down into the enterprise knowledge base list of a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持两种模式：当 <c>directoryId</c> 为空或为 &#39;root&#39; 时，返回知识库的顶层列表；当 <c>directoryId</c> 有具体值时，则进行下钻操作，返回指定目录下的子目录和资源。</description></item>
-        /// <item><description><c>tenantId</c> 作为公共参数，若未提供则默认使用调用方的租户 ID。</description></item>
-        /// <item><description>在下钻模式下（即 <c>directoryId</c> 非空），可以通过 <c>sourceTypes</c> 参数来过滤特定类型的资源。</description></item>
-        /// <item><description>排序字段 (<c>sortField</c>) 和排序方向 (<c>sortOrder</c>) 可以自定义，但非法值将被重置为默认设置。</description></item>
-        /// <item><description>搜索功能仅在获取顶层列表时有效，并且只支持模糊匹配名称或描述。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c> 严格从鉴权身份中获取，不允许通过请求体传递。</description></item>
+        /// <item><description>This API supports two modes: when <c>directoryId</c> is empty or set to \&quot;root\&quot;, the top-level knowledge base list is returned. When <c>directoryId</c> has a specific value, a drill-down operation is performed to return subdirectories and resources under the specified directory.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If not provided, the caller\&quot;s tenant ID is used by default.</description></item>
+        /// <item><description>In drill-down mode (when <c>directoryId</c> is not empty), use the <c>sourceTypes</c> parameter to filter resources by specific types.</description></item>
+        /// <item><description>The sort field (<c>sortField</c>) and sort order (<c>sortOrder</c>) can be customized. Invalid values are reset to default settings.</description></item>
+        /// <item><description>The search feature is only effective when retrieving the top-level list and supports only fuzzy matching on names or descriptions.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> is strictly obtained from the authenticated identity and cannot be passed through the request body.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8682,19 +10150,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户全量数字员工列表</para>
+        /// <para>Queries the full list of digital employees for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询租户下全部数字员工列表（含停用）。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_agents 完成权限校验（APPLICATION_AGENT_VIEW）
-        ///     3. 返回租户全量数字员工的富字段（operatingObjectName / displayName / authMode / isActive）
-        ///     4. 系统级 Token 通过 ctx.skip_permission 自动放行
-        ///     与 listAuthorizedAgents 区别：本接口返回租户全量（含停用、不做授权过滤），
-        ///     并携带 displayName / isActive 等富字段，供管理端展示。</para>
+        /// <para>Queries the full list of digital employees under a tenant, including deactivated ones.
+        ///     Business logic:
+        ///     1. Constructs AuthContext from identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_agents to complete permission verification (APPLICATION_AGENT_VIEW).
+        ///     3. Returns rich fields for all digital employees of the tenant (operatingObjectName / displayName / authMode / isActive).
+        ///     4. System-level tokens are automatically allowed through ctx.skip_permission.
+        ///     Difference from listAuthorizedAgents: This operation returns all digital employees of the tenant (including deactivated ones, without authorization filtering) and includes rich fields such as displayName and isActive for management console display.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8740,19 +10207,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户全量数字员工列表</para>
+        /// <para>Queries the full list of digital employees for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询租户下全部数字员工列表（含停用）。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_agents 完成权限校验（APPLICATION_AGENT_VIEW）
-        ///     3. 返回租户全量数字员工的富字段（operatingObjectName / displayName / authMode / isActive）
-        ///     4. 系统级 Token 通过 ctx.skip_permission 自动放行
-        ///     与 listAuthorizedAgents 区别：本接口返回租户全量（含停用、不做授权过滤），
-        ///     并携带 displayName / isActive 等富字段，供管理端展示。</para>
+        /// <para>Queries the full list of digital employees under a tenant, including deactivated ones.
+        ///     Business logic:
+        ///     1. Constructs AuthContext from identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_agents to complete permission verification (APPLICATION_AGENT_VIEW).
+        ///     3. Returns rich fields for all digital employees of the tenant (operatingObjectName / displayName / authMode / isActive).
+        ///     4. System-level tokens are automatically allowed through ctx.skip_permission.
+        ///     Difference from listAuthorizedAgents: This operation returns all digital employees of the tenant (including deactivated ones, without authorization filtering) and includes rich fields such as displayName and isActive for management console display.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8798,19 +10264,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户全量数字员工列表</para>
+        /// <para>Queries the full list of digital employees for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询租户下全部数字员工列表（含停用）。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_agents 完成权限校验（APPLICATION_AGENT_VIEW）
-        ///     3. 返回租户全量数字员工的富字段（operatingObjectName / displayName / authMode / isActive）
-        ///     4. 系统级 Token 通过 ctx.skip_permission 自动放行
-        ///     与 listAuthorizedAgents 区别：本接口返回租户全量（含停用、不做授权过滤），
-        ///     并携带 displayName / isActive 等富字段，供管理端展示。</para>
+        /// <para>Queries the full list of digital employees under a tenant, including deactivated ones.
+        ///     Business logic:
+        ///     1. Constructs AuthContext from identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_agents to complete permission verification (APPLICATION_AGENT_VIEW).
+        ///     3. Returns rich fields for all digital employees of the tenant (operatingObjectName / displayName / authMode / isActive).
+        ///     4. System-level tokens are automatically allowed through ctx.skip_permission.
+        ///     Difference from listAuthorizedAgents: This operation returns all digital employees of the tenant (including deactivated ones, without authorization filtering) and includes rich fields such as displayName and isActive for management console display.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8829,19 +10294,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户全量数字员工列表</para>
+        /// <para>Queries the full list of digital employees for a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询租户下全部数字员工列表（含停用）。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_agents 完成权限校验（APPLICATION_AGENT_VIEW）
-        ///     3. 返回租户全量数字员工的富字段（operatingObjectName / displayName / authMode / isActive）
-        ///     4. 系统级 Token 通过 ctx.skip_permission 自动放行
-        ///     与 listAuthorizedAgents 区别：本接口返回租户全量（含停用、不做授权过滤），
-        ///     并携带 displayName / isActive 等富字段，供管理端展示。</para>
+        /// <para>Queries the full list of digital employees under a tenant, including deactivated ones.
+        ///     Business logic:
+        ///     1. Constructs AuthContext from identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_agents to complete permission verification (APPLICATION_AGENT_VIEW).
+        ///     3. Returns rich fields for all digital employees of the tenant (operatingObjectName / displayName / authMode / isActive).
+        ///     4. System-level tokens are automatically allowed through ctx.skip_permission.
+        ///     Difference from listAuthorizedAgents: This operation returns all digital employees of the tenant (including deactivated ones, without authorization filtering) and includes rich fields such as displayName and isActive for management console display.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8860,19 +10324,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调用方有指定权限的数字员工名称列表</para>
+        /// <para>Queries the list of digital human names for which the caller has specified permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询当前调用方（或指定目标用户）拥有指定权限（USE/MANAGE）的数字员工名称列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_authorized_agents 执行查询
-        ///     3. skip_permission=True 时返回租户全量活跃 agent
-        ///     4. 普通用户根据授权记录 + auth_mode 过滤
-        ///     5. 传入 targetUserId（代查他人）时需 APPLICATION_AGENT_VIEW 门控，查询限定本租户；
-        ///        目标用户非本租户成员时抛 USER_NOT_IN_TENANT（不静默返回空列表）</para>
+        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has specified permissions (USE/MANAGE).
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_agents to execute the query.
+        ///     3. When skip_permission=True, returns all active agents for the tenant.
+        ///     4. Regular users are filtered based on authorization records and auth_mode.
+        ///     5. When targetUserId is specified (querying on behalf of another user), the APPLICATION_AGENT_VIEW gate is required, and the query is restricted to the current tenant. If the target user is not a member of the current tenant, a USER_NOT_IN_TENANT error is thrown (an empty list is not silently returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8928,19 +10391,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调用方有指定权限的数字员工名称列表</para>
+        /// <para>Queries the list of digital human names for which the caller has specified permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询当前调用方（或指定目标用户）拥有指定权限（USE/MANAGE）的数字员工名称列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_authorized_agents 执行查询
-        ///     3. skip_permission=True 时返回租户全量活跃 agent
-        ///     4. 普通用户根据授权记录 + auth_mode 过滤
-        ///     5. 传入 targetUserId（代查他人）时需 APPLICATION_AGENT_VIEW 门控，查询限定本租户；
-        ///        目标用户非本租户成员时抛 USER_NOT_IN_TENANT（不静默返回空列表）</para>
+        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has specified permissions (USE/MANAGE).
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_agents to execute the query.
+        ///     3. When skip_permission=True, returns all active agents for the tenant.
+        ///     4. Regular users are filtered based on authorization records and auth_mode.
+        ///     5. When targetUserId is specified (querying on behalf of another user), the APPLICATION_AGENT_VIEW gate is required, and the query is restricted to the current tenant. If the target user is not a member of the current tenant, a USER_NOT_IN_TENANT error is thrown (an empty list is not silently returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8996,19 +10458,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调用方有指定权限的数字员工名称列表</para>
+        /// <para>Queries the list of digital human names for which the caller has specified permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询当前调用方（或指定目标用户）拥有指定权限（USE/MANAGE）的数字员工名称列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_authorized_agents 执行查询
-        ///     3. skip_permission=True 时返回租户全量活跃 agent
-        ///     4. 普通用户根据授权记录 + auth_mode 过滤
-        ///     5. 传入 targetUserId（代查他人）时需 APPLICATION_AGENT_VIEW 门控，查询限定本租户；
-        ///        目标用户非本租户成员时抛 USER_NOT_IN_TENANT（不静默返回空列表）</para>
+        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has specified permissions (USE/MANAGE).
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_agents to execute the query.
+        ///     3. When skip_permission=True, returns all active agents for the tenant.
+        ///     4. Regular users are filtered based on authorization records and auth_mode.
+        ///     5. When targetUserId is specified (querying on behalf of another user), the APPLICATION_AGENT_VIEW gate is required, and the query is restricted to the current tenant. If the target user is not a member of the current tenant, a USER_NOT_IN_TENANT error is thrown (an empty list is not silently returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9027,19 +10488,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询调用方有指定权限的数字员工名称列表</para>
+        /// <para>Queries the list of digital human names for which the caller has specified permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询当前调用方（或指定目标用户）拥有指定权限（USE/MANAGE）的数字员工名称列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_authorized_agents 执行查询
-        ///     3. skip_permission=True 时返回租户全量活跃 agent
-        ///     4. 普通用户根据授权记录 + auth_mode 过滤
-        ///     5. 传入 targetUserId（代查他人）时需 APPLICATION_AGENT_VIEW 门控，查询限定本租户；
-        ///        目标用户非本租户成员时抛 USER_NOT_IN_TENANT（不静默返回空列表）</para>
+        /// <para>Queries the list of digital human names for which the current caller (or a specified target user) has specified permissions (USE/MANAGE).
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_agents to execute the query.
+        ///     3. When skip_permission=True, returns all active agents for the tenant.
+        ///     4. Regular users are filtered based on authorization records and auth_mode.
+        ///     5. When targetUserId is specified (querying on behalf of another user), the APPLICATION_AGENT_VIEW gate is required, and the query is restricted to the current tenant. If the target user is not a member of the current tenant, a USER_NOT_IN_TENANT error is thrown (an empty list is not silently returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9058,17 +10518,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工已授权的用户/用户组列表</para>
+        /// <para>Queries the list of authorized users or user groups for a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询某数字员工已授权的用户/用户组列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_authorized_users 执行查询
-        ///     3. 权限校验由 AuthorizedService 层 @require_permission(APPLICATION_AGENT_VIEW) 完成
-        ///     4. auth_mode=ALL_USERS 时仅展示有 MANAGE 权限的记录</para>
+        /// <para>Queries the list of authorized users or user groups for a specified digital employee.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_users to execute the query.
+        ///     3. Permission verification is performed at the AuthorizedService layer by @require_permission(APPLICATION_AGENT_VIEW).
+        ///     4. When auth_mode=ALL_USERS, only records with MANAGE permissions are displayed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9132,17 +10592,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工已授权的用户/用户组列表</para>
+        /// <para>Queries the list of authorized users or user groups for a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询某数字员工已授权的用户/用户组列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_authorized_users 执行查询
-        ///     3. 权限校验由 AuthorizedService 层 @require_permission(APPLICATION_AGENT_VIEW) 完成
-        ///     4. auth_mode=ALL_USERS 时仅展示有 MANAGE 权限的记录</para>
+        /// <para>Queries the list of authorized users or user groups for a specified digital employee.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_users to execute the query.
+        ///     3. Permission verification is performed at the AuthorizedService layer by @require_permission(APPLICATION_AGENT_VIEW).
+        ///     4. When auth_mode=ALL_USERS, only records with MANAGE permissions are displayed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9206,17 +10666,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工已授权的用户/用户组列表</para>
+        /// <para>Queries the list of authorized users or user groups for a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询某数字员工已授权的用户/用户组列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_authorized_users 执行查询
-        ///     3. 权限校验由 AuthorizedService 层 @require_permission(APPLICATION_AGENT_VIEW) 完成
-        ///     4. auth_mode=ALL_USERS 时仅展示有 MANAGE 权限的记录</para>
+        /// <para>Queries the list of authorized users or user groups for a specified digital employee.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_users to execute the query.
+        ///     3. Permission verification is performed at the AuthorizedService layer by @require_permission(APPLICATION_AGENT_VIEW).
+        ///     4. When auth_mode=ALL_USERS, only records with MANAGE permissions are displayed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9235,17 +10695,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工已授权的用户/用户组列表</para>
+        /// <para>Queries the list of authorized users or user groups for a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询某数字员工已授权的用户/用户组列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.list_authorized_users 执行查询
-        ///     3. 权限校验由 AuthorizedService 层 @require_permission(APPLICATION_AGENT_VIEW) 完成
-        ///     4. auth_mode=ALL_USERS 时仅展示有 MANAGE 权限的记录</para>
+        /// <para>Queries the list of authorized users or user groups for a specified digital employee.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.list_authorized_users to execute the query.
+        ///     3. Permission verification is performed at the AuthorizedService layer by @require_permission(APPLICATION_AGENT_VIEW).
+        ///     4. When auth_mode=ALL_USERS, only records with MANAGE permissions are displayed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9264,18 +10724,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>枚举可用的组织同步配置</para>
+        /// <para>Enumerates available organization synchronization configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>枚举当前租户下所有可用的组织同步配置。
-        ///     返回统一格式的 configs 列表，涵盖四种平台类型：
-        ///     - <b>wecom</b>：从 SsoProviderRegistry 获取活跃的企微 SSO 配置
-        ///     - <b>saml</b>：从 SsoProviderRegistry 获取活跃的 SAML SSO 配置，corpId 取 idpEntityId
-        ///     - <b>oauth2</b>：从 SsoProviderRegistry 获取活跃的 OAuth2 SSO 配置，corpId 取 clientId
-        ///     - <b>custom</b>：从数据库查询该租户已注册的纯自定义组织
-        ///     客户端根据返回的 platformType 区分处理逻辑，corpId 为后续同步接口的必传参数。</para>
+        /// <para>Enumerates all available organization synchronization configurations under the current tenant.
+        ///     Returns a unified configs list covering four platform types:
+        ///     - <b>wecom</b>: Retrieves active WeCom SSO configurations from SsoProviderRegistry.
+        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry. The corpId is set to idpEntityId.
+        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry. The corpId is set to clientId.
+        ///     - <b>custom</b>: Queries the database for pure custom organizations registered under the tenant.
+        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9321,18 +10781,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>枚举可用的组织同步配置</para>
+        /// <para>Enumerates available organization synchronization configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>枚举当前租户下所有可用的组织同步配置。
-        ///     返回统一格式的 configs 列表，涵盖四种平台类型：
-        ///     - <b>wecom</b>：从 SsoProviderRegistry 获取活跃的企微 SSO 配置
-        ///     - <b>saml</b>：从 SsoProviderRegistry 获取活跃的 SAML SSO 配置，corpId 取 idpEntityId
-        ///     - <b>oauth2</b>：从 SsoProviderRegistry 获取活跃的 OAuth2 SSO 配置，corpId 取 clientId
-        ///     - <b>custom</b>：从数据库查询该租户已注册的纯自定义组织
-        ///     客户端根据返回的 platformType 区分处理逻辑，corpId 为后续同步接口的必传参数。</para>
+        /// <para>Enumerates all available organization synchronization configurations under the current tenant.
+        ///     Returns a unified configs list covering four platform types:
+        ///     - <b>wecom</b>: Retrieves active WeCom SSO configurations from SsoProviderRegistry.
+        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry. The corpId is set to idpEntityId.
+        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry. The corpId is set to clientId.
+        ///     - <b>custom</b>: Queries the database for pure custom organizations registered under the tenant.
+        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9378,18 +10838,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>枚举可用的组织同步配置</para>
+        /// <para>Enumerates available organization synchronization configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>枚举当前租户下所有可用的组织同步配置。
-        ///     返回统一格式的 configs 列表，涵盖四种平台类型：
-        ///     - <b>wecom</b>：从 SsoProviderRegistry 获取活跃的企微 SSO 配置
-        ///     - <b>saml</b>：从 SsoProviderRegistry 获取活跃的 SAML SSO 配置，corpId 取 idpEntityId
-        ///     - <b>oauth2</b>：从 SsoProviderRegistry 获取活跃的 OAuth2 SSO 配置，corpId 取 clientId
-        ///     - <b>custom</b>：从数据库查询该租户已注册的纯自定义组织
-        ///     客户端根据返回的 platformType 区分处理逻辑，corpId 为后续同步接口的必传参数。</para>
+        /// <para>Enumerates all available organization synchronization configurations under the current tenant.
+        ///     Returns a unified configs list covering four platform types:
+        ///     - <b>wecom</b>: Retrieves active WeCom SSO configurations from SsoProviderRegistry.
+        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry. The corpId is set to idpEntityId.
+        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry. The corpId is set to clientId.
+        ///     - <b>custom</b>: Queries the database for pure custom organizations registered under the tenant.
+        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9408,18 +10868,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>枚举可用的组织同步配置</para>
+        /// <para>Enumerates available organization synchronization configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>枚举当前租户下所有可用的组织同步配置。
-        ///     返回统一格式的 configs 列表，涵盖四种平台类型：
-        ///     - <b>wecom</b>：从 SsoProviderRegistry 获取活跃的企微 SSO 配置
-        ///     - <b>saml</b>：从 SsoProviderRegistry 获取活跃的 SAML SSO 配置，corpId 取 idpEntityId
-        ///     - <b>oauth2</b>：从 SsoProviderRegistry 获取活跃的 OAuth2 SSO 配置，corpId 取 clientId
-        ///     - <b>custom</b>：从数据库查询该租户已注册的纯自定义组织
-        ///     客户端根据返回的 platformType 区分处理逻辑，corpId 为后续同步接口的必传参数。</para>
+        /// <para>Enumerates all available organization synchronization configurations under the current tenant.
+        ///     Returns a unified configs list covering four platform types:
+        ///     - <b>wecom</b>: Retrieves active WeCom SSO configurations from SsoProviderRegistry.
+        ///     - <b>saml</b>: Retrieves active SAML SSO configurations from SsoProviderRegistry. The corpId is set to idpEntityId.
+        ///     - <b>oauth2</b>: Retrieves active OAuth2 SSO configurations from SsoProviderRegistry. The corpId is set to clientId.
+        ///     - <b>custom</b>: Queries the database for pure custom organizations registered under the tenant.
+        ///     The client distinguishes processing logic based on the returned platformType. The corpId is a required parameter for subsequent synchronization operations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9438,18 +10898,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过OpenAPI查询并筛选账单列表，支持多种条件过滤。</para>
+        /// <para>Queries and filters the bill list through OpenAPI with support for multiple filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询指定条件下的账单列表。</description></item>
-        /// <item><description>支持按租户、用户、操作类型、状态、时间范围、业务来源等条件进行筛选。</description></item>
-        /// <item><description>分页返回账单数据，默认每页显示20条记录。</description></item>
-        /// <item><description>可选择是否过滤掉credit消耗为0的账单，默认过滤。</description></item>
-        /// <item><description>请求时需提供必要的认证信息（如AK、BearerToken或APP认证）。</description></item>
+        /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
+        /// <item><description>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
+        /// <item><description>Returns bill data in pages. The default page size is 20 records.</description></item>
+        /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
+        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9538,18 +10998,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过OpenAPI查询并筛选账单列表，支持多种条件过滤。</para>
+        /// <para>Queries and filters the bill list through OpenAPI with support for multiple filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询指定条件下的账单列表。</description></item>
-        /// <item><description>支持按租户、用户、操作类型、状态、时间范围、业务来源等条件进行筛选。</description></item>
-        /// <item><description>分页返回账单数据，默认每页显示20条记录。</description></item>
-        /// <item><description>可选择是否过滤掉credit消耗为0的账单，默认过滤。</description></item>
-        /// <item><description>请求时需提供必要的认证信息（如AK、BearerToken或APP认证）。</description></item>
+        /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
+        /// <item><description>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
+        /// <item><description>Returns bill data in pages. The default page size is 20 records.</description></item>
+        /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
+        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9638,18 +11098,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过OpenAPI查询并筛选账单列表，支持多种条件过滤。</para>
+        /// <para>Queries and filters the bill list through OpenAPI with support for multiple filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询指定条件下的账单列表。</description></item>
-        /// <item><description>支持按租户、用户、操作类型、状态、时间范围、业务来源等条件进行筛选。</description></item>
-        /// <item><description>分页返回账单数据，默认每页显示20条记录。</description></item>
-        /// <item><description>可选择是否过滤掉credit消耗为0的账单，默认过滤。</description></item>
-        /// <item><description>请求时需提供必要的认证信息（如AK、BearerToken或APP认证）。</description></item>
+        /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
+        /// <item><description>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
+        /// <item><description>Returns bill data in pages. The default page size is 20 records.</description></item>
+        /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
+        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9669,18 +11129,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过OpenAPI查询并筛选账单列表，支持多种条件过滤。</para>
+        /// <para>Queries and filters the bill list through OpenAPI with support for multiple filter conditions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询指定条件下的账单列表。</description></item>
-        /// <item><description>支持按租户、用户、操作类型、状态、时间范围、业务来源等条件进行筛选。</description></item>
-        /// <item><description>分页返回账单数据，默认每页显示20条记录。</description></item>
-        /// <item><description>可选择是否过滤掉credit消耗为0的账单，默认过滤。</description></item>
-        /// <item><description>请求时需提供必要的认证信息（如AK、BearerToken或APP认证）。</description></item>
+        /// <item><description>This operation queries the bill list based on specified conditions.</description></item>
+        /// <item><description>Supports filtering by tenant, user, operation type, status, time range, business source, and other conditions.</description></item>
+        /// <item><description>Returns bill data in pages. The default page size is 20 records.</description></item>
+        /// <item><description>You can choose whether to filter out bills with zero credit consumption. By default, such bills are filtered out.</description></item>
+        /// <item><description>Authentication information (such as AK, BearerToken, or APP authentication) is required in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9700,16 +11160,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按创建时间倒序列出当前用户的聊天会话。</para>
+        /// <para>Lists chat sessions of the current user in reverse chronological order by creation time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持通过多种参数进行过滤和排序，包括租户 ID、分页大小、分页令牌、关键词搜索、数字员工名称以及更新时间区间。</description></item>
-        /// <item><description>默认情况下，结果将按照 <c>UpdatedAt</c> 字段降序排列。</description></item>
-        /// <item><description>如果提供了无效的 <c>NextToken</c> 或者 <c>PageSize</c> 超出了允许范围（1-100），API 将返回 400 错误。</description></item>
+        /// <item><description>This API supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
+        /// <item><description>By default, results are sorted in descending order by the <c>UpdatedAt</c> field.</description></item>
+        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API returns a 400 error.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9772,16 +11232,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按创建时间倒序列出当前用户的聊天会话。</para>
+        /// <para>Lists chat sessions of the current user in reverse chronological order by creation time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持通过多种参数进行过滤和排序，包括租户 ID、分页大小、分页令牌、关键词搜索、数字员工名称以及更新时间区间。</description></item>
-        /// <item><description>默认情况下，结果将按照 <c>UpdatedAt</c> 字段降序排列。</description></item>
-        /// <item><description>如果提供了无效的 <c>NextToken</c> 或者 <c>PageSize</c> 超出了允许范围（1-100），API 将返回 400 错误。</description></item>
+        /// <item><description>This API supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
+        /// <item><description>By default, results are sorted in descending order by the <c>UpdatedAt</c> field.</description></item>
+        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API returns a 400 error.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9844,16 +11304,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按创建时间倒序列出当前用户的聊天会话。</para>
+        /// <para>Lists chat sessions of the current user in reverse chronological order by creation time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持通过多种参数进行过滤和排序，包括租户 ID、分页大小、分页令牌、关键词搜索、数字员工名称以及更新时间区间。</description></item>
-        /// <item><description>默认情况下，结果将按照 <c>UpdatedAt</c> 字段降序排列。</description></item>
-        /// <item><description>如果提供了无效的 <c>NextToken</c> 或者 <c>PageSize</c> 超出了允许范围（1-100），API 将返回 400 错误。</description></item>
+        /// <item><description>This API supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
+        /// <item><description>By default, results are sorted in descending order by the <c>UpdatedAt</c> field.</description></item>
+        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API returns a 400 error.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9873,16 +11333,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按创建时间倒序列出当前用户的聊天会话。</para>
+        /// <para>Lists chat sessions of the current user in reverse chronological order by creation time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 支持通过多种参数进行过滤和排序，包括租户 ID、分页大小、分页令牌、关键词搜索、数字员工名称以及更新时间区间。</description></item>
-        /// <item><description>默认情况下，结果将按照 <c>UpdatedAt</c> 字段降序排列。</description></item>
-        /// <item><description>如果提供了无效的 <c>NextToken</c> 或者 <c>PageSize</c> 超出了允许范围（1-100），API 将返回 400 错误。</description></item>
+        /// <item><description>This API supports filtering and sorting by multiple parameters, including tenant ID, page size, pagination token, keyword search, digital employee name, and update time range.</description></item>
+        /// <item><description>By default, results are sorted in descending order by the <c>UpdatedAt</c> field.</description></item>
+        /// <item><description>If an invalid <c>NextToken</c> is provided or <c>PageSize</c> exceeds the allowed range (1-100), the API returns a 400 error.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9902,16 +11362,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户可用于语义查询的图谱列表</para>
+        /// <para>Queries the list of knowledge graphs available for semantic queries under a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出身份租户下的已发布图谱。
-        ///     CLI 映射为 <c>winnexo graph list</c>；<c>tenantId</c> 是必传公共参数，不进入请求体。
-        ///     返回的 <c>graphName</c> 可直接用于 <c>querySemanticKnowledge</c>。该查询与现有前台
-        ///     图谱列表保持一致，不做数字员工权限过滤；具体语义查询仍会校验 agent USE 权限。
-        ///     数据库异常直接进入统一 5xx 错误处理，不会伪装为成功空列表。</para>
+        /// <para>Lists published knowledge graphs under an identity tenant.
+        ///     CLI mapping: <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
+        ///     The returned <c>graphName</c> can be used directly in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend knowledge graph list and does not apply digital worker permission filtering. Specific semantic queries still verify agent USE permissions.
+        ///     Database exceptions go directly into unified 5xx error handling and are not disguised as a successful empty list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9957,16 +11416,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户可用于语义查询的图谱列表</para>
+        /// <para>Queries the list of knowledge graphs available for semantic queries under a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出身份租户下的已发布图谱。
-        ///     CLI 映射为 <c>winnexo graph list</c>；<c>tenantId</c> 是必传公共参数，不进入请求体。
-        ///     返回的 <c>graphName</c> 可直接用于 <c>querySemanticKnowledge</c>。该查询与现有前台
-        ///     图谱列表保持一致，不做数字员工权限过滤；具体语义查询仍会校验 agent USE 权限。
-        ///     数据库异常直接进入统一 5xx 错误处理，不会伪装为成功空列表。</para>
+        /// <para>Lists published knowledge graphs under an identity tenant.
+        ///     CLI mapping: <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
+        ///     The returned <c>graphName</c> can be used directly in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend knowledge graph list and does not apply digital worker permission filtering. Specific semantic queries still verify agent USE permissions.
+        ///     Database exceptions go directly into unified 5xx error handling and are not disguised as a successful empty list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10012,16 +11470,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户可用于语义查询的图谱列表</para>
+        /// <para>Queries the list of knowledge graphs available for semantic queries under a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出身份租户下的已发布图谱。
-        ///     CLI 映射为 <c>winnexo graph list</c>；<c>tenantId</c> 是必传公共参数，不进入请求体。
-        ///     返回的 <c>graphName</c> 可直接用于 <c>querySemanticKnowledge</c>。该查询与现有前台
-        ///     图谱列表保持一致，不做数字员工权限过滤；具体语义查询仍会校验 agent USE 权限。
-        ///     数据库异常直接进入统一 5xx 错误处理，不会伪装为成功空列表。</para>
+        /// <para>Lists published knowledge graphs under an identity tenant.
+        ///     CLI mapping: <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
+        ///     The returned <c>graphName</c> can be used directly in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend knowledge graph list and does not apply digital worker permission filtering. Specific semantic queries still verify agent USE permissions.
+        ///     Database exceptions go directly into unified 5xx error handling and are not disguised as a successful empty list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10040,16 +11497,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询租户可用于语义查询的图谱列表</para>
+        /// <para>Queries the list of knowledge graphs available for semantic queries under a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出身份租户下的已发布图谱。
-        ///     CLI 映射为 <c>winnexo graph list</c>；<c>tenantId</c> 是必传公共参数，不进入请求体。
-        ///     返回的 <c>graphName</c> 可直接用于 <c>querySemanticKnowledge</c>。该查询与现有前台
-        ///     图谱列表保持一致，不做数字员工权限过滤；具体语义查询仍会校验 agent USE 权限。
-        ///     数据库异常直接进入统一 5xx 错误处理，不会伪装为成功空列表。</para>
+        /// <para>Lists published knowledge graphs under an identity tenant.
+        ///     CLI mapping: <c>winnexo graph list</c>. <c>tenantId</c> is a required common parameter and is not included in the request body.
+        ///     The returned <c>graphName</c> can be used directly in <c>querySemanticKnowledge</c>. This query is consistent with the existing frontend knowledge graph list and does not apply digital worker permission filtering. Specific semantic queries still verify agent USE permissions.
+        ///     Database exceptions go directly into unified 5xx error handling and are not disguised as a successful empty list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10068,17 +11524,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询企业知识库的分类目录树，支持按指定字段排序。</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base, with support for sorting by a specified field.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于获取企业知识库的分类列表（子目录树），需要具备知识库查看权限。</description></item>
-        /// <item><description>如果未提供 <c>directoryId</c> 参数，则返回企业知识库根目录下的所有分类树；如果提供了 <c>directoryId</c>，则以该目录为根返回其子目录树。</description></item>
-        /// <item><description>支持通过 <c>sortField</c> 和 <c>sortOrder</c> 参数对结果进行排序，默认按照创建时间降序排列。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份，并且调用者必须拥有 <c>DEVELOPMENT_KB_VIEW</c> 功能权限。</description></item>
+        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the <c>directoryId</c> parameter is not provided, the API returns all category trees under the root directory of the enterprise knowledge base. If <c>directoryId</c> is provided, the API returns the subdirectory tree rooted at the specified directory.</description></item>
+        /// <item><description>You can sort results by using the <c>sortField</c> and <c>sortOrder</c> parameters. By default, results are sorted by creation time in descending order.</description></item>
+        /// <item><description>Security constraints: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10139,17 +11595,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询企业知识库的分类目录树，支持按指定字段排序。</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base, with support for sorting by a specified field.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于获取企业知识库的分类列表（子目录树），需要具备知识库查看权限。</description></item>
-        /// <item><description>如果未提供 <c>directoryId</c> 参数，则返回企业知识库根目录下的所有分类树；如果提供了 <c>directoryId</c>，则以该目录为根返回其子目录树。</description></item>
-        /// <item><description>支持通过 <c>sortField</c> 和 <c>sortOrder</c> 参数对结果进行排序，默认按照创建时间降序排列。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份，并且调用者必须拥有 <c>DEVELOPMENT_KB_VIEW</c> 功能权限。</description></item>
+        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the <c>directoryId</c> parameter is not provided, the API returns all category trees under the root directory of the enterprise knowledge base. If <c>directoryId</c> is provided, the API returns the subdirectory tree rooted at the specified directory.</description></item>
+        /// <item><description>You can sort results by using the <c>sortField</c> and <c>sortOrder</c> parameters. By default, results are sorted by creation time in descending order.</description></item>
+        /// <item><description>Security constraints: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10210,17 +11666,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询企业知识库的分类目录树，支持按指定字段排序。</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base, with support for sorting by a specified field.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于获取企业知识库的分类列表（子目录树），需要具备知识库查看权限。</description></item>
-        /// <item><description>如果未提供 <c>directoryId</c> 参数，则返回企业知识库根目录下的所有分类树；如果提供了 <c>directoryId</c>，则以该目录为根返回其子目录树。</description></item>
-        /// <item><description>支持通过 <c>sortField</c> 和 <c>sortOrder</c> 参数对结果进行排序，默认按照创建时间降序排列。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份，并且调用者必须拥有 <c>DEVELOPMENT_KB_VIEW</c> 功能权限。</description></item>
+        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the <c>directoryId</c> parameter is not provided, the API returns all category trees under the root directory of the enterprise knowledge base. If <c>directoryId</c> is provided, the API returns the subdirectory tree rooted at the specified directory.</description></item>
+        /// <item><description>You can sort results by using the <c>sortField</c> and <c>sortOrder</c> parameters. By default, results are sorted by creation time in descending order.</description></item>
+        /// <item><description>Security constraints: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10240,17 +11696,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询企业知识库的分类目录树，支持按指定字段排序。</para>
+        /// <para>Queries the category directory tree of an enterprise knowledge base, with support for sorting by a specified field.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于获取企业知识库的分类列表（子目录树），需要具备知识库查看权限。</description></item>
-        /// <item><description>如果未提供 <c>directoryId</c> 参数，则返回企业知识库根目录下的所有分类树；如果提供了 <c>directoryId</c>，则以该目录为根返回其子目录树。</description></item>
-        /// <item><description>支持通过 <c>sortField</c> 和 <c>sortOrder</c> 参数对结果进行排序，默认按照创建时间降序排列。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份，并且调用者必须拥有 <c>DEVELOPMENT_KB_VIEW</c> 功能权限。</description></item>
+        /// <item><description>This API retrieves the category list (subdirectory tree) of an enterprise knowledge base. You must have the knowledge base view permission.</description></item>
+        /// <item><description>If the <c>directoryId</c> parameter is not provided, the API returns all category trees under the root directory of the enterprise knowledge base. If <c>directoryId</c> is provided, the API returns the subdirectory tree rooted at the specified directory.</description></item>
+        /// <item><description>You can sort results by using the <c>sortField</c> and <c>sortOrder</c> parameters. By default, results are sorted by creation time in descending order.</description></item>
+        /// <item><description>Security constraints: <c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity, and the caller must have the <c>DEVELOPMENT_KB_VIEW</c> feature permission.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10270,20 +11726,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户的产出列表，支持按条件过滤和分页。</para>
+        /// <para>Queries the output list of the current user with support for conditional filtering and pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于查询当前登录用户的产出列表。</description></item>
-        /// <item><description><c>tenantId</c>作为公共参数，缺省时使用调用方默认租户。</description></item>
-        /// <item><description>支持通过<c>operatingObjectName</c>、<c>itemType</c>、<c>keyword</c>等参数进行过滤查询。</description></item>
-        /// <item><description>可以设置<c>sharedOnly</c>为<c>true</c>来仅展示开启分享的产出。</description></item>
-        /// <item><description>分页信息通过<c>page</c>（页码）和<c>pageSize</c>（每页数量）控制，默认从第1页开始，每页显示20条记录。</description></item>
-        /// <item><description>默认按更新时间倒序排列。</description></item>
-        /// <item><description>调用者在请求体中传入的<c>tenant_id</c>或<c>user_id</c>将被忽略，这些信息仅来自鉴权身份。</description></item>
+        /// <item><description>This API operation queries the output list of the current logon user.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</description></item>
+        /// <item><description>You can filter results by using parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only shared outputs.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of entries per page). By default, the first page is returned with 20 records per page.</description></item>
+        /// <item><description>Results are sorted by update time in descending order by default.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body are ignored. This information is obtained only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10356,20 +11812,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户的产出列表，支持按条件过滤和分页。</para>
+        /// <para>Queries the output list of the current user with support for conditional filtering and pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于查询当前登录用户的产出列表。</description></item>
-        /// <item><description><c>tenantId</c>作为公共参数，缺省时使用调用方默认租户。</description></item>
-        /// <item><description>支持通过<c>operatingObjectName</c>、<c>itemType</c>、<c>keyword</c>等参数进行过滤查询。</description></item>
-        /// <item><description>可以设置<c>sharedOnly</c>为<c>true</c>来仅展示开启分享的产出。</description></item>
-        /// <item><description>分页信息通过<c>page</c>（页码）和<c>pageSize</c>（每页数量）控制，默认从第1页开始，每页显示20条记录。</description></item>
-        /// <item><description>默认按更新时间倒序排列。</description></item>
-        /// <item><description>调用者在请求体中传入的<c>tenant_id</c>或<c>user_id</c>将被忽略，这些信息仅来自鉴权身份。</description></item>
+        /// <item><description>This API operation queries the output list of the current logon user.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</description></item>
+        /// <item><description>You can filter results by using parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only shared outputs.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of entries per page). By default, the first page is returned with 20 records per page.</description></item>
+        /// <item><description>Results are sorted by update time in descending order by default.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body are ignored. This information is obtained only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10442,20 +11898,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户的产出列表，支持按条件过滤和分页。</para>
+        /// <para>Queries the output list of the current user with support for conditional filtering and pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于查询当前登录用户的产出列表。</description></item>
-        /// <item><description><c>tenantId</c>作为公共参数，缺省时使用调用方默认租户。</description></item>
-        /// <item><description>支持通过<c>operatingObjectName</c>、<c>itemType</c>、<c>keyword</c>等参数进行过滤查询。</description></item>
-        /// <item><description>可以设置<c>sharedOnly</c>为<c>true</c>来仅展示开启分享的产出。</description></item>
-        /// <item><description>分页信息通过<c>page</c>（页码）和<c>pageSize</c>（每页数量）控制，默认从第1页开始，每页显示20条记录。</description></item>
-        /// <item><description>默认按更新时间倒序排列。</description></item>
-        /// <item><description>调用者在请求体中传入的<c>tenant_id</c>或<c>user_id</c>将被忽略，这些信息仅来自鉴权身份。</description></item>
+        /// <item><description>This API operation queries the output list of the current logon user.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</description></item>
+        /// <item><description>You can filter results by using parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only shared outputs.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of entries per page). By default, the first page is returned with 20 records per page.</description></item>
+        /// <item><description>Results are sorted by update time in descending order by default.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body are ignored. This information is obtained only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10475,20 +11931,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前用户的产出列表，支持按条件过滤和分页。</para>
+        /// <para>Queries the output list of the current user with support for conditional filtering and pagination.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于查询当前登录用户的产出列表。</description></item>
-        /// <item><description><c>tenantId</c>作为公共参数，缺省时使用调用方默认租户。</description></item>
-        /// <item><description>支持通过<c>operatingObjectName</c>、<c>itemType</c>、<c>keyword</c>等参数进行过滤查询。</description></item>
-        /// <item><description>可以设置<c>sharedOnly</c>为<c>true</c>来仅展示开启分享的产出。</description></item>
-        /// <item><description>分页信息通过<c>page</c>（页码）和<c>pageSize</c>（每页数量）控制，默认从第1页开始，每页显示20条记录。</description></item>
-        /// <item><description>默认按更新时间倒序排列。</description></item>
-        /// <item><description>调用者在请求体中传入的<c>tenant_id</c>或<c>user_id</c>将被忽略，这些信息仅来自鉴权身份。</description></item>
+        /// <item><description>This API operation queries the output list of the current logon user.</description></item>
+        /// <item><description><c>tenantId</c> is a common parameter. If this parameter is not specified, the default tenant of the caller is used.</description></item>
+        /// <item><description>You can filter results by using parameters such as <c>operatingObjectName</c>, <c>itemType</c>, and <c>keyword</c>.</description></item>
+        /// <item><description>Set <c>sharedOnly</c> to <c>true</c> to display only shared outputs.</description></item>
+        /// <item><description>Pagination is controlled by <c>page</c> (page number) and <c>pageSize</c> (number of entries per page). By default, the first page is returned with 20 records per page.</description></item>
+        /// <item><description>Results are sorted by update time in descending order by default.</description></item>
+        /// <item><description>The <c>tenant_id</c> or <c>user_id</c> values passed in the request body are ignored. This information is obtained only from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10508,19 +11964,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定数字员工资源目录下的子目录与资源。</para>
+        /// <para>Queries subdirectories and resources under a specified digital employee resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于下钻查询&quot;我的资源&quot;目录下的子目录与资源。</description></item>
-        /// <item><description>当 <c>directoryId</c> 设置为 &#39;root&#39; 时，服务将自动解析并返回当前数字员工默认根目录下的内容；若提供具体的目录 ID，则返回该目录下的子目录和资源。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份信息，调用方在请求体中提供的这些字段将被忽略。</description></item>
-        /// <item><description>支持通过 <c>sourceTypes</c> 参数筛选特定类型的资源，当此参数有值时，仅返回符合类型条件的资源而不包含子目录。</description></item>
-        /// <item><description>排序支持按名称 (<c>name</c>)、创建时间 (<c>gmt_create</c>) 或修改时间 (<c>gmt_modified</c>) 进行升序或降序排列。</description></item>
-        /// <item><description>分页功能允许用户自定义每页显示的数量（最大100）及当前查看的页码。</description></item>
+        /// <item><description>This API is used to drill down and query subdirectories and resources under the &quot;My Resources&quot; directory.</description></item>
+        /// <item><description>When <c>directoryId</c> is set to \&quot;root\&quot;, the service automatically resolves and returns the content under the current digital employee\&quot;s default root directory. If a specific directory ID is provided, the subdirectories and resources under that directory are returned.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> can only come from the authenticated identity information. These fields provided by the caller in the request body are ignored.</description></item>
+        /// <item><description>You can use the <c>sourceTypes</c> parameter to filter resources of specific types. When this parameter has a value, only resources that match the type condition are returned, and subdirectories are not included.</description></item>
+        /// <item><description>Sorting supports ascending or descending order by name (<c>name</c>), creation time (<c>gmt_create</c>), or modification time (<c>gmt_modified</c>).</description></item>
+        /// <item><description>The pagination feature allows you to customize the number of items displayed per page (maximum 100) and the current page number.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10603,19 +12059,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定数字员工资源目录下的子目录与资源。</para>
+        /// <para>Queries subdirectories and resources under a specified digital employee resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于下钻查询&quot;我的资源&quot;目录下的子目录与资源。</description></item>
-        /// <item><description>当 <c>directoryId</c> 设置为 &#39;root&#39; 时，服务将自动解析并返回当前数字员工默认根目录下的内容；若提供具体的目录 ID，则返回该目录下的子目录和资源。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份信息，调用方在请求体中提供的这些字段将被忽略。</description></item>
-        /// <item><description>支持通过 <c>sourceTypes</c> 参数筛选特定类型的资源，当此参数有值时，仅返回符合类型条件的资源而不包含子目录。</description></item>
-        /// <item><description>排序支持按名称 (<c>name</c>)、创建时间 (<c>gmt_create</c>) 或修改时间 (<c>gmt_modified</c>) 进行升序或降序排列。</description></item>
-        /// <item><description>分页功能允许用户自定义每页显示的数量（最大100）及当前查看的页码。</description></item>
+        /// <item><description>This API is used to drill down and query subdirectories and resources under the &quot;My Resources&quot; directory.</description></item>
+        /// <item><description>When <c>directoryId</c> is set to \&quot;root\&quot;, the service automatically resolves and returns the content under the current digital employee\&quot;s default root directory. If a specific directory ID is provided, the subdirectories and resources under that directory are returned.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> can only come from the authenticated identity information. These fields provided by the caller in the request body are ignored.</description></item>
+        /// <item><description>You can use the <c>sourceTypes</c> parameter to filter resources of specific types. When this parameter has a value, only resources that match the type condition are returned, and subdirectories are not included.</description></item>
+        /// <item><description>Sorting supports ascending or descending order by name (<c>name</c>), creation time (<c>gmt_create</c>), or modification time (<c>gmt_modified</c>).</description></item>
+        /// <item><description>The pagination feature allows you to customize the number of items displayed per page (maximum 100) and the current page number.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10698,19 +12154,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定数字员工资源目录下的子目录与资源。</para>
+        /// <para>Queries subdirectories and resources under a specified digital employee resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于下钻查询&quot;我的资源&quot;目录下的子目录与资源。</description></item>
-        /// <item><description>当 <c>directoryId</c> 设置为 &#39;root&#39; 时，服务将自动解析并返回当前数字员工默认根目录下的内容；若提供具体的目录 ID，则返回该目录下的子目录和资源。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份信息，调用方在请求体中提供的这些字段将被忽略。</description></item>
-        /// <item><description>支持通过 <c>sourceTypes</c> 参数筛选特定类型的资源，当此参数有值时，仅返回符合类型条件的资源而不包含子目录。</description></item>
-        /// <item><description>排序支持按名称 (<c>name</c>)、创建时间 (<c>gmt_create</c>) 或修改时间 (<c>gmt_modified</c>) 进行升序或降序排列。</description></item>
-        /// <item><description>分页功能允许用户自定义每页显示的数量（最大100）及当前查看的页码。</description></item>
+        /// <item><description>This API is used to drill down and query subdirectories and resources under the &quot;My Resources&quot; directory.</description></item>
+        /// <item><description>When <c>directoryId</c> is set to \&quot;root\&quot;, the service automatically resolves and returns the content under the current digital employee\&quot;s default root directory. If a specific directory ID is provided, the subdirectories and resources under that directory are returned.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> can only come from the authenticated identity information. These fields provided by the caller in the request body are ignored.</description></item>
+        /// <item><description>You can use the <c>sourceTypes</c> parameter to filter resources of specific types. When this parameter has a value, only resources that match the type condition are returned, and subdirectories are not included.</description></item>
+        /// <item><description>Sorting supports ascending or descending order by name (<c>name</c>), creation time (<c>gmt_create</c>), or modification time (<c>gmt_modified</c>).</description></item>
+        /// <item><description>The pagination feature allows you to customize the number of items displayed per page (maximum 100) and the current page number.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10730,19 +12186,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定数字员工资源目录下的子目录与资源。</para>
+        /// <para>Queries subdirectories and resources under a specified digital employee resource directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 用于下钻查询&quot;我的资源&quot;目录下的子目录与资源。</description></item>
-        /// <item><description>当 <c>directoryId</c> 设置为 &#39;root&#39; 时，服务将自动解析并返回当前数字员工默认根目录下的内容；若提供具体的目录 ID，则返回该目录下的子目录和资源。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 只能来自鉴权身份信息，调用方在请求体中提供的这些字段将被忽略。</description></item>
-        /// <item><description>支持通过 <c>sourceTypes</c> 参数筛选特定类型的资源，当此参数有值时，仅返回符合类型条件的资源而不包含子目录。</description></item>
-        /// <item><description>排序支持按名称 (<c>name</c>)、创建时间 (<c>gmt_create</c>) 或修改时间 (<c>gmt_modified</c>) 进行升序或降序排列。</description></item>
-        /// <item><description>分页功能允许用户自定义每页显示的数量（最大100）及当前查看的页码。</description></item>
+        /// <item><description>This API is used to drill down and query subdirectories and resources under the &quot;My Resources&quot; directory.</description></item>
+        /// <item><description>When <c>directoryId</c> is set to \&quot;root\&quot;, the service automatically resolves and returns the content under the current digital employee\&quot;s default root directory. If a specific directory ID is provided, the subdirectories and resources under that directory are returned.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> can only come from the authenticated identity information. These fields provided by the caller in the request body are ignored.</description></item>
+        /// <item><description>You can use the <c>sourceTypes</c> parameter to filter resources of specific types. When this parameter has a value, only resources that match the type condition are returned, and subdirectories are not included.</description></item>
+        /// <item><description>Sorting supports ascending or descending order by name (<c>name</c>), creation time (<c>gmt_create</c>), or modification time (<c>gmt_modified</c>).</description></item>
+        /// <item><description>The pagination feature allows you to customize the number of items displayed per page (maximum 100) and the current page number.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10762,18 +12218,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统内置角色列表</para>
+        /// <para>Queries the list of system built-in roles.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询系统内置角色列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 UserManagementAuthorizedService.list_system_roles 完成权限校验（PLATFORM_USER_VIEW）
-        ///     3. 按请求 Accept-Language 渲染角色名称与说明
-        ///     4. 返回固定的 7 个系统内置角色
-        ///     返回字段 roleCode 可直接用于 createUser / updateUser 的 roleCodes 参数。</para>
+        /// <para>Queries the list of system built-in roles.
+        ///     Business logic:
+        ///     1. Constructs AuthContext from identity.
+        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles for permission verification (PLATFORM_USER_VIEW).
+        ///     3. Renders role names and descriptions based on the request Accept-Language header.
+        ///     4. Returns a fixed set of 7 system built-in roles.
+        ///     The returned roleCode field can be directly used as the roleCodes parameter for createUser or updateUser.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10819,18 +12275,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统内置角色列表</para>
+        /// <para>Queries the list of system built-in roles.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询系统内置角色列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 UserManagementAuthorizedService.list_system_roles 完成权限校验（PLATFORM_USER_VIEW）
-        ///     3. 按请求 Accept-Language 渲染角色名称与说明
-        ///     4. 返回固定的 7 个系统内置角色
-        ///     返回字段 roleCode 可直接用于 createUser / updateUser 的 roleCodes 参数。</para>
+        /// <para>Queries the list of system built-in roles.
+        ///     Business logic:
+        ///     1. Constructs AuthContext from identity.
+        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles for permission verification (PLATFORM_USER_VIEW).
+        ///     3. Renders role names and descriptions based on the request Accept-Language header.
+        ///     4. Returns a fixed set of 7 system built-in roles.
+        ///     The returned roleCode field can be directly used as the roleCodes parameter for createUser or updateUser.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10876,18 +12332,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统内置角色列表</para>
+        /// <para>Queries the list of system built-in roles.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询系统内置角色列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 UserManagementAuthorizedService.list_system_roles 完成权限校验（PLATFORM_USER_VIEW）
-        ///     3. 按请求 Accept-Language 渲染角色名称与说明
-        ///     4. 返回固定的 7 个系统内置角色
-        ///     返回字段 roleCode 可直接用于 createUser / updateUser 的 roleCodes 参数。</para>
+        /// <para>Queries the list of system built-in roles.
+        ///     Business logic:
+        ///     1. Constructs AuthContext from identity.
+        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles for permission verification (PLATFORM_USER_VIEW).
+        ///     3. Renders role names and descriptions based on the request Accept-Language header.
+        ///     4. Returns a fixed set of 7 system built-in roles.
+        ///     The returned roleCode field can be directly used as the roleCodes parameter for createUser or updateUser.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10906,18 +12362,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询系统内置角色列表</para>
+        /// <para>Queries the list of system built-in roles.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>查询系统内置角色列表。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 UserManagementAuthorizedService.list_system_roles 完成权限校验（PLATFORM_USER_VIEW）
-        ///     3. 按请求 Accept-Language 渲染角色名称与说明
-        ///     4. 返回固定的 7 个系统内置角色
-        ///     返回字段 roleCode 可直接用于 createUser / updateUser 的 roleCodes 参数。</para>
+        /// <para>Queries the list of system built-in roles.
+        ///     Business logic:
+        ///     1. Constructs AuthContext from identity.
+        ///     2. Delegates to UserManagementAuthorizedService.list_system_roles for permission verification (PLATFORM_USER_VIEW).
+        ///     3. Renders role names and descriptions based on the request Accept-Language header.
+        ///     4. Returns a fixed set of 7 system built-in roles.
+        ///     The returned roleCode field can be directly used as the roleCodes parameter for createUser or updateUser.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10936,10 +12392,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务列表</para>
+        /// <para>Retrieves a list of scheduled tasks.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this API.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
         /// ListScheduledTasksRequest
         /// </param>
         /// <param name="headers">
@@ -10952,13 +12422,23 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// ListScheduledTasksResponse
         /// </returns>
-        public ListScheduledTasksResponse ListScheduledTasksWithOptions(ListScheduledTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ListScheduledTasksResponse ListScheduledTasksWithOptions(ListScheduledTasksRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListScheduledTasksShrinkRequest request = new ListScheduledTasksShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Visibilities))
+            {
+                request.VisibilitiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Visibilities, "visibilities", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatorOnly))
+            {
+                query["creatorOnly"] = request.CreatorOnly;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
@@ -10983,6 +12463,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
                 query["tenantId"] = request.TenantId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilitiesShrink))
+            {
+                query["visibilities"] = request.VisibilitiesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11006,10 +12490,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务列表</para>
+        /// <para>Retrieves a list of scheduled tasks.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this API.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
         /// ListScheduledTasksRequest
         /// </param>
         /// <param name="headers">
@@ -11022,13 +12520,23 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         /// <returns>
         /// ListScheduledTasksResponse
         /// </returns>
-        public async Task<ListScheduledTasksResponse> ListScheduledTasksWithOptionsAsync(ListScheduledTasksRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ListScheduledTasksResponse> ListScheduledTasksWithOptionsAsync(ListScheduledTasksRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListScheduledTasksShrinkRequest request = new ListScheduledTasksShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Visibilities))
+            {
+                request.VisibilitiesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Visibilities, "visibilities", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
             {
                 query["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreatorOnly))
+            {
+                query["creatorOnly"] = request.CreatorOnly;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
             {
@@ -11054,6 +12562,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 query["tenantId"] = request.TenantId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibilitiesShrink))
+            {
+                query["visibilities"] = request.VisibilitiesShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -11076,8 +12588,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务列表</para>
+        /// <para>Retrieves a list of scheduled tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this API.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListScheduledTasksRequest
@@ -11095,8 +12621,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取定时任务列表</para>
+        /// <para>Retrieves a list of scheduled tasks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation uploads a file to an enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_MANAGE</c> permission is required to call this API.</description></item>
+        /// <item><description>You must provide the OSS persistent address (<c>filePath</c>) of the file when uploading.</description></item>
+        /// <item><description>Optional parameters include the public access URL and original file name to enhance the completeness of file information.</description></item>
+        /// <item><description>If <c>directoryId</c> is specified, the file is placed in the corresponding enterprise knowledge base directory. Otherwise, the file is bound to the default root directory of the current digital employee.</description></item>
+        /// <item><description>You can add tags to the resource by using <c>sourceTags</c> for subsequent management and retrieval.</description></item>
+        /// <item><description>This operation initiates a billing item (UNSTRUCTURED_PARSE). Make sure your account balance is sufficient.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListScheduledTasksRequest
@@ -11114,26 +12654,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出当前租户可见的技能。</para>
+        /// <para>Lists the skills visible to the current tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于获取当前租户下所有可见的技能列表。支持按数字员工绑定关系、技能来源、标签、关键词等条件进行过滤，并支持分页。</para>
-        /// <h3>入参</h3>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选，公共参数，由网关透传到后端 Header；不传时使用当前调用方所属的默认租户。</description></item>
-        /// <item><description><b>FilterType</b>：可选，技能筛选维度。可选值：<c>ALL</c>(全部已发布)、<c>BUILTIN</c>(内置已发布)、<c>CUSTOM</c>(自定义已发布)、<c>DRAFT</c>(草稿箱，含未发布修改的已发布技能)。默认 <c>ALL</c>。</description></item>
-        /// <item><description><b>Tags</b>：可选，按标签过滤，数组任一命中即匹配。</description></item>
-        /// <item><description><b>Keyword</b>：可选，按技能名称或描述模糊匹配。</description></item>
-        /// <item><description><b>Page</b>：可选，页码，最小 1，默认 1。</description></item>
-        /// <item><description><b>PageSize</b>：可选，每页数量，范围 1~100，默认 20。</description></item>
-        /// <item><description><b>OperatingObjectName</b>：可选，数字员工名称，传入时按绑定关系过滤；必须配合 <c>BindStatus</c> 使用。</description></item>
-        /// <item><description><b>BindStatus</b>：可选，绑定状态。可选值：<c>BOUND</c>(已绑定)、<c>UNBOUND</c>(未绑定的全局技能)。</description></item>
+        /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs fuzzy matching by skill name or description.</description></item>
+        /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
+        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Value range: 1 to 100. Default value: 20.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
-        /// <h3>出参</h3>
-        /// <para>响应包含技能列表 <c>items</c>、总数 <c>total</c>、当前页 <c>page</c> 与每页数量 <c>pageSize</c>。</para>
+        /// <h3>Response parameters</h3>
+        /// <para>The response contains the skill list <c>items</c>, total count <c>total</c>, current page <c>page</c>, and page size <c>pageSize</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11215,26 +12755,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出当前租户可见的技能。</para>
+        /// <para>Lists the skills visible to the current tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于获取当前租户下所有可见的技能列表。支持按数字员工绑定关系、技能来源、标签、关键词等条件进行过滤，并支持分页。</para>
-        /// <h3>入参</h3>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选，公共参数，由网关透传到后端 Header；不传时使用当前调用方所属的默认租户。</description></item>
-        /// <item><description><b>FilterType</b>：可选，技能筛选维度。可选值：<c>ALL</c>(全部已发布)、<c>BUILTIN</c>(内置已发布)、<c>CUSTOM</c>(自定义已发布)、<c>DRAFT</c>(草稿箱，含未发布修改的已发布技能)。默认 <c>ALL</c>。</description></item>
-        /// <item><description><b>Tags</b>：可选，按标签过滤，数组任一命中即匹配。</description></item>
-        /// <item><description><b>Keyword</b>：可选，按技能名称或描述模糊匹配。</description></item>
-        /// <item><description><b>Page</b>：可选，页码，最小 1，默认 1。</description></item>
-        /// <item><description><b>PageSize</b>：可选，每页数量，范围 1~100，默认 20。</description></item>
-        /// <item><description><b>OperatingObjectName</b>：可选，数字员工名称，传入时按绑定关系过滤；必须配合 <c>BindStatus</c> 使用。</description></item>
-        /// <item><description><b>BindStatus</b>：可选，绑定状态。可选值：<c>BOUND</c>(已绑定)、<c>UNBOUND</c>(未绑定的全局技能)。</description></item>
+        /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs fuzzy matching by skill name or description.</description></item>
+        /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
+        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Value range: 1 to 100. Default value: 20.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
-        /// <h3>出参</h3>
-        /// <para>响应包含技能列表 <c>items</c>、总数 <c>total</c>、当前页 <c>page</c> 与每页数量 <c>pageSize</c>。</para>
+        /// <h3>Response parameters</h3>
+        /// <para>The response contains the skill list <c>items</c>, total count <c>total</c>, current page <c>page</c>, and page size <c>pageSize</c>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11316,26 +12856,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出当前租户可见的技能。</para>
+        /// <para>Lists the skills visible to the current tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于获取当前租户下所有可见的技能列表。支持按数字员工绑定关系、技能来源、标签、关键词等条件进行过滤，并支持分页。</para>
-        /// <h3>入参</h3>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选，公共参数，由网关透传到后端 Header；不传时使用当前调用方所属的默认租户。</description></item>
-        /// <item><description><b>FilterType</b>：可选，技能筛选维度。可选值：<c>ALL</c>(全部已发布)、<c>BUILTIN</c>(内置已发布)、<c>CUSTOM</c>(自定义已发布)、<c>DRAFT</c>(草稿箱，含未发布修改的已发布技能)。默认 <c>ALL</c>。</description></item>
-        /// <item><description><b>Tags</b>：可选，按标签过滤，数组任一命中即匹配。</description></item>
-        /// <item><description><b>Keyword</b>：可选，按技能名称或描述模糊匹配。</description></item>
-        /// <item><description><b>Page</b>：可选，页码，最小 1，默认 1。</description></item>
-        /// <item><description><b>PageSize</b>：可选，每页数量，范围 1~100，默认 20。</description></item>
-        /// <item><description><b>OperatingObjectName</b>：可选，数字员工名称，传入时按绑定关系过滤；必须配合 <c>BindStatus</c> 使用。</description></item>
-        /// <item><description><b>BindStatus</b>：可选，绑定状态。可选值：<c>BOUND</c>(已绑定)、<c>UNBOUND</c>(未绑定的全局技能)。</description></item>
+        /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs fuzzy matching by skill name or description.</description></item>
+        /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
+        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Value range: 1 to 100. Default value: 20.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
-        /// <h3>出参</h3>
-        /// <para>响应包含技能列表 <c>items</c>、总数 <c>total</c>、当前页 <c>page</c> 与每页数量 <c>pageSize</c>。</para>
+        /// <h3>Response parameters</h3>
+        /// <para>The response contains the skill list <c>items</c>, total count <c>total</c>, current page <c>page</c>, and page size <c>pageSize</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11354,26 +12894,26 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出当前租户可见的技能。</para>
+        /// <para>Lists the skills visible to the current tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于获取当前租户下所有可见的技能列表。支持按数字员工绑定关系、技能来源、标签、关键词等条件进行过滤，并支持分页。</para>
-        /// <h3>入参</h3>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves all visible skills under the current tenant. It supports filtering by digital employee binding relationship, skill source, tags, keywords, and other conditions, and supports pagination.</para>
+        /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选，公共参数，由网关透传到后端 Header；不传时使用当前调用方所属的默认租户。</description></item>
-        /// <item><description><b>FilterType</b>：可选，技能筛选维度。可选值：<c>ALL</c>(全部已发布)、<c>BUILTIN</c>(内置已发布)、<c>CUSTOM</c>(自定义已发布)、<c>DRAFT</c>(草稿箱，含未发布修改的已发布技能)。默认 <c>ALL</c>。</description></item>
-        /// <item><description><b>Tags</b>：可选，按标签过滤，数组任一命中即匹配。</description></item>
-        /// <item><description><b>Keyword</b>：可选，按技能名称或描述模糊匹配。</description></item>
-        /// <item><description><b>Page</b>：可选，页码，最小 1，默认 1。</description></item>
-        /// <item><description><b>PageSize</b>：可选，每页数量，范围 1~100，默认 20。</description></item>
-        /// <item><description><b>OperatingObjectName</b>：可选，数字员工名称，传入时按绑定关系过滤；必须配合 <c>BindStatus</c> 使用。</description></item>
-        /// <item><description><b>BindStatus</b>：可选，绑定状态。可选值：<c>BOUND</c>(已绑定)、<c>UNBOUND</c>(未绑定的全局技能)。</description></item>
+        /// <item><description><b>TenantId</b>: Optional. A common parameter passed through by the gateway to the backend header. If not specified, the default tenant of the current caller is used.</description></item>
+        /// <item><description><b>FilterType</b>: Optional. The skill filtering dimension. Valid values: <c>ALL</c> (all published), <c>BUILTIN</c> (built-in published), <c>CUSTOM</c> (custom published), <c>DRAFT</c> (drafts, including published skills with unpublished modifications). Default value: <c>ALL</c>.</description></item>
+        /// <item><description><b>Tags</b>: Optional. Filters by tags. A match occurs if any tag in the array is hit.</description></item>
+        /// <item><description><b>Keyword</b>: Optional. Performs fuzzy matching by skill name or description.</description></item>
+        /// <item><description><b>Page</b>: Optional. The page number. Minimum value: 1. Default value: 1.</description></item>
+        /// <item><description><b>PageSize</b>: Optional. The number of entries per page. Value range: 1 to 100. Default value: 20.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The digital employee name. If specified, filters by binding relationship. Must be used together with <c>BindStatus</c>.</description></item>
+        /// <item><description><b>BindStatus</b>: Optional. The binding status. Valid values: <c>BOUND</c> (bound), <c>UNBOUND</c> (unbound global skills).</description></item>
         /// </list>
-        /// <h3>出参</h3>
-        /// <para>响应包含技能列表 <c>items</c>、总数 <c>total</c>、当前页 <c>page</c> 与每页数量 <c>pageSize</c>。</para>
+        /// <h3>Response parameters</h3>
+        /// <para>The response contains the skill list <c>items</c>, total count <c>total</c>, current page <c>page</c>, and page size <c>pageSize</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11392,18 +12932,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按管理端口径分页查询企业知识库目录与资源。</para>
+        /// <para>Retrieves the list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于分页查询企业知识库中的目录内容和资源。</description></item>
-        /// <item><description>支持通过多种参数进行过滤和排序，如<c>directoryId</c>、<c>page</c>、<c>pageSize</c>、<c>sortField</c>、<c>sortOrder</c>等。</description></item>
-        /// <item><description><c>sourceTypes</c>参数允许用户根据资源类型进行过滤，多个类型使用逗号分隔。</description></item>
-        /// <item><description>当不传或传入<c>root</c>作为<c>directoryId</c>时，默认查询知识库根目录列表。</description></item>
-        /// <item><description>默认的排序字段为<c>name</c>，默认排序方向为升序（<c>asc</c>）。</description></item>
+        /// <item><description>This API is used to perform a paging query on the folder content and resources in an enterprise knowledge base.</description></item>
+        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and others.</description></item>
+        /// <item><description>The <c>sourceTypes</c> parameter allows you to filter by resource type. Separate multiple types with commas.</description></item>
+        /// <item><description>When <c>directoryId</c> is not specified or set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
+        /// <item><description>The default sort field is <c>name</c>, and the default sort order is ascending (<c>asc</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11476,18 +13016,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按管理端口径分页查询企业知识库目录与资源。</para>
+        /// <para>Retrieves the list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于分页查询企业知识库中的目录内容和资源。</description></item>
-        /// <item><description>支持通过多种参数进行过滤和排序，如<c>directoryId</c>、<c>page</c>、<c>pageSize</c>、<c>sortField</c>、<c>sortOrder</c>等。</description></item>
-        /// <item><description><c>sourceTypes</c>参数允许用户根据资源类型进行过滤，多个类型使用逗号分隔。</description></item>
-        /// <item><description>当不传或传入<c>root</c>作为<c>directoryId</c>时，默认查询知识库根目录列表。</description></item>
-        /// <item><description>默认的排序字段为<c>name</c>，默认排序方向为升序（<c>asc</c>）。</description></item>
+        /// <item><description>This API is used to perform a paging query on the folder content and resources in an enterprise knowledge base.</description></item>
+        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and others.</description></item>
+        /// <item><description>The <c>sourceTypes</c> parameter allows you to filter by resource type. Separate multiple types with commas.</description></item>
+        /// <item><description>When <c>directoryId</c> is not specified or set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
+        /// <item><description>The default sort field is <c>name</c>, and the default sort order is ascending (<c>asc</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11560,18 +13100,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按管理端口径分页查询企业知识库目录与资源。</para>
+        /// <para>Retrieves the list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于分页查询企业知识库中的目录内容和资源。</description></item>
-        /// <item><description>支持通过多种参数进行过滤和排序，如<c>directoryId</c>、<c>page</c>、<c>pageSize</c>、<c>sortField</c>、<c>sortOrder</c>等。</description></item>
-        /// <item><description><c>sourceTypes</c>参数允许用户根据资源类型进行过滤，多个类型使用逗号分隔。</description></item>
-        /// <item><description>当不传或传入<c>root</c>作为<c>directoryId</c>时，默认查询知识库根目录列表。</description></item>
-        /// <item><description>默认的排序字段为<c>name</c>，默认排序方向为升序（<c>asc</c>）。</description></item>
+        /// <item><description>This API is used to perform a paging query on the folder content and resources in an enterprise knowledge base.</description></item>
+        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and others.</description></item>
+        /// <item><description>The <c>sourceTypes</c> parameter allows you to filter by resource type. Separate multiple types with commas.</description></item>
+        /// <item><description>When <c>directoryId</c> is not specified or set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
+        /// <item><description>The default sort field is <c>name</c>, and the default sort order is ascending (<c>asc</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11591,18 +13131,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按管理端口径分页查询企业知识库目录与资源。</para>
+        /// <para>Retrieves the list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于分页查询企业知识库中的目录内容和资源。</description></item>
-        /// <item><description>支持通过多种参数进行过滤和排序，如<c>directoryId</c>、<c>page</c>、<c>pageSize</c>、<c>sortField</c>、<c>sortOrder</c>等。</description></item>
-        /// <item><description><c>sourceTypes</c>参数允许用户根据资源类型进行过滤，多个类型使用逗号分隔。</description></item>
-        /// <item><description>当不传或传入<c>root</c>作为<c>directoryId</c>时，默认查询知识库根目录列表。</description></item>
-        /// <item><description>默认的排序字段为<c>name</c>，默认排序方向为升序（<c>asc</c>）。</description></item>
+        /// <item><description>This API is used to perform a paging query on the folder content and resources in an enterprise knowledge base.</description></item>
+        /// <item><description>Multiple parameters are supported for filtering and sorting, such as <c>directoryId</c>, <c>page</c>, <c>pageSize</c>, <c>sortField</c>, <c>sortOrder</c>, and others.</description></item>
+        /// <item><description>The <c>sourceTypes</c> parameter allows you to filter by resource type. Separate multiple types with commas.</description></item>
+        /// <item><description>When <c>directoryId</c> is not specified or set to <c>root</c>, the root folder list of the knowledge base is queried by default.</description></item>
+        /// <item><description>The default sort field is <c>name</c>, and the default sort order is ascending (<c>asc</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11622,16 +13162,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前 OpenAPI 用户可见知识库目录内容。</para>
+        /// <para>Queries the knowledge base directory content visible to the current OpenAPI user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口按企业知识库前台口径返回指定目录的子目录和 READY 资源。</description></item>
-        /// <item><description>用户身份与目录可见范围均来自 OpenAPI 鉴权上下文。</description></item>
-        /// <item><description><c>sourceTypes</c> 有值时仅返回资源；<c>keyword</c> 仅搜索当前目录层级。</description></item>
+        /// <item><description>This operation returns subdirectories and READY resources under the specified directory based on the enterprise knowledge base frontend scope.</description></item>
+        /// <item><description>The user identity and directory visibility scope are derived from the OpenAPI authentication context.</description></item>
+        /// <item><description>When <c>sourceTypes</c> has a value, only resources are returned. <c>keyword</c> searches only the current directory level.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11708,16 +13248,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前 OpenAPI 用户可见知识库目录内容。</para>
+        /// <para>Queries the knowledge base directory content visible to the current OpenAPI user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口按企业知识库前台口径返回指定目录的子目录和 READY 资源。</description></item>
-        /// <item><description>用户身份与目录可见范围均来自 OpenAPI 鉴权上下文。</description></item>
-        /// <item><description><c>sourceTypes</c> 有值时仅返回资源；<c>keyword</c> 仅搜索当前目录层级。</description></item>
+        /// <item><description>This operation returns subdirectories and READY resources under the specified directory based on the enterprise knowledge base frontend scope.</description></item>
+        /// <item><description>The user identity and directory visibility scope are derived from the OpenAPI authentication context.</description></item>
+        /// <item><description>When <c>sourceTypes</c> has a value, only resources are returned. <c>keyword</c> searches only the current directory level.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11794,16 +13334,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前 OpenAPI 用户可见知识库目录内容。</para>
+        /// <para>Queries the knowledge base directory content visible to the current OpenAPI user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口按企业知识库前台口径返回指定目录的子目录和 READY 资源。</description></item>
-        /// <item><description>用户身份与目录可见范围均来自 OpenAPI 鉴权上下文。</description></item>
-        /// <item><description><c>sourceTypes</c> 有值时仅返回资源；<c>keyword</c> 仅搜索当前目录层级。</description></item>
+        /// <item><description>This operation returns subdirectories and READY resources under the specified directory based on the enterprise knowledge base frontend scope.</description></item>
+        /// <item><description>The user identity and directory visibility scope are derived from the OpenAPI authentication context.</description></item>
+        /// <item><description>When <c>sourceTypes</c> has a value, only resources are returned. <c>keyword</c> searches only the current directory level.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11823,16 +13363,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前 OpenAPI 用户可见知识库目录内容。</para>
+        /// <para>Queries the knowledge base directory content visible to the current OpenAPI user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口按企业知识库前台口径返回指定目录的子目录和 READY 资源。</description></item>
-        /// <item><description>用户身份与目录可见范围均来自 OpenAPI 鉴权上下文。</description></item>
-        /// <item><description><c>sourceTypes</c> 有值时仅返回资源；<c>keyword</c> 仅搜索当前目录层级。</description></item>
+        /// <item><description>This operation returns subdirectories and READY resources under the specified directory based on the enterprise knowledge base frontend scope.</description></item>
+        /// <item><description>The user identity and directory visibility scope are derived from the OpenAPI authentication context.</description></item>
+        /// <item><description>When <c>sourceTypes</c> has a value, only resources are returned. <c>keyword</c> searches only the current directory level.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11852,16 +13392,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前 OpenAPI 用户可见的企业知识库列表。</para>
+        /// <para>Queries the list of enterprise knowledge bases visible to the current OpenAPI user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口按 OpenAPI 鉴权身份映射的平台用户查询其可见企业知识库。</description></item>
-        /// <item><description>租户和用户身份均由鉴权上下文确定，调用方不能通过业务参数扩大可见范围。</description></item>
-        /// <item><description><c>tenantId</c> 为可选公共参数；<c>keyword</c> 可按知识库名称或描述过滤。</description></item>
+        /// <item><description>This operation queries the enterprise knowledge bases visible to the platform user mapped from the OpenAPI authentication identity.</description></item>
+        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visible scope through business parameters.</description></item>
+        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can filter by knowledge base name or description.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11914,16 +13454,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前 OpenAPI 用户可见的企业知识库列表。</para>
+        /// <para>Queries the list of enterprise knowledge bases visible to the current OpenAPI user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口按 OpenAPI 鉴权身份映射的平台用户查询其可见企业知识库。</description></item>
-        /// <item><description>租户和用户身份均由鉴权上下文确定，调用方不能通过业务参数扩大可见范围。</description></item>
-        /// <item><description><c>tenantId</c> 为可选公共参数；<c>keyword</c> 可按知识库名称或描述过滤。</description></item>
+        /// <item><description>This operation queries the enterprise knowledge bases visible to the platform user mapped from the OpenAPI authentication identity.</description></item>
+        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visible scope through business parameters.</description></item>
+        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can filter by knowledge base name or description.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11976,16 +13516,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前 OpenAPI 用户可见的企业知识库列表。</para>
+        /// <para>Queries the list of enterprise knowledge bases visible to the current OpenAPI user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口按 OpenAPI 鉴权身份映射的平台用户查询其可见企业知识库。</description></item>
-        /// <item><description>租户和用户身份均由鉴权上下文确定，调用方不能通过业务参数扩大可见范围。</description></item>
-        /// <item><description><c>tenantId</c> 为可选公共参数；<c>keyword</c> 可按知识库名称或描述过滤。</description></item>
+        /// <item><description>This operation queries the enterprise knowledge bases visible to the platform user mapped from the OpenAPI authentication identity.</description></item>
+        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visible scope through business parameters.</description></item>
+        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can filter by knowledge base name or description.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12005,16 +13545,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询当前 OpenAPI 用户可见的企业知识库列表。</para>
+        /// <para>Queries the list of enterprise knowledge bases visible to the current OpenAPI user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口按 OpenAPI 鉴权身份映射的平台用户查询其可见企业知识库。</description></item>
-        /// <item><description>租户和用户身份均由鉴权上下文确定，调用方不能通过业务参数扩大可见范围。</description></item>
-        /// <item><description><c>tenantId</c> 为可选公共参数；<c>keyword</c> 可按知识库名称或描述过滤。</description></item>
+        /// <item><description>This operation queries the enterprise knowledge bases visible to the platform user mapped from the OpenAPI authentication identity.</description></item>
+        /// <item><description>Both the tenant and user identities are determined by the authentication context. Callers cannot expand the visible scope through business parameters.</description></item>
+        /// <item><description><c>tenantId</c> is an optional common parameter. <c>keyword</c> can filter by knowledge base name or description.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12034,18 +13574,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询租户成员列表</para>
+        /// <para>Queries tenant members by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 分页查询租户成员列表。
-        ///     业务编排：
-        ///     1. 解析筛选条件（roleCodes → role_ids）
-        ///     2. 调用 UserTenantMappingRepository.query_paged_tenant_members 分页查询
-        ///     3. 将结果中的 role_id 转为 roleCode 并组装响应
-        ///     错误码：
-        ///     - 非法 roleCode 参数时抛出错误</para>
+        /// <para>Queries a paged list of tenant members by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse filter conditions (roleCodes → role_ids).
+        ///     2. Call UserTenantMappingRepository.query_paged_tenant_members to perform a paged query.
+        ///     3. Convert role_id in the results to roleCode and assemble the response.
+        ///     Error codes:
+        ///     - An error is thrown when an invalid roleCode parameter is specified.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12127,18 +13667,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询租户成员列表</para>
+        /// <para>Queries tenant members by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 分页查询租户成员列表。
-        ///     业务编排：
-        ///     1. 解析筛选条件（roleCodes → role_ids）
-        ///     2. 调用 UserTenantMappingRepository.query_paged_tenant_members 分页查询
-        ///     3. 将结果中的 role_id 转为 roleCode 并组装响应
-        ///     错误码：
-        ///     - 非法 roleCode 参数时抛出错误</para>
+        /// <para>Queries a paged list of tenant members by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse filter conditions (roleCodes → role_ids).
+        ///     2. Call UserTenantMappingRepository.query_paged_tenant_members to perform a paged query.
+        ///     3. Convert role_id in the results to roleCode and assemble the response.
+        ///     Error codes:
+        ///     - An error is thrown when an invalid roleCode parameter is specified.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -12220,18 +13760,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询租户成员列表</para>
+        /// <para>Queries tenant members by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 分页查询租户成员列表。
-        ///     业务编排：
-        ///     1. 解析筛选条件（roleCodes → role_ids）
-        ///     2. 调用 UserTenantMappingRepository.query_paged_tenant_members 分页查询
-        ///     3. 将结果中的 role_id 转为 roleCode 并组装响应
-        ///     错误码：
-        ///     - 非法 roleCode 参数时抛出错误</para>
+        /// <para>Queries a paged list of tenant members by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse filter conditions (roleCodes → role_ids).
+        ///     2. Call UserTenantMappingRepository.query_paged_tenant_members to perform a paged query.
+        ///     3. Convert role_id in the results to roleCode and assemble the response.
+        ///     Error codes:
+        ///     - An error is thrown when an invalid roleCode parameter is specified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12250,18 +13790,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页查询租户成员列表</para>
+        /// <para>Queries tenant members by paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 分页查询租户成员列表。
-        ///     业务编排：
-        ///     1. 解析筛选条件（roleCodes → role_ids）
-        ///     2. 调用 UserTenantMappingRepository.query_paged_tenant_members 分页查询
-        ///     3. 将结果中的 role_id 转为 roleCode 并组装响应
-        ///     错误码：
-        ///     - 非法 roleCode 参数时抛出错误</para>
+        /// <para>Queries a paged list of tenant members by using OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse filter conditions (roleCodes → role_ids).
+        ///     2. Call UserTenantMappingRepository.query_paged_tenant_members to perform a paged query.
+        ///     3. Convert role_id in the results to roleCode and assemble the response.
+        ///     Error codes:
+        ///     - An error is thrown when an invalid roleCode parameter is specified.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12280,19 +13820,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下钻查询指定数字员工可见的知识库目录下的子目录与资源。</para>
+        /// <para>Drills down to query subdirectories and resources under a specified knowledge base directory visible to a specified digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询特定数字员工在指定知识库目录下的所有子目录和资源。</description></item>
-        /// <item><description>用户需拥有对目标数字员工的USE权限，且该数字员工必须有权访问请求中指定的目录及其子目录。</description></item>
-        /// <item><description>请求时需要提供数字员工名称（<c>operatingObjectName</c>）及要查询的目录ID（<c>directoryId</c>），其他参数如分页信息、排序方式等为可选项。</description></item>
-        /// <item><description>接口返回结果包括目录下的子目录和资源列表，并支持按页码分页显示。</description></item>
-        /// <item><description><c>sourceStatus</c>字段固定过滤值为<c>READY</c>状态的资源。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>与<c>user_id</c>仅从鉴权身份获取，调用方即使在请求体中传递也会被忽略。</description></item>
+        /// <item><description>This operation queries all subdirectories and resources under a specified knowledge base directory for a specific digital employee.</description></item>
+        /// <item><description>The user must have the USE permission on the target digital employee, and the digital employee must have access to the directory and its subdirectories specified in the request.</description></item>
+        /// <item><description>You must provide the digital employee name (<c>operatingObjectName</c>) and the directory ID (<c>directoryId</c>) to query. Other parameters such as pagination information and sorting method are optional.</description></item>
+        /// <item><description>The response includes the list of subdirectories and resources under the directory, and supports pagination.</description></item>
+        /// <item><description>The <c>sourceStatus</c> field filters only resources in the <c>READY</c> state.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. Values passed in the request body by the caller are ignored.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12375,19 +13915,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下钻查询指定数字员工可见的知识库目录下的子目录与资源。</para>
+        /// <para>Drills down to query subdirectories and resources under a specified knowledge base directory visible to a specified digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询特定数字员工在指定知识库目录下的所有子目录和资源。</description></item>
-        /// <item><description>用户需拥有对目标数字员工的USE权限，且该数字员工必须有权访问请求中指定的目录及其子目录。</description></item>
-        /// <item><description>请求时需要提供数字员工名称（<c>operatingObjectName</c>）及要查询的目录ID（<c>directoryId</c>），其他参数如分页信息、排序方式等为可选项。</description></item>
-        /// <item><description>接口返回结果包括目录下的子目录和资源列表，并支持按页码分页显示。</description></item>
-        /// <item><description><c>sourceStatus</c>字段固定过滤值为<c>READY</c>状态的资源。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>与<c>user_id</c>仅从鉴权身份获取，调用方即使在请求体中传递也会被忽略。</description></item>
+        /// <item><description>This operation queries all subdirectories and resources under a specified knowledge base directory for a specific digital employee.</description></item>
+        /// <item><description>The user must have the USE permission on the target digital employee, and the digital employee must have access to the directory and its subdirectories specified in the request.</description></item>
+        /// <item><description>You must provide the digital employee name (<c>operatingObjectName</c>) and the directory ID (<c>directoryId</c>) to query. Other parameters such as pagination information and sorting method are optional.</description></item>
+        /// <item><description>The response includes the list of subdirectories and resources under the directory, and supports pagination.</description></item>
+        /// <item><description>The <c>sourceStatus</c> field filters only resources in the <c>READY</c> state.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. Values passed in the request body by the caller are ignored.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12470,19 +14010,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下钻查询指定数字员工可见的知识库目录下的子目录与资源。</para>
+        /// <para>Drills down to query subdirectories and resources under a specified knowledge base directory visible to a specified digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询特定数字员工在指定知识库目录下的所有子目录和资源。</description></item>
-        /// <item><description>用户需拥有对目标数字员工的USE权限，且该数字员工必须有权访问请求中指定的目录及其子目录。</description></item>
-        /// <item><description>请求时需要提供数字员工名称（<c>operatingObjectName</c>）及要查询的目录ID（<c>directoryId</c>），其他参数如分页信息、排序方式等为可选项。</description></item>
-        /// <item><description>接口返回结果包括目录下的子目录和资源列表，并支持按页码分页显示。</description></item>
-        /// <item><description><c>sourceStatus</c>字段固定过滤值为<c>READY</c>状态的资源。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>与<c>user_id</c>仅从鉴权身份获取，调用方即使在请求体中传递也会被忽略。</description></item>
+        /// <item><description>This operation queries all subdirectories and resources under a specified knowledge base directory for a specific digital employee.</description></item>
+        /// <item><description>The user must have the USE permission on the target digital employee, and the digital employee must have access to the directory and its subdirectories specified in the request.</description></item>
+        /// <item><description>You must provide the digital employee name (<c>operatingObjectName</c>) and the directory ID (<c>directoryId</c>) to query. Other parameters such as pagination information and sorting method are optional.</description></item>
+        /// <item><description>The response includes the list of subdirectories and resources under the directory, and supports pagination.</description></item>
+        /// <item><description>The <c>sourceStatus</c> field filters only resources in the <c>READY</c> state.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. Values passed in the request body by the caller are ignored.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12502,19 +14042,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>下钻查询指定数字员工可见的知识库目录下的子目录与资源。</para>
+        /// <para>Drills down to query subdirectories and resources under a specified knowledge base directory visible to a specified digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询特定数字员工在指定知识库目录下的所有子目录和资源。</description></item>
-        /// <item><description>用户需拥有对目标数字员工的USE权限，且该数字员工必须有权访问请求中指定的目录及其子目录。</description></item>
-        /// <item><description>请求时需要提供数字员工名称（<c>operatingObjectName</c>）及要查询的目录ID（<c>directoryId</c>），其他参数如分页信息、排序方式等为可选项。</description></item>
-        /// <item><description>接口返回结果包括目录下的子目录和资源列表，并支持按页码分页显示。</description></item>
-        /// <item><description><c>sourceStatus</c>字段固定过滤值为<c>READY</c>状态的资源。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c>与<c>user_id</c>仅从鉴权身份获取，调用方即使在请求体中传递也会被忽略。</description></item>
+        /// <item><description>This operation queries all subdirectories and resources under a specified knowledge base directory for a specific digital employee.</description></item>
+        /// <item><description>The user must have the USE permission on the target digital employee, and the digital employee must have access to the directory and its subdirectories specified in the request.</description></item>
+        /// <item><description>You must provide the digital employee name (<c>operatingObjectName</c>) and the directory ID (<c>directoryId</c>) to query. Other parameters such as pagination information and sorting method are optional.</description></item>
+        /// <item><description>The response includes the list of subdirectories and resources under the directory, and supports pagination.</description></item>
+        /// <item><description>The <c>sourceStatus</c> field filters only resources in the <c>READY</c> state.</description></item>
+        /// <item><description>For security purposes, <c>tenant_id</c> and <c>user_id</c> are obtained only from the authenticated identity. Values passed in the request body by the caller are ignored.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12534,14 +14074,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工可访问的企业知识库顶层目录。</para>
+        /// <para>Queries the top-level directories of enterprise knowledge bases accessible to a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取指定数字员工（运营对象）在企业内可见的知识库顶层目录列表。</description></item>
+        /// <item><description>This API operation retrieves the list of top-level knowledge base directories visible to a specified digital employee (operating object) within the enterprise.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12603,14 +14143,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工可访问的企业知识库顶层目录。</para>
+        /// <para>Queries the top-level directories of enterprise knowledge bases accessible to a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取指定数字员工（运营对象）在企业内可见的知识库顶层目录列表。</description></item>
+        /// <item><description>This API operation retrieves the list of top-level knowledge base directories visible to a specified digital employee (operating object) within the enterprise.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12672,14 +14212,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工可访问的企业知识库顶层目录。</para>
+        /// <para>Queries the top-level directories of enterprise knowledge bases accessible to a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取指定数字员工（运营对象）在企业内可见的知识库顶层目录列表。</description></item>
+        /// <item><description>This API operation retrieves the list of top-level knowledge base directories visible to a specified digital employee (operating object) within the enterprise.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12699,14 +14239,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询数字员工可访问的企业知识库顶层目录。</para>
+        /// <para>Queries the top-level directories of enterprise knowledge bases accessible to a digital employee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于获取指定数字员工（运营对象）在企业内可见的知识库顶层目录列表。</description></item>
+        /// <item><description>This API operation retrieves the list of top-level knowledge base directories visible to a specified digital employee (operating object) within the enterprise.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12726,30 +14266,30 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在企业知识库目录间移动指定资源，需具备管理权限。</para>
+        /// <para>Moves a specified resource between enterprise knowledge base directories. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>鉴权流程</b>：<ol>
-        /// <item><description>基础鉴权由根 router 统一完成（<c>request.state.openapi_identity</c>）。</description></item>
-        /// <item><description>本 handler 校验 <c>DEVELOPMENT_KB_MANAGE</c> 功能权限。</description></item>
+        /// <item><description><b>Authentication flow</b>:<ol>
+        /// <item><description>Basic authentication is performed by the root router (<c>request.state.openapi_identity</c>).</description></item>
+        /// <item><description>This handler checks the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>操作步骤</b>：<ol>
-        /// <item><description>检查源目录与目标目录不能相同。</description></item>
-        /// <item><description>确认目标目录存在。</description></item>
-        /// <item><description>验证待移动的资源确实位于源目录中。</description></item>
-        /// <item><description>更新资源的目录绑定关系。</description></item>
-        /// <item><description>尽力更新 <c>source.settings[&quot;knowledge_id&quot;]</c> 为目标知识库 ID。</description></item>
-        /// <item><description>尽力通知 DocumentAgent 同步 <c>knowledge_id</c> 和 <c>update_time</c>。</description></item>
+        /// <item><description><b>Procedure</b>:<ol>
+        /// <item><description>Check that the source directory and target directory are not the same.</description></item>
+        /// <item><description>Confirm that the target directory exists.</description></item>
+        /// <item><description>Verify that the resource to be moved is in the source directory.</description></item>
+        /// <item><description>Update the directory binding of the resource.</description></item>
+        /// <item><description>Best-effort update of <c>source.settings[&quot;knowledge_id&quot;]</c> to the target knowledge base ID.</description></item>
+        /// <item><description>Best-effort notification to DocumentAgent to sync <c>knowledge_id</c> and <c>update_time</c>.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>安全约束</b>：<list type="bullet">
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
-        /// <item><description>调用者需要拥有 KB 管理权限。</description></item>
+        /// <item><description><b>Security constraints</b>:<list type="bullet">
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description>The caller must have KB management permissions.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -12816,30 +14356,30 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在企业知识库目录间移动指定资源，需具备管理权限。</para>
+        /// <para>Moves a specified resource between enterprise knowledge base directories. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>鉴权流程</b>：<ol>
-        /// <item><description>基础鉴权由根 router 统一完成（<c>request.state.openapi_identity</c>）。</description></item>
-        /// <item><description>本 handler 校验 <c>DEVELOPMENT_KB_MANAGE</c> 功能权限。</description></item>
+        /// <item><description><b>Authentication flow</b>:<ol>
+        /// <item><description>Basic authentication is performed by the root router (<c>request.state.openapi_identity</c>).</description></item>
+        /// <item><description>This handler checks the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>操作步骤</b>：<ol>
-        /// <item><description>检查源目录与目标目录不能相同。</description></item>
-        /// <item><description>确认目标目录存在。</description></item>
-        /// <item><description>验证待移动的资源确实位于源目录中。</description></item>
-        /// <item><description>更新资源的目录绑定关系。</description></item>
-        /// <item><description>尽力更新 <c>source.settings[&quot;knowledge_id&quot;]</c> 为目标知识库 ID。</description></item>
-        /// <item><description>尽力通知 DocumentAgent 同步 <c>knowledge_id</c> 和 <c>update_time</c>。</description></item>
+        /// <item><description><b>Procedure</b>:<ol>
+        /// <item><description>Check that the source directory and target directory are not the same.</description></item>
+        /// <item><description>Confirm that the target directory exists.</description></item>
+        /// <item><description>Verify that the resource to be moved is in the source directory.</description></item>
+        /// <item><description>Update the directory binding of the resource.</description></item>
+        /// <item><description>Best-effort update of <c>source.settings[&quot;knowledge_id&quot;]</c> to the target knowledge base ID.</description></item>
+        /// <item><description>Best-effort notification to DocumentAgent to sync <c>knowledge_id</c> and <c>update_time</c>.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>安全约束</b>：<list type="bullet">
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
-        /// <item><description>调用者需要拥有 KB 管理权限。</description></item>
+        /// <item><description><b>Security constraints</b>:<list type="bullet">
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description>The caller must have KB management permissions.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -12906,30 +14446,30 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在企业知识库目录间移动指定资源，需具备管理权限。</para>
+        /// <para>Moves a specified resource between enterprise knowledge base directories. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>鉴权流程</b>：<ol>
-        /// <item><description>基础鉴权由根 router 统一完成（<c>request.state.openapi_identity</c>）。</description></item>
-        /// <item><description>本 handler 校验 <c>DEVELOPMENT_KB_MANAGE</c> 功能权限。</description></item>
+        /// <item><description><b>Authentication flow</b>:<ol>
+        /// <item><description>Basic authentication is performed by the root router (<c>request.state.openapi_identity</c>).</description></item>
+        /// <item><description>This handler checks the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>操作步骤</b>：<ol>
-        /// <item><description>检查源目录与目标目录不能相同。</description></item>
-        /// <item><description>确认目标目录存在。</description></item>
-        /// <item><description>验证待移动的资源确实位于源目录中。</description></item>
-        /// <item><description>更新资源的目录绑定关系。</description></item>
-        /// <item><description>尽力更新 <c>source.settings[&quot;knowledge_id&quot;]</c> 为目标知识库 ID。</description></item>
-        /// <item><description>尽力通知 DocumentAgent 同步 <c>knowledge_id</c> 和 <c>update_time</c>。</description></item>
+        /// <item><description><b>Procedure</b>:<ol>
+        /// <item><description>Check that the source directory and target directory are not the same.</description></item>
+        /// <item><description>Confirm that the target directory exists.</description></item>
+        /// <item><description>Verify that the resource to be moved is in the source directory.</description></item>
+        /// <item><description>Update the directory binding of the resource.</description></item>
+        /// <item><description>Best-effort update of <c>source.settings[&quot;knowledge_id&quot;]</c> to the target knowledge base ID.</description></item>
+        /// <item><description>Best-effort notification to DocumentAgent to sync <c>knowledge_id</c> and <c>update_time</c>.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>安全约束</b>：<list type="bullet">
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
-        /// <item><description>调用者需要拥有 KB 管理权限。</description></item>
+        /// <item><description><b>Security constraints</b>:<list type="bullet">
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description>The caller must have KB management permissions.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -12951,30 +14491,30 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在企业知识库目录间移动指定资源，需具备管理权限。</para>
+        /// <para>Moves a specified resource between enterprise knowledge base directories. Management permissions are required.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description><b>鉴权流程</b>：<ol>
-        /// <item><description>基础鉴权由根 router 统一完成（<c>request.state.openapi_identity</c>）。</description></item>
-        /// <item><description>本 handler 校验 <c>DEVELOPMENT_KB_MANAGE</c> 功能权限。</description></item>
+        /// <item><description><b>Authentication flow</b>:<ol>
+        /// <item><description>Basic authentication is performed by the root router (<c>request.state.openapi_identity</c>).</description></item>
+        /// <item><description>This handler checks the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>操作步骤</b>：<ol>
-        /// <item><description>检查源目录与目标目录不能相同。</description></item>
-        /// <item><description>确认目标目录存在。</description></item>
-        /// <item><description>验证待移动的资源确实位于源目录中。</description></item>
-        /// <item><description>更新资源的目录绑定关系。</description></item>
-        /// <item><description>尽力更新 <c>source.settings[&quot;knowledge_id&quot;]</c> 为目标知识库 ID。</description></item>
-        /// <item><description>尽力通知 DocumentAgent 同步 <c>knowledge_id</c> 和 <c>update_time</c>。</description></item>
+        /// <item><description><b>Procedure</b>:<ol>
+        /// <item><description>Check that the source directory and target directory are not the same.</description></item>
+        /// <item><description>Confirm that the target directory exists.</description></item>
+        /// <item><description>Verify that the resource to be moved is in the source directory.</description></item>
+        /// <item><description>Update the directory binding of the resource.</description></item>
+        /// <item><description>Best-effort update of <c>source.settings[&quot;knowledge_id&quot;]</c> to the target knowledge base ID.</description></item>
+        /// <item><description>Best-effort notification to DocumentAgent to sync <c>knowledge_id</c> and <c>update_time</c>.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>安全约束</b>：<list type="bullet">
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
-        /// <item><description>调用者需要拥有 KB 管理权限。</description></item>
+        /// <item><description><b>Security constraints</b>:<list type="bullet">
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description>The caller must have KB management permissions.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -12996,18 +14536,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在用户的个人目录之间移动指定资源。</para>
+        /// <para>Moves a specified resource between personal directories of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>源目录与目标目录不能相同</b>，否则将返回 <c>ERR.Robject.UserDirectory.InvalidOperation</c> 错误。</description></item>
-        /// <item><description><b>目标目录必须存在</b>，如果不存在则会返回 <c>ERR.Robject.UserDirectory.DirectoryNotFound</c> 错误。</description></item>
-        /// <item><description><b>待移动的资源必须存在于源目录中</b>，若不在源目录中，则会收到 <c>ERR.Robject.UserDirectory.ResourceNotInDirectory</c> 错误。</description></item>
-        /// <item><description>成功移动后，系统会尝试通知 DocumentAgent 更新资源的新路径 (<c>source_path</c>)，但此步骤为尽力而为（best-effort），即使失败也不会影响整体操作的成功状态，仅记录错误日志。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c> 的值只能来源于鉴权身份信息。</description></item>
+        /// <item><description><b>The source directory and target directory cannot be the same</b>. Otherwise, the <c>ERR.Robject.UserDirectory.InvalidOperation</c> error is returned.</description></item>
+        /// <item><description><b>The target directory must exist</b>. If it does not exist, the <c>ERR.Robject.UserDirectory.DirectoryNotFound</c> error is returned.</description></item>
+        /// <item><description><b>The resource to be moved must exist in the source directory</b>. If it is not in the source directory, the <c>ERR.Robject.UserDirectory.ResourceNotInDirectory</c> error is returned.</description></item>
+        /// <item><description>After a successful move, the system attempts to notify DocumentAgent to update the new path (<c>source_path</c>) of the resource. This step is best-effort. Even if it fails, the overall operation success status is not affected. Only an error log is recorded.</description></item>
+        /// <item><description>For security purposes, the value of <c>tenant_id</c> can only be derived from the authenticated identity information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13068,18 +14608,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在用户的个人目录之间移动指定资源。</para>
+        /// <para>Moves a specified resource between personal directories of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>源目录与目标目录不能相同</b>，否则将返回 <c>ERR.Robject.UserDirectory.InvalidOperation</c> 错误。</description></item>
-        /// <item><description><b>目标目录必须存在</b>，如果不存在则会返回 <c>ERR.Robject.UserDirectory.DirectoryNotFound</c> 错误。</description></item>
-        /// <item><description><b>待移动的资源必须存在于源目录中</b>，若不在源目录中，则会收到 <c>ERR.Robject.UserDirectory.ResourceNotInDirectory</c> 错误。</description></item>
-        /// <item><description>成功移动后，系统会尝试通知 DocumentAgent 更新资源的新路径 (<c>source_path</c>)，但此步骤为尽力而为（best-effort），即使失败也不会影响整体操作的成功状态，仅记录错误日志。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c> 的值只能来源于鉴权身份信息。</description></item>
+        /// <item><description><b>The source directory and target directory cannot be the same</b>. Otherwise, the <c>ERR.Robject.UserDirectory.InvalidOperation</c> error is returned.</description></item>
+        /// <item><description><b>The target directory must exist</b>. If it does not exist, the <c>ERR.Robject.UserDirectory.DirectoryNotFound</c> error is returned.</description></item>
+        /// <item><description><b>The resource to be moved must exist in the source directory</b>. If it is not in the source directory, the <c>ERR.Robject.UserDirectory.ResourceNotInDirectory</c> error is returned.</description></item>
+        /// <item><description>After a successful move, the system attempts to notify DocumentAgent to update the new path (<c>source_path</c>) of the resource. This step is best-effort. Even if it fails, the overall operation success status is not affected. Only an error log is recorded.</description></item>
+        /// <item><description>For security purposes, the value of <c>tenant_id</c> can only be derived from the authenticated identity information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13140,18 +14680,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在用户的个人目录之间移动指定资源。</para>
+        /// <para>Moves a specified resource between personal directories of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>源目录与目标目录不能相同</b>，否则将返回 <c>ERR.Robject.UserDirectory.InvalidOperation</c> 错误。</description></item>
-        /// <item><description><b>目标目录必须存在</b>，如果不存在则会返回 <c>ERR.Robject.UserDirectory.DirectoryNotFound</c> 错误。</description></item>
-        /// <item><description><b>待移动的资源必须存在于源目录中</b>，若不在源目录中，则会收到 <c>ERR.Robject.UserDirectory.ResourceNotInDirectory</c> 错误。</description></item>
-        /// <item><description>成功移动后，系统会尝试通知 DocumentAgent 更新资源的新路径 (<c>source_path</c>)，但此步骤为尽力而为（best-effort），即使失败也不会影响整体操作的成功状态，仅记录错误日志。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c> 的值只能来源于鉴权身份信息。</description></item>
+        /// <item><description><b>The source directory and target directory cannot be the same</b>. Otherwise, the <c>ERR.Robject.UserDirectory.InvalidOperation</c> error is returned.</description></item>
+        /// <item><description><b>The target directory must exist</b>. If it does not exist, the <c>ERR.Robject.UserDirectory.DirectoryNotFound</c> error is returned.</description></item>
+        /// <item><description><b>The resource to be moved must exist in the source directory</b>. If it is not in the source directory, the <c>ERR.Robject.UserDirectory.ResourceNotInDirectory</c> error is returned.</description></item>
+        /// <item><description>After a successful move, the system attempts to notify DocumentAgent to update the new path (<c>source_path</c>) of the resource. This step is best-effort. Even if it fails, the overall operation success status is not affected. Only an error log is recorded.</description></item>
+        /// <item><description>For security purposes, the value of <c>tenant_id</c> can only be derived from the authenticated identity information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13171,18 +14711,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>在用户的个人目录之间移动指定资源。</para>
+        /// <para>Moves a specified resource between personal directories of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><b>源目录与目标目录不能相同</b>，否则将返回 <c>ERR.Robject.UserDirectory.InvalidOperation</c> 错误。</description></item>
-        /// <item><description><b>目标目录必须存在</b>，如果不存在则会返回 <c>ERR.Robject.UserDirectory.DirectoryNotFound</c> 错误。</description></item>
-        /// <item><description><b>待移动的资源必须存在于源目录中</b>，若不在源目录中，则会收到 <c>ERR.Robject.UserDirectory.ResourceNotInDirectory</c> 错误。</description></item>
-        /// <item><description>成功移动后，系统会尝试通知 DocumentAgent 更新资源的新路径 (<c>source_path</c>)，但此步骤为尽力而为（best-effort），即使失败也不会影响整体操作的成功状态，仅记录错误日志。</description></item>
-        /// <item><description>安全性方面，<c>tenant_id</c> 的值只能来源于鉴权身份信息。</description></item>
+        /// <item><description><b>The source directory and target directory cannot be the same</b>. Otherwise, the <c>ERR.Robject.UserDirectory.InvalidOperation</c> error is returned.</description></item>
+        /// <item><description><b>The target directory must exist</b>. If it does not exist, the <c>ERR.Robject.UserDirectory.DirectoryNotFound</c> error is returned.</description></item>
+        /// <item><description><b>The resource to be moved must exist in the source directory</b>. If it is not in the source directory, the <c>ERR.Robject.UserDirectory.ResourceNotInDirectory</c> error is returned.</description></item>
+        /// <item><description>After a successful move, the system attempts to notify DocumentAgent to update the new path (<c>source_path</c>) of the resource. This step is best-effort. Even if it fails, the overall operation success status is not affected. Only an error log is recorded.</description></item>
+        /// <item><description>For security purposes, the value of <c>tenant_id</c> can only be derived from the authenticated identity information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13202,18 +14742,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览指定企业知识库下的知识内容</para>
+        /// <para>Previews the knowledge content in a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于预览企业知识库下指定知识的内容。</description></item>
-        /// <item><description>需要具备<c>DEVELOPMENT_KB_VIEW</c>功能权限才能调用此API。</description></item>
-        /// <item><description><c>sourceId</c>是必需参数，用来标识要预览的知识条目。</description></item>
-        /// <item><description>可选参数<c>tenantId</c>允许指定租户ID；若未提供，则使用调用方默认的租户ID。</description></item>
-        /// <item><description>支持多种类型的预览，包括但不限于图片、音频、视频及文本等。</description></item>
+        /// <item><description>This operation previews the content of a specified knowledge entry in an enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_VIEW</c> permission is required to call this API.</description></item>
+        /// <item><description><c>sourceId</c> is a required parameter that identifies the knowledge entry to preview.</description></item>
+        /// <item><description>The optional parameter <c>tenantId</c> specifies the tenant ID. If not provided, the default tenant ID of the caller is used.</description></item>
+        /// <item><description>Multiple preview types are supported, including but not limited to images, audio, video, and text.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13266,18 +14806,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览指定企业知识库下的知识内容</para>
+        /// <para>Previews the knowledge content in a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于预览企业知识库下指定知识的内容。</description></item>
-        /// <item><description>需要具备<c>DEVELOPMENT_KB_VIEW</c>功能权限才能调用此API。</description></item>
-        /// <item><description><c>sourceId</c>是必需参数，用来标识要预览的知识条目。</description></item>
-        /// <item><description>可选参数<c>tenantId</c>允许指定租户ID；若未提供，则使用调用方默认的租户ID。</description></item>
-        /// <item><description>支持多种类型的预览，包括但不限于图片、音频、视频及文本等。</description></item>
+        /// <item><description>This operation previews the content of a specified knowledge entry in an enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_VIEW</c> permission is required to call this API.</description></item>
+        /// <item><description><c>sourceId</c> is a required parameter that identifies the knowledge entry to preview.</description></item>
+        /// <item><description>The optional parameter <c>tenantId</c> specifies the tenant ID. If not provided, the default tenant ID of the caller is used.</description></item>
+        /// <item><description>Multiple preview types are supported, including but not limited to images, audio, video, and text.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13330,18 +14870,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览指定企业知识库下的知识内容</para>
+        /// <para>Previews the knowledge content in a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于预览企业知识库下指定知识的内容。</description></item>
-        /// <item><description>需要具备<c>DEVELOPMENT_KB_VIEW</c>功能权限才能调用此API。</description></item>
-        /// <item><description><c>sourceId</c>是必需参数，用来标识要预览的知识条目。</description></item>
-        /// <item><description>可选参数<c>tenantId</c>允许指定租户ID；若未提供，则使用调用方默认的租户ID。</description></item>
-        /// <item><description>支持多种类型的预览，包括但不限于图片、音频、视频及文本等。</description></item>
+        /// <item><description>This operation previews the content of a specified knowledge entry in an enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_VIEW</c> permission is required to call this API.</description></item>
+        /// <item><description><c>sourceId</c> is a required parameter that identifies the knowledge entry to preview.</description></item>
+        /// <item><description>The optional parameter <c>tenantId</c> specifies the tenant ID. If not provided, the default tenant ID of the caller is used.</description></item>
+        /// <item><description>Multiple preview types are supported, including but not limited to images, audio, video, and text.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13361,18 +14901,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>预览指定企业知识库下的知识内容</para>
+        /// <para>Previews the knowledge content in a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于预览企业知识库下指定知识的内容。</description></item>
-        /// <item><description>需要具备<c>DEVELOPMENT_KB_VIEW</c>功能权限才能调用此API。</description></item>
-        /// <item><description><c>sourceId</c>是必需参数，用来标识要预览的知识条目。</description></item>
-        /// <item><description>可选参数<c>tenantId</c>允许指定租户ID；若未提供，则使用调用方默认的租户ID。</description></item>
-        /// <item><description>支持多种类型的预览，包括但不限于图片、音频、视频及文本等。</description></item>
+        /// <item><description>This operation previews the content of a specified knowledge entry in an enterprise knowledge base.</description></item>
+        /// <item><description>The <c>DEVELOPMENT_KB_VIEW</c> permission is required to call this API.</description></item>
+        /// <item><description><c>sourceId</c> is a required parameter that identifies the knowledge entry to preview.</description></item>
+        /// <item><description>The optional parameter <c>tenantId</c> specifies the tenant ID. If not provided, the default tenant ID of the caller is used.</description></item>
+        /// <item><description>Multiple preview types are supported, including but not limited to images, audio, video, and text.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13392,17 +14932,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许用户预览其个人目录下的指定知识内容。</para>
+        /// <para>Allows a user to preview specified knowledge content in their personal directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口仅允许用户预览属于自己的个人目录下的资源。</description></item>
-        /// <item><description>鉴权流程包括基础鉴权和数据源归属校验，确保请求者只能访问其个人目录中的知识。</description></item>
-        /// <item><description>请求时需提供知识的唯一标识 <c>sourceId</c>，系统将根据此ID及用户的租户信息查询并返回相应的预览信息。</description></item>
-        /// <item><description>支持多种类型的预览，如图片、音频、视频等，并根据不同类型返回对应的预览URL或直接的内容展示。</description></item>
+        /// <item><description>This operation only allows a user to preview resources in their own personal directory.</description></item>
+        /// <item><description>The authentication process includes basic authentication and data source ownership verification to ensure that the requester can only access knowledge in their personal directory.</description></item>
+        /// <item><description>You must provide the unique identifier <c>sourceId</c> of the knowledge content in the request. The system queries and returns the corresponding preview information based on this ID and the user\&quot;s tenant information.</description></item>
+        /// <item><description>Multiple preview types are supported, such as image, audio, and video. The system returns the corresponding preview URL or direct content display based on the type.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13464,17 +15004,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许用户预览其个人目录下的指定知识内容。</para>
+        /// <para>Allows a user to preview specified knowledge content in their personal directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口仅允许用户预览属于自己的个人目录下的资源。</description></item>
-        /// <item><description>鉴权流程包括基础鉴权和数据源归属校验，确保请求者只能访问其个人目录中的知识。</description></item>
-        /// <item><description>请求时需提供知识的唯一标识 <c>sourceId</c>，系统将根据此ID及用户的租户信息查询并返回相应的预览信息。</description></item>
-        /// <item><description>支持多种类型的预览，如图片、音频、视频等，并根据不同类型返回对应的预览URL或直接的内容展示。</description></item>
+        /// <item><description>This operation only allows a user to preview resources in their own personal directory.</description></item>
+        /// <item><description>The authentication process includes basic authentication and data source ownership verification to ensure that the requester can only access knowledge in their personal directory.</description></item>
+        /// <item><description>You must provide the unique identifier <c>sourceId</c> of the knowledge content in the request. The system queries and returns the corresponding preview information based on this ID and the user\&quot;s tenant information.</description></item>
+        /// <item><description>Multiple preview types are supported, such as image, audio, and video. The system returns the corresponding preview URL or direct content display based on the type.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13536,17 +15076,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许用户预览其个人目录下的指定知识内容。</para>
+        /// <para>Allows a user to preview specified knowledge content in their personal directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口仅允许用户预览属于自己的个人目录下的资源。</description></item>
-        /// <item><description>鉴权流程包括基础鉴权和数据源归属校验，确保请求者只能访问其个人目录中的知识。</description></item>
-        /// <item><description>请求时需提供知识的唯一标识 <c>sourceId</c>，系统将根据此ID及用户的租户信息查询并返回相应的预览信息。</description></item>
-        /// <item><description>支持多种类型的预览，如图片、音频、视频等，并根据不同类型返回对应的预览URL或直接的内容展示。</description></item>
+        /// <item><description>This operation only allows a user to preview resources in their own personal directory.</description></item>
+        /// <item><description>The authentication process includes basic authentication and data source ownership verification to ensure that the requester can only access knowledge in their personal directory.</description></item>
+        /// <item><description>You must provide the unique identifier <c>sourceId</c> of the knowledge content in the request. The system queries and returns the corresponding preview information based on this ID and the user\&quot;s tenant information.</description></item>
+        /// <item><description>Multiple preview types are supported, such as image, audio, and video. The system returns the corresponding preview URL or direct content display based on the type.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13566,17 +15106,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许用户预览其个人目录下的指定知识内容。</para>
+        /// <para>Allows a user to preview specified knowledge content in their personal directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口仅允许用户预览属于自己的个人目录下的资源。</description></item>
-        /// <item><description>鉴权流程包括基础鉴权和数据源归属校验，确保请求者只能访问其个人目录中的知识。</description></item>
-        /// <item><description>请求时需提供知识的唯一标识 <c>sourceId</c>，系统将根据此ID及用户的租户信息查询并返回相应的预览信息。</description></item>
-        /// <item><description>支持多种类型的预览，如图片、音频、视频等，并根据不同类型返回对应的预览URL或直接的内容展示。</description></item>
+        /// <item><description>This operation only allows a user to preview resources in their own personal directory.</description></item>
+        /// <item><description>The authentication process includes basic authentication and data source ownership verification to ensure that the requester can only access knowledge in their personal directory.</description></item>
+        /// <item><description>You must provide the unique identifier <c>sourceId</c> of the knowledge content in the request. The system queries and returns the corresponding preview information based on this ID and the user\&quot;s tenant information.</description></item>
+        /// <item><description>Multiple preview types are supported, such as image, audio, and video. The system returns the corresponding preview URL or direct content display based on the type.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13596,18 +15136,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过运营对象名称分页查询主对象数据，支持过滤和搜索。</para>
+        /// <para>Queries primary object data by operating object name with paging support, including filtering and search.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于根据给定的运营对象名称（如 <c>customer_1</c>）分页查询相关的主对象数据。</description></item>
-        /// <item><description>支持通过关键字进行搜索，并且可以设置是否仅返回被标记为关注的对象。</description></item>
-        /// <item><description>可以使用复杂的过滤条件来进一步筛选结果，包括但不限于等于、不等于、大于、小于等逻辑操作符。</description></item>
-        /// <item><description>如果没有配置主对象类型，则会返回一个空的结果集。</description></item>
-        /// <item><description>请求中包含的数据将经过鉴权与过滤处理，确保安全性和准确性。</description></item>
+        /// <item><description>This API queries primary object data by a specified operating object name (such as <c>customer_1</c>) with paging.</description></item>
+        /// <item><description>Keyword-based search is supported. You can set whether to return only objects marked as favorites in Settings.</description></item>
+        /// <item><description>Complex filter conditions can be used to further narrow results, including but not limited to equal to, not equal to, greater than, and less than operators.</description></item>
+        /// <item><description>If no primary object type is configured, an empty result set is returned.</description></item>
+        /// <item><description>Data in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13676,18 +15216,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过运营对象名称分页查询主对象数据，支持过滤和搜索。</para>
+        /// <para>Queries primary object data by operating object name with paging support, including filtering and search.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于根据给定的运营对象名称（如 <c>customer_1</c>）分页查询相关的主对象数据。</description></item>
-        /// <item><description>支持通过关键字进行搜索，并且可以设置是否仅返回被标记为关注的对象。</description></item>
-        /// <item><description>可以使用复杂的过滤条件来进一步筛选结果，包括但不限于等于、不等于、大于、小于等逻辑操作符。</description></item>
-        /// <item><description>如果没有配置主对象类型，则会返回一个空的结果集。</description></item>
-        /// <item><description>请求中包含的数据将经过鉴权与过滤处理，确保安全性和准确性。</description></item>
+        /// <item><description>This API queries primary object data by a specified operating object name (such as <c>customer_1</c>) with paging.</description></item>
+        /// <item><description>Keyword-based search is supported. You can set whether to return only objects marked as favorites in Settings.</description></item>
+        /// <item><description>Complex filter conditions can be used to further narrow results, including but not limited to equal to, not equal to, greater than, and less than operators.</description></item>
+        /// <item><description>If no primary object type is configured, an empty result set is returned.</description></item>
+        /// <item><description>Data in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13756,18 +15296,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过运营对象名称分页查询主对象数据，支持过滤和搜索。</para>
+        /// <para>Queries primary object data by operating object name with paging support, including filtering and search.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于根据给定的运营对象名称（如 <c>customer_1</c>）分页查询相关的主对象数据。</description></item>
-        /// <item><description>支持通过关键字进行搜索，并且可以设置是否仅返回被标记为关注的对象。</description></item>
-        /// <item><description>可以使用复杂的过滤条件来进一步筛选结果，包括但不限于等于、不等于、大于、小于等逻辑操作符。</description></item>
-        /// <item><description>如果没有配置主对象类型，则会返回一个空的结果集。</description></item>
-        /// <item><description>请求中包含的数据将经过鉴权与过滤处理，确保安全性和准确性。</description></item>
+        /// <item><description>This API queries primary object data by a specified operating object name (such as <c>customer_1</c>) with paging.</description></item>
+        /// <item><description>Keyword-based search is supported. You can set whether to return only objects marked as favorites in Settings.</description></item>
+        /// <item><description>Complex filter conditions can be used to further narrow results, including but not limited to equal to, not equal to, greater than, and less than operators.</description></item>
+        /// <item><description>If no primary object type is configured, an empty result set is returned.</description></item>
+        /// <item><description>Data in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13787,18 +15327,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过运营对象名称分页查询主对象数据，支持过滤和搜索。</para>
+        /// <para>Queries primary object data by operating object name with paging support, including filtering and search.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于根据给定的运营对象名称（如 <c>customer_1</c>）分页查询相关的主对象数据。</description></item>
-        /// <item><description>支持通过关键字进行搜索，并且可以设置是否仅返回被标记为关注的对象。</description></item>
-        /// <item><description>可以使用复杂的过滤条件来进一步筛选结果，包括但不限于等于、不等于、大于、小于等逻辑操作符。</description></item>
-        /// <item><description>如果没有配置主对象类型，则会返回一个空的结果集。</description></item>
-        /// <item><description>请求中包含的数据将经过鉴权与过滤处理，确保安全性和准确性。</description></item>
+        /// <item><description>This API queries primary object data by a specified operating object name (such as <c>customer_1</c>) with paging.</description></item>
+        /// <item><description>Keyword-based search is supported. You can set whether to return only objects marked as favorites in Settings.</description></item>
+        /// <item><description>Complex filter conditions can be used to further narrow results, including but not limited to equal to, not equal to, greater than, and less than operators.</description></item>
+        /// <item><description>If no primary object type is configured, an empty result set is returned.</description></item>
+        /// <item><description>Data in the request undergoes authentication and filtering to ensure security and accuracy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13818,16 +15358,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询与用户问题相关的语义知识</para>
+        /// <para>Queries semantic knowledge related to a user question.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅开放 smart-query 的 schema_knowledge 语义召回能力。
-        ///     CLI 映射为 <c>winnexo semantic query</c>。<c>tenantId</c> 由公共参数传入，<c>userId</c>
-        ///     仅从 Token 身份读取，禁止请求体覆盖。服务会校验 <c>graphName + agentName</c> 归属、
-        ///     active graph、数字员工启用状态及当前用户 USE 权限；跨图同名 agent 会失败关闭，
-        ///     随后固定 <c>outputs=[schema_knowledge]</c>。</para>
+        /// <para>Exposes only the schema_knowledge semantic recall capability of smart-query.
+        ///     CLI mapping: <c>winnexo semantic query</c>. <c>tenantId</c> is passed through common parameters. <c>userId</c>
+        ///     is read only from the Token identity and cannot be overridden by the request body. The service validates
+        ///     the ownership of <c>graphName + agentName</c>, active graph status, digital human enablement status, and
+        ///     the current user\&quot;s USE permission. A cross-graph agent with the same name will fail and be closed.
+        ///     Then <c>outputs=[schema_knowledge]</c> is fixed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13887,16 +15428,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询与用户问题相关的语义知识</para>
+        /// <para>Queries semantic knowledge related to a user question.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅开放 smart-query 的 schema_knowledge 语义召回能力。
-        ///     CLI 映射为 <c>winnexo semantic query</c>。<c>tenantId</c> 由公共参数传入，<c>userId</c>
-        ///     仅从 Token 身份读取，禁止请求体覆盖。服务会校验 <c>graphName + agentName</c> 归属、
-        ///     active graph、数字员工启用状态及当前用户 USE 权限；跨图同名 agent 会失败关闭，
-        ///     随后固定 <c>outputs=[schema_knowledge]</c>。</para>
+        /// <para>Exposes only the schema_knowledge semantic recall capability of smart-query.
+        ///     CLI mapping: <c>winnexo semantic query</c>. <c>tenantId</c> is passed through common parameters. <c>userId</c>
+        ///     is read only from the Token identity and cannot be overridden by the request body. The service validates
+        ///     the ownership of <c>graphName + agentName</c>, active graph status, digital human enablement status, and
+        ///     the current user\&quot;s USE permission. A cross-graph agent with the same name will fail and be closed.
+        ///     Then <c>outputs=[schema_knowledge]</c> is fixed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13956,16 +15498,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询与用户问题相关的语义知识</para>
+        /// <para>Queries semantic knowledge related to a user question.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅开放 smart-query 的 schema_knowledge 语义召回能力。
-        ///     CLI 映射为 <c>winnexo semantic query</c>。<c>tenantId</c> 由公共参数传入，<c>userId</c>
-        ///     仅从 Token 身份读取，禁止请求体覆盖。服务会校验 <c>graphName + agentName</c> 归属、
-        ///     active graph、数字员工启用状态及当前用户 USE 权限；跨图同名 agent 会失败关闭，
-        ///     随后固定 <c>outputs=[schema_knowledge]</c>。</para>
+        /// <para>Exposes only the schema_knowledge semantic recall capability of smart-query.
+        ///     CLI mapping: <c>winnexo semantic query</c>. <c>tenantId</c> is passed through common parameters. <c>userId</c>
+        ///     is read only from the Token identity and cannot be overridden by the request body. The service validates
+        ///     the ownership of <c>graphName + agentName</c>, active graph status, digital human enablement status, and
+        ///     the current user\&quot;s USE permission. A cross-graph agent with the same name will fail and be closed.
+        ///     Then <c>outputs=[schema_knowledge]</c> is fixed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13984,16 +15527,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询与用户问题相关的语义知识</para>
+        /// <para>Queries semantic knowledge related to a user question.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>仅开放 smart-query 的 schema_knowledge 语义召回能力。
-        ///     CLI 映射为 <c>winnexo semantic query</c>。<c>tenantId</c> 由公共参数传入，<c>userId</c>
-        ///     仅从 Token 身份读取，禁止请求体覆盖。服务会校验 <c>graphName + agentName</c> 归属、
-        ///     active graph、数字员工启用状态及当前用户 USE 权限；跨图同名 agent 会失败关闭，
-        ///     随后固定 <c>outputs=[schema_knowledge]</c>。</para>
+        /// <para>Exposes only the schema_knowledge semantic recall capability of smart-query.
+        ///     CLI mapping: <c>winnexo semantic query</c>. <c>tenantId</c> is passed through common parameters. <c>userId</c>
+        ///     is read only from the Token identity and cannot be overridden by the request body. The service validates
+        ///     the ownership of <c>graphName + agentName</c>, active graph status, digital human enablement status, and
+        ///     the current user\&quot;s USE permission. A cross-graph agent with the same name will fail and be closed.
+        ///     Then <c>outputs=[schema_knowledge]</c> is fixed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14012,14 +15556,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询组织同步结果</para>
+        /// <para>Queries the result of an organization synchronization task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据 taskId 查询组织同步任务的执行状态和结果。
-        ///     任务状态流转：PENDING → RUNNING → COMPLETED / FAILED / TIMEOUT / CANCELED
-        ///     建议客户端轮询间隔：3-5 秒。</para>
+        /// <para>Queries the execution status and result of an organization synchronization task based on the task ID.
+        ///     Task status transitions: PENDING → RUNNING → COMPLETED / FAILED / TIMEOUT / CANCELED
+        ///     Recommended client polling interval: 3 to 5 seconds.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14071,14 +15615,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询组织同步结果</para>
+        /// <para>Queries the result of an organization synchronization task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据 taskId 查询组织同步任务的执行状态和结果。
-        ///     任务状态流转：PENDING → RUNNING → COMPLETED / FAILED / TIMEOUT / CANCELED
-        ///     建议客户端轮询间隔：3-5 秒。</para>
+        /// <para>Queries the execution status and result of an organization synchronization task based on the task ID.
+        ///     Task status transitions: PENDING → RUNNING → COMPLETED / FAILED / TIMEOUT / CANCELED
+        ///     Recommended client polling interval: 3 to 5 seconds.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14130,14 +15674,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询组织同步结果</para>
+        /// <para>Queries the result of an organization synchronization task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据 taskId 查询组织同步任务的执行状态和结果。
-        ///     任务状态流转：PENDING → RUNNING → COMPLETED / FAILED / TIMEOUT / CANCELED
-        ///     建议客户端轮询间隔：3-5 秒。</para>
+        /// <para>Queries the execution status and result of an organization synchronization task based on the task ID.
+        ///     Task status transitions: PENDING → RUNNING → COMPLETED / FAILED / TIMEOUT / CANCELED
+        ///     Recommended client polling interval: 3 to 5 seconds.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14156,14 +15700,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询组织同步结果</para>
+        /// <para>Queries the result of an organization synchronization task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>根据 taskId 查询组织同步任务的执行状态和结果。
-        ///     任务状态流转：PENDING → RUNNING → COMPLETED / FAILED / TIMEOUT / CANCELED
-        ///     建议客户端轮询间隔：3-5 秒。</para>
+        /// <para>Queries the execution status and result of an organization synchronization task based on the task ID.
+        ///     Task status transitions: PENDING → RUNNING → COMPLETED / FAILED / TIMEOUT / CANCELED
+        ///     Recommended client polling interval: 3 to 5 seconds.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14182,21 +15726,239 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从租户移除用户</para>
+        /// <para>Generates next-step recommendations for a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 从租户移除用户。
-        ///     业务编排：
-        ///     1. 从 identity 获取 tenant_id
-        ///     2. 调用 delete_user_from_tenant（内部含最后超管保护）
-        ///     3. 返回成功
-        ///     该操作会：
-        ///     - 移除用户在租户下的所有角色关联
-        ///     - 移除用户在租户下的所有用户组关联
-        ///     - 撤销用户在租户下的全部数字员工使用授权
-        ///     - 删除用户-租户映射</para>
+        /// <h2>Request description</h2>
+        /// <para>Based on the most recent N messages in a session and the skills attached to the agent, this operation invokes an LLM to generate 0 to 3 next-step recommendations (follow-up questions or recommended skills to execute).</para>
+        /// <list type="bullet">
+        /// <item><description><c>sessionId</c>: The session ID. Required. Only sessions that the currently authenticated user has permission to access are allowed.</description></item>
+        /// <item><description><c>recentMessageCount</c>: The number of recent messages used to assemble contextual information. Valid values: 1 to 30. Default value: 10 (approximately 5 rounds of user+assistant conversation).</description></item>
+        /// <item><description><c>customPrompt</c>: A custom recommendation instruction (up to 10,000 characters). This is injected into the default recommendation template as a custom instruction (before the output format constraints). The output is still subject to the JSON format and type constraints of the template.</description></item>
+        /// <item><description><c>outputType</c>: The output type filter. followUpOnly = follow-up recommendations only (default). skillOnly = skill recommendations only. both = generate both types.
+        /// Unlike internal endpoints, API calls are not restricted by the next-step recommendation toggle in user personal settings and always execute recommendation generation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecommendNextActionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecommendNextActionsResponse
+        /// </returns>
+        public RecommendNextActionsResponse RecommendNextActionsWithOptions(RecommendNextActionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrompt))
+            {
+                body["customPrompt"] = request.CustomPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputType))
+            {
+                body["outputType"] = request.OutputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecentMessageCount))
+            {
+                body["recentMessageCount"] = request.RecentMessageCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecommendNextActions",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/recommendNextActions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecommendNextActionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates next-step recommendations for a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Based on the most recent N messages in a session and the skills attached to the agent, this operation invokes an LLM to generate 0 to 3 next-step recommendations (follow-up questions or recommended skills to execute).</para>
+        /// <list type="bullet">
+        /// <item><description><c>sessionId</c>: The session ID. Required. Only sessions that the currently authenticated user has permission to access are allowed.</description></item>
+        /// <item><description><c>recentMessageCount</c>: The number of recent messages used to assemble contextual information. Valid values: 1 to 30. Default value: 10 (approximately 5 rounds of user+assistant conversation).</description></item>
+        /// <item><description><c>customPrompt</c>: A custom recommendation instruction (up to 10,000 characters). This is injected into the default recommendation template as a custom instruction (before the output format constraints). The output is still subject to the JSON format and type constraints of the template.</description></item>
+        /// <item><description><c>outputType</c>: The output type filter. followUpOnly = follow-up recommendations only (default). skillOnly = skill recommendations only. both = generate both types.
+        /// Unlike internal endpoints, API calls are not restricted by the next-step recommendation toggle in user personal settings and always execute recommendation generation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecommendNextActionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecommendNextActionsResponse
+        /// </returns>
+        public async Task<RecommendNextActionsResponse> RecommendNextActionsWithOptionsAsync(RecommendNextActionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CustomPrompt))
+            {
+                body["customPrompt"] = request.CustomPrompt;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputType))
+            {
+                body["outputType"] = request.OutputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecentMessageCount))
+            {
+                body["recentMessageCount"] = request.RecentMessageCount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                body["sessionId"] = request.SessionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RecommendNextActions",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/recommendNextActions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RecommendNextActionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates next-step recommendations for a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Based on the most recent N messages in a session and the skills attached to the agent, this operation invokes an LLM to generate 0 to 3 next-step recommendations (follow-up questions or recommended skills to execute).</para>
+        /// <list type="bullet">
+        /// <item><description><c>sessionId</c>: The session ID. Required. Only sessions that the currently authenticated user has permission to access are allowed.</description></item>
+        /// <item><description><c>recentMessageCount</c>: The number of recent messages used to assemble contextual information. Valid values: 1 to 30. Default value: 10 (approximately 5 rounds of user+assistant conversation).</description></item>
+        /// <item><description><c>customPrompt</c>: A custom recommendation instruction (up to 10,000 characters). This is injected into the default recommendation template as a custom instruction (before the output format constraints). The output is still subject to the JSON format and type constraints of the template.</description></item>
+        /// <item><description><c>outputType</c>: The output type filter. followUpOnly = follow-up recommendations only (default). skillOnly = skill recommendations only. both = generate both types.
+        /// Unlike internal endpoints, API calls are not restricted by the next-step recommendation toggle in user personal settings and always execute recommendation generation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecommendNextActionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecommendNextActionsResponse
+        /// </returns>
+        public RecommendNextActionsResponse RecommendNextActions(RecommendNextActionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RecommendNextActionsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Generates next-step recommendations for a session.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Based on the most recent N messages in a session and the skills attached to the agent, this operation invokes an LLM to generate 0 to 3 next-step recommendations (follow-up questions or recommended skills to execute).</para>
+        /// <list type="bullet">
+        /// <item><description><c>sessionId</c>: The session ID. Required. Only sessions that the currently authenticated user has permission to access are allowed.</description></item>
+        /// <item><description><c>recentMessageCount</c>: The number of recent messages used to assemble contextual information. Valid values: 1 to 30. Default value: 10 (approximately 5 rounds of user+assistant conversation).</description></item>
+        /// <item><description><c>customPrompt</c>: A custom recommendation instruction (up to 10,000 characters). This is injected into the default recommendation template as a custom instruction (before the output format constraints). The output is still subject to the JSON format and type constraints of the template.</description></item>
+        /// <item><description><c>outputType</c>: The output type filter. followUpOnly = follow-up recommendations only (default). skillOnly = skill recommendations only. both = generate both types.
+        /// Unlike internal endpoints, API calls are not restricted by the next-step recommendation toggle in user personal settings and always execute recommendation generation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RecommendNextActionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RecommendNextActionsResponse
+        /// </returns>
+        public async Task<RecommendNextActionsResponse> RecommendNextActionsAsync(RecommendNextActionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RecommendNextActionsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes a user from a tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Removes a user from a tenant.
+        ///     Business orchestration:
+        ///     1. Obtains tenant_id from identity.
+        ///     2. Calls delete_user_from_tenant (includes last admin protection).
+        ///     3. Returns success.
+        ///     This operation:
+        ///     - Removes all role associations of the user under the tenant.
+        ///     - Removes all user group associations of the user under the tenant.
+        ///     - Revokes all digital employee usage authorizations of the user under the tenant.
+        ///     - Deletes the user-tenant mapping.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14246,21 +16008,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从租户移除用户</para>
+        /// <para>Removes a user from a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 从租户移除用户。
-        ///     业务编排：
-        ///     1. 从 identity 获取 tenant_id
-        ///     2. 调用 delete_user_from_tenant（内部含最后超管保护）
-        ///     3. 返回成功
-        ///     该操作会：
-        ///     - 移除用户在租户下的所有角色关联
-        ///     - 移除用户在租户下的所有用户组关联
-        ///     - 撤销用户在租户下的全部数字员工使用授权
-        ///     - 删除用户-租户映射</para>
+        /// <para>Removes a user from a tenant.
+        ///     Business orchestration:
+        ///     1. Obtains tenant_id from identity.
+        ///     2. Calls delete_user_from_tenant (includes last admin protection).
+        ///     3. Returns success.
+        ///     This operation:
+        ///     - Removes all role associations of the user under the tenant.
+        ///     - Removes all user group associations of the user under the tenant.
+        ///     - Revokes all digital employee usage authorizations of the user under the tenant.
+        ///     - Deletes the user-tenant mapping.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14310,21 +16072,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从租户移除用户</para>
+        /// <para>Removes a user from a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 从租户移除用户。
-        ///     业务编排：
-        ///     1. 从 identity 获取 tenant_id
-        ///     2. 调用 delete_user_from_tenant（内部含最后超管保护）
-        ///     3. 返回成功
-        ///     该操作会：
-        ///     - 移除用户在租户下的所有角色关联
-        ///     - 移除用户在租户下的所有用户组关联
-        ///     - 撤销用户在租户下的全部数字员工使用授权
-        ///     - 删除用户-租户映射</para>
+        /// <para>Removes a user from a tenant.
+        ///     Business orchestration:
+        ///     1. Obtains tenant_id from identity.
+        ///     2. Calls delete_user_from_tenant (includes last admin protection).
+        ///     3. Returns success.
+        ///     This operation:
+        ///     - Removes all role associations of the user under the tenant.
+        ///     - Removes all user group associations of the user under the tenant.
+        ///     - Revokes all digital employee usage authorizations of the user under the tenant.
+        ///     - Deletes the user-tenant mapping.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14343,21 +16105,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>从租户移除用户</para>
+        /// <para>Removes a user from a tenant.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 从租户移除用户。
-        ///     业务编排：
-        ///     1. 从 identity 获取 tenant_id
-        ///     2. 调用 delete_user_from_tenant（内部含最后超管保护）
-        ///     3. 返回成功
-        ///     该操作会：
-        ///     - 移除用户在租户下的所有角色关联
-        ///     - 移除用户在租户下的所有用户组关联
-        ///     - 撤销用户在租户下的全部数字员工使用授权
-        ///     - 删除用户-租户映射</para>
+        /// <para>Removes a user from a tenant.
+        ///     Business orchestration:
+        ///     1. Obtains tenant_id from identity.
+        ///     2. Calls delete_user_from_tenant (includes last admin protection).
+        ///     3. Returns success.
+        ///     This operation:
+        ///     - Removes all role associations of the user under the tenant.
+        ///     - Removes all user group associations of the user under the tenant.
+        ///     - Revokes all digital employee usage authorizations of the user under the tenant.
+        ///     - Deletes the user-tenant mapping.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14376,20 +16138,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定企业知识库内数据源的名称。</para>
+        /// <para>Renames a data source in a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口允许具有相应权限的用户修改企业知识库中的特定数据源名称。</description></item>
-        /// <item><description>需要提供待修改的数据源ID(<c>sourceId</c>)及新的名称(<c>newName</c>)。</description></item>
-        /// <item><description>修改操作仅更新数据源的名字字段，不会触发其他处理流程。</description></item>
-        /// <item><description>成功执行后，系统会发布<c>SOURCE_CHANGED</c>事件以供前端刷新显示，并尝试通知DocumentAgent同步最新的source_name信息，但此步骤失败不会影响主流程的完成状态。</description></item>
-        /// <item><description>如果提供的<c>sourceId</c>不存在，则返回错误码<c>ERR.Robject.Source.NotFound</c>。</description></item>
-        /// <item><description>此API调用需具备<c>DEVELOPMENT_KB_MANAGE</c>功能权限。</description></item>
-        /// <item><description>支持通过AK、BearerToken或APP方式进行身份验证。</description></item>
+        /// <item><description>This operation allows users with the required permissions to modify the name of a specific data source in an enterprise knowledge base.</description></item>
+        /// <item><description>You must provide the ID of the data source to be renamed (sourceId) and the new name (newName).</description></item>
+        /// <item><description>The rename operation only updates the name field of the data source and does not trigger other processing flows.</description></item>
+        /// <item><description>After successful execution, the system publishes a <c>SOURCE_CHANGED</c> event for frontend display refresh and attempts to notify DocumentAgent to synchronize the latest source_name information. However, if this step fails, it does not affect the completion status of the main flow.</description></item>
+        /// <item><description>If the specified sourceId does not exist, the error code <c>ERR.Robject.Source.NotFound</c> is returned.</description></item>
+        /// <item><description>To invoke this API, you must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
+        /// <item><description>Identity verification is supported through AccessKey, BearerToken, or APP methods to authenticate requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14446,20 +16208,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定企业知识库内数据源的名称。</para>
+        /// <para>Renames a data source in a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口允许具有相应权限的用户修改企业知识库中的特定数据源名称。</description></item>
-        /// <item><description>需要提供待修改的数据源ID(<c>sourceId</c>)及新的名称(<c>newName</c>)。</description></item>
-        /// <item><description>修改操作仅更新数据源的名字字段，不会触发其他处理流程。</description></item>
-        /// <item><description>成功执行后，系统会发布<c>SOURCE_CHANGED</c>事件以供前端刷新显示，并尝试通知DocumentAgent同步最新的source_name信息，但此步骤失败不会影响主流程的完成状态。</description></item>
-        /// <item><description>如果提供的<c>sourceId</c>不存在，则返回错误码<c>ERR.Robject.Source.NotFound</c>。</description></item>
-        /// <item><description>此API调用需具备<c>DEVELOPMENT_KB_MANAGE</c>功能权限。</description></item>
-        /// <item><description>支持通过AK、BearerToken或APP方式进行身份验证。</description></item>
+        /// <item><description>This operation allows users with the required permissions to modify the name of a specific data source in an enterprise knowledge base.</description></item>
+        /// <item><description>You must provide the ID of the data source to be renamed (sourceId) and the new name (newName).</description></item>
+        /// <item><description>The rename operation only updates the name field of the data source and does not trigger other processing flows.</description></item>
+        /// <item><description>After successful execution, the system publishes a <c>SOURCE_CHANGED</c> event for frontend display refresh and attempts to notify DocumentAgent to synchronize the latest source_name information. However, if this step fails, it does not affect the completion status of the main flow.</description></item>
+        /// <item><description>If the specified sourceId does not exist, the error code <c>ERR.Robject.Source.NotFound</c> is returned.</description></item>
+        /// <item><description>To invoke this API, you must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
+        /// <item><description>Identity verification is supported through AccessKey, BearerToken, or APP methods to authenticate requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14516,20 +16278,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定企业知识库内数据源的名称。</para>
+        /// <para>Renames a data source in a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口允许具有相应权限的用户修改企业知识库中的特定数据源名称。</description></item>
-        /// <item><description>需要提供待修改的数据源ID(<c>sourceId</c>)及新的名称(<c>newName</c>)。</description></item>
-        /// <item><description>修改操作仅更新数据源的名字字段，不会触发其他处理流程。</description></item>
-        /// <item><description>成功执行后，系统会发布<c>SOURCE_CHANGED</c>事件以供前端刷新显示，并尝试通知DocumentAgent同步最新的source_name信息，但此步骤失败不会影响主流程的完成状态。</description></item>
-        /// <item><description>如果提供的<c>sourceId</c>不存在，则返回错误码<c>ERR.Robject.Source.NotFound</c>。</description></item>
-        /// <item><description>此API调用需具备<c>DEVELOPMENT_KB_MANAGE</c>功能权限。</description></item>
-        /// <item><description>支持通过AK、BearerToken或APP方式进行身份验证。</description></item>
+        /// <item><description>This operation allows users with the required permissions to modify the name of a specific data source in an enterprise knowledge base.</description></item>
+        /// <item><description>You must provide the ID of the data source to be renamed (sourceId) and the new name (newName).</description></item>
+        /// <item><description>The rename operation only updates the name field of the data source and does not trigger other processing flows.</description></item>
+        /// <item><description>After successful execution, the system publishes a <c>SOURCE_CHANGED</c> event for frontend display refresh and attempts to notify DocumentAgent to synchronize the latest source_name information. However, if this step fails, it does not affect the completion status of the main flow.</description></item>
+        /// <item><description>If the specified sourceId does not exist, the error code <c>ERR.Robject.Source.NotFound</c> is returned.</description></item>
+        /// <item><description>To invoke this API, you must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
+        /// <item><description>Identity verification is supported through AccessKey, BearerToken, or APP methods to authenticate requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14549,20 +16311,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定企业知识库内数据源的名称。</para>
+        /// <para>Renames a data source in a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口允许具有相应权限的用户修改企业知识库中的特定数据源名称。</description></item>
-        /// <item><description>需要提供待修改的数据源ID(<c>sourceId</c>)及新的名称(<c>newName</c>)。</description></item>
-        /// <item><description>修改操作仅更新数据源的名字字段，不会触发其他处理流程。</description></item>
-        /// <item><description>成功执行后，系统会发布<c>SOURCE_CHANGED</c>事件以供前端刷新显示，并尝试通知DocumentAgent同步最新的source_name信息，但此步骤失败不会影响主流程的完成状态。</description></item>
-        /// <item><description>如果提供的<c>sourceId</c>不存在，则返回错误码<c>ERR.Robject.Source.NotFound</c>。</description></item>
-        /// <item><description>此API调用需具备<c>DEVELOPMENT_KB_MANAGE</c>功能权限。</description></item>
-        /// <item><description>支持通过AK、BearerToken或APP方式进行身份验证。</description></item>
+        /// <item><description>This operation allows users with the required permissions to modify the name of a specific data source in an enterprise knowledge base.</description></item>
+        /// <item><description>You must provide the ID of the data source to be renamed (sourceId) and the new name (newName).</description></item>
+        /// <item><description>The rename operation only updates the name field of the data source and does not trigger other processing flows.</description></item>
+        /// <item><description>After successful execution, the system publishes a <c>SOURCE_CHANGED</c> event for frontend display refresh and attempts to notify DocumentAgent to synchronize the latest source_name information. However, if this step fails, it does not affect the completion status of the main flow.</description></item>
+        /// <item><description>If the specified sourceId does not exist, the error code <c>ERR.Robject.Source.NotFound</c> is returned.</description></item>
+        /// <item><description>To invoke this API, you must have the <c>DEVELOPMENT_KB_MANAGE</c> feature permission.</description></item>
+        /// <item><description>Identity verification is supported through AccessKey, BearerToken, or APP methods to authenticate requests.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14582,18 +16344,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定数据源的名称，支持轻量级操作。</para>
+        /// <para>Renames a specified data source. This is a lightweight operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 仅更新数据源的 <c>name</c> 字段，不会触发 <c>process_source</c>。</description></item>
-        /// <item><description>成功后会发布 <c>SOURCE_CHANGED</c> 事件供前端刷新显示。</description></item>
-        /// <item><description>将尽力通知 DocumentAgent 同步新的 <c>source_name</c>，即使同步失败也不会阻断主流程。</description></item>
-        /// <item><description>如果指定的数据源不存在，则抛出 <c>ERR.Robject.Source.NotFound</c> 错误，并由全局中间件统一转换为 POP 错误码。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
+        /// <item><description>This API updates only the <c>name</c> field of the data source and does not trigger <c>process_source</c>.</description></item>
+        /// <item><description>After a successful update, a <c>SOURCE_CHANGED</c> event is published for the frontend to refresh the display.</description></item>
+        /// <item><description>The system makes a best-effort attempt to notify DocumentAgent to sync the new <c>source_name</c>. Even if the sync fails, the main process is not blocked.</description></item>
+        /// <item><description>If the specified data source does not exist, the <c>ERR.Robject.Source.NotFound</c> error is returned. The global middleware converts this error into a POP error code.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14650,18 +16412,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定数据源的名称，支持轻量级操作。</para>
+        /// <para>Renames a specified data source. This is a lightweight operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 仅更新数据源的 <c>name</c> 字段，不会触发 <c>process_source</c>。</description></item>
-        /// <item><description>成功后会发布 <c>SOURCE_CHANGED</c> 事件供前端刷新显示。</description></item>
-        /// <item><description>将尽力通知 DocumentAgent 同步新的 <c>source_name</c>，即使同步失败也不会阻断主流程。</description></item>
-        /// <item><description>如果指定的数据源不存在，则抛出 <c>ERR.Robject.Source.NotFound</c> 错误，并由全局中间件统一转换为 POP 错误码。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
+        /// <item><description>This API updates only the <c>name</c> field of the data source and does not trigger <c>process_source</c>.</description></item>
+        /// <item><description>After a successful update, a <c>SOURCE_CHANGED</c> event is published for the frontend to refresh the display.</description></item>
+        /// <item><description>The system makes a best-effort attempt to notify DocumentAgent to sync the new <c>source_name</c>. Even if the sync fails, the main process is not blocked.</description></item>
+        /// <item><description>If the specified data source does not exist, the <c>ERR.Robject.Source.NotFound</c> error is returned. The global middleware converts this error into a POP error code.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14718,18 +16480,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定数据源的名称，支持轻量级操作。</para>
+        /// <para>Renames a specified data source. This is a lightweight operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 仅更新数据源的 <c>name</c> 字段，不会触发 <c>process_source</c>。</description></item>
-        /// <item><description>成功后会发布 <c>SOURCE_CHANGED</c> 事件供前端刷新显示。</description></item>
-        /// <item><description>将尽力通知 DocumentAgent 同步新的 <c>source_name</c>，即使同步失败也不会阻断主流程。</description></item>
-        /// <item><description>如果指定的数据源不存在，则抛出 <c>ERR.Robject.Source.NotFound</c> 错误，并由全局中间件统一转换为 POP 错误码。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
+        /// <item><description>This API updates only the <c>name</c> field of the data source and does not trigger <c>process_source</c>.</description></item>
+        /// <item><description>After a successful update, a <c>SOURCE_CHANGED</c> event is published for the frontend to refresh the display.</description></item>
+        /// <item><description>The system makes a best-effort attempt to notify DocumentAgent to sync the new <c>source_name</c>. Even if the sync fails, the main process is not blocked.</description></item>
+        /// <item><description>If the specified data source does not exist, the <c>ERR.Robject.Source.NotFound</c> error is returned. The global middleware converts this error into a POP error code.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14749,18 +16511,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定数据源的名称，支持轻量级操作。</para>
+        /// <para>Renames a specified data source. This is a lightweight operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该 API 仅更新数据源的 <c>name</c> 字段，不会触发 <c>process_source</c>。</description></item>
-        /// <item><description>成功后会发布 <c>SOURCE_CHANGED</c> 事件供前端刷新显示。</description></item>
-        /// <item><description>将尽力通知 DocumentAgent 同步新的 <c>source_name</c>，即使同步失败也不会阻断主流程。</description></item>
-        /// <item><description>如果指定的数据源不存在，则抛出 <c>ERR.Robject.Source.NotFound</c> 错误，并由全局中间件统一转换为 POP 错误码。</description></item>
-        /// <item><description>安全约束：<c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
+        /// <item><description>This API updates only the <c>name</c> field of the data source and does not trigger <c>process_source</c>.</description></item>
+        /// <item><description>After a successful update, a <c>SOURCE_CHANGED</c> event is published for the frontend to refresh the display.</description></item>
+        /// <item><description>The system makes a best-effort attempt to notify DocumentAgent to sync the new <c>source_name</c>. Even if the sync fails, the main process is not blocked.</description></item>
+        /// <item><description>If the specified data source does not exist, the <c>ERR.Robject.Source.NotFound</c> error is returned. The global middleware converts this error into a POP error code.</description></item>
+        /// <item><description>Security constraint: <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14780,16 +16542,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新解析当前租户内的指定数据源。</para>
+        /// <para>Re-parses a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于重新解析指定的数据源，支持同步或异步执行。请求时需提供数据源 ID，并可选择是否同步等待解析完成，默认为异步入队处理。此外，可以通过 <c>tenantId</c> 参数指定租户ID，但此参数非必填。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation re-parses a specified data source. You can choose synchronous or asynchronous execution. You must provide the data source ID in the request. You can optionally specify whether to synchronously wait for parsing to complete. By default, the request is processed asynchronously by being added to a queue. You can also use the <c>tenantId</c> parameter to specify a tenant ID, but this parameter is optional.</para>
         /// <list type="bullet">
-        /// <item><description><b>forceSync</b>：若设置为 <c>true</c>，则会同步等待重新解析操作完成；默认值为 <c>false</c>，表示以异步方式处理请求。</description></item>
-        /// <item><description>当服务返回 <c>None</c> 时，将被转换成 <c>SourceNotFound</c> 异常；其他异常情况将由 OpenAPI 的全局异常链进行处理。</description></item>
+        /// <item><description><b>forceSync</b>: If set to <c>true</c>, the operation synchronously waits for the re-parsing to complete. Default value: <c>false</c>, which indicates that the request is processed asynchronously.</description></item>
+        /// <item><description>When the service returns <c>None</c>, it is converted to a <c>SourceNotFound</c> exception. Other exceptions are handled by the OpenAPI global exception chain.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14846,16 +16608,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新解析当前租户内的指定数据源。</para>
+        /// <para>Re-parses a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于重新解析指定的数据源，支持同步或异步执行。请求时需提供数据源 ID，并可选择是否同步等待解析完成，默认为异步入队处理。此外，可以通过 <c>tenantId</c> 参数指定租户ID，但此参数非必填。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation re-parses a specified data source. You can choose synchronous or asynchronous execution. You must provide the data source ID in the request. You can optionally specify whether to synchronously wait for parsing to complete. By default, the request is processed asynchronously by being added to a queue. You can also use the <c>tenantId</c> parameter to specify a tenant ID, but this parameter is optional.</para>
         /// <list type="bullet">
-        /// <item><description><b>forceSync</b>：若设置为 <c>true</c>，则会同步等待重新解析操作完成；默认值为 <c>false</c>，表示以异步方式处理请求。</description></item>
-        /// <item><description>当服务返回 <c>None</c> 时，将被转换成 <c>SourceNotFound</c> 异常；其他异常情况将由 OpenAPI 的全局异常链进行处理。</description></item>
+        /// <item><description><b>forceSync</b>: If set to <c>true</c>, the operation synchronously waits for the re-parsing to complete. Default value: <c>false</c>, which indicates that the request is processed asynchronously.</description></item>
+        /// <item><description>When the service returns <c>None</c>, it is converted to a <c>SourceNotFound</c> exception. Other exceptions are handled by the OpenAPI global exception chain.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14912,16 +16674,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新解析当前租户内的指定数据源。</para>
+        /// <para>Re-parses a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于重新解析指定的数据源，支持同步或异步执行。请求时需提供数据源 ID，并可选择是否同步等待解析完成，默认为异步入队处理。此外，可以通过 <c>tenantId</c> 参数指定租户ID，但此参数非必填。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation re-parses a specified data source. You can choose synchronous or asynchronous execution. You must provide the data source ID in the request. You can optionally specify whether to synchronously wait for parsing to complete. By default, the request is processed asynchronously by being added to a queue. You can also use the <c>tenantId</c> parameter to specify a tenant ID, but this parameter is optional.</para>
         /// <list type="bullet">
-        /// <item><description><b>forceSync</b>：若设置为 <c>true</c>，则会同步等待重新解析操作完成；默认值为 <c>false</c>，表示以异步方式处理请求。</description></item>
-        /// <item><description>当服务返回 <c>None</c> 时，将被转换成 <c>SourceNotFound</c> 异常；其他异常情况将由 OpenAPI 的全局异常链进行处理。</description></item>
+        /// <item><description><b>forceSync</b>: If set to <c>true</c>, the operation synchronously waits for the re-parsing to complete. Default value: <c>false</c>, which indicates that the request is processed asynchronously.</description></item>
+        /// <item><description>When the service returns <c>None</c>, it is converted to a <c>SourceNotFound</c> exception. Other exceptions are handled by the OpenAPI global exception chain.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14941,16 +16703,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重新解析当前租户内的指定数据源。</para>
+        /// <para>Re-parses a resource.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于重新解析指定的数据源，支持同步或异步执行。请求时需提供数据源 ID，并可选择是否同步等待解析完成，默认为异步入队处理。此外，可以通过 <c>tenantId</c> 参数指定租户ID，但此参数非必填。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation re-parses a specified data source. You can choose synchronous or asynchronous execution. You must provide the data source ID in the request. You can optionally specify whether to synchronously wait for parsing to complete. By default, the request is processed asynchronously by being added to a queue. You can also use the <c>tenantId</c> parameter to specify a tenant ID, but this parameter is optional.</para>
         /// <list type="bullet">
-        /// <item><description><b>forceSync</b>：若设置为 <c>true</c>，则会同步等待重新解析操作完成；默认值为 <c>false</c>，表示以异步方式处理请求。</description></item>
-        /// <item><description>当服务返回 <c>None</c> 时，将被转换成 <c>SourceNotFound</c> 异常；其他异常情况将由 OpenAPI 的全局异常链进行处理。</description></item>
+        /// <item><description><b>forceSync</b>: If set to <c>true</c>, the operation synchronously waits for the re-parsing to complete. Default value: <c>false</c>, which indicates that the request is processed asynchronously.</description></item>
+        /// <item><description>When the service returns <c>None</c>, it is converted to a <c>SourceNotFound</c> exception. Other exceptions are handled by the OpenAPI global exception chain.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14970,17 +16732,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于替换指定的企业知识库中的FILE资源并触发重新解析。</para>
+        /// <para>Replaces a FILE resource in a specified enterprise knowledge base and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API允许用户更新企业自建知识库中特定的FILE类型的数据源，并通过提供新的文件路径和公开访问URL来触发系统对该数据源的重新解析。支持同步或异步模式下的操作执行，其中同步模式下客户端将等待直到解析过程完成。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update a specific FILE-type data source in a self-built enterprise knowledge base and trigger the system to re-parse the data source by providing a new file path and public access URL. Operations can be performed in synchronous or asynchronous mode. In synchronous mode, the client waits until the parsing process is complete.</para>
         /// <list type="bullet">
-        /// <item><description><b>forceSync</b> 参数控制是否采用同步方式处理请求，默认为 <c>false</c>，即以异步方式进行。</description></item>
-        /// <item><description>当不提供 <b>fileName</b> 或其值为空时，新上传的文件将保留原有的文件名。</description></item>
-        /// <item><description>必须确保提供的 <b>filePath</b> 和 <b>filePublicUrl</b> 是有效的且指向同一个文件实体。</description></item>
+        /// <item><description>The <b>forceSync</b> parameter controls whether the request is processed synchronously. The default value is <c>false</c>, which indicates asynchronous processing.</description></item>
+        /// <item><description>If <b>fileName</b> is not provided or its value is empty, the newly uploaded file retains the original file name.</description></item>
+        /// <item><description>Ensure that the provided <b>filePath</b> and <b>filePublicUrl</b> are valid and point to the same file entity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15053,17 +16815,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于替换指定的企业知识库中的FILE资源并触发重新解析。</para>
+        /// <para>Replaces a FILE resource in a specified enterprise knowledge base and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API允许用户更新企业自建知识库中特定的FILE类型的数据源，并通过提供新的文件路径和公开访问URL来触发系统对该数据源的重新解析。支持同步或异步模式下的操作执行，其中同步模式下客户端将等待直到解析过程完成。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update a specific FILE-type data source in a self-built enterprise knowledge base and trigger the system to re-parse the data source by providing a new file path and public access URL. Operations can be performed in synchronous or asynchronous mode. In synchronous mode, the client waits until the parsing process is complete.</para>
         /// <list type="bullet">
-        /// <item><description><b>forceSync</b> 参数控制是否采用同步方式处理请求，默认为 <c>false</c>，即以异步方式进行。</description></item>
-        /// <item><description>当不提供 <b>fileName</b> 或其值为空时，新上传的文件将保留原有的文件名。</description></item>
-        /// <item><description>必须确保提供的 <b>filePath</b> 和 <b>filePublicUrl</b> 是有效的且指向同一个文件实体。</description></item>
+        /// <item><description>The <b>forceSync</b> parameter controls whether the request is processed synchronously. The default value is <c>false</c>, which indicates asynchronous processing.</description></item>
+        /// <item><description>If <b>fileName</b> is not provided or its value is empty, the newly uploaded file retains the original file name.</description></item>
+        /// <item><description>Ensure that the provided <b>filePath</b> and <b>filePublicUrl</b> are valid and point to the same file entity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15136,17 +16898,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于替换指定的企业知识库中的FILE资源并触发重新解析。</para>
+        /// <para>Replaces a FILE resource in a specified enterprise knowledge base and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API允许用户更新企业自建知识库中特定的FILE类型的数据源，并通过提供新的文件路径和公开访问URL来触发系统对该数据源的重新解析。支持同步或异步模式下的操作执行，其中同步模式下客户端将等待直到解析过程完成。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update a specific FILE-type data source in a self-built enterprise knowledge base and trigger the system to re-parse the data source by providing a new file path and public access URL. Operations can be performed in synchronous or asynchronous mode. In synchronous mode, the client waits until the parsing process is complete.</para>
         /// <list type="bullet">
-        /// <item><description><b>forceSync</b> 参数控制是否采用同步方式处理请求，默认为 <c>false</c>，即以异步方式进行。</description></item>
-        /// <item><description>当不提供 <b>fileName</b> 或其值为空时，新上传的文件将保留原有的文件名。</description></item>
-        /// <item><description>必须确保提供的 <b>filePath</b> 和 <b>filePublicUrl</b> 是有效的且指向同一个文件实体。</description></item>
+        /// <item><description>The <b>forceSync</b> parameter controls whether the request is processed synchronously. The default value is <c>false</c>, which indicates asynchronous processing.</description></item>
+        /// <item><description>If <b>fileName</b> is not provided or its value is empty, the newly uploaded file retains the original file name.</description></item>
+        /// <item><description>Ensure that the provided <b>filePath</b> and <b>filePublicUrl</b> are valid and point to the same file entity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15166,17 +16928,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于替换指定的企业知识库中的FILE资源并触发重新解析。</para>
+        /// <para>Replaces a FILE resource in a specified enterprise knowledge base and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API允许用户更新企业自建知识库中特定的FILE类型的数据源，并通过提供新的文件路径和公开访问URL来触发系统对该数据源的重新解析。支持同步或异步模式下的操作执行，其中同步模式下客户端将等待直到解析过程完成。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API allows you to update a specific FILE-type data source in a self-built enterprise knowledge base and trigger the system to re-parse the data source by providing a new file path and public access URL. Operations can be performed in synchronous or asynchronous mode. In synchronous mode, the client waits until the parsing process is complete.</para>
         /// <list type="bullet">
-        /// <item><description><b>forceSync</b> 参数控制是否采用同步方式处理请求，默认为 <c>false</c>，即以异步方式进行。</description></item>
-        /// <item><description>当不提供 <b>fileName</b> 或其值为空时，新上传的文件将保留原有的文件名。</description></item>
-        /// <item><description>必须确保提供的 <b>filePath</b> 和 <b>filePublicUrl</b> 是有效的且指向同一个文件实体。</description></item>
+        /// <item><description>The <b>forceSync</b> parameter controls whether the request is processed synchronously. The default value is <c>false</c>, which indicates asynchronous processing.</description></item>
+        /// <item><description>If <b>fileName</b> is not provided or its value is empty, the newly uploaded file retains the original file name.</description></item>
+        /// <item><description>Ensure that the provided <b>filePath</b> and <b>filePublicUrl</b> are valid and point to the same file entity.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15196,17 +16958,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于全量替换指定数据源下的对象绑定信息。</para>
+        /// <para>Replaces all object binding information under a specified data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于全量替换特定数据源的对象绑定（先删除现有绑定，再插入新的绑定）。如果传入空列表，则表示清空所有绑定。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API performs a full replacement of object bindings for a specified data source (deletes existing bindings first, then inserts new bindings). If an empty list is passed, all bindings are cleared.</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
-        /// <item><description><b>错误处理</b>：若指定的数据源不存在，将抛出 <c>ERR.Robject.InvalidParameter</c> 错误，并由全局中间件转换为 POP 错误码。</description></item>
-        /// <item><description><b>同步通知</b>：替换成功后会尽力同步通知 DocumentAgent 更新 <c>semantics.object_bindings</c>，但失败仅记录日志，不会阻断主流程。</description></item>
+        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description><b>Error handling</b>: If the specified data source does not exist, an <c>ERR.Robject.InvalidParameter</c> error is thrown and converted to a POP error code by the global middleware.</description></item>
+        /// <item><description><b>Synchronous notification</b>: After a successful replacement, the system makes a best-effort synchronous notification to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15269,17 +17031,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于全量替换指定数据源下的对象绑定信息。</para>
+        /// <para>Replaces all object binding information under a specified data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于全量替换特定数据源的对象绑定（先删除现有绑定，再插入新的绑定）。如果传入空列表，则表示清空所有绑定。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API performs a full replacement of object bindings for a specified data source (deletes existing bindings first, then inserts new bindings). If an empty list is passed, all bindings are cleared.</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
-        /// <item><description><b>错误处理</b>：若指定的数据源不存在，将抛出 <c>ERR.Robject.InvalidParameter</c> 错误，并由全局中间件转换为 POP 错误码。</description></item>
-        /// <item><description><b>同步通知</b>：替换成功后会尽力同步通知 DocumentAgent 更新 <c>semantics.object_bindings</c>，但失败仅记录日志，不会阻断主流程。</description></item>
+        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description><b>Error handling</b>: If the specified data source does not exist, an <c>ERR.Robject.InvalidParameter</c> error is thrown and converted to a POP error code by the global middleware.</description></item>
+        /// <item><description><b>Synchronous notification</b>: After a successful replacement, the system makes a best-effort synchronous notification to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15342,17 +17104,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于全量替换指定数据源下的对象绑定信息。</para>
+        /// <para>Replaces all object binding information under a specified data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于全量替换特定数据源的对象绑定（先删除现有绑定，再插入新的绑定）。如果传入空列表，则表示清空所有绑定。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API performs a full replacement of object bindings for a specified data source (deletes existing bindings first, then inserts new bindings). If an empty list is passed, all bindings are cleared.</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
-        /// <item><description><b>错误处理</b>：若指定的数据源不存在，将抛出 <c>ERR.Robject.InvalidParameter</c> 错误，并由全局中间件转换为 POP 错误码。</description></item>
-        /// <item><description><b>同步通知</b>：替换成功后会尽力同步通知 DocumentAgent 更新 <c>semantics.object_bindings</c>，但失败仅记录日志，不会阻断主流程。</description></item>
+        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description><b>Error handling</b>: If the specified data source does not exist, an <c>ERR.Robject.InvalidParameter</c> error is thrown and converted to a POP error code by the global middleware.</description></item>
+        /// <item><description><b>Synchronous notification</b>: After a successful replacement, the system makes a best-effort synchronous notification to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15372,17 +17134,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于全量替换指定数据源下的对象绑定信息。</para>
+        /// <para>Replaces all object binding information under a specified data source.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于全量替换特定数据源的对象绑定（先删除现有绑定，再插入新的绑定）。如果传入空列表，则表示清空所有绑定。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API performs a full replacement of object bindings for a specified data source (deletes existing bindings first, then inserts new bindings). If an empty list is passed, all bindings are cleared.</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c> 和 <c>user_id</c> 必须来自鉴权身份。</description></item>
-        /// <item><description><b>错误处理</b>：若指定的数据源不存在，将抛出 <c>ERR.Robject.InvalidParameter</c> 错误，并由全局中间件转换为 POP 错误码。</description></item>
-        /// <item><description><b>同步通知</b>：替换成功后会尽力同步通知 DocumentAgent 更新 <c>semantics.object_bindings</c>，但失败仅记录日志，不会阻断主流程。</description></item>
+        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must come from the authenticated identity.</description></item>
+        /// <item><description><b>Error handling</b>: If the specified data source does not exist, an <c>ERR.Robject.InvalidParameter</c> error is thrown and converted to a POP error code by the global middleware.</description></item>
+        /// <item><description><b>Synchronous notification</b>: After a successful replacement, the system makes a best-effort synchronous notification to DocumentAgent to update <c>semantics.object_bindings</c>. However, failures are only logged and do not block the main process.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15402,17 +17164,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许用户替换其创建的个人文件资源，并触发系统重新解析该文件。</para>
+        /// <para>Allows a user to replace a personal file resource that they created and triggers the system to re-parse the file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>此 API 用于替换当前平台用户创建的个人 FILE 资源，并触发系统对该文件的重新解析。</description></item>
-        /// <item><description><c>tenant_id</c>、操作人和创建者约束只读取鉴权身份。缺少平台用户时请求将被拒绝，以防止绕过所有权校验。</description></item>
-        /// <item><description>如果服务端返回 <c>None</c>，则会被转换为 <c>NotFound</c> 异常；其他异常由 OpenAPI 全局异常链处理。</description></item>
-        /// <item><description>该接口支持同步或异步等待重新解析完成，默认为异步入队（通过设置 <c>forceSync</c> 参数控制）。</description></item>
+        /// <item><description>This API operation replaces a personal FILE resource created by the current platform user and triggers the system to re-parse the file.</description></item>
+        /// <item><description>The <c>tenant_id</c>, operator, and creator constraints are read only from the authenticated identity. Requests without a platform user are rejected to prevent bypassing ownership verification.</description></item>
+        /// <item><description>If the server returns <c>None</c>, it is converted to a <c>NotFound</c> exception. Other exceptions are handled by the OpenAPI global exception chain.</description></item>
+        /// <item><description>This operation supports synchronous or asynchronous waiting for re-parsing to complete. The default behavior is asynchronous queuing (controlled by the <c>forceSync</c> parameter).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15485,17 +17247,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许用户替换其创建的个人文件资源，并触发系统重新解析该文件。</para>
+        /// <para>Allows a user to replace a personal file resource that they created and triggers the system to re-parse the file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>此 API 用于替换当前平台用户创建的个人 FILE 资源，并触发系统对该文件的重新解析。</description></item>
-        /// <item><description><c>tenant_id</c>、操作人和创建者约束只读取鉴权身份。缺少平台用户时请求将被拒绝，以防止绕过所有权校验。</description></item>
-        /// <item><description>如果服务端返回 <c>None</c>，则会被转换为 <c>NotFound</c> 异常；其他异常由 OpenAPI 全局异常链处理。</description></item>
-        /// <item><description>该接口支持同步或异步等待重新解析完成，默认为异步入队（通过设置 <c>forceSync</c> 参数控制）。</description></item>
+        /// <item><description>This API operation replaces a personal FILE resource created by the current platform user and triggers the system to re-parse the file.</description></item>
+        /// <item><description>The <c>tenant_id</c>, operator, and creator constraints are read only from the authenticated identity. Requests without a platform user are rejected to prevent bypassing ownership verification.</description></item>
+        /// <item><description>If the server returns <c>None</c>, it is converted to a <c>NotFound</c> exception. Other exceptions are handled by the OpenAPI global exception chain.</description></item>
+        /// <item><description>This operation supports synchronous or asynchronous waiting for re-parsing to complete. The default behavior is asynchronous queuing (controlled by the <c>forceSync</c> parameter).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15568,17 +17330,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许用户替换其创建的个人文件资源，并触发系统重新解析该文件。</para>
+        /// <para>Allows a user to replace a personal file resource that they created and triggers the system to re-parse the file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>此 API 用于替换当前平台用户创建的个人 FILE 资源，并触发系统对该文件的重新解析。</description></item>
-        /// <item><description><c>tenant_id</c>、操作人和创建者约束只读取鉴权身份。缺少平台用户时请求将被拒绝，以防止绕过所有权校验。</description></item>
-        /// <item><description>如果服务端返回 <c>None</c>，则会被转换为 <c>NotFound</c> 异常；其他异常由 OpenAPI 全局异常链处理。</description></item>
-        /// <item><description>该接口支持同步或异步等待重新解析完成，默认为异步入队（通过设置 <c>forceSync</c> 参数控制）。</description></item>
+        /// <item><description>This API operation replaces a personal FILE resource created by the current platform user and triggers the system to re-parse the file.</description></item>
+        /// <item><description>The <c>tenant_id</c>, operator, and creator constraints are read only from the authenticated identity. Requests without a platform user are rejected to prevent bypassing ownership verification.</description></item>
+        /// <item><description>If the server returns <c>None</c>, it is converted to a <c>NotFound</c> exception. Other exceptions are handled by the OpenAPI global exception chain.</description></item>
+        /// <item><description>This operation supports synchronous or asynchronous waiting for re-parsing to complete. The default behavior is asynchronous queuing (controlled by the <c>forceSync</c> parameter).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15598,17 +17360,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>允许用户替换其创建的个人文件资源，并触发系统重新解析该文件。</para>
+        /// <para>Allows a user to replace a personal file resource that they created and triggers the system to re-parse the file.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>此 API 用于替换当前平台用户创建的个人 FILE 资源，并触发系统对该文件的重新解析。</description></item>
-        /// <item><description><c>tenant_id</c>、操作人和创建者约束只读取鉴权身份。缺少平台用户时请求将被拒绝，以防止绕过所有权校验。</description></item>
-        /// <item><description>如果服务端返回 <c>None</c>，则会被转换为 <c>NotFound</c> 异常；其他异常由 OpenAPI 全局异常链处理。</description></item>
-        /// <item><description>该接口支持同步或异步等待重新解析完成，默认为异步入队（通过设置 <c>forceSync</c> 参数控制）。</description></item>
+        /// <item><description>This API operation replaces a personal FILE resource created by the current platform user and triggers the system to re-parse the file.</description></item>
+        /// <item><description>The <c>tenant_id</c>, operator, and creator constraints are read only from the authenticated identity. Requests without a platform user are rejected to prevent bypassing ownership verification.</description></item>
+        /// <item><description>If the server returns <c>None</c>, it is converted to a <c>NotFound</c> exception. Other exceptions are handled by the OpenAPI global exception chain.</description></item>
+        /// <item><description>This operation supports synchronous or asynchronous waiting for re-parsing to complete. The default behavior is asynchronous queuing (controlled by the <c>forceSync</c> parameter).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15628,20 +17390,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置用户密码</para>
+        /// <para>Resets the password of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 重置用户密码。
-        ///     业务编排：
-        ///     1. 调用 UserManagementService.reset_member_password 传入 password_encrypted（必填）
-        ///        → service 内部完成 RSA 解密 + 复杂度校验 + bcrypt hash + 写入
-        ///     2. 返回重置结果
-        ///     错误码：
-        ///     - ERR.User.NotFound: 用户不存在
-        ///     - ERR.User.NotInTenant: 用户不在当前租户下
-        ///     - ERR.User.WinnexoPasswordRequired: 用户无密码凭证（非 WINNEXO 类型）</para>
+        /// <para>Resets the password of a user through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Call UserManagementService.reset_member_password with password_encrypted (required).
+        ///        The service internally performs RSA decryption, complexity validation, bcrypt hashing, and writes the result.
+        ///     2. Returns the reset result.
+        ///     Error codes:
+        ///     - ERR.User.NotFound: The user does not exist.
+        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.
+        ///     - ERR.User.WinnexoPasswordRequired: The user does not have password credentials (non-WINNEXO type).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15697,20 +17459,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置用户密码</para>
+        /// <para>Resets the password of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 重置用户密码。
-        ///     业务编排：
-        ///     1. 调用 UserManagementService.reset_member_password 传入 password_encrypted（必填）
-        ///        → service 内部完成 RSA 解密 + 复杂度校验 + bcrypt hash + 写入
-        ///     2. 返回重置结果
-        ///     错误码：
-        ///     - ERR.User.NotFound: 用户不存在
-        ///     - ERR.User.NotInTenant: 用户不在当前租户下
-        ///     - ERR.User.WinnexoPasswordRequired: 用户无密码凭证（非 WINNEXO 类型）</para>
+        /// <para>Resets the password of a user through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Call UserManagementService.reset_member_password with password_encrypted (required).
+        ///        The service internally performs RSA decryption, complexity validation, bcrypt hashing, and writes the result.
+        ///     2. Returns the reset result.
+        ///     Error codes:
+        ///     - ERR.User.NotFound: The user does not exist.
+        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.
+        ///     - ERR.User.WinnexoPasswordRequired: The user does not have password credentials (non-WINNEXO type).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15766,20 +17528,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置用户密码</para>
+        /// <para>Resets the password of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 重置用户密码。
-        ///     业务编排：
-        ///     1. 调用 UserManagementService.reset_member_password 传入 password_encrypted（必填）
-        ///        → service 内部完成 RSA 解密 + 复杂度校验 + bcrypt hash + 写入
-        ///     2. 返回重置结果
-        ///     错误码：
-        ///     - ERR.User.NotFound: 用户不存在
-        ///     - ERR.User.NotInTenant: 用户不在当前租户下
-        ///     - ERR.User.WinnexoPasswordRequired: 用户无密码凭证（非 WINNEXO 类型）</para>
+        /// <para>Resets the password of a user through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Call UserManagementService.reset_member_password with password_encrypted (required).
+        ///        The service internally performs RSA decryption, complexity validation, bcrypt hashing, and writes the result.
+        ///     2. Returns the reset result.
+        ///     Error codes:
+        ///     - ERR.User.NotFound: The user does not exist.
+        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.
+        ///     - ERR.User.WinnexoPasswordRequired: The user does not have password credentials (non-WINNEXO type).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15798,20 +17560,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置用户密码</para>
+        /// <para>Resets the password of a user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 重置用户密码。
-        ///     业务编排：
-        ///     1. 调用 UserManagementService.reset_member_password 传入 password_encrypted（必填）
-        ///        → service 内部完成 RSA 解密 + 复杂度校验 + bcrypt hash + 写入
-        ///     2. 返回重置结果
-        ///     错误码：
-        ///     - ERR.User.NotFound: 用户不存在
-        ///     - ERR.User.NotInTenant: 用户不在当前租户下
-        ///     - ERR.User.WinnexoPasswordRequired: 用户无密码凭证（非 WINNEXO 类型）</para>
+        /// <para>Resets the password of a user through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Call UserManagementService.reset_member_password with password_encrypted (required).
+        ///        The service internally performs RSA decryption, complexity validation, bcrypt hashing, and writes the result.
+        ///     2. Returns the reset result.
+        ///     Error codes:
+        ///     - ERR.User.NotFound: The user does not exist.
+        ///     - ERR.User.NotInTenant: The user does not belong to the current tenant.
+        ///     - ERR.User.WinnexoPasswordRequired: The user does not have password credentials (non-WINNEXO type).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15830,20 +17592,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 API Token</para>
+        /// <para>Resets an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重置用户的 INSTANCE Token。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 reset_token：
-        ///        - 旧 ACTIVE Token → RESET（永久失效）
-        ///        - 生成新 ACTIVE Token
-        ///     4. 返回新 Token 明文 + 脱敏值
-        ///     注意：重置后旧 Token 永久失效且不可恢复。新 Token 明文仅在本次响应中返回。</para>
+        /// <para>Resets the token of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls reset_token:
+        ///        - Changes the old ACTIVE token to RESET (permanently invalidated).
+        ///        - Generates a new ACTIVE token.
+        ///     4. Returns the new token in plaintext and the masked value.
+        ///     Note: After the reset, the old token is permanently invalidated and cannot be recovered. The new token in plaintext is returned only in this response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15895,20 +17657,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 API Token</para>
+        /// <para>Resets an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重置用户的 INSTANCE Token。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 reset_token：
-        ///        - 旧 ACTIVE Token → RESET（永久失效）
-        ///        - 生成新 ACTIVE Token
-        ///     4. 返回新 Token 明文 + 脱敏值
-        ///     注意：重置后旧 Token 永久失效且不可恢复。新 Token 明文仅在本次响应中返回。</para>
+        /// <para>Resets the token of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls reset_token:
+        ///        - Changes the old ACTIVE token to RESET (permanently invalidated).
+        ///        - Generates a new ACTIVE token.
+        ///     4. Returns the new token in plaintext and the masked value.
+        ///     Note: After the reset, the old token is permanently invalidated and cannot be recovered. The new token in plaintext is returned only in this response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15960,20 +17722,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 API Token</para>
+        /// <para>Resets an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重置用户的 INSTANCE Token。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 reset_token：
-        ///        - 旧 ACTIVE Token → RESET（永久失效）
-        ///        - 生成新 ACTIVE Token
-        ///     4. 返回新 Token 明文 + 脱敏值
-        ///     注意：重置后旧 Token 永久失效且不可恢复。新 Token 明文仅在本次响应中返回。</para>
+        /// <para>Resets the token of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls reset_token:
+        ///        - Changes the old ACTIVE token to RESET (permanently invalidated).
+        ///        - Generates a new ACTIVE token.
+        ///     4. Returns the new token in plaintext and the masked value.
+        ///     Note: After the reset, the old token is permanently invalidated and cannot be recovered. The new token in plaintext is returned only in this response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15992,20 +17754,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重置 API Token</para>
+        /// <para>Resets an API token.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>重置用户的 INSTANCE Token。
-        ///     业务逻辑：
-        ///     1. 从 identity 取 user_id（强制 caller_type=user）
-        ///     2. 构造 AuthContext，委托 UserTokenAuthorizedService 完成权限校验
-        ///     3. 调用 reset_token：
-        ///        - 旧 ACTIVE Token → RESET（永久失效）
-        ///        - 生成新 ACTIVE Token
-        ///     4. 返回新 Token 明文 + 脱敏值
-        ///     注意：重置后旧 Token 永久失效且不可恢复。新 Token 明文仅在本次响应中返回。</para>
+        /// <para>Resets the token of a user.
+        ///     Business logic:
+        ///     1. Retrieves user_id from identity (caller_type=user is required).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls reset_token:
+        ///        - Changes the old ACTIVE token to RESET (permanently invalidated).
+        ///        - Generates a new ACTIVE token.
+        ///     4. Returns the new token in plaintext and the masked value.
+        ///     Note: After the reset, the old token is permanently invalidated and cannot be recovered. The new token in plaintext is returned only in this response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16024,24 +17786,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量重试指定目录及其子目录下的所有失败数据源。</para>
+        /// <para>Retries all failed data sources in a specified folder and its subfolders in batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于获取并重试指定用户个人目录（包括其所有子目录）中状态为FAILED的数据源。请求将立即返回，实际的重试任务将在后台异步执行。请注意，只有当前登录用户有权访问且属于其创建的资源才能被重试。</para>
-        /// <h3>安全与权限</h3>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves and retries data sources with a FAILED status in the specified personal folder of a user (including all subfolders). The request returns immediately, and the actual retry tasks are executed asynchronously in the background. Only resources that the current logged-in user has access to and that were created by the user can be retried.</para>
+        /// <h3>Security and permissions</h3>
         /// <list type="bullet">
-        /// <item><description>此操作需要适当的RAM权限。</description></item>
-        /// <item><description>只能对当前用户所属租户内的资源进行操作。</description></item>
-        /// <item><description>确保<c>tenantId</c>和<c>userId</c>来自经过验证的身份信息。</description></item>
+        /// <item><description>This operation requires appropriate RAM permissions.</description></item>
+        /// <item><description>You can only operate on resources within the tenant to which the current user belongs.</description></item>
+        /// <item><description>Ensure that <c>tenantId</c> and <c>userId</c> come from verified identity information.</description></item>
         /// </list>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description><c>directoryId</c>是必需参数，指定了要检查和重试失败数据源的目标目录。</description></item>
-        /// <item><description>如果没有提供<c>tenantId</c>，则默认使用调用方的租户ID。</description></item>
-        /// <item><description>API支持多种认证方式，包括AK、BearerToken以及APP认证。</description></item>
+        /// <item><description><c>directoryId</c> is a required parameter that specifies the target folder in which to check and retry failed data sources.</description></item>
+        /// <item><description>If <c>tenantId</c> is not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>The API supports multiple authentication methods, including AccessKey, BearerToken, and APP authentication.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16094,24 +17856,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量重试指定目录及其子目录下的所有失败数据源。</para>
+        /// <para>Retries all failed data sources in a specified folder and its subfolders in batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于获取并重试指定用户个人目录（包括其所有子目录）中状态为FAILED的数据源。请求将立即返回，实际的重试任务将在后台异步执行。请注意，只有当前登录用户有权访问且属于其创建的资源才能被重试。</para>
-        /// <h3>安全与权限</h3>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves and retries data sources with a FAILED status in the specified personal folder of a user (including all subfolders). The request returns immediately, and the actual retry tasks are executed asynchronously in the background. Only resources that the current logged-in user has access to and that were created by the user can be retried.</para>
+        /// <h3>Security and permissions</h3>
         /// <list type="bullet">
-        /// <item><description>此操作需要适当的RAM权限。</description></item>
-        /// <item><description>只能对当前用户所属租户内的资源进行操作。</description></item>
-        /// <item><description>确保<c>tenantId</c>和<c>userId</c>来自经过验证的身份信息。</description></item>
+        /// <item><description>This operation requires appropriate RAM permissions.</description></item>
+        /// <item><description>You can only operate on resources within the tenant to which the current user belongs.</description></item>
+        /// <item><description>Ensure that <c>tenantId</c> and <c>userId</c> come from verified identity information.</description></item>
         /// </list>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description><c>directoryId</c>是必需参数，指定了要检查和重试失败数据源的目标目录。</description></item>
-        /// <item><description>如果没有提供<c>tenantId</c>，则默认使用调用方的租户ID。</description></item>
-        /// <item><description>API支持多种认证方式，包括AK、BearerToken以及APP认证。</description></item>
+        /// <item><description><c>directoryId</c> is a required parameter that specifies the target folder in which to check and retry failed data sources.</description></item>
+        /// <item><description>If <c>tenantId</c> is not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>The API supports multiple authentication methods, including AccessKey, BearerToken, and APP authentication.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16164,24 +17926,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量重试指定目录及其子目录下的所有失败数据源。</para>
+        /// <para>Retries all failed data sources in a specified folder and its subfolders in batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于获取并重试指定用户个人目录（包括其所有子目录）中状态为FAILED的数据源。请求将立即返回，实际的重试任务将在后台异步执行。请注意，只有当前登录用户有权访问且属于其创建的资源才能被重试。</para>
-        /// <h3>安全与权限</h3>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves and retries data sources with a FAILED status in the specified personal folder of a user (including all subfolders). The request returns immediately, and the actual retry tasks are executed asynchronously in the background. Only resources that the current logged-in user has access to and that were created by the user can be retried.</para>
+        /// <h3>Security and permissions</h3>
         /// <list type="bullet">
-        /// <item><description>此操作需要适当的RAM权限。</description></item>
-        /// <item><description>只能对当前用户所属租户内的资源进行操作。</description></item>
-        /// <item><description>确保<c>tenantId</c>和<c>userId</c>来自经过验证的身份信息。</description></item>
+        /// <item><description>This operation requires appropriate RAM permissions.</description></item>
+        /// <item><description>You can only operate on resources within the tenant to which the current user belongs.</description></item>
+        /// <item><description>Ensure that <c>tenantId</c> and <c>userId</c> come from verified identity information.</description></item>
         /// </list>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description><c>directoryId</c>是必需参数，指定了要检查和重试失败数据源的目标目录。</description></item>
-        /// <item><description>如果没有提供<c>tenantId</c>，则默认使用调用方的租户ID。</description></item>
-        /// <item><description>API支持多种认证方式，包括AK、BearerToken以及APP认证。</description></item>
+        /// <item><description><c>directoryId</c> is a required parameter that specifies the target folder in which to check and retry failed data sources.</description></item>
+        /// <item><description>If <c>tenantId</c> is not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>The API supports multiple authentication methods, including AccessKey, BearerToken, and APP authentication.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16201,24 +17963,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量重试指定目录及其子目录下的所有失败数据源。</para>
+        /// <para>Retries all failed data sources in a specified folder and its subfolders in batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于获取并重试指定用户个人目录（包括其所有子目录）中状态为FAILED的数据源。请求将立即返回，实际的重试任务将在后台异步执行。请注意，只有当前登录用户有权访问且属于其创建的资源才能被重试。</para>
-        /// <h3>安全与权限</h3>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves and retries data sources with a FAILED status in the specified personal folder of a user (including all subfolders). The request returns immediately, and the actual retry tasks are executed asynchronously in the background. Only resources that the current logged-in user has access to and that were created by the user can be retried.</para>
+        /// <h3>Security and permissions</h3>
         /// <list type="bullet">
-        /// <item><description>此操作需要适当的RAM权限。</description></item>
-        /// <item><description>只能对当前用户所属租户内的资源进行操作。</description></item>
-        /// <item><description>确保<c>tenantId</c>和<c>userId</c>来自经过验证的身份信息。</description></item>
+        /// <item><description>This operation requires appropriate RAM permissions.</description></item>
+        /// <item><description>You can only operate on resources within the tenant to which the current user belongs.</description></item>
+        /// <item><description>Ensure that <c>tenantId</c> and <c>userId</c> come from verified identity information.</description></item>
         /// </list>
-        /// <h3>注意事项</h3>
+        /// <h3>Precautions</h3>
         /// <list type="bullet">
-        /// <item><description><c>directoryId</c>是必需参数，指定了要检查和重试失败数据源的目标目录。</description></item>
-        /// <item><description>如果没有提供<c>tenantId</c>，则默认使用调用方的租户ID。</description></item>
-        /// <item><description>API支持多种认证方式，包括AK、BearerToken以及APP认证。</description></item>
+        /// <item><description><c>directoryId</c> is a required parameter that specifies the target folder in which to check and retry failed data sources.</description></item>
+        /// <item><description>If <c>tenantId</c> is not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>The API supports multiple authentication methods, including AccessKey, BearerToken, and APP authentication.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16238,22 +18000,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量重试指定目录下所有失败状态的数据源</para>
+        /// <para>Retries all data sources in failed status under a specified directory in batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于获取并重试指定企业知识库目录（包括其子目录）下的所有处于FAILED状态的数据源。请求将立即返回，实际的重试操作将在后台异步执行。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</para>
         /// <list type="bullet">
-        /// <item><description><b>鉴权</b>：除了基础鉴权外，还需具备<c>DEVELOPMENT_KB_MANAGE</c>权限。</description></item>
-        /// <item><description><b>安全约束</b>：仅允许具有相应租户和用户身份的调用者访问，并且需要KB管理权限；管理员可以对任何用户的失败资源发起重试。</description></item>
-        /// <item><description><b>参数</b>：<list type="bullet">
-        /// <item><description><c>directoryId</c> (必填)：指定要检查和重试失败数据源的企业知识库目录ID。</description></item>
-        /// <item><description><c>tenantId</c> (可选)：指定租户ID，默认使用调用方的默认租户。</description></item>
+        /// <item><description><b>Authentication</b>: In addition to basic authentication, the <c>DEVELOPMENT_KB_MANAGE</c> permission is required.</description></item>
+        /// <item><description><b>Security constraints</b>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</description></item>
+        /// <item><description><b>Parameters</b>:<list type="bullet">
+        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</description></item>
+        /// <item><description><c>tenantId</c> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>响应</b>：成功时返回已入队等待重试的数据源数量及详情等信息。</description></item>
+        /// <item><description><b>Response</b>: On success, returns the number of data sources enqueued for retry and related details.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16306,22 +18068,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量重试指定目录下所有失败状态的数据源</para>
+        /// <para>Retries all data sources in failed status under a specified directory in batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于获取并重试指定企业知识库目录（包括其子目录）下的所有处于FAILED状态的数据源。请求将立即返回，实际的重试操作将在后台异步执行。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</para>
         /// <list type="bullet">
-        /// <item><description><b>鉴权</b>：除了基础鉴权外，还需具备<c>DEVELOPMENT_KB_MANAGE</c>权限。</description></item>
-        /// <item><description><b>安全约束</b>：仅允许具有相应租户和用户身份的调用者访问，并且需要KB管理权限；管理员可以对任何用户的失败资源发起重试。</description></item>
-        /// <item><description><b>参数</b>：<list type="bullet">
-        /// <item><description><c>directoryId</c> (必填)：指定要检查和重试失败数据源的企业知识库目录ID。</description></item>
-        /// <item><description><c>tenantId</c> (可选)：指定租户ID，默认使用调用方的默认租户。</description></item>
+        /// <item><description><b>Authentication</b>: In addition to basic authentication, the <c>DEVELOPMENT_KB_MANAGE</c> permission is required.</description></item>
+        /// <item><description><b>Security constraints</b>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</description></item>
+        /// <item><description><b>Parameters</b>:<list type="bullet">
+        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</description></item>
+        /// <item><description><c>tenantId</c> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>响应</b>：成功时返回已入队等待重试的数据源数量及详情等信息。</description></item>
+        /// <item><description><b>Response</b>: On success, returns the number of data sources enqueued for retry and related details.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16374,22 +18136,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量重试指定目录下所有失败状态的数据源</para>
+        /// <para>Retries all data sources in failed status under a specified directory in batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于获取并重试指定企业知识库目录（包括其子目录）下的所有处于FAILED状态的数据源。请求将立即返回，实际的重试操作将在后台异步执行。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</para>
         /// <list type="bullet">
-        /// <item><description><b>鉴权</b>：除了基础鉴权外，还需具备<c>DEVELOPMENT_KB_MANAGE</c>权限。</description></item>
-        /// <item><description><b>安全约束</b>：仅允许具有相应租户和用户身份的调用者访问，并且需要KB管理权限；管理员可以对任何用户的失败资源发起重试。</description></item>
-        /// <item><description><b>参数</b>：<list type="bullet">
-        /// <item><description><c>directoryId</c> (必填)：指定要检查和重试失败数据源的企业知识库目录ID。</description></item>
-        /// <item><description><c>tenantId</c> (可选)：指定租户ID，默认使用调用方的默认租户。</description></item>
+        /// <item><description><b>Authentication</b>: In addition to basic authentication, the <c>DEVELOPMENT_KB_MANAGE</c> permission is required.</description></item>
+        /// <item><description><b>Security constraints</b>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</description></item>
+        /// <item><description><b>Parameters</b>:<list type="bullet">
+        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</description></item>
+        /// <item><description><c>tenantId</c> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>响应</b>：成功时返回已入队等待重试的数据源数量及详情等信息。</description></item>
+        /// <item><description><b>Response</b>: On success, returns the number of data sources enqueued for retry and related details.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16409,22 +18171,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量重试指定目录下所有失败状态的数据源</para>
+        /// <para>Retries all data sources in failed status under a specified directory in batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该API用于获取并重试指定企业知识库目录（包括其子目录）下的所有处于FAILED状态的数据源。请求将立即返回，实际的重试操作将在后台异步执行。</para>
+        /// <h2>Request description</h2>
+        /// <para>This API retrieves and retries all data sources in FAILED status under a specified enterprise knowledge base directory (including its subdirectories). The request returns immediately, and the actual retry operations are executed asynchronously in the background.</para>
         /// <list type="bullet">
-        /// <item><description><b>鉴权</b>：除了基础鉴权外，还需具备<c>DEVELOPMENT_KB_MANAGE</c>权限。</description></item>
-        /// <item><description><b>安全约束</b>：仅允许具有相应租户和用户身份的调用者访问，并且需要KB管理权限；管理员可以对任何用户的失败资源发起重试。</description></item>
-        /// <item><description><b>参数</b>：<list type="bullet">
-        /// <item><description><c>directoryId</c> (必填)：指定要检查和重试失败数据源的企业知识库目录ID。</description></item>
-        /// <item><description><c>tenantId</c> (可选)：指定租户ID，默认使用调用方的默认租户。</description></item>
+        /// <item><description><b>Authentication</b>: In addition to basic authentication, the <c>DEVELOPMENT_KB_MANAGE</c> permission is required.</description></item>
+        /// <item><description><b>Security constraints</b>: Only callers with the corresponding tenant and user identity are allowed access, and KB management permission is required. Administrators can initiate retries for failed resources of any user.</description></item>
+        /// <item><description><b>Parameters</b>:<list type="bullet">
+        /// <item><description><c>directoryId</c> (required): The ID of the enterprise knowledge base directory for which to check and retry failed data sources.</description></item>
+        /// <item><description><c>tenantId</c> (optional): The tenant ID. The default tenant of the caller is used if this parameter is not specified.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>响应</b>：成功时返回已入队等待重试的数据源数量及详情等信息。</description></item>
+        /// <item><description><b>Response</b>: On success, returns the number of data sources enqueued for retry and related details.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16444,18 +18206,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>撤销用户/用户组的数字员工使用权限</para>
+        /// <para>Revokes the usage permissions of a user or user group on a digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>撤销用户或用户组对指定数字员工的使用权限。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 请求体互斥校验：userIds / userGroupIds 二选一
-        ///     3. 委托 AgentAuthorizationAuthorizedService.revoke_authorization 执行
-        ///     4. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     5. 撤销用户直接授权后，用户可能仍通过用户组获得授权</para>
+        /// <para>Revokes the usage permissions of a user or user group on a specified digital human.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from identity.
+        ///     2. Performs mutual exclusion validation on the request body: either userIds or userGroupIds must be specified.
+        ///     3. Delegates to AgentAuthorizationAuthorizedService.revoke_authorization for execution.
+        ///     4. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
+        ///     5. After direct user authorization is revoked, the user may still have access through user group authorization.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16525,18 +18287,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>撤销用户/用户组的数字员工使用权限</para>
+        /// <para>Revokes the usage permissions of a user or user group on a digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>撤销用户或用户组对指定数字员工的使用权限。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 请求体互斥校验：userIds / userGroupIds 二选一
-        ///     3. 委托 AgentAuthorizationAuthorizedService.revoke_authorization 执行
-        ///     4. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     5. 撤销用户直接授权后，用户可能仍通过用户组获得授权</para>
+        /// <para>Revokes the usage permissions of a user or user group on a specified digital human.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from identity.
+        ///     2. Performs mutual exclusion validation on the request body: either userIds or userGroupIds must be specified.
+        ///     3. Delegates to AgentAuthorizationAuthorizedService.revoke_authorization for execution.
+        ///     4. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
+        ///     5. After direct user authorization is revoked, the user may still have access through user group authorization.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16606,18 +18368,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>撤销用户/用户组的数字员工使用权限</para>
+        /// <para>Revokes the usage permissions of a user or user group on a digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>撤销用户或用户组对指定数字员工的使用权限。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 请求体互斥校验：userIds / userGroupIds 二选一
-        ///     3. 委托 AgentAuthorizationAuthorizedService.revoke_authorization 执行
-        ///     4. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     5. 撤销用户直接授权后，用户可能仍通过用户组获得授权</para>
+        /// <para>Revokes the usage permissions of a user or user group on a specified digital human.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from identity.
+        ///     2. Performs mutual exclusion validation on the request body: either userIds or userGroupIds must be specified.
+        ///     3. Delegates to AgentAuthorizationAuthorizedService.revoke_authorization for execution.
+        ///     4. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
+        ///     5. After direct user authorization is revoked, the user may still have access through user group authorization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16636,18 +18398,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>撤销用户/用户组的数字员工使用权限</para>
+        /// <para>Revokes the usage permissions of a user or user group on a digital human.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>撤销用户或用户组对指定数字员工的使用权限。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 请求体互斥校验：userIds / userGroupIds 二选一
-        ///     3. 委托 AgentAuthorizationAuthorizedService.revoke_authorization 执行
-        ///     4. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     5. 撤销用户直接授权后，用户可能仍通过用户组获得授权</para>
+        /// <para>Revokes the usage permissions of a user or user group on a specified digital human.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from identity.
+        ///     2. Performs mutual exclusion validation on the request body: either userIds or userGroupIds must be specified.
+        ///     3. Delegates to AgentAuthorizationAuthorizedService.revoke_authorization for execution.
+        ///     4. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
+        ///     5. After direct user authorization is revoked, the user may still have access through user group authorization.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16666,19 +18428,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步触发技能执行，立即返回 RunId。</para>
+        /// <para>Asynchronously triggers skill execution and immediately returns a RunId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口仅支持异步模式：提交后立即返回 <c>RunId</c> 和 <c>Status=Running</c>，客户端通过 <c>GetSkillRun</c> 轮询最终结果。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation supports only asynchronous mode. After submission, the operation immediately returns a <c>RunId</c> and <c>Status=Running</c>. The client polls for the final result by calling <c>GetSkillRun</c>.</para>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传到后端 Header。</description></item>
-        /// <item><description><b>SkillCode</b> / <b>SkillName</b>：二选一；SkillCode 优先；SkillName 不唯一时返回 <c>ERR.SkillHub.SkillNameAmbiguous</c>。</description></item>
-        /// <item><description><b>Arguments</b>：必填，技能入参对象，结构由 <c>GetSkill</c> 返回的 inputConfig 描述。</description></item>
-        /// <item><description><b>ClientToken</b>：可选幂等键；当前版本仅记录到任务元数据，不做强幂等去重。
-        /// 注意：同步模式（Async=false）、Stream、CallbackUrl 一期不支持，将在后续版本提供。</description></item>
+        /// <item><description><b>TenantId</b>: An optional common parameter that the gateway passes through to the backend header.</description></item>
+        /// <item><description><b>SkillCode</b> / <b>SkillName</b>: Specify one of the two parameters. SkillCode takes priority. If SkillName is not unique, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
+        /// <item><description><b>Arguments</b>: Required. The skill input parameter object. The structure is described by the inputConfig returned by <c>GetSkill</c>.</description></item>
+        /// <item><description><b>ClientToken</b>: An optional idempotency key. In the current version, this value is only recorded in the task metadata and is not used for strict idempotency deduplication.
+        /// Note: Synchronous mode (Async=false), Stream, and CallbackUrl are not supported in the first release and will be available in later versions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16757,19 +18519,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步触发技能执行，立即返回 RunId。</para>
+        /// <para>Asynchronously triggers skill execution and immediately returns a RunId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口仅支持异步模式：提交后立即返回 <c>RunId</c> 和 <c>Status=Running</c>，客户端通过 <c>GetSkillRun</c> 轮询最终结果。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation supports only asynchronous mode. After submission, the operation immediately returns a <c>RunId</c> and <c>Status=Running</c>. The client polls for the final result by calling <c>GetSkillRun</c>.</para>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传到后端 Header。</description></item>
-        /// <item><description><b>SkillCode</b> / <b>SkillName</b>：二选一；SkillCode 优先；SkillName 不唯一时返回 <c>ERR.SkillHub.SkillNameAmbiguous</c>。</description></item>
-        /// <item><description><b>Arguments</b>：必填，技能入参对象，结构由 <c>GetSkill</c> 返回的 inputConfig 描述。</description></item>
-        /// <item><description><b>ClientToken</b>：可选幂等键；当前版本仅记录到任务元数据，不做强幂等去重。
-        /// 注意：同步模式（Async=false）、Stream、CallbackUrl 一期不支持，将在后续版本提供。</description></item>
+        /// <item><description><b>TenantId</b>: An optional common parameter that the gateway passes through to the backend header.</description></item>
+        /// <item><description><b>SkillCode</b> / <b>SkillName</b>: Specify one of the two parameters. SkillCode takes priority. If SkillName is not unique, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
+        /// <item><description><b>Arguments</b>: Required. The skill input parameter object. The structure is described by the inputConfig returned by <c>GetSkill</c>.</description></item>
+        /// <item><description><b>ClientToken</b>: An optional idempotency key. In the current version, this value is only recorded in the task metadata and is not used for strict idempotency deduplication.
+        /// Note: Synchronous mode (Async=false), Stream, and CallbackUrl are not supported in the first release and will be available in later versions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16848,19 +18610,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步触发技能执行，立即返回 RunId。</para>
+        /// <para>Asynchronously triggers skill execution and immediately returns a RunId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口仅支持异步模式：提交后立即返回 <c>RunId</c> 和 <c>Status=Running</c>，客户端通过 <c>GetSkillRun</c> 轮询最终结果。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation supports only asynchronous mode. After submission, the operation immediately returns a <c>RunId</c> and <c>Status=Running</c>. The client polls for the final result by calling <c>GetSkillRun</c>.</para>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传到后端 Header。</description></item>
-        /// <item><description><b>SkillCode</b> / <b>SkillName</b>：二选一；SkillCode 优先；SkillName 不唯一时返回 <c>ERR.SkillHub.SkillNameAmbiguous</c>。</description></item>
-        /// <item><description><b>Arguments</b>：必填，技能入参对象，结构由 <c>GetSkill</c> 返回的 inputConfig 描述。</description></item>
-        /// <item><description><b>ClientToken</b>：可选幂等键；当前版本仅记录到任务元数据，不做强幂等去重。
-        /// 注意：同步模式（Async=false）、Stream、CallbackUrl 一期不支持，将在后续版本提供。</description></item>
+        /// <item><description><b>TenantId</b>: An optional common parameter that the gateway passes through to the backend header.</description></item>
+        /// <item><description><b>SkillCode</b> / <b>SkillName</b>: Specify one of the two parameters. SkillCode takes priority. If SkillName is not unique, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
+        /// <item><description><b>Arguments</b>: Required. The skill input parameter object. The structure is described by the inputConfig returned by <c>GetSkill</c>.</description></item>
+        /// <item><description><b>ClientToken</b>: An optional idempotency key. In the current version, this value is only recorded in the task metadata and is not used for strict idempotency deduplication.
+        /// Note: Synchronous mode (Async=false), Stream, and CallbackUrl are not supported in the first release and will be available in later versions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16880,19 +18642,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步触发技能执行，立即返回 RunId。</para>
+        /// <para>Asynchronously triggers skill execution and immediately returns a RunId.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口仅支持异步模式：提交后立即返回 <c>RunId</c> 和 <c>Status=Running</c>，客户端通过 <c>GetSkillRun</c> 轮询最终结果。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation supports only asynchronous mode. After submission, the operation immediately returns a <c>RunId</c> and <c>Status=Running</c>. The client polls for the final result by calling <c>GetSkillRun</c>.</para>
         /// <list type="bullet">
-        /// <item><description><b>TenantId</b>：可选公共参数，由网关透传到后端 Header。</description></item>
-        /// <item><description><b>SkillCode</b> / <b>SkillName</b>：二选一；SkillCode 优先；SkillName 不唯一时返回 <c>ERR.SkillHub.SkillNameAmbiguous</c>。</description></item>
-        /// <item><description><b>Arguments</b>：必填，技能入参对象，结构由 <c>GetSkill</c> 返回的 inputConfig 描述。</description></item>
-        /// <item><description><b>ClientToken</b>：可选幂等键；当前版本仅记录到任务元数据，不做强幂等去重。
-        /// 注意：同步模式（Async=false）、Stream、CallbackUrl 一期不支持，将在后续版本提供。</description></item>
+        /// <item><description><b>TenantId</b>: An optional common parameter that the gateway passes through to the backend header.</description></item>
+        /// <item><description><b>SkillCode</b> / <b>SkillName</b>: Specify one of the two parameters. SkillCode takes priority. If SkillName is not unique, <c>ERR.SkillHub.SkillNameAmbiguous</c> is returned.</description></item>
+        /// <item><description><b>Arguments</b>: Required. The skill input parameter object. The structure is described by the inputConfig returned by <c>GetSkill</c>.</description></item>
+        /// <item><description><b>ClientToken</b>: An optional idempotency key. In the current version, this value is only recorded in the task metadata and is not used for strict idempotency deduplication.
+        /// Note: Synchronous mode (Async=false), Stream, and CallbackUrl are not supported in the first release and will be available in later versions.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16912,20 +18674,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将产出明细批量保存为个人资源，支持链接或复制模式。</para>
+        /// <para>Saves output details in batch as personal resources. Supports link or copy mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将一批产出明细保存为用户的个人资源。</description></item>
-        /// <item><description>支持两种保存方式：<c>link</c>（链接）和<c>copy</c>（复制）。选择<c>link</c>时，编辑产出会同步到资源；选择<c>copy</c>则创建快照，不限次数。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份。</description></item>
-        /// <item><description>如果批内 <c>operating_object</c> 不一致且未传 <c>directoryId</c>，则整批请求前置失败。</description></item>
-        /// <item><description>单条记录的处理结果不会影响其他记录的结果，单条失败信息会在响应中返回。</description></item>
-        /// <item><description>批量操作最多支持50条记录。</description></item>
-        /// <item><description>整批前置失败的情况由全局异常中间件统一返回POP兼容错误格式。</description></item>
+        /// <item><description>This API saves a batch of output details as personal resources for the user.</description></item>
+        /// <item><description>Two save modes are supported: <c>link</c> and <c>copy</c>. When <c>link</c> is selected, edits to the output are synchronized to the resource. When <c>copy</c> is selected, a snapshot is created with no limit on the number of copies.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity.</description></item>
+        /// <item><description>If <c>operating_object</c> values are inconsistent within the batch and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
+        /// <item><description>The processing result of a single record does not affect other records. Failure information for individual records is returned in the response.</description></item>
+        /// <item><description>A maximum of 50 records are supported per batch operation.</description></item>
+        /// <item><description>Batch-level pre-check failures are returned in a POP-compatible error format by the global exception middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -16992,20 +18754,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将产出明细批量保存为个人资源，支持链接或复制模式。</para>
+        /// <para>Saves output details in batch as personal resources. Supports link or copy mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将一批产出明细保存为用户的个人资源。</description></item>
-        /// <item><description>支持两种保存方式：<c>link</c>（链接）和<c>copy</c>（复制）。选择<c>link</c>时，编辑产出会同步到资源；选择<c>copy</c>则创建快照，不限次数。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份。</description></item>
-        /// <item><description>如果批内 <c>operating_object</c> 不一致且未传 <c>directoryId</c>，则整批请求前置失败。</description></item>
-        /// <item><description>单条记录的处理结果不会影响其他记录的结果，单条失败信息会在响应中返回。</description></item>
-        /// <item><description>批量操作最多支持50条记录。</description></item>
-        /// <item><description>整批前置失败的情况由全局异常中间件统一返回POP兼容错误格式。</description></item>
+        /// <item><description>This API saves a batch of output details as personal resources for the user.</description></item>
+        /// <item><description>Two save modes are supported: <c>link</c> and <c>copy</c>. When <c>link</c> is selected, edits to the output are synchronized to the resource. When <c>copy</c> is selected, a snapshot is created with no limit on the number of copies.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity.</description></item>
+        /// <item><description>If <c>operating_object</c> values are inconsistent within the batch and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
+        /// <item><description>The processing result of a single record does not affect other records. Failure information for individual records is returned in the response.</description></item>
+        /// <item><description>A maximum of 50 records are supported per batch operation.</description></item>
+        /// <item><description>Batch-level pre-check failures are returned in a POP-compatible error format by the global exception middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17072,20 +18834,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将产出明细批量保存为个人资源，支持链接或复制模式。</para>
+        /// <para>Saves output details in batch as personal resources. Supports link or copy mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将一批产出明细保存为用户的个人资源。</description></item>
-        /// <item><description>支持两种保存方式：<c>link</c>（链接）和<c>copy</c>（复制）。选择<c>link</c>时，编辑产出会同步到资源；选择<c>copy</c>则创建快照，不限次数。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份。</description></item>
-        /// <item><description>如果批内 <c>operating_object</c> 不一致且未传 <c>directoryId</c>，则整批请求前置失败。</description></item>
-        /// <item><description>单条记录的处理结果不会影响其他记录的结果，单条失败信息会在响应中返回。</description></item>
-        /// <item><description>批量操作最多支持50条记录。</description></item>
-        /// <item><description>整批前置失败的情况由全局异常中间件统一返回POP兼容错误格式。</description></item>
+        /// <item><description>This API saves a batch of output details as personal resources for the user.</description></item>
+        /// <item><description>Two save modes are supported: <c>link</c> and <c>copy</c>. When <c>link</c> is selected, edits to the output are synchronized to the resource. When <c>copy</c> is selected, a snapshot is created with no limit on the number of copies.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity.</description></item>
+        /// <item><description>If <c>operating_object</c> values are inconsistent within the batch and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
+        /// <item><description>The processing result of a single record does not affect other records. Failure information for individual records is returned in the response.</description></item>
+        /// <item><description>A maximum of 50 records are supported per batch operation.</description></item>
+        /// <item><description>Batch-level pre-check failures are returned in a POP-compatible error format by the global exception middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17105,20 +18867,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>将产出明细批量保存为个人资源，支持链接或复制模式。</para>
+        /// <para>Saves output details in batch as personal resources. Supports link or copy mode.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于将一批产出明细保存为用户的个人资源。</description></item>
-        /// <item><description>支持两种保存方式：<c>link</c>（链接）和<c>copy</c>（复制）。选择<c>link</c>时，编辑产出会同步到资源；选择<c>copy</c>则创建快照，不限次数。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅来自鉴权身份。</description></item>
-        /// <item><description>如果批内 <c>operating_object</c> 不一致且未传 <c>directoryId</c>，则整批请求前置失败。</description></item>
-        /// <item><description>单条记录的处理结果不会影响其他记录的结果，单条失败信息会在响应中返回。</description></item>
-        /// <item><description>批量操作最多支持50条记录。</description></item>
-        /// <item><description>整批前置失败的情况由全局异常中间件统一返回POP兼容错误格式。</description></item>
+        /// <item><description>This API saves a batch of output details as personal resources for the user.</description></item>
+        /// <item><description>Two save modes are supported: <c>link</c> and <c>copy</c>. When <c>link</c> is selected, edits to the output are synchronized to the resource. When <c>copy</c> is selected, a snapshot is created with no limit on the number of copies.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are derived only from the authenticated identity.</description></item>
+        /// <item><description>If <c>operating_object</c> values are inconsistent within the batch and <c>directoryId</c> is not specified, the entire batch fails with a pre-check error.</description></item>
+        /// <item><description>The processing result of a single record does not affect other records. Failure information for individual records is returned in the response.</description></item>
+        /// <item><description>A maximum of 50 records are supported per batch operation.</description></item>
+        /// <item><description>Batch-level pre-check failures are returned in a POP-compatible error format by the global exception middleware.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17138,8 +18900,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步发送会话消息</para>
+        /// <para>Asynchronously sends a session message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Asynchronously sends a session message.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SendAsyncChatMessageRequest
@@ -17240,8 +19007,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步发送会话消息</para>
+        /// <para>Asynchronously sends a session message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Asynchronously sends a session message.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SendAsyncChatMessageRequest
@@ -17342,8 +19114,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步发送会话消息</para>
+        /// <para>Asynchronously sends a session message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Asynchronously sends a session message.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAsyncChatMessageRequest
@@ -17361,8 +19138,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>异步发送会话消息</para>
+        /// <para>Asynchronously sends a session message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Asynchronously sends a session message.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendAsyncChatMessageRequest
@@ -17380,8 +19162,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送消息</para>
+        /// <para>Sends a message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
+        /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SendChatMessageRequest
@@ -17482,8 +19277,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送消息</para>
+        /// <para>Sends a message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
+        /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SendChatMessageRequest
@@ -17584,8 +19392,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送消息</para>
+        /// <para>Sends a message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
+        /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendChatMessageRequest
@@ -17603,8 +19424,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发送消息</para>
+        /// <para>Sends a message.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This API is used to upload a file to the &quot;My Resources&quot; section of a specified digital employee.</description></item>
+        /// <item><description><c>source_type</c> is fixed to <c>FILE</c>, <c>scope</c> is fixed to <c>PERSONAL</c>, and <c>platform</c> is fixed to <c>LOCAL</c>.</description></item>
+        /// <item><description>A persistent OSS address (<c>filePath</c>) must be provided for the file. Other information such as the public access URL and original file name is optional.</description></item>
+        /// <item><description>If the target folder ID (<c>directoryId</c>) is not specified, the file is automatically attached to the default root folder of the current digital employee. If specified, ensure that the folder belongs to the invoker\&quot;s personal folder.</description></item>
+        /// <item><description>Multiple authentication methods (AK, BearerToken, APP) are supported to authenticate requests.</description></item>
+        /// <item><description>The operation type is write, and operation logs are recorded for subsequent auditing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SendChatMessageRequest
@@ -17622,7 +19456,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止对话生成</para>
+        /// <para>Stops conversation generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17672,7 +19506,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止对话生成</para>
+        /// <para>Stops conversation generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17722,7 +19556,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止对话生成</para>
+        /// <para>Stops conversation generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17741,7 +19575,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>停止对话生成</para>
+        /// <para>Stops conversation generation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17760,8 +19594,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅会话消息流</para>
+        /// <para>Subscribes to a conversation message stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscribes to a conversation message stream.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StreamChatMessageRequest
@@ -17810,8 +19649,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅会话消息流</para>
+        /// <para>Subscribes to a conversation message stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscribes to a conversation message stream.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StreamChatMessageRequest
@@ -17860,8 +19704,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅会话消息流</para>
+        /// <para>Subscribes to a conversation message stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscribes to a conversation message stream.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StreamChatMessageRequest
@@ -17879,8 +19728,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>订阅会话消息流</para>
+        /// <para>Subscribes to a conversation message stream.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Subscribes to a conversation message stream.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// StreamChatMessageRequest
@@ -17898,20 +19752,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送组织架构同步</para>
+        /// <para>Pushes organizational structure synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>接收客户端推送的部门树和成员关系，创建异步同步任务。
-        ///     处理流程：
-        ///     1. 校验 platformType（仅允许 saml / oauth2 / custom）
-        ///     2. 校验数据量限制（departments + members &lt;= 50000）
-        ///     3. 校验 syncMembers 与 platformType 的兼容性
-        ///     4. SAML/OAuth2 场景：解析或自动推导 ssoSettingsId
-        ///     5. Custom 场景：校验 corpId 已通过 createCustomOrg 注册
-        ///     6. 委托 OrgSyncAuthorizedService 创建任务（内含权限校验）
-        ///     7. 返回 taskId 供轮询</para>
+        /// <para>Accepts a department tree and member relationships pushed from the client and creates an asynchronous synchronization task.
+        ///     Processing flow:
+        ///     1. Validates platformType (only saml, oauth2, or custom are allowed).
+        ///     2. Validates data volume limits (departments + members &lt;= 50000).
+        ///     3. Validates the compatibility between syncMembers and platformType.
+        ///     4. SAML/OAuth2 scenario: Parses or automatically derives ssoSettingsId.
+        ///     5. Custom scenario: Validates that corpId has been registered through createCustomOrg.
+        ///     6. Delegates to OrgSyncAuthorizedService to create the task (which includes permission verification).
+        ///     7. Returns taskId for polling.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -17993,20 +19847,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送组织架构同步</para>
+        /// <para>Pushes organizational structure synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>接收客户端推送的部门树和成员关系，创建异步同步任务。
-        ///     处理流程：
-        ///     1. 校验 platformType（仅允许 saml / oauth2 / custom）
-        ///     2. 校验数据量限制（departments + members &lt;= 50000）
-        ///     3. 校验 syncMembers 与 platformType 的兼容性
-        ///     4. SAML/OAuth2 场景：解析或自动推导 ssoSettingsId
-        ///     5. Custom 场景：校验 corpId 已通过 createCustomOrg 注册
-        ///     6. 委托 OrgSyncAuthorizedService 创建任务（内含权限校验）
-        ///     7. 返回 taskId 供轮询</para>
+        /// <para>Accepts a department tree and member relationships pushed from the client and creates an asynchronous synchronization task.
+        ///     Processing flow:
+        ///     1. Validates platformType (only saml, oauth2, or custom are allowed).
+        ///     2. Validates data volume limits (departments + members &lt;= 50000).
+        ///     3. Validates the compatibility between syncMembers and platformType.
+        ///     4. SAML/OAuth2 scenario: Parses or automatically derives ssoSettingsId.
+        ///     5. Custom scenario: Validates that corpId has been registered through createCustomOrg.
+        ///     6. Delegates to OrgSyncAuthorizedService to create the task (which includes permission verification).
+        ///     7. Returns taskId for polling.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -18088,20 +19942,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送组织架构同步</para>
+        /// <para>Pushes organizational structure synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>接收客户端推送的部门树和成员关系，创建异步同步任务。
-        ///     处理流程：
-        ///     1. 校验 platformType（仅允许 saml / oauth2 / custom）
-        ///     2. 校验数据量限制（departments + members &lt;= 50000）
-        ///     3. 校验 syncMembers 与 platformType 的兼容性
-        ///     4. SAML/OAuth2 场景：解析或自动推导 ssoSettingsId
-        ///     5. Custom 场景：校验 corpId 已通过 createCustomOrg 注册
-        ///     6. 委托 OrgSyncAuthorizedService 创建任务（内含权限校验）
-        ///     7. 返回 taskId 供轮询</para>
+        /// <para>Accepts a department tree and member relationships pushed from the client and creates an asynchronous synchronization task.
+        ///     Processing flow:
+        ///     1. Validates platformType (only saml, oauth2, or custom are allowed).
+        ///     2. Validates data volume limits (departments + members &lt;= 50000).
+        ///     3. Validates the compatibility between syncMembers and platformType.
+        ///     4. SAML/OAuth2 scenario: Parses or automatically derives ssoSettingsId.
+        ///     5. Custom scenario: Validates that corpId has been registered through createCustomOrg.
+        ///     6. Delegates to OrgSyncAuthorizedService to create the task (which includes permission verification).
+        ///     7. Returns taskId for polling.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18120,20 +19974,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>推送组织架构同步</para>
+        /// <para>Pushes organizational structure synchronization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>接收客户端推送的部门树和成员关系，创建异步同步任务。
-        ///     处理流程：
-        ///     1. 校验 platformType（仅允许 saml / oauth2 / custom）
-        ///     2. 校验数据量限制（departments + members &lt;= 50000）
-        ///     3. 校验 syncMembers 与 platformType 的兼容性
-        ///     4. SAML/OAuth2 场景：解析或自动推导 ssoSettingsId
-        ///     5. Custom 场景：校验 corpId 已通过 createCustomOrg 注册
-        ///     6. 委托 OrgSyncAuthorizedService 创建任务（内含权限校验）
-        ///     7. 返回 taskId 供轮询</para>
+        /// <para>Accepts a department tree and member relationships pushed from the client and creates an asynchronous synchronization task.
+        ///     Processing flow:
+        ///     1. Validates platformType (only saml, oauth2, or custom are allowed).
+        ///     2. Validates data volume limits (departments + members &lt;= 50000).
+        ///     3. Validates the compatibility between syncMembers and platformType.
+        ///     4. SAML/OAuth2 scenario: Parses or automatically derives ssoSettingsId.
+        ///     5. Custom scenario: Validates that corpId has been registered through createCustomOrg.
+        ///     6. Delegates to OrgSyncAuthorizedService to create the task (which includes permission verification).
+        ///     7. Returns taskId for polling.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18152,24 +20006,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过此API可以对指定的主对象执行关注或取消关注操作。</para>
+        /// <para>Follows or unfollows a specified primary object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><b>Precheck</b>:<ol>
-        /// <item><description>添加关注时：系统会检查是否已对该主对象进行了关注以防止重复，并且会验证该主对象是否存在。</description></item>
-        /// <item><description>取消关注时：这是一个幂等操作，无论用户之前是否已经关注了该对象，都会返回 <c>success=true</c>。</description></item>
+        /// <item><description>When adding a follow: The system checks whether the primary object is already followed to prevent duplicates, and authenticates that the primary object exists.</description></item>
+        /// <item><description>When unfollowing: This is an idempotent operation. Regardless of whether the user has previously followed the object, <c>success=true</c> is returned.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>安全性</b>：支持AK、BearerToken和APP三种认证方式。</description></item>
-        /// <item><description><b>请求频率限制</b>：每秒最多可发送100次请求。</description></item>
-        /// <item><description><b>响应日志</b>：开启响应日志记录功能。</description></item>
-        /// <item><description><b>租户相关性</b>：此API与特定租户相关联，默认使用调用方的租户ID。</description></item>
-        /// <item><description><b>操作类型</b>：属于写入型操作。</description></item>
-        /// <item><description><b>后端服务</b>：请求将被转发至内部服务进行处理，超时时间为3秒。</description></item>
+        /// <item><description><b>Security</b>: Three authentication methods are supported: AK, BearerToken, and APP.</description></item>
+        /// <item><description><b>Request frequency limit</b>: A maximum of 100 requests can be send per second.</description></item>
+        /// <item><description><b>Response log</b>: The response log record feature is enabled.</description></item>
+        /// <item><description><b>Tenant relevance</b>: This API is associated with a specific tenant. The tenant ID of the invoker is used by default.</description></item>
+        /// <item><description><b>Operation type</b>: Write operation.</description></item>
+        /// <item><description><b>Backend service</b>: Requests are forwarded to an internal service for processing. The timeout period is 3 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18240,24 +20094,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过此API可以对指定的主对象执行关注或取消关注操作。</para>
+        /// <para>Follows or unfollows a specified primary object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><b>Precheck</b>:<ol>
-        /// <item><description>添加关注时：系统会检查是否已对该主对象进行了关注以防止重复，并且会验证该主对象是否存在。</description></item>
-        /// <item><description>取消关注时：这是一个幂等操作，无论用户之前是否已经关注了该对象，都会返回 <c>success=true</c>。</description></item>
+        /// <item><description>When adding a follow: The system checks whether the primary object is already followed to prevent duplicates, and authenticates that the primary object exists.</description></item>
+        /// <item><description>When unfollowing: This is an idempotent operation. Regardless of whether the user has previously followed the object, <c>success=true</c> is returned.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>安全性</b>：支持AK、BearerToken和APP三种认证方式。</description></item>
-        /// <item><description><b>请求频率限制</b>：每秒最多可发送100次请求。</description></item>
-        /// <item><description><b>响应日志</b>：开启响应日志记录功能。</description></item>
-        /// <item><description><b>租户相关性</b>：此API与特定租户相关联，默认使用调用方的租户ID。</description></item>
-        /// <item><description><b>操作类型</b>：属于写入型操作。</description></item>
-        /// <item><description><b>后端服务</b>：请求将被转发至内部服务进行处理，超时时间为3秒。</description></item>
+        /// <item><description><b>Security</b>: Three authentication methods are supported: AK, BearerToken, and APP.</description></item>
+        /// <item><description><b>Request frequency limit</b>: A maximum of 100 requests can be send per second.</description></item>
+        /// <item><description><b>Response log</b>: The response log record feature is enabled.</description></item>
+        /// <item><description><b>Tenant relevance</b>: This API is associated with a specific tenant. The tenant ID of the invoker is used by default.</description></item>
+        /// <item><description><b>Operation type</b>: Write operation.</description></item>
+        /// <item><description><b>Backend service</b>: Requests are forwarded to an internal service for processing. The timeout period is 3 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18328,24 +20182,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过此API可以对指定的主对象执行关注或取消关注操作。</para>
+        /// <para>Follows or unfollows a specified primary object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><b>Precheck</b>:<ol>
-        /// <item><description>添加关注时：系统会检查是否已对该主对象进行了关注以防止重复，并且会验证该主对象是否存在。</description></item>
-        /// <item><description>取消关注时：这是一个幂等操作，无论用户之前是否已经关注了该对象，都会返回 <c>success=true</c>。</description></item>
+        /// <item><description>When adding a follow: The system checks whether the primary object is already followed to prevent duplicates, and authenticates that the primary object exists.</description></item>
+        /// <item><description>When unfollowing: This is an idempotent operation. Regardless of whether the user has previously followed the object, <c>success=true</c> is returned.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>安全性</b>：支持AK、BearerToken和APP三种认证方式。</description></item>
-        /// <item><description><b>请求频率限制</b>：每秒最多可发送100次请求。</description></item>
-        /// <item><description><b>响应日志</b>：开启响应日志记录功能。</description></item>
-        /// <item><description><b>租户相关性</b>：此API与特定租户相关联，默认使用调用方的租户ID。</description></item>
-        /// <item><description><b>操作类型</b>：属于写入型操作。</description></item>
-        /// <item><description><b>后端服务</b>：请求将被转发至内部服务进行处理，超时时间为3秒。</description></item>
+        /// <item><description><b>Security</b>: Three authentication methods are supported: AK, BearerToken, and APP.</description></item>
+        /// <item><description><b>Request frequency limit</b>: A maximum of 100 requests can be send per second.</description></item>
+        /// <item><description><b>Response log</b>: The response log record feature is enabled.</description></item>
+        /// <item><description><b>Tenant relevance</b>: This API is associated with a specific tenant. The tenant ID of the invoker is used by default.</description></item>
+        /// <item><description><b>Operation type</b>: Write operation.</description></item>
+        /// <item><description><b>Backend service</b>: Requests are forwarded to an internal service for processing. The timeout period is 3 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18365,24 +20219,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过此API可以对指定的主对象执行关注或取消关注操作。</para>
+        /// <para>Follows or unfollows a specified primary object.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><b>Precheck</b>:<ol>
-        /// <item><description>添加关注时：系统会检查是否已对该主对象进行了关注以防止重复，并且会验证该主对象是否存在。</description></item>
-        /// <item><description>取消关注时：这是一个幂等操作，无论用户之前是否已经关注了该对象，都会返回 <c>success=true</c>。</description></item>
+        /// <item><description>When adding a follow: The system checks whether the primary object is already followed to prevent duplicates, and authenticates that the primary object exists.</description></item>
+        /// <item><description>When unfollowing: This is an idempotent operation. Regardless of whether the user has previously followed the object, <c>success=true</c> is returned.</description></item>
         /// </ol>
         /// </description></item>
-        /// <item><description><b>安全性</b>：支持AK、BearerToken和APP三种认证方式。</description></item>
-        /// <item><description><b>请求频率限制</b>：每秒最多可发送100次请求。</description></item>
-        /// <item><description><b>响应日志</b>：开启响应日志记录功能。</description></item>
-        /// <item><description><b>租户相关性</b>：此API与特定租户相关联，默认使用调用方的租户ID。</description></item>
-        /// <item><description><b>操作类型</b>：属于写入型操作。</description></item>
-        /// <item><description><b>后端服务</b>：请求将被转发至内部服务进行处理，超时时间为3秒。</description></item>
+        /// <item><description><b>Security</b>: Three authentication methods are supported: AK, BearerToken, and APP.</description></item>
+        /// <item><description><b>Request frequency limit</b>: A maximum of 100 requests can be send per second.</description></item>
+        /// <item><description><b>Response log</b>: The response log record feature is enabled.</description></item>
+        /// <item><description><b>Tenant relevance</b>: This API is associated with a specific tenant. The tenant ID of the invoker is used by default.</description></item>
+        /// <item><description><b>Operation type</b>: Write operation.</description></item>
+        /// <item><description><b>Backend service</b>: Requests are forwarded to an internal service for processing. The timeout period is 3 seconds.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18402,18 +20256,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字员工使用权限授权模式</para>
+        /// <para>Updates the authorization mode for digital employee usage permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>切换数字员工的使用权限授权模式。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.update_auth_mode 执行
-        ///     3. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     4. SPECIFIED_USERS：需显式授权才能使用
-        ///     5. ALL_USERS：所有用户无需授权即可使用（管理权限不受影响）</para>
+        /// <para>Switches the authorization mode for digital employee usage permissions.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.update_auth_mode for execution.
+        ///     3. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
+        ///     4. SPECIFIED_USERS: Explicit authorization is required before usage.
+        ///     5. ALL_USERS: All users can use the digital employee without authorization (management permissions are not affected).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18469,18 +20323,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字员工使用权限授权模式</para>
+        /// <para>Updates the authorization mode for digital employee usage permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>切换数字员工的使用权限授权模式。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.update_auth_mode 执行
-        ///     3. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     4. SPECIFIED_USERS：需显式授权才能使用
-        ///     5. ALL_USERS：所有用户无需授权即可使用（管理权限不受影响）</para>
+        /// <para>Switches the authorization mode for digital employee usage permissions.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.update_auth_mode for execution.
+        ///     3. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
+        ///     4. SPECIFIED_USERS: Explicit authorization is required before usage.
+        ///     5. ALL_USERS: All users can use the digital employee without authorization (management permissions are not affected).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18536,18 +20390,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字员工使用权限授权模式</para>
+        /// <para>Updates the authorization mode for digital employee usage permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>切换数字员工的使用权限授权模式。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.update_auth_mode 执行
-        ///     3. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     4. SPECIFIED_USERS：需显式授权才能使用
-        ///     5. ALL_USERS：所有用户无需授权即可使用（管理权限不受影响）</para>
+        /// <para>Switches the authorization mode for digital employee usage permissions.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.update_auth_mode for execution.
+        ///     3. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
+        ///     4. SPECIFIED_USERS: Explicit authorization is required before usage.
+        ///     5. ALL_USERS: All users can use the digital employee without authorization (management permissions are not affected).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18566,18 +20420,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新数字员工使用权限授权模式</para>
+        /// <para>Updates the authorization mode for digital employee usage permissions.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>切换数字员工的使用权限授权模式。
-        ///     业务逻辑：
-        ///     1. 从 identity 构造 AuthContext
-        ///     2. 委托 AgentAuthorizationAuthorizedService.update_auth_mode 执行
-        ///     3. 前置校验：MANAGE 权限 + agent 存在性（由 AuthorizedService 层执行，先鉴权后暴露存在性）
-        ///     4. SPECIFIED_USERS：需显式授权才能使用
-        ///     5. ALL_USERS：所有用户无需授权即可使用（管理权限不受影响）</para>
+        /// <para>Switches the authorization mode for digital employee usage permissions.
+        ///     Business logic:
+        ///     1. Constructs an AuthContext from the identity.
+        ///     2. Delegates to AgentAuthorizationAuthorizedService.update_auth_mode for execution.
+        ///     3. Pre-validation: MANAGE permission + agent existence check (performed by the AuthorizedService layer, which authenticates before exposing existence).
+        ///     4. SPECIFIED_USERS: Explicit authorization is required before usage.
+        ///     5. ALL_USERS: All users can use the digital employee without authorization (management permissions are not affected).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -18596,8 +20450,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话</para>
+        /// <para>Updates a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a session.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateChatSessionRequest
@@ -18656,8 +20515,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话</para>
+        /// <para>Updates a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a session.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateChatSessionRequest
@@ -18716,8 +20580,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话</para>
+        /// <para>Updates a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a session.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateChatSessionRequest
@@ -18735,8 +20604,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新会话</para>
+        /// <para>Updates a session.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a session.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateChatSessionRequest
@@ -18754,22 +20628,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新用户的个人目录基础信息。</para>
+        /// <para>Updates the basic information of a user\&quot;s personal directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于更新指定用户的个人目录信息，包括名称、描述、父目录等。请求时需确保提供的 <c>directoryId</c> 对应的目录存在且属于当前用户。此外，如果更改了目录的 <c>name</c> 或 <c>path</c>，系统将自动递归更新所有子目录的路径以保持一致性。特别注意，在调整父目录时，必须保证新父目录的有效性（即非自身或不会导致循环引用）。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation updates the personal directory information of a specified user, including the name, description, and parent directory. Ensure that the directory corresponding to the provided <c>directoryId</c> exists and belongs to the current user. If the <c>name</c> or <c>path</c> of the directory is changed, the system automatically and recursively updates the paths of all subdirectories to maintain consistency. When adjusting the parent directory, ensure the validity of the new parent directory (that is, it is not the directory itself and does not cause a circular dependency).</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c> 和 <c>user_id</c> 必须来自于鉴权身份。</description></item>
-        /// <item><description><b>权限要求</b>：执行此操作需要相应的 RAM 权限。</description></item>
-        /// <item><description><b>输入参数</b>：<list type="bullet">
-        /// <item><description><c>directoryId</c>：必填，表示要更新的目录唯一标识。</description></item>
-        /// <item><description><c>name</c>：选填，设置新的目录名称。</description></item>
-        /// <item><description><c>description</c>：选填，提供新的目录描述。</description></item>
-        /// <item><description><c>parentId</c>：选填，指定新的父目录ID。</description></item>
-        /// <item><description><c>path</c>：选填，当传入时会级联更新当前及所有子目录的路径。</description></item>
+        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
+        /// <item><description><b>Permission requirements</b>: Corresponding RAM permissions are required to perform this operation.</description></item>
+        /// <item><description><b>Input parameters</b>:<list type="bullet">
+        /// <item><description><c>directoryId</c>: Required. The unique identifier of the directory to update.</description></item>
+        /// <item><description><c>name</c>: Optional. The new directory name.</description></item>
+        /// <item><description><c>description</c>: Optional. The new directory description.</description></item>
+        /// <item><description><c>parentId</c>: Optional. The ID of the new parent directory.</description></item>
+        /// <item><description><c>path</c>: Optional. When specified, the system cascades the update to the paths of the current directory and all its subdirectories.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18840,22 +20714,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新用户的个人目录基础信息。</para>
+        /// <para>Updates the basic information of a user\&quot;s personal directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于更新指定用户的个人目录信息，包括名称、描述、父目录等。请求时需确保提供的 <c>directoryId</c> 对应的目录存在且属于当前用户。此外，如果更改了目录的 <c>name</c> 或 <c>path</c>，系统将自动递归更新所有子目录的路径以保持一致性。特别注意，在调整父目录时，必须保证新父目录的有效性（即非自身或不会导致循环引用）。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation updates the personal directory information of a specified user, including the name, description, and parent directory. Ensure that the directory corresponding to the provided <c>directoryId</c> exists and belongs to the current user. If the <c>name</c> or <c>path</c> of the directory is changed, the system automatically and recursively updates the paths of all subdirectories to maintain consistency. When adjusting the parent directory, ensure the validity of the new parent directory (that is, it is not the directory itself and does not cause a circular dependency).</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c> 和 <c>user_id</c> 必须来自于鉴权身份。</description></item>
-        /// <item><description><b>权限要求</b>：执行此操作需要相应的 RAM 权限。</description></item>
-        /// <item><description><b>输入参数</b>：<list type="bullet">
-        /// <item><description><c>directoryId</c>：必填，表示要更新的目录唯一标识。</description></item>
-        /// <item><description><c>name</c>：选填，设置新的目录名称。</description></item>
-        /// <item><description><c>description</c>：选填，提供新的目录描述。</description></item>
-        /// <item><description><c>parentId</c>：选填，指定新的父目录ID。</description></item>
-        /// <item><description><c>path</c>：选填，当传入时会级联更新当前及所有子目录的路径。</description></item>
+        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
+        /// <item><description><b>Permission requirements</b>: Corresponding RAM permissions are required to perform this operation.</description></item>
+        /// <item><description><b>Input parameters</b>:<list type="bullet">
+        /// <item><description><c>directoryId</c>: Required. The unique identifier of the directory to update.</description></item>
+        /// <item><description><c>name</c>: Optional. The new directory name.</description></item>
+        /// <item><description><c>description</c>: Optional. The new directory description.</description></item>
+        /// <item><description><c>parentId</c>: Optional. The ID of the new parent directory.</description></item>
+        /// <item><description><c>path</c>: Optional. When specified, the system cascades the update to the paths of the current directory and all its subdirectories.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18926,22 +20800,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新用户的个人目录基础信息。</para>
+        /// <para>Updates the basic information of a user\&quot;s personal directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于更新指定用户的个人目录信息，包括名称、描述、父目录等。请求时需确保提供的 <c>directoryId</c> 对应的目录存在且属于当前用户。此外，如果更改了目录的 <c>name</c> 或 <c>path</c>，系统将自动递归更新所有子目录的路径以保持一致性。特别注意，在调整父目录时，必须保证新父目录的有效性（即非自身或不会导致循环引用）。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation updates the personal directory information of a specified user, including the name, description, and parent directory. Ensure that the directory corresponding to the provided <c>directoryId</c> exists and belongs to the current user. If the <c>name</c> or <c>path</c> of the directory is changed, the system automatically and recursively updates the paths of all subdirectories to maintain consistency. When adjusting the parent directory, ensure the validity of the new parent directory (that is, it is not the directory itself and does not cause a circular dependency).</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c> 和 <c>user_id</c> 必须来自于鉴权身份。</description></item>
-        /// <item><description><b>权限要求</b>：执行此操作需要相应的 RAM 权限。</description></item>
-        /// <item><description><b>输入参数</b>：<list type="bullet">
-        /// <item><description><c>directoryId</c>：必填，表示要更新的目录唯一标识。</description></item>
-        /// <item><description><c>name</c>：选填，设置新的目录名称。</description></item>
-        /// <item><description><c>description</c>：选填，提供新的目录描述。</description></item>
-        /// <item><description><c>parentId</c>：选填，指定新的父目录ID。</description></item>
-        /// <item><description><c>path</c>：选填，当传入时会级联更新当前及所有子目录的路径。</description></item>
+        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
+        /// <item><description><b>Permission requirements</b>: Corresponding RAM permissions are required to perform this operation.</description></item>
+        /// <item><description><b>Input parameters</b>:<list type="bullet">
+        /// <item><description><c>directoryId</c>: Required. The unique identifier of the directory to update.</description></item>
+        /// <item><description><c>name</c>: Optional. The new directory name.</description></item>
+        /// <item><description><c>description</c>: Optional. The new directory description.</description></item>
+        /// <item><description><c>parentId</c>: Optional. The ID of the new parent directory.</description></item>
+        /// <item><description><c>path</c>: Optional. When specified, the system cascades the update to the paths of the current directory and all its subdirectories.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -18963,22 +20837,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新用户的个人目录基础信息。</para>
+        /// <para>Updates the basic information of a user\&quot;s personal directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于更新指定用户的个人目录信息，包括名称、描述、父目录等。请求时需确保提供的 <c>directoryId</c> 对应的目录存在且属于当前用户。此外，如果更改了目录的 <c>name</c> 或 <c>path</c>，系统将自动递归更新所有子目录的路径以保持一致性。特别注意，在调整父目录时，必须保证新父目录的有效性（即非自身或不会导致循环引用）。</para>
+        /// <h2>Operation description</h2>
+        /// <para>This API operation updates the personal directory information of a specified user, including the name, description, and parent directory. Ensure that the directory corresponding to the provided <c>directoryId</c> exists and belongs to the current user. If the <c>name</c> or <c>path</c> of the directory is changed, the system automatically and recursively updates the paths of all subdirectories to maintain consistency. When adjusting the parent directory, ensure the validity of the new parent directory (that is, it is not the directory itself and does not cause a circular dependency).</para>
         /// <list type="bullet">
-        /// <item><description><b>安全约束</b>：<c>tenant_id</c> 和 <c>user_id</c> 必须来自于鉴权身份。</description></item>
-        /// <item><description><b>权限要求</b>：执行此操作需要相应的 RAM 权限。</description></item>
-        /// <item><description><b>输入参数</b>：<list type="bullet">
-        /// <item><description><c>directoryId</c>：必填，表示要更新的目录唯一标识。</description></item>
-        /// <item><description><c>name</c>：选填，设置新的目录名称。</description></item>
-        /// <item><description><c>description</c>：选填，提供新的目录描述。</description></item>
-        /// <item><description><c>parentId</c>：选填，指定新的父目录ID。</description></item>
-        /// <item><description><c>path</c>：选填，当传入时会级联更新当前及所有子目录的路径。</description></item>
+        /// <item><description><b>Security constraints</b>: <c>tenant_id</c> and <c>user_id</c> must be derived from the authenticated identity.</description></item>
+        /// <item><description><b>Permission requirements</b>: Corresponding RAM permissions are required to perform this operation.</description></item>
+        /// <item><description><b>Input parameters</b>:<list type="bullet">
+        /// <item><description><c>directoryId</c>: Required. The unique identifier of the directory to update.</description></item>
+        /// <item><description><c>name</c>: Optional. The new directory name.</description></item>
+        /// <item><description><c>description</c>: Optional. The new directory description.</description></item>
+        /// <item><description><c>parentId</c>: Optional. The ID of the new parent directory.</description></item>
+        /// <item><description><c>path</c>: Optional. When specified, the system cascades the update to the paths of the current directory and all its subdirectories.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -19000,19 +20874,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定的企业知识库分类信息，包括名称、描述及父目录。</para>
+        /// <para>Updates the information of a specified enterprise knowledge base directory, including the name, description, and parent directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于修改企业知识库中的某个分类。</description></item>
-        /// <item><description>需要具有<c>DEVELOPMENT_KB_MANAGE</c>功能权限才能调用此API。</description></item>
-        /// <item><description><c>tenantId</c>参数为可选，若未提供，则默认使用调用者的租户ID。</description></item>
-        /// <item><description>必须提供待修改的<c>directoryId</c>，而<c>name</c>、<c>description</c>和<c>parentDirectoryId</c>均为可选项，不提供则表示这些字段保持不变。</description></item>
-        /// <item><description>当指定了新的<c>parentDirectoryId</c>时，系统会检查新父目录是否属于当前租户，并且不会导致循环引用问题。</description></item>
-        /// <item><description>安全性方面，本API支持多种认证方式（AK、BearerToken、APP），并启用了RAM权限控制与操作审计。</description></item>
+        /// <item><description>This operation modifies a directory in the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>The <c>tenantId</c> parameter is optional. If not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>You must specify the <c>directoryId</c> of the directory to modify. The <c>name</c>, <c>description</c>, and <c>parentDirectoryId</c> parameters are optional. If not provided, the corresponding fields remain unchanged.</description></item>
+        /// <item><description>When a new <c>parentDirectoryId</c> is specified, the system checks whether the new parent directory belongs to the current tenant and does not cause a circular dependency.</description></item>
+        /// <item><description>This API operation supports multiple authentication methods (AK, BearerToken, APP) and has RAM permission control and operation auditing enabled.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19077,19 +20951,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定的企业知识库分类信息，包括名称、描述及父目录。</para>
+        /// <para>Updates the information of a specified enterprise knowledge base directory, including the name, description, and parent directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于修改企业知识库中的某个分类。</description></item>
-        /// <item><description>需要具有<c>DEVELOPMENT_KB_MANAGE</c>功能权限才能调用此API。</description></item>
-        /// <item><description><c>tenantId</c>参数为可选，若未提供，则默认使用调用者的租户ID。</description></item>
-        /// <item><description>必须提供待修改的<c>directoryId</c>，而<c>name</c>、<c>description</c>和<c>parentDirectoryId</c>均为可选项，不提供则表示这些字段保持不变。</description></item>
-        /// <item><description>当指定了新的<c>parentDirectoryId</c>时，系统会检查新父目录是否属于当前租户，并且不会导致循环引用问题。</description></item>
-        /// <item><description>安全性方面，本API支持多种认证方式（AK、BearerToken、APP），并启用了RAM权限控制与操作审计。</description></item>
+        /// <item><description>This operation modifies a directory in the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>The <c>tenantId</c> parameter is optional. If not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>You must specify the <c>directoryId</c> of the directory to modify. The <c>name</c>, <c>description</c>, and <c>parentDirectoryId</c> parameters are optional. If not provided, the corresponding fields remain unchanged.</description></item>
+        /// <item><description>When a new <c>parentDirectoryId</c> is specified, the system checks whether the new parent directory belongs to the current tenant and does not cause a circular dependency.</description></item>
+        /// <item><description>This API operation supports multiple authentication methods (AK, BearerToken, APP) and has RAM permission control and operation auditing enabled.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19154,19 +21028,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定的企业知识库分类信息，包括名称、描述及父目录。</para>
+        /// <para>Updates the information of a specified enterprise knowledge base directory, including the name, description, and parent directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于修改企业知识库中的某个分类。</description></item>
-        /// <item><description>需要具有<c>DEVELOPMENT_KB_MANAGE</c>功能权限才能调用此API。</description></item>
-        /// <item><description><c>tenantId</c>参数为可选，若未提供，则默认使用调用者的租户ID。</description></item>
-        /// <item><description>必须提供待修改的<c>directoryId</c>，而<c>name</c>、<c>description</c>和<c>parentDirectoryId</c>均为可选项，不提供则表示这些字段保持不变。</description></item>
-        /// <item><description>当指定了新的<c>parentDirectoryId</c>时，系统会检查新父目录是否属于当前租户，并且不会导致循环引用问题。</description></item>
-        /// <item><description>安全性方面，本API支持多种认证方式（AK、BearerToken、APP），并启用了RAM权限控制与操作审计。</description></item>
+        /// <item><description>This operation modifies a directory in the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>The <c>tenantId</c> parameter is optional. If not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>You must specify the <c>directoryId</c> of the directory to modify. The <c>name</c>, <c>description</c>, and <c>parentDirectoryId</c> parameters are optional. If not provided, the corresponding fields remain unchanged.</description></item>
+        /// <item><description>When a new <c>parentDirectoryId</c> is specified, the system checks whether the new parent directory belongs to the current tenant and does not cause a circular dependency.</description></item>
+        /// <item><description>This API operation supports multiple authentication methods (AK, BearerToken, APP) and has RAM permission control and operation auditing enabled.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19186,19 +21060,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定的企业知识库分类信息，包括名称、描述及父目录。</para>
+        /// <para>Updates the information of a specified enterprise knowledge base directory, including the name, description, and parent directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于修改企业知识库中的某个分类。</description></item>
-        /// <item><description>需要具有<c>DEVELOPMENT_KB_MANAGE</c>功能权限才能调用此API。</description></item>
-        /// <item><description><c>tenantId</c>参数为可选，若未提供，则默认使用调用者的租户ID。</description></item>
-        /// <item><description>必须提供待修改的<c>directoryId</c>，而<c>name</c>、<c>description</c>和<c>parentDirectoryId</c>均为可选项，不提供则表示这些字段保持不变。</description></item>
-        /// <item><description>当指定了新的<c>parentDirectoryId</c>时，系统会检查新父目录是否属于当前租户，并且不会导致循环引用问题。</description></item>
-        /// <item><description>安全性方面，本API支持多种认证方式（AK、BearerToken、APP），并启用了RAM权限控制与操作审计。</description></item>
+        /// <item><description>This operation modifies a directory in the enterprise knowledge base.</description></item>
+        /// <item><description>You must have the <c>DEVELOPMENT_KB_MANAGE</c> permission to call this API operation.</description></item>
+        /// <item><description>The <c>tenantId</c> parameter is optional. If not provided, the tenant ID of the caller is used by default.</description></item>
+        /// <item><description>You must specify the <c>directoryId</c> of the directory to modify. The <c>name</c>, <c>description</c>, and <c>parentDirectoryId</c> parameters are optional. If not provided, the corresponding fields remain unchanged.</description></item>
+        /// <item><description>When a new <c>parentDirectoryId</c> is specified, the system checks whether the new parent directory belongs to the current tenant and does not cause a circular dependency.</description></item>
+        /// <item><description>This API operation supports multiple authentication methods (AK, BearerToken, APP) and has RAM permission control and operation auditing enabled.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19218,16 +21092,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于编辑企业自建知识库中的资源正文并触发重新解析。</para>
+        /// <para>Edits the body content of a resource in an enterprise self-built knowledge base and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口允许用户更新指定的企业知识库数据源的正文内容，并可选择是否同步等待解析完成。通过设置<c>forceSync</c>参数，可以控制解析过程是同步还是异步执行，默认为异步处理。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to update the body content of a specified enterprise knowledge base data source and optionally wait synchronously for parsing to complete. By setting the <c>forceSync</c> parameter, you can control whether the parsing process is executed synchronously or asynchronously. The default is asynchronous processing.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：当<c>content</c>字段为空字符串时，表示清空原有内容。</description></item>
-        /// <item><description><b>权限要求</b>：调用此接口需要具备相应的RAM操作权限（<c>winnexo:UpdateKnowledgeBaseSourceContent</c>）。</description></item>
+        /// <item><description><b>Note</b>: When the <c>content</c> field is an empty string, the original content is cleared.</description></item>
+        /// <item><description><b>Permission requirement</b>: Calling this operation requires the corresponding RAM action permission (<c>winnexo:UpdateKnowledgeBaseSourceContent</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19288,16 +21162,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于编辑企业自建知识库中的资源正文并触发重新解析。</para>
+        /// <para>Edits the body content of a resource in an enterprise self-built knowledge base and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口允许用户更新指定的企业知识库数据源的正文内容，并可选择是否同步等待解析完成。通过设置<c>forceSync</c>参数，可以控制解析过程是同步还是异步执行，默认为异步处理。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to update the body content of a specified enterprise knowledge base data source and optionally wait synchronously for parsing to complete. By setting the <c>forceSync</c> parameter, you can control whether the parsing process is executed synchronously or asynchronously. The default is asynchronous processing.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：当<c>content</c>字段为空字符串时，表示清空原有内容。</description></item>
-        /// <item><description><b>权限要求</b>：调用此接口需要具备相应的RAM操作权限（<c>winnexo:UpdateKnowledgeBaseSourceContent</c>）。</description></item>
+        /// <item><description><b>Note</b>: When the <c>content</c> field is an empty string, the original content is cleared.</description></item>
+        /// <item><description><b>Permission requirement</b>: Calling this operation requires the corresponding RAM action permission (<c>winnexo:UpdateKnowledgeBaseSourceContent</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19358,16 +21232,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于编辑企业自建知识库中的资源正文并触发重新解析。</para>
+        /// <para>Edits the body content of a resource in an enterprise self-built knowledge base and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口允许用户更新指定的企业知识库数据源的正文内容，并可选择是否同步等待解析完成。通过设置<c>forceSync</c>参数，可以控制解析过程是同步还是异步执行，默认为异步处理。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to update the body content of a specified enterprise knowledge base data source and optionally wait synchronously for parsing to complete. By setting the <c>forceSync</c> parameter, you can control whether the parsing process is executed synchronously or asynchronously. The default is asynchronous processing.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：当<c>content</c>字段为空字符串时，表示清空原有内容。</description></item>
-        /// <item><description><b>权限要求</b>：调用此接口需要具备相应的RAM操作权限（<c>winnexo:UpdateKnowledgeBaseSourceContent</c>）。</description></item>
+        /// <item><description><b>Note</b>: When the <c>content</c> field is an empty string, the original content is cleared.</description></item>
+        /// <item><description><b>Permission requirement</b>: Calling this operation requires the corresponding RAM action permission (<c>winnexo:UpdateKnowledgeBaseSourceContent</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19387,16 +21261,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于编辑企业自建知识库中的资源正文并触发重新解析。</para>
+        /// <para>Edits the body content of a resource in an enterprise self-built knowledge base and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>本接口允许用户更新指定的企业知识库数据源的正文内容，并可选择是否同步等待解析完成。通过设置<c>forceSync</c>参数，可以控制解析过程是同步还是异步执行，默认为异步处理。</para>
+        /// <h2>Request description</h2>
+        /// <para>This operation allows you to update the body content of a specified enterprise knowledge base data source and optionally wait synchronously for parsing to complete. By setting the <c>forceSync</c> parameter, you can control whether the parsing process is executed synchronously or asynchronously. The default is asynchronous processing.</para>
         /// <list type="bullet">
-        /// <item><description><b>注意</b>：当<c>content</c>字段为空字符串时，表示清空原有内容。</description></item>
-        /// <item><description><b>权限要求</b>：调用此接口需要具备相应的RAM操作权限（<c>winnexo:UpdateKnowledgeBaseSourceContent</c>）。</description></item>
+        /// <item><description><b>Note</b>: When the <c>content</c> field is an empty string, the original content is cleared.</description></item>
+        /// <item><description><b>Permission requirement</b>: Calling this operation requires the corresponding RAM action permission (<c>winnexo:UpdateKnowledgeBaseSourceContent</c>).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19416,20 +21290,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定企业知识库数据源的资源标签。</para>
+        /// <para>Updates the resource tags of a specified data source in an enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于更新企业知识库中特定数据源的标签。</description></item>
-        /// <item><description>需要具备知识库管理权限才能调用此接口。</description></item>
-        /// <item><description><c>sourceTags</c> 参数接受 JSON 字符串列表形式，例如 <c>[&quot;tagA&quot;, &quot;tagB&quot;]</c>；若传入 <c>null</c> 则表示清空所有现有标签。</description></item>
-        /// <item><description>更新操作仅影响 <c>sourceTags</c> 和 <c>gmt_modified</c> 字段，并不会触发 <c>process_source</c> 流程。</description></item>
-        /// <item><description>如果指定的数据源不存在，则会抛出 <c>ERR.Robject.Source.NotFound</c> 错误。</description></item>
-        /// <item><description>接口支持通过 AK、BearerToken 或 APP 方式进行身份验证。</description></item>
-        /// <item><description>调用时需确保 <c>tenant_id</c> 和 <c>user_id</c> 来自有效的鉴权身份信息。</description></item>
+        /// <item><description>This operation updates the labels of a specific data source in an enterprise knowledge base.</description></item>
+        /// <item><description>You must have knowledge base management permissions to invoke this operation.</description></item>
+        /// <item><description>The <c>sourceTags</c> parameter accepts a JSON character string list, such as <c>[&quot;tagA&quot;, &quot;tagB&quot;]</c>. If you set this parameter to <c>null</c>, all existing labels are cleared.</description></item>
+        /// <item><description>The update operation affects only the <c>sourceTags</c> and <c>gmt_modified</c> fields and does not trigger the <c>process_source</c> workflow.</description></item>
+        /// <item><description>If the specified data source does not exist, the <c>ERR.Robject.Source.NotFound</c> fault is returned.</description></item>
+        /// <item><description>This operation supports authentication through AccessKey, BearerToken, or APP methods.</description></item>
+        /// <item><description>When you invoke this operation, make sure that <c>tenant_id</c> and <c>user_id</c> are from valid authentication identity information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19486,20 +21360,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定企业知识库数据源的资源标签。</para>
+        /// <para>Updates the resource tags of a specified data source in an enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于更新企业知识库中特定数据源的标签。</description></item>
-        /// <item><description>需要具备知识库管理权限才能调用此接口。</description></item>
-        /// <item><description><c>sourceTags</c> 参数接受 JSON 字符串列表形式，例如 <c>[&quot;tagA&quot;, &quot;tagB&quot;]</c>；若传入 <c>null</c> 则表示清空所有现有标签。</description></item>
-        /// <item><description>更新操作仅影响 <c>sourceTags</c> 和 <c>gmt_modified</c> 字段，并不会触发 <c>process_source</c> 流程。</description></item>
-        /// <item><description>如果指定的数据源不存在，则会抛出 <c>ERR.Robject.Source.NotFound</c> 错误。</description></item>
-        /// <item><description>接口支持通过 AK、BearerToken 或 APP 方式进行身份验证。</description></item>
-        /// <item><description>调用时需确保 <c>tenant_id</c> 和 <c>user_id</c> 来自有效的鉴权身份信息。</description></item>
+        /// <item><description>This operation updates the labels of a specific data source in an enterprise knowledge base.</description></item>
+        /// <item><description>You must have knowledge base management permissions to invoke this operation.</description></item>
+        /// <item><description>The <c>sourceTags</c> parameter accepts a JSON character string list, such as <c>[&quot;tagA&quot;, &quot;tagB&quot;]</c>. If you set this parameter to <c>null</c>, all existing labels are cleared.</description></item>
+        /// <item><description>The update operation affects only the <c>sourceTags</c> and <c>gmt_modified</c> fields and does not trigger the <c>process_source</c> workflow.</description></item>
+        /// <item><description>If the specified data source does not exist, the <c>ERR.Robject.Source.NotFound</c> fault is returned.</description></item>
+        /// <item><description>This operation supports authentication through AccessKey, BearerToken, or APP methods.</description></item>
+        /// <item><description>When you invoke this operation, make sure that <c>tenant_id</c> and <c>user_id</c> are from valid authentication identity information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19556,20 +21430,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定企业知识库数据源的资源标签。</para>
+        /// <para>Updates the resource tags of a specified data source in an enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于更新企业知识库中特定数据源的标签。</description></item>
-        /// <item><description>需要具备知识库管理权限才能调用此接口。</description></item>
-        /// <item><description><c>sourceTags</c> 参数接受 JSON 字符串列表形式，例如 <c>[&quot;tagA&quot;, &quot;tagB&quot;]</c>；若传入 <c>null</c> 则表示清空所有现有标签。</description></item>
-        /// <item><description>更新操作仅影响 <c>sourceTags</c> 和 <c>gmt_modified</c> 字段，并不会触发 <c>process_source</c> 流程。</description></item>
-        /// <item><description>如果指定的数据源不存在，则会抛出 <c>ERR.Robject.Source.NotFound</c> 错误。</description></item>
-        /// <item><description>接口支持通过 AK、BearerToken 或 APP 方式进行身份验证。</description></item>
-        /// <item><description>调用时需确保 <c>tenant_id</c> 和 <c>user_id</c> 来自有效的鉴权身份信息。</description></item>
+        /// <item><description>This operation updates the labels of a specific data source in an enterprise knowledge base.</description></item>
+        /// <item><description>You must have knowledge base management permissions to invoke this operation.</description></item>
+        /// <item><description>The <c>sourceTags</c> parameter accepts a JSON character string list, such as <c>[&quot;tagA&quot;, &quot;tagB&quot;]</c>. If you set this parameter to <c>null</c>, all existing labels are cleared.</description></item>
+        /// <item><description>The update operation affects only the <c>sourceTags</c> and <c>gmt_modified</c> fields and does not trigger the <c>process_source</c> workflow.</description></item>
+        /// <item><description>If the specified data source does not exist, the <c>ERR.Robject.Source.NotFound</c> fault is returned.</description></item>
+        /// <item><description>This operation supports authentication through AccessKey, BearerToken, or APP methods.</description></item>
+        /// <item><description>When you invoke this operation, make sure that <c>tenant_id</c> and <c>user_id</c> are from valid authentication identity information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19589,20 +21463,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新指定企业知识库数据源的资源标签。</para>
+        /// <para>Updates the resource tags of a specified data source in an enterprise knowledge base.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于更新企业知识库中特定数据源的标签。</description></item>
-        /// <item><description>需要具备知识库管理权限才能调用此接口。</description></item>
-        /// <item><description><c>sourceTags</c> 参数接受 JSON 字符串列表形式，例如 <c>[&quot;tagA&quot;, &quot;tagB&quot;]</c>；若传入 <c>null</c> 则表示清空所有现有标签。</description></item>
-        /// <item><description>更新操作仅影响 <c>sourceTags</c> 和 <c>gmt_modified</c> 字段，并不会触发 <c>process_source</c> 流程。</description></item>
-        /// <item><description>如果指定的数据源不存在，则会抛出 <c>ERR.Robject.Source.NotFound</c> 错误。</description></item>
-        /// <item><description>接口支持通过 AK、BearerToken 或 APP 方式进行身份验证。</description></item>
-        /// <item><description>调用时需确保 <c>tenant_id</c> 和 <c>user_id</c> 来自有效的鉴权身份信息。</description></item>
+        /// <item><description>This operation updates the labels of a specific data source in an enterprise knowledge base.</description></item>
+        /// <item><description>You must have knowledge base management permissions to invoke this operation.</description></item>
+        /// <item><description>The <c>sourceTags</c> parameter accepts a JSON character string list, such as <c>[&quot;tagA&quot;, &quot;tagB&quot;]</c>. If you set this parameter to <c>null</c>, all existing labels are cleared.</description></item>
+        /// <item><description>The update operation affects only the <c>sourceTags</c> and <c>gmt_modified</c> fields and does not trigger the <c>process_source</c> workflow.</description></item>
+        /// <item><description>If the specified data source does not exist, the <c>ERR.Robject.Source.NotFound</c> fault is returned.</description></item>
+        /// <item><description>This operation supports authentication through AccessKey, BearerToken, or APP methods.</description></item>
+        /// <item><description>When you invoke this operation, make sure that <c>tenant_id</c> and <c>user_id</c> are from valid authentication identity information.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19622,8 +21496,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新定时任务</para>
+        /// <para>Updates a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a scheduled task.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateScheduledTaskRequest
@@ -19663,6 +21542,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 request.TriggerConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConfig, "triggerConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VisibleMemberUserIds))
+            {
+                request.VisibleMemberUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibleMemberUserIds, "visibleMemberUserIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -19705,6 +21588,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["triggerConfig"] = request.TriggerConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
+            {
+                body["visibility"] = request.Visibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibleMemberUserIdsShrink))
+            {
+                body["visibleMemberUserIds"] = request.VisibleMemberUserIdsShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -19728,8 +21619,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新定时任务</para>
+        /// <para>Updates a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a scheduled task.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateScheduledTaskRequest
@@ -19769,6 +21665,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 request.TriggerConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TriggerConfig, "triggerConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.VisibleMemberUserIds))
+            {
+                request.VisibleMemberUserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.VisibleMemberUserIds, "visibleMemberUserIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
             {
@@ -19811,6 +21711,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             {
                 body["triggerConfig"] = request.TriggerConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Visibility))
+            {
+                body["visibility"] = request.Visibility;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VisibleMemberUserIdsShrink))
+            {
+                body["visibleMemberUserIds"] = request.VisibleMemberUserIdsShrink;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -19834,8 +21742,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新定时任务</para>
+        /// <para>Updates a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a scheduled task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateScheduledTaskRequest
@@ -19853,8 +21766,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新定时任务</para>
+        /// <para>Updates a scheduled task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates a scheduled task.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateScheduledTaskRequest
@@ -19872,18 +21790,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新租户内可编辑数据源的正文并触发重新解析。</para>
+        /// <para>Updates the content of an editable data source within a tenant and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于更新指定租户内的数据源内容，并根据需要触发同步或异步的数据源重新解析。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅用于鉴权，不参与实际业务逻辑处理。</description></item>
-        /// <item><description>当提供的正文为空字符串时，系统将按照现有服务契约执行操作。</description></item>
-        /// <item><description>如果指定的数据源不存在，则返回标准的NotFound错误；其他异常情况则由全局异常链处理。</description></item>
-        /// <item><description>可通过设置<c>forceSync</c>参数来决定是否等待解析过程完成（默认为异步入队）。</description></item>
+        /// <item><description>This API operation updates the content of a data source within a specified tenant and triggers synchronous or asynchronous re-parsing of the data source as needed.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are used only for authentication and are not involved in actual business logic processing.</description></item>
+        /// <item><description>When the provided content is an empty string, the system performs the operation according to the existing service contract.</description></item>
+        /// <item><description>If the specified data source does not exist, a standard NotFound error is returned. Other exceptions are handled by the global exception chain.</description></item>
+        /// <item><description>Set the <c>forceSync</c> parameter to determine whether to wait for the parsing process to complete. The default behavior is asynchronous queuing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -19944,18 +21862,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新租户内可编辑数据源的正文并触发重新解析。</para>
+        /// <para>Updates the content of an editable data source within a tenant and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于更新指定租户内的数据源内容，并根据需要触发同步或异步的数据源重新解析。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅用于鉴权，不参与实际业务逻辑处理。</description></item>
-        /// <item><description>当提供的正文为空字符串时，系统将按照现有服务契约执行操作。</description></item>
-        /// <item><description>如果指定的数据源不存在，则返回标准的NotFound错误；其他异常情况则由全局异常链处理。</description></item>
-        /// <item><description>可通过设置<c>forceSync</c>参数来决定是否等待解析过程完成（默认为异步入队）。</description></item>
+        /// <item><description>This API operation updates the content of a data source within a specified tenant and triggers synchronous or asynchronous re-parsing of the data source as needed.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are used only for authentication and are not involved in actual business logic processing.</description></item>
+        /// <item><description>When the provided content is an empty string, the system performs the operation according to the existing service contract.</description></item>
+        /// <item><description>If the specified data source does not exist, a standard NotFound error is returned. Other exceptions are handled by the global exception chain.</description></item>
+        /// <item><description>Set the <c>forceSync</c> parameter to determine whether to wait for the parsing process to complete. The default behavior is asynchronous queuing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20016,18 +21934,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新租户内可编辑数据源的正文并触发重新解析。</para>
+        /// <para>Updates the content of an editable data source within a tenant and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于更新指定租户内的数据源内容，并根据需要触发同步或异步的数据源重新解析。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅用于鉴权，不参与实际业务逻辑处理。</description></item>
-        /// <item><description>当提供的正文为空字符串时，系统将按照现有服务契约执行操作。</description></item>
-        /// <item><description>如果指定的数据源不存在，则返回标准的NotFound错误；其他异常情况则由全局异常链处理。</description></item>
-        /// <item><description>可通过设置<c>forceSync</c>参数来决定是否等待解析过程完成（默认为异步入队）。</description></item>
+        /// <item><description>This API operation updates the content of a data source within a specified tenant and triggers synchronous or asynchronous re-parsing of the data source as needed.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are used only for authentication and are not involved in actual business logic processing.</description></item>
+        /// <item><description>When the provided content is an empty string, the system performs the operation according to the existing service contract.</description></item>
+        /// <item><description>If the specified data source does not exist, a standard NotFound error is returned. Other exceptions are handled by the global exception chain.</description></item>
+        /// <item><description>Set the <c>forceSync</c> parameter to determine whether to wait for the parsing process to complete. The default behavior is asynchronous queuing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20047,18 +21965,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新租户内可编辑数据源的正文并触发重新解析。</para>
+        /// <para>Updates the content of an editable data source within a tenant and triggers re-parsing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该API用于更新指定租户内的数据源内容，并根据需要触发同步或异步的数据源重新解析。</description></item>
-        /// <item><description><c>tenant_id</c> 和 <c>user_id</c> 仅用于鉴权，不参与实际业务逻辑处理。</description></item>
-        /// <item><description>当提供的正文为空字符串时，系统将按照现有服务契约执行操作。</description></item>
-        /// <item><description>如果指定的数据源不存在，则返回标准的NotFound错误；其他异常情况则由全局异常链处理。</description></item>
-        /// <item><description>可通过设置<c>forceSync</c>参数来决定是否等待解析过程完成（默认为异步入队）。</description></item>
+        /// <item><description>This API operation updates the content of a data source within a specified tenant and triggers synchronous or asynchronous re-parsing of the data source as needed.</description></item>
+        /// <item><description><c>tenant_id</c> and <c>user_id</c> are used only for authentication and are not involved in actual business logic processing.</description></item>
+        /// <item><description>When the provided content is an empty string, the system performs the operation according to the existing service contract.</description></item>
+        /// <item><description>If the specified data source does not exist, a standard NotFound error is returned. Other exceptions are handled by the global exception chain.</description></item>
+        /// <item><description>Set the <c>forceSync</c> parameter to determine whether to wait for the parsing process to complete. The default behavior is asynchronous queuing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20078,12 +21996,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新指定的企业知识库目录信息。</para>
+        /// <para>Modifies knowledge base folder information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Modifies knowledge base folder information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20151,12 +22069,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新指定的企业知识库目录信息。</para>
+        /// <para>Modifies knowledge base folder information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Modifies knowledge base folder information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20224,12 +22142,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新指定的企业知识库目录信息。</para>
+        /// <para>Modifies knowledge base folder information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Modifies knowledge base folder information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20248,12 +22166,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新指定的企业知识库目录信息。</para>
+        /// <para>Modifies knowledge base folder information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Modifies knowledge base folder information.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20272,21 +22190,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户信息（含启停用）</para>
+        /// <para>Modifies user information, including enabling or disabling the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 修改用户信息。
-        ///     业务编排：
-        ///     1. 解析 roleCodes → role_ids
-        ///     2. 若 isActive 有变更，先执行状态切换（含最后超管保护）
-        ///     3. 调用 update_tenant_member 修改其他字段（displayName / roleCodes / userGroupIds）
-        ///     4. 全部成功返回 HTTP 200
-        ///     执行顺序说明：
-        ///     - isActive 状态变更先于其他字段写入。两步不在同一事务中。
-        ///     - 校验失败（如最后超管保护）→ 抛出异常，后续步骤不执行。
-        ///     - 若 isActive 变更已落库但后续步骤异常，isActive 不会回滚。</para>
+        /// <para>Modifies user information through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse roleCodes → role_ids
+        ///     2. If isActive has changed, perform the status switch first (including last super admin protection)
+        ///     3. Call update_tenant_member to modify other fields (displayName / roleCodes / userGroupIds)
+        ///     4. Return HTTP 200 if all steps succeed
+        ///     Execution order notes:
+        ///     - The isActive status change is performed before other field writes. The two steps are not in the same transaction.
+        ///     - If validation fails (such as last super admin protection) → an exception is thrown and subsequent steps are not executed.
+        ///     - If the isActive change has been persisted but a subsequent step fails, the isActive change is not rolled back.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -20364,21 +22282,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户信息（含启停用）</para>
+        /// <para>Modifies user information, including enabling or disabling the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 修改用户信息。
-        ///     业务编排：
-        ///     1. 解析 roleCodes → role_ids
-        ///     2. 若 isActive 有变更，先执行状态切换（含最后超管保护）
-        ///     3. 调用 update_tenant_member 修改其他字段（displayName / roleCodes / userGroupIds）
-        ///     4. 全部成功返回 HTTP 200
-        ///     执行顺序说明：
-        ///     - isActive 状态变更先于其他字段写入。两步不在同一事务中。
-        ///     - 校验失败（如最后超管保护）→ 抛出异常，后续步骤不执行。
-        ///     - 若 isActive 变更已落库但后续步骤异常，isActive 不会回滚。</para>
+        /// <para>Modifies user information through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse roleCodes → role_ids
+        ///     2. If isActive has changed, perform the status switch first (including last super admin protection)
+        ///     3. Call update_tenant_member to modify other fields (displayName / roleCodes / userGroupIds)
+        ///     4. Return HTTP 200 if all steps succeed
+        ///     Execution order notes:
+        ///     - The isActive status change is performed before other field writes. The two steps are not in the same transaction.
+        ///     - If validation fails (such as last super admin protection) → an exception is thrown and subsequent steps are not executed.
+        ///     - If the isActive change has been persisted but a subsequent step fails, the isActive change is not rolled back.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -20456,21 +22374,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户信息（含启停用）</para>
+        /// <para>Modifies user information, including enabling or disabling the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 修改用户信息。
-        ///     业务编排：
-        ///     1. 解析 roleCodes → role_ids
-        ///     2. 若 isActive 有变更，先执行状态切换（含最后超管保护）
-        ///     3. 调用 update_tenant_member 修改其他字段（displayName / roleCodes / userGroupIds）
-        ///     4. 全部成功返回 HTTP 200
-        ///     执行顺序说明：
-        ///     - isActive 状态变更先于其他字段写入。两步不在同一事务中。
-        ///     - 校验失败（如最后超管保护）→ 抛出异常，后续步骤不执行。
-        ///     - 若 isActive 变更已落库但后续步骤异常，isActive 不会回滚。</para>
+        /// <para>Modifies user information through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse roleCodes → role_ids
+        ///     2. If isActive has changed, perform the status switch first (including last super admin protection)
+        ///     3. Call update_tenant_member to modify other fields (displayName / roleCodes / userGroupIds)
+        ///     4. Return HTTP 200 if all steps succeed
+        ///     Execution order notes:
+        ///     - The isActive status change is performed before other field writes. The two steps are not in the same transaction.
+        ///     - If validation fails (such as last super admin protection) → an exception is thrown and subsequent steps are not executed.
+        ///     - If the isActive change has been persisted but a subsequent step fails, the isActive change is not rolled back.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20489,21 +22407,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改用户信息（含启停用）</para>
+        /// <para>Modifies user information, including enabling or disabling the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>OpenAPI 修改用户信息。
-        ///     业务编排：
-        ///     1. 解析 roleCodes → role_ids
-        ///     2. 若 isActive 有变更，先执行状态切换（含最后超管保护）
-        ///     3. 调用 update_tenant_member 修改其他字段（displayName / roleCodes / userGroupIds）
-        ///     4. 全部成功返回 HTTP 200
-        ///     执行顺序说明：
-        ///     - isActive 状态变更先于其他字段写入。两步不在同一事务中。
-        ///     - 校验失败（如最后超管保护）→ 抛出异常，后续步骤不执行。
-        ///     - 若 isActive 变更已落库但后续步骤异常，isActive 不会回滚。</para>
+        /// <para>Modifies user information through OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parse roleCodes → role_ids
+        ///     2. If isActive has changed, perform the status switch first (including last super admin protection)
+        ///     3. Call update_tenant_member to modify other fields (displayName / roleCodes / userGroupIds)
+        ///     4. Return HTTP 200 if all steps succeed
+        ///     Execution order notes:
+        ///     - The isActive status change is performed before other field writes. The two steps are not in the same transaction.
+        ///     - If validation fails (such as last super admin protection) → an exception is thrown and subsequent steps are not executed.
+        ///     - If the isActive change has been persisted but a subsequent step fails, the isActive change is not rolled back.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20522,19 +22440,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持部分字段更新当前用户信息，并返回完整用户信息。</para>
+        /// <para>Updates partial fields of the current user information and returns the complete user information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API允许调用者更新指定用户的部分或全部可选字段，未提供的字段将保持原有值。</description></item>
-        /// <item><description>支持通过<c>tenantId</c>参数指定租户ID；若省略，则默认使用调用方的默认租户。</description></item>
-        /// <item><description>更新成功后，响应体中会包含完整的用户信息对象。</description></item>
-        /// <item><description>此接口要求认证，支持AK、BearerToken和APP三种安全方案。</description></item>
-        /// <item><description>接口消费类型为JSON格式，且仅在HTTPS协议下可用。</description></item>
-        /// <item><description>特别注意：<c>profileRoleInfo</c>字段仅当用户角色设置为Others时有效，用于描述用户的具体角色信息。</description></item>
+        /// <item><description>This API allows the caller to update some or all optional fields of a specified user. Fields that are not provided retain their original values.</description></item>
+        /// <item><description>Use the <c>tenantId</c> parameter to specify a tenant ID. If omitted, the default tenant of the caller is used.</description></item>
+        /// <item><description>After a successful update, the response body contains the complete user information object.</description></item>
+        /// <item><description>This operation requires authentication and supports AK, BearerToken, and APP security schemes.</description></item>
+        /// <item><description>The request content type is JSON, and the operation is available only over HTTPS.</description></item>
+        /// <item><description>Note: The <c>profileRoleInfo</c> field is valid only when the user role is set to Others. It describes the specific role information of the user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20607,19 +22525,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持部分字段更新当前用户信息，并返回完整用户信息。</para>
+        /// <para>Updates partial fields of the current user information and returns the complete user information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API允许调用者更新指定用户的部分或全部可选字段，未提供的字段将保持原有值。</description></item>
-        /// <item><description>支持通过<c>tenantId</c>参数指定租户ID；若省略，则默认使用调用方的默认租户。</description></item>
-        /// <item><description>更新成功后，响应体中会包含完整的用户信息对象。</description></item>
-        /// <item><description>此接口要求认证，支持AK、BearerToken和APP三种安全方案。</description></item>
-        /// <item><description>接口消费类型为JSON格式，且仅在HTTPS协议下可用。</description></item>
-        /// <item><description>特别注意：<c>profileRoleInfo</c>字段仅当用户角色设置为Others时有效，用于描述用户的具体角色信息。</description></item>
+        /// <item><description>This API allows the caller to update some or all optional fields of a specified user. Fields that are not provided retain their original values.</description></item>
+        /// <item><description>Use the <c>tenantId</c> parameter to specify a tenant ID. If omitted, the default tenant of the caller is used.</description></item>
+        /// <item><description>After a successful update, the response body contains the complete user information object.</description></item>
+        /// <item><description>This operation requires authentication and supports AK, BearerToken, and APP security schemes.</description></item>
+        /// <item><description>The request content type is JSON, and the operation is available only over HTTPS.</description></item>
+        /// <item><description>Note: The <c>profileRoleInfo</c> field is valid only when the user role is set to Others. It describes the specific role information of the user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20692,19 +22610,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持部分字段更新当前用户信息，并返回完整用户信息。</para>
+        /// <para>Updates partial fields of the current user information and returns the complete user information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API允许调用者更新指定用户的部分或全部可选字段，未提供的字段将保持原有值。</description></item>
-        /// <item><description>支持通过<c>tenantId</c>参数指定租户ID；若省略，则默认使用调用方的默认租户。</description></item>
-        /// <item><description>更新成功后，响应体中会包含完整的用户信息对象。</description></item>
-        /// <item><description>此接口要求认证，支持AK、BearerToken和APP三种安全方案。</description></item>
-        /// <item><description>接口消费类型为JSON格式，且仅在HTTPS协议下可用。</description></item>
-        /// <item><description>特别注意：<c>profileRoleInfo</c>字段仅当用户角色设置为Others时有效，用于描述用户的具体角色信息。</description></item>
+        /// <item><description>This API allows the caller to update some or all optional fields of a specified user. Fields that are not provided retain their original values.</description></item>
+        /// <item><description>Use the <c>tenantId</c> parameter to specify a tenant ID. If omitted, the default tenant of the caller is used.</description></item>
+        /// <item><description>After a successful update, the response body contains the complete user information object.</description></item>
+        /// <item><description>This operation requires authentication and supports AK, BearerToken, and APP security schemes.</description></item>
+        /// <item><description>The request content type is JSON, and the operation is available only over HTTPS.</description></item>
+        /// <item><description>Note: The <c>profileRoleInfo</c> field is valid only when the user role is set to Others. It describes the specific role information of the user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20724,19 +22642,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>支持部分字段更新当前用户信息，并返回完整用户信息。</para>
+        /// <para>Updates partial fields of the current user information and returns the complete user information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>该API允许调用者更新指定用户的部分或全部可选字段，未提供的字段将保持原有值。</description></item>
-        /// <item><description>支持通过<c>tenantId</c>参数指定租户ID；若省略，则默认使用调用方的默认租户。</description></item>
-        /// <item><description>更新成功后，响应体中会包含完整的用户信息对象。</description></item>
-        /// <item><description>此接口要求认证，支持AK、BearerToken和APP三种安全方案。</description></item>
-        /// <item><description>接口消费类型为JSON格式，且仅在HTTPS协议下可用。</description></item>
-        /// <item><description>特别注意：<c>profileRoleInfo</c>字段仅当用户角色设置为Others时有效，用于描述用户的具体角色信息。</description></item>
+        /// <item><description>This API allows the caller to update some or all optional fields of a specified user. Fields that are not provided retain their original values.</description></item>
+        /// <item><description>Use the <c>tenantId</c> parameter to specify a tenant ID. If omitted, the default tenant of the caller is used.</description></item>
+        /// <item><description>After a successful update, the response body contains the complete user information object.</description></item>
+        /// <item><description>This operation requires authentication and supports AK, BearerToken, and APP security schemes.</description></item>
+        /// <item><description>The request content type is JSON, and the operation is available only over HTTPS.</description></item>
+        /// <item><description>Note: The <c>profileRoleInfo</c> field is valid only when the user role is set to Others. It describes the specific role information of the user.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20756,27 +22674,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话上传本地文件</para>
+        /// <para>Uploads a local file in a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于上传会话临时文件，采用<b>文件中转上传</b>模式（<c>fileTransfer</c>）：文件二进制不经本 API 的请求体传输，而是先落到 OSS，再把 OSS 地址通过 <c>FileUrl</c> 入参交给后端；后端从该地址取回字节并写入自己的 OSS，创建会话临时文件记录。</para>
-        /// <h3>调用方式</h3>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to upload a session temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted through the request body of this API. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS, and creates a session temporary file record.</para>
+        /// <h3>Call methods</h3>
         /// <list type="bullet">
-        /// <item><description><b>推荐</b>：使用 SDK 生成的 <c>UploadChatFileAdvance</c> 方法，传入本地文件流，SDK 自动完成中转上传并回填 <c>FileUrl</c>。</description></item>
-        /// <item><description><b>直传</b>：自行将文件上传到可被服务端访问的 OSS 地址，然后直接调用本 API 并传入 <c>FileUrl</c>。</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates <c>FileUrl</c>.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then directly call this API with the <c>FileUrl</c> parameter.</description></item>
         /// </list>
-        /// <h3>入参</h3>
+        /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>：必填，文件的 OSS 地址。使用 Advance 方法时由 SDK 自动回填，无需手动赋值。</description></item>
-        /// <item><description><b>FileName</b>：必填，原始文件名（含后缀，如 <c>report.pdf</c>）。中转生成的 OSS 地址不携带原始文件名，后端据此确定文件后缀与展示名，因此必须显式传入。</description></item>
-        /// <item><description><b>ContentType</b>：可选，文件 MIME 类型；不传时按 <c>application/octet-stream</c> 处理。</description></item>
-        /// <item><description><b>OperatingObjectName</b>：可选，Agent 命名空间标识，决定文件入库路径。</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
+        /// <item><description><b>ContentType</b>: Optional. The MIME type of the file. If this parameter is not specified, <c>application/octet-stream</c> is used.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The Agent namespace identifier that determines the file storage path.</description></item>
         /// </list>
-        /// <h3>出参</h3>
-        /// <para>返回 OSS 对象路径 <c>objectName</c>、入库地址 <c>fileUrl</c>、公开访问地址 <c>filePublicUrl</c>（有效期 1 小时）、文件记录 ID <c>fileRecordId</c> 等；<c>uploadSignatureUrl</c> 在本模式下恒为空。</para>
+        /// <h3>Response parameters</h3>
+        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the public access address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20840,27 +22758,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话上传本地文件</para>
+        /// <para>Uploads a local file in a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于上传会话临时文件，采用<b>文件中转上传</b>模式（<c>fileTransfer</c>）：文件二进制不经本 API 的请求体传输，而是先落到 OSS，再把 OSS 地址通过 <c>FileUrl</c> 入参交给后端；后端从该地址取回字节并写入自己的 OSS，创建会话临时文件记录。</para>
-        /// <h3>调用方式</h3>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to upload a session temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted through the request body of this API. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS, and creates a session temporary file record.</para>
+        /// <h3>Call methods</h3>
         /// <list type="bullet">
-        /// <item><description><b>推荐</b>：使用 SDK 生成的 <c>UploadChatFileAdvance</c> 方法，传入本地文件流，SDK 自动完成中转上传并回填 <c>FileUrl</c>。</description></item>
-        /// <item><description><b>直传</b>：自行将文件上传到可被服务端访问的 OSS 地址，然后直接调用本 API 并传入 <c>FileUrl</c>。</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates <c>FileUrl</c>.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then directly call this API with the <c>FileUrl</c> parameter.</description></item>
         /// </list>
-        /// <h3>入参</h3>
+        /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>：必填，文件的 OSS 地址。使用 Advance 方法时由 SDK 自动回填，无需手动赋值。</description></item>
-        /// <item><description><b>FileName</b>：必填，原始文件名（含后缀，如 <c>report.pdf</c>）。中转生成的 OSS 地址不携带原始文件名，后端据此确定文件后缀与展示名，因此必须显式传入。</description></item>
-        /// <item><description><b>ContentType</b>：可选，文件 MIME 类型；不传时按 <c>application/octet-stream</c> 处理。</description></item>
-        /// <item><description><b>OperatingObjectName</b>：可选，Agent 命名空间标识，决定文件入库路径。</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
+        /// <item><description><b>ContentType</b>: Optional. The MIME type of the file. If this parameter is not specified, <c>application/octet-stream</c> is used.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The Agent namespace identifier that determines the file storage path.</description></item>
         /// </list>
-        /// <h3>出参</h3>
-        /// <para>返回 OSS 对象路径 <c>objectName</c>、入库地址 <c>fileUrl</c>、公开访问地址 <c>filePublicUrl</c>（有效期 1 小时）、文件记录 ID <c>fileRecordId</c> 等；<c>uploadSignatureUrl</c> 在本模式下恒为空。</para>
+        /// <h3>Response parameters</h3>
+        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the public access address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20924,27 +22842,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话上传本地文件</para>
+        /// <para>Uploads a local file in a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于上传会话临时文件，采用<b>文件中转上传</b>模式（<c>fileTransfer</c>）：文件二进制不经本 API 的请求体传输，而是先落到 OSS，再把 OSS 地址通过 <c>FileUrl</c> 入参交给后端；后端从该地址取回字节并写入自己的 OSS，创建会话临时文件记录。</para>
-        /// <h3>调用方式</h3>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to upload a session temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted through the request body of this API. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS, and creates a session temporary file record.</para>
+        /// <h3>Call methods</h3>
         /// <list type="bullet">
-        /// <item><description><b>推荐</b>：使用 SDK 生成的 <c>UploadChatFileAdvance</c> 方法，传入本地文件流，SDK 自动完成中转上传并回填 <c>FileUrl</c>。</description></item>
-        /// <item><description><b>直传</b>：自行将文件上传到可被服务端访问的 OSS 地址，然后直接调用本 API 并传入 <c>FileUrl</c>。</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates <c>FileUrl</c>.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then directly call this API with the <c>FileUrl</c> parameter.</description></item>
         /// </list>
-        /// <h3>入参</h3>
+        /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>：必填，文件的 OSS 地址。使用 Advance 方法时由 SDK 自动回填，无需手动赋值。</description></item>
-        /// <item><description><b>FileName</b>：必填，原始文件名（含后缀，如 <c>report.pdf</c>）。中转生成的 OSS 地址不携带原始文件名，后端据此确定文件后缀与展示名，因此必须显式传入。</description></item>
-        /// <item><description><b>ContentType</b>：可选，文件 MIME 类型；不传时按 <c>application/octet-stream</c> 处理。</description></item>
-        /// <item><description><b>OperatingObjectName</b>：可选，Agent 命名空间标识，决定文件入库路径。</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
+        /// <item><description><b>ContentType</b>: Optional. The MIME type of the file. If this parameter is not specified, <c>application/octet-stream</c> is used.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The Agent namespace identifier that determines the file storage path.</description></item>
         /// </list>
-        /// <h3>出参</h3>
-        /// <para>返回 OSS 对象路径 <c>objectName</c>、入库地址 <c>fileUrl</c>、公开访问地址 <c>filePublicUrl</c>（有效期 1 小时）、文件记录 ID <c>fileRecordId</c> 等；<c>uploadSignatureUrl</c> 在本模式下恒为空。</para>
+        /// <h3>Response parameters</h3>
+        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the public access address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20963,27 +22881,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>会话上传本地文件</para>
+        /// <para>Uploads a local file in a session.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>该 API 用于上传会话临时文件，采用<b>文件中转上传</b>模式（<c>fileTransfer</c>）：文件二进制不经本 API 的请求体传输，而是先落到 OSS，再把 OSS 地址通过 <c>FileUrl</c> 入参交给后端；后端从该地址取回字节并写入自己的 OSS，创建会话临时文件记录。</para>
-        /// <h3>调用方式</h3>
+        /// <h2>Operation description</h2>
+        /// <para>This API is used to upload a session temporary file by using the <b>file transfer upload</b> mode (<c>fileTransfer</c>). The file binary data is not transmitted through the request body of this API. Instead, the file is first uploaded to Object Storage Service (OSS), and then the OSS address is passed to the backend through the <c>FileUrl</c> parameter. The backend retrieves the bytes from that address, writes them to its own OSS, and creates a session temporary file record.</para>
+        /// <h3>Call methods</h3>
         /// <list type="bullet">
-        /// <item><description><b>推荐</b>：使用 SDK 生成的 <c>UploadChatFileAdvance</c> 方法，传入本地文件流，SDK 自动完成中转上传并回填 <c>FileUrl</c>。</description></item>
-        /// <item><description><b>直传</b>：自行将文件上传到可被服务端访问的 OSS 地址，然后直接调用本 API 并传入 <c>FileUrl</c>。</description></item>
+        /// <item><description><b>Recommended</b>: Use the <c>UploadChatFileAdvance</c> method generated by the SDK. Pass in the local file stream, and the SDK automatically completes the transfer upload and populates <c>FileUrl</c>.</description></item>
+        /// <item><description><b>Direct upload</b>: Upload the file to an OSS address accessible by the server, and then directly call this API with the <c>FileUrl</c> parameter.</description></item>
         /// </list>
-        /// <h3>入参</h3>
+        /// <h3>Request parameters</h3>
         /// <list type="bullet">
-        /// <item><description><b>FileUrl</b>：必填，文件的 OSS 地址。使用 Advance 方法时由 SDK 自动回填，无需手动赋值。</description></item>
-        /// <item><description><b>FileName</b>：必填，原始文件名（含后缀，如 <c>report.pdf</c>）。中转生成的 OSS 地址不携带原始文件名，后端据此确定文件后缀与展示名，因此必须显式传入。</description></item>
-        /// <item><description><b>ContentType</b>：可选，文件 MIME 类型；不传时按 <c>application/octet-stream</c> 处理。</description></item>
-        /// <item><description><b>OperatingObjectName</b>：可选，Agent 命名空间标识，决定文件入库路径。</description></item>
+        /// <item><description><b>FileUrl</b>: Required. The OSS address of the file. When you use the Advance method, the SDK automatically populates this parameter. You do not need to manually assign a value.</description></item>
+        /// <item><description><b>FileName</b>: Required. The original file name including the extension, such as <c>report.pdf</c>. The OSS address generated during transfer does not carry the original file name. The backend uses this parameter to determine the file extension and display name. Therefore, you must explicitly pass in this parameter.</description></item>
+        /// <item><description><b>ContentType</b>: Optional. The MIME type of the file. If this parameter is not specified, <c>application/octet-stream</c> is used.</description></item>
+        /// <item><description><b>OperatingObjectName</b>: Optional. The Agent namespace identifier that determines the file storage path.</description></item>
         /// </list>
-        /// <h3>出参</h3>
-        /// <para>返回 OSS 对象路径 <c>objectName</c>、入库地址 <c>fileUrl</c>、公开访问地址 <c>filePublicUrl</c>（有效期 1 小时）、文件记录 ID <c>fileRecordId</c> 等；<c>uploadSignatureUrl</c> 在本模式下恒为空。</para>
+        /// <h3>Response parameters</h3>
+        /// <para>The response includes the OSS object path <c>objectName</c>, the storage address <c>fileUrl</c>, the public access address <c>filePublicUrl</c> (valid for 1 hour), and the file record ID <c>fileRecordId</c>. The <c>uploadSignatureUrl</c> parameter is always empty in this mode.</para>
         /// </description>
         /// 
         /// <param name="request">

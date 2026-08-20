@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SyncOrgStructureRequest : TeaModel {
         /// <summary>
-        /// <para>企业标识（必须与 listAvailableConfigs 返回的 corpId 一致）</para>
+        /// <para>The enterprise identifier. This value must match the corpId returned by listAvailableConfigs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CorpId { get; set; }
 
         /// <summary>
-        /// <para>部门列表（至少包含一个根部门）</para>
+        /// <para>The department list. At least one root department must be included.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("departments")]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<SyncOrgStructureRequestDepartments> Departments { get; set; }
         public class SyncOrgStructureRequestDepartments : TeaModel {
             /// <summary>
-            /// <para>部门 ID（外部标识，客户端自行保证唯一性）</para>
+            /// <para>The department ID. This is an external identifier. The client is responsible for ensuring uniqueness.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleDeptId</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DeptId { get; set; }
 
             /// <summary>
-            /// <para>部门名称</para>
+            /// <para>The department name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DeptName { get; set; }
 
             /// <summary>
-            /// <para>排序号（数值越小越靠前）</para>
+            /// <para>The sort order. A smaller value indicates a higher priority.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Order { get; set; }
 
             /// <summary>
-            /// <para>父部门 ID（null 表示一级部门/根部门）</para>
+            /// <para>The parent department ID. A value of null indicates a top-level department or root department.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleParentDeptId</para>
@@ -71,14 +71,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>成员列表（syncMembers=true 时必须提供）</para>
+        /// <para>The member list. This parameter is required when syncMembers is set to true.</para>
         /// </summary>
         [NameInMap("members")]
         [Validation(Required=false)]
         public List<SyncOrgStructureRequestMembers> Members { get; set; }
         public class SyncOrgStructureRequestMembers : TeaModel {
             /// <summary>
-            /// <para>用户标识（SAML 场景为邮箱/UPN，需与 rbj_user_account.account_id 匹配）</para>
+            /// <para>The user identifier. In the SAML scenario, this is an email address or UPN, which must match rbj_user_account.account_id.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleAccountId</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>所属部门 ID（必须与 departments 中的 deptId 对应）</para>
+            /// <para>The department ID to which the member belongs. This value must correspond to a deptId in the departments list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleDeptId</para>
@@ -98,10 +98,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DeptId { get; set; }
 
             /// <summary>
-            /// <para>用户姓名（展示用，可选）</para>
+            /// <para>The username for display purposes. This parameter is optional.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>平台类型: saml / oauth2 / custom</para>
+        /// <para>The platform type. Valid values: saml, oauth2, or custom.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PlatformType { get; set; }
 
         /// <summary>
-        /// <para>SSO 配置 ID（SAML/OAuth2 可选：不传时按 corpId 自动推导；若存在多个 IdP 使用相同 corpId 则必须显式传入，否则报 AMBIGUOUS 错误；custom 不需要）</para>
+        /// <para>The SSO configuration ID. For SAML/OAuth2, this parameter is optional. If not specified, the value is automatically derived based on corpId. If multiple IdPs use the same corpId, you must explicitly specify this parameter. Otherwise, an AMBIGUOUS error is returned. This parameter is not required for custom.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSsoSettingsId</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SsoSettingsId { get; set; }
 
         /// <summary>
-        /// <para>是否同步成员关系（custom 模式强制为 false）</para>
+        /// <para>Specifies whether to synchronize member relationships. In custom mode, this parameter is forced to false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -141,7 +141,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? SyncMembers { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

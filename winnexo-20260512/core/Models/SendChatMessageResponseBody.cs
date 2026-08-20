@@ -9,18 +9,31 @@ using Tea;
 namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SendChatMessageResponseBody : TeaModel {
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>响应数据负载</para>
+        /// <para>The streaming response content.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>yes，i\&quot;m ready</para>
+        /// </summary>
+        [NameInMap("content")]
+        [Validation(Required=false)]
+        public string Content { get; set; }
+
+        /// <summary>
+        /// <para>The SSE event stream payload. On success, the response is a text/event-stream raw frame that must be consumed frame by frame in streaming mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -29,22 +42,41 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public object Data { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
+        [Obsolete]
         public string Message { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
+        [Obsolete]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The event type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>think</para>
+        /// </summary>
+        [NameInMap("type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

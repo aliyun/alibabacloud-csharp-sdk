@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CheckHealthResponseBody : TeaModel {
         /// <summary>
-        /// <para>认证来源: bearer / aliyun_gateway</para>
+        /// <para>The authentication source: bearer / aliyun_gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliyun_gateway</para>
@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AuthSource { get; set; }
 
         /// <summary>
+        /// <para>The caller type: user / aliyun_main / aliyun_ram / service.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>aliyun_main</para>
         /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CallerType { get; set; }
 
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -38,34 +40,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>当前请求生效的数字员工名（运营对象）；未传且租户下无数字员工时为空</para>
+        /// <para>The name of the currently effective digital employee. This value is empty if not configured.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>pcitc-magent</para>
         /// </summary>
         [NameInMap("digitalEmployeeName")]
         [Validation(Required=false)]
         public string DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>F4A9EB1C-6952-5CCC-B1DC-355576FC82A7</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>生效租户ID</para>
+        /// <para>The effective tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21577</para>
@@ -75,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? TenantId { get; set; }
 
         /// <summary>
-        /// <para>平台用户ID</para>
+        /// <para>The platform user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10001</para>

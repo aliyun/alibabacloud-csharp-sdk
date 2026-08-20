@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UploadChatFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>文件 MIME 类型</para>
+        /// <para>The content type of the file. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>image</b>: image</description></item>
+        /// <item><description><b>document</b>: general document</description></item>
+        /// <item><description><b>alidoc</b>: Alibaba document</description></item>
+        /// <item><description><b>text</b>: text</description></item>
+        /// <item><description><b>video</b>: video</description></item>
+        /// <item><description><b>audio</b>: audio</description></item>
+        /// <item><description><b>archive</b>: archive</description></item>
+        /// <item><description><b>app</b>: application</description></item>
+        /// <item><description><b>link</b>: shortcut</description></item>
+        /// <item><description><b>other</b>: other</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ContentType { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The full path name of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.pdf</para>
@@ -40,7 +52,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>文件公开访问 URL（有效期 1 小时）</para>
+        /// <para>The publicly accessible URL of the online document.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -50,7 +62,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>文件记录 ID</para>
+        /// <para>The file record ID (optional, corresponding to settings.file_record_id).</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleFileRecordId</para>
@@ -60,7 +72,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileRecordId { get; set; }
 
         /// <summary>
-        /// <para>文件 remote_url（入库路径）</para>
+        /// <para>The attachment address.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -70,14 +82,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileUrl { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>OSS 对象路径</para>
+        /// <para>The object name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -87,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ObjectName { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -97,7 +112,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>签名上传 URL（本接口为后端直传，该字段为空）</para>
+        /// <para>The signature URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>

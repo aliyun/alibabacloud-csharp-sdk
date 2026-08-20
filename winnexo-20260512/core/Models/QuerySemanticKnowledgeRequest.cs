@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class QuerySemanticKnowledgeRequest : TeaModel {
         /// <summary>
-        /// <para>数字员工名称，可先调用 listAuthorizedAgents 获取 USE 权限列表</para>
+        /// <para>The digital human name. Call listAuthorizedAgents first to retrieve the list of USE permissions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例数字员工</para>
+        /// <para>SampleDigitalHuman</para>
         /// </summary>
         [NameInMap("agentName")]
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
         /// <summary>
-        /// <para>图谱名称，可先调用 listGraphs 获取</para>
+        /// <para>The knowledge graph name. Call listGraphs first to retrieve available graphs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GraphName { get; set; }
 
         /// <summary>
-        /// <para>自然语言查询问题</para>
+        /// <para>The natural language query question.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,8 +43,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21577</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

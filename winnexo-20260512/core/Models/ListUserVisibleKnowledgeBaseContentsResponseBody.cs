@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListUserVisibleKnowledgeBaseContentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -19,32 +19,35 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of skill cards.</para>
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListUserVisibleKnowledgeBaseContentsResponseBodyItems> Items { get; set; }
         public class ListUserVisibleKnowledgeBaseContentsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>创建人名称</para>
+            /// <para>The name of the creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>John</para>
             /// </summary>
             [NameInMap("creatorName")]
             [Validation(Required=false)]
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>知识库描述</para>
+            /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>产品资料与使用说明</para>
+            /// <para>Product materials and user guide</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>目录归属类型</para>
+            /// <para>The directory type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DirectoryKind { get; set; }
 
             /// <summary>
-            /// <para>目录类型</para>
+            /// <para>The directory type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TENANT</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DirectoryType { get; set; }
 
             /// <summary>
-            /// <para>创建时间戳（毫秒）</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>修改时间戳（毫秒）</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>目录 ID 或资源 ID</para>
+            /// <para>The item ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>source_example</para>
@@ -94,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ItemId { get; set; }
 
             /// <summary>
-            /// <para>内容类型：directory 或 resource</para>
+            /// <para>The item type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>resource</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ItemType { get; set; }
 
             /// <summary>
-            /// <para>资源是否存在待审批的知识库提交记录</para>
+            /// <para>Indicates whether the resource has a pending knowledge base submission record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -114,31 +117,34 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? KbSubmissionPending { get; set; }
 
             /// <summary>
-            /// <para>更新人名称</para>
+            /// <para>The name of the modifier.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>李四</para>
+            /// <para>Jane</para>
             /// </summary>
             [NameInMap("modifierName")]
             [Validation(Required=false)]
             public string ModifierName { get; set; }
 
             /// <summary>
-            /// <para>目录或资源名称</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>产品说明.pdf</para>
+            /// <para>Product description.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The object bindings.</para>
+            /// </summary>
             [NameInMap("objectBindings")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> ObjectBindings { get; set; }
 
             /// <summary>
-            /// <para>知识库对数字员工的可见模式</para>
+            /// <para>The visibility mode of the knowledge base to digital employees.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLIC</para>
@@ -148,7 +154,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OoVisibilityMode { get; set; }
 
             /// <summary>
-            /// <para>是否为只读关联内容</para>
+            /// <para>Indicates whether the item is read-only.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -157,12 +163,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             [Validation(Required=false)]
             public bool? ReadOnly { get; set; }
 
+            /// <summary>
+            /// <para>The sharing information.</para>
+            /// </summary>
             [NameInMap("shareInfos")]
             [Validation(Required=false)]
             public List<ListUserVisibleKnowledgeBaseContentsResponseBodyItemsShareInfos> ShareInfos { get; set; }
             public class ListUserVisibleKnowledgeBaseContentsResponseBodyItemsShareInfos : TeaModel {
                 /// <summary>
-                /// <para>知识库提交审批单 ID</para>
+                /// <para>The Ray Job ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>submission_example</para>
@@ -172,7 +181,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string SubmissionId { get; set; }
 
                 /// <summary>
-                /// <para>提交人用户 ID</para>
+                /// <para>The user ID of the submitter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -182,17 +191,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public long? SubmitterId { get; set; }
 
                 /// <summary>
-                /// <para>提交人名称</para>
+                /// <para>The submitter name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>John</para>
                 /// </summary>
                 [NameInMap("submitterName")]
                 [Validation(Required=false)]
                 public string SubmitterName { get; set; }
 
                 /// <summary>
-                /// <para>目标目录 ID</para>
+                /// <para>The target directory ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dir_target</para>
@@ -202,17 +211,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string TargetDirectoryId { get; set; }
 
                 /// <summary>
-                /// <para>目标目录名称</para>
+                /// <para>The target directory name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>共享目录</para>
+                /// <para>Shared directory</para>
                 /// </summary>
                 [NameInMap("targetDirectoryName")]
                 [Validation(Required=false)]
                 public string TargetDirectoryName { get; set; }
 
                 /// <summary>
-                /// <para>目标企业知识库根目录 ID</para>
+                /// <para>The root directory ID of the target enterprise knowledge base.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dir_kb_root</para>
@@ -222,10 +231,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string TargetKbRootDirectoryId { get; set; }
 
                 /// <summary>
-                /// <para>目标企业知识库名称</para>
+                /// <para>The name of the target enterprise knowledge base.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>产品知识库</para>
+                /// <para>Product knowledge base</para>
                 /// </summary>
                 [NameInMap("targetKbRootDirectoryName")]
                 [Validation(Required=false)]
@@ -234,7 +243,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>是否已直接共享到企业知识库</para>
+            /// <para>Indicates whether shared access is allowed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -244,7 +253,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? Shared { get; set; }
 
             /// <summary>
-            /// <para>目录 FAILED 资源数</para>
+            /// <para>The number of resources in FAILED status. Returned only when listing top-level KB directories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -254,7 +263,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceFailedCount { get; set; }
 
             /// <summary>
-            /// <para>资源归属类型</para>
+            /// <para>The knowledge base affiliation type. Valid values: aliding_kb_doc (DingTalk knowledge base document), normal (common knowledge).</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -264,7 +273,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceKind { get; set; }
 
             /// <summary>
-            /// <para>目录 READY 资源数</para>
+            /// <para>The number of resources in READY status. Returned only when listing top-level KB directories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -274,7 +283,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceReadyCount { get; set; }
 
             /// <summary>
-            /// <para>资源状态；本接口只返回 READY 资源</para>
+            /// <para>The resource status. This field has a value only when itemType is resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>READY</para>
@@ -284,7 +293,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceStatus { get; set; }
 
             /// <summary>
-            /// <para>目录资源总数</para>
+            /// <para>The total number of resources under the directory and its subdirectories. Returned only when listing top-level KB directories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -294,7 +303,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceTotalCount { get; set; }
 
             /// <summary>
-            /// <para>资源类型，目录项为空</para>
+            /// <para>The data source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FILE</para>
@@ -306,14 +315,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>当前页码</para>
+        /// <para>The page number. Default value: 1. Pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -323,7 +335,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页数量</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -333,7 +345,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -343,7 +355,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>命中总数</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

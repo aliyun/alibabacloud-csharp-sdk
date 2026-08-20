@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateTenantDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>新目录描述</para>
+        /// <para>The folder description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>Sample description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>目录唯一标识</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The folder name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>SampleName.pdf</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>新父目录内部主键</para>
+        /// <para>The parent label ID. Set this parameter to -<b>1</b> for the root folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? ParentId { get; set; }
 
         /// <summary>
-        /// <para>文件 OSS URL</para>
+        /// <para>The path of the node.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The ID of the effective tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

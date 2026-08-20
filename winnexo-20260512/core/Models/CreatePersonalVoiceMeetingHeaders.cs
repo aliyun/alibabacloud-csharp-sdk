@@ -14,11 +14,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public Dictionary<string, string> CommonHeaders { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>Id of the request</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>0B6F0F99-EB17-51D5-AAC8-AD78A26E18DD</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

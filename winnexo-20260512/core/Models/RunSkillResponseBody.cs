@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class RunSkillResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>任务创建时间，ISO8601 UTC 格式</para>
+        /// <para>The task creation time in ISO 8601 UTC format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,14 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The prompt message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The current zone list is illegal.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>异步任务 ID，用于 getSkillRun 查询</para>
+        /// <para>The asynchronous task ID, used for querying with getSkillRun.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleRunId</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>实际执行的技能编码</para>
+        /// <para>The skill code that was actually executed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SkillCode { get; set; }
 
         /// <summary>
-        /// <para>技能名称</para>
+        /// <para>The skill name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SkillName { get; set; }
 
         /// <summary>
-        /// <para>任务状态：提交即返回 Running</para>
+        /// <para>The task status. Returns Running immediately upon submission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>

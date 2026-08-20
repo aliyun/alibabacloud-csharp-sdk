@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListChatSessionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>是否有更多数据</para>
+        /// <para>Indicates whether there is a next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,18 +30,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The current page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("page")]
         [Validation(Required=false)]
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数</para>
+        /// <para>The number of entries per page. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -51,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -61,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>响应数据负载</para>
+        /// <para>The list of sessions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -71,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<object> Sessions { get; set; }
 
         /// <summary>
-        /// <para>租户ID</para>
+        /// <para>The effective tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -80,6 +89,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1159</para>
+        /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]
         public int? Total { get; set; }

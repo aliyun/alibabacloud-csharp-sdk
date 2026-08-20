@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateConversationResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,51 +20,57 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>新建会话ID</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleConversationId</para>
+        /// <para>3a59769c-e631-4b48-84f3-c9bf3a8ae940</para>
         /// </summary>
         [NameInMap("conversationId")]
         [Validation(Required=false)]
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>会话创建时间戳（秒）</para>
+        /// <para>The time when the share was created.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>1784513941206</para>
         /// </summary>
         [NameInMap("createdAt")]
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The current zone list is illegal.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>A reserved field for extension use.</para>
+        /// </summary>
         [NameInMap("metadata")]
         [Validation(Required=false)]
         public Dictionary<string, object> Metadata { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>A5241B90-8FF4-565C-977A-0CE1842AED72</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>会话标题（已按调用方语言国际化）</para>
+        /// <para>The appointment title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例标题</para>
+        /// <para>Incident RCA: alert-0885feb7-3d4b-4da5-90f0-0119dfbbf555:up0shc25tp0kueo0afeobvhk81</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

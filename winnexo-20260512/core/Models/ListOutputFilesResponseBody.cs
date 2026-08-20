@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListOutputFilesResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -19,12 +19,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The output list.</para>
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListOutputFilesResponseBodyItems> Items { get; set; }
         public class ListOutputFilesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>会话 ID</para>
+            /// <para>The conversation ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleConversationId</para>
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ConversationId { get; set; }
 
             /// <summary>
-            /// <para>创建时间(ISO8601)</para>
+            /// <para>The creation time in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>更新时间(ISO8601)</para>
+            /// <para>The update time in ISO 8601 format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -54,17 +57,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The output name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>数字员工（运营对象）名称</para>
+            /// <para>The name of the digital employee (operating object).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OperatingObjectName { get; set; }
 
             /// <summary>
-            /// <para>产出 ID</para>
+            /// <para>The output ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleOutputId</para>
@@ -83,12 +86,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             [Validation(Required=false)]
             public string OutputId { get; set; }
 
+            /// <summary>
+            /// <para>The output detail list.</para>
+            /// </summary>
             [NameInMap("outputItems")]
             [Validation(Required=false)]
             public List<ListOutputFilesResponseBodyItemsOutputItems> OutputItems { get; set; }
             public class ListOutputFilesResponseBodyItemsOutputItems : TeaModel {
                 /// <summary>
-                /// <para>创建时间(ISO8601)</para>
+                /// <para>The creation time in ISO 8601 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-10-01T12:00:00Z</para>
@@ -97,12 +103,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 [Validation(Required=false)]
                 public string CreateTime { get; set; }
 
+                /// <summary>
+                /// <para>The email information. This field is present when the output type is email.</para>
+                /// </summary>
                 [NameInMap("emailInfo")]
                 [Validation(Required=false)]
                 public ListOutputFilesResponseBodyItemsOutputItemsEmailInfo EmailInfo { get; set; }
                 public class ListOutputFilesResponseBodyItemsOutputItemsEmailInfo : TeaModel {
                     /// <summary>
-                    /// <para>邮件内容</para>
+                    /// <para>The email body.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string_value</para>
@@ -112,7 +121,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public string Body { get; set; }
 
                     /// <summary>
-                    /// <para>内容类型，如 MARKDOWN/JSONML/HTML</para>
+                    /// <para>The content type, such as MARKDOWN/JSONML/HTML.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string_value</para>
@@ -122,7 +131,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public string ContentType { get; set; }
 
                     /// <summary>
-                    /// <para>recipients</para>
+                    /// <para>The recipient list.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string_value</para>
@@ -132,7 +141,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public List<string> Recipients { get; set; }
 
                     /// <summary>
-                    /// <para>邮件主题</para>
+                    /// <para>The email subject.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string_value</para>
@@ -143,32 +152,35 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 
                 }
 
+                /// <summary>
+                /// <para>The file information. This field is present when the output type is file.</para>
+                /// </summary>
                 [NameInMap("fileInfo")]
                 [Validation(Required=false)]
                 public ListOutputFilesResponseBodyItemsOutputItemsFileInfo FileInfo { get; set; }
                 public class ListOutputFilesResponseBodyItemsOutputItemsFileInfo : TeaModel {
                     /// <summary>
-                    /// <para>文件描述</para>
+                    /// <para>The file description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>示例描述</para>
+                    /// <para>Sample description</para>
                     /// </summary>
                     [NameInMap("description")]
                     [Validation(Required=false)]
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>文件名</para>
+                    /// <para>The file name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>示例名称.pdf</para>
+                    /// <para>SampleName.pdf</para>
                     /// </summary>
                     [NameInMap("name")]
                     [Validation(Required=false)]
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>文件 OSS URL</para>
+                    /// <para>The file path (OSS object key).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></para>
@@ -178,7 +190,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>文件类型，如 .pdf, .md</para>
+                    /// <para>The file type, such as .pdf or .md.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>text</para>
@@ -190,7 +202,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 }
 
                 /// <summary>
-                /// <para>数据库创建时间(ISO8601)</para>
+                /// <para>The database creation time in ISO 8601 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-10-01T12:00:00Z</para>
@@ -200,7 +212,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string GmtCreate { get; set; }
 
                 /// <summary>
-                /// <para>数据库更新时间(ISO8601)</para>
+                /// <para>The database update time in ISO 8601 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-10-01T12:00:00Z</para>
@@ -210,7 +222,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string GmtModified { get; set; }
 
                 /// <summary>
-                /// <para>产出名称</para>
+                /// <para>The output name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exampleItemName</para>
@@ -220,7 +232,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ItemName { get; set; }
 
                 /// <summary>
-                /// <para>产出明细类型: ppt/html/document/picture/slides/video/audio/email/others</para>
+                /// <para>The type of the output item. Valid values: ppt, html, document, picture, slides, video, audio, email, and others.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ppt</para>
@@ -230,7 +242,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ItemType { get; set; }
 
                 /// <summary>
-                /// <para>产出明细类型国际化展示名称</para>
+                /// <para>The internationalized display name of the output detail type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -240,7 +252,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ItemTypeDisplayName { get; set; }
 
                 /// <summary>
-                /// <para>助手消息ID，由 sendAsyncChatMessage 返回；不属于当前租户时返回 404</para>
+                /// <para>The message ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exampleMessageId</para>
@@ -250,7 +262,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string MessageId { get; set; }
 
                 /// <summary>
-                /// <para>产出明细 ID</para>
+                /// <para>The output detail ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_example_value</para>
@@ -260,7 +272,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string OutputItemId { get; set; }
 
                 /// <summary>
-                /// <para>是否开启分享</para>
+                /// <para>Indicates whether sharing is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -270,7 +282,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public bool? ShareEnabled { get; set; }
 
                 /// <summary>
-                /// <para>分享令牌</para>
+                /// <para>The share token, which is present when sharing is enabled. You can use this token to access the public share preview API.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example_share_token</para>
@@ -280,7 +292,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ShareToken { get; set; }
 
                 /// <summary>
-                /// <para>技能产出 ID</para>
+                /// <para>The skill output ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exampleSkillOutputId</para>
@@ -289,12 +301,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 [Validation(Required=false)]
                 public string SkillOutputId { get; set; }
 
+                /// <summary>
+                /// <para>The slides information. This field is present when the output type is slides.</para>
+                /// </summary>
                 [NameInMap("slidesInfo")]
                 [Validation(Required=false)]
                 public ListOutputFilesResponseBodyItemsOutputItemsSlidesInfo SlidesInfo { get; set; }
                 public class ListOutputFilesResponseBodyItemsOutputItemsSlidesInfo : TeaModel {
                     /// <summary>
-                    /// <para>已完成幻灯片数</para>
+                    /// <para>The number of completed slides.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -314,7 +329,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public string PptId { get; set; }
 
                     /// <summary>
-                    /// <para>PPT 名称</para>
+                    /// <para>The PPT name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>string_value</para>
@@ -324,7 +339,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                     public string PptName { get; set; }
 
                     /// <summary>
-                    /// <para>总幻灯片数</para>
+                    /// <para>The total number of slides.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -336,7 +351,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 }
 
                 /// <summary>
-                /// <para>任务执行 ID</para>
+                /// <para>The task execution ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exampleTaskExecutionId</para>
@@ -348,7 +363,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>产出类型: conversation/skill/task</para>
+            /// <para>The output type: <c>conversation/skill/task</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>conversation</para>
@@ -358,7 +373,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OutputType { get; set; }
 
             /// <summary>
-            /// <para>产出类型国际化展示名称</para>
+            /// <para>The internationalized display name of the output type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -368,7 +383,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OutputTypeDisplayName { get; set; }
 
             /// <summary>
-            /// <para>技能产出 ID</para>
+            /// <para>The skill output ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleSkillOutputId</para>
@@ -378,7 +393,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SkillOutputId { get; set; }
 
             /// <summary>
-            /// <para>任务 ID</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_example_value</para>
@@ -390,14 +405,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The prompt message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>当前页码</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -407,7 +425,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页数量</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -417,7 +435,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -427,7 +445,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>符合条件的产出总数</para>
+        /// <para>The total number of outputs that match the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetSkillRunRequest : TeaModel {
         /// <summary>
-        /// <para>是否附带执行日志（默认 false，仅在排查问题时建议开启）</para>
+        /// <para>Specifies whether to include execution logs. Default value: false. Enable this parameter only for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IncludeLogs { get; set; }
 
         /// <summary>
-        /// <para>runSkill 返回的异步任务 ID</para>
+        /// <para>The evaluation run ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

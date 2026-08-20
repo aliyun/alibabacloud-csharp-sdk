@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class TogglePrimaryObjectFavoriteRequest : TeaModel {
         /// <summary>
-        /// <para>操作：add-关注，remove-取消关注</para>
+        /// <para>The operation type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: Add to whitelist.</description></item>
+        /// <item><description><b>2</b>: Remove from whitelist.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>主对象业务ID列表</para>
+        /// <para>The list of primary object business IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> ObjectIds { get; set; }
 
         /// <summary>
-        /// <para>对象类型（如 customer、project）</para>
+        /// <para>The object type, such as customer. This parameter has a value when type is set to mention.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// <para>运营对象名称（如 customer_1）</para>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The ID of the effective tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

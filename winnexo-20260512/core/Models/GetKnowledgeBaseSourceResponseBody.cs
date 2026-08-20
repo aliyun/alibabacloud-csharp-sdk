@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetKnowledgeBaseSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>知识描述</para>
+        /// <para>The description of the to-do card type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>Sample description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>所属分类 ID</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>所属分类完整路径</para>
+        /// <para>The full path of the category to which the knowledge item belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryPath { get; set; }
 
         /// <summary>
-        /// <para>创建时间戳（毫秒）</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>修改时间戳（毫秒）</para>
+        /// <para>The last modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,24 +70,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? GmtModified { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>SampleName.pdf</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>知识 ID</para>
+        /// <para>The unique identifier on the business system side, that is, the business ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceId</para>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>知识 KB 归属类型：aliding_kb_doc（阿里钉知识库文档）/ normal（普通知识）</para>
+        /// <para>The knowledge base ownership type. Valid values: aliding_kb_doc (DingTalk knowledge base document) and normal (common knowledge).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -117,7 +120,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceKind { get; set; }
 
         /// <summary>
-        /// <para>知识标签（JSON 字符串列表）</para>
+        /// <para>The resource tags. This is optional and is a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -127,7 +130,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>知识类型（TEXT / FILE / ONLINE_DOC 等）</para>
+        /// <para>The type of the resource source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>ExportTaskId: the resource export ID.</para>
+        /// </description></item>
+        /// <item><description><para>TaskId: the Module execution task ID.</para>
+        /// </description></item>
+        /// <item><description><para>StatePath: the OSS path where the resource state is stored.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -137,7 +148,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>处理状态（READY / RUNNING / FAILED 等）</para>
+        /// <para>The data source status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>1</b>: online.</description></item>
+        /// <item><description><b>0</b>: offline.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -147,7 +162,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>状态附加信息（如失败原因）</para>
+        /// <para>The status message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

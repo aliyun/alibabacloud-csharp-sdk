@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateKnowledgeBaseDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>分类描述</para>
+        /// <para>The description of the to-do card type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>This is default function description by fc-deploy component</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>新建分类 ID</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>目录 KB 归属类型：normal / aliding_kb_root / aliding_kb_internal</para>
+        /// <para>The directory type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,67 +50,70 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryKind { get; set; }
 
         /// <summary>
-        /// <para>创建时间戳（毫秒）</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2025-11-14T02:18:27Z</para>
         /// </summary>
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
         public long? GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>修改时间戳（毫秒）</para>
+        /// <para>The last modification time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2026-01-19T01:48:56Z</para>
         /// </summary>
         [NameInMap("gmtModified")]
         [Validation(Required=false)]
         public long? GmtModified { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>p-toolset-89550434-4e20-4e4e-bcac-9ab81b82c5b3</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>父分类 ID；新分类挂在租户根目录下时返回 null</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleParentDirectoryId</para>
+        /// <para>wd-lxykjnnw4lyl9eq</para>
         /// </summary>
         [NameInMap("parentDirectoryId")]
         [Validation(Required=false)]
         public string ParentDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>文件 OSS URL</para>
+        /// <para>The path of the node.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></para>
+        /// <para>UVCIpI0siUski9iw</para>
         /// </summary>
         [NameInMap("path")]
         [Validation(Required=false)]
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>C474BFC7-7B11-5D92-971E-74AA82EC495B</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

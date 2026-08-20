@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class TogglePrimaryObjectFavoriteResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>该用户的关注总数（针对该对象类型）</para>
+        /// <para>The total number of follows by the user for the specified object type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,14 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? FavoriteCount { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -46,12 +49,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of results.</para>
+        /// </summary>
         [NameInMap("results")]
         [Validation(Required=false)]
         public List<TogglePrimaryObjectFavoriteResponseBodyResults> Results { get; set; }
         public class TogglePrimaryObjectFavoriteResponseBodyResults : TeaModel {
             /// <summary>
-            /// <para>操作后是否已关注</para>
+            /// <para>Indicates whether the object is followed after the operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -61,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsFavorited { get; set; }
 
             /// <summary>
-            /// <para>失败原因（成功时为 null）</para>
+            /// <para>The description of the status code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -71,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>主对象业务ID</para>
+            /// <para>The ID of the aligned object: target ID or KR ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>操作是否成功</para>
+            /// <para>Indicates whether the operation is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

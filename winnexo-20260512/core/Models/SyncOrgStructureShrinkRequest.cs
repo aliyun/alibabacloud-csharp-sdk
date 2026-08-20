@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SyncOrgStructureShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>企业标识（必须与 listAvailableConfigs 返回的 corpId 一致）</para>
+        /// <para>The enterprise identifier. This value must match the corpId returned by listAvailableConfigs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CorpId { get; set; }
 
         /// <summary>
-        /// <para>部门列表（至少包含一个根部门）</para>
+        /// <para>The department list. At least one root department must be included.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("departments")]
@@ -29,14 +29,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DepartmentsShrink { get; set; }
 
         /// <summary>
-        /// <para>成员列表（syncMembers=true 时必须提供）</para>
+        /// <para>The member list. This parameter is required when syncMembers is set to true.</para>
         /// </summary>
         [NameInMap("members")]
         [Validation(Required=false)]
         public string MembersShrink { get; set; }
 
         /// <summary>
-        /// <para>平台类型: saml / oauth2 / custom</para>
+        /// <para>The platform type. Valid values: saml, oauth2, or custom.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PlatformType { get; set; }
 
         /// <summary>
-        /// <para>SSO 配置 ID（SAML/OAuth2 可选：不传时按 corpId 自动推导；若存在多个 IdP 使用相同 corpId 则必须显式传入，否则报 AMBIGUOUS 错误；custom 不需要）</para>
+        /// <para>The SSO configuration ID. For SAML/OAuth2, this parameter is optional. If not specified, the value is automatically derived based on corpId. If multiple IdPs use the same corpId, you must explicitly specify this parameter. Otherwise, an AMBIGUOUS error is returned. This parameter is not required for custom.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSsoSettingsId</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SsoSettingsId { get; set; }
 
         /// <summary>
-        /// <para>是否同步成员关系（custom 模式强制为 false）</para>
+        /// <para>Specifies whether to synchronize member relationships. In custom mode, this parameter is forced to false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? SyncMembers { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

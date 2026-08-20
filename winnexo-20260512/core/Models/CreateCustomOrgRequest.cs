@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateCustomOrgRequest : TeaModel {
         /// <summary>
-        /// <para>自定义组织标识，格式：^[a-z0-9][a-z0-9-]{2,63}$</para>
+        /// <para>The corpId of the activated enterprise.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CorpId { get; set; }
 
         /// <summary>
-        /// <para>组织展示名称（可选，不传则与 corpId 相同）</para>
+        /// <para>The organization name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CorpName { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>692318833855074</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

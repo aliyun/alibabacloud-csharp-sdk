@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalFileRequest : TeaModel {
         /// <summary>
-        /// <para>资源描述（可选）</para>
+        /// <para>The pipeline description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>created by eventbridge</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前用户在当前数字员工下的已有个人目录</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>文件后缀名（可选，如 pdf、docx）</para>
+        /// <para>The file extension (optional, such as pdf or docx).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,28 +40,28 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileExt { get; set; }
 
         /// <summary>
-        /// <para>原始文件名（可选，含后缀）</para>
+        /// <para>The file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example.pdf</para>
+        /// <para>0250705120003-2026-04-28-19-22-20.wav</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>文件 OSS 持久化地址（必填，对应 settings.file_path）</para>
+        /// <para>The file path.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>bi/batch-query-service.app.yaml</para>
         /// </summary>
         [NameInMap("filePath")]
         [Validation(Required=false)]
         public string FilePath { get; set; }
 
         /// <summary>
-        /// <para>文件公开访问 URL（可选，带签名，对应 settings.file_public_url）</para>
+        /// <para>The publicly accessible URL of the Alibaba DingTalk online document.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>文件记录 ID（可选，对应 settings.file_record_id）</para>
+        /// <para>The file record ID (optional, corresponding to settings.file_record_id).</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleFileRecordId</para>
@@ -81,18 +81,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileRecordId { get; set; }
 
         /// <summary>
-        /// <para>资源显示名称</para>
+        /// <para>The pipeline name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>sys_first_new_v3_b</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</para>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -102,10 +102,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>1798284341201499</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

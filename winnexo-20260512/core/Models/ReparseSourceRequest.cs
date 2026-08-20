@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ReparseSourceRequest : TeaModel {
         /// <summary>
-        /// <para>是否同步等待重新解析完成；默认 false，异步入队</para>
+        /// <para>Specifies whether to synchronously wait for the re-parsing to complete. Default value: false, which indicates asynchronous queuing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? ForceSync { get; set; }
 
         /// <summary>
-        /// <para>待重新解析的数据源 ID（租户内唯一）</para>
+        /// <para>The ID of the data source to re-parse. This ID is unique within the tenant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this value explicitly by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

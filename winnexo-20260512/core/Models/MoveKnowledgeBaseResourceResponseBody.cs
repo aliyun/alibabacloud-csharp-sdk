@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class MoveKnowledgeBaseResourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>目标知识库 ID（echo 回入参）</para>
+        /// <para>The target knowledge base ID. This value is echoed from the request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleKnowledgeId</para>
@@ -30,24 +30,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>375701FC-2FB9-5782-BE8F-A3F5E2F2158C</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>源目录 ID（echo 回入参）</para>
+        /// <para>The source directory ID. This value is echoed from the request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceDirectoryId</para>
@@ -57,17 +60,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>资源 ID（echo 回入参）</para>
+        /// <para>The unique identifier on the business system side, that is, the business ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleSourceId</para>
+        /// <para>2000358</para>
         /// </summary>
         [NameInMap("sourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>目标目录 ID（echo 回入参）</para>
+        /// <para>The target directory ID. This value is echoed from the request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleTargetDirectoryId</para>

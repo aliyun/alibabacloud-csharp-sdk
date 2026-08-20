@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>成员列表</para>
+        /// <para>The user information.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListUsersResponseBodyItems> Items { get; set; }
         public class ListUsersResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>WINNEXO 登录账号</para>
+            /// <para>The account ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleAccountId</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>用户显示名称</para>
+            /// <para>The display name of the tool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>加入租户时间</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -57,7 +57,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>启用/停用状态</para>
+            /// <para>Indicates whether the account is activated:</para>
+            /// <list type="bullet">
+            /// <item><description>1: Activated.</description></item>
+            /// <item><description>0: Not activated.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsActive { get; set; }
 
             /// <summary>
-            /// <para>最后登录时间</para>
+            /// <para>The last logon time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-01T12:00:00Z</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string LastLoginTime { get; set; }
 
             /// <summary>
-            /// <para>用户拥有的系统角色 code 列表</para>
+            /// <para>The list of new system role codes (full replacement, at least one role must be included). Valid values: SUPER_ADMIN / SYSTEM_ADMIN / SEMANTIC_ADMIN / SKILL_ADMIN / KB_ADMIN / AGENT_ADMIN / APPLICATION_USER.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> RoleCodes { get; set; }
 
             /// <summary>
-            /// <para>用户ID</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -99,14 +103,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>当前页码</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -116,7 +123,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页数量</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -126,7 +133,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -136,7 +143,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>符合条件的总记录数</para>
+        /// <para>The total number of data entries in the project.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

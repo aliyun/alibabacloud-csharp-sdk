@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class DeleteTenantDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>删除模式：reject / recursive / move_to_root</para>
+        /// <para>The deletion mode: reject / recursive / move_to_root.</para>
         /// 
         /// <b>Example:</b>
         /// <para>reject</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DeleteMode { get; set; }
 
         /// <summary>
-        /// <para>目录唯一标识</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID that takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

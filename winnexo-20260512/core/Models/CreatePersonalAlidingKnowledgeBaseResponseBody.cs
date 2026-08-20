@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalAlidingKnowledgeBaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>新建知识库根目录 ID</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>创建时间 ISO8601</para>
+        /// <para>The creation time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>2025-11-14T02:18:27Z</para>
         /// </summary>
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>知识库 URL（echo 回入参，便于调用方对齐）</para>
+        /// <para>The knowledge base URL (echoed from the request parameter for caller alignment).</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -50,24 +50,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string KbUrl { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The name of the AI assistant.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>p-toolset-3dcef7ca-31b9-4d1c-8692-1ef03099cad3</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>所属数字员工名称（echo 回入参，可为 null）</para>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -77,20 +80,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>E68654BD-F7BA-5837-8686-5645D739A47C</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>知识库根目录状态（创建后为 RUNNING；后台同步完成后转 READY 或 FAILED）</para>
+        /// <para>The status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>200: Success.</description></item>
+        /// <item><description>500: Failure.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>READY</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

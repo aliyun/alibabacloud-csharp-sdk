@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class MoveResourceRequest : TeaModel {
         /// <summary>
-        /// <para>源目录 ID（资源当前所在的个人目录）</para>
+        /// <para>The source directory ID, which is the personal directory where the resource currently resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,18 +21,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>待移动的资源 ID</para>
+        /// <para>The ID of the resource to be moved.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleSourceId</para>
+        /// <para>8</para>
         /// </summary>
         [NameInMap("sourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>目标目录 ID（资源即将移动到的个人目录）</para>
+        /// <para>The target directory ID, which is the personal directory to which the resource will be moved.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,10 +43,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TargetDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID. You can view the tenant ID by logging on to the MaxCompute console and choosing <b>Tenant Management</b> &gt; <b>Tenant Properties</b> in the left-side navigation pane.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>PiPklI1iSRTm6VFFqlY9VzbgiEiE</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

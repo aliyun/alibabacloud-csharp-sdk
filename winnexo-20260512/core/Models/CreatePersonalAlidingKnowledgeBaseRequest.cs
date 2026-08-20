@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalAlidingKnowledgeBaseRequest : TeaModel {
         /// <summary>
-        /// <para>目标个人目录 ID；不传时自动绑定到用户默认根目录，传入时必须是当前用户的已有个人目录（PERSONAL）</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>知识库显示名称；不传时由后台从远程拉取的根节点名称回填</para>
+        /// <para>The display name of the knowledge base. If not provided, the name is populated from the root node name pulled from the remote source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string KbName { get; set; }
 
         /// <summary>
-        /// <para>阿里钉知识库的可公开访问 URL</para>
+        /// <para>The publicly accessible URL of the AliDing knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,25 +40,28 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string KbUrl { get; set; }
 
+        /// <summary>
+        /// <para>The object bindings.</para>
+        /// </summary>
         [NameInMap("objectBindings")]
         [Validation(Required=false)]
         public List<CreatePersonalAlidingKnowledgeBaseRequestObjectBindings> ObjectBindings { get; set; }
         public class CreatePersonalAlidingKnowledgeBaseRequestObjectBindings : TeaModel {
             /// <summary>
-            /// <para>绑定对象 ID</para>
+            /// <para>The ID of the recommended item, which can be a <b>feedId</b> or a micro-application ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>exampleObjectId</para>
+            /// <para>2676</para>
             /// </summary>
             [NameInMap("objectId")]
             [Validation(Required=false)]
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>绑定对象类型，例如 CUSTOMER / OPPORTUNITY</para>
+            /// <para>The advanced field type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>table</para>
             /// </summary>
             [NameInMap("objectType")]
             [Validation(Required=false)]
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>Agent 命名空间标识，可选</para>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -76,12 +79,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string OperatingObjectName { get; set; }
 
+        /// <summary>
+        /// <para>The synchronization settings.</para>
+        /// </summary>
         [NameInMap("syncConfig")]
         [Validation(Required=false)]
         public CreatePersonalAlidingKnowledgeBaseRequestSyncConfig SyncConfig { get; set; }
         public class CreatePersonalAlidingKnowledgeBaseRequestSyncConfig : TeaModel {
             /// <summary>
-            /// <para>cron 表达式；enabled=true 时必填，enabled=false 时忽略</para>
+            /// <para>The cron expression for timed scheduling.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -91,10 +97,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Cron { get; set; }
 
             /// <summary>
-            /// <para>是否启用定时同步</para>
+            /// <para>Specifies whether to enable synchronization.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>False</para>
             /// </summary>
             [NameInMap("enabled")]
             [Validation(Required=false)]
@@ -103,10 +109,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>PiPklI1iSRTm6VFFqlY9VzbgiEiE</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

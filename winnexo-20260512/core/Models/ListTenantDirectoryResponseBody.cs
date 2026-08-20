@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListTenantDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -19,12 +19,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The file information.</para>
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListTenantDirectoryResponseBodyItems> Items { get; set; }
         public class ListTenantDirectoryResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>创建人名称</para>
+            /// <para>The nickname of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -34,17 +37,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>目录描述</para>
+            /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例描述</para>
+            /// <para>Sample description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>创建时间戳</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -54,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>修改时间戳</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>目录 ID 或资源 ID</para>
+            /// <para>The signing record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleItemId</para>
@@ -74,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ItemId { get; set; }
 
             /// <summary>
-            /// <para>内容类型：directory 或 resource</para>
+            /// <para>The data type (group, user, or role).</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -84,21 +87,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ItemType { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
+            /// <summary>
+            /// <para>The object bindings.</para>
+            /// </summary>
             [NameInMap("objectBindings")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> ObjectBindings { get; set; }
 
             /// <summary>
-            /// <para>根知识库下失败资源数</para>
+            /// <para>The number of resources with the FAILED status. This field is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -108,7 +114,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceFailedCount { get; set; }
 
             /// <summary>
-            /// <para>根知识库下成功资源数</para>
+            /// <para>The number of resources with the READY status. This field is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -118,7 +124,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceReadyCount { get; set; }
 
             /// <summary>
-            /// <para>资源解析状态</para>
+            /// <para>The resource status. This field has a value only when itemType is set to resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -128,7 +134,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceStatus { get; set; }
 
             /// <summary>
-            /// <para>根知识库下资源总数</para>
+            /// <para>The total number of resources in the directory and its subdirectories. This field is returned only when the top-level directory list of the knowledge base is queried.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceTotalCount { get; set; }
 
             /// <summary>
-            /// <para>资源类型</para>
+            /// <para>The data source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -150,14 +156,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>当前页码</para>
+        /// <para>The page number. Default value: 1. Minimum value: 1. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -167,7 +176,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页数量</para>
+        /// <para>The number of entries per page. Default value: 100. Maximum value: 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -177,7 +186,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -187,7 +196,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>内容总数</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

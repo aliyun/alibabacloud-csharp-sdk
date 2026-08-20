@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ReplaceKnowledgeBaseSourceFileRequest : TeaModel {
         /// <summary>
-        /// <para>新文件名（可选；不传或空字符串时保持原文件名）</para>
+        /// <para>The new file name. This parameter is optional. If this parameter is not provided or set to an empty string, the original file name is retained.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.pdf</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>新文件的 OSS 持久化地址（由上传签名接口返回）</para>
+        /// <para>The OSS persistent storage address of the replacement file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePath { get; set; }
 
         /// <summary>
-        /// <para>新文件的公开访问 URL（可能携带临时签名）</para>
+        /// <para>The public access URL of the new file. The URL may contain a temporary signature.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>新文件的文件记录 ID</para>
+        /// <para>The file record ID of the replacement file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileRecordId { get; set; }
 
         /// <summary>
-        /// <para>是否同步等待重新解析完成；默认 false，异步入队</para>
+        /// <para>Specifies whether to synchronously wait for re-parsing to complete. Default value: false, which indicates asynchronous queuing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? ForceSync { get; set; }
 
         /// <summary>
-        /// <para>待替换的企业知识库 FILE 数据源 ID</para>
+        /// <para>The ID of the FILE data source in the enterprise knowledge base to be replaced.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this parameter explicitly by using --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

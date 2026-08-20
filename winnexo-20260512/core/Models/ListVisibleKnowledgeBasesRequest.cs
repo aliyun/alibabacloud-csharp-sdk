@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListVisibleKnowledgeBasesRequest : TeaModel {
         /// <summary>
-        /// <para>数字员工名称（运营对象 name）</para>
+        /// <para>The name of the digital employee (operating object name).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>1729094555111072</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetScheduledTaskUnderstandDetailShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>所属协作群组 ID（如 cg_101）；群任务理解时传入（调用者需为有效群成员），候选技能额外并入群绑定技能</para>
+        /// <para>The ID of the collaboration group to which the task belongs (such as cg_101). If this parameter is specified, a group space task is created (the caller must be a valid group member). If this parameter is left empty, a personal task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleCollaborationGroupId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>数字员工名称列表，用于过滤可用技能；必传（传空列表表示仅用租户 global 技能）</para>
+        /// <para>The name of the current effective digital employee. This parameter is empty if not configured.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,12 +30,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string DigitalEmployeeNameShrink { get; set; }
 
+        /// <summary>
+        /// <para>The segments.</para>
+        /// </summary>
         [NameInMap("segments")]
         [Validation(Required=false)]
         public string SegmentsShrink { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The ID of the effective tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -45,8 +48,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>自然语言任务描述</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The natural language task description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

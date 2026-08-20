@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetScheduledTaskExecutionRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,47 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>Indicates whether more data is available.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("hasMore")]
+        [Validation(Required=false)]
+        public bool? HasMore { get; set; }
+
+        /// <summary>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The current zone list is illegal.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The current page number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("page")]
+        [Validation(Required=false)]
+        public int? Page { get; set; }
+
+        /// <summary>
+        /// <para>The number of tasks per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
+        [NameInMap("pageSize")]
+        [Validation(Required=false)]
+        public int? PageSize { get; set; }
+
+        /// <summary>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -36,12 +69,25 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The task list.</para>
+        /// </summary>
         [NameInMap("tasks")]
         [Validation(Required=false)]
         public List<GetScheduledTaskExecutionRecordsResponseBodyTasks> Tasks { get; set; }
         public class GetScheduledTaskExecutionRecordsResponseBodyTasks : TeaModel {
             /// <summary>
-            /// <para>Cron 表达式</para>
+            /// <para>The ID of the collaboration group to which the task belongs. If empty, the task is a personal task.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>exampleCollaborationGroupId</para>
+            /// </summary>
+            [NameInMap("collaborationGroupId")]
+            [Validation(Required=false)]
+            public string CollaborationGroupId { get; set; }
+
+            /// <summary>
+            /// <para>The cron expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -51,17 +97,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>任务简述</para>
+            /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例描述</para>
+            /// <para>Sample description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>是否公开</para>
+            /// <para>Indicates whether public access is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -71,17 +117,32 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsOpen { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The execution model tier. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>flagship: flagship.</description></item>
+            /// <item><description>standard: standard.</description></item>
+            /// <item><description>quick: lightweight.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>standard</para>
+            /// </summary>
+            [NameInMap("model")]
+            [Validation(Required=false)]
+            public string Model { get; set; }
+
+            /// <summary>
+            /// <para>The name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>任务 ID</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleTaskId</para>
@@ -90,12 +151,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// <para>The timeline.</para>
+            /// </summary>
             [NameInMap("timeline")]
             [Validation(Required=false)]
             public List<GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline> Timeline { get; set; }
             public class GetScheduledTaskExecutionRecordsResponseBodyTasksTimeline : TeaModel {
                 /// <summary>
-                /// <para>实际执行时间（仅历史记录）</para>
+                /// <para>The actual working hours, in hours.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-10-01T12:00:00Z</para>
@@ -105,7 +169,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ActualTime { get; set; }
 
                 /// <summary>
-                /// <para>执行记录展示名称</para>
+                /// <para>The name of the schedule location.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -115,7 +179,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>错误信息（仅失败记录）</para>
+                /// <para>The error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -125,7 +189,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>执行记录 ID（历史记录才有）</para>
+                /// <para>The execution record ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>exampleExecutionId</para>
@@ -135,7 +199,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ExecutionId { get; set; }
 
                 /// <summary>
-                /// <para>执行输出内容（仅历史记录）</para>
+                /// <para>Indicates whether the execution record has been archived due to expiration.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("isExpired")]
+                [Validation(Required=false)]
+                public bool? IsExpired { get; set; }
+
+                /// <summary>
+                /// <para>The execution output content (historical records only).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>string_value</para>
@@ -145,7 +219,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string OutputContent { get; set; }
 
                 /// <summary>
-                /// <para>计划执行时间 ISO8601</para>
+                /// <para>The timed scheduling time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2023-10-01T12:00:00Z</para>
@@ -155,7 +229,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
                 public string ScheduledTime { get; set; }
 
                 /// <summary>
-                /// <para>状态：PENDING/RUNNING/SUCCESS/FAILED/SCHEDULED</para>
+                /// <para>The final status of the message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>READY</para>
@@ -167,7 +241,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             }
 
             /// <summary>
-            /// <para>时区</para>
+            /// <para>The time zone.</para>
+            /// <remarks>
+            /// <para>Default value: UTC+8.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>Asia/Shanghai</para>
@@ -177,7 +254,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Timezone { get; set; }
 
             /// <summary>
-            /// <para>触发类型 cron/manual/event</para>
+            /// <para>The trigger type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Manual: manually executed.</description></item>
+            /// <item><description>Cron: triggered by a schedule.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -187,6 +268,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string TriggerType { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The total number of tasks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("total")]
+        [Validation(Required=false)]
+        public long? Total { get; set; }
 
     }
 

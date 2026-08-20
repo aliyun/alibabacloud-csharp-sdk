@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAgentsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>租户全量数字员工列表（含停用，按名称字母序）</para>
+        /// <para>The list of skill cards.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListAgentsResponseBodyItems> Items { get; set; }
         public class ListAgentsResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>使用权限授权模式：SPECIFIED_USERS=指定用户 / ALL_USERS=所有用户；未设置时为 null</para>
+            /// <para>The authentication mode.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string AuthMode { get; set; }
 
             /// <summary>
-            /// <para>数字员工显示名称</para>
+            /// <para>The display name of the tool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>启用/停用状态</para>
+            /// <para>Indicates whether the account is activated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsActive { get; set; }
 
             /// <summary>
-            /// <para>数字员工名称（唯一标识）</para>
+            /// <para>The name of the digital employee.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -69,14 +69,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The prompt message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

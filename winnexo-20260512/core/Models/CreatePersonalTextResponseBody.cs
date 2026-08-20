@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalTextResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>SUCCESS indicates success. In case of failure, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>绑定的目录 ID（请求体传入时 echo 回；缺省走默认根目录时为 null）</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,67 +30,80 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>创建时间 ISO8601</para>
+        /// <para>The creation time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>2026-05-22 18:18:56</para>
         /// </summary>
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Instance i-0jl6hlcbtuo4eqg7puni not found</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The updated filter view name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>p-toolset-3dcef7ca-31b9-4d1c-8692-1ef03099cad3</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>04EE99E6-A0D9-5B04-81D1-7BEC0CB0AFDF</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>资源 scope，固定为 PERSONAL</para>
+        /// <para>The travel scale of the integration partner.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PERSONAL</para>
+        /// <para>read:user,read:repo,write:repo,read:org,read:group</para>
         /// </summary>
         [NameInMap("scope")]
         [Validation(Required=false)]
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>新建资源 ID</para>
+        /// <para>The source ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleSourceId</para>
+        /// <para>2000398</para>
         /// </summary>
         [NameInMap("sourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>资源状态（创建链路初始多为 PENDING；on_create 失败则为 FAILED）</para>
+        /// <para>The filter status.</para>
+        /// <list type="bullet">
+        /// <item><description><para>0: All</para>
+        /// </description></item>
+        /// <item><description><para>1: Unconfirmed</para>
+        /// </description></item>
+        /// <item><description><para>3: Ignored</para>
+        /// </description></item>
+        /// <item><description><para>4: Rejected</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>READY</para>
+        /// <para>{\&quot;observedGeneration\&quot;: 4, \&quot;servicesInstances\&quot;: {}, \&quot;observedTime\&quot;: \&quot;2025-10-31T03:48:27Z\&quot;, \&quot;servicesWithPendingChanges\&quot;: [], \&quot;latestEnvironmentDeploymentName\&quot;: \&quot;manual-1761882507097-Eu1vIP\&quot;}</para>
         /// </summary>
         [NameInMap("status")]
         [Validation(Required=false)]

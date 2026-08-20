@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class MoveKnowledgeBaseResourceRequest : TeaModel {
         /// <summary>
-        /// <para>目标知识库 ID</para>
+        /// <para>Not supported. This parameter is ignored.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>源目录 ID（资源当前所在的企业知识库目录）</para>
+        /// <para>The source directory ID. This is the enterprise knowledge base directory where the resource currently resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,18 +32,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>待移动的资源 ID</para>
+        /// <para>The data source ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleSourceId</para>
+        /// <para>2000627</para>
         /// </summary>
         [NameInMap("sourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>目标目录 ID（资源即将移动到的企业知识库目录）</para>
+        /// <para>The target directory ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TargetDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>1729094555111072</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

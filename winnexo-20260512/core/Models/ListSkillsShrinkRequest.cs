@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListSkillsShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>绑定状态：BOUND(已绑定) / UNBOUND(未绑定的全局技能)；必须与 operatingObjectName 同时传入</para>
+        /// <para>The binding status. Valid values: BOUND (bound) and UNBOUND (unbound global skills). Must be specified together with operatingObjectName.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BOUND</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BindStatus { get; set; }
 
         /// <summary>
-        /// <para>技能筛选维度：ALL/BUILTIN/CUSTOM/DRAFT/ALL_WITH_DRAFTS</para>
+        /// <para>The filter expression type.</para>
+        /// <list type="bullet">
+        /// <item><description>SQL: SQL-based filtering.</description></item>
+        /// <item><description>TAG: Tag-based filtering.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
@@ -30,24 +34,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilterType { get; set; }
 
         /// <summary>
-        /// <para>按技能名称或描述模糊匹配</para>
+        /// <para>The search keyword. Supports fuzzy search by API name or exact search by API ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例关键词</para>
+        /// <para>SampleKeyword</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>数字员工名称；必须与 bindStatus 同时传入</para>
+        /// <para>The digital employee name. Used to calculate the CodeAgent allowedSkills whitelist based on binding relationships.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>11111</para>
         /// </summary>
         [NameInMap("operatingObjectName")]
         [Validation(Required=false)]
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>页码，从 1 开始</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -57,14 +64,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>每页数量，范围 1-100</para>
+        /// <para>The number of entries per page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
         /// </summary>
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>按标签过滤，数组任一命中即匹配</para>
+        /// <para>The tag filtering parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -74,7 +84,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

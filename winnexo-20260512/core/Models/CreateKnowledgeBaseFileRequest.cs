@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateKnowledgeBaseFileRequest : TeaModel {
         /// <summary>
-        /// <para>资源描述（可选）</para>
+        /// <para>The description of the alias.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>hangzhou-release-version-3-eventbridge-numeric-queue-fix-20260529</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>目标企业知识库目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前租户下已有的企业知识库目录</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>文件后缀名（可选，如 pdf、docx）</para>
+        /// <para>The file name extension. This parameter is optional. Examples: pdf and docx.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,28 +40,28 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileExt { get; set; }
 
         /// <summary>
-        /// <para>原始文件名（可选，含后缀）</para>
+        /// <para>The file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>example.pdf</para>
+        /// <para>BasicSimilarityScorer.cava</para>
         /// </summary>
         [NameInMap("fileName")]
         [Validation(Required=false)]
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>文件 OSS 持久化地址（必填，对应 settings.file_path）</para>
+        /// <para>The file path.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>bi/batch-query-service.app.yaml</para>
         /// </summary>
         [NameInMap("filePath")]
         [Validation(Required=false)]
         public string FilePath { get; set; }
 
         /// <summary>
-        /// <para>文件公开访问 URL（可选，带签名，对应 settings.file_public_url）</para>
+        /// <para>The publicly accessible URL of the DingTalk online document.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilePublicUrl { get; set; }
 
         /// <summary>
-        /// <para>文件记录 ID（可选，对应 settings.file_record_id）</para>
+        /// <para>The file record ID. This parameter is optional and corresponds to settings.file_record_id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleFileRecordId</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileRecordId { get; set; }
 
         /// <summary>
-        /// <para>知识库 ID（可选，透传给 document_agent）</para>
+        /// <para>Not supported. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleKnowledgeId</para>
@@ -91,18 +91,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string KnowledgeId { get; set; }
 
         /// <summary>
-        /// <para>资源显示名称</para>
+        /// <para>The name of the AI assistant.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>oklabs_tongyici</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>数字员工名称（运营对象 name，可选）</para>
+        /// <para>The name of the digital employee (operating object name). This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>资源标签（可选，JSON 字符串列表，如 [&quot;tagA&quot;,&quot;tagB&quot;]）</para>
+        /// <para>The resource labels. This parameter is optional. Specify a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -122,10 +122,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>692318833855074</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

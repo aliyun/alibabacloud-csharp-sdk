@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListUserVisibleKnowledgeBasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -19,12 +19,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The result list.
+        /// Maximum size:
+        ///     50</para>
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListUserVisibleKnowledgeBasesResponseBodyItems> Items { get; set; }
         public class ListUserVisibleKnowledgeBasesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>知识库创建人用户 ID</para>
+            /// <para>The user ID of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -34,27 +39,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? CreatorId { get; set; }
 
             /// <summary>
-            /// <para>知识库创建人名称</para>
+            /// <para>The name of the creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>John</para>
             /// </summary>
             [NameInMap("creatorName")]
             [Validation(Required=false)]
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>知识库描述</para>
+            /// <para>The description of the knowledge base.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>产品资料与使用说明</para>
+            /// <para>Product materials and usage instructions</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>知识库根目录唯一标识</para>
+            /// <para>The directory ID of the enterprise knowledge base.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dir_example</para>
@@ -64,7 +69,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// <para>目录归属类型</para>
+            /// <para>The directory type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>normal</para>
@@ -74,7 +79,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DirectoryKind { get; set; }
 
             /// <summary>
-            /// <para>目录类型</para>
+            /// <para>The directory type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TENANT</para>
@@ -84,7 +89,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DirectoryType { get; set; }
 
             /// <summary>
-            /// <para>创建时间戳（毫秒）</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -94,7 +99,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>修改时间戳（毫秒）</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -104,10 +109,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>知识库名称</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>产品知识库</para>
+            /// <para>Product Knowledge Base</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
@@ -116,14 +121,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The current zone list is illegal.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -133,7 +141,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>知识库总数</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetGraphSchemaRequest : TeaModel {
         /// <summary>
-        /// <para>图谱名称，可先调用 listGraphs 获取</para>
+        /// <para>The knowledge graph name. Call listGraphs to obtain this value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,8 +21,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GraphName { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The effective tenant ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>21577</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

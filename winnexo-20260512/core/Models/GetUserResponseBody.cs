@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>WINNEXO 登录账号</para>
+        /// <para>The account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleAccountId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>用户显示名称</para>
+        /// <para>The display name of the account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>加入租户时间</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,7 +50,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>启用/停用状态</para>
+        /// <para>Indicates whether the account is activated. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: Activated.</description></item>
+        /// <item><description><b>false</b>: Not activated.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsActive { get; set; }
 
         /// <summary>
-        /// <para>最后登录时间</para>
+        /// <para>The last logon time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -70,14 +74,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string LastLoginTime { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -87,7 +94,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>用户拥有的系统角色 code 列表</para>
+        /// <para>The list of system role codes (full replacement, must contain at least one role). Valid values: SUPER_ADMIN, SYSTEM_ADMIN, SEMANTIC_ADMIN, SKILL_ADMIN, KB_ADMIN, AGENT_ADMIN, and APPLICATION_USER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -97,7 +104,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> RoleCodes { get; set; }
 
         /// <summary>
-        /// <para>用户所属用户组ID列表</para>
+        /// <para>The list of user group IDs to which the user belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -107,7 +114,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> UserGroupIds { get; set; }
 
         /// <summary>
-        /// <para>WINNEXO 平台用户ID</para>
+        /// <para>The WINNEXO platform user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

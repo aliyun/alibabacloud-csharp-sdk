@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAvailableConfigsResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>可用的组织同步配置列表</para>
+        /// <para>The list of queried Logtail configurations.</para>
         /// </summary>
         [NameInMap("configs")]
         [Validation(Required=false)]
         public List<ListAvailableConfigsResponseBodyConfigs> Configs { get; set; }
         public class ListAvailableConfigsResponseBodyConfigs : TeaModel {
             /// <summary>
-            /// <para>企业标识（wecom=corpId, saml=idpEntityId, oauth2=clientId, custom=客户自定义）。注意：OAuth2 多 IdP 配置使用相同 clientId 时，需在 syncOrgStructure 中显式传 ssoSettingsId</para>
+            /// <para>The enterprise ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleCorpId</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CorpId { get; set; }
 
             /// <summary>
-            /// <para>企业展示名称</para>
+            /// <para>The organization name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CorpName { get; set; }
 
             /// <summary>
-            /// <para>平台类型: wecom / saml / oauth2 / custom</para>
+            /// <para>The platform type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string PlatformType { get; set; }
 
             /// <summary>
-            /// <para>SSO 配置 ID（仅 SAML/OAuth2/WeCom 有值，custom 为 null）</para>
+            /// <para>The SSO configuration ID. This field has a value only for SAML, OAuth2, or WeCom types. The value is null for custom types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleSsoSettingsId</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SsoSettingsId { get; set; }
 
             /// <summary>
-            /// <para>SSO 配置名称（仅 SAML/OAuth2/WeCom 有值，custom 为 null）</para>
+            /// <para>The SSO configuration name. This field has a value only for SAML, OAuth2, or WeCom types. The value is null for custom types.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -79,14 +79,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

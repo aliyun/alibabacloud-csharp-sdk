@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class RetryKnowledgeBaseFailedSourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The business status code. A value of 200 indicates success. A failure returns a backend error code (ERR.* / InvalidParameter.*).</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>企业知识库目录 ID</para>
+        /// <para>The enterprise knowledge base directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>成功入队重试的数量</para>
+        /// <para>The number of resources successfully enqueued for retry.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? EnqueuedCount { get; set; }
 
         /// <summary>
-        /// <para>enqueuedIds</para>
+        /// <para>enqueuedIds。</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> EnqueuedIds { get; set; }
 
         /// <summary>
-        /// <para>目录下失败资源总数</para>
+        /// <para>The total number of failed resources under the directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -59,22 +59,25 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public long? FailedCount { get; set; }
 
+        /// <summary>
+        /// <para>The list of failed data sources.</para>
+        /// </summary>
         [NameInMap("failedSources")]
         [Validation(Required=false)]
         public List<RetryKnowledgeBaseFailedSourcesResponseBodyFailedSources> FailedSources { get; set; }
         public class RetryKnowledgeBaseFailedSourcesResponseBodyFailedSources : TeaModel {
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>数据源 ID</para>
+            /// <para>The data source ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleSourceId</para>
@@ -84,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SourceId { get; set; }
 
             /// <summary>
-            /// <para>数据源类型</para>
+            /// <para>The data source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -96,14 +99,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The error description. This value is empty on success.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -113,7 +119,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>跳过（非 FAILED 状态）的数量</para>
+        /// <para>The number of resources skipped because they are not in FAILED status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

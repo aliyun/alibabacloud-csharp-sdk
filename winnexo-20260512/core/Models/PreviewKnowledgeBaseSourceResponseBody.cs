@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class PreviewKnowledgeBaseSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>文本内容（CONTENT类型使用）</para>
+        /// <para>The text content. This is used for the CONTENT type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例内容</para>
+        /// <para>Sample content</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>文件扩展名（OSS_IMM类型使用）</para>
+        /// <para>The file name extension. This is used for the OSS_IMM type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileExt { get; set; }
 
         /// <summary>
-        /// <para>文件名（OSS_IMM类型使用）</para>
+        /// <para>The file name. This is used for the OSS_IMM type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.pdf</para>
@@ -50,14 +50,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>预览类型：OSS_IMM / IMAGE / AUDIO / VIDEO / HTML / DING_TALK / VOICE_MEETING / CONTENT</para>
+        /// <para>The preview type. Valid values: OSS_IMM, IMAGE, AUDIO, VIDEO, HTML, DING_TALK, VOICE_MEETING, CONTENT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS_IMM</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PreviewType { get; set; }
 
         /// <summary>
-        /// <para>预览URL（OSS_IMM、DING_TALK、VOICE_MEETING使用）</para>
+        /// <para>The preview URL. This is used for the OSS_IMM, DING_TALK, and VOICE_MEETING types.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PreviewUrl { get; set; }
 
         /// <summary>
-        /// <para>公开下载URL（可供下载的文件URL）</para>
+        /// <para>The public download URL of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PublicUrl { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>

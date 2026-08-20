@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>SUCCESS indicates success. In case of failure, the corresponding error type is returned, such as ERR_BAD_REQUEST, ERR_VALIDATION_FAILED, or ERR_INTERNAL_SERVER_ERROR.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>目录描述</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>PublicApplication</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>新建目录 ID</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>目录 KB 归属类型：normal / aliding_kb_root / aliding_kb_internal</para>
+        /// <para>The folder type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,44 +50,47 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryKind { get; set; }
 
         /// <summary>
-        /// <para>创建时间戳（毫秒）</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2026-03-04 13:54:52</para>
         /// </summary>
         [NameInMap("gmtCreate")]
         [Validation(Required=false)]
         public long? GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>修改时间戳（毫秒）</para>
+        /// <para>The last modification time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2025-11-14T02:18:27Z</para>
         /// </summary>
         [NameInMap("gmtModified")]
         [Validation(Required=false)]
         public long? GmtModified { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The name of the worksheet.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>conn_ip_101</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>所属数字员工名称</para>
+        /// <para>The name of the digital human (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -97,30 +100,30 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>父目录 ID（service 若回填默认根目录，这里返回回填后的父目录 ID）</para>
+        /// <para>The folder ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleParentDirectoryId</para>
+        /// <para>wd-lxykjnnw4lyl9eq</para>
         /// </summary>
         [NameInMap("parentDirectoryId")]
         [Validation(Required=false)]
         public string ParentDirectoryId { get; set; }
 
         /// <summary>
-        /// <para>文件 OSS URL</para>
+        /// <para>The path.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></para>
+        /// <para>oss://clg-paimon-4a00f1ac43464714b86fb54ca41a84c9/db-abc73646-6a08-4b96-820f-3d1d547a1e3b.db/tbl-c8a33522-5398-4f8e-9a2a-fba1efad94d1</para>
         /// </summary>
         [NameInMap("path")]
         [Validation(Required=false)]
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>375701FC-2FB9-5782-BE8F-A3F5E2F2158C</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

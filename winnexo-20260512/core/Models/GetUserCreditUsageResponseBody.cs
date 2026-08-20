@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetUserCreditUsageResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>用户 credit 限额</para>
+        /// <para>The credit limit of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,14 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CreditLimit { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>The current zone list is illegal.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>剩余 credit（实时，来自 Redis）</para>
+        /// <para>The remaining credits in real time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RemainingCredits { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -57,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>影子 credit 限额</para>
+        /// <para>The shadow credit limit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ShadowCreditLimit { get; set; }
 
         /// <summary>
-        /// <para>剩余影子 credit（实时，来自 Redis）</para>
+        /// <para>The remaining shadow credits in real time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ShadowRemainingCredits { get; set; }
 
         /// <summary>
-        /// <para>已消耗影子 credit（实时，来自 Redis）</para>
+        /// <para>The consumed shadow credits in real time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -87,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ShadowUsedCredits { get; set; }
 
         /// <summary>
-        /// <para>租户ID</para>
+        /// <para>The ID of the tenant to which the task belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -97,7 +100,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? TenantId { get; set; }
 
         /// <summary>
-        /// <para>已消耗 credit（实时，来自 Redis）</para>
+        /// <para>The consumed credits in real time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -107,7 +110,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string UsedCredits { get; set; }
 
         /// <summary>
-        /// <para>用户ID</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

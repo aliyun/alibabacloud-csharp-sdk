@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListAuthorizedUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>授权模式：SPECIFIED_USERS / ALL_USERS</para>
+        /// <para>The authentication mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AuthMode { get; set; }
 
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>已授权对象列表</para>
+        /// <para>The details.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListAuthorizedUsersResponseBodyItems> Items { get; set; }
         public class ListAuthorizedUsersResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>授权截止时间戳（毫秒）</para>
+            /// <para>The authorization expiration timestamp in milliseconds. If not specified, the authorization never expires.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? ExpireDate { get; set; }
 
             /// <summary>
-            /// <para>创建时间</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>最后修改时间</para>
+            /// <para>The last update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>授权人用户 ID</para>
+            /// <para>The user ID of the person who granted the authorization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? GrantedBy { get; set; }
 
             /// <summary>
-            /// <para>被授权对象 ID</para>
+            /// <para>The ID of the authorized object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleGranteeId</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GranteeId { get; set; }
 
             /// <summary>
-            /// <para>被授权对象类型：USER / USER_GROUP</para>
+            /// <para>The authorization object type. Valid values: USER, USER_GROUP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GranteeType { get; set; }
 
             /// <summary>
-            /// <para>授权记录 ID</para>
+            /// <para>The Operation logs ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>用户组成员数</para>
+            /// <para>The number of members.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -117,7 +117,19 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? MemberCount { get; set; }
 
             /// <summary>
-            /// <para>已授权的权限列表</para>
+            /// <para>The permission member type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><b>ORG</b>: Enterprise.</para>
+            /// </description></item>
+            /// <item><description><para><b>DEPT</b>: Department.</para>
+            /// </description></item>
+            /// <item><description><para><b>TAG</b>: Custom tag.</para>
+            /// </description></item>
+            /// <item><description><para><b>CONVERSATION</b>: Conversation.</para>
+            /// </description></item>
+            /// <item><description><para><b>USER</b>: User.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -127,7 +139,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> Permissions { get; set; }
 
             /// <summary>
-            /// <para>用户组 ID（granteeType=USER_GROUP 时有值）</para>
+            /// <para>The user group ID. This parameter has a value only when granteeType is set to USER_GROUP.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleUserGroupId</para>
@@ -137,7 +149,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string UserGroupId { get; set; }
 
             /// <summary>
-            /// <para>用户组名</para>
+            /// <para>The user group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -147,7 +159,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string UserGroupName { get; set; }
 
             /// <summary>
-            /// <para>用户 ID（granteeType=USER 时有值）</para>
+            /// <para>The user ID. This parameter has a value only when granteeType is set to USER.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -157,7 +169,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? UserId { get; set; }
 
             /// <summary>
-            /// <para>用户名</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -169,14 +181,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -186,7 +201,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>授权记录总数</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

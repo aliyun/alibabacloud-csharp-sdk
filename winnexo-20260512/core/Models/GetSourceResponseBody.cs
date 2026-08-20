@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetSourceResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>DocumentAgent 解析完成时间，ISO8601 格式</para>
+        /// <para>The completion time, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CompletionTime { get; set; }
 
         /// <summary>
-        /// <para>数据源描述</para>
+        /// <para>The description of the to-do card type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>Sample description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>创建时间，ISO8601 格式</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>修改时间，ISO8601 格式</para>
+        /// <para>The last modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>是否存在备注</para>
+        /// <para>Indicates whether notes exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasNotes { get; set; }
 
         /// <summary>
-        /// <para>是否存在 settings 配置</para>
+        /// <para>Indicates whether settings configuration exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasSettings { get; set; }
 
         /// <summary>
-        /// <para>是否存在结构化表</para>
+        /// <para>Indicates whether structured tables exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasStructuredTables { get; set; }
 
         /// <summary>
-        /// <para>是否存在非结构化文档</para>
+        /// <para>Indicates whether unstructured documents exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -100,24 +100,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasUnstructuredDocs { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The username.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>SampleName.pdf</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>备注（仅 includeDetails=True）</para>
+        /// <para>The meeting notes content (optional), which participates in auxiliary analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -126,12 +129,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string Notes { get; set; }
 
+        /// <summary>
+        /// <para>The object bindings.</para>
+        /// </summary>
         [NameInMap("objectBindings")]
         [Validation(Required=false)]
         public List<GetSourceResponseBodyObjectBindings> ObjectBindings { get; set; }
         public class GetSourceResponseBodyObjectBindings : TeaModel {
             /// <summary>
-            /// <para>对象归属的语义图谱名</para>
+            /// <para>The semantic graph name to which the object belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -141,7 +147,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GraphName { get; set; }
 
             /// <summary>
-            /// <para>对象 ID</para>
+            /// <para>The ID of the recommended item, which can be a <b>feedId</b> or a micro-application ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -151,7 +157,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>对象类型</para>
+            /// <para>The object type, such as customer. This field has a value when type is set to mention.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -163,7 +169,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>主对象 ID（兼容字段）</para>
+        /// <para>The associated variable ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleObjectId</para>
@@ -173,7 +179,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>主对象类型（兼容字段）</para>
+        /// <para>The object type, such as customer. This field has a value when type is set to mention.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -183,7 +189,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ObjectType { get; set; }
 
         /// <summary>
-        /// <para>运营对象名称</para>
+        /// <para>The digital employee name (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -193,7 +199,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -203,7 +209,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>可见范围：PERSONAL / TENANT</para>
+        /// <para>The task scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PERSONAL</para>
@@ -212,12 +218,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string Scope { get; set; }
 
+        /// <summary>
+        /// <para>The user profile card settings.</para>
+        /// </summary>
         [NameInMap("settings")]
         [Validation(Required=false)]
         public Dictionary<string, object> Settings { get; set; }
 
         /// <summary>
-        /// <para>技能产出 ID（由产出保存为资源时携带）</para>
+        /// <para>The skill output ID (carried when the output is saved as a resource).</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSkillOutputId</para>
@@ -227,7 +236,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SkillOutputId { get; set; }
 
         /// <summary>
-        /// <para>数据源 ID</para>
+        /// <para>The data source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleSourceId</para>
@@ -237,7 +246,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>数据源归属类型：normal / aliding_kb_doc</para>
+        /// <para>The knowledge base affiliation type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>aliding_kb_doc: DingTalk knowledge base document.</description></item>
+        /// <item><description>normal: common knowledge.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -247,7 +260,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceKind { get; set; }
 
         /// <summary>
-        /// <para>资源标签 JSON 字符串</para>
+        /// <para>The resource tags (optional, a JSON string list such as [&quot;tagA&quot;,&quot;tagB&quot;]).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -257,7 +270,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>数据源类型</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -267,7 +280,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>数据源状态</para>
+        /// <para>The final status of the message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -286,12 +299,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public List<string> StructuredTables { get; set; }
 
+        /// <summary>
+        /// <para>The unstructured documents.</para>
+        /// </summary>
         [NameInMap("unstructuredDocs")]
         [Validation(Required=false)]
         public List<GetSourceResponseBodyUnstructuredDocs> UnstructuredDocs { get; set; }
         public class GetSourceResponseBodyUnstructuredDocs : TeaModel {
             /// <summary>
-            /// <para>DocumentAgent 解析完成时间，ISO8601 格式</para>
+            /// <para>The completion time, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-10-01T12:00:00Z</para>
@@ -301,7 +317,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CompletionTime { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The file name, including the file name extension.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example.pdf</para>
@@ -311,7 +327,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>文件记录 ID</para>
+            /// <para>The file record ID (optional, corresponding to settings.file_record_id).</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleFileRecordId</para>
@@ -321,7 +337,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string FileRecordId { get; set; }
 
             /// <summary>
-            /// <para>文件类型</para>
+            /// <para>The file type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>file</b>: file.</description></item>
+            /// <item><description><b>folder</b>: folder.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>pdf</para>
@@ -331,7 +351,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string FileType { get; set; }
 
             /// <summary>
-            /// <para>OSS 远程 URL</para>
+            /// <para>The session analysis result in OSS URL format. The URL expires in one hour.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/winnexo/resource">https://example.com/winnexo/resource</a></para>
@@ -341,7 +361,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string OssUrl { get; set; }
 
             /// <summary>
-            /// <para>DocumentAgent 语义 ID</para>
+            /// <para>The DocumentAgent semantic ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleSemanticsId</para>

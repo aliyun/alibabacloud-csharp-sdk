@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreatePersonalDingtalkMeetingRequest : TeaModel {
         /// <summary>
-        /// <para>凭证 ID（不传则使用系统默认配置）</para>
+        /// <para>The credential ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleCredentialId</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CredentialId { get; set; }
 
         /// <summary>
-        /// <para>资源描述（可选）</para>
+        /// <para>The pipeline description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>Watchlist Monitor Layer</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>目标个人目录 ID；不传时自动绑定到当前数字员工默认根目录，传入时必须是当前用户在当前数字员工下的已有个人目录</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -40,18 +40,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>资源显示名称</para>
+        /// <para>The image name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>p-default-007735a2-58f5-47a5-9e37-ea3fd64e0899</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>会议笔记内容（可选），会参与辅助分析</para>
+        /// <para>The meeting notes content (optional). The notes are used for auxiliary analysis.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Notes { get; set; }
 
         /// <summary>
-        /// <para>数字员工名称（已废弃：不再作为个人资源隔离条件，仅保留用于来源追溯）</para>
+        /// <para>The name of the digital employee (operating object name, optional).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -71,21 +71,21 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectName { get; set; }
 
         /// <summary>
-        /// <para>钉钉会议号（必填）</para>
+        /// <para>The meeting code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>356 776 973</para>
         /// </summary>
         [NameInMap("roomCode")]
         [Validation(Required=false)]
         public string RoomCode { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>520539530998273</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

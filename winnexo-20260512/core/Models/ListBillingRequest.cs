@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListBillingRequest : TeaModel {
         /// <summary>
-        /// <para>业务来源ID（可选筛选）</para>
+        /// <para>The unique business identifier. When bizType is set to LibraryChat, bizId refers to the document library ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleBizId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>业务来源类型（可选筛选）</para>
+        /// <para>The business type. Currently supported values: model Q&amp;A (LlmChat) and document library Q&amp;A (LibraryChat).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>结束时间范围，ISO-8601 字符串，如 2026-08-05T16:30:00.000Z</para>
+        /// <para>The actual end timestamp of the live stream, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>是否过滤 credit 消耗为 0 的账单，默认 true（过滤）</para>
+        /// <para>Specifies whether to filter out bills with zero credit consumption. Default value: true (filtered).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,7 +50,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IgnoreZero { get; set; }
 
         /// <summary>
-        /// <para>操作类型（可选筛选）</para>
+        /// <para>The operation type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>start: indicates node creation. This is the default value and does not need to be explicitly set in most cases.</description></item>
+        /// <item><description>stop: stops a real-time meeting task. This corresponds to the creation of a real-time meeting. Set this to stop after the meeting ends to trigger the call. This is used in real-time meeting scenarios.</description></item>
+        /// </list>
+        /// <para>Note: When ending a real-time recording, you must set this parameter to stop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -60,7 +65,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Operation { get; set; }
 
         /// <summary>
-        /// <para>页码</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +75,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数</para>
+        /// <para>The number of entries per page. Default value: 20. Minimum value: 1. Maximum value: 50.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -80,7 +85,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>开始时间范围，ISO-8601 字符串，如 2026-08-05T16:30:00.000Z</para>
+        /// <para>The query start time. This is a UNIX timestamp in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -90,7 +95,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>状态（可选筛选）</para>
+        /// <para>The task status. Running is returned upon submission.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -100,7 +105,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -110,7 +115,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>用户ID（WINNEXO 平台用户ID，可选筛选）</para>
+        /// <para>The user ID (WINNEXO platform user ID, optional filter).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

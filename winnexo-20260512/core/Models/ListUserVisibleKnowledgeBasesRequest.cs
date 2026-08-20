@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListUserVisibleKnowledgeBasesRequest : TeaModel {
         /// <summary>
-        /// <para>知识库名称或描述关键词；不传时返回全部可见知识库</para>
+        /// <para>The keyword for fuzzy match on knowledge base name or description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>产品知识</para>
+        /// <para>Product knowledge</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

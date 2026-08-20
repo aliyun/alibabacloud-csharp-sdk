@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetScheduledTaskUnderstandDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,18 +20,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The related objects.</para>
+        /// </summary>
         [NameInMap("relatedObjects")]
         [Validation(Required=false)]
         public List<GetScheduledTaskUnderstandDetailResponseBodyRelatedObjects> RelatedObjects { get; set; }
         public class GetScheduledTaskUnderstandDetailResponseBodyRelatedObjects : TeaModel {
             /// <summary>
-            /// <para>提及类型</para>
+            /// <para>The mention type, such as objects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -41,17 +47,23 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string MentionType { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>对象 ID</para>
+            /// <para>The object ID. Pass the project task ID.</para>
+            /// <list type="bullet">
+            /// <item><description><para>For internal enterprise applications, this is the taskId obtained by calling the <a href="https://open.dingtalk.com/document/orgapp-server/create-a-project-task">Create a project task</a> operation.</para>
+            /// </description></item>
+            /// <item><description><para>For third-party enterprise applications, this is the taskId obtained by calling the <a href="https://open.dingtalk.com/document/isvapp-server/create-a-project-task">Create a project task</a> operation.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>exampleObjectId</para>
@@ -61,7 +73,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string ObjectId { get; set; }
 
             /// <summary>
-            /// <para>对象类型</para>
+            /// <para>The object type, such as customer. This parameter has a value when type is set to mention.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -72,12 +84,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 
         }
 
+        /// <summary>
+        /// <para>The related semantics.</para>
+        /// </summary>
         [NameInMap("relatedSemantics")]
         [Validation(Required=false)]
         public List<GetScheduledTaskUnderstandDetailResponseBodyRelatedSemantics> RelatedSemantics { get; set; }
         public class GetScheduledTaskUnderstandDetailResponseBodyRelatedSemantics : TeaModel {
             /// <summary>
-            /// <para>语义属性（JSON 字符串），用于语义检索时过滤</para>
+            /// <para>The information type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;level&quot;: &quot;VIP&quot;}</para>
@@ -87,7 +102,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Attributes { get; set; }
 
             /// <summary>
-            /// <para>语义实体名，如客户/机会</para>
+            /// <para>The semantic entity name, such as customer or opportunity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>customer</para>
@@ -98,12 +113,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 
         }
 
+        /// <summary>
+        /// <para>The related skills.</para>
+        /// </summary>
         [NameInMap("relatedSkills")]
         [Validation(Required=false)]
         public List<GetScheduledTaskUnderstandDetailResponseBodyRelatedSkills> RelatedSkills { get; set; }
         public class GetScheduledTaskUnderstandDetailResponseBodyRelatedSkills : TeaModel {
             /// <summary>
-            /// <para>技能展示名称</para>
+            /// <para>The display name of the MCP service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -113,17 +131,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>技能代码</para>
+            /// <para>The skill code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -145,7 +163,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -155,7 +173,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>润色后的任务理解</para>
+        /// <para>The task understanding description polished by the LLM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

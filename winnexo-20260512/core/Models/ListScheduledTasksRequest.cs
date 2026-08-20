@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListScheduledTasksRequest : TeaModel {
         /// <summary>
-        /// <para>协作群组 ID（如 cg_101）；传入时按群维度返回群任务（调用者需为有效群成员），未传时为个人维度（排除群任务）</para>
+        /// <para>The ID of the collaboration group (such as cg_101). If specified, a group task is created (the caller must be a valid group member). If left empty, a personal task is created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleCollaborationGroupId</para>
@@ -20,17 +20,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CollaborationGroupId { get; set; }
 
         /// <summary>
-        /// <para>任务名模糊搜索</para>
+        /// <para>Specifies whether to return only tasks created by the caller. This parameter takes effect only in the group dimension (in the personal dimension, only the caller\&quot;s own tasks are returned). If not specified, no filtering is applied.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例关键词</para>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("creatorOnly")]
+        [Validation(Required=false)]
+        public bool? CreatorOnly { get; set; }
+
+        /// <summary>
+        /// <para>The keyword of the rule name, used for fuzzy match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SampleKeyword</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>单页最大返回数量（1~100）；传入时优先于 pageSize</para>
+        /// <para>The maximum number of entries returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,14 +50,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>翻页令牌，取上次响应返回的 nextToken；传入时优先于 page，翻页过程中请保持 maxResults 不变</para>
+        /// <para>The pagination token for the next page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eHiB8vca1XDyBT0cNAmThA==</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>页码</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +70,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数（1~100）</para>
+        /// <para>The number of entries per page.</para>
+        /// <remarks>
+        /// <para>The maximum number of entries per page is 30.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -67,7 +83,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID that takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -75,6 +91,22 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("tenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
+
+        /// <summary>
+        /// <para>Filters by visibility. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PRIVATE: visible only to the creator and group owner.</description></item>
+        /// <item><description>COLLABORATIVE: visible to specified collaborators.</description></item>
+        /// <item><description>PUBLIC: visible to all group members.</description></item>
+        /// </list>
+        /// <para>If not specified or an empty list is passed, no filtering is applied. This parameter takes effect only in the group dimension (when collaborationGroupId is specified) and is ignored in the personal dimension.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PRIVATE</para>
+        /// </summary>
+        [NameInMap("visibilities")]
+        [Validation(Required=false)]
+        public List<string> Visibilities { get; set; }
 
     }
 

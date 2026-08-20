@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetScheduledTaskExecutionDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>完成时间 ISO8601</para>
+        /// <para>The completion time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CompletedAt { get; set; }
 
         /// <summary>
-        /// <para>执行完整内容</para>
+        /// <para>The full execution content.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例内容</para>
+        /// <para>Sample content</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>创建人</para>
+        /// <para>The creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>digitalEmployeeName</para>
+        /// <para>The list of digital employee names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>错误信息</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>执行 ID</para>
+        /// <para>The execution ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleExecutionId</para>
@@ -79,22 +79,25 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string ExecutionId { get; set; }
 
+        /// <summary>
+        /// <para>The list of output files.</para>
+        /// </summary>
         [NameInMap("files")]
         [Validation(Required=false)]
         public List<GetScheduledTaskExecutionDetailResponseBodyFiles> Files { get; set; }
         public class GetScheduledTaskExecutionDetailResponseBodyFiles : TeaModel {
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>文件 OSS URL</para>
+            /// <para>The OSS URL of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></para>
@@ -106,7 +109,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>创建时间 ISO8601</para>
+        /// <para>The creation time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -116,18 +119,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The extended metadata.</para>
+        /// </summary>
         [NameInMap("metadata")]
         [Validation(Required=false)]
         public GetScheduledTaskExecutionDetailResponseBodyMetadata Metadata { get; set; }
         public class GetScheduledTaskExecutionDetailResponseBodyMetadata : TeaModel {
             /// <summary>
-            /// <para>会话 ID</para>
+            /// <para>The session ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleSessionId</para>
@@ -137,7 +146,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string SessionId { get; set; }
 
             /// <summary>
-            /// <para>执行结果推送状态（多频道时为列表）</para>
+            /// <para>The token usage information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -149,7 +158,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>结构化输出内容</para>
+        /// <para>The structured output content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -158,12 +167,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string OutputContent { get; set; }
 
+        /// <summary>
+        /// <para>The push status of the execution result.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>succuss</para>
+        /// </summary>
         [NameInMap("pushResult")]
         [Validation(Required=false)]
         public string PushResult { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -173,7 +188,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>skillCodes</para>
+        /// <para>The list of associated skill codes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -183,7 +198,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> SkillCodes { get; set; }
 
         /// <summary>
-        /// <para>开始时间 ISO8601</para>
+        /// <para>The start time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -193,7 +208,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string StartedAt { get; set; }
 
         /// <summary>
-        /// <para>执行状态</para>
+        /// <para>The execution status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -203,7 +218,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>任务 ID</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleTaskId</para>
@@ -213,21 +228,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>执行结果标题</para>
+        /// <para>The execution result title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例标题</para>
+        /// <para>Sample title</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]
         public string Title { get; set; }
 
+        /// <summary>
+        /// <para>The trigger information.</para>
+        /// </summary>
         [NameInMap("triggerInfo")]
         [Validation(Required=false)]
         public GetScheduledTaskExecutionDetailResponseBodyTriggerInfo TriggerInfo { get; set; }
         public class GetScheduledTaskExecutionDetailResponseBodyTriggerInfo : TeaModel {
             /// <summary>
-            /// <para>触发执行的用户标识</para>
+            /// <para>The user identifier that triggered the execution.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user_10001</para>
@@ -239,7 +257,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>触发类型</para>
+        /// <para>The trigger type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -247,6 +265,16 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [NameInMap("triggerType")]
         [Validation(Required=false)]
         public string TriggerType { get; set; }
+
+        /// <summary>
+        /// <para>The visibility scope of the execution record, which is always equal to the visibility scope of the associated task. Valid values: PRIVATE, COLLABORATIVE, and PUBLIC. This field is empty for personal task executions.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>COLLABORATIVE</para>
+        /// </summary>
+        [NameInMap("visibility")]
+        [Validation(Required=false)]
+        public string Visibility { get; set; }
 
     }
 

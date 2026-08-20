@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListScheduledTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>是否有更多数据</para>
+        /// <para>Indicates whether more data is available. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: More data is available.</description></item>
+        /// <item><description>false: No more data is available.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -29,12 +33,75 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public bool? HasMore { get; set; }
 
+        /// <summary>
+        /// <para>The list of skill cards.</para>
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListScheduledTasksResponseBodyItems> Items { get; set; }
         public class ListScheduledTasksResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>创建人</para>
+            /// <para>The reason for the abnormality. This field has a value only when status is abnormal.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>string_value</para>
+            /// </summary>
+            [NameInMap("abnormalReason")]
+            [Validation(Required=false)]
+            public string AbnormalReason { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the current caller can delete the task (only the task creator and group owner can do so). Always returns true for personal tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("canDelete")]
+            [Validation(Required=false)]
+            public bool? CanDelete { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the task can be edited or deleted.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("canEdit")]
+            [Validation(Required=false)]
+            public bool? CanEdit { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the current caller can immediately execute the task (anyone with visibility can operate. Returns false for abnormal tasks). Always returns true for personal tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("canExecute")]
+            [Validation(Required=false)]
+            public bool? CanExecute { get; set; }
+
+            /// <summary>
+            /// <para>Indicates whether the current caller can start or stop the task (only the task creator and group owner can do so. Returns false for abnormal tasks). Always returns true for personal tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("canToggle")]
+            [Validation(Required=false)]
+            public bool? CanToggle { get; set; }
+
+            /// <summary>
+            /// <para>The ID of the collaboration group (such as cg_101). If specified, a group task is created (the caller must be a valid group member). If left empty, a personal task is created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>exampleCollaborationGroupId</para>
+            /// </summary>
+            [NameInMap("collaborationGroupId")]
+            [Validation(Required=false)]
+            public string CollaborationGroupId { get; set; }
+
+            /// <summary>
+            /// <para>The creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -44,7 +111,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>Cron 表达式</para>
+            /// <para>The creator.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>string_value</para>
+            /// </summary>
+            [NameInMap("creatorName")]
+            [Validation(Required=false)]
+            public string CreatorName { get; set; }
+
+            /// <summary>
+            /// <para>The cron expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -54,17 +131,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>任务简述</para>
+            /// <para>The description of the to-do card type.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例描述</para>
+            /// <para>Sample description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>累计执行次数</para>
+            /// <para>The list of digital employee names.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>string_value</para>
+            /// </summary>
+            [NameInMap("digitalEmployeeName")]
+            [Validation(Required=false)]
+            public List<string> DigitalEmployeeName { get; set; }
+
+            /// <summary>
+            /// <para>The cumulative number of executions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -74,7 +161,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? ExecutionCount { get; set; }
 
             /// <summary>
-            /// <para>创建时间 ISO8601</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -84,7 +171,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>修改时间 ISO8601</para>
+            /// <para>The last modification time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -94,7 +181,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>是否公开</para>
+            /// <para>Indicates whether public access is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -104,17 +191,37 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? IsOpen { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The execution model tier. If not specified, the value is not updated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>standard</para>
+            /// </summary>
+            [NameInMap("model")]
+            [Validation(Required=false)]
+            public string Model { get; set; }
+
+            /// <summary>
+            /// <para>The name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>任务 ID</para>
+            /// <para>The task status. Running is returned upon submission.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>active</para>
+            /// </summary>
+            [NameInMap("status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+            /// <summary>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleTaskId</para>
@@ -124,7 +231,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>触发类型（manual/cron/event）</para>
+            /// <para>The trigger type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -133,10 +240,36 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             [Validation(Required=false)]
             public string TriggerType { get; set; }
 
+            /// <summary>
+            /// <para>The visibility of the group task. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PRIVATE: visible only to the creator and group owner.</description></item>
+            /// <item><description>COLLABORATIVE: visible to specified collaborators.</description></item>
+            /// <item><description>PUBLIC: visible to all group members.</description></item>
+            /// </list>
+            /// <para>If not specified for a group task, the default value is PRIVATE. This field is ignored for personal tasks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PRIVATE</para>
+            /// </summary>
+            [NameInMap("visibility")]
+            [Validation(Required=false)]
+            public string Visibility { get; set; }
+
+            /// <summary>
+            /// <para>The list of collaborator user IDs (excluding the task creator and group creator, who are covered by the authentication layer). This field is returned only for group tasks. An empty list is returned for PRIVATE or PUBLIC visibility.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>string_value</para>
+            /// </summary>
+            [NameInMap("visibleMemberUserIds")]
+            [Validation(Required=false)]
+            public List<string> VisibleMemberUserIds { get; set; }
+
         }
 
         /// <summary>
-        /// <para>本次实际生效的单页最大返回数量</para>
+        /// <para>The maximum number of entries returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -146,21 +279,27 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>下一页翻页令牌，原样回传即可取下一页；无更多数据时为空字符串</para>
+        /// <para>The pagination token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1763604514518000_531300</para>
         /// </summary>
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>当前页码（实际生效值）</para>
+        /// <para>The page number. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -170,7 +309,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页条数（实际生效值）</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -180,7 +319,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -190,7 +329,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>满足条件的总数</para>
+        /// <para>The total number of tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

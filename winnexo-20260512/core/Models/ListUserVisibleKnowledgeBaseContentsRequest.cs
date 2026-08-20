@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListUserVisibleKnowledgeBaseContentsRequest : TeaModel {
         /// <summary>
-        /// <para>目标知识库根目录或其子目录的唯一标识</para>
+        /// <para>The directory ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>当前目录下的目录或资源名称关键词</para>
+        /// <para>The search keyword. Supports fuzzy match on version names.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>产品说明</para>
+        /// <para>Product description</para>
         /// </summary>
         [NameInMap("keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>页码，从 1 开始</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? Page { get; set; }
 
         /// <summary>
-        /// <para>每页数量，范围 1-200</para>
+        /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -51,7 +51,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>排序字段，可选 name / gmt_create / gmt_modified</para>
+        /// <para>The field by which the results are sorted. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>event_time: the event creation time.</description></item>
+        /// <item><description>event_execute_start_time: the event execution time.</description></item>
+        /// <item><description>event_execute_finish_time: the event completion time.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>name</para>
@@ -61,7 +66,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortField { get; set; }
 
         /// <summary>
-        /// <para>排序方向，可选 asc / desc</para>
+        /// <para>The sort order. This parameter takes effect when sortBy is specified. Valid values: ASC, DESC (case-insensitive).</para>
         /// 
         /// <b>Example:</b>
         /// <para>asc</para>
@@ -71,7 +76,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>资源类型过滤，多个类型使用逗号分隔；传入后只返回资源</para>
+        /// <para>The list of service source types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FILE,WEB_PAGE</para>
@@ -81,7 +86,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTypes { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. Pass it explicitly through --tenant-id in winnexo-cli.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

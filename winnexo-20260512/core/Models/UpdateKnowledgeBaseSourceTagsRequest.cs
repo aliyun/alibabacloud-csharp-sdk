@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateKnowledgeBaseSourceTagsRequest : TeaModel {
         /// <summary>
-        /// <para>数据源 ID（租户内唯一）</para>
+        /// <para>The unique identifier on the business system side, that is, the business ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>资源标签（JSON 字符串列表，如 [&quot;tagA&quot;,&quot;tagB&quot;]；传 null 表示清空标签）</para>
+        /// <para>The resource tags. This is an optional parameter that accepts a JSON string list, such as [&quot;tagA&quot;,&quot;tagB&quot;].</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceTags { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

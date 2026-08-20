@@ -9,12 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetChatSessionRequest : TeaModel {
+        /// <summary>
+        /// <para>The maximum number of resources to return. If not specified, the default value is 20. The maximum value is 100. The actual number of returned results may be less than the specified value but will not exceed it.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("limit")]
         [Validation(Required=false)]
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>会话ID</para>
+        /// <para>The SessionId value to filter by. If specified, all Active/Expired status information associated with this session is returned.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The effective tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetInstanceExpireTimeResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>是否找到标准包实例</para>
+        /// <para>Indicates whether a standard package instance is found.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? Found { get; set; }
 
         /// <summary>
-        /// <para>实例过期时间（ISO格式）</para>
+        /// <para>The expiration time of the instance in ISO format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceExpireTime { get; set; }
 
         /// <summary>
-        /// <para>实例ID</para>
+        /// <para>The instance ID. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleInstanceId</para>
@@ -50,7 +50,13 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>实例状态</para>
+        /// <para>The instance status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>RUNNING: Running.</description></item>
+        /// <item><description>TERMINATED: Terminated.</description></item>
+        /// <item><description>COMPLETED: Completed.</description></item>
+        /// <item><description>ERROR: Error.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -60,14 +66,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string InstanceStatus { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The prompt message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -77,7 +86,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>系统租户ID</para>
+        /// <para>The effective tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

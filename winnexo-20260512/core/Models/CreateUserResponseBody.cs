@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>WINNEXO 登录账号</para>
+        /// <para>The ID of your Alibaba Cloud account.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleAccountId</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string AccountId { get; set; }
 
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>用户显示名称</para>
+        /// <para>The cluster name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>是否为新创建的用户（false 表示已有用户加入租户）</para>
+        /// <para>Indicates whether the user is newly created. A value of false indicates that an existing user is added to the tenant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -50,14 +50,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? IsNewUser { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>WINNEXO 平台用户ID</para>
+        /// <para>The WINNEXO platform user ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

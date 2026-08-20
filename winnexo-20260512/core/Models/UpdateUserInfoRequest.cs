@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateUserInfoRequest : TeaModel {
         /// <summary>
-        /// <para>用户头像 URL</para>
+        /// <para>The profile picture URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/avatar.png">https://example.com/avatar.png</a></para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Avatar { get; set; }
 
         /// <summary>
-        /// <para>语言偏好: zh-CN, en-US</para>
+        /// <para>The language preference: zh-CN, en-US.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,17 +30,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string LanguagePreference { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>SampleName.pdf</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>用户服务描述，最多1000字符</para>
+        /// <para>The user service description. Maximum length: 1000 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Offering { get; set; }
 
         /// <summary>
-        /// <para>用户角色描述（当profileRole为Others时使用），最多100字符</para>
+        /// <para>The user role description (used when profileRole is set to Others). Maximum length: 100 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ProfileRoleInfo { get; set; }
 
         /// <summary>
-        /// <para>用户自我介绍，最多1000字符</para>
+        /// <para>The user self-introduction. Maximum length: 1000 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SelfIntroduction { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The effective tenant ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

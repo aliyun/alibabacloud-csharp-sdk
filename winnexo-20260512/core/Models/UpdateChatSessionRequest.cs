@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateChatSessionRequest : TeaModel {
         /// <summary>
-        /// <para>抽象模型名（模型档位）；不传则不修改会话当前模型</para>
+        /// <para>The abstract model name (model tier). If not specified, the current model of the session is not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quick</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Model { get; set; }
 
         /// <summary>
-        /// <para>会话 ID</para>
+        /// <para>The session ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID. This is a common parameter. If not specified, the default tenant of the caller is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string TenantId { get; set; }
 
         /// <summary>
-        /// <para>新的会话标题</para>
+        /// <para>The new session title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例标题</para>
+        /// <para>Sample title</para>
         /// </summary>
         [NameInMap("title")]
         [Validation(Required=false)]

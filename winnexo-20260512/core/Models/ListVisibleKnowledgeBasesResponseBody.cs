@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class ListVisibleKnowledgeBasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -19,32 +19,35 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The file information.</para>
+        /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
         public List<ListVisibleKnowledgeBasesResponseBodyItems> Items { get; set; }
         public class ListVisibleKnowledgeBasesResponseBodyItems : TeaModel {
             /// <summary>
-            /// <para>目录创建者姓名（来自 rbj_user_tenant_mapping.user_display_name）</para>
+            /// <para>The creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>string_value</para>
+            /// <para>admin</para>
             /// </summary>
             [NameInMap("creatorName")]
             [Validation(Required=false)]
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>目录描述</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例描述</para>
+            /// <para>{{7*7}}</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>目录唯一标识（租户内唯一）</para>
+            /// <para>The directory ID. You can obtain this value by calling the API operation for retrieving the knowledge base directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>exampleDirectoryId</para>
@@ -54,47 +57,47 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// <para>创建时间戳（毫秒）</para>
+            /// <para>The creation time. This value is a timestamp in milliseconds.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>2025-11-14T02:18:27Z</para>
             /// </summary>
             [NameInMap("gmtCreate")]
             [Validation(Required=false)]
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>修改时间戳（毫秒）</para>
+            /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1</para>
+            /// <para>2026-03-26T13:57:42Z</para>
             /// </summary>
             [NameInMap("gmtModified")]
             [Validation(Required=false)]
             public long? GmtModified { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The skill name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>cs-default-umodel-1785637207863_k8s.metric.k8s_csi_node_pv_node_cn-heyuan-acdr-1/c80cf3a4f9d6c496781591bd17d006c6f</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>文件 OSS URL</para>
+            /// <para>The file directory information.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://example.com/oss/file.pdf">https://example.com/oss/file.pdf</a></para>
+            /// <para>/test-folder-path1_1773194924773</para>
             /// </summary>
             [NameInMap("path")]
             [Validation(Required=false)]
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>目录及子目录下状态为 FAILED 的资源数</para>
+            /// <para>The number of resources in the FAILED state. This parameter is returned only when listing top-level knowledge base directories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -104,7 +107,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceFailedCount { get; set; }
 
             /// <summary>
-            /// <para>目录及子目录下状态为 READY 的资源数</para>
+            /// <para>The number of resources in the READY state. This parameter is returned only when listing top-level knowledge base directories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -114,7 +117,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? SourceReadyCount { get; set; }
 
             /// <summary>
-            /// <para>目录及子目录下的资源总数</para>
+            /// <para>The total number of resources in the directory and its subdirectories. This parameter is returned only when listing top-level knowledge base directories.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -126,27 +129,30 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>190F5425-A145-5BBA-980F-082ADB0CA6AF</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>返回条数（不分页，等于 len(items)）</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>3</para>
         /// </summary>
         [NameInMap("total")]
         [Validation(Required=false)]

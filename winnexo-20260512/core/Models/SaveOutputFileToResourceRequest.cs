@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class SaveOutputFileToResourceRequest : TeaModel {
         /// <summary>
-        /// <para>目标个人目录 ID；不传则自动解析用户默认目录。</para>
+        /// <para>The ID of the target personal folder. If not specified, the user\&quot;s default folder is automatically resolved.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleDirectoryId</para>
@@ -31,7 +31,11 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> ItemIds { get; set; }
 
         /// <summary>
-        /// <para>保存方式：link=链接（1:1 幂等，编辑产出会同步资源） / copy=复制（不限次，快照）</para>
+        /// <para>The save mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>link: Links the resource to the output in a 1:1 idempotent manner. Edits to the output are synchronized to the resource.</description></item>
+        /// <item><description>copy: Creates a snapshot copy with no limit on the number of copies.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>link</para>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass it explicitly with --tenant-id.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

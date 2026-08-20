@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateCustomOrgResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>注册成功的组织标识</para>
+        /// <para>The enterprise ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleCorpId</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CorpId { get; set; }
 
         /// <summary>
-        /// <para>组织展示名称</para>
+        /// <para>The organization name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,14 +40,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CorpName { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The prompt message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>平台类型，固定为 custom</para>
+        /// <para>The platform type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -57,10 +60,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PlatformType { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
+        /// <para>72D1EC35-B174-5595-891F-2F0B3BFBE56F</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class EnableTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -37,7 +40,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Token 明文（仅本次返回，请妥善保管）</para>
+        /// <para>The temporary access credential for the data catalog.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example_token_value</para>
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Token { get; set; }
 
         /// <summary>
-        /// <para>脱敏后的 Token 值</para>
+        /// <para>The masked token value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>

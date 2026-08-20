@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class CreateConversationShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>会话元数据，可含 model 等透传字段（model 需为合法抽象模型名，否则回退默认）</para>
+        /// <para>A reserved field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -20,17 +20,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Metadata { get; set; }
 
         /// <summary>
-        /// <para>关联业务对象ID</para>
+        /// <para>The primary key ID of the associated variable.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>exampleObjectId</para>
+        /// <para>2676</para>
         /// </summary>
         [NameInMap("objectId")]
         [Validation(Required=false)]
         public string ObjectId { get; set; }
 
         /// <summary>
-        /// <para>operatingObjectName</para>
+        /// <para>The operating object name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -40,10 +40,10 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string OperatingObjectNameShrink { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数，缺省时使用调用方默认租户</para>
+        /// <para>The tenant ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10000</para>
+        /// <para>10001</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

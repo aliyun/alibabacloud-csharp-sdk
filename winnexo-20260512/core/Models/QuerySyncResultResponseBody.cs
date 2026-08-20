@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class QuerySyncResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>任务完成时间（ISO 8601）</para>
+        /// <para>The time when the task was completed (ISO 8601 format).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CompletedAt { get; set; }
 
         /// <summary>
-        /// <para>企业标识</para>
+        /// <para>The enterprise identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>exampleCorpId</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CorpId { get; set; }
 
         /// <summary>
-        /// <para>部门同步统计（完成时有值）</para>
+        /// <para>The department synchronization statistics. This field has a value when the task is completed.</para>
         /// </summary>
         [NameInMap("deptStats")]
         [Validation(Required=false)]
         public QuerySyncResultResponseBodyDeptStats DeptStats { get; set; }
         public class QuerySyncResultResponseBodyDeptStats : TeaModel {
             /// <summary>
-            /// <para>新增的用户组数</para>
+            /// <para>The total number of external departments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Created { get; set; }
 
             /// <summary>
-            /// <para>标记删除的用户组数</para>
+            /// <para>The number of user groups marked for deletion.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Deleted { get; set; }
 
             /// <summary>
-            /// <para>移动的用户组数</para>
+            /// <para>The number of moved user groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Moved { get; set; }
 
             /// <summary>
-            /// <para>更名的用户组数</para>
+            /// <para>The number of renamed user groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Renamed { get; set; }
 
             /// <summary>
-            /// <para>跳过的用户组数</para>
+            /// <para>The number of skipped user groups.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Skipped { get; set; }
 
             /// <summary>
-            /// <para>外部部门总数</para>
+            /// <para>The total number of external departments.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>执行时长（秒）</para>
+        /// <para>The execution duration, in seconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? DurationSeconds { get; set; }
 
         /// <summary>
-        /// <para>错误信息（失败时有值）</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -129,14 +129,14 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>成员同步统计（syncMembers=true 且完成时有值）</para>
+        /// <para>The member synchronization statistics. This field has a value when syncMembers is set to true and the task is completed.</para>
         /// </summary>
         [NameInMap("memberStats")]
         [Validation(Required=false)]
         public QuerySyncResultResponseBodyMemberStats MemberStats { get; set; }
         public class QuerySyncResultResponseBodyMemberStats : TeaModel {
             /// <summary>
-            /// <para>失败的成员数</para>
+            /// <para>The number of failed members.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? Failed { get; set; }
 
             /// <summary>
-            /// <para>新增的成员关系数</para>
+            /// <para>The number of added member relationships.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? RelationshipAdded { get; set; }
 
             /// <summary>
-            /// <para>移除的成员关系数</para>
+            /// <para>The number of removed member relationships.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? RelationshipRemoved { get; set; }
 
             /// <summary>
-            /// <para>外部成员总数</para>
+            /// <para>The total number of external members.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public long? TotalExternal { get; set; }
 
             /// <summary>
-            /// <para>未变更的成员关系数</para>
+            /// <para>The number of unchanged member relationships.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -188,14 +188,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The description of the status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>平台类型</para>
+        /// <para>The platform type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -205,7 +208,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string PlatformType { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request trace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -215,7 +218,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>任务开始执行时间（ISO 8601）</para>
+        /// <para>The time when the task started (ISO 8601 format).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -225,7 +228,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string StartedAt { get; set; }
 
         /// <summary>
-        /// <para>任务状态: PENDING / RUNNING / COMPLETED / FAILED / TIMEOUT / CANCELED</para>
+        /// <para>The task status. Valid values: PENDING, RUNNING, COMPLETED, FAILED, TIMEOUT, and CANCELED.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -235,7 +238,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>任务提交时间（ISO 8601）</para>
+        /// <para>The time when the task was submitted (ISO 8601 format).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -245,7 +248,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SubmittedAt { get; set; }
 
         /// <summary>
-        /// <para>执行摘要（人可读）</para>
+        /// <para>The intelligent meeting summary content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -255,7 +258,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Summary { get; set; }
 
         /// <summary>
-        /// <para>任务 ID</para>
+        /// <para>The task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,18 +10,18 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class UpdateKnowledgeBaseSourceContentRequest : TeaModel {
         /// <summary>
-        /// <para>更新后的完整正文；允许空字符串</para>
+        /// <para>Specifies whether the operation is successful. A value of true indicates success.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例内容</para>
+        /// <para>Sample content</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>是否同步等待重新解析完成；默认 false，异步入队</para>
+        /// <para>Specifies whether to force synchronous processing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? ForceSync { get; set; }
 
         /// <summary>
-        /// <para>待编辑的企业知识库数据源 ID</para>
+        /// <para>The source ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>租户ID，公共参数；winnexo-cli 通过 --tenant-id 显式传入</para>
+        /// <para>The tenant ID that takes effect.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>

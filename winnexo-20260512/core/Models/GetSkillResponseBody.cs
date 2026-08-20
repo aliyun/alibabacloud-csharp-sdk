@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
     public class GetSkillResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The simplified parameter schema that describes what needs to be passed in runSkill.arguments. This is automatically extracted from inputConfigFormatted.</para>
+        /// </summary>
         [NameInMap("arguments")]
         [Validation(Required=false)]
         public List<GetSkillResponseBodyArguments> Arguments { get; set; }
         public class GetSkillResponseBodyArguments : TeaModel {
             /// <summary>
-            /// <para>默认值</para>
+            /// <para>The default value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -24,17 +27,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public string Default { get; set; }
 
             /// <summary>
-            /// <para>参数说明</para>
+            /// <para>The parameter description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例描述</para>
+            /// <para>Sample description</para>
             /// </summary>
             [NameInMap("description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>enum</para>
+            /// <para>The list of valid values, which is available when the options are limited.</para>
             /// 
             /// <b>Example:</b>
             /// <para>string_value</para>
@@ -44,17 +47,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public List<string> Enum { get; set; }
 
             /// <summary>
-            /// <para>文件名</para>
+            /// <para>The parameter name, which corresponds to the key in runSkill.arguments.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>示例名称.pdf</para>
+            /// <para>SampleName.pdf</para>
             /// </summary>
             [NameInMap("name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>是否必填</para>
+            /// <para>Indicates whether the parameter is required.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
             public bool? Required { get; set; }
 
             /// <summary>
-            /// <para>参数类型: string / number / boolean / array</para>
+            /// <para>The parameter type. Valid values: string, number, boolean, and array.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text</para>
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         }
 
         /// <summary>
-        /// <para>业务状态码：成功为 200，失败为后端错误码（ERR.* / InvalidParameter.*）</para>
+        /// <para>The response status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -86,7 +89,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>创建时间，ISO8601 格式</para>
+        /// <para>The creation time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -96,17 +99,17 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string CreatedTime { get; set; }
 
         /// <summary>
-        /// <para>技能描述（已 i18n 解析）</para>
+        /// <para>The skill description, which has been resolved through internationalization (i18n).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例描述</para>
+        /// <para>Sample description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>技能详细逻辑</para>
+        /// <para>The detailed logic of the skill.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -116,7 +119,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DetailLogic { get; set; }
 
         /// <summary>
-        /// <para>展示名称</para>
+        /// <para>The display name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -126,7 +129,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string DisplayName { get; set; }
 
         /// <summary>
-        /// <para>执行模式</para>
+        /// <para>The execution mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -136,7 +139,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string ExecuteMode { get; set; }
 
         /// <summary>
-        /// <para>是否全局可访问</para>
+        /// <para>Indicates whether the skill is globally accessible.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -146,7 +149,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? GlobalAccess { get; set; }
 
         /// <summary>
-        /// <para>是否存在未发布的草稿修改</para>
+        /// <para>Indicates whether unpublished draft changes exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -156,7 +159,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? HasDraftChanges { get; set; }
 
         /// <summary>
-        /// <para>入参配置原文</para>
+        /// <para>The raw input parameter configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -165,29 +168,35 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string InputConfig { get; set; }
 
+        /// <summary>
+        /// <para>The structured input parameter schema array.</para>
+        /// </summary>
         [NameInMap("inputConfigFormatted")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> InputConfigFormatted { get; set; }
 
         /// <summary>
-        /// <para>错误描述，成功时为空</para>
+        /// <para>The status code description.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ok</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>文件名</para>
+        /// <para>The skill name, which has been resolved through internationalization (i18n).</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例名称.pdf</para>
+        /// <para>SampleName.pdf</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>请求追踪 ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019FF406-1B10-0065-A97D-2D1920C2A03D</para>
@@ -197,7 +206,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>技能编码（全局唯一）</para>
+        /// <para>The skill code, which is globally unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -206,12 +215,15 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         [Validation(Required=false)]
         public string SkillCode { get; set; }
 
+        /// <summary>
+        /// <para>The nested tree of skill files. This is returned only when includeSkillFiles is set to True.</para>
+        /// </summary>
         [NameInMap("skillFiles")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> SkillFiles { get; set; }
 
         /// <summary>
-        /// <para>技能定义 ID</para>
+        /// <para>The skill definition ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -221,7 +233,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? SkillHubDefinitionId { get; set; }
 
         /// <summary>
-        /// <para>SKILL.md 简介（由 LLM 生成）</para>
+        /// <para>The SKILL.md summary, which is generated by a large language model (LLM).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -231,7 +243,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SkillMdSummary { get; set; }
 
         /// <summary>
-        /// <para>来源类型: BUILTIN / CUSTOM</para>
+        /// <para>The source type. Valid values: BUILTIN and CUSTOM.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -241,7 +253,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>技能状态: ACTIVE / DRAFT</para>
+        /// <para>The skill status. Valid values: ACTIVE and DRAFT.</para>
         /// 
         /// <b>Example:</b>
         /// <para>READY</para>
@@ -251,7 +263,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>tags</para>
+        /// <para>The tag list, which has been resolved through internationalization (i18n).</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
@@ -261,7 +273,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public List<string> Tags { get; set; }
 
         /// <summary>
-        /// <para>修改时间，ISO8601 格式</para>
+        /// <para>The modification time in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-10-01T12:00:00Z</para>
@@ -271,7 +283,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string UpdatedTime { get; set; }
 
         /// <summary>
-        /// <para>版本总数</para>
+        /// <para>The total number of versions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -281,7 +293,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public long? VersionCount { get; set; }
 
         /// <summary>
-        /// <para>版本号</para>
+        /// <para>The version number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
