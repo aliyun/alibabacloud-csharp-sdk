@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeMemberAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The status of the member accounts that you want to query. Valid values:</para>
+        /// <para>The status of the member accounts to query. You can set this parameter to query member accounts in a specific status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>enabled</b>: The member account is being managed.</para>
+        /// <item><description><para><b>enabled</b>: The member account is managed.</para>
         /// </description></item>
-        /// <item><description><para><b>disabled</b>: The member account is not being managed.</para>
+        /// <item><description><para><b>disabled</b>: The member account is not managed.</para>
         /// </description></item>
-        /// <item><description><para><b>disabling</b>: The member account is being removed from management.</para>
+        /// <item><description><para><b>disabling</b>: The member account is being removed.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -28,9 +28,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string AccountStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -42,11 +42,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: a region outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address. You do not need to specify this parameter. It is automatically obtained by the system.</para>
+        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.XX.XX</para>

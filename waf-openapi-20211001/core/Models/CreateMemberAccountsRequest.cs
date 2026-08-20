@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class CreateMemberAccountsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the WAF instance.</para>
+        /// <para>Instance ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to view your current WAF instance ID.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance ID of your current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account IDs of the members that you want to add. You can add up to 10 members at the same time.</para>
+        /// <para>The list of WAF member account IDs to manage. You can add up to 10 member accounts at a time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MemberAccountIds")]
@@ -32,11 +32,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<string> MemberAccountIds { get; set; }
 
         /// <summary>
-        /// <para>The region of the WAF instance. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: The Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Outside the Chinese mainland.</para>
+        /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request. The system automatically obtains the value of this parameter.</para>
+        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.X.X</para>

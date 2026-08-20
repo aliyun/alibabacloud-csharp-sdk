@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The expiration timestamp, in seconds.</para>
         /// <remarks>
-        /// <para>If this parameter is set to <b>0</b>, the rule takes effect permanently.</para>
+        /// <para>If the value is <b>0</b>, the rule takes effect permanently.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the IP blacklist rule for critical event protection.</para>
+        /// <para>The ID of the critical event protection IP blacklist rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -94,9 +94,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection rule template for critical event protection.</para>
+        /// <para>The ID of the critical event protection rule template.</para>
         /// <remarks>
         /// <para>This parameter requires the ID of a protection template of the critical event protection type. You can create this type of template only after you purchase the critical event protection upgrade.</para>
+        /// <para>For more information about how to enable critical event protection and create a critical event protection rule template, see <a href="https://help.aliyun.com/document_detail/425591.html">Critical event protection</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

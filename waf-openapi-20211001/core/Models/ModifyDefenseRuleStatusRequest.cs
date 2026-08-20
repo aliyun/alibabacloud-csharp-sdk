@@ -60,7 +60,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the protection rule to modify.</para>
+        /// <para>The ID of the protection rule that you want to modify.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/461426.html">DescribeDefenseRules</a> operation to query the protection rule ID. You can create a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,10 +74,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public long? RuleId { get; set; }
 
         /// <summary>
-        /// <para>The status of the protection rule to set. Valid values: </para>
+        /// <para>The status that you want to set for the protection rule. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Disabled.  </description></item>
-        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.  </description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

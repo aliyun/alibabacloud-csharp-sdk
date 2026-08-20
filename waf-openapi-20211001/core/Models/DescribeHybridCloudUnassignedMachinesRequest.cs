@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class DescribeHybridCloudUnassignedMachinesRequest : TeaModel {
         /// <summary>
         /// <para>The ID of the hybrid cloud cluster.</para>
+        /// <remarks>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation and obtain the <b>Id</b> field value of the target hybrid cloud cluster from the <b>ClusterInfos</b> array in the response. If no cluster is available, call the <a href="https://help.aliyun.com/document_detail/2980286.html">CreateHybridCloudCluster</a> operation to create a hybrid cloud cluster.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string Ip { get; set; }
 
         /// <summary>
-        /// <para>The page number to return in a paged query. Default value: <b>1</b>. For more information about paging, see the relevant parameter descriptions.</para>
+        /// <para>The page number to return in a paged query. Default value: <b>1</b>. For more information about paging, see the PageSize parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,7 +68,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>, which indicates that each page contains 10 entries. For more information about paging, see the relevant parameter descriptions.</para>
+        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>, which indicates that each page contains 10 entries. For more information about paging, see the PageNumber parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

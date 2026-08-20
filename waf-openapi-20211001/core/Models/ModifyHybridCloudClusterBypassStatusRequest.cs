@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
     public class ModifyHybridCloudClusterBypassStatusRequest : TeaModel {
         /// <summary>
         /// <para>The resource ID of the hybrid cloud cluster.</para>
+        /// <remarks>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2849376.html">DescribeHybridCloudClusters</a> operation and find the target hybrid cloud cluster in the <b>ClusterInfos</b> array of the response. Use the value of the <b>ClusterResourceId</b> field. If no cluster is available, call the <a href="https://help.aliyun.com/document_detail/2980286.html">CreateHybridCloudCluster</a> operation to create a hybrid cloud cluster.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +26,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the current WAF instance.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/140857.html">DescribeInstanceInfo</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,7 +64,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The manual bypass enabling status. Valid values:</para>
+        /// <para>The enabling status of the manual bypass switch. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>on</b>: enabled.</para>
         /// </description></item>

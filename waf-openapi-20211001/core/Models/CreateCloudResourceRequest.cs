@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public List<CreateCloudResourceRequestListenCertificates> Certificates { get; set; }
             public class CreateCloudResourceRequestListenCertificates : TeaModel {
                 /// <summary>
-                /// <para>The certificate type for HTTPS. Valid values:</para>
+                /// <para>The certificate type for the HTTPS protocol. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para><b>default</b>: default certificate.</para>
                 /// </description></item>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <para>The domain name to connect to WAF.</para>
             /// <remarks>
             /// <para>This parameter is required only when the cloud service type is ddos. For other service types, leave this field empty.
-            /// For the applicable scope of domain names, see the DDoS connection documentation listed in the operation description.</para>
+            /// Refer to the Anti-DDoS connection documentation listed in the operation description for the applicable scope of domain names.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -169,7 +169,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The ID of the cloud service instance.</para>
             /// <remarks>
-            /// <para>The instance must meet the applicable scope of the corresponding cloud service (instance specifications, region, etc.). For more information, see the corresponding product connection documentation listed in the operation description.</para>
+            /// <para>The instance must meet the applicable scope of the corresponding cloud service (instance specifications, region, etc.). Refer to the corresponding product connection documentation listed in the operation description.</para>
+            /// <para>This parameter is required when <b>ResourceProduct</b> is set to <b>ecs</b>, <b>clb4</b>, <b>clb7</b>, or <b>nlb</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -193,7 +194,8 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The region ID of the cloud service.</para>
             /// <remarks>
-            /// <para>This parameter is required when the instance ID to be connected has not been synchronized to WAF.</para>
+            /// <para>This parameter is required when the instance ID to be connected has not been synchronized to WAF.
+            /// Call <a href="https://help.aliyun.com/document_detail/2743902.html">SyncProductInstance</a> to synchronize ECS, CLB, and NLB assets, and call <a href="https://help.aliyun.com/document_detail/2743168.html">DescribeProductInstances</a> to query the synchronized cloud service assets and their region IDs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -206,10 +208,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The TLS version to add. This parameter is used only when <b>HttpsPorts</b> is not empty, which indicates that the domain name uses HTTPS. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>tlsv1</b>: TLS 1.0 and later. Highest compatibility and lowest security.</description></item>
-            /// <item><description><b>tlsv1.1</b>: TLS 1.1 and later. Good compatibility and good security.</description></item>
-            /// <item><description><b>tlsv1.2</b>: TLS 1.2 and later. Good compatibility and highest security.</description></item>
-            /// <item><description><b>tlsv1.3</b>: TLS 1.3 only. Highest security and lowest compatibility.</description></item>
+            /// <item><description><b>tlsv1</b>: TLS 1.0 and later. Highest compatibility, lower security.</description></item>
+            /// <item><description><b>tlsv1.1</b>: TLS 1.1 and later. Good compatibility, good security.</description></item>
+            /// <item><description><b>tlsv1.2</b>: TLS 1.2 and later. Good compatibility, highest security.</description></item>
+            /// <item><description><b>tlsv1.3</b>: TLS 1.3 only. Highest security, lower compatibility.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -257,7 +259,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The number of requests that can reuse a persistent connection. Valid values: 60 to 1000.</para>
             /// <remarks>
-            /// <para>The number of persistent connections to reuse after persistent connections are enabled.</para>
+            /// <para>After persistent connections are enabled, this parameter specifies how many requests can reuse a persistent connection.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -268,9 +270,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? KeepaliveRequests { get; set; }
 
             /// <summary>
-            /// <para>The timeout period for idle persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</para>
+            /// <para>The idle timeout period for persistent connections. Valid values: 10 to 3600. Default value: 3600. Unit: seconds.</para>
             /// <remarks>
-            /// <para>The idle time after which a reused persistent connection is released.</para>
+            /// <para>Specifies how long an idle persistent connection remains open before it is released.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -283,7 +285,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The maximum request body size. Valid values: 2 to 10. Default value: 2. Unit: GB.</para>
             /// <remarks>
-            /// <para>Only Ultimate Edition is supported.</para>
+            /// <para>Only the Ultimate Edition supports this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -305,9 +307,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public int? ReadTimeout { get; set; }
 
             /// <summary>
-            /// <para>The value of this parameter is in the format of [<b>{&quot;k&quot;:&quot;<em>key</em>&quot;,&quot;v&quot;:&quot;<em>value</em>&quot;}</b>], where <b><em>key</em></b> specifies the custom request header field and <b><em>value</em></b> specifies the value of the field.</para>
+            /// <para>The value of this parameter is in the format of [<b>{&quot;k&quot;:&quot;<em>key</em>&quot;,&quot;v&quot;:&quot;<em>value</em>&quot;}</b>], where <b><em>key</em></b> specifies the custom request header field and <b><em>value</em></b> specifies the value set for the field.</para>
             /// <remarks>
-            /// <para>If the custom header field already exists in the request, the system overwrites the original value with the specified traffic mark value.</para>
+            /// <para>If the custom header field already exists in the request, the system overwrites the value of the custom field in the request with the specified traffic mark value.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("RequestHeaders")]
@@ -325,7 +327,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the custom request header field.</para>
+                /// <para>The value set for the custom request header field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value1</para>
@@ -350,7 +352,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The method that WAF uses to obtain the originating IP address of the client. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: No Layer 7 proxy is deployed before WAF.</para>
+            /// <item><description><para><b>0</b>: No Layer 7 proxy is deployed in front of WAF.</para>
             /// </description></item>
             /// <item><description><para><b>1</b>: WAF reads the first value in the X-Forwarded-For (XFF) header as the client IP address.</para>
             /// </description></item>
@@ -370,7 +372,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             /// <summary>
             /// <para>The list of custom header fields used to obtain the client IP address, in the format of [<b>&quot;header1&quot;,&quot;header2&quot;,……</b>].</para>
             /// <remarks>
-            /// <para>This parameter is required only when <b>XffHeaderMode</b> is set to 2, which indicates that WAF reads the value of a custom header field as the client IP address.</para>
+            /// <para>This parameter is required only when <b>XffHeaderMode</b> is set to 2, which indicates that WAF reads the value of a custom header field that you specify as the client IP address.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("XffHeaders")]
@@ -396,7 +398,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>

@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RedirectShrink { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance is deployed. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>

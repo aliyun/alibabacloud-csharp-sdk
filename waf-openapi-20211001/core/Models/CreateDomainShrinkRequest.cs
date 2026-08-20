@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If the value is <b>share</b>, or the value is <b>hybrid_cloud_cname</b> and public cloud disaster recovery is enabled, call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to verify domain name ownership first. If the domain name is connected to a region in the Chinese mainland, ICP filing must be completed.</para>
+        /// <para>If the value is <b>share</b>, or if the value is <b>hybrid_cloud_cname</b> and public cloud disaster recovery is enabled, call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations to verify domain name ownership first. If the domain name is connected to a region in the Chinese mainland, ICP filing must also be completed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The listener configuration.</para>
+        /// <para>The listening configuration.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Listen")]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud resource group ID.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

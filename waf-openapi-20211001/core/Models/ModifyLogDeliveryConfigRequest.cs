@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyLogDeliveryConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The details of the log delivery configuration, in JSON format.</para>
+        /// <para>The log delivery configuration content, which is a string converted from a JSON object constructed with a series of parameters.</para>
         /// <remarks>
-        /// <para>The value of this parameter is the same as the <b>DeliveryDetail</b> parameter of the <b>CreateLogDeliveryConfig</b> operation. For more information, see <a href="">CreateLogDeliveryConfig</a>.</para>
+        /// <para>This parameter is the same as the <b>DeliveryDetail</b> parameter of the <b>CreateLogDeliveryConfig</b> operation. For more information, see the <b>log delivery configuration content parameter description</b> in the <a href="~~CreateLogDeliveryConfig~~">CreateLogDeliveryConfig</a> operation.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryDetail { get; set; }
 
         /// <summary>
-        /// <para>The name of the log delivery configuration that you want to modify.</para>
+        /// <para>The name of the log delivery configuration to modify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,12 +44,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryName { get; set; }
 
         /// <summary>
-        /// <para>The type of the log delivery destination. Valid values:</para>
+        /// <para>The type of the log delivery configuration to modify. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>syslog</b>: delivers logs to a syslog server.</para>
-        /// </description></item>
-        /// <item><description><para><b>kafka</b>: delivers logs to a Kafka cluster.</para>
-        /// </description></item>
+        /// <item><description><b>syslog</b>: delivers logs to a syslog service.</description></item>
+        /// <item><description><b>kafka</b>: delivers logs to a Kafka service.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -61,9 +59,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string DeliveryType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Web Application Firewall (WAF) instance.</para>
+        /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to obtain the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -75,9 +73,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance resides. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-hangzhou</b>: Chinese mainland.</para>
+        /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
         /// <item><description><para><b>ap-southeast-1</b>: outside the Chinese mainland.</para>
         /// </description></item>
@@ -91,7 +89,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The ID of the Alibaba Cloud resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>

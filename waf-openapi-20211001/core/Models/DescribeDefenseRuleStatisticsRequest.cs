@@ -82,6 +82,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 
         /// <summary>
         /// <para>The ID of the protection template to query.</para>
+        /// <remarks>
+        /// <para>This operation supports querying protection templates under the new Bot Management (<b>bot_manager</b>) and new Web Core Protection (<b>waf_base</b>) scenarios. You can call <a href="https://help.aliyun.com/document_detail/2712643.html">DescribeDefenseTemplates</a> to query the protection scenario (DefenseScene) of a protection template.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

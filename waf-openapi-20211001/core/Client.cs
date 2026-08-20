@@ -1150,7 +1150,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and DDoS.</para>
+        /// <para>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and Anti-DDoS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1158,7 +1158,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Before invoking this operation, complete the following steps:</para>
         /// <ol>
         /// <item><description>Confirm that you have a WAF instance. Invoke <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</description></item>
-        /// <item><description>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/464617.html">ECS Connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB Connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB Connection</a>. For DDoS connections, verify the domain name scope. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/3032763.html">DDoS Connection</a>.
+        /// <item><description>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. Refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/464617.html">ECS connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB connection</a> documentation. For Anti-DDoS connections, which are configured for domain names, refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/3032763.html">Anti-DDoS connection</a> documentation.
         /// After completing the preceding steps, invoke this operation to connect the cloud service to WAF in cloud native mode.</description></item>
         /// </ol>
         /// </description>
@@ -1236,7 +1236,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and DDoS.</para>
+        /// <para>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and Anti-DDoS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1244,7 +1244,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Before invoking this operation, complete the following steps:</para>
         /// <ol>
         /// <item><description>Confirm that you have a WAF instance. Invoke <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</description></item>
-        /// <item><description>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/464617.html">ECS Connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB Connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB Connection</a>. For DDoS connections, verify the domain name scope. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/3032763.html">DDoS Connection</a>.
+        /// <item><description>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. Refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/464617.html">ECS connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB connection</a> documentation. For Anti-DDoS connections, which are configured for domain names, refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/3032763.html">Anti-DDoS connection</a> documentation.
         /// After completing the preceding steps, invoke this operation to connect the cloud service to WAF in cloud native mode.</description></item>
         /// </ol>
         /// </description>
@@ -1322,7 +1322,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and DDoS.</para>
+        /// <para>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and Anti-DDoS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1330,7 +1330,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Before invoking this operation, complete the following steps:</para>
         /// <ol>
         /// <item><description>Confirm that you have a WAF instance. Invoke <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</description></item>
-        /// <item><description>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/464617.html">ECS Connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB Connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB Connection</a>. For DDoS connections, verify the domain name scope. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/3032763.html">DDoS Connection</a>.
+        /// <item><description>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. Refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/464617.html">ECS connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB connection</a> documentation. For Anti-DDoS connections, which are configured for domain names, refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/3032763.html">Anti-DDoS connection</a> documentation.
         /// After completing the preceding steps, invoke this operation to connect the cloud service to WAF in cloud native mode.</description></item>
         /// </ol>
         /// </description>
@@ -1350,7 +1350,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and DDoS.</para>
+        /// <para>Connects a cloud service to WAF in cloud native mode. Supported cloud services include ECS, CLB, NLB, and Anti-DDoS.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -1358,7 +1358,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Before invoking this operation, complete the following steps:</para>
         /// <ol>
         /// <item><description>Confirm that you have a WAF instance. Invoke <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> to query the ID of your WAF instance.</description></item>
-        /// <item><description>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/464617.html">ECS Connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB Connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB Connection</a>. For DDoS connections, verify the domain name scope. For more information, see the &quot;Applicable Scope&quot; section in <a href="https://help.aliyun.com/document_detail/3032763.html">DDoS Connection</a>.
+        /// <item><description>Confirm that the cloud service to be connected meets the applicable scope. For ECS, CLB, and NLB connections, verify the instance specifications and region. Refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/464617.html">ECS connection</a>, <a href="https://help.aliyun.com/document_detail/464614.html">CLB connection</a>, and <a href="https://help.aliyun.com/document_detail/2853925.html">NLB connection</a> documentation. For Anti-DDoS connections, which are configured for domain names, refer to the &quot;Applicable Scope&quot; section in the <a href="https://help.aliyun.com/document_detail/3032763.html">Anti-DDoS connection</a> documentation.
         /// After completing the preceding steps, invoke this operation to connect the cloud service to WAF in cloud native mode.</description></item>
         /// </ol>
         /// </description>
@@ -2314,15 +2314,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a WAF instance for Website Config.</para>
+        /// <para>Adds a domain name to a WAF instance for Website Config protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements:</para>
+        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements.</para>
         /// <list type="bullet">
-        /// <item><description><b>Domain ownership verification</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must complete domain ownership verification first. Call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then call the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership verification.</description></item>
-        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is connected to a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
+        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <b>DomainName</b> parameter to specify the domain name. The <b>DescribeVerifyContent</b> operation also requires the <b>AccessOrigin</b> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</description></item>
+        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2403,15 +2403,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a WAF instance for Website Config.</para>
+        /// <para>Adds a domain name to a WAF instance for Website Config protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements:</para>
+        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements.</para>
         /// <list type="bullet">
-        /// <item><description><b>Domain ownership verification</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must complete domain ownership verification first. Call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then call the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership verification.</description></item>
-        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is connected to a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
+        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <b>DomainName</b> parameter to specify the domain name. The <b>DescribeVerifyContent</b> operation also requires the <b>AccessOrigin</b> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</description></item>
+        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2492,15 +2492,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a WAF instance for Website Config.</para>
+        /// <para>Adds a domain name to a WAF instance for Website Config protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements:</para>
+        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements.</para>
         /// <list type="bullet">
-        /// <item><description><b>Domain ownership verification</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must complete domain ownership verification first. Call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then call the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership verification.</description></item>
-        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is connected to a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
+        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <b>DomainName</b> parameter to specify the domain name. The <b>DescribeVerifyContent</b> operation also requires the <b>AccessOrigin</b> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</description></item>
+        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2519,15 +2519,15 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a domain name to a WAF instance for Website Config.</para>
+        /// <para>Adds a domain name to a WAF instance for Website Config protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements:</para>
+        /// <para>Before you call this operation, the domain name (<b>Domain</b>) must meet the following requirements.</para>
         /// <list type="bullet">
-        /// <item><description><b>Domain ownership verification</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must complete domain ownership verification first. Call the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then call the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership verification.</description></item>
-        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is connected to a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
+        /// <item><description><b>Domain ownership authentication</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, you must first complete domain ownership authentication. Invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> operation to obtain domain verification information, configure a DNS TXT record or upload an HTTP verification file based on the response, and then invoke the <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operation to complete domain ownership authentication. When you invoke the <a href="https://help.aliyun.com/document_detail/2985193.html">DescribeVerifyContent</a> and <a href="https://help.aliyun.com/document_detail/2985192.html">VerifyDomainOwner</a> operations, use the <b>DomainName</b> parameter to specify the domain name. The <b>DescribeVerifyContent</b> operation also requires the <b>AccessOrigin</b> parameter to specify the access source. For valid values, refer to the metric description of the DescribeVerifyContent operation.</description></item>
+        /// <item><description><b>ICP filing</b>: If <b>AccessType</b> is set to <b>share</b> (CNAME access) or <b>hybrid_cloud_cname</b> (hybrid cloud CNAME access) with public cloud disaster recovery enabled, and the domain name is added to Website Config in a region in the Chinese mainland, the domain name must have a valid ICP filing.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3346,12 +3346,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds IP addresses to the IP blacklist for critical event protection in WAF.</para>
+        /// <para>Adds IP addresses to the IP blacklist for WAF critical event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3421,12 +3421,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds IP addresses to the IP blacklist for critical event protection in WAF.</para>
+        /// <para>Adds IP addresses to the IP blacklist for WAF critical event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3496,12 +3496,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds IP addresses to the IP blacklist for critical event protection in WAF.</para>
+        /// <para>Adds IP addresses to the IP blacklist for WAF critical event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3519,12 +3519,12 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds IP addresses to the IP blacklist for critical event protection in WAF.</para>
+        /// <para>Adds IP addresses to the IP blacklist for WAF critical event protection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the response parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3542,8 +3542,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds member accounts to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Adds WAF member accounts in the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, ensure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not, upgrade the instance to enable multi-account management. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> folder to configure a WAF delegated administrator in the resource directory first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMemberAccountsRequest
@@ -3600,8 +3605,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds member accounts to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Adds WAF member accounts in the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, ensure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not, upgrade the instance to enable multi-account management. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> folder to configure a WAF delegated administrator in the resource directory first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMemberAccountsRequest
@@ -3658,8 +3668,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds member accounts to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Adds WAF member accounts in the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, ensure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not, upgrade the instance to enable multi-account management. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> folder to configure a WAF delegated administrator in the resource directory first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMemberAccountsRequest
@@ -3676,8 +3691,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds member accounts to use the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Adds WAF member accounts in the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, ensure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not, upgrade the instance to enable multi-account management. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> folder to configure a WAF delegated administrator in the resource directory first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateMemberAccountsRequest
@@ -6502,8 +6522,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Web Application Firewall (WAF) member account.</para>
+        /// <para>Deletes a WAF member account from the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.ResourceDirectory response parameter is true, the instance supports the multi-account management feature. If the instance does not support this feature, upgrade the instance to enable multi-account management. Call the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management</a> documentation to configure a WAF delegated administrator in the resource directory first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteMemberAccountRequest
@@ -6560,8 +6585,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Web Application Firewall (WAF) member account.</para>
+        /// <para>Deletes a WAF member account from the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.ResourceDirectory response parameter is true, the instance supports the multi-account management feature. If the instance does not support this feature, upgrade the instance to enable multi-account management. Call the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management</a> documentation to configure a WAF delegated administrator in the resource directory first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteMemberAccountRequest
@@ -6618,8 +6648,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Web Application Firewall (WAF) member account.</para>
+        /// <para>Deletes a WAF member account from the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.ResourceDirectory response parameter is true, the instance supports the multi-account management feature. If the instance does not support this feature, upgrade the instance to enable multi-account management. Call the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management</a> documentation to configure a WAF delegated administrator in the resource directory first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteMemberAccountRequest
@@ -6636,8 +6671,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Web Application Firewall (WAF) member account.</para>
+        /// <para>Deletes a WAF member account from the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.ResourceDirectory response parameter is true, the instance supports the multi-account management feature. If the instance does not support this feature, upgrade the instance to enable multi-account management. Call the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management</a> documentation to configure a WAF delegated administrator in the resource directory first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteMemberAccountRequest
@@ -12102,7 +12142,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the billing module information of Web Application Firewall (WAF).</para>
+        /// <para>Queries the pricing module information of WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12119,6 +12159,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeUnit))
+            {
+                query["ChargeUnit"] = request.ChargeUnit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -12152,7 +12196,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the billing module information of Web Application Firewall (WAF).</para>
+        /// <para>Queries the pricing module information of WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12169,6 +12213,10 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChargeUnit))
+            {
+                query["ChargeUnit"] = request.ChargeUnit;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayType))
             {
                 query["PayType"] = request.PayType;
@@ -12202,7 +12250,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the billing module information of Web Application Firewall (WAF).</para>
+        /// <para>Queries the pricing module information of WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12220,7 +12268,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the billing module information of Web Application Firewall (WAF).</para>
+        /// <para>Queries the pricing module information of WAF.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15497,6 +15545,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Queries statistics of rules under a specified WAF protection module.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDefenseRuleStatisticsRequest
         /// </param>
@@ -15566,6 +15619,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <summary>
         /// <para>Queries statistics of rules under a specified WAF protection module.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDefenseRuleStatisticsRequest
@@ -15637,6 +15695,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Queries statistics of rules under a specified WAF protection module.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DescribeDefenseRuleStatisticsRequest
         /// </param>
@@ -15654,6 +15717,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <summary>
         /// <para>Queries statistics of rules under a specified WAF protection module.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation supports querying rule statistics for protection templates under the new Bot Management (bot_manager) and new Web Core Protection (waf_base) scenarios.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDefenseRuleStatisticsRequest
@@ -20707,7 +20775,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20782,7 +20850,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20857,7 +20925,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20880,7 +20948,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloud parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22010,8 +22078,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all member accounts managed by the WAF multi-account management feature.</para>
+        /// <para>Queries the information about all member accounts in the WAF multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports the multi-account management feature. If not, upgrade the instance to enable the multi-account management feature. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMemberAccountsRequest
@@ -22068,8 +22141,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all member accounts managed by the WAF multi-account management feature.</para>
+        /// <para>Queries the information about all member accounts in the WAF multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports the multi-account management feature. If not, upgrade the instance to enable the multi-account management feature. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMemberAccountsRequest
@@ -22126,8 +22204,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all member accounts managed by the WAF multi-account management feature.</para>
+        /// <para>Queries the information about all member accounts in the WAF multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports the multi-account management feature. If not, upgrade the instance to enable the multi-account management feature. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMemberAccountsRequest
@@ -22144,8 +22227,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves all member accounts managed by the WAF multi-account management feature.</para>
+        /// <para>Queries the information about all member accounts in the WAF multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that the WAF instance supports the multi-account management feature and that the current calling account is configured as a WAF delegated administrator. Invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports the multi-account management feature. If not, upgrade the instance to enable the multi-account management feature. Invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to check whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">Multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeMemberAccountsRequest
@@ -33353,6 +33441,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Modifies the status of protected objects or protected object groups for the API security protection module.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyApisecModuleStatusRequest
         /// </param>
@@ -33418,6 +33511,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <summary>
         /// <para>Modifies the status of protected objects or protected object groups for the API security protection module.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyApisecModuleStatusRequest
@@ -33485,6 +33583,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Modifies the status of protected objects or protected object groups for the API security protection module.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyApisecModuleStatusRequest
         /// </param>
@@ -33502,6 +33605,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <summary>
         /// <para>Modifies the status of protected objects or protected object groups for the API security protection module.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that protected objects or protected object groups already exist. For protected objects that have been added to WAF, call the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query their names. For created protected object groups, call the <a href="https://help.aliyun.com/document_detail/2773860.html">DescribeDefenseResourceGroups</a> operation to query them. If no protected object group has been created, call the <a href="https://help.aliyun.com/document_detail/461739.html">CreateDefenseResourceGroup</a> operation to create one first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyApisecModuleStatusRequest
@@ -34522,8 +34630,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</para>
+        /// <para>Modifies the client IP and cookie settings of a protected object.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDefenseResourceXffRequest
@@ -34600,8 +34713,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</para>
+        /// <para>Modifies the client IP and cookie settings of a protected object.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDefenseResourceXffRequest
@@ -34678,8 +34796,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</para>
+        /// <para>Modifies the client IP and cookie settings of a protected object.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDefenseResourceXffRequest
@@ -34696,8 +34819,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the cookie settings of a protected object and the method to identify the originating IP addresses of clients.</para>
+        /// <para>Modifies the client IP and cookie settings of a protected object.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you invoke this operation, make sure that a protected object has been added to WAF. You can invoke the <a href="https://help.aliyun.com/document_detail/461413.html">CreateDomain</a> operation to create a CNAME-based resource, invoke the <a href="https://help.aliyun.com/document_detail/2839876.html">CreateCloudResource</a> operation to create a cloud native mode resource, or invoke the <a href="https://help.aliyun.com/document_detail/2930080.html">CreateDefenseResource</a> operation to create a custom protected object. You can invoke the <a href="https://help.aliyun.com/document_detail/461612.html">DescribeDefenseResources</a> operation to query the protected objects that have been added to WAF.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDefenseResourceXffRequest
@@ -35049,6 +35177,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Modifies the status of a protection rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you have created a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDefenseRuleStatusRequest
         /// </param>
@@ -35114,6 +35247,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <summary>
         /// <para>Modifies the status of a protection rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you have created a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDefenseRuleStatusRequest
@@ -35181,6 +35319,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <para>Modifies the status of a protection rule.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you have created a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ModifyDefenseRuleStatusRequest
         /// </param>
@@ -35198,6 +35341,11 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// <summary>
         /// <para>Modifies the status of a protection rule.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you have created a protection rule by calling the <a href="https://help.aliyun.com/document_detail/461421.html">CreateDefenseRule</a> operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyDefenseRuleStatusRequest
@@ -36487,7 +36635,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36550,7 +36698,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36613,7 +36761,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36636,7 +36784,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud response parameter is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
+        /// <para>Before calling this operation, make sure that the hybrid cloud feature is enabled for the WAF instance. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the Details.HybridCloud parameter in the response is true, the hybrid cloud feature is enabled. If the feature is not enabled, log on to the WAF console and upgrade the instance to enable the hybrid cloud feature.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37730,8 +37878,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a log delivery configuration for a hybrid cloud cluster.</para>
+        /// <para>Modifies the log delivery configuration for hybrid cloud.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyLogDeliveryConfigRequest
@@ -37792,8 +37945,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a log delivery configuration for a hybrid cloud cluster.</para>
+        /// <para>Modifies the log delivery configuration for hybrid cloud.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyLogDeliveryConfigRequest
@@ -37854,8 +38012,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a log delivery configuration for a hybrid cloud cluster.</para>
+        /// <para>Modifies the log delivery configuration for hybrid cloud.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyLogDeliveryConfigRequest
@@ -37872,8 +38035,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a log delivery configuration for a hybrid cloud cluster.</para>
+        /// <para>Modifies the log delivery configuration for hybrid cloud.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that the WAF instance has purchased hybrid cloud extension nodes. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.HybridCloudNodeExtend parameter is greater than 0, hybrid cloud extension nodes have been purchased. If not, log on to the WAF console and purchase hybrid cloud extension nodes by upgrading the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyLogDeliveryConfigRequest
@@ -37895,7 +38063,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37970,7 +38138,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38045,7 +38213,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38068,7 +38236,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
+        /// <para>Before calling this operation, make sure that the WAF instance supports critical event protection. Critical event protection requires a separate upgrade purchase. Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned parameter Details.MajorProtection is true, the instance supports critical event protection. If not, upgrade the instance to enable critical event protection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38086,8 +38254,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a member account that is managed by the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the information of member accounts in the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not supported, you can upgrade the instance to enable multi-account management. You can also invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to query whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyMemberAccountRequest
@@ -38148,8 +38321,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a member account that is managed by the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the information of member accounts in the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not supported, you can upgrade the instance to enable multi-account management. You can also invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to query whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyMemberAccountRequest
@@ -38210,8 +38388,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a member account that is managed by the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the information of member accounts in the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not supported, you can upgrade the instance to enable multi-account management. You can also invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to query whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyMemberAccountRequest
@@ -38228,8 +38411,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information of a member account that is managed by the multi-account management feature of Web Application Firewall (WAF).</para>
+        /// <para>Modifies the information of member accounts in the multi-account management feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before invoking this operation, make sure that the WAF instance supports multi-account management and that the current calling account is configured as a WAF delegated administrator. You can invoke the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query instance details. If the returned Details.ResourceDirectory parameter is true, the instance supports multi-account management. If not supported, you can upgrade the instance to enable multi-account management. You can also invoke the <a href="https://help.aliyun.com/document_detail/2716807.html">DescribeAccountDelegatedStatus</a> operation to query whether the current account is a WAF delegated administrator. If not, refer to the <a href="https://help.aliyun.com/document_detail/2709681.html">multi-account management feature</a> documentation to configure a WAF delegated administrator in the resource folder first.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyMemberAccountRequest

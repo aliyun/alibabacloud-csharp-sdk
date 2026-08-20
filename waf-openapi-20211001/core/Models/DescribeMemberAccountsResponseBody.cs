@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public List<DescribeMemberAccountsResponseBodyAccountInfos> AccountInfos { get; set; }
         public class DescribeMemberAccountsResponseBodyAccountInfos : TeaModel {
             /// <summary>
-            /// <para>The ID of the member account.</para>
+            /// <para>The ID of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>169************21</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the member account.</para>
+            /// <para>The name of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ipflgmqqnbjg</para>
@@ -37,13 +37,13 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AccountName { get; set; }
 
             /// <summary>
-            /// <para>The status of the member account. Valid values:</para>
+            /// <para>The status of the member accounts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>enabled</b>: The member account is being managed.</para>
+            /// <item><description><para><b>enabled</b>: The member accounts is managed.</para>
             /// </description></item>
-            /// <item><description><para><b>disabled</b>: The member account is not being managed.</para>
+            /// <item><description><para><b>disabled</b>: The member accounts is not managed.</para>
             /// </description></item>
-            /// <item><description><para><b>disabling</b>: The member account is being removed from management.</para>
+            /// <item><description><para><b>disabling</b>: The member accounts is being deleted.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -55,17 +55,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string AccountStatus { get; set; }
 
             /// <summary>
-            /// <para>The description of the member account.</para>
+            /// <para>The description of the member accounts.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>descriptionTest</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the member account was added. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the member accounts was added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1683367751000</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class ModifyMemberAccountRequest : TeaModel {
         /// <summary>
-        /// <para>The description of the member account. The description must be 1 to 256 characters in length and can contain letters, digits, Chinese characters, periods (.), underscores (_), hyphens (-), and asterisks (\*).</para>
+        /// <para>The description of the WAF member accounts. The value is 1 to 256 characters in length and can contain Chinese characters, letters, digits, periods (.), underscores (_), hyphens (-), and asterisks (*).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         /// <summary>
         /// <para>The ID of the WAF instance.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the WAF instance.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/433756.html">DescribeInstance</a> operation to query the ID of the current WAF instance.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member account that is managed by the WAF multi-account management feature.</para>
+        /// <para>The ID of the managed WAF member accounts.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string MemberAccountId { get; set; }
 
         /// <summary>
-        /// <para>The region where the WAF instance resides. Valid values:</para>
+        /// <para>The region where the WAF instance is deployed. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>cn-hangzhou</b>: the Chinese mainland.</para>
         /// </description></item>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string ResourceManagerResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The source IP address of the request.</para>
+        /// <para>The source IP address of the request. You do not need to specify this parameter. The system automatically obtains the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.XX.XX</para>

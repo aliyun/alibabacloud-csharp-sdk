@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeChargeModuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of billing modules for WAF.</para>
+        /// <para>The list of WAF pricing module information.</para>
         /// </summary>
         [NameInMap("ChargeModules")]
         [Validation(Required=false)]
         public List<DescribeChargeModuleResponseBodyChargeModules> ChargeModules { get; set; }
         public class DescribeChargeModuleResponseBodyChargeModules : TeaModel {
             /// <summary>
-            /// <para>The pricing model of the billing module. Valid values:</para>
+            /// <para>The pricing mode of the pricing module. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>NORMAL_PRICE</b>: tiered pricing.</para>
-            /// </description></item>
-            /// <item><description><para><b>STEP_ACCUMULATION</b>: tiered pricing.</para>
-            /// </description></item>
+            /// <item><description><b>NORMAL_PRICE</b>: standard pricing.</description></item>
+            /// <item><description><b>STEP_ACCUMULATION</b>: tiered pricing.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,75 +31,55 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ChargeMode { get; set; }
 
             /// <summary>
-            /// <para>The detailed pricing information for the billing module.</para>
+            /// <para>The pricing details of the pricing module.</para>
             /// </summary>
             [NameInMap("ChargeModeDetails")]
             [Validation(Required=false)]
             public List<string> ChargeModeDetails { get; set; }
 
             /// <summary>
-            /// <para>The code of the billing module. Valid values:</para>
+            /// <para>The pricing unit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SeCU</para>
+            /// </summary>
+            [NameInMap("ChargeUnit")]
+            [Validation(Required=false)]
+            public string ChargeUnit { get; set; }
+
+            /// <summary>
+            /// <para>The pricing module identity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>domainCount</b>: the number of domain names added to WAF in CNAME record mode.</para>
-            /// </description></item>
-            /// <item><description><para><b>qps</b>: the peak queries per second (QPS).</para>
-            /// </description></item>
-            /// <item><description><para><b>request</b>: the basic traffic fee.</para>
-            /// </description></item>
-            /// <item><description><para><b>ipBlacklistRuleCount</b>: the number of IP blacklist rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>customAclBaseRuleCount</b>: the number of basic rules in custom protection rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>customAclAdvanceRuleCount</b>: the number of advanced rules in custom protection rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>antiScanRuleCount</b>: the number of scan protection rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>customResponseRuleCount</b>: the number of custom response rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>ipv6</b>: IPv6 protection.</para>
-            /// </description></item>
-            /// <item><description><para><b>gslb</b>: intelligent load balancing.</para>
-            /// </description></item>
-            /// <item><description><para><b>exclusiveIpCount</b>: the number of exclusive IP addresses.</para>
-            /// </description></item>
-            /// <item><description><para><b>ccRuleCount</b>: the number of HTTP flood protection rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>regionBlockRuleCount</b>: the number of rules in the region blacklist.</para>
-            /// </description></item>
-            /// <item><description><para><b>tamperproofRuleCount</b>: the number of web tamper-proofing rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>dlpRuleCount</b>: the number of data leakage prevention rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>botTraffic</b>: the traffic fee for bot management.</para>
-            /// </description></item>
-            /// <item><description><para><b>aiWhiteListTemplateCount</b>: the number of intelligent whitelist templates.</para>
-            /// </description></item>
-            /// <item><description><para><b>apisecResourceCount</b>: the number of protected objects for which API security is enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>apisecTraffic</b>: the traffic fee for API security.</para>
-            /// </description></item>
-            /// <item><description><para><b>compliance</b>: the number of protocol compliance templates.</para>
-            /// </description></item>
-            /// <item><description><para><b>riskTraffic</b>: the number of times that risk identification in bot management is matched.</para>
-            /// </description></item>
-            /// <item><description><para><b>assetStatus</b>: asset center.</para>
-            /// </description></item>
-            /// <item><description><para><b>nonPort</b>: custom ports protection.</para>
-            /// </description></item>
-            /// <item><description><para><b>customAclCaptcha</b>: the number of times that sliders are used for custom protection rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>wafBaseTemplateCount</b>: the number of core web protection rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>instanceFee</b>: the WAF instance fee.</para>
-            /// </description></item>
-            /// <item><description><para><b>spikeThrottleRuleCount</b>: the number of peak traffic throttling rules.</para>
-            /// </description></item>
-            /// <item><description><para><b>botWebTemplateCount</b>: the number of web protection templates in bot management.</para>
-            /// </description></item>
-            /// <item><description><para><b>botAppTemplateCount</b>: the number of app protection templates in bot management.</para>
-            /// </description></item>
-            /// <item><description><para><b>customAclBotRuleCount</b>: the number of advanced custom rules in bot management.</para>
-            /// </description></item>
+            /// <item><description><b>domainCount</b>: the number of CNAME-connected domain names.</description></item>
+            /// <item><description><b>qps</b>: the peak QPS.</description></item>
+            /// <item><description><b>request</b>: the basic traffic fee.</description></item>
+            /// <item><description><b>ipBlacklistRuleCount</b>: the number of IP blacklist rules.</description></item>
+            /// <item><description><b>customAclBaseRuleCount</b>: the number of Basic Policies in custom rules.</description></item>
+            /// <item><description><b>customAclAdvanceRuleCount</b>: the number of advanced rules in custom rules.</description></item>
+            /// <item><description><b>antiScanRuleCount</b>: the number of scan protection rules.</description></item>
+            /// <item><description><b>customResponseRuleCount</b>: the number of custom response rules.</description></item>
+            /// <item><description><b>ipv6</b>: IPv6.</description></item>
+            /// <item><description><b>gslb</b>: intelligent load balancing.</description></item>
+            /// <item><description><b>exclusiveIpCount</b>: the number of exclusive IP addresses.</description></item>
+            /// <item><description><b>ccRuleCount</b>: the number of HTTP flood mitigation rules.</description></item>
+            /// <item><description><b>regionBlockRuleCount</b>: the number of Location Blacklist rules.</description></item>
+            /// <item><description><b>tamperproofRuleCount</b>: the number of web tamper proofing rules.</description></item>
+            /// <item><description><b>dlpRuleCount</b>: the number of information leak prevention rules.</description></item>
+            /// <item><description><b>botTraffic</b>: the Bot management traffic fee.</description></item>
+            /// <item><description><b>aiWhiteListTemplateCount</b>: the number of intelligent whitelist templates.</description></item>
+            /// <item><description><b>apisecResourceCount</b>: the number of protected objects with API security enabled.</description></item>
+            /// <item><description><b>apisecTraffic</b>: the API security traffic fee.</description></item>
+            /// <item><description><b>compliance</b>: the number of protocol compliance templates.</description></item>
+            /// <item><description><b>riskTraffic</b>: the number of risk identification hits in Bot management.</description></item>
+            /// <item><description><b>assetStatus</b>: the asset center.</description></item>
+            /// <item><description><b>nonPort</b>: non-standard ports.</description></item>
+            /// <item><description><b>customAclCaptcha</b>: the number of custom rule slider verification attempts.</description></item>
+            /// <item><description><b>wafBaseTemplateCount</b>: the number of web core protection rules.</description></item>
+            /// <item><description><b>instanceFee</b>: the WAF instance fee.</description></item>
+            /// <item><description><b>spikeThrottleRuleCount</b>: the number of peak traffic throttling rules.</description></item>
+            /// <item><description><b>botWebTemplateCount</b>: the number of web protection templates in Bot management.</description></item>
+            /// <item><description><b>botAppTemplateCount</b>: the number of app protection templates in Bot management.</description></item>
+            /// <item><description><b>customAclBotRuleCount</b>: the number of advanced custom rules in Bot management.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +90,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string ModuleCode { get; set; }
 
             /// <summary>
-            /// <para>The billing cycle of the billing module. Valid values:</para>
+            /// <para>The billing period type of the pricing module. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Hour</b>: hourly billing.</description></item>
             /// </list>
@@ -125,26 +103,17 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string PeriodType { get; set; }
 
             /// <summary>
-            /// <para>The usage type of the billing module. Valid values:</para>
+            /// <para>The usage type of the pricing module. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>template</b>: template.</para>
-            /// </description></item>
-            /// <item><description><para><b>qps</b>: QPS.</para>
-            /// </description></item>
-            /// <item><description><para><b>domain</b>: domain name.</para>
-            /// </description></item>
-            /// <item><description><para><b>rule</b>: rule.</para>
-            /// </description></item>
-            /// <item><description><para><b>ip</b>: IP address.</para>
-            /// </description></item>
-            /// <item><description><para><b>resource</b>: protected object.</para>
-            /// </description></item>
-            /// <item><description><para><b>request</b>: request.</para>
-            /// </description></item>
-            /// <item><description><para><b>function</b>: feature enablement.</para>
-            /// </description></item>
-            /// <item><description><para><b>time</b>: number of times.</para>
-            /// </description></item>
+            /// <item><description><b>template</b>: template.</description></item>
+            /// <item><description><b>qps</b>: QPS.</description></item>
+            /// <item><description><b>domain</b>: domain name.</description></item>
+            /// <item><description><b>rule</b>: rule.</description></item>
+            /// <item><description><b>ip</b>: IP address.</description></item>
+            /// <item><description><b>resource</b>: protected object.</description></item>
+            /// <item><description><b>reqest</b>: request.</description></item>
+            /// <item><description><b>function</b>: feature enablement.</description></item>
+            /// <item><description><b>time</b>: number of times.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -155,9 +124,9 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
             public string UsageType { get; set; }
 
             /// <summary>
-            /// <para>The billing unit coefficient of the billing module.</para>
+            /// <para>The billing unit factor of the pricing module.</para>
             /// <remarks>
-            /// <para>The usage unit for the module is determined by multiplying the <b>UsageUnitFactor</b> by the <b>UsageType</b>.</para>
+            /// <para>The billing unit factor <b>UsageUnitFactor</b> multiplied by the usage type <b>UsageType</b> forms the billing unit of the module.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

@@ -10,9 +10,19 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
 {
     public class DescribeChargeModuleRequest : TeaModel {
         /// <summary>
-        /// <para>The billing method of the instance. Valid values:</para>
+        /// <para>The pricing unit.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SeCU</para>
+        /// </summary>
+        [NameInMap("ChargeUnit")]
+        [Validation(Required=false)]
+        public string ChargeUnit { get; set; }
+
+        /// <summary>
+        /// <para>The billing type of the instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>POSTPAY</b>: a pay-as-you-go WAF instance.</description></item>
+        /// <item><description><b>POSTPAY</b>: pay-as-you-go WAF instance.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.Waf_openapi20211001.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The Alibaba Cloud resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm***q</para>
