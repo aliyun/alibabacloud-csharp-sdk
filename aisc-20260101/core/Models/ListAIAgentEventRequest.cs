@@ -114,6 +114,20 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>Sort direction</para>
+        /// </summary>
+        [NameInMap("Order")]
+        [Validation(Required=false)]
+        public string Order { get; set; }
+
+        /// <summary>
+        /// <para>Sort field, currently supports CheckTime</para>
+        /// </summary>
+        [NameInMap("OrderBy")]
+        [Validation(Required=false)]
+        public string OrderBy { get; set; }
+
+        /// <summary>
         /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The file name. If this parameter is not specified, the file name is parsed from DownloadUrl.</para>
+            /// <para>The file name. If not specified, the file name is parsed from DownloadUrl.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test-file</para>
@@ -36,7 +36,27 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             [Validation(Required=false)]
             public string FileName { get; set; }
 
+            /// <summary>
+            /// <para>The tenant-isolated OSS temporary object key returned by GenerateSkillOssUploadCredential. Specify either this parameter or DownloadUrl.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>user-upload/staging/123456789/550e8400-e29b-41d4-a716-446655440000</para>
+            /// </summary>
+            [NameInMap("UploadKey")]
+            [Validation(Required=false)]
+            public string UploadKey { get; set; }
+
         }
+
+        /// <summary>
+        /// <para>The upload source. If left empty, the default value is user_upload. Use sec_ops_agent for the security operations agent.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sec_ops_agent</para>
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
 
     }
 

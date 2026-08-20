@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public int? FailCount { get; set; }
 
             /// <summary>
-            /// <para>The ID of the root task returned after the task is submitted.</para>
+            /// <para>The root task ID returned after the task is submitted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c6e7fa8a77df6e182ac3fcf1478ab83a</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public string RootTaskId { get; set; }
 
             /// <summary>
-            /// <para>The number of files that are uploaded.</para>
+            /// <para>The number of files that are uploaded successfully.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.AISC20260101.Models
             public List<CreateSkillFileCheckResponseBodyDataUploadResults> UploadResults { get; set; }
             public class CreateSkillFileCheckResponseBodyDataUploadResults : TeaModel {
                 /// <summary>
-                /// <para>The error message returned when the file fails to be uploaded.</para>
+                /// <para>The error message returned when the file upload fails.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Network error.</para>
