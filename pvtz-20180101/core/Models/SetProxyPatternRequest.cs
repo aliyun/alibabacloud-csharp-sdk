@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class SetProxyPatternRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. The token must be unique for each request. It can contain only ASCII characters and must be no more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21079fa016944979537637959d09bc</para>
@@ -22,10 +22,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -35,10 +37,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the recursive resolution proxy for subdomain names. Valid values:</para>
+        /// <para>The proxy mode for recursive resolution of subdomains. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ZONE</b>: disables the recursive resolution proxy for subdomain names. In this case, NXDOMAIN is returned if the queried subdomain name does not exist in the zone.</description></item>
-        /// <item><description><b>RECORD</b>: enables the recursive resolution proxy for subdomain names. In this case, if the queried domain name does not exist in the zone, Domain Name System (DNS) requests are recursively forwarded to the forward module and then to the recursion module until DNS results are returned.</description></item>
+        /// <item><description><para><b>ZONE</b>: Disables the proxy. If a subdomain does not exist, an NXDOMAIN response is returned.</para>
+        /// </description></item>
+        /// <item><description><para><b>RECORD</b>: Enables the proxy. If a subdomain does not exist, the system queries the forwarding and recursion modules and returns the final result.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

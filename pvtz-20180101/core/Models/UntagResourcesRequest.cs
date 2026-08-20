@@ -10,25 +10,29 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class UntagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to remove all tags of the specified zones. Valid values:</para>
+        /// <para>Specifies whether to remove all tags. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: removes all tags of the specified zones.</description></item>
-        /// <item><description>false: removes only the tags with the specified tag keys.</description></item>
+        /// <item><description><para>true: Removes all tags from the specified zones.</para>
+        /// </description></item>
+        /// <item><description><para>false: Removes only the tags that have the specified tag keys (TagKey.N).</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("All")]
         [Validation(Required=false)]
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
+        /// <para>The language of the return value. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: en.</para>
         /// 
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</para>
+        /// <para>A list of resource IDs, which are the zone IDs. You can specify up to 50 resource IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +55,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. The value of ResourceType can only be ZONE.</para>
+        /// <para>The resource type. Set the value to ZONE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The keys of tags that you want to remove. You can specify up to 20 tag keys.</para>
+        /// <para>A list of tag keys. You can specify up to 20 tag keys.</para>
         /// 
         /// <b>Example:</b>
         /// <para>env</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class BindZoneVpcResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</para>

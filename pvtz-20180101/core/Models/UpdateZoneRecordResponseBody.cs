@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>250E2C38-D0AD-4518-851D-1C1055805F82</para>

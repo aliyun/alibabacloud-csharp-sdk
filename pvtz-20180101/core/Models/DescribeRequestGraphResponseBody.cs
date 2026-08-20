@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EB71815-A421-4E51-8E8D-667F44ABE633</para>

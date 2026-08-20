@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class AddCustomLineRequest : TeaModel {
         /// <summary>
-        /// <para>This parameter is not available. You can ignore it.</para>
+        /// <para>This parameter is not available to users. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>INTRANET</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string DnsCategory { get; set; }
 
         /// <summary>
-        /// <para>The IPv4 CIDR blocks.</para>
+        /// <para>The list of IPv4 address segments.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ipv4s")]
@@ -40,13 +40,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The name of the custom line.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Custom Route-test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not available. You can ignore it.</para>
+        /// <para>This parameter is not available to users. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GLOBAL</para>

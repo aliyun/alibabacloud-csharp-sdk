@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 
         /// <summary>
         /// <para>The name of the custom line.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Custom Route-test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

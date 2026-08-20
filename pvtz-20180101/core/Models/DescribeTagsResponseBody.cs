@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The returned page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9EA7F720-B7C0-45C1-9CF4-B6A5A1179B68</para>
@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tags added to the resources.</para>
+        /// <para>The list of resource tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<DescribeTagsResponseBodyTags> Tags { get; set; }
         public class DescribeTagsResponseBodyTags : TeaModel {
             /// <summary>
-            /// <para>The key of tag N added to the resource.</para>
+            /// <para>The tag key of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The values of tags added to the resources.</para>
+            /// <para>The list of tag values.</para>
             /// </summary>
             [NameInMap("Values")]
             [Validation(Required=false)]

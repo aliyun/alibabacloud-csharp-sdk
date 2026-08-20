@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class UpdateSyncEcsHostTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-FC9A-4595-8D96-089D73D7A63D</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>True: The request succeeded.</para>
+        /// </description></item>
+        /// <item><description><para>False: The request failed.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

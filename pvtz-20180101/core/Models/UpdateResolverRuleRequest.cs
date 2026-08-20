@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class UpdateResolverRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The endpoint ID.</para>
+        /// <para>The ID of the endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr****</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses and ports of the external Domain Name System (DNS) servers. Enter the IP addresses and ports of the destination servers to which the DNS requests are forwarded. You can enter up to six IP addresses and ports. Both private and public IP addresses are supported.</para>
+        /// <para>The IP addresses and ports of external DNS servers. DNS queries are forwarded to these servers. You can specify up to six servers. Both private and public IP addresses are supported.</para>
         /// <remarks>
-        /// <para> If you specify public IP addresses as the IP addresses of the external DNS servers and Elastic Compute Service (ECS) instances in the outbound virtual private cloud (VPC) are not assigned public IP addresses, you need to activate NAT Gateway for the VPC and create and manage SNAT entries on a NAT gateway.</para>
+        /// <para>If you specify a public IP address for an external DNS server, and the Elastic Compute Service (ECS) instances in the virtual private cloud (VPC) for the outbound endpoint do not have public IP addresses, enable a NAT Gateway and configure Source Network Address Translation (SNAT) entries for it.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ForwardIp")]
@@ -32,7 +32,9 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             /// <summary>
             /// <para>The IP address of the destination server.</para>
             /// <remarks>
-            /// <para> You cannot specify the following IP addresses as the IP addresses of the external DNS servers because the IP addresses are reserved by the system: 100.100.2.136 to 100.100.2.138, and 100.100.2.116 to 100.100.2.118.</para>
+            /// <para>The IP addresses in the following ranges are reserved by the system and cannot be used for external DNS servers:
+            /// 100.100.2.136-100.100.2.138
+            /// 100.100.2.116-100.100.2.118</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The port of the destination server.</para>
+            /// <para>The port number of the destination server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8080</para>
@@ -57,10 +59,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <para>The name of the forwarding rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>forward rule-test</para>
+        /// <para>Forwarding rule-test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

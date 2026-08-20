@@ -12,10 +12,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The start value is 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum number: 1. Default value: 20.</para>
+        /// <para>The number of entries per page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid value: ZONE.</para>
+        /// <para>The resource type. Set the value to ZONE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

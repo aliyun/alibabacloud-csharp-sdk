@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeCustomLineInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the custom line was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-23T03:15Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the custom line was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The creation timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1516775741000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The creator of the custom line.</para>
+        /// <para>The creator.</para>
         /// 
         /// <b>Example:</b>
         /// <para>260282302749096109</para>
@@ -40,12 +40,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The type of the creator. Valid values:</para>
+        /// <para>The subtype of the creator. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CUSTOM: Alibaba Cloud account</description></item>
-        /// <item><description>SUB: RAM user</description></item>
-        /// <item><description>STS: assumed role that obtains the Security Token Service (STS) token of a RAM role</description></item>
-        /// <item><description>OTHER: other roles</description></item>
+        /// <item><description><para><c>CUSTOM</c>: Alibaba Cloud account</para>
+        /// </description></item>
+        /// <item><description><para><c>SUB</c>: RAM user</para>
+        /// </description></item>
+        /// <item><description><para><c>STS</c>: assumed role</para>
+        /// </description></item>
+        /// <item><description><para><c>OTHER</c>: other roles</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -56,10 +60,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string CreatorSubType { get; set; }
 
         /// <summary>
-        /// <para>The role of the creator. Valid values:</para>
+        /// <para>The creator type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>USER: user</description></item>
-        /// <item><description>SYSTEM: system</description></item>
+        /// <item><description><para><c>USER</c>: user</para>
+        /// </description></item>
+        /// <item><description><para><c>SYSTEM</c>: system</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Dnscategory { get; set; }
 
         /// <summary>
-        /// <para>The IPv4 CIDR blocks.</para>
+        /// <para>A list of IPv4 address segments.</para>
         /// </summary>
         [NameInMap("Ipv4s")]
         [Validation(Required=false)]
@@ -91,7 +97,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string LineId { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom line.</para>
+        /// <para>The custom line name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -108,7 +117,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The time when the custom line was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The last update time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-24T06:35Z</para>
@@ -118,7 +127,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the custom line was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The last update timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1516775741000</para>

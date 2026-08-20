@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class AddResolverEndpointRequest : TeaModel {
         /// <summary>
-        /// <para>The source IP addresses of outbound traffic. You must add two to six source IP addresses.</para>
+        /// <para>The list of source IP addresses for outbound traffic. You must add at least two IP addresses. You can add up to six IP addresses.</para>
         /// <remarks>
-        /// <para> You must add at least two source IP addresses for outbound traffic to ensure high availability. We recommend that you add two IP addresses that reside in different zones. You can add up to six source IP addresses.</para>
+        /// <para>To ensure high availability (HA), add at least two source IP addresses for the outbound endpoint. We recommend that you allocate these IP addresses in different zones. You can add a maximum of six source IP addresses.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public List<AddResolverEndpointRequestIpConfig> IpConfig { get; set; }
         public class AddResolverEndpointRequestIpConfig : TeaModel {
             /// <summary>
-            /// <para>The ID of the zone to which the vSwitch belongs.</para>
+            /// <para>The ID of the zone where the vSwitch resides.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -36,17 +36,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>172.16.0.0/24</para>
+            /// <para>172.16.XX.XX/24</para>
             /// </summary>
             [NameInMap("CidrBlock")]
             [Validation(Required=false)]
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If you leave this parameter empty, the system automatically allocates an IP address.</para>
+            /// <para>The IP address. The IP address must be within the specified CIDR block. If you leave this parameter empty, the system automatically assigns an IP address.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>172.16.xx.xx</para>
+            /// <para>172.16.XX.XX</para>
             /// </summary>
             [NameInMap("Ip")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>sjqkql</para>
+            /// <para>vsw-0jlgeyq4oazkh5xue****</para>
             /// </summary>
             [NameInMap("VSwitchId")]
             [Validation(Required=false)]
@@ -68,10 +68,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The endpoint name. The name can be up to 20 characters in length. If the upper limit is exceeded, an error message is returned.</para>
+        /// <para>The name of the endpoint. The name can be up to 20 characters long. An error is reported if the limit is exceeded.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -92,35 +94,35 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group. The security group rules are applied to the outbound VPC.</para>
+        /// <para>The ID of the security group. The rules in the security group are applied to the outbound VPC.</para>
         /// <remarks>
-        /// <para> After you create the outbound endpoint, you cannot change the value of SecurityGroupId. This prevents the forwarding of DNS requests from being interrupted due to misoperations.</para>
+        /// <para>To prevent service interruptions, you cannot change this value after you create the outbound endpoint.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>kqlqlqjqqkq</para>
+        /// <para>sg-0jld3m9yq7l2cw12****</para>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The outbound VPC ID. All outbound Domain Name System (DNS) requests of the resolver are forwarded by this VPC.</para>
+        /// <para>The ID of the outbound virtual private cloud (VPC). All outbound DNS query traffic from the Resolver is forwarded through this VPC.</para>
         /// <remarks>
-        /// <para> After you create the outbound endpoint, you cannot change the value of VpcId. This prevents the forwarding of DNS requests from being interrupted due to misoperations.</para>
+        /// <para>To prevent service interruptions, you cannot change this value after you create the outbound endpoint.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>vpc-129343jslslsks</para>
+        /// <para>vpc-0jl96awrjt75ezglc****</para>
         /// </summary>
         [NameInMap("VpcId")]
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the outbound virtual private cloud (VPC).</para>
+        /// <para>The region ID of the outbound VPC.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

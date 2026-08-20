@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeResolverAvailableZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The queried zones.</para>
+        /// <para>A list of zones and their resource statuses.</para>
         /// </summary>
         [NameInMap("AvailableZones")]
         [Validation(Required=false)]
@@ -27,10 +27,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string AzId { get; set; }
 
             /// <summary>
-            /// <para>The state of resources in the zone. Valid values:</para>
+            /// <para>The status of resources in the zone. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NORMAL: The resources are in the normal state.</description></item>
-            /// <item><description>SOLD_OUT: The resources are sold out.</description></item>
+            /// <item><description><para>NORMAL: Normal</para>
+            /// </description></item>
+            /// <item><description><para>SOLD_OUT: Sold out</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23268E49-0C3E-4A2C-AB70-B4C7D092470B</para>

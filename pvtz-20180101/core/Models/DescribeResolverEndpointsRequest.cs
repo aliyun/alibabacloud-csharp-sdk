@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeResolverEndpointsRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword of the endpoint name, which is used for fuzzy searches.</para>
+        /// <para>The keyword for the endpoint name. A fuzzy search is performed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Endpoint-test</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
@@ -22,10 +22,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number for a paged query. The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries per page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -55,17 +57,23 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The state of the endpoint that you want to query. Valid values:</para>
+        /// <para>The status of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SUCCESS: The endpoint works as expected.</description></item>
-        /// <item><description>INIT: The endpoint is being created.</description></item>
-        /// <item><description>FAILED: The endpoint failed to be created.</description></item>
-        /// <item><description>CHANGE_INIT: The endpoint is being modified.</description></item>
-        /// <item><description>CHANGE_FAILED: The endpoint failed to be modified.</description></item>
-        /// <item><description>EXCEPTION: The endpoint encountered an exception.</description></item>
+        /// <item><description><para>SUCCESS: The endpoint is working as expected.</para>
+        /// </description></item>
+        /// <item><description><para>INIT: The endpoint is being created.</para>
+        /// </description></item>
+        /// <item><description><para>FAILED: The endpoint failed to be created.</para>
+        /// </description></item>
+        /// <item><description><para>CHANGE_INIT: The endpoint is being modified.</para>
+        /// </description></item>
+        /// <item><description><para>CHANGE_FAILED: The endpoint failed to be modified.</para>
+        /// </description></item>
+        /// <item><description><para>EXCEPTION: The endpoint is not working as expected.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you do not specify this parameter, endpoints in all states are returned.</para>
+        /// <para>If you do not specify this parameter, endpoints in all states are returned. If you specify this parameter, only endpoints in the specified state are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -76,7 +84,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the outbound virtual private cloud (VPC).</para>
+        /// <para>The ID of the region where the outbound virtual private cloud (VPC) is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-zhangjiakou</para>

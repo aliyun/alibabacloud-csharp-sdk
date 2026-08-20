@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: en.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the forwarding rule.</para>
+        /// <para>The forwarding rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

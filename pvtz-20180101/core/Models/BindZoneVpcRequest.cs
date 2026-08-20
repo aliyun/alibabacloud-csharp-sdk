@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class BindZoneVpcRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client-generated token that is used to ensure the idempotence of the request. You can use the client to generate a unique token for the request. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6447728c8578e66aacf062d2df4446dc</para>
@@ -22,10 +22,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para><c>zh</c>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><c>en</c>: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: <c>en</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The VPCs.</para>
         /// <remarks>
-        /// <para> If Vpcs is left empty, all VPCs that are associated with the zone are disassociated from the zone.</para>
+        /// <para>If you leave this parameter empty, all VPCs bound to the zone are unbound.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Vpcs")]
@@ -55,7 +57,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public List<BindZoneVpcRequestVpcs> Vpcs { get; set; }
         public class BindZoneVpcRequestVpcs : TeaModel {
             /// <summary>
-            /// <para>The region ID of the VPC.</para>
+            /// <para>The ID of the region where the VPC is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The VPC ID. If the zone is already associated with VPCs and you do not specify this parameter, the associated VPCs are disassociated from the zone.</para>
+            /// <para>The ID of the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-f8zvrvr1payllgz38****</para>
@@ -75,10 +77,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>The VPC type. Valid values:</para>
+            /// <para>The type of the VPC. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>STANDARD</b>: standard VPC</description></item>
-            /// <item><description><b>EDS</b>: Elastic Desktop Service (EDS) workspace VPC</description></item>
+            /// <item><description><para><b>STANDARD</b>: a standard VPC.</para>
+            /// </description></item>
+            /// <item><description><para><b>EDS</b>: an Elastic Desktop Service VPC.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -91,7 +95,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

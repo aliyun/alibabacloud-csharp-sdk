@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75446CC1-FC9A-4595-8D96-089D73D7A63D</para>
@@ -56,10 +56,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether hostname automatic synchronization is enabled. Valid values:</para>
+        /// <para>The status of the automatic hostname synchronization feature. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ON: Hostname automatic synchronization is enabled. After this feature is enabled, the system automatically reads the hostnames of the Elastic Compute Service (ECS) instances in the specified regions and updates Domain Name System (DNS) records at an interval of 1 minute.</description></item>
-        /// <item><description>OFF: Hostname automatic synchronization is disabled.</description></item>
+        /// <item><description><para>ON: Enabled. The system reads the hostnames of ECS instances in the selected region and updates the DNS records every minute.</para>
+        /// </description></item>
+        /// <item><description><para>OFF: Disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,10 +72,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task was successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True</description></item>
-        /// <item><description>False</description></item>
+        /// <item><description><para>True</para>
+        /// </description></item>
+        /// <item><description><para>False</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +88,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pvtz-test-id-2989149d628c56****</para>

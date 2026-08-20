@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DeleteZoneResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E246E023-F2EB-4034-83F7-B13FCF31459C</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0e41496f12da01311d314f17b801****</para>

@@ -74,17 +74,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned data.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0FCB52A-D512-41A0-8595-40234EDCFD8B</para>
@@ -104,10 +104,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of logs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalItems")]
         [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <para>The total number of pages returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalPages")]
         [Validation(Required=false)]

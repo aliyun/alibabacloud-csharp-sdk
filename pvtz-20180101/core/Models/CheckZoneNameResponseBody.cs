@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class CheckZoneNameResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the zone name can be added. Valid values:</para>
+        /// <para>The result of the check. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b>: The zone name can be added.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: The zone name cannot be added.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public bool? Check { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CA29B88F-A571-4123-80D5-768AC2F7F806</para>

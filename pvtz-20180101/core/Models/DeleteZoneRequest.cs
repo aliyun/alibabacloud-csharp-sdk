@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DeleteZoneRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token to ensure the idempotence of the request. Generate a unique value from your client for this parameter. The token must contain only ASCII characters and be no more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21079fa016944979537637959d09bc</para>
@@ -22,10 +22,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default: en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -45,9 +47,9 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// <remarks>
-        /// <para> If you want to delete a built-in authoritative zone whose effective scope is configured, you must disassociate the zone from the effective scope first.</para>
+        /// <para>You must dissociate a built-in authoritative domain name from its scope before you delete it.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

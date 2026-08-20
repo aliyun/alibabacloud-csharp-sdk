@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class MoveResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that ensures the idempotence of the request. Generate a unique value on your client. The token must contain only ASCII characters and be no more than 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>21079fa016944979537637959d09bc</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: en.</para>
         /// 
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the new resource group.</para>
+        /// <para>The ID of the destination resource group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +48,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

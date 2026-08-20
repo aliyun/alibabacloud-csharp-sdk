@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The authorization channel. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AUTH_CODE: A verification code is used for authorization.</description></item>
-        /// <item><description>RESOURCE_DIRECTORY: A resource directory is used for authorization.</description></item>
+        /// <item><description>AUTH_CODE: verification code authorization.</description></item>
+        /// <item><description>RESOURCE_DIRECTORY: resource directory authorization.</description></item>
         /// </list>
         /// <para>Default value: AUTH_CODE.</para>
         /// 
@@ -27,13 +27,11 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The verification code.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>The specified authentication code is used if the value of AuthChannel is left empty or is set to AUTH_CODE.</para>
-        /// </description></item>
-        /// <item><description><para>In other cases, a random 6-digit number is used. Example: 123456.</para>
-        /// </description></item>
+        /// <item><description>If AuthChannel is empty or set to AUTH_CODE, specify the verification code.  </description></item>
+        /// <item><description>In other cases, specify a random 6-digit number, such as 123456.</description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -43,10 +41,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string AuthCode { get; set; }
 
         /// <summary>
-        /// <para>The authorization scope. Valid values:</para>
+        /// <para>The authorization type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: general authorization</description></item>
-        /// <item><description>CLOUD_PRODUCT: cloud service-related authorization</description></item>
+        /// <item><description>NORMAL: normal authorization.</description></item>
+        /// <item><description>CLOUD_PRODUCT: cloud product authorization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,9 +55,9 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string AuthType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</para>
+        /// <para>The ID of the Alibaba Cloud account that owns the authorized resource.</para>
         /// <remarks>
-        /// <para> You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</para>
+        /// <para>Cross-account authorization only supports Alibaba Cloud accounts (primary accounts) and does not support RAM users. Only accounts within the same site can be associated, such as between Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>) accounts or between Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>) accounts. Cross-site association is not supported, such as between a China Website account and an International Website account.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

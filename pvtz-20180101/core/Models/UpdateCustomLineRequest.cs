@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string DnsCategory { get; set; }
 
         /// <summary>
-        /// <para>The IPv4 CIDR blocks.</para>
+        /// <para>An array of IPv4 address ranges for the custom line. Specify each range in the <c>StartIP-EndIP</c> format.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Ipv4s")]
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public List<string> Ipv4s { get; set; }
 
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The language of the response. Valid values: <c>en</c> and <c>zh</c>. Default value: <c>en</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -44,6 +44,9 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 
         /// <summary>
         /// <para>The name of the custom line.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]

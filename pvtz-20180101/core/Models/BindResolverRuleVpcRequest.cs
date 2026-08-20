@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: en.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The ID of the forwarding rule.</para>
+        /// <para>The forwarding rule ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +38,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RuleId { get; set; }
 
         /// <summary>
-        /// <para>The VPCs that you want to associate with the forwarding rule.</para>
+        /// <para>The VPCs to associate.</para>
         /// </summary>
         [NameInMap("Vpc")]
         [Validation(Required=false)]
@@ -65,8 +67,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             /// <summary>
             /// <para>The VPC type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>STANDARD: standard VPC</description></item>
-            /// <item><description>EDS: Elastic Desktop Service (EDS) workspace VPC</description></item>
+            /// <item><description><para>STANDARD: standard VPC.</para>
+            /// </description></item>
+            /// <item><description><para>EDS: Elastic Desktop Service workspace VPC.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

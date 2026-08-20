@@ -10,6 +10,18 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribePvtzStatisticsZoneOverviewRequest : TeaModel {
         /// <summary>
+        /// <para>The language of the response. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><c>zh-CN</c>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><c>en-US</c>: English</para>
+        /// </description></item>
+        /// </list>
+        /// <para>Default value: <c>en-US</c>.</para>
+        /// <remarks>
+        /// <para>This parameter takes precedence over the <c>Lang</c> parameter.</para>
+        /// </remarks>
+        /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
         /// </summary>
@@ -18,6 +30,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
+        /// <para>A client token to ensure request idempotence. Your client must generate a unique token for each request. The token can contain only ASCII characters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>234534535432323...</para>
         /// </summary>
@@ -26,6 +40,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The statistical module.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AUTHORITY</para>
         /// </summary>
@@ -33,11 +49,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public string Module { get; set; }
 
+        /// <summary>
+        /// <para>The network parameters.</para>
+        /// </summary>
         [NameInMap("NetworkParams")]
         [Validation(Required=false)]
         public List<DescribePvtzStatisticsZoneOverviewRequestNetworkParams> NetworkParams { get; set; }
         public class DescribePvtzStatisticsZoneOverviewRequestNetworkParams : TeaModel {
             /// <summary>
+            /// <para>The region ID of the VPC.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hongkong</para>
             /// </summary>
@@ -46,7 +67,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The ID of the VPC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-uf68l2l04nqoyg7ie1kaw</para>
@@ -56,6 +77,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string VpcId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the Alibaba Cloud account to which the VPC belongs.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5209821778041881</para>
             /// </summary>
@@ -64,6 +87,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string VpcOwner { get; set; }
 
             /// <summary>
+            /// <para>The type of the VPC. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para><c>STANDARD</c>: standard VPC</para>
+            /// </description></item>
+            /// <item><description><para><c>EDS</c>: Elastic Desktop Service (EDS) VPC</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>STANDARD</para>
             /// </summary>
@@ -73,11 +104,19 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 
         }
 
+        /// <summary>
+        /// <para>The statistical period.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DAY</para>
+        /// </summary>
         [NameInMap("OverviewPeriod")]
         [Validation(Required=false)]
         public string OverviewPeriod { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

@@ -12,10 +12,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -25,10 +27,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to replace the original tags added to the resources. Valid values:</para>
+        /// <para>Specifies whether to modify the tag list. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True: replaces the original tags.</description></item>
-        /// <item><description>False (default): appends the specified one or more tags to the original tags. If a new tag has the same key but a different value from an original tag, the new tag replaces the original tag.</description></item>
+        /// <item><description><para>True: Overwrites the existing tag list.</para>
+        /// </description></item>
+        /// <item><description><para>False (default): Appends tags to the existing list. If a tag key already exists, its value is updated.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public bool? OverWrite { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</para>
+        /// <para>The list of resource IDs. These are the IDs of the zones. You can specify up to 50 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,7 +54,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid value: ZONE.</para>
+        /// <para>The resource type. The value must be ZONE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the resources.</para>
+        /// <para>The list of tags.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Tag")]
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public List<TagResourcesRequestTag> Tag { get; set; }
         public class TagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N to add to the resources.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N to add to the resources.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>daily</para>

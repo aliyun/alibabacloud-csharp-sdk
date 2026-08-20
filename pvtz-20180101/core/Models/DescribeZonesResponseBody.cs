@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZonesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -43,17 +43,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalItems")]
         [Validation(Required=false)]
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned pages.</para>
+        /// <para>The total number of pages returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>3</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalPages")]
         [Validation(Required=false)]

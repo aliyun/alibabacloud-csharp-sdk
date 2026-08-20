@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of DNS records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -122,10 +122,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>The total number of pages returned.</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("TotalPages")]
         [Validation(Required=false)]

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class SetProxyPatternResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</para>
+        /// <para>0417DC19-11A0-5597-8717-2F705DE88925</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39CB16E5-4180-49F2-A060-23C0ECEB80D9</para>
@@ -30,14 +30,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The state of the DNS record. Valid values:</para>
+        /// <para>The status of the DNS record. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ENABLE: The DNS record is enabled.</description></item>
-        /// <item><description>DISABLE: The DNS record is disabled.</description></item>
+        /// <item><description><para>ENABLE: DNS resolution is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>DISABLE: DNS resolution is paused.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>DISABLE</para>
+        /// <para>ENABLE</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

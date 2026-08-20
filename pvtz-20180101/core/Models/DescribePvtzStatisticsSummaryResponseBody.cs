@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribePvtzStatisticsSummaryResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public int? CurPage { get; set; }
 
+        /// <summary>
+        /// <para>A list of statistical entries for the current page.</para>
+        /// </summary>
         [NameInMap("PageData")]
         [Validation(Required=false)]
         public List<DescribePvtzStatisticsSummaryResponseBodyPageData> PageData { get; set; }
         public class DescribePvtzStatisticsSummaryResponseBodyPageData : TeaModel {
             /// <summary>
+            /// <para>The UNIX timestamp for the start of the current statistical period, rounded down to the minute.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1776774900000</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? AggrTimestamp { get; set; }
 
             /// <summary>
+            /// <para>The total number of requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>4</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? Count { get; set; }
 
             /// <summary>
+            /// <para>The domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>lb-ni1iadds-2c8uyzvgrm5ftsnq.clb.gz-tencentclb.com</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string DomainName { get; set; }
 
             /// <summary>
+            /// <para>The fluctuation rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>19</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public int? FluctuationValue { get; set; }
 
             /// <summary>
+            /// <para>The average resolution latency, in milliseconds (ms).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? Latency { get; set; }
 
             /// <summary>
+            /// <para>The resolution line.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>default</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Line { get; set; }
 
             /// <summary>
+            /// <para>The statistics module.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AUTHORITY</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Module { get; set; }
 
             /// <summary>
+            /// <para>The value from the previous statistical period.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2227</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? PreviousCount { get; set; }
 
             /// <summary>
+            /// <para>The protocol type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>UDP</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Protocol { get; set; }
 
             /// <summary>
+            /// <para>The DNS query type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>A</para>
             /// </summary>
@@ -102,6 +127,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Qtype { get; set; }
 
             /// <summary>
+            /// <para>The success rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -110,6 +137,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? Ratio { get; set; }
 
             /// <summary>
+            /// <para>The DNS response code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0</para>
             /// </summary>
@@ -118,6 +147,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Rcode { get; set; }
 
             /// <summary>
+            /// <para>The source IP address of the request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>110.19.60.72</para>
             /// </summary>
@@ -126,6 +157,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string SourceIp { get; set; }
 
             /// <summary>
+            /// <para>The source ISP of the request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>telecom</para>
             /// </summary>
@@ -134,6 +167,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string SourceIsp { get; set; }
 
             /// <summary>
+            /// <para>The source region of the request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
             /// </summary>
@@ -142,7 +177,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string SourceRegion { get; set; }
 
             /// <summary>
-            /// <para>VPC ID。</para>
+            /// <para>The VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-bp1uvv79h1t8unnzdh3nq</para>
@@ -152,6 +187,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string VpcId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the zone. The operation\&quot;s behavior depends on whether you specify this parameter:</para>
+            /// <list type="bullet">
+            /// <item><description><para>If you specify a ZoneId, the operation returns the change log of DNS records for that zone.<br></para>
+            /// </description></item>
+            /// <item><description><para>If you omit ZoneId, the operation returns the change log of all zone operations and DNS resolution changes for all zones in your account.</para>
+            /// </description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>479226c2db1f9bed449b0502c13bcd9d</para>
             /// </summary>
@@ -160,6 +203,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string ZoneId { get; set; }
 
             /// <summary>
+            /// <para>The zone name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>bwcj.biz</para>
             /// </summary>
@@ -170,6 +215,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
+        /// <para>The number of entries per page. The maximum value is <b>100</b>. The default value is <b>10</b>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -178,7 +225,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F0FCB52A-D512-41A0-8595-40234EDCFD8B</para>
@@ -188,6 +235,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -196,6 +245,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? TotalPage { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11</para>
         /// </summary>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeResolverRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The outbound endpoint ID.</para>
+        /// <para>The ID of the outbound endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The keyword of the forwarding rule name. Fuzzy search is supported. The value is not case-sensitive.</para>
+        /// <para>The keyword for the name of the forwarding rule. The search is case-insensitive and supports fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -32,10 +32,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -45,10 +47,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return virtual private clouds (VPCs) associated with the forwarding rule. Valid values:</para>
+        /// <para>Specifies whether to return the list of virtual private clouds (VPCs) that are associated with the forwarding rule. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: returns the list.</para>
+        /// </description></item>
+        /// <item><description><para>false: does not return the list.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
         /// 
@@ -60,7 +64,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public bool? NeedDetailAttributes { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The number of the page to return. The start value is 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -8,27 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
-    public class DeleteResolverRuleRequest : TeaModel {
+    public class SetZoneLbaStatusResponseBody : TeaModel {
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>en</para>
+        /// <para>0B7AD377-7E86-44A8-B9A8-53E8666E72FE</para>
         /// </summary>
-        [NameInMap("Lang")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the forwarding rule.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>hr****</para>
+        /// <para>true</para>
         /// </summary>
-        [NameInMap("RuleId")]
+        [NameInMap("Success")]
         [Validation(Required=false)]
-        public string RuleId { get; set; }
+        public bool? Success { get; set; }
 
     }
 

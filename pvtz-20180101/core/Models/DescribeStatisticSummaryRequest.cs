@@ -12,20 +12,22 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: en.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>en</para>
+        /// <para>zh</para>
         /// </summary>
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client.</para>
+        /// <para>The user\&quot;s IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.XX.XX</para>

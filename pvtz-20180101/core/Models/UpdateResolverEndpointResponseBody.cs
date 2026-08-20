@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class UpdateResolverEndpointResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EC0BDA3A-A92A-4AC8-B351-322A9C79D5C5</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class AddZoneRecordRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. A client generates this value to ensure that it is unique among different requests. The value can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6447728c8578e66aacf062d2df4446dc</para>
@@ -22,10 +22,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -35,20 +37,23 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The DNS request source. Valid values:</para>
+        /// <para>The source of the DNS resolution request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>default: the default resolution line. The default line is equivalent to a global line. We recommend that you configure a default line to ensure that a DNS record can be returned if no intelligent line is matched.</description></item>
-        /// <item><description>Alibaba Cloud lines: indicate that DNS requests are originated from Alibaba Cloud, including Alibaba Cloud public cloud, Alibaba Finance Cloud, and Alibaba Gov Cloud.</description></item>
-        /// <item><description>Custom lines: You can configure custom lines so that Private DNS can return specific IP addresses for DNS requests that are originated from a specific CIDR block.</description></item>
+        /// <item><description><para>default: The default line. This is equivalent to a global line. Configure a default line to ensure that a DNS record is returned even if no smart line is hit.</para>
+        /// </description></item>
+        /// <item><description><para>Alibaba Cloud line: The DNS resolution request comes from Alibaba Cloud, including Public Cloud, Alibaba Finance Cloud, and Alibaba Gov Cloud.</para>
+        /// </description></item>
+        /// <item><description><para>Custom line: Customize internal domain name resolution to return a specific IP address for DNS query requests from a specific IP address segment.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>Only built-in authoritative acceleration zones support custom lines.</para>
+        /// <item><description><para>Only zones in built-in authoritative acceleration regions support adding DNS resolution request source lines.</para>
         /// </description></item>
-        /// <item><description><para>Set Line to default if you want to choose the default line. Set Line to a specific line code if you want to choose an Alibaba Cloud line or a custom line. Example: aliyun_r_cn-beijing-a.</para>
+        /// <item><description><para>To use the default line, enter &quot;default&quot;. For Alibaba Cloud lines and custom lines, enter the specified line code. Example: aliyun_r_cn-beijing-a</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -58,7 +63,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Line { get; set; }
 
         /// <summary>
-        /// <para>The priority of the mail exchanger (MX) record. Valid values: <b>1 to 99</b>. A smaller value indicates a higher priority.</para>
+        /// <para>The priority of the MX record. A smaller value indicates a higher priority. Valid values: <b>[1, 99]</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -68,7 +73,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The description of the DNS record.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -78,8 +83,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The hostname. The hostname is the prefix of the subdomain name for the zone. Example: www, @, \* (used for wildcard DNS resolution), and mail (used for specifying the mail server that receives emails).</para>
-        /// <para>For example, if you want to resolve the domain name @.exmaple.com, you must set Rr to @ instead of leaving Rr empty.</para>
+        /// <para>The host record. A host record is the prefix of a domain name. Common host records include www, @, \* (for wildcard DNS), and mail (for mailboxes).</para>
+        /// <para>For example, to resolve @.example.com, set the host record to &quot;@&quot;, not an empty string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +95,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Rr { get; set; }
 
         /// <summary>
-        /// <para>The time to live (TTL) period. Valid values: 5, 30, 60, 3600, 43200, and 86400. Unit: seconds. Default value: 60.</para>
+        /// <para>The time to live (TTL). The unit is seconds (s). Valid values are 5, 30, 60, 3600 (1 hour), 43200 (12 hours), and 86400 (1 day). The default value is 60.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -100,18 +105,25 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? Ttl { get; set; }
 
         /// <summary>
-        /// <para>The type of the DNS record. Valid values:</para>
+        /// <para>The type of the DNS record. The following types are supported:</para>
         /// <list type="bullet">
-        /// <item><description><b>A</b>: An A record maps a domain name to an IPv4 address in the dotted decimal notation format.</description></item>
-        /// <item><description><b>AAAA</b>: An AAAA record maps a domain name to an IPv6 address.</description></item>
-        /// <item><description><b>CNAME</b>: A canonical name (CNAME) record maps a domain name to another domain name.</description></item>
-        /// <item><description><b>TXT</b>: A text (TXT) record usually serves as a Sender Policy Framework (SPF) record to prevent email spam. The record value of the TXT record can be up to 255 characters in length.</description></item>
-        /// <item><description><b>MX</b>: A mail exchanger (MX) record maps a domain name to the domain name of a mail server.</description></item>
-        /// <item><description><b>PTR</b>: A pointer (PTR) record maps an IP address to a domain name.</description></item>
-        /// <item><description><b>SRV</b>: A service (SRV) record specifies a server that hosts a specific service. Enter a record value in the format of Priority Weight Port Destination domain name. Separate these items with spaces.</description></item>
+        /// <item><description><para><b>A</b>: Maps a domain name to an IPv4 address in dotted decimal notation.</para>
+        /// </description></item>
+        /// <item><description><para><b>AAAA</b>: Maps a domain name to an IPv6 address.</para>
+        /// </description></item>
+        /// <item><description><para><b>CNAME</b>: Maps a domain name to another domain name.</para>
+        /// </description></item>
+        /// <item><description><para><b>TXT</b>: A text record. The text can be up to 255 characters in length. TXT records are often used for Sender Policy Framework (SPF) records to prevent spam.</para>
+        /// </description></item>
+        /// <item><description><para><b>MX</b>: Maps a domain name to the domain name of a mail server.</para>
+        /// </description></item>
+        /// <item><description><para><b>PTR</b>: Maps an IP address to a domain name.</para>
+        /// </description></item>
+        /// <item><description><para><b>SRV</b>: Specifies the server for a specific service. The format is: Priority Weight Port Target. Separate each value with a space.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> Before you add a PTR record, you must configure a reverse lookup zone. For more information, see <a href="https://help.aliyun.com/document_detail/2592976.html">Add PTR records</a>.</para>
+        /// <para>Before adding a PTR record, configure a reverse lookup zone. For more information, see <a href="https://help.aliyun.com/document_detail/2592976.html">Reverse DNS lookups and PTR records</a>.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -133,7 +145,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// <para>The record value. You need to enter the record value based on the DNS record type.</para>
+        /// <para>The record value. Enter a value based on the DNS record type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -144,7 +156,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Value { get; set; }
 
         /// <summary>
-        /// <para>The weight value of the address. You can set a different weight value for each address. This way, addresses are returned based on the weight values for DNS requests. A weight value must be an integer that ranges from 1 to 100. Default value: 1.</para>
+        /// <para>The weight. Valid values are integers from 1 to 100. The default value is 1. Set different weights for each address to return addresses based on the weight ratio for DNS queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -154,7 +166,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? Weight { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The ID of the zone. This is the unique identifier of the zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

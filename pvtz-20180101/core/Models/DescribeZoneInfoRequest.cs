@@ -12,10 +12,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: <b>en</b>.</para>
+        /// <para>Default: <b>en</b></para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -38,10 +38,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AF7D4DCE-0776-47F2-A9B2-6FB85A87AA60</para>
+        /// <para>1E0F6898-F854-5133-A4CB-9C094152D05A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

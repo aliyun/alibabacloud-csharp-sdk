@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the endpoint was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time when the endpoint was created. This is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594608356000</para>
@@ -30,24 +30,24 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The endpoint ID. This ID uniquely identifies the endpoint.</para>
+        /// <para>The ID of the endpoint.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>hr****</para>
+        /// <para>hra0**</para>
         /// </summary>
         [NameInMap("Id")]
         [Validation(Required=false)]
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The configurations of the source IP addresses for outbound traffic.</para>
+        /// <para>A list of IP address configurations for the outbound traffic source.</para>
         /// </summary>
         [NameInMap("IpConfigs")]
         [Validation(Required=false)]
         public List<DescribeResolverEndpointResponseBodyIpConfigs> IpConfigs { get; set; }
         public class DescribeResolverEndpointResponseBodyIpConfigs : TeaModel {
             /// <summary>
-            /// <para>The ID of the zone to which the vSwitch belongs.</para>
+            /// <para>The ID of the zone where the vSwitch is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-a</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If this parameter is left empty, the system automatically allocates an IP address.</para>
+            /// <para>An IP address within the specified CIDR block. If you leave this parameter empty, the system automatically assigns an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.16.XX.XX</para>
@@ -92,14 +92,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <para>The name of the endpoint.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Endpoint-test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>45020ED9-6319-4CA7-9475-6E8D6446E84F</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group. The security group rules are applied to the outbound virtual private cloud (VPC).</para>
+        /// <para>The ID of the security group. The rules in the security group are applied to the outbound VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-8vb3sigz86xc-group-****</para>
@@ -119,14 +119,20 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The state of the endpoint. Valid values:</para>
+        /// <para>The status of the endpoint. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SUCCESS: The endpoint works as expected.</description></item>
-        /// <item><description>INIT: The endpoint is being created.</description></item>
-        /// <item><description>FAILED: The endpoint failed to be created.</description></item>
-        /// <item><description>CHANGE_INIT: The endpoint is being modified.</description></item>
-        /// <item><description>CHANGE_FAILED: The endpoint failed to be modified.</description></item>
-        /// <item><description>EXCEPTION: The endpoint encountered an exception.</description></item>
+        /// <item><description><para>SUCCESS: The endpoint works as expected.</para>
+        /// </description></item>
+        /// <item><description><para>INIT: The endpoint is being created.</para>
+        /// </description></item>
+        /// <item><description><para>FAILED: The endpoint failed to be created.</para>
+        /// </description></item>
+        /// <item><description><para>CHANGE_INIT: The endpoint is being modified.</para>
+        /// </description></item>
+        /// <item><description><para>CHANGE_FAILED: The endpoint failed to be modified.</para>
+        /// </description></item>
+        /// <item><description><para>EXCEPTION: An exception occurred on the endpoint.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -137,7 +143,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time when the endpoint was updated.</para>
+        /// <para>The time when the endpoint was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-07-13 10:48:39</para>
@@ -147,7 +153,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the endpoint was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The time when the endpoint was last updated. This is a UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594608519000</para>
@@ -157,7 +163,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public long? UpdateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the outbound VPC. All outbound Domain Name System (DNS) requests of the resolver are forwarded by this VPC.</para>
+        /// <para>The ID of the outbound virtual private cloud (VPC). All outbound DNS query traffic from the Resolver is forwarded through this VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-0jl96awrjt75ezglc****</para>
@@ -177,7 +183,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string VpcName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the outbound VPC.</para>
+        /// <para>The ID of the region where the outbound VPC is located.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -187,10 +193,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string VpcRegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the region where the outbound VPC resides.</para>
+        /// <para>The name of the region where the outbound VPC is located.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>HuaBei</para>
+        /// <para>North China</para>
         /// </summary>
         [NameInMap("VpcRegionName")]
         [Validation(Required=false)]

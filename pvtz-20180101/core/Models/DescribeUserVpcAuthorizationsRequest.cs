@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeUserVpcAuthorizationsRequest : TeaModel {
         /// <summary>
-        /// <para>The authorization scope. Valid values:</para>
+        /// <para>The authorization type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>NORMAL: general authorization</description></item>
-        /// <item><description>CLOUD_PRODUCT: cloud service-related authorization</description></item>
+        /// <item><description><para>NORMAL: A regular authorization.</para>
+        /// </description></item>
+        /// <item><description><para>CLOUD_PRODUCT: An authorization for an Alibaba Cloud service.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string AuthType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</para>
+        /// <para>The ID of the Alibaba Cloud account that owns the authorized resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>141339776561****</para>
@@ -34,7 +36,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public long? AuthorizedUserId { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. The value starts from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -44,7 +46,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries per page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

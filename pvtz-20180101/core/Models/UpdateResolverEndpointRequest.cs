@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The source IP addresses of outbound traffic. You can add two to six IP addresses.</para>
+        /// <para>A list of source IP addresses for outbound traffic. Specify at least two and up to six IP addresses.</para>
         /// <remarks>
-        /// <para> You must add at least two source IP addresses for outbound traffic to ensure high availability. We recommend that you add two IP addresses that reside in different zones. You can add up to six source IP addresses.</para>
+        /// <para>To ensure high availability (HA), an outbound endpoint requires at least two source IP addresses. We recommend that you assign these IP addresses to different zones. An outbound endpoint supports a maximum of six source IP addresses.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("IpConfig")]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public List<UpdateResolverEndpointRequestIpConfig> IpConfig { get; set; }
         public class UpdateResolverEndpointRequestIpConfig : TeaModel {
             /// <summary>
-            /// <para>The ID of the zone to which the vSwitch belongs.</para>
+            /// <para>The ID of the zone where the vSwitch is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-a</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string CidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The source IP address of outbound traffic. The IP address must be within the specified CIDR block. If you leave this parameter empty, the system automatically allocates an IP address.</para>
+            /// <para>An IP address that is within the CIDR block of the vSwitch. If you leave this parameter empty, the system automatically assigns an IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.16.XX.XX</para>
@@ -75,10 +75,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -88,7 +90,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The endpoint name.</para>
+        /// <para>The name of the endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>endpoint-test-name</para>

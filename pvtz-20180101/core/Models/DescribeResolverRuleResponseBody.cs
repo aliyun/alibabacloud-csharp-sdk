@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The virtual private clouds (VPCs) that are associated with the forwarding rule.</para>
+        /// <para>A list of Virtual Private Clouds (VPCs) that are associated with the forwarding rule.</para>
         /// </summary>
         [NameInMap("BindVpcs")]
         [Validation(Required=false)]
@@ -45,10 +45,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The region name.</para>
+            /// <para>The name of the region.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>hangzhou</para>
+            /// <para>Hangzhou test</para>
             /// </summary>
             [NameInMap("RegionName")]
             [Validation(Required=false)]
@@ -75,10 +75,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string VpcName { get; set; }
 
             /// <summary>
-            /// <para>The VPC type. Valid values:</para>
+            /// <para>The type of the VPC. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>STANDARD: standard VPC</description></item>
-            /// <item><description>EDS: Elastic Desktop Service (EDS) workspace VPC</description></item>
+            /// <item><description><para>STANDARD: A standard VPC.</para>
+            /// </description></item>
+            /// <item><description><para>EDS: An Elastic Desktop Service (EDS) workspace VPC.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The time when the forwarding rule was created.</para>
+        /// <para>The time when the rule was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-07-13 10:51:44</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the forwarding rule was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp that indicates when the rule was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594608704000</para>
@@ -131,17 +133,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The endpoint name.</para>
+        /// <para>The name of the endpoint.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>endpoint-test</para>
+        /// <para>Endpoint-test</para>
         /// </summary>
         [NameInMap("EndpointName")]
         [Validation(Required=false)]
         public string EndpointName { get; set; }
 
         /// <summary>
-        /// <para>The destination IP addresses.</para>
+        /// <para>A list of destination IP addresses.</para>
         /// </summary>
         [NameInMap("ForwardIps")]
         [Validation(Required=false)]
@@ -158,10 +160,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>The port number.</para>
+            /// <para>The destination port.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>8080</para>
+            /// <para>80</para>
             /// </summary>
             [NameInMap("Port")]
             [Validation(Required=false)]
@@ -170,7 +172,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The ID of the forwarding rule.</para>
+        /// <para>The forwarding rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hr****</para>
@@ -183,14 +185,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <para>The name of the forwarding rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>forward rule-test</para>
+        /// <para>Forwarding rule-test</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>13D5113B-7E34-407F-A9C1-D96CD2B04277</para>
@@ -200,8 +202,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The type of the forwarding rule. Valid value:</para>
-        /// <para>OUTBOUND: outbound forwarding rule. This type of rule forwards Domain Name System (DNS) requests to one or more external IP addresses.</para>
+        /// <para>The type of the forwarding rule. The only valid value is OUTBOUND, which indicates that traffic is forwarded to an external IP address.</para>
+        /// <para>OUTBOUND: Forwards to an external IP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OUTBOUND</para>
@@ -211,7 +213,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The time when the forwarding rule was updated.</para>
+        /// <para>The time when the rule was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-07-13 10:51:44</para>
@@ -221,7 +223,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the forwarding rule was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp that indicates when the rule was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1594608704000</para>
@@ -231,7 +233,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public long? UpdateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The name of the forward zone.</para>
+        /// <para>The name of the forwarding zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>

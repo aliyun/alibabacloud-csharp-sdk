@@ -70,20 +70,20 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The time when the zone was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the zone was created.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2018-01-23T03:15Z</para>
+        /// <para>2024-07-15T09:40Z</para>
         /// </summary>
         [NameInMap("CreateTime")]
         [Validation(Required=false)]
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the zone was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp that indicates when the zone was created.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1516775741000</para>
+        /// <para>1721036404000</para>
         /// </summary>
         [NameInMap("CreateTimestamp")]
         [Validation(Required=false)]
@@ -110,10 +110,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string CreatorType { get; set; }
 
         /// <summary>
-        /// <para>The logical location type of the built-in authoritative module in which the zone is added. Valid values:</para>
+        /// <para>The DNS group. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>NORMAL_ZONE</b>: regular module</description></item>
-        /// <item><description><b>FAST_ZONE</b>: acceleration module</description></item>
+        /// <item><description><para><b>NORMAL_ZONE</b>: Regular group</para>
+        /// </description></item>
+        /// <item><description><para><b>FAST_ZONE</b>: Fast group</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -124,10 +126,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string DnsGroup { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the zone is being removed to another logical location. Valid values:</para>
+        /// <para>The status of switching the DNS group for the zone. You can switch a zone between the regular and fast groups. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The DNS group is being switched.</para>
+        /// </description></item>
+        /// <item><description><para>false: The DNS group is not being switched.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -140,8 +144,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>Indicates whether the zone is a reverse lookup zone. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false</description></item>
+        /// <item><description><para>true: The zone is a reverse lookup zone.</para>
+        /// </description></item>
+        /// <item><description><para>false: The zone is not a reverse lookup zone.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -152,10 +158,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public bool? IsPtr { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the recursive resolution proxy for subdomain names is enabled. Valid values:</para>
+        /// <para>Indicates whether the recursive proxy for subdomains is enabled.</para>
         /// <list type="bullet">
-        /// <item><description>ZONE: The recursive resolution proxy for subdomain names is disabled. In this case, NXDOMAIN is returned if the queried domain name does not exist in the zone.</description></item>
-        /// <item><description>RECORD: The recursive resolution proxy for subdomain names is enabled. In this case, if the queried domain name does not exist in the zone, DNS requests are recursively forwarded to the forward module and then to the recursion module until DNS results are returned.</description></item>
+        /// <item><description><para>ZONE: Disabled. If a non-existent subdomain is resolved, an NXDOMAIN response is returned to indicate that the subdomain does not exist.</para>
+        /// </description></item>
+        /// <item><description><para>RECORD: Enabled. If a non-existent subdomain is resolved, the system queries the forwarding and recursion modules in sequence and uses the final result to respond to the DNS query.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -166,17 +174,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string ProxyPattern { get; set; }
 
         /// <summary>
-        /// <para>The total number of DNS records added in the zone.</para>
+        /// <para>The total number of DNS records in the zone.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2</para>
+        /// <para>5</para>
         /// </summary>
         [NameInMap("RecordCount")]
         [Validation(Required=false)]
         public int? RecordCount { get; set; }
 
         /// <summary>
-        /// <para>The description of the zone.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -186,7 +194,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F73F41A3-B6DD-42CA-A793-FFF93277835D</para>
@@ -206,41 +214,43 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the secondary Domain Name System (DNS) feature is enabled for the zone. Valid values:</para>
+        /// <para>Indicates whether secondary DNS is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The secondary DNS feature is enabled.</description></item>
-        /// <item><description><b>false</b>: The secondary DNS feature is disabled.</description></item>
+        /// <item><description><para><b>true</b>: Enabled</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Disabled</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("SlaveDns")]
         [Validation(Required=false)]
         public bool? SlaveDns { get; set; }
 
         /// <summary>
-        /// <para>The time when the zone was last updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the zone was last updated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2018-01-24T06:35Z</para>
+        /// <para>2024-07-22T09:39Z</para>
         /// </summary>
         [NameInMap("UpdateTime")]
         [Validation(Required=false)]
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the zone was last updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp that indicates when the zone was last updated.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1516775741000</para>
+        /// <para>1721641148000</para>
         /// </summary>
         [NameInMap("UpdateTimestamp")]
         [Validation(Required=false)]
         public long? UpdateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>df2d03865266bd9842306db586d3****</para>
@@ -250,7 +260,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string ZoneId { get; set; }
 
         /// <summary>
-        /// <para>The zone name.</para>
+        /// <para>The name of the zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zone-test.cn</para>
@@ -260,7 +270,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string ZoneName { get; set; }
 
         /// <summary>
-        /// <para>The tag added to the zone.</para>
+        /// <para>The tag of the zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pvtz</para>
@@ -270,14 +280,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string ZoneTag { get; set; }
 
         /// <summary>
-        /// <para>The zone type. Valid values:</para>
+        /// <para>The type of the zone. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AUTH_ZONE</b>: authoritative zone</description></item>
-        /// <item><description><b>CLOUD_PRODUCT_ZONE</b>: authoritative zone for cloud services</description></item>
+        /// <item><description><para><b>AUTH_ZONE</b>: Authoritative zone.</para>
+        /// </description></item>
+        /// <item><description><para><b>CLOUD_PRODUCT_ZONE</b>: Authoritative zone for a cloud product.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>CLOUD_PRODUCT_ZONE</para>
+        /// <para>AUTH_ZONE</para>
         /// </summary>
         [NameInMap("ZoneType")]
         [Validation(Required=false)]

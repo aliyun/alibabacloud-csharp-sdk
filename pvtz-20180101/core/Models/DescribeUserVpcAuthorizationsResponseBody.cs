@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeUserVpcAuthorizationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of authorizations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned pages.</para>
+        /// <para>The total number of pages returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -60,17 +60,19 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? TotalPages { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud accounts to which the permissions on the resources are granted.</para>
+        /// <para>The information about the Alibaba Cloud accounts that own the authorized resources.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<DescribeUserVpcAuthorizationsResponseBodyUsers> Users { get; set; }
         public class DescribeUserVpcAuthorizationsResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The authorization scope. Valid values:</para>
+            /// <para>The authorization type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NORMAL: general authorization</description></item>
-            /// <item><description>CLOUD_PRODUCT: cloud service-related authorization</description></item>
+            /// <item><description><para>NORMAL: A regular authorization.</para>
+            /// </description></item>
+            /// <item><description><para>CLOUD_PRODUCT: An authorization for an Alibaba Cloud service.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,7 +83,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string AuthType { get; set; }
 
             /// <summary>
-            /// <para>The name of the Alibaba Cloud account to which the permissions on the resources are granted.</para>
+            /// <para>The name of the Alibaba Cloud account that owns the authorized resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alidn****@test.com</para>
@@ -91,7 +93,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string AuthorizedAliyunId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account to which the permissions on the resources are granted.</para>
+            /// <para>The ID of the Alibaba Cloud account that owns the authorized resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>141339776561****</para>
@@ -101,7 +103,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? AuthorizedUserId { get; set; }
 
             /// <summary>
-            /// <para>The time when the authorization was performed. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the authorization was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-05-08T02:31Z</para>
@@ -111,7 +113,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the authorization was performed. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The timestamp that indicates when the authorization was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1672740294000</para>

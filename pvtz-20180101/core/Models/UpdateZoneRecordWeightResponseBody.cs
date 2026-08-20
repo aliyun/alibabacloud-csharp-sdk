@@ -8,27 +8,26 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
-    public class DeleteResolverRuleRequest : TeaModel {
+    public class UpdateZoneRecordWeightResponseBody : TeaModel {
         /// <summary>
-        /// <para>The language.</para>
+        /// <para>The ID of the DNS record.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>en</para>
+        /// <para>5808</para>
         /// </summary>
-        [NameInMap("Lang")]
+        [NameInMap("RecordId")]
         [Validation(Required=false)]
-        public string Lang { get; set; }
+        public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the forwarding rule.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>hr****</para>
+        /// <para>39CB16E5-4180-49F2-A060-23C0ECEB80D9</para>
         /// </summary>
-        [NameInMap("RuleId")]
+        [NameInMap("RequestId")]
         [Validation(Required=false)]
-        public string RuleId { get; set; }
+        public string RequestId { get; set; }
 
     }
 

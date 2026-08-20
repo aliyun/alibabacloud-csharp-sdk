@@ -18,7 +18,24 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "central";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-northeast-1", "pvtz.aliyuncs.com"},
+                {"cn-hangzhou", "pvtz.aliyuncs.com"},
+                {"cn-qingdao", "pvtz.aliyuncs.com"},
+                {"cn-zhangjiakou", "pvtz.aliyuncs.com"},
+                {"eu-west-1", "pvtz.aliyuncs.com"},
+                {"us-east-1", "pvtz.aliyuncs.com"},
+                {"us-west-1", "pvtz.aliyuncs.com"},
+                {"ap-south-1", "pvtz.aliyuncs.com"},
+                {"me-east-1", "pvtz.aliyuncs.com"},
+                {"cn-beijing-finance-1", "pvtz.aliyuncs.com"},
+                {"cn-hangzhou-finance", "pvtz.aliyuncs.com"},
+                {"cn-north-2-gov-1", "pvtz.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "pvtz.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "pvtz.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("pvtz", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -191,7 +208,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an endpoint.</para>
+        /// <para>You can call this operation to add an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -253,7 +270,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an endpoint.</para>
+        /// <para>You can call this operation to add an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -315,7 +332,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an endpoint.</para>
+        /// <para>You can call this operation to add an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -333,7 +350,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an endpoint.</para>
+        /// <para>You can call this operation to add an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -351,13 +368,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a forwarding rule.</para>
+        /// <para>Adds a forwarding rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>If a virtual private cloud (VPC) serves as both an inbound VPC and an outbound VPC, the IP addresses of external Domain Name System (DNS) servers cannot be the same as the IP addresses of the inbound endpoint in the VPC. The IP addresses of the external DNS servers are specified in the forwarding rule associated with the outbound endpoint in the same VPC. If the IP addresses are the same, the DNS requests sent from the IP addresses of the inbound endpoint are returned to the VPC. This results in resolution failures.</para>
+        /// <para>If the outbound VPC and the inbound VPC are the same, the IP address of the external DNS system in the forwarding rule for the outbound endpoint cannot be the same as the IP address of the inbound endpoint service. This is because if the IP addresses are the same, a request loopback occurs and DNS resolution fails.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -427,13 +443,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a forwarding rule.</para>
+        /// <para>Adds a forwarding rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>If a virtual private cloud (VPC) serves as both an inbound VPC and an outbound VPC, the IP addresses of external Domain Name System (DNS) servers cannot be the same as the IP addresses of the inbound endpoint in the VPC. The IP addresses of the external DNS servers are specified in the forwarding rule associated with the outbound endpoint in the same VPC. If the IP addresses are the same, the DNS requests sent from the IP addresses of the inbound endpoint are returned to the VPC. This results in resolution failures.</para>
+        /// <para>If the outbound VPC and the inbound VPC are the same, the IP address of the external DNS system in the forwarding rule for the outbound endpoint cannot be the same as the IP address of the inbound endpoint service. This is because if the IP addresses are the same, a request loopback occurs and DNS resolution fails.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -503,13 +518,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a forwarding rule.</para>
+        /// <para>Adds a forwarding rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>If a virtual private cloud (VPC) serves as both an inbound VPC and an outbound VPC, the IP addresses of external Domain Name System (DNS) servers cannot be the same as the IP addresses of the inbound endpoint in the VPC. The IP addresses of the external DNS servers are specified in the forwarding rule associated with the outbound endpoint in the same VPC. If the IP addresses are the same, the DNS requests sent from the IP addresses of the inbound endpoint are returned to the VPC. This results in resolution failures.</para>
+        /// <para>If the outbound VPC and the inbound VPC are the same, the IP address of the external DNS system in the forwarding rule for the outbound endpoint cannot be the same as the IP address of the inbound endpoint service. This is because if the IP addresses are the same, a request loopback occurs and DNS resolution fails.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -527,13 +541,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a forwarding rule.</para>
+        /// <para>Adds a forwarding rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>If a virtual private cloud (VPC) serves as both an inbound VPC and an outbound VPC, the IP addresses of external Domain Name System (DNS) servers cannot be the same as the IP addresses of the inbound endpoint in the VPC. The IP addresses of the external DNS servers are specified in the forwarding rule associated with the outbound endpoint in the same VPC. If the IP addresses are the same, the DNS requests sent from the IP addresses of the inbound endpoint are returned to the VPC. This results in resolution failures.</para>
+        /// <para>If the outbound VPC and the inbound VPC are the same, the IP address of the external DNS system in the forwarding rule for the outbound endpoint cannot be the same as the IP address of the inbound endpoint service. This is because if the IP addresses are the same, a request loopback occurs and DNS resolution fails.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -551,18 +564,18 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds another account to associate one or more virtual private clouds (VPCs) of the current account with a private zone.</para>
+        /// <para>Adds cross-account VPC authorization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h4><b>Limits</b></h4>
         /// <list type="bullet">
-        /// <item><description>You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</description></item>
-        /// <item><description>No API operation is provided for sending the verification codes that are required for authorization.</description></item>
+        /// <item><description>Cross-account settings for the effective scope only support Alibaba Cloud accounts (primary accounts) and do not support RAM users. Only accounts within the same site can be associated, such as between Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>) accounts or between Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>) accounts. Cross-site association is not supported, such as between a China Website account and an International Website account.</description></item>
+        /// <item><description>For scenarios that use authentication code authorization, no API is currently available for sending authentication codes.</description></item>
         /// </list>
         /// <h4><b>Precautions</b></h4>
-        /// <para>If you set an effective scope across accounts, bills are settled within the account that is used to perform routine management on built-in authoritative zones.</para>
+        /// <para>When you configure cross-account settings for the effective scope, billing is settled under the account that manages the built-in authoritative domain name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -616,18 +629,18 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds another account to associate one or more virtual private clouds (VPCs) of the current account with a private zone.</para>
+        /// <para>Adds cross-account VPC authorization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h4><b>Limits</b></h4>
         /// <list type="bullet">
-        /// <item><description>You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</description></item>
-        /// <item><description>No API operation is provided for sending the verification codes that are required for authorization.</description></item>
+        /// <item><description>Cross-account settings for the effective scope only support Alibaba Cloud accounts (primary accounts) and do not support RAM users. Only accounts within the same site can be associated, such as between Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>) accounts or between Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>) accounts. Cross-site association is not supported, such as between a China Website account and an International Website account.</description></item>
+        /// <item><description>For scenarios that use authentication code authorization, no API is currently available for sending authentication codes.</description></item>
         /// </list>
         /// <h4><b>Precautions</b></h4>
-        /// <para>If you set an effective scope across accounts, bills are settled within the account that is used to perform routine management on built-in authoritative zones.</para>
+        /// <para>When you configure cross-account settings for the effective scope, billing is settled under the account that manages the built-in authoritative domain name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -681,18 +694,18 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds another account to associate one or more virtual private clouds (VPCs) of the current account with a private zone.</para>
+        /// <para>Adds cross-account VPC authorization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h4><b>Limits</b></h4>
         /// <list type="bullet">
-        /// <item><description>You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</description></item>
-        /// <item><description>No API operation is provided for sending the verification codes that are required for authorization.</description></item>
+        /// <item><description>Cross-account settings for the effective scope only support Alibaba Cloud accounts (primary accounts) and do not support RAM users. Only accounts within the same site can be associated, such as between Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>) accounts or between Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>) accounts. Cross-site association is not supported, such as between a China Website account and an International Website account.</description></item>
+        /// <item><description>For scenarios that use authentication code authorization, no API is currently available for sending authentication codes.</description></item>
         /// </list>
         /// <h4><b>Precautions</b></h4>
-        /// <para>If you set an effective scope across accounts, bills are settled within the account that is used to perform routine management on built-in authoritative zones.</para>
+        /// <para>When you configure cross-account settings for the effective scope, billing is settled under the account that manages the built-in authoritative domain name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -710,18 +723,18 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds another account to associate one or more virtual private clouds (VPCs) of the current account with a private zone.</para>
+        /// <para>Adds cross-account VPC authorization.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h4><b>Limits</b></h4>
         /// <list type="bullet">
-        /// <item><description>You can set an effective scope across accounts only by using an Alibaba Cloud account instead of a RAM user. You can set an effective scope across accounts registered on the same site. For example, you can perform the operation across accounts that are both registered on the Alibaba Cloud China site or Alibaba Cloud international site. You cannot set an effective scope across accounts registered on different sites. For example, you cannot perform the operation across accounts that are separately registered on the Alibaba Cloud China site and Alibaba Cloud international site.</description></item>
-        /// <item><description>No API operation is provided for sending the verification codes that are required for authorization.</description></item>
+        /// <item><description>Cross-account settings for the effective scope only support Alibaba Cloud accounts (primary accounts) and do not support RAM users. Only accounts within the same site can be associated, such as between Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>) accounts or between Alibaba Cloud International Website (<a href="http://www.alibabacloud.com">www.alibabacloud.com</a>) accounts. Cross-site association is not supported, such as between a China Website account and an International Website account.</description></item>
+        /// <item><description>For scenarios that use authentication code authorization, no API is currently available for sending authentication codes.</description></item>
         /// </list>
         /// <h4><b>Precautions</b></h4>
-        /// <para>If you set an effective scope across accounts, bills are settled within the account that is used to perform routine management on built-in authoritative zones.</para>
+        /// <para>When you configure cross-account settings for the effective scope, billing is settled under the account that manages the built-in authoritative domain name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -739,8 +752,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a built-in authoritative zone in the regular module or acceleration module.</para>
+        /// <para>Call the AddZone operation to create a built-in authoritative zone. The built-in authoritative zone can be a standard zone or an accelerated zone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from April 30, 2025 (UTC+8), zones added by new users of Alibaba Cloud DNS PrivateZone are set as accelerated zones by default. Starting from &lt;props=&quot;china&quot;&gt;October 30, 2025 (UTC+8)&lt;props=&quot;intl&quot;&gt;April 30, 2026 (UTC+8), all built-in authoritative standard zones will be automatically switched to accelerated zones. After the switch, the number of DNS queries may increase, which can increase your costs. To reduce the increase in DNS queries caused by the absence of a local cache, <a href="https://help.aliyun.com/document_detail/2592999.html">enable NSCD for your ECS instances</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddZoneRequest
@@ -809,8 +827,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a built-in authoritative zone in the regular module or acceleration module.</para>
+        /// <para>Call the AddZone operation to create a built-in authoritative zone. The built-in authoritative zone can be a standard zone or an accelerated zone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from April 30, 2025 (UTC+8), zones added by new users of Alibaba Cloud DNS PrivateZone are set as accelerated zones by default. Starting from &lt;props=&quot;china&quot;&gt;October 30, 2025 (UTC+8)&lt;props=&quot;intl&quot;&gt;April 30, 2026 (UTC+8), all built-in authoritative standard zones will be automatically switched to accelerated zones. After the switch, the number of DNS queries may increase, which can increase your costs. To reduce the increase in DNS queries caused by the absence of a local cache, <a href="https://help.aliyun.com/document_detail/2592999.html">enable NSCD for your ECS instances</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddZoneRequest
@@ -879,8 +902,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a built-in authoritative zone in the regular module or acceleration module.</para>
+        /// <para>Call the AddZone operation to create a built-in authoritative zone. The built-in authoritative zone can be a standard zone or an accelerated zone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from April 30, 2025 (UTC+8), zones added by new users of Alibaba Cloud DNS PrivateZone are set as accelerated zones by default. Starting from &lt;props=&quot;china&quot;&gt;October 30, 2025 (UTC+8)&lt;props=&quot;intl&quot;&gt;April 30, 2026 (UTC+8), all built-in authoritative standard zones will be automatically switched to accelerated zones. After the switch, the number of DNS queries may increase, which can increase your costs. To reduce the increase in DNS queries caused by the absence of a local cache, <a href="https://help.aliyun.com/document_detail/2592999.html">enable NSCD for your ECS instances</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddZoneRequest
@@ -897,8 +925,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a built-in authoritative zone in the regular module or acceleration module.</para>
+        /// <para>Call the AddZone operation to create a built-in authoritative zone. The built-in authoritative zone can be a standard zone or an accelerated zone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting from April 30, 2025 (UTC+8), zones added by new users of Alibaba Cloud DNS PrivateZone are set as accelerated zones by default. Starting from &lt;props=&quot;china&quot;&gt;October 30, 2025 (UTC+8)&lt;props=&quot;intl&quot;&gt;April 30, 2026 (UTC+8), all built-in authoritative standard zones will be automatically switched to accelerated zones. After the switch, the number of DNS queries may increase, which can increase your costs. To reduce the increase in DNS queries caused by the absence of a local cache, <a href="https://help.aliyun.com/document_detail/2592999.html">enable NSCD for your ECS instances</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// AddZoneRequest
@@ -915,7 +948,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Domain Name System (DNS) record for a built-in authoritative zone. Within the effective scope, the intranet DNS records rather than the Internet DNS records take effect for the zone.</para>
+        /// <para>Call the AddZoneRecord operation to add a DNS record to an authoritative zone. Within the effective scope of the zone, the internal DNS record for a domain name overwrites its public DNS record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1001,7 +1034,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Domain Name System (DNS) record for a built-in authoritative zone. Within the effective scope, the intranet DNS records rather than the Internet DNS records take effect for the zone.</para>
+        /// <para>Call the AddZoneRecord operation to add a DNS record to an authoritative zone. Within the effective scope of the zone, the internal DNS record for a domain name overwrites its public DNS record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1087,7 +1120,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Domain Name System (DNS) record for a built-in authoritative zone. Within the effective scope, the intranet DNS records rather than the Internet DNS records take effect for the zone.</para>
+        /// <para>Call the AddZoneRecord operation to add a DNS record to an authoritative zone. Within the effective scope of the zone, the internal DNS record for a domain name overwrites its public DNS record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1105,7 +1138,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a Domain Name System (DNS) record for a built-in authoritative zone. Within the effective scope, the intranet DNS records rather than the Internet DNS records take effect for the zone.</para>
+        /// <para>Call the AddZoneRecord operation to add a DNS record to an authoritative zone. Within the effective scope of the zone, the internal DNS record for a domain name overwrites its public DNS record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1123,8 +1156,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a forwarding rule with virtual private clouds (VPCs).</para>
+        /// <para>The BindResolverRuleVpc operation associates a forwarding rule with a virtual private cloud (VPC).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation performs a full replacement. Any existing VPC associations not included in your request will be removed. To add a new VPC, you must include the IDs of all VPCs that should remain associated.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindResolverRuleVpcRequest
@@ -1173,8 +1214,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a forwarding rule with virtual private clouds (VPCs).</para>
+        /// <para>The BindResolverRuleVpc operation associates a forwarding rule with a virtual private cloud (VPC).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation performs a full replacement. Any existing VPC associations not included in your request will be removed. To add a new VPC, you must include the IDs of all VPCs that should remain associated.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindResolverRuleVpcRequest
@@ -1223,8 +1272,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a forwarding rule with virtual private clouds (VPCs).</para>
+        /// <para>The BindResolverRuleVpc operation associates a forwarding rule with a virtual private cloud (VPC).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation performs a full replacement. Any existing VPC associations not included in your request will be removed. To add a new VPC, you must include the IDs of all VPCs that should remain associated.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindResolverRuleVpcRequest
@@ -1241,8 +1298,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a forwarding rule with virtual private clouds (VPCs).</para>
+        /// <para>The BindResolverRuleVpc operation associates a forwarding rule with a virtual private cloud (VPC).</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <para>Notice: 
+        /// This operation performs a full replacement. Any existing VPC associations not included in your request will be removed. To add a new VPC, you must include the IDs of all VPCs that should remain associated.</para>
+        /// </remarks>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindResolverRuleVpcRequest
@@ -1259,13 +1324,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates or dissociates virtual private clouds (VPCs) from a zone to set the effective scope of the zone.</para>
+        /// <para>Binds a Zone to, or unbinds it from, one or more VPCs to define its effective scope.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h5><a href="#"></a>Precautions:</h5>
-        /// <para>We recommend that you set the effective scope of a zone after you configure all Domain Name System (DNS) records. If you set an effective scope before you configure DNS records, the DNS resolution for the zone within the effective scope will fail unless you enable the recursive resolution proxy for subdomain names.</para>
+        /// <h5>Notes</h5>
+        /// <para>We recommend binding VPCs to a Zone only after you configure all its DNS records. Otherwise, DNS queries for the domain name in the specified VPCs may fail. This issue does not occur if the subdomain recursive resolution proxy feature is enabled.</para>
+        /// <remarks>
+        /// <para>Notice: This API operation performs a full overwrite. The list of VPCs provided in a request replaces all existing associated VPCs. To add a VPC, you must include the IDs of the new VPC and all existing VPCs that you want to retain.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1323,13 +1391,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates or dissociates virtual private clouds (VPCs) from a zone to set the effective scope of the zone.</para>
+        /// <para>Binds a Zone to, or unbinds it from, one or more VPCs to define its effective scope.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h5><a href="#"></a>Precautions:</h5>
-        /// <para>We recommend that you set the effective scope of a zone after you configure all Domain Name System (DNS) records. If you set an effective scope before you configure DNS records, the DNS resolution for the zone within the effective scope will fail unless you enable the recursive resolution proxy for subdomain names.</para>
+        /// <h5>Notes</h5>
+        /// <para>We recommend binding VPCs to a Zone only after you configure all its DNS records. Otherwise, DNS queries for the domain name in the specified VPCs may fail. This issue does not occur if the subdomain recursive resolution proxy feature is enabled.</para>
+        /// <remarks>
+        /// <para>Notice: This API operation performs a full overwrite. The list of VPCs provided in a request replaces all existing associated VPCs. To add a VPC, you must include the IDs of the new VPC and all existing VPCs that you want to retain.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1387,13 +1458,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates or dissociates virtual private clouds (VPCs) from a zone to set the effective scope of the zone.</para>
+        /// <para>Binds a Zone to, or unbinds it from, one or more VPCs to define its effective scope.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h5><a href="#"></a>Precautions:</h5>
-        /// <para>We recommend that you set the effective scope of a zone after you configure all Domain Name System (DNS) records. If you set an effective scope before you configure DNS records, the DNS resolution for the zone within the effective scope will fail unless you enable the recursive resolution proxy for subdomain names.</para>
+        /// <h5>Notes</h5>
+        /// <para>We recommend binding VPCs to a Zone only after you configure all its DNS records. Otherwise, DNS queries for the domain name in the specified VPCs may fail. This issue does not occur if the subdomain recursive resolution proxy feature is enabled.</para>
+        /// <remarks>
+        /// <para>Notice: This API operation performs a full overwrite. The list of VPCs provided in a request replaces all existing associated VPCs. To add a VPC, you must include the IDs of the new VPC and all existing VPCs that you want to retain.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1411,13 +1485,16 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates or dissociates virtual private clouds (VPCs) from a zone to set the effective scope of the zone.</para>
+        /// <para>Binds a Zone to, or unbinds it from, one or more VPCs to define its effective scope.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h5><a href="#"></a>Precautions:</h5>
-        /// <para>We recommend that you set the effective scope of a zone after you configure all Domain Name System (DNS) records. If you set an effective scope before you configure DNS records, the DNS resolution for the zone within the effective scope will fail unless you enable the recursive resolution proxy for subdomain names.</para>
+        /// <h5>Notes</h5>
+        /// <para>We recommend binding VPCs to a Zone only after you configure all its DNS records. Otherwise, DNS queries for the domain name in the specified VPCs may fail. This issue does not occur if the subdomain recursive resolution proxy feature is enabled.</para>
+        /// <remarks>
+        /// <para>Notice: This API operation performs a full overwrite. The list of VPCs provided in a request replaces all existing associated VPCs. To add a VPC, you must include the IDs of the new VPC and all existing VPCs that you want to retain.</para>
+        /// </remarks>
         /// </description>
         /// 
         /// <param name="request">
@@ -1435,8 +1512,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the logical location of a zone.</para>
+        /// <para>Modify the location of a ZONE.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting April 30, 2025 (UTC+8), zones added by new Alibaba Cloud DNS PrivateZone users will be set to acceleration zones by default. &lt;props=&quot;china&quot;&gt;Starting October 30, 2025 (UTC+8)&lt;props=&quot;intl&quot;&gt;Starting April 30, 2026 (UTC+8), built-in authoritative zones in the standard zone group for all users will be automatically switched to the acceleration zone group. After the switch, the number of DNS requests may increase, which can result in higher usage costs. You can enable <a href="https://help.aliyun.com/document_detail/2592999.html">NSCD for ECS</a> to reduce the increase in DNS requests caused by the lack of a local cache.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeZoneDnsGroupRequest
@@ -1485,8 +1567,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the logical location of a zone.</para>
+        /// <para>Modify the location of a ZONE.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting April 30, 2025 (UTC+8), zones added by new Alibaba Cloud DNS PrivateZone users will be set to acceleration zones by default. &lt;props=&quot;china&quot;&gt;Starting October 30, 2025 (UTC+8)&lt;props=&quot;intl&quot;&gt;Starting April 30, 2026 (UTC+8), built-in authoritative zones in the standard zone group for all users will be automatically switched to the acceleration zone group. After the switch, the number of DNS requests may increase, which can result in higher usage costs. You can enable <a href="https://help.aliyun.com/document_detail/2592999.html">NSCD for ECS</a> to reduce the increase in DNS requests caused by the lack of a local cache.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeZoneDnsGroupRequest
@@ -1535,8 +1622,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the logical location of a zone.</para>
+        /// <para>Modify the location of a ZONE.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting April 30, 2025 (UTC+8), zones added by new Alibaba Cloud DNS PrivateZone users will be set to acceleration zones by default. &lt;props=&quot;china&quot;&gt;Starting October 30, 2025 (UTC+8)&lt;props=&quot;intl&quot;&gt;Starting April 30, 2026 (UTC+8), built-in authoritative zones in the standard zone group for all users will be automatically switched to the acceleration zone group. After the switch, the number of DNS requests may increase, which can result in higher usage costs. You can enable <a href="https://help.aliyun.com/document_detail/2592999.html">NSCD for ECS</a> to reduce the increase in DNS requests caused by the lack of a local cache.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeZoneDnsGroupRequest
@@ -1553,8 +1645,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the logical location of a zone.</para>
+        /// <para>Modify the location of a ZONE.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Starting April 30, 2025 (UTC+8), zones added by new Alibaba Cloud DNS PrivateZone users will be set to acceleration zones by default. &lt;props=&quot;china&quot;&gt;Starting October 30, 2025 (UTC+8)&lt;props=&quot;intl&quot;&gt;Starting April 30, 2026 (UTC+8), built-in authoritative zones in the standard zone group for all users will be automatically switched to the acceleration zone group. After the switch, the number of DNS requests may increase, which can result in higher usage costs. You can enable <a href="https://help.aliyun.com/document_detail/2592999.html">NSCD for ECS</a> to reduce the increase in DNS requests caused by the lack of a local cache.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ChangeZoneDnsGroupRequest
@@ -1571,7 +1668,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a zone name can be added based on a rule.</para>
+        /// <para>You can call the CheckZoneName operation to check whether a zone name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1621,7 +1718,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a zone name can be added based on a rule.</para>
+        /// <para>You can call the CheckZoneName operation to check whether a zone name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1671,7 +1768,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a zone name can be added based on a rule.</para>
+        /// <para>You can call the CheckZoneName operation to check whether a zone name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1689,7 +1786,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether a zone name can be added based on a rule.</para>
+        /// <para>You can call the CheckZoneName operation to check whether a zone name is available.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1835,7 +1932,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an endpoint based on the endpoint ID.</para>
+        /// <para>You can call the DeleteResolverEndpoint operation to delete an endpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1881,7 +1978,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an endpoint based on the endpoint ID.</para>
+        /// <para>You can call the DeleteResolverEndpoint operation to delete an endpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1927,7 +2024,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an endpoint based on the endpoint ID.</para>
+        /// <para>You can call the DeleteResolverEndpoint operation to delete an endpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1945,7 +2042,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an endpoint based on the endpoint ID.</para>
+        /// <para>You can call the DeleteResolverEndpoint operation to delete an endpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1963,7 +2060,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a forwarding rule based on the rule ID.</para>
+        /// <para>Deletes a forwarding rule by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2009,7 +2106,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a forwarding rule based on the rule ID.</para>
+        /// <para>Deletes a forwarding rule by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2055,7 +2152,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a forwarding rule based on the rule ID.</para>
+        /// <para>Deletes a forwarding rule by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2073,7 +2170,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a forwarding rule based on the rule ID.</para>
+        /// <para>Deletes a forwarding rule by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2091,7 +2188,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an account from the central management of private Domain Name System (DNS) resolution based on the account ID and authorization type.</para>
+        /// <para>Deletes a cross-account authorization based on a specified account ID and authorization type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2137,7 +2234,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an account from the central management of private Domain Name System (DNS) resolution based on the account ID and authorization type.</para>
+        /// <para>Deletes a cross-account authorization based on a specified account ID and authorization type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2183,7 +2280,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an account from the central management of private Domain Name System (DNS) resolution based on the account ID and authorization type.</para>
+        /// <para>Deletes a cross-account authorization based on a specified account ID and authorization type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2201,7 +2298,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes an account from the central management of private Domain Name System (DNS) resolution based on the account ID and authorization type.</para>
+        /// <para>Deletes a cross-account authorization based on a specified account ID and authorization type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2219,13 +2316,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an idle built-in authoritative zone.</para>
+        /// <para>Deletes an idle zone (built-in authoritative domain name).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a>Precautions</h4>
-        /// <para>If you want to delete a built-in authoritative zone whose effective scope is configured, you must disassociate the zone from the effective scope first.</para>
+        /// <h4>Notes</h4>
+        /// <para>You must dissociate a zone from its scope before you delete it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2279,13 +2376,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an idle built-in authoritative zone.</para>
+        /// <para>Deletes an idle zone (built-in authoritative domain name).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a>Precautions</h4>
-        /// <para>If you want to delete a built-in authoritative zone whose effective scope is configured, you must disassociate the zone from the effective scope first.</para>
+        /// <h4>Notes</h4>
+        /// <para>You must dissociate a zone from its scope before you delete it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2339,13 +2436,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an idle built-in authoritative zone.</para>
+        /// <para>Deletes an idle zone (built-in authoritative domain name).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a>Precautions</h4>
-        /// <para>If you want to delete a built-in authoritative zone whose effective scope is configured, you must disassociate the zone from the effective scope first.</para>
+        /// <h4>Notes</h4>
+        /// <para>You must dissociate a zone from its scope before you delete it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2363,13 +2460,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes an idle built-in authoritative zone.</para>
+        /// <para>Deletes an idle zone (built-in authoritative domain name).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a>Precautions</h4>
-        /// <para>If you want to delete a built-in authoritative zone whose effective scope is configured, you must disassociate the zone from the effective scope first.</para>
+        /// <h4>Notes</h4>
+        /// <para>You must dissociate a zone from its scope before you delete it.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2387,13 +2484,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Domain Name System (DNS) record based on the ID of the DNS record.</para>
+        /// <para>The DeleteZoneRecord operation deletes a DNS record by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>Deleted DNS records cannot be restored. Exercise caution when you perform this operation.</para>
+        /// <h4><b>Notes</b></h4>
+        /// <para>This operation is irreversible. Deleted records cannot be recovered.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2447,13 +2544,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Domain Name System (DNS) record based on the ID of the DNS record.</para>
+        /// <para>The DeleteZoneRecord operation deletes a DNS record by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>Deleted DNS records cannot be restored. Exercise caution when you perform this operation.</para>
+        /// <h4><b>Notes</b></h4>
+        /// <para>This operation is irreversible. Deleted records cannot be recovered.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2507,13 +2604,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Domain Name System (DNS) record based on the ID of the DNS record.</para>
+        /// <para>The DeleteZoneRecord operation deletes a DNS record by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>Deleted DNS records cannot be restored. Exercise caution when you perform this operation.</para>
+        /// <h4><b>Notes</b></h4>
+        /// <para>This operation is irreversible. Deleted records cannot be recovered.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2531,13 +2628,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a Domain Name System (DNS) record based on the ID of the DNS record.</para>
+        /// <para>The DeleteZoneRecord operation deletes a DNS record by its ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>Deleted DNS records cannot be restored. Exercise caution when you perform this operation.</para>
+        /// <h4><b>Notes</b></h4>
+        /// <para>This operation is irreversible. Deleted records cannot be recovered.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2555,13 +2652,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operation logs of Private DNS. Operation logs record operations in modules such as the built-in authoritative module, cache module, forward module, and service address module and record the queries for Domain Name System (DNS) records. You can query operation logs by operation or operation content.</para>
+        /// <para>You can call the DescribeChangeLogs operation to retrieve the operation logs for a private zone. The logs record operations related to built-in authoritative zones, cache management, forwarding management, endpoints, and DNS record queries. You can perform a fuzzy search by keywords such as behavior and content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>You can query the operation logs of Private DNS that are generated within the last six months.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can query operation logs for a private zone generated within the last six months.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2635,13 +2732,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operation logs of Private DNS. Operation logs record operations in modules such as the built-in authoritative module, cache module, forward module, and service address module and record the queries for Domain Name System (DNS) records. You can query operation logs by operation or operation content.</para>
+        /// <para>You can call the DescribeChangeLogs operation to retrieve the operation logs for a private zone. The logs record operations related to built-in authoritative zones, cache management, forwarding management, endpoints, and DNS record queries. You can perform a fuzzy search by keywords such as behavior and content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>You can query the operation logs of Private DNS that are generated within the last six months.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can query operation logs for a private zone generated within the last six months.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2715,13 +2812,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operation logs of Private DNS. Operation logs record operations in modules such as the built-in authoritative module, cache module, forward module, and service address module and record the queries for Domain Name System (DNS) records. You can query operation logs by operation or operation content.</para>
+        /// <para>You can call the DescribeChangeLogs operation to retrieve the operation logs for a private zone. The logs record operations related to built-in authoritative zones, cache management, forwarding management, endpoints, and DNS record queries. You can perform a fuzzy search by keywords such as behavior and content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>You can query the operation logs of Private DNS that are generated within the last six months.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can query operation logs for a private zone generated within the last six months.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2739,13 +2836,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operation logs of Private DNS. Operation logs record operations in modules such as the built-in authoritative module, cache module, forward module, and service address module and record the queries for Domain Name System (DNS) records. You can query operation logs by operation or operation content.</para>
+        /// <para>You can call the DescribeChangeLogs operation to retrieve the operation logs for a private zone. The logs record operations related to built-in authoritative zones, cache management, forwarding management, endpoints, and DNS record queries. You can perform a fuzzy search by keywords such as behavior and content.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>You can query the operation logs of Private DNS that are generated within the last six months.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can query operation logs for a private zone generated within the last six months.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2763,7 +2860,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a custom line.</para>
+        /// <para>Retrieves the details of a custom line.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2809,7 +2906,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a custom line.</para>
+        /// <para>Retrieves the details of a custom line.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2855,7 +2952,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a custom line.</para>
+        /// <para>Retrieves the details of a custom line.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2873,7 +2970,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a custom line.</para>
+        /// <para>Retrieves the details of a custom line.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3027,8 +3124,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户可以分析的VPC列表</para>
+        /// <para>Retrieves a list of VPCs that a user can analyze.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is not recommended due to its low performance. To retrieve a list of zones, call the <c>DescribeZones</c> operation. To get details about a VPC in a specific zone, call <c>DescribeZoneInfo</c> and specify the <c>zoneId</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeIntranetUserCanAnalysisVpcsRequest
@@ -3093,8 +3195,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户可以分析的VPC列表</para>
+        /// <para>Retrieves a list of VPCs that a user can analyze.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is not recommended due to its low performance. To retrieve a list of zones, call the <c>DescribeZones</c> operation. To get details about a VPC in a specific zone, call <c>DescribeZoneInfo</c> and specify the <c>zoneId</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeIntranetUserCanAnalysisVpcsRequest
@@ -3159,8 +3266,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户可以分析的VPC列表</para>
+        /// <para>Retrieves a list of VPCs that a user can analyze.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is not recommended due to its low performance. To retrieve a list of zones, call the <c>DescribeZones</c> operation. To get details about a VPC in a specific zone, call <c>DescribeZoneInfo</c> and specify the <c>zoneId</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeIntranetUserCanAnalysisVpcsRequest
@@ -3177,8 +3289,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户可以分析的VPC列表</para>
+        /// <para>Retrieves a list of VPCs that a user can analyze.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation is not recommended due to its low performance. To retrieve a list of zones, call the <c>DescribeZones</c> operation. To get details about a VPC in a specific zone, call <c>DescribeZoneInfo</c> and specify the <c>zoneId</c>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeIntranetUserCanAnalysisVpcsRequest
@@ -3195,8 +3312,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息全局总览</para>
+        /// <para>Retrieves global DNS resolution statistics for PrivateZone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Usage notes</b></h4>
+        /// <para>This operation queries tag information only for zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsGlobalOverviewRequest
@@ -3245,8 +3368,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息全局总览</para>
+        /// <para>Retrieves global DNS resolution statistics for PrivateZone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Usage notes</b></h4>
+        /// <para>This operation queries tag information only for zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsGlobalOverviewRequest
@@ -3295,8 +3424,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息全局总览</para>
+        /// <para>Retrieves global DNS resolution statistics for PrivateZone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Usage notes</b></h4>
+        /// <para>This operation queries tag information only for zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsGlobalOverviewRequest
@@ -3313,8 +3448,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息全局总览</para>
+        /// <para>Retrieves global DNS resolution statistics for PrivateZone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Usage notes</b></h4>
+        /// <para>This operation queries tag information only for zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsGlobalOverviewRequest
@@ -3331,8 +3472,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息趋势</para>
+        /// <para>PrivateZone Resolution Trends</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Limits</b></h4>
+        /// <para>Currently, you can only query tags for availability zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsHistoryRequest
@@ -3405,8 +3552,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息趋势</para>
+        /// <para>PrivateZone Resolution Trends</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Limits</b></h4>
+        /// <para>Currently, you can only query tags for availability zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsHistoryRequest
@@ -3479,8 +3632,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息趋势</para>
+        /// <para>PrivateZone Resolution Trends</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Limits</b></h4>
+        /// <para>Currently, you can only query tags for availability zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsHistoryRequest
@@ -3497,8 +3656,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息趋势</para>
+        /// <para>PrivateZone Resolution Trends</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Limits</b></h4>
+        /// <para>Currently, you can only query tags for availability zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsHistoryRequest
@@ -3515,8 +3680,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息摘要列表</para>
+        /// <para>PrivateZone Resolution Statistics Summary</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can only query tags for zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsSummaryRequest
@@ -3613,8 +3784,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息摘要列表</para>
+        /// <para>PrivateZone Resolution Statistics Summary</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can only query tags for zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsSummaryRequest
@@ -3711,8 +3888,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息摘要列表</para>
+        /// <para>PrivateZone Resolution Statistics Summary</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can only query tags for zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsSummaryRequest
@@ -3729,8 +3912,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息摘要列表</para>
+        /// <para>PrivateZone Resolution Statistics Summary</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can only query tags for zone resources.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsSummaryRequest
@@ -3747,8 +3936,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息Zone维度总览</para>
+        /// <para>Provides an overview of resolution statistics for zones in PrivateZone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is a low-performance operation and is not recommended. To retrieve a list of zones, use the DescribeZones operation. To get details of the VPCs bound to a zone, call the DescribeZoneInfo operation and specify the zone ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsZoneOverviewRequest
@@ -3809,8 +4003,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息Zone维度总览</para>
+        /// <para>Provides an overview of resolution statistics for zones in PrivateZone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is a low-performance operation and is not recommended. To retrieve a list of zones, use the DescribeZones operation. To get details of the VPCs bound to a zone, call the DescribeZoneInfo operation and specify the zone ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsZoneOverviewRequest
@@ -3871,8 +4070,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息Zone维度总览</para>
+        /// <para>Provides an overview of resolution statistics for zones in PrivateZone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is a low-performance operation and is not recommended. To retrieve a list of zones, use the DescribeZones operation. To get details of the VPCs bound to a zone, call the DescribeZoneInfo operation and specify the zone ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsZoneOverviewRequest
@@ -3889,8 +4093,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Pvtz解析统计信息Zone维度总览</para>
+        /// <para>Provides an overview of resolution statistics for zones in PrivateZone.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This is a low-performance operation and is not recommended. To retrieve a list of zones, use the DescribeZones operation. To get details of the VPCs bound to a zone, call the DescribeZoneInfo operation and specify the zone ID.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePvtzStatisticsZoneOverviewRequest
@@ -3907,7 +4116,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions for selection based on the scenario and virtual private cloud (VPC) type.</para>
+        /// <para>Call the DescribeRegions operation to query a list of available regions. You can filter the list by criteria such as the scenario and VPC type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3969,7 +4178,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions for selection based on the scenario and virtual private cloud (VPC) type.</para>
+        /// <para>Call the DescribeRegions operation to query a list of available regions. You can filter the list by criteria such as the scenario and VPC type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4031,7 +4240,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions for selection based on the scenario and virtual private cloud (VPC) type.</para>
+        /// <para>Call the DescribeRegions operation to query a list of available regions. You can filter the list by criteria such as the scenario and VPC type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4049,7 +4258,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of regions for selection based on the scenario and virtual private cloud (VPC) type.</para>
+        /// <para>Call the DescribeRegions operation to query a list of available regions. You can filter the list by criteria such as the scenario and VPC type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4067,7 +4276,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Domain Name System (DNS) requests based on conditions such as the time range.</para>
+        /// <para>Queries details about the number of requests based on conditions such as a time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4137,7 +4346,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Domain Name System (DNS) requests based on conditions such as the time range.</para>
+        /// <para>Queries details about the number of requests based on conditions such as a time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4207,7 +4416,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Domain Name System (DNS) requests based on conditions such as the time range.</para>
+        /// <para>Queries details about the number of requests based on conditions such as a time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4225,7 +4434,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about Domain Name System (DNS) requests based on conditions such as the time range.</para>
+        /// <para>Queries details about the number of requests based on conditions such as a time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4243,7 +4452,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available zones.</para>
+        /// <para>Call DescribeResolverAvailableZones to retrieve a list of available zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4293,7 +4502,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available zones.</para>
+        /// <para>Call DescribeResolverAvailableZones to retrieve a list of available zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4343,7 +4552,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available zones.</para>
+        /// <para>Call DescribeResolverAvailableZones to retrieve a list of available zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4361,7 +4570,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of available zones.</para>
+        /// <para>Call DescribeResolverAvailableZones to retrieve a list of available zones.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4379,7 +4588,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an endpoint based on the endpoint ID.</para>
+        /// <para>You can call DescribeResolverEndpoint to retrieve the details of an endpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4425,7 +4634,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an endpoint based on the endpoint ID.</para>
+        /// <para>You can call DescribeResolverEndpoint to retrieve the details of an endpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4471,7 +4680,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an endpoint based on the endpoint ID.</para>
+        /// <para>You can call DescribeResolverEndpoint to retrieve the details of an endpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4489,7 +4698,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about an endpoint based on the endpoint ID.</para>
+        /// <para>You can call DescribeResolverEndpoint to retrieve the details of an endpoint by its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4507,7 +4716,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoints.</para>
+        /// <para>You can call DescribeResolverEndpoints to retrieve a list of endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4569,7 +4778,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoints.</para>
+        /// <para>You can call DescribeResolverEndpoints to retrieve a list of endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4631,7 +4840,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoints.</para>
+        /// <para>You can call DescribeResolverEndpoints to retrieve a list of endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4649,7 +4858,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of endpoints.</para>
+        /// <para>You can call DescribeResolverEndpoints to retrieve a list of endpoints.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4667,7 +4876,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a forwarding rule based on the ID of the forwarding rule.</para>
+        /// <para>Call the DescribeResolverRule operation to retrieve the details of a forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4713,7 +4922,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a forwarding rule based on the ID of the forwarding rule.</para>
+        /// <para>Call the DescribeResolverRule operation to retrieve the details of a forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4759,7 +4968,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a forwarding rule based on the ID of the forwarding rule.</para>
+        /// <para>Call the DescribeResolverRule operation to retrieve the details of a forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4777,7 +4986,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a forwarding rule based on the ID of the forwarding rule.</para>
+        /// <para>Call the DescribeResolverRule operation to retrieve the details of a forwarding rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4795,7 +5004,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of forwarding rules.</para>
+        /// <para>Describes one or more forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4857,7 +5066,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of forwarding rules.</para>
+        /// <para>Describes one or more forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4919,7 +5128,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of forwarding rules.</para>
+        /// <para>Describes one or more forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4937,7 +5146,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of forwarding rules.</para>
+        /// <para>Describes one or more forwarding rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4955,7 +5164,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on Domain Name System (DNS) requests received on the previous day, including the top three zones and virtual private clouds (VPCs) with the largest number of DNS requests.</para>
+        /// <para>Call the DescribeStatisticSummary operation to retrieve a summary of yesterday\&quot;s request volume. This summary includes the top three zones and top three VPCs ranked by request volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5001,7 +5210,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on Domain Name System (DNS) requests received on the previous day, including the top three zones and virtual private clouds (VPCs) with the largest number of DNS requests.</para>
+        /// <para>Call the DescribeStatisticSummary operation to retrieve a summary of yesterday\&quot;s request volume. This summary includes the top three zones and top three VPCs ranked by request volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5047,7 +5256,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on Domain Name System (DNS) requests received on the previous day, including the top three zones and virtual private clouds (VPCs) with the largest number of DNS requests.</para>
+        /// <para>Call the DescribeStatisticSummary operation to retrieve a summary of yesterday\&quot;s request volume. This summary includes the top three zones and top three VPCs ranked by request volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5065,7 +5274,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics on Domain Name System (DNS) requests received on the previous day, including the top three zones and virtual private clouds (VPCs) with the largest number of DNS requests.</para>
+        /// <para>Call the DescribeStatisticSummary operation to retrieve a summary of yesterday\&quot;s request volume. This summary includes the top three zones and top three VPCs ranked by request volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5083,13 +5292,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a hostname synchronization task based on a zone ID.</para>
+        /// <para>Call DescribeSyncEcsHostTask to retrieve the details of a hostname sync task based on a zone ID.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call the DescribeSyncEcsHostTask operation to query the information about a hostname synchronization task based on a zone ID.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSyncEcsHostTaskRequest
@@ -5134,13 +5338,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a hostname synchronization task based on a zone ID.</para>
+        /// <para>Call DescribeSyncEcsHostTask to retrieve the details of a hostname sync task based on a zone ID.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call the DescribeSyncEcsHostTask operation to query the information about a hostname synchronization task based on a zone ID.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSyncEcsHostTaskRequest
@@ -5185,13 +5384,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a hostname synchronization task based on a zone ID.</para>
+        /// <para>Call DescribeSyncEcsHostTask to retrieve the details of a hostname sync task based on a zone ID.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call the DescribeSyncEcsHostTask operation to query the information about a hostname synchronization task based on a zone ID.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSyncEcsHostTaskRequest
@@ -5208,13 +5402,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a hostname synchronization task based on a zone ID.</para>
+        /// <para>Call DescribeSyncEcsHostTask to retrieve the details of a hostname sync task based on a zone ID.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call the DescribeSyncEcsHostTask operation to query the information about a hostname synchronization task based on a zone ID.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// DescribeSyncEcsHostTaskRequest
@@ -5231,13 +5420,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags added to zones.</para>
+        /// <para>Queries the tags that are added to resources in PrivateZone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>You can call this API operation to query the information about tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can query tags for zone resources only.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5291,13 +5480,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags added to zones.</para>
+        /// <para>Queries the tags that are added to resources in PrivateZone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>You can call this API operation to query the information about tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can query tags for zone resources only.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5351,13 +5540,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags added to zones.</para>
+        /// <para>Queries the tags that are added to resources in PrivateZone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>You can call this API operation to query the information about tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can query tags for zone resources only.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5375,13 +5564,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags added to zones.</para>
+        /// <para>Queries the tags that are added to resources in PrivateZone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>You can call this API operation to query the information about tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can query tags for zone resources only.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5399,7 +5588,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the current user\&quot;s service status, such as whether the service is activated, whether there are any unpaid fees, etc.</para>
+        /// <para>Queries the service status of the current user, which indicates whether the service is activated or has overdue payments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5441,7 +5630,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the current user\&quot;s service status, such as whether the service is activated, whether there are any unpaid fees, etc.</para>
+        /// <para>Queries the service status of the current user, which indicates whether the service is activated or has overdue payments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5483,7 +5672,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the current user\&quot;s service status, such as whether the service is activated, whether there are any unpaid fees, etc.</para>
+        /// <para>Queries the service status of the current user, which indicates whether the service is activated or has overdue payments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5501,7 +5690,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the current user\&quot;s service status, such as whether the service is activated, whether there are any unpaid fees, etc.</para>
+        /// <para>Queries the service status of the current user, which indicates whether the service is activated or has overdue payments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5519,7 +5708,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of accounts whose virtual private clouds (VPCs) are associated with a private zone.</para>
+        /// <para>Call the DescribeUserVpcAuthorizations operation to retrieve a list of cross-account authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5573,7 +5762,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of accounts whose virtual private clouds (VPCs) are associated with a private zone.</para>
+        /// <para>Call the DescribeUserVpcAuthorizations operation to retrieve a list of cross-account authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5627,7 +5816,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of accounts whose virtual private clouds (VPCs) are associated with a private zone.</para>
+        /// <para>Call the DescribeUserVpcAuthorizations operation to retrieve a list of cross-account authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5645,7 +5834,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of accounts whose virtual private clouds (VPCs) are associated with a private zone.</para>
+        /// <para>Call the DescribeUserVpcAuthorizations operation to retrieve a list of cross-account authorizations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5663,7 +5852,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a built-in authoritative zone, such as the virtual private clouds (VPCs) that are associated with the zone.</para>
+        /// <para>Call the DescribeZoneInfo operation to retrieve the details of a specified built-in authoritative zone. The details include the list of VPCs that are bound to the zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5709,7 +5898,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a built-in authoritative zone, such as the virtual private clouds (VPCs) that are associated with the zone.</para>
+        /// <para>Call the DescribeZoneInfo operation to retrieve the details of a specified built-in authoritative zone. The details include the list of VPCs that are bound to the zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5755,7 +5944,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a built-in authoritative zone, such as the virtual private clouds (VPCs) that are associated with the zone.</para>
+        /// <para>Call the DescribeZoneInfo operation to retrieve the details of a specified built-in authoritative zone. The details include the list of VPCs that are bound to the zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5773,7 +5962,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a built-in authoritative zone, such as the virtual private clouds (VPCs) that are associated with the zone.</para>
+        /// <para>Call the DescribeZoneInfo operation to retrieve the details of a specified built-in authoritative zone. The details include the list of VPCs that are bound to the zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5791,7 +5980,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Domain Name System (DNS) record.</para>
+        /// <para>Queries the details of a DNS record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5833,7 +6022,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Domain Name System (DNS) record.</para>
+        /// <para>Queries the details of a DNS record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5875,7 +6064,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Domain Name System (DNS) record.</para>
+        /// <para>Queries the details of a DNS record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5893,7 +6082,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a Domain Name System (DNS) record.</para>
+        /// <para>Queries the details of a DNS record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5911,7 +6100,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Domain Name System (DNS) records.</para>
+        /// <para>You can call DescribeZoneRecords to query DNS records for a zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5981,7 +6170,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Domain Name System (DNS) records.</para>
+        /// <para>You can call DescribeZoneRecords to query DNS records for a zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6051,7 +6240,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Domain Name System (DNS) records.</para>
+        /// <para>You can call DescribeZoneRecords to query DNS records for a zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6069,7 +6258,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of Domain Name System (DNS) records.</para>
+        /// <para>You can call DescribeZoneRecords to query DNS records for a zone.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6087,12 +6276,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones within the current account and a list of virtual private clouds (VPCs) associated with the zones.</para>
+        /// <para>Call the DescribeZoneVpcTree operation to query the zones and the Virtual Private Clouds (VPCs) attached to them in your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs with which a zone is associated, you can call the DescribeZoneInfo operation based on the zone ID.</para>
+        /// <para>This operation is not recommended due to low performance. To retrieve a list of zones, call DescribeZones. To retrieve the details of attached VPCs, call DescribeZoneInfo with the zone ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6138,12 +6327,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones within the current account and a list of virtual private clouds (VPCs) associated with the zones.</para>
+        /// <para>Call the DescribeZoneVpcTree operation to query the zones and the Virtual Private Clouds (VPCs) attached to them in your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs with which a zone is associated, you can call the DescribeZoneInfo operation based on the zone ID.</para>
+        /// <para>This operation is not recommended due to low performance. To retrieve a list of zones, call DescribeZones. To retrieve the details of attached VPCs, call DescribeZoneInfo with the zone ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6189,12 +6378,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones within the current account and a list of virtual private clouds (VPCs) associated with the zones.</para>
+        /// <para>Call the DescribeZoneVpcTree operation to query the zones and the Virtual Private Clouds (VPCs) attached to them in your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs with which a zone is associated, you can call the DescribeZoneInfo operation based on the zone ID.</para>
+        /// <para>This operation is not recommended due to low performance. To retrieve a list of zones, call DescribeZones. To retrieve the details of attached VPCs, call DescribeZoneInfo with the zone ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6212,12 +6401,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones within the current account and a list of virtual private clouds (VPCs) associated with the zones.</para>
+        /// <para>Call the DescribeZoneVpcTree operation to query the zones and the Virtual Private Clouds (VPCs) attached to them in your account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>We recommend that you do not call this API operation due to its poor performance. Instead, you can call the DescribeZones operation to query a list of zones. If you want to query the information about VPCs with which a zone is associated, you can call the DescribeZoneInfo operation based on the zone ID.</para>
+        /// <para>This operation is not recommended due to low performance. To retrieve a list of zones, call DescribeZones. To retrieve the details of attached VPCs, call DescribeZoneInfo with the zone ID.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6235,7 +6424,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones within the current account.</para>
+        /// <para>You can call the DescribeZones operation to query a list of zones available to your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6317,7 +6506,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones within the current account.</para>
+        /// <para>You can call the DescribeZones operation to query a list of zones available to your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6399,7 +6588,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones within the current account.</para>
+        /// <para>You can call the DescribeZones operation to query a list of zones available to your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6417,7 +6606,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of zones within the current account.</para>
+        /// <para>You can call the DescribeZones operation to query a list of zones available to your account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6435,13 +6624,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags added to zones.</para>
+        /// <para>Queries the tags that are added to resources in Private Zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>You can call this API operation to query tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>This operation queries tags for zone resources only.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6503,13 +6692,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags added to zones.</para>
+        /// <para>Queries the tags that are added to resources in Private Zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>You can call this API operation to query tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>This operation queries tags for zone resources only.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6571,13 +6760,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags added to zones.</para>
+        /// <para>Queries the tags that are added to resources in Private Zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>You can call this API operation to query tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>This operation queries tags for zone resources only.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6595,13 +6784,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of tags added to zones.</para>
+        /// <para>Queries the tags that are added to resources in Private Zone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>You can call this API operation to query tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>This operation queries tags for zone resources only.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6619,13 +6808,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a resource group.</para>
+        /// <para>You can call the MoveResourceGroup operation to move a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a>Precautions</h4>
-        /// <para>You can call this API operation to change a resource group only for a zone.</para>
+        /// <h4>Conditions</h4>
+        /// <para>This operation can be used to change the resource group of only zone-specific resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6679,13 +6868,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a resource group.</para>
+        /// <para>You can call the MoveResourceGroup operation to move a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a>Precautions</h4>
-        /// <para>You can call this API operation to change a resource group only for a zone.</para>
+        /// <h4>Conditions</h4>
+        /// <para>This operation can be used to change the resource group of only zone-specific resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6739,13 +6928,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a resource group.</para>
+        /// <para>You can call the MoveResourceGroup operation to move a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a>Precautions</h4>
-        /// <para>You can call this API operation to change a resource group only for a zone.</para>
+        /// <h4>Conditions</h4>
+        /// <para>This operation can be used to change the resource group of only zone-specific resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6763,13 +6952,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes a resource group.</para>
+        /// <para>You can call the MoveResourceGroup operation to move a resource to a different resource group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a>Precautions</h4>
-        /// <para>You can call this API operation to change a resource group only for a zone.</para>
+        /// <h4>Conditions</h4>
+        /// <para>This operation can be used to change the resource group of only zone-specific resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6787,7 +6976,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of custom lines.</para>
+        /// <para>Searches for custom access control lists (ACLs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6865,7 +7054,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of custom lines.</para>
+        /// <para>Searches for custom access control lists (ACLs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6943,7 +7132,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of custom lines.</para>
+        /// <para>Searches for custom access control lists (ACLs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6961,7 +7150,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of custom lines.</para>
+        /// <para>Searches for custom access control lists (ACLs).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6979,7 +7168,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the recursive resolution proxy for subdomain names.</para>
+        /// <para>Sets the recursive resolution proxy for subdomains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7037,7 +7226,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the recursive resolution proxy for subdomain names.</para>
+        /// <para>Sets the recursive resolution proxy for subdomains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7095,7 +7284,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the recursive resolution proxy for subdomain names.</para>
+        /// <para>Sets the recursive resolution proxy for subdomains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7113,7 +7302,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the recursive resolution proxy for subdomain names.</para>
+        /// <para>Sets the recursive resolution proxy for subdomains.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7131,7 +7320,207 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a Domain Name System (DNS) record.</para>
+        /// <para>Sets the weight enabling status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4>Precautions</h4>
+        /// <para>Built-in authoritative domain names that have configured domain name effective scopes must first be dissociated from the domain name effective scope before they can be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetZoneLbaStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetZoneLbaStatusResponse
+        /// </returns>
+        public SetZoneLbaStatusResponse SetZoneLbaStatusWithOptions(SetZoneLbaStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
+            {
+                query["Line"] = request.Line;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Open))
+            {
+                query["Open"] = request.Open;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rr))
+            {
+                query["Rr"] = request.Rr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserClientIp))
+            {
+                query["UserClientIp"] = request.UserClientIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetZoneLbaStatus",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetZoneLbaStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the weight enabling status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4>Precautions</h4>
+        /// <para>Built-in authoritative domain names that have configured domain name effective scopes must first be dissociated from the domain name effective scope before they can be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetZoneLbaStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetZoneLbaStatusResponse
+        /// </returns>
+        public async Task<SetZoneLbaStatusResponse> SetZoneLbaStatusWithOptionsAsync(SetZoneLbaStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Line))
+            {
+                query["Line"] = request.Line;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Open))
+            {
+                query["Open"] = request.Open;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Rr))
+            {
+                query["Rr"] = request.Rr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserClientIp))
+            {
+                query["UserClientIp"] = request.UserClientIp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SetZoneLbaStatus",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SetZoneLbaStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the weight enabling status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4>Precautions</h4>
+        /// <para>Built-in authoritative domain names that have configured domain name effective scopes must first be dissociated from the domain name effective scope before they can be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetZoneLbaStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetZoneLbaStatusResponse
+        /// </returns>
+        public SetZoneLbaStatusResponse SetZoneLbaStatus(SetZoneLbaStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SetZoneLbaStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets the weight enabling status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h4>Precautions</h4>
+        /// <para>Built-in authoritative domain names that have configured domain name effective scopes must first be dissociated from the domain name effective scope before they can be deleted.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SetZoneLbaStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SetZoneLbaStatusResponse
+        /// </returns>
+        public async Task<SetZoneLbaStatusResponse> SetZoneLbaStatusAsync(SetZoneLbaStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SetZoneLbaStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>You can call SetZoneRecordStatus to set the status of a DNS record for a zone. This enables or pauses DNS resolution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7189,7 +7578,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a Domain Name System (DNS) record.</para>
+        /// <para>You can call SetZoneRecordStatus to set the status of a DNS record for a zone. This enables or pauses DNS resolution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7247,7 +7636,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a Domain Name System (DNS) record.</para>
+        /// <para>You can call SetZoneRecordStatus to set the status of a DNS record for a zone. This enables or pauses DNS resolution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7265,7 +7654,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a Domain Name System (DNS) record.</para>
+        /// <para>You can call SetZoneRecordStatus to set the status of a DNS record for a zone. This enables or pauses DNS resolution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7283,13 +7672,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or modifies tags for zones.</para>
+        /// <para>You can call the TagResources operation to add or modify tags for one or more zones in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h5><a href="#"></a>Precautions</h5>
-        /// <para>You can configure tags only for zones.</para>
+        /// <h5>Limits</h5>
+        /// <para>You can add tags only to zone resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7347,13 +7736,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or modifies tags for zones.</para>
+        /// <para>You can call the TagResources operation to add or modify tags for one or more zones in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h5><a href="#"></a>Precautions</h5>
-        /// <para>You can configure tags only for zones.</para>
+        /// <h5>Limits</h5>
+        /// <para>You can add tags only to zone resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7411,13 +7800,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or modifies tags for zones.</para>
+        /// <para>You can call the TagResources operation to add or modify tags for one or more zones in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h5><a href="#"></a>Precautions</h5>
-        /// <para>You can configure tags only for zones.</para>
+        /// <h5>Limits</h5>
+        /// <para>You can add tags only to zone resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7435,13 +7824,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or modifies tags for zones.</para>
+        /// <para>You can call the TagResources operation to add or modify tags for one or more zones in a batch.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h5><a href="#"></a>Precautions</h5>
-        /// <para>You can configure tags only for zones.</para>
+        /// <h5>Limits</h5>
+        /// <para>You can add tags only to zone resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7459,13 +7848,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the tags of multiple zones at a time.</para>
+        /// <para>You can call the UntagResources operation to remove tags from one or more zones in PrivateZone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>You can call this API operation to remove tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can remove tags only from zone resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7523,13 +7912,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the tags of multiple zones at a time.</para>
+        /// <para>You can call the UntagResources operation to remove tags from one or more zones in PrivateZone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>You can call this API operation to remove tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can remove tags only from zone resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7587,13 +7976,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the tags of multiple zones at a time.</para>
+        /// <para>You can call the UntagResources operation to remove tags from one or more zones in PrivateZone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>You can call this API operation to remove tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can remove tags only from zone resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7611,13 +8000,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes the tags of multiple zones at a time.</para>
+        /// <para>You can call the UntagResources operation to remove tags from one or more zones in PrivateZone.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><a href="#"></a><b>Precautions</b></h4>
-        /// <para>You can call this API operation to remove tags added only to zones.</para>
+        /// <h4><b>Limits</b></h4>
+        /// <para>You can remove tags only from zone resources.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7635,7 +8024,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom line.</para>
+        /// <para>Updates a custom line.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7693,7 +8082,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom line.</para>
+        /// <para>Updates a custom line.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7751,7 +8140,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom line.</para>
+        /// <para>Updates a custom line.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7769,7 +8158,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a custom line.</para>
+        /// <para>Updates a custom line.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7787,7 +8176,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Domain Name System (DNS) record based on the record ID.</para>
+        /// <para>You can call the UpdateRecordRemark operation to modify the remarks of a DNS record based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7841,7 +8230,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Domain Name System (DNS) record based on the record ID.</para>
+        /// <para>You can call the UpdateRecordRemark operation to modify the remarks of a DNS record based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7895,7 +8284,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Domain Name System (DNS) record based on the record ID.</para>
+        /// <para>You can call the UpdateRecordRemark operation to modify the remarks of a DNS record based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7913,7 +8302,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a Domain Name System (DNS) record based on the record ID.</para>
+        /// <para>You can call the UpdateRecordRemark operation to modify the remarks of a DNS record based on its ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7931,7 +8320,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an endpoint.</para>
+        /// <para>Updates an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7985,7 +8374,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an endpoint.</para>
+        /// <para>Updates an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8039,7 +8428,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an endpoint.</para>
+        /// <para>Updates an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8057,7 +8446,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an endpoint.</para>
+        /// <para>Updates an endpoint.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8235,7 +8624,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or updates a hostname synchronization task.</para>
+        /// <para>Call the UpdateSyncEcsHostTask operation to add or update a hostname sync task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8289,7 +8678,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or updates a hostname synchronization task.</para>
+        /// <para>Call the UpdateSyncEcsHostTask operation to add or update a hostname sync task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8343,7 +8732,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or updates a hostname synchronization task.</para>
+        /// <para>Call the UpdateSyncEcsHostTask operation to add or update a hostname sync task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8361,7 +8750,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds or updates a hostname synchronization task.</para>
+        /// <para>Call the UpdateSyncEcsHostTask operation to add or update a hostname sync task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8379,13 +8768,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Domain Name System (DNS) record of a zone, including the hostname, record value, and weight value of the DNS record.</para>
+        /// <para>The UpdateZoneRecord operation modifies a DNS record for a zone. You can change properties such as the host record, record type, and weight.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>The DNS record modification for a zone in the regular module takes effect only after the time to live (TTL) expires. The DNS record modification for a zone in the acceleration module takes effect immediately.</para>
+        /// <h4><b>Notes</b></h4>
+        /// <para>Modifications to DNS records in standard zones take effect after the Time to Live (TTL) expires. Modifications to DNS records in acceleration regions take effect immediately and are not affected by the TTL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8467,13 +8856,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Domain Name System (DNS) record of a zone, including the hostname, record value, and weight value of the DNS record.</para>
+        /// <para>The UpdateZoneRecord operation modifies a DNS record for a zone. You can change properties such as the host record, record type, and weight.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>The DNS record modification for a zone in the regular module takes effect only after the time to live (TTL) expires. The DNS record modification for a zone in the acceleration module takes effect immediately.</para>
+        /// <h4><b>Notes</b></h4>
+        /// <para>Modifications to DNS records in standard zones take effect after the Time to Live (TTL) expires. Modifications to DNS records in acceleration regions take effect immediately and are not affected by the TTL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8555,13 +8944,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Domain Name System (DNS) record of a zone, including the hostname, record value, and weight value of the DNS record.</para>
+        /// <para>The UpdateZoneRecord operation modifies a DNS record for a zone. You can change properties such as the host record, record type, and weight.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>The DNS record modification for a zone in the regular module takes effect only after the time to live (TTL) expires. The DNS record modification for a zone in the acceleration module takes effect immediately.</para>
+        /// <h4><b>Notes</b></h4>
+        /// <para>Modifications to DNS records in standard zones take effect after the Time to Live (TTL) expires. Modifications to DNS records in acceleration regions take effect immediately and are not affected by the TTL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8579,13 +8968,13 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a Domain Name System (DNS) record of a zone, including the hostname, record value, and weight value of the DNS record.</para>
+        /// <para>The UpdateZoneRecord operation modifies a DNS record for a zone. You can change properties such as the host record, record type, and weight.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h4><b>Precautions</b></h4>
-        /// <para>The DNS record modification for a zone in the regular module takes effect only after the time to live (TTL) expires. The DNS record modification for a zone in the acceleration module takes effect immediately.</para>
+        /// <h4><b>Notes</b></h4>
+        /// <para>Modifications to DNS records in standard zones take effect after the Time to Live (TTL) expires. Modifications to DNS records in acceleration regions take effect immediately and are not affected by the TTL.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8603,7 +8992,171 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a built-in authoritative zone.</para>
+        /// <para>Updates the weight value of an authoritative DNS record in Alibaba Cloud DNS PrivateZone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the weight value of an authoritative DNS record in Alibaba Cloud DNS PrivateZone.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateZoneRecordWeightRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateZoneRecordWeightResponse
+        /// </returns>
+        public UpdateZoneRecordWeightResponse UpdateZoneRecordWeightWithOptions(UpdateZoneRecordWeightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Weight))
+            {
+                query["Weight"] = request.Weight;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateZoneRecordWeight",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateZoneRecordWeightResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the weight value of an authoritative DNS record in Alibaba Cloud DNS PrivateZone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the weight value of an authoritative DNS record in Alibaba Cloud DNS PrivateZone.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateZoneRecordWeightRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateZoneRecordWeightResponse
+        /// </returns>
+        public async Task<UpdateZoneRecordWeightResponse> UpdateZoneRecordWeightWithOptionsAsync(UpdateZoneRecordWeightRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
+            {
+                query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RecordId))
+            {
+                query["RecordId"] = request.RecordId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Weight))
+            {
+                query["Weight"] = request.Weight;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateZoneRecordWeight",
+                Version = "2018-01-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateZoneRecordWeightResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the weight value of an authoritative DNS record in Alibaba Cloud DNS PrivateZone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the weight value of an authoritative DNS record in Alibaba Cloud DNS PrivateZone.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateZoneRecordWeightRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateZoneRecordWeightResponse
+        /// </returns>
+        public UpdateZoneRecordWeightResponse UpdateZoneRecordWeight(UpdateZoneRecordWeightRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateZoneRecordWeightWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the weight value of an authoritative DNS record in Alibaba Cloud DNS PrivateZone.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the weight value of an authoritative DNS record in Alibaba Cloud DNS PrivateZone.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateZoneRecordWeightRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateZoneRecordWeightResponse
+        /// </returns>
+        public async Task<UpdateZoneRecordWeightResponse> UpdateZoneRecordWeightAsync(UpdateZoneRecordWeightRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateZoneRecordWeightWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the remark for a built-in authoritative domain name (zone).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8661,7 +9214,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a built-in authoritative zone.</para>
+        /// <para>Modifies the remark for a built-in authoritative domain name (zone).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8719,7 +9272,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a built-in authoritative zone.</para>
+        /// <para>Modifies the remark for a built-in authoritative domain name (zone).</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8737,7 +9290,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the description of a built-in authoritative zone.</para>
+        /// <para>Modifies the remark for a built-in authoritative domain name (zone).</para>
         /// </summary>
         /// 
         /// <param name="request">

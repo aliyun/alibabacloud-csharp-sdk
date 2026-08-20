@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <para>The endpoint ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>hra0**</para>
+        /// <para>hr****</para>
         /// </summary>
         [NameInMap("EndpointId")]
         [Validation(Required=false)]
         public string EndpointId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32436208-E1AF-4DAB-B3B8-24F5F25B0950</para>

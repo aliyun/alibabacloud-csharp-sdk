@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeIntranetUserCanAnalysisVpcsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? CurPage { get; set; }
 
         /// <summary>
+        /// <para>The number of entries returned per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C6F1D541-E7A6-447A-A2B5-9F7A20B2A8FB</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of pages.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? TotalPage { get; set; }
 
         /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>35</para>
         /// </summary>
@@ -49,6 +59,9 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         [Validation(Required=false)]
         public int? TotalSize { get; set; }
 
+        /// <summary>
+        /// <para>A list of VPCs that the user can analyze.</para>
+        /// </summary>
         [NameInMap("UserCanAnalysisVpcsPopResults")]
         [Validation(Required=false)]
         public DescribeIntranetUserCanAnalysisVpcsResponseBodyUserCanAnalysisVpcsPopResults UserCanAnalysisVpcsPopResults { get; set; }

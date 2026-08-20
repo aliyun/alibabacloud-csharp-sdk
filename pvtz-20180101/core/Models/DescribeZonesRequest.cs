@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZonesRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword of the zone name. The value is not case-sensitive. You can set SearchMode to LIKE or EXACT. The default value of SearchMode is LIKE.</para>
+        /// <para>The keyword of the zone name. The search is not case-sensitive. You can set the SearchMode parameter to switch between exact search and fuzzy search. The default mode is fuzzy search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: en.</para>
         /// 
@@ -45,17 +47,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: <b>20</b>.</para>
+        /// <para>The number of entries to return on each page. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the virtual private cloud (VPC) associated with the zone.</para>
+        /// <para>The region ID of the VPC that is associated with the zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -65,7 +67,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string QueryRegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the VPC associated with the zone.</para>
+        /// <para>The ID of the VPC that is associated with the zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-f8zvrvr1payllgz38****</para>
@@ -85,14 +87,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags added to the zone.</para>
+        /// <para>The resource tags that are added to the zone.</para>
         /// </summary>
         [NameInMap("ResourceTag")]
         [Validation(Required=false)]
         public List<DescribeZonesRequestResourceTag> ResourceTag { get; set; }
         public class DescribeZonesRequestResourceTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N added to the zone.</para>
+            /// <para>The key of the resource tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N added to the zone.</para>
+            /// <para>The value of the resource tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>daily</para>
@@ -114,22 +116,24 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The search mode. The value of Keyword is the search scope. Valid values:</para>
+        /// <para>The search mode. This parameter takes effect only when the Keyword parameter is specified. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LIKE</b> (default): fuzzy search</description></item>
-        /// <item><description><b>EXACT</b>: exact search</description></item>
+        /// <item><description><para><b>LIKE</b>: fuzzy search (default)</para>
+        /// </description></item>
+        /// <item><description><para><b>EXACT</b>: exact search</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>LIKE</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LIKE</para>
+        /// <para>EXACT</para>
         /// </summary>
         [NameInMap("SearchMode")]
         [Validation(Required=false)]
         public string SearchMode { get; set; }
 
         /// <summary>
-        /// <para>The types of cloud services.</para>
+        /// <para>The list of cloud service types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BLINK</para>
@@ -139,15 +143,17 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public List<string> ZoneTag { get; set; }
 
         /// <summary>
-        /// <para>The zone type. Valid values:</para>
+        /// <para>The type of the zones to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>AUTH_ZONE</b>: authoritative zone</description></item>
-        /// <item><description><b>CLOUD_PRODUCT_ZONE</b>: authoritative zone for cloud services</description></item>
+        /// <item><description><para><b>AUTH_ZONE</b>: authoritative zones.</para>
+        /// </description></item>
+        /// <item><description><para><b>CLOUD_PRODUCT_ZONE</b>: zones for cloud services.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <b>AUTH_ZONE</b>.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>CLOUD_PRODUCT_ZONE</para>
+        /// <para>AUTH_ZONE</para>
         /// </summary>
         [NameInMap("ZoneType")]
         [Validation(Required=false)]

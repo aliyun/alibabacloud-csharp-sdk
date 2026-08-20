@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The token for the next query. If this parameter is empty, all results have been returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23423****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75446CC1-FC9A-4595-8D96-089D73D7A63D</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The tags added to the resources.</para>
+        /// <para>The list of tagged resources.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]
         public List<ListTagResourcesResponseBodyTagResources> TagResources { get; set; }
         public class ListTagResourcesResponseBodyTagResources : TeaModel {
             /// <summary>
-            /// <para>The resource ID, which is a zone ID.</para>
+            /// <para>The resource ID. In this case, the zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>97fe9321a476d0861f624d3f738d****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The key of tag N added to the resource.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string TagKey { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N added to the resource.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>daily</para>

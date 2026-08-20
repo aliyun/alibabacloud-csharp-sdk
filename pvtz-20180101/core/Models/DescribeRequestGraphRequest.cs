@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeRequestGraphRequest : TeaModel {
         /// <summary>
-        /// <para>The business ID. BizId is specified together with BizType.</para>
+        /// <para>The data ID. This parameter is used with BizType.</para>
         /// <list type="bullet">
-        /// <item><description>If you set BizType to AUTH_ZONE, set BizId to a zone ID.</description></item>
-        /// <item><description>If you set BizType to RESOLVER_RULE, set BizId to the ID of a forwarding rule.</description></item>
+        /// <item><description><para>If BizType is set to AUTH_ZONE, set this parameter to the zone ID.</para>
+        /// </description></item>
+        /// <item><description><para>If BizType is set to RESOLVER_RULE, set this parameter to the forwarding rule ID.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +28,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The business type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AUTH_ZONE: authoritative zone</description></item>
-        /// <item><description>RESOLVER_RULE: forwarding rule</description></item>
+        /// <item><description><para>AUTH_ZONE: An authoritative zone.</para>
+        /// </description></item>
+        /// <item><description><para>RESOLVER_RULE: A forwarding rule.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,11 +42,11 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end of the time range to query. This is a UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1571673600000</para>
+        /// <para>1721723624000</para>
         /// </summary>
         [NameInMap("EndTimestamp")]
         [Validation(Required=false)]
@@ -51,8 +55,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: en.</para>
         /// 
@@ -64,18 +70,18 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Set the time to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start of the time range to query. This is a UNIX timestamp.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1571587200000</para>
+        /// <para>1721036404000</para>
         /// </summary>
         [NameInMap("StartTimestamp")]
         [Validation(Required=false)]
         public long? StartTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client.</para>
+        /// <para>The user\&quot;s IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -85,7 +91,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// <para>The ID of the virtual private cloud (VPC).</para>
+        /// <para>The ID of the Virtual Private Cloud (VPC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-f8zvrvr1payllgz38****</para>
@@ -97,7 +103,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The zone ID.</para>
         /// <remarks>
-        /// <para> To query the number of DNS requests for a zone, you can specify ZoneId or BizType and BizId.</para>
+        /// <para>To query the number of requests for a zone, specify either ZoneId or both BizType and BizId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

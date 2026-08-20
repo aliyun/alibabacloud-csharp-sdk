@@ -8,26 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
-    public class UpdateRecordRemarkRequest : TeaModel {
+    public class UpdateZoneRecordWeightRequest : TeaModel {
         /// <summary>
-        /// <para>A client token used to ensure the idempotence of a request. The client generates this value, which must be unique across different requests. The token can be up to 64 ASCII characters in length.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. If you do not specify this parameter, the system automatically generates a value. To ensure uniqueness across different requests, the value cannot exceed 64 ASCII characters.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>6447728c8578e66aacf062d2df4446dc</para>
+        /// <para>210bc45716943908285687176dcf0a</para>
         /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The language of the response. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>zh: Chinese.</para>
-        /// </description></item>
-        /// <item><description><para>en: English.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>The language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -41,21 +34,22 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>202991****</para>
+        /// <para>5808</para>
         /// </summary>
         [NameInMap("RecordId")]
         [Validation(Required=false)]
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>The remarks.</para>
+        /// <para>The updated weight value <c>[0,100]</c>.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test record</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("Remark")]
+        [NameInMap("Weight")]
         [Validation(Required=false)]
-        public string Remark { get; set; }
+        public int? Weight { get; set; }
 
     }
 

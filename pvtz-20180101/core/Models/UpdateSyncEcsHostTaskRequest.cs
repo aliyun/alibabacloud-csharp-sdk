@@ -12,10 +12,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>Default value: en</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The regions to be synchronized.</para>
+        /// <para>The regions for synchronization.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Region")]
@@ -43,7 +45,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The user ID to which the region belongs. This parameter is used in cross-account synchronization scenarios.</para>
+            /// <para>The ID of the user who owns the region. This parameter is used for cross-account synchronization.</para>
             /// 
             /// <b>Example:</b>
             /// <para>141339776561****</para>
@@ -55,10 +57,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The state of the hostname synchronization task. Valid values:</para>
+        /// <para>The status of the ECS hostname sync task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ON: The task is started.</description></item>
-        /// <item><description>OFF: The task is ended.</description></item>
+        /// <item><description><para>ON: enables the task.</para>
+        /// </description></item>
+        /// <item><description><para>OFF: disables the task.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,7 +74,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

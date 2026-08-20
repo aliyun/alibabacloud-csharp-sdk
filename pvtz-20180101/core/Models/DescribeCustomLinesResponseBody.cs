@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>The page number. Pages start from page <b>1</b>. Default value: <b>1</b>.</para>
+        /// <para>The page number of the returned page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: <b>1 to 100</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries returned per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? TotalItems { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned pages.</para>
+        /// <para>The total number of pages returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

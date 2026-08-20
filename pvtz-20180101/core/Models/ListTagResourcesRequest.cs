@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en: English</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: en.</para>
         /// 
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</para>
+        /// <para>The token that is used to start the next query. It is returned in the response to the previous query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23423****</para>
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource IDs, which are zone IDs. You can specify up to 50 zone IDs.</para>
+        /// <para>A list of resource IDs. In this case, a list of zone IDs. You can specify up to 50 IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>97fe9321a476d0861f624d3f738dcc38</para>
@@ -45,7 +47,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public List<string> ResourceId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. Valid value: ZONE.</para>
+        /// <para>The resource type. Set the value to ZONE.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,7 +58,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 200. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. Maximum value: 200. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -66,14 +68,14 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? Size { get; set; }
 
         /// <summary>
-        /// <para>The tags added to the resources.</para>
+        /// <para>A list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N added to the resource.</para>
+            /// <para>The key of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>env</para>
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N added to the resource.</para>
+            /// <para>The value of the tag.</para>
             /// 
             /// <b>Example:</b>
             /// <para>daily</para>

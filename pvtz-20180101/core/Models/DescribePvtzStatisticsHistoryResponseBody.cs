@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribePvtzStatisticsHistoryResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The statistical data.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribePvtzStatisticsHistoryResponseBodyData> Data { get; set; }
         public class DescribePvtzStatisticsHistoryResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The number of requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>29</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? Count { get; set; }
 
             /// <summary>
+            /// <para>The domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>wget At8P8tza.popscan.xaliyun.com</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string DomainName { get; set; }
 
             /// <summary>
+            /// <para>The number of failed requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>100</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? FailCount { get; set; }
 
             /// <summary>
+            /// <para>The protocol.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>UDP、TCP</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Protocol { get; set; }
 
             /// <summary>
+            /// <para>The query type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>A</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public string Qtype { get; set; }
 
             /// <summary>
+            /// <para>The success rate.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>95</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? Ratio { get; set; }
 
             /// <summary>
+            /// <para>The number of successful requests.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>5</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? SuccessCount { get; set; }
 
             /// <summary>
+            /// <para>The timestamp of the data point. Unit: milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1687190400000</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
             public long? Timestamp { get; set; }
 
             /// <summary>
+            /// <para>The name of the zone.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-zhangjiakou-share.log.aliyuncs.com</para>
             /// </summary>
@@ -88,7 +109,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</para>

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class AddZoneResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>46973D4C-E3E4-4ABA-9190-9A9DE406C7E</para>
+        /// <para>54F10A2A-C3CF-59D4-810F-F18DDD93FE20</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6fc186295683a131f63bb8b0cddc****</para>

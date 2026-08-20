@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZoneRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The keyword of the hostname. The value is not case-sensitive. You can set SearchMode to LIKE or EXACT. The default value of SearchMode is EXACT.</para>
+        /// <para>The keyword for the hostname. The search is not case-sensitive. Use the SearchMode parameter to switch between a fuzzy search and an exact search. The default is an exact search.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: en.</para>
         /// 
@@ -35,7 +37,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number. Pages start from 1. The default value is 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -45,10 +47,10 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 100. Default value: 20.</para>
+        /// <para>The number of entries to return on each page. The maximum value is 100. The default value is 20.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>100</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
@@ -57,23 +59,27 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The search mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>LIKE</b>: fuzzy search</description></item>
-        /// <item><description><b>EXACT</b> (default): exact search</description></item>
+        /// <item><description><para><b>LIKE</b>: fuzzy search</para>
+        /// </description></item>
+        /// <item><description><para><b>EXACT</b>: exact search (default)</para>
+        /// </description></item>
         /// </list>
-        /// <para>The value of Keyword is the search scope.</para>
+        /// <para>This parameter is used with the Keyword parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>LIKE</para>
+        /// <para>EXACT</para>
         /// </summary>
         [NameInMap("SearchMode")]
         [Validation(Required=false)]
         public string SearchMode { get; set; }
 
         /// <summary>
-        /// <para>The tag added to the DNS record. Valid values:</para>
+        /// <para>The tag. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ecs: If you set Tag to ecs, the DNS records added to the hostnames of Elastic Compute Service (ECS) instances in the zone are queried.</description></item>
-        /// <item><description>If Tag is left empty, the DNS records in the zone are queried.</description></item>
+        /// <item><description><para>ecs: Queries the hostnames that are synchronized from ECS instances to the zone.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify this parameter, all DNS records in the zone are queried.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +90,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Tag { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client.</para>
+        /// <para>The client IP address of the user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.XX.XX</para>
@@ -94,7 +100,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string UserClientIp { get; set; }
 
         /// <summary>
-        /// <para>The zone ID. This ID uniquely identifies the zone.</para>
+        /// <para>The unique ID of the zone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

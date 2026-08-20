@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class SetZoneRecordStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. The client generates this value. The value must be unique among different requests and can be up to 64 ASCII characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6447728c8578e66aacf062d2df4446dc</para>
@@ -22,10 +22,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         /// <summary>
         /// <para>The language of the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description><para>zh: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para>en: English.</para>
+        /// </description></item>
         /// </list>
-        /// <para>Default value: en.</para>
+        /// <para>The default value is en.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -46,22 +48,24 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>The state of the DNS record. Valid values:</para>
+        /// <para>The status of the DNS record. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ENABLE: enables the DNS record.</description></item>
-        /// <item><description>DISABLE: suspends the DNS record.</description></item>
+        /// <item><description><para>ENABLE: Enables DNS resolution.</para>
+        /// </description></item>
+        /// <item><description><para>DISABLE: Pauses DNS resolution.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DISABLE</para>
+        /// <para>ENABLE</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the client.</para>
+        /// <para>The client IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.XX.XX</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
 {
     public class DescribeZoneRecordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the DNS record was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the record was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-23T03:15Z</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the DNS record was created. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp that indicates when the record was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1516775741000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The resolution line.</para>
+        /// <para>The DNS resolution line.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Line { get; set; }
 
         /// <summary>
-        /// <para>The priority of the mail exchanger (MX) record.</para>
+        /// <para>The priority of the mail exchange (MX) record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public long? RecordId { get; set; }
 
         /// <summary>
-        /// <para>The description of the DNS record.</para>
+        /// <para>The remarks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test record</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The hostname.</para>
+        /// <para>The host record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>www</para>
@@ -90,10 +90,12 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Rr { get; set; }
 
         /// <summary>
-        /// <para>The state of the DNS record. Valid values:</para>
+        /// <para>The status of the DNS record. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ENABLE</b>: The DNS record is enabled.</description></item>
-        /// <item><description><b>DISABLE</b>: The DNS record is disabled.</description></item>
+        /// <item><description><para><b>ENABLE</b>: The DNS record is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>DISABLE</b>: The DNS record is paused.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +106,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The time to live (TTL) of the DNS record.</para>
+        /// <para>The time to live (TTL).</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -124,7 +126,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The time when the DNS record was updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
+        /// <para>The time when the record was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-24T06:35Z</para>
@@ -134,7 +136,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string UpdateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the DNS record was updated. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The timestamp that indicates when the record was last updated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1516775741000</para>
@@ -154,7 +156,7 @@ namespace AlibabaCloud.SDK.Pvtz20180101.Models
         public string Value { get; set; }
 
         /// <summary>
-        /// <para>The weight value of the DNS record.</para>
+        /// <para>The weight of the DNS record.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
