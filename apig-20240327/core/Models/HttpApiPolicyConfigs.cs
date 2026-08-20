@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiPolicyConfigs : TeaModel {
         /// <summary>
-        /// <para>AiCacheConfig</para>
+        /// <para>The AI cache configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiCacheConfig AiCacheConfig { get; set; }
 
         /// <summary>
-        /// <para>AiFallbackConfig</para>
+        /// <para>The AI fallback configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiFallbackConfig AiFallbackConfig { get; set; }
 
         /// <summary>
-        /// <para>AiNetworkSearchConfig</para>
+        /// <para>The AI web search configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiNetworkSearchConfig AiNetworkSearchConfig { get; set; }
 
         /// <summary>
-        /// <para>AiSecurityGuardConfig</para>
+        /// <para>The AI security protection configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiSecurityGuardConfig AiSecurityGuardConfig { get; set; }
 
         /// <summary>
-        /// <para>AiStatisticsConfig</para>
+        /// <para>The AI statistics configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -59,18 +59,21 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public AiStatisticsConfig AiStatisticsConfig { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>AiTokenRateLimitConfig</para>
+        /// <para>The AI token rate limiting configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
         /// </summary>
         [NameInMap("aiTokenRateLimitConfig")]
         [Validation(Required=false)]
+        [Obsolete]
         public AiTokenRateLimitConfig AiTokenRateLimitConfig { get; set; }
 
         /// <summary>
-        /// <para>AiToolSelectionConfig</para>
+        /// <para>The AI tool selection configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -80,17 +83,27 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AiToolSelectionConfig AiToolSelectionConfig { get; set; }
 
         /// <summary>
-        /// <para>Policy Enable</para>
+        /// <para>Indicates whether the policy is enabled.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>false</para>
         /// </summary>
         [NameInMap("enable")]
         [Validation(Required=false)]
         public bool? Enable { get; set; }
 
         /// <summary>
-        /// <para>SemanticRouterConfig</para>
+        /// <para>The read-only compatible reference. GetHttpApi returns policyId/policyAttachmentId for ModelAPI AiTokenRateLimit. This must be stripped before write path persistence and is not used as a bind/unbind instruction.</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>true</c>
+        /// </summary>
+        [NameInMap("policyReference")]
+        [Validation(Required=false)]
+        public HttpApiPolicyReference PolicyReference { get; set; }
+
+        /// <summary>
+        /// <para>The semantic routing configuration.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>false</c>
@@ -100,7 +113,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpApiPolicyConfigsSemanticRouterConfig SemanticRouterConfig { get; set; }
         public class HttpApiPolicyConfigsSemanticRouterConfig : TeaModel {
             /// <summary>
-            /// <para>Timeout in milliseconds</para>
+            /// <para>The timeout period, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2000</para>
@@ -112,10 +125,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Policy Type</para>
+        /// <para>The policy template type.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>AiCache</para>
+        /// <para>K8S</para>
         /// </summary>
         [NameInMap("type")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpRouteMatch : TeaModel {
         /// <summary>
-        /// <para>The rules for matching based on HTTP request headers.</para>
+        /// <para>The list of HTTP request header matching rules.</para>
         /// </summary>
         [NameInMap("headers")]
         [Validation(Required=false)]
         public List<HttpRouteMatchHeaders> Headers { get; set; }
         public class HttpRouteMatchHeaders : TeaModel {
             /// <summary>
-            /// <para>The header name.</para>
+            /// <para>The name of the header.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The match type. Valid values:</para>
+            /// <para>The header matching type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Exact: exact match</description></item>
-            /// <item><description>Prefix: prefix match</description></item>
-            /// <item><description>Regex: regular expression</description></item>
+            /// <item><description>Exact: exact match.</description></item>
+            /// <item><description>Prefix: prefix match. </description></item>
+            /// <item><description>Regex: regular expression match.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The header value.</para>
+            /// <para>The value of the header.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? IgnoreUriCase { get; set; }
 
         /// <summary>
-        /// <para>The HTTP methods.</para>
+        /// <para>The list of request methods.</para>
         /// </summary>
         [NameInMap("methods")]
         [Validation(Required=false)]
@@ -78,11 +78,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public HttpRouteMatchPath Path { get; set; }
         public class HttpRouteMatchPath : TeaModel {
             /// <summary>
-            /// <para>The path matching type. Valid values:</para>
+            /// <para>The path matching rule. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Exact: exact match</description></item>
-            /// <item><description>Prefix: prefix match</description></item>
-            /// <item><description>Regex: regular expression</description></item>
+            /// <item><description>Exact: exact match.</description></item>
+            /// <item><description>Prefix: prefix match. </description></item>
+            /// <item><description>Regex: regular expression match.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The rules for matching based on query parameters.</para>
+        /// <para>The list of query request parameter matching rules.</para>
         /// </summary>
         [NameInMap("queryParams")]
         [Validation(Required=false)]
@@ -122,11 +122,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The match type. Valid values:</para>
+            /// <para>The query parameter matching type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Exact: exact match</description></item>
-            /// <item><description>Prefix: prefix match</description></item>
-            /// <item><description>Regex: regular expression</description></item>
+            /// <item><description>Exact: exact match. </description></item>
+            /// <item><description>Prefix: prefix match. </description></item>
+            /// <item><description>Regex: regular expression match.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

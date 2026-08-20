@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ListMcpServersResponseBodyData Data { get; set; }
         public class ListMcpServersResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of MCP servers.</para>
+            /// <para>The MCP server list information.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ApiId { get; set; }
 
                 /// <summary>
-                /// <para>The list of assembly sources. This parameter is required when type is AssemblyMCP.</para>
+                /// <para>The list of assembled sources. This parameter is required when type is AssemblyMCP.</para>
                 /// </summary>
                 [NameInMap("assembledSources")]
                 [Validation(Required=false)]
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The creation source type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</description></item>
+                /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP.</description></item>
                 /// <item><description>ApiGatewayMcpHosting: gateway-managed MCP direct proxy.</description></item>
                 /// <item><description>ApiGatewayAssembly: gateway MCP assembly.</description></item>
-                /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</description></item>
+                /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP.</description></item>
                 /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</description></item>
                 /// </list>
                 /// 
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>这是xxx的xx项目测试环境</para>
+                /// <para>This is the test environment for the xx project of xxx</para>
                 /// </summary>
                 [NameInMap("description")]
                 [Validation(Required=false)]
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The HTTP-to-MCP configuration.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>HTTP转MCP Config base64值</para>
+                /// <para>Base64-encoded value of the HTTP-to-MCP configuration</para>
                 /// </summary>
                 [NameInMap("mcpServerConfig")]
                 [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string McpServerPath { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether MCP observability is enabled. Default value: false.</para>
+                /// <para>Specifies whether MCP observability is enabled. Default value: false.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The synced MCP server ID.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>同步的MCP Server ID</para>
+                    /// <para>The synced MCP server ID</para>
                     /// </summary>
                     [NameInMap("importMcpServerId")]
                     [Validation(Required=false)]
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The MCP server type.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>可选值：RealMCP、AssemblyMCP</para>
+                /// <para>Valid values: RealMCP, AssemblyMCP</para>
                 /// </summary>
                 [NameInMap("type")]
                 [Validation(Required=false)]

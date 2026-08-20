@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreatePluginClassRequest : TeaModel {
         /// <summary>
-        /// <para>The alias of the plugin.</para>
+        /// <para>The alias of the plugin class. This parameter is required. If this parameter is not specified, the service returns InvalidParameter.WithValue.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My Wasm Plugin</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The execution priority of the plugin.</para>
+        /// <para>The execution priority of the plugin. This parameter is required when executeStage is specified. The default value 0 is invalid. Set this parameter to 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The minimum gateway version that the plugin is compatible with.</para>
+        /// <para>The minimum gateway version supported by the plugin.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.0.0</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string VersionDescription { get; set; }
 
         /// <summary>
-        /// <para>The programming language used to develop the WASM plugin.</para>
+        /// <para>The development language of the WASM plugin. Valid values: TinyGo.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

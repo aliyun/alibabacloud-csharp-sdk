@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>商品中心服务路由</para>
+        /// <para>Product center service routing</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExposedUriPath { get; set; }
 
         /// <summary>
-        /// <para>The list of canary release MCP server route configurations.</para>
+        /// <para>The list of canary release MCP server routing configurations.</para>
         /// </summary>
         [NameInMap("grayMcpServerConfigs")]
         [Validation(Required=false)]
@@ -258,7 +258,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The route match rule.</para>
+            /// <para>The route match rules.</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route match rule.</para>
+        /// <para>The route match rules.</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
@@ -328,7 +328,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <item><description>HTTP: HTTP protocol.</description></item>
         /// <item><description>HTTPS: HTTPS protocol.</description></item>
         /// <item><description>SSE: Server-Sent Events protocol.</description></item>
-        /// <item><description>StreamableHTTP: streamable HTTP protocol.</description></item>
+        /// <item><description>StreamableHTTP: Streamable HTTP protocol.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

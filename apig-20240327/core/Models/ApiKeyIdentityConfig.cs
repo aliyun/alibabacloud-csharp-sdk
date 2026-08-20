@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The complete set of API key credential sources. The set contains one to three items. Multiple sources are applicable only to AI gateway Header mode. Query String and non-AI gateway allow only a single source. When submitted together with apikeySource, the latter must be consistent with the compatible projection.</para>
+        /// <para>The complete set of API key credential sources. The set contains one to three items. Multiple sources are applicable only to the AI gateway Header mode. Query String and non-AI gateway allow only a single source. If submitted together with apikeySource, the latter must be consistent with the compatible projection.</para>
         /// </summary>
         [NameInMap("apikeySources")]
         [Validation(Required=false)]
@@ -47,6 +47,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public class ApiKeyIdentityConfigApikeySources : TeaModel {
             /// <summary>
             /// <para>The credential source type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Default</para>
             /// </summary>
             [NameInMap("source")]
             [Validation(Required=false)]
@@ -54,6 +57,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
             /// <summary>
             /// <para>The field name of the HTTP header or query string.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Authorization</para>
             /// </summary>
             [NameInMap("value")]
             [Validation(Required=false)]

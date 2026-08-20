@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<QueryConsumerAuthorizationRulesResponseBodyDataItems> Items { get; set; }
             public class QueryConsumerAuthorizationRulesResponseBodyDataItems : TeaModel {
                 /// <summary>
-                /// <para>The API information.</para>
+                /// <para>The API information details.</para>
                 /// </summary>
                 [NameInMap("apiInfo")]
                 [Validation(Required=false)]
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConsumerId { get; set; }
 
                 /// <summary>
-                /// <para>The consumer information.</para>
+                /// <para>The consumer information details.</para>
                 /// </summary>
                 [NameInMap("consumerInfo")]
                 [Validation(Required=false)]
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource information.</para>
+                /// <para>The resource information details.</para>
                 /// </summary>
                 [NameInMap("resourceInfo")]
                 [Validation(Required=false)]

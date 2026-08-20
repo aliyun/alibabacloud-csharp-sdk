@@ -33,10 +33,19 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public List<ListGatewayFeaturesResponseBodyDataItems> Items { get; set; }
             public class ListGatewayFeaturesResponseBodyDataItems : TeaModel {
+                /// <summary>
+                /// <para>The runtime constraints calculated based on the current gateway form. Only returned for certain features.</para>
+                /// </summary>
                 [NameInMap("constraints")]
                 [Validation(Required=false)]
                 public ListGatewayFeaturesResponseBodyDataItemsConstraints Constraints { get; set; }
                 public class ListGatewayFeaturesResponseBodyDataItemsConstraints : TeaModel {
+                    /// <summary>
+                    /// <para>The maximum body collection size per request in bytes. This value is returned based on the managed form of the gateway deployment cluster. Only the log-request-response feature returns this field.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5120</para>
+                    /// </summary>
                     [NameInMap("bodyMaxSizeLimit")]
                     [Validation(Required=false)]
                     public int? BodyMaxSizeLimit { get; set; }
@@ -64,7 +73,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The parameter description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>作用于请求与响应环节，启用gzip会对请求响应进行压缩，会减少网关流量，增加网关cpu消耗</para>
+                    /// <para>Applies to request and response phases. Enabling gzip compresses request responses, which reduces gateway traffic but increases gateway CPU consumption</para>
                     /// </summary>
                     [NameInMap("description")]
                     [Validation(Required=false)]
@@ -83,8 +92,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <summary>
                     /// <para>The parameter group. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>Telemetry: observability parameter.</description></item>
-                    /// <item><description>Engine: engine parameter.</description></item>
+                    /// <item><description>Telemetry: observability-related parameter.</description></item>
+                    /// <item><description>Engine: engine-related parameter.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -98,7 +107,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <para>The input type of the parameter. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>Trigger: toggle.</description></item>
-                    /// <item><description>Input: input.</description></item>
+                    /// <item><description>Input: text input.</description></item>
                     /// <item><description>SingleSelect: single-select.</description></item>
                     /// <item><description>MultiSelect: multi-select.</description></item>
                     /// </list>
@@ -188,7 +197,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public List<ListGatewayFeaturesResponseBodyDataItemsDefinitionValueOptions> ValueOptions { get; set; }
                     public class ListGatewayFeaturesResponseBodyDataItemsDefinitionValueOptions : TeaModel {
                         /// <summary>
-                        /// <para>The pass parameter key.</para>
+                        /// <para>The key used to pass the parameter.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>KEEP_UNCHANGED</para>
@@ -201,7 +210,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                         /// <para>The display value.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>保持不变</para>
+                        /// <para>Keep unchanged</para>
                         /// </summary>
                         [NameInMap("label")]
                         [Validation(Required=false)]
@@ -214,11 +223,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     /// <list type="bullet">
                     /// <item><description>bool: Boolean.</description></item>
                     /// <item><description>string: String.</description></item>
-                    /// <item><description>int32: Integer.</description></item>
-                    /// <item><description>int64: Long integer.</description></item>
+                    /// <item><description>int32: 32-bit integer.</description></item>
+                    /// <item><description>int64: 64-bit integer.</description></item>
                     /// <item><description>json: JSON format.</description></item>
                     /// <item><description>array: JSON array format.</description></item>
-                    /// <item><description>float: Float.</description></item>
+                    /// <item><description>float: Floating-point.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>

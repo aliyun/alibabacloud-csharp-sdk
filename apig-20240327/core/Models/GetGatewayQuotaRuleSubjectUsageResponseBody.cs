@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? OutputAmount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the quota limit is exceeded.</para>
+            /// <para>Indicates whether the limit is exceeded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>

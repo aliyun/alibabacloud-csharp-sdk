@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AuthConfig AuthConfig { get; set; }
 
         /// <summary>
-        /// <para>The API base path, which must start with /.</para>
+        /// <para>The base path of the API. The value must start with a forward slash (/).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,10 +49,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<HttpApiDeployConfig> DeployConfigs { get; set; }
 
         /// <summary>
-        /// <para>The API description.</para>
+        /// <para>The description of the API.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Updated API description</para>
+        /// <para>Update API description</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to only modify the configuration without triggering redeployment. A value of true indicates that only the configuration is modified.</para>
+        /// <para>Specifies whether to only modify the configuration. If set to true, only the configuration is modified without triggering a redeployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -165,11 +165,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? RemoveBasePathOnForward { get; set; }
 
         /// <summary>
-        /// <para>The API versioning configuration.</para>
+        /// <para>The versioning configuration of the API.</para>
         /// </summary>
         [NameInMap("versionConfig")]
         [Validation(Required=false)]
         public HttpApiVersionConfig VersionConfig { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run. If set to true, all synchronous validations identical to a real update are performed without updating any configurations or producing side effects. If not specified or set to false, the behavior is the same as the existing version.</para>
+        /// </summary>
+        [NameInMap("dryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
     }
 

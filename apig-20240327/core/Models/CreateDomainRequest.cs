@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateDomainRequest : TeaModel {
         /// <summary>
-        /// <para>The CA certificate identifier. This parameter is optional for Dedicated with HTTPS. This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</para>
+        /// <para>The CA certificate identifier. This parameter is optional for Dedicated scope with HTTPS. It is not allowed for Serverless scope and is not validated for Dedicated scope with HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CaCertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The certificate identifier. This parameter is required for Dedicated with HTTPS and must pass validation. This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</para>
+        /// <para>The certificate identifier. This parameter is required for Dedicated scope with HTTPS and must pass validation. It is not allowed for Serverless scope and is not validated for Dedicated scope with HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1ef1da5f-38ed-69b3-****-037781890265</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string CertIdentifier { get; set; }
 
         /// <summary>
-        /// <para>The client CA certificate. This parameter is conditionally required for Dedicated with HTTPS (when MTLSEnabled is set to true). This parameter is not allowed for Serverless and is not validated for Dedicated with HTTP.</para>
+        /// <para>The client CA certificate. This parameter is conditionally required for Dedicated scope with HTTPS (required when MTLSEnabled is set to true). It is not allowed for Serverless scope and is not validated for Dedicated scope with HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>-----BEGIN CERTIFICATE-----
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DomainScope { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable forced HTTPS redirect for the HTTPS protocol type. This parameter is required for Serverless and for Dedicated with HTTPS. This parameter is not validated for Dedicated with HTTP.</para>
+        /// <para>Specifies whether to enable forced HTTPS redirect for the HTTPS protocol type. This parameter is required for Serverless scope and for Dedicated scope with HTTPS. It is not validated for Dedicated scope with HTTP.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -95,14 +95,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Http2Option { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable mTLS mutual authentication. This parameter is optional for Dedicated with HTTPS. When set to true, ClientCACert is required. This parameter is not allowed for Serverless.</para>
+        /// <para>Specifies whether to enable mTLS mutual authentication. This parameter is optional for Dedicated scope with HTTPS. When set to true, ClientCACert is required. This parameter is not allowed for Serverless scope.</para>
         /// </summary>
         [NameInMap("mTLSEnabled")]
         [Validation(Required=false)]
         public bool? MTLSEnabled { get; set; }
 
         /// <summary>
-        /// <para>The domain name. The name must be 1 to 128 characters in length, such as abc.com.</para>
+        /// <para>The domain name. The name must be 1 to 128 characters in length. Example: abc.com.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol type used by the domain name. Valid values: HTTP and HTTPS. This parameter is required for the Dedicated scope and is not allowed for the Serverless scope.</para>
+        /// <para>The protocol type used by the domain name. Valid values: HTTP, HTTPS. This parameter is required for the Dedicated scope and is not allowed for the Serverless scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public TlsCipherSuitesConfig TlsCipherSuitesConfig { get; set; }
 
         /// <summary>
-        /// <para>The maximum TLS protocol version. This parameter is optional for Dedicated with HTTPS. If not specified, the value is derived from TlsMin. The value must be greater than or equal to TlsMin. This parameter is not allowed for Serverless.</para>
+        /// <para>The maximum TLS protocol version. This parameter is optional for Dedicated scope with HTTPS. If not specified, the value is derived from TlsMin. The value must be greater than or equal to TlsMin. This parameter is not allowed for Serverless scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS1.3</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string TlsMax { get; set; }
 
         /// <summary>
-        /// <para>The minimum TLS protocol version. This parameter is optional for Dedicated with HTTPS. If not specified, the default value is TLS 1.0. Valid values: TLS 1.0 to TLS 1.3, compatible with TLSv1.x. This parameter is not allowed for Serverless.</para>
+        /// <para>The minimum TLS protocol version. This parameter is optional for Dedicated scope with HTTPS. If not specified, the default value is TLS 1.0. Valid values: TLS 1.0 to TLS 1.3 (compatible with TLSv1.x). This parameter is not allowed for Serverless scope.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TLS1.0</para>
@@ -158,6 +158,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [NameInMap("tlsMin")]
         [Validation(Required=false)]
         public string TlsMin { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to perform only a dry run validation. If set to true, all synchronous validations identical to an actual creation are performed (including idempotency checks for existing test domain names), but no domain name is created and no side effects are produced. If not specified or set to false, the behavior is the same as the existing version.</para>
+        /// </summary>
+        [NameInMap("dryRun")]
+        [Validation(Required=false)]
+        public bool? DryRun { get; set; }
 
     }
 

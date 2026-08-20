@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group that allows a gateway to access services.</para>
+        /// <para>Authorizes a security group to allow gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -451,7 +451,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group that allows a gateway to access services.</para>
+        /// <para>Authorizes a security group to allow gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -505,7 +505,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group that allows a gateway to access services.</para>
+        /// <para>Authorizes a security group to allow gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a security group that allows a gateway to access services.</para>
+        /// <para>Authorizes a security group to allow gateway access to services.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1005,6 +1005,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["resourceGroupId"] = request.ResourceGroupId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecContentBase64))
+            {
+                body["specContentBase64"] = request.SpecContentBase64;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecFileUrl))
             {
                 body["specFileUrl"] = request.SpecFileUrl;
@@ -1082,6 +1086,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
             {
                 body["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecContentBase64))
+            {
+                body["specContentBase64"] = request.SpecContentBase64;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SpecFileUrl))
             {
@@ -2680,6 +2688,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         public CreateDomainResponse CreateDomainWithOptions(CreateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaCertIdentifier))
             {
@@ -2740,6 +2753,7 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2778,6 +2792,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         public async Task<CreateDomainResponse> CreateDomainWithOptionsAsync(CreateDomainRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaCertIdentifier))
             {
@@ -2838,6 +2857,7 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6642,6 +6662,9 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Deletes a specified HTTP API.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteHttpApiRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6652,11 +6675,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// DeleteHttpApiResponse
         /// </returns>
-        public DeleteHttpApiResponse DeleteHttpApiWithOptions(string httpApiId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DeleteHttpApiResponse DeleteHttpApiWithOptions(string httpApiId, DeleteHttpApiRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6678,6 +6708,9 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Deletes a specified HTTP API.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteHttpApiRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -6688,11 +6721,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// DeleteHttpApiResponse
         /// </returns>
-        public async Task<DeleteHttpApiResponse> DeleteHttpApiWithOptionsAsync(string httpApiId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DeleteHttpApiResponse> DeleteHttpApiWithOptionsAsync(string httpApiId, DeleteHttpApiRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -6714,14 +6754,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Deletes a specified HTTP API.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteHttpApiRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteHttpApiResponse
         /// </returns>
-        public DeleteHttpApiResponse DeleteHttpApi(string httpApiId)
+        public DeleteHttpApiResponse DeleteHttpApi(string httpApiId, DeleteHttpApiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return DeleteHttpApiWithOptions(httpApiId, headers, runtime);
+            return DeleteHttpApiWithOptions(httpApiId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6729,14 +6773,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Deletes a specified HTTP API.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// DeleteHttpApiRequest
+        /// </param>
+        /// 
         /// <returns>
         /// DeleteHttpApiResponse
         /// </returns>
-        public async Task<DeleteHttpApiResponse> DeleteHttpApiAsync(string httpApiId)
+        public async Task<DeleteHttpApiResponse> DeleteHttpApiAsync(string httpApiId, DeleteHttpApiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await DeleteHttpApiWithOptionsAsync(httpApiId, headers, runtime);
+            return await DeleteHttpApiWithOptionsAsync(httpApiId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9988,7 +10036,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>This operation retrieves the usage details of a consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10047,7 +10095,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>This operation retrieves the usage details of a consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10106,7 +10154,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>This operation retrieves the usage details of a consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10130,7 +10178,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>This operation retrieves the usage details of a consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10152,6 +10200,9 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Retrieves HTTP API information.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetHttpApiRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -10162,11 +10213,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// GetHttpApiResponse
         /// </returns>
-        public GetHttpApiResponse GetHttpApiWithOptions(string httpApiId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetHttpApiResponse GetHttpApiWithOptions(string httpApiId, GetHttpApiRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpandPolicyConfigs))
+            {
+                query["expandPolicyConfigs"] = request.ExpandPolicyConfigs;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10188,6 +10246,9 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Retrieves HTTP API information.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetHttpApiRequest
+        /// </param>
         /// <param name="headers">
         /// map
         /// </param>
@@ -10198,11 +10259,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <returns>
         /// GetHttpApiResponse
         /// </returns>
-        public async Task<GetHttpApiResponse> GetHttpApiWithOptionsAsync(string httpApiId, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetHttpApiResponse> GetHttpApiWithOptionsAsync(string httpApiId, GetHttpApiRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpandPolicyConfigs))
+            {
+                query["expandPolicyConfigs"] = request.ExpandPolicyConfigs;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -10224,14 +10292,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Retrieves HTTP API information.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetHttpApiRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetHttpApiResponse
         /// </returns>
-        public GetHttpApiResponse GetHttpApi(string httpApiId)
+        public GetHttpApiResponse GetHttpApi(string httpApiId, GetHttpApiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return GetHttpApiWithOptions(httpApiId, headers, runtime);
+            return GetHttpApiWithOptions(httpApiId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10239,14 +10311,18 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Retrieves HTTP API information.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetHttpApiRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetHttpApiResponse
         /// </returns>
-        public async Task<GetHttpApiResponse> GetHttpApiAsync(string httpApiId)
+        public async Task<GetHttpApiResponse> GetHttpApiAsync(string httpApiId, GetHttpApiRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
-            return await GetHttpApiWithOptionsAsync(httpApiId, headers, runtime);
+            return await GetHttpApiWithOptionsAsync(httpApiId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15115,7 +15191,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of MCP servers.</para>
+        /// <para>Retrieves the list of MCP servers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15190,7 +15266,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of MCP servers.</para>
+        /// <para>Retrieves the list of MCP servers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15265,7 +15341,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of MCP servers.</para>
+        /// <para>Retrieves the list of MCP servers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15289,7 +15365,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of MCP servers.</para>
+        /// <para>Retrieves the list of MCP servers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -20938,6 +21014,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         public UpdateHttpApiResponse UpdateHttpApiWithOptions(string httpApiId, UpdateHttpApiRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProtocols))
             {
@@ -20994,6 +21075,7 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -21032,6 +21114,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         public async Task<UpdateHttpApiResponse> UpdateHttpApiWithOptionsAsync(string httpApiId, UpdateHttpApiRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["dryRun"] = request.DryRun;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentProtocols))
             {
@@ -21088,6 +21175,7 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -21458,7 +21546,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21553,7 +21641,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21648,7 +21736,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21672,7 +21760,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only sources of the <b>Container Service</b> type can update the Ingress listener configuration.</para>
+        /// <para>Only sources of the <b>Container Service</b> type are allowed to update the Ingress listener configuration.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -106,7 +106,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ExpireTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The gateway instance edition. Valid values:</para>
+            /// <para>The edition of the gateway instance. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Professional: standard instance.</description></item>
+            /// <item><description>Serverless: Serverless.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Serverless</para>
@@ -125,6 +129,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string GatewayId { get; set; }
 
+            /// <summary>
+            /// <para>The running mode of AI multi-tenant V2. Default value: ENTERPRISE. This parameter can be specified only when AI + MultiTenantServerless is used.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>STANDARD</para>
+            /// </summary>
             [NameInMap("gatewayMode")]
             [Validation(Required=false)]
             public string GatewayMode { get; set; }
@@ -428,6 +438,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string TargetVersion { get; set; }
 
+            /// <summary>
+            /// <para>The tenant ID returned in STANDARD mode.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>pt-xxx</para>
+            /// </summary>
             [NameInMap("tenantId")]
             [Validation(Required=false)]
             public string TenantId { get; set; }

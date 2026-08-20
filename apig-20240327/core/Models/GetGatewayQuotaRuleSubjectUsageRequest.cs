@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class GetGatewayQuotaRuleSubjectUsageRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to filter zero values.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("filterFailedRequests")]
         [Validation(Required=false)]
         public bool? FilterFailedRequests { get; set; }

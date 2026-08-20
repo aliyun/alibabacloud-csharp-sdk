@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ApiNameLike { get; set; }
 
         /// <summary>
-        /// <para>The consumer group ID. If specified, the authorization rules for the consumer group are queried.</para>
+        /// <para>The consumer group ID. If specified, the authorization rules of this consumer group are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>csg-8c13d2b4f8a1</para>
@@ -31,6 +31,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 
         /// <summary>
         /// <para>The consumer group name for fuzzy match.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>team</para>
         /// </summary>
         [NameInMap("consumerGroupNameLike")]
         [Validation(Required=false)]
@@ -47,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConsumerId { get; set; }
 
         /// <summary>
-        /// <para>The consumer name.</para>
+        /// <para>The consumer name for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>consumer-xxx</para>
@@ -137,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The service source type.</para>
+        /// <para>The service source types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>K8S</para>

@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The REST API deployment configuration. Required when the HTTP API being published is a REST API.</para>
+        /// <para>The REST API deployment configuration. Required when the HTTP API being published is a REST API. At least one of revisionId, environment, or gatewayId must be provided to identify the publish target.</para>
         /// </summary>
         [NameInMap("restApiConfig")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The API publish scenario.</para>
+                /// <para>The API publish scenario. Backend configurations cannot be specified during publishing. Configure them in advance by using UpdateHttpApi or UpdateHttpApiOperation before publishing.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SingleService</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
-                /// <para>The existing service configurations. In the single service scenario, only one entry is allowed. In the by-ratio or by-content scenarios, multiple entries are allowed.</para>
+                /// <para>The existing service configurations. In the single-service scenario, only one entry is allowed. In ratio-based or content-based scenarios, multiple entries are allowed. Backend configurations cannot be specified during publishing. Configure them in advance by using UpdateHttpApi or UpdateHttpApiOperation before publishing.</para>
                 /// 
                 /// <b>if can be null:</b>
                 /// <c>true</c>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public List<DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs> ServiceConfigs { get; set; }
                 public class DeployHttpApiRequestRestApiConfigEnvironmentServiceConfigs : TeaModel {
                     /// <summary>
-                    /// <para>The match condition configuration related to API publishing.</para>
+                    /// <para>The match condition configuration for API publishing.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{\&quot;change_order_revision\&quot;:\&quot;3.657.33_fc-hz-yunqi.1662568293908382_faas-eerouter\&quot;}</para>
@@ -129,7 +129,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public int? Port { get; set; }
 
                     /// <summary>
-                    /// <para>The service protocol. Valid values:</para>
+                    /// <para>The Terms of Service. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>HTTP.</description></item>
                     /// <item><description>HTTPS.</description></item>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string Version { get; set; }
 
                     /// <summary>
-                    /// <para>The weight. Valid values: 1 to 100. This parameter takes effect only in the by-ratio scenario.</para>
+                    /// <para>The weight. Valid values: 1 to 100. This parameter takes effect only in ratio-based scenarios.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>49</para>
@@ -187,14 +187,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The operation-level deployment control list.</para>
+            /// <para>The operation-level publish control list.</para>
             /// </summary>
             [NameInMap("operationDeployments")]
             [Validation(Required=false)]
             public List<DeployHttpApiRequestRestApiConfigOperationDeployments> OperationDeployments { get; set; }
             public class DeployHttpApiRequestRestApiConfigOperationDeployments : TeaModel {
                 /// <summary>
-                /// <para>The operation type.</para>
+                /// <para>The action type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Publish</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> OperationIds { get; set; }
 
             /// <summary>
-            /// <para>The historical version number. If this field is specified, the publish information is based on the historical version.</para>
+            /// <para>The historical version number. If specified, the publish uses the information from this historical version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>apr-xxx</para>

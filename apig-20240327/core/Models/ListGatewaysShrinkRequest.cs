@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string TagShrink { get; set; }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The virtual private cloud (VPC) ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-2zeqrgx6jrlb063y06yjo</para>

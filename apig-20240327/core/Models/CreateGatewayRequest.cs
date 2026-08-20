@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class CreateGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The billing method. Required for the Serverless edition and must be set to POSTPAY.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY</para>
@@ -39,12 +39,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string GatewayEdition { get; set; }
 
+        /// <summary>
+        /// <para>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. Only allowed when the gateway type is AI and the edition is MultiTenantServerless.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ENTERPRISE</para>
+        /// </summary>
         [NameInMap("gatewayMode")]
         [Validation(Required=false)]
         public string GatewayMode { get; set; }
 
         /// <summary>
-        /// <para>The gateway type.</para>
+        /// <para>The gateway type. Must be explicitly set to AI for AI Serverless or multi-tenant editions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>API</para>
@@ -61,14 +67,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public CreateGatewayRequestLogConfig LogConfig { get; set; }
         public class CreateGatewayRequestLogConfig : TeaModel {
             /// <summary>
-            /// <para>The Simple Log Service (SLS) configuration, which controls gateway log collection.</para>
+            /// <para>The Simple Log Service (SLS) configuration that controls gateway log collection.</para>
             /// </summary>
             [NameInMap("sls")]
             [Validation(Required=false)]
             public CreateGatewayRequestLogConfigSls Sls { get; set; }
             public class CreateGatewayRequestLogConfigSls : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable SLS log collection.</para>
+                /// <para>Specifies whether to enable log collection.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -82,7 +88,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The gateway name.</para>
+        /// <para>The gateway name. Required for all editions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-ceshi</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The node specifications.</para>
+        /// <para>The node specifications. Required for the Serverless edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>apigw.dev.x2</para>
@@ -160,7 +166,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The VPC ID.</para>
+        /// <para>The VPC ID. Required for all editions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-zm0x16tomfiat1mk9f6rs</para>
@@ -170,7 +176,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string VpcId { get; set; }
 
         /// <summary>
-        /// <para>The zone configuration.</para>
+        /// <para>The zone configuration. Required for all editions.</para>
         /// </summary>
         [NameInMap("zoneConfig")]
         [Validation(Required=false)]

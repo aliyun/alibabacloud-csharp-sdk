@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class DomainInfo : TeaModel {
         /// <summary>
-        /// <para>The SSL Certificates Service certificate identity.</para>
+        /// <para>The certificate identity from SSL Certificates Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>235556-cn-hangzhou</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? ForceHttps { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable mTLS mutual authentication.</para>
+        /// <para>Specifies whether to enable mutual TLS (mTLS) authentication.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -137,10 +137,22 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Status { get; set; }
 
+        /// <summary>
+        /// <para>The maximum TLS version. TLS 1.3 is the maximum supported version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TLS 1.3</para>
+        /// </summary>
         [NameInMap("tlsMax")]
         [Validation(Required=false)]
         public string TlsMax { get; set; }
 
+        /// <summary>
+        /// <para>The minimum TLS version. TLS 1.0 is the minimum supported version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>TLS 1.0</para>
+        /// </summary>
         [NameInMap("tlsMin")]
         [Validation(Required=false)]
         public string TlsMin { get; set; }

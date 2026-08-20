@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The description of the security group rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>商品中心访问安全组</para>
+        /// <para>Product center access security group</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> PortRanges { get; set; }
 
         /// <summary>
-        /// <para>The security group ID.</para>
+        /// <para>The security group ID. This parameter is required. The specified security group must be different from the security group associated with the gateway. Otherwise, an error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sg-wz929kxhcdp****</para>

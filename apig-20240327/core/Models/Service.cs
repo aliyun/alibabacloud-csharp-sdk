@@ -40,6 +40,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public long? CreateTimestamp { get; set; }
 
+        /// <summary>
+        /// <para>The list of DNS servers.</para>
+        /// </summary>
         [NameInMap("dnsServers")]
         [Validation(Required=false)]
         public List<string> DnsServers { get; set; }
@@ -55,7 +58,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ExpressType { get; set; }
 
         /// <summary>
-        /// <para>The gateway instance ID.</para>
+        /// <para>The instance ID of the gateway.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gw-xxxx</para>
@@ -91,6 +94,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string HealthStatus { get; set; }
 
+        /// <summary>
+        /// <para>The healthy panic threshold.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("healthyPanicThreshold")]
         [Validation(Required=false)]
         public float? HealthyPanicThreshold { get; set; }
@@ -103,6 +112,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<LabelDetail> LabelDetails { get; set; }
 
         /// <summary>
+        /// <para>The resource ID of the model provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mp-xxxx</para>
         /// </summary>
@@ -130,26 +141,59 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string Namespace { get; set; }
 
+        /// <summary>
+        /// <para>The configuration for removing abnormal instances.</para>
+        /// </summary>
         [NameInMap("outlierDetection")]
         [Validation(Required=false)]
         public ServiceOutlierDetection OutlierDetection { get; set; }
         public class ServiceOutlierDetection : TeaModel {
+            /// <summary>
+            /// <para>The base ejection duration in seconds. Valid values: 1 to 3600.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("baseEjectionTime")]
             [Validation(Required=false)]
             public int? BaseEjectionTime { get; set; }
 
+            /// <summary>
+            /// <para>Specifies whether to enable outlier detection.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
+            /// </summary>
             [NameInMap("enable")]
             [Validation(Required=false)]
             public bool? Enable { get; set; }
 
+            /// <summary>
+            /// <para>The minimum number of hosts. The value must be greater than or equal to 0.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("failurePercentageMinimumHosts")]
             [Validation(Required=false)]
             public int? FailurePercentageMinimumHosts { get; set; }
 
+            /// <summary>
+            /// <para>The failure rate threshold in percentage. Valid values: 1 to 100.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>80</para>
+            /// </summary>
             [NameInMap("failurePercentageThreshold")]
             [Validation(Required=false)]
             public int? FailurePercentageThreshold { get; set; }
 
+            /// <summary>
+            /// <para>The detection interval in seconds. Valid values: 1 to 3600.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>30</para>
+            /// </summary>
             [NameInMap("interval")]
             [Validation(Required=false)]
             public int? Interval { get; set; }
@@ -233,6 +277,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
+        /// <para>The masked error code of the runtime details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>RuntimeEndpointTimeout</para>
         /// </summary>
@@ -241,6 +287,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RuntimeDetailErrorCode { get; set; }
 
         /// <summary>
+        /// <para>The runtime detail status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Available</para>
         /// </summary>
@@ -276,7 +324,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public List<string> UnhealthyEndpoints { get; set; }
 
         /// <summary>
-        /// <para>The time when the service was updated.</para>
+        /// <para>The time when the service was created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1725868548440</para>

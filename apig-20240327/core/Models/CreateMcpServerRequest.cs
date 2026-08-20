@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The backend service configuration of the route.</para>
+        /// <para>The backend service configuration for the route. This parameter is required. You must provide the backend service configuration (including scene and services). If this parameter is omitted, the API returns InvalidParameter.WithValue(400).</para>
         /// </summary>
         [NameInMap("backendConfig")]
         [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Protocol { get; set; }
 
                 /// <summary>
-                /// <para>The service ID.</para>
+                /// <para>The service ID. The serviceId is the ID of a backend service registered under the gateway. You can call the ListServices operation (with gatewayId specified) to query available service IDs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>svc-crbgq0dlhtgr***</para>
@@ -130,11 +130,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The creation source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion</description></item>
-        /// <item><description>ApiGatewayProxyMcpHosting: gateway-managed direct MCP proxy</description></item>
-        /// <item><description>ApiGatewayAssembly: gateway MCP assembly</description></item>
-        /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion</description></item>
-        /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced direct MCP proxy</description></item>
+        /// <item><description>ApiGatewayHttpToMCP: gateway-managed HTTP-to-MCP conversion.</description></item>
+        /// <item><description>ApiGatewayProxyMcpHosting: gateway-managed MCP direct proxy.</description></item>
+        /// <item><description>ApiGatewayAssembly: gateway MCP assembly.</description></item>
+        /// <item><description>NacosHttpToMCP: gateway-managed Nacos-synced HTTP-to-MCP conversion.</description></item>
+        /// <item><description>NacosMcpHosting: gateway-managed Nacos-synced MCP direct proxy.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -268,7 +268,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>The route match rule.</para>
+            /// <para>The route matching rule.</para>
             /// </summary>
             [NameInMap("match")]
             [Validation(Required=false)]
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The route match rule.</para>
+        /// <para>The route match rule. When type is set to RealMCP, the match parameter is required and you must provide a route matching rule.</para>
         /// </summary>
         [NameInMap("match")]
         [Validation(Required=false)]
@@ -344,7 +344,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The protocol type. Valid values: HTTP, HTTPS, SSE, and StreamableHTTP.</para>
+        /// <para>The protocol type. This parameter is required. You must explicitly specify the protocol type (HTTP/HTTPS/SSE/StreamableHTTP). If this parameter is omitted, the API returns InvalidParameter.WithValue(400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>HTTP</para>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>RealMCP: standard MCP service</description></item>
+        /// <item><description>RealMCP: standard MCP service.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

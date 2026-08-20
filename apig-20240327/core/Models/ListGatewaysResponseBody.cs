@@ -94,6 +94,13 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayId { get; set; }
 
                 /// <summary>
+                /// <para>The running mode of the AI MultiTenantServerless gateway. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ENTERPRISE: Enterprise Edition.</description></item>
+                /// <item><description>STANDARD: Standard Edition.</description></item>
+                /// </list>
+                /// <para>This parameter is returned only for AI MultiTenantServerless gateways.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ENTERPRISE</para>
                 /// </summary>
@@ -112,7 +119,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string GatewayType { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the gateway instance was created before AI gateway was released.</para>
+                /// <para>Indicates whether the gateway instance was created before the AI gateway was released.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -359,7 +366,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 }
 
                 /// <summary>
-                /// <para>The target version of the gateway. If this value differs from the version, a version upgrade can be performed.</para>
+                /// <para>The target version of the gateway. When this value differs from version, a version upgrade can be performed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2.0.2</para>
