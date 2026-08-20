@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class ModifyInvoiceForIsvResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code. A value of 200 indicates success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cmjj01**45</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -25,11 +29,19 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;成功&quot;</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5BD09171-MB74-18D8-890E-C70C067527BE</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

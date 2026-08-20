@@ -9,11 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeProductResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The reason for the audit failure. This parameter is returned when QueryDraft is set to true.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>功能验收不通过</para>
+        /// </summary>
         [NameInMap("AuditFailMsg")]
         [Validation(Required=false)]
         public string AuditFailMsg { get; set; }
 
         /// <summary>
+        /// <para>The audit status. This parameter is returned when QueryDraft is set to true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>draft: not submitted</description></item>
+        /// <item><description>security_ing: security audit in progress</description></item>
+        /// <item><description>security_fail: security audit failed</description></item>
+        /// <item><description>function_ing: functional audit in progress</description></item>
+        /// <item><description>function_fail: functional audit failed</description></item>
+        /// <item><description>info_ing: product information audit in progress</description></item>
+        /// <item><description>info_fail: product information audit failed</description></item>
+        /// <item><description>success: succeeded.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>function_fail</para>
         /// </summary>
@@ -22,6 +40,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string AuditStatus { get; set; }
 
         /// <summary>
+        /// <para>The audit time. This parameter is returned when QueryDraft is set to true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1581609600000</para>
         /// </summary>
@@ -30,6 +50,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? AuditTime { get; set; }
 
         /// <summary>
+        /// <para>The commodity code of the product.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cmjj01**45</para>
         /// </summary>
@@ -37,11 +59,19 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The detailed description of the product. HTML is supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <div>基于阿里云（Ubuntu16.04 64位）系统源码安装，安全、稳定、高效！</div>
+        /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The product category ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>523617212</para>
         /// </summary>
@@ -50,6 +80,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? FrontCategoryId { get; set; }
 
         /// <summary>
+        /// <para>The time when the product was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1578931200000</para>
         /// </summary>
@@ -58,6 +90,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? GmtCreated { get; set; }
 
         /// <summary>
+        /// <para>The time when the product was last modified.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1578931200000</para>
         /// </summary>
@@ -65,11 +99,19 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public long? GmtModified { get; set; }
 
+        /// <summary>
+        /// <para>The product name.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>LNMP环境（Ubuntu16.04 Nginx PHP5.3）</para>
+        /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The URL of the product image.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://oss.aliyuncs.com/photogallery/photo/1930532890589852/6245/495d5f19-03e4-4c2e-9c4e-bef9ab6af1e1.png">https://oss.aliyuncs.com/photogallery/photo/1930532890589852/6245/495d5f19-03e4-4c2e-9c4e-bef9ab6af1e1.png</a></para>
         /// </summary>
@@ -254,6 +296,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6EF60BEC-0242-43AF-BB20-270359FB54A7</para>
         /// </summary>
@@ -262,6 +306,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The product rating.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5.0</para>
         /// </summary>
@@ -269,11 +315,16 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public float? Score { get; set; }
 
+        /// <summary>
+        /// <para>The shop information.</para>
+        /// </summary>
         [NameInMap("ShopInfo")]
         [Validation(Required=false)]
         public DescribeProductResponseBodyShopInfo ShopInfo { get; set; }
         public class DescribeProductResponseBodyShopInfo : TeaModel {
             /// <summary>
+            /// <para>The email address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>46**<a href="mailto:41@example.com">41@example.com</a></para>
             /// </summary>
@@ -282,6 +333,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string Emails { get; set; }
 
             /// <summary>
+            /// <para>The shop ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -289,6 +342,12 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public long? Id { get; set; }
 
+            /// <summary>
+            /// <para>The shop name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>**科学公司</para>
+            /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
@@ -325,11 +384,19 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 
         }
 
+        /// <summary>
+        /// <para>The short description of the product.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>该镜像为LNMP（Ubuntu16.04 64位+Nginx+MySQL5.6+PHP5.3）</para>
+        /// </summary>
         [NameInMap("ShortDescription")]
         [Validation(Required=false)]
         public string ShortDescription { get; set; }
 
         /// <summary>
+        /// <para>Deprecated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -338,6 +405,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The UID of the service provider.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1526111111****</para>
         /// </summary>
@@ -346,6 +415,15 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? SupplierPk { get; set; }
 
         /// <summary>
+        /// <para>The product type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>APP: application</description></item>
+        /// <item><description>DOWNLOAD: download</description></item>
+        /// <item><description>MIRROR: image</description></item>
+        /// <item><description>SERVICE: service</description></item>
+        /// <item><description>API_SERVICE: API service.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>MIRROR</para>
         /// </summary>
@@ -354,6 +432,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The usage count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

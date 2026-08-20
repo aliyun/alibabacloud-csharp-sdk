@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The order type. This parameter is deprecated.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>NEW</para>
         /// </summary>

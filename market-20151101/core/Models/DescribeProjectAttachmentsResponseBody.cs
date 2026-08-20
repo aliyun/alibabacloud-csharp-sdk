@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeProjectAttachmentsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>e03a9f78-7b40-4fb3-a015-350913e37e3f</para>
         /// </summary>
@@ -22,6 +24,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public List<DescribeProjectAttachmentsResponseBodyResult> Result { get; set; }
         public class DescribeProjectAttachmentsResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The MD5 hash of the attachment.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Mzc4NDAtODQ3MjY4MzI=</para>
             /// </summary>
@@ -30,6 +34,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string AttachmentToken { get; set; }
 
             /// <summary>
+            /// <para>The attachment type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>File</para>
             /// </summary>
@@ -37,11 +43,19 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public string AttachmentType { get; set; }
 
+            /// <summary>
+            /// <para>The content text.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>无</para>
+            /// </summary>
             [NameInMap("Content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
+            /// <para>The file access URL.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&OSSAccessKeyId=wI2r*********&Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D">http://delivery-center.oss-cn-shanghai.aliyuncs.com/6a8****0e2/e0a***f3.jpg?Expires=1589334682&amp;OSSAccessKeyId=wI2r*********&amp;Signature=JWB39pUxs7RCqrcw58qXPEGu6M0%3D</a></para>
             /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string FileLink { get; set; }
 
             /// <summary>
+            /// <para>The expiration time of the file URL (UNIX timestamp).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1589334682404</para>
             /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? FileLinkGmtExpired { get; set; }
 
             /// <summary>
+            /// <para>The file name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>f8-test-perview.jpeg</para>
             /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string FileName { get; set; }
 
             /// <summary>
+            /// <para>The file size, in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>109124</para>
             /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? FileSize { get; set; }
 
             /// <summary>
+            /// <para>The file name extension.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>jpg</para>
             /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string FileSuffix { get; set; }
 
             /// <summary>
+            /// <para>The time when the attachment was uploaded (UNIX timestamp).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1587968858000</para>
             /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
+            /// <para>The ID of the process node where the attachment was uploaded.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8472</para>
             /// </summary>
@@ -97,11 +123,19 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public long? NodeId { get; set; }
 
+            /// <summary>
+            /// <para>The node name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>等待服务开通</para>
+            /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
             public string NodeName { get; set; }
 
             /// <summary>
+            /// <para>The Alibaba Cloud UID of the operator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>45261111****</para>
             /// </summary>
@@ -109,11 +143,19 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public long? Operator { get; set; }
 
+            /// <summary>
+            /// <para>The name of the operator.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>**科技技术有限公司</para>
+            /// </summary>
             [NameInMap("OperatorName")]
             [Validation(Required=false)]
             public string OperatorName { get; set; }
 
             /// <summary>
+            /// <para>The role of the operator.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Provider</para>
             /// </summary>
@@ -122,6 +164,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string OperatorRole { get; set; }
 
             /// <summary>
+            /// <para>The sequence number of the process node.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>3</para>
             /// </summary>
@@ -132,6 +176,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
+        /// <para>The success status identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

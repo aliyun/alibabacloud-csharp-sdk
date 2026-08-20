@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeLicenseRequest : TeaModel {
         /// <summary>
+        /// <para>The activation code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

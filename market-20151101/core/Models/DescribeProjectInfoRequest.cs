@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeProjectInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The business instance ID in Cloud Marketplace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

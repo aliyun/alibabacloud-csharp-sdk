@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class ConfirmNotificationRequest : TeaModel {
         /// <summary>
+        /// <para>The notification request ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

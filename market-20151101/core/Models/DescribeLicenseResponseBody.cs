@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeLicenseResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The license object.</para>
+        /// </summary>
         [NameInMap("License")]
         [Validation(Required=false)]
         public DescribeLicenseResponseBodyLicense License { get; set; }
         public class DescribeLicenseResponseBodyLicense : TeaModel {
             /// <summary>
+            /// <para>The activation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2019-05-25 09:00:00</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string ActivateTime { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2019-05-25 09:00:00</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <para>The expiration time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2019-06-25 09:00:00</para>
             /// </summary>
@@ -57,11 +66,16 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 
             }
 
+            /// <summary>
+            /// <para>The extended information.</para>
+            /// </summary>
             [NameInMap("ExtendInfo")]
             [Validation(Required=false)]
             public DescribeLicenseResponseBodyLicenseExtendInfo ExtendInfo { get; set; }
             public class DescribeLicenseResponseBodyLicenseExtendInfo : TeaModel {
                 /// <summary>
+                /// <para>The account information.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
                 /// <item><description></description></item>
@@ -72,6 +86,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public long? AccountQuantity { get; set; }
 
                 /// <summary>
+                /// <para>The Alibaba Cloud UID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>190311111111****</para>
                 /// </summary>
@@ -80,6 +96,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public long? AliUid { get; set; }
 
                 /// <summary>
+                /// <para>The email address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>id***@**.com</para>
                 /// </summary>
@@ -88,6 +106,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
                 public string Email { get; set; }
 
                 /// <summary>
+                /// <para>The mobile phone number.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>129****1111</para>
                 /// </summary>
@@ -98,6 +118,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             }
 
             /// <summary>
+            /// <para>The business instance ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1551111111</para>
             /// </summary>
@@ -106,6 +128,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The activation code.</para>
+            /// 
             /// <b>Example:</b>
             /// <list type="bullet">
             /// <item><description></description></item>
@@ -116,6 +140,12 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string LicenseCode { get; set; }
 
             /// <summary>
+            /// <para>The license status.</para>
+            /// <list type="bullet">
+            /// <item><description>ACTIVATED</description></item>
+            /// <item><description>INACTIVATED</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ACTIVATED</para>
             /// </summary>
@@ -124,6 +154,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string LicenseStatus { get; set; }
 
             /// <summary>
+            /// <para>The product code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cmgj02****</para>
             /// </summary>
@@ -131,11 +163,19 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
+            /// <summary>
+            /// <para>The product name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>LNMP环境</para>
+            /// </summary>
             [NameInMap("ProductName")]
             [Validation(Required=false)]
             public string ProductName { get; set; }
 
             /// <summary>
+            /// <para>The product SKU ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cmgj02****-prepay</para>
             /// </summary>
@@ -143,6 +183,12 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public string ProductSkuId { get; set; }
 
+            /// <summary>
+            /// <para>The supplier name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>**科技股份有限公司</para>
+            /// </summary>
             [NameInMap("SupplierName")]
             [Validation(Required=false)]
             public string SupplierName { get; set; }
@@ -150,6 +196,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>6EF60BEC-0242-43AF-BB20-270359FB54A7</para>
         /// </summary>

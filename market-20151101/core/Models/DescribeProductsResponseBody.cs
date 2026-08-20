@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeProductsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of products displayed per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -102,6 +106,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A077D99E-0C4D-421E-A5D4-F533F6657817</para>
         /// </summary>
@@ -110,6 +116,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The total number of products that match the search conditions.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>75</para>
         /// </summary>

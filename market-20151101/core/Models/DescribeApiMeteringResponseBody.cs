@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeApiMeteringResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The total count.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -35,11 +39,19 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public bool? Fatal { get; set; }
 
+        /// <summary>
+        /// <para>The error message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>&quot;成功&quot;</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -48,6 +60,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -56,6 +70,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>62FC432C55A1A63534A6CB34</para>
         /// </summary>
@@ -63,11 +79,16 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The list of results.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<DescribeApiMeteringResponseBodyResult> Result { get; set; }
         public class DescribeApiMeteringResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The Alibaba Cloud primary key.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>102277855749****</para>
             /// </summary>
@@ -76,6 +97,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? AliyunPk { get; set; }
 
             /// <summary>
+            /// <para>The commodity code.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cmapi0004****</para>
             /// </summary>
@@ -83,6 +106,12 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public string ProductCode { get; set; }
 
+            /// <summary>
+            /// <para>The commodity name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>身份证实名认证-身份证实名</para>
+            /// </summary>
             [NameInMap("ProductName")]
             [Validation(Required=false)]
             public string ProductName { get; set; }
@@ -92,6 +121,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? TotalCapacity { get; set; }
 
             /// <summary>
+            /// <para>The remaining quota.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>98</para>
             /// </summary>
@@ -100,6 +131,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public long? TotalQuota { get; set; }
 
             /// <summary>
+            /// <para>The usage.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>220</para>
             /// </summary>
@@ -107,6 +140,12 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             [Validation(Required=false)]
             public long? TotalUsage { get; set; }
 
+            /// <summary>
+            /// <para>The unit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>次</para>
+            /// </summary>
             [NameInMap("Unit")]
             [Validation(Required=false)]
             public string Unit { get; set; }
@@ -114,6 +153,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -122,6 +163,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1.0</para>
         /// </summary>

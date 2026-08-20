@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeFailedNotificationsRequest : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of instances per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

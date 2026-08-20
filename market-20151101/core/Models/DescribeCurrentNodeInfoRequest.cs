@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeCurrentNodeInfoRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the Alibaba Cloud Marketplace order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

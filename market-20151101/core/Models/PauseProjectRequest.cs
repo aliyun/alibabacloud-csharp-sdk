@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class PauseProjectRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID of the Alibaba Cloud Marketplace order.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the current operation flow node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,6 +31,12 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public long? NodeId { get; set; }
 
+        /// <summary>
+        /// <para>The reason for the remark.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>等待与仓库确认库存，目前库存显示异常。</para>
+        /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
         public string Remark { get; set; }

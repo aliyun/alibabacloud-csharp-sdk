@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class RollbackCurrentProjectNodeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ee69a00f-189b-400f-9fd2-af89749fb50f</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public bool? Result { get; set; }
 
         /// <summary>
+        /// <para>The success status identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

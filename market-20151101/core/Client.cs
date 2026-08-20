@@ -44,6 +44,7 @@ namespace AlibabaCloud.SDK.Market20151101
                 {"cn-shenzhen-finance-1", "market.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "market.aliyuncs.com"},
                 {"cn-north-2-gov-1", "market.aliyuncs.com"},
+                {"ap-southeast-1", "market.ap-southeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("market", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -65,7 +66,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加STS支持</para>
+        /// <para>Activates an authorization code by calling ActivateLicense.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -111,7 +112,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加STS支持</para>
+        /// <para>Activates an authorization code by calling ActivateLicense.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -157,7 +158,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加STS支持</para>
+        /// <para>Activates an authorization code by calling ActivateLicense.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -175,7 +176,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>增加STS支持</para>
+        /// <para>Activates an authorization code by calling ActivateLicense.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -193,7 +194,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置自动续费</para>
+        /// <para>Sets auto-renewal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -251,7 +252,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置自动续费</para>
+        /// <para>Sets auto-renewal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -309,7 +310,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置自动续费</para>
+        /// <para>Sets auto-renewal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -327,7 +328,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置自动续费</para>
+        /// <para>Sets auto-renewal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -345,8 +346,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>确认查收订阅通知</para>
+        /// <para>Confirms that the merchant has received and processed a notification message. After this call, the message will no longer be returned in subsequent queries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms the receipt of a subscription notification failure message.</para>
+        /// <list type="bullet">
+        /// <item><description>After a successful call, the message will no longer be returned in subsequent queries. The platform considers that the merchant has correctly processed the message.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfirmNotificationRequest
@@ -387,8 +396,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>确认查收订阅通知</para>
+        /// <para>Confirms that the merchant has received and processed a notification message. After this call, the message will no longer be returned in subsequent queries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms the receipt of a subscription notification failure message.</para>
+        /// <list type="bullet">
+        /// <item><description>After a successful call, the message will no longer be returned in subsequent queries. The platform considers that the merchant has correctly processed the message.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfirmNotificationRequest
@@ -429,8 +446,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>确认查收订阅通知</para>
+        /// <para>Confirms that the merchant has received and processed a notification message. After this call, the message will no longer be returned in subsequent queries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms the receipt of a subscription notification failure message.</para>
+        /// <list type="bullet">
+        /// <item><description>After a successful call, the message will no longer be returned in subsequent queries. The platform considers that the merchant has correctly processed the message.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfirmNotificationRequest
@@ -447,8 +472,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>确认查收订阅通知</para>
+        /// <para>Confirms that the merchant has received and processed a notification message. After this call, the message will no longer be returned in subsequent queries.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Confirms the receipt of a subscription notification failure message.</para>
+        /// <list type="bullet">
+        /// <item><description>After a successful call, the message will no longer be returned in subsequent queries. The platform considers that the merchant has correctly processed the message.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ConfirmNotificationRequest
@@ -465,8 +498,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建订单</para>
+        /// <para>Calls the CreateOrder operation to create an order.
+        /// Before calling this operation, make sure that you fully understand the billing method and pricing of Alibaba Cloud Marketplace products.
+        /// To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you fully understand the billing method and <a href="https://market.aliyun.com/">pricing</a> of Alibaba Cloud Marketplace products.
+        /// To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOrderRequest
@@ -527,8 +568,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建订单</para>
+        /// <para>Calls the CreateOrder operation to create an order.
+        /// Before calling this operation, make sure that you fully understand the billing method and pricing of Alibaba Cloud Marketplace products.
+        /// To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you fully understand the billing method and <a href="https://market.aliyun.com/">pricing</a> of Alibaba Cloud Marketplace products.
+        /// To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOrderRequest
@@ -589,8 +638,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建订单</para>
+        /// <para>Calls the CreateOrder operation to create an order.
+        /// Before calling this operation, make sure that you fully understand the billing method and pricing of Alibaba Cloud Marketplace products.
+        /// To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you fully understand the billing method and <a href="https://market.aliyun.com/">pricing</a> of Alibaba Cloud Marketplace products.
+        /// To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOrderRequest
@@ -607,8 +664,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建订单</para>
+        /// <para>Calls the CreateOrder operation to create an order.
+        /// Before calling this operation, make sure that you fully understand the billing method and pricing of Alibaba Cloud Marketplace products.
+        /// To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, make sure that you fully understand the billing method and <a href="https://market.aliyun.com/">pricing</a> of Alibaba Cloud Marketplace products.
+        /// To create an order for a commercial image, refer to <a href="https://help.aliyun.com/document_detail/25499.html">CreateInstance</a>.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOrderRequest
@@ -625,7 +690,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨账号角色授权，根据token获取用户信息</para>
+        /// <para>Query cross-account role authorization information, including the authorized user\&quot;s Alibaba Cloud account UID, name, authorization time, and authorized role name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -667,7 +732,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨账号角色授权，根据token获取用户信息</para>
+        /// <para>Query cross-account role authorization information, including the authorized user\&quot;s Alibaba Cloud account UID, name, authorization time, and authorized role name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -709,7 +774,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨账号角色授权，根据token获取用户信息</para>
+        /// <para>Query cross-account role authorization information, including the authorized user\&quot;s Alibaba Cloud account UID, name, authorization time, and authorized role name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -727,7 +792,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>跨账号角色授权，根据token获取用户信息</para>
+        /// <para>Query cross-account role authorization information, including the authorized user\&quot;s Alibaba Cloud account UID, name, authorization time, and authorized role name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -745,8 +810,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API用量</para>
+        /// <para>Retrieves the API quota data of a user, including the remaining quota, total quota, and usage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><b>Note: This operation supports both Alibaba Cloud accounts and RAM users to retrieve API remaining quota, total quota, and usage information.</b>.</h3>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeApiMeteringRequest
@@ -783,8 +853,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API用量</para>
+        /// <para>Retrieves the API quota data of a user, including the remaining quota, total quota, and usage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><b>Note: This operation supports both Alibaba Cloud accounts and RAM users to retrieve API remaining quota, total quota, and usage information.</b>.</h3>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeApiMeteringRequest
@@ -821,8 +896,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API用量</para>
+        /// <para>Retrieves the API quota data of a user, including the remaining quota, total quota, and usage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><b>Note: This operation supports both Alibaba Cloud accounts and RAM users to retrieve API remaining quota, total quota, and usage information.</b>.</h3>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeApiMeteringRequest
@@ -839,8 +919,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询API用量</para>
+        /// <para>Retrieves the API quota data of a user, including the remaining quota, total quota, and usage.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3><b>Note: This operation supports both Alibaba Cloud accounts and RAM users to retrieve API remaining quota, total quota, and usage information.</b>.</h3>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeApiMeteringRequest
@@ -857,8 +942,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作流当前节点信息</para>
+        /// <para>Calls DescribeCurrentNodeInfo to retrieve the process information of the current node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCurrentNodeInfoRequest
@@ -899,8 +991,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作流当前节点信息</para>
+        /// <para>Calls DescribeCurrentNodeInfo to retrieve the process information of the current node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCurrentNodeInfoRequest
@@ -941,8 +1040,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作流当前节点信息</para>
+        /// <para>Calls DescribeCurrentNodeInfo to retrieve the process information of the current node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCurrentNodeInfoRequest
@@ -959,8 +1065,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工作流当前节点信息</para>
+        /// <para>Calls DescribeCurrentNodeInfo to retrieve the process information of the current node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeCurrentNodeInfoRequest
@@ -977,8 +1090,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取推广商品</para>
+        /// <para>Retrieves a paginated list of promotional products with detailed information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation by using a promotion service provider account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDistributionProductsRequest
@@ -1015,8 +1133,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取推广商品</para>
+        /// <para>Retrieves a paginated list of promotional products with detailed information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation by using a promotion service provider account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDistributionProductsRequest
@@ -1053,8 +1176,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取推广商品</para>
+        /// <para>Retrieves a paginated list of promotional products with detailed information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation by using a promotion service provider account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDistributionProductsRequest
@@ -1071,8 +1199,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>分页获取推广商品</para>
+        /// <para>Retrieves a paginated list of promotional products with detailed information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation by using a promotion service provider account.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDistributionProductsRequest
@@ -1089,8 +1222,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取并生成推广商品-链接</para>
+        /// <para>Retrieves promotion links for promoted products.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation by using a promotion service provider account. Calls from non-promotion service provider accounts will fail.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeDistributionProductsLinkRequest
@@ -1137,8 +1275,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取并生成推广商品-链接</para>
+        /// <para>Retrieves promotion links for promoted products.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation by using a promotion service provider account. Calls from non-promotion service provider accounts will fail.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// DescribeDistributionProductsLinkRequest
@@ -1185,8 +1328,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取并生成推广商品-链接</para>
+        /// <para>Retrieves promotion links for promoted products.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation by using a promotion service provider account. Calls from non-promotion service provider accounts will fail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDistributionProductsLinkRequest
@@ -1203,8 +1351,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取并生成推广商品-链接</para>
+        /// <para>Retrieves promotion links for promoted products.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Call this operation by using a promotion service provider account. Calls from non-promotion service provider accounts will fail.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeDistributionProductsLinkRequest
@@ -1221,8 +1374,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅通知失败列表</para>
+        /// <para>Queries the list of failed subscription notifications. After Alibaba Cloud Marketplace fails to call a service provider\&quot;s message SPI, the service provider can use this operation to proactively query the failed notification information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about failed subscription notifications for a service provider.</para>
+        /// <list type="bullet">
+        /// <item><description>If no unconfirmed failed notifications exist, TotalCount returns 0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFailedNotificationsRequest
@@ -1267,8 +1428,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅通知失败列表</para>
+        /// <para>Queries the list of failed subscription notifications. After Alibaba Cloud Marketplace fails to call a service provider\&quot;s message SPI, the service provider can use this operation to proactively query the failed notification information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about failed subscription notifications for a service provider.</para>
+        /// <list type="bullet">
+        /// <item><description>If no unconfirmed failed notifications exist, TotalCount returns 0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFailedNotificationsRequest
@@ -1313,8 +1482,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅通知失败列表</para>
+        /// <para>Queries the list of failed subscription notifications. After Alibaba Cloud Marketplace fails to call a service provider\&quot;s message SPI, the service provider can use this operation to proactively query the failed notification information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about failed subscription notifications for a service provider.</para>
+        /// <list type="bullet">
+        /// <item><description>If no unconfirmed failed notifications exist, TotalCount returns 0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFailedNotificationsRequest
@@ -1331,8 +1508,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订阅通知失败列表</para>
+        /// <para>Queries the list of failed subscription notifications. After Alibaba Cloud Marketplace fails to call a service provider\&quot;s message SPI, the service provider can use this operation to proactively query the failed notification information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the information about failed subscription notifications for a service provider.</para>
+        /// <list type="bullet">
+        /// <item><description>If no unconfirmed failed notifications exist, TotalCount returns 0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeFailedNotificationsRequest
@@ -1477,7 +1662,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Calls the DescribeInstance operation to query instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1527,7 +1712,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Calls the DescribeInstance operation to query instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1577,7 +1762,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Calls the DescribeInstance operation to query instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1595,7 +1780,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例</para>
+        /// <para>Calls the DescribeInstance operation to query instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1613,7 +1798,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务商侧查询实例信息</para>
+        /// <para>Queries instance information from the service provider side.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1655,7 +1840,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务商侧查询实例信息</para>
+        /// <para>Queries instance information from the service provider side.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1697,7 +1882,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务商侧查询实例信息</para>
+        /// <para>Queries instance information from the service provider side.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1715,7 +1900,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务商侧查询实例信息</para>
+        /// <para>Queries instance information from the service provider side.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1733,7 +1918,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries the list of services purchased by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1791,7 +1976,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries the list of services purchased by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1849,7 +2034,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries the list of services purchased by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1867,7 +2052,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实例列表</para>
+        /// <para>Queries the list of services purchased by the user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1885,8 +2070,17 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询供应商下的发票信息</para>
+        /// <para>Queries the invoice information of a supplier store in Alibaba Cloud Marketplace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries business information based on an authorization code. The system first verifies whether the authorization code is valid.</para>
+        /// <list type="bullet">
+        /// <item><description>If the authorization code is invalid, an error message is returned.</description></item>
+        /// <item><description>If the authorization code is valid, the authorization information is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInvoiceForIsvRequest
@@ -1963,8 +2157,17 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询供应商下的发票信息</para>
+        /// <para>Queries the invoice information of a supplier store in Alibaba Cloud Marketplace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries business information based on an authorization code. The system first verifies whether the authorization code is valid.</para>
+        /// <list type="bullet">
+        /// <item><description>If the authorization code is invalid, an error message is returned.</description></item>
+        /// <item><description>If the authorization code is valid, the authorization information is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInvoiceForIsvRequest
@@ -2041,8 +2244,17 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询供应商下的发票信息</para>
+        /// <para>Queries the invoice information of a supplier store in Alibaba Cloud Marketplace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries business information based on an authorization code. The system first verifies whether the authorization code is valid.</para>
+        /// <list type="bullet">
+        /// <item><description>If the authorization code is invalid, an error message is returned.</description></item>
+        /// <item><description>If the authorization code is valid, the authorization information is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInvoiceForIsvRequest
@@ -2059,8 +2271,17 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询供应商下的发票信息</para>
+        /// <para>Queries the invoice information of a supplier store in Alibaba Cloud Marketplace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries business information based on an authorization code. The system first verifies whether the authorization code is valid.</para>
+        /// <list type="bullet">
+        /// <item><description>If the authorization code is invalid, an error message is returned.</description></item>
+        /// <item><description>If the authorization code is valid, the authorization information is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeInvoiceForIsvRequest
@@ -2077,7 +2298,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取License</para>
+        /// <para>Calls DescribeLicense to query license information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2119,7 +2340,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取License</para>
+        /// <para>Calls DescribeLicense to query license information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2161,7 +2382,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取License</para>
+        /// <para>Calls DescribeLicense to query license information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2179,7 +2400,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取License</para>
+        /// <para>Calls DescribeLicense to query license information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2197,7 +2418,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订单</para>
+        /// <para>Queries the details of a specified order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2239,7 +2460,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订单</para>
+        /// <para>Queries the details of a specified order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2281,7 +2502,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订单</para>
+        /// <para>Queries the details of a specified order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2299,7 +2520,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询订单</para>
+        /// <para>Queries the details of a specified order.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2317,7 +2538,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务商侧查询订单详情</para>
+        /// <para>Queries order details from the service provider side.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2359,7 +2580,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务商侧查询订单详情</para>
+        /// <para>Queries order details from the service provider side.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2401,7 +2622,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务商侧查询订单详情</para>
+        /// <para>Queries order details from the service provider side.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2419,7 +2640,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>服务商侧查询订单详情</para>
+        /// <para>Queries order details from the service provider side.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2437,7 +2658,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询价格</para>
+        /// <para>Calls DescribePrice to query the price information of the corresponding product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2483,7 +2704,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询价格</para>
+        /// <para>Calls DescribePrice to query the price information of the corresponding product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2529,7 +2750,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询价格</para>
+        /// <para>Calls DescribePrice to query the price information of the corresponding product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2547,7 +2768,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询价格</para>
+        /// <para>Calls DescribePrice to query the price information of the corresponding product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2563,6 +2784,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribePriceWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified product by calling DescribeProduct.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProductRequest
         /// </param>
@@ -2608,6 +2834,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProductResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified product by calling DescribeProduct.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProductRequest
         /// </param>
@@ -2653,6 +2884,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProductResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified product by calling DescribeProduct.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProductRequest
         /// </param>
@@ -2666,6 +2902,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeProductWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified product by calling DescribeProduct.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProductRequest
         /// </param>
@@ -2679,6 +2920,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return await DescribeProductWithOptionsAsync(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of products that meet the specified conditions along with their details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProductsRequest
         /// </param>
@@ -2728,6 +2974,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProductsResponse>(CallApi(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of products that meet the specified conditions along with their details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProductsRequest
         /// </param>
@@ -2777,6 +3028,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return TeaModel.ToObject<DescribeProductsResponse>(await CallApiAsync(params_, req, runtime));
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of products that meet the specified conditions along with their details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProductsRequest
         /// </param>
@@ -2790,6 +3046,11 @@ namespace AlibabaCloud.SDK.Market20151101
             return DescribeProductsWithOptions(request, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a list of products that meet the specified conditions along with their details.</para>
+        /// </summary>
+        /// 
         /// <param name="request">
         /// DescribeProductsRequest
         /// </param>
@@ -2805,7 +3066,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>附件信息</para>
+        /// <para>Calls DescribeProjectAttachments to retrieve the list of project attachments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2847,7 +3108,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>附件信息</para>
+        /// <para>Calls DescribeProjectAttachments to retrieve the list of project attachments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2889,7 +3150,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>附件信息</para>
+        /// <para>Calls DescribeProjectAttachments to retrieve the list of project attachments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2907,7 +3168,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>附件信息</para>
+        /// <para>Calls DescribeProjectAttachments to retrieve the list of project attachments.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2925,7 +3186,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>项目信息</para>
+        /// <para>Calls DescribeProjectInfo to query project information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2967,7 +3228,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>项目信息</para>
+        /// <para>Calls DescribeProjectInfo to query project information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3009,7 +3270,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>项目信息</para>
+        /// <para>Calls DescribeProjectInfo to query project information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3027,7 +3288,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>项目信息</para>
+        /// <para>Calls DescribeProjectInfo to query project information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3045,7 +3306,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目留言信息</para>
+        /// <para>Calls DescribeProjectMessages to retrieve the list of project workflow messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3091,7 +3352,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目留言信息</para>
+        /// <para>Calls DescribeProjectMessages to retrieve the list of project workflow messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3137,7 +3398,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目留言信息</para>
+        /// <para>Calls DescribeProjectMessages to retrieve the list of project workflow messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3155,7 +3416,7 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目留言信息</para>
+        /// <para>Calls DescribeProjectMessages to retrieve the list of project workflow messages.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3173,13 +3434,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目流程节点list</para>
+        /// <para>Queries the list of project flow nodes by calling DescribeProjectNodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>**</description></item>
+        /// <item><description>**.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3222,13 +3483,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目流程节点list</para>
+        /// <para>Queries the list of project flow nodes by calling DescribeProjectNodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>**</description></item>
+        /// <item><description>**.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3271,13 +3532,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目流程节点list</para>
+        /// <para>Queries the list of project flow nodes by calling DescribeProjectNodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>**</description></item>
+        /// <item><description>**.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3296,13 +3557,13 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目流程节点list</para>
+        /// <para>Queries the list of project flow nodes by calling DescribeProjectNodes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>**</description></item>
+        /// <item><description>**.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3321,8 +3582,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目操作记录列表</para>
+        /// <para>Calls DescribeProjectOperateLogs to retrieve the operation logs of a project flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeProjectOperateLogsRequest
@@ -3363,8 +3631,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目操作记录列表</para>
+        /// <para>Calls DescribeProjectOperateLogs to retrieve the operation logs of a project flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeProjectOperateLogsRequest
@@ -3405,8 +3680,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目操作记录列表</para>
+        /// <para>Calls DescribeProjectOperateLogs to retrieve the operation logs of a project flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeProjectOperateLogsRequest
@@ -3423,8 +3705,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询项目操作记录列表</para>
+        /// <para>Calls DescribeProjectOperateLogs to retrieve the operation logs of a project flow.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribeProjectOperateLogsRequest
@@ -3441,8 +3730,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成当前流程节点</para>
+        /// <para>Completes the current process by calling FinishCurrentProjectNode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FinishCurrentProjectNodeRequest
@@ -3495,8 +3791,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成当前流程节点</para>
+        /// <para>Completes the current process by calling FinishCurrentProjectNode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FinishCurrentProjectNodeRequest
@@ -3549,8 +3852,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成当前流程节点</para>
+        /// <para>Completes the current process by calling FinishCurrentProjectNode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FinishCurrentProjectNodeRequest
@@ -3567,8 +3877,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>完成当前流程节点</para>
+        /// <para>Completes the current process by calling FinishCurrentProjectNode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// FinishCurrentProjectNodeRequest
@@ -3585,8 +3902,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发票受理接口</para>
+        /// <para>Processes invoice acceptance requests.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries information about failed subscription notifications for merchants.</para>
+        /// <list type="bullet">
+        /// <item><description>If no unconfirmed notification failure information exists, TotalCount returns 0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInvoiceForIsvRequest
@@ -3647,8 +3972,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发票受理接口</para>
+        /// <para>Processes invoice acceptance requests.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries information about failed subscription notifications for merchants.</para>
+        /// <list type="bullet">
+        /// <item><description>If no unconfirmed notification failure information exists, TotalCount returns 0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInvoiceForIsvRequest
@@ -3709,8 +4042,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发票受理接口</para>
+        /// <para>Processes invoice acceptance requests.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries information about failed subscription notifications for merchants.</para>
+        /// <list type="bullet">
+        /// <item><description>If no unconfirmed notification failure information exists, TotalCount returns 0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInvoiceForIsvRequest
@@ -3727,8 +4068,16 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>发票受理接口</para>
+        /// <para>Processes invoice acceptance requests.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries information about failed subscription notifications for merchants.</para>
+        /// <list type="bullet">
+        /// <item><description>If no unconfirmed notification failure information exists, TotalCount returns 0.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ModifyInvoiceForIsvRequest
@@ -3745,8 +4094,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停项目</para>
+        /// <para>Calls PauseProject to pause a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseProjectRequest
@@ -3795,8 +4151,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停项目</para>
+        /// <para>Calls PauseProject to pause a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseProjectRequest
@@ -3845,8 +4208,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停项目</para>
+        /// <para>Calls PauseProject to pause a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseProjectRequest
@@ -3863,8 +4233,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>暂停项目</para>
+        /// <para>Calls PauseProject to pause a project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PauseProjectRequest
@@ -3881,8 +4258,43 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云市场计量推送接口</para>
+        /// <para>Call PushMeteringData to push metering data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Encoding and Format Requirements</h3>
+        /// <list type="bullet">
+        /// <item><description>All request parameters must be URLEncoded.</description></item>
+        /// <item><description>The Metering field in the parameters must strictly follow the format in the example in this document. It has been found that many submissions are not valid JSON. Please verify the format with a JSON formatting tool before submission, otherwise the API call will fail.</description></item>
+        /// </list>
+        /// <h3>Request Frequency and Single Write Volume Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>For hourly/daily metering: Cloud Marketplace limits requests for each InstanceId to once per 60 seconds, and each request supports writing up to 100 metering data entries.</description></item>
+        /// <item><description>For real-time metering (for large model usage scenarios): Cloud Marketplace has no frequency limit for each InstanceId, and each request supports writing up to 10 metering data entries.</description></item>
+        /// </list>
+        /// <h3>Batch Push Limits for Metering Data</h3>
+        /// <list type="bullet">
+        /// <item><description>Cross-product InstanceId batch pushing is not supported. When batch pushing, ensure all InstanceIds belong to the same product.</description></item>
+        /// <item><description>When batch pushing metering data, the &quot;InstanceId&quot; attribute must belong to instances generated by the same product. Pushing instances from multiple products simultaneously is currently not supported.</description></item>
+        /// </list>
+        /// <h3>Time Requirements for Metering Data Push</h3>
+        /// <list type="bullet">
+        /// <item><description>For products billed by the hour, the billing deadline is the next hour, and metering data must be pushed on time. For example, if the metering data is for 8:10-08:20, it must be pushed before 9:59, otherwise billing will not occur. The rule for daily billing is similar: the previous day\&quot;s data must be pushed before 1:59 of the next day, otherwise the metering push will return an error and billing will not occur.</description></item>
+        /// <item><description>For products billed by the minute, real-time pushed data is aggregated by the minute and billed by the minute.</description></item>
+        /// <item><description>If the product is set to real-time billing, StartTime and EndTime can have any time span, but EndTime must be greater than StartTime.</description></item>
+        /// <item><description>If the product is set to non-real-time billing (i.e., hourly, daily, etc.), the interval between StartTime and EndTime must be greater than 5 minutes.</description></item>
+        /// </list>
+        /// <h3>Timeliness of Pushing and Billing</h3>
+        /// <list type="bullet">
+        /// <item><description>If the instance status has expired, metering data pushed after the instance expiration will not be billed. For example, if the instance expired at 2025-07-09 12:20:00, metering data pushed for the period 2025-07-09 13:00:00-2025-07-09 14:00:00 will not be billed. Metering data for the period 2025-07-09 12:00:00-2025-07-09 13:00:00 can still be billed normally.</description></item>
+        /// <item><description>After pushing metering data, billing does not occur immediately. For hourly billing, bills are generated in the next time interval. For example, for hourly billing, the bill for 8:00-9:00 is generated after 10:00. For daily billing, bills are generated the next day. After billing, customers can view the bills in <a href="https://billing-cost.console.aliyun.com/finance/expense-report/expense-detail-by-instance">Alibaba Cloud Bill Details</a>.</description></item>
+        /// </list>
+        /// <h3>Amount Rounding to Zero</h3>
+        /// <list type="bullet">
+        /// <item><description>If the bill amount is too small and the single bill amount is less than 0.01 CNY, the bill amount on the buyer\&quot;s side will be 0. For example, if the product unit price is 0.001 CNY/count and is billed by the minute with 9 uses per minute, the bill amount per minute is 0. If billed by the hour and the single hourly bill amount is less than 0.01, the buyer\&quot;s bill amount will be 0. The probability of minute-level billing amounts being rounded to zero may be higher than that of hourly billing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMeteringDataRequest
@@ -3923,8 +4335,43 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云市场计量推送接口</para>
+        /// <para>Call PushMeteringData to push metering data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Encoding and Format Requirements</h3>
+        /// <list type="bullet">
+        /// <item><description>All request parameters must be URLEncoded.</description></item>
+        /// <item><description>The Metering field in the parameters must strictly follow the format in the example in this document. It has been found that many submissions are not valid JSON. Please verify the format with a JSON formatting tool before submission, otherwise the API call will fail.</description></item>
+        /// </list>
+        /// <h3>Request Frequency and Single Write Volume Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>For hourly/daily metering: Cloud Marketplace limits requests for each InstanceId to once per 60 seconds, and each request supports writing up to 100 metering data entries.</description></item>
+        /// <item><description>For real-time metering (for large model usage scenarios): Cloud Marketplace has no frequency limit for each InstanceId, and each request supports writing up to 10 metering data entries.</description></item>
+        /// </list>
+        /// <h3>Batch Push Limits for Metering Data</h3>
+        /// <list type="bullet">
+        /// <item><description>Cross-product InstanceId batch pushing is not supported. When batch pushing, ensure all InstanceIds belong to the same product.</description></item>
+        /// <item><description>When batch pushing metering data, the &quot;InstanceId&quot; attribute must belong to instances generated by the same product. Pushing instances from multiple products simultaneously is currently not supported.</description></item>
+        /// </list>
+        /// <h3>Time Requirements for Metering Data Push</h3>
+        /// <list type="bullet">
+        /// <item><description>For products billed by the hour, the billing deadline is the next hour, and metering data must be pushed on time. For example, if the metering data is for 8:10-08:20, it must be pushed before 9:59, otherwise billing will not occur. The rule for daily billing is similar: the previous day\&quot;s data must be pushed before 1:59 of the next day, otherwise the metering push will return an error and billing will not occur.</description></item>
+        /// <item><description>For products billed by the minute, real-time pushed data is aggregated by the minute and billed by the minute.</description></item>
+        /// <item><description>If the product is set to real-time billing, StartTime and EndTime can have any time span, but EndTime must be greater than StartTime.</description></item>
+        /// <item><description>If the product is set to non-real-time billing (i.e., hourly, daily, etc.), the interval between StartTime and EndTime must be greater than 5 minutes.</description></item>
+        /// </list>
+        /// <h3>Timeliness of Pushing and Billing</h3>
+        /// <list type="bullet">
+        /// <item><description>If the instance status has expired, metering data pushed after the instance expiration will not be billed. For example, if the instance expired at 2025-07-09 12:20:00, metering data pushed for the period 2025-07-09 13:00:00-2025-07-09 14:00:00 will not be billed. Metering data for the period 2025-07-09 12:00:00-2025-07-09 13:00:00 can still be billed normally.</description></item>
+        /// <item><description>After pushing metering data, billing does not occur immediately. For hourly billing, bills are generated in the next time interval. For example, for hourly billing, the bill for 8:00-9:00 is generated after 10:00. For daily billing, bills are generated the next day. After billing, customers can view the bills in <a href="https://billing-cost.console.aliyun.com/finance/expense-report/expense-detail-by-instance">Alibaba Cloud Bill Details</a>.</description></item>
+        /// </list>
+        /// <h3>Amount Rounding to Zero</h3>
+        /// <list type="bullet">
+        /// <item><description>If the bill amount is too small and the single bill amount is less than 0.01 CNY, the bill amount on the buyer\&quot;s side will be 0. For example, if the product unit price is 0.001 CNY/count and is billed by the minute with 9 uses per minute, the bill amount per minute is 0. If billed by the hour and the single hourly bill amount is less than 0.01, the buyer\&quot;s bill amount will be 0. The probability of minute-level billing amounts being rounded to zero may be higher than that of hourly billing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMeteringDataRequest
@@ -3965,8 +4412,43 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云市场计量推送接口</para>
+        /// <para>Call PushMeteringData to push metering data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Encoding and Format Requirements</h3>
+        /// <list type="bullet">
+        /// <item><description>All request parameters must be URLEncoded.</description></item>
+        /// <item><description>The Metering field in the parameters must strictly follow the format in the example in this document. It has been found that many submissions are not valid JSON. Please verify the format with a JSON formatting tool before submission, otherwise the API call will fail.</description></item>
+        /// </list>
+        /// <h3>Request Frequency and Single Write Volume Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>For hourly/daily metering: Cloud Marketplace limits requests for each InstanceId to once per 60 seconds, and each request supports writing up to 100 metering data entries.</description></item>
+        /// <item><description>For real-time metering (for large model usage scenarios): Cloud Marketplace has no frequency limit for each InstanceId, and each request supports writing up to 10 metering data entries.</description></item>
+        /// </list>
+        /// <h3>Batch Push Limits for Metering Data</h3>
+        /// <list type="bullet">
+        /// <item><description>Cross-product InstanceId batch pushing is not supported. When batch pushing, ensure all InstanceIds belong to the same product.</description></item>
+        /// <item><description>When batch pushing metering data, the &quot;InstanceId&quot; attribute must belong to instances generated by the same product. Pushing instances from multiple products simultaneously is currently not supported.</description></item>
+        /// </list>
+        /// <h3>Time Requirements for Metering Data Push</h3>
+        /// <list type="bullet">
+        /// <item><description>For products billed by the hour, the billing deadline is the next hour, and metering data must be pushed on time. For example, if the metering data is for 8:10-08:20, it must be pushed before 9:59, otherwise billing will not occur. The rule for daily billing is similar: the previous day\&quot;s data must be pushed before 1:59 of the next day, otherwise the metering push will return an error and billing will not occur.</description></item>
+        /// <item><description>For products billed by the minute, real-time pushed data is aggregated by the minute and billed by the minute.</description></item>
+        /// <item><description>If the product is set to real-time billing, StartTime and EndTime can have any time span, but EndTime must be greater than StartTime.</description></item>
+        /// <item><description>If the product is set to non-real-time billing (i.e., hourly, daily, etc.), the interval between StartTime and EndTime must be greater than 5 minutes.</description></item>
+        /// </list>
+        /// <h3>Timeliness of Pushing and Billing</h3>
+        /// <list type="bullet">
+        /// <item><description>If the instance status has expired, metering data pushed after the instance expiration will not be billed. For example, if the instance expired at 2025-07-09 12:20:00, metering data pushed for the period 2025-07-09 13:00:00-2025-07-09 14:00:00 will not be billed. Metering data for the period 2025-07-09 12:00:00-2025-07-09 13:00:00 can still be billed normally.</description></item>
+        /// <item><description>After pushing metering data, billing does not occur immediately. For hourly billing, bills are generated in the next time interval. For example, for hourly billing, the bill for 8:00-9:00 is generated after 10:00. For daily billing, bills are generated the next day. After billing, customers can view the bills in <a href="https://billing-cost.console.aliyun.com/finance/expense-report/expense-detail-by-instance">Alibaba Cloud Bill Details</a>.</description></item>
+        /// </list>
+        /// <h3>Amount Rounding to Zero</h3>
+        /// <list type="bullet">
+        /// <item><description>If the bill amount is too small and the single bill amount is less than 0.01 CNY, the bill amount on the buyer\&quot;s side will be 0. For example, if the product unit price is 0.001 CNY/count and is billed by the minute with 9 uses per minute, the bill amount per minute is 0. If billed by the hour and the single hourly bill amount is less than 0.01, the buyer\&quot;s bill amount will be 0. The probability of minute-level billing amounts being rounded to zero may be higher than that of hourly billing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMeteringDataRequest
@@ -3983,8 +4465,43 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>云市场计量推送接口</para>
+        /// <para>Call PushMeteringData to push metering data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h3>Encoding and Format Requirements</h3>
+        /// <list type="bullet">
+        /// <item><description>All request parameters must be URLEncoded.</description></item>
+        /// <item><description>The Metering field in the parameters must strictly follow the format in the example in this document. It has been found that many submissions are not valid JSON. Please verify the format with a JSON formatting tool before submission, otherwise the API call will fail.</description></item>
+        /// </list>
+        /// <h3>Request Frequency and Single Write Volume Limits</h3>
+        /// <list type="bullet">
+        /// <item><description>For hourly/daily metering: Cloud Marketplace limits requests for each InstanceId to once per 60 seconds, and each request supports writing up to 100 metering data entries.</description></item>
+        /// <item><description>For real-time metering (for large model usage scenarios): Cloud Marketplace has no frequency limit for each InstanceId, and each request supports writing up to 10 metering data entries.</description></item>
+        /// </list>
+        /// <h3>Batch Push Limits for Metering Data</h3>
+        /// <list type="bullet">
+        /// <item><description>Cross-product InstanceId batch pushing is not supported. When batch pushing, ensure all InstanceIds belong to the same product.</description></item>
+        /// <item><description>When batch pushing metering data, the &quot;InstanceId&quot; attribute must belong to instances generated by the same product. Pushing instances from multiple products simultaneously is currently not supported.</description></item>
+        /// </list>
+        /// <h3>Time Requirements for Metering Data Push</h3>
+        /// <list type="bullet">
+        /// <item><description>For products billed by the hour, the billing deadline is the next hour, and metering data must be pushed on time. For example, if the metering data is for 8:10-08:20, it must be pushed before 9:59, otherwise billing will not occur. The rule for daily billing is similar: the previous day\&quot;s data must be pushed before 1:59 of the next day, otherwise the metering push will return an error and billing will not occur.</description></item>
+        /// <item><description>For products billed by the minute, real-time pushed data is aggregated by the minute and billed by the minute.</description></item>
+        /// <item><description>If the product is set to real-time billing, StartTime and EndTime can have any time span, but EndTime must be greater than StartTime.</description></item>
+        /// <item><description>If the product is set to non-real-time billing (i.e., hourly, daily, etc.), the interval between StartTime and EndTime must be greater than 5 minutes.</description></item>
+        /// </list>
+        /// <h3>Timeliness of Pushing and Billing</h3>
+        /// <list type="bullet">
+        /// <item><description>If the instance status has expired, metering data pushed after the instance expiration will not be billed. For example, if the instance expired at 2025-07-09 12:20:00, metering data pushed for the period 2025-07-09 13:00:00-2025-07-09 14:00:00 will not be billed. Metering data for the period 2025-07-09 12:00:00-2025-07-09 13:00:00 can still be billed normally.</description></item>
+        /// <item><description>After pushing metering data, billing does not occur immediately. For hourly billing, bills are generated in the next time interval. For example, for hourly billing, the bill for 8:00-9:00 is generated after 10:00. For daily billing, bills are generated the next day. After billing, customers can view the bills in <a href="https://billing-cost.console.aliyun.com/finance/expense-report/expense-detail-by-instance">Alibaba Cloud Bill Details</a>.</description></item>
+        /// </list>
+        /// <h3>Amount Rounding to Zero</h3>
+        /// <list type="bullet">
+        /// <item><description>If the bill amount is too small and the single bill amount is less than 0.01 CNY, the bill amount on the buyer\&quot;s side will be 0. For example, if the product unit price is 0.001 CNY/count and is billed by the minute with 9 uses per minute, the bill amount per minute is 0. If billed by the hour and the single hourly bill amount is less than 0.01, the buyer\&quot;s bill amount will be 0. The probability of minute-level billing amounts being rounded to zero may be higher than that of hourly billing.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushMeteringDataRequest
@@ -4001,8 +4518,24 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按次售卖按量计费</para>
+        /// <para>Pushes usage deduction for a prepaid per-use product to Alibaba Cloud Marketplace on behalf of a service provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation applies to prepaid per-use products. Service providers can call this operation to push usage deductions to Alibaba Cloud Marketplace.</description></item>
+        /// <item><description>The operation uses a forced update mode that directly deducts the specified number of uses. The caller must determine whether the user\&quot;s usage exceeds the quota.</description></item>
+        /// <item><description>All request parameters must be URL-encoded.</description></item>
+        /// <item><description>Use the <c>ClientToken</c> parameter for idempotency control. The same <c>ClientToken</c> cannot be submitted more than once within 24 hours.</description></item>
+        /// <item><description>Retries for the same deduction operation must use the same <c>ClientToken</c>. Use a new <c>ClientToken</c> for new business operations.</description></item>
+        /// <item><description>If the previous request succeeded (even if no response was received due to a gateway timeout), retrying with the same <c>ClientToken</c> returns a success response idempotently without duplicate deductions.</description></item>
+        /// <item><description>If the result of the previous request is undetermined (in PROCESSING state), retrying with the same <c>ClientToken</c> returns a <c>DuplicateClientToken</c> error. Retry later or contact Alibaba Cloud Marketplace to confirm the push status.</description></item>
+        /// <item><description>Only one operation can be executed at a time for the same <c>InstanceId</c>. Concurrent requests return a <c>Throttling</c> error. Retry later.</description></item>
+        /// <item><description>You can run this operation in <a href="https://api.aliyun.com/#product=Market&api=PushTimesUsage&type=RPC&version=2015-11-01">OpenAPI Explorer</a> without calculating signatures.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushTimesUsageRequest
@@ -4018,6 +4551,14 @@ namespace AlibabaCloud.SDK.Market20151101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Adjust))
+            {
+                query["Adjust"] = request.Adjust;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdjustDate))
+            {
+                query["AdjustDate"] = request.AdjustDate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -4025,6 +4566,10 @@ namespace AlibabaCloud.SDK.Market20151101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mark))
+            {
+                query["Mark"] = request.Mark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Times))
             {
@@ -4051,8 +4596,24 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按次售卖按量计费</para>
+        /// <para>Pushes usage deduction for a prepaid per-use product to Alibaba Cloud Marketplace on behalf of a service provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation applies to prepaid per-use products. Service providers can call this operation to push usage deductions to Alibaba Cloud Marketplace.</description></item>
+        /// <item><description>The operation uses a forced update mode that directly deducts the specified number of uses. The caller must determine whether the user\&quot;s usage exceeds the quota.</description></item>
+        /// <item><description>All request parameters must be URL-encoded.</description></item>
+        /// <item><description>Use the <c>ClientToken</c> parameter for idempotency control. The same <c>ClientToken</c> cannot be submitted more than once within 24 hours.</description></item>
+        /// <item><description>Retries for the same deduction operation must use the same <c>ClientToken</c>. Use a new <c>ClientToken</c> for new business operations.</description></item>
+        /// <item><description>If the previous request succeeded (even if no response was received due to a gateway timeout), retrying with the same <c>ClientToken</c> returns a success response idempotently without duplicate deductions.</description></item>
+        /// <item><description>If the result of the previous request is undetermined (in PROCESSING state), retrying with the same <c>ClientToken</c> returns a <c>DuplicateClientToken</c> error. Retry later or contact Alibaba Cloud Marketplace to confirm the push status.</description></item>
+        /// <item><description>Only one operation can be executed at a time for the same <c>InstanceId</c>. Concurrent requests return a <c>Throttling</c> error. Retry later.</description></item>
+        /// <item><description>You can run this operation in <a href="https://api.aliyun.com/#product=Market&api=PushTimesUsage&type=RPC&version=2015-11-01">OpenAPI Explorer</a> without calculating signatures.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushTimesUsageRequest
@@ -4068,6 +4629,14 @@ namespace AlibabaCloud.SDK.Market20151101
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Adjust))
+            {
+                query["Adjust"] = request.Adjust;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdjustDate))
+            {
+                query["AdjustDate"] = request.AdjustDate;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
@@ -4075,6 +4644,10 @@ namespace AlibabaCloud.SDK.Market20151101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mark))
+            {
+                query["Mark"] = request.Mark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Times))
             {
@@ -4101,8 +4674,24 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按次售卖按量计费</para>
+        /// <para>Pushes usage deduction for a prepaid per-use product to Alibaba Cloud Marketplace on behalf of a service provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation applies to prepaid per-use products. Service providers can call this operation to push usage deductions to Alibaba Cloud Marketplace.</description></item>
+        /// <item><description>The operation uses a forced update mode that directly deducts the specified number of uses. The caller must determine whether the user\&quot;s usage exceeds the quota.</description></item>
+        /// <item><description>All request parameters must be URL-encoded.</description></item>
+        /// <item><description>Use the <c>ClientToken</c> parameter for idempotency control. The same <c>ClientToken</c> cannot be submitted more than once within 24 hours.</description></item>
+        /// <item><description>Retries for the same deduction operation must use the same <c>ClientToken</c>. Use a new <c>ClientToken</c> for new business operations.</description></item>
+        /// <item><description>If the previous request succeeded (even if no response was received due to a gateway timeout), retrying with the same <c>ClientToken</c> returns a success response idempotently without duplicate deductions.</description></item>
+        /// <item><description>If the result of the previous request is undetermined (in PROCESSING state), retrying with the same <c>ClientToken</c> returns a <c>DuplicateClientToken</c> error. Retry later or contact Alibaba Cloud Marketplace to confirm the push status.</description></item>
+        /// <item><description>Only one operation can be executed at a time for the same <c>InstanceId</c>. Concurrent requests return a <c>Throttling</c> error. Retry later.</description></item>
+        /// <item><description>You can run this operation in <a href="https://api.aliyun.com/#product=Market&api=PushTimesUsage&type=RPC&version=2015-11-01">OpenAPI Explorer</a> without calculating signatures.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushTimesUsageRequest
@@ -4119,8 +4708,24 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>按次售卖按量计费</para>
+        /// <para>Pushes usage deduction for a prepaid per-use product to Alibaba Cloud Marketplace on behalf of a service provider.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation applies to prepaid per-use products. Service providers can call this operation to push usage deductions to Alibaba Cloud Marketplace.</description></item>
+        /// <item><description>The operation uses a forced update mode that directly deducts the specified number of uses. The caller must determine whether the user\&quot;s usage exceeds the quota.</description></item>
+        /// <item><description>All request parameters must be URL-encoded.</description></item>
+        /// <item><description>Use the <c>ClientToken</c> parameter for idempotency control. The same <c>ClientToken</c> cannot be submitted more than once within 24 hours.</description></item>
+        /// <item><description>Retries for the same deduction operation must use the same <c>ClientToken</c>. Use a new <c>ClientToken</c> for new business operations.</description></item>
+        /// <item><description>If the previous request succeeded (even if no response was received due to a gateway timeout), retrying with the same <c>ClientToken</c> returns a success response idempotently without duplicate deductions.</description></item>
+        /// <item><description>If the result of the previous request is undetermined (in PROCESSING state), retrying with the same <c>ClientToken</c> returns a <c>DuplicateClientToken</c> error. Retry later or contact Alibaba Cloud Marketplace to confirm the push status.</description></item>
+        /// <item><description>Only one operation can be executed at a time for the same <c>InstanceId</c>. Concurrent requests return a <c>Throttling</c> error. Retry later.</description></item>
+        /// <item><description>You can run this operation in <a href="https://api.aliyun.com/#product=Market&api=PushTimesUsage&type=RPC&version=2015-11-01">OpenAPI Explorer</a> without calculating signatures.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// PushTimesUsageRequest
@@ -4137,8 +4742,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复已暂停的项目</para>
+        /// <para>Calls ResumeProject to resume a paused project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeProjectRequest
@@ -4187,8 +4799,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复已暂停的项目</para>
+        /// <para>Calls ResumeProject to resume a paused project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeProjectRequest
@@ -4237,8 +4856,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复已暂停的项目</para>
+        /// <para>Calls ResumeProject to resume a paused project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeProjectRequest
@@ -4255,8 +4881,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>恢复已暂停的项目</para>
+        /// <para>Calls ResumeProject to resume a paused project.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResumeProjectRequest
@@ -4273,8 +4906,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前流程节点回滚到上一步</para>
+        /// <para>Triggers a rejection of the current process node by calling RollbackCurrentProjectNode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RollbackCurrentProjectNodeRequest
@@ -4323,8 +4963,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前流程节点回滚到上一步</para>
+        /// <para>Triggers a rejection of the current process node by calling RollbackCurrentProjectNode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RollbackCurrentProjectNodeRequest
@@ -4373,8 +5020,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前流程节点回滚到上一步</para>
+        /// <para>Triggers a rejection of the current process node by calling RollbackCurrentProjectNode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RollbackCurrentProjectNodeRequest
@@ -4391,8 +5045,15 @@ namespace AlibabaCloud.SDK.Market20151101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>当前流程节点回滚到上一步</para>
+        /// <para>Triggers a rejection of the current process node by calling RollbackCurrentProjectNode.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>**.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// RollbackCurrentProjectNodeRequest

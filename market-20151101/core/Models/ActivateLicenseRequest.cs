@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class ActivateLicenseRequest : TeaModel {
         /// <summary>
+        /// <para>The identity information for activation. Set this parameter to the Alibaba Cloud account ID (aliyunUid) of the user.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>129****1111</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string Identification { get; set; }
 
         /// <summary>
+        /// <para>The authorization code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

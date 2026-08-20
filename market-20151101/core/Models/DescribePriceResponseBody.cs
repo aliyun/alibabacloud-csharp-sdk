@@ -46,6 +46,11 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
+        /// <para>Currency</para>
+        /// <para>CNY: Chinese Yuan
+        /// USD: US Dollar
+        /// JPY: Japanese Yen</para>
+        /// 
         /// <b>Example:</b>
         /// <para>CNY</para>
         /// </summary>
@@ -54,6 +59,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string Currency { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether a promotion is available</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -62,6 +69,11 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public bool? Cuxiao { get; set; }
 
         /// <summary>
+        /// <para>Cycle unit</para>
+        /// <para>DAY: Day
+        /// MONTH: Month
+        /// YEAR: Year</para>
+        /// 
         /// <b>Example:</b>
         /// <para>MONTH</para>
         /// </summary>
@@ -70,6 +82,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public string Cycle { get; set; }
 
         /// <summary>
+        /// <para>Discount amount (original price minus trade price), in CNY</para>
+        /// 
         /// <b>Example:</b>
         /// <para>178.20</para>
         /// </summary>
@@ -78,6 +92,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public float? DiscountPrice { get; set; }
 
         /// <summary>
+        /// <para>Number of cycles, such as 1, 2, 3...</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -86,6 +102,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public int? Duration { get; set; }
 
         /// <summary>
+        /// <para>Purchase restriction code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ORDER.NO_REAL_NAME_AUTHENTICATION</para>
         /// </summary>
@@ -93,15 +111,29 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         [Validation(Required=false)]
         public string ExpressionCode { get; set; }
 
+        /// <summary>
+        /// <para>Purchase restriction description</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>企业用户才能购买</para>
+        /// </summary>
         [NameInMap("ExpressionMessage")]
         [Validation(Required=false)]
         public string ExpressionMessage { get; set; }
 
+        /// <summary>
+        /// <para>Promotion name</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>新年特惠</para>
+        /// </summary>
         [NameInMap("InfoTitle")]
         [Validation(Required=false)]
         public string InfoTitle { get; set; }
 
         /// <summary>
+        /// <para>Original price, in CNY</para>
+        /// 
         /// <b>Example:</b>
         /// <para>198.00</para>
         /// </summary>
@@ -110,6 +142,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public float? OriginalPrice { get; set; }
 
         /// <summary>
+        /// <para>Product code</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cmgj01****</para>
         /// </summary>
@@ -142,6 +176,8 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
+        /// <para>Trade price (actual price), in CNY</para>
+        /// 
         /// <b>Example:</b>
         /// <para>19.80</para>
         /// </summary>

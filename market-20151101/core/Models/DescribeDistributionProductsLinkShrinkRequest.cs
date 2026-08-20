@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeDistributionProductsLinkShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The collection of product codes. The collection cannot be empty and can contain up to 50 entries.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Codes")]

@@ -9,11 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Market20151101.Models
 {
     public class DescribeDistributionProductsRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of filter conditions.</para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<DescribeDistributionProductsRequestFilter> Filter { get; set; }
         public class DescribeDistributionProductsRequestFilter : TeaModel {
             /// <summary>
+            /// <para>The search label category. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>code: the commodity code of the promotional product</description></item>
+            /// <item><description>name: the name of the promotional product</description></item>
+            /// <item><description>supplierName: the name of the promotion service provider.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -24,6 +33,12 @@ namespace AlibabaCloud.SDK.Market20151101.Models
             public string Key { get; set; }
 
             /// <summary>
+            /// <para>The search tag value:</para>
+            /// <list type="bullet">
+            /// <item><description>code: the product code to search for</description></item>
+            /// <item><description>name: the product name to search for</description></item>
+            /// <item><description>supplierName: the supplier name to search for.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -36,6 +51,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         }
 
         /// <summary>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +62,7 @@ namespace AlibabaCloud.SDK.Market20151101.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of promotional products per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
