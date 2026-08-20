@@ -17,6 +17,13 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public List<string> DenyOut { get; set; }
 
+        /// <summary>
+        /// <para>The request transform rules configured by exact target host. If omitted, existing rules are retained. An empty object clears all rules, and a non-empty object replaces all rules entirely. Null is not supported. The transform.headers and transform.headerValueReplacements fields are supported.</para>
+        /// </summary>
+        [NameInMap("rules")]
+        [Validation(Required=false)]
+        public Dictionary<string, List<SessionNetworkRule>> Rules { get; set; }
+
     }
 
 }

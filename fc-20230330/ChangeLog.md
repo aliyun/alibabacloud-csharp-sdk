@@ -1,3 +1,7 @@
+2026-08-20 Version: 4.8.1
+- Update API PauseSession: add request parameters fileSystemOnly.
+
+
 2026-08-19 Version: 4.8.0
 - Support API CreateSnapshot.
 - Support API DeleteSnapshot.

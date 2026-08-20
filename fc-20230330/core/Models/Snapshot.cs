@@ -10,18 +10,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class Snapshot : TeaModel {
         /// <summary>
-        /// <para>The total disk snapshot size, in bytes.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>10737418240</para>
-        /// </summary>
-        [NameInMap("artifactDiskTotalSizeInB")]
-        [Validation(Required=false)]
-        public long? ArtifactDiskTotalSizeInB { get; set; }
-
-        /// <summary>
-        /// <para>The used disk snapshot size, in bytes.</para>
+        /// <para>The used size of the disk snapshot, in bytes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,29 +21,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public long? ArtifactDiskUsedSizeInB { get; set; }
 
         /// <summary>
-        /// <para>The memory snapshot cache size, in bytes.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>268435456</para>
-        /// </summary>
-        [NameInMap("artifactMemCacheSizeInB")]
-        [Validation(Required=false)]
-        public long? ArtifactMemCacheSizeInB { get; set; }
-
-        /// <summary>
-        /// <para>The total memory snapshot size, in bytes.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>3221225472</para>
-        /// </summary>
-        [NameInMap("artifactMemTotalSizeInB")]
-        [Validation(Required=false)]
-        public long? ArtifactMemTotalSizeInB { get; set; }
-
-        /// <summary>
-        /// <para>The used memory snapshot size, in bytes.</para>
+        /// <para>The used size of the memory snapshot, in bytes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         public string Qualifier { get; set; }
 
         /// <summary>
-        /// <para>The source session ID from which the snapshot was created. If specified, functionName must also be specified.</para>
+        /// <para>The source session ID from which the snapshot was created. When specified, functionName must also be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-session-id-1</para>

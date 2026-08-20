@@ -4454,7 +4454,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified session, including the session ID, associated function, affinity type, lifecycle configuration, status, and instance information. This operation queries the current metadata of a single session and supports exact matching by functionName and qualifier for external system monitoring and debugging. Only sessions in the Active state can be queried.</para>
+        /// <para>Retrieves the details of a specified session, including the session ID, associated function, affinity type, lifecycle configuration, status, and instance information. This operation queries the current metadata of a single session, supports precise identification by functionName and qualifier for external system monitoring and debugging, and only supports querying sessions in the Active state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4500,7 +4500,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified session, including the session ID, associated function, affinity type, lifecycle configuration, status, and instance information. This operation queries the current metadata of a single session and supports exact matching by functionName and qualifier for external system monitoring and debugging. Only sessions in the Active state can be queried.</para>
+        /// <para>Retrieves the details of a specified session, including the session ID, associated function, affinity type, lifecycle configuration, status, and instance information. This operation queries the current metadata of a single session, supports precise identification by functionName and qualifier for external system monitoring and debugging, and only supports querying sessions in the Active state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4546,7 +4546,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified session, including the session ID, associated function, affinity type, lifecycle configuration, status, and instance information. This operation queries the current metadata of a single session and supports exact matching by functionName and qualifier for external system monitoring and debugging. Only sessions in the Active state can be queried.</para>
+        /// <para>Retrieves the details of a specified session, including the session ID, associated function, affinity type, lifecycle configuration, status, and instance information. This operation queries the current metadata of a single session, supports precise identification by functionName and qualifier for external system monitoring and debugging, and only supports querying sessions in the Active state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4565,7 +4565,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified session, including the session ID, associated function, affinity type, lifecycle configuration, status, and instance information. This operation queries the current metadata of a single session and supports exact matching by functionName and qualifier for external system monitoring and debugging. Only sessions in the Active state can be queried.</para>
+        /// <para>Retrieves the details of a specified session, including the session ID, associated function, affinity type, lifecycle configuration, status, and instance information. This operation queries the current metadata of a single session, supports precise identification by functionName and qualifier for external system monitoring and debugging, and only supports querying sessions in the Active state.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6998,7 +6998,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists sessions in Active or Expired status under a specified function. Supports filtering by qualifier, status, and session ID, and supports paged query. Returns basic session properties for batch viewing of session distribution and status, facilitating operations management and external system integration, and improving session visibility and management capability.</para>
+        /// <para>Lists sessions in Active or Expired status under a specified function. Supports filtering by qualifier, status, and session ID, and supports paging. Returns basic session properties for batch viewing of session distribution and status, facilitating Service Monitoring and external system integration, and improving session visibility and management capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7060,7 +7060,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists sessions in Active or Expired status under a specified function. Supports filtering by qualifier, status, and session ID, and supports paged query. Returns basic session properties for batch viewing of session distribution and status, facilitating operations management and external system integration, and improving session visibility and management capability.</para>
+        /// <para>Lists sessions in Active or Expired status under a specified function. Supports filtering by qualifier, status, and session ID, and supports paging. Returns basic session properties for batch viewing of session distribution and status, facilitating Service Monitoring and external system integration, and improving session visibility and management capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7122,7 +7122,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists sessions in Active or Expired status under a specified function. Supports filtering by qualifier, status, and session ID, and supports paged query. Returns basic session properties for batch viewing of session distribution and status, facilitating operations management and external system integration, and improving session visibility and management capability.</para>
+        /// <para>Lists sessions in Active or Expired status under a specified function. Supports filtering by qualifier, status, and session ID, and supports paging. Returns basic session properties for batch viewing of session distribution and status, facilitating Service Monitoring and external system integration, and improving session visibility and management capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7141,7 +7141,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists sessions in Active or Expired status under a specified function. Supports filtering by qualifier, status, and session ID, and supports paged query. Returns basic session properties for batch viewing of session distribution and status, facilitating operations management and external system integration, and improving session visibility and management capability.</para>
+        /// <para>Lists sessions in Active or Expired status under a specified function. Supports filtering by qualifier, status, and session ID, and supports paging. Returns basic session properties for batch viewing of session distribution and status, facilitating Service Monitoring and external system integration, and improving session visibility and management capabilities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7801,7 +7801,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pauses an active session by persisting the state of its associated runtime environment and then releasing compute resources. After the call, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use this operation to interrupt long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
+        /// <para>Pauses an Active session by persisting the state of its associated execution environment and then releasing compute resources. After you invoke this operation, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use it to break long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7821,6 +7821,10 @@ namespace AlibabaCloud.SDK.FC20230330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemOnly))
+            {
+                query["fileSystemOnly"] = request.FileSystemOnly;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
                 query["qualifier"] = request.Qualifier;
@@ -7852,7 +7856,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pauses an active session by persisting the state of its associated runtime environment and then releasing compute resources. After the call, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use this operation to interrupt long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
+        /// <para>Pauses an Active session by persisting the state of its associated execution environment and then releasing compute resources. After you invoke this operation, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use it to break long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7872,6 +7876,10 @@ namespace AlibabaCloud.SDK.FC20230330
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemOnly))
+            {
+                query["fileSystemOnly"] = request.FileSystemOnly;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Qualifier))
             {
                 query["qualifier"] = request.Qualifier;
@@ -7903,7 +7911,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pauses an active session by persisting the state of its associated runtime environment and then releasing compute resources. After the call, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use this operation to interrupt long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
+        /// <para>Pauses an Active session by persisting the state of its associated execution environment and then releasing compute resources. After you invoke this operation, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use it to break long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7927,7 +7935,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Pauses an active session by persisting the state of its associated runtime environment and then releasing compute resources. After the call, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use this operation to interrupt long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
+        /// <para>Pauses an Active session by persisting the state of its associated execution environment and then releasing compute resources. After you invoke this operation, the session status changes to Paused, and the session no longer accepts function invocation requests. This operation retains the session configuration (such as SessionTTL) and SessionID. You can use it to break long-running tasks or save snapshots of development environments for cost optimization and state management. This operation applies to custom image functions configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8725,7 +8733,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests and route them to the restored instance. This operation applies to custom image functions that have HEADER_FIELD or GENERATED_COOKIE affinity types configured and session isolation enabled.</para>
+        /// <para>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests that are routed to the restored instance. This operation applies to custom image functions that are configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8780,7 +8788,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests and route them to the restored instance. This operation applies to custom image functions that have HEADER_FIELD or GENERATED_COOKIE affinity types configured and session isolation enabled.</para>
+        /// <para>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests that are routed to the restored instance. This operation applies to custom image functions that are configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8835,7 +8843,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests and route them to the restored instance. This operation applies to custom image functions that have HEADER_FIELD or GENERATED_COOKIE affinity types configured and session isolation enabled.</para>
+        /// <para>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests that are routed to the restored instance. This operation applies to custom image functions that are configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8859,7 +8867,7 @@ namespace AlibabaCloud.SDK.FC20230330
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests and route them to the restored instance. This operation applies to custom image functions that have HEADER_FIELD or GENERATED_COOKIE affinity types configured and session isolation enabled.</para>
+        /// <para>Resumes a session that is in the Paused state. The system quickly restores the session in a new execution environment based on the previously persisted state, returning it to the state before it was paused. After the session is successfully resumed, its status changes back to Active, and it can continue to accept function calling requests that are routed to the restored instance. This operation applies to custom image functions that are configured with the HEADER_FIELD or GENERATED_COOKIE affinity type and session isolation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9662,7 +9670,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a session in Active status, such as lifecycle settings including SessionTTLInSeconds and SessionIdleTimeoutInSeconds. The changes take effect immediately, and LastModifiedTime is automatically refreshed. You can use this operation to extend or shorten the session validity period for dynamic management without changing the execution environment bound to the session.</para>
+        /// <para>Updates the configuration of a session in Active state, such as lifecycle settings including SessionTTLInSeconds and SessionIdleTimeoutInSeconds. The update takes effect immediately, and LastModifiedTime is automatically refreshed. You can use this operation to extend or shorten the session validity period for dynamic management without changing the execution environment bound to the session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9709,7 +9717,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a session in Active status, such as lifecycle settings including SessionTTLInSeconds and SessionIdleTimeoutInSeconds. The changes take effect immediately, and LastModifiedTime is automatically refreshed. You can use this operation to extend or shorten the session validity period for dynamic management without changing the execution environment bound to the session.</para>
+        /// <para>Updates the configuration of a session in Active state, such as lifecycle settings including SessionTTLInSeconds and SessionIdleTimeoutInSeconds. The update takes effect immediately, and LastModifiedTime is automatically refreshed. You can use this operation to extend or shorten the session validity period for dynamic management without changing the execution environment bound to the session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9756,7 +9764,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a session in Active status, such as lifecycle settings including SessionTTLInSeconds and SessionIdleTimeoutInSeconds. The changes take effect immediately, and LastModifiedTime is automatically refreshed. You can use this operation to extend or shorten the session validity period for dynamic management without changing the execution environment bound to the session.</para>
+        /// <para>Updates the configuration of a session in Active state, such as lifecycle settings including SessionTTLInSeconds and SessionIdleTimeoutInSeconds. The update takes effect immediately, and LastModifiedTime is automatically refreshed. You can use this operation to extend or shorten the session validity period for dynamic management without changing the execution environment bound to the session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9775,7 +9783,7 @@ namespace AlibabaCloud.SDK.FC20230330
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the configuration of a session in Active status, such as lifecycle settings including SessionTTLInSeconds and SessionIdleTimeoutInSeconds. The changes take effect immediately, and LastModifiedTime is automatically refreshed. You can use this operation to extend or shorten the session validity period for dynamic management without changing the execution environment bound to the session.</para>
+        /// <para>Updates the configuration of a session in Active state, such as lifecycle settings including SessionTTLInSeconds and SessionIdleTimeoutInSeconds. The update takes effect immediately, and LastModifiedTime is automatically refreshed. You can use this operation to extend or shorten the session validity period for dynamic management without changing the execution environment bound to the session.</para>
         /// </summary>
         /// 
         /// <param name="request">

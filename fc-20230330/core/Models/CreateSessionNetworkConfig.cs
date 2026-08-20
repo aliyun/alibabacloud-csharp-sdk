@@ -25,6 +25,13 @@ namespace AlibabaCloud.SDK.FC20230330.Models
         [Validation(Required=false)]
         public string MaskRequestHost { get; set; }
 
+        /// <summary>
+        /// <para>The request transform rules configured by exact target host. Supports transform.headers and transform.headerValueReplacements.</para>
+        /// </summary>
+        [NameInMap("rules")]
+        [Validation(Required=false)]
+        public Dictionary<string, List<SessionNetworkRule>> Rules { get; set; }
+
     }
 
 }

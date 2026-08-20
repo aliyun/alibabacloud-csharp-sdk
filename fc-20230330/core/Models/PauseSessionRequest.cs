@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.FC20230330.Models
 {
     public class PauseSessionRequest : TeaModel {
+        [NameInMap("fileSystemOnly")]
+        [Validation(Required=false)]
+        public string FileSystemOnly { get; set; }
+
         /// <summary>
-        /// <para>The alias or version of the function associated with the session to save.</para>
+        /// <para>The function alias or version associated with the session ID to save.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aliasName1</para>
