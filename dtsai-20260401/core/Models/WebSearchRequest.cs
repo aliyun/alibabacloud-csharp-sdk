@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DtsAI20260401.Models
 {
     public class WebSearchRequest : TeaModel {
+        [NameInMap("AgentName")]
+        [Validation(Required=false)]
+        public string AgentName { get; set; }
+
         /// <summary>
         /// <para>The maximum number of results to return. Default value: 10. Valid values: 1 to 50.</para>
         /// 
@@ -40,6 +44,20 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        /// <summary>
+        /// <para>The list of domain names.</para>
+        /// </summary>
+        [NameInMap("UrlScopeDomains")]
+        [Validation(Required=false)]
+        public string UrlScopeDomains { get; set; }
+
+        /// <summary>
+        /// <para>The URL scope mode.</para>
+        /// </summary>
+        [NameInMap("UrlScopeMode")]
+        [Validation(Required=false)]
+        public string UrlScopeMode { get; set; }
 
     }
 

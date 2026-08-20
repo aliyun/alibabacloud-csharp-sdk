@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DtsAI20260401.Models
 {
     public class DescribeDocParserJobResultRequest : TeaModel {
+        [NameInMap("AgentName")]
+        [Validation(Required=false)]
+        public string AgentName { get; set; }
+
         /// <summary>
         /// <para>The document parsing task ID. You can obtain this ID by calling CreateDocParserJob.</para>
         /// <para>This parameter is required.</para>
@@ -30,6 +34,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResultType")]
+        [Validation(Required=false)]
+        public string ResultType { get; set; }
 
     }
 

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.DtsAI20260401.Models
 {
     public class WebFetchRequest : TeaModel {
+        [NameInMap("AgentName")]
+        [Validation(Required=false)]
+        public string AgentName { get; set; }
+
         /// <summary>
         /// <para>The output format. Valid values:</para>
         /// <list type="bullet">

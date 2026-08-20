@@ -60,14 +60,14 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The search result list.</para>
+        /// <para>The list of search results.</para>
         /// </summary>
         [NameInMap("SearchResult")]
         [Validation(Required=false)]
         public List<WebSearchResponseBodySearchResult> SearchResult { get; set; }
         public class WebSearchResponseBodySearchResult : TeaModel {
             /// <summary>
-            /// <para>The summary of the web page content.</para>
+            /// <para>The snippet of the web page content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Spring Boot makes it easy to create stand-alone, production-grade Spring based Applications.</para>

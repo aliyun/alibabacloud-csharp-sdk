@@ -9,18 +9,38 @@ using Tea;
 namespace AlibabaCloud.SDK.DtsAI20260401.Models
 {
     public class CreateDocParserJobAdvanceRequest : TeaModel {
+        [NameInMap("AgentName")]
+        [Validation(Required=false)]
+        public string AgentName { get; set; }
+
+        [NameInMap("AsrLanguage")]
+        [Validation(Required=false)]
+        public string AsrLanguage { get; set; }
+
+        [NameInMap("AudioClipOutput")]
+        [Validation(Required=false)]
+        public bool? AudioClipOutput { get; set; }
+
+        [NameInMap("AudioWindowSeconds")]
+        [Validation(Required=false)]
+        public int? AudioWindowSeconds { get; set; }
+
+        [NameInMap("ChunkSummary")]
+        [Validation(Required=false)]
+        public bool? ChunkSummary { get; set; }
+
         /// <summary>
         /// <para>The format of the input file. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>pdf</b>: PDF file.</para>
         /// </description></item>
-        /// <item><description><para><b>docx</b>: Word file in DOCX format.</para>
+        /// <item><description><para><b>docx</b>: Word file in docx format.</para>
         /// </description></item>
-        /// <item><description><para><b>doc</b>: Word file in DOC format.</para>
+        /// <item><description><para><b>doc</b>: Word file in doc format.</para>
         /// </description></item>
-        /// <item><description><para><b>pptx</b>: PPT file in PPTX format.</para>
+        /// <item><description><para><b>pptx</b>: PPT file in pptx format.</para>
         /// </description></item>
-        /// <item><description><para><b>ppt</b>: PPT file in PPT format.</para>
+        /// <item><description><para><b>ppt</b>: PPT file in ppt format.</para>
         /// </description></item>
         /// <item><description><para><b>txt</b>: plain text file.</para>
         /// </description></item>
@@ -56,7 +76,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         /// <summary>
         /// <para>The HTTP or HTTPS URL of the file to be parsed.</para>
         /// <remarks>
-        /// <para>The SDKs for various programming languages additionally provide a <c>CreateDocParserJobAdvance</c> method that supports passing a local file stream directly (such as InputStream in Java), without the need to upload the file to OSS and construct a FileUrl in advance. When using the Advance method, replace the <c>FileUrl</c> parameter (URL string) with the <c>FileUrlObject</c> parameter (file stream). All other request parameters remain unchanged. The SDK automatically performs the following operations:</para>
+        /// <para>SDKs for various languages provide an additional <c>CreateDocParserJobAdvance</c> method that supports passing a local file stream directly (such as InputStream in Java), without the need to upload the file to OSS and construct a FileUrl in advance. When using the Advance method, replace the <c>FileUrl</c> parameter (URL string) with the <c>FileUrlObject</c> parameter (file stream). All other request parameters remain unchanged. The SDK automatically performs the following operations:</para>
         /// <ol>
         /// <item><description>Obtains temporary OSS upload credentials.</description></item>
         /// <item><description>Uploads the file stream directly to OSS.</description></item>
@@ -71,9 +91,41 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [Validation(Required=false)]
         public Stream FileUrlObject { get; set; }
 
+        [NameInMap("FrameOutput")]
+        [Validation(Required=false)]
+        public bool? FrameOutput { get; set; }
+
+        [NameInMap("GlobalSummary")]
+        [Validation(Required=false)]
+        public bool? GlobalSummary { get; set; }
+
         [NameInMap("ImageMode")]
         [Validation(Required=false)]
         public string ImageMode { get; set; }
+
+        [NameInMap("ImageUnderstanding")]
+        [Validation(Required=false)]
+        public string ImageUnderstanding { get; set; }
+
+        [NameInMap("MediaChunkIntervalSeconds")]
+        [Validation(Required=false)]
+        public int? MediaChunkIntervalSeconds { get; set; }
+
+        [NameInMap("MediaChunkStrategy")]
+        [Validation(Required=false)]
+        public string MediaChunkStrategy { get; set; }
+
+        [NameInMap("MediaFramesPerMinute")]
+        [Validation(Required=false)]
+        public double? MediaFramesPerMinute { get; set; }
+
+        [NameInMap("MediaMaxFrameBudget")]
+        [Validation(Required=false)]
+        public int? MediaMaxFrameBudget { get; set; }
+
+        [NameInMap("MediaMinFrameBudget")]
+        [Validation(Required=false)]
+        public int? MediaMinFrameBudget { get; set; }
 
         /// <summary>
         /// <para>The OSS file URL.</para>
@@ -96,6 +148,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [Validation(Required=false)]
         public string OutputFormat { get; set; }
 
+        [NameInMap("ParseScene")]
+        [Validation(Required=false)]
+        public string ParseScene { get; set; }
+
         /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
@@ -106,6 +162,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
+
+        [NameInMap("ResponseMode")]
+        [Validation(Required=false)]
+        public string ResponseMode { get; set; }
 
         [NameInMap("ResultType")]
         [Validation(Required=false)]

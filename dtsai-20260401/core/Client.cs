@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) is supported.</description></item>
-        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -275,6 +275,26 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrLanguage))
+            {
+                query["AsrLanguage"] = request.AsrLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioClipOutput))
+            {
+                query["AudioClipOutput"] = request.AudioClipOutput;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioWindowSeconds))
+            {
+                query["AudioWindowSeconds"] = request.AudioWindowSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkSummary))
+            {
+                query["ChunkSummary"] = request.ChunkSummary;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFormat))
             {
                 query["FileFormat"] = request.FileFormat;
@@ -287,9 +307,41 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             {
                 query["FileUrl"] = request.FileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameOutput))
+            {
+                query["FrameOutput"] = request.FrameOutput;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSummary))
+            {
+                query["GlobalSummary"] = request.GlobalSummary;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageMode))
             {
                 query["ImageMode"] = request.ImageMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUnderstanding))
+            {
+                query["ImageUnderstanding"] = request.ImageUnderstanding;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaChunkIntervalSeconds))
+            {
+                query["MediaChunkIntervalSeconds"] = request.MediaChunkIntervalSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaChunkStrategy))
+            {
+                query["MediaChunkStrategy"] = request.MediaChunkStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaFramesPerMinute))
+            {
+                query["MediaFramesPerMinute"] = request.MediaFramesPerMinute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaMaxFrameBudget))
+            {
+                query["MediaMaxFrameBudget"] = request.MediaMaxFrameBudget;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaMinFrameBudget))
+            {
+                query["MediaMinFrameBudget"] = request.MediaMinFrameBudget;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssFileUrl))
             {
@@ -299,9 +351,17 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             {
                 query["OutputFormat"] = request.OutputFormat;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParseScene))
+            {
+                query["ParseScene"] = request.ParseScene;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseMode))
+            {
+                query["ResponseMode"] = request.ResponseMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultType))
             {
@@ -339,7 +399,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) is supported.</description></item>
-        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -357,6 +417,26 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrLanguage))
+            {
+                query["AsrLanguage"] = request.AsrLanguage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioClipOutput))
+            {
+                query["AudioClipOutput"] = request.AudioClipOutput;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AudioWindowSeconds))
+            {
+                query["AudioWindowSeconds"] = request.AudioWindowSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChunkSummary))
+            {
+                query["ChunkSummary"] = request.ChunkSummary;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFormat))
             {
                 query["FileFormat"] = request.FileFormat;
@@ -369,9 +449,41 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             {
                 query["FileUrl"] = request.FileUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FrameOutput))
+            {
+                query["FrameOutput"] = request.FrameOutput;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GlobalSummary))
+            {
+                query["GlobalSummary"] = request.GlobalSummary;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageMode))
             {
                 query["ImageMode"] = request.ImageMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageUnderstanding))
+            {
+                query["ImageUnderstanding"] = request.ImageUnderstanding;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaChunkIntervalSeconds))
+            {
+                query["MediaChunkIntervalSeconds"] = request.MediaChunkIntervalSeconds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaChunkStrategy))
+            {
+                query["MediaChunkStrategy"] = request.MediaChunkStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaFramesPerMinute))
+            {
+                query["MediaFramesPerMinute"] = request.MediaFramesPerMinute;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaMaxFrameBudget))
+            {
+                query["MediaMaxFrameBudget"] = request.MediaMaxFrameBudget;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaMinFrameBudget))
+            {
+                query["MediaMinFrameBudget"] = request.MediaMinFrameBudget;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssFileUrl))
             {
@@ -381,9 +493,17 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             {
                 query["OutputFormat"] = request.OutputFormat;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParseScene))
+            {
+                query["ParseScene"] = request.ParseScene;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseMode))
+            {
+                query["ResponseMode"] = request.ResponseMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultType))
             {
@@ -421,7 +541,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) is supported.</description></item>
-        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -447,7 +567,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) is supported.</description></item>
-        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
+        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -684,6 +804,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
@@ -691,6 +815,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultType))
+            {
+                query["ResultType"] = request.ResultType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -739,6 +867,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
@@ -746,6 +878,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultType))
+            {
+                query["ResultType"] = request.ResultType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -847,6 +983,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
@@ -901,6 +1041,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JobId))
             {
                 query["JobId"] = request.JobId;
@@ -1007,6 +1151,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormat))
             {
                 query["OutputFormat"] = request.OutputFormat;
@@ -1065,6 +1213,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputFormat))
             {
                 query["OutputFormat"] = request.OutputFormat;
@@ -1157,7 +1309,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
-        /// <item><description>Fees: Free of charge during the public preview. No fees are charged.</description></item>
+        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1175,6 +1327,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -1186,6 +1342,14 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlScopeDomains))
+            {
+                query["UrlScopeDomains"] = request.UrlScopeDomains;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlScopeMode))
+            {
+                query["UrlScopeMode"] = request.UrlScopeMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1215,7 +1379,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
-        /// <item><description>Fees: Free of charge during the public preview. No fees are charged.</description></item>
+        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1233,6 +1397,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 query["MaxResults"] = request.MaxResults;
@@ -1244,6 +1412,14 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlScopeDomains))
+            {
+                query["UrlScopeDomains"] = request.UrlScopeDomains;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UrlScopeMode))
+            {
+                query["UrlScopeMode"] = request.UrlScopeMode;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1273,7 +1449,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
-        /// <item><description>Fees: Free of charge during the public preview. No fees are charged.</description></item>
+        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1299,7 +1475,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
-        /// <item><description>Fees: Free of charge during the public preview. No fees are charged.</description></item>
+        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
         /// </list>
         /// </description>
         /// 
