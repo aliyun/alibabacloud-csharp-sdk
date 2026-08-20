@@ -8,13 +8,13 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 {
-    public class QueryAccountSafetyIncidentRequest : TeaModel {
+    public class QueryAccountSafetyIncidentShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The list of control action codes.</para>
         /// </summary>
         [NameInMap("ActionCodes")]
         [Validation(Required=false)]
-        public List<string> ActionCodes { get; set; }
+        public string ActionCodesShrink { get; set; }
 
         /// <summary>
         /// <para>The internationalization language. Default value: zh. Valid values:</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
         /// </summary>
         [NameInMap("CaseCodes")]
         [Validation(Required=false)]
-        public List<string> CaseCodes { get; set; }
+        public string CaseCodesShrink { get; set; }
 
         /// <summary>
         /// <para>The current page number. The value must be greater than 0.</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 
         [NameInMap("EventIds")]
         [Validation(Required=false)]
-        public List<string> EventIds { get; set; }
+        public string EventIdsShrink { get; set; }
 
         /// <summary>
         /// <para>The number of records per page. Valid values: 1 to 100.</para>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424.Models
 
         [NameInMap("Statuses")]
         [Validation(Required=false)]
-        public List<string> Statuses { get; set; }
+        public string StatusesShrink { get; set; }
 
     }
 

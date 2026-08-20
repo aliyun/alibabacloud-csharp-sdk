@@ -3558,7 +3558,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
         /// <para>Queries account security events.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// QueryAccountSafetyIncidentRequest
         /// </param>
         /// <param name="runtime">
@@ -3568,10 +3568,32 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
         /// <returns>
         /// QueryAccountSafetyIncidentResponse
         /// </returns>
-        public QueryAccountSafetyIncidentResponse QueryAccountSafetyIncidentWithOptions(QueryAccountSafetyIncidentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public QueryAccountSafetyIncidentResponse QueryAccountSafetyIncidentWithOptions(QueryAccountSafetyIncidentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryAccountSafetyIncidentShrinkRequest request = new QueryAccountSafetyIncidentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ActionCodes))
+            {
+                request.ActionCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ActionCodes, "ActionCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CaseCodes))
+            {
+                request.CaseCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CaseCodes, "CaseCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventIds))
+            {
+                request.EventIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventIds, "EventIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Statuses))
+            {
+                request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionCodesShrink))
+            {
+                query["ActionCodes"] = request.ActionCodesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
             {
                 query["AliyunLang"] = request.AliyunLang;
@@ -3580,6 +3602,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             {
                 query["CaseCode"] = request.CaseCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaseCodesShrink))
+            {
+                query["CaseCodes"] = request.CaseCodesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["Current"] = request.Current;
@@ -3587,6 +3613,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
             {
                 query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventIdsShrink))
+            {
+                query["EventIds"] = request.EventIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -3607,6 +3637,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusesShrink))
+            {
+                query["Statuses"] = request.StatusesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3632,7 +3666,7 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
         /// <para>Queries account security events.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// QueryAccountSafetyIncidentRequest
         /// </param>
         /// <param name="runtime">
@@ -3642,10 +3676,32 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
         /// <returns>
         /// QueryAccountSafetyIncidentResponse
         /// </returns>
-        public async Task<QueryAccountSafetyIncidentResponse> QueryAccountSafetyIncidentWithOptionsAsync(QueryAccountSafetyIncidentRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<QueryAccountSafetyIncidentResponse> QueryAccountSafetyIncidentWithOptionsAsync(QueryAccountSafetyIncidentRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            QueryAccountSafetyIncidentShrinkRequest request = new QueryAccountSafetyIncidentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ActionCodes))
+            {
+                request.ActionCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ActionCodes, "ActionCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.CaseCodes))
+            {
+                request.CaseCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.CaseCodes, "CaseCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EventIds))
+            {
+                request.EventIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EventIds, "EventIds", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Statuses))
+            {
+                request.StatusesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Statuses, "Statuses", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ActionCodesShrink))
+            {
+                query["ActionCodes"] = request.ActionCodesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliyunLang))
             {
                 query["AliyunLang"] = request.AliyunLang;
@@ -3654,6 +3710,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             {
                 query["CaseCode"] = request.CaseCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CaseCodesShrink))
+            {
+                query["CaseCodes"] = request.CaseCodesShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["Current"] = request.Current;
@@ -3661,6 +3721,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventId))
             {
                 query["EventId"] = request.EventId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventIdsShrink))
+            {
+                query["EventIds"] = request.EventIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -3681,6 +3745,10 @@ namespace AlibabaCloud.SDK.RiskManagement20260424
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusesShrink))
+            {
+                query["Statuses"] = request.StatusesShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
