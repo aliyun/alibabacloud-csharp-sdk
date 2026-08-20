@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
         [Validation(Required=false)]
         public string AccessId { get; set; }
 
+        [NameInMap("accessUrl")]
+        [Validation(Required=false)]
+        public string AccessUrl { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
