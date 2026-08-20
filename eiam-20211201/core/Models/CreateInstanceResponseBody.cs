@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance that is created.</para>
+        /// <para>The ID of the instance created by this API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>idaas_wj5htncdvoc4q5xxxxxxxxx</para>

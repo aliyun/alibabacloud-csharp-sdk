@@ -44,6 +44,16 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
+        /// <para>The service code of the managing cloud service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>kms</para>
+        /// </summary>
+        [NameInMap("ManagedServiceCode")]
+        [Validation(Required=false)]
+        public string ManagedServiceCode { get; set; }
+
+        /// <summary>
         /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>

@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The failover activation status of the instance. Valid values: active (activated) or inactive (not activated).</para>
+            /// <para>The instance failover activation status. Valid values: active (activated) or inactive (not activated).</para>
             /// 
             /// <b>Example:</b>
             /// <para>inactive</para>

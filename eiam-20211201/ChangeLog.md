@@ -1,3 +1,8 @@
+2026-08-20 Version: 1.26.2
+- Update API CreateInstance: add request parameters ClientToken.
+- Update API ListInstances: add request parameters ManagedServiceCode.
+
+
 2026-08-19 Version: 1.26.1
 - Update API CreateAuthorizationResource: add request parameters Condition.
 - Update API GetAuthorizationResource: add response parameters Body.AuthorizationResource.Condition.

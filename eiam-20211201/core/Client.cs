@@ -6593,7 +6593,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance based on which all capabilities of Identity as a Service (IDaaS) Enterprise Identity and Access Management (EIAM) are provided.</para>
+        /// <para>Creates an instance. All EIAM product capabilities are provided based on instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6610,6 +6610,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -6635,7 +6639,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance based on which all capabilities of Identity as a Service (IDaaS) Enterprise Identity and Access Management (EIAM) are provided.</para>
+        /// <para>Creates an instance. All EIAM product capabilities are provided based on instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6652,6 +6656,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
@@ -6677,7 +6685,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance based on which all capabilities of Identity as a Service (IDaaS) Enterprise Identity and Access Management (EIAM) are provided.</para>
+        /// <para>Creates an instance. All EIAM product capabilities are provided based on instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6695,7 +6703,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an instance based on which all capabilities of Identity as a Service (IDaaS) Enterprise Identity and Access Management (EIAM) are provided.</para>
+        /// <para>Creates an instance. All EIAM product capabilities are provided based on instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33562,6 +33570,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             {
                 query["InstanceIds"] = request.InstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedServiceCode))
+            {
+                query["ManagedServiceCode"] = request.ManagedServiceCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
                 query["PageNumber"] = request.PageNumber;
@@ -33627,6 +33639,10 @@ namespace AlibabaCloud.SDK.Eiam20211201
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
                 query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedServiceCode))
+            {
+                query["ManagedServiceCode"] = request.ManagedServiceCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
             {
