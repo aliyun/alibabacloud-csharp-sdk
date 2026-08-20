@@ -23,17 +23,24 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>Required when SourceType is set to UPLOAD. The OSS URL of the skill package to upload.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570</a></para>
+        /// <para><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator1.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator1.zip</a></para>
         /// </summary>
         [NameInMap("OssUrl")]
         [Validation(Required=false)]
         public string OssUrl { get; set; }
 
         /// <summary>
+        /// <para>The collection of connection types required by the skill.</para>
+        /// </summary>
+        [NameInMap("RequiredConnections")]
+        [Validation(Required=false)]
+        public List<string> RequiredConnections { get; set; }
+
+        /// <summary>
         /// <para>The description of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>11111</para>
+        /// <para>Create new skills.</para>
         /// </summary>
         [NameInMap("SkillDescription")]
         [Validation(Required=false)]
@@ -48,7 +55,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>06e9dca2-0ac9-4d2e-a965-e9db9c057e00</para>
+        /// <para>s-xxxxx</para>
         /// </summary>
         [NameInMap("SkillId")]
         [Validation(Required=false)]
@@ -65,7 +72,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>The name of the skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>111111</para>
+        /// <para>skill-creator</para>
         /// </summary>
         [NameInMap("SkillName")]
         [Validation(Required=false)]
@@ -75,7 +82,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>Required when SourceType is set to COPY. The ID of the public skill.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>s-111</para>
+        /// <para>s-xxxxx</para>
         /// </summary>
         [NameInMap("SourceSkillId")]
         [Validation(Required=false)]

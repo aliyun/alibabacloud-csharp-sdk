@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of skills.</para>
+        /// <para>The list of Skills.</para>
         /// </summary>
         [NameInMap("Skills")]
         [Validation(Required=false)]
         public List<ListSkillsResponseBodySkills> Skills { get; set; }
         public class ListSkillsResponseBodySkills : TeaModel {
             /// <summary>
-            /// <para>The time when the skill was created.</para>
+            /// <para>The time when the Skill was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-10T02:22:18Z</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the skill package.</para>
+            /// <para>The download URL for the Skill package.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip">https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip</a></para>
+            /// <para><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip</a></para>
             /// </summary>
             [NameInMap("DownloadUrl")]
             [Validation(Required=false)]
@@ -89,15 +89,32 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             }
 
             /// <summary>
-            /// <para>The skill description.</para>
+            /// <para>The set of connection types that the Skill depends on.</para>
+            /// </summary>
+            [NameInMap("RequiredConnections")]
+            [Validation(Required=false)]
+            public List<string> RequiredConnections { get; set; }
+
+            /// <summary>
+            /// <para>The security scan status of the source file.</para>
+            /// </summary>
+            [NameInMap("SecurityScanStatus")]
+            [Validation(Required=false)]
+            public string SecurityScanStatus { get; set; }
+
+            /// <summary>
+            /// <para>The Skill description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1111</para>
+            /// <para>Create new skills, modify and improve existing skills, and measure skill performance.</para>
             /// </summary>
             [NameInMap("SkillDescription")]
             [Validation(Required=false)]
             public string SkillDescription { get; set; }
 
+            /// <summary>
+            /// <para>The Skill display name.</para>
+            /// </summary>
             [NameInMap("SkillDisplayName")]
             [Validation(Required=false)]
             public string SkillDisplayName { get; set; }
@@ -106,41 +123,41 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <para>Skill ID</para>
             /// 
             /// <b>Example:</b>
-            /// <para>s-111111</para>
+            /// <para>s-xxxxx</para>
             /// </summary>
             [NameInMap("SkillId")]
             [Validation(Required=false)]
             public string SkillId { get; set; }
 
             /// <summary>
-            /// <para>The set of skill labels.</para>
+            /// <para>The set of Skill labels.</para>
             /// </summary>
             [NameInMap("SkillLabels")]
             [Validation(Required=false)]
             public List<string> SkillLabels { get; set; }
 
             /// <summary>
-            /// <para>The skill name.</para>
+            /// <para>The Skill name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>reimbursement-print</para>
+            /// <para>skill-creator</para>
             /// </summary>
             [NameInMap("SkillName")]
             [Validation(Required=false)]
             public string SkillName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the SkillSpace to which the skill belongs.</para>
+            /// <para>The ID of the SkillSpace to which the Skill belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ss-11111</para>
+            /// <para>ss-xxxxx</para>
             /// </summary>
             [NameInMap("SkillSpaceId")]
             [Validation(Required=false)]
             public string SkillSpaceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the skill was last updated.</para>
+            /// <para>The time when the Skill was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-03T22:58:52Z</para>

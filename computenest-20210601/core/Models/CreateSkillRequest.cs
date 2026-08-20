@@ -23,17 +23,24 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>The OSS URL of the Skill package to upload. This parameter is required when SourceType is set to UPLOAD.</para>
         /// 
         /// <b>Example:</b>
-        /// <para><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/30516570</a></para>
+        /// <para><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip</a></para>
         /// </summary>
         [NameInMap("OssUrl")]
         [Validation(Required=false)]
         public string OssUrl { get; set; }
 
         /// <summary>
+        /// <para>The set of connection types that the Skill depends on.</para>
+        /// </summary>
+        [NameInMap("RequiredConnections")]
+        [Validation(Required=false)]
+        public List<string> RequiredConnections { get; set; }
+
+        /// <summary>
         /// <para>The Skill description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>11111</para>
+        /// <para>Create new skills, modify and improve existing skills, and measure skill performance</para>
         /// </summary>
         [NameInMap("SkillDescription")]
         [Validation(Required=false)]
@@ -44,7 +51,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string SkillDisplayName { get; set; }
 
         /// <summary>
-        /// <para>The Skill labels.</para>
+        /// <para>The set of Skill labels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;category:frontend-development&quot;]</para>
@@ -57,7 +64,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>The Skill name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>11111</para>
+        /// <para>skill-creator</para>
         /// </summary>
         [NameInMap("SkillName")]
         [Validation(Required=false)]
@@ -68,7 +75,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ss-111111</para>
+        /// <para>ss-xxxxx</para>
         /// </summary>
         [NameInMap("SkillSpaceId")]
         [Validation(Required=false)]
@@ -78,14 +85,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>The public Skill ID. This parameter is required when SourceType is set to COPY.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>s-11111</para>
+        /// <para>s-xxxxx</para>
         /// </summary>
         [NameInMap("SourceSkillId")]
         [Validation(Required=false)]
         public string SourceSkillId { get; set; }
 
         /// <summary>
-        /// <para>The source type used when creating the Skill.</para>
+        /// <para>The source type for creating the Skill.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

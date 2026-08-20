@@ -19,19 +19,19 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <summary>
             /// <para>The filter name. You can specify one or more names for the query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>SkillId: the skill ID. Exact match.</para>
+            /// <item><description><para>SkillId: the Skill ID. Exact match.</para>
             /// </description></item>
             /// <item><description><para>SkillSpaceId: the SkillSpace ID. Exact match.</para>
             /// </description></item>
-            /// <item><description><para>SkillName: the skill name.</para>
+            /// <item><description><para>SkillName: the Skill name.</para>
             /// </description></item>
             /// <item><description><para>MatchType: the match type that controls how SkillName is matched. Valid values: exact, prefix, and fuzzy.</para>
             /// </description></item>
-            /// <item><description><para>SkillType: the skill type. Valid values: official and custom.</para>
+            /// <item><description><para>SkillType: the Skill type. Valid values: official and custom.</para>
             /// </description></item>
-            /// <item><description><para>Keyword: keyword match for the skill name or skill description. Fuzzy match.</para>
+            /// <item><description><para>Keyword: keyword match for the Skill name or Skill description. Fuzzy match.</para>
             /// </description></item>
-            /// <item><description><para>SkillLabels: the skill labels. Fuzzy match.</para>
+            /// <item><description><para>SkillLabels: the Skill labels. Fuzzy match.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the download URL of the skill package.</para>
+        /// <para>Specifies whether to include the download URL for the Skill package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

@@ -10,20 +10,20 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListSkillSpacesRequest : TeaModel {
         /// <summary>
-        /// <para>The query filters.</para>
+        /// <para>The filter.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListSkillSpacesRequestFilter> Filter { get; set; }
         public class ListSkillSpacesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter name. You can specify one or more filter names. Valid values:</para>
+            /// <para>The filter name. You can specify one or more names for the query. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>SkillSpaceId</c>: The SkillSpace ID. This filter performs an exact match.</para>
+            /// <item><description><para>SkillSpaceId: the SkillSpace ID. Exact match.</para>
             /// </description></item>
-            /// <item><description><para><c>SkillSpaceName</c>: The SkillSpace name.</para>
+            /// <item><description><para>SkillSpaceName: the SkillSpace name.</para>
             /// </description></item>
-            /// <item><description><para><c>MatchType</c>: The match type for the <c>SkillSpaceName</c> filter. Valid values: <c>exact</c>, <c>prefix</c>, and <c>fuzzy</c>.</para>
+            /// <item><description><para>MatchType: the match type that controls the matching behavior of SkillSpace. Valid values: exact, prefix, and fuzzy.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The filter values. You can specify 1 to 10 values.</para>
+            /// <para>The list of filter values. Valid values of N: 1 to 10.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The number of entries to return per page. Maximum value: 100. Default value: 20.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results. To retrieve the next page, set this parameter to the <c>NextToken</c> value from the previous response.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BBBAAfu+XtuBE55iRLHEYYuojI4=</para>

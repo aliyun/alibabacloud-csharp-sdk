@@ -16,6 +16,12 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         [Validation(Required=false)]
         public List<string> OperationTypes { get; set; }
 
+        /// <summary>
+        /// <para>The parameters required to check the deployment permissions of the service instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{\&quot;EnablePublicIp\&quot;:null,\&quot;DeploymentMode\&quot;:\&quot;ExistingECS\&quot;,\&quot;ExistingInstanceId\&quot;:\&quot;i-bp1cg4t5o9kol5tdiw1q\&quot;,\&quot;RegionId\&quot;:\&quot;cn-hangzhou\&quot;,\&quot;InternetChargeType\&quot;:\&quot;PayByTraffic\&quot;}</para>
+        /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public Dictionary<string, object> Parameters { get; set; }
@@ -56,7 +62,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>The template name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Template 1</para>
+        /// <para>模板1</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

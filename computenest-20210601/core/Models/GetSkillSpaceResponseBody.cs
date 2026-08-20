@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string CreateTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>13FE89A5-C036-56BF-A0FF-A31C59819FD7</para>
@@ -30,30 +30,30 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The description of the SkillSpace.</para>
+        /// <para>The SkillSpace description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1111111</para>
+        /// <para>All-in-one office toolkit — generate reports, process data, manage files, and streamline workflows effortlessly.</para>
         /// </summary>
         [NameInMap("SkillSpaceDescription")]
         [Validation(Required=false)]
         public string SkillSpaceDescription { get; set; }
 
         /// <summary>
-        /// <para>The ID of the SkillSpace.</para>
+        /// <para>SkillSpace ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ss-11111</para>
+        /// <para>ss-xxxxx</para>
         /// </summary>
         [NameInMap("SkillSpaceId")]
         [Validation(Required=false)]
         public string SkillSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the SkillSpace.</para>
+        /// <para>The SkillSpace name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1111111</para>
+        /// <para>office-toolkit-skills</para>
         /// </summary>
         [NameInMap("SkillSpaceName")]
         [Validation(Required=false)]

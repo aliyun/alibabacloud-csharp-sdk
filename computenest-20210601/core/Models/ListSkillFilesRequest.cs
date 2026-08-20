@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
 {
     public class ListSkillFilesRequest : TeaModel {
         /// <summary>
-        /// <para>The filter conditions.</para>
+        /// <para>The filter.</para>
         /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public List<ListSkillFilesRequestFilter> Filter { get; set; }
         public class ListSkillFilesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>No filter names are currently supported.</para>
+            /// <para>No supported filter names are available.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>111111</para>
+            /// <para>xxx</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The filter values. You can specify 1 to 10 values.</para>
+            /// <para>The list of filter values. Valid values of N: 1 to 10.</para>
             /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return per page. Valid values: 1 to 100. Default: 20.</para>
+        /// <para>The number of entries per page in a paging query. Maximum value: 100. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that was returned from a previous call to this operation. Use this token to retrieve the next page of results.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAVz7BQqj2xtiNSC3d3RAD38=</para>
@@ -56,11 +56,11 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Skill.</para>
+        /// <para>Skill ID</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>06e9dca2-0ac9-4d2e-a965-e9db9c057e00</para>
+        /// <para>s-xxxxx</para>
         /// </summary>
         [NameInMap("SkillId")]
         [Validation(Required=false)]

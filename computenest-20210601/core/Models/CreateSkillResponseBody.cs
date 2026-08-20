@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         /// <para>Skill ID</para>
         /// 
         /// <b>Example:</b>
-        /// <para>s-051j4ot2aerr5dyc4</para>
+        /// <para>s-xxxxx</para>
         /// </summary>
         [NameInMap("SkillId")]
         [Validation(Required=false)]

@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// </description></item>
             /// <item><description><para>MatchType: the match type that controls how SkillName is matched. Valid values: exact, prefix, and fuzzy.</para>
             /// </description></item>
-            /// <item><description><para>Keyword: keyword match for the skill name or skill description. Fuzzy match.</para>
+            /// <item><description><para>Keyword: keyword match against the skill name or skill description. Fuzzy match.</para>
             /// </description></item>
             /// <item><description><para>SkillLabels: the skill label set. Fuzzy match.</para>
             /// </description></item>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the download URL of the skill package.</para>
+        /// <para>Specifies whether to include the download URL for the skill package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

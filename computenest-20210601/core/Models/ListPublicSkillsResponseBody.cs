@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
         public List<ListPublicSkillsResponseBodySkills> Skills { get; set; }
         public class ListPublicSkillsResponseBodySkills : TeaModel {
             /// <summary>
-            /// <para>The time when the skill was created.</para>
+            /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-09-11T02:18:42Z</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the skill package.</para>
+            /// <para>The download URL for the skill package.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip">https://testts-1.oss-cn-beijing.aliyuncs.com/app/yyb_9.1.1.zip</a></para>
+            /// <para><a href="https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip">https://embedding-pic.oss-cn-beijing-internal.aliyuncs.com/skill-creator.zip</a></para>
             /// </summary>
             [NameInMap("DownloadUrl")]
             [Validation(Required=false)]
@@ -89,15 +89,32 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             }
 
             /// <summary>
+            /// <para>The set of connection types that the skill depends on.</para>
+            /// </summary>
+            [NameInMap("RequiredConnections")]
+            [Validation(Required=false)]
+            public List<string> RequiredConnections { get; set; }
+
+            /// <summary>
+            /// <para>The security scan status of the source file.</para>
+            /// </summary>
+            [NameInMap("SecurityScanStatus")]
+            [Validation(Required=false)]
+            public string SecurityScanStatus { get; set; }
+
+            /// <summary>
             /// <para>The skill description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>11111</para>
+            /// <para>Create new skills, modify and improve existing skills, and measure skill performance.</para>
             /// </summary>
             [NameInMap("SkillDescription")]
             [Validation(Required=false)]
             public string SkillDescription { get; set; }
 
+            /// <summary>
+            /// <para>The skill display name.</para>
+            /// </summary>
             [NameInMap("SkillDisplayName")]
             [Validation(Required=false)]
             public string SkillDisplayName { get; set; }
@@ -106,7 +123,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <para>Skill ID</para>
             /// 
             /// <b>Example:</b>
-            /// <para>af7e49d9-277f-454a-afc5-1513d41cac31</para>
+            /// <para>s-xxxxx</para>
             /// </summary>
             [NameInMap("SkillId")]
             [Validation(Required=false)]
@@ -123,7 +140,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <para>The skill name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ziptest</para>
+            /// <para>skill-creator</para>
             /// </summary>
             [NameInMap("SkillName")]
             [Validation(Required=false)]
@@ -133,14 +150,14 @@ namespace AlibabaCloud.SDK.ComputeNest20210601.Models
             /// <para>The ID of the SkillSpace to which the skill belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ss-1111111</para>
+            /// <para>ss-xxxxx</para>
             /// </summary>
             [NameInMap("SkillSpaceId")]
             [Validation(Required=false)]
             public string SkillSpaceId { get; set; }
 
             /// <summary>
-            /// <para>The time when the skill was last updated.</para>
+            /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-03T22:58:52Z</para>

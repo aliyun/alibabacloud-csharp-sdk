@@ -1430,7 +1430,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1450,6 +1450,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
             {
                 query["OssUrl"] = request.OssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequiredConnections))
+            {
+                query["RequiredConnections"] = request.RequiredConnections;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillDescription))
             {
@@ -1512,7 +1516,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1532,6 +1536,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
             {
                 query["OssUrl"] = request.OssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequiredConnections))
+            {
+                query["RequiredConnections"] = request.RequiredConnections;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillDescription))
             {
@@ -1594,7 +1602,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1618,7 +1626,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1641,8 +1649,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider has enabled the modification feature and configured its parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1699,8 +1707,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider has enabled the modification feature and configured its parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1757,8 +1765,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider has enabled the modification feature and configured its parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1781,8 +1789,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider has enabled the modification feature and configured its parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1964,13 +1972,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a skill space.</para>
+        /// <para>Creates a SkillSpace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider has enabled the modify configuration feature and set the required parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2022,13 +2030,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a skill space.</para>
+        /// <para>Creates a SkillSpace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider has enabled the modify configuration feature and set the required parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2080,13 +2088,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a skill space.</para>
+        /// <para>Creates a SkillSpace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider has enabled the modify configuration feature and set the required parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2104,13 +2112,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a skill space.</para>
+        /// <para>Creates a SkillSpace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider has enabled the modify configuration feature and set the required parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2408,13 +2416,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a skill.</para>
+        /// <para>Deletes a Skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider has enabled the modification feature and configured the modification parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2462,13 +2470,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a skill.</para>
+        /// <para>Deletes a Skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider has enabled the modification feature and configured the modification parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2516,13 +2524,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a skill.</para>
+        /// <para>Deletes a Skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider has enabled the modification feature and configured the modification parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2540,13 +2548,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a skill.</para>
+        /// <para>Deletes a Skill.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider has enabled the modification feature and configured the modification parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2564,13 +2572,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a SkillSpace.</para>
+        /// <para>Deletes a Skill workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider enabled the modify configuration feature and set the required parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2618,13 +2626,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a SkillSpace.</para>
+        /// <para>Deletes a Skill workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider enabled the modify configuration feature and set the required parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2672,13 +2680,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a SkillSpace.</para>
+        /// <para>Deletes a Skill workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider enabled the modify configuration feature and set the required parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2696,13 +2704,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a SkillSpace.</para>
+        /// <para>Deletes a Skill workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider enabled the modify configuration feature and set the required parameters during service creation.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Confirm that the service provider has enabled the Upgrade/Downgrade feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4562,7 +4570,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4610,7 +4618,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4658,7 +4666,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4682,7 +4690,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4980,13 +4988,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a SkillSpace.</para>
+        /// <para>Queries the details of a SkillSpace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider has enabled the modification feature and configured the modification parameters for the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5028,13 +5036,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a SkillSpace.</para>
+        /// <para>Queries the details of a SkillSpace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider has enabled the modification feature and configured the modification parameters for the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5076,13 +5084,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a SkillSpace.</para>
+        /// <para>Queries the details of a SkillSpace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider has enabled the modification feature and configured the modification parameters for the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5100,13 +5108,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a SkillSpace.</para>
+        /// <para>Queries the details of a SkillSpace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure that the service provider has enabled the modification feature and configured the modification parameters for the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5546,7 +5554,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5606,7 +5614,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5666,7 +5674,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5690,7 +5698,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Confirm that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7092,13 +7100,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the files of a specified Skill.</para>
+        /// <para>Retrieves the list of skill files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Before you call this operation, ensure that the service provider has enabled the modification feature and configured the modification parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7152,13 +7160,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the files of a specified Skill.</para>
+        /// <para>Retrieves the list of skill files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Before you call this operation, ensure that the service provider has enabled the modification feature and configured the modification parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7212,13 +7220,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the files of a specified Skill.</para>
+        /// <para>Retrieves the list of skill files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Before you call this operation, ensure that the service provider has enabled the modification feature and configured the modification parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7236,13 +7244,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the files of a specified Skill.</para>
+        /// <para>Retrieves the list of skill files.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Before you call this operation, ensure that the service provider has enabled the modification feature and configured the modification parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7265,8 +7273,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider enabled the upgrade feature and configured its parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7321,8 +7329,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider enabled the upgrade feature and configured its parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7377,8 +7385,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider enabled the upgrade feature and configured its parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7401,8 +7409,8 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h3>Prerequisites</h3>
-        /// <para>Ensure the service provider enabled the upgrade feature and configured its parameters when creating the service.</para>
+        /// <h3>Before you begin</h3>
+        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7420,13 +7428,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of skills.</para>
+        /// <para>Queries a list of Skills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7480,13 +7488,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of skills.</para>
+        /// <para>Queries a list of Skills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7540,13 +7548,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of skills.</para>
+        /// <para>Queries a list of Skills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7564,13 +7572,13 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of skills.</para>
+        /// <para>Queries a list of Skills.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9738,7 +9746,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9758,6 +9766,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
             {
                 query["OssUrl"] = request.OssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequiredConnections))
+            {
+                query["RequiredConnections"] = request.RequiredConnections;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillDescription))
             {
@@ -9820,7 +9832,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9840,6 +9852,10 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OssUrl))
             {
                 query["OssUrl"] = request.OssUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RequiredConnections))
+            {
+                query["RequiredConnections"] = request.RequiredConnections;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillDescription))
             {
@@ -9902,7 +9918,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9926,7 +9942,7 @@ namespace AlibabaCloud.SDK.ComputeNest20210601
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h3>Before you begin</h3>
-        /// <para>Make sure that the service provider has enabled the specification change feature and configured the specification change parameters when creating the service.</para>
+        /// <para>Make sure the service provider has enabled the specification change feature and completed the specification change parameter settings when creating the service.</para>
         /// </description>
         /// 
         /// <param name="request">
