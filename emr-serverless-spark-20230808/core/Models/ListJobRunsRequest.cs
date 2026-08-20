@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Creator { get; set; }
 
         /// <summary>
-        /// <para>The time range when the job run ended.</para>
+        /// <para>The end time range of the job.</para>
         /// </summary>
         [NameInMap("endTime")]
         [Validation(Required=false)]
         public ListJobRunsRequestEndTime EndTime { get; set; }
         public class ListJobRunsRequestEndTime : TeaModel {
             /// <summary>
-            /// <para>The end of the time range.</para>
+            /// <para>The end of the end time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710432000000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The start of the time range.</para>
+            /// <para>The beginning of the end time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709740800000</para>
@@ -58,8 +58,12 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
         }
 
+        [NameInMap("groupByState")]
+        [Validation(Required=false)]
+        public bool? GroupByState { get; set; }
+
         /// <summary>
-        /// <para>Specifies whether the job is a workflow task.</para>
+        /// <para>Specifies whether the job is a workflow job.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -69,7 +73,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string IsWorkflow { get; set; }
 
         /// <summary>
-        /// <para>The deployment ID of the streaming job.</para>
+        /// <para>The job ID of the streaming job deployment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>jd-b6d003f1930f****</para>
@@ -79,7 +83,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string JobRunDeploymentId { get; set; }
 
         /// <summary>
-        /// <para>The job run ID.</para>
+        /// <para>The job ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>j-xxx</para>
@@ -89,7 +93,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string JobRunId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. The maximum value is 100.</para>
+        /// <para>The maximum number of records to retrieve in a single request. Maximum value: 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -99,7 +103,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The minimum runtime of the job run, in milliseconds.</para>
+        /// <para>The minimum execution duration of the job, in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60000</para>
@@ -119,7 +123,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The token that specifies the position from which to start the next read.</para>
+        /// <para>The pagination token that marks the position from which to start reading.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C89568980</para>
@@ -139,7 +143,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource queue on which the Spark job runs.</para>
+        /// <para>The name of the resource queue on which the Spark job runs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_queue</para>
@@ -159,14 +163,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RuntimeConfigs { get; set; }
 
         /// <summary>
-        /// <para>The time range when the job run started.</para>
+        /// <para>The start time range of the job.</para>
         /// </summary>
         [NameInMap("startTime")]
         [Validation(Required=false)]
         public ListJobRunsRequestStartTime StartTime { get; set; }
         public class ListJobRunsRequestStartTime : TeaModel {
             /// <summary>
-            /// <para>The end of the time range.</para>
+            /// <para>The end of the start time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1710432000000</para>
@@ -176,7 +180,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>The start of the time range.</para>
+            /// <para>The beginning of the start time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1709740800000</para>
@@ -188,7 +192,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The job run states.</para>
+        /// <para>The job states.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;Running&quot;,&quot;Submitted&quot;]</para>

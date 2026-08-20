@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListLivyComputeTokenResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 1000000 indicates that the request was successful. Other values indicate that the request failed. See the message parameter for failure details.</para>
+        /// <para>The response code. A value of 1000000 indicates success. Any other value indicates failure. You can view the specific error description in the message field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<ListLivyComputeTokenResponseBodyDataTokens> Tokens { get; set; }
             public class ListLivyComputeTokenResponseBodyDataTokens : TeaModel {
                 /// <summary>
-                /// <para>The time when the token was created.</para>
+                /// <para>The creation time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1749456094000</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The user who created the token.</para>
+                /// <para>The creator of the token.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>alice</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Createdby { get; set; }
 
                 /// <summary>
-                /// <para>The time when the token expires.</para>
+                /// <para>The expiration time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1749456994000</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The time when the token was last used.</para>
+                /// <para>The last used time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1749456098000</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Token { get; set; }
 
                 /// <summary>
-                /// <para>The token ID.</para>
+                /// <para>Token ID。</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>lctk-xxxxxxxxxxx</para>

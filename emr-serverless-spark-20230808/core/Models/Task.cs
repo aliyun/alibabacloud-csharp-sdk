@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<string> Archives { get; set; }
 
         /// <summary>
-        /// <para>The temporary URL to access the resource file.</para>
+        /// <para>The temporary URL for accessing the resource file.</para>
         /// </summary>
         [NameInMap("artifactUrl")]
         [Validation(Required=false)]
@@ -32,14 +32,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string BizId { get; set; }
 
         /// <summary>
-        /// <para>The business ID of the folder.</para>
+        /// <para>The folder business ID.</para>
         /// </summary>
         [NameInMap("categoryBizId")]
         [Validation(Required=false)]
         public string CategoryBizId { get; set; }
 
         /// <summary>
-        /// <para>The content of the Spark job.</para>
+        /// <para>The Spark job content.</para>
         /// </summary>
         [NameInMap("content")]
         [Validation(Required=false)]
@@ -54,14 +54,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? Creator { get; set; }
 
         /// <summary>
-        /// <para>The information for directly uploading files to Object Storage Service (OSS).</para>
+        /// <para>The OSS direct upload credentials.</para>
         /// </summary>
         [NameInMap("credential")]
         [Validation(Required=false)]
         public TaskCredential Credential { get; set; }
         public class TaskCredential : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID.</para>
+            /// <para>access id</para>
             /// </summary>
             [NameInMap("accessId")]
             [Validation(Required=false)]
@@ -96,14 +96,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The policy.</para>
+            /// <para>policy</para>
             /// </summary>
             [NameInMap("policy")]
             [Validation(Required=false)]
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The security token.</para>
+            /// <para>security token</para>
             /// </summary>
             [NameInMap("securityToken")]
             [Validation(Required=false)]
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string DefaultDatabase { get; set; }
 
         /// <summary>
-        /// <para>The default queue ID for the task.</para>
+        /// <para>The default queue ID of the task.</para>
         /// </summary>
         [NameInMap("defaultResourceQueueId")]
         [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<string> ExtraArtifactIds { get; set; }
 
         /// <summary>
-        /// <para>The custom parameters for the spark-submit command.</para>
+        /// <para>The custom Spark submit configuration parameters.</para>
         /// </summary>
         [NameInMap("extraSparkSubmitParams")]
         [Validation(Required=false)]
@@ -182,14 +182,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<string> Files { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether to enable fusion.</para>
+        /// <para>Indicates whether the fusion switch is enabled.</para>
         /// </summary>
         [NameInMap("fusion")]
         [Validation(Required=false)]
         public bool? Fusion { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was created.</para>
+        /// <para>The creation time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("gmtCreated")]
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string GmtCreated { get; set; }
 
         /// <summary>
-        /// <para>The time when the task was last modified.</para>
+        /// <para>The last modification time.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("gmtModified")]
@@ -205,14 +205,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string GmtModified { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task has been changed since the last commit.</para>
+        /// <para>Indicates whether the task has been changed since the last submission.</para>
         /// </summary>
         [NameInMap("hasChanged")]
         [Validation(Required=false)]
         public bool? HasChanged { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the task has been committed.</para>
+        /// <para>Indicates whether the task has been submitted.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("hasCommited")]
@@ -238,14 +238,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string KernelId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource queue that was used for the last run.</para>
+        /// <para>The ID of the resource queue used in the last run.</para>
         /// </summary>
         [NameInMap("lastRunResourceQueueId")]
         [Validation(Required=false)]
         public string LastRunResourceQueueId { get; set; }
 
         /// <summary>
-        /// <para>The UID of the user who last updated the task.</para>
+        /// <para>The UID of the last modifier.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("modifier")]
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public Dictionary<string, string> Params { get; set; }
 
         /// <summary>
-        /// <para>The PySpark dependency pyfiles.</para>
+        /// <para>The Spark PySpark dependency pyfiles.</para>
         /// </summary>
         [NameInMap("pyFiles")]
         [Validation(Required=false)]
@@ -433,7 +433,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public List<SparkConf> SparkConf { get; set; }
 
         /// <summary>
-        /// <para>The number of cores for the Spark driver.</para>
+        /// <para>The number of Spark driver cores.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkDriverCores")]
@@ -441,7 +441,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? SparkDriverCores { get; set; }
 
         /// <summary>
-        /// <para>The memory of the Spark driver.</para>
+        /// <para>The Spark driver memory.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkDriverMemory")]
@@ -449,14 +449,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? SparkDriverMemory { get; set; }
 
         /// <summary>
-        /// <para>The entrypoint of the Spark main class.</para>
+        /// <para>The Spark main class entry point.</para>
         /// </summary>
         [NameInMap("sparkEntrypoint")]
         [Validation(Required=false)]
         public string SparkEntrypoint { get; set; }
 
         /// <summary>
-        /// <para>The number of cores for the Spark executor.</para>
+        /// <para>The number of Spark executor cores.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkExecutorCores")]
@@ -464,7 +464,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? SparkExecutorCores { get; set; }
 
         /// <summary>
-        /// <para>The memory of the Spark executor.</para>
+        /// <para>The Spark executor memory.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkExecutorMemory")]
@@ -472,7 +472,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public long? SparkExecutorMemory { get; set; }
 
         /// <summary>
-        /// <para>The log level for Spark.</para>
+        /// <para>The Spark log level.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("sparkLogLevel")]
@@ -488,7 +488,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SparkLogPath { get; set; }
 
         /// <summary>
-        /// <para>The spark-submit statement.</para>
+        /// <para>The Spark submit task submission statement.</para>
         /// </summary>
         [NameInMap("sparkSubmitClause")]
         [Validation(Required=false)]
@@ -503,14 +503,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string SparkVersion { get; set; }
 
         /// <summary>
-        /// <para>The task tags.</para>
+        /// <para>The task labels.</para>
         /// </summary>
         [NameInMap("tags")]
         [Validation(Required=false)]
         public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The task timeout duration.</para>
+        /// <para>The task timeout period.</para>
         /// </summary>
         [NameInMap("timeout")]
         [Validation(Required=false)]

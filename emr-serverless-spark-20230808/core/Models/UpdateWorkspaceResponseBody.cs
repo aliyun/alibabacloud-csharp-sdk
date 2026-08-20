@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public UpdateWorkspaceResponseBodyData Data { get; set; }
         public class UpdateWorkspaceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the order.</para>
+            /// <para>The order ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1005565802416783361</para>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>979071171373334529</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>

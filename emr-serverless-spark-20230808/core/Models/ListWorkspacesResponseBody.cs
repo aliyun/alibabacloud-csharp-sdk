@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class ListWorkspacesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The maximum number of records to retrieve at one time.</para>
+        /// <para>The maximum number of records to retrieve in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Next page token.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of records.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Workspace list.</para>
+        /// <para>The list of workspaces.</para>
         /// </summary>
         [NameInMap("workspaces")]
         [Validation(Required=false)]
         public List<ListWorkspacesResponseBodyWorkspaces> Workspaces { get; set; }
         public class ListWorkspacesResponseBodyWorkspaces : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to enable auto-renewal (required for the prepaid billing method).</para>
+            /// <para>Indicates whether auto-renewal is enabled. This parameter is required for the prepaid type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>Auto-renewal duration (Required for the prepaid billing method).</para>
+            /// <para>The auto-renewal duration. This parameter is required for the prepaid type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? AutoRenewPeriod { get; set; }
 
             /// <summary>
-            /// <para>Auto-renewal period (Required for the prepaid billing method).</para>
+            /// <para>The auto-renewal epoch unit. This parameter is required for the prepaid type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenewPeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>Workspace creation time.</para>
+            /// <para>The time when the workspace was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1684115879955</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>DLF Catalog information.</para>
+            /// <para>The DLF Catalog information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DlfCatalogId { get; set; }
 
             /// <summary>
-            /// <para>Bind a dlf type.</para>
+            /// <para>The DLF binding type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.0</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string DlfType { get; set; }
 
             /// <summary>
-            /// <para>The subscription period quantity is required for the prepaid billing method.</para>
+            /// <para>The subscription period quantity. This parameter is required for the prepaid type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public int? Duration { get; set; }
 
             /// <summary>
-            /// <para>Workspace release time.</para>
+            /// <para>The time when the workspace was released.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1687103999999</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public long? EndTime { get; set; }
 
             /// <summary>
-            /// <para>Failure reason.</para>
+            /// <para>The failure reason.</para>
             /// 
             /// <b>Example:</b>
             /// <para>out of stock</para>
@@ -146,9 +146,6 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string FailReason { get; set; }
 
-            /// <summary>
-            /// <para>The GPU specifications.</para>
-            /// </summary>
             [NameInMap("gpuSpec")]
             [Validation(Required=false)]
             public List<string> GpuSpec { get; set; }
@@ -158,7 +155,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public List<string> IpWhiteList { get; set; }
 
             /// <summary>
-            /// <para>Subscription period (Required for the prepaid billing method).</para>
+            /// <para>The subscription period unit. This parameter is required for the prepaid type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>YEAR, MONTH, WEEK, DAY, HOUR, MINUTE</para>
@@ -168,7 +165,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string PaymentDurationUnit { get; set; }
 
             /// <summary>
-            /// <para>Payment status.</para>
+            /// <para>The payment status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PAID/UNPAID</para>
@@ -178,7 +175,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string PaymentStatus { get; set; }
 
             /// <summary>
-            /// <para>Billing method.</para>
+            /// <para>The payment type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PayAsYouGo or Subscription</para>
@@ -188,14 +185,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>Information about prepaid resource quotas.</para>
+            /// <para>The prepaid resource quota information.</para>
             /// </summary>
             [NameInMap("prePaidQuota")]
             [Validation(Required=false)]
             public ListWorkspacesResponseBodyWorkspacesPrePaidQuota PrePaidQuota { get; set; }
             public class ListWorkspacesResponseBodyWorkspacesPrePaidQuota : TeaModel {
                 /// <summary>
-                /// <para>The amount of resources that are currently allocated.</para>
+                /// <para>The amount of resources currently allocated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;cpu\&quot;:\&quot;1\&quot;,\&quot;memory\&quot;:\&quot;4Gi\&quot;,\&quot;cu\&quot;:\&quot;1\&quot;}</para>
@@ -205,12 +202,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string AllocatedResource { get; set; }
 
                 /// <summary>
-                /// <para>Whether auto-renewal is enabled for the resource.</para>
+                /// <para>Indicates whether auto-renewal is enabled for the resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>true: Enables auto-renewal. The resource is automatically renewed after it expires.</para>
-                /// </description></item>
-                /// <item><description><para>false: Auto-renewal is disabled. The resource is stopped upon expiration.</para>
-                /// </description></item>
+                /// <item><description>true: Auto-renewal is enabled. The resource is automatically renewed upon expiration.</description></item>
+                /// <item><description>false: Auto-renewal is not enabled. The resource stops being available upon expiration.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -221,7 +216,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public bool? AutoRenewal { get; set; }
 
                 /// <summary>
-                /// <para>The creation time of the resource quota.</para>
+                /// <para>The time when the resource quota was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1745683200000</para>
@@ -231,7 +226,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The expiration time of the resource quota.</para>
+                /// <para>The time when the resource quota expires.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1740537153000</para>
@@ -241,7 +236,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public long? ExpireTime { get; set; }
 
                 /// <summary>
-                /// <para>The resource instance ID that is associated with the quota.</para>
+                /// <para>The instance ID of the resource associated with the quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>i-abc12345</para>
@@ -251,7 +246,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>The maximum amount of resources.</para>
+                /// <para>The maximum amount of resources available.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;cpu\&quot;:\&quot;1\&quot;,\&quot;memory\&quot;:\&quot;4Gi\&quot;,\&quot;cu\&quot;:\&quot;1\&quot;}</para>
@@ -261,21 +256,19 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string MaxResource { get; set; }
 
                 /// <summary>
-                /// <para>The order ID.</para>
+                /// <b>Example:</b>
+                /// <para>23464687565</para>
                 /// </summary>
                 [NameInMap("orderId")]
                 [Validation(Required=false)]
                 public string OrderId { get; set; }
 
                 /// <summary>
-                /// <para>The payment status of the current resource. The possible values are as follows:</para>
+                /// <para>The payment status of the current resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para>NORMAL: Active.</para>
-                /// </description></item>
-                /// <item><description><para>WAIT_FOR_EXPIRE: Will expire.</para>
-                /// </description></item>
-                /// <item><description><para>EXPIRED: The item has expired.</para>
-                /// </description></item>
+                /// <item><description>NORMAL: Active.</description></item>
+                /// <item><description>WAIT_FOR_EXPIRE: About to expire.</description></item>
+                /// <item><description>EXPIRED: Expired.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -286,7 +279,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string PaymentStatus { get; set; }
 
                 /// <summary>
-                /// <para>The amount of resources currently in use.</para>
+                /// <para>The amount of resources currently used.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{\&quot;cpu\&quot;:\&quot;0\&quot;,\&quot;memory\&quot;:\&quot;0Gi\&quot;,\&quot;cu\&quot;:\&quot;0\&quot;}</para>
@@ -297,8 +290,106 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 
             }
 
+            [NameInMap("prePaidQuotaGpu")]
+            [Validation(Required=false)]
+            public List<ListWorkspacesResponseBodyWorkspacesPrePaidQuotaGpu> PrePaidQuotaGpu { get; set; }
+            public class ListWorkspacesResponseBodyWorkspacesPrePaidQuotaGpu : TeaModel {
+                [NameInMap("autoRenewal")]
+                [Validation(Required=false)]
+                public bool? AutoRenewal { get; set; }
+
+                [NameInMap("cpuCoreCount")]
+                [Validation(Required=false)]
+                public string CpuCoreCount { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1782292672000</para>
+                /// </summary>
+                [NameInMap("createTime")]
+                [Validation(Required=false)]
+                public long? CreateTime { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1782292772000</para>
+                /// </summary>
+                [NameInMap("expireTime")]
+                [Validation(Required=false)]
+                public long? ExpireTime { get; set; }
+
+                [NameInMap("gpuAmount")]
+                [Validation(Required=false)]
+                public int? GpuAmount { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>4</para>
+                /// </summary>
+                [NameInMap("gpuMachineNum")]
+                [Validation(Required=false)]
+                public int? GpuMachineNum { get; set; }
+
+                [NameInMap("gpuMemorySize")]
+                [Validation(Required=false)]
+                public long? GpuMemorySize { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>8</para>
+                /// </summary>
+                [NameInMap("gpuNum")]
+                [Validation(Required=false)]
+                public int? GpuNum { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>ecs.gn7i-c8g1.2xlarge</para>
+                /// </summary>
+                [NameInMap("gpuSpec")]
+                [Validation(Required=false)]
+                public string GpuSpec { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>w-xxxxxxxxx-gpu-quota-xxxx</para>
+                /// </summary>
+                [NameInMap("instanceId")]
+                [Validation(Required=false)]
+                public string InstanceId { get; set; }
+
+                [NameInMap("instanceTypeFamily")]
+                [Validation(Required=false)]
+                public string InstanceTypeFamily { get; set; }
+
+                [NameInMap("instanceTypeId")]
+                [Validation(Required=false)]
+                public string InstanceTypeId { get; set; }
+
+                [NameInMap("memorySize")]
+                [Validation(Required=false)]
+                public string MemorySize { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>2534863936</para>
+                /// </summary>
+                [NameInMap("orderId")]
+                [Validation(Required=false)]
+                public string OrderId { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>NORMAL</para>
+                /// </summary>
+                [NameInMap("paymentStatus")]
+                [Validation(Required=false)]
+                public string PaymentStatus { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>Region ID.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -308,7 +399,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>Workspace release reason.</para>
+            /// <para>The reason why the workspace was released.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SERVICE_RELEASE</para>
@@ -318,8 +409,6 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ReleaseType { get; set; }
 
             /// <summary>
-            /// <para>The resource group ID.</para>
-            /// 
             /// <b>Example:</b>
             /// <para>rg-xxxxxxxxxx</para>
             /// </summary>
@@ -328,7 +417,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Resource specification.</para>
+            /// <para>The resource specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100cu</para>
@@ -338,14 +427,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ResourceSpec { get; set; }
 
             /// <summary>
-            /// <para>Information about changes to the workspace status.</para>
+            /// <para>The state change information of the workspace.</para>
             /// </summary>
             [NameInMap("stateChangeReason")]
             [Validation(Required=false)]
             public ListWorkspacesResponseBodyWorkspacesStateChangeReason StateChangeReason { get; set; }
             public class ListWorkspacesResponseBodyWorkspacesStateChangeReason : TeaModel {
                 /// <summary>
-                /// <para>Error code.</para>
+                /// <para>The error code.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -355,7 +444,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
                 public string Code { get; set; }
 
                 /// <summary>
-                /// <para>Error message.</para>
+                /// <para>The error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Success</para>
@@ -367,7 +456,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>OSS path.</para>
+            /// <para>The OSS path.</para>
             /// 
             /// <b>Example:</b>
             /// <para>spark-result</para>
@@ -376,23 +465,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public string Storage { get; set; }
 
-            /// <summary>
-            /// <para>The tags of the workspace.</para>
-            /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
             public List<ListWorkspacesResponseBodyWorkspacesTags> Tags { get; set; }
             public class ListWorkspacesResponseBodyWorkspacesTags : TeaModel {
-                /// <summary>
-                /// <para>The tag key.</para>
-                /// </summary>
                 [NameInMap("tagKey")]
                 [Validation(Required=false)]
                 public string TagKey { get; set; }
 
-                /// <summary>
-                /// <para>The tag value.</para>
-                /// </summary>
                 [NameInMap("tagValue")]
                 [Validation(Required=false)]
                 public string TagValue { get; set; }
@@ -400,7 +480,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             }
 
             /// <summary>
-            /// <para>Workspace ID.</para>
+            /// <para>Workspace ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>w-******</para>
@@ -410,7 +490,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string WorkspaceId { get; set; }
 
             /// <summary>
-            /// <para>Workspace name.</para>
+            /// <para>The workspace name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Spark batch workspace-1</para>
@@ -420,7 +500,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string WorkspaceName { get; set; }
 
             /// <summary>
-            /// <para>Workspace status.</para>
+            /// <para>The workspace status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>STARTING,RUNNING,TERMINATED</para>

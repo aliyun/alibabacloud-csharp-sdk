@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class SubmitRayJobResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>DD6B1B2A-5837-5237-ABE4-FF0C8944</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Ray Job ID。</para>
+        /// 
         /// <b>Example:</b>
         /// <para>rj-k7nm8ahl5te4tg91</para>
         /// </summary>

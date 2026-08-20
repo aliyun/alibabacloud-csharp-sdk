@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class EditWorkspaceQueueRequest : TeaModel {
         /// <summary>
-        /// <para>The environment types.</para>
+        /// <para>The queue environment type.</para>
         /// </summary>
         [NameInMap("environments")]
         [Validation(Required=false)]
@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         [Validation(Required=false)]
         public List<string> GpuSpec { get; set; }
 
+        [NameInMap("instanceId")]
+        [Validation(Required=false)]
+        public string InstanceId { get; set; }
+
         /// <summary>
         /// <para>The resource specifications.</para>
         /// </summary>
@@ -28,7 +32,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public EditWorkspaceQueueRequestResourceSpec ResourceSpec { get; set; }
         public class EditWorkspaceQueueRequestResourceSpec : TeaModel {
             /// <summary>
-            /// <para>The maximum resource capacity of the Workspace Queue.</para>
+            /// <para>The resource upper limit of the workspace queue.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -45,6 +49,10 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             [Validation(Required=false)]
             public int? Gpu { get; set; }
 
+            [NameInMap("gpuMachineNum")]
+            [Validation(Required=false)]
+            public int? GpuMachineNum { get; set; }
+
             /// <summary>
             /// <b>Example:</b>
             /// <para>0.5</para>
@@ -56,7 +64,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         }
 
         /// <summary>
-        /// <para>The Workspace ID.</para>
+        /// <para>The workspace ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>w-975bcfda9625****</para>
@@ -66,7 +74,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the Workspace Queue.</para>
+        /// <para>The workspace queue name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev_queue</para>

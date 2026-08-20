@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
 {
     public class UpdateWorkspaceRequest : TeaModel {
         /// <summary>
-        /// <para>The resource cap for the workspace.</para>
+        /// <para>The upper limit of workspace resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Cu { get; set; }
 
         /// <summary>
-        /// <para>The number of GPUs.</para>
+        /// <para>The number of GPU cards.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,15 +30,58 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public int? Gpu { get; set; }
 
         /// <summary>
-        /// <para>The GPU specifications.</para>
+        /// <para>The GPU instance type.</para>
         /// </summary>
         [NameInMap("gpuSpec")]
         [Validation(Required=false)]
         public List<string> GpuSpec { get; set; }
 
-        /// <summary>
-        /// <para>The IP whitelist.</para>
-        /// </summary>
+        [NameInMap("gpuSubscription")]
+        [Validation(Required=false)]
+        public UpdateWorkspaceRequestGpuSubscription GpuSubscription { get; set; }
+        public class UpdateWorkspaceRequestGpuSubscription : TeaModel {
+            [NameInMap("autoRenew")]
+            [Validation(Required=false)]
+            public bool? AutoRenew { get; set; }
+
+            [NameInMap("duration")]
+            [Validation(Required=false)]
+            public int? Duration { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>8</para>
+            /// </summary>
+            [NameInMap("gpuMachineNum")]
+            [Validation(Required=false)]
+            public int? GpuMachineNum { get; set; }
+
+            [NameInMap("instanceId")]
+            [Validation(Required=false)]
+            public string InstanceId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ecs.gn7i-c8g1.2xlarge</para>
+            /// </summary>
+            [NameInMap("instanceTypeId")]
+            [Validation(Required=false)]
+            public string InstanceTypeId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>BUY</para>
+            /// </summary>
+            [NameInMap("operation")]
+            [Validation(Required=false)]
+            public string Operation { get; set; }
+
+            [NameInMap("paymentDurationUnit")]
+            [Validation(Required=false)]
+            public string PaymentDurationUnit { get; set; }
+
+        }
+
         [NameInMap("ipWhiteList")]
         [Validation(Required=false)]
         public List<string> IpWhiteList { get; set; }
@@ -54,14 +97,14 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Details for converting a pay-as-you-go workspace to a subscription plan.</para>
+        /// <para>The information for converting from pay-as-you-go to subscription.</para>
         /// </summary>
         [NameInMap("subscription")]
         [Validation(Required=false)]
         public UpdateWorkspaceRequestSubscription Subscription { get; set; }
         public class UpdateWorkspaceRequestSubscription : TeaModel {
             /// <summary>
-            /// <para>Indicates whether to enable auto-renewal. Required for subscription plans.</para>
+            /// <para>Specifies whether to enable auto-renewal. This parameter is required for the pre-paid billing type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -71,7 +114,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The auto-renewal duration. Required for subscription plans.</para>
+            /// <para>The auto-renewal duration. This parameter is required for the pre-paid billing type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -81,7 +124,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenewPeriod { get; set; }
 
             /// <summary>
-            /// <para>The unit for the auto-renewal duration. Required for subscription plans.</para>
+            /// <para>The auto-renewal period unit. This parameter is required for the pre-paid billing type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MONTH</para>
@@ -91,7 +134,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string AutoRenewPeriodUnit { get; set; }
 
             /// <summary>
-            /// <para>A unique, case-sensitive token to ensure request idempotence.</para>
+            /// <para>The idempotency token.</para>
             /// 
             /// <b>Example:</b>
             /// <para>my-token-asxkxxxxxxx</para>
@@ -101,7 +144,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string ClientToken { get; set; }
 
             /// <summary>
-            /// <para>The subscription duration. This parameter is required for subscription plans.</para>
+            /// <para>The number of subscription periods. This parameter is required for the pre-paid billing type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1799</para>
@@ -111,7 +154,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string Duration { get; set; }
 
             /// <summary>
-            /// <para>The unit of the subscription period.</para>
+            /// <para>The subscription period unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MONTH</para>
@@ -121,7 +164,7 @@ namespace AlibabaCloud.SDK.Emr_serverless_spark20230808.Models
             public string PaymentDurationUnit { get; set; }
 
             /// <summary>
-            /// <para>The queues to convert to the subscription plan.</para>
+            /// <para>The list of running queues to be converted.</para>
             /// </summary>
             [NameInMap("queue")]
             [Validation(Required=false)]
