@@ -8,9 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
-    public class GlobalHotelQueryOrderRequest : TeaModel {
+    public class TicketCheckRefundRequest : TeaModel {
         /// <summary>
-        /// <para>The distributor account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,34 +20,32 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? AccountNo { get; set; }
 
         /// <summary>
-        /// <para>The external order number. At least one of ExternalOrderNo and OrderNo is required.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>EXT_ORDER_001</para>
+        /// <para>123456</para>
         /// </summary>
-        [NameInMap("ExternalOrderNo")]
+        [NameInMap("DistributorOrderId")]
         [Validation(Required=false)]
-        public string ExternalOrderNo { get; set; }
+        public string DistributorOrderId { get; set; }
 
         /// <summary>
-        /// <para>The sales order number. At least one of OrderNo and ExternalOrderNo is required.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>SO202606290001</para>
+        /// <para>计划有变</para>
         /// </summary>
-        [NameInMap("OrderNo")]
+        [NameInMap("RefundReason")]
         [Validation(Required=false)]
-        public string OrderNo { get; set; }
+        public string RefundReason { get; set; }
 
         /// <summary>
-        /// <para>TracerId</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>TracerId</para>
+        /// <para>档期冲突</para>
         /// </summary>
-        [NameInMap("TracerId")]
+        [NameInMap("RefundRemark")]
         [Validation(Required=false)]
-        public string TracerId { get; set; }
+        public string RefundRemark { get; set; }
 
     }
 

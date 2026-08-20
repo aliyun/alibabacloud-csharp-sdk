@@ -17,6 +17,8 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public GlobalHotelCancelOrRefundResponseBodyData Data { get; set; }
         public class GlobalHotelCancelOrRefundResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The after-sales refund order number. This parameter is returned when an after-sales refund is processed and can be used for polling the refund status. This parameter is null when a cancellation is processed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RF202606290001</para>
             /// </summary>
@@ -25,7 +27,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public string RefundOrderNo { get; set; }
 
             /// <summary>
-            /// <para>The total penalty amount on the sales side.</para>
+            /// <para>The total penalty amount on the sales side. This parameter is returned when an after-sales refund is processed.</para>
             /// </summary>
             [NameInMap("TotalPenaltyAmount")]
             [Validation(Required=false)]
@@ -64,7 +66,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             }
 
             /// <summary>
-            /// <para>The total refund amount.</para>
+            /// <para>The total refund amount. This parameter is returned when an after-sales refund is processed. The value equals the total sales price minus the total penalty amount.</para>
             /// </summary>
             [NameInMap("TotalRefundAmount")]
             [Validation(Required=false)]
@@ -145,7 +147,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

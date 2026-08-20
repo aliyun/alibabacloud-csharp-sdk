@@ -8,9 +8,8 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
-    public class GlobalHotelQueryOrderRequest : TeaModel {
+    public class TicketPageQueryProductRequest : TeaModel {
         /// <summary>
-        /// <para>The distributor account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,34 +20,28 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public long? AccountNo { get; set; }
 
         /// <summary>
-        /// <para>The external order number. At least one of ExternalOrderNo and OrderNo is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>EXT_ORDER_001</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("ExternalOrderNo")]
+        [NameInMap("PageNo")]
         [Validation(Required=false)]
-        public string ExternalOrderNo { get; set; }
+        public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The sales order number. At least one of OrderNo and ExternalOrderNo is required.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>SO202606290001</para>
+        /// <para>10</para>
         /// </summary>
-        [NameInMap("OrderNo")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string OrderNo { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>TracerId</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>TracerId</para>
+        /// <para>123456</para>
         /// </summary>
-        [NameInMap("TracerId")]
+        [NameInMap("ScenicId")]
         [Validation(Required=false)]
-        public string TracerId { get; set; }
+        public long? ScenicId { get; set; }
 
     }
 

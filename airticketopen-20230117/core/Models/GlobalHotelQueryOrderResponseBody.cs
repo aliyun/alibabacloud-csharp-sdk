@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public List<GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties> Penalties { get; set; }
                     public class GlobalHotelQueryOrderResponseBodyDataItemInfoCancelPolicyPenalties : TeaModel {
                         /// <summary>
-                        /// <para>The currency code (present only for AMOUNT type penalties).</para>
+                        /// <para>The currency code (present only for AMOUNT type).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>USD</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string PenaltyType { get; set; }
 
                         /// <summary>
-                        /// <para>The penalty value (percentage, amount, or number of nights).</para>
+                        /// <para>The penalty value (percentage/amount/number of nights).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>50</para>

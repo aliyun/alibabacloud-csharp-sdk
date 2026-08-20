@@ -402,7 +402,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             /// <para>The rate plan name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Breakfast included</para>
+            /// <para>Breakfast Included</para>
             /// </summary>
             [NameInMap("RatePlanName")]
             [Validation(Required=false)]
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public List<DataHotelsValueOffersCancelPolicyPenalties> Penalties { get; set; }
                 public class DataHotelsValueOffersCancelPolicyPenalties : TeaModel {
                     /// <summary>
-                    /// <para>The effective start time (UTC millisecond timestamp).</para>
+                    /// <para>The effective start time as a UTC millisecond timestamp.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1672531200000</para>
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Start { get; set; }
 
                     /// <summary>
-                    /// <para>The effective end time (UTC millisecond timestamp).</para>
+                    /// <para>The effective end time as a UTC millisecond timestamp.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1672617600000</para>
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string PenaltyValue { get; set; }
 
                     /// <summary>
-                    /// <para>The currency code. This field has a value only when the penalty type is AMOUNT.</para>
+                    /// <para>The currency code. This field is present only when the penalty type is AMOUNT.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>USD</para>

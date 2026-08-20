@@ -1,3 +1,19 @@
+2026-08-20 Version: 6.1.0
+- Support API TicketApplyRefund.
+- Support API TicketCancelOrder.
+- Support API TicketCheckRefund.
+- Support API TicketCreateOrder.
+- Support API TicketPageQueryProduct.
+- Support API TicketPageQueryScenic.
+- Support API TicketPayOrder.
+- Support API TicketQueryOrder.
+- Support API TicketQueryPriceStock.
+- Support API TicketQueryProduct.
+- Support API TicketQueryRefundOrder.
+- Support API TicketQueryScenic.
+- Support API TicketQueryShelf.
+
+
 2026-08-12 Version: 6.0.2
 - Generated csharp 2023-01-17 for airticketOpen.
 

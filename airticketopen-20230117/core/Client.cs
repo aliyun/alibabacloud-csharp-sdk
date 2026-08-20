@@ -4345,6 +4345,1948 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>申请退款。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketApplyRefundRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketApplyRefundResponse
+        /// </returns>
+        public TicketApplyRefundResponse TicketApplyRefundWithOptions(TicketApplyRefundRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundReason))
+            {
+                body["RefundReason"] = request.RefundReason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundRemark))
+            {
+                body["RefundRemark"] = request.RefundRemark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketApplyRefund",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketApplyRefund",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketApplyRefundResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>申请退款。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketApplyRefundRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketApplyRefundResponse
+        /// </returns>
+        public async Task<TicketApplyRefundResponse> TicketApplyRefundWithOptionsAsync(TicketApplyRefundRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundReason))
+            {
+                body["RefundReason"] = request.RefundReason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundRemark))
+            {
+                body["RefundRemark"] = request.RefundRemark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketApplyRefund",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketApplyRefund",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketApplyRefundResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>申请退款。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketApplyRefundRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketApplyRefundResponse
+        /// </returns>
+        public TicketApplyRefundResponse TicketApplyRefund(TicketApplyRefundRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketApplyRefundWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>申请退款。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketApplyRefundRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketApplyRefundResponse
+        /// </returns>
+        public async Task<TicketApplyRefundResponse> TicketApplyRefundAsync(TicketApplyRefundRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketApplyRefundWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketCancelOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCancelOrderResponse
+        /// </returns>
+        public TicketCancelOrderResponse TicketCancelOrderWithOptions(TicketCancelOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketCancelOrder",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketCancelOrder",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketCancelOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketCancelOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCancelOrderResponse
+        /// </returns>
+        public async Task<TicketCancelOrderResponse> TicketCancelOrderWithOptionsAsync(TicketCancelOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketCancelOrder",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketCancelOrder",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketCancelOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketCancelOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCancelOrderResponse
+        /// </returns>
+        public TicketCancelOrderResponse TicketCancelOrder(TicketCancelOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketCancelOrderWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>取消订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketCancelOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCancelOrderResponse
+        /// </returns>
+        public async Task<TicketCancelOrderResponse> TicketCancelOrderAsync(TicketCancelOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketCancelOrderWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查退款。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketCheckRefundRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCheckRefundResponse
+        /// </returns>
+        public TicketCheckRefundResponse TicketCheckRefundWithOptions(TicketCheckRefundRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundReason))
+            {
+                body["RefundReason"] = request.RefundReason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundRemark))
+            {
+                body["RefundRemark"] = request.RefundRemark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketCheckRefund",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketCheckRefund",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketCheckRefundResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查退款。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketCheckRefundRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCheckRefundResponse
+        /// </returns>
+        public async Task<TicketCheckRefundResponse> TicketCheckRefundWithOptionsAsync(TicketCheckRefundRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundReason))
+            {
+                body["RefundReason"] = request.RefundReason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RefundRemark))
+            {
+                body["RefundRemark"] = request.RefundRemark;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketCheckRefund",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketCheckRefund",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketCheckRefundResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查退款。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketCheckRefundRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCheckRefundResponse
+        /// </returns>
+        public TicketCheckRefundResponse TicketCheckRefund(TicketCheckRefundRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketCheckRefundWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>检查退款。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketCheckRefundRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCheckRefundResponse
+        /// </returns>
+        public async Task<TicketCheckRefundResponse> TicketCheckRefundAsync(TicketCheckRefundRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketCheckRefundWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TicketCreateOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCreateOrderResponse
+        /// </returns>
+        public TicketCreateOrderResponse TicketCreateOrderWithOptions(TicketCreateOrderRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TicketCreateOrderShrinkRequest request = new TicketCreateOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Contact))
+            {
+                request.ContactShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Contact, "Contact", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OrderProduct))
+            {
+                request.OrderProductShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OrderProduct, "OrderProduct", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TotalDistributionPrice))
+            {
+                request.TotalDistributionPriceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TotalDistributionPrice, "TotalDistributionPrice", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Travelers))
+            {
+                request.TravelersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Travelers, "Travelers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactShrink))
+            {
+                body["Contact"] = request.ContactShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderProductShrink))
+            {
+                body["OrderProduct"] = request.OrderProductShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quantity))
+            {
+                body["Quantity"] = request.Quantity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalDistributionPriceShrink))
+            {
+                body["TotalDistributionPrice"] = request.TotalDistributionPriceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TravelersShrink))
+            {
+                body["Travelers"] = request.TravelersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketCreateOrder",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketCreateOrder",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketCreateOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// TicketCreateOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCreateOrderResponse
+        /// </returns>
+        public async Task<TicketCreateOrderResponse> TicketCreateOrderWithOptionsAsync(TicketCreateOrderRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            TicketCreateOrderShrinkRequest request = new TicketCreateOrderShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Contact))
+            {
+                request.ContactShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Contact, "Contact", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.OrderProduct))
+            {
+                request.OrderProductShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.OrderProduct, "OrderProduct", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TotalDistributionPrice))
+            {
+                request.TotalDistributionPriceShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TotalDistributionPrice, "TotalDistributionPrice", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Travelers))
+            {
+                request.TravelersShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Travelers, "Travelers", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContactShrink))
+            {
+                body["Contact"] = request.ContactShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderProductShrink))
+            {
+                body["OrderProduct"] = request.OrderProductShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Quantity))
+            {
+                body["Quantity"] = request.Quantity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TotalDistributionPriceShrink))
+            {
+                body["TotalDistributionPrice"] = request.TotalDistributionPriceShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TravelersShrink))
+            {
+                body["Travelers"] = request.TravelersShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketCreateOrder",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketCreateOrder",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketCreateOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketCreateOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCreateOrderResponse
+        /// </returns>
+        public TicketCreateOrderResponse TicketCreateOrder(TicketCreateOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketCreateOrderWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketCreateOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketCreateOrderResponse
+        /// </returns>
+        public async Task<TicketCreateOrderResponse> TicketCreateOrderAsync(TicketCreateOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketCreateOrderWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询门票产品。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPageQueryProductRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPageQueryProductResponse
+        /// </returns>
+        public TicketPageQueryProductResponse TicketPageQueryProductWithOptions(TicketPageQueryProductRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScenicId))
+            {
+                body["ScenicId"] = request.ScenicId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketPageQueryProduct",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketPageQueryProduct",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketPageQueryProductResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询门票产品。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPageQueryProductRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPageQueryProductResponse
+        /// </returns>
+        public async Task<TicketPageQueryProductResponse> TicketPageQueryProductWithOptionsAsync(TicketPageQueryProductRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScenicId))
+            {
+                body["ScenicId"] = request.ScenicId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketPageQueryProduct",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketPageQueryProduct",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketPageQueryProductResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询门票产品。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPageQueryProductRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPageQueryProductResponse
+        /// </returns>
+        public TicketPageQueryProductResponse TicketPageQueryProduct(TicketPageQueryProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketPageQueryProductWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询门票产品。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPageQueryProductRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPageQueryProductResponse
+        /// </returns>
+        public async Task<TicketPageQueryProductResponse> TicketPageQueryProductAsync(TicketPageQueryProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketPageQueryProductWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询景区。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPageQueryScenicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPageQueryScenicResponse
+        /// </returns>
+        public TicketPageQueryScenicResponse TicketPageQueryScenicWithOptions(TicketPageQueryScenicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketPageQueryScenic",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketPageQueryScenic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketPageQueryScenicResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询景区。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPageQueryScenicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPageQueryScenicResponse
+        /// </returns>
+        public async Task<TicketPageQueryScenicResponse> TicketPageQueryScenicWithOptionsAsync(TicketPageQueryScenicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                body["PageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketPageQueryScenic",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketPageQueryScenic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketPageQueryScenicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询景区。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPageQueryScenicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPageQueryScenicResponse
+        /// </returns>
+        public TicketPageQueryScenicResponse TicketPageQueryScenic(TicketPageQueryScenicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketPageQueryScenicWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>分页查询景区。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPageQueryScenicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPageQueryScenicResponse
+        /// </returns>
+        public async Task<TicketPageQueryScenicResponse> TicketPageQueryScenicAsync(TicketPageQueryScenicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketPageQueryScenicWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支付订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPayOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPayOrderResponse
+        /// </returns>
+        public TicketPayOrderResponse TicketPayOrderWithOptions(TicketPayOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketPayOrder",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketPayOrder",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketPayOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支付订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPayOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPayOrderResponse
+        /// </returns>
+        public async Task<TicketPayOrderResponse> TicketPayOrderWithOptionsAsync(TicketPayOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketPayOrder",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketPayOrder",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketPayOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支付订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPayOrderResponse
+        /// </returns>
+        public TicketPayOrderResponse TicketPayOrder(TicketPayOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketPayOrderWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>支付订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketPayOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketPayOrderResponse
+        /// </returns>
+        public async Task<TicketPayOrderResponse> TicketPayOrderAsync(TicketPayOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketPayOrderWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryOrderResponse
+        /// </returns>
+        public TicketQueryOrderResponse TicketQueryOrderWithOptions(TicketQueryOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryOrder",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryOrder",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryOrderResponse
+        /// </returns>
+        public async Task<TicketQueryOrderResponse> TicketQueryOrderWithOptionsAsync(TicketQueryOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryOrder",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryOrder",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryOrderResponse
+        /// </returns>
+        public TicketQueryOrderResponse TicketQueryOrder(TicketQueryOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketQueryOrderWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询订单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryOrderResponse
+        /// </returns>
+        public async Task<TicketQueryOrderResponse> TicketQueryOrderAsync(TicketQueryOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketQueryOrderWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票价库。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryPriceStockRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryPriceStockResponse
+        /// </returns>
+        public TicketQueryPriceStockResponse TicketQueryPriceStockWithOptions(TicketQueryPriceStockRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                body["ProductId"] = request.ProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryPriceStock",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryPriceStock",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryPriceStockResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票价库。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryPriceStockRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryPriceStockResponse
+        /// </returns>
+        public async Task<TicketQueryPriceStockResponse> TicketQueryPriceStockWithOptionsAsync(TicketQueryPriceStockRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                body["EndDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                body["ProductId"] = request.ProductId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                body["StartDate"] = request.StartDate;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryPriceStock",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryPriceStock",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryPriceStockResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票价库。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryPriceStockRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryPriceStockResponse
+        /// </returns>
+        public TicketQueryPriceStockResponse TicketQueryPriceStock(TicketQueryPriceStockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketQueryPriceStockWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票价库。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryPriceStockRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryPriceStockResponse
+        /// </returns>
+        public async Task<TicketQueryPriceStockResponse> TicketQueryPriceStockAsync(TicketQueryPriceStockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketQueryPriceStockWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票产品。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryProductRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryProductResponse
+        /// </returns>
+        public TicketQueryProductResponse TicketQueryProductWithOptions(TicketQueryProductRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                body["ProductId"] = request.ProductId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryProduct",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryProduct",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryProductResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票产品。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryProductRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryProductResponse
+        /// </returns>
+        public async Task<TicketQueryProductResponse> TicketQueryProductWithOptionsAsync(TicketQueryProductRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductId))
+            {
+                body["ProductId"] = request.ProductId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryProduct",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryProduct",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryProductResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票产品。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryProductRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryProductResponse
+        /// </returns>
+        public TicketQueryProductResponse TicketQueryProduct(TicketQueryProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketQueryProductWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票产品。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryProductRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryProductResponse
+        /// </returns>
+        public async Task<TicketQueryProductResponse> TicketQueryProductAsync(TicketQueryProductRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketQueryProductWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询退款单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryRefundOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryRefundOrderResponse
+        /// </returns>
+        public TicketQueryRefundOrderResponse TicketQueryRefundOrderWithOptions(TicketQueryRefundOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryRefundOrder",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryRefundOrder",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryRefundOrderResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询退款单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryRefundOrderRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryRefundOrderResponse
+        /// </returns>
+        public async Task<TicketQueryRefundOrderResponse> TicketQueryRefundOrderWithOptionsAsync(TicketQueryRefundOrderRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DistributorOrderId))
+            {
+                body["DistributorOrderId"] = request.DistributorOrderId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryRefundOrder",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryRefundOrder",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryRefundOrderResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询退款单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryRefundOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryRefundOrderResponse
+        /// </returns>
+        public TicketQueryRefundOrderResponse TicketQueryRefundOrder(TicketQueryRefundOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketQueryRefundOrderWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询退款单。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryRefundOrderRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryRefundOrderResponse
+        /// </returns>
+        public async Task<TicketQueryRefundOrderResponse> TicketQueryRefundOrderAsync(TicketQueryRefundOrderRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketQueryRefundOrderWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票景区。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryScenicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryScenicResponse
+        /// </returns>
+        public TicketQueryScenicResponse TicketQueryScenicWithOptions(TicketQueryScenicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScenicId))
+            {
+                body["ScenicId"] = request.ScenicId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryScenic",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryScenic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryScenicResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票景区。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryScenicRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryScenicResponse
+        /// </returns>
+        public async Task<TicketQueryScenicResponse> TicketQueryScenicWithOptionsAsync(TicketQueryScenicRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScenicId))
+            {
+                body["ScenicId"] = request.ScenicId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryScenic",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryScenic",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryScenicResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票景区。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryScenicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryScenicResponse
+        /// </returns>
+        public TicketQueryScenicResponse TicketQueryScenic(TicketQueryScenicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketQueryScenicWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询门票景区。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryScenicRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryScenicResponse
+        /// </returns>
+        public async Task<TicketQueryScenicResponse> TicketQueryScenicAsync(TicketQueryScenicRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketQueryScenicWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询货架。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryShelfRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryShelfResponse
+        /// </returns>
+        public TicketQueryShelfResponse TicketQueryShelfWithOptions(TicketQueryShelfRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScenicId))
+            {
+                body["ScenicId"] = request.ScenicId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryShelf",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryShelf",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryShelfResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询货架。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryShelfRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryShelfResponse
+        /// </returns>
+        public async Task<TicketQueryShelfResponse> TicketQueryShelfWithOptionsAsync(TicketQueryShelfRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountNo))
+            {
+                body["AccountNo"] = request.AccountNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScenicId))
+            {
+                body["ScenicId"] = request.ScenicId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TicketQueryShelf",
+                Version = "2023-01-17",
+                Protocol = "HTTPS",
+                Pathname = "/TicketQueryShelf",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TicketQueryShelfResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询货架。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryShelfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryShelfResponse
+        /// </returns>
+        public TicketQueryShelfResponse TicketQueryShelf(TicketQueryShelfRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return TicketQueryShelfWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询货架。</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TicketQueryShelfRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TicketQueryShelfResponse
+        /// </returns>
+        public async Task<TicketQueryShelfResponse> TicketQueryShelfAsync(TicketQueryShelfRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await TicketQueryShelfWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Pays for and issues a ticket.</para>
         /// </summary>
         /// 
