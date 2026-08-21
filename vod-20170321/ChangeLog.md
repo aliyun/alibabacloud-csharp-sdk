@@ -1,3 +1,7 @@
+2026-08-21 Version: 3.13.0
+- Support API GetMediaAiAnalysis.
+
+
 2026-08-19 Version: 3.12.0
 - Support API GetWorkflowTask.
 

@@ -20541,6 +20541,150 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the results of video AI analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMediaAiAnalysisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaAiAnalysisResponse
+        /// </returns>
+        public GetMediaAiAnalysisResponse GetMediaAiAnalysisWithOptions(GetMediaAiAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputType))
+            {
+                query["OutputType"] = request.OutputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultTypes))
+            {
+                query["ResultTypes"] = request.ResultTypes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMediaAiAnalysis",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMediaAiAnalysisResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the results of video AI analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMediaAiAnalysisRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaAiAnalysisResponse
+        /// </returns>
+        public async Task<GetMediaAiAnalysisResponse> GetMediaAiAnalysisWithOptionsAsync(GetMediaAiAnalysisRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthTimeout))
+            {
+                query["AuthTimeout"] = request.AuthTimeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaId))
+            {
+                query["MediaId"] = request.MediaId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OutputType))
+            {
+                query["OutputType"] = request.OutputType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResultTypes))
+            {
+                query["ResultTypes"] = request.ResultTypes;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMediaAiAnalysis",
+                Version = "2017-03-21",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMediaAiAnalysisResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the results of video AI analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMediaAiAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaAiAnalysisResponse
+        /// </returns>
+        public GetMediaAiAnalysisResponse GetMediaAiAnalysis(GetMediaAiAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetMediaAiAnalysisWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the results of video AI analysis.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetMediaAiAnalysisRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMediaAiAnalysisResponse
+        /// </returns>
+        public async Task<GetMediaAiAnalysisResponse> GetMediaAiAnalysisAsync(GetMediaAiAnalysisRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetMediaAiAnalysisWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of audio automated review results.</para>
         /// </summary>
         /// 
