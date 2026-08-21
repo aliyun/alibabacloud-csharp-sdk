@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GenerateCopilotResponseRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>Input parameters for the copilot LLM service. Refer to the standard LLM API input parameter dict, which needs to be converted to a string and passed into llmParamString</para>
         /// 
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("llmParamString")]
         [Validation(Required=false)]
         public string LlmParamString { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

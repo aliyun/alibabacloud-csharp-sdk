@@ -9,10 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListClustersRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>Filter by cluster ID.</para>
+        /// <para>Filters by cluster ID.</para>
         /// <remarks>
-        /// <para>This cluster ID is not the ACK cluster ID, but the <c>id</c> field in the data returned by this API.</para>
+        /// <para>This cluster ID is not the ACK cluster ID. It is the <c>id</c> field returned by this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,9 +29,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <list type="bullet">
         /// <item><description><c>Running</c>: The cluster is managed normally.</description></item>
-        /// <item><description><c>Installing</c>: The cluster has an installation task in progress.</description></item>
-        /// <item><description><c>Uninstalling</c>: The cluster has an uninstallation task in progress.</description></item>
-        /// <item><description><c>Upgrading</c>: The cluster has an upgrade task in progress.</description></item>
+        /// <item><description><c>Installing</c>: An installation task is in progress for the cluster.</description></item>
+        /// <item><description><c>Uninstalling</c>: An uninstallation task is in progress for the cluster.</description></item>
+        /// <item><description><c>Upgrading</c>: An update task is in progress for the cluster.</description></item>
         /// <item><description><c>Offline</c>: The cluster is offline and management is abnormal.</description></item>
         /// </list>
         /// 
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <list type="bullet">
         /// <item><description><c>ACK</c>: ACK cluster.</description></item>
-        /// <item><description><c>CUSTOM</c>: Custom cluster (the default cluster belongs to custom clusters).</description></item>
+        /// <item><description><c>CUSTOM</c>: Custom cluster (default clusters belong to custom clusters).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ClusterType { get; set; }
 
         /// <summary>
-        /// <para>Current page number (starting from page 1)</para>
+        /// <para>The current page number (starting from page 1).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -62,7 +66,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Current { get; set; }
 
         /// <summary>
-        /// <para>This field is deprecated. Use the cluster_id field to filter instead.</para>
+        /// <para><b>[Deprecated]</b> Use the cluster_id parameter to filter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cb7d4cc26c8f845fb8a8255ffd394820e</para>
@@ -72,7 +76,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>Filter by plugin name</para>
+        /// <para>Filters plugins by plugin name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>proxy-next-upstream</para>
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -90,6 +94,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("pageSize")]
         [Validation(Required=false)]
         public long? PageSize { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

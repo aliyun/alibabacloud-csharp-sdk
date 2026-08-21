@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateFuncSwitchRecordRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The diagnostic channel. Currently, this parameter is fixed to the ECS channel.</para>
         /// <para>This parameter is required.</para>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</para>
+        /// <para>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match specified values.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("params")]
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string Cpu { get; set; }
 
                 /// <summary>
-                /// <para>The start duration, in seconds (s).</para>
+                /// <para>The start duration. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3600</para>
@@ -159,7 +163,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Op { get; set; }
 
             /// <summary>
-            /// <para>The region to which the instance belongs. All instance IDs passed in instances must belong to the same region.</para>
+            /// <para>The region to which the instance belongs. Make sure that all instance IDs passed in instances belong to the same region.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -190,6 +194,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("service_name")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

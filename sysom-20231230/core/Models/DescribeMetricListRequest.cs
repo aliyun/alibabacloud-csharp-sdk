@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class DescribeMetricListRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>The end time as a UNIX timestamp in seconds.</para>
+        /// <para>The end time, in seconds (UNIX timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683618245000</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The start time as a UNIX timestamp in seconds.</para>
+        /// <para>The start time, in seconds (UNIX timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1709740800000</para>
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("startTime")]
         [Validation(Required=false)]
         public long? StartTime { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

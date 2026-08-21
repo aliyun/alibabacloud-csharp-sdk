@@ -9,12 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class StartAIDiffAnalysisRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The task1 parameters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>task1参数</para>
+        /// <para>task1 parameters</para>
         /// </summary>
         [NameInMap("task1")]
         [Validation(Required=false)]
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AnalysisId { get; set; }
 
             /// <summary>
-            /// <para>The pids of AI job processes. Batch input is supported. Separate multiple pids with commas.</para>
+            /// <para>The process IDs (PIDs) of AI job processes. Batch input is supported with comma-separated values.</para>
             /// </summary>
             [NameInMap("pids")]
             [Validation(Required=false)]
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>task2参数，目前只支持相同analysisId和pid的对比</para>
+        /// <para>task2 parameters. Currently, only comparison with the same analysisId and pid is supported</para>
         /// </summary>
         [NameInMap("task2")]
         [Validation(Required=false)]
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string AnalysisId { get; set; }
 
             /// <summary>
-            /// <para>The pids of AI job processes. Batch input is supported. Separate multiple pids with commas.</para>
+            /// <para>The process IDs (PIDs) of AI job processes. Batch input is supported with comma-separated values.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -115,6 +119,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public float? StepStart { get; set; }
 
         }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

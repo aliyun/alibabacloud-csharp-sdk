@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListVmcoreDiagnosisTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates the authorization was successful.</description></item>
-        /// <item><description>Other status codes indicate authorization failure. When authorization fails, check the <c>message</c> field for detailed error information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<ListVmcoreDiagnosisTaskResponseBodyData> Data { get; set; }
         public class ListVmcoreDiagnosisTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Task creation time</para>
+            /// <para>The task creation time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-02T17:36:12</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
-            /// <para>Error message</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>error message</para>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string ErrorMsg { get; set; }
 
             /// <summary>
-            /// <para>Task ID</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bbe94a98-4192-4172-b856-95777e0a55d7</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>Task status</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>running</para>
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string TaskStatus { get; set; }
 
             /// <summary>
-            /// <para>Task type</para>
+            /// <para>The task type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vmcore</para>
@@ -83,10 +83,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of tasks</para>
+        /// <para>The total number of tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

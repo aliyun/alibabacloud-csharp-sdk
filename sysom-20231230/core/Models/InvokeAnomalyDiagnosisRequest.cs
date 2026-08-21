@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InvokeAnomalyDiagnosisRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The UUID of the anomaly event.</para>
         /// 
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("uuid")]
         [Validation(Required=false)]
         public string Uuid { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

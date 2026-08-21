@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateAlertDestinationRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         [NameInMap("app_id")]
         [Validation(Required=false)]
         public string AppId { get; set; }
@@ -113,6 +117,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("target")]
         [Validation(Required=false)]
         public string Target { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

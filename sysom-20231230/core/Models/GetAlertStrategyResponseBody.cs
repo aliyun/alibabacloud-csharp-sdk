@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate authorization failed. Check the <c>message</c> field for the detailed fault message.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. If the authorization fails, check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,15 +91,18 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 [Validation(Required=false)]
                 public List<string> Clusters { get; set; }
 
+                /// <summary>
+                /// <para>The alert contacts.</para>
+                /// </summary>
                 [NameInMap("destinations")]
                 [Validation(Required=false)]
                 public object Destinations { get; set; }
 
                 /// <summary>
-                /// <para>接收告警的异常项列表</para>
+                /// <para>The list of anomaly items for which alerts are received.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>节点CPU使用率检测</para>
+                /// <para>Node CPU utilization detection</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
@@ -133,7 +136,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

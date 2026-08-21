@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The status code.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate authorization has failed. Check the <c>message</c> field for the detailed error message.</description></item>
+        /// <item><description>Other status codes indicate authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateFuncSwitchRecordShrinkRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The diagnostic channel. Currently, this parameter is fixed to the ECS channel.</para>
         /// <para>This parameter is required.</para>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</para>
+        /// <para>The diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match specified values.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("params")]
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("service_name")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

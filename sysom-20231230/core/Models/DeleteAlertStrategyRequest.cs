@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class DeleteAlertStrategyRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The ID of the alert policy.</para>
         /// <para>This parameter is required.</para>
@@ -19,6 +23,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("id")]
         [Validation(Required=false)]
         public string Id { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

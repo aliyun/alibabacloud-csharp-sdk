@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetDiagnosisResultRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The diagnostic task ID.</para>
         /// <para>This parameter is required.</para>
@@ -19,6 +23,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("task_id")]
         [Validation(Required=false)]
         public string TaskId { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

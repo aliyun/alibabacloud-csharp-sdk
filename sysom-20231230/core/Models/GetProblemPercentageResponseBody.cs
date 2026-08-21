@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetProblemPercentageResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code.</para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate authorization failure. Check the <c>message</c> field for detailed error information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GetProblemPercentageResponseBodyData> Data { get; set; }
         public class GetProblemPercentageResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Abnormal item type.</para>
+            /// <para>The type of the abnormal item.</para>
             /// 
             /// <b>Example:</b>
             /// <para>saturation</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Number of abnormal items.</para>
+            /// <para>The number of abnormal items of this type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
         /// <item><description>Otherwise, this field contains the request error information.</description></item>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>35F91AAB-5FDF-5A22-B211-C7C6B00817D0</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of data entries.</para>
+        /// <para>The total amount of data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19</para>

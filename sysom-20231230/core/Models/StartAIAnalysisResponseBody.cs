@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class StartAIAnalysisResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public StartAIAnalysisResponseBodyData Data { get; set; }
         public class StartAIAnalysisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>AI analysis ID</para>
+            /// <para>The AI analysis ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16896fa8-37f6-4c70-bb32-67fa9817d426</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

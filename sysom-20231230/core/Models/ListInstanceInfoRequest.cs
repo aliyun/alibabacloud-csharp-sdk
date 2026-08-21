@@ -8,48 +8,60 @@ using Tea;
 
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
-    public class GetListRecordRequest : TeaModel {
+    public class ListInstanceInfoRequest : TeaModel {
         [NameInMap("X-Debug-Id")]
         [Validation(Required=false)]
         public string XDebugId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the analysis record to query the status of.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>xxxxxxxxx-f37b-478d-87f6-2259ed8766bf</para>
+        /// <para>instance_tag</para>
         /// </summary>
-        [NameInMap("analysisId")]
+        [NameInMap("infoType")]
         [Validation(Required=false)]
-        public string AnalysisId { get; set; }
+        public string InfoType { get; set; }
 
         /// <summary>
-        /// <para>The current page number.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>5</para>
+        /// <para>ecs</para>
         /// </summary>
-        [NameInMap("current")]
+        [NameInMap("instanceType")]
         [Validation(Required=false)]
-        public long? Current { get; set; }
-
-        [NameInMap("customId")]
-        [Validation(Required=false)]
-        public long? CustomId { get; set; }
+        public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
-        /// 
+        /// <b>Example:</b>
+        /// <para>managed</para>
+        /// </summary>
+        [NameInMap("managedType")]
+        [Validation(Required=false)]
+        public string ManagedType { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
-        [NameInMap("pageSize")]
+        [NameInMap("maxResults")]
         [Validation(Required=false)]
-        public long? PageSize { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
-        /// 
+        /// <b>Example:</b>
+        /// <para>xiF/wDgaeitjjhVJYYzLwJ4dD+2BRJj42DLT6GrZysw=</para>
+        /// </summary>
+        [NameInMap("nextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>01fc4a0b-f199-4885-9861-b4054a310fe7</para>
+        /// </summary>
+        [NameInMap("pluginId")]
+        [Validation(Required=false)]
+        public string PluginId { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
         /// </summary>

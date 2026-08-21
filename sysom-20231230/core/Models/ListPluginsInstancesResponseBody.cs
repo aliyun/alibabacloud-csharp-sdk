@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The instance tag.</para>
+            /// <para>The instance tags.</para>
             /// </summary>
             [NameInMap("instance_tag")]
             [Validation(Required=false)]
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total number of query results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>42</para>

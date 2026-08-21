@@ -9,14 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListClusterAgentInstallRecordsRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         [NameInMap("agent_config_id")]
         [Validation(Required=false)]
         public string AgentConfigId { get; set; }
 
         /// <summary>
-        /// <para>Filter by cluster ID.</para>
+        /// <para>Filters by cluster ID.</para>
         /// <remarks>
-        /// <para>This cluster ID is not the ACK cluster ID, but the <c>cluster_id</c> field in the data returned by this API, or the <c>id</c> field in the data returned by the ListCluster API.</para>
+        /// <para>This cluster ID is not the ACK cluster ID. It is the <c>cluster_id</c> field in the data returned by this operation, or the <c>id</c> field in the data returned by the ListCluster operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -27,7 +31,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>Current page number (starting from 1)</para>
+        /// <para>The current page number (starting from 1).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -37,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Current { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Specify this parameter to filter the installation list for a specific agent. Can be used in combination with the plugin_version parameter.</para>
+        /// <para>Specifies the agent ID to filter the installation list for the specified agent. This parameter can be used together with the plugin_version parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Cannot be used alone. Use in combination with plugin_id to filter the installation list for a specific agent version.</para>
+        /// <para>Cannot be used alone. Use this parameter together with plugin_id to filter the installation list for a specified version of the specified agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3.4.0-1</para>
@@ -65,6 +69,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("plugin_version")]
         [Validation(Required=false)]
         public string PluginVersion { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotSpotUniqListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization is successful;</description></item>
-        /// <item><description>Other status codes indicate that the authorization has failed. When authorization fails, check the <c>message</c> field for detailed error information;</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,21 +24,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetHotSpotUniqListResponseBodyData Data { get; set; }
         public class GetHotSpotUniqListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of data column names</para>
+            /// <para>The list of data names.</para>
             /// </summary>
             [NameInMap("columns")]
             [Validation(Required=false)]
             public List<string> Columns { get; set; }
 
             /// <summary>
-            /// <para>List of data values</para>
+            /// <para>The list of data values.</para>
             /// </summary>
             [NameInMap("values")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Response message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D693121-C925-5154-8DF6-C09A8B369822</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>true indicates the API call succeeded, false indicates the API call failed</para>
+        /// <para>Indicates whether the API call is successful. true: successful. false: failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

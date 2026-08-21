@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotInstanceListResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SysomOpenAPI.ServerError</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetHotspotInstanceListResponseBodyData Data { get; set; }
         public class GetHotspotInstanceListResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Field names</para>
+            /// <para>The field names.</para>
             /// </summary>
             [NameInMap("columns")]
             [Validation(Required=false)]
             public List<string> Columns { get; set; }
 
             /// <summary>
-            /// <para>Instance list</para>
+            /// <para>The instance list.</para>
             /// </summary>
             [NameInMap("values")]
             [Validation(Required=false)]
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Description</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

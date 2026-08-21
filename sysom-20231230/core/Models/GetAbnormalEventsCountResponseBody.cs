@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAbnormalEventsCountResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code.</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GetAbnormalEventsCountResponseBodyData> Data { get; set; }
         public class GetAbnormalEventsCountResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>List of abnormal events.</para>
+            /// <para>The list of abnormal events.</para>
             /// </summary>
             [NameInMap("eventList")]
             [Validation(Required=false)]
             public List<string> EventList { get; set; }
 
             /// <summary>
-            /// <para>Abnormal event type.</para>
+            /// <para>The type of the abnormal event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>health</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>Count of abnormal event type.</para>
+            /// <para>The number of abnormal events of this type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>When success is false, this value is not empty, indicating a business error message.</para>
+        /// <para>The business error message. This parameter is not empty when success is false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>result: code=1 msg=(Request failed, status_code != 200)</para>

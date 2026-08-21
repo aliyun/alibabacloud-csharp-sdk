@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotInstanceListRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>End time</para>
+        /// <para>The end time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegEnd { get; set; }
 
         /// <summary>
-        /// <para>Start time</para>
+        /// <para>The start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegStart { get; set; }
 
         /// <summary>
-        /// <para>Query table name</para>
+        /// <para>The name of the table to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("table")]
         [Validation(Required=false)]
         public string Table { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

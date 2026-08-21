@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotSpotUniqListRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>End time</para>
+        /// <para>The end time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegEnd { get; set; }
 
         /// <summary>
-        /// <para>Start time</para>
+        /// <para>The start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? BegStart { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>Process ID</para>
+        /// <para>The process ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12345</para>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Pid { get; set; }
 
         /// <summary>
-        /// <para>Table name</para>
+        /// <para>The table name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>prof_on</para>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Table { get; set; }
 
         /// <summary>
-        /// <para>Identifier flag</para>
+        /// <para>The identifier flag.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,6 +76,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("uniq")]
         [Validation(Required=false)]
         public string Uniq { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

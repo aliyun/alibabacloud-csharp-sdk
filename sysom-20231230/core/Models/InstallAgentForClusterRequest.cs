@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InstallAgentForClusterRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The component ID.</para>
         /// 
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>The cluster ID here must be an ACK cluster ID.</para>
+        /// <para>Pass the ID of the ACK cluster for this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -53,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The canary release configuration.</para>
+        /// <para>The canary release environment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;numeric&quot;,&quot;config&quot;:{&quot;value&quot;:2}}</para>
@@ -61,6 +65,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("grayscale_config")]
         [Validation(Required=false)]
         public string GrayscaleConfig { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

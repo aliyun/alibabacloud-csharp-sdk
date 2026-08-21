@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstancesEcsInfoListRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The type of information to retrieve.</para>
         /// <para>This parameter is required.</para>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InfoType { get; set; }
 
         /// <summary>
-        /// <para>Specifies the instance ID to filter and return the Agent installation status of the specified instance.</para>
+        /// <para>Specifies the instance ID to filter the Agent installation status of the specified instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-bp118piqcio9tiwgh84b</para>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ManagedType { get; set; }
 
         /// <summary>
-        /// <para>Specifies the component ID to filter and return the instance information list for the corresponding component.</para>
+        /// <para>Specifies the component ID to filter the instance information list for the corresponding component.</para>
         /// 
         /// <b>Example:</b>
         /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
@@ -60,6 +64,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

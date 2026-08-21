@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If code is Success, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate authorization failed. Check the message field for the detailed fault information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The supported architectures. Multiple architectures are separated by commas.</para>
+            /// <para>The supported architectures (multiple architectures are separated by commas).</para>
             /// 
             /// <b>Example:</b>
             /// <para>x86</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Type { get; set; }
 
             /// <summary>
-            /// <para>The time when the component was last updated.</para>
+            /// <para>The time when the component was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-14T20:46:08</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
                 public string UninstallScript { get; set; }
 
                 /// <summary>
-                /// <para>The time when the component version was last updated.</para>
+                /// <para>The time when the component version was updated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-09-14T20:46:08</para>
@@ -188,8 +188,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If code is Success, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

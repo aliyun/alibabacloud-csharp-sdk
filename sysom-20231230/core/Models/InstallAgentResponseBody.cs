@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public class InstallAgentResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The task ID.</para>
-            /// <para>You can use this task ID to call the GetAgentTask operation to retrieve the task execution status.</para>
+            /// <para>You can use this task ID to call the GetAgentTask operation to query the task execution status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>26b3cd97389c43dcad6bc4901c36fcec</para>

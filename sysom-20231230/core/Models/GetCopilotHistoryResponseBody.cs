@@ -20,24 +20,24 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of chat records. The length equals the requested count. If the actual number of chat records is less than the requested count, the actual number is returned. Format: [{&quot;user&quot;:&quot;&quot;,&quot;content&quot;:&quot;&quot;.question,&quot;time&quot;:&quot;&quot;},{...}].</para>
+        /// <para>The list of chat records. The length equals the requested count. If the actual chat records are fewer than the requested count, the actual number is returned. Format: [{&quot;user&quot;:&quot;&quot;,&quot;content&quot;:&quot;&quot;.question,&quot;time&quot;:&quot;&quot;},{...}]</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public List<GetCopilotHistoryResponseBodyData> Data { get; set; }
         public class GetCopilotHistoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The text content of the chat message.</para>
+            /// <para>The chat content text.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>copilot回复的具体内容</para>
+            /// <para>Specific content replied by Copilot</para>
             /// </summary>
             [NameInMap("content")]
             [Validation(Required=false)]
             public string Content { get; set; }
 
             /// <summary>
-            /// <para>The time of the chat record. The value is of the STRING type.</para>
+            /// <para>The time of the chat record. The value is of the string type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-09-02 10:02:39</para>
@@ -47,10 +47,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public string Time { get; set; }
 
             /// <summary>
-            /// <para>The role of the message sender. Valid values:</para>
+            /// <para>The role identifier. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>user: the user.</description></item>
-            /// <item><description>copilot: the bot.</description></item>
+            /// <item><description>user: a user.</description></item>
+            /// <item><description>copilot: a bot.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the error message of the request.</description></item>
+        /// <item><description>Otherwise, this field contains the request error message.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -22,8 +22,8 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, the authorization is successful.</description></item>
-        /// <item><description>Other status codes indicate authorization failure. In this case, check the <c>message</c> field for detailed error information.</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public class UpgradeAgentForClusterResponseBodyData : TeaModel {
             /// <summary>
             /// <para>The task ID.</para>
-            /// <para>You can use this task ID to call the GetAgentTask operation to query the task execution status.</para>
+            /// <para>You can use this task ID to call the GetAgentTask operation to check the execution status of the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7523e9e0ddc74d99a5236f4f4d5056e6</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <para>The error message.</para>
         /// <list type="bullet">
         /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
-        /// <item><description>Otherwise, this field contains the request error message.</description></item>
+        /// <item><description>Otherwise, this field contains the request error information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetProblemPercentageRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2ijff4be-bf24-4070-89ca-c47c879b0g32</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Cluster { get; set; }
 
         /// <summary>
-        /// <para>End time.</para>
+        /// <para>The end time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +35,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public float? End { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-wz9d00ut2ska3mlyhn6j</para>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>Start time.</para>
+        /// <para>The start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,6 +54,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("start")]
         [Validation(Required=false)]
         public float? Start { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

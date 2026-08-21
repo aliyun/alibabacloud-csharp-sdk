@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListDiagnosisRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>Current page number</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Current { get; set; }
 
         /// <summary>
-        /// <para>Page size</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Diagnostic parameters. Different types of diagnostics require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</para>
+        /// <para>The diagnostic parameters. Different diagnostic types require different diagnostic parameters. You can use this field to filter records whose parameters match the specified values.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{\&quot;key\&quot;:\&quot;region\&quot;,\&quot;value\&quot;:\&quot;cn-beijing\&quot;}]</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>Diagnostic type</para>
+        /// <para>The diagnostic type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>memgraph</para>
@@ -50,13 +54,13 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string ServiceName { get; set; }
 
         /// <summary>
-        /// <para>Execution status of the diagnostic task.
-        /// Valid values:</para>
+        /// <para>The execution status of the diagnostic task.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Ready</b>: Ready</description></item>
-        /// <item><description><b>Running</b>: Running</description></item>
-        /// <item><description><b>Success</b>: Execution succeeded</description></item>
-        /// <item><description><b>Fail</b>: Execution failed</description></item>
+        /// <item><description><b>Ready</b>: Ready.</description></item>
+        /// <item><description><b>Running</b>: Running.</description></item>
+        /// <item><description><b>Success</b>: Succeeded.</description></item>
+        /// <item><description><b>Fail</b>: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -65,6 +69,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

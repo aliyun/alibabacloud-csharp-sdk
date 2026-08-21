@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotCompareRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>End time 1</para>
+        /// <para>The end time 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +25,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Beg1End { get; set; }
 
         /// <summary>
-        /// <para>Start time 1</para>
+        /// <para>The start time 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Beg1Start { get; set; }
 
         /// <summary>
-        /// <para>End time 2</para>
+        /// <para>The end time 2.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +47,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Beg2End { get; set; }
 
         /// <summary>
-        /// <para>Start time 2</para>
+        /// <para>The start time 2.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Beg2Start { get; set; }
 
         /// <summary>
-        /// <para>Hotspot type</para>
+        /// <para>The hot spot type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alloc</para>
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string HotType { get; set; }
 
         /// <summary>
-        /// <para>Instance 1</para>
+        /// <para>The instance 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +79,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance1 { get; set; }
 
         /// <summary>
-        /// <para>Instance 2</para>
+        /// <para>The instance 2.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,7 +90,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance2 { get; set; }
 
         /// <summary>
-        /// <para>Instance 1 process</para>
+        /// <para>The process of instance 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -96,7 +100,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Pid1 { get; set; }
 
         /// <summary>
-        /// <para>Instance 2 process</para>
+        /// <para>The process of instance 2.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-2zei55fwj8nnu31h3z46</para>
@@ -106,7 +110,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? Pid2 { get; set; }
 
         /// <summary>
-        /// <para>Query table name</para>
+        /// <para>The name of the table to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,6 +119,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("table")]
         [Validation(Required=false)]
         public string Table { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

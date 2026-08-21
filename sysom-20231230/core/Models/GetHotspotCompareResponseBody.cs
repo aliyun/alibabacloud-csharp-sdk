@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetHotspotCompareResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SysomOpenAPI.ServerError</para>
@@ -20,28 +20,28 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public GetHotspotCompareResponseBodyData Data { get; set; }
         public class GetHotspotCompareResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Differential flame graph data</para>
+            /// <para>The differential flame graph data.</para>
             /// </summary>
             [NameInMap("flame")]
             [Validation(Required=false)]
             public GetHotspotCompareResponseBodyDataFlame Flame { get; set; }
             public class GetHotspotCompareResponseBodyDataFlame : TeaModel {
                 /// <summary>
-                /// <para>Field name list</para>
+                /// <para>The list of field names.</para>
                 /// </summary>
                 [NameInMap("columns")]
                 [Validation(Required=false)]
                 public List<string> Columns { get; set; }
 
                 /// <summary>
-                /// <para>Flame graph data list</para>
+                /// <para>The list of flame graph data.</para>
                 /// </summary>
                 [NameInMap("values")]
                 [Validation(Required=false)]
@@ -50,21 +50,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>Hotspot time series 1</para>
+            /// <para>The hot spot time series 1.</para>
             /// </summary>
             [NameInMap("series_instance1")]
             [Validation(Required=false)]
             public GetHotspotCompareResponseBodyDataSeriesInstance1 SeriesInstance1 { get; set; }
             public class GetHotspotCompareResponseBodyDataSeriesInstance1 : TeaModel {
                 /// <summary>
-                /// <para>Field name list</para>
+                /// <para>The list of field names.</para>
                 /// </summary>
                 [NameInMap("columns")]
                 [Validation(Required=false)]
                 public List<string> Columns { get; set; }
 
                 /// <summary>
-                /// <para>Hotspot time series data list</para>
+                /// <para>The list of hot spot time series data.</para>
                 /// </summary>
                 [NameInMap("values")]
                 [Validation(Required=false)]
@@ -73,21 +73,21 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             }
 
             /// <summary>
-            /// <para>Hotspot time series 2</para>
+            /// <para>The hot spot time series 2.</para>
             /// </summary>
             [NameInMap("series_instance2")]
             [Validation(Required=false)]
             public GetHotspotCompareResponseBodyDataSeriesInstance2 SeriesInstance2 { get; set; }
             public class GetHotspotCompareResponseBodyDataSeriesInstance2 : TeaModel {
                 /// <summary>
-                /// <para>Field name list</para>
+                /// <para>The list of field names.</para>
                 /// </summary>
                 [NameInMap("columns")]
                 [Validation(Required=false)]
                 public List<string> Columns { get; set; }
 
                 /// <summary>
-                /// <para>Hotspot time series data list</para>
+                /// <para>The list of hot spot time series data.</para>
                 /// </summary>
                 [NameInMap("values")]
                 [Validation(Required=false)]
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         }
 
         /// <summary>
-        /// <para>Response message</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -118,7 +118,11 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>true: API call succeeded; false: API call failed</para>
+        /// <para>Indicates whether the API call was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

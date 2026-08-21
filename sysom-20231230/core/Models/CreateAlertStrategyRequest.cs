@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CreateAlertStrategyRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>Specifies whether the alert strategy is enabled.</para>
+        /// <para>Specifies whether the alert policy is enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,12 +24,15 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public bool? Enabled { get; set; }
 
+        /// <summary>
+        /// <para>The Kubernetes label.</para>
+        /// </summary>
         [NameInMap("k8sLabel")]
         [Validation(Required=false)]
         public bool? K8sLabel { get; set; }
 
         /// <summary>
-        /// <para>The name of the alert strategy.</para>
+        /// <para>The Policy Name of the alerting policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +43,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The details of the alert strategy.</para>
+        /// <para>The details of the alert policy.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("strategy")]
@@ -50,6 +57,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public List<string> Clusters { get; set; }
 
+            /// <summary>
+            /// <para>The alert contacts.</para>
+            /// </summary>
             [NameInMap("destinations")]
             [Validation(Required=false)]
             public List<int?> Destinations { get; set; }
@@ -62,6 +72,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             public List<string> Items { get; set; }
 
         }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

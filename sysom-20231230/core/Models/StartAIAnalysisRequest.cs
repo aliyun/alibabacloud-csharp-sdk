@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class StartAIAnalysisRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>Analysis tool. Not required for OpenAPI access.</para>
+        /// <para>The analysis tool. This parameter does not need to be specified when you use OpenAPI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>gp/pyki/analysis</para>
@@ -20,14 +24,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string AnalysisTool { get; set; }
 
         /// <summary>
-        /// <para>Data richness</para>
+        /// <para>The data richness level.</para>
         /// </summary>
         [NameInMap("analysis_params")]
         [Validation(Required=false)]
         public List<string> AnalysisParams { get; set; }
 
         /// <summary>
-        /// <para>Channel name</para>
+        /// <para>The channel name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs_sysom</para>
@@ -37,7 +41,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>Process name, optional parameter</para>
+        /// <para>The process name. This parameter is optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python_test</para>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Comms { get; set; }
 
         /// <summary>
-        /// <para>Creator. Not required for OpenAPI access.</para>
+        /// <para>The creator. This parameter does not need to be specified when you use OpenAPI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>445333</para>
@@ -57,7 +61,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string CreatedBy { get; set; }
 
         /// <summary>
-        /// <para>Instance ID</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>i-wz9dej066kii4goqxxxx</para>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>Instance type. Not required for OpenAPI access.</para>
+        /// <para>The instance type. This parameter does not need to be specified when you use OpenAPI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ip/sn/hostname</para>
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>Iteration entry function. Required only in iteration mode. Can be left blank.</para>
+        /// <para>The iteration entry function. This parameter is required only in iteration mode and can be left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Class.function</para>
@@ -87,7 +91,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string IterationFunc { get; set; }
 
         /// <summary>
-        /// <para>Iteration entry module. Required only in iteration mode. Can be left blank.</para>
+        /// <para>The iteration entry module. This parameter is required only in iteration mode and can be left empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a.b.module</para>
@@ -97,14 +101,14 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string IterationMod { get; set; }
 
         /// <summary>
-        /// <para>Iteration range (iteration count: refers to the number of iterations when the data collection module is activated, independent of the AI job\&quot;s iteration count)</para>
+        /// <para>The iteration range. The iteration count refers to the number of iterations when the data collection module is activated, which is independent of the AI job iteration count.</para>
         /// </summary>
         [NameInMap("iteration_range")]
         [Validation(Required=false)]
         public List<int?> IterationRange { get; set; }
 
         /// <summary>
-        /// <para>AI job process PIDs. Supports batch input, separated by commas.</para>
+        /// <para>The process IDs (PIDs) of the AI job. Multiple PIDs are supported, separated by commas.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2421,36547,10043</para>
@@ -114,7 +118,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Pids { get; set; }
 
         /// <summary>
-        /// <para>Region ID</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shenzhen</para>
@@ -124,9 +128,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>AI Infra analysis time;
-        /// Unit: milliseconds;
-        /// Default value: 2000;</para>
+        /// <para>The AI Infra analysis duration. Unit: milliseconds. Default value: 2000.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2000</para>
@@ -136,7 +138,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? Timeout { get; set; }
 
         /// <summary>
-        /// <para>Alibaba Cloud user ID. Not required for OpenAPI access.</para>
+        /// <para>The Alibaba Cloud user ID. This parameter does not need to be specified when you use OpenAPI.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123423414</para>
@@ -144,6 +146,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("uid")]
         [Validation(Required=false)]
         public string Uid { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

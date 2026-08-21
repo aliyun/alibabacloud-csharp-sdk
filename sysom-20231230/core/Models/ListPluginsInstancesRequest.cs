@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListPluginsInstancesRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>The current page number. This field is present when pagination is used.</para>
+        /// <para>The page number for pagination. This field indicates the current page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string InstanceTag { get; set; }
 
         /// <summary>
-        /// <para>Filters instances by plug-in installation status.</para>
+        /// <para>Filters instances by plugin installation status.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,7 +65,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters the instance list by the specified agent. If this parameter is specified, only instances associated with the specified agent are returned.</para>
+        /// <para>Specifies the agent ID to filter the instance list for the specified agent.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,6 +85,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("region")]
         [Validation(Required=false)]
         public string Region { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

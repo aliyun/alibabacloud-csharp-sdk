@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class InvokeDiagnosisRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>Diagnosis channel (currently fixed as the ECS channel).</para>
+        /// <para>The diagnosis channel (currently fixed to the ECS channel).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +25,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>Diagnosis parameters. Different types of diagnoses require different diagnosis parameters. For the parameters required by each diagnosis type, refer to the supplementary request parameter description below.</para>
+        /// <para>The diagnosis parameters. Different diagnosis types require different parameters. Refer to the supplementary request parameter descriptions below for the parameters required by each diagnosis type.</para>
         /// <remarks>
-        /// <para>Notice: Please pass a JSON-formatted string.</notice></para>
+        /// <para>Notice: Pass a JSON-formatted string.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +43,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Params { get; set; }
 
         /// <summary>
-        /// <para>Diagnosis type, used to distinguish different types of diagnoses.</para>
+        /// <para>The diagnosis type. This parameter distinguishes between different types of diagnostics.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("service_name")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

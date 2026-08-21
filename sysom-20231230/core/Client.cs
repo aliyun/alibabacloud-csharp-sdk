@@ -43,19 +43,19 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnostics for a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnostics on it.</para>
+        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnosis on a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnosis on it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. This operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
-        /// Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
+        /// <para>Notice: The diagnosis feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+        /// Take note of the following items when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Each authorization is valid for 7 days. After the authorization expires, invoke this operation again to re-authorize.</description></item>
-        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The RAM user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
-        /// <item><description>When you invoke this operation to authorize diagnostics for a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</description></item>
+        /// <item><description>Each authorization is valid for 7 days. After 7 days, the authorization expires and you must invoke this operation again to re-authorize.</description></item>
+        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The Resource Access Management (RAM) user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
+        /// <item><description>When you invoke this operation to authorize diagnosis on a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnosis on instances that have this label.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -75,6 +75,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public AuthDiagnosisResponse AuthDiagnosisWithOptions(AuthDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateRole))
             {
@@ -91,6 +100,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -110,19 +120,19 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnostics for a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnostics on it.</para>
+        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnosis on a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnosis on it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. This operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
-        /// Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
+        /// <para>Notice: The diagnosis feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+        /// Take note of the following items when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Each authorization is valid for 7 days. After the authorization expires, invoke this operation again to re-authorize.</description></item>
-        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The RAM user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
-        /// <item><description>When you invoke this operation to authorize diagnostics for a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</description></item>
+        /// <item><description>Each authorization is valid for 7 days. After 7 days, the authorization expires and you must invoke this operation again to re-authorize.</description></item>
+        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The Resource Access Management (RAM) user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
+        /// <item><description>When you invoke this operation to authorize diagnosis on a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnosis on instances that have this label.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -142,6 +152,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<AuthDiagnosisResponse> AuthDiagnosisWithOptionsAsync(AuthDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoCreateRole))
             {
@@ -158,6 +177,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -177,19 +197,19 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnostics for a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnostics on it.</para>
+        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnosis on a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnosis on it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. This operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
-        /// Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
+        /// <para>Notice: The diagnosis feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+        /// Take note of the following items when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Each authorization is valid for 7 days. After the authorization expires, invoke this operation again to re-authorize.</description></item>
-        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The RAM user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
-        /// <item><description>When you invoke this operation to authorize diagnostics for a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</description></item>
+        /// <item><description>Each authorization is valid for 7 days. After 7 days, the authorization expires and you must invoke this operation again to re-authorize.</description></item>
+        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The Resource Access Management (RAM) user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
+        /// <item><description>When you invoke this operation to authorize diagnosis on a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnosis on instances that have this label.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -209,19 +229,19 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnostics for a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnostics on it.</para>
+        /// <para>Authorizes SysOM to diagnose ECS instances under the current account. You must call this operation to authorize diagnosis on a specific ECS instance before you can call the InvokeDiagnosis operation to initiate diagnosis on it.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Notice: The diagnostics feature requires a service-linked role to be created under the Resource Access Management (RAM) user. This operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
-        /// Note the following when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
+        /// <para>Notice: The diagnosis feature requires a service-linked role to be created under the Resource Access Management (RAM) user. Invoking this operation automatically checks whether the service-linked role exists and creates it if it does not. The RAM user that invokes this operation must have the ram:CreateServiceLinkedRole permission.</notice>
+        /// Take note of the following items when you invoke this operation to authorize SysOM to diagnose ECS instances:</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description>Each authorization is valid for 7 days. After the authorization expires, invoke this operation again to re-authorize.</description></item>
-        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The RAM user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
-        /// <item><description>When you invoke this operation to authorize diagnostics for a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnostics on instances that have this label.</description></item>
+        /// <item><description>Each authorization is valid for 7 days. After 7 days, the authorization expires and you must invoke this operation again to re-authorize.</description></item>
+        /// <item><description>If the SysOM service-linked role (AliyunServiceRoleForSysom) does not exist when you invoke this operation, automatic creation is performed. The Resource Access Management (RAM) user that invokes this operation must have the <c>ram:CreateServiceLinkedRole</c> permission.</description></item>
+        /// <item><description>When you invoke this operation to authorize diagnosis on a specific instance, the label <c>sysom:diagnosis</c> is automatically associated with the target ECS instance. SysOM only allows diagnosis on instances that have this label.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -265,6 +285,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public CheckInstanceSupportResponse CheckInstanceSupportWithOptions(CheckInstanceSupportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instances))
             {
@@ -277,6 +306,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -320,6 +350,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<CheckInstanceSupportResponse> CheckInstanceSupportWithOptionsAsync(CheckInstanceSupportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instances))
             {
@@ -332,6 +371,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -399,7 +439,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CPU High Agent streaming SSE interface.</para>
+        /// <para>Invokes the CPU high agent streaming SSE interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -418,6 +458,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public CpuHighAgentStreamResponseResponse CpuHighAgentStreamResponseWithOptions(CpuHighAgentStreamResponseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmParamString))
             {
@@ -426,6 +475,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -445,7 +495,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CPU High Agent streaming SSE interface.</para>
+        /// <para>Invokes the CPU high agent streaming SSE interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -464,6 +514,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<CpuHighAgentStreamResponseResponse> CpuHighAgentStreamResponseWithOptionsAsync(CpuHighAgentStreamResponseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmParamString))
             {
@@ -472,6 +531,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -491,7 +551,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CPU High Agent streaming SSE interface.</para>
+        /// <para>Invokes the CPU high agent streaming SSE interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -510,7 +570,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the CPU High Agent streaming SSE interface.</para>
+        /// <para>Invokes the CPU high agent streaming SSE interface.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -548,6 +608,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public CreateAlertDestinationResponse CreateAlertDestinationWithOptions(CreateAlertDestinationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
@@ -584,6 +653,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -622,6 +692,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<CreateAlertDestinationResponse> CreateAlertDestinationWithOptionsAsync(CreateAlertDestinationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
@@ -658,6 +737,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -715,7 +795,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert push strategy.</para>
+        /// <para>Creates an alert policy for push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -734,6 +814,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public CreateAlertStrategyResponse CreateAlertStrategyWithOptions(CreateAlertStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
             {
@@ -754,6 +843,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -773,7 +863,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert push strategy.</para>
+        /// <para>Creates an alert policy for push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -792,6 +882,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<CreateAlertStrategyResponse> CreateAlertStrategyWithOptionsAsync(CreateAlertStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
             {
@@ -812,6 +911,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -831,7 +931,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert push strategy.</para>
+        /// <para>Creates an alert policy for push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -850,7 +950,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an alert push strategy.</para>
+        /// <para>Creates an alert policy for push notifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -876,8 +976,8 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// <description>
         /// <list type="bullet">
         /// <item><description>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</description></item>
-        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
-        /// <item><description>Convert the returned string to a dictionary before use. Refer to the general LLM service response format.</description></item>
+        /// <item><description>Populate the parameters based on the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -897,6 +997,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public CreateClusterVpcEndpointConnectionResponse CreateClusterVpcEndpointConnectionWithOptions(CreateClusterVpcEndpointConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
@@ -913,6 +1022,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -939,8 +1049,8 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// <description>
         /// <list type="bullet">
         /// <item><description>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</description></item>
-        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
-        /// <item><description>Convert the returned string to a dictionary before use. Refer to the general LLM service response format.</description></item>
+        /// <item><description>Populate the parameters based on the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -960,6 +1070,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<CreateClusterVpcEndpointConnectionResponse> CreateClusterVpcEndpointConnectionWithOptionsAsync(CreateClusterVpcEndpointConnectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
@@ -976,6 +1095,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1002,8 +1122,8 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// <description>
         /// <list type="bullet">
         /// <item><description>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</description></item>
-        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
-        /// <item><description>Convert the returned string to a dictionary before use. Refer to the general LLM service response format.</description></item>
+        /// <item><description>Populate the parameters based on the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1030,8 +1150,8 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// <description>
         /// <list type="bullet">
         /// <item><description>Use this operation with the call_sseapi interface of the aliyun-tea-openapi-inner package.</description></item>
-        /// <item><description>Populate parameters according to the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
-        /// <item><description>Convert the returned string to a dictionary before use. Refer to the general LLM service response format.</description></item>
+        /// <item><description>Populate the parameters based on the general LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned data from a string to a dict before use. Refer to the general LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1070,6 +1190,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public CreateInstanceInspectionResponse CreateInstanceInspectionWithOptions(CreateInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instance))
             {
@@ -1094,6 +1223,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1132,6 +1262,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<CreateInstanceInspectionResponse> CreateInstanceInspectionWithOptionsAsync(CreateInstanceInspectionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instance))
             {
@@ -1156,6 +1295,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1213,7 +1353,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent breakdown diagnostic node that diagnoses the specified vmcore or dmesg log file based on the input parameters.</para>
+        /// <para>Creates an intelligent diagnostic node for system breakdowns, which diagnoses the vmcore or dmesg log files provided as input parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1232,6 +1372,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public CreateVmcoreDiagnosisTaskResponse CreateVmcoreDiagnosisTaskWithOptions(CreateVmcoreDiagnosisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebuginfoCommonUrl))
             {
@@ -1256,6 +1405,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1275,7 +1425,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent breakdown diagnostic node that diagnoses the specified vmcore or dmesg log file based on the input parameters.</para>
+        /// <para>Creates an intelligent diagnostic node for system breakdowns, which diagnoses the vmcore or dmesg log files provided as input parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1294,6 +1444,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<CreateVmcoreDiagnosisTaskResponse> CreateVmcoreDiagnosisTaskWithOptionsAsync(CreateVmcoreDiagnosisTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DebuginfoCommonUrl))
             {
@@ -1318,6 +1477,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1337,7 +1497,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent breakdown diagnostic node that diagnoses the specified vmcore or dmesg log file based on the input parameters.</para>
+        /// <para>Creates an intelligent diagnostic node for system breakdowns, which diagnoses the vmcore or dmesg log files provided as input parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1356,7 +1516,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent breakdown diagnostic node that diagnoses the specified vmcore or dmesg log file based on the input parameters.</para>
+        /// <para>Creates an intelligent diagnostic node for system breakdowns, which diagnoses the vmcore or dmesg log files provided as input parameters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1395,9 +1555,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1441,9 +1609,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1525,9 +1701,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1571,9 +1755,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1640,7 +1832,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this operation contains only instances that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1660,6 +1852,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["endTime"] = request.EndTime;
@@ -1675,6 +1871,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1703,7 +1903,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this operation contains only instances that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1723,6 +1923,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["endTime"] = request.EndTime;
@@ -1738,6 +1942,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["startTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1766,7 +1974,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this operation contains only instances that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1790,7 +1998,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The instance list returned by this operation contains only instances that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
+        /// <para>The instance list retrieved by this operation contains only machines that are managed by SysOM. If an ECS instance exists but is not managed by SysOM, it does not appear in the list.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1836,6 +2044,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public GenerateCopilotResponseResponse GenerateCopilotResponseWithOptions(GenerateCopilotResponseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmParamString))
             {
@@ -1844,6 +2061,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1890,6 +2108,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<GenerateCopilotResponseResponse> GenerateCopilotResponseWithOptionsAsync(GenerateCopilotResponseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmParamString))
             {
@@ -1898,6 +2125,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -1971,15 +2199,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the streaming SSE endpoint of the OS Copilot service.</para>
+        /// <para>Calls the streaming SSE interface of the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</description></item>
-        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
-        /// <item><description>Convert the returned string to a dictionary before use. Refer to the standard LLM service response format.</description></item>
+        /// <item><description>Use this operation together with the call_sseapi interface in the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string data to a dict before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1999,6 +2227,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public GenerateCopilotStreamResponseResponse GenerateCopilotStreamResponseWithOptions(GenerateCopilotStreamResponseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmParamString))
             {
@@ -2007,6 +2244,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2026,15 +2264,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the streaming SSE endpoint of the OS Copilot service.</para>
+        /// <para>Calls the streaming SSE interface of the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</description></item>
-        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
-        /// <item><description>Convert the returned string to a dictionary before use. Refer to the standard LLM service response format.</description></item>
+        /// <item><description>Use this operation together with the call_sseapi interface in the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string data to a dict before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2054,6 +2292,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<GenerateCopilotStreamResponseResponse> GenerateCopilotStreamResponseWithOptionsAsync(GenerateCopilotStreamResponseRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LlmParamString))
             {
@@ -2062,6 +2309,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2081,15 +2329,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the streaming SSE endpoint of the OS Copilot service.</para>
+        /// <para>Calls the streaming SSE interface of the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</description></item>
-        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
-        /// <item><description>Convert the returned string to a dictionary before use. Refer to the standard LLM service response format.</description></item>
+        /// <item><description>Use this operation together with the call_sseapi interface in the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string data to a dict before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2109,15 +2357,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the streaming SSE endpoint of the OS Copilot service.</para>
+        /// <para>Calls the streaming SSE interface of the OS Copilot service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Use this operation together with the call_sseapi operation in the aliyun-tea-openapi-inner package.</description></item>
-        /// <item><description>Populate the parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
-        /// <item><description>Convert the returned string to a dictionary before use. Refer to the standard LLM service response format.</description></item>
+        /// <item><description>Use this operation together with the call_sseapi interface in the aliyun-tea-openapi-inner package.</description></item>
+        /// <item><description>Populate parameters based on the standard LLM service input parameters, convert them to a string, and assign the string to llmParamString.</description></item>
+        /// <item><description>Convert the returned string data to a dict before use. Refer to the standard LLM service response format.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -2156,6 +2404,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public GetAIQueryResultResponse GetAIQueryResultWithOptions(GetAIQueryResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisId))
             {
@@ -2164,6 +2421,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2202,6 +2460,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<GetAIQueryResultResponse> GetAIQueryResultWithOptionsAsync(GetAIQueryResultRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisId))
             {
@@ -2210,6 +2477,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -2267,7 +2535,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the count of unhandled (undiagnosed) abnormal events of different levels for nodes/Pods</para>
+        /// <para>Retrieves the number of unprocessed (undiagnosed) abnormal events at different severity levels for a node or pod.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2287,6 +2555,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -2318,6 +2590,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2341,7 +2617,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the count of unhandled (undiagnosed) abnormal events of different levels for nodes/Pods</para>
+        /// <para>Retrieves the number of unprocessed (undiagnosed) abnormal events at different severity levels for a node or pod.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2361,6 +2637,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -2393,6 +2673,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 query["start"] = request.Start;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -2415,7 +2699,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the count of unhandled (undiagnosed) abnormal events of different levels for nodes/Pods</para>
+        /// <para>Retrieves the number of unprocessed (undiagnosed) abnormal events at different severity levels for a node or pod.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2434,7 +2718,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the count of unhandled (undiagnosed) abnormal events of different levels for nodes/Pods</para>
+        /// <para>Retrieves the number of unprocessed (undiagnosed) abnormal events at different severity levels for a node or pod.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2453,7 +2737,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get details of a specific agent</para>
+        /// <para>Retrieves the details of a specified component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2473,9 +2757,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
                 query["agent_id"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2499,7 +2791,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get details of a specific agent</para>
+        /// <para>Retrieves the details of a specified component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2519,9 +2811,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
                 query["agent_id"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2545,7 +2845,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get details of a specific agent</para>
+        /// <para>Retrieves the details of a specified component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2564,7 +2864,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get details of a specific agent</para>
+        /// <para>Retrieves the details of a specified component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2603,9 +2903,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["task_id"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2649,9 +2957,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["task_id"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2733,9 +3049,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2779,9 +3103,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2863,9 +3195,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2909,9 +3249,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2973,6 +3321,184 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves configuration information by configuration name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConfigByNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigByNameResponse
+        /// </returns>
+        public GetConfigByNameResponse GetConfigByNameWithOptions(GetConfigByNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                query["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["configType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                query["entityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseGlobalUid))
+            {
+                query["useGlobalUid"] = request.UseGlobalUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["versionId"] = request.VersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConfigByName",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/configManage/config/getConfigByName",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConfigByNameResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves configuration information by configuration name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConfigByNameRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigByNameResponse
+        /// </returns>
+        public async Task<GetConfigByNameResponse> GetConfigByNameWithOptionsAsync(GetConfigByNameRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigName))
+            {
+                query["configName"] = request.ConfigName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigType))
+            {
+                query["configType"] = request.ConfigType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntityId))
+            {
+                query["entityId"] = request.EntityId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseGlobalUid))
+            {
+                query["useGlobalUid"] = request.UseGlobalUid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                query["versionId"] = request.VersionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetConfigByName",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/configManage/config/getConfigByName",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetConfigByNameResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves configuration information by configuration name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConfigByNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigByNameResponse
+        /// </returns>
+        public GetConfigByNameResponse GetConfigByName(GetConfigByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetConfigByNameWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves configuration information by configuration name.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetConfigByNameRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetConfigByNameResponse
+        /// </returns>
+        public async Task<GetConfigByNameResponse> GetConfigByNameAsync(GetConfigByNameRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetConfigByNameWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the chat history of Copilot.</para>
         /// </summary>
         /// 
@@ -2992,6 +3518,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public GetCopilotHistoryResponse GetCopilotHistoryWithOptions(GetCopilotHistoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
@@ -3000,6 +3535,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3038,6 +3574,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<GetCopilotHistoryResponse> GetCopilotHistoryWithOptionsAsync(GetCopilotHistoryRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Count))
             {
@@ -3046,6 +3591,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3128,9 +3674,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["task_id"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3179,9 +3733,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["task_id"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3253,7 +3815,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the health status distribution of nodes or pods over a specified time period.</para>
+        /// <para>Retrieves the health status distribution of nodes or Pods within a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3273,6 +3835,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -3288,6 +3854,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3311,7 +3881,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the health status distribution of nodes or pods over a specified time period.</para>
+        /// <para>Retrieves the health status distribution of nodes or Pods within a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3331,6 +3901,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -3346,6 +3920,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3369,7 +3947,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the health status distribution of nodes or pods over a specified time period.</para>
+        /// <para>Retrieves the health status distribution of nodes or Pods within a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3388,7 +3966,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the health status distribution of nodes or pods over a specified time period.</para>
+        /// <para>Retrieves the health status distribution of nodes or Pods within a specified time period.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3407,7 +3985,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the number of nodes or the number of Pods on nodes in a cluster.</para>
+        /// <para>Retrieves the number of cluster nodes or the number of Pods on a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3427,6 +4005,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -3442,6 +4024,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3465,7 +4051,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the number of nodes or the number of Pods on nodes in a cluster.</para>
+        /// <para>Retrieves the number of cluster nodes or the number of Pods on a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3485,6 +4071,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -3500,6 +4090,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -3523,7 +4117,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the number of nodes or the number of Pods on nodes in a cluster.</para>
+        /// <para>Retrieves the number of cluster nodes or the number of Pods on a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3542,7 +4136,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the number of nodes or the number of Pods on nodes in a cluster.</para>
+        /// <para>Retrieves the number of cluster nodes or the number of Pods on a node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3561,7 +4155,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of a specific field under an instance.</para>
+        /// <para>Retrieves the list of a specific field under an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3580,6 +4174,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public GetHotSpotUniqListResponse GetHotSpotUniqListWithOptions(GetHotSpotUniqListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BegEnd))
             {
@@ -3608,6 +4211,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3627,7 +4231,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of a specific field under an instance.</para>
+        /// <para>Retrieves the list of a specific field under an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3646,6 +4250,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<GetHotSpotUniqListResponse> GetHotSpotUniqListWithOptionsAsync(GetHotSpotUniqListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BegEnd))
             {
@@ -3674,6 +4287,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3693,7 +4307,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of a specific field under an instance.</para>
+        /// <para>Retrieves the list of a specific field under an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3712,7 +4326,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the list of a specific field under an instance.</para>
+        /// <para>Retrieves the list of a specific field under an instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3750,6 +4364,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public GetHotspotAnalysisResponse GetHotspotAnalysisWithOptions(GetHotspotAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
             {
@@ -3778,6 +4401,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3816,6 +4440,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<GetHotspotAnalysisResponse> GetHotspotAnalysisWithOptionsAsync(GetHotspotAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppType))
             {
@@ -3844,6 +4477,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3901,7 +4535,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Hotspot Comparison Tracing Results</para>
+        /// <para>Retrieves the hot spot comparison and tracing results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3920,6 +4554,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public GetHotspotCompareResponse GetHotspotCompareWithOptions(GetHotspotCompareRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Beg1End))
             {
@@ -3964,6 +4607,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -3983,7 +4627,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Hotspot Comparison Tracing Results</para>
+        /// <para>Retrieves the hot spot comparison and tracing results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4002,6 +4646,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<GetHotspotCompareResponse> GetHotspotCompareWithOptionsAsync(GetHotspotCompareRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Beg1End))
             {
@@ -4046,6 +4699,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4065,7 +4719,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Hotspot Comparison Tracing Results</para>
+        /// <para>Retrieves the hot spot comparison and tracing results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4084,7 +4738,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Hotspot Comparison Tracing Results</para>
+        /// <para>Retrieves the hot spot comparison and tracing results.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4103,7 +4757,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Hotspot Instance List</para>
+        /// <para>Retrieves the list of hot spot instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4122,6 +4776,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public GetHotspotInstanceListResponse GetHotspotInstanceListWithOptions(GetHotspotInstanceListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BegEnd))
             {
@@ -4138,6 +4801,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4157,7 +4821,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Hotspot Instance List</para>
+        /// <para>Retrieves the list of hot spot instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4176,6 +4840,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<GetHotspotInstanceListResponse> GetHotspotInstanceListWithOptionsAsync(GetHotspotInstanceListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BegEnd))
             {
@@ -4192,6 +4865,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4211,7 +4885,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Hotspot Instance List</para>
+        /// <para>Retrieves the list of hot spot instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4230,7 +4904,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Hotspot Instance List</para>
+        /// <para>Retrieves the list of hot spot instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4268,6 +4942,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public GetHotspotPidListResponse GetHotspotPidListWithOptions(GetHotspotPidListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BegEnd))
             {
@@ -4288,6 +4971,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4326,6 +5010,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<GetHotspotPidListResponse> GetHotspotPidListWithOptionsAsync(GetHotspotPidListRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BegEnd))
             {
@@ -4346,6 +5039,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4422,6 +5116,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public GetHotspotTrackingResponse GetHotspotTrackingWithOptions(GetHotspotTrackingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BegEnd))
             {
@@ -4450,6 +5153,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4488,6 +5192,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<GetHotspotTrackingResponse> GetHotspotTrackingWithOptionsAsync(GetHotspotTrackingRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BegEnd))
             {
@@ -4516,6 +5229,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -4593,9 +5307,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
             {
                 query["reportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4639,9 +5361,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
             {
                 query["reportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4703,7 +5433,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get real-time cluster/node health score</para>
+        /// <para>Retrieves the real-time health score of a cluster or node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4723,6 +5453,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -4730,6 +5464,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instance))
             {
                 query["instance"] = request.Instance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4753,7 +5491,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get real-time cluster/node health score</para>
+        /// <para>Retrieves the real-time health score of a cluster or node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4773,6 +5511,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -4780,6 +5522,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Instance))
             {
                 query["instance"] = request.Instance;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4803,7 +5549,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get real-time cluster/node health score</para>
+        /// <para>Retrieves the real-time health score of a cluster or node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4822,7 +5568,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get real-time cluster/node health score</para>
+        /// <para>Retrieves the real-time health score of a cluster or node.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4841,7 +5587,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of AI Infra analysis records.</para>
+        /// <para>Retrieves the list of AI Infra analysis records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4861,6 +5607,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisId))
             {
                 query["analysisId"] = request.AnalysisId;
@@ -4880,6 +5630,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4903,7 +5657,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of AI Infra analysis records.</para>
+        /// <para>Retrieves the list of AI Infra analysis records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4923,6 +5677,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisId))
             {
                 query["analysisId"] = request.AnalysisId;
@@ -4942,6 +5700,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4965,7 +5727,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of AI Infra analysis records.</para>
+        /// <para>Retrieves the list of AI Infra analysis records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4984,7 +5746,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of AI Infra analysis records.</para>
+        /// <para>Retrieves the list of AI Infra analysis records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5003,7 +5765,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the proportion of abnormal issues in cluster nodes/pods within a specified time range</para>
+        /// <para>Retrieves the proportion of abnormal issues for nodes in a cluster or pods in a node within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5023,6 +5785,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -5038,6 +5804,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5061,7 +5831,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the proportion of abnormal issues in cluster nodes/pods within a specified time range</para>
+        /// <para>Retrieves the proportion of abnormal issues for nodes in a cluster or pods in a node within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5081,6 +5851,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -5096,6 +5870,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5119,7 +5897,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the proportion of abnormal issues in cluster nodes/pods within a specified time range</para>
+        /// <para>Retrieves the proportion of abnormal issues for nodes in a cluster or pods in a node within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5138,7 +5916,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the proportion of abnormal issues in cluster nodes/pods within a specified time range</para>
+        /// <para>Retrieves the proportion of abnormal issues for nodes in a cluster or pods in a node within a specified time range.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5177,6 +5955,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -5192,6 +5974,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5235,6 +6021,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -5250,6 +6040,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5331,6 +6125,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -5342,6 +6140,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5385,6 +6187,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -5396,6 +6202,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5488,6 +6298,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
                 request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "params", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
                 query["channel"] = request.Channel;
@@ -5499,6 +6313,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
             {
                 query["service_name"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5553,6 +6371,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
                 request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "params", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
                 query["channel"] = request.Channel;
@@ -5564,6 +6386,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
             {
                 query["service_name"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5655,9 +6481,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["taskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5701,9 +6535,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["taskId"] = request.TaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -5765,15 +6607,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes SysOM to ensure that the service-linked role exists.</para>
+        /// <para>Initializes SysOM and ensures that the service-linked role exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Some SysOM API operations require role assumption based on the <c>AliyunServiceRoleForSysom</c> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</para>
         /// <list type="bullet">
-        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, the operation performs automatic creation of the service-linked role if it does not exist.<remarks>
-        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
+        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, invoking this operation triggers automatic creation of the service-linked role if it does not exist.<remarks>
+        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, refer to: <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a>, <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a></para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5795,6 +6637,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public InitialSysomResponse InitialSysomWithOptions(InitialSysomRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckOnly))
             {
@@ -5807,6 +6658,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -5826,15 +6678,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes SysOM to ensure that the service-linked role exists.</para>
+        /// <para>Initializes SysOM and ensures that the service-linked role exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Some SysOM API operations require role assumption based on the <c>AliyunServiceRoleForSysom</c> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</para>
         /// <list type="bullet">
-        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, the operation performs automatic creation of the service-linked role if it does not exist.<remarks>
-        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
+        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, invoking this operation triggers automatic creation of the service-linked role if it does not exist.<remarks>
+        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, refer to: <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a>, <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a></para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5856,6 +6708,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<InitialSysomResponse> InitialSysomWithOptionsAsync(InitialSysomRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckOnly))
             {
@@ -5868,6 +6729,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -5887,15 +6749,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes SysOM to ensure that the service-linked role exists.</para>
+        /// <para>Initializes SysOM and ensures that the service-linked role exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Some SysOM API operations require role assumption based on the <c>AliyunServiceRoleForSysom</c> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</para>
         /// <list type="bullet">
-        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, the operation performs automatic creation of the service-linked role if it does not exist.<remarks>
-        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
+        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, invoking this operation triggers automatic creation of the service-linked role if it does not exist.<remarks>
+        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, refer to: <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a>, <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a></para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5917,15 +6779,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initializes SysOM to ensure that the service-linked role exists.</para>
+        /// <para>Initializes SysOM and ensures that the service-linked role exists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Some SysOM API operations require role assumption based on the <c>AliyunServiceRoleForSysom</c> service-linked role. Before using SysOM features, invoke this operation to perform initialization and ensure that the service-linked role has been created.</para>
         /// <list type="bullet">
-        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, the operation performs automatic creation of the service-linked role if it does not exist.<remarks>
-        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, see <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a> and <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a>.</para>
+        /// <item><description><c>check_only</c>: If this parameter is set to True, the operation only checks whether the service-linked role exists and does not create it. If this parameter is set to False or left empty, invoking this operation triggers automatic creation of the service-linked role if it does not exist.<remarks>
+        /// <para>Note: When you call this operation to initialize the role through the API, you agree to the user agreement of the operating system console by default. For more information, refer to: <a href="https://www.alibabacloud.com/help/en/alinux/product-overview/os-console-overview">Operating system console overview</a>, <a href="https://terms.aliyun.com/legal-agreement/terms/suit_bu1_ali_cloud/suit_bu1_ali_cloud202001091714_51956.html">Alibaba Cloud Service Trial Terms</a></para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -5952,7 +6814,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5971,6 +6833,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public InstallAgentResponse InstallAgentWithOptions(InstallAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -5991,6 +6862,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6015,7 +6887,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6034,6 +6906,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<InstallAgentResponse> InstallAgentWithOptionsAsync(InstallAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -6054,6 +6935,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6078,7 +6960,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6102,7 +6984,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the task execution status.</para>
+        /// <para>Calling this operation to install an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the task execution status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6121,15 +7003,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install component for cluster</para>
+        /// <para>Installs a component on an ACK cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing a component for the target ACK cluster:</para>
+        /// <para>After you install a component on the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when the cluster is managed for the first time, the component will be installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances will be covered in the first batch.</description></item>
-        /// <item><description>Then, the SysOM console periodically checks the scaling status of the managed cluster. Once a new ECS instance is added to the cluster, the SysOM console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are processed in the first batch.</description></item>
+        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster in each epoch. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -6149,6 +7031,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public InstallAgentForClusterResponse InstallAgentForClusterWithOptions(InstallAgentForClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -6173,6 +7064,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6192,15 +7084,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install component for cluster</para>
+        /// <para>Installs a component on an ACK cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing a component for the target ACK cluster:</para>
+        /// <para>After you install a component on the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when the cluster is managed for the first time, the component will be installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances will be covered in the first batch.</description></item>
-        /// <item><description>Then, the SysOM console periodically checks the scaling status of the managed cluster. Once a new ECS instance is added to the cluster, the SysOM console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are processed in the first batch.</description></item>
+        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster in each epoch. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -6220,6 +7112,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<InstallAgentForClusterResponse> InstallAgentForClusterWithOptionsAsync(InstallAgentForClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -6244,6 +7145,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6263,15 +7165,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install component for cluster</para>
+        /// <para>Installs a component on an ACK cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing a component for the target ACK cluster:</para>
+        /// <para>After you install a component on the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when the cluster is managed for the first time, the component will be installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances will be covered in the first batch.</description></item>
-        /// <item><description>Then, the SysOM console periodically checks the scaling status of the managed cluster. Once a new ECS instance is added to the cluster, the SysOM console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are processed in the first batch.</description></item>
+        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster in each epoch. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -6291,15 +7193,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Install component for cluster</para>
+        /// <para>Installs a component on an ACK cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After installing a component for the target ACK cluster:</para>
+        /// <para>After you install a component on the target ACK cluster:</para>
         /// <ol>
-        /// <item><description>First, when the cluster is managed for the first time, the component will be installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances will be covered in the first batch.</description></item>
-        /// <item><description>Then, the SysOM console periodically checks the scaling status of the managed cluster. Once a new ECS instance is added to the cluster, the SysOM console automatically installs the component on it without user intervention.</description></item>
+        /// <item><description>First, when the cluster is managed for the first time, the component is installed on all existing ECS instances in the cluster. If the cluster contains more than 50 nodes, only 50 instances are processed in the first batch.</description></item>
+        /// <item><description>Then, the operating system console periodically checks the scaling status of the managed cluster in each epoch. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -6343,6 +7245,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public InstallAgentWithTypeResponse InstallAgentWithTypeWithOptions(InstallAgentWithTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -6371,6 +7282,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6414,6 +7326,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<InstallAgentWithTypeResponse> InstallAgentWithTypeWithOptionsAsync(InstallAgentWithTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
             {
@@ -6442,6 +7363,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6529,9 +7451,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
             {
                 query["uuid"] = request.Uuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6575,9 +7505,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
             {
                 query["uuid"] = request.Uuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6639,17 +7577,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate Diagnosis.</para>
+        /// <para>Initiates a diagnostic task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
+        /// <para>The following requirements apply when diagnosing a target ECS instance:</para>
         /// <list type="bullet">
-        /// <item><description>The target ECS instance must be in the Running state.</description></item>
-        /// <item><description>The Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
-        /// <item><description>You must call the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this API will fail directly.</description></item>
-        /// <item><description>This API requires that the SysOM service-linked role (AliyunServiceRoleForSysom) has been created. This API does not automatically create the service role. If the service role does not exist, you must first call AuthDiagnosis for authorization, which will create the aforementioned service role.</description></item>
+        /// <item><description>The target ECS instance status must be Running.</description></item>
+        /// <item><description>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
+        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly returns failed.</description></item>
+        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, invoke AuthDiagnosis first to associate the authorization. That operation creates the service-linked role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6669,6 +7607,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public InvokeDiagnosisResponse InvokeDiagnosisWithOptions(InvokeDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
@@ -6685,6 +7632,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6704,17 +7652,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate Diagnosis.</para>
+        /// <para>Initiates a diagnostic task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
+        /// <para>The following requirements apply when diagnosing a target ECS instance:</para>
         /// <list type="bullet">
-        /// <item><description>The target ECS instance must be in the Running state.</description></item>
-        /// <item><description>The Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
-        /// <item><description>You must call the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this API will fail directly.</description></item>
-        /// <item><description>This API requires that the SysOM service-linked role (AliyunServiceRoleForSysom) has been created. This API does not automatically create the service role. If the service role does not exist, you must first call AuthDiagnosis for authorization, which will create the aforementioned service role.</description></item>
+        /// <item><description>The target ECS instance status must be Running.</description></item>
+        /// <item><description>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
+        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly returns failed.</description></item>
+        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, invoke AuthDiagnosis first to associate the authorization. That operation creates the service-linked role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6734,6 +7682,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<InvokeDiagnosisResponse> InvokeDiagnosisWithOptionsAsync(InvokeDiagnosisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
@@ -6750,6 +7707,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -6769,17 +7727,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate Diagnosis.</para>
+        /// <para>Initiates a diagnostic task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
+        /// <para>The following requirements apply when diagnosing a target ECS instance:</para>
         /// <list type="bullet">
-        /// <item><description>The target ECS instance must be in the Running state.</description></item>
-        /// <item><description>The Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
-        /// <item><description>You must call the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this API will fail directly.</description></item>
-        /// <item><description>This API requires that the SysOM service-linked role (AliyunServiceRoleForSysom) has been created. This API does not automatically create the service role. If the service role does not exist, you must first call AuthDiagnosis for authorization, which will create the aforementioned service role.</description></item>
+        /// <item><description>The target ECS instance status must be Running.</description></item>
+        /// <item><description>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
+        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly returns failed.</description></item>
+        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, invoke AuthDiagnosis first to associate the authorization. That operation creates the service-linked role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6799,17 +7757,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiate Diagnosis.</para>
+        /// <para>Initiates a diagnostic task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The following requirements must be met to diagnose a target ECS instance:</para>
+        /// <para>The following requirements apply when diagnosing a target ECS instance:</para>
         /// <list type="bullet">
-        /// <item><description>The target ECS instance must be in the Running state.</description></item>
-        /// <item><description>The Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://help.aliyun.com/zh/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
-        /// <item><description>You must call the AuthDiagnosis API to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this API will fail directly.</description></item>
-        /// <item><description>This API requires that the SysOM service-linked role (AliyunServiceRoleForSysom) has been created. This API does not automatically create the service role. If the service role does not exist, you must first call AuthDiagnosis for authorization, which will create the aforementioned service role.</description></item>
+        /// <item><description>The target ECS instance status must be Running.</description></item>
+        /// <item><description>Cloud Assistant must be installed on the target ECS instance. If it is not installed, refer to <a href="https://www.alibabacloud.com/help/en/ecs/user-guide/install-the-cloud-assistant-agent">Install the Cloud Assistant Agent</a> for installation.</description></item>
+        /// <item><description>You must invoke the AuthDiagnosis operation to authorize SysOM to diagnose the target ECS instance. If authorization is not granted, this operation directly returns failed.</description></item>
+        /// <item><description>This operation depends on the SysOM service-linked role (AliyunServiceRoleForSysom) being created. This operation does not automatically create the service-linked role. If the service-linked role does not exist, invoke AuthDiagnosis first to associate the authorization. That operation creates the service-linked role.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -6849,6 +7807,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -6892,6 +7854,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -6935,6 +7901,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -6978,6 +7948,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7059,6 +8033,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -7086,6 +8064,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7129,6 +8111,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -7156,6 +8142,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7217,7 +8207,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of agents.</para>
+        /// <para>Retrieves a list of Agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7237,6 +8227,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -7252,6 +8246,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7275,7 +8273,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of agents.</para>
+        /// <para>Retrieves a list of Agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7295,6 +8293,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -7310,6 +8312,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["type"] = request.Type;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7333,7 +8339,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of agents.</para>
+        /// <para>Retrieves a list of Agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7352,7 +8358,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of agents.</para>
+        /// <para>Retrieves a list of Agents.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7371,7 +8377,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to get the list of alert contacts</para>
+        /// <para>Retrieves the list of alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7391,6 +8397,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -7410,6 +8420,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7433,7 +8447,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to get the list of alert contacts</para>
+        /// <para>Retrieves the list of alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7453,6 +8467,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -7472,6 +8490,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7495,7 +8517,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to get the list of alert contacts</para>
+        /// <para>Retrieves the list of alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7514,7 +8536,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to get the list of alert contacts</para>
+        /// <para>Retrieves the list of alert contacts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7655,6 +8677,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -7674,6 +8700,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7717,6 +8747,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -7736,6 +8770,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7797,7 +8835,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to retrieve a list of managed/unmanaged instances along with their instance information.</para>
+        /// <para>Retrieves a list of managed or unmanaged instances along with their instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7817,6 +8855,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -7852,6 +8894,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -7875,7 +8921,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to retrieve a list of managed/unmanaged instances along with their instance information.</para>
+        /// <para>Retrieves a list of managed or unmanaged instances along with their instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7895,6 +8941,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -7931,6 +8981,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 query["region"] = request.Region;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -7953,7 +9007,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to retrieve a list of managed/unmanaged instances along with their instance information.</para>
+        /// <para>Retrieves a list of managed or unmanaged instances along with their instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7972,7 +9026,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This API is used to retrieve a list of managed/unmanaged instances along with their instance information.</para>
+        /// <para>Retrieves a list of managed or unmanaged instances along with their instance information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7991,7 +9045,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get cluster component installation records</para>
+        /// <para>Retrieves the component installation records of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8011,6 +9065,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentConfigId))
             {
                 query["agent_config_id"] = request.AgentConfigId;
@@ -8034,6 +9092,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginVersion))
             {
                 query["plugin_version"] = request.PluginVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8057,7 +9119,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get cluster component installation records</para>
+        /// <para>Retrieves the component installation records of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8077,6 +9139,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentConfigId))
             {
                 query["agent_config_id"] = request.AgentConfigId;
@@ -8101,6 +9167,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 query["plugin_version"] = request.PluginVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8123,7 +9193,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get cluster component installation records</para>
+        /// <para>Retrieves the component installation records of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8142,7 +9212,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get cluster component installation records</para>
+        /// <para>Retrieves the component installation records of a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8161,7 +9231,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all managed clusters of the current user</para>
+        /// <para>Retrieves all managed clusters for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8181,6 +9251,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["cluster_id"] = request.ClusterId;
@@ -8208,6 +9282,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8231,7 +9309,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all managed clusters of the current user</para>
+        /// <para>Retrieves all managed clusters for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8251,6 +9329,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["cluster_id"] = request.ClusterId;
@@ -8279,6 +9361,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 query["pageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -8301,7 +9387,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all managed clusters of the current user</para>
+        /// <para>Retrieves all managed clusters for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8320,7 +9406,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve all managed clusters of the current user</para>
+        /// <para>Retrieves all managed clusters for the current user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8339,7 +9425,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of diagnostic history.</para>
+        /// <para>Retrieves a list of diagnostic history records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8359,6 +9445,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -8378,6 +9468,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8401,7 +9495,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of diagnostic history.</para>
+        /// <para>Retrieves a list of diagnostic history records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8421,6 +9515,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -8440,6 +9538,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8463,7 +9565,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of diagnostic history.</para>
+        /// <para>Retrieves a list of diagnostic history records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8482,7 +9584,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtain the list of diagnostic history.</para>
+        /// <para>Retrieves a list of diagnostic history records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8521,6 +9623,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -8544,6 +9650,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8587,6 +9697,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cluster))
             {
                 query["cluster"] = request.Cluster;
@@ -8610,6 +9724,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Start))
             {
                 query["start"] = request.Start;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8671,6 +9789,200 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>此接口用于获取某类型实例信息的所有值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInfoResponse
+        /// </returns>
+        public ListInstanceInfoResponse ListInstanceInfoWithOptions(ListInstanceInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfoType))
+            {
+                query["infoType"] = request.InfoType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
+            {
+                query["managedType"] = request.ManagedType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["pluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceInfo",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/am/instance/listInstanceInfo",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>此接口用于获取某类型实例信息的所有值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInfoRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInfoResponse
+        /// </returns>
+        public async Task<ListInstanceInfoResponse> ListInstanceInfoWithOptionsAsync(ListInstanceInfoRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfoType))
+            {
+                query["infoType"] = request.InfoType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceType))
+            {
+                query["instanceType"] = request.InstanceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ManagedType))
+            {
+                query["managedType"] = request.ManagedType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PluginId))
+            {
+                query["pluginId"] = request.PluginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
+            {
+                query["region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListInstanceInfo",
+                Version = "2023-12-30",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/am/instance/listInstanceInfo",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListInstanceInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>此接口用于获取某类型实例信息的所有值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInfoResponse
+        /// </returns>
+        public ListInstanceInfoResponse ListInstanceInfo(ListInstanceInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListInstanceInfoWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>此接口用于获取某类型实例信息的所有值</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListInstanceInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListInstanceInfoResponse
+        /// </returns>
+        public async Task<ListInstanceInfoResponse> ListInstanceInfoAsync(ListInstanceInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListInstanceInfoWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves instance statuses.</para>
         /// </summary>
         /// 
@@ -8696,6 +10008,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -8715,6 +10031,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8763,6 +10083,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -8782,6 +10106,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8878,6 +10206,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["cluster_id"] = request.ClusterId;
@@ -8901,6 +10233,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -8949,6 +10285,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["cluster_id"] = request.ClusterId;
@@ -8972,6 +10312,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9043,7 +10387,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves lists of ECS information for instances, such as tag lists and public IP address lists.</para>
+        /// <para>Retrieves ECS information lists for instances, such as tag lists and public IP address lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9068,6 +10412,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfoType))
             {
                 query["info_type"] = request.InfoType;
@@ -9087,6 +10435,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9110,7 +10462,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves lists of ECS information for instances, such as tag lists and public IP address lists.</para>
+        /// <para>Retrieves ECS information lists for instances, such as tag lists and public IP address lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9135,6 +10487,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InfoType))
             {
                 query["info_type"] = request.InfoType;
@@ -9154,6 +10510,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Region))
             {
                 query["region"] = request.Region;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9177,7 +10537,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves lists of ECS information for instances, such as tag lists and public IP address lists.</para>
+        /// <para>Retrieves ECS information lists for instances, such as tag lists and public IP address lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9201,7 +10561,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves lists of ECS information for instances, such as tag lists and public IP address lists.</para>
+        /// <para>Retrieves ECS information lists for instances, such as tag lists and public IP address lists.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9256,6 +10616,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
                 request.InstanceTagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceTag, "instance_tag", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -9315,6 +10679,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
             {
                 query["resource_group_name"] = request.ResourceGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9369,6 +10737,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
                 request.InstanceTagShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceTag, "instance_tag", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -9428,6 +10800,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupName))
             {
                 query["resource_group_name"] = request.ResourceGroupName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9499,7 +10875,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of instances for plug-in installation, update, or uninstallation.</para>
+        /// <para>Retrieves the list of instances for plugin installation, update, or uninstallation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9524,6 +10900,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -9552,6 +10932,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 query["region"] = request.Region;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -9574,7 +10958,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of instances for plug-in installation, update, or uninstallation.</para>
+        /// <para>Retrieves the list of instances for plugin installation, update, or uninstallation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9599,6 +10983,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Current))
             {
                 query["current"] = request.Current;
@@ -9627,6 +11015,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             {
                 query["region"] = request.Region;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -9649,7 +11041,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of instances for plug-in installation, update, or uninstallation.</para>
+        /// <para>Retrieves the list of instances for plugin installation, update, or uninstallation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9673,7 +11065,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of instances for plug-in installation, update, or uninstallation.</para>
+        /// <para>Retrieves the list of instances for plugin installation, update, or uninstallation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -9717,6 +11109,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["cluster_id"] = request.ClusterId;
@@ -9732,6 +11128,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9775,6 +11175,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["cluster_id"] = request.ClusterId;
@@ -9790,6 +11194,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9973,7 +11381,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the historical crash diagnosis task list.</para>
+        /// <para>Queries the list of historical down diagnosis tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9993,9 +11401,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
                 query["days"] = request.Days;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10019,7 +11435,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the historical crash diagnosis task list.</para>
+        /// <para>Queries the list of historical down diagnosis tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10039,9 +11455,17 @@ namespace AlibabaCloud.SDK.SysOM20231230
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Days))
             {
                 query["days"] = request.Days;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10065,7 +11489,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the historical crash diagnosis task list.</para>
+        /// <para>Queries the list of historical down diagnosis tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10084,7 +11508,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the historical crash diagnosis task list.</para>
+        /// <para>Queries the list of historical down diagnosis tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10103,7 +11527,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start AI job analysis.</para>
+        /// <para>Starts AI job analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10122,6 +11546,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public StartAIAnalysisResponse StartAIAnalysisWithOptions(StartAIAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisTool))
             {
@@ -10182,6 +11615,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10201,7 +11635,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start AI job analysis.</para>
+        /// <para>Starts AI job analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10220,6 +11654,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<StartAIAnalysisResponse> StartAIAnalysisWithOptionsAsync(StartAIAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnalysisTool))
             {
@@ -10280,6 +11723,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10299,7 +11743,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start AI job analysis.</para>
+        /// <para>Starts AI job analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10318,7 +11762,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Start AI job analysis.</para>
+        /// <para>Starts AI job analysis.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10361,6 +11805,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public StartAIDiffAnalysisResponse StartAIDiffAnalysisWithOptions(StartAIDiffAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task1))
             {
@@ -10373,6 +11826,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10416,6 +11870,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<StartAIDiffAnalysisResponse> StartAIDiffAnalysisWithOptionsAsync(StartAIDiffAnalysisRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Task1))
             {
@@ -10428,6 +11891,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10500,7 +11964,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10519,6 +11983,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public UninstallAgentResponse UninstallAgentWithOptions(UninstallAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -10535,6 +12008,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10559,7 +12033,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10578,6 +12052,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<UninstallAgentResponse> UninstallAgentWithOptionsAsync(UninstallAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -10594,6 +12077,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10618,7 +12102,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10642,7 +12126,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. Use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
+        /// <para>Calling this operation to uninstall an Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10680,6 +12164,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public UninstallAgentForClusterResponse UninstallAgentForClusterWithOptions(UninstallAgentForClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -10696,6 +12189,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10734,6 +12228,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<UninstallAgentForClusterResponse> UninstallAgentForClusterWithOptionsAsync(UninstallAgentForClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -10750,6 +12253,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10831,6 +12335,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public UninstallAgentWithTypeResponse UninstallAgentWithTypeWithOptions(UninstallAgentWithTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -10851,6 +12364,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10894,6 +12408,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<UninstallAgentWithTypeResponse> UninstallAgentWithTypeWithOptionsAsync(UninstallAgentWithTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -10914,6 +12437,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -10986,7 +12510,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>.</para>
+        /// <para>、</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11005,6 +12529,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public UpdateAlertDestinationResponse UpdateAlertDestinationWithOptions(UpdateAlertDestinationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
@@ -11045,6 +12578,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -11069,7 +12603,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>.</para>
+        /// <para>、</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11088,6 +12622,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<UpdateAlertDestinationResponse> UpdateAlertDestinationWithOptionsAsync(UpdateAlertDestinationRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AppId))
             {
@@ -11128,6 +12671,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -11152,7 +12696,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>.</para>
+        /// <para>、</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11176,7 +12720,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>.</para>
+        /// <para>、</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11214,6 +12758,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public UpdateAlertEnabledResponse UpdateAlertEnabledWithOptions(UpdateAlertEnabledRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
             {
@@ -11226,6 +12779,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -11264,6 +12818,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<UpdateAlertEnabledResponse> UpdateAlertEnabledWithOptionsAsync(UpdateAlertEnabledRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
             {
@@ -11276,6 +12839,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -11352,6 +12916,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public UpdateAlertStrategyResponse UpdateAlertStrategyWithOptions(UpdateAlertStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
             {
@@ -11376,6 +12949,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -11414,6 +12988,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<UpdateAlertStrategyResponse> UpdateAlertStrategyWithOptionsAsync(UpdateAlertStrategyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
             {
@@ -11438,6 +13021,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -11514,6 +13098,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public UpdateEventsAttentionResponse UpdateEventsAttentionWithOptions(UpdateEventsAttentionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
             {
@@ -11530,6 +13123,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -11568,6 +13162,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<UpdateEventsAttentionResponse> UpdateEventsAttentionWithOptionsAsync(UpdateEventsAttentionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
             {
@@ -11584,6 +13187,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -11675,6 +13279,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
                 request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "params", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
                 query["channel"] = request.Channel;
@@ -11686,6 +13294,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
             {
                 query["service_name"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11743,6 +13355,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
                 request.ParamsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Params, "params", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Channel))
             {
                 query["channel"] = request.Channel;
@@ -11754,6 +13370,10 @@ namespace AlibabaCloud.SDK.SysOM20231230
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceName))
             {
                 query["service_name"] = request.ServiceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11831,12 +13451,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an installed component to a specified version.</para>
+        /// <para>Updates the version of an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updating the Agent by calling this operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the execution status of the task.</para>
+        /// <para>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11855,6 +13475,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public UpgradeAgentResponse UpgradeAgentWithOptions(UpgradeAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -11871,6 +13500,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -11890,12 +13520,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an installed component to a specified version.</para>
+        /// <para>Updates the version of an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updating the Agent by calling this operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the execution status of the task.</para>
+        /// <para>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11914,6 +13544,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<UpgradeAgentResponse> UpgradeAgentWithOptionsAsync(UpgradeAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -11930,6 +13569,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -11949,12 +13589,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an installed component to a specified version.</para>
+        /// <para>Updates the version of an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updating the Agent by calling this operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the execution status of the task.</para>
+        /// <para>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11973,12 +13613,12 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates an installed component to a specified version.</para>
+        /// <para>Updates the version of an installed component to a specified version.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updating the Agent by calling this operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetAgentTask operation to query the execution status of the task.</para>
+        /// <para>Calling this operation to update the Agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetAgentTask operation to retrieve the execution status of the task.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11997,7 +13637,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates components for a cluster.</para>
+        /// <para>Updates a component for an ACK cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12016,6 +13656,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public UpgradeAgentForClusterResponse UpgradeAgentForClusterWithOptions(UpgradeAgentForClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -12032,6 +13681,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -12051,7 +13701,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates components for a cluster.</para>
+        /// <para>Updates a component for an ACK cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12070,6 +13720,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<UpgradeAgentForClusterResponse> UpgradeAgentForClusterWithOptionsAsync(UpgradeAgentForClusterRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -12086,6 +13745,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -12105,7 +13765,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates components for a cluster.</para>
+        /// <para>Updates a component for an ACK cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12124,7 +13784,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates components for a cluster.</para>
+        /// <para>Updates a component for an ACK cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12167,6 +13827,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public UpgradeAgentWithTypeResponse UpgradeAgentWithTypeWithOptions(UpgradeAgentWithTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -12187,6 +13856,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -12230,6 +13900,15 @@ namespace AlibabaCloud.SDK.SysOM20231230
         public async Task<UpgradeAgentWithTypeResponse> UpgradeAgentWithTypeWithOptionsAsync(UpgradeAgentWithTypeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XDebugId))
+            {
+                query["X-Debug-Id"] = request.XDebugId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.XSysomInvokeSource))
+            {
+                query["x-sysom-invoke-source"] = request.XSysomInvokeSource;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
             {
@@ -12250,6 +13929,7 @@ namespace AlibabaCloud.SDK.SysOM20231230
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params

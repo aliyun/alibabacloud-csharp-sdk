@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetAgentRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>Agent ID</para>
+        /// <para>The component ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>74a86327-3170-412c-8e67-da3389ec56a9</para>
@@ -18,6 +22,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("agent_id")]
         [Validation(Required=false)]
         public string AgentId { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

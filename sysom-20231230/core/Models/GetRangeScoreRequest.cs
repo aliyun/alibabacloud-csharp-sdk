@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetRangeScoreRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The cluster ID.</para>
         /// 
@@ -50,6 +54,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("start")]
         [Validation(Required=false)]
         public float? Start { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

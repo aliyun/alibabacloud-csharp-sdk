@@ -9,8 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAgentsRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
-        /// <para>The current page number. Pages start from page 1.</para>
+        /// <para>The current page number (starting from page 1).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The agent type used to filter the list. For example, set this parameter to control to retrieve all agents of the control type.</para>
+        /// <para>Filters the list by Agent type. For example, pass control to retrieve all Agents of the control type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>control</para>
@@ -48,6 +52,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

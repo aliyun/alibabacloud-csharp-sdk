@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpgradeAgentForClusterRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The component ID.</para>
         /// 
@@ -32,7 +36,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>The cluster ID must be the ID of an ACK cluster.</para>
+        /// <para>This must be the ID of an ACK cluster.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -41,6 +45,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("cluster_id")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

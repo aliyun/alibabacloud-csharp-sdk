@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class GetServiceFuncStatusShrinkRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The channel name.</para>
         /// <para>This parameter is required.</para>
@@ -38,6 +42,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("service_name")]
         [Validation(Required=false)]
         public string ServiceName { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

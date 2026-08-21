@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class UpdateAlertStrategyRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>Specifies whether the alert policy is enabled.</para>
         /// <para>This parameter is required.</para>
@@ -31,6 +35,9 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [Validation(Required=false)]
         public long? Id { get; set; }
 
+        /// <summary>
+        /// <para>The Kubernetes labels.</para>
+        /// </summary>
         [NameInMap("k8sLabel")]
         [Validation(Required=false)]
         public bool? K8sLabel { get; set; }
@@ -61,18 +68,25 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
             [Validation(Required=false)]
             public List<string> Clusters { get; set; }
 
+            /// <summary>
+            /// <para>The alert contacts.</para>
+            /// </summary>
             [NameInMap("destinations")]
             [Validation(Required=false)]
             public List<int?> Destinations { get; set; }
 
             /// <summary>
-            /// <para>接收告警的异常项合计</para>
+            /// <para>The collection of anomaly items for which alerts are received.</para>
             /// </summary>
             [NameInMap("items")]
             [Validation(Required=false)]
             public List<string> Items { get; set; }
 
         }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

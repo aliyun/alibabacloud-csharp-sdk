@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListInstancesWithEcsInfoRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The page number for pagination. This parameter specifies the current page.</para>
         /// 
@@ -178,6 +182,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("resource_group_name")]
         [Validation(Required=false)]
         public string ResourceGroupName { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 

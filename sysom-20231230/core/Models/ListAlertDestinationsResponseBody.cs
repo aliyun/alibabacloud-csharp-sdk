@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class ListAlertDestinationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Status code</para>
+        /// <para>The status code.</para>
         /// <list type="bullet">
-        /// <item><description><c>code == Success</c> indicates that the authorization was successful;</description></item>
-        /// <item><description>Other status codes indicate authorization failure. When authorization fails, check the <c>message</c> field for detailed error information;</description></item>
+        /// <item><description><c>code == Success</c> indicates that the authorization is successful.</description></item>
+        /// <item><description>Other status codes indicate that the authorization failed. Check the <c>message</c> field for the detailed fault information.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Response data.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public object Data { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of records to retrieve at a time.</para>
+        /// <para>The maximum number of records to retrieve in a single request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// <list type="bullet">
-        /// <item><description>If <c>code == Success</c>, this field is empty;</description></item>
-        /// <item><description>Otherwise, this field contains the request error information.</description></item>
+        /// <item><description>If <c>code == Success</c>, this field is empty.</description></item>
+        /// <item><description>Otherwise, this field contains the error information for the request.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Pagination token for the next request.</para>
+        /// <para>The pagination token for the next request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c2f78a783f49457caba6bace6f6f79e4</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D693121-C925-5154-8DF6-C09A8B369822</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Maximum number of records returned by this request</para>
+        /// <para>The maximum number of records returned by this request based on MaxResults.</para>
         /// 
         /// <b>Example:</b>
         /// <para>623</para>

@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.SysOM20231230.Models
 {
     public class CreateInstanceInspectionRequest : TeaModel {
+        [NameInMap("X-Debug-Id")]
+        [Validation(Required=false)]
+        public string XDebugId { get; set; }
+
         /// <summary>
         /// <para>The instance ID.</para>
         /// 
@@ -20,7 +24,7 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         public string Instance { get; set; }
 
         /// <summary>
-        /// <para>异常项</para>
+        /// <para>The anomaly items.</para>
         /// </summary>
         [NameInMap("items")]
         [Validation(Required=false)]
@@ -55,6 +59,10 @@ namespace AlibabaCloud.SDK.SysOM20231230.Models
         [NameInMap("source")]
         [Validation(Required=false)]
         public string Source { get; set; }
+
+        [NameInMap("x-sysom-invoke-source")]
+        [Validation(Required=false)]
+        public string XSysomInvokeSource { get; set; }
 
     }
 
