@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CheckResourceStockRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the instance type.</para>
+        /// <para>The specification ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acp.basic.small</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string AcpSpecId { get; set; }
 
         /// <summary>
-        /// <para>The number of Cloud Phone instances.</para>
+        /// <para>The number of cloud phone instances.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public bool? GpuAcceleration { get; set; }
 
         /// <summary>
-        /// <para>The zone where the resource resides.</para>
+        /// <para>The zone to which the resource belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou-i</para>

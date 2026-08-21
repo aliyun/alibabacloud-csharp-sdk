@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class CheckResourceStockResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>805D8FB6-512A-531C-9E4D-2A807D3C****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<CheckResourceStockResponseBodyResourceStockModels> ResourceStockModels { get; set; }
         public class CheckResourceStockResponseBodyResourceStockModels : TeaModel {
             /// <summary>
-            /// <para>The ID of the region.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             public string StockStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the zone.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-shanghai-b</para>

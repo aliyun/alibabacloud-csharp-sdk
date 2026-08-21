@@ -1636,7 +1636,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the inventory of Cloud Phone resources. Before you create an instance, call this operation to check whether resources are available in the target region. Create the instance only after you confirm that resources are available.</para>
+        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can use this operation to check whether the inventory in the target region is sufficient, and then proceed with creation after confirmation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1694,7 +1694,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the inventory of Cloud Phone resources. Before you create an instance, call this operation to check whether resources are available in the target region. Create the instance only after you confirm that resources are available.</para>
+        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can use this operation to check whether the inventory in the target region is sufficient, and then proceed with creation after confirmation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1752,7 +1752,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the inventory of Cloud Phone resources. Before you create an instance, call this operation to check whether resources are available in the target region. Create the instance only after you confirm that resources are available.</para>
+        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can use this operation to check whether the inventory in the target region is sufficient, and then proceed with creation after confirmation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1770,7 +1770,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks the inventory of Cloud Phone resources. Before you create an instance, call this operation to check whether resources are available in the target region. Create the instance only after you confirm that resources are available.</para>
+        /// <para>Checks the inventory status of cloud phone resources. Before creating an instance, you can use this operation to check whether the inventory in the target region is sufficient, and then proceed with creation after confirmation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3432,12 +3432,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase an edge smart gateway agent package.</para>
+        /// <para>Places an order to purchase an edge agent package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3511,12 +3511,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase an edge smart gateway agent package.</para>
+        /// <para>Places an order to purchase an edge agent package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3590,12 +3590,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase an edge smart gateway agent package.</para>
+        /// <para>Places an order to purchase an edge agent package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3613,12 +3613,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Places an order to purchase an edge smart gateway agent package.</para>
+        /// <para>Places an order to purchase an edge agent package.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of the Cloud Phone product.</para>
+        /// <para>This operation involves billing. Before you call this operation, make sure that you fully understand the <a href="https://www.alibabacloud.com/help/en/ecp/jvs-mobile-billing-instructions">billing methods and pricing</a> of WUYING Cloud Phone.</para>
         /// </description>
         /// 
         /// <param name="request">
