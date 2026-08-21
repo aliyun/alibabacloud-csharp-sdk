@@ -44,14 +44,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public List<string> Addresses { get; set; }
 
             /// <summary>
-            /// <para>The Agent service configuration. This parameter is required when sourceType is set to AGENT.</para>
+            /// <para>The Agent service configuration. Required when sourceType is AGENT.</para>
             /// </summary>
             [NameInMap("agentServiceConfig")]
             [Validation(Required=false)]
             public AgentServiceConfig AgentServiceConfig { get; set; }
 
             /// <summary>
-            /// <para>The AI service configuration. This parameter is required when sourceType is set to AI.</para>
+            /// <para>The AI service configuration. Required when sourceType is AI.</para>
             /// </summary>
             [NameInMap("aiServiceConfig")]
             [Validation(Required=false)]
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ExpressType { get; set; }
 
             /// <summary>
-            /// <para>The service group name. This parameter is required when sourceType is set to MSE_NACOS.</para>
+            /// <para>The service group name. Required when sourceType is MSE_NACOS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEFAULT_GROUP</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string ModelProviderId { get; set; }
 
             /// <summary>
-            /// <para>The service name. This parameter is required when sourceType is set to FC3.</para>
+            /// <para>The service name. Required when sourceType is FC3.</para>
             /// 
             /// <b>Example:</b>
             /// <para>user-service</para>
@@ -105,12 +105,12 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the service.</para>
+            /// <para>The namespace of the service:</para>
             /// <list type="bullet">
-            /// <item><description>If sourceType is set to K8S, this parameter specifies the namespace of the Kubernetes service.</description></item>
-            /// <item><description>If sourceType is set to MSE_NACOS, this parameter specifies the namespace in Nacos.</description></item>
+            /// <item><description>If sourceType is K8S, this indicates the namespace of the Kubernetes service.</description></item>
+            /// <item><description>If sourceType is MSE_NACOS, this indicates the namespace in Nacos.</description></item>
             /// </list>
-            /// <para>This parameter is required when sourceType is set to K8S or MSE_NACOS.</para>
+            /// <para>Required when sourceType is K8S or MSE_NACOS.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLIC</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string Qualifier { get; set; }
 
             /// <summary>
-            /// <para>The service source ID. This parameter is required in multi-Nacos instance scenarios.</para>
+            /// <para>The service source ID. Required in multi-Nacos instance scenarios.</para>
             /// 
             /// <b>Example:</b>
             /// <para>nacos-instance-001</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The service source type. Valid values:</para>
+        /// <para>The service source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>MSE_NACOS: a service in MSE Nacos.</description></item>
         /// <item><description>K8S: a service in a Kubernetes cluster of Container Service.</description></item>
