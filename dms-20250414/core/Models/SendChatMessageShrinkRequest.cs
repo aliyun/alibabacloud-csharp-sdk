@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class SendChatMessageShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The agent ID. This parameter is required. You can obtain the current AgentId from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to specify may change with each request.</para>
+        /// <para>The agent ID. This is a required field. You can obtain the current AgentId from the response of the CreateAgentSession operation. Agent resources have a lifecycle, so the AgentId you need to specify may change with each request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>agent_***</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The Data Management unit you are currently in. If you select an analytics database, this information is used to correctly connect to your Data Management instance through Data Management. You can go to the DAS console to view your current Data Management unit. If you are a user of Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), set this parameter to cn-hangzhou.</para>
+        /// <para>The Data Management unit you are currently in. If you select an analytics database, this information is used to correctly connect to your Data Management instance. You can go to the DAS console to view your current Data Management unit. If you are a user on the Alibaba Cloud China Website (<a href="http://www.aliyun.com">www.aliyun.com</a>), you can directly enter cn-hangzhou.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The data source information. This parameter can be left empty. Only one data source can be specified for this parameter. Use the DataSources parameter instead.</para>
+        /// <para>The data source information. This parameter can be left empty. This parameter supports only one data source. Use the DataSources parameter instead.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>
@@ -59,6 +59,16 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         /// <summary>
         /// <para>The message type. Default value: <c>[primary]</c>.</para>
+        /// <list type="bullet">
+        /// <item><description><para>Under normal circumstances, when interacting with the Agent, the message type is <c>[primary]</c>.</para>
+        /// </description></item>
+        /// <item><description><para>When the message is a response to the Agent\&quot;s Human-in-Loop question, the type should be <c>[additional]</c>.</para>
+        /// </description></item>
+        /// <item><description><para>When the message is intended to trigger a report generation, the type should be <c>[report]</c>.</para>
+        /// </description></item>
+        /// <item><description><para>When the message is intended to cancel the current session, the type should be <c>[cancel]</c>.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>primary</para>
@@ -78,17 +88,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ParentSessionId { get; set; }
 
         /// <summary>
-        /// <para>The specific question that the agent asks the user through Human-in-Loop. This parameter is required when the message type is <c>additional</c>.</para>
+        /// <para>This is a required field when the message type is <c>additional</c>. Specify the specific question that the agent asks the user through Human-in-Loop.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Please provide the criteria for calculating GMV.</para>
+        /// <para>Please provide the criteria for calculating GMV</para>
         /// </summary>
         [NameInMap("Question")]
         [Validation(Required=false)]
         public string Question { get; set; }
 
         /// <summary>
-        /// <para>The quoted content. This parameter is typically used when interacting with the agent.</para>
+        /// <para>The quoted content. This is typically used when interacting with the agent.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;version&quot;:&quot;v0&quot;}</para>
@@ -99,6 +109,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         /// <summary>
         /// <para><b>Important</b></para>
+        /// <para>When this message is a reply to an Agent message (for example, the Agent asks a clarifying question through ASK_HUMAN), set reply_to to the exact Checkpoint number carried in that Agent message. If this message is not a targeted reply, such as requesting the Agent to perform further in-depth analysis after the analysis is complete, leave reply_to empty or set it to &quot;0&quot;.</para>
+        /// <para>This field affects how the Agent decides to process the message. Passing an incorrect value may cause the analysis results to fall short of expectations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -108,7 +120,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ReplyTo { get; set; }
 
         /// <summary>
-        /// <para>The special configuration for the current session. For the same session, only the configuration specified in the first SendMessage call takes effect.</para>
+        /// <para>The special configuration for the current session. For the same session, only the configuration passed with the first SendMessage call takes effect.</para>
         /// 
         /// <b>if can be null:</b>
         /// <c>true</c>
@@ -118,7 +130,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SessionConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The session ID. This parameter is required. You can obtain the SessionId by calling the CreateAgentSession operation.</para>
+        /// <para>The session ID. This is a required field. You can obtain the SessionId by calling CreateAgentSession.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sess_***</para>
@@ -135,7 +147,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string TaskConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The OSS bucket of the user. If this parameter is not specified, the analysis data is securely stored in the built-in storage.</para>
+        /// <para>The user OSS bucket. If this parameter is not specified, analysis data is securely stored in the built-in storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-bucket</para>
