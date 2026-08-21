@@ -1,3 +1,6 @@
+2026-08-21 Version: 6.1.1
+- Generated csharp 2023-01-17 for airticketOpen.
+
 2026-08-20 Version: 6.1.0
 - Support API TicketApplyRefund.
 - Support API TicketCancelOrder.
