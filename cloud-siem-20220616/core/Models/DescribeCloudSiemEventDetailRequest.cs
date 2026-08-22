@@ -21,12 +21,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string IncidentUuid { get; set; }
 
         /// <summary>
-        /// <para>The region of the data management center for Threat Analysis. Select the region where your assets are located. Valid values:</para>
+        /// <para>The region of the data management center of the threat analysis feature. Specify this parameter based on the region where your assets reside. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cn-hangzhou: assets in the Chinese mainland and China (Hong Kong)</para>
-        /// </description></item>
-        /// <item><description><para>ap-southeast-1: assets in regions outside the Chinese mainland</para>
-        /// </description></item>
+        /// <item><description>cn-hangzhou: the assets reside in the Chinese mainland or Hong Kong (China).</description></item>
+        /// <item><description>ap-southeast-1: the assets reside in regions outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member account. An administrator can use this parameter to query data from the perspective of the member.</para>
+        /// <para>The ID of the member to which the administrator switches the view.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113091674488****</para>
@@ -47,12 +45,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The view type.</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>0: the view of the current Alibaba Cloud account.</para>
-        /// </description></item>
-        /// <item><description><para>1: the view of all accounts in your enterprise.</para>
-        /// </description></item>
+        /// <item><description>0: the view of the current Alibaba Cloud account.</description></item>
+        /// <item><description>1: the view of all accounts in the enterprise.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

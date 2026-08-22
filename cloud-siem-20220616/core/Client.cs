@@ -2476,7 +2476,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of threat types for custom rules.</para>
+        /// <para>Retrieves the list of available threat types for custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2530,7 +2530,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of threat types for custom rules.</para>
+        /// <para>Retrieves the list of available threat types for custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2584,7 +2584,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of threat types for custom rules.</para>
+        /// <para>Retrieves the list of available threat types for custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2602,7 +2602,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves a list of threat types for custom rules.</para>
+        /// <para>Retrieves the list of available threat types for custom rules.</para>
         /// </summary>
         /// 
         /// <param name="request">

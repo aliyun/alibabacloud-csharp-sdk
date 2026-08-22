@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         public int? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The response data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456</para>
@@ -40,6 +40,36 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             public string AlertType { get; set; }
 
             /// <summary>
+            /// <para>The threat type category identifier.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>identity_access</para>
+            /// </summary>
+            [NameInMap("AlertTypeCategory")]
+            [Validation(Required=false)]
+            public string AlertTypeCategory { get; set; }
+
+            /// <summary>
+            /// <para>The threat type category name in the language of the current request. Empty if no translation is available.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Identity and Access</para>
+            /// </summary>
+            [NameInMap("AlertTypeCategoryMds")]
+            [Validation(Required=false)]
+            public string AlertTypeCategoryMds { get; set; }
+
+            /// <summary>
+            /// <para>The display order of the threat type category.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10</para>
+            /// </summary>
+            [NameInMap("AlertTypeCategoryOrder")]
+            [Validation(Required=false)]
+            public int? AlertTypeCategoryOrder { get; set; }
+
+            /// <summary>
             /// <para>The Medusa code of the threat type.</para>
             /// 
             /// <b>Example:</b>
@@ -49,10 +79,30 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
             [Validation(Required=false)]
             public string AlertTypeMds { get; set; }
 
+            /// <summary>
+            /// <para>The English name of the threat type. Empty if no translation is available.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Unusual Logon</para>
+            /// </summary>
+            [NameInMap("AlertTypeNameEn")]
+            [Validation(Required=false)]
+            public string AlertTypeNameEn { get; set; }
+
+            /// <summary>
+            /// <para>The Chinese name of the threat type. Empty if no translation is available.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>异常登录</para>
+            /// </summary>
+            [NameInMap("AlertTypeNameZh")]
+            [Validation(Required=false)]
+            public string AlertTypeNameZh { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -74,10 +124,8 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: successful.</description></item>
+        /// <item><description>false: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
