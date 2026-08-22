@@ -1,3 +1,7 @@
+2026-08-22 Version: 1.26.3
+- Update API GetInstanceLicense: add response parameters Body.License.InstanceLicenseDetail.PamLicenseStatus.
+
+
 2026-08-20 Version: 1.26.2
 - Update API CreateInstance: add request parameters ClientToken.
 - Update API ListInstances: add request parameters ManagedServiceCode.

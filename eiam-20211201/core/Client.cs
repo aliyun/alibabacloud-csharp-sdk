@@ -24425,12 +24425,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active license information for an instance.</para>
+        /// <para>Queries the license information that is currently effective for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure the instance is not in use before deletion. Deleting an EIAM instance permanently removes all of its associated data.</para>
+        /// <para>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24472,12 +24472,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active license information for an instance.</para>
+        /// <para>Queries the license information that is currently effective for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure the instance is not in use before deletion. Deleting an EIAM instance permanently removes all of its associated data.</para>
+        /// <para>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24519,12 +24519,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active license information for an instance.</para>
+        /// <para>Queries the license information that is currently effective for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure the instance is not in use before deletion. Deleting an EIAM instance permanently removes all of its associated data.</para>
+        /// <para>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -24542,12 +24542,12 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the active license information for an instance.</para>
+        /// <para>Queries the license information that is currently effective for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Ensure the instance is not in use before deletion. Deleting an EIAM instance permanently removes all of its associated data.</para>
+        /// <para>Make sure that your instance is no longer in use. After an EIAM instance is deleted, all related data is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
