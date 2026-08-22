@@ -1,0 +1,130 @@
+// This file is auto-generated, don't edit it. Thanks.
+
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+using Tea;
+
+namespace AlibabaCloud.SDK.Polardbx20200202.Models
+{
+    public class DescribeContext0ConfigResponseBody : TeaModel {
+        [NameInMap("AccessDeniedDetail")]
+        [Validation(Required=false)]
+        public DescribeContext0ConfigResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
+        public class DescribeContext0ConfigResponseBodyAccessDeniedDetail : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxx</para>
+            /// </summary>
+            [NameInMap("AuthAction")]
+            [Validation(Required=false)]
+            public string AuthAction { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxx</para>
+            /// </summary>
+            [NameInMap("AuthPrincipalDisplayName")]
+            [Validation(Required=false)]
+            public string AuthPrincipalDisplayName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>111</para>
+            /// </summary>
+            [NameInMap("AuthPrincipalOwnerId")]
+            [Validation(Required=false)]
+            public string AuthPrincipalOwnerId { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>222</para>
+            /// </summary>
+            [NameInMap("AuthPrincipalType")]
+            [Validation(Required=false)]
+            public string AuthPrincipalType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
+            /// </summary>
+            [NameInMap("EncodedDiagnosticMessage")]
+            [Validation(Required=false)]
+            public string EncodedDiagnosticMessage { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>ImplicitDeny</para>
+            /// </summary>
+            [NameInMap("NoPermissionType")]
+            [Validation(Required=false)]
+            public string NoPermissionType { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>PRIORITY</para>
+            /// </summary>
+            [NameInMap("PolicyType")]
+            [Validation(Required=false)]
+            public string PolicyType { get; set; }
+
+        }
+
+        [NameInMap("Data")]
+        [Validation(Required=false)]
+        public DescribeContext0ConfigResponseBodyData Data { get; set; }
+        public class DescribeContext0ConfigResponseBodyData : TeaModel {
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>admin-key-example</para>
+            /// </summary>
+            [NameInMap("Context0AdminKey")]
+            [Validation(Required=false)]
+            public string Context0AdminKey { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>context0-example</para>
+            /// </summary>
+            [NameInMap("Context0InstanceName")]
+            [Validation(Required=false)]
+            public string Context0InstanceName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>owner-key-example</para>
+            /// </summary>
+            [NameInMap("Context0OwnerKey")]
+            [Validation(Required=false)]
+            public string Context0OwnerKey { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pxsp-*********</para>
+            /// </summary>
+            [NameInMap("DBInstanceName")]
+            [Validation(Required=false)]
+            public string DBInstanceName { get; set; }
+
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>pxs-*********</para>
+            /// </summary>
+            [NameInMap("OpenSearchInstanceName")]
+            [Validation(Required=false)]
+            public string OpenSearchInstanceName { get; set; }
+
+        }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</para>
+        /// </summary>
+        [NameInMap("RequestId")]
+        [Validation(Required=false)]
+        public string RequestId { get; set; }
+
+    }
+
+}
