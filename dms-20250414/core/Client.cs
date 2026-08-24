@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddDataAgentMemory</para>
+        /// <para>Adds a memory entry to a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddDataAgentMemory</para>
+        /// <para>Adds a memory entry to a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -174,7 +174,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddDataAgentMemory</para>
+        /// <para>Adds a memory entry to a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>AddDataAgentMemory</para>
+        /// <para>Adds a memory entry to a DataAgent.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3430,6 +3430,182 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>创建sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOneMetaSqlTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOneMetaSqlTemplateResponse
+        /// </returns>
+        public CreateOneMetaSqlTemplateResponse CreateOneMetaSqlTemplateWithOptions(CreateOneMetaSqlTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expr))
+            {
+                query["Expr"] = request.Expr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlParams))
+            {
+                query["SqlParams"] = request.SqlParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOneMetaSqlTemplate",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOneMetaSqlTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOneMetaSqlTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOneMetaSqlTemplateResponse
+        /// </returns>
+        public async Task<CreateOneMetaSqlTemplateResponse> CreateOneMetaSqlTemplateWithOptionsAsync(CreateOneMetaSqlTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expr))
+            {
+                query["Expr"] = request.Expr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlParams))
+            {
+                query["SqlParams"] = request.SqlParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateOneMetaSqlTemplate",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateOneMetaSqlTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOneMetaSqlTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOneMetaSqlTemplateResponse
+        /// </returns>
+        public CreateOneMetaSqlTemplateResponse CreateOneMetaSqlTemplate(CreateOneMetaSqlTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateOneMetaSqlTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>创建sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateOneMetaSqlTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateOneMetaSqlTemplateResponse
+        /// </returns>
+        public async Task<CreateOneMetaSqlTemplateResponse> CreateOneMetaSqlTemplateAsync(CreateOneMetaSqlTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateOneMetaSqlTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an Airflow instance.</para>
         /// </summary>
         /// 
@@ -5546,6 +5722,246 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteFileUploadWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除onemeta3.0的Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOneMetaOssieModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOneMetaOssieModelResponse
+        /// </returns>
+        public DeleteOneMetaOssieModelResponse DeleteOneMetaOssieModelWithOptions(DeleteOneMetaOssieModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeUuid))
+            {
+                query["KnowledgeUuid"] = request.KnowledgeUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOneMetaOssieModel",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOneMetaOssieModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除onemeta3.0的Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOneMetaOssieModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOneMetaOssieModelResponse
+        /// </returns>
+        public async Task<DeleteOneMetaOssieModelResponse> DeleteOneMetaOssieModelWithOptionsAsync(DeleteOneMetaOssieModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeUuid))
+            {
+                query["KnowledgeUuid"] = request.KnowledgeUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOneMetaOssieModel",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOneMetaOssieModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除onemeta3.0的Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOneMetaOssieModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOneMetaOssieModelResponse
+        /// </returns>
+        public DeleteOneMetaOssieModelResponse DeleteOneMetaOssieModel(DeleteOneMetaOssieModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteOneMetaOssieModelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除onemeta3.0的Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOneMetaOssieModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOneMetaOssieModelResponse
+        /// </returns>
+        public async Task<DeleteOneMetaOssieModelResponse> DeleteOneMetaOssieModelAsync(DeleteOneMetaOssieModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteOneMetaOssieModelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOneMetaSqlTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOneMetaSqlTemplateResponse
+        /// </returns>
+        public DeleteOneMetaSqlTemplateResponse DeleteOneMetaSqlTemplateWithOptions(DeleteOneMetaSqlTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeUuid))
+            {
+                query["KnowledgeUuid"] = request.KnowledgeUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOneMetaSqlTemplate",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOneMetaSqlTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOneMetaSqlTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOneMetaSqlTemplateResponse
+        /// </returns>
+        public async Task<DeleteOneMetaSqlTemplateResponse> DeleteOneMetaSqlTemplateWithOptionsAsync(DeleteOneMetaSqlTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeUuid))
+            {
+                query["KnowledgeUuid"] = request.KnowledgeUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteOneMetaSqlTemplate",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteOneMetaSqlTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOneMetaSqlTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOneMetaSqlTemplateResponse
+        /// </returns>
+        public DeleteOneMetaSqlTemplateResponse DeleteOneMetaSqlTemplate(DeleteOneMetaSqlTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteOneMetaSqlTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>删除sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteOneMetaSqlTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteOneMetaSqlTemplateResponse
+        /// </returns>
+        public async Task<DeleteOneMetaSqlTemplateResponse> DeleteOneMetaSqlTemplateAsync(DeleteOneMetaSqlTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteOneMetaSqlTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9134,6 +9550,134 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取onemeta3.0的Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOneMetaOssieModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOneMetaOssieModelResponse
+        /// </returns>
+        public GetOneMetaOssieModelResponse GetOneMetaOssieModelWithOptions(GetOneMetaOssieModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocFormat))
+            {
+                body["DocFormat"] = request.DocFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeUuid))
+            {
+                body["KnowledgeUuid"] = request.KnowledgeUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOneMetaOssieModel",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOneMetaOssieModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取onemeta3.0的Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOneMetaOssieModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOneMetaOssieModelResponse
+        /// </returns>
+        public async Task<GetOneMetaOssieModelResponse> GetOneMetaOssieModelWithOptionsAsync(GetOneMetaOssieModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocFormat))
+            {
+                body["DocFormat"] = request.DocFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeUuid))
+            {
+                body["KnowledgeUuid"] = request.KnowledgeUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetOneMetaOssieModel",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetOneMetaOssieModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取onemeta3.0的Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOneMetaOssieModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOneMetaOssieModelResponse
+        /// </returns>
+        public GetOneMetaOssieModelResponse GetOneMetaOssieModel(GetOneMetaOssieModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetOneMetaOssieModelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取onemeta3.0的Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetOneMetaOssieModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetOneMetaOssieModelResponse
+        /// </returns>
+        public async Task<GetOneMetaOssieModelResponse> GetOneMetaOssieModelAsync(GetOneMetaOssieModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetOneMetaOssieModelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the operation logs of the SQL window.</para>
         /// </summary>
         /// 
@@ -9742,6 +10286,182 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetWorkspaceQuotaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportOneMetaOssieModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportOneMetaOssieModelResponse
+        /// </returns>
+        public ImportOneMetaOssieModelResponse ImportOneMetaOssieModelWithOptions(ImportOneMetaOssieModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocFormat))
+            {
+                query["DocFormat"] = request.DocFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Document))
+            {
+                query["Document"] = request.Document;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportOneMetaOssieModel",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportOneMetaOssieModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportOneMetaOssieModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportOneMetaOssieModelResponse
+        /// </returns>
+        public async Task<ImportOneMetaOssieModelResponse> ImportOneMetaOssieModelWithOptionsAsync(ImportOneMetaOssieModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocFormat))
+            {
+                query["DocFormat"] = request.DocFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Document))
+            {
+                query["Document"] = request.Document;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ImportOneMetaOssieModel",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ImportOneMetaOssieModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportOneMetaOssieModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportOneMetaOssieModelResponse
+        /// </returns>
+        public ImportOneMetaOssieModelResponse ImportOneMetaOssieModel(ImportOneMetaOssieModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ImportOneMetaOssieModelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>导入Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ImportOneMetaOssieModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ImportOneMetaOssieModelResponse
+        /// </returns>
+        public async Task<ImportOneMetaOssieModelResponse> ImportOneMetaOssieModelAsync(ImportOneMetaOssieModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ImportOneMetaOssieModelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -14794,6 +15514,350 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取ossie模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOneMetaOssieModelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOneMetaOssieModelsResponse
+        /// </returns>
+        public ListOneMetaOssieModelsResponse ListOneMetaOssieModelsWithOptions(ListOneMetaOssieModelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVectorSearch))
+            {
+                query["EnableVectorSearch"] = request.EnableVectorSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOneMetaOssieModels",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOneMetaOssieModelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ossie模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOneMetaOssieModelsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOneMetaOssieModelsResponse
+        /// </returns>
+        public async Task<ListOneMetaOssieModelsResponse> ListOneMetaOssieModelsWithOptionsAsync(ListOneMetaOssieModelsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVectorSearch))
+            {
+                query["EnableVectorSearch"] = request.EnableVectorSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOneMetaOssieModels",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOneMetaOssieModelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ossie模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOneMetaOssieModelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOneMetaOssieModelsResponse
+        /// </returns>
+        public ListOneMetaOssieModelsResponse ListOneMetaOssieModels(ListOneMetaOssieModelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListOneMetaOssieModelsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取ossie模型列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOneMetaOssieModelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOneMetaOssieModelsResponse
+        /// </returns>
+        public async Task<ListOneMetaOssieModelsResponse> ListOneMetaOssieModelsAsync(ListOneMetaOssieModelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListOneMetaOssieModelsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOneMetaSqlTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOneMetaSqlTemplatesResponse
+        /// </returns>
+        public ListOneMetaSqlTemplatesResponse ListOneMetaSqlTemplatesWithOptions(ListOneMetaSqlTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVectorSearch))
+            {
+                query["EnableVectorSearch"] = request.EnableVectorSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOneMetaSqlTemplates",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOneMetaSqlTemplatesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOneMetaSqlTemplatesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOneMetaSqlTemplatesResponse
+        /// </returns>
+        public async Task<ListOneMetaSqlTemplatesResponse> ListOneMetaSqlTemplatesWithOptionsAsync(ListOneMetaSqlTemplatesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableVectorSearch))
+            {
+                query["EnableVectorSearch"] = request.EnableVectorSearch;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOneMetaSqlTemplates",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOneMetaSqlTemplatesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOneMetaSqlTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOneMetaSqlTemplatesResponse
+        /// </returns>
+        public ListOneMetaSqlTemplatesResponse ListOneMetaSqlTemplates(ListOneMetaSqlTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListOneMetaSqlTemplatesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListOneMetaSqlTemplatesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOneMetaSqlTemplatesResponse
+        /// </returns>
+        public async Task<ListOneMetaSqlTemplatesResponse> ListOneMetaSqlTemplatesAsync(ListOneMetaSqlTemplatesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListOneMetaSqlTemplatesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Lists code files and directories at a specified path in a workspace.</para>
         /// </summary>
         /// 
@@ -19294,6 +20358,358 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOneMetaOssieModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOneMetaOssieModelResponse
+        /// </returns>
+        public UpdateOneMetaOssieModelResponse UpdateOneMetaOssieModelWithOptions(UpdateOneMetaOssieModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocFormat))
+            {
+                query["DocFormat"] = request.DocFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Document))
+            {
+                query["Document"] = request.Document;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeUuid))
+            {
+                query["KnowledgeUuid"] = request.KnowledgeUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOneMetaOssieModel",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOneMetaOssieModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOneMetaOssieModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOneMetaOssieModelResponse
+        /// </returns>
+        public async Task<UpdateOneMetaOssieModelResponse> UpdateOneMetaOssieModelWithOptionsAsync(UpdateOneMetaOssieModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocFormat))
+            {
+                query["DocFormat"] = request.DocFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Document))
+            {
+                query["Document"] = request.Document;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeUuid))
+            {
+                query["KnowledgeUuid"] = request.KnowledgeUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOneMetaOssieModel",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOneMetaOssieModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOneMetaOssieModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOneMetaOssieModelResponse
+        /// </returns>
+        public UpdateOneMetaOssieModelResponse UpdateOneMetaOssieModel(UpdateOneMetaOssieModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateOneMetaOssieModelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新Ossie模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOneMetaOssieModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOneMetaOssieModelResponse
+        /// </returns>
+        public async Task<UpdateOneMetaOssieModelResponse> UpdateOneMetaOssieModelAsync(UpdateOneMetaOssieModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateOneMetaOssieModelWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOneMetaSqlTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOneMetaSqlTemplateResponse
+        /// </returns>
+        public UpdateOneMetaSqlTemplateResponse UpdateOneMetaSqlTemplateWithOptions(UpdateOneMetaSqlTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expr))
+            {
+                query["Expr"] = request.Expr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeUuid))
+            {
+                query["KnowledgeUuid"] = request.KnowledgeUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlParams))
+            {
+                query["SqlParams"] = request.SqlParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOneMetaSqlTemplate",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOneMetaSqlTemplateResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOneMetaSqlTemplateRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOneMetaSqlTemplateResponse
+        /// </returns>
+        public async Task<UpdateOneMetaSqlTemplateResponse> UpdateOneMetaSqlTemplateWithOptionsAsync(UpdateOneMetaSqlTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CatalogUuid))
+            {
+                query["CatalogUuid"] = request.CatalogUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatabaseUuid))
+            {
+                query["DatabaseUuid"] = request.DatabaseUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Expr))
+            {
+                query["Expr"] = request.Expr;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeUuid))
+            {
+                query["KnowledgeUuid"] = request.KnowledgeUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SqlParams))
+            {
+                query["SqlParams"] = request.SqlParams;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tag))
+            {
+                query["Tag"] = request.Tag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                query["Title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateOneMetaSqlTemplate",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateOneMetaSqlTemplateResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOneMetaSqlTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOneMetaSqlTemplateResponse
+        /// </returns>
+        public UpdateOneMetaSqlTemplateResponse UpdateOneMetaSqlTemplate(UpdateOneMetaSqlTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateOneMetaSqlTemplateWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新sql模版</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateOneMetaSqlTemplateRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateOneMetaSqlTemplateResponse
+        /// </returns>
+        public async Task<UpdateOneMetaSqlTemplateResponse> UpdateOneMetaSqlTemplateAsync(UpdateOneMetaSqlTemplateRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateOneMetaSqlTemplateWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
