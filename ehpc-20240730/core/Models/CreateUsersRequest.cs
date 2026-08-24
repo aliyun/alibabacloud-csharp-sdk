@@ -21,16 +21,16 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The users that you want to add.</para>
+        /// <para>The list of users.</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public List<CreateUsersRequestUser> User { get; set; }
         public class CreateUsersRequestUser : TeaModel {
             /// <summary>
-            /// <para>The public key of the user.</para>
-            /// <para>You can add up to 20 users in a call.</para>
-            /// <para>Specify one of the Password and AuthKey parameters. The AuthKey parameter takes effect only when the cluster authentication method is set to Key. Key authentication is not recommended.</para>
+            /// <para>The public key of the Nth user to add.</para>
+            /// <para>Valid values of N: 1 to 20.</para>
+            /// <para>This parameter is mutually exclusive with the Password parameter. This parameter takes effect when the cluster authentication method is set to key (not recommended).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Abc****</para>
@@ -40,8 +40,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string AuthKey { get; set; }
 
             /// <summary>
-            /// <para>The permission group to which the user belongs. Valid values:</para>
-            /// <para>users: ordinary permissions, which are suitable for ordinary users that need only to submit and debug jobs. wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes. You can add up to 20 users in a call.</para>
+            /// <para>The user group of the Nth user to add. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>users: ordinary permission group. This group is suitable for regular users who only need to commit and debug jobs.</description></item>
+            /// <item><description>wheel: sudo permission group. This group is suitable for administrators who need to perform cluster management. In addition to committing and debugging jobs, users in this group can execute sudo commands to install software, restart nodes, and perform other operations.</description></item>
+            /// </list>
+            /// <para>Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>users</para>
@@ -51,15 +55,15 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string Group { get; set; }
 
             /// <summary>
-            /// <para>The password of the user. The password must be 6 to 30 characters in length and must contain three of the following character types:</para>
+            /// <para>The password of the Nth user to add. The password must be 8 to 30 characters in length and contain at least three of the following four character types:</para>
             /// <list type="bullet">
             /// <item><description>Uppercase letters</description></item>
             /// <item><description>Lowercase letters</description></item>
             /// <item><description>Digits</description></item>
-            /// <item><description>Special characters ()~!@#$%^&amp;\*-_+=|{}[]:;\&quot;/&lt;&gt;,.?/</description></item>
+            /// <item><description>Special characters: ()~!@#$%^&amp;*-_+=|{}[]:;\&quot;/&lt;&gt;,.?/</description></item>
             /// </list>
-            /// <para>You can add up to 20 users in a call.</para>
-            /// <para>Specify one of the Password and AuthKey parameters. The Password parameter takes effect only when the cluster authentication method is set to Password. Password authentication is recommended.</para>
+            /// <para>Valid values of N: 1 to 20.</para>
+            /// <para>This parameter is mutually exclusive with the AuthKey parameter. This parameter takes effect when the cluster authentication method is set to password (recommended).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1@a2****</para>
@@ -69,8 +73,8 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public string Password { get; set; }
 
             /// <summary>
-            /// <para>The username. The username must be 1 to 30 characters in length. It must start with a letter and can contain digits, letters, and periods (.).</para>
-            /// <para>You can add up to 20 users in a call.</para>
+            /// <para>The username of the Nth user to add. The username must be 1 to 30 characters in length, start with a letter, and can contain digits and special characters (.).</para>
+            /// <para>Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testuser</para>

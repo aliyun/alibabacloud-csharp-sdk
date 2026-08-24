@@ -80,8 +80,6 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public bool? DeleteWithInstance { get; set; }
 
             /// <summary>
-            /// <para>Device</para>
-            /// 
             /// <b>Example:</b>
             /// <para>/dev/xvdb</para>
             /// </summary>
@@ -140,8 +138,6 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
             public int? Size { get; set; }
 
             /// <summary>
-            /// <para>SnapshotId</para>
-            /// 
             /// <b>Example:</b>
             /// <para>s-bp1ei2b44ripxuo46hym</para>
             /// </summary>

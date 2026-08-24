@@ -8,9 +8,10 @@ using Tea;
 
 namespace AlibabaCloud.SDK.EHPC20240730.Models
 {
-    public class CreateUsersShrinkRequest : TeaModel {
+    public class GetUserRequest : TeaModel {
         /// <summary>
         /// <para>The cluster ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/87116.html">ListClusters</a> to obtain the cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,11 +22,15 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The list of users.</para>
+        /// <para>The username.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>testuser</para>
         /// </summary>
-        [NameInMap("User")]
+        [NameInMap("UserName")]
         [Validation(Required=false)]
-        public string UserShrink { get; set; }
+        public string UserName { get; set; }
 
     }
 

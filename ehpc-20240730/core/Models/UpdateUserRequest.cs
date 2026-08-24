@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string ClusterId { get; set; }
 
         /// <summary>
-        /// <para>The user group attribute of the user that you want to update. Valid values:</para>
+        /// <para>The user group property to update. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>users: ordinary permissions, which are suitable for ordinary users that need only to submit and debug jobs.</description></item>
-        /// <item><description>wheel: sudo permissions, which are suitable for administrators who need to manage clusters. In addition to submitting and debugging jobs, you can also run sudo commands to install software and restart nodes.</description></item>
+        /// <item><description><para>users: ordinary permission group. This group is suitable for regular users who only need to submit and debug jobs.</para>
+        /// </description></item>
+        /// <item><description><para>wheel: sudo permission group. This group is suitable for administrators who need cluster management. In addition to submitting and debugging jobs, users in this group can execute sudo commands to install software, restart nodes, and perform other operations.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,12 +37,12 @@ namespace AlibabaCloud.SDK.EHPC20240730.Models
         public string Group { get; set; }
 
         /// <summary>
-        /// <para>The password attribute of the user that you want to update. The password must be 6 to 30 characters in length and must contain three of the following four character types:</para>
+        /// <para>The user password property to update. The password must be 8 to 30 characters in length and must contain at least three of the following four character types:</para>
         /// <list type="bullet">
         /// <item><description>Uppercase letters</description></item>
         /// <item><description>Lowercase letters</description></item>
         /// <item><description>Digits</description></item>
-        /// <item><description>Special characters ()~!@#$%^&amp;\*-_+=|{}[]:;\&quot;/&lt;&gt;,.?/</description></item>
+        /// <item><description>Special characters: ()~!@#$%^&amp;*-_+=|{}[]:;\&quot;/&lt;&gt;,.?/</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

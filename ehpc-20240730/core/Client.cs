@@ -21,8 +21,6 @@ namespace AlibabaCloud.SDK.EHPC20240730
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"me-east-1", "ehpc.me-east-1.aliyuncs.com"},
-                {"eu-central-1", "ehpc.eu-central-1.aliyuncs.com"},
                 {"cn-zhangjiakou", "ehpc.cn-zhangjiakou.aliyuncs.com"},
                 {"cn-wulanchabu", "ehpc.cn-wulanchabu.aliyuncs.com"},
                 {"cn-wuhan-lr", "ehpc.cn-wuhan-lr.aliyuncs.com"},
@@ -39,6 +37,8 @@ namespace AlibabaCloud.SDK.EHPC20240730
                 {"ap-southeast-5", "ehpc.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-1", "ehpc.ap-southeast-1.aliyuncs.com"},
                 {"ap-northeast-1", "ehpc.ap-northeast-1.aliyuncs.com"},
+                {"eu-central-1", "ehpc.eu-central-1.aliyuncs.com"},
+                {"me-east-1", "ehpc.me-east-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ehpc", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1556,7 +1556,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Adds one or more users to a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1608,7 +1608,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Adds one or more users to a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1660,7 +1660,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Adds one or more users to a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1678,7 +1678,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds users to an Elastic High Performance Computing (E-HPC) cluster.</para>
+        /// <para>Adds one or more users to a specified cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3552,6 +3552,118 @@ namespace AlibabaCloud.SDK.EHPC20240730
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetQueueWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cluster user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
+        public GetUserResponse GetUserWithOptions(GetUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUser",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cluster user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
+        public async Task<GetUserResponse> GetUserWithOptionsAsync(GetUserRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUser",
+                Version = "2024-07-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cluster user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
+        public GetUserResponse GetUser(GetUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetUserWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a cluster user.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetUserRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserResponse
+        /// </returns>
+        public async Task<GetUserResponse> GetUserAsync(GetUserRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetUserWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7064,7 +7176,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</para>
+        /// <para>Updates the information of a specified cluster user, including properties such as user group and password.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7118,7 +7230,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</para>
+        /// <para>Updates the information of a specified cluster user, including properties such as user group and password.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7172,7 +7284,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</para>
+        /// <para>Updates the information of a specified cluster user, including properties such as user group and password.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7190,7 +7302,7 @@ namespace AlibabaCloud.SDK.EHPC20240730
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information of a user in an Elastic High Performance Computing (E-HPC) cluster, including the user group and password.</para>
+        /// <para>Updates the information of a specified cluster user, including properties such as user group and password.</para>
         /// </summary>
         /// 
         /// <param name="request">
