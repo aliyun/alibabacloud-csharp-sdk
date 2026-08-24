@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
 {
-    public class CreateReportDefinitionRequest : TeaModel {
+    public class CreateReportDefinitionShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The start billing cycle for push. After successful subscription, the system automatically pushes data from the start billing cycle to the current time. This parameter is invalid for monthly bill PDF subscriptions and does not re-push historical data. Data within the last year can be pushed.</para>
         /// 
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
         /// </summary>
         [NameInMap("SelectedFields")]
         [Validation(Required=false)]
-        public List<string> SelectedFields { get; set; }
+        public string SelectedFieldsShrink { get; set; }
 
         /// <summary>
         /// <para>Email subscription configuration. Specifies whether to include bill attachments in emails.</para>

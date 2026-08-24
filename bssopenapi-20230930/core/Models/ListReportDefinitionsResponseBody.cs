@@ -108,6 +108,10 @@ namespace AlibabaCloud.SDK.BssOpenApi20230930.Models
             [Validation(Required=false)]
             public string ReportType { get; set; }
 
+            [NameInMap("SelectedFields")]
+            [Validation(Required=false)]
+            public List<string> SelectedFields { get; set; }
+
             /// <summary>
             /// <para>The time when the subscription was created.</para>
             /// 
