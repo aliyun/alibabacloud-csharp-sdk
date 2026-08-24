@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>ListResult<InstanceSSL></para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteSecurityIPGroupResponseBodyData Data { get; set; }
         public class DeleteSecurityIPGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The details of the cross-product whitelist template.</para>
+            /// <para>The cross-product whitelist template information.</para>
             /// </summary>
             [NameInMap("GlobalSecurityIPGroup")]
             [Validation(Required=false)]
             public List<DeleteSecurityIPGroupResponseBodyDataGlobalSecurityIPGroup> GlobalSecurityIPGroup { get; set; }
             public class DeleteSecurityIPGroupResponseBodyDataGlobalSecurityIPGroup : TeaModel {
                 /// <summary>
-                /// <para>The ID of the IP address whitelist template.</para>
+                /// <para>The ID of the IP whitelist template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>g-1no2rzybnqcv0m****</para>
@@ -48,9 +48,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message is returned. The error message may include an error code.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,12 +71,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSecurityIPGroupRelationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code that is returned.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>ListResult<InstanceSSL></para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSecurityIPGroupRelationResponseBodyData Data { get; set; }
         public class DescribeSecurityIPGroupRelationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the global IP address whitelist template.</para>
+            /// <para>The global IP whitelist template information.</para>
             /// </summary>
             [NameInMap("GlobalSecurityIPGroupRel")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The IP addresses in the whitelist template.</para>
                 /// <remarks>
-                /// <para>Separate multiple IP addresses with commas (,). Add a maximum of 1,000 IP addresses or CIDR blocks to all IP address whitelists.</para>
+                /// <para>Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks across all IP whitelists.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string GIpList { get; set; }
 
                 /// <summary>
-                /// <para>The name of the IP address whitelist template.</para>
+                /// <para>The name of the IP whitelist template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test2</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string GlobalIgName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the IP address whitelist template.</para>
+                /// <para>The ID of the IP whitelist template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>g-1no2rzybnqcv0xxxxxx</para>
@@ -91,9 +91,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message is returned, such as an error code.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -114,12 +114,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

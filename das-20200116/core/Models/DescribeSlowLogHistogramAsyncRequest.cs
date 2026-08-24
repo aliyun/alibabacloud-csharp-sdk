@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSlowLogHistogramAsyncRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time as a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time of the query. Specify a UNIX timestamp in milliseconds.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -24,14 +24,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>A list of query filter conditions.</para>
+        /// <para>The list of query filter conditions.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
         public List<DescribeSlowLogHistogramAsyncRequestFilters> Filters { get; set; }
         public class DescribeSlowLogHistogramAsyncRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The filter key.</para>
+            /// <para>The filter parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The ID of the database instance.</para>
+        /// <para>The database instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para>For PolarDB for MySQL instances, you must specify the node ID.</para>
+        /// <para>For PolarDB for MySQL instances, specify the node ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time as a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time of the query. Specify a UNIX timestamp in milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

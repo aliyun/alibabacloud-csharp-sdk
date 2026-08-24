@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogStatisticResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSqlLogStatisticResponseBodyData Data { get; set; }
         public class DescribeSqlLogStatisticResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total size of data in cold storage, in bytes.</para>
+            /// <para>The total cold storage data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8585901</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? ColdSqlSize { get; set; }
 
             /// <summary>
-            /// <para>The amount of free-of-charge cold storage, in bytes.</para>
+            /// <para>The free cold storage data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5041450</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? FreeColdSqlSize { get; set; }
 
             /// <summary>
-            /// <para>The amount of free-of-charge hot storage, in bytes.</para>
+            /// <para>The free hot storage data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>297245</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? FreeHotSqlSize { get; set; }
 
             /// <summary>
-            /// <para>The total size of data in hot storage, in bytes.</para>
+            /// <para>The total hot storage data. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1118042</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? HotSqlSize { get; set; }
 
             /// <summary>
-            /// <para>The amount of data imported in the last 24 hours, in bytes.</para>
+            /// <para>The amount of data imported in the last day. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>297245</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? ImportSqlSize { get; set; }
 
             /// <summary>
-            /// <para>The UNIX timestamp in milliseconds.</para>
+            /// <para>The timestamp in UNIX timestamp format. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1712568564928</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? Timestamp { get; set; }
 
             /// <summary>
-            /// <para>The total storage size. This is the sum of the data in hot storage and cold storage. Unit: bytes.</para>
+            /// <para>The total storage data (cold data + hot data).</para>
             /// 
             /// <b>Example:</b>
             /// <para>9703943</para>
@@ -99,9 +99,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. Otherwise, an error message is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -122,12 +122,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

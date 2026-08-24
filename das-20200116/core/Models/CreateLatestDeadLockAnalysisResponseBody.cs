@@ -22,10 +22,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the task is created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The task is created.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The task fails to be created.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The task is created.</description></item>
+        /// <item><description><b>false</b>: The task fails to be created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,14 +34,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? Data { get; set; }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description><para>When the request is successful, <b>Successful</b> is returned.</para>
-        /// </description></item>
-        /// <item><description><para>When the request fails, error information (such as error codes) is returned.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -54,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the API request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B6D17591-B48B-4D31-9CD6-9B9796B2****</para>
@@ -64,12 +57,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

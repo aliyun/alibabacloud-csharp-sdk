@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeAutoScalingHistoryRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the auto scaling task that you want to query. Set the value to <b>SPEC</b>, which indicates that you can query the history of only automatic performance scaling tasks.</para>
+        /// <para>The type of elastic scaling task to query. Currently, only <b>SPEC</b> is supported, which indicates querying the automatic performance scaling history.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string AutoScalingTaskType { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time of the query task. Specify the value as a UNIX timestamp. Unit: milliseconds.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>Only ApsaraDB RDS for MySQL instances are supported.</para>
+        /// <para>Currently, only ApsaraDB RDS for MySQL instances are supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -49,9 +49,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time of the query task. Specify the value as a UNIX timestamp. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>The maximum time range that can be specified is 45 days.</para>
+        /// <para>The start time cannot be earlier than 45 days before the current time.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

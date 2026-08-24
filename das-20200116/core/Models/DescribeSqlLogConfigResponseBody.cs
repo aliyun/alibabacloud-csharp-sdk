@@ -230,6 +230,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             [Validation(Required=false)]
             public bool? SupportMigration { get; set; }
 
+            [NameInMap("SupportSecurityAudit")]
+            [Validation(Required=false)]
+            public bool? SupportSecurityAudit { get; set; }
+
             /// <summary>
             /// <para>The latest DAS Enterprise Edition version supported by the instance. Valid values:</para>
             /// <list type="bullet">

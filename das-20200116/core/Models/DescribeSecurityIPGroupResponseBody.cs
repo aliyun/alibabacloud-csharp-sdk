@@ -20,35 +20,35 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>ListResult</para>
+        /// <para>ListResult<InstanceSSL></para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeSecurityIPGroupResponseBodyData Data { get; set; }
         public class DescribeSecurityIPGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>A list of all cross-product whitelist templates in the specified region.</para>
+            /// <para>The list of all cross-engine whitelist templates for the user in the specified region.</para>
             /// </summary>
             [NameInMap("SecurityIpGroups")]
             [Validation(Required=false)]
             public List<DescribeSecurityIPGroupResponseBodyDataSecurityIpGroups> SecurityIpGroups { get; set; }
             public class DescribeSecurityIPGroupResponseBodyDataSecurityIpGroups : TeaModel {
                 /// <summary>
-                /// <para>The database instances that are attached to the whitelist template.</para>
+                /// <para>The list of database instances bound to the cross-engine whitelist template.</para>
                 /// </summary>
                 [NameInMap("DbInstances")]
                 [Validation(Required=false)]
                 public List<string> DbInstances { get; set; }
 
                 /// <summary>
-                /// <para>The information about the instances of each product that are attached to the template.</para>
+                /// <para>The instance information for each product bound to the template.</para>
                 /// </summary>
                 [NameInMap("EngineInfoList")]
                 [Validation(Required=false)]
                 public List<DescribeSecurityIPGroupResponseBodyDataSecurityIpGroupsEngineInfoList> EngineInfoList { get; set; }
                 public class DescribeSecurityIPGroupResponseBodyDataSecurityIpGroupsEngineInfoList : TeaModel {
                     /// <summary>
-                    /// <para>The database type of the destination instance.</para>
+                    /// <para>The database engine type of the target instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PolarDBMySQL</para>
@@ -58,14 +58,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public string EngineName { get; set; }
 
                     /// <summary>
-                    /// <para>A list of database instance IDs.</para>
+                    /// <para>The list of database instance IDs.</para>
                     /// </summary>
                     [NameInMap("InstanceIds")]
                     [Validation(Required=false)]
                     public List<string> InstanceIds { get; set; }
 
                     /// <summary>
-                    /// <para>The number of instances that belong to the current logon account.</para>
+                    /// <para>The number of instances under the current logon account.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// <para>The ID of the ECS security group. This parameter is deprecated and is retained for compatibility. It will be removed in a future version.</para>
+                /// <para>The ECS security group ID. This field is invalid and contains redundant data that will be deprecated.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>null</para>
@@ -100,13 +100,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string GIpList { get; set; }
 
                 /// <summary>
-                /// <para>The name of the IP address whitelist template. The name must meet the following requirements:</para>
+                /// <para>The IP whitelist template name. The name must meet the following requirements:</para>
                 /// <list type="bullet">
-                /// <item><description><para>It must consist of lowercase letters, digits, and underscores (_).</para>
+                /// <item><description><para>Contains only lowercase letters, digits, and underscores (_).</para>
                 /// </description></item>
-                /// <item><description><para>It must start with a letter and end with a letter or a digit.</para>
+                /// <item><description><para>Starts with a letter and ends with a letter or digit.</para>
                 /// </description></item>
-                /// <item><description><para>It must be 2 to 120 characters in length.</para>
+                /// <item><description><para>Contains 2 to 120 characters in length.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string GlobalIgName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the IP address whitelist template.</para>
+                /// <para>The IP whitelist template ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>g-1no2rzybnqcv****</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The IP address type.</para>
+                /// <para>The IP type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ipv4</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string SecurityIpType { get; set; }
 
                 /// <summary>
-                /// <para>The account ID. You can obtain the ID of your logon account on the <b>Security Settings</b> page of <b>Account Management</b>.</para>
+                /// <para>The account ID. You can obtain the ID of the <b>logon account</b> on the <b>Security Settings</b> page in <b>Account Management</b> of the Alibaba Cloud console.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>160-79abe3f4****</para>
@@ -184,7 +184,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message is returned, such as an error code.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an exception message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -205,12 +205,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

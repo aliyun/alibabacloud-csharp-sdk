@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class CreateSqlLogTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</para>
+        /// <para>The end time of the task. Specify the value as a UNIX timestamp. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions.</para>
+        /// <para>The list of filter conditions.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The name of the filter parameter.</para>
             /// <remarks>
-            /// <para>For more information about the supported filter parameters and their valid values, see the following <b>supplement about the Key parameter</b>.</para>
+            /// <para>For the supported filter parameters and values, see <b>Request parameters description</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The ID of the database instance.</para>
+        /// <para>The database instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-2ze8g2am97624****</para>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the task.</para>
+        /// <para>The task name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SQL audit export 1</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para>This parameter is available only for instances that run in a cluster architecture. You can specify this parameter to query the offline tasks of a specific node. By default, if this parameter is not specified, the information about the offline tasks of the primary node is returned.</para>
+        /// <para>This parameter is applicable only to cluster instances. You can specify this parameter to query the batch task of a specific node. If you do not specify this parameter, the batch task of the primary node is returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -86,11 +86,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The role of the node of the PolarDB-X 2.0 database instance. Valid values:</para>
+        /// <para>The node information of the PolarDB-X 2.0 database instance.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>polarx_cn</b>: compute node</para>
+        /// <item><description><para><b>polarx_cn</b>: compute node.</para>
         /// </description></item>
-        /// <item><description><para><b>polarx_dn</b>: data node</para>
+        /// <item><description><para><b>polarx_dn</b>: data node.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</para>
+        /// <para>The start time of the task. Specify the value as a UNIX timestamp. Unit: milliseconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -113,14 +113,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The task type.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Export</b></para>
+        /// <item><description><b>Export</b>: export task.<remarks>
+        /// <para>For the filter parameters and values supported by <b>Export</b>, see <b>Request parameters description</b>.</para>
+        /// </remarks>
         /// </description></item>
-        /// <item><description><para><b>Query</b></para>
-        /// </description></item>
-        /// <item><description><para><b>Insight</b></para>
-        /// </description></item>
+        /// <item><description><b>Query</b>: query task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

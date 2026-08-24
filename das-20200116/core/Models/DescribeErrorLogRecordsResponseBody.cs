@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public DescribeErrorLogRecordsResponseBodyData Data { get; set; }
         public class DescribeErrorLogRecordsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The end of the time range to query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
+            /// <para>The end time of the query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-23T05:48:43Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of log details returned.</para>
+            /// <para>The total number of log entries returned on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -56,15 +56,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The log category. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>NETWORK</b>: network connectivity logs.</description></item>
-                /// <item><description><b>ACCESS</b>: access control logs.</description></item>
-                /// <item><description><b>-</b>: common logs.</description></item>
-                /// <item><description><b>COMMAND</b>: slow query log.</description></item>
-                /// <item><description><b>SHARDING</b>: cluster logs.</description></item>
-                /// <item><description><b>STORAGE</b>: storage engine logs.</description></item>
-                /// <item><description><b>CONNPOOL</b>: connection pool logs.</description></item>
-                /// <item><description><b>ASIO</b>: asynchronous I/O logs.</description></item>
-                /// <item><description><b>WRITE</b>: slow update logs.</description></item>
+                /// <item><description><b>NETWORK</b>: network connectivity log.</description></item>
+                /// <item><description><b>ACCESS</b>: access control log.</description></item>
+                /// <item><description><b>-</b>: common log.</description></item>
+                /// <item><description><b>COMMAND</b>: slow log.</description></item>
+                /// <item><description><b>SHARDING</b>: cluster log.</description></item>
+                /// <item><description><b>STORAGE</b>: storage engine log.</description></item>
+                /// <item><description><b>CONNPOOL</b>: connection pool log.</description></item>
+                /// <item><description><b>ASIO</b>: asynchronous I/O log.</description></item>
+                /// <item><description><b>WRITE</b>: slow update log.</description></item>
                 /// </list>
                 /// <remarks>
                 /// <para>This parameter is supported only for ApsaraDB for MongoDB instances.</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string Category { get; set; }
 
                 /// <summary>
-                /// <para>The connection information of the log.</para>
+                /// <para>The log connection information.</para>
                 /// <remarks>
                 /// <para>This parameter is supported only for ApsaraDB for MongoDB instances.</para>
                 /// </remarks>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ConnInfo { get; set; }
 
                 /// <summary>
-                /// <para>The error log.</para>
+                /// <para>The error log content.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2025-07-15T15:14:27.175188+08:00 0 [Note] [MY-012468] [InnoDB] Transactions deadlock detected, dumping detailed information.</para>
@@ -101,12 +101,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string Content { get; set; }
 
                 /// <summary>
-                /// <para>The time when the error log was generated. The value is a UNIX timestamp. Unit: milliseconds.</para>
+                /// <para>The time when the error log was generated. The value is a UNIX timestamp in milliseconds.</para>
                 /// <remarks>
-                /// <para>Notice: </para>
+                /// <para>Notice: For ApsaraDB for MongoDB instances, the time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
                 /// </remarks>
-                /// <para>For ApsaraDB for MongoDB instances, the time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
-                /// </notice>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1731983067000</para>
@@ -131,7 +129,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// <para>The maximum number of records displayed per page.</para>
+            /// <para>The maximum number of entries per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -141,7 +139,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? MaxRecordsPerPage { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current query.</para>
+            /// <para>The current page number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -151,7 +149,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? PageNumbers { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range to query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
+            /// <para>The start time of the query. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-22T05:48:43Z</para>
@@ -161,7 +159,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The total number of log details within the time range to query.</para>
+            /// <para>The total number of log entries within the specified time range.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -175,7 +173,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, error information such as an error code is returned.</para>
+        /// <para> If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -186,7 +184,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAA17591-B48B-4D31-9CD6-9B9796B2****</para>
@@ -196,10 +194,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The request was successful.</description></item>
-        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

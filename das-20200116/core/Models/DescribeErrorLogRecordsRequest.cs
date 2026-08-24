@@ -10,13 +10,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeErrorLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The end time of the query. The value is in the format of a UNIX timestamp. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: The value is of the Long type. Precision loss may occur during serialization/deserialization. The value must not be greater than 9007199254740991.</para>
         /// </remarks>
-        /// <para>This field is of the Long type. During serialization and deserialization, precision may be lost. Make sure that the value does not exceed 9007199254740991.</para>
-        /// </notice>
-        /// 
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +26,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The filter conditions.</para>
         /// <remarks>
-        /// <para>Error log filtering is supported only for RDS MySQL, RDS PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (compatible with Oracle).</para>
+        /// <para>Filtering is supported only for error logs of ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, PolarDB for MySQL, PolarDB for PostgreSQL, and PolarDB for PostgreSQL (Compatible with Oracle).</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Filters")]
@@ -37,7 +34,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public List<DescribeErrorLogRecordsRequestFilters> Filters { get; set; }
         public class DescribeErrorLogRecordsRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The filter parameter. Set the value to filters.</para>
+            /// <para>The filter parameter. Set this parameter to filters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>filters</para>
@@ -47,7 +44,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The content of the error log to filter.</para>
+            /// <para>The error log content to filter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>deadlock</para>
@@ -100,7 +97,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The node role:</para>
+        /// <para>The node role. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>db</description></item>
         /// <item><description>mongos</description></item>
@@ -117,13 +114,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Role { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The start time of the query. The value is in the format of a UNIX timestamp. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: The value is of the Long type. Precision loss may occur during serialization/deserialization. The value must not be greater than 9007199254740991.</para>
         /// </remarks>
-        /// <para>This field is of the Long type. During serialization and deserialization, precision may be lost. Make sure that the value does not exceed 9007199254740991.</para>
-        /// </notice>
-        /// 
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

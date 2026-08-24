@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public CreateSqlLogTaskResponseBodyData Data { get; set; }
         public class CreateSqlLogTaskResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created. This value is a UNIX timestamp. Unit: milliseconds.</para>
+            /// <para>The task creation time. Specify the value as a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1681363254423</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The end time. Specify the value as a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1608888296000</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? End { get; set; }
 
             /// <summary>
-            /// <para>The ID of the database instance.</para>
+            /// <para>The database instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pc-2ze8g2am97624****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the task.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Export_test</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The start time. Specify the value as a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1596177993000</para>
@@ -77,21 +77,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? Start { get; set; }
 
             /// <summary>
-            /// <para>The state of the task. Valid values:</para>
+            /// <para>The task status.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>INIT</b>: The task is to be scheduled.</para>
-            /// </description></item>
-            /// <item><description><para><b>RUNNING</b>: The task is running.</para>
-            /// </description></item>
-            /// <item><description><para><b>FAILED</b>: The task failed.</para>
-            /// </description></item>
-            /// <item><description><para><b>CANCELED</b>: The task is canceled.</para>
-            /// </description></item>
-            /// <item><description><para><b>COMPLETED</b>: The task is complete.</para>
-            /// </description></item>
+            /// <item><description><b>INIT</b>: pending scheduling.</description></item>
+            /// <item><description><b>RUNNING</b>: running.</description></item>
+            /// <item><description><b>FAILED</b>: failed.</description></item>
+            /// <item><description><b>CANCELED</b>: canceled.</description></item>
+            /// <item><description><b>COMPLETED</b>: completed.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>You can view the result of a task that is in the <b>COMPLETED</b> state.</para>
+            /// <para>When the task is in the <b>COMPLETED</b> state, you can view the task results.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -116,7 +111,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, error information such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -137,12 +132,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: successful.</description></item>
+        /// <item><description><b>false</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,11 +10,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDeadlockHistogramRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</para>
+        /// <para>The end of the time range to query. The format is a UNIX timestamp in milliseconds.</para>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: The value is of the Long type. Precision loss may occur during the serialization/deserialization procedure. The value must not be greater than 9007199254740991.</notice></para>
         /// </remarks>
-        /// <para>This field is of the Long type. During serialization/deserialization, precision loss may occur. Make sure that the value does not exceed 9007199254740991.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -25,7 +24,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The ID of the database instance.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para>Required for PolarDB for MySQL cluster instances</para>
+        /// <para>For PolarDB for MySQL instances, you must specify the node ID.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -49,14 +48,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the UNIX timestamp format. Unit: milliseconds.</para>
+        /// <para>The beginning of the time range to query. The format is a UNIX timestamp in milliseconds.</para>
         /// <remarks>
-        /// <para>The maximum query window is 7 days.</para>
+        /// <para>The start time can be at most 7 days earlier than the end time.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>Notice: </para>
+        /// <para>Notice: The value is of the Long type. Precision loss may occur during the serialization/deserialization procedure. The value must not be greater than 9007199254740991.</notice></para>
         /// </remarks>
-        /// <para>This field is of the Long type. During serialization/deserialization, precision loss may occur. Make sure that the value does not exceed 9007199254740991.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,7 +65,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the analysis task.</para>
+        /// <para>The analysis status of the task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>

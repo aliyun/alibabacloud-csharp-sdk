@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public int? LockNumber { get; set; }
 
             /// <summary>
-            /// <para>The node ID, used for PolarDB MySQL clusters.</para>
+            /// <para>The node ID. This parameter is used for PolarDB for MySQL clusters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pi-bp16v3824rt73****</para>
@@ -77,12 +77,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The task status:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>SUCCESS</b>: The analysis was successful.</para>
-            /// </description></item>
-            /// <item><description><para><b>FAILED</b>: The analysis was abnormal or failed.</para>
-            /// </description></item>
+            /// <item><description><b>SUCCESS</b>: The analysis is successful.</description></item>
+            /// <item><description><b>FAILED</b>: The analysis failed or encountered an exception.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +91,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the full deadlock analysis task.</para>
+            /// <para>The full deadlock analysis task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B6D17591-B48B-4D31-9CD6-1321B394****</para>
@@ -115,9 +113,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The message returned.</para>
+        /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>When the request is successful, this parameter returns <b>Successful</b>. When the request fails, this parameter returns exception information such as error codes.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -128,7 +126,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0A74B755-98B7-59DB-8724-1321B394****</para>
@@ -138,12 +136,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

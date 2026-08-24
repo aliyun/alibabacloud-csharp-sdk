@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSlowLogRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to sort the results in ascending order. The default value is <b>true</b>.</para>
+        /// <para>Specifies whether to sort results in ascending order. Default value: <b>true</b>.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Sorts the results in ascending order.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Sorts the results in descending order.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: ascending order.</description></item>
+        /// <item><description><b>false</b>: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? Asc { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. The value must be a UNIX timestamp in milliseconds.</para>
+        /// <para>The end time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,9 +42,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public List<DescribeSlowLogRecordsRequestFilters> Filters { get; set; }
         public class DescribeSlowLogRecordsRequestFilters : TeaModel {
             /// <summary>
-            /// <para>The filter key.</para>
+            /// <para>The filter parameter.</para>
             /// <remarks>
-            /// <para>For details, refer to the supplementary information.</para>
+            /// <para>For more information, refer to the supplementary description.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value for the filter key.</para>
+            /// <para>The value of the filter parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -91,45 +89,28 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b></para>
-        /// <list type="bullet">
-        /// <item><description><para>QueryTimeSeconds: the query execution time in seconds.</para>
-        /// </description></item>
-        /// <item><description><para>LockTimeSeconds: the lock duration in seconds.</para>
-        /// </description></item>
-        /// <item><description><para>RowsSent: the number of rows sent.</para>
-        /// </description></item>
-        /// <item><description><para>RowsExamined: the number of rows examined.</para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b> <list type="bullet">
+        /// <item><description>QueryTimeSeconds: query duration in seconds.</description></item>
+        /// <item><description>LockTimeSeconds: lock time in seconds.</description></item>
+        /// <item><description>RowsSent: rows sent.</description></item>
+        /// <item><description>RowsExamined: rows examined.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>Redis</b></para>
-        /// <list type="bullet">
-        /// <item><description><para>QueryTime: the query execution time.</para>
-        /// </description></item>
-        /// <item><description><para>Timestamp: the end time of the query execution.</para>
-        /// </description></item>
+        /// <item><description><b>Redis</b><list type="bullet">
+        /// <item><description>QueryTime: query duration.</description></item>
+        /// <item><description>Timestamp: execution end time.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>MongoDB</b></para>
-        /// <list type="bullet">
-        /// <item><description><para>QueryTime: the query execution time.</para>
-        /// </description></item>
-        /// <item><description><para>Timestamp: the end time of the query execution.</para>
-        /// </description></item>
-        /// <item><description><para>KeysExamined: the number of keys examined.</para>
-        /// </description></item>
-        /// <item><description><para>DocExamined: the number of documents scanned.</para>
-        /// </description></item>
-        /// <item><description><para>ReturnNum: the number of rows returned.</para>
-        /// </description></item>
+        /// <item><description><b>MongoDB</b><list type="bullet">
+        /// <item><description>QueryTime: query duration.</description></item>
+        /// <item><description>Timestamp: execution end time.</description></item>
+        /// <item><description>KeysExamined: keys examined.</description></item>
+        /// <item><description>DocExamined: documents examined.</description></item>
+        /// <item><description>ReturnNum: rows returned.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>RDS for PostgreSQL, PolarDB for PostgreSQL, and SQL Server do not support sorting.</para>
+        /// <para><notice>RDS PostgreSQL, PolarDB for PostgreSQL, and SQL Server do not support sorting.</notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>QueryTimeSeconds</para>
@@ -139,7 +120,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number. Page numbering starts at 1.</para>
+        /// <para>The page number. Pages start from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -159,7 +140,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. The value must be a UNIX timestamp in milliseconds.</para>
+        /// <para>The start time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

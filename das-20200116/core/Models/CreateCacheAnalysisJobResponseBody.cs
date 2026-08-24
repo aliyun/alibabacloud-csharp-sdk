@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class CreateCacheAnalysisJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The detailed information.</para>
+        /// <para>The details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -81,9 +81,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cache analysis task.</para>
+            /// <para>The ID of query cache analysis task.</para>
             /// <remarks>
-            /// <para>This parameter can be used to query a specific cache analysis task. When you call the CreateCacheAnalysisJob operation, it takes some time to create a cache analysis task. As a result, the analysis results cannot be immediately returned. You can call the <a href="https://help.aliyun.com/document_detail/180983.html">DescribeCacheAnalysisJob</a> operation to query the analysis results of the specified cache analysis task.</para>
+            /// <para>You can use this parameter to query query cache analysis task. Because creating a cache analysis task takes some time, the analysis result is not immediately returned when you call this operation. Use this parameter together with the <a href="https://help.aliyun.com/document_detail/180983.html">DescribeCacheAnalysisJob</a> operation to query the analysis result.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The returned message.</para>
             /// <remarks>
-            /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+            /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data node on the instance.</para>
+            /// <para>The ID of the data node in the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>r-x****-db-0</para>
@@ -117,16 +117,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The state of the cache analysis task. Valid values:</para>
+            /// <para>The status of the cache analysis task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>BACKUP</b>: The data is being backed up.</para>
-            /// </description></item>
-            /// <item><description><para><b>ANALYZING</b>: The data is being analyzed.</para>
-            /// </description></item>
-            /// <item><description><para><b>FINISHED</b>: The data is analyzed.</para>
-            /// </description></item>
-            /// <item><description><para><b>FAILED</b>: An error occurred.</para>
-            /// </description></item>
+            /// <item><description><b>BACKUP</b>: The system is performing a backup.</description></item>
+            /// <item><description><b>ANALYZING</b>: The system is analyzing the backup file.</description></item>
+            /// <item><description><b>FINISHED</b>: The analysis is complete.</description></item>
+            /// <item><description><b>FAILED</b>: An error occurred.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -141,7 +137,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -162,12 +158,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class CreateSecurityIPGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The list of results.</para>
+        /// <para>ListResult<InstanceSSL></para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateSecurityIPGroupResponseBodyData Data { get; set; }
         public class CreateSecurityIPGroupResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the cross-product whitelist template.</para>
+            /// <para>The cross-service whitelist template information.</para>
             /// </summary>
             [NameInMap("GlobalSecurityIPGroup")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The IP addresses in the whitelist template.</para>
                 /// <remarks>
-                /// <para>Separate multiple IP addresses with commas (,). A cumulative total of 1,000 IP addresses or CIDR blocks can be added to all IP address whitelists.</para>
+                /// <para>Separate multiple IP addresses with commas (,). A maximum of 1000 IP addresses or CIDR blocks can be added across all IP whitelists.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -47,11 +47,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string GIpList { get; set; }
 
                 /// <summary>
-                /// <para>The name of the IP address whitelist template. The name must meet the following requirements:</para>
+                /// <para>The name of the IP whitelist template. The name must meet the following requirements:</para>
                 /// <list type="bullet">
-                /// <item><description><para>Consists of lowercase letters, digits, and underscores (_).</para>
+                /// <item><description><para>Contains only lowercase letters, digits, and underscores (_).</para>
                 /// </description></item>
-                /// <item><description><para>Starts with a letter and ends with a letter or a digit.</para>
+                /// <item><description><para>Starts with a letter and ends with a letter or digit.</para>
                 /// </description></item>
                 /// <item><description><para>Is 2 to 120 characters in length.</para>
                 /// </description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string GlobalIgName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the IP address whitelist template.</para>
+                /// <para>The ID of the IP whitelist template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>g-2uztsd6yvhmsqyjXXX</para>
@@ -76,7 +76,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 
                 /// <summary>
                 /// <para>The region ID.</para>
-                /// <para>Example: cn-hangzhou</para>
+                /// <para>Example value:
+                /// cn-hangzhou</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-shenzhen</para>
@@ -86,7 +87,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The IP address type.</para>
+                /// <para>The IP type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ipv4</para>
@@ -110,9 +111,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request is successful, Successful is returned. If the request fails, an error message is returned, such as an error code.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message that contains information such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -133,12 +134,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

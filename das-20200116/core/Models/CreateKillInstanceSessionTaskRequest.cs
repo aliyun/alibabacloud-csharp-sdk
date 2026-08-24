@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class CreateKillInstanceSessionTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The database account that has the permissions to terminate sessions.</para>
+        /// <para>The database account that has the permission to terminate sessions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string DbUserPassword { get; set; }
 
         /// <summary>
-        /// <para>The account whose sessions do not need to be terminated.</para>
+        /// <para>The list of accounts whose sessions will not be terminated.</para>
         /// <remarks>
-        /// <para>Set this parameter to a JSON array. Separate database accounts with commas (,). Example: [\&quot;Database account 1\&quot;,\&quot;Database account 2\&quot;].</para>
+        /// <para>The data is in JSONArray format, such as [\&quot;DatabaseAccount1\&quot;,\&quot;DatabaseAccount2\&quot;\]. Separate multiple database accounts with commas (,).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -58,13 +58,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Specifies whether to terminate all sessions.</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
+        /// <item><description><para><b>true</b>: Yes.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b></para>
+        /// <item><description><para><b>false</b>: No.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you set this parameter to <b>true</b>, sessions of the accounts that are specified by <b>IgnoredUsers</b>, sessions of internal O\&amp;M accounts of Alibaba Cloud, and <b>Binlog Dump</b> sessions are not terminated.</para>
+        /// <para>When this parameter is set to <b>true</b>, sessions of accounts specified in the <b>IgnoredUsers</b> request parameter, sessions of Alibaba Cloud internal operations accounts, and <b>Binlog Dump</b> sessions are not terminated.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para>This parameter must be specified if the database instance is a PolarDB for MySQL cluster. If you do not specify a node ID and set <b>KillAllSessions</b> to <b>true</b>, the system traverses all nodes in the PolarDB for MySQL cluster and terminates the active sessions on each node.</para>
+        /// <para>For PolarDB for MySQL instances, provide the node ID. If no node ID is provided and the <b>KillAllSessions</b> request parameter is set to <b>true</b> (terminate all sessions), the system traverses all nodes of the PolarDB for MySQL instance and terminates ongoing sessions on each node.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,9 +89,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of sessions that need to be terminated.</para>
+        /// <para>The list of session IDs to be terminated.</para>
         /// <remarks>
-        /// <para>Set this parameter to a JSON array. Separate session IDs with commas (,). Example: [\&quot;Session ID1\&quot;,\&quot;Session ID2\&quot;]. If <b>KillAllSessions</b> is set to <b>true</b>, this parameter does not take effect.</para>
+        /// <para>The data is in JSONArray format, such as [SessionID1,SessionID2\]. Separate multiple session IDs with commas (,). If the <b>KillAllSessions</b> request parameter is set to <b>true</b> (terminate all sessions), this list is ignored.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeAutoScalingHistoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned. The status code 200 indicates that the request was successful.</para>
+        /// <para>The status code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The history of auto scaling.</para>
+        /// <para>The elastic scaling history records.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeAutoScalingHistoryResponseBodyData Data { get; set; }
         public class DescribeAutoScalingHistoryResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The history of automatic bandwidth scaling of ApsaraDB for Redis instances. This feature is not supported.</para>
+            /// <para>The Redis bandwidth elastic scaling history records. This parameter is not supported.</para>
             /// </summary>
             [NameInMap("Bandwidth")]
             [Validation(Required=false)]
@@ -44,37 +44,33 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The history of resource scale-out of ApsaraDB for Redis instances. This feature is not supported.</para>
+            /// <para>The Redis resource scaling history records. This parameter is not supported.</para>
             /// </summary>
             [NameInMap("Resource")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Resource { get; set; }
 
             /// <summary>
-            /// <para>The history of automatic shard scale-out of ApsaraDB for Redis instances. This feature is not supported.</para>
+            /// <para>The Redis automatic shard scaling history records. This parameter is not supported.</para>
             /// </summary>
             [NameInMap("Shard")]
             [Validation(Required=false)]
             public List<Dictionary<string, object>> Shard { get; set; }
 
             /// <summary>
-            /// <para>The history of automatic performance scaling.</para>
+            /// <para>The automatic performance extension history records.</para>
             /// </summary>
             [NameInMap("SpecHistory")]
             [Validation(Required=false)]
             public List<DescribeAutoScalingHistoryResponseBodyDataSpecHistory> SpecHistory { get; set; }
             public class DescribeAutoScalingHistoryResponseBodyDataSpecHistory : TeaModel {
                 /// <summary>
-                /// <para>The error code returned by the scaling task. Valid values:</para>
+                /// <para>The error code returned by the internal scaling task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>Insufficient_Balance</b>: The account has insufficient balance or an unpaid order.</para>
-                /// </description></item>
-                /// <item><description><para><b>REACH_SPEC_UPPERBOUND</b>: The instance type reaches the upper limit.</para>
-                /// </description></item>
-                /// <item><description><para><b>Control_Error_Timeout_Msg</b>: The management task timed out.</para>
-                /// </description></item>
-                /// <item><description><para><b>Invoke_Rds_Api_Error_Msg</b>: Failed to call the ApsaraDB RDS API.</para>
-                /// </description></item>
+                /// <item><description><b>Insufficient_Balance</b>: The account balance is insufficient or there are unpaid orders.</description></item>
+                /// <item><description><b>REACH_SPEC_UPPERBOUND</b>: The upper limit of the instance specification has been reached.</description></item>
+                /// <item><description><b>Control_Error_Timeout_Msg</b>: The control task timed out.</description></item>
+                /// <item><description><b>Invoke_Rds_Api_Error_Msg</b>: Failed to call the RDS API.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -85,7 +81,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ErrorCode { get; set; }
 
                 /// <summary>
-                /// <para>The original number of CPU cores of the instance.</para>
+                /// <para>The number of CPU cores of the original instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -105,7 +101,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string OriginInstanceClass { get; set; }
 
                 /// <summary>
-                /// <para>The original memory size of the instance. Unit: GB.</para>
+                /// <para>The memory size of the original instance. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -115,12 +111,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public double? OriginMemory { get; set; }
 
                 /// <summary>
-                /// <para>The type of the automatic performance scaling task. Valid values:</para>
+                /// <para>The type of the automatic performance extension task. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>SCALE_UP</b>: automatic instance type scale-up task.</para>
-                /// </description></item>
-                /// <item><description><para><b>SCALE_DOWN</b>: automatic instance type scale-down task.</para>
-                /// </description></item>
+                /// <item><description><b>SCALE_UP</b>: Automatic specification extension.</description></item>
+                /// <item><description><b>SCALE_DOWN</b>: Automatic specification scale-down.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -131,7 +125,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string ScaleType { get; set; }
 
                 /// <summary>
-                /// <para>The destination number of CPU cores of the instance.</para>
+                /// <para>The number of CPU cores of the target instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>8</para>
@@ -141,7 +135,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public int? TargetCore { get; set; }
 
                 /// <summary>
-                /// <para>The destination instance type.</para>
+                /// <para>The target instance type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mysql.n2.xlarge.2c</para>
@@ -151,7 +145,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string TargetInstanceClass { get; set; }
 
                 /// <summary>
-                /// <para>The destination memory size of the instance. Unit: GB.</para>
+                /// <para>The memory size of the target instance. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>16</para>
@@ -161,12 +155,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public double? TargetMemory { get; set; }
 
                 /// <summary>
-                /// <para>The status of the task. Valid values:</para>
+                /// <para>The task execution status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>true</b>: The task was successful.</para>
-                /// </description></item>
-                /// <item><description><para><b>false</b>: The task failed.</para>
-                /// </description></item>
+                /// <item><description><b>true</b>: The task was executed successfully.</description></item>
+                /// <item><description><b>false</b>: The task failed.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -177,7 +169,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public bool? TaskExcuteStatus { get; set; }
 
                 /// <summary>
-                /// <para>The time when the task was run. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+                /// <para>The task execution time. The value is a UNIX timestamp. Unit: milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1684830763000</para>
@@ -189,7 +181,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// <para>The history of storage expansion. This feature is not supported.</para>
+            /// <para>The storage expansion history records. This parameter is not supported.</para>
             /// </summary>
             [NameInMap("Storage")]
             [Validation(Required=false)]
@@ -200,7 +192,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request was successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -223,10 +215,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

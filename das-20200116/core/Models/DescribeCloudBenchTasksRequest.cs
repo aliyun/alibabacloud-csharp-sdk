@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeCloudBenchTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time of the query task. Specify the value as a UNIX timestamp. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>The end time must be later than the start time.</para>
+        /// <para>The end time of the query task must be later than the start time.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer. Default value: 1.</para>
+        /// <para>The page number. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The value must be a positive integer. Default value: 10.</para>
+        /// <para>The maximum number of records per page. The value must be greater than 0 and cannot exceed the maximum value of the Integer data type. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time of the query task. Specify the value as a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1596177993000</para>
@@ -53,16 +53,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the task. Valid values:</para>
+        /// <para>The running status of the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>SUCCESS</b>: The task is successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>IGNORED</b>: The task is ignored.</para>
-        /// </description></item>
-        /// <item><description><para><b>RUNNING</b>: The task is running.</para>
-        /// </description></item>
-        /// <item><description><para><b>EXCEPTION</b>: The task is abnormal.</para>
-        /// </description></item>
+        /// <item><description><b>SUCCESS</b>: Successful.</description></item>
+        /// <item><description><b>IGNORED</b>: Ignored.</description></item>
+        /// <item><description><b>RUNNING</b>: Running.</description></item>
+        /// <item><description><b>EXCEPTION</b>: Exception.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,10 +71,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The type of the stress testing task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>pressure test</b> (default): A stress testing task that replays the traffic captured from the source instance on the destination instance at the maximum playback rate that is supported by the destination instance.</para>
-        /// </description></item>
-        /// <item><description><para><b>smart pressure test</b>: A stress testing task that is generated to perform continuous stress testing. The task analyzes the traffic that is captured from a source instance in a short period of time and generates traffic that is similar to the traffic on the source instance in terms of business model and traffic distribution. This reduces the time that is required to collect data from the source instance and lowers the costs of storage and performance.</para>
-        /// </description></item>
+        /// <item><description><b>pressure test</b> (default): intelligent stress testing. Traffic captured from the target instance is replayed on the destination instance at the maximum speed supported by the destination instance specifications.</description></item>
+        /// <item><description><b>smart pressure test</b>: generated stress testing. By analyzing and learning from traffic captured from the target instance within a short period, traffic that is consistent with the business model and traffic distribution of the original traffic is generated for continuous stress testing. This reduces the time required to collect data from the target instance and lowers storage costs and performance overhead.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
