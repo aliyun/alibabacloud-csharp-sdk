@@ -184,6 +184,146 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddVirusScanAdditionalListsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddVirusScanAdditionalListsResponse
+        /// </returns>
+        public AddVirusScanAdditionalListsResponse AddVirusScanAdditionalListsWithOptions(AddVirusScanAdditionalListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalLists))
+            {
+                bodyFlat["AdditionalLists"] = request.AdditionalLists;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevType))
+            {
+                body["DevType"] = request.DevType;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddVirusScanAdditionalLists",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddVirusScanAdditionalListsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddVirusScanAdditionalListsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddVirusScanAdditionalListsResponse
+        /// </returns>
+        public async Task<AddVirusScanAdditionalListsResponse> AddVirusScanAdditionalListsWithOptionsAsync(AddVirusScanAdditionalListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdditionalLists))
+            {
+                bodyFlat["AdditionalLists"] = request.AdditionalLists;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevType))
+            {
+                body["DevType"] = request.DevType;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddVirusScanAdditionalLists",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddVirusScanAdditionalListsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddVirusScanAdditionalListsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddVirusScanAdditionalListsResponse
+        /// </returns>
+        public AddVirusScanAdditionalListsResponse AddVirusScanAdditionalLists(AddVirusScanAdditionalListsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddVirusScanAdditionalListsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Appends entries in batches to the virus scan blacklists and whitelists for a specified operating system without overwriting existing entries. Quotas are calculated independently for each combination of matching dimension and list type. Each combination allows a maximum of 10,000 whitelist entries and 1,000 blacklist entries. If the quota is exceeded after appending, the entire batch fails.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddVirusScanAdditionalListsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddVirusScanAdditionalListsResponse
+        /// </returns>
+        public async Task<AddVirusScanAdditionalListsResponse> AddVirusScanAdditionalListsAsync(AddVirusScanAdditionalListsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddVirusScanAdditionalListsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Attaches the private access applications of a Connector under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -1092,6 +1232,270 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await BatchDeletePrivateAccessPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelVirusScanTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelVirusScanTasksResponse
+        /// </returns>
+        public CancelVirusScanTasksResponse CancelVirusScanTasksWithOptions(CancelVirusScanTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                bodyFlat["TaskIds"] = request.TaskIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelVirusScanTasks",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelVirusScanTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelVirusScanTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelVirusScanTasksResponse
+        /// </returns>
+        public async Task<CancelVirusScanTasksResponse> CancelVirusScanTasksWithOptionsAsync(CancelVirusScanTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                bodyFlat["TaskIds"] = request.TaskIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelVirusScanTasks",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelVirusScanTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelVirusScanTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelVirusScanTasksResponse
+        /// </returns>
+        public CancelVirusScanTasksResponse CancelVirusScanTasks(CancelVirusScanTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelVirusScanTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelVirusScanTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelVirusScanTasksResponse
+        /// </returns>
+        public async Task<CancelVirusScanTasksResponse> CancelVirusScanTasksAsync(CancelVirusScanTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelVirusScanTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelVulScanTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelVulScanTasksResponse
+        /// </returns>
+        public CancelVulScanTasksResponse CancelVulScanTasksWithOptions(CancelVulScanTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                bodyFlat["TaskIds"] = request.TaskIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelVulScanTasks",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelVulScanTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelVulScanTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelVulScanTasksResponse
+        /// </returns>
+        public async Task<CancelVulScanTasksResponse> CancelVulScanTasksWithOptionsAsync(CancelVulScanTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
+            {
+                bodyFlat["TaskIds"] = request.TaskIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CancelVulScanTasks",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CancelVulScanTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelVulScanTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelVulScanTasksResponse
+        /// </returns>
+        public CancelVulScanTasksResponse CancelVulScanTasks(CancelVulScanTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CancelVulScanTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Cancels multiple vulnerability scanning tasks that have not yet expired in a batch.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CancelVulScanTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CancelVulScanTasksResponse
+        /// </returns>
+        public async Task<CancelVulScanTasksResponse> CancelVulScanTasksAsync(CancelVulScanTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CancelVulScanTasksWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4648,6 +5052,1070 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirusScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirusScanScheduledStrategyResponse
+        /// </returns>
+        public CreateVirusScanScheduledStrategyResponse CreateVirusScanScheduledStrategyWithOptions(CreateVirusScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighRiskOperation))
+            {
+                body["HighRiskOperation"] = request.HighRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowRiskOperation))
+            {
+                body["LowRiskOperation"] = request.LowRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpuUsage))
+            {
+                body["MaxCpuUsage"] = request.MaxCpuUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MidRiskOperation))
+            {
+                body["MidRiskOperation"] = request.MidRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerformanceMode))
+            {
+                body["PerformanceMode"] = request.PerformanceMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBeginTime))
+            {
+                body["ScanBeginTime"] = request.ScanBeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanEndTime))
+            {
+                body["ScanEndTime"] = request.ScanEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanFrequency))
+            {
+                body["ScanFrequency"] = request.ScanFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
+            {
+                body["ScanInterval"] = request.ScanInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanMode))
+            {
+                body["ScanMode"] = request.ScanMode;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanPath))
+            {
+                bodyFlat["ScanPath"] = request.ScanPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanTargets))
+            {
+                bodyFlat["ScanTargets"] = request.ScanTargets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyDescription))
+            {
+                body["StrategyDescription"] = request.StrategyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
+            {
+                body["StrategyName"] = request.StrategyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVirusScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVirusScanScheduledStrategyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirusScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirusScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<CreateVirusScanScheduledStrategyResponse> CreateVirusScanScheduledStrategyWithOptionsAsync(CreateVirusScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighRiskOperation))
+            {
+                body["HighRiskOperation"] = request.HighRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowRiskOperation))
+            {
+                body["LowRiskOperation"] = request.LowRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpuUsage))
+            {
+                body["MaxCpuUsage"] = request.MaxCpuUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MidRiskOperation))
+            {
+                body["MidRiskOperation"] = request.MidRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerformanceMode))
+            {
+                body["PerformanceMode"] = request.PerformanceMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBeginTime))
+            {
+                body["ScanBeginTime"] = request.ScanBeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanEndTime))
+            {
+                body["ScanEndTime"] = request.ScanEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanFrequency))
+            {
+                body["ScanFrequency"] = request.ScanFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
+            {
+                body["ScanInterval"] = request.ScanInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanMode))
+            {
+                body["ScanMode"] = request.ScanMode;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanPath))
+            {
+                bodyFlat["ScanPath"] = request.ScanPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanTargets))
+            {
+                bodyFlat["ScanTargets"] = request.ScanTargets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyDescription))
+            {
+                body["StrategyDescription"] = request.StrategyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
+            {
+                body["StrategyName"] = request.StrategyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVirusScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVirusScanScheduledStrategyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirusScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirusScanScheduledStrategyResponse
+        /// </returns>
+        public CreateVirusScanScheduledStrategyResponse CreateVirusScanScheduledStrategy(CreateVirusScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateVirusScanScheduledStrategyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled virus scan policy that automatically sends scan tasks to user terminal devices within the effective scope based on the configured cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirusScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirusScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<CreateVirusScanScheduledStrategyResponse> CreateVirusScanScheduledStrategyAsync(CreateVirusScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateVirusScanScheduledStrategyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instant virus scan task and delivers it to user endpoint devices within the effective scope. The task takes effect immediately after creation. A maximum of 10 tasks can be created per Alibaba Cloud account per minute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirusScanTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirusScanTaskResponse
+        /// </returns>
+        public CreateVirusScanTaskResponse CreateVirusScanTaskWithOptions(CreateVirusScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighRiskOperation))
+            {
+                body["HighRiskOperation"] = request.HighRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowRiskOperation))
+            {
+                body["LowRiskOperation"] = request.LowRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpuUsage))
+            {
+                body["MaxCpuUsage"] = request.MaxCpuUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MidRiskOperation))
+            {
+                body["MidRiskOperation"] = request.MidRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerformanceMode))
+            {
+                body["PerformanceMode"] = request.PerformanceMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanMode))
+            {
+                body["ScanMode"] = request.ScanMode;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanPath))
+            {
+                bodyFlat["ScanPath"] = request.ScanPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanTargets))
+            {
+                bodyFlat["ScanTargets"] = request.ScanTargets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskDescription))
+            {
+                body["TaskDescription"] = request.TaskDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVirusScanTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVirusScanTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instant virus scan task and delivers it to user endpoint devices within the effective scope. The task takes effect immediately after creation. A maximum of 10 tasks can be created per Alibaba Cloud account per minute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirusScanTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirusScanTaskResponse
+        /// </returns>
+        public async Task<CreateVirusScanTaskResponse> CreateVirusScanTaskWithOptionsAsync(CreateVirusScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighRiskOperation))
+            {
+                body["HighRiskOperation"] = request.HighRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowRiskOperation))
+            {
+                body["LowRiskOperation"] = request.LowRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpuUsage))
+            {
+                body["MaxCpuUsage"] = request.MaxCpuUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MidRiskOperation))
+            {
+                body["MidRiskOperation"] = request.MidRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerformanceMode))
+            {
+                body["PerformanceMode"] = request.PerformanceMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanMode))
+            {
+                body["ScanMode"] = request.ScanMode;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanPath))
+            {
+                bodyFlat["ScanPath"] = request.ScanPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanTargets))
+            {
+                bodyFlat["ScanTargets"] = request.ScanTargets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskDescription))
+            {
+                body["TaskDescription"] = request.TaskDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVirusScanTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVirusScanTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instant virus scan task and delivers it to user endpoint devices within the effective scope. The task takes effect immediately after creation. A maximum of 10 tasks can be created per Alibaba Cloud account per minute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirusScanTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirusScanTaskResponse
+        /// </returns>
+        public CreateVirusScanTaskResponse CreateVirusScanTask(CreateVirusScanTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateVirusScanTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instant virus scan task and delivers it to user endpoint devices within the effective scope. The task takes effect immediately after creation. A maximum of 10 tasks can be created per Alibaba Cloud account per minute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVirusScanTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVirusScanTaskResponse
+        /// </returns>
+        public async Task<CreateVirusScanTaskResponse> CreateVirusScanTaskAsync(CreateVirusScanTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateVirusScanTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled vulnerability scanning policy that automatically sends vulnerability scanning tasks to user endpoint devices within the effective scope based on the configured cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVulScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulScanScheduledStrategyResponse
+        /// </returns>
+        public CreateVulScanScheduledStrategyResponse CreateVulScanScheduledStrategyWithOptions(CreateVulScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBeginTime))
+            {
+                body["ScanBeginTime"] = request.ScanBeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanEndTime))
+            {
+                body["ScanEndTime"] = request.ScanEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanFrequency))
+            {
+                body["ScanFrequency"] = request.ScanFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
+            {
+                body["ScanInterval"] = request.ScanInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyDescription))
+            {
+                body["StrategyDescription"] = request.StrategyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
+            {
+                body["StrategyName"] = request.StrategyName;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVulScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVulScanScheduledStrategyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled vulnerability scanning policy that automatically sends vulnerability scanning tasks to user endpoint devices within the effective scope based on the configured cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVulScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<CreateVulScanScheduledStrategyResponse> CreateVulScanScheduledStrategyWithOptionsAsync(CreateVulScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBeginTime))
+            {
+                body["ScanBeginTime"] = request.ScanBeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanEndTime))
+            {
+                body["ScanEndTime"] = request.ScanEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanFrequency))
+            {
+                body["ScanFrequency"] = request.ScanFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
+            {
+                body["ScanInterval"] = request.ScanInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyDescription))
+            {
+                body["StrategyDescription"] = request.StrategyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
+            {
+                body["StrategyName"] = request.StrategyName;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVulScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVulScanScheduledStrategyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled vulnerability scanning policy that automatically sends vulnerability scanning tasks to user endpoint devices within the effective scope based on the configured cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVulScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulScanScheduledStrategyResponse
+        /// </returns>
+        public CreateVulScanScheduledStrategyResponse CreateVulScanScheduledStrategy(CreateVulScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateVulScanScheduledStrategyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a scheduled vulnerability scanning policy that automatically sends vulnerability scanning tasks to user endpoint devices within the effective scope based on the configured cycle.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVulScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<CreateVulScanScheduledStrategyResponse> CreateVulScanScheduledStrategyAsync(CreateVulScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateVulScanScheduledStrategyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instant vulnerability scanning task and delivers it to user endpoint devices within the effective scope.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVulScanTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulScanTaskResponse
+        /// </returns>
+        public CreateVulScanTaskResponse CreateVulScanTaskWithOptions(CreateVulScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                body["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskDescription))
+            {
+                body["TaskDescription"] = request.TaskDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["TaskName"] = request.TaskName;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVulScanTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVulScanTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instant vulnerability scanning task and delivers it to user endpoint devices within the effective scope.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVulScanTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulScanTaskResponse
+        /// </returns>
+        public async Task<CreateVulScanTaskResponse> CreateVulScanTaskWithOptionsAsync(CreateVulScanTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimestamp))
+            {
+                body["EndTimestamp"] = request.EndTimestamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskDescription))
+            {
+                body["TaskDescription"] = request.TaskDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["TaskName"] = request.TaskName;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVulScanTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVulScanTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instant vulnerability scanning task and delivers it to user endpoint devices within the effective scope.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVulScanTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulScanTaskResponse
+        /// </returns>
+        public CreateVulScanTaskResponse CreateVulScanTask(CreateVulScanTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateVulScanTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an instant vulnerability scanning task and delivers it to user endpoint devices within the effective scope.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVulScanTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulScanTaskResponse
+        /// </returns>
+        public async Task<CreateVulScanTaskResponse> CreateVulScanTaskAsync(CreateVulScanTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateVulScanTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a vulnerability fix task that delivers the patch for a specified vulnerability to user endpoint devices and performs the installation.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateVulnerabilityFixTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulnerabilityFixTaskResponse
+        /// </returns>
+        public CreateVulnerabilityFixTaskResponse CreateVulnerabilityFixTaskWithOptions(CreateVulnerabilityFixTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateVulnerabilityFixTaskShrinkRequest request = new CreateVulnerabilityFixTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WuyingVulFixConfig))
+            {
+                request.WuyingVulFixConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WuyingVulFixConfig, "WuyingVulFixConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTags))
+            {
+                bodyFlat["DevTags"] = request.DevTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FixMode))
+            {
+                body["FixMode"] = request.FixMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDownloadSpeed))
+            {
+                body["MaxDownloadSpeed"] = request.MaxDownloadSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateId))
+            {
+                body["UpdateId"] = request.UpdateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingVulFixConfigShrink))
+            {
+                body["WuyingVulFixConfig"] = request.WuyingVulFixConfigShrink;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVulnerabilityFixTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVulnerabilityFixTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a vulnerability fix task that delivers the patch for a specified vulnerability to user endpoint devices and performs the installation.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateVulnerabilityFixTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulnerabilityFixTaskResponse
+        /// </returns>
+        public async Task<CreateVulnerabilityFixTaskResponse> CreateVulnerabilityFixTaskWithOptionsAsync(CreateVulnerabilityFixTaskRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateVulnerabilityFixTaskShrinkRequest request = new CreateVulnerabilityFixTaskShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WuyingVulFixConfig))
+            {
+                request.WuyingVulFixConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WuyingVulFixConfig, "WuyingVulFixConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTags))
+            {
+                bodyFlat["DevTags"] = request.DevTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FixMode))
+            {
+                body["FixMode"] = request.FixMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDownloadSpeed))
+            {
+                body["MaxDownloadSpeed"] = request.MaxDownloadSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateId))
+            {
+                body["UpdateId"] = request.UpdateId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingVulFixConfigShrink))
+            {
+                body["WuyingVulFixConfig"] = request.WuyingVulFixConfigShrink;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateVulnerabilityFixTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateVulnerabilityFixTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a vulnerability fix task that delivers the patch for a specified vulnerability to user endpoint devices and performs the installation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVulnerabilityFixTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulnerabilityFixTaskResponse
+        /// </returns>
+        public CreateVulnerabilityFixTaskResponse CreateVulnerabilityFixTask(CreateVulnerabilityFixTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateVulnerabilityFixTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a vulnerability fix task that delivers the patch for a specified vulnerability to user endpoint devices and performs the installation.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateVulnerabilityFixTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateVulnerabilityFixTaskResponse
+        /// </returns>
+        public async Task<CreateVulnerabilityFixTaskResponse> CreateVulnerabilityFixTaskAsync(CreateVulnerabilityFixTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateVulnerabilityFixTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the invisible watermark transparent background image for web watermarks, screen watermarks, and App watermarks.</para>
         /// </summary>
         /// 
@@ -6140,6 +7608,146 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDeviceGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes detection records of a specified vulnerability from specified user endpoint devices in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDevicesVulnerabilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDevicesVulnerabilityResponse
+        /// </returns>
+        public DeleteDevicesVulnerabilityResponse DeleteDevicesVulnerabilityWithOptions(DeleteDevicesVulnerabilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTags))
+            {
+                bodyFlat["DevTags"] = request.DevTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateId))
+            {
+                body["UpdateId"] = request.UpdateId;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDevicesVulnerability",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDevicesVulnerabilityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes detection records of a specified vulnerability from specified user endpoint devices in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDevicesVulnerabilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDevicesVulnerabilityResponse
+        /// </returns>
+        public async Task<DeleteDevicesVulnerabilityResponse> DeleteDevicesVulnerabilityWithOptionsAsync(DeleteDevicesVulnerabilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTags))
+            {
+                bodyFlat["DevTags"] = request.DevTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateId))
+            {
+                body["UpdateId"] = request.UpdateId;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDevicesVulnerability",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDevicesVulnerabilityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes detection records of a specified vulnerability from specified user endpoint devices in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDevicesVulnerabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDevicesVulnerabilityResponse
+        /// </returns>
+        public DeleteDevicesVulnerabilityResponse DeleteDevicesVulnerability(DeleteDevicesVulnerabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDevicesVulnerabilityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes detection records of a specified vulnerability from specified user endpoint devices in batches.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDevicesVulnerabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDevicesVulnerabilityResponse
+        /// </returns>
+        public async Task<DeleteDevicesVulnerabilityResponse> DeleteDevicesVulnerabilityAsync(DeleteDevicesVulnerabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDevicesVulnerabilityWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7740,7 +9348,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除自定义标签</para>
+        /// <para>Deletes custom prohibited software labels in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7788,7 +9396,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除自定义标签</para>
+        /// <para>Deletes custom prohibited software labels in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7836,7 +9444,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除自定义标签</para>
+        /// <para>Deletes custom prohibited software labels in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7854,7 +9462,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量删除自定义标签</para>
+        /// <para>Deletes custom prohibited software labels in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8304,6 +9912,394 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteUserGroupWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virus file record that failed to be handled. Only records with a handling action of Fail can be deleted. This operation does not delete the actual file on the user\&quot;s endpoint device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVirusFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirusFileResponse
+        /// </returns>
+        public DeleteVirusFileResponse DeleteVirusFileWithOptions(DeleteVirusFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTag))
+            {
+                body["DevTag"] = request.DevTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMd5))
+            {
+                body["FileMd5"] = request.FileMd5;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                body["FilePath"] = request.FilePath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVirusFile",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVirusFileResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virus file record that failed to be handled. Only records with a handling action of Fail can be deleted. This operation does not delete the actual file on the user\&quot;s endpoint device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVirusFileRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirusFileResponse
+        /// </returns>
+        public async Task<DeleteVirusFileResponse> DeleteVirusFileWithOptionsAsync(DeleteVirusFileRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTag))
+            {
+                body["DevTag"] = request.DevTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMd5))
+            {
+                body["FileMd5"] = request.FileMd5;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                body["FilePath"] = request.FilePath;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVirusFile",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVirusFileResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virus file record that failed to be handled. Only records with a handling action of Fail can be deleted. This operation does not delete the actual file on the user\&quot;s endpoint device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVirusFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirusFileResponse
+        /// </returns>
+        public DeleteVirusFileResponse DeleteVirusFile(DeleteVirusFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteVirusFileWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a virus file record that failed to be handled. Only records with a handling action of Fail can be deleted. This operation does not delete the actual file on the user\&quot;s endpoint device.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVirusFileRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirusFileResponse
+        /// </returns>
+        public async Task<DeleteVirusFileResponse> DeleteVirusFileAsync(DeleteVirusFileRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteVirusFileWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes virus scheduled scan policies in batches. After deletion, no new scan tasks are triggered, but scan tasks that have already been dispatched are not affected. If any policy ID does not belong to the current Alibaba Cloud account, the entire deletion fails.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVirusScanScheduledStrategiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirusScanScheduledStrategiesResponse
+        /// </returns>
+        public DeleteVirusScanScheduledStrategiesResponse DeleteVirusScanScheduledStrategiesWithOptions(DeleteVirusScanScheduledStrategiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyIds))
+            {
+                bodyFlat["StrategyIds"] = request.StrategyIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVirusScanScheduledStrategies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVirusScanScheduledStrategiesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes virus scheduled scan policies in batches. After deletion, no new scan tasks are triggered, but scan tasks that have already been dispatched are not affected. If any policy ID does not belong to the current Alibaba Cloud account, the entire deletion fails.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVirusScanScheduledStrategiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirusScanScheduledStrategiesResponse
+        /// </returns>
+        public async Task<DeleteVirusScanScheduledStrategiesResponse> DeleteVirusScanScheduledStrategiesWithOptionsAsync(DeleteVirusScanScheduledStrategiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyIds))
+            {
+                bodyFlat["StrategyIds"] = request.StrategyIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVirusScanScheduledStrategies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVirusScanScheduledStrategiesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes virus scheduled scan policies in batches. After deletion, no new scan tasks are triggered, but scan tasks that have already been dispatched are not affected. If any policy ID does not belong to the current Alibaba Cloud account, the entire deletion fails.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVirusScanScheduledStrategiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirusScanScheduledStrategiesResponse
+        /// </returns>
+        public DeleteVirusScanScheduledStrategiesResponse DeleteVirusScanScheduledStrategies(DeleteVirusScanScheduledStrategiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteVirusScanScheduledStrategiesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes virus scheduled scan policies in batches. After deletion, no new scan tasks are triggered, but scan tasks that have already been dispatched are not affected. If any policy ID does not belong to the current Alibaba Cloud account, the entire deletion fails.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVirusScanScheduledStrategiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVirusScanScheduledStrategiesResponse
+        /// </returns>
+        public async Task<DeleteVirusScanScheduledStrategiesResponse> DeleteVirusScanScheduledStrategiesAsync(DeleteVirusScanScheduledStrategiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteVirusScanScheduledStrategiesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified scheduled vulnerability scanning policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVulScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVulScanScheduledStrategyResponse
+        /// </returns>
+        public DeleteVulScanScheduledStrategyResponse DeleteVulScanScheduledStrategyWithOptions(DeleteVulScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyId))
+            {
+                body["StrategyId"] = request.StrategyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVulScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVulScanScheduledStrategyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified scheduled vulnerability scanning policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVulScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVulScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<DeleteVulScanScheduledStrategyResponse> DeleteVulScanScheduledStrategyWithOptionsAsync(DeleteVulScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyId))
+            {
+                body["StrategyId"] = request.StrategyId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteVulScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteVulScanScheduledStrategyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified scheduled vulnerability scanning policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVulScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVulScanScheduledStrategyResponse
+        /// </returns>
+        public DeleteVulScanScheduledStrategyResponse DeleteVulScanScheduledStrategy(DeleteVulScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteVulScanScheduledStrategyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified scheduled vulnerability scanning policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteVulScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteVulScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<DeleteVulScanScheduledStrategyResponse> DeleteVulScanScheduledStrategyAsync(DeleteVulScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteVulScanScheduledStrategyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Deprecated</b></term>
@@ -9176,6 +11172,110 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetActiveIdpConfigWithOptionsAsync(runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the real-time antivirus defense policy of the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAntiVirusRealTimeDefenceStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAntiVirusRealTimeDefenceStrategyResponse
+        /// </returns>
+        public GetAntiVirusRealTimeDefenceStrategyResponse GetAntiVirusRealTimeDefenceStrategyWithOptions(GetAntiVirusRealTimeDefenceStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAntiVirusRealTimeDefenceStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAntiVirusRealTimeDefenceStrategyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the real-time antivirus defense policy of the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAntiVirusRealTimeDefenceStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAntiVirusRealTimeDefenceStrategyResponse
+        /// </returns>
+        public async Task<GetAntiVirusRealTimeDefenceStrategyResponse> GetAntiVirusRealTimeDefenceStrategyWithOptionsAsync(GetAntiVirusRealTimeDefenceStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAntiVirusRealTimeDefenceStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAntiVirusRealTimeDefenceStrategyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the real-time antivirus defense policy of the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAntiVirusRealTimeDefenceStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAntiVirusRealTimeDefenceStrategyResponse
+        /// </returns>
+        public GetAntiVirusRealTimeDefenceStrategyResponse GetAntiVirusRealTimeDefenceStrategy(GetAntiVirusRealTimeDefenceStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAntiVirusRealTimeDefenceStrategyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the real-time antivirus defense policy of the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAntiVirusRealTimeDefenceStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAntiVirusRealTimeDefenceStrategyResponse
+        /// </returns>
+        public async Task<GetAntiVirusRealTimeDefenceStrategyResponse> GetAntiVirusRealTimeDefenceStrategyAsync(GetAntiVirusRealTimeDefenceStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAntiVirusRealTimeDefenceStrategyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -11728,6 +13828,550 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVirusScanGlobalConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirusScanGlobalConfigResponse
+        /// </returns>
+        public GetVirusScanGlobalConfigResponse GetVirusScanGlobalConfigWithOptions(GetVirusScanGlobalConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVirusScanGlobalConfig",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVirusScanGlobalConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVirusScanGlobalConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirusScanGlobalConfigResponse
+        /// </returns>
+        public async Task<GetVirusScanGlobalConfigResponse> GetVirusScanGlobalConfigWithOptionsAsync(GetVirusScanGlobalConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVirusScanGlobalConfig",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVirusScanGlobalConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVirusScanGlobalConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirusScanGlobalConfigResponse
+        /// </returns>
+        public GetVirusScanGlobalConfigResponse GetVirusScanGlobalConfig(GetVirusScanGlobalConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVirusScanGlobalConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global anti-virus configuration of the current Alibaba Cloud account, including the virus file upload switch and upload limits. If the current Alibaba Cloud account does not have its own configuration record, the default configurations are returned.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVirusScanGlobalConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirusScanGlobalConfigResponse
+        /// </returns>
+        public async Task<GetVirusScanGlobalConfigResponse> GetVirusScanGlobalConfigAsync(GetVirusScanGlobalConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVirusScanGlobalConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified scheduled virus scan policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVirusScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirusScanScheduledStrategyResponse
+        /// </returns>
+        public GetVirusScanScheduledStrategyResponse GetVirusScanScheduledStrategyWithOptions(GetVirusScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVirusScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVirusScanScheduledStrategyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified scheduled virus scan policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVirusScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirusScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<GetVirusScanScheduledStrategyResponse> GetVirusScanScheduledStrategyWithOptionsAsync(GetVirusScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVirusScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVirusScanScheduledStrategyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified scheduled virus scan policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVirusScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirusScanScheduledStrategyResponse
+        /// </returns>
+        public GetVirusScanScheduledStrategyResponse GetVirusScanScheduledStrategy(GetVirusScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVirusScanScheduledStrategyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified scheduled virus scan policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVirusScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVirusScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<GetVirusScanScheduledStrategyResponse> GetVirusScanScheduledStrategyAsync(GetVirusScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVirusScanScheduledStrategyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulScanGlobalConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulScanGlobalConfigResponse
+        /// </returns>
+        public GetVulScanGlobalConfigResponse GetVulScanGlobalConfigWithOptions(GetVulScanGlobalConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVulScanGlobalConfig",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVulScanGlobalConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulScanGlobalConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulScanGlobalConfigResponse
+        /// </returns>
+        public async Task<GetVulScanGlobalConfigResponse> GetVulScanGlobalConfigWithOptionsAsync(GetVulScanGlobalConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVulScanGlobalConfig",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVulScanGlobalConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulScanGlobalConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulScanGlobalConfigResponse
+        /// </returns>
+        public GetVulScanGlobalConfigResponse GetVulScanGlobalConfig(GetVulScanGlobalConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVulScanGlobalConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the global configuration of vulnerability scanning for the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulScanGlobalConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulScanGlobalConfigResponse
+        /// </returns>
+        public async Task<GetVulScanGlobalConfigResponse> GetVulScanGlobalConfigAsync(GetVulScanGlobalConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVulScanGlobalConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete configuration of a specified vulnerability scheduled scan policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulScanScheduledStrategyResponse
+        /// </returns>
+        public GetVulScanScheduledStrategyResponse GetVulScanScheduledStrategyWithOptions(GetVulScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVulScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVulScanScheduledStrategyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete configuration of a specified vulnerability scheduled scan policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<GetVulScanScheduledStrategyResponse> GetVulScanScheduledStrategyWithOptionsAsync(GetVulScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVulScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVulScanScheduledStrategyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete configuration of a specified vulnerability scheduled scan policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulScanScheduledStrategyResponse
+        /// </returns>
+        public GetVulScanScheduledStrategyResponse GetVulScanScheduledStrategy(GetVulScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVulScanScheduledStrategyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete configuration of a specified vulnerability scheduled scan policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<GetVulScanScheduledStrategyResponse> GetVulScanScheduledStrategyAsync(GetVulScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVulScanScheduledStrategyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified vulnerability.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulnerabilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulnerabilityResponse
+        /// </returns>
+        public GetVulnerabilityResponse GetVulnerabilityWithOptions(GetVulnerabilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVulnerability",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVulnerabilityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified vulnerability.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulnerabilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulnerabilityResponse
+        /// </returns>
+        public async Task<GetVulnerabilityResponse> GetVulnerabilityWithOptionsAsync(GetVulnerabilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetVulnerability",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetVulnerabilityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified vulnerability.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulnerabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulnerabilityResponse
+        /// </returns>
+        public GetVulnerabilityResponse GetVulnerability(GetVulnerabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetVulnerabilityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified vulnerability.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetVulnerabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetVulnerabilityResponse
+        /// </returns>
+        public async Task<GetVulnerabilityResponse> GetVulnerabilityAsync(GetVulnerabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetVulnerabilityWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Use the job ID obtained from creating a watermark embedding job to query the embedding job result.</para>
         /// </summary>
         /// 
@@ -13228,6 +15872,118 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDeviceGroupsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDevicesForVulnerabilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDevicesForVulnerabilityResponse
+        /// </returns>
+        public ListDevicesForVulnerabilityResponse ListDevicesForVulnerabilityWithOptions(ListDevicesForVulnerabilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDevicesForVulnerability",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDevicesForVulnerabilityResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDevicesForVulnerabilityRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDevicesForVulnerabilityResponse
+        /// </returns>
+        public async Task<ListDevicesForVulnerabilityResponse> ListDevicesForVulnerabilityWithOptionsAsync(ListDevicesForVulnerabilityRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDevicesForVulnerability",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDevicesForVulnerabilityResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDevicesForVulnerabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDevicesForVulnerabilityResponse
+        /// </returns>
+        public ListDevicesForVulnerabilityResponse ListDevicesForVulnerability(ListDevicesForVulnerabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDevicesForVulnerabilityWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries user endpoint devices affected by a specified vulnerability and their remediation status by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDevicesForVulnerabilityRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDevicesForVulnerabilityResponse
+        /// </returns>
+        public async Task<ListDevicesForVulnerabilityResponse> ListDevicesForVulnerabilityAsync(ListDevicesForVulnerabilityRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDevicesForVulnerabilityWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18480,6 +21236,1014 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries virus files detected under the current Alibaba Cloud account and their disposition status with paging. Supports filtering by virus type, risk level, user terminal device, user, and discovery time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusFileStatusesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusFileStatusesResponse
+        /// </returns>
+        public ListVirusFileStatusesResponse ListVirusFileStatusesWithOptions(ListVirusFileStatusesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusFileStatuses",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusFileStatusesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virus files detected under the current Alibaba Cloud account and their disposition status with paging. Supports filtering by virus type, risk level, user terminal device, user, and discovery time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusFileStatusesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusFileStatusesResponse
+        /// </returns>
+        public async Task<ListVirusFileStatusesResponse> ListVirusFileStatusesWithOptionsAsync(ListVirusFileStatusesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusFileStatuses",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusFileStatusesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virus files detected under the current Alibaba Cloud account and their disposition status with paging. Supports filtering by virus type, risk level, user terminal device, user, and discovery time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusFileStatusesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusFileStatusesResponse
+        /// </returns>
+        public ListVirusFileStatusesResponse ListVirusFileStatuses(ListVirusFileStatusesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVirusFileStatusesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virus files detected under the current Alibaba Cloud account and their disposition status with paging. Supports filtering by virus type, risk level, user terminal device, user, and discovery time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusFileStatusesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusFileStatusesResponse
+        /// </returns>
+        public async Task<ListVirusFileStatusesResponse> ListVirusFileStatusesAsync(ListVirusFileStatusesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVirusFileStatusesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询病毒扫描额外名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanAdditionalListsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanAdditionalListsResponse
+        /// </returns>
+        public ListVirusScanAdditionalListsResponse ListVirusScanAdditionalListsWithOptions(ListVirusScanAdditionalListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusScanAdditionalLists",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusScanAdditionalListsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询病毒扫描额外名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanAdditionalListsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanAdditionalListsResponse
+        /// </returns>
+        public async Task<ListVirusScanAdditionalListsResponse> ListVirusScanAdditionalListsWithOptionsAsync(ListVirusScanAdditionalListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusScanAdditionalLists",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusScanAdditionalListsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询病毒扫描额外名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanAdditionalListsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanAdditionalListsResponse
+        /// </returns>
+        public ListVirusScanAdditionalListsResponse ListVirusScanAdditionalLists(ListVirusScanAdditionalListsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVirusScanAdditionalListsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询病毒扫描额外名单</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanAdditionalListsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanAdditionalListsResponse
+        /// </returns>
+        public async Task<ListVirusScanAdditionalListsResponse> ListVirusScanAdditionalListsAsync(ListVirusScanAdditionalListsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVirusScanAdditionalListsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virus scheduled scan policies under the current Alibaba Cloud account with paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanScheduledStrategiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanScheduledStrategiesResponse
+        /// </returns>
+        public ListVirusScanScheduledStrategiesResponse ListVirusScanScheduledStrategiesWithOptions(ListVirusScanScheduledStrategiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusScanScheduledStrategies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusScanScheduledStrategiesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virus scheduled scan policies under the current Alibaba Cloud account with paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanScheduledStrategiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanScheduledStrategiesResponse
+        /// </returns>
+        public async Task<ListVirusScanScheduledStrategiesResponse> ListVirusScanScheduledStrategiesWithOptionsAsync(ListVirusScanScheduledStrategiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusScanScheduledStrategies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusScanScheduledStrategiesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virus scheduled scan policies under the current Alibaba Cloud account with paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanScheduledStrategiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanScheduledStrategiesResponse
+        /// </returns>
+        public ListVirusScanScheduledStrategiesResponse ListVirusScanScheduledStrategies(ListVirusScanScheduledStrategiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVirusScanScheduledStrategiesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries virus scheduled scan policies under the current Alibaba Cloud account with paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanScheduledStrategiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanScheduledStrategiesResponse
+        /// </returns>
+        public async Task<ListVirusScanScheduledStrategiesResponse> ListVirusScanScheduledStrategiesAsync(ListVirusScanScheduledStrategiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVirusScanScheduledStrategiesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务的状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTaskStatusesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTaskStatusesResponse
+        /// </returns>
+        public ListVirusScanTaskStatusesResponse ListVirusScanTaskStatusesWithOptions(ListVirusScanTaskStatusesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusScanTaskStatuses",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusScanTaskStatusesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务的状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTaskStatusesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTaskStatusesResponse
+        /// </returns>
+        public async Task<ListVirusScanTaskStatusesResponse> ListVirusScanTaskStatusesWithOptionsAsync(ListVirusScanTaskStatusesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusScanTaskStatuses",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusScanTaskStatusesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务的状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTaskStatusesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTaskStatusesResponse
+        /// </returns>
+        public ListVirusScanTaskStatusesResponse ListVirusScanTaskStatuses(ListVirusScanTaskStatusesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVirusScanTaskStatusesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务的状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTaskStatusesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTaskStatusesResponse
+        /// </returns>
+        public async Task<ListVirusScanTaskStatusesResponse> ListVirusScanTaskStatusesAsync(ListVirusScanTaskStatusesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVirusScanTaskStatusesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTaskSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTaskSummaryResponse
+        /// </returns>
+        public ListVirusScanTaskSummaryResponse ListVirusScanTaskSummaryWithOptions(ListVirusScanTaskSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusScanTaskSummary",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusScanTaskSummaryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTaskSummaryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTaskSummaryResponse
+        /// </returns>
+        public async Task<ListVirusScanTaskSummaryResponse> ListVirusScanTaskSummaryWithOptionsAsync(ListVirusScanTaskSummaryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusScanTaskSummary",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusScanTaskSummaryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTaskSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTaskSummaryResponse
+        /// </returns>
+        public ListVirusScanTaskSummaryResponse ListVirusScanTaskSummary(ListVirusScanTaskSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVirusScanTaskSummaryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务统计数据</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTaskSummaryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTaskSummaryResponse
+        /// </returns>
+        public async Task<ListVirusScanTaskSummaryResponse> ListVirusScanTaskSummaryAsync(ListVirusScanTaskSummaryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVirusScanTaskSummaryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTasksResponse
+        /// </returns>
+        public ListVirusScanTasksResponse ListVirusScanTasksWithOptions(ListVirusScanTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusScanTasks",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusScanTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTasksResponse
+        /// </returns>
+        public async Task<ListVirusScanTasksResponse> ListVirusScanTasksWithOptionsAsync(ListVirusScanTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVirusScanTasks",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVirusScanTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTasksResponse
+        /// </returns>
+        public ListVirusScanTasksResponse ListVirusScanTasks(ListVirusScanTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVirusScanTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>批量查询病毒扫描任务</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVirusScanTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVirusScanTasksResponse
+        /// </returns>
+        public async Task<ListVirusScanTasksResponse> ListVirusScanTasksAsync(ListVirusScanTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVirusScanTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scheduled vulnerability scan policies under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulScanScheduledStrategiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulScanScheduledStrategiesResponse
+        /// </returns>
+        public ListVulScanScheduledStrategiesResponse ListVulScanScheduledStrategiesWithOptions(ListVulScanScheduledStrategiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVulScanScheduledStrategies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVulScanScheduledStrategiesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scheduled vulnerability scan policies under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulScanScheduledStrategiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulScanScheduledStrategiesResponse
+        /// </returns>
+        public async Task<ListVulScanScheduledStrategiesResponse> ListVulScanScheduledStrategiesWithOptionsAsync(ListVulScanScheduledStrategiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVulScanScheduledStrategies",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVulScanScheduledStrategiesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scheduled vulnerability scan policies under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulScanScheduledStrategiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulScanScheduledStrategiesResponse
+        /// </returns>
+        public ListVulScanScheduledStrategiesResponse ListVulScanScheduledStrategies(ListVulScanScheduledStrategiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVulScanScheduledStrategiesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries scheduled vulnerability scan policies under the current Alibaba Cloud account by paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulScanScheduledStrategiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulScanScheduledStrategiesResponse
+        /// </returns>
+        public async Task<ListVulScanScheduledStrategiesResponse> ListVulScanScheduledStrategiesAsync(ListVulScanScheduledStrategiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVulScanScheduledStrategiesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries vulnerability scanning tasks under the current Alibaba Cloud account by paged query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulScanTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulScanTasksResponse
+        /// </returns>
+        public ListVulScanTasksResponse ListVulScanTasksWithOptions(ListVulScanTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVulScanTasks",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVulScanTasksResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries vulnerability scanning tasks under the current Alibaba Cloud account by paged query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulScanTasksRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulScanTasksResponse
+        /// </returns>
+        public async Task<ListVulScanTasksResponse> ListVulScanTasksWithOptionsAsync(ListVulScanTasksRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVulScanTasks",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVulScanTasksResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries vulnerability scanning tasks under the current Alibaba Cloud account by paged query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulScanTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulScanTasksResponse
+        /// </returns>
+        public ListVulScanTasksResponse ListVulScanTasks(ListVulScanTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVulScanTasksWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries vulnerability scanning tasks under the current Alibaba Cloud account by paged query.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulScanTasksRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulScanTasksResponse
+        /// </returns>
+        public async Task<ListVulScanTasksResponse> ListVulScanTasksAsync(ListVulScanTasksRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVulScanTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries vulnerabilities detected by scans under the current Alibaba Cloud account by using paged query with paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulnerabilitiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulnerabilitiesResponse
+        /// </returns>
+        public ListVulnerabilitiesResponse ListVulnerabilitiesWithOptions(ListVulnerabilitiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVulnerabilities",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVulnerabilitiesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries vulnerabilities detected by scans under the current Alibaba Cloud account by using paged query with paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulnerabilitiesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulnerabilitiesResponse
+        /// </returns>
+        public async Task<ListVulnerabilitiesResponse> ListVulnerabilitiesWithOptionsAsync(ListVulnerabilitiesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVulnerabilities",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVulnerabilitiesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries vulnerabilities detected by scans under the current Alibaba Cloud account by using paged query with paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulnerabilitiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulnerabilitiesResponse
+        /// </returns>
+        public ListVulnerabilitiesResponse ListVulnerabilities(ListVulnerabilitiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVulnerabilitiesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries vulnerabilities detected by scans under the current Alibaba Cloud account by using paged query with paging.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVulnerabilitiesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVulnerabilitiesResponse
+        /// </returns>
+        public async Task<ListVulnerabilitiesResponse> ListVulnerabilitiesAsync(ListVulnerabilitiesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVulnerabilitiesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Look up an existing watermark information mapping to retrieve the corresponding string-formatted watermark information from numeric-formatted watermark data.</para>
         /// </summary>
         /// 
@@ -19248,6 +23012,138 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Removes virus scan blacklists and whitelists entries in batch by entry IDs. The entire removal operation is failed if any of the specified entry IDs do not belong to the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveVirusScanAdditionalListsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveVirusScanAdditionalListsResponse
+        /// </returns>
+        public RemoveVirusScanAdditionalListsResponse RemoveVirusScanAdditionalListsWithOptions(RemoveVirusScanAdditionalListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListIds))
+            {
+                bodyFlat["ListIds"] = request.ListIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveVirusScanAdditionalLists",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveVirusScanAdditionalListsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes virus scan blacklists and whitelists entries in batch by entry IDs. The entire removal operation is failed if any of the specified entry IDs do not belong to the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveVirusScanAdditionalListsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveVirusScanAdditionalListsResponse
+        /// </returns>
+        public async Task<RemoveVirusScanAdditionalListsResponse> RemoveVirusScanAdditionalListsWithOptionsAsync(RemoveVirusScanAdditionalListsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ListIds))
+            {
+                bodyFlat["ListIds"] = request.ListIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveVirusScanAdditionalLists",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveVirusScanAdditionalListsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes virus scan blacklists and whitelists entries in batch by entry IDs. The entire removal operation is failed if any of the specified entry IDs do not belong to the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveVirusScanAdditionalListsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveVirusScanAdditionalListsResponse
+        /// </returns>
+        public RemoveVirusScanAdditionalListsResponse RemoveVirusScanAdditionalLists(RemoveVirusScanAdditionalListsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return RemoveVirusScanAdditionalListsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes virus scan blacklists and whitelists entries in batch by entry IDs. The entire removal operation is failed if any of the specified entry IDs do not belong to the current Alibaba Cloud account.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RemoveVirusScanAdditionalListsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveVirusScanAdditionalListsResponse
+        /// </returns>
+        public async Task<RemoveVirusScanAdditionalListsResponse> RemoveVirusScanAdditionalListsAsync(RemoveVirusScanAdditionalListsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await RemoveVirusScanAdditionalListsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Revokes a user device session.</para>
         /// </summary>
         /// 
@@ -19524,6 +23420,202 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await RevokeUserSessionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the real-time anti-virus defense policy for the current Alibaba Cloud account. The first call creates the policy, and subsequent calls update it. The complete updated configuration is returned. When configuring for the first time, Status, MatchMode, HighRiskOperation, MidRiskOperation, LowRiskOperation, and ScanTargets are all required. ScanTargets and Whitelist are full replacements. The collection you pass in replaces the existing configuration. When MatchMode is set to UserGroupNormal, you must pass in the complete UserGroupIds on every call. When Status is not set to Disabled, the system validates the endpoint hardening license count. The call fails if the count exceeds the purchased licenses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAntiVirusRealTimeDefenceStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAntiVirusRealTimeDefenceStrategyResponse
+        /// </returns>
+        public UpdateAntiVirusRealTimeDefenceStrategyResponse UpdateAntiVirusRealTimeDefenceStrategyWithOptions(UpdateAntiVirusRealTimeDefenceStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighRiskOperation))
+            {
+                body["HighRiskOperation"] = request.HighRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowRiskOperation))
+            {
+                body["LowRiskOperation"] = request.LowRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpuUsage))
+            {
+                body["MaxCpuUsage"] = request.MaxCpuUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MidRiskOperation))
+            {
+                body["MidRiskOperation"] = request.MidRiskOperation;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanTargets))
+            {
+                bodyFlat["ScanTargets"] = request.ScanTargets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAntiVirusRealTimeDefenceStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAntiVirusRealTimeDefenceStrategyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the real-time anti-virus defense policy for the current Alibaba Cloud account. The first call creates the policy, and subsequent calls update it. The complete updated configuration is returned. When configuring for the first time, Status, MatchMode, HighRiskOperation, MidRiskOperation, LowRiskOperation, and ScanTargets are all required. ScanTargets and Whitelist are full replacements. The collection you pass in replaces the existing configuration. When MatchMode is set to UserGroupNormal, you must pass in the complete UserGroupIds on every call. When Status is not set to Disabled, the system validates the endpoint hardening license count. The call fails if the count exceeds the purchased licenses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAntiVirusRealTimeDefenceStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAntiVirusRealTimeDefenceStrategyResponse
+        /// </returns>
+        public async Task<UpdateAntiVirusRealTimeDefenceStrategyResponse> UpdateAntiVirusRealTimeDefenceStrategyWithOptionsAsync(UpdateAntiVirusRealTimeDefenceStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighRiskOperation))
+            {
+                body["HighRiskOperation"] = request.HighRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowRiskOperation))
+            {
+                body["LowRiskOperation"] = request.LowRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpuUsage))
+            {
+                body["MaxCpuUsage"] = request.MaxCpuUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MidRiskOperation))
+            {
+                body["MidRiskOperation"] = request.MidRiskOperation;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanTargets))
+            {
+                bodyFlat["ScanTargets"] = request.ScanTargets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAntiVirusRealTimeDefenceStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAntiVirusRealTimeDefenceStrategyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the real-time anti-virus defense policy for the current Alibaba Cloud account. The first call creates the policy, and subsequent calls update it. The complete updated configuration is returned. When configuring for the first time, Status, MatchMode, HighRiskOperation, MidRiskOperation, LowRiskOperation, and ScanTargets are all required. ScanTargets and Whitelist are full replacements. The collection you pass in replaces the existing configuration. When MatchMode is set to UserGroupNormal, you must pass in the complete UserGroupIds on every call. When Status is not set to Disabled, the system validates the endpoint hardening license count. The call fails if the count exceeds the purchased licenses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAntiVirusRealTimeDefenceStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAntiVirusRealTimeDefenceStrategyResponse
+        /// </returns>
+        public UpdateAntiVirusRealTimeDefenceStrategyResponse UpdateAntiVirusRealTimeDefenceStrategy(UpdateAntiVirusRealTimeDefenceStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateAntiVirusRealTimeDefenceStrategyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Configures the real-time anti-virus defense policy for the current Alibaba Cloud account. The first call creates the policy, and subsequent calls update it. The complete updated configuration is returned. When configuring for the first time, Status, MatchMode, HighRiskOperation, MidRiskOperation, LowRiskOperation, and ScanTargets are all required. ScanTargets and Whitelist are full replacements. The collection you pass in replaces the existing configuration. When MatchMode is set to UserGroupNormal, you must pass in the complete UserGroupIds on every call. When Status is not set to Disabled, the system validates the endpoint hardening license count. The call fails if the count exceeds the purchased licenses.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAntiVirusRealTimeDefenceStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAntiVirusRealTimeDefenceStrategyResponse
+        /// </returns>
+        public async Task<UpdateAntiVirusRealTimeDefenceStrategyResponse> UpdateAntiVirusRealTimeDefenceStrategyAsync(UpdateAntiVirusRealTimeDefenceStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateAntiVirusRealTimeDefenceStrategyWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24360,6 +28452,958 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateUsersStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusFileStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusFileStatusResponse
+        /// </returns>
+        public UpdateVirusFileStatusResponse UpdateVirusFileStatusWithOptions(UpdateVirusFileStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTag))
+            {
+                body["DevTag"] = request.DevTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMd5))
+            {
+                body["FileMd5"] = request.FileMd5;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                body["FilePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                body["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirusType))
+            {
+                body["VirusType"] = request.VirusType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVirusFileStatus",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVirusFileStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusFileStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusFileStatusResponse
+        /// </returns>
+        public async Task<UpdateVirusFileStatusResponse> UpdateVirusFileStatusWithOptionsAsync(UpdateVirusFileStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTag))
+            {
+                body["DevTag"] = request.DevTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileMd5))
+            {
+                body["FileMd5"] = request.FileMd5;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilePath))
+            {
+                body["FilePath"] = request.FilePath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
+            {
+                body["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirusType))
+            {
+                body["VirusType"] = request.VirusType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVirusFileStatus",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVirusFileStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusFileStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusFileStatusResponse
+        /// </returns>
+        public UpdateVirusFileStatusResponse UpdateVirusFileStatus(UpdateVirusFileStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateVirusFileStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Quarantines or trusts a virus file on a specified user terminal device. DevTag, FilePath, and FileMd5 together identify a virus file record. The call fails if the record does not exist. Quarantine is an asynchronous operation. After the server creates a disposal task, the user terminal device pulls and executes it. The same virus file record can only be disposed of once within one minute.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusFileStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusFileStatusResponse
+        /// </returns>
+        public async Task<UpdateVirusFileStatusResponse> UpdateVirusFileStatusAsync(UpdateVirusFileStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateVirusFileStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the anti-virus global configuration for the current Alibaba Cloud account. The four configuration items are treated as a whole and are entirely overwritten with each call. Therefore, pass in the complete configuration with each call: set VirusFileUpload to false, UploadFileSuffixBlacklist to empty, and UploadFileMaxSize and UploadFileMaxSpeed to 0 (no limit). After VirusFileUpload is changed, the virus file upload module switch is synchronously updated, which affects whether cloud-based STS tokens are issued to user terminal devices.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusScanGlobalConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusScanGlobalConfigResponse
+        /// </returns>
+        public UpdateVirusScanGlobalConfigResponse UpdateVirusScanGlobalConfigWithOptions(UpdateVirusScanGlobalConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadFileMaxSize))
+            {
+                body["UploadFileMaxSize"] = request.UploadFileMaxSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadFileMaxSpeed))
+            {
+                body["UploadFileMaxSpeed"] = request.UploadFileMaxSpeed;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadFileSuffixBlacklist))
+            {
+                bodyFlat["UploadFileSuffixBlacklist"] = request.UploadFileSuffixBlacklist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirusFileUpload))
+            {
+                body["VirusFileUpload"] = request.VirusFileUpload;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVirusScanGlobalConfig",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVirusScanGlobalConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the anti-virus global configuration for the current Alibaba Cloud account. The four configuration items are treated as a whole and are entirely overwritten with each call. Therefore, pass in the complete configuration with each call: set VirusFileUpload to false, UploadFileSuffixBlacklist to empty, and UploadFileMaxSize and UploadFileMaxSpeed to 0 (no limit). After VirusFileUpload is changed, the virus file upload module switch is synchronously updated, which affects whether cloud-based STS tokens are issued to user terminal devices.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusScanGlobalConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusScanGlobalConfigResponse
+        /// </returns>
+        public async Task<UpdateVirusScanGlobalConfigResponse> UpdateVirusScanGlobalConfigWithOptionsAsync(UpdateVirusScanGlobalConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadFileMaxSize))
+            {
+                body["UploadFileMaxSize"] = request.UploadFileMaxSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadFileMaxSpeed))
+            {
+                body["UploadFileMaxSpeed"] = request.UploadFileMaxSpeed;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadFileSuffixBlacklist))
+            {
+                bodyFlat["UploadFileSuffixBlacklist"] = request.UploadFileSuffixBlacklist;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VirusFileUpload))
+            {
+                body["VirusFileUpload"] = request.VirusFileUpload;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVirusScanGlobalConfig",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVirusScanGlobalConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the anti-virus global configuration for the current Alibaba Cloud account. The four configuration items are treated as a whole and are entirely overwritten with each call. Therefore, pass in the complete configuration with each call: set VirusFileUpload to false, UploadFileSuffixBlacklist to empty, and UploadFileMaxSize and UploadFileMaxSpeed to 0 (no limit). After VirusFileUpload is changed, the virus file upload module switch is synchronously updated, which affects whether cloud-based STS tokens are issued to user terminal devices.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusScanGlobalConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusScanGlobalConfigResponse
+        /// </returns>
+        public UpdateVirusScanGlobalConfigResponse UpdateVirusScanGlobalConfig(UpdateVirusScanGlobalConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateVirusScanGlobalConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the anti-virus global configuration for the current Alibaba Cloud account. The four configuration items are treated as a whole and are entirely overwritten with each call. Therefore, pass in the complete configuration with each call: set VirusFileUpload to false, UploadFileSuffixBlacklist to empty, and UploadFileMaxSize and UploadFileMaxSpeed to 0 (no limit). After VirusFileUpload is changed, the virus file upload module switch is synchronously updated, which affects whether cloud-based STS tokens are issued to user terminal devices.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusScanGlobalConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusScanGlobalConfigResponse
+        /// </returns>
+        public async Task<UpdateVirusScanGlobalConfigResponse> UpdateVirusScanGlobalConfigAsync(UpdateVirusScanGlobalConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateVirusScanGlobalConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusScanScheduledStrategyResponse
+        /// </returns>
+        public UpdateVirusScanScheduledStrategyResponse UpdateVirusScanScheduledStrategyWithOptions(UpdateVirusScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighRiskOperation))
+            {
+                body["HighRiskOperation"] = request.HighRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowRiskOperation))
+            {
+                body["LowRiskOperation"] = request.LowRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpuUsage))
+            {
+                body["MaxCpuUsage"] = request.MaxCpuUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MidRiskOperation))
+            {
+                body["MidRiskOperation"] = request.MidRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerformanceMode))
+            {
+                body["PerformanceMode"] = request.PerformanceMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBeginTime))
+            {
+                body["ScanBeginTime"] = request.ScanBeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanEndTime))
+            {
+                body["ScanEndTime"] = request.ScanEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanFrequency))
+            {
+                body["ScanFrequency"] = request.ScanFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
+            {
+                body["ScanInterval"] = request.ScanInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanMode))
+            {
+                body["ScanMode"] = request.ScanMode;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanPath))
+            {
+                bodyFlat["ScanPath"] = request.ScanPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanTargets))
+            {
+                bodyFlat["ScanTargets"] = request.ScanTargets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyDescription))
+            {
+                body["StrategyDescription"] = request.StrategyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyId))
+            {
+                body["StrategyId"] = request.StrategyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
+            {
+                body["StrategyName"] = request.StrategyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVirusScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVirusScanScheduledStrategyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<UpdateVirusScanScheduledStrategyResponse> UpdateVirusScanScheduledStrategyWithOptionsAsync(UpdateVirusScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HighRiskOperation))
+            {
+                body["HighRiskOperation"] = request.HighRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LowRiskOperation))
+            {
+                body["LowRiskOperation"] = request.LowRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxCpuUsage))
+            {
+                body["MaxCpuUsage"] = request.MaxCpuUsage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MidRiskOperation))
+            {
+                body["MidRiskOperation"] = request.MidRiskOperation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PerformanceMode))
+            {
+                body["PerformanceMode"] = request.PerformanceMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBeginTime))
+            {
+                body["ScanBeginTime"] = request.ScanBeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanEndTime))
+            {
+                body["ScanEndTime"] = request.ScanEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanFrequency))
+            {
+                body["ScanFrequency"] = request.ScanFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
+            {
+                body["ScanInterval"] = request.ScanInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanMode))
+            {
+                body["ScanMode"] = request.ScanMode;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanPath))
+            {
+                bodyFlat["ScanPath"] = request.ScanPath;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanTargets))
+            {
+                bodyFlat["ScanTargets"] = request.ScanTargets;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyDescription))
+            {
+                body["StrategyDescription"] = request.StrategyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyId))
+            {
+                body["StrategyId"] = request.StrategyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
+            {
+                body["StrategyName"] = request.StrategyName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVirusScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVirusScanScheduledStrategyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusScanScheduledStrategyResponse
+        /// </returns>
+        public UpdateVirusScanScheduledStrategyResponse UpdateVirusScanScheduledStrategy(UpdateVirusScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateVirusScanScheduledStrategyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified scheduled virus scan policy. The Whitelist parameter performs a full overwrite, meaning the provided list replaces the existing exception user list of the policy.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVirusScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVirusScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<UpdateVirusScanScheduledStrategyResponse> UpdateVirusScanScheduledStrategyAsync(UpdateVirusScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateVirusScanScheduledStrategyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global vulnerability scanning configuration for the current Alibaba Cloud account and returns the complete updated configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateVulScanGlobalConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVulScanGlobalConfigResponse
+        /// </returns>
+        public UpdateVulScanGlobalConfigResponse UpdateVulScanGlobalConfigWithOptions(UpdateVulScanGlobalConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateVulScanGlobalConfigShrinkRequest request = new UpdateVulScanGlobalConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WuyingVulFixConfig))
+            {
+                request.WuyingVulFixConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WuyingVulFixConfig, "WuyingVulFixConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDownloadSpeed))
+            {
+                body["MaxDownloadSpeed"] = request.MaxDownloadSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingVulFixConfigShrink))
+            {
+                body["WuyingVulFixConfig"] = request.WuyingVulFixConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVulScanGlobalConfig",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVulScanGlobalConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global vulnerability scanning configuration for the current Alibaba Cloud account and returns the complete updated configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateVulScanGlobalConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVulScanGlobalConfigResponse
+        /// </returns>
+        public async Task<UpdateVulScanGlobalConfigResponse> UpdateVulScanGlobalConfigWithOptionsAsync(UpdateVulScanGlobalConfigRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateVulScanGlobalConfigShrinkRequest request = new UpdateVulScanGlobalConfigShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.WuyingVulFixConfig))
+            {
+                request.WuyingVulFixConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.WuyingVulFixConfig, "WuyingVulFixConfig", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxDownloadSpeed))
+            {
+                body["MaxDownloadSpeed"] = request.MaxDownloadSpeed;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WuyingVulFixConfigShrink))
+            {
+                body["WuyingVulFixConfig"] = request.WuyingVulFixConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVulScanGlobalConfig",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVulScanGlobalConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global vulnerability scanning configuration for the current Alibaba Cloud account and returns the complete updated configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVulScanGlobalConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVulScanGlobalConfigResponse
+        /// </returns>
+        public UpdateVulScanGlobalConfigResponse UpdateVulScanGlobalConfig(UpdateVulScanGlobalConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateVulScanGlobalConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the global vulnerability scanning configuration for the current Alibaba Cloud account and returns the complete updated configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVulScanGlobalConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVulScanGlobalConfigResponse
+        /// </returns>
+        public async Task<UpdateVulScanGlobalConfigResponse> UpdateVulScanGlobalConfigAsync(UpdateVulScanGlobalConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateVulScanGlobalConfigWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVulScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVulScanScheduledStrategyResponse
+        /// </returns>
+        public UpdateVulScanScheduledStrategyResponse UpdateVulScanScheduledStrategyWithOptions(UpdateVulScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBeginTime))
+            {
+                body["ScanBeginTime"] = request.ScanBeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanEndTime))
+            {
+                body["ScanEndTime"] = request.ScanEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanFrequency))
+            {
+                body["ScanFrequency"] = request.ScanFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
+            {
+                body["ScanInterval"] = request.ScanInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyDescription))
+            {
+                body["StrategyDescription"] = request.StrategyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyId))
+            {
+                body["StrategyId"] = request.StrategyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
+            {
+                body["StrategyName"] = request.StrategyName;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVulScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVulScanScheduledStrategyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVulScanScheduledStrategyRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVulScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<UpdateVulScanScheduledStrategyResponse> UpdateVulScanScheduledStrategyWithOptionsAsync(UpdateVulScanScheduledStrategyRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["Priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanBeginTime))
+            {
+                body["ScanBeginTime"] = request.ScanBeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanEndTime))
+            {
+                body["ScanEndTime"] = request.ScanEndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanFrequency))
+            {
+                body["ScanFrequency"] = request.ScanFrequency;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanInterval))
+            {
+                body["ScanInterval"] = request.ScanInterval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyDescription))
+            {
+                body["StrategyDescription"] = request.StrategyDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyId))
+            {
+                body["StrategyId"] = request.StrategyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StrategyName))
+            {
+                body["StrategyName"] = request.StrategyName;
+            }
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
+            {
+                bodyFlat["Whitelist"] = request.Whitelist;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateVulScanScheduledStrategy",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateVulScanScheduledStrategyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVulScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVulScanScheduledStrategyResponse
+        /// </returns>
+        public UpdateVulScanScheduledStrategyResponse UpdateVulScanScheduledStrategy(UpdateVulScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateVulScanScheduledStrategyWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration of a specified vulnerability scheduled scan policy and returns the complete updated configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateVulScanScheduledStrategyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateVulScanScheduledStrategyResponse
+        /// </returns>
+        public async Task<UpdateVulScanScheduledStrategyResponse> UpdateVulScanScheduledStrategyAsync(UpdateVulScanScheduledStrategyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateVulScanScheduledStrategyWithOptionsAsync(request, runtime);
         }
 
     }

@@ -8,14 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
-    public class DeleteProhibitedTagsRequest : TeaModel {
+    public class RemoveVirusScanAdditionalListsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the custom prohibited software labels to delete. Duplicate IDs are not allowed. You can specify up to 100 IDs.</para>
+        /// <para>The collection of entry IDs to remove. At least one entry ID must be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
-        [NameInMap("TagIds")]
+        [NameInMap("ListIds")]
         [Validation(Required=false)]
-        public List<string> TagIds { get; set; }
+        public List<string> ListIds { get; set; }
 
     }
 

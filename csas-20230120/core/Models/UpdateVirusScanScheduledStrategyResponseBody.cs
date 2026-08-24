@@ -8,12 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Csas20230120.Models
 {
-    public class DeleteProhibitedTagsResponseBody : TeaModel {
+    public class UpdateVirusScanScheduledStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>A900F300-AF09-5A39-954F-50B8CF733FD6</para>
+        /// <para>3D7EC0AF-DB2A-5D9C-90EC-F090A6BAAEA7</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
