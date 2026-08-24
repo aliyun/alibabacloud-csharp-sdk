@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The destination region to which snapshots are replicated. You can set only one destination region.</para>
+        /// <para>The destination region to which snapshots are replicated. You can specify one destination region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cn-hangzhou&quot;]</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The list of target resource tags. The automatic snapshot policy matches target resources based on tags.
-        /// This parameter is required when AssociationType is set to AssociatedWithInstanceTag.</para>
+        /// When AssociationType is set to AssociatedWithInstanceTag, this parameter is required.</para>
         /// </summary>
         [NameInMap("TargetTags")]
         [Validation(Required=false)]

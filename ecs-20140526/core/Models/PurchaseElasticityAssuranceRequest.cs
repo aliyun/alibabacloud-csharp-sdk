@@ -27,8 +27,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The matching mode of the elastic capacity reservation service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Open: open mode. The system automatically matches the capacity of open private pools when instances are started. If no matching private pool capacity is available, public pool resources are used to start the instances.</description></item>
-            /// <item><description>Target: targeted mode. Instances are started by using the capacity of the specified private pool. If the specified private pool capacity is unavailable, the instances fail to start.</description></item>
+            /// <item><description>Open: open mode. The system automatically matches available open private pool capacity when instances are launched. If no matching private pool capacity is available, public pool resources are used.</description></item>
+            /// <item><description>Target: targeted mode. Instances are launched by using the specified private pool capacity. If the specified private pool capacity is unavailable, the instances fail to be launched.</description></item>
             /// </list>
             /// <para>Default value: Open.</para>
             /// 
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>Ensures the idempotence of the request. The value is generated from your client and must be unique among different requests. The <c>ClientToken</c> value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The effective period of the elastic capacity reservation service. By default, the service takes effect when this operation is invoked. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
+        /// <para>The effective period of the elastic capacity reservation service. By default, the service takes effect when the operation is invoked. Specify the time in the ISO 8601 standard in the <c>yyyy-MM-ddTHH:mm:ssZ</c> format. The time must be in UTC. For more information, see <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2024-06-18T00:00:00Z</para>

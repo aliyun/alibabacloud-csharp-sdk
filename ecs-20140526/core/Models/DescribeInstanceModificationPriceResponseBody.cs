@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeInstanceModificationPriceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The price information, including the price and discount rule information.</para>
+        /// <para>The price information, including the price and discount rule details.</para>
         /// </summary>
         [NameInMap("PriceInfo")]
         [Validation(Required=false)]
@@ -25,12 +25,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class DescribeInstanceModificationPriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
                 /// <para>The currency unit. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>China site: CNY.</para>
-                /// </description></item>
-                /// <item><description><para>International site: USD.</para>
-                /// </description></item>
-                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -119,15 +113,23 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             }
 
+            /// <summary>
+            /// <para>The related price.</para>
+            /// </summary>
             [NameInMap("RelatedPrice")]
             [Validation(Required=false)]
             public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice RelatedPrice { get; set; }
             public class DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPrice : TeaModel {
+                /// <summary>
+                /// <para>The Alibaba Cloud Marketplace image price.</para>
+                /// </summary>
                 [NameInMap("MarketplaceImagePrice")]
                 [Validation(Required=false)]
                 public DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice MarketplaceImagePrice { get; set; }
                 public class DescribeInstanceModificationPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice : TeaModel {
                     /// <summary>
+                    /// <para>The currency unit.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>CNY</para>
                     /// </summary>
@@ -136,6 +138,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Currency { get; set; }
 
                     /// <summary>
+                    /// <para>The discount.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -144,6 +148,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public float? DiscountPrice { get; set; }
 
                     /// <summary>
+                    /// <para>The original price.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
                     /// </summary>
@@ -152,6 +158,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public float? OriginalPrice { get; set; }
 
                     /// <summary>
+                    /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
                     /// </summary>

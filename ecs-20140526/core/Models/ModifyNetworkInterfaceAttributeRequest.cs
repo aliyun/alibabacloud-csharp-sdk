@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration ConnectionTrackingConfiguration { get; set; }
         public class ModifyNetworkInterfaceAttributeRequestConnectionTrackingConfiguration : TeaModel {
             /// <summary>
-            /// <para>The timeout period for TCP connections in the TIME_WAIT and CLOSED states. Unit: seconds. Valid values: integers from 3 to 15.</para>
+            /// <para>The timeout period for TCP connections in the TIME_WAIT or CLOSED state. Unit: seconds. Valid values: integers from 3 to 15.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -59,7 +59,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DeleteOnRelease { get; set; }
 
         /// <summary>
-        /// <para>The description of the network interface controller (NIC). The description must be 2 to 255 characters in length and cannot start with http:// or https://.</para>
+        /// <para>The description of the ENI. The description must be 2 to 255 characters in length and cannot start with http:// or https://.</para>
+        /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -116,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The ID of the network interface controller (NIC).</para>
+        /// <para>The ID of the ENI.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. The name can contain characters under the letter categorization in Unicode, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the ENI. The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. The name can contain characters under the letter categorization in Unicode, including English letters, Chinese characters, and digits. It can also contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>eniTestName</para>
@@ -137,14 +138,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The communication parameter of the network interface controller (NIC).</para>
+        /// <para>The communication parameters of the network interface controller (NIC).</para>
         /// </summary>
         [NameInMap("NetworkInterfaceTrafficConfig")]
         [Validation(Required=false)]
         public ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig NetworkInterfaceTrafficConfig { get; set; }
         public class ModifyNetworkInterfaceAttributeRequestNetworkInterfaceTrafficConfig : TeaModel {
             /// <summary>
-            /// <para>The communication mode of the ENI. Valid values:</para>
+            /// <para>The communication mode of the network interface. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>Standard: Uses TCP communication mode.</description></item>
+            /// <item><description>HighPerformance: Enables the Elastic RDMA Interface (ERI) and uses RDMA communication mode.</description></item>
+            /// </list>
+            /// <para>When the ENI is in the attached state, note the following:</para>
+            /// <list type="bullet">
+            /// <item><description>The total number of RDMA network interfaces on an instance cannot exceed the RDMA network interface quota allowed by the instance type. You can query the EriQuantity field by calling the DescribeInstanceTypes operation to obtain the RDMA network interface quota allowed by the instance type.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This parameter is in invitational preview and is not yet publicly available.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>HighPerformance</para>
@@ -154,7 +166,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceTrafficMode { get; set; }
 
             /// <summary>
-            /// <para>The number of queues for the network interface controller (NIC).</para>
+            /// <para>The number of queues for the ENI.
+            /// When the ENI is in the attached state, take note of the following items:</para>
+            /// <list type="bullet">
+            /// <item><description>The value cannot exceed the maximum number of queues allowed per ENI for the instance type.</description></item>
+            /// <item><description>The total number of queues across all ENIs of the instance cannot exceed the total queue quota allowed for the instance type. You can call the DescribeInstanceTypes operation to query the MaximumQueueNumberPerEni and TotalEniQueueQuantity fields for the maximum number of queues per ENI and the total quota of the instance type.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This parameter is in invitational preview and is not yet publicly available.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -164,7 +184,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? QueueNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of queues for the RDMA ENI.</para>
+            /// <para>The number of queues on the RDMA network interface.
+            /// When the ENI is in the attached state, take note of the following:</para>
+            /// <list type="bullet">
+            /// <item><description>The value cannot exceed the maximum number of queues allowed per RDMA network interface for the instance type. You can call the DescribeInstanceTypes operation to query the QueuePairNumber field for the maximum number of queues allowed per RDMA network interface for the instance type.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This parameter is in invitational preview and is not publicly available.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -214,7 +241,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? QueueNumber { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the ENI. You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -243,7 +270,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? RxQueueSize { get; set; }
 
         /// <summary>
-        /// <para>The list of security group IDs. The secondary network interface controller (NIC) is added to the specified security groups and removed from the existing security groups.</para>
+        /// <para>The IDs of security groups. The secondary ENI is added to the specified security groups and removed from the existing security groups.</para>
+        /// <list type="bullet">
+        /// <item><description><para>The valid values of N depend on the quota for the maximum number of security groups to which an ENI can belong. For more information, see <a href="~~25412#SecurityGroupQuota~~">Before you begin</a>.</para>
+        /// </description></item>
+        /// <item><description><para>The modification takes effect shortly, but a slight delay may occur.</para>
+        /// </description></item>
+        /// </list>
         /// </summary>
         [NameInMap("SecurityGroupId")]
         [Validation(Required=false)]

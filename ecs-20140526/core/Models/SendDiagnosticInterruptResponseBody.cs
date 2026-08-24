@@ -8,22 +8,12 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
-    public class ModifyDiskChargeTypeResponseBody : TeaModel {
-        /// <summary>
-        /// <para>The ID of the generated order.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123456****</para>
-        /// </summary>
-        [NameInMap("OrderId")]
-        [Validation(Required=false)]
-        public string OrderId { get; set; }
-
+    public class SendDiagnosticInterruptResponseBody : TeaModel {
         /// <summary>
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</para>
+        /// <para>473469C7-AA6F-4DC5-B3DB-A3DC0DE3****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

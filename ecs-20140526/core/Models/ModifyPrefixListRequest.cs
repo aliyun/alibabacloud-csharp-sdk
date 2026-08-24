@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class ModifyPrefixListRequest : TeaModel {
         /// <summary>
-        /// <para>The prefix list entries to add.</para>
+        /// <para>The information about entries to add to the prefix list.</para>
         /// </summary>
         [NameInMap("AddEntry")]
         [Validation(Required=false)]
@@ -21,8 +21,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
             /// <item><description>The total number of entries in the prefix list cannot exceed the maximum number of entries supported by the prefix list. You can invoke <a href="https://help.aliyun.com/document_detail/205872.html">DescribePrefixListAttributes</a> to query the maximum number of entries supported by a specified prefix list.</description></item>
-            /// <item><description>Duplicate CIDR blocks are not allowed in Settings.</description></item>
-            /// <item><description>The value cannot be the same as the value of the <c>RemoveEntry.N.Cidr</c> parameter.</description></item>
+            /// <item><description>You cannot specify duplicate CIDR block values in the settings.</description></item>
+            /// <item><description>The value of this parameter cannot be the same as the value of <c>RemoveEntry.N.Cidr</c>.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The prefix list entries to delete.</para>
+        /// <para>The information about entries to delete from the prefix list.</para>
         /// </summary>
         [NameInMap("RemoveEntry")]
         [Validation(Required=false)]
@@ -106,8 +106,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <para>The Classless Inter-Domain Routing (CIDR) block of the prefix list entry to delete. Valid values of N: 0 to 200.</para>
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
-            /// <item><description>Duplicate CIDR blocks are not allowed in Settings.</description></item>
-            /// <item><description>The value cannot be the same as the value of the <c>AddEntry.N.Cidr</c> parameter.</description></item>
+            /// <item><description>You cannot specify duplicate CIDR block values in the settings.</description></item>
+            /// <item><description>The value of this parameter cannot be the same as the value of <c>AddEntry.N.Cidr</c>.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 

@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>-1: permanently retained.</description></item>
-        /// <item><description>1 to 65535: retained for the specified number of days.</description></item>
+        /// <item><description>-1: Snapshot replicas are permanently retained.</description></item>
+        /// <item><description>1 to 65535: specifies the number of days for which snapshot replicas are retained.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enabled. </description></item>
-            /// <item><description>false: disabled.</description></item>
+            /// <item><description>true: enables encryption. </description></item>
+            /// <item><description>false: does not enable encryption.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The key ID of the KMS key used for encrypted cross-region snapshot replication.</para>
+            /// <para>The key ID of the Key Management Service (KMS) key used for encrypted cross-region snapshot replication.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0e478b7a-4262-4802-b8cb-00d3fb40826X</para>
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday.</para>
+        /// <para>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7, where 1 indicates Monday.</para>
         /// <para>To create multiple automatic snapshots within a week, specify multiple days:</para>
         /// <list type="bullet">
         /// <item><description>You can specify up to 7 days.</description></item>
@@ -211,8 +211,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The retention period of automatic snapshots. Unit: days. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>-1: permanently retained.</description></item>
-        /// <item><description>1 to 65536: retained for the specified number of days.</description></item>
+        /// <item><description>-1: Automatic snapshots are permanently retained.</description></item>
+        /// <item><description>1 to 65536: specifies the number of days for which automatic snapshots are retained.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 

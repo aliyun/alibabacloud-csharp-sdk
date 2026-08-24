@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to enable automatic payment. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>true (default): Automatic payment is enabled. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated, and you can only void the order. </description></item>
-        /// <item><description>false: An order is generated without automatic payment. If your account balance is insufficient, an unpaid order is generated. You can log on to the Alibaba Cloud <b>Expenses and Costs</b> console and go to the &lt;props=&quot;china&quot;&gt;<ph><a href="https://usercenter2.aliyun.com/order/list">Orders</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://usercenter2-intl.aliyun.com/order/list">Orders</a></ph> page to complete the payment.</description></item>
+        /// <item><description>false: Only an order is generated without payment. If your account balance is insufficient, a normal unpaid order is generated. You can log on to the Alibaba Cloud <b>Expenses and Costs</b> console and pay for the order on the &lt;props=&quot;china&quot;&gt;<ph><a href="https://usercenter2.aliyun.com/order/list">My Orders</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://usercenter2-intl.aliyun.com/order/list">Orders</a></ph> page.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The billing method of the disk. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>PrePaid (default): The pay-as-you-go data disk is converted to a subscription data disk. </description></item>
-        /// <item><description>PostPaid: The subscription data disk is converted to a pay-as-you-go data disk.</description></item>
+        /// <item><description>PrePaid (default): Converts pay-as-you-go data disks to subscription data disks. </description></item>
+        /// <item><description>PostPaid: Converts subscription data disks to pay-as-you-go data disks.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>When you convert a pay-as-you-go disk to subscription, the billing cycle of the capacity fee is automatically synchronized with the associated ECS instance.</para>
+        /// <para>When you convert a pay-as-you-go disk to subscription, the billing cycle of the disk capacity fee is automatically synchronized with the associated ECS instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent list of Alibaba Cloud regions.</para>
+        /// <para>The region ID of the instance. You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

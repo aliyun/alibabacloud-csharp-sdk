@@ -56,8 +56,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The metadata access mode of the image. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>v1: when you create an ECS instance from this image, you cannot set the metadata access mode to IMDSv2 only (hardened mode).</description></item>
-            /// <item><description>v2: when you create an ECS instance from this image, you can set the metadata access mode to IMDSv2 only (hardened mode).<notice>
+            /// <item><description>v1: When you create an ECS instance from this image, you cannot set the metadata access mode to IMDSv2 only (hardened mode).</description></item>
+            /// <item><description>v2: When you create an ECS instance from this image, you can set the metadata access mode to IMDSv2 only (hardened mode).<notice>
             /// 
             /// ImdsSupport cannot be changed from v2 to v1. If you need to change it, create a new image from the snapshot associated with this image and set the value to v1.</description></item>
             /// </list>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The license type used to activate the operating system after the image is imported. Currently, only BYOL is supported.</para>
-        /// <para>BYOL: the license that comes with the source operating system. When you use BYOL, make sure that your license key supports use on Alibaba Cloud.</para>
+        /// <para>BYOL: The license that comes with the source operating system. When you use BYOL, make sure that your license key supports use on Alibaba Cloud.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BYOL</para>
@@ -162,8 +162,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The image status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Deprecated: sets the image to the deprecated state. If you have shared the custom image, you must unshare it before you can set it to the deprecated state. You cannot share or copy a deprecated image. However, you can use the image to create instances or replace system disks.</description></item>
-        /// <item><description>Available: sets the image to the available state. You can restore a deprecated image to the available state.</description></item>
+        /// <item><description>Deprecated: Sets the image to the deprecated state. If you have shared the custom image, you must unshare it before you can set it to the deprecated state. A deprecated image cannot be shared or copied. However, you can use the image to create instances or replace system disks.</description></item>
+        /// <item><description>Available: Sets the image to the available state. You can restore a deprecated image to the available state.</description></item>
         /// </list>
         /// <remarks>
         /// <para>To roll back a custom image in an image family to the previous version, you can set the latest available custom image to the deprecated state. However, if the image is the only available custom image in the image family, the image family will have no available custom image for creating instances after the image is deprecated. Proceed with caution.</para>

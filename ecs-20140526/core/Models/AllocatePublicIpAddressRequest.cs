@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The instance ID of the instance to which you want to allocate a public IP address.</para>
         /// <remarks>
-        /// <para>The instance bandwidth must be greater than 0.</para>
+        /// <para>The public bandwidth of the instance must be greater than 0.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

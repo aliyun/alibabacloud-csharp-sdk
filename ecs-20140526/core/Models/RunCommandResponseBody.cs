@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The command execution ID.</para>
+        /// <para>The invocation ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-7d2a745b412b4601b2d47f6a768d****</para>

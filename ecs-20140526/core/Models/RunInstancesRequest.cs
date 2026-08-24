@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public RunInstancesRequestSchedulerOptions SchedulerOptions { get; set; }
         public class RunInstancesRequestSchedulerOptions : TeaModel {
             /// <summary>
-            /// <para>Specifies the dedicated host cluster for the ECS instance. The system automatically selects a dedicated host from the specified cluster to deploy the ECS instance.</para>
+            /// <para>The ID of the dedicated host cluster to which the ECS instance belongs. The system automatically selects a dedicated host in the cluster to deploy the ECS instance.</para>
             /// <remarks>
             /// <para>This parameter takes effect only when <c>Tenancy</c> is set to <c>host</c>.</para>
             /// </remarks>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string DiskName { get; set; }
 
             /// <summary>
-            /// <para>The performance level of the enterprise SSD used as the system disk. Settings for the performance level when you create an enterprise SSD (standard SSD not applicable). Valid values:</para>
+            /// <para>The performance level of the enterprise SSD (ESSD) used as the system disk. When you create an ESSD as the system disk, you can set the performance level of the disk. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL0</para>
@@ -324,7 +324,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The ID of the KMS key used for the system disk.</para>
+            /// <para>The ID of the KMS key for the system disk.</para>
             /// <remarks>
             /// <para>If Encrypted is set to true and KMSKeyId is not specified, the default key is used for encryption, and the KMSKeyId value is returned after the instance is created.</para>
             /// <list type="bullet">
@@ -377,14 +377,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether the instance is associated with a dedicated host. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>default: The instance is not associated with a dedicated host. When an instance that has economical mode enabled is restarted after it is stopped, the instance is deployed to another dedicated host in the automatic deployment resource pool if the resources of the original dedicated host are insufficient.</para>
-        /// </description></item>
-        /// <item><description><para>host: The instance is associated with a dedicated host. When an instance that has economical mode enabled is restarted after it is stopped, the instance remains on the original dedicated host. If the resources of the original dedicated host are insufficient, the instance fails to restart.</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: default.</para>
+        /// <para>Specifies whether the instance on a dedicated host is associated with the dedicated host. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -397,13 +390,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The number of ECS instances to create. Valid values: 1 to 100.</para>
         /// <para>The number of ECS instances that are created depends on the values of Amount and MinAmount:</para>
         /// <list type="bullet">
-        /// <item><description><para>If MinAmount is not specified, instances are created based on the value of Amount. If the inventory is insufficient, the API returns a failure and no instances are created.</para>
+        /// <item><description><para>If MinAmount is not specified: instances are created based on the Amount value. If the inventory is insufficient, the API returns a failure and no instances are created.</para>
         /// </description></item>
         /// <item><description><para>If MinAmount is specified:</para>
         /// <list type="bullet">
-        /// <item><description>If the available inventory &lt; MinAmount, no ECS instances are created and the API returns a failure.</description></item>
-        /// <item><description>If MinAmount ≤ available inventory &lt; Amount, instances are created based on the available inventory and the API returns a success.</description></item>
-        /// <item><description>If the available inventory ≥ Amount, instances are created based on the value of Amount and the API returns a success.</description></item>
+        /// <item><description>If the available inventory &lt; MinAmount: no ECS instances are created, and the API returns a failure.</description></item>
+        /// <item><description>If MinAmount ≤ available inventory &lt; Amount: instances are created based on the available inventory, and the API returns a success.</description></item>
+        /// <item><description>If the available inventory ≥ Amount: instances are created based on the specified Amount value, and the API returns a success.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -468,7 +461,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>true: The payment is automatically completed.</para>
         /// <remarks>
-        /// <para>If the balance of your payment method is insufficient, an abnormal order is generated and can only be canceled. If your payment method has an insufficient balance, set <c>AutoPay</c> to <c>false</c>. An unpaid order is generated, and you can log on to the ECS console to complete the payment.</para>
+        /// <para>If the balance of your payment method is insufficient, an abnormal order is generated and can only be canceled. If the balance of your payment method is insufficient, set AutoPay to <c>false</c>. In this case, an unpaid order is generated. You can then log on to the ECS console to complete the payment.</para>
         /// </remarks>
         /// </description></item>
         /// <item><description><para>false: An order is generated but the payment is not completed.</para>
@@ -488,6 +481,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The automatic release time of the pay-as-you-go instance. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the UTC+0 time zone. The format is <c>yyyy-MM-ddTHH:mm:ssZ</c>.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If the value of seconds (<c>ss</c>) is not <c>00</c>, the start time of the current minute (<c>mm</c>) is used.</para>
+        /// </description></item>
+        /// <item><description><para>The earliest release time is half an hour after the current time.</para>
+        /// </description></item>
+        /// <item><description><para>The latest release time cannot be more than three years from the current time.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>2018-01-01T12:05:00Z</para>
@@ -497,7 +498,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string AutoReleaseTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when <c>InstanceChargeType</c> is set to <c>PrePaid</c>. Valid values:</para>
+        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect only when InstanceChargeType is set to PrePaid. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Auto-renewal is enabled.</description></item>
+        /// <item><description>false: Auto-renewal is not enabled.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -541,7 +547,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public RunInstancesRequestClockOptions ClockOptions { get; set; }
         public class RunInstancesRequestClockOptions : TeaModel {
             /// <summary>
-            /// <para>The PTP status. Valid values:</para>
+            /// <para>The Precision Time Protocol (PTP) status. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>enabled</para>
@@ -599,17 +605,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>cloud_auto: ESSD AutoPL disk.</description></item>
             /// <item><description>cloud_regional_disk_auto: regional Enterprise SSD (ESSD).</description></item>
             /// <item><description>cloud_essd_entry: ESSD Entry disk.<remarks>
-            /// <para>The <c>cloud_essd_entry</c> value is supported only when <c>InstanceType</c> is set to an instance type in the <c>ecs.u1</c> or <c>ecs.e</c> instance family.</para>
+            /// <para>cloud_essd_entry is supported only when <c>InstanceType</c> is set to an instance type in the <c>ecs.u1</c> or <c>ecs.e</c> instance family.</para>
             /// </remarks>
             /// </description></item>
-            /// <item><description>elastic_ephemeral_disk_standard: elastic ephemeral disk - Standard.</description></item>
-            /// <item><description>elastic_ephemeral_disk_premium: elastic ephemeral disk - Premium.</description></item>
+            /// <item><description>elastic_ephemeral_disk_standard: elastic ephemeral disk - Standard Edition.</description></item>
+            /// <item><description>elastic_ephemeral_disk_premium: elastic ephemeral disk - Premium Edition.</description></item>
             /// </list>
             /// <para>For I/O optimized instances, the default value is cloud_efficiency. For non-I/O optimized instances, the default value is cloud.
-            /// Default value description:</para>
+            /// Notes on default values:</para>
             /// <list type="bullet">
             /// <item><description>If InstanceType is set to a retired instance type that is not I/O optimized, the default value is <c>cloud</c>.</description></item>
-            /// <item><description>In other cases, the default value is <c>cloud_efficiency</c>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, if the I/O optimized instance type does not support cloud_auto, the default value is cloud_efficiency. Otherwise, the default value is cloud_auto, and performance burst is enabled by default (which incurs additional fees. For more information, see <a href="~~368372#p_75k_2hp_7gp~~">Billing examples</a>). For more information, see <a href="https://www.aliyun.com/notice/117844">Change announcement</a>.</description></item>
+            /// <item><description>In other cases, the default value is <c>cloud_efficiency</c>.&lt;props=&quot;china&quot;&gt;After January 30, 2026, if the I/O optimized instance type does not support cloud_auto, the default value is cloud_efficiency. Otherwise, the default value is cloud_auto, and performance burst is enabled by default (which incurs additional fees. For more information, see <a href="~~368372#p_75k_2hp_7gp~~">Billing examples</a>). For more information, see <a href="https://www.aliyun.com/notice/117844">Change notice</a>.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -650,7 +656,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string Device { get; set; }
 
             /// <summary>
-            /// <para>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, and characters categorized as letter in Unicode. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
+            /// <para>The name of the data disk. The name must be 2 to 128 characters in length and can contain letters, digits, and characters that are supported by Unicode in the letter category. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_ssdData</para>
@@ -713,7 +719,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string KMSKeyId { get; set; }
 
             /// <summary>
-            /// <para>Settings for the performance level of the data disk when you create an enterprise SSD as a data disk. The value of N must be the same as that in <c>DataDisk.N.Category=cloud_essd</c>. Valid values:</para>
+            /// <para>The performance level of the data disk when you create an enterprise SSD as a data disk. The value of N must be the same as the N in <c>DataDisk.N.Category=cloud_essd</c>. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
+            /// <item><description>PL1 (default): A single disk can deliver up to 50,000 random read/write IOPS.</description></item>
+            /// <item><description>PL2: A single disk can deliver up to 100,000 random read/write IOPS.</description></item>
+            /// <item><description>PL3: A single disk can deliver up to 1,000,000 random read/write IOPS.</description></item>
+            /// </list>
+            /// <para>For more information about how to select an ESSD performance level, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PL1</para>
@@ -738,14 +751,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <item><description>cloud_efficiency: 20 to 32768.</description></item>
             /// <item><description>cloud_ssd: 20 to 32768.</description></item>
             /// <item><description>cloud_essd: The valid values depend on the value of <c>DataDisk.N.PerformanceLevel</c>. <list type="bullet">
-            /// <item><description>PL0: 1 to 65536.</description></item>
-            /// <item><description>PL1: 20 to 65536.</description></item>
-            /// <item><description>PL2: 461 to 65536.</description></item>
-            /// <item><description>PL3: 1261 to 65536.</description></item>
+            /// <item><description>PL0: 1 to 65,536.</description></item>
+            /// <item><description>PL1: 20 to 65,536.</description></item>
+            /// <item><description>PL2: 461 to 65,536.</description></item>
+            /// <item><description>PL3: 1261 to 65,536.</description></item>
             /// </list>
             /// </description></item>
             /// <item><description>cloud: 5 to 2000.</description></item>
-            /// <item><description>cloud_auto: 1 to 65536.</description></item>
+            /// <item><description>cloud_auto: 1 to 65,536.</description></item>
             /// <item><description>cloud_essd_entry: 10 to 32768.</description></item>
             /// </list>
             /// <remarks>
@@ -786,7 +799,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// &lt;props=&quot;china&quot;&gt;You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the list of dedicated host IDs.</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;You can call <a href="https://help.aliyun.com/document_detail/134242.html">DescribeDedicatedHosts</a> to query the list of dedicated host IDs.</para>
         /// <remarks>
-        /// <para>Notice: Dedicated hosts do not support the creation of spot instances. If you specify the <c>DedicatedHostId</c> parameter, the <c>SpotStrategy</c> and <c>SpotPriceLimit</c> settings in the request are automatically ignored.</para>
+        /// <para>Notice: Dedicated hosts do not support spot instances. If you specify the DedicatedHostId parameter, the SpotStrategy and SpotPriceLimit settings in the request are automatically ignored.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -815,7 +828,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DeletionProtection { get; set; }
 
         /// <summary>
-        /// <para>If the deployment set uses the high availability group strategy (AvailabilityGroup), you can use this parameter to specify the group number of the instance in the deployment set. Valid values: 1 to 7.</para>
+        /// <para>The group number of the instance in the deployment set. If the deployment set uses the high availability group strategy (AvailabilityGroup), you can use this parameter to specify the group number. Valid values: 1 to 7.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -846,10 +859,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>Specifies whether to perform only a dry run. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: performs a dry run without creating the instance. The system checks the required parameters, request syntax, business restrictions, and ECS inventory. If the check fails, the corresponding error is returned. If the check passes, the error code <c>DryRunOperation</c> is returned.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request. If the check passes, the instance is created.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -911,10 +920,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? HttpPutResponseHopLimit { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to forcefully use the China Reinforced mode (IMDSv2) for accessing instance metadata. Valid values:</para>
+        /// <para>Specifies whether to forcefully use the China Reinforced Mode (IMDSv2) for accessing instance metadata. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>optional: does not forcefully use the China Reinforced mode.</description></item>
-        /// <item><description>required: forcefully uses the China Reinforced mode. After this value is set, the normal mode cannot be used to access instance metadata.</description></item>
+        /// <item><description>optional: does not forcefully use the China Reinforced Mode.</description></item>
+        /// <item><description>required: forcefully uses the China Reinforced Mode. After this value is set, the normal mode cannot be used to access instance metadata.</description></item>
         /// </list>
         /// <para>Default value: optional.</para>
         /// <remarks>
@@ -937,7 +946,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>If you do not set the ImageId parameter but the launch template specified by LaunchTemplateId or LaunchTemplateName has ImageId configured, you cannot set this parameter.</description></item>
         /// <item><description>If you do not set ImageId and the launch template specified by LaunchTemplateId or LaunchTemplateName does not have ImageId configured, you can set this parameter.</description></item>
         /// <item><description>If you do not set ImageId and do not set LaunchTemplateId or LaunchTemplateName, you can set this parameter.<remarks>
-        /// <para>For information about image families associated with Alibaba Cloud public images, see <a href="https://help.aliyun.com/document_detail/108393.html">Overview of public images</a>.</para>
+        /// <para>For information about image families associated with Alibaba Cloud public images, see <a href="https://help.aliyun.com/document_detail/108393.html">Public image overview</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -1012,10 +1021,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceName { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the instance. If you do not specify <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to determine the launch template, <c>InstanceType</c> is required.  </para>
+        /// <para>The instance type of the instance. If you do not specify <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to determine the launch template, <c>InstanceType</c> is required.</para>
         /// <list type="bullet">
-        /// <item><description>Instance type selection: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of an instance type. You can also see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select instance types.</description></item>
-        /// <item><description>Stock query: Call <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query the resource availability in a specific region or zone.</description></item>
+        /// <item><description>Instance type selection: See <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the performance data of the target instance type, or see <a href="https://help.aliyun.com/document_detail/58291.html">Best practices for instance type selection</a> to learn how to select an instance type.</description></item>
+        /// <item><description>Inventory query: Call <a href="https://help.aliyun.com/document_detail/66186.html">DescribeAvailableResource</a> to query the resource availability in a specific region or zone.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1064,7 +1073,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the instance is an I/O optimized instance. The default value for <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a> is none, which indicates that I/O optimization is disabled. The default value for other instance types is optimized. Valid values:</para>
+        /// <para>Specifies whether the instance is I/O optimization enabled. The default value for <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a> is none. The default value for other instance types is optimized. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>optimized</para>
@@ -1092,14 +1101,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>The number of randomly generated IPv6 addresses to assign to the primary ENI. Valid values: 1 to 10.</para>
-        /// <para>Take note of the following items:</para>
-        /// <list type="bullet">
-        /// <item><description><para>You cannot specify both <c>Ipv6Address.N</c> and <c>Ipv6AddressCount</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you cannot specify <c>Ipv6Address.N</c> or <c>Ipv6AddressCount</c>. Instead, specify <c>NetworkInterface.N.Ipv6Address.N</c> or <c>NetworkInterface.N.Ipv6AddressCount</c>.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The number of randomly generated IPv6 addresses for the primary ENI. Valid values: 1 to 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -1161,7 +1163,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? LaunchTemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The minimum number of ECS instances to purchase. Valid values: 1 to 100.</para>
+        /// <para>The minimum Quantity of ECS instances to purchase. Valid values: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -1253,8 +1255,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? NetworkCardIndex { get; set; }
 
             /// <summary>
-            /// <para>The ID of the ENI to attach to the instance.</para>
-            /// <para>After you set this parameter, the value of <c>Amount</c> can only be 1.</para>
+            /// <para>The ID of the Elastic Network Interface (ENI) to attach to the instance.</para>
+            /// <para>If you set this parameter, the value of <c>Amount</c> can only be 1.</para>
             /// <remarks>
             /// <para>This parameter takes effect only for secondary ENIs. After you specify an existing secondary ENI, you cannot configure other ENI creation parameters.</para>
             /// </remarks>
@@ -1267,14 +1269,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public string NetworkInterfaceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the ENI. The name must be 2 to 128 characters in length and can contain characters that are categorized as letter in Unicode, including but not limited to English letters, Chinese characters, and digits. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
-            /// <para>Take note of the following items:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Valid values of N cannot exceed the maximum number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the maximum number of ENIs supported by the target instance type.</para>
-            /// </description></item>
-            /// <item><description><para>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you do not need to set this parameter.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and can contain letters, digits, and characters that are supported by Unicode in the letter categorization. The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
             /// 
             /// <b>Example:</b>
             /// <para>Network_Name</para>
@@ -1285,14 +1280,6 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The communication mode of the ENI. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>Standard: Uses the TCP communication mode.</description></item>
-            /// <item><description>HighPerformance: Enables the Elastic RDMA Interface (ERI) and uses the RDMA communication mode.</description></item>
-            /// </list>
-            /// <para>Default value: Standard.</para>
-            /// <remarks>
-            /// <para>The number of ENIs in RDMA mode cannot exceed the limit of the instance family. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
-            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>Standard</para>
@@ -1357,7 +1344,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public int? RxQueueSize { get; set; }
 
             /// <summary>
-            /// <para>The number of secondary private IPv4 addresses for the ENI. Valid values: 1 to 49.</para>
+            /// <para>The number of secondary private IPv4 addresses to assign to the network interface. Valid values: 1 to 49.</para>
+            /// <list type="bullet">
+            /// <item><description>The value cannot exceed the maximum number of IP addresses allowed for the instance type. For more information, see <a href="~~~25378~~">Instance families</a>.</description></item>
+            /// <item><description>NetworkInterface.N.SecondaryPrivateIpAddressCount specifies the number of secondary private IPv4 addresses to assign to the network interface (excluding the primary private IP address of the network interface). The system randomly assigns IP addresses from the available CIDR block of the vSwitch (NetworkInterface.N.VSwitchId) to which the network interface belongs.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -1379,8 +1370,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>One or more security group IDs to which the ENI belongs.</para>
             /// <list type="bullet">
-            /// <item><description>The valid values of N for the first index do not exceed the number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the number of ENIs supported by the target instance type.</description></item>
-            /// <item><description>The second N indicates that you can specify one or more security group IDs. The valid values of N are related to the quota of security groups that an instance can join. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</description></item>
+            /// <item><description>The valid values of N for the first dimension do not exceed the number of ENIs supported by the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a> or call <a href="https://help.aliyun.com/document_detail/2679699.html">DescribeInstanceTypes</a> to query the number of ENIs supported by the target instance type.</description></item>
+            /// <item><description>The second N indicates that you can specify one or more security group IDs. The valid values of N are related to the quota for the number of security groups to which an instance can belong. For more information, see <a href="~~25412#SecurityGroupQuota1~~">Security group limits</a>.</description></item>
             /// </list>
             /// <para>Take note of the following items:</para>
             /// <list type="bullet">
@@ -1398,11 +1389,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public List<string> SecurityGroupIds { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable source/destination checking. Enable this feature to improve network security. Valid values:</para>
+            /// <para>Specifies whether to enable source/destination checking. We recommend that you enable this feature to improve network security. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>true: Enabled.</para>
+            /// <item><description><para>true: enabled.</para>
             /// </description></item>
-            /// <item><description><para>false: Not enabled.</para>
+            /// <item><description><para>false: disabled.</para>
             /// </description></item>
             /// </list>
             /// <para>Default value: false.</para>
@@ -1444,9 +1435,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>The value cannot exceed the maximum number of queues per ENI allowed by the instance type.</para>
         /// </description></item>
-        /// <item><description><para>The total number of queues for all ENIs on the instance cannot exceed the queue quota allowed by the instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the MaximumQueueNumberPerEni and TotalEniQueueQuantity fields for the maximum number of queues per ENI and the total queue quota of an instance type.</para>
+        /// <item><description><para>The total number of queues for all ENIs on the instance cannot exceed the queue quota allowed by the instance type. You can call the <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> operation to query the MaximumQueueNumberPerEni and TotalEniQueueQuantity fields to obtain the maximum number of queues per ENI and the total queue quota for an instance type.</para>
         /// </description></item>
-        /// <item><description><para>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you cannot set <c>NetworkInterfaceQueueNumber</c>. Set <c>NetworkInterface.N.QueueNumber</c> instead.</para>
+        /// <item><description><para>If NetworkInterface.N.InstanceType is set to Primary, you cannot set NetworkInterfaceQueueNumber. Set NetworkInterface.N.QueueNumber instead.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -1524,15 +1515,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Password { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the preset password of the image. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The preset password of the image is used.</description></item>
-        /// <item><description>false: The preset password of the image is not used.</description></item>
-        /// </list>
-        /// <para>Default value: false.</para>
-        /// <remarks>
-        /// <para>When you use this parameter, the Password parameter must be empty. Make sure that the image has a preset password.</para>
-        /// </remarks>
+        /// <para>Specifies whether to use the password preset in the image. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -1542,13 +1525,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? PasswordInherit { get; set; }
 
         /// <summary>
-        /// <para>The duration of the subscription. Unit: specified by PeriodUnit. This parameter is required and takes effect only when InstanceChargeType is set to PrePaid. If DedicatedHostId is specified, the value of this parameter cannot exceed the remaining subscription duration of the dedicated host. Valid values:</para>
+        /// <para>The duration of the subscription. Unit: specified by <c>PeriodUnit</c>. This parameter is required and takes effect only when <c>InstanceChargeType</c> is set to <c>PrePaid</c>. If <c>DedicatedHostId</c> is specified, the value of this parameter cannot exceed the subscription duration of the dedicated host. Valid values:</para>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>If PeriodUnit is set to Week, valid values of Period: 1, 2, 3, and 4.</description></item>
-        /// <item><description>If PeriodUnit is set to Month, valid values of Period: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
+        /// <item><description>PeriodUnit=Week: 1, 2, 3, and 4.</description></item>
+        /// <item><description>PeriodUnit=Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;If PeriodUnit is set to Month, valid values of Period: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;PeriodUnit=Month: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -1558,13 +1541,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. Valid values:</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>Week</description></item>
-        /// <item><description>Month (default)</description></item>
-        /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;Month (default).</para>
+        /// <para>The unit of the subscription billable methods duration. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -1581,7 +1558,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public RunInstancesRequestPrivateDnsNameOptions PrivateDnsNameOptions { get; set; }
         public class RunInstancesRequestPrivateDnsNameOptions : TeaModel {
             /// <summary>
-            /// <para>Enables or disables DNS AAAA record resolution from the instance ID-based domain name to the IPv6 address. Valid values:</para>
+            /// <para>Specifies whether to enable DNS AAAA record resolution from the instance ID-based domain name to IPv6. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>true: Enabled.</para>
             /// </description></item>
@@ -1615,7 +1592,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableInstanceIdDnsARecord { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable DNS resolution from the IP-based domain name to the IPv4 address. Valid values:</para>
+            /// <para>Specifies whether to enable DNS resolution from IP-based domain names to IPv4 addresses. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: Enabled.</description></item>
+            /// <item><description>false: Disabled.</description></item>
+            /// </list>
+            /// <para>Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -1625,7 +1607,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? EnableIpDnsARecord { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable reverse DNS resolution from IPv4 addresses to domain names. Valid values:</para>
+            /// <para>Specifies whether to enable reverse DNS resolution from IPv4 addresses to IP-type domain names. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>true: Enabled.</description></item>
             /// <item><description>false: Disabled.</description></item>
@@ -1652,7 +1634,22 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The private IP address of the instance. For a VPC-type ECS instance, the private IP address must be from the idle CIDR block of the vSwitch specified by <c>VSwitchId</c>.</para>
+        /// <para>The private IP address of the instance. When you specify a private IP address for a VPC-connected ECS instance, the IP address must be an available address within the CIDR block of the vSwitch specified by <c>VSwitchId</c>.</para>
+        /// <para>Take note of the following items:</para>
+        /// <list type="bullet">
+        /// <item><description><para>After you set <c>PrivateIpAddress</c>:</para>
+        /// <list type="bullet">
+        /// <item><description>If <c>Amount</c> is set to 1, the specified private IP address is assigned to the created ECS instance.</description></item>
+        /// <item><description>If <c>Amount</c> is set to a value greater than 1, the specified private IP address is used as the start address to sequentially assign consecutive private IP addresses to multiple ECS instances during batch creation. In this case, you cannot attach secondary ENIs to the instances (that is, you cannot set <c>NetworkInterface.N.*</c> parameters).</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you cannot set <c>PrivateIpAddress</c>. Set <c>NetworkInterface.N.PrimaryIpAddress</c> instead.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>The first and last three IP addresses of each vSwitch CIDR block are reserved by the system and cannot be specified.
+        /// For example, if the CIDR block of a vSwitch is 192.168.1.0/24, the IP addresses 192.168.1.0, 192.168.1.253, 192.168.1.254, and 192.168.1.255 are reserved by the system.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para><c>10.1.**.**</c></para>
@@ -1711,13 +1708,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityEnhancementStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the security group to which the new instance belongs. Instances within the same security group can communicate with each other. The maximum number of instances that a security group can contain depends on the security group type. For more information, see the security group section in <a href="~~25412#SecurityGroupQuota~~">Limits</a>.</para>
+        /// <para>The ID of the security group to which the new instance belongs. Instances within the same security group can communicate with each other. The maximum number of instances that a security group can contain varies based on the security group type. For more information, see the security group section in <a href="~~25412#SecurityGroupQuota~~">Limits</a>.</para>
         /// <remarks>
-        /// <para>The <c>SecurityGroupId</c> parameter determines the network type of the instance. For example, if the specified security group is of the Virtual Private Cloud (VPC) type, the instance is a VPC-type instance, and you must also specify the <c>VSwitchId</c> parameter.</para>
+        /// <para><c>SecurityGroupId</c> determines the network type of the instance. For example, if the specified security group is of the Virtual Private Cloud (VPC) type, the instance is a VPC-type instance, and you must also specify the <c>VSwitchId</c> parameter.</para>
         /// </remarks>
-        /// <para>If you do not set <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to specify a launch template, the security group ID is required. Take note of the following items:</para>
+        /// <para>If you do not set <c>LaunchTemplateId</c> or <c>LaunchTemplateName</c> to specify a launch template, the security group ID is required. Note the following items:</para>
         /// <list type="bullet">
-        /// <item><description><para>You can set <c>SecurityGroupId</c> to specify a single security group, or set <c>SecurityGroupIds.N</c> to specify one or more security groups. However, you cannot specify both <c>SecurityGroupId</c> and <c>SecurityGroupIds.N</c> at the same time.</para>
+        /// <item><description><para>You can set one security group by using <c>SecurityGroupId</c>, or set one or more security groups by using <c>SecurityGroupIds.N</c>. However, you cannot specify both <c>SecurityGroupId</c> and <c>SecurityGroupIds.N</c> at the same time.</para>
         /// </description></item>
         /// <item><description><para>If <c>NetworkInterface.N.InstanceType</c> is set to <c>Primary</c>, you cannot set <c>SecurityGroupId</c> or <c>SecurityGroupIds.N</c>. In this case, you can only set <c>NetworkInterface.N.SecurityGroupId</c> or <c>NetworkInterface.N.SecurityGroupIds.N</c>.</para>
         /// </description></item>
@@ -1741,7 +1738,19 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> SecurityGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the spot instance, in hours. Valid values:</para>
+        /// <para>The protection period of the spot instance. Unit: hours. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>1: After the instance is created, Alibaba Cloud guarantees that the instance runs for 1 hour without being automatically released. After 1 hour, the system compares the bid price with the market price and checks resource inventory to determine whether to retain or reclaim the instance.</description></item>
+        /// <item><description>0: After the instance is created, Alibaba Cloud does not guarantee the instance running duration. The system compares the bid price with the market price and checks resource inventory to determine whether to retain or reclaim the instance.</description></item>
+        /// </list>
+        /// <para>Default value: 1.</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This parameter supports only the value 0 or 1.</description></item>
+        /// <item><description>Spot instances are billed by second. Set an appropriate protection period based on the expected task execution duration.</description></item>
+        /// <item><description>Alibaba Cloud sends a notification to you through an ECS system event 5 minutes before the instance is reclaimed.</description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -1761,7 +1770,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SpotInterruptionBehavior { get; set; }
 
         /// <summary>
-        /// <para>The maximum hourly price of the instance. This value supports up to three decimal places. This parameter takes effect when the <c>SpotStrategy</c> parameter is set to <c>SpotWithPriceLimit</c>.</para>
+        /// <para>The maximum hourly price of the instance. A maximum of three decimal places is supported. This parameter takes effect when the <c>SpotStrategy</c> parameter is set to <c>SpotWithPriceLimit</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.97</para>
@@ -1771,13 +1780,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? SpotPriceLimit { get; set; }
 
         /// <summary>
-        /// <para>The bidding policy for the pay-as-you-go instance. This parameter takes effect only when <c>InstanceChargeType</c> is set to <c>PostPaid</c>. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>NoSpot: a regular pay-as-you-go instance.</description></item>
-        /// <item><description>SpotWithPriceLimit: a spot instance with a maximum hourly price.</description></item>
-        /// <item><description>SpotAsPriceGo: a spot instance for which the system automatically bids, following the current market price.</description></item>
-        /// </list>
-        /// <para>Default value: NoSpot.</para>
+        /// <para>The bidding policy for the pay-as-you-go instance. This parameter takes effect when the <c>InstanceChargeType</c> parameter is set to <c>PostPaid</c>. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>NoSpot</para>
@@ -1787,7 +1790,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SpotStrategy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the storage set.</para>
+        /// <para>The storage set ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ss-bp67acfmxazb4p****</para>
@@ -1846,7 +1849,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Tenancy { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to automatically append sequential suffixes to <c>HostName</c> and <c>InstanceName</c> when you create multiple instances. The sequential suffix ranges from 001 to 999. Valid values:</para>
+        /// <para>Specifies whether to automatically append sequential suffixes to <c>HostName</c> and <c>InstanceName</c> when you create multiple instances. Sequential suffixes start from 001 and can be up to 999. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Appends sequential suffixes.</description></item>
+        /// <item><description>false: Does not append sequential suffixes.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// <para>If <c>HostName</c> or <c>InstanceName</c> is configured in a specified sorting format without the naming suffix <c>name_suffix</c>, that is, the naming format is <c>name_prefix[begin_number,bits]</c>, <c>UniqueSuffix</c> does not take effect, and names are sorted only in the specified order.</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/196048.html">Batch configure sequential instance names or hostnames</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
