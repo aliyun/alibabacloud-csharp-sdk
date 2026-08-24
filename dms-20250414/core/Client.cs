@@ -50,6 +50,166 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>AddDataAgentMemory</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDataAgentMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataAgentMemoryResponse
+        /// </returns>
+        public AddDataAgentMemoryResponse AddDataAgentMemoryWithOptions(AddDataAgentMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromId))
+            {
+                query["FromId"] = request.FromId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Label))
+            {
+                query["Label"] = request.Label;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemFrom))
+            {
+                query["MemFrom"] = request.MemFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionUuid))
+            {
+                query["SessionUuid"] = request.SessionUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDataAgentMemory",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDataAgentMemoryResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AddDataAgentMemory</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDataAgentMemoryRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataAgentMemoryResponse
+        /// </returns>
+        public async Task<AddDataAgentMemoryResponse> AddDataAgentMemoryWithOptionsAsync(AddDataAgentMemoryRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                query["Content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromId))
+            {
+                query["FromId"] = request.FromId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Label))
+            {
+                query["Label"] = request.Label;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MemFrom))
+            {
+                query["MemFrom"] = request.MemFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionUuid))
+            {
+                query["SessionUuid"] = request.SessionUuid;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddDataAgentMemory",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddDataAgentMemoryResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AddDataAgentMemory</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDataAgentMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataAgentMemoryResponse
+        /// </returns>
+        public AddDataAgentMemoryResponse AddDataAgentMemory(AddDataAgentMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AddDataAgentMemoryWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>AddDataAgentMemory</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AddDataAgentMemoryRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddDataAgentMemoryResponse
+        /// </returns>
+        public async Task<AddDataAgentMemoryResponse> AddDataAgentMemoryAsync(AddDataAgentMemoryRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AddDataAgentMemoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Adds a user to a specified workspace.</para>
         /// </summary>
         /// 
@@ -1616,6 +1776,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserSpecifiedSkillList))
+            {
+                request.UserSpecifiedSkillListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserSpecifiedSkillList, "UserSpecifiedSkillList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
             {
@@ -1668,6 +1832,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextReportConfig))
             {
                 query["TextReportConfig"] = request.TextReportConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserSpecifiedSkillListShrink))
+            {
+                query["UserSpecifiedSkillList"] = request.UserSpecifiedSkillListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebReportConfig))
             {
@@ -1740,6 +1908,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserSpecifiedSkillList))
+            {
+                request.UserSpecifiedSkillListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserSpecifiedSkillList, "UserSpecifiedSkillList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
             {
@@ -1792,6 +1964,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextReportConfig))
             {
                 query["TextReportConfig"] = request.TextReportConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserSpecifiedSkillListShrink))
+            {
+                query["UserSpecifiedSkillList"] = request.UserSpecifiedSkillListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebReportConfig))
             {
@@ -14804,6 +14980,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserSpecifiedSkillList))
+            {
+                request.UserSpecifiedSkillListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserSpecifiedSkillList, "UserSpecifiedSkillList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
             {
@@ -14860,6 +15040,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextReportConfig))
             {
                 query["TextReportConfig"] = request.TextReportConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserSpecifiedSkillListShrink))
+            {
+                query["UserSpecifiedSkillList"] = request.UserSpecifiedSkillListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebReportConfig))
             {
@@ -14932,6 +15116,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             {
                 request.ScheduleTaskConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ScheduleTaskConfig, "ScheduleTaskConfig", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserSpecifiedSkillList))
+            {
+                request.UserSpecifiedSkillListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserSpecifiedSkillList, "UserSpecifiedSkillList", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackConfigShrink))
             {
@@ -14988,6 +15176,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextReportConfig))
             {
                 query["TextReportConfig"] = request.TextReportConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserSpecifiedSkillListShrink))
+            {
+                query["UserSpecifiedSkillList"] = request.UserSpecifiedSkillListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WebReportConfig))
             {
@@ -16095,7 +16287,15 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the user\&quot;s previous message content.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16216,7 +16416,15 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the user\&quot;s previous message content.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -16337,7 +16545,15 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the user\&quot;s previous message content.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -16360,7 +16576,15 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request description.</h2>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
+        /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the user\&quot;s previous message content.</description></item>
+        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">

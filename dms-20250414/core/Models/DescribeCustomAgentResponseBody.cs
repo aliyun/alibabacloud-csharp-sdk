@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The description of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AgentTestDescription</para>
+            /// <para>Agent test description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Instruction { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether a periodic task is configured.</para>
+            /// <para>Specifies whether a scheduled task is configured.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders;</description></item>
             /// <item><description>Order volume is the number of valid orders placed per day;</description></item>
             /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</description></item>
-            /// <item><description>Conversion rate = paid orders / UV, reflecting traffic conversion efficiency;</description></item>
+            /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Knowledge")]
@@ -315,14 +315,14 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The name of the custom agent.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AgentTestName</para>
+            /// <para>Agent test name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The next run time of the periodic task.</para>
+            /// <para>The next run time of the scheduled task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1767715200</para>
@@ -372,7 +372,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string ReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>The periodic task configuration.</para>
+            /// <para>The scheduled task configuration.</para>
             /// </summary>
             [NameInMap("ScheduleTaskConfig")]
             [Validation(Required=false)]
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public string CronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The query for the periodic task.</para>
+                /// <para>The query for the scheduled task.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Analyze this data and provide a brief report</para>
@@ -430,6 +430,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [Validation(Required=false)]
             public string TextReportConfig { get; set; }
 
+            [NameInMap("UserSpecifiedSkillList")]
+            [Validation(Required=false)]
+            public List<string> UserSpecifiedSkillList { get; set; }
+
             /// <summary>
             /// <para>The web report format.</para>
             /// 
@@ -467,7 +471,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the request failed.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>

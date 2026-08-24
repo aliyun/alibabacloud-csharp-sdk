@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public CreateCustomAgentResponseBodyData Data { get; set; }
         public class CreateCustomAgentResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud account ID of the primary account.</para>
+            /// <para>The Alibaba Cloud account ID of the parent account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16738266********</para>
@@ -175,7 +175,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                 public bool? SkipSqlConfirm { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether to skip the web report rendering confirmation.</para>
+                /// <para>Specifies whether to skip the web report generation confirmation.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -212,9 +212,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <b>Example:</b>
             /// <para>Analysis framework:</para>
             /// <ol>
-            /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, analyze trends and year-over-year/month-over-month fluctuations;</description></item>
-            /// <item><description>Segment by new/existing customers, channels, and regions to identify growth drivers and weaknesses;</description></item>
-            /// <item><description>Conduct funnel analysis based on user behavior paths (browsing → add to cart → payment) to pinpoint drop-off stages;</description></item>
+            /// <item><description>Monitor core metrics (GMV, order volume, UV, conversion rate) on a daily, weekly, and monthly basis, and analyze trends and year-over-year/month-over-month fluctuations.</description></item>
+            /// <item><description>Segment by new/existing customers, channels, and regions to identify growth drivers and weaknesses.</description></item>
+            /// <item><description>Conduct funnel analysis based on user behavior paths (browse → add to cart → payment) to identify drop-off points</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Instruction")]
@@ -237,10 +237,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <b>Example:</b>
             /// <para>Core metric definitions:</para>
             /// <ol>
-            /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders;</description></item>
-            /// <item><description>Order volume is the number of valid orders placed per day;</description></item>
-            /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</description></item>
-            /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</description></item>
+            /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders.</description></item>
+            /// <item><description>Order volume is the number of valid orders placed per day.</description></item>
+            /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</description></item>
+            /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency</description></item>
             /// </ol>
             /// </summary>
             [NameInMap("Knowledge")]
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public string Knowledge { get; set; }
 
             /// <summary>
-            /// <para>The external knowledge base configurations.</para>
+            /// <para>The external knowledge base.</para>
             /// </summary>
             [NameInMap("KnowledgeConfigList")]
             [Validation(Required=false)]
@@ -256,6 +256,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             public class CreateCustomAgentResponseBodyDataKnowledgeConfigList : TeaModel {
                 /// <summary>
                 /// <para>The access type.</para>
+                /// <list type="bullet">
+                /// <item><description>mcp: access through MCP.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>mcp</para>
@@ -334,6 +337,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
             /// <summary>
             /// <para>The next run time of the periodic task.</para>
+            /// <list type="bullet">
+            /// <item><description>Timestamp format.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>1767715200</para>
@@ -432,17 +438,21 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             /// <para>The text report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</para>
+            /// <para>The text report requires all numbers to be expressed in Chinese characters instead of Arabic numerals</para>
             /// </summary>
             [NameInMap("TextReportConfig")]
             [Validation(Required=false)]
             public string TextReportConfig { get; set; }
 
+            [NameInMap("UserSpecifiedSkillList")]
+            [Validation(Required=false)]
+            public List<string> UserSpecifiedSkillList { get; set; }
+
             /// <summary>
             /// <para>The web report format.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</para>
+            /// <para>The web report requires all numbers to be expressed in Chinese characters instead of Arabic numerals</para>
             /// </summary>
             [NameInMap("WebReportConfig")]
             [Validation(Required=false)]
@@ -475,7 +485,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned if the call failed.</para>
+        /// <para>The error message returned when the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Specified parameter Tid is not valid.</para>
@@ -495,10 +505,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>True: The request is successful.</description></item>
-        /// <item><description>False: The request fails.</description></item>
+        /// <item><description>True: The request was successful.                                 </description></item>
+        /// <item><description>False: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

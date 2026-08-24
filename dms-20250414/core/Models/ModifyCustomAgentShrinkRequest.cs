@@ -211,6 +211,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         [Validation(Required=false)]
         public string TextReportConfig { get; set; }
 
+        [NameInMap("UserSpecifiedSkillList")]
+        [Validation(Required=false)]
+        public string UserSpecifiedSkillListShrink { get; set; }
+
         /// <summary>
         /// <para>The web report format.</para>
         /// 

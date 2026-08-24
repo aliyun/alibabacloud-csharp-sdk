@@ -24,10 +24,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DMSUnit { get; set; }
 
         /// <summary>
-        /// <para>The specified data range in <b>JSON string format</b>.</para>
+        /// <para>The specified data scope in <b>JSON character string format</b>.</para>
         /// <list type="bullet">
-        /// <item><description>Common parameter description<list type="bullet">
-        /// <item><description>tableFlag: true indicates a specified data range.</description></item>
+        /// <item><description>Common metric description<list type="bullet">
+        /// <item><description>tableFlag: true indicates that a data scope is specified.</description></item>
         /// <item><description>scope: personal is a fixed value.</description></item>
         /// <item><description>personal: pass parameters for file or database types.</description></item>
         /// </list>
@@ -36,11 +36,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para><b>File type</b>. Pass parameters in the following format:</para>
         /// <list type="bullet">
         /// <item><description>DataSourceType: remote_data_center is a fixed value.</description></item>
-        /// <item><description>FileId: The file ID.</description></item>
-        /// <item><description>Database: The database name returned by the ListDataCenterTable operation, which is usually the file name.</description></item>
-        /// <item><description>Tables: The table name returned by the ListDataCenterTable operation.</description></item>
-        /// <item><description>TableIds: The TableId returned by the ListDataCenterTable operation.</description></item>
-        /// <item><description>RegionId: The current region.</description></item>
+        /// <item><description>FileId: the file ID.</description></item>
+        /// <item><description>Database: the database name returned by the ListDataCenterTable operation, which is typically the file name.</description></item>
+        /// <item><description>Tables: the table name returned by the ListDataCenterTable operation.</description></item>
+        /// <item><description>TableIds: the TableId returned by the ListDataCenterTable operation.</description></item>
+        /// <item><description>RegionId: the current region.</description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;tableFlag&quot;: true,
@@ -62,15 +62,15 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para><b>Database type</b>. Pass parameters as follows:</para>
         /// <list type="bullet">
         /// <item><description>DataSourceType: database is a fixed value.</description></item>
-        /// <item><description>DmsInstanceId: The DMS instance ID returned by the data center operation.</description></item>
-        /// <item><description>DmsDatabaseId: The DMS database ID returned by the data center operation.</description></item>
-        /// <item><description>FileId: The instance name (deprecated).</description></item>
-        /// <item><description>DbName: The database name returned by the data center operation.</description></item>
-        /// <item><description>Database: The database name returned by the data center operation.</description></item>
-        /// <item><description>Tables: The table name returned by the data center operation.</description></item>
-        /// <item><description>TableIds: The TableId returned by the data center operation.</description></item>
-        /// <item><description>Engine: The engine type (mysql or postgresql).</description></item>
-        /// <item><description>RegionId: The current region.</description></item>
+        /// <item><description>DmsInstanceId: the DMS instance ID returned by the data center operation.</description></item>
+        /// <item><description>DmsDatabaseId: the DMS database ID returned by the data center operation.</description></item>
+        /// <item><description>FileId: the instance name (deprecated).</description></item>
+        /// <item><description>DbName: the database name returned by the data center operation.</description></item>
+        /// <item><description>Database: the database name returned by the data center operation.</description></item>
+        /// <item><description>Tables: the table name returned by the data center operation.</description></item>
+        /// <item><description>TableIds: the TableId returned by the data center operation.</description></item>
+        /// <item><description>Engine: the DPI engine type (mysql or postgresql).</description></item>
+        /// <item><description>RegionId: the current region.</description></item>
         /// </list>
         /// <pre><c>{
         ///   &quot;tableFlag&quot;: true,
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         ///   &quot;personal&quot; : {
         ///     &quot;DataSourceType&quot; : &quot;remote_data_center&quot;,
         ///     &quot;FileId&quot; : &quot;f-5qlrwaw10<b><b><b><b>s3gpw1z&quot;,
-        ///     &quot;Database&quot; : &quot;TestTable</b></b></b>.xlsx&quot;,
+        ///     &quot;Database&quot; : &quot;测试表格</b></b></b>.xlsx&quot;,
         ///     &quot;Tables&quot; : [ &quot;Sheet1&quot; ],
         ///     &quot;TableIds&quot; : [ &quot;</b>****&quot; ],
         ///     &quot;RegionId&quot; : &quot;cn-hangzhou&quot;
@@ -131,14 +131,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         /// <summary>
         /// <para>The instruction.</para>
+        /// <list type="bullet">
+        /// <item><description>Input limit: a maximum of 10000 characters.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Core metric definitions:</para>
         /// <ol>
-        /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders;</description></item>
-        /// <item><description>Order volume is the number of valid orders placed per day;</description></item>
-        /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app;</description></item>
-        /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency;</description></item>
+        /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders.</description></item>
+        /// <item><description>Order volume is the number of valid orders placed per day.</description></item>
+        /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</description></item>
+        /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("Instruction")]
@@ -147,14 +150,17 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 
         /// <summary>
         /// <para>The knowledge.</para>
+        /// <list type="bullet">
+        /// <item><description>Input limit: a maximum of 10000 characters.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Core metric definitions:</para>
         /// <ol>
-        /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including both paid and unpaid orders.</description></item>
+        /// <item><description>GMV (Gross Merchandise Volume) refers to the total order amount, including paid and unpaid orders.</description></item>
         /// <item><description>Order volume is the number of valid orders placed per day.</description></item>
         /// <item><description>UV (Unique Visitors) refers to the deduplicated number of users who visit the website or app.</description></item>
-        /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency.</description></item>
+        /// <item><description>Conversion rate = number of paid orders / UV, reflecting traffic conversion efficiency</description></item>
         /// </ol>
         /// </summary>
         [NameInMap("Knowledge")]
@@ -162,7 +168,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Knowledge { get; set; }
 
         /// <summary>
-        /// <para>The external knowledge base configurations.</para>
+        /// <para>The external knowledge base.</para>
         /// </summary>
         [NameInMap("KnowledgeConfigList")]
         [Validation(Required=false)]
@@ -200,17 +206,21 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <para>The text report format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The text report requires all numbers to be written in Chinese characters instead of Arabic numerals</para>
+        /// <para>The text report requires all numbers to be expressed in Chinese characters instead of Arabic numerals</para>
         /// </summary>
         [NameInMap("TextReportConfig")]
         [Validation(Required=false)]
         public string TextReportConfig { get; set; }
 
+        [NameInMap("UserSpecifiedSkillList")]
+        [Validation(Required=false)]
+        public string UserSpecifiedSkillListShrink { get; set; }
+
         /// <summary>
         /// <para>The web report format.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The web report requires all numbers to be written in Chinese characters instead of Arabic numerals</para>
+        /// <para>The web report requires all numbers to be expressed in Chinese characters instead of Arabic numerals</para>
         /// </summary>
         [NameInMap("WebReportConfig")]
         [Validation(Required=false)]
