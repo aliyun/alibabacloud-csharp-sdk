@@ -250,6 +250,142 @@ namespace AlibabaCloud.SDK.DtsAI20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Uploads a file directly to the Bucket/ObjectKey specified in the response, and then uses the object URL as OssFileUrl to create a parsing task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeFileUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeFileUploadResponse
+        /// </returns>
+        public AuthorizeFileUploadResponse AuthorizeFileUploadWithOptions(AuthorizeFileUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFormat))
+            {
+                query["FileFormat"] = request.FileFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2026-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AuthorizeFileUploadResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a file directly to the Bucket/ObjectKey specified in the response, and then uses the object URL as OssFileUrl to create a parsing task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeFileUploadRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeFileUploadResponse
+        /// </returns>
+        public async Task<AuthorizeFileUploadResponse> AuthorizeFileUploadWithOptionsAsync(AuthorizeFileUploadRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFormat))
+            {
+                query["FileFormat"] = request.FileFormat;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AuthorizeFileUpload",
+                Version = "2026-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AuthorizeFileUploadResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a file directly to the Bucket/ObjectKey specified in the response, and then uses the object URL as OssFileUrl to create a parsing task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeFileUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeFileUploadResponse
+        /// </returns>
+        public AuthorizeFileUploadResponse AuthorizeFileUpload(AuthorizeFileUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return AuthorizeFileUploadWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads a file directly to the Bucket/ObjectKey specified in the response, and then uses the object URL as OssFileUrl to create a parsing task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// AuthorizeFileUploadRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AuthorizeFileUploadResponse
+        /// </returns>
+        public async Task<AuthorizeFileUploadResponse> AuthorizeFileUploadAsync(AuthorizeFileUploadRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await AuthorizeFileUploadWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a document parsing task.</para>
         /// </summary>
         /// 
@@ -257,7 +393,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) is supported.</description></item>
-        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -399,7 +535,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) is supported.</description></item>
-        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -541,7 +677,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) is supported.</description></item>
-        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -567,7 +703,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) is supported.</description></item>
-        /// <item><description>Fees: Free during the public preview period. No fees are charged.</description></item>
+        /// <item><description>Fees: The service is free of charge during the public preview period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1133,7 +1269,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
-        /// <item><description>Pricing: Free of charge during the public preview period.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1195,7 +1331,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
-        /// <item><description>Pricing: Free of charge during the public preview period.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1257,7 +1393,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
-        /// <item><description>Pricing: Free of charge during the public preview period.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview period.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1283,7 +1419,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401
         /// <description>
         /// <list type="bullet">
         /// <item><description>Region: Only China (Beijing) and Singapore regions are supported.</description></item>
-        /// <item><description>Pricing: Free of charge during the public preview period.</description></item>
+        /// <item><description>Fees: Free of charge during the public preview period.</description></item>
         /// </list>
         /// </description>
         /// 

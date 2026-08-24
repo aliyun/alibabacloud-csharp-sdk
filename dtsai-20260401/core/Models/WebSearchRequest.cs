@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.DtsAI20260401.Models
 {
     public class WebSearchRequest : TeaModel {
+        /// <summary>
+        /// <para>The agent name.</para>
+        /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
         public string AgentName { get; set; }

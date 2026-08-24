@@ -9,22 +9,37 @@ using Tea;
 namespace AlibabaCloud.SDK.DtsAI20260401.Models
 {
     public class CreateDocParserJobRequest : TeaModel {
+        /// <summary>
+        /// <para>The agent name.</para>
+        /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
+        /// <summary>
+        /// <para>The language type for speech recognition.</para>
+        /// </summary>
         [NameInMap("AsrLanguage")]
         [Validation(Required=false)]
         public string AsrLanguage { get; set; }
 
+        /// <summary>
+        /// <para>The audio clip output.</para>
+        /// </summary>
         [NameInMap("AudioClipOutput")]
         [Validation(Required=false)]
         public bool? AudioClipOutput { get; set; }
 
+        /// <summary>
+        /// <para>The audio window duration in seconds.</para>
+        /// </summary>
         [NameInMap("AudioWindowSeconds")]
         [Validation(Required=false)]
         public int? AudioWindowSeconds { get; set; }
 
+        /// <summary>
+        /// <para>The chunk summary information.</para>
+        /// </summary>
         [NameInMap("ChunkSummary")]
         [Validation(Required=false)]
         public bool? ChunkSummary { get; set; }
@@ -42,7 +57,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         /// </description></item>
         /// <item><description><para><b>ppt</b>: PPT file in ppt format.</para>
         /// </description></item>
-        /// <item><description><para><b>txt</b>: plain text file.</para>
+        /// <item><description><para><b>txt</b>: Plain text file.</para>
         /// </description></item>
         /// <item><description><para><b>md</b>: Markdown file.</para>
         /// </description></item>
@@ -76,11 +91,11 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         /// <summary>
         /// <para>The HTTP or HTTPS URL of the file to be parsed.</para>
         /// <remarks>
-        /// <para>SDKs for various languages provide an additional <c>CreateDocParserJobAdvance</c> method that supports passing a local file stream directly (such as InputStream in Java), without the need to upload the file to OSS and construct a FileUrl in advance. When using the Advance method, replace the <c>FileUrl</c> parameter (URL string) with the <c>FileUrlObject</c> parameter (file stream). All other request parameters remain unchanged. The SDK automatically performs the following operations:</para>
+        /// <para>SDKs for various programming languages additionally provide a <c>CreateDocParserJobAdvance</c> method that supports passing a local file stream directly (such as Java InputStream), without the need to upload the file to OSS and construct a FileUrl in advance. When using the Advance method, replace the <c>FileUrl</c> parameter (URL string) with the <c>FileUrlObject</c> parameter (file stream). All other request parameters remain unchanged. The SDK automatically performs the following operations:</para>
         /// <ol>
         /// <item><description>Obtains temporary OSS upload credentials.</description></item>
         /// <item><description>Uploads the file stream directly to OSS.</description></item>
-        /// <item><description>Calls the CreateDocParserJob operation with the generated OSS URL.</description></item>
+        /// <item><description>Calls the CreateDocParserJob operation using the generated OSS URL.</description></item>
         /// </ol>
         /// </remarks>
         /// 
@@ -91,38 +106,65 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [Validation(Required=false)]
         public string FileUrl { get; set; }
 
+        /// <summary>
+        /// <para>The frame output result.</para>
+        /// </summary>
         [NameInMap("FrameOutput")]
         [Validation(Required=false)]
         public bool? FrameOutput { get; set; }
 
+        /// <summary>
+        /// <para>The global summary information.</para>
+        /// </summary>
         [NameInMap("GlobalSummary")]
         [Validation(Required=false)]
         public bool? GlobalSummary { get; set; }
 
+        /// <summary>
+        /// <para>The image processing format.</para>
+        /// </summary>
         [NameInMap("ImageMode")]
         [Validation(Required=false)]
         public string ImageMode { get; set; }
 
+        /// <summary>
+        /// <para>The image understanding and analysis setting.</para>
+        /// </summary>
         [NameInMap("ImageUnderstanding")]
         [Validation(Required=false)]
         public string ImageUnderstanding { get; set; }
 
+        /// <summary>
+        /// <para>The media chunk interval in seconds.</para>
+        /// </summary>
         [NameInMap("MediaChunkIntervalSeconds")]
         [Validation(Required=false)]
         public int? MediaChunkIntervalSeconds { get; set; }
 
+        /// <summary>
+        /// <para>The media chunk strategy.</para>
+        /// </summary>
         [NameInMap("MediaChunkStrategy")]
         [Validation(Required=false)]
         public string MediaChunkStrategy { get; set; }
 
+        /// <summary>
+        /// <para>The number of media frames per minute.</para>
+        /// </summary>
         [NameInMap("MediaFramesPerMinute")]
         [Validation(Required=false)]
         public double? MediaFramesPerMinute { get; set; }
 
+        /// <summary>
+        /// <para>The maximum frame budget for media.</para>
+        /// </summary>
         [NameInMap("MediaMaxFrameBudget")]
         [Validation(Required=false)]
         public int? MediaMaxFrameBudget { get; set; }
 
+        /// <summary>
+        /// <para>The minimum frame budget for media.</para>
+        /// </summary>
         [NameInMap("MediaMinFrameBudget")]
         [Validation(Required=false)]
         public int? MediaMinFrameBudget { get; set; }
@@ -148,6 +190,9 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [Validation(Required=false)]
         public string OutputFormat { get; set; }
 
+        /// <summary>
+        /// <para>The parsing scene.</para>
+        /// </summary>
         [NameInMap("ParseScene")]
         [Validation(Required=false)]
         public string ParseScene { get; set; }
@@ -163,14 +208,23 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The response mode.</para>
+        /// </summary>
         [NameInMap("ResponseMode")]
         [Validation(Required=false)]
         public string ResponseMode { get; set; }
 
+        /// <summary>
+        /// <para>The result type.</para>
+        /// </summary>
         [NameInMap("ResultType")]
         [Validation(Required=false)]
         public string ResultType { get; set; }
 
+        /// <summary>
+        /// <para>The table processing format.</para>
+        /// </summary>
         [NameInMap("TableFormat")]
         [Validation(Required=false)]
         public string TableFormat { get; set; }

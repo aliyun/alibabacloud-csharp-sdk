@@ -110,11 +110,11 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         /// <summary>
         /// <para>The URL classification result. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>static_html</b>: Static HTML page.</description></item>
-        /// <item><description><b>dynamic_js</b>: Single-page application (SPA) page that requires JavaScript rendering.</description></item>
-        /// <item><description><b>audio</b>: Audio file.</description></item>
-        /// <item><description><b>video</b>: Video file.</description></item>
-        /// <item><description><b>document</b>: Document file (PDF, Word, PPT, or Excel).</description></item>
+        /// <item><description><b>static_html</b>: A static HTML page.</description></item>
+        /// <item><description><b>dynamic_js</b>: A single-page application (SPA) page that requires JavaScript rendering.</description></item>
+        /// <item><description><b>audio</b>: An audio file.</description></item>
+        /// <item><description><b>video</b>: A video file.</description></item>
+        /// <item><description><b>document</b>: A document file (PDF, Word, PPT, or Excel).</description></item>
         /// <item><description><b>unknown</b>: Unrecognizable.</description></item>
         /// </list>
         /// 

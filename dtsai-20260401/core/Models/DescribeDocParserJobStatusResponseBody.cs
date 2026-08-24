@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The failure cause. This parameter has a value only when Status is failed.</para>
+        /// <para>The failure reason. This parameter has a value only when Status is failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Failed Message</para>
@@ -70,9 +70,9 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         /// </description></item>
         /// <item><description><para><b>success</b>: Completed. You can call DescribeDocParserJobResult to obtain the result.</para>
         /// </description></item>
-        /// <item><description><para><b>failed</b>: Failed. The cause is provided in FailureMessage.</para>
+        /// <item><description><para><b>failed</b>: Failed. The reason is provided in FailureMessage.</para>
         /// </description></item>
-        /// <item><description><para><b>cancelled</b>: Canceled.</para>
+        /// <item><description><para><b>cancelled</b>: Cancelled.</para>
         /// </description></item>
         /// </list>
         /// 

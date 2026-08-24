@@ -59,18 +59,30 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The result data.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public string Result { get; set; }
 
+        /// <summary>
+        /// <para>The result type.</para>
+        /// </summary>
         [NameInMap("ResultType")]
         [Validation(Required=false)]
         public string ResultType { get; set; }
 
+        /// <summary>
+        /// <para>The result URL.</para>
+        /// </summary>
         [NameInMap("ResultUrl")]
         [Validation(Required=false)]
         public string ResultUrl { get; set; }
 
+        /// <summary>
+        /// <para>The status information.</para>
+        /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }

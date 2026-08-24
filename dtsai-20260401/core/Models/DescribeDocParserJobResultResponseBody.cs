@@ -59,10 +59,16 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [Validation(Required=false)]
         public string Result { get; set; }
 
+        /// <summary>
+        /// <para>The result format.</para>
+        /// </summary>
         [NameInMap("ResultType")]
         [Validation(Required=false)]
         public string ResultType { get; set; }
 
+        /// <summary>
+        /// <para>oss url</para>
+        /// </summary>
         [NameInMap("ResultUrl")]
         [Validation(Required=false)]
         public string ResultUrl { get; set; }

@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.DtsAI20260401.Models
 {
     public class DescribeDocParserJobStatusRequest : TeaModel {
+        /// <summary>
+        /// <para>The agent name.</para>
+        /// </summary>
         [NameInMap("AgentName")]
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the document parsing task. You can obtain the ID by calling CreateDocParserJob.</para>
+        /// <para>The ID of the document parsing task. You can obtain this ID by calling CreateDocParserJob.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
