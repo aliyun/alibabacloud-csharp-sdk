@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetListRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to retrieve all ConfigSets. Optional.</para>
+        /// <para>Specifies whether to query all configuration sets. Optional.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? All { get; set; }
 
         /// <summary>
-        /// <para>The keyword for filtering ConfigSets by name.</para>
+        /// <para>The keyword for searching by name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>

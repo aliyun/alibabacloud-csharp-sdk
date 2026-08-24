@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetDetailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the configuration set.</para>
+        /// <para>The configuration set information.</para>
         /// </summary>
         [NameInMap("Detail")]
         [Validation(Required=false)]
         public ConfigSetDetailResponseBodyDetail Detail { get; set; }
         public class ConfigSetDetailResponseBodyDetail : TeaModel {
             /// <summary>
-            /// <para>A description of the configuration set.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the configuration set.</para>
+            /// <para>The configuration set ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public ConfigSetDetailResponseBodyDetailIpPool IpPool { get; set; }
             public class ConfigSetDetailResponseBodyDetailIpPool : TeaModel {
                 /// <summary>
-                /// <para>The ID of the associated IP pool.</para>
+                /// <para>The associated IP pool ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
                 public string IpPoolId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the associated IP pool.</para>
+                /// <para>The associated IP pool name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xxx</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public bool? IsPublicChannelBackoff { get; set; }
 
             /// <summary>
-            /// <para>The name of the configuration set.</para>
+            /// <para>The configuration set name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -78,6 +78,24 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("ValidationOption")]
+            [Validation(Required=false)]
+            public ConfigSetDetailResponseBodyDetailValidationOption ValidationOption { get; set; }
+            public class ConfigSetDetailResponseBodyDetailValidationOption : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("ForbiddenStatusList")]
+                [Validation(Required=false)]
+                public List<string> ForbiddenStatusList { get; set; }
+
+                [NameInMap("ForbiddenSubStatusList")]
+                [Validation(Required=false)]
+                public List<string> ForbiddenSubStatusList { get; set; }
+
+            }
 
         }
 

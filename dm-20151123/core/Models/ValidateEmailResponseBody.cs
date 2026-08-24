@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ValidateEmailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The domain part of the email address parsed from syntax validation (lowercased).</para>
+        /// <para>The domain part of the email address parsed from syntax validation (converted to lowercase).</para>
         /// 
         /// <b>Example:</b>
         /// <para>yyy.com</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? IsFreeMail { get; set; }
 
         /// <summary>
-        /// <para>The local part of the email address parsed from syntax validation (lowercased and with the plus-sign portion removed).</para>
+        /// <para>The local part of the email address parsed from syntax validation (converted to lowercase with the plus-sign portion removed).</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>

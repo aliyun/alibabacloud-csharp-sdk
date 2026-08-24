@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dm20151123.Models
 {
-    public class ConfigSetUpdateRequest : TeaModel {
+    public class ConfigSetUpdateShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The description. Maximum length: 50 characters.</para>
         /// 
@@ -55,21 +55,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 
         [NameInMap("ValidationOption")]
         [Validation(Required=false)]
-        public ConfigSetUpdateRequestValidationOption ValidationOption { get; set; }
-        public class ConfigSetUpdateRequestValidationOption : TeaModel {
-            [NameInMap("Enabled")]
-            [Validation(Required=false)]
-            public bool? Enabled { get; set; }
-
-            [NameInMap("ForbiddenStatusList")]
-            [Validation(Required=false)]
-            public List<string> ForbiddenStatusList { get; set; }
-
-            [NameInMap("ForbiddenSubStatusList")]
-            [Validation(Required=false)]
-            public List<string> ForbiddenSubStatusList { get; set; }
-
-        }
+        public string ValidationOptionShrink { get; set; }
 
     }
 

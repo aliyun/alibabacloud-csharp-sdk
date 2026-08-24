@@ -1526,10 +1526,10 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration set. You can create up to 100 configuration sets.</para>
+        /// <para>Creates a configuration set. A maximum of 100 configuration sets can be created.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ConfigSetCreateRequest
         /// </param>
         /// <param name="runtime">
@@ -1539,9 +1539,15 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <returns>
         /// ConfigSetCreateResponse
         /// </returns>
-        public ConfigSetCreateResponse ConfigSetCreateWithOptions(ConfigSetCreateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ConfigSetCreateResponse ConfigSetCreateWithOptions(ConfigSetCreateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ConfigSetCreateShrinkRequest request = new ConfigSetCreateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ValidationOption))
+            {
+                request.ValidationOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ValidationOption, "ValidationOption", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1558,6 +1564,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidationOptionShrink))
+            {
+                query["ValidationOption"] = request.ValidationOptionShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1580,10 +1590,10 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration set. You can create up to 100 configuration sets.</para>
+        /// <para>Creates a configuration set. A maximum of 100 configuration sets can be created.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ConfigSetCreateRequest
         /// </param>
         /// <param name="runtime">
@@ -1593,9 +1603,15 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <returns>
         /// ConfigSetCreateResponse
         /// </returns>
-        public async Task<ConfigSetCreateResponse> ConfigSetCreateWithOptionsAsync(ConfigSetCreateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ConfigSetCreateResponse> ConfigSetCreateWithOptionsAsync(ConfigSetCreateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ConfigSetCreateShrinkRequest request = new ConfigSetCreateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ValidationOption))
+            {
+                request.ValidationOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ValidationOption, "ValidationOption", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -1612,6 +1628,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidationOptionShrink))
+            {
+                query["ValidationOption"] = request.ValidationOptionShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -1634,7 +1654,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration set. You can create up to 100 configuration sets.</para>
+        /// <para>Creates a configuration set. A maximum of 100 configuration sets can be created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1652,7 +1672,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration set. You can create up to 100 configuration sets.</para>
+        /// <para>Creates a configuration set. A maximum of 100 configuration sets can be created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1798,7 +1818,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified configuration set.</para>
+        /// <para>Retrieves the details of a configuration set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1840,7 +1860,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified configuration set.</para>
+        /// <para>Retrieves the details of a configuration set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1882,7 +1902,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified configuration set.</para>
+        /// <para>Retrieves the details of a configuration set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1900,7 +1920,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specified configuration set.</para>
+        /// <para>Retrieves the details of a configuration set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1918,7 +1938,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists ConfigSets.</para>
+        /// <para>Lists configuration sets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1972,7 +1992,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists ConfigSets.</para>
+        /// <para>Lists configuration sets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2026,7 +2046,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists ConfigSets.</para>
+        /// <para>Lists configuration sets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2044,7 +2064,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists ConfigSets.</para>
+        /// <para>Lists configuration sets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2193,7 +2213,7 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <para>Updates a configuration set.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ConfigSetUpdateRequest
         /// </param>
         /// <param name="runtime">
@@ -2203,9 +2223,15 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <returns>
         /// ConfigSetUpdateResponse
         /// </returns>
-        public ConfigSetUpdateResponse ConfigSetUpdateWithOptions(ConfigSetUpdateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ConfigSetUpdateResponse ConfigSetUpdateWithOptions(ConfigSetUpdateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ConfigSetUpdateShrinkRequest request = new ConfigSetUpdateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ValidationOption))
+            {
+                request.ValidationOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ValidationOption, "ValidationOption", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -2226,6 +2252,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidationOptionShrink))
+            {
+                query["ValidationOption"] = request.ValidationOptionShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2251,7 +2281,7 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <para>Updates a configuration set.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ConfigSetUpdateRequest
         /// </param>
         /// <param name="runtime">
@@ -2261,9 +2291,15 @@ namespace AlibabaCloud.SDK.Dm20151123
         /// <returns>
         /// ConfigSetUpdateResponse
         /// </returns>
-        public async Task<ConfigSetUpdateResponse> ConfigSetUpdateWithOptionsAsync(ConfigSetUpdateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ConfigSetUpdateResponse> ConfigSetUpdateWithOptionsAsync(ConfigSetUpdateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ConfigSetUpdateShrinkRequest request = new ConfigSetUpdateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ValidationOption))
+            {
+                request.ValidationOptionShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ValidationOption, "ValidationOption", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
@@ -2284,6 +2320,10 @@ namespace AlibabaCloud.SDK.Dm20151123
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
             {
                 query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ValidationOptionShrink))
+            {
+                query["ValidationOption"] = request.ValidationOptionShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -12018,7 +12058,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Send a single email.</para>
+        /// <para>Sends a single email.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12156,7 +12196,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Send a single email.</para>
+        /// <para>Sends a single email.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -12294,7 +12334,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Send a single email.</para>
+        /// <para>Sends a single email.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12312,7 +12352,7 @@ namespace AlibabaCloud.SDK.Dm20151123
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Send a single email.</para>
+        /// <para>Sends a single email.</para>
         /// </summary>
         /// 
         /// <param name="request">

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of ConfigSets.</para>
+        /// <para>The list of configuration sets.</para>
         /// </summary>
         [NameInMap("ConfigSets")]
         [Validation(Required=false)]
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The list of from addresses associated with the ConfigSet.</para>
+            /// <para>The list of associated sender addresses.</para>
             /// </summary>
             [NameInMap("FromAddresses")]
             [Validation(Required=false)]
             public List<string> FromAddresses { get; set; }
 
             /// <summary>
-            /// <para>The ConfigSet ID.</para>
+            /// <para>The configuration set ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public string Id { get; set; }
 
             /// <summary>
-            /// <para>The IP pool associated with the ConfigSet.</para>
+            /// <para>The IP pool.</para>
             /// </summary>
             [NameInMap("IpPool")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             public bool? IsPublicChannelBackoff { get; set; }
 
             /// <summary>
-            /// <para>The ConfigSet name.</para>
+            /// <para>The configuration set name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
@@ -85,6 +85,24 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
+
+            [NameInMap("ValidationOption")]
+            [Validation(Required=false)]
+            public ConfigSetListResponseBodyConfigSetsValidationOption ValidationOption { get; set; }
+            public class ConfigSetListResponseBodyConfigSetsValidationOption : TeaModel {
+                [NameInMap("Enabled")]
+                [Validation(Required=false)]
+                public bool? Enabled { get; set; }
+
+                [NameInMap("ForbiddenStatusList")]
+                [Validation(Required=false)]
+                public List<string> ForbiddenStatusList { get; set; }
+
+                [NameInMap("ForbiddenSubStatusList")]
+                [Validation(Required=false)]
+                public List<string> ForbiddenSubStatusList { get; set; }
+
+            }
 
         }
 
@@ -99,7 +117,11 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether more results are available.</para>
+        /// <para>Indicates whether there is a next page. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -109,7 +131,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public bool? HasMore { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -129,7 +151,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of matching entries.</para>
+        /// <para>The total number of entries that match the request conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

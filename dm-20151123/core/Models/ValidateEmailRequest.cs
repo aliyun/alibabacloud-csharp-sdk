@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
         /// <summary>
         /// <para>The probe type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>FULL: Enables all detection capabilities, including SMTP probing. Because SMTP probing involves remote connections, the overall latency is high. This value is suitable for scenarios that are not sensitive to response time. Each detection consumes 1 address validation quota.</description></item>
-        /// <item><description>BASIC_ONLY: Enables all detection capabilities except SMTP probing, with low latency. This value is suitable for scenarios that are sensitive to response time, such as real-time validation during registration to check whether an email address is a disposable mailbox or an MX-forwarded abnormal address, to prevent batch registration by the cyber underground economy chain. Each detection consumes 1/3 of an address validation quota.</description></item>
+        /// <item><description>FULL: enables all detection capabilities, including SMTP probing. Because SMTP probing involves remote connections, the overall latency is high. This mode is suitable for scenarios that are not sensitive to response time. Each detection consumes 1 address validation quota. In this mode, the UNKNOWN status is not metered.</description></item>
+        /// <item><description>BASIC_ONLY: enables all detection capabilities except SMTP probing, with low latency. This mode is suitable for scenarios that are sensitive to response time, such as real-time validation during registration to check whether an email address is a disposable mailbox or an abnormal address with MX forwarding, to prevent batch registration by the cyber underground economy chain. Each detection consumes 1/3 of an address validation quota. In this mode, the UNKNOWN status is metered.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

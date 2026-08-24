@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dm20151123.Models
 {
     public class ConfigSetDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the configuration set.</para>
+        /// <para>The configuration set ID. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
