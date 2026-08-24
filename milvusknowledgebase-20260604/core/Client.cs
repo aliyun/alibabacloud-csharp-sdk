@@ -39,7 +39,12 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加文档到知识库</para>
+        /// <para>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
+        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
+        /// A maximum of 100 files can be registered in a single request.</description></item>
+        /// </list>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87,6 +92,10 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
             {
                 body["dingTalkConfiguration"] = request.DingTalkConfiguration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
+            {
+                body["parentId"] = request.ParentId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -109,7 +118,12 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加文档到知识库</para>
+        /// <para>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
+        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
+        /// A maximum of 100 files can be registered in a single request.</description></item>
+        /// </list>
         /// </summary>
         /// 
         /// <param name="request">
@@ -157,6 +171,10 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
             {
                 body["dingTalkConfiguration"] = request.DingTalkConfiguration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
+            {
+                body["parentId"] = request.ParentId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -179,7 +197,12 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加文档到知识库</para>
+        /// <para>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
+        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
+        /// A maximum of 100 files can be registered in a single request.</description></item>
+        /// </list>
         /// </summary>
         /// 
         /// <param name="request">
@@ -198,7 +221,12 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加文档到知识库</para>
+        /// <para>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <list type="bullet">
+        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
+        /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
+        /// A maximum of 100 files can be registered in a single request.</description></item>
+        /// </list>
         /// </summary>
         /// 
         /// <param name="request">
@@ -217,7 +245,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库文件预签名URL</para>
+        /// <para>Generates an <b>OSS pre-signed PUT URL</b> pointing to the knowledge base dedicated storage for each file in <c>Documents</c>. The caller uses the URL to upload file content directly to Object Storage Service (OSS), and then calls <c>AddDocuments</c> to register the files. A maximum of 100 files can be processed per request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -271,7 +299,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库文件预签名URL</para>
+        /// <para>Generates an <b>OSS pre-signed PUT URL</b> pointing to the knowledge base dedicated storage for each file in <c>Documents</c>. The caller uses the URL to upload file content directly to Object Storage Service (OSS), and then calls <c>AddDocuments</c> to register the files. A maximum of 100 files can be processed per request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -325,7 +353,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库文件预签名URL</para>
+        /// <para>Generates an <b>OSS pre-signed PUT URL</b> pointing to the knowledge base dedicated storage for each file in <c>Documents</c>. The caller uses the URL to upload file content directly to Object Storage Service (OSS), and then calls <c>AddDocuments</c> to register the files. A maximum of 100 files can be processed per request.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -344,7 +372,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取知识库文件预签名URL</para>
+        /// <para>Generates an <b>OSS pre-signed PUT URL</b> pointing to the knowledge base dedicated storage for each file in <c>Documents</c>. The caller uses the URL to upload file content directly to Object Storage Service (OSS), and then calls <c>AddDocuments</c> to register the files. A maximum of 100 files can be processed per request.</para>
         /// </summary>
         /// 
         /// <param name="request">

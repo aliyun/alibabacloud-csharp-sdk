@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The response message.</para>
+        /// <para>The returned message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -250,6 +250,16 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             [NameInMap("parentChunkId")]
             [Validation(Required=false)]
             public string ParentChunkId { get; set; }
+
+            /// <summary>
+            /// <para>The scalar columns of the structured knowledge base. The columns are returned by their original column names and are not used in retrieval.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{&quot;question&quot;:&quot;How do I reset it?&quot;,&quot;category&quot;:&quot;account&quot;}</para>
+            /// </summary>
+            [NameInMap("scalarFields")]
+            [Validation(Required=false)]
+            public object ScalarFields { get; set; }
 
             /// <summary>
             /// <para>The overall relevance score.</para>

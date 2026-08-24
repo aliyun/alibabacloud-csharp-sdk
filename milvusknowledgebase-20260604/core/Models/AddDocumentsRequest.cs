@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
 {
     public class AddDocumentsRequest : TeaModel {
+        /// <summary>
+        /// <para>The deduplication configuration.</para>
+        /// </summary>
         [NameInMap("Dedup")]
         [Validation(Required=false)]
         public AddDocumentsRequestDedup Dedup { get; set; }
         public class AddDocumentsRequestDedup : TeaModel {
             /// <summary>
+            /// <para>Specifies whether to enable content deduplication.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public bool? ContentDedup { get; set; }
 
             /// <summary>
+            /// <para>Specifies whether to enable document name deduplication.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -31,11 +38,16 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
 
         }
 
+        /// <summary>
+        /// <para>The list of documents.</para>
+        /// </summary>
         [NameInMap("Documents")]
         [Validation(Required=false)]
         public List<AddDocumentsRequestDocuments> Documents { get; set; }
         public class AddDocumentsRequestDocuments : TeaModel {
             /// <summary>
+            /// <para>The name of the document.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CHANGELOG.md</para>
             /// </summary>
@@ -44,7 +56,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>本地上传时为预签名上传使用的批次相对路径；不同 ImportType 下含义由导入类型定义。</para>
+            /// <para>The document path. This is the file name or relative path used during upload, which must be consistent with the pre-signed request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026_06_23_17_49_52WwGSUezpG2u2iHWxyYGzkf9KtormhkxN/CHANGELOG.md</para>
@@ -54,6 +66,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string Path { get; set; }
 
             /// <summary>
+            /// <para>The size of the file.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1024</para>
             /// </summary>
@@ -64,7 +78,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         }
 
         /// <summary>
-        /// <para>当前支持 LOCAL_UPLOAD；OSS_IMPORT 和 PUBLIC_URL 为后续导入方式预留。</para>
+        /// <para>The import type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LOCAL_UPLOAD</para>
@@ -74,6 +88,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string ImportType { get; set; }
 
         /// <summary>
+        /// <para>The ID of the knowledge base.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>kb-3bd02617e9be335f</para>
         /// </summary>
@@ -82,7 +98,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
-        /// <para>导入时批量设置到本批次所有知识数据的标签键值。Key 必须为知识库已定义标签字段；Value 支持 string、int64、float32、bool、list。</para>
+        /// <para>The batch label configuration. The key must be a label field defined in the knowledge base. The value supports string, int64, float32, bool, and list types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;department&quot;:&quot;legal&quot;,&quot;topics&quot;:[&quot;policy&quot;,&quot;contract&quot;],&quot;reviewed&quot;:true}</para>
@@ -92,6 +108,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public object MetaFields { get; set; }
 
         /// <summary>
+        /// <para>The ID of the processing strategy.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>kb-strategy-7043984ca395eabd</para>
         /// </summary>
@@ -99,11 +117,16 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         [Validation(Required=false)]
         public string StrategyId { get; set; }
 
+        /// <summary>
+        /// <para>Not supported. Ignore this parameter.</para>
+        /// </summary>
         [NameInMap("dingTalkConfiguration")]
         [Validation(Required=false)]
         public AddDocumentsRequestDingTalkConfiguration DingTalkConfiguration { get; set; }
         public class AddDocumentsRequestDingTalkConfiguration : TeaModel {
             /// <summary>
+            /// <para>Not supported. Ignore this parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ignore</para>
             /// </summary>
@@ -112,6 +135,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string AppId { get; set; }
 
             /// <summary>
+            /// <para>Not supported. Ignore this parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ignore</para>
             /// </summary>
@@ -120,6 +145,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string AppPassword { get; set; }
 
             /// <summary>
+            /// <para>Not supported. Ignore this parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ignore</para>
             /// </summary>
@@ -128,6 +155,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string DingDocMcpLink { get; set; }
 
             /// <summary>
+            /// <para>Not supported. Ignore this parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ignore</para>
             /// </summary>
@@ -136,6 +165,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string DingTableMcpLink { get; set; }
 
             /// <summary>
+            /// <para>Not supported. Ignore this parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ignore</para>
             /// </summary>
@@ -144,6 +175,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string KnowledgeId { get; set; }
 
             /// <summary>
+            /// <para>Not supported. Ignore this parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ignore</para>
             /// </summary>
@@ -152,6 +185,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string KnowledgeType { get; set; }
 
             /// <summary>
+            /// <para>Not supported. Ignore this parameter.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ignore</para>
             /// </summary>
@@ -160,6 +195,16 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string UserId { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>Defaults to root when omitted.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>root</para>
+        /// </summary>
+        [NameInMap("parentId")]
+        [Validation(Required=false)]
+        public string ParentId { get; set; }
 
     }
 

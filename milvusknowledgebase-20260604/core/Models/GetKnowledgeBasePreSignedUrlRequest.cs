@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
 {
     public class GetKnowledgeBasePreSignedUrlRequest : TeaModel {
+        /// <summary>
+        /// <para>The list of files to upload. You can specify 1 to 100 files.</para>
+        /// </summary>
         [NameInMap("Documents")]
         [Validation(Required=false)]
         public List<GetKnowledgeBasePreSignedUrlRequestDocuments> Documents { get; set; }
         public class GetKnowledgeBasePreSignedUrlRequestDocuments : TeaModel {
             /// <summary>
+            /// <para>The display name of the file. If not specified, the file name from Path is used.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CHANGELOG.md</para>
             /// </summary>
@@ -22,7 +27,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>本地上传时为预签名上传使用的批次相对路径；不同 ImportType 下含义由导入类型定义。</para>
+            /// <para>The file name or relative path for local upload scenarios. The value cannot start with <c>direct_upload/</c> or <c>uploaded/</c>, cannot contain empty segments, <c>.</c>, or <c>..</c>, and must be 1024 bytes or less.</para>
             /// 
             /// <b>Example:</b>
             /// <para>contract-2026.md</para>
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string Path { get; set; }
 
             /// <summary>
+            /// <para>The file size in bytes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1024</para>
             /// </summary>
@@ -42,6 +49,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         }
 
         /// <summary>
+        /// <para>The validity period of the pre-signed URL in seconds. Default value: <c>3600</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3600</para>
         /// </summary>
@@ -50,6 +59,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public int? ExpiresIn { get; set; }
 
         /// <summary>
+        /// <para>The knowledge base ID. Either this parameter or datasetId must be specified. This parameter takes priority.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>kb-3bd02617e9be335f</para>
         /// </summary>

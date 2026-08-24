@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The reranking model ID.</para>
+        /// <para>The rerank model ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public long? RerankModelId { get; set; }
 
         /// <summary>
-        /// <para>租户已开通的重排模型名称。同时填写 rerankModelId 时，本参数优先生效。</para>
+        /// <para>The name of the rerank model that the tenant has activated. If both rerankModelName and rerankModelId are specified, this parameter takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3-rerank</para>
