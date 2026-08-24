@@ -872,12 +872,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库 API Key</para>
+        /// <para>Creates a context database API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建 API Key（返回明文 apiKey）。</para>
+        /// <para>Creates an API key and returns the plaintext apiKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -927,12 +927,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库 API Key</para>
+        /// <para>Creates a context database API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建 API Key（返回明文 apiKey）。</para>
+        /// <para>Creates an API key and returns the plaintext apiKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -982,12 +982,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库 API Key</para>
+        /// <para>Creates a context database API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建 API Key（返回明文 apiKey）。</para>
+        /// <para>Creates an API key and returns the plaintext apiKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1005,12 +1005,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库 API Key</para>
+        /// <para>Creates a context database API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建 API Key（返回明文 apiKey）。</para>
+        /// <para>Creates an API key and returns the plaintext apiKey.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1028,12 +1028,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库成员</para>
+        /// <para>Creates a ContextDB member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</para>
+        /// <para>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1091,12 +1091,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库成员</para>
+        /// <para>Creates a ContextDB member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</para>
+        /// <para>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1154,12 +1154,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库成员</para>
+        /// <para>Creates a ContextDB member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</para>
+        /// <para>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1177,12 +1177,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库成员</para>
+        /// <para>Creates a ContextDB member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建成员；当 GenerateInitialKey=true 时同时签发首把 API Key，并在响应中返回明文 ApiKey（敏感字段，仅此一次返回，请妥善保存）。创建成功后可通过 List / Get 查询成员及其名下 API Key 的元数据。</para>
+        /// <para>Creates a member. When GenerateInitialKey is set to true, the first API key is issued at the same time, and the plaintext ApiKey is returned in the response. This is a sensitive field and is returned only once. Store it securely. After the member is created, you can use the List or Get operation to query the member and the metadata of the API keys under the member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1200,12 +1200,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库工作区</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1251,12 +1251,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库工作区</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1302,12 +1302,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库工作区</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1325,12 +1325,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建上下文数据库工作区</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>创建 workspace + 首位成员 + 首把 API Key 的一次性引导，返回明文 apiKey。</para>
+        /// <para>Creates a workspace, the first member, and the first API key in a one-time onboarding flow. Returns the plaintext API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1899,7 +1899,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateSandboxTemplateRequest
         /// </param>
         /// <param name="runtime">
@@ -1909,9 +1909,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <returns>
         /// CreateSandboxTemplateResponse
         /// </returns>
-        public CreateSandboxTemplateResponse CreateSandboxTemplateWithOptions(CreateSandboxTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public CreateSandboxTemplateResponse CreateSandboxTemplateWithOptions(CreateSandboxTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSandboxTemplateShrinkRequest request = new CreateSandboxTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCpu))
             {
@@ -1925,6 +1931,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                query["Image"] = request.Image;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -1936,6 +1946,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
             {
                 query["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
             {
@@ -1973,7 +1987,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// CreateSandboxTemplateRequest
         /// </param>
         /// <param name="runtime">
@@ -1983,9 +1997,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <returns>
         /// CreateSandboxTemplateResponse
         /// </returns>
-        public async Task<CreateSandboxTemplateResponse> CreateSandboxTemplateWithOptionsAsync(CreateSandboxTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<CreateSandboxTemplateResponse> CreateSandboxTemplateWithOptionsAsync(CreateSandboxTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSandboxTemplateShrinkRequest request = new CreateSandboxTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCpu))
             {
@@ -1999,6 +2019,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             {
                 query["Description"] = request.Description;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                query["Image"] = request.Image;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
                 query["InstanceName"] = request.InstanceName;
@@ -2010,6 +2034,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
             {
                 query["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateName))
             {
@@ -2848,12 +2876,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文数据库成员</para>
+        /// <para>Deletes a ContextDB member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除成员（硬删除，不可恢复）。</para>
+        /// <para>Deletes a member (hard delete, not recoverable).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2899,12 +2927,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文数据库成员</para>
+        /// <para>Deletes a ContextDB member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除成员（硬删除，不可恢复）。</para>
+        /// <para>Deletes a member (hard delete, not recoverable).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2950,12 +2978,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文数据库成员</para>
+        /// <para>Deletes a ContextDB member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除成员（硬删除，不可恢复）。</para>
+        /// <para>Deletes a member (hard delete, not recoverable).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2973,12 +3001,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文数据库成员</para>
+        /// <para>Deletes a ContextDB member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除成员（硬删除，不可恢复）。</para>
+        /// <para>Deletes a member (hard delete, not recoverable).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2996,12 +3024,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文数据库工作区</para>
+        /// <para>Deletes a ContextDB workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</para>
+        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3043,12 +3071,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文数据库工作区</para>
+        /// <para>Deletes a ContextDB workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</para>
+        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3090,12 +3118,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文数据库工作区</para>
+        /// <para>Deletes a ContextDB workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</para>
+        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3113,12 +3141,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除上下文数据库工作区</para>
+        /// <para>Deletes a ContextDB workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除业务空间（Workspace），硬删除、不可恢复。删除成功后本地元数据同步软删除，已删除的业务空间不再计入配额。</para>
+        /// <para>Deletes a workspace. This is a hard delete and cannot be recovered. After successful deletion, local metadata is soft-deleted synchronously. Deleted workspaces no longer count toward the quota.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6232,7 +6260,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
+        /// <para>Queries the list of sandbox templates available for creating a Supabase sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6310,7 +6338,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
+        /// <para>Queries the list of sandbox templates available for creating a Supabase sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6388,7 +6416,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
+        /// <para>Queries the list of sandbox templates available for creating a Supabase sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6414,7 +6442,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of sandbox templates used to create Supabase sandboxes.</para>
+        /// <para>Queries the list of sandbox templates available for creating a Supabase sandbox.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7104,6 +7132,110 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAvailableLLMModelsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取会话可选模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatModelResponse
+        /// </returns>
+        public GetChatModelResponse GetChatModelWithOptions(GetChatModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatModel",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatModelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取会话可选模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatModelRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatModelResponse
+        /// </returns>
+        public async Task<GetChatModelResponse> GetChatModelWithOptionsAsync(GetChatModelRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChatModel",
+                Version = "2025-05-07",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChatModelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取会话可选模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatModelResponse
+        /// </returns>
+        public GetChatModelResponse GetChatModel(GetChatModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetChatModelWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取会话可选模型</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChatModelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChatModelResponse
+        /// </returns>
+        public async Task<GetChatModelResponse> GetChatModelAsync(GetChatModelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetChatModelWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8504,12 +8636,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出成员名下 API Key</para>
+        /// <para>Lists the API keys for a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出指定成员名下的 API Key（不返回明文）。</para>
+        /// <para>Lists the API keys under a specified member. The plaintext key values are not returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8563,12 +8695,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出成员名下 API Key</para>
+        /// <para>Lists the API keys for a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出指定成员名下的 API Key（不返回明文）。</para>
+        /// <para>Lists the API keys under a specified member. The plaintext key values are not returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8622,12 +8754,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出成员名下 API Key</para>
+        /// <para>Lists the API keys for a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出指定成员名下的 API Key（不返回明文）。</para>
+        /// <para>Lists the API keys under a specified member. The plaintext key values are not returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8645,12 +8777,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出成员名下 API Key</para>
+        /// <para>Lists the API keys for a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出指定成员名下的 API Key（不返回明文）。</para>
+        /// <para>Lists the API keys under a specified member. The plaintext key values are not returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8668,12 +8800,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作区成员</para>
+        /// <para>Lists the members of a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</para>
+        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8723,12 +8855,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作区成员</para>
+        /// <para>Lists the members of a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</para>
+        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8778,12 +8910,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作区成员</para>
+        /// <para>Lists the members of a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</para>
+        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8801,12 +8933,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>列出工作区成员</para>
+        /// <para>Lists the members of a context database.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出指定业务空间下的全部成员，每个成员附带其名下 API Key 列表（不返回明文）。</para>
+        /// <para>Lists all members in a specified workspace. Each member includes a list of API keys associated with the member (plaintext values are not returned).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8824,12 +8956,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据workspaceId和状态过滤调用方账号下的工作区列表。</para>
+        /// <para>Lists ContextDB workspaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出上下文数据库工作空间</para>
+        /// <para>Lists ContextDB workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8883,12 +9015,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据workspaceId和状态过滤调用方账号下的工作区列表。</para>
+        /// <para>Lists ContextDB workspaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出上下文数据库工作空间</para>
+        /// <para>Lists ContextDB workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8942,12 +9074,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据workspaceId和状态过滤调用方账号下的工作区列表。</para>
+        /// <para>Lists ContextDB workspaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出上下文数据库工作空间</para>
+        /// <para>Lists ContextDB workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8965,12 +9097,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>根据workspaceId和状态过滤调用方账号下的工作区列表。</para>
+        /// <para>Lists ContextDB workspaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>列出上下文数据库工作空间</para>
+        /// <para>Lists ContextDB workspaces.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11343,7 +11475,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifySandboxTemplateRequest
         /// </param>
         /// <param name="runtime">
@@ -11353,9 +11485,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <returns>
         /// ModifySandboxTemplateResponse
         /// </returns>
-        public ModifySandboxTemplateResponse ModifySandboxTemplateWithOptions(ModifySandboxTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public ModifySandboxTemplateResponse ModifySandboxTemplateWithOptions(ModifySandboxTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifySandboxTemplateShrinkRequest request = new ModifySandboxTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCpu))
             {
@@ -11364,6 +11502,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultMemory))
             {
                 query["DefaultMemory"] = request.DefaultMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                query["Image"] = request.Image;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -11376,6 +11518,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
             {
                 query["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -11413,7 +11559,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <para><a href="https://help.aliyun.com/document_detail/2938735.html">RDS Supabase</a></para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// ModifySandboxTemplateRequest
         /// </param>
         /// <param name="runtime">
@@ -11423,9 +11569,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507
         /// <returns>
         /// ModifySandboxTemplateResponse
         /// </returns>
-        public async Task<ModifySandboxTemplateResponse> ModifySandboxTemplateWithOptionsAsync(ModifySandboxTemplateRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<ModifySandboxTemplateResponse> ModifySandboxTemplateWithOptionsAsync(ModifySandboxTemplateRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ModifySandboxTemplateShrinkRequest request = new ModifySandboxTemplateShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Tags))
+            {
+                request.TagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Tags, "Tags", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultCpu))
             {
@@ -11434,6 +11586,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DefaultMemory))
             {
                 query["DefaultMemory"] = request.DefaultMemory;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Image))
+            {
+                query["Image"] = request.Image;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceName))
             {
@@ -11446,6 +11602,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Replicas))
             {
                 query["Replicas"] = request.Replicas;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagsShrink))
+            {
+                query["Tags"] = request.TagsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -12720,12 +12880,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销上下文数据库 API Key</para>
+        /// <para>Revokes a context database API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>吊销 API Key。</para>
+        /// <para>Revokes an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12775,12 +12935,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销上下文数据库 API Key</para>
+        /// <para>Revokes a context database API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>吊销 API Key。</para>
+        /// <para>Revokes an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12830,12 +12990,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销上下文数据库 API Key</para>
+        /// <para>Revokes a context database API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>吊销 API Key。</para>
+        /// <para>Revokes an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12853,12 +13013,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>吊销上下文数据库 API Key</para>
+        /// <para>Revokes a context database API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>吊销 API Key。</para>
+        /// <para>Revokes an API key.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13384,12 +13544,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上下文数据库 API Key 元数据</para>
+        /// <para>Updates the display metadata of a ContextDB API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</para>
+        /// <para>Updates the display metadata of an API key. At least one of Name or Description must be specified. The plaintext key is not reissued.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13447,12 +13607,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上下文数据库 API Key 元数据</para>
+        /// <para>Updates the display metadata of a ContextDB API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</para>
+        /// <para>Updates the display metadata of an API key. At least one of Name or Description must be specified. The plaintext key is not reissued.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13510,12 +13670,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上下文数据库 API Key 元数据</para>
+        /// <para>Updates the display metadata of a ContextDB API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</para>
+        /// <para>Updates the display metadata of an API key. At least one of Name or Description must be specified. The plaintext key is not reissued.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13533,12 +13693,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上下文数据库 API Key 元数据</para>
+        /// <para>Updates the display metadata of a ContextDB API key.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新 API Key 的展示元数据。Name 与 Description 至少传其一；明文 Key 不重新签发。</para>
+        /// <para>Updates the display metadata of an API key. At least one of Name or Description must be specified. The plaintext key is not reissued.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13556,12 +13716,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上下文数据库成员</para>
+        /// <para>Updates a context database member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新成员的角色 / 状态。</para>
+        /// <para>Updates the role or status of a member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13615,12 +13775,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上下文数据库成员</para>
+        /// <para>Updates a context database member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新成员的角色 / 状态。</para>
+        /// <para>Updates the role or status of a member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13674,12 +13834,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上下文数据库成员</para>
+        /// <para>Updates a context database member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新成员的角色 / 状态。</para>
+        /// <para>Updates the role or status of a member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13697,12 +13857,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上下文数据库成员</para>
+        /// <para>Updates a context database member.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>更新成员的角色 / 状态。</para>
+        /// <para>Updates the role or status of a member.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13720,12 +13880,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文数据库工作区</para>
+        /// <para>Updates a ContextDB workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改 workspace 名称。</para>
+        /// <para>Modifies the name of a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13771,12 +13931,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文数据库工作区</para>
+        /// <para>Updates a ContextDB workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改 workspace 名称。</para>
+        /// <para>Modifies the name of a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13822,12 +13982,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文数据库工作区</para>
+        /// <para>Updates a ContextDB workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改 workspace 名称。</para>
+        /// <para>Modifies the name of a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -13845,12 +14005,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>修改上下文数据库工作区</para>
+        /// <para>Updates a ContextDB workspace.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>修改 workspace 名称。</para>
+        /// <para>Modifies the name of a workspace.</para>
         /// </description>
         /// 
         /// <param name="request">

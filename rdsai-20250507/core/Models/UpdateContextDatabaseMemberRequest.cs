@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class UpdateContextDatabaseMemberRequest : TeaModel {
         /// <summary>
+        /// <para>The member ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string MemberId { get; set; }
 
         /// <summary>
+        /// <para>The new role. Valid values: owner, admin, and member. If not specified, the current role is retained.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>admin</para>
         /// </summary>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Role { get; set; }
 
         /// <summary>
+        /// <para>The new status. Valid values: active, disabled, and deleted. If not specified, the current status is retained.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>disabled</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

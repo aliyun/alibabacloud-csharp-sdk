@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateContextDatabaseWorkspaceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The plaintext API key. This value is returned only once at creation time. The caller must persist it.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ctxdb-*****</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The name of the first API key. The value is fixed as default.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>default</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ApiKeyName { get; set; }
 
         /// <summary>
+        /// <para>The time when the workspace was created, in ISO 8601 format.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-05-28T17:59:55Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>The ID of the first member.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mb-cz51tnnp8****</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string MemberId { get; set; }
 
         /// <summary>
+        /// <para>The name of the first member.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-member</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string MemberName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The role of the first member. The value is fixed as owner.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>owner</para>
         /// </summary>
@@ -66,6 +80,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Role { get; set; }
 
         /// <summary>
+        /// <para>The workspace status. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Active: running normally.</description></item>
+        /// <item><description>Locked: locked due to overdue payment or expiration.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>Active</para>
         /// </summary>
@@ -74,6 +94,12 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Status { get; set; }
 
         /// <summary>
+        /// <para>The workspace type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>personal: individual account.</description></item>
+        /// <item><description>enterprise: enterprise account.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>personal</para>
         /// </summary>
@@ -82,6 +108,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Type { get; set; }
 
         /// <summary>
+        /// <para>The ID of the new workspace.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ws-as1llqmkol****</para>
         /// </summary>
@@ -90,6 +118,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string WorkspaceId { get; set; }
 
         /// <summary>
+        /// <para>The workspace name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-workspace</para>
         /// </summary>

@@ -39,6 +39,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        [NameInMap("Image")]
+        [Validation(Required=false)]
+        public string Image { get; set; }
+
         /// <summary>
         /// <para>The instance ID of the AI application.</para>
         /// <para>This parameter is required.</para>
@@ -69,6 +73,10 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("Replicas")]
         [Validation(Required=false)]
         public long? Replicas { get; set; }
+
+        [NameInMap("Tags")]
+        [Validation(Required=false)]
+        public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
         /// <para>The name of the sandbox template.</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListContextDatabaseMembersRequest : TeaModel {
         /// <summary>
+        /// <para>The maximum number of entries per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The pagination token.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(null)</para>
         /// </summary>
@@ -26,6 +30,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The workspace ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

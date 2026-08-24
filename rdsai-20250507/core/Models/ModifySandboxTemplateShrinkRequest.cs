@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
-    public class ModifySandboxTemplateRequest : TeaModel {
+    public class ModifySandboxTemplateShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The number of CPUs for sandboxes created from this template. Valid values: 1 to 4.</para>
         /// 
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 
         [NameInMap("Tags")]
         [Validation(Required=false)]
-        public Dictionary<string, string> Tags { get; set; }
+        public string TagsShrink { get; set; }
 
         /// <summary>
         /// <para>The sandbox template ID.</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class ListContextDatabaseMembersResponseBody : TeaModel {
         /// <summary>
+        /// <para>The maximum number of entries per page. This field is empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(null)</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The list of members.</para>
+        /// </summary>
         [NameInMap("Members")]
         [Validation(Required=false)]
         public List<ListContextDatabaseMembersResponseBodyMembers> Members { get; set; }
         public class ListContextDatabaseMembersResponseBodyMembers : TeaModel {
             /// <summary>
+            /// <para>The time when the member was created.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-05-28T17:59:55Z</para>
             /// </summary>
@@ -29,11 +36,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public string CreatedAt { get; set; }
 
+            /// <summary>
+            /// <para>The list of API keys.</para>
+            /// </summary>
             [NameInMap("Keys")]
             [Validation(Required=false)]
             public List<ListContextDatabaseMembersResponseBodyMembersKeys> Keys { get; set; }
             public class ListContextDatabaseMembersResponseBodyMembersKeys : TeaModel {
                 /// <summary>
+                /// <para>The time when the member was created.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2026-05-28T17:59:55Z</para>
                 /// </summary>
@@ -42,6 +54,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string CreatedAt { get; set; }
 
                 /// <summary>
+                /// <para>The API key description.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>data pipeline key</para>
                 /// </summary>
@@ -50,6 +64,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string Description { get; set; }
 
                 /// <summary>
+                /// <para>This field is empty.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>(null)</para>
                 /// </summary>
@@ -58,6 +74,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ExpiresAt { get; set; }
 
                 /// <summary>
+                /// <para>The suffix of the API key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>33631c</para>
                 /// </summary>
@@ -66,6 +84,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyDisplaySuffix { get; set; }
 
                 /// <summary>
+                /// <para>The key ID.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
                 /// </summary>
@@ -74,6 +94,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public long? KeyId { get; set; }
 
                 /// <summary>
+                /// <para>The prefix of the API key.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ctxdb-</para>
                 /// </summary>
@@ -82,6 +104,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyPrefix { get; set; }
 
                 /// <summary>
+                /// <para>The time when the key was last used. This field is populated after the key has been authenticated and used. This field is empty for keys that have never been used.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>2026-07-15T08:30:00Z</para>
                 /// </summary>
@@ -90,6 +114,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string LastUsedAt { get; set; }
 
                 /// <summary>
+                /// <para>The API key name.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>my-key</para>
                 /// </summary>
@@ -98,6 +124,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string Name { get; set; }
 
                 /// <summary>
+                /// <para>This field is empty.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>(null)</para>
                 /// </summary>
@@ -106,6 +134,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string RevokedAt { get; set; }
 
                 /// <summary>
+                /// <para>The API key status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>active</para>
                 /// </summary>
@@ -116,6 +146,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
+            /// <para>The member ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>mb-cz51tnnp8****</para>
             /// </summary>
@@ -124,6 +156,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string MemberId { get; set; }
 
             /// <summary>
+            /// <para>The member name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Alice</para>
             /// </summary>
@@ -132,6 +166,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string MemberName { get; set; }
 
             /// <summary>
+            /// <para>The member role.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>admin</para>
             /// </summary>
@@ -140,6 +176,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Role { get; set; }
 
             /// <summary>
+            /// <para>The member status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>active</para>
             /// </summary>
@@ -150,6 +188,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The pagination token for the next page. This field is empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(null)</para>
         /// </summary>
@@ -158,6 +198,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>

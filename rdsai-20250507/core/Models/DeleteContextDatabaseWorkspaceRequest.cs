@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DeleteContextDatabaseWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the target workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

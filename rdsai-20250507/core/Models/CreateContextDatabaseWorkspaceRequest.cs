@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class CreateContextDatabaseWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the first member.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string MemberName { get; set; }
 
         /// <summary>
+        /// <para>The workspace name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

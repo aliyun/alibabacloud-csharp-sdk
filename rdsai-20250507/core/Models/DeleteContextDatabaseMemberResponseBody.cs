@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DeleteContextDatabaseMemberResponseBody : TeaModel {
         /// <summary>
+        /// <para>The creation time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-05-28T17:59:55Z</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [Validation(Required=false)]
         public string CreatedAt { get; set; }
 
+        /// <summary>
+        /// <para>The API key details. An empty array is returned.</para>
+        /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public List<DeleteContextDatabaseMemberResponseBodyKeys> Keys { get; set; }
         public class DeleteContextDatabaseMemberResponseBodyKeys : TeaModel {
             /// <summary>
+            /// <para>The creation time. This field is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string CreatedAt { get; set; }
 
             /// <summary>
+            /// <para>The API key description. This field is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>This field is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ExpiresAt { get; set; }
 
             /// <summary>
+            /// <para>The API key suffix. This field is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string KeyDisplaySuffix { get; set; }
 
             /// <summary>
+            /// <para>The key ID. This field is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? KeyId { get; set; }
 
             /// <summary>
+            /// <para>The API key prefix. This field is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string KeyPrefix { get; set; }
 
             /// <summary>
+            /// <para>This field is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string LastUsedAt { get; set; }
 
             /// <summary>
+            /// <para>The API key name. This field is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>This field is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string RevokedAt { get; set; }
 
             /// <summary>
+            /// <para>The API key status. This field is empty.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>(null)</para>
             /// </summary>
@@ -104,6 +129,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         }
 
         /// <summary>
+        /// <para>The member ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mb-cz51tnnp8****</para>
         /// </summary>
@@ -112,6 +139,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string MemberId { get; set; }
 
         /// <summary>
+        /// <para>The member name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Alice</para>
         /// </summary>
@@ -120,6 +149,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string MemberName { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>
@@ -128,6 +159,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The member role.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>admin</para>
         /// </summary>
@@ -136,6 +169,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Role { get; set; }
 
         /// <summary>
+        /// <para>The member status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>deleted</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class UpdateContextDatabaseApiKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The time when the API key was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-05-28T17:59:55Z</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string CreatedAt { get; set; }
 
         /// <summary>
+        /// <para>The API key description.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>for nightly cron</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>A reserved field. This field is empty.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(null)</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string ExpiresAt { get; set; }
 
         /// <summary>
+        /// <para>The suffix of the API key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>33631c</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string KeyDisplaySuffix { get; set; }
 
         /// <summary>
+        /// <para>The key ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1024</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public long? KeyId { get; set; }
 
         /// <summary>
+        /// <para>The prefix of the API key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ctxdb-</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string KeyPrefix { get; set; }
 
         /// <summary>
+        /// <para>The time when the API key was last used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-06-01T08:30:12Z</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string LastUsedAt { get; set; }
 
         /// <summary>
+        /// <para>The API key name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-key</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329****</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The time when the API key was revoked.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>(null)</para>
         /// </summary>
@@ -90,6 +110,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RevokedAt { get; set; }
 
         /// <summary>
+        /// <para>The API key status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>active</para>
         /// </summary>
