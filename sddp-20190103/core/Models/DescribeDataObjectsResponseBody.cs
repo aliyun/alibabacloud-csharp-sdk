@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 {
     public class DescribeDataObjectsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the current page in a paged query. Settings the current page number for paging. Default value: <b>1</b>.</para>
+        /// <para>The page number of the current page in a paged query. Settings for paging. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,6 +34,16 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
         [NameInMap("HasPrevious")]
         [Validation(Required=false)]
         public bool? HasPrevious { get; set; }
+
+        /// <summary>
+        /// <para>The associate filter values used to return filtered values.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;linxiu&quot;,&quot;sddptest&quot;]</para>
+        /// </summary>
+        [NameInMap("HitValues")]
+        [Validation(Required=false)]
+        public List<string> HitValues { get; set; }
 
         /// <summary>
         /// <para>The list of data objects.</para>
@@ -194,7 +204,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? MemberAccount { get; set; }
 
             /// <summary>
-            /// <para>The list of data tags.</para>
+            /// <para>The list of data labels.</para>
             /// </summary>
             [NameInMap("ModelTags")]
             [Validation(Required=false)]
@@ -216,7 +226,12 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? Id { get; set; }
 
                 /// <summary>
-                /// <para>The data tag name. Valid values:</para>
+                /// <para>The data label name. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>Personal sensitive information.</b></description></item>
+                /// <item><description><b>Personal information.</b></description></item>
+                /// <item><description><b>General information.</b></description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Personal sensitive information</para>
@@ -248,7 +263,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public string ObjectFileCategory { get; set; }
 
             /// <summary>
-            /// <para>The data object type.</para>
+            /// <para>The object type of the data object.</para>
             /// 
             /// <b>Example:</b>
             /// <para>text type</para>
@@ -269,6 +284,20 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
 
             /// <summary>
             /// <para>The product name to which the data object belongs. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>MaxCompute</b></description></item>
+            /// <item><description><b>OSS</b></description></item>
+            /// <item><description><b>ADB-MYSQL</b></description></item>
+            /// <item><description><b>TableStore</b></description></item>
+            /// <item><description><b>RDS</b></description></item>
+            /// <item><description><b>SELF_DB</b></description></item>
+            /// <item><description><b>PolarDB-X</b></description></item>
+            /// <item><description><b>PolarDB</b></description></item>
+            /// <item><description><b>ADB-PG</b></description></item>
+            /// <item><description><b>OceanBase</b></description></item>
+            /// <item><description><b>MongoDB</b></description></item>
+            /// <item><description><b>Redis</b></description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RDS</para>
@@ -342,7 +371,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RiskLevelId { get; set; }
 
             /// <summary>
-            /// <para>The number of rules that are hit.</para>
+            /// <para>The number of matched rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -352,7 +381,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public int? RuleCount { get; set; }
 
             /// <summary>
-            /// <para>The list of detection models that are hit.</para>
+            /// <para>The list of matched detection models.</para>
             /// </summary>
             [NameInMap("RuleList")]
             [Validation(Required=false)]
@@ -360,6 +389,13 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public class DescribeDataObjectsResponseBodyItemsRuleList : TeaModel {
                 /// <summary>
                 /// <para>The risk level ID of the sensitive data detection rule. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>1</b>: N/A. No sensitive data is detected.</description></item>
+                /// <item><description><b>2</b>: S1. Level 1 sensitive data.</description></item>
+                /// <item><description><b>3</b>: S2. Level 2 sensitive data.</description></item>
+                /// <item><description><b>4</b>: S3. Level 3 sensitive data.</description></item>
+                /// <item><description><b>5</b>: S4. Level 4 sensitive data.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -372,10 +408,10 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 /// <para>The risk level name of the data asset table. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>N/A</b>: No sensitive data is detected.</description></item>
-                /// <item><description><b>S1</b>: Level-1 sensitive data.</description></item>
-                /// <item><description><b>S2</b>: Level-2 sensitive data.</description></item>
-                /// <item><description><b>S3</b>: Level-3 sensitive data.</description></item>
-                /// <item><description><b>S4</b>: Level-4 sensitive data.</description></item>
+                /// <item><description><b>S1</b>: Level 1 sensitive data.</description></item>
+                /// <item><description><b>S2</b>: Level 2 sensitive data.</description></item>
+                /// <item><description><b>S3</b>: Level 3 sensitive data.</description></item>
+                /// <item><description><b>S4</b>: Level 4 sensitive data.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -396,7 +432,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public string RuleCategoryNameList { get; set; }
 
                 /// <summary>
-                /// <para>The number of detection models that are hit.</para>
+                /// <para>The number of matched detection models.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>590</para>
@@ -406,7 +442,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public int? RuleCount { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the detection model.</para>
+                /// <para>The detection model ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1080</para>
@@ -416,7 +452,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
                 public long? RuleId { get; set; }
 
                 /// <summary>
-                /// <para>The name of the detection model.</para>
+                /// <para>The detection model name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
@@ -458,7 +494,7 @@ namespace AlibabaCloud.SDK.Sddp20190103.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>An array that consists of the number of rules hit for each sensitivity level, in the format &quot;S1,S2,S3,S4,S5,S6,S7,S8,S9,S10&quot;, where S1 represents the number of rules hit at sensitivity level S1.</para>
+            /// <para>The array that consists of the number of rules matched at each sensitivity level, in the format &quot;S1,S2,S3,S4,S5,S6,S7,S8,S9,S10&quot;, where S1 represents the number of rules matched at sensitivity level S1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1,2,3,0,0,0,0,5,0,0</para>

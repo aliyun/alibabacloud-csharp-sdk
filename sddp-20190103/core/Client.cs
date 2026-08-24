@@ -4461,9 +4461,9 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</para>
+        /// <para>Queries the detection results of data tables and files, allowing you to view asset data detection results from a global perspective.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4512,6 +4512,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["EngineType"] = request.EngineType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacetType))
+            {
+                query["FacetType"] = request.FacetType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureType))
             {
                 query["FeatureType"] = request.FeatureType;
@@ -4527,6 +4531,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRevision))
+            {
+                query["IsRevision"] = request.IsRevision;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -4638,9 +4646,9 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</para>
+        /// <para>Queries the detection results of data tables and files, allowing you to view asset data detection results from a global perspective.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4689,6 +4697,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             {
                 query["EngineType"] = request.EngineType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FacetType))
+            {
+                query["FacetType"] = request.FacetType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureType))
             {
                 query["FeatureType"] = request.FeatureType;
@@ -4704,6 +4716,10 @@ namespace AlibabaCloud.SDK.Sddp20190103
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsRevision))
+            {
+                query["IsRevision"] = request.IsRevision;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
@@ -4815,9 +4831,9 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</para>
+        /// <para>Queries the detection results of data tables and files, allowing you to view asset data detection results from a global perspective.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4840,9 +4856,9 @@ namespace AlibabaCloud.SDK.Sddp20190103
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the detection results of data tables and files. This allows you to query data detection results of assets from a global perspective.</para>
+        /// <para>Queries the detection results of data tables and files, allowing you to view asset data detection results from a global perspective.</para>
         /// <h2>QPS limit</h2>
-        /// <para>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation at an appropriate frequency.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API call is throttled, which may affect your business. Call this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
