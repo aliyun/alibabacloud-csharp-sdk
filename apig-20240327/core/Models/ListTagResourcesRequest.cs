@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListTagResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The token for the next query start position.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeb235b-xxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The resource ID. You can specify up to 50 subkeys.</para>
+        /// <para>The resource ID. Up to 50 subkeys are supported. At least one of ResourceId and Tag must be provided. If both are empty, the API returns InvalidParameter.BothEmpty (400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;gw-xxx&quot;,&quot;gw-yyy&quot;]</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The list of labels to add. You can specify up to 20 subkeys.</para>
+        /// <para>The label list. Up to 20 subkeys are supported. At least one of ResourceId and Tag must be provided. If both are empty, the API returns InvalidParameter.BothEmpty (400).</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;key&quot;:&quot;env&quot;,&quot;value&quot;:&quot;prod&quot;}]</para>

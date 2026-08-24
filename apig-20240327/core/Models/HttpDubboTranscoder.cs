@@ -9,47 +9,71 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpDubboTranscoder : TeaModel {
+        /// <summary>
+        /// <para>The Dubbo service group.</para>
+        /// </summary>
         [NameInMap("dubboServiceGroup")]
         [Validation(Required=false)]
         public string DubboServiceGroup { get; set; }
 
+        /// <summary>
+        /// <para>The Dubbo service name.</para>
+        /// </summary>
         [NameInMap("dubboServiceName")]
         [Validation(Required=false)]
         public string DubboServiceName { get; set; }
 
+        /// <summary>
+        /// <para>The Dubbo service version.</para>
+        /// </summary>
         [NameInMap("dubboServiceVersion")]
         [Validation(Required=false)]
         public string DubboServiceVersion { get; set; }
 
-        [NameInMap("mothedMapList")]
+        /// <summary>
+        /// <para>The method mapping list.</para>
+        /// </summary>
+        [NameInMap("methodMapList")]
         [Validation(Required=false)]
-        public List<HttpDubboTranscoderMothedMapList> MothedMapList { get; set; }
-        public class HttpDubboTranscoderMothedMapList : TeaModel {
-            [NameInMap("dubboMothedName")]
+        public List<HttpDubboTranscoderMethodMapList> MethodMapList { get; set; }
+        public class HttpDubboTranscoderMethodMapList : TeaModel {
+            /// <summary>
+            /// <para>The Dubbo method name.</para>
+            /// </summary>
+            [NameInMap("dubboMethodName")]
             [Validation(Required=false)]
-            public string DubboMothedName { get; set; }
+            public string DubboMethodName { get; set; }
 
             /// <summary>
+            /// <para>The HTTP method. Valid values: ALL_GET. ALL_POST. ALL_PUT. ALL_DELETE. ALL_PATCH.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ALL_GET</para>
             /// </summary>
-            [NameInMap("httpMothed")]
+            [NameInMap("httpMethod")]
             [Validation(Required=false)]
-            public string HttpMothed { get; set; }
+            public string HttpMethod { get; set; }
 
             /// <summary>
+            /// <para>The method matching path.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>/mytestzbk/sayhello</para>
             /// </summary>
-            [NameInMap("mothedpath")]
+            [NameInMap("methodPath")]
             [Validation(Required=false)]
-            public string Mothedpath { get; set; }
+            public string MethodPath { get; set; }
 
+            /// <summary>
+            /// <para>The parameter mapping list.</para>
+            /// </summary>
             [NameInMap("paramMapsList")]
             [Validation(Required=false)]
-            public List<HttpDubboTranscoderMothedMapListParamMapsList> ParamMapsList { get; set; }
-            public class HttpDubboTranscoderMothedMapListParamMapsList : TeaModel {
+            public List<HttpDubboTranscoderMethodMapListParamMapsList> ParamMapsList { get; set; }
+            public class HttpDubboTranscoderMethodMapListParamMapsList : TeaModel {
                 /// <summary>
+                /// <para>The key used to extract the input parameter.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>name</para>
                 /// </summary>
@@ -58,6 +82,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExtractKey { get; set; }
 
                 /// <summary>
+                /// <para>The input parameter location. Valid values: ALL_QUERY_PARAMETER: request parameter. ALL_HEADER: request header. ALL_PATH: URI of the request. ALL_BODY: request body.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>ALL_QUERY_PARAMETER</para>
                 /// </summary>
@@ -66,6 +92,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ExtractKeySpec { get; set; }
 
                 /// <summary>
+                /// <para>The backend parameter type.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>java.lang.String</para>
                 /// </summary>
@@ -76,6 +104,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
+            /// <para>The header pass-through type. Valid values: PASS_ALL: passes through all headers. PASS_NOT: does not pass through any headers. PASS_ASSIGN: passes through specified headers.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PASS_NOT</para>
             /// </summary>
@@ -83,6 +113,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [Validation(Required=false)]
             public string PassThroughAllHeaders { get; set; }
 
+            /// <summary>
+            /// <para>The list of specified pass-through headers.</para>
+            /// </summary>
             [NameInMap("passThroughList")]
             [Validation(Required=false)]
             public List<string> PassThroughList { get; set; }

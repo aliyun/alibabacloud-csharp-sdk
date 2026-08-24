@@ -21371,7 +21371,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the route of an HTTP API.</para>
+        /// <para>Updates a route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21441,7 +21441,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the route of an HTTP API.</para>
+        /// <para>Updates a route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21511,7 +21511,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the route of an HTTP API.</para>
+        /// <para>Updates a route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21530,7 +21530,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the route of an HTTP API.</para>
+        /// <para>Updates a route of an HTTP API.</para>
         /// </summary>
         /// 
         /// <param name="request">

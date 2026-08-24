@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <list type="bullet">
         /// <item><description><para>Professional: standard instance.</para>
         /// </description></item>
-        /// <item><description><para>Serverless: Serverless instance.</para>
+        /// <item><description><para>Serverless: Serverless.</para>
         /// </description></item>
-        /// <item><description><para>MultiTenantServerless: multi-tenant Serverless instance.</para>
+        /// <item><description><para>MultiTenantServerless: multi-tenant Serverless.</para>
         /// </description></item>
         /// <item><description><para>Unknown: unknown.</para>
         /// </description></item>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string GatewayEdition { get; set; }
 
         /// <summary>
-        /// <para>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. Only allowed when the gateway type is AI and the edition is MultiTenantServerless.</para>
+        /// <para>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter can be specified only when gatewayType is AI and gatewayEdition is MultiTenantServerless.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ENTERPRISE</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public CreateGatewayRequestLogConfigSls Sls { get; set; }
             public class CreateGatewayRequestLogConfigSls : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable log collection.</para>
+                /// <para>Specifies whether to enable SLS log collection.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>false</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The node specifications. Required for the Serverless edition.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>apigw.dev.x2</para>
+        /// <para>apigw.dev.x1</para>
         /// </summary>
         [NameInMap("spec")]
         [Validation(Required=false)]
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string VSwitchId { get; set; }
 
             /// <summary>
-            /// <para>The list of supported zones.</para>
+            /// <para>The list of supported zones. At least two zones are required.</para>
             /// </summary>
             [NameInMap("zones")]
             [Validation(Required=false)]
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <para>The zone ID.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>cn-wulanchabu-a</para>
+                /// <para>cn-hangzhou-j</para>
                 /// </summary>
                 [NameInMap("zoneId")]
                 [Validation(Required=false)]

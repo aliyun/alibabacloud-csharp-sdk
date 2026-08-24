@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class ListTagResourcesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token for the next query. An empty NextToken indicates that no more results exist.</para>
+        /// <para>The token for the next query start position. An empty NextToken indicates that there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeb235b-xxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of resources.</para>
+        /// <para>The resources.</para>
         /// </summary>
         [NameInMap("TagResources")]
         [Validation(Required=false)]

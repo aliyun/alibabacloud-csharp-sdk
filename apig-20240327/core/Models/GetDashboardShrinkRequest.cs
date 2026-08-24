@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese</description></item>
-        /// <item><description>en: English</description></item>
+        /// <item><description>zh: Chinese.</description></item>
+        /// <item><description>en: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -43,8 +43,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The dashboard name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LOG: access log</description></item>
-        /// <item><description>PLUGIN: plug-in log</description></item>
+        /// <item><description>LOG: access log.</description></item>
+        /// <item><description>PLUGIN: plugin log.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The plug-in type ID.</para>
+        /// <para>The plugin type ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pls-dn82a9djd8z****</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginClassId { get; set; }
 
         /// <summary>
-        /// <para>The plug-in ID.</para>
+        /// <para>The plugin ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>inner-ai-search-cvd3mcum1hks660icn10</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The dashboard source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SLS: log dashboard</description></item>
+        /// <item><description>SLS: log dashboard.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

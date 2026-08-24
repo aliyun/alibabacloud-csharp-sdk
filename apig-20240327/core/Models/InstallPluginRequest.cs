@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class InstallPluginRequest : TeaModel {
         /// <summary>
-        /// <para>The list of gateway IDs.</para>
+        /// <para>The list of gateway IDs. This parameter is required. If this parameter is not specified, the service returns InvalidParameter.IsEmpty. This field must be included in the body object.</para>
         /// </summary>
         [NameInMap("gatewayIds")]
         [Validation(Required=false)]
         public List<string> GatewayIds { get; set; }
 
         /// <summary>
-        /// <para>The plug-in type ID.</para>
+        /// <para>The plug-in type ID. This parameter is required. If this parameter is not specified, the service returns InvalidParameter.IsEmpty. This field must be included in the body object.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pls-csqmjndlhtguk0loef21</para>
