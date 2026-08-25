@@ -4884,6 +4884,530 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a software distribution task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a task is created, its initial status is disabled.</description></item>
+        /// <item><description>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</description></item>
+        /// <item><description>SupportOs supports only a single operating system value.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSoftwarelibDistributeTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSoftwarelibDistributeTaskResponse
+        /// </returns>
+        public CreateSoftwarelibDistributeTaskResponse CreateSoftwarelibDistributeTaskWithOptions(CreateSoftwarelibDistributeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTags))
+            {
+                bodyFlat["DevTags"] = request.DevTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceGroupIds))
+            {
+                bodyFlat["DeviceGroupIds"] = request.DeviceGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteMode))
+            {
+                body["ExecuteMode"] = request.ExecuteMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteParameters))
+            {
+                body["ExecuteParameters"] = request.ExecuteParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutePeriod))
+            {
+                body["ExecutePeriod"] = request.ExecutePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireMode))
+            {
+                body["ExpireMode"] = request.ExpireMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtExpired))
+            {
+                body["GmtExpired"] = request.GmtExpired;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryTimes))
+            {
+                body["RetryTimes"] = request.RetryTimes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunAsAccount))
+            {
+                body["RunAsAccount"] = request.RunAsAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareId))
+            {
+                body["SoftwareId"] = request.SoftwareId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareName))
+            {
+                body["SoftwareName"] = request.SoftwareName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportOs))
+            {
+                body["SupportOs"] = request.SupportOs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                body["Timeout"] = request.Timeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSoftwarelibDistributeTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSoftwarelibDistributeTaskResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a software distribution task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a task is created, its initial status is disabled.</description></item>
+        /// <item><description>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</description></item>
+        /// <item><description>SupportOs supports only a single operating system value.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSoftwarelibDistributeTaskRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSoftwarelibDistributeTaskResponse
+        /// </returns>
+        public async Task<CreateSoftwarelibDistributeTaskResponse> CreateSoftwarelibDistributeTaskWithOptionsAsync(CreateSoftwarelibDistributeTaskRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DevTags))
+            {
+                bodyFlat["DevTags"] = request.DevTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeviceGroupIds))
+            {
+                bodyFlat["DeviceGroupIds"] = request.DeviceGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteMode))
+            {
+                body["ExecuteMode"] = request.ExecuteMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteParameters))
+            {
+                body["ExecuteParameters"] = request.ExecuteParameters;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecutePeriod))
+            {
+                body["ExecutePeriod"] = request.ExecutePeriod;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExpireMode))
+            {
+                body["ExpireMode"] = request.ExpireMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GmtExpired))
+            {
+                body["GmtExpired"] = request.GmtExpired;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MatchMode))
+            {
+                body["MatchMode"] = request.MatchMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryTimes))
+            {
+                body["RetryTimes"] = request.RetryTimes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunAsAccount))
+            {
+                body["RunAsAccount"] = request.RunAsAccount;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareId))
+            {
+                body["SoftwareId"] = request.SoftwareId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareName))
+            {
+                body["SoftwareName"] = request.SoftwareName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportOs))
+            {
+                body["SupportOs"] = request.SupportOs;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskType))
+            {
+                body["TaskType"] = request.TaskType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timeout))
+            {
+                body["Timeout"] = request.Timeout;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIds))
+            {
+                bodyFlat["UserGroupIds"] = request.UserGroupIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionId))
+            {
+                body["VersionId"] = request.VersionId;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSoftwarelibDistributeTask",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSoftwarelibDistributeTaskResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a software distribution task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a task is created, its initial status is disabled.</description></item>
+        /// <item><description>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</description></item>
+        /// <item><description>SupportOs supports only a single operating system value.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSoftwarelibDistributeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSoftwarelibDistributeTaskResponse
+        /// </returns>
+        public CreateSoftwarelibDistributeTaskResponse CreateSoftwarelibDistributeTask(CreateSoftwarelibDistributeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSoftwarelibDistributeTaskWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a software distribution task.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>After a task is created, its initial status is disabled.</description></item>
+        /// <item><description>MatchMode determines how to specify the matching target parameters: when set to UserGroupNormal, you must pass only UserGroupIds. When set to DeviceGroupNormal, you must pass only DeviceGroupIds. When set to DevTagNormal, you must pass only DevTags. Requests that contain parameters not matching the MatchMode value are rejected.</description></item>
+        /// <item><description>SupportOs supports only a single operating system value.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSoftwarelibDistributeTaskRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSoftwarelibDistributeTaskResponse
+        /// </returns>
+        public async Task<CreateSoftwarelibDistributeTaskResponse> CreateSoftwarelibDistributeTaskAsync(CreateSoftwarelibDistributeTaskRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSoftwarelibDistributeTaskWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a software version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Within the same software, the combination of operating system and version number must be unique. If a duplicate is created, a ResourceDuplicated error is returned.</description></item>
+        /// <item><description>A newly created version has an initial publish status of unpublished.</description></item>
+        /// <item><description>A newly created version has the highest priority. The priorities of other versions under the same software are shifted down accordingly.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSoftwarelibVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSoftwarelibVersionResponse
+        /// </returns>
+        public CreateSoftwarelibVersionResponse CreateSoftwarelibVersionWithOptions(CreateSoftwarelibVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Md5))
+            {
+                body["Md5"] = request.Md5;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Os))
+            {
+                body["Os"] = request.Os;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublisherType))
+            {
+                body["PublisherType"] = request.PublisherType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareId))
+            {
+                body["SoftwareId"] = request.SoftwareId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareName))
+            {
+                body["SoftwareName"] = request.SoftwareName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwarePkgName))
+            {
+                body["SoftwarePkgName"] = request.SoftwarePkgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwarePkgSize))
+            {
+                body["SoftwarePkgSize"] = request.SoftwarePkgSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareUrl))
+            {
+                body["SoftwareUrl"] = request.SoftwareUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareVersion))
+            {
+                body["SoftwareVersion"] = request.SoftwareVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSoftwarelibVersion",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSoftwarelibVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a software version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Within the same software, the combination of operating system and version number must be unique. If a duplicate is created, a ResourceDuplicated error is returned.</description></item>
+        /// <item><description>A newly created version has an initial publish status of unpublished.</description></item>
+        /// <item><description>A newly created version has the highest priority. The priorities of other versions under the same software are shifted down accordingly.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSoftwarelibVersionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSoftwarelibVersionResponse
+        /// </returns>
+        public async Task<CreateSoftwarelibVersionResponse> CreateSoftwarelibVersionWithOptionsAsync(CreateSoftwarelibVersionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Md5))
+            {
+                body["Md5"] = request.Md5;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Os))
+            {
+                body["Os"] = request.Os;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublisherType))
+            {
+                body["PublisherType"] = request.PublisherType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareId))
+            {
+                body["SoftwareId"] = request.SoftwareId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareName))
+            {
+                body["SoftwareName"] = request.SoftwareName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwarePkgName))
+            {
+                body["SoftwarePkgName"] = request.SoftwarePkgName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwarePkgSize))
+            {
+                body["SoftwarePkgSize"] = request.SoftwarePkgSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareUrl))
+            {
+                body["SoftwareUrl"] = request.SoftwareUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareVersion))
+            {
+                body["SoftwareVersion"] = request.SoftwareVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSoftwarelibVersion",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSoftwarelibVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a software version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Within the same software, the combination of operating system and version number must be unique. If a duplicate is created, a ResourceDuplicated error is returned.</description></item>
+        /// <item><description>A newly created version has an initial publish status of unpublished.</description></item>
+        /// <item><description>A newly created version has the highest priority. The priorities of other versions under the same software are shifted down accordingly.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSoftwarelibVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSoftwarelibVersionResponse
+        /// </returns>
+        public CreateSoftwarelibVersionResponse CreateSoftwarelibVersion(CreateSoftwarelibVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSoftwarelibVersionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a software version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Within the same software, the combination of operating system and version number must be unique. If a duplicate is created, a ResourceDuplicated error is returned.</description></item>
+        /// <item><description>A newly created version has an initial publish status of unpublished.</description></item>
+        /// <item><description>A newly created version has the highest priority. The priorities of other versions under the same software are shifted down accordingly.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSoftwarelibVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSoftwarelibVersionResponse
+        /// </returns>
+        public async Task<CreateSoftwarelibVersionResponse> CreateSoftwarelibVersionAsync(CreateSoftwarelibVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSoftwarelibVersionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a user group for your Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -17716,6 +18240,234 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries administrator operation audit logs in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</description></item>
+        /// <item><description>If OperationStatus is not specified, only successful operation records are returned.</description></item>
+        /// <item><description>Results are sorted by operation time in descending order.</description></item>
+        /// <item><description>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</description></item>
+        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperationAuditLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationAuditLogsResponse
+        /// </returns>
+        public ListOperationAuditLogsResponse ListOperationAuditLogsWithOptions(ListOperationAuditLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationFunc))
+            {
+                query["OperationFunc"] = request.OperationFunc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationStatus))
+            {
+                query["OperationStatus"] = request.OperationStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
+            {
+                query["OperationType"] = request.OperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorId))
+            {
+                query["OperatorId"] = request.OperatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOperationAuditLogs",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOperationAuditLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries administrator operation audit logs in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</description></item>
+        /// <item><description>If OperationStatus is not specified, only successful operation records are returned.</description></item>
+        /// <item><description>Results are sorted by operation time in descending order.</description></item>
+        /// <item><description>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</description></item>
+        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperationAuditLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationAuditLogsResponse
+        /// </returns>
+        public async Task<ListOperationAuditLogsResponse> ListOperationAuditLogsWithOptionsAsync(ListOperationAuditLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
+            {
+                query["EventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationFunc))
+            {
+                query["OperationFunc"] = request.OperationFunc;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationStatus))
+            {
+                query["OperationStatus"] = request.OperationStatus;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperationType))
+            {
+                query["OperationType"] = request.OperationType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatorId))
+            {
+                query["OperatorId"] = request.OperatorId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListOperationAuditLogs",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListOperationAuditLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries administrator operation audit logs in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</description></item>
+        /// <item><description>If OperationStatus is not specified, only successful operation records are returned.</description></item>
+        /// <item><description>Results are sorted by operation time in descending order.</description></item>
+        /// <item><description>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</description></item>
+        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperationAuditLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationAuditLogsResponse
+        /// </returns>
+        public ListOperationAuditLogsResponse ListOperationAuditLogs(ListOperationAuditLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListOperationAuditLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries administrator operation audit logs in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>StartTime and EndTime are UNIX timestamps in seconds. StartTime must be earlier than EndTime. The interval between them cannot exceed 30 days, and StartTime cannot be more than 31 days before the current time.</description></item>
+        /// <item><description>If OperationStatus is not specified, only successful operation records are returned.</description></item>
+        /// <item><description>Results are sorted by operation time in descending order.</description></item>
+        /// <item><description>The return values of OperationFunc, OperationPage, and OperationType are localized based on the request language.</description></item>
+        /// <item><description>The values of filter parameters cannot contain single quotation marks (\&quot;), double quotation marks (&quot;), or backslashes (\\). Otherwise, an InvalidParameter error is returned.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListOperationAuditLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListOperationAuditLogsResponse
+        /// </returns>
+        public async Task<ListOperationAuditLogsResponse> ListOperationAuditLogsAsync(ListOperationAuditLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListOperationAuditLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries policies for private access applications in your Alibaba Cloud account in batches.</para>
         /// </summary>
         /// 
@@ -19916,6 +20668,218 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries software in the software library in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</description></item>
+        /// <item><description>SoftwareName supports fuzzy match.</description></item>
+        /// <item><description>The Versions field (software version list) is not returned in the response. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSoftwarelibSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSoftwarelibSoftwareResponse
+        /// </returns>
+        public ListSoftwarelibSoftwareResponse ListSoftwarelibSoftwareWithOptions(ListSoftwarelibSoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClassifyId))
+            {
+                query["ClassifyId"] = request.ClassifyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Os))
+            {
+                query["Os"] = request.Os;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareName))
+            {
+                query["SoftwareName"] = request.SoftwareName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSoftwarelibSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSoftwarelibSoftwareResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries software in the software library in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</description></item>
+        /// <item><description>SoftwareName supports fuzzy match.</description></item>
+        /// <item><description>The Versions field (software version list) is not returned in the response. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSoftwarelibSoftwareRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSoftwarelibSoftwareResponse
+        /// </returns>
+        public async Task<ListSoftwarelibSoftwareResponse> ListSoftwarelibSoftwareWithOptionsAsync(ListSoftwarelibSoftwareRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClassifyId))
+            {
+                query["ClassifyId"] = request.ClassifyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Os))
+            {
+                query["Os"] = request.Os;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SoftwareName))
+            {
+                query["SoftwareName"] = request.SoftwareName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSoftwarelibSoftware",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSoftwarelibSoftwareResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries software in the software library in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</description></item>
+        /// <item><description>SoftwareName supports fuzzy match.</description></item>
+        /// <item><description>The Versions field (software version list) is not returned in the response. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSoftwarelibSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSoftwarelibSoftwareResponse
+        /// </returns>
+        public ListSoftwarelibSoftwareResponse ListSoftwarelibSoftware(ListSoftwarelibSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSoftwarelibSoftwareWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries software in the software library in batches.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <list type="bullet">
+        /// <item><description>Use CurrentPage and PageSize for pagination. NextToken and MaxResults do not take effect.</description></item>
+        /// <item><description>SoftwareName supports fuzzy match.</description></item>
+        /// <item><description>The Versions field (software version list) is not returned in the response. To query software versions, call <a href="~~ListSoftwarelibVersion~~">ListSoftwarelibVersion</a>.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSoftwarelibSoftwareRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSoftwarelibSoftwareResponse
+        /// </returns>
+        public async Task<ListSoftwarelibSoftwareResponse> ListSoftwarelibSoftwareAsync(ListSoftwarelibSoftwareRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSoftwarelibSoftwareWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Batch query tags for private network access applications under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -21572,7 +22536,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务的状态</para>
+        /// <para>Queries the execution progress of specified virus scan tasks on user terminal devices in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21610,7 +22574,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务的状态</para>
+        /// <para>Queries the execution progress of specified virus scan tasks on user terminal devices in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21648,7 +22612,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务的状态</para>
+        /// <para>Queries the execution progress of specified virus scan tasks on user terminal devices in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21666,7 +22630,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务的状态</para>
+        /// <para>Queries the execution progress of specified virus scan tasks on user terminal devices in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21684,7 +22648,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务统计数据</para>
+        /// <para>Queries the detection result statistics of specified virus scan tasks in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21722,7 +22686,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务统计数据</para>
+        /// <para>Queries the detection result statistics of specified virus scan tasks in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21760,7 +22724,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务统计数据</para>
+        /// <para>Queries the detection result statistics of specified virus scan tasks in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21778,7 +22742,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务统计数据</para>
+        /// <para>Queries the detection result statistics of specified virus scan tasks in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21796,7 +22760,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务</para>
+        /// <para>Queries instant virus scan tasks under the current Alibaba Cloud account by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21834,7 +22798,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务</para>
+        /// <para>Queries instant virus scan tasks under the current Alibaba Cloud account by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21872,7 +22836,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务</para>
+        /// <para>Queries instant virus scan tasks under the current Alibaba Cloud account by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21890,7 +22854,7 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>批量查询病毒扫描任务</para>
+        /// <para>Queries instant virus scan tasks under the current Alibaba Cloud account by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">

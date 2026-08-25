@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListVirusScanTaskStatusesRequest : TeaModel {
         /// <summary>
+        /// <para>The collection of virus scan task IDs. The collection must contain at least one ID, and duplicate IDs are not allowed.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("TaskIds")]
