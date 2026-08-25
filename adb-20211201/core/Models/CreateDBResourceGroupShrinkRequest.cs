@@ -9,12 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateDBResourceGroupShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The PromQL resource group configuration.</para>
+        /// </summary>
         [NameInMap("AtmConfig")]
         [Validation(Required=false)]
         public string AtmConfigShrink { get; set; }
 
         /// <summary>
-        /// <para>The automatic stop interval. Unit: minutes (m).</para>
+        /// <para>The automatic stop interval, in minutes (m).</para>
         /// 
         /// <b>Example:</b>
         /// <para>5m</para>
@@ -64,7 +67,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ClusterSizeResource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
+        /// <para>The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -140,7 +143,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <list type="bullet">
         /// <item><description><b>Interactive</b></description></item>
         /// <item><description><b>Job</b><remarks>
-        /// <para>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</para>
+        /// <para>For more information about resource groups of the Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -166,10 +169,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? MaxClusterCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum amount of reserved computing resources. Unit: ACUs.</para>
+        /// <para>The maximum reserved computing resources, in ACUs.</para>
         /// <list type="bullet">
-        /// <item><description>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 16 ACUs.</description></item>
-        /// <item><description>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 8 ACUs.</description></item>
+        /// <item><description>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 16 ACUs.</description></item>
+        /// <item><description>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 8 ACUs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -202,7 +205,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? MinClusterCount { get; set; }
 
         /// <summary>
-        /// <para>The minimum amount of reserved computing resources. Unit: ACUs.</para>
+        /// <para>The minimum reserved computing resources, in ACUs.</para>
         /// <list type="bullet">
         /// <item><description>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACUs.</description></item>
         /// <item><description>If the resource group type is Job, the minimum reserved computing resources is 0 ACUs.</description></item>
@@ -226,7 +229,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? MinGpuQuantity { get; set; }
 
         /// <summary>
-        /// <para>The Ray configuration.</para>
+        /// <para>The Ray configuration information.</para>
         /// <remarks>
         /// <para>This parameter is required when the resource group is an AI resource group and the corresponding engine is RayCluster.</para>
         /// </remarks>
@@ -281,7 +284,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SpecName { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination resource group.</para>
+        /// <para>The name of the target resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

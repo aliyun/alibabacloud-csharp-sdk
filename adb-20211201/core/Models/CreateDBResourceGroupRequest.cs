@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class CreateDBResourceGroupRequest : TeaModel {
+        /// <summary>
+        /// <para>The PromQL resource group configuration.</para>
+        /// </summary>
         [NameInMap("AtmConfig")]
         [Validation(Required=false)]
         public CreateDBResourceGroupRequestAtmConfig AtmConfig { get; set; }
         public class CreateDBResourceGroupRequestAtmConfig : TeaModel {
             /// <summary>
+            /// <para>The number of authentication nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? AuthNodeNum { get; set; }
 
             /// <summary>
+            /// <para>The authentication node specifications ([0-9+]ACU).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8ACU</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string AuthNodeSpec { get; set; }
 
             /// <summary>
+            /// <para>The number of insert nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? InsertNodeNum { get; set; }
 
             /// <summary>
+            /// <para>The insert node specifications ([0-9+]ACU).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8ACU</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string InsertNodeSpec { get; set; }
 
             /// <summary>
+            /// <para>The cache size of query nodes (GB).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? SelectNodeCacheSize { get; set; }
 
             /// <summary>
+            /// <para>The number of query nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? SelectNodeNum { get; set; }
 
             /// <summary>
+            /// <para>The query node specifications ([0-9+]ACU).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8ACU</para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string SelectNodeSpec { get; set; }
 
             /// <summary>
+            /// <para>The disk size of storage nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -78,6 +97,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? StorageNodeDiskSize { get; set; }
 
             /// <summary>
+            /// <para>The disk type of storage nodes (essd_pl1, essd_pl2).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>essd_pl1</para>
             /// </summary>
@@ -86,6 +107,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string StorageNodeDiskType { get; set; }
 
             /// <summary>
+            /// <para>The number of storage nodes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2</para>
             /// </summary>
@@ -94,6 +117,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public int? StorageNodeNum { get; set; }
 
             /// <summary>
+            /// <para>The storage node specifications ([0-9+]ACU).</para>
+            /// 
             /// <b>Example:</b>
             /// <para>8ACU</para>
             /// </summary>
@@ -104,7 +129,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         }
 
         /// <summary>
-        /// <para>The automatic stop interval. Unit: minutes (m).</para>
+        /// <para>The automatic stop interval, in minutes (m).</para>
         /// 
         /// <b>Example:</b>
         /// <para>5m</para>
@@ -154,7 +179,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string ClusterSizeResource { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
+        /// <para>The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -231,7 +256,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public List<CreateDBResourceGroupRequestGpuElasticPlanRules> Rules { get; set; }
             public class CreateDBResourceGroupRequestGpuElasticPlanRules : TeaModel {
                 /// <summary>
-                /// <para>The end time as a cron expression. The interval must be at least 1 hour.</para>
+                /// <para>The end time, specified as a cron expression. The interval must be at least 1 hour.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 3 * * ?</para>
@@ -241,7 +266,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
                 public string EndCronExpression { get; set; }
 
                 /// <summary>
-                /// <para>The start time as a cron expression. The interval must be at least 1 hour.</para>
+                /// <para>The start time, specified as a cron expression. The interval must be at least 1 hour.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0 0 2 * * ?</para>
@@ -275,7 +300,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         /// <list type="bullet">
         /// <item><description><b>Interactive</b></description></item>
         /// <item><description><b>Job</b><remarks>
-        /// <para>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</para>
+        /// <para>For more information about resource groups of the Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -301,10 +326,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? MaxClusterCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum amount of reserved computing resources. Unit: ACUs.</para>
+        /// <para>The maximum reserved computing resources, in ACUs.</para>
         /// <list type="bullet">
-        /// <item><description>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 16 ACUs.</description></item>
-        /// <item><description>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, in increments of 8 ACUs.</description></item>
+        /// <item><description>If the resource group type is Interactive, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 16 ACUs.</description></item>
+        /// <item><description>If the resource group type is Job, the maximum reserved computing resources is the current unallocated resources of the cluster, with a step size of 8 ACUs.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -337,7 +362,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? MinClusterCount { get; set; }
 
         /// <summary>
-        /// <para>The minimum amount of reserved computing resources. Unit: ACUs.</para>
+        /// <para>The minimum reserved computing resources, in ACUs.</para>
         /// <list type="bullet">
         /// <item><description>If the resource group type is Interactive, the minimum reserved computing resources is 16 ACUs.</description></item>
         /// <item><description>If the resource group type is Job, the minimum reserved computing resources is 0 ACUs.</description></item>
@@ -361,7 +386,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public int? MinGpuQuantity { get; set; }
 
         /// <summary>
-        /// <para>The Ray configuration.</para>
+        /// <para>The Ray configuration information.</para>
         /// <remarks>
         /// <para>This parameter is required when the resource group is an AI resource group and the corresponding engine is RayCluster.</para>
         /// </remarks>
@@ -373,8 +398,10 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             /// <summary>
             /// <para>The Ray cluster type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>BASIC: basic type, non-high-availability</description></item>
-            /// <item><description>HIGH_AVAILABILITY: high-availability type</description></item>
+            /// <item><description><para>BASIC: basic type, non-high-availability.</para>
+            /// </description></item>
+            /// <item><description><para>HIGH_AVAILABILITY: high-availability type.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -430,6 +457,24 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             [NameInMap("HeadSpecType")]
             [Validation(Required=false)]
             public string HeadSpecType { get; set; }
+
+            [NameInMap("StorageMounts")]
+            [Validation(Required=false)]
+            public List<CreateDBResourceGroupRequestRayConfigStorageMounts> StorageMounts { get; set; }
+            public class CreateDBResourceGroupRequestRayConfigStorageMounts : TeaModel {
+                [NameInMap("MountPath")]
+                [Validation(Required=false)]
+                public string MountPath { get; set; }
+
+                [NameInMap("StorageId")]
+                [Validation(Required=false)]
+                public long? StorageId { get; set; }
+
+                [NameInMap("StorageName")]
+                [Validation(Required=false)]
+                public string StorageName { get; set; }
+
+            }
 
             [NameInMap("UserDefinedRequirements")]
             [Validation(Required=false)]
@@ -552,7 +597,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The query execution time threshold. Unit: milliseconds (ms).</para>
+            /// <para>The query execution time threshold, in milliseconds (ms).</para>
             /// 
             /// <b>Example:</b>
             /// <para>180000</para>
@@ -562,7 +607,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
             public string QueryTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the destination resource group.</para>
+            /// <para>The name of the target resource group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>job</para>
@@ -599,7 +644,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string SpecName { get; set; }
 
         /// <summary>
-        /// <para>The name of the destination resource group.</para>
+        /// <para>The name of the target resource group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>

@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 {
     public class DescribeDBResourceGroupRequest : TeaModel {
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-        /// &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster is of Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+        /// &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The resource group name.</para>
+        /// <para>The name of the resource group.</para>
         /// <remarks>
-        /// <para>If this parameter is not specified, information about all resource groups in the specified cluster is returned by default.</para>
+        /// <para>If you do not specify this parameter, information about all resource groups in the specified cluster is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,11 +35,11 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The resource group type. Valid values:</para>
+        /// <para>The type of the resource group. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Interactive</b></description></item>
         /// <item><description><b>Job</b><remarks>
-        /// <para>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</para>
+        /// <para>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group introduction</a>.</para>
         /// </remarks>
         /// </description></item>
         /// </list>

@@ -4933,12 +4933,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for a specified Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
+        /// <para>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5094,12 +5094,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for a specified Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
+        /// <para>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5255,12 +5255,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for a specified Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
+        /// <para>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5278,12 +5278,12 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a resource group for a specified Dedicated Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
+        /// <para>Creates a resource group for a specified Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16754,7 +16754,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16817,7 +16817,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16880,7 +16880,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16903,7 +16903,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For information about the service registration of the current service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
+        /// <para>For the service registration of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Endpoint</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38722,7 +38722,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoints</a>.</para>
+        /// <para>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -38875,7 +38875,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoints</a>.</para>
+        /// <para>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -39028,7 +39028,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoints</a>.</para>
+        /// <para>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39051,7 +39051,7 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>For service endpoints, see <a href="https://help.aliyun.com/document_detail/612373.html">endpoints</a>.</para>
+        /// <para>For information about the endpoints of this service, see <a href="https://help.aliyun.com/document_detail/612373.html">Service registration</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
