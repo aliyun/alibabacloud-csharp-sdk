@@ -32,13 +32,13 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The policy type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>STANDARD</b>: general backup policy. Supports backing up data sources other than ECS full-server backup.</description></item>
-        /// <item><description><b>UDM_ECS_ONLY</b>: full-server backup policy. Supports only ECS full-server backup.</description></item>
+        /// <item><description><b>STANDARD</b>: general backup policy. Supports backing up data sources other than ECS instances.</description></item>
+        /// <item><description><b>UDM_ECS_ONLY</b>: ECS instance backup policy. Supports backing up only ECS instances.</description></item>
         /// </list>
-        /// <para>If the policy type is not specified, Cloud Backup automatically sets the policy type based on whether a backup vault is specified in the policy rules:</para>
+        /// <para>If you do not specify the policy type, Cloud Backup automatically sets the policy type based on whether a backup vault is specified in the policy rules:</para>
         /// <list type="bullet">
-        /// <item><description>Backup vault specified in policy rules: <b>STANDARD</b></description></item>
-        /// <item><description>Backup vault not specified in policy rules: <b>UDM_ECS_ONLY</b></description></item>
+        /// <item><description>A backup vault is specified in the policy rules: <b>STANDARD</b></description></item>
+        /// <item><description>No backup vault is specified in the policy rules: <b>UDM_ECS_ONLY</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,6 +82,28 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public List<CreatePolicyV2RequestRulesDataSourceFilters> DataSourceFilters { get; set; }
             public class CreatePolicyV2RequestRulesDataSourceFilters : TeaModel {
+                [NameInMap("AccountScope")]
+                [Validation(Required=false)]
+                public string AccountScope { get; set; }
+
+                [NameInMap("Accounts")]
+                [Validation(Required=false)]
+                public List<CreatePolicyV2RequestRulesDataSourceFiltersAccounts> Accounts { get; set; }
+                public class CreatePolicyV2RequestRulesDataSourceFiltersAccounts : TeaModel {
+                    [NameInMap("CrossAccountRoleName")]
+                    [Validation(Required=false)]
+                    public string CrossAccountRoleName { get; set; }
+
+                    [NameInMap("CrossAccountType")]
+                    [Validation(Required=false)]
+                    public string CrossAccountType { get; set; }
+
+                    [NameInMap("CrossAccountUserId")]
+                    [Validation(Required=false)]
+                    public long? CrossAccountUserId { get; set; }
+
+                }
+
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
@@ -95,7 +117,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 /// <summary>
                 /// <para>The data source type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>UDM_ECS</b>: ECS full-server backup. This data source type is supported only when <b>PolicyType</b> is set to <b>UDM_ECS_ONLY</b>.</description></item>
+                /// <item><description><b>UDM_ECS</b>: ECS instance backup. This data source type is supported only when <b>PolicyType</b> is set to <b>UDM_ECS_ONLY</b>.</description></item>
                 /// <item><description><b>OSS</b>: OSS backup. This data source type is supported only when <b>PolicyType</b> is set to <b>STANDARD</b>.</description></item>
                 /// <item><description><b>NAS</b>: Alibaba Cloud NAS backup. This data source type is supported only when <b>PolicyType</b> is set to <b>STANDARD</b>.</description></item>
                 /// <item><description><b>ECS_FILE</b>: ECS File Backup Essential Edition. This data source type is supported only when <b>PolicyType</b> is set to <b>STANDARD</b>.</description></item>
@@ -112,7 +134,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
-            /// <para>This parameter is valid only when <b>PolicyType</b> is set to <b>UDM_ECS_ONLY</b>. Specifies whether to enable backup lock.</para>
+            /// <para>This parameter is required only when <b>PolicyType</b> is set to <b>UDM_ECS_ONLY</b> and <b>RuleType</b> is set to <b>SECURITY</b>. Specifies whether to enable backup locking.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -148,9 +170,9 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>This parameter is required only when <b>RuleType</b> is set to <b>BACKUP</b>, <b>TRANSITION</b>, or <b>REPLICATION</b>.</para>
             /// <list type="bullet">
-            /// <item><description><b>RuleType</b> set to <b>BACKUP</b>: the retention period of backups. The priority is lower than the Retention value of the rule with <b>RuleType</b>=<b>TRANSITION</b>. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
-            /// <item><description><b>RuleType</b> set to <b>TRANSITION</b>: the retention period of backups. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
-            /// <item><description><b>RuleType</b> set to <b>REPLICATION</b>: the retention period of cross-region backups. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
+            /// <item><description>If <b>RuleType</b> is set to <b>BACKUP</b>: the retention period of backups. The priority of this parameter is lower than the Retention parameter of the rule whose <b>RuleType</b> is <b>TRANSITION</b>. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
+            /// <item><description>If <b>RuleType</b> is set to <b>TRANSITION</b>: the retention period of backups. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
+            /// <item><description>If <b>RuleType</b> is set to <b>REPLICATION</b>: the retention period of cross-region backups. Minimum value: 1. Maximum value: 364635. Unit: days.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -170,10 +192,10 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 /// <summary>
                 /// <para>The type of the special retention rule. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>DAILY</b>: daily backup</description></item>
-                /// <item><description><b>WEEKLY</b>: weekly backup</description></item>
-                /// <item><description><b>MONTHLY</b>: monthly backup</description></item>
-                /// <item><description><b>YEARLY</b>: yearly backup</description></item>
+                /// <item><description><b>DAILY</b>: daily backup.</description></item>
+                /// <item><description><b>WEEKLY</b>: weekly backup.</description></item>
+                /// <item><description><b>MONTHLY</b>: monthly backup.</description></item>
+                /// <item><description><b>YEARLY</b>: yearly backup.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -194,7 +216,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 public long? Retention { get; set; }
 
                 /// <summary>
-                /// <para>Specifies which backup the rule applies to. Currently, only the first backup is supported. Set the value to 1.</para>
+                /// <para>The backup to which the rule applies. Currently, only the first backup is supported. Set the value to 1.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -225,20 +247,20 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>This parameter is required only when <b>RuleType</b> is set to <b>BACKUP</b>. The backup schedule settings. Supported formats:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>I|{startTime}|{interval}</c>: specifies that a backup job is executed at the specified interval starting from the start time. For example, <c>I|1631685600|P1D</c> specifies that a backup job is executed once a day starting from 2021-09-15 14:00:00.</para>
+            /// <item><description><para><c>I|{startTime}|{interval}</c>: specifies that a backup job is executed at the specified interval starting from {startTime}. For example, <c>I|1631685600|P1D</c> specifies that a backup job is executed once a day starting from 2021-09-15 14:00:00.</para>
             /// <list type="bullet">
             /// <item><description>startTime: the start time of the backup. This value is a UNIX timestamp. Unit: seconds.</description></item>
             /// <item><description>interval: the ISO 8601 time interval. For example, <c>PT1H</c> specifies an interval of one hour. <c>P1D</c> specifies an interval of one day.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><c>C|{startTime}|{crontab}</c>: specifies that a backup job is executed based on the crontab expression starting from the start time. For example, <c>C|1631685600|0 0 2 ? * 3,5,7</c> specifies that a backup job is executed at 02:00:00 every Tuesday, Thursday, and Saturday starting from 2021-09-15 14:00:00.</para>
+            /// <item><description><para><c>C|{startTime}|{crontab}</c>: specifies that a backup job is executed based on the {crontab} expression starting from {startTime}. For example, <c>C|1631685600|0 0 2 ? * 3,5,7</c> specifies that a backup job is executed at 02:00:00 every Tuesday, Thursday, and Saturday starting from 2021-09-15 14:00:00.</para>
             /// <list type="bullet">
             /// <item><description>startTime: the start time of the backup. This value is a UNIX timestamp. Unit: seconds.</description></item>
             /// <item><description>crontab: the crontab expression. For example, <c>0 0 2 ? * 3,5,7</c> specifies every Tuesday, Thursday, and Saturday at 02:00:00.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
-            /// <para>Backup jobs for past time periods are not compensated. If the previous backup job is not completed, the next backup job is not triggered.</para>
+            /// <para>Backup jobs that are missed are not compensated. If the previous backup job is not complete, the next backup job is not triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>I|1648647166|P1D</para>

@@ -165,6 +165,28 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
                 [Validation(Required=false)]
                 public List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters> DataSourceFilters { get; set; }
                 public class DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFilters : TeaModel {
+                    [NameInMap("AccountScope")]
+                    [Validation(Required=false)]
+                    public string AccountScope { get; set; }
+
+                    [NameInMap("Accounts")]
+                    [Validation(Required=false)]
+                    public List<DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts> Accounts { get; set; }
+                    public class DescribePoliciesV2ResponseBodyPoliciesRulesDataSourceFiltersAccounts : TeaModel {
+                        [NameInMap("CrossAccountRoleName")]
+                        [Validation(Required=false)]
+                        public string CrossAccountRoleName { get; set; }
+
+                        [NameInMap("CrossAccountType")]
+                        [Validation(Required=false)]
+                        public string CrossAccountType { get; set; }
+
+                        [NameInMap("CrossAccountUserId")]
+                        [Validation(Required=false)]
+                        public long? CrossAccountUserId { get; set; }
+
+                    }
+
                     /// <term><b>Obsolete</b></term>
                     /// 
                     /// <summary>

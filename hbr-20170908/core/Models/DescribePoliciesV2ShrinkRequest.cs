@@ -8,28 +8,14 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
-    public class DescribePoliciesV2Request : TeaModel {
+    public class DescribePoliciesV2ShrinkRequest : TeaModel {
         [NameInMap("AccountScope")]
         [Validation(Required=false)]
         public string AccountScope { get; set; }
 
         [NameInMap("Accounts")]
         [Validation(Required=false)]
-        public List<DescribePoliciesV2RequestAccounts> Accounts { get; set; }
-        public class DescribePoliciesV2RequestAccounts : TeaModel {
-            [NameInMap("CrossAccountRoleName")]
-            [Validation(Required=false)]
-            public string CrossAccountRoleName { get; set; }
-
-            [NameInMap("CrossAccountType")]
-            [Validation(Required=false)]
-            public string CrossAccountType { get; set; }
-
-            [NameInMap("CrossAccountUserId")]
-            [Validation(Required=false)]
-            public long? CrossAccountUserId { get; set; }
-
-        }
+        public string AccountsShrink { get; set; }
 
         /// <summary>
         /// <para>The number of results per query.</para>

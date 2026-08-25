@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Daily backup + cross-region backup</para>
+        /// <para>Daily backup + geo-redundancy</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public List<UpdatePolicyV2RequestRules> Rules { get; set; }
         public class UpdatePolicyV2RequestRules : TeaModel {
             /// <summary>
-            /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TRANSITION</b>. The number of days after which the backup is transitioned to archive storage. Unit: days.</para>
+            /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TRANSITION</b>. The number of days after which the backup is converted to archive storage. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             public string BackupType { get; set; }
 
             /// <summary>
-            /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TRANSITION</b>. The number of days after which the backup is transitioned to cold archive storage. Unit: days.</para>
+            /// <para>This parameter is required only when <b>RuleType</b> is set to <b>TRANSITION</b>. The number of days after which the backup is converted to cold archive storage. Unit: days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>365</para>
@@ -83,6 +83,28 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             [Validation(Required=false)]
             public List<UpdatePolicyV2RequestRulesDataSourceFilters> DataSourceFilters { get; set; }
             public class UpdatePolicyV2RequestRulesDataSourceFilters : TeaModel {
+                [NameInMap("AccountScope")]
+                [Validation(Required=false)]
+                public string AccountScope { get; set; }
+
+                [NameInMap("Accounts")]
+                [Validation(Required=false)]
+                public List<UpdatePolicyV2RequestRulesDataSourceFiltersAccounts> Accounts { get; set; }
+                public class UpdatePolicyV2RequestRulesDataSourceFiltersAccounts : TeaModel {
+                    [NameInMap("CrossAccountRoleName")]
+                    [Validation(Required=false)]
+                    public string CrossAccountRoleName { get; set; }
+
+                    [NameInMap("CrossAccountType")]
+                    [Validation(Required=false)]
+                    public string CrossAccountType { get; set; }
+
+                    [NameInMap("CrossAccountUserId")]
+                    [Validation(Required=false)]
+                    public long? CrossAccountUserId { get; set; }
+
+                }
+
                 /// <term><b>Obsolete</b></term>
                 /// 
                 /// <summary>
@@ -113,7 +135,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             }
 
             /// <summary>
-            /// <para>This parameter is valid only when <b>PolicyType</b> is set to <b>UDM_ECS_ONLY</b>. Specifies whether to enable backup locking.</para>
+            /// <para>This parameter is required only when <b>PolicyType</b> is set to <b>UDM_ECS_ONLY</b> and <b>RuleType</b> is set to <b>SECURITY</b>. Specifies whether to enable backup locking.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -232,20 +254,20 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
             /// <summary>
             /// <para>This parameter is required only when <b>RuleType</b> is set to <b>BACKUP</b>. The backup schedule settings. Supported formats:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>I|{startTime}|{interval}</c>: specifies that a backup job is run at the {interval} from {startTime}. For example, <c>I|1631685600|P1D</c> specifies that a backup job is run once a day starting from 2021-09-15 14:00:00.</para>
+            /// <item><description><para><c>I|{startTime}|{interval}</c>: specifies that a backup job is run at the {interval} from the {startTime}. Example: <c>I|1631685600|P1D</c> specifies that a backup job is run once a day starting from 2021-09-15 14:00:00.</para>
             /// <list type="bullet">
             /// <item><description>startTime: the start time of the backup. This value is a UNIX timestamp. Unit: seconds.</description></item>
-            /// <item><description>interval: the ISO 8601 time interval. For example, <c>PT1H</c> specifies an interval of one hour. <c>P1D</c> specifies an interval of one day.</description></item>
+            /// <item><description>interval: the ISO 8601 time interval. Example: <c>PT1H</c> specifies an interval of one hour. <c>P1D</c> specifies an interval of one day.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><para><c>C|{startTime}|{crontab}</c>: specifies that a backup job is run based on the {crontab} expression from {startTime}. For example, <c>C|1631685600|0 0 2 ? * 3,5,7</c> specifies that a backup job is run at 02:00:00 every Tuesday, Thursday, and Saturday starting from 2021-09-15 14:00:00.</para>
+            /// <item><description><para><c>C|{startTime}|{crontab}</c>: specifies that a backup job is run based on the {crontab} expression from the {startTime}. Example: <c>C|1631685600|0 0 2 ? * 3,5,7</c> specifies that a backup job is run at 02:00:00 every Tuesday, Thursday, and Saturday starting from 2021-09-15 14:00:00.</para>
             /// <list type="bullet">
             /// <item><description>startTime: the start time of the backup. This value is a UNIX timestamp. Unit: seconds.</description></item>
-            /// <item><description>crontab: the crontab expression. For example, <c>0 0 2 ? * 3,5,7</c> specifies every Tuesday, Thursday, and Saturday at 02:00:00.</description></item>
+            /// <item><description>crontab: the crontab expression. Example: <c>0 0 2 ? * 3,5,7</c> specifies every Tuesday, Thursday, and Saturday at 02:00:00.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
-            /// <para>Backup jobs that are scheduled for past times are not compensated. If the previous backup job is not completed, the next backup job is not triggered.</para>
+            /// <para>Backup jobs for elapsed time periods are not compensated. If the previous backup job is not completed, the next backup job is not triggered.</para>
             /// 
             /// <b>Example:</b>
             /// <para>I|1648647166|P1D</para>

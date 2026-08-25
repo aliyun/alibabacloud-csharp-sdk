@@ -3311,11 +3311,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A backup plan records the information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job is successful, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
+        /// <para>A backup policy records the information required for backup. After a backup policy is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
         /// <list type="bullet">
-        /// <item><description>A backup plan supports multiple data source types, including NAS backup, OSS backup, ECS full-server backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
-        /// <item><description>A backup plan supports only a single fixed-interval backup cycle policy.</description></item>
-        /// <item><description>A backup plan can back up data to only one backup vault.</description></item>
+        /// <item><description>A backup policy supports multiple data source types, including NAS backup, OSS backup, ECS instance backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
+        /// <item><description>A backup policy supports only a single backup cycle policy with a fixed interval.</description></item>
+        /// <item><description>A backup policy can back up data to only one backup vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3381,11 +3381,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A backup plan records the information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job is successful, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
+        /// <para>A backup policy records the information required for backup. After a backup policy is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
         /// <list type="bullet">
-        /// <item><description>A backup plan supports multiple data source types, including NAS backup, OSS backup, ECS full-server backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
-        /// <item><description>A backup plan supports only a single fixed-interval backup cycle policy.</description></item>
-        /// <item><description>A backup plan can back up data to only one backup vault.</description></item>
+        /// <item><description>A backup policy supports multiple data source types, including NAS backup, OSS backup, ECS instance backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
+        /// <item><description>A backup policy supports only a single backup cycle policy with a fixed interval.</description></item>
+        /// <item><description>A backup policy can back up data to only one backup vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3451,11 +3451,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A backup plan records the information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job is successful, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
+        /// <para>A backup policy records the information required for backup. After a backup policy is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
         /// <list type="bullet">
-        /// <item><description>A backup plan supports multiple data source types, including NAS backup, OSS backup, ECS full-server backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
-        /// <item><description>A backup plan supports only a single fixed-interval backup cycle policy.</description></item>
-        /// <item><description>A backup plan can back up data to only one backup vault.</description></item>
+        /// <item><description>A backup policy supports multiple data source types, including NAS backup, OSS backup, ECS instance backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
+        /// <item><description>A backup policy supports only a single backup cycle policy with a fixed interval.</description></item>
+        /// <item><description>A backup policy can back up data to only one backup vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3479,11 +3479,11 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A backup plan records the information required for backup. After a backup plan is executed, a backup job is generated to record the backup progress and result. If the backup job is successful, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
+        /// <para>A backup policy records the information required for backup. After a backup policy is executed, a backup job is generated to record the backup progress and result. If the backup job succeeds, a backup snapshot is generated. You can use the backup snapshot to create a restore job.</para>
         /// <list type="bullet">
-        /// <item><description>A backup plan supports multiple data source types, including NAS backup, OSS backup, ECS full-server backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
-        /// <item><description>A backup plan supports only a single fixed-interval backup cycle policy.</description></item>
-        /// <item><description>A backup plan can back up data to only one backup vault.</description></item>
+        /// <item><description>A backup policy supports multiple data source types, including NAS backup, OSS backup, ECS instance backup, ECS File Backup Essential Edition, local file backup, Tablestore backup, and CPFS backup.</description></item>
+        /// <item><description>A backup policy supports only a single backup cycle policy with a fixed interval.</description></item>
+        /// <item><description>A backup policy can back up data to only one backup vault.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9869,7 +9869,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <para>Queries one or more policies.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribePoliciesV2Request
         /// </param>
         /// <param name="runtime">
@@ -9879,10 +9879,24 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <returns>
         /// DescribePoliciesV2Response
         /// </returns>
-        public DescribePoliciesV2Response DescribePoliciesV2WithOptions(DescribePoliciesV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public DescribePoliciesV2Response DescribePoliciesV2WithOptions(DescribePoliciesV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribePoliciesV2ShrinkRequest request = new DescribePoliciesV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Accounts))
+            {
+                request.AccountsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Accounts, "Accounts", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountScope))
+            {
+                body["AccountScope"] = request.AccountScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountsShrink))
+            {
+                body["Accounts"] = request.AccountsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
@@ -9894,6 +9908,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 body["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleScope))
+            {
+                body["RuleScope"] = request.RuleScope;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9919,7 +9937,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <para>Queries one or more policies.</para>
         /// </summary>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// DescribePoliciesV2Request
         /// </param>
         /// <param name="runtime">
@@ -9929,10 +9947,24 @@ namespace AlibabaCloud.SDK.Hbr20170908
         /// <returns>
         /// DescribePoliciesV2Response
         /// </returns>
-        public async Task<DescribePoliciesV2Response> DescribePoliciesV2WithOptionsAsync(DescribePoliciesV2Request request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<DescribePoliciesV2Response> DescribePoliciesV2WithOptionsAsync(DescribePoliciesV2Request tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            DescribePoliciesV2ShrinkRequest request = new DescribePoliciesV2ShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Accounts))
+            {
+                request.AccountsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Accounts, "Accounts", "json");
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountScope))
+            {
+                body["AccountScope"] = request.AccountScope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AccountsShrink))
+            {
+                body["Accounts"] = request.AccountsShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
             {
                 body["MaxResults"] = request.MaxResults;
@@ -9944,6 +9976,10 @@ namespace AlibabaCloud.SDK.Hbr20170908
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyId))
             {
                 body["PolicyId"] = request.PolicyId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleScope))
+            {
+                body["RuleScope"] = request.RuleScope;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {

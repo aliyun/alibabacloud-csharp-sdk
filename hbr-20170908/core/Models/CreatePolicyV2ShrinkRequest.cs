@@ -32,13 +32,13 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>The policy type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>STANDARD</b>: general backup policy. Supports backing up data sources other than ECS full-server backup.</description></item>
-        /// <item><description><b>UDM_ECS_ONLY</b>: full-server backup policy. Supports only ECS full-server backup.</description></item>
+        /// <item><description><b>STANDARD</b>: general backup policy. Supports backing up data sources other than ECS instances.</description></item>
+        /// <item><description><b>UDM_ECS_ONLY</b>: ECS instance backup policy. Supports backing up only ECS instances.</description></item>
         /// </list>
-        /// <para>If the policy type is not specified, Cloud Backup automatically sets the policy type based on whether a backup vault is specified in the policy rules:</para>
+        /// <para>If you do not specify the policy type, Cloud Backup automatically sets the policy type based on whether a backup vault is specified in the policy rules:</para>
         /// <list type="bullet">
-        /// <item><description>Backup vault specified in policy rules: <b>STANDARD</b></description></item>
-        /// <item><description>Backup vault not specified in policy rules: <b>UDM_ECS_ONLY</b></description></item>
+        /// <item><description>A backup vault is specified in the policy rules: <b>STANDARD</b></description></item>
+        /// <item><description>No backup vault is specified in the policy rules: <b>UDM_ECS_ONLY</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

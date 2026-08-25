@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Daily backup + cross-region backup</para>
+        /// <para>Daily backup + geo-redundancy</para>
         /// </summary>
         [NameInMap("PolicyName")]
         [Validation(Required=false)]
