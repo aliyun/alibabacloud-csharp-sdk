@@ -11,9 +11,6 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
     public class QuerySingleActivityInfoRequest : TeaModel {
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>123</para>
         /// </summary>
         [NameInMap("ActivityId")]
         [Validation(Required=false)]
@@ -27,10 +24,6 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
         [Validation(Required=false)]
         public string CustomerName { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>12233445</para>
-        /// </summary>
         [NameInMap("Mobile")]
         [Validation(Required=false)]
         public string Mobile { get; set; }

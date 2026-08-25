@@ -34,8 +34,6 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
             public string Event { get; set; }
 
             /// <summary>
-            /// <para>nfcid</para>
-            /// 
             /// <b>Example:</b>
             /// <para>cshdsaodhoashd</para>
             /// </summary>
@@ -44,8 +42,6 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
             public string Rfid { get; set; }
 
             /// <summary>
-            /// <para>sessionId</para>
-            /// 
             /// <b>Example:</b>
             /// <para>2001</para>
             /// </summary>

@@ -26,8 +26,6 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
         public List<QuerySessionListPopResponseBodyData> Data { get; set; }
         public class QuerySessionListPopResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>code</para>
-            /// 
             /// <b>Example:</b>
             /// <para>code</para>
             /// </summary>
@@ -44,8 +42,6 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>id</para>
-            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -54,8 +50,6 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>location</para>
-            /// 
             /// <b>Example:</b>
             /// <para>location</para>
             /// </summary>
@@ -64,8 +58,6 @@ namespace AlibabaCloud.SDK.Marketing_event20210101.Models
             public string Location { get; set; }
 
             /// <summary>
-            /// <para>name</para>
-            /// 
             /// <b>Example:</b>
             /// <para>name</para>
             /// </summary>

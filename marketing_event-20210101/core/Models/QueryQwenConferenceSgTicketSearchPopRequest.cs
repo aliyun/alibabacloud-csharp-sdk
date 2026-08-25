@@ -9,10 +9,6 @@ using Tea;
 namespace AlibabaCloud.SDK.Marketing_event20210101.Models
 {
     public class QueryQwenConferenceSgTicketSearchPopRequest : TeaModel {
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>neal</para>
-        /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
