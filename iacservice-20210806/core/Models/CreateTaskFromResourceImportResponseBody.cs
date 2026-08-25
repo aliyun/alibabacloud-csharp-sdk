@@ -8,16 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
-    public class DissociateDetectConfigResponseBody : TeaModel {
+    public class CreateTaskFromResourceImportResponseBody : TeaModel {
         /// <summary>
         /// <para>Id of the request</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>B6ED9F71-7FA8-598E-B64D-4606FB3FCCC9</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        [NameInMap("taskId")]
+        [Validation(Required=false)]
+        public string TaskId { get; set; }
 
     }
 

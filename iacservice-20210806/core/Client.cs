@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associate drift detection configuration</para>
+        /// <para>Associates a drift detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -470,7 +470,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associate drift detection configuration</para>
+        /// <para>Associates a drift detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -524,7 +524,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associate drift detection configuration</para>
+        /// <para>Associates a drift detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -543,7 +543,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associate drift detection configuration</para>
+        /// <para>Associates a drift detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3516,7 +3516,161 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete drift detection configuration</para>
+        /// <para>Creates a node from a resource import result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskFromResourceImportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskFromResourceImportResponse
+        /// </returns>
+        public CreateTaskFromResourceImportResponse CreateTaskFromResourceImportWithOptions(CreateTaskFromResourceImportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportTaskId))
+            {
+                body["exportTaskId"] = request.ExportTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportVersion))
+            {
+                body["exportVersion"] = request.ExportVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["taskName"] = request.TaskName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTaskFromResourceImport",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/tasks/operations/createTaskFromResourceImport",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTaskFromResourceImportResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a node from a resource import result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskFromResourceImportRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskFromResourceImportResponse
+        /// </returns>
+        public async Task<CreateTaskFromResourceImportResponse> CreateTaskFromResourceImportWithOptionsAsync(CreateTaskFromResourceImportRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["clientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportTaskId))
+            {
+                body["exportTaskId"] = request.ExportTaskId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExportVersion))
+            {
+                body["exportVersion"] = request.ExportVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskName))
+            {
+                body["taskName"] = request.TaskName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTaskFromResourceImport",
+                Version = "2021-08-06",
+                Protocol = "HTTPS",
+                Pathname = "/tasks/operations/createTaskFromResourceImport",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTaskFromResourceImportResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a node from a resource import result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskFromResourceImportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskFromResourceImportResponse
+        /// </returns>
+        public CreateTaskFromResourceImportResponse CreateTaskFromResourceImport(CreateTaskFromResourceImportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateTaskFromResourceImportWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a node from a resource import result.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTaskFromResourceImportRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTaskFromResourceImportResponse
+        /// </returns>
+        public async Task<CreateTaskFromResourceImportResponse> CreateTaskFromResourceImportAsync(CreateTaskFromResourceImportRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateTaskFromResourceImportWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a bias detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3556,7 +3710,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete drift detection configuration</para>
+        /// <para>Deletes a bias detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3596,7 +3750,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete drift detection configuration</para>
+        /// <para>Deletes a bias detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3615,7 +3769,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Delete drift detection configuration</para>
+        /// <para>Deletes a bias detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4850,7 +5004,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Single-user call frequency: 100 calls per second.
-        /// Deletes a node. If the node has resources that have not been destroyed, the node cannot be deleted.</para>
+        /// Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4869,9 +5023,15 @@ namespace AlibabaCloud.SDK.IaCService20210806
         public DeleteTaskResponse DeleteTaskWithOptions(string taskId, DeleteTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRetentionPolicy))
+            {
+                query["resourceRetentionPolicy"] = request.ResourceRetentionPolicy;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4896,7 +5056,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Single-user call frequency: 100 calls per second.
-        /// Deletes a node. If the node has resources that have not been destroyed, the node cannot be deleted.</para>
+        /// Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4915,9 +5075,15 @@ namespace AlibabaCloud.SDK.IaCService20210806
         public async Task<DeleteTaskResponse> DeleteTaskWithOptionsAsync(string taskId, DeleteTaskRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceRetentionPolicy))
+            {
+                query["resourceRetentionPolicy"] = request.ResourceRetentionPolicy;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -4942,7 +5108,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Single-user call frequency: 100 calls per second.
-        /// Deletes a node. If the node has resources that have not been destroyed, the node cannot be deleted.</para>
+        /// Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4967,7 +5133,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Single-user call frequency: 100 calls per second.
-        /// Deletes a node. If the node has resources that have not been destroyed, the node cannot be deleted.</para>
+        /// Deletes a node. If the node has resources that have not been destroyed, the deletion is not allowed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5152,7 +5318,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociate drift detection configuration</para>
+        /// <para>Dissociates a drift detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5206,7 +5372,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociate drift detection configuration</para>
+        /// <para>Dissociates a drift detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5260,7 +5426,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociate drift detection configuration</para>
+        /// <para>Dissociates a drift detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5279,7 +5445,7 @@ namespace AlibabaCloud.SDK.IaCService20210806
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disassociate drift detection configuration</para>
+        /// <para>Dissociates a drift detection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">

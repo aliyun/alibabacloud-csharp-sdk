@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
 {
     public class DissociateDetectConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Drift detection configuration ID</para>
+        /// <para>The ID of the drift detection configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dc-xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string DetectConfigId { get; set; }
 
         /// <summary>
-        /// <para>ID of the association target. StackId or TaskId</para>
+        /// <para>The ID of the association target. The value is a StackId or TaskId.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,10 +31,10 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string TargetId { get; set; }
 
         /// <summary>
-        /// <para>Type of the association target</para>
+        /// <para>The type of the association target. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Task: Orchestration job  </description></item>
-        /// <item><description>Stack: Resource stack</description></item>
+        /// <item><description>Task: orchestration task.</description></item>
+        /// <item><description>Stack: resource stack.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public string ExportVersion { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. Fuzzy match is supported for export version names.</para>
+        /// <para>The search keyword. Fuzzy search on export version names is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         /// <item><description>Pending: preparing to run</description></item>
         /// <item><description>Success: succeeded</description></item>
         /// <item><description>Errored: failed</description></item>
-        /// <item><description>Canceled: canceled.</description></item>
+        /// <item><description>Canceled: canceled</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

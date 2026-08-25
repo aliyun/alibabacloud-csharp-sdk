@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
         public List<ListResourceExportTaskVersionsResponseBodyExportTasks> ExportTasks { get; set; }
         public class ListResourceExportTaskVersionsResponseBodyExportTasks : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in UTC, in the ISO 8601 format of YYYY-MM-DDTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-11T02:18:50Z</para>
@@ -57,17 +57,17 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string ExportTaskId { get; set; }
 
             /// <summary>
-            /// <para>Saves the exported template as a module. If this parameter is not set, the template is automatically saved in the registry.</para>
+            /// <para>The module to which the exported template is saved. If this parameter is not set, the template is automatically saved in the Registry.</para>
             /// </summary>
             [NameInMap("exportToModule")]
             [Validation(Required=false)]
             public ListResourceExportTaskVersionsResponseBodyExportTasksExportToModule ExportToModule { get; set; }
             public class ListResourceExportTaskVersionsResponseBodyExportTasksExportToModule : TeaModel {
                 /// <summary>
-                /// <para>The module type in which the exported template is saved. Valid values:</para>
+                /// <para>The module type to which the exported template is saved. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>OSS: OSS</description></item>
-                /// <item><description>Registry: Terraform Registry.</description></item>
+                /// <item><description>Registry: Terraform Registry</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 /// <list type="bullet">
                 /// <item><description><para>If Source is set to Registry, the format is: &quot;cloudregistry::iacservice//&quot;</para>
                 /// </description></item>
-                /// <item><description><para>If Source is set to OSS, the format is: &quot;oss::https://.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</para>
+                /// <item><description><para>If Source is set to OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string SourcePath { get; set; }
 
                 /// <summary>
-                /// <para>The path of the state file corresponding to the module.</para>
+                /// <para>The path of the State file corresponding to the module.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/</para>
@@ -126,22 +126,22 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string FailedReason { get; set; }
 
             /// <summary>
-            /// <para>The list of inclusion rules used when exporting resources.</para>
+            /// <para>The list of include rules used when exporting resources.</para>
             /// </summary>
             [NameInMap("includeRules")]
             [Validation(Required=false)]
             public List<ListResourceExportTaskVersionsResponseBodyExportTasksIncludeRules> IncludeRules { get; set; }
             public class ListResourceExportTaskVersionsResponseBodyExportTasksIncludeRules : TeaModel {
                 /// <summary>
-                /// <para>The name of the inclusion rule for resource export. Valid values:</para>
+                /// <para>The name of the include rule for resource export. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>ResourceType: required. The resource type. Example: ALIYUN::VPC::VPC.</description></item>
-                /// <item><description>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: ap-southeast-1.</description></item>
+                /// <item><description>RegionId: required. The region to which the resource belongs. Only one region is supported. Example: cn-chengdu.</description></item>
                 /// <item><description>\<ResourceType>:Id: the resource ID. Example: ALIYUN::VPC::VPC:Id.</description></item>
                 /// <item><description>ResourceGroupId: the resource group ID. Example: rg-1234.</description></item>
-                /// <item><description>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: ap-southeast-1h.</description></item>
+                /// <item><description>ZoneId: the zone to which the resource belongs. Only one zone is supported. Example: cn-hangzhou-h.</description></item>
                 /// </list>
-                /// <para>Multiple filter conditions are combined by using the AND operator. A resource is matched only if all filter conditions are met.</para>
+                /// <para>Multiple filter conditions have an AND relationship by default. A resource must meet all filter conditions to be considered a match.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RegionId</para>
@@ -151,13 +151,17 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The values of the inclusion rules for resource export.</para>
+                /// <para>The values of the include rule for resource export.</para>
                 /// </summary>
                 [NameInMap("values")]
                 [Validation(Required=false)]
                 public List<string> Values { get; set; }
 
             }
+
+            [NameInMap("managedTaskId")]
+            [Validation(Required=false)]
+            public string ManagedTaskId { get; set; }
 
             /// <summary>
             /// <para>The module configuration of the exported resources.</para>
@@ -167,7 +171,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public List<ListResourceExportTaskVersionsResponseBodyExportTasksModules> Modules { get; set; }
             public class ListResourceExportTaskVersionsResponseBodyExportTasksModules : TeaModel {
                 /// <summary>
-                /// <para>The module type where the exported template is stored. Two formats are supported: CloudRegistry and OSS. If the ExportToModule parameter is specified, both formats are returned. Otherwise, only CloudRegistry is returned.</para>
+                /// <para>The module type where the exported template is located. Two formats are supported: CloudRegistry and OSS. If the ExportToModule parameter is specified, both formats are returned. Otherwise, only CloudRegistry is returned.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>OSS</para>
@@ -177,11 +181,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Source { get; set; }
 
                 /// <summary>
-                /// <para>The download URL of the module where the exported template is stored.</para>
+                /// <para>The download address of the exported template within the module.</para>
                 /// <list type="bullet">
-                /// <item><description><para>If Source is set to CloudRegistry, the format is: &quot;cloudregistry::iacservice//&quot;</para>
+                /// <item><description><para>If Source is CloudRegistry, the format is: &quot;cloudregistry::iacservice//&quot;</para>
                 /// </description></item>
-                /// <item><description><para>If Source is set to OSS, the format is: &quot;oss::https://.oss-ap-southeast-1.aliyuncs.com/xxx.zip&quot;.</para>
+                /// <item><description><para>If Source is OSS, the format is: &quot;oss::https://.oss-cn-hangzhou.aliyuncs.com/xxx.zip&quot;</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -193,7 +197,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string SourcePath { get; set; }
 
                 /// <summary>
-                /// <para>The version of the module where the exported template is stored.</para>
+                /// <para>The version of the module where the exported template is located.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>v1</para>
@@ -221,7 +225,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// <item><description>Pending: preparing to run</description></item>
             /// <item><description>Success: succeeded</description></item>
             /// <item><description>Errored: failed</description></item>
-            /// <item><description>Canceled: canceled.</description></item>
+            /// <item><description>Canceled: canceled</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -232,7 +236,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The list of variables. Parameters of the exported resources are set as variables.</para>
+            /// <para>The list of variables. Parameters of exported resources are set as variables.</para>
             /// </summary>
             [NameInMap("variables")]
             [Validation(Required=false)]

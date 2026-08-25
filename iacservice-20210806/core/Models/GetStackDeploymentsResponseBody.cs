@@ -142,6 +142,13 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             public string JobId { get; set; }
 
             /// <summary>
+            /// <para>OSS object key prefix for deployment logs</para>
+            /// </summary>
+            [NameInMap("logOutputPath")]
+            [Validation(Required=false)]
+            public string LogOutputPath { get; set; }
+
+            /// <summary>
             /// <para>The outputs.</para>
             /// </summary>
             [NameInMap("outputs")]
@@ -238,7 +245,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the parameter is sensitive. Sensitive parameter values are not visible in the console or API.</para>
+                /// <para>Specifies whether the parameter is sensitive. Sensitive parameter values are not visible in the console or API. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>true: Sensitive.</description></item>
                 /// <item><description>false: Not sensitive.</description></item>
@@ -340,7 +347,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
                 public List<GetStackDeploymentsResponseBodyDeploymentsPlanOutputsResourceChanges> ResourceChanges { get; set; }
                 public class GetStackDeploymentsResponseBodyDeploymentsPlanOutputsResourceChanges : TeaModel {
                     /// <summary>
-                    /// <para>The difference information of the resource change.</para>
+                    /// <para>The diff information of the resource change.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>~ resource \&quot;alicloud_log_store\&quot; \&quot;default\&quot; {\n        id                    = \&quot;alb-log-project-v1-ph-xxxxx:alb-log-store-ph\&quot;\n      ~ max_split_shard_count = 64 -&gt; 32\n        name                  = \&quot;alb-log-store-ph\&quot;\n\n        # (13 unchanged attributes hidden)\n    }</para>
@@ -395,15 +402,15 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// </tr>
             /// <tr>
             /// <td>PriorityQueued</td>
-            /// <td>The deployment is queued by priority.</td>
+            /// <td>Priority queuing in progress.</td>
             /// </tr>
             /// <tr>
             /// <td>PlanQueued</td>
-            /// <td>The deployment is queued because no workflow is available after creation.</td>
+            /// <td>The deployment is queuing because no workflow is available after creation.</td>
             /// </tr>
             /// <tr>
             /// <td>ApplyQueued</td>
-            /// <td>The deployment is queued because no workflow is available during execution.</td>
+            /// <td>The deployment is queuing because no workflow is available during execution.</td>
             /// </tr>
             /// <tr>
             /// <td>Planning</td>
@@ -415,7 +422,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// </tr>
             /// <tr>
             /// <td>ConfigProactiveInProgress</td>
-            /// <td>Compliance pre-check is in progress.</td>
+            /// <td>Compliance pre-check in progress.</td>
             /// </tr>
             /// <tr>
             /// <td>ConfigProactiveSuccess</td>
@@ -423,11 +430,11 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// </tr>
             /// <tr>
             /// <td>DetectInProgress</td>
-            /// <td>Drift detection is in progress.</td>
+            /// <td>Drift detection in progress.</td>
             /// </tr>
             /// <tr>
             /// <td>ImportQueued</td>
-            /// <td>The deployment is queued because no workflow is available during the Import phase.</td>
+            /// <td>The deployment is queuing because no workflow is available during Import execution.</td>
             /// </tr>
             /// <tr>
             /// <td>Importing</td>
@@ -439,7 +446,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// </tr>
             /// <tr>
             /// <td>StateQueued</td>
-            /// <td>The deployment is queued because no workflow is available during the state command execution.</td>
+            /// <td>The deployment is queuing because no workflow is available during state command execution.</td>
             /// </tr>
             /// <tr>
             /// <td>Stating</td>
@@ -455,7 +462,7 @@ namespace AlibabaCloud.SDK.IaCService20210806.Models
             /// </tr>
             /// <tr>
             /// <td>PlannedAndFinished</td>
-            /// <td>No differences were found after the Plan phase. The deployment is in a final status.</td>
+            /// <td>No diff was found after the Plan phase. The deployment is in a final status.</td>
             /// </tr>
             /// <tr>
             /// <td>Applying</td>
