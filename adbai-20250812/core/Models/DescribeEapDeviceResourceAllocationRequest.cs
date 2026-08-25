@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
 {
     public class DescribeEapDeviceResourceAllocationRequest : TeaModel {
         /// <summary>
-        /// <para>Instance cluster ID.</para>
+        /// <para>The cluster ID of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Total number of devices</para>
+        /// <para>The total number of devices.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -31,9 +31,9 @@ namespace AlibabaCloud.SDK.ADBAI20250812.Models
         public int? DeviceCount { get; set; }
 
         /// <summary>
-        /// <para>Region ID where the instance is located.</para>
+        /// <para>The region ID of the instance.</para>
         /// <remarks>
-        /// <para>You can invoke the DescribeRegions API to view the region ID of a specified Data Lakehouse Edition cluster.</para>
+        /// <para>You can call the DescribeRegions operation to query the region ID of a specified Data Lakehouse Edition cluster.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

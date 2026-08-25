@@ -21,13 +21,15 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"cn-shenzhen", "adbai.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "adbai.cn-shanghai.aliyuncs.com"},
-                {"cn-hangzhou", "adbai.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "adbai.cn-guangzhou.aliyuncs.com"},
-                {"cn-beijing", "adbai.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-1", "adbai.ap-southeast-1.aliyuncs.com"},
                 {"ap-northeast-1", "adbai.ap-northeast-1.aliyuncs.com"},
+                {"ap-southeast-1", "adbai.ap-southeast-1.aliyuncs.com"},
+                {"cn-beijing", "adbai.cn-beijing.aliyuncs.com"},
+                {"cn-hangzhou", "adbai.cn-hangzhou.aliyuncs.com"},
+                {"cn-shanghai", "adbai.cn-shanghai.aliyuncs.com"},
+                {"cn-shenzhen", "adbai.cn-shenzhen.aliyuncs.com"},
+                {"cn-guangzhou", "adbai.cn-guangzhou.aliyuncs.com"},
+                {"cn-wulanchabu", "adbai.cn-wulanchabu.aliyuncs.com"},
+                {"us-west-1", "adbai.us-west-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("adbai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1153,12 +1155,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the resource allocation plan for Embodied Intelligence platform devices</para>
+        /// <para>Queries the resource allocation plan for devices on the embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to view the actual resource amount corresponding to the backend of the instance ontology count</para>
+        /// <para>Queries the actual resource capacity corresponding to the backend of the instance device count.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1208,12 +1210,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the resource allocation plan for Embodied Intelligence platform devices</para>
+        /// <para>Queries the resource allocation plan for devices on the embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to view the actual resource amount corresponding to the backend of the instance ontology count</para>
+        /// <para>Queries the actual resource capacity corresponding to the backend of the instance device count.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1263,12 +1265,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the resource allocation plan for Embodied Intelligence platform devices</para>
+        /// <para>Queries the resource allocation plan for devices on the embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to view the actual resource amount corresponding to the backend of the instance ontology count</para>
+        /// <para>Queries the actual resource capacity corresponding to the backend of the instance device count.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1286,12 +1288,12 @@ namespace AlibabaCloud.SDK.ADBAI20250812
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the resource allocation plan for Embodied Intelligence platform devices</para>
+        /// <para>Queries the resource allocation plan for devices on the embodied intelligence platform.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Used to view the actual resource amount corresponding to the backend of the instance ontology count</para>
+        /// <para>Queries the actual resource capacity corresponding to the backend of the instance device count.</para>
         /// </description>
         /// 
         /// <param name="request">
