@@ -1,3 +1,7 @@
+2026-08-25 Version: 5.7.0
+- Support API GetFileUploadInfo.
+
+
 2026-08-20 Version: 5.6.7
 - Update API ListModelProviderTemplates: add response parameters Body.Data.$.WuyingProviderKey.
 
