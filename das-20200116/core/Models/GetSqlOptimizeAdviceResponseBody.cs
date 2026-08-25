@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetSqlOptimizeAdviceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The status code returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The detailed information, including the error codes and the number of entries that are returned.</para>
+        /// <para>The details, including the total number of entries and error codes.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetSqlOptimizeAdviceResponseBodyData Data { get; set; }
         public class GetSqlOptimizeAdviceResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The time when the task was created. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the task was created. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1632303861000</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The URL that is used to download the file.</para>
+            /// <para>The download URL of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://das-sql-optimize.oss-cn-shanghai.aliyuncs.com/adb/oss_sql_optimize_advice/1083">https://das-sql-optimize.oss-cn-shanghai.aliyuncs.com/adb/oss_sql_optimize_advice/1083</a>*******</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string DownloadUrl { get; set; }
 
             /// <summary>
-            /// <para>The time when the file expires. The value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the file expires. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// <remarks>
             /// <para>The file expires three days after the task is created.</para>
             /// </remarks>
@@ -60,16 +60,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the task. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>INIT</b>: The task is being initialized.</para>
-            /// </description></item>
-            /// <item><description><para><b>RUNNING</b>: The task is running.</para>
-            /// </description></item>
-            /// <item><description><para><b>FINISH</b>: The task is complete.</para>
-            /// </description></item>
-            /// <item><description><para><b>FAILED</b>: The task failed.</para>
-            /// </description></item>
+            /// <item><description><b>INIT</b>: initializing.</description></item>
+            /// <item><description><b>RUNNING</b>: running.</description></item>
+            /// <item><description><b>FINISH</b>: completed.</description></item>
+            /// <item><description><b>FAILED</b>: failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -80,14 +76,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The status code of the task. Valid values:</para>
+            /// <para>The task status code. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>NO_DATA</b>: No data is returned.</para>
-            /// </description></item>
-            /// <item><description><para><b>INTERNAL_ERROR</b>: An internal error occurred.</para>
-            /// </description></item>
-            /// <item><description><para><b>SUCCESS</b>: The task is successful.</para>
-            /// </description></item>
+            /// <item><description><b>NO_DATA</b>: no data available.</description></item>
+            /// <item><description><b>INTERNAL_ERROR</b>: internal error.</description></item>
+            /// <item><description><b>SUCCESS</b>: successful.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -110,9 +103,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The message returned for the request.</para>
         /// <remarks>
-        /// <para>If the request was successful, Successful is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, Successful is returned. If the request fails, an error message is returned, such as an error code.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -133,12 +126,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: successful.</description></item>
+        /// <item><description><b>false</b>: failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

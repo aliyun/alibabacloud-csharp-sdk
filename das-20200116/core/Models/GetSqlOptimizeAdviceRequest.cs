@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetSqlOptimizeAdviceRequest : TeaModel {
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ConsoleContext { get; set; }
 
         /// <summary>
-        /// <para>The end date of the time range to query. Specify the date in the <em>yyyyMMdd</em> format. The time must be in UTC.</para>
+        /// <para>The end date of the query. Format: <i>yyyyMMdd</i> (UTC).</para>
         /// <list type="bullet">
-        /// <item><description><para>The default value of this parameter is one day before the current day.</para>
-        /// </description></item>
-        /// <item><description><para>The value must be earlier than the current day. The interval between the start date and the end date cannot exceed 30 days.</para>
-        /// </description></item>
+        /// <item><description>If this parameter is left empty, the default value is the day before the current date.</description></item>
+        /// <item><description>You can only query data from the day before the current date or earlier. The interval between the start date and the end date cannot exceed 30 days.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,10 +36,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>MySQL</b>: ApsaraDB RDS for MySQL.</para>
-        /// </description></item>
-        /// <item><description><para><b>PolarDBMySQL</b>: PolarDB for MySQL.</para>
-        /// </description></item>
+        /// <item><description><b>MySQL</b>: RDS MySQL.</description></item>
+        /// <item><description><b>PolarDBMySQL</b>: PolarDB for MySQL.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -54,7 +50,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The instance ID.</para>
         /// <remarks>
-        /// <para>You must specify the instance ID only if your database instance is an ApsaraDB RDS for MySQL instance or a PolarDB for MySQL cluster.</para>
+        /// <para>Only RDS MySQL and PolarDB for MySQL instances are supported.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -65,18 +61,15 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The region in which the instance resides. Valid values:</para>
+        /// <para>The region to which the instance belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cn-china</b>: Chinese mainland.</para>
-        /// </description></item>
-        /// <item><description><para><b>cn-hongkong</b>: China (Hong Kong).</para>
-        /// </description></item>
-        /// <item><description><para><b>ap-southeast-1</b>: Singapore.</para>
-        /// </description></item>
+        /// <item><description><b>cn-china</b>: the Chinese mainland.</description></item>
+        /// <item><description><b>cn-hongkong</b>: Hong Kong (China).</description></item>
+        /// <item><description><b>ap-southeast-1</b>: Singapore.</description></item>
         /// </list>
-        /// <para>This parameter takes effect only if <b>InstanceIds</b> is left empty. If you leave <b>InstanceIds</b> empty, the system obtains data from the region specified by <b>Region</b>. By default, Region is set to <b>cn-china</b>. If you specify <b>InstanceIds</b>, <b>Region</b> does not take effect, and the system obtains data from the region in which the first specified instance resides.\<em>\</em>\<em>\</em></para>
+        /// <para>This parameter takes effect only when the <b>InstanceIds</b> request parameter is left empty. If <b>InstanceIds</b> is left empty, data is retrieved based on the region specified by the <b>Region</b> parameter. The default region is <b>cn-china</b>. If <b>InstanceIds</b> is not empty, data is retrieved based on the region of the first instance specified by <b>InstanceIds</b>, even if the <b>Region</b> parameter is set.</para>
         /// <remarks>
-        /// <para>If your instances reside in the regions inside the Chinese mainland, set this parameter to <b>cn-china</b>.</para>
+        /// <para>For instances created in regions within the Chinese mainland, set this parameter to <b>cn-china</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -87,12 +80,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Region { get; set; }
 
         /// <summary>
-        /// <para>The start date of the time range to query. Specify the date in the <em>yyyyMMdd</em> format. The time must be in UTC.</para>
+        /// <para>The start date of the query. Format: <i>yyyyMMdd</i> (UTC).</para>
         /// <list type="bullet">
-        /// <item><description><para>The default value of this parameter is one day before the current day.</para>
-        /// </description></item>
-        /// <item><description><para>The value must be earlier than the current day.</para>
-        /// </description></item>
+        /// <item><description>If this parameter is left empty, the default value is the day before the current date.</description></item>
+        /// <item><description>You can only query data from the day before the current date or earlier.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

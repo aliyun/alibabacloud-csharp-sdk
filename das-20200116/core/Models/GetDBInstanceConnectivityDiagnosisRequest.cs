@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>47.110.180.62</para>
+        /// <para>47.100.XX.XX</para>
         /// </summary>
         [NameInMap("SrcIp")]
         [Validation(Required=false)]

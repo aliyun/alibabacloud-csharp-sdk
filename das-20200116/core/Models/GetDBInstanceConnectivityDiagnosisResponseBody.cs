@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDBInstanceConnectivityDiagnosisResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,26 +20,26 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The detailed information.</para>
+        /// <para>The details.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetDBInstanceConnectivityDiagnosisResponseBodyData Data { get; set; }
         public class GetDBInstanceConnectivityDiagnosisResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The exception detection items:</para>
+            /// <para>The outlier detection item. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>SRC_IP_NOT_IN_USER_WHITELIST</b>: The source IP address is not added to the whitelist of the user.</description></item>
-            /// <item><description><b>VIP_NOT_EXISTS</b>: The Application Load Balancer (ALB) instance corresponding to the virtual IP address (VIP) does not exist.</description></item>
-            /// <item><description><b>RS_NOT_EXISTS</b>: The resource sharing (RS) is not properly mounted.</description></item>
-            /// <item><description><b>VIP_TUNNEL_ID_NOT_CONSISTENT</b>: The tunnel ID used by the VIP of the virtual private cloud (VPC) type is different from the tunnel ID of the VPC.</description></item>
-            /// <item><description><b>VIP_VPC_CLOUD_INSTANCE_NOT_EXISTS</b>: The VIP of the VPC type does not exist.</description></item>
-            /// <item><description><b>VIP_IS_NOT_NGLB</b>: The NGLB mode is disabled for the VIP.</description></item>
-            /// <item><description><b>CUSTINS_NOT_ASSOCIATE_ECS_SECURITY_GROUP</b>: No security group is associated with the instance.</description></item>
-            /// <item><description><b>SRC_IP_NOT_IN_USER_WHITELIST</b>: The source IP address is not added to the whitelist of the user.</description></item>
-            /// <item><description><b>SRC_IP_NOT_IN_ADMIN_WHITELIST</b>: The source IP address is not added to the whitelist of the instance.</description></item>
-            /// <item><description><b>SRC_IP_NOT_IN_ECS_SECURITY_GROUP</b>: The source IP address is not added to the security group that is associated with the instance.</description></item>
-            /// <item><description><b>VPC_INSTANCE_IP_NOT_WORKING_STATUS</b>: The IP address in the VPC is in an abnormal state.</description></item>
+            /// <item><description><b>SRC_IP_NOT_IN_USER_WHITELIST</b>: The source IP address is not added to the user whitelist.</description></item>
+            /// <item><description><b>VIP_NOT_EXISTS</b>: The ALB instance corresponding to the VIP does not exist.</description></item>
+            /// <item><description><b>RS_NOT_EXISTS</b>: The RS is not properly mounted.</description></item>
+            /// <item><description><b>VIP_TUNNEL_ID_NOT_CONSISTENT</b>: The TUNNEL ID used by the VPC-type VIP is inconsistent with the actual TUNNEL ID of the VPC.</description></item>
+            /// <item><description><b>VIP_VPC_CLOUD_INSTANCE_NOT_EXISTS</b>: The VPC-type VIP does not exist.</description></item>
+            /// <item><description><b>VIP_IS_NOT_NGLB</b>: The NGLB pattern is shutdown for the VIP.</description></item>
+            /// <item><description><b>CUSTINS_NOT_ASSOCIATE_ECS_SECURITY_GROUP</b>: The instance is not associated with a security group.</description></item>
+            /// <item><description><b>SRC_IP_NOT_IN_USER_WHITELIST</b>: The source IP address is not added to the user whitelist.</description></item>
+            /// <item><description><b>SRC_IP_NOT_IN_ADMIN_WHITELIST</b>: The source IP address is not added to the management machine whitelist.</description></item>
+            /// <item><description><b>SRC_IP_NOT_IN_ECS_SECURITY_GROUP</b>: The source IP address is not added to the security group associated with the instance.</description></item>
+            /// <item><description><b>VPC_INSTANCE_IP_NOT_WORKING_STATUS</b>: The VPC IP address is in an abnormal state.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -50,20 +50,20 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ConnCheckErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The details of the exception detection.</para>
+            /// <para>The details of the outlier detection item.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Src ip:47.110.180.62 not in user whitelist</para>
+            /// <para>Src ip:47.100.XX.XX not in user whitelist</para>
             /// </summary>
             [NameInMap("connCheckErrorMessage")]
             [Validation(Required=false)]
             public string ConnCheckErrorMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the exception:</para>
+            /// <para>The exception type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: an exception that can be handled by the user.</description></item>
-            /// <item><description><b>1</b>: an exception that can be handled by a technical engineer.</description></item>
+            /// <item><description><b>0</b>: The issue can be resolved by the user.</description></item>
+            /// <item><description><b>1</b>: The issue requires on-duty personnel to resolve.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,10 +84,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the connectivity test was passed:</para>
+            /// <para>Indicates whether the check is passed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: The check is passed.</description></item>
+            /// <item><description><b>false</b>: The check is not passed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request was successful, <b>Successful</b> is returned. Otherwise, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message is returned, such as an error code.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -123,10 +123,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: The request is successful.</description></item>
+        /// <item><description><b>false</b>: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

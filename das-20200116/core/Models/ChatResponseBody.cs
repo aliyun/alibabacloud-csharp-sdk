@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ChatResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates the current activity status of the agent.</para>
+        /// <para>The heartbeat.</para>
         /// 
         /// <b>Example:</b>
         /// <para>waiting_for_agent_thinking</para>
@@ -19,8 +19,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string ActivityType { get; set; }
 
+        [NameInMap("AgentId")]
+        [Validation(Required=false)]
+        public string AgentId { get; set; }
+
         /// <summary>
-        /// <para>The content of the response.</para>
+        /// <para>The response content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>I see you have several PolarDB instances, and I will query them for you shortly</para>
@@ -30,7 +34,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The incremental content of the response.</para>
+        /// <para>Indicates whether the content is incremental.</para>
         /// 
         /// <b>Example:</b>
         /// <para>hello</para>
@@ -38,6 +42,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [NameInMap("Delta")]
         [Validation(Required=false)]
         public string Delta { get; set; }
+
+        [NameInMap("Kind")]
+        [Validation(Required=false)]
+        public string Kind { get; set; }
+
+        [NameInMap("Label")]
+        [Validation(Required=false)]
+        public string Label { get; set; }
 
         /// <summary>
         /// <para>The message ID.</para>
@@ -50,7 +62,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>The key for the additional information.</para>
+        /// <para>The extension key.</para>
         /// 
         /// <b>Example:</b>
         /// <para>summary</para>
@@ -59,8 +71,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string Name { get; set; }
 
+        [NameInMap("OriginatingToolCallId")]
+        [Validation(Required=false)]
+        public string OriginatingToolCallId { get; set; }
+
+        [NameInMap("ParentAgentId")]
+        [Validation(Required=false)]
+        public string ParentAgentId { get; set; }
+
         /// <summary>
-        /// <para>The ID of the parent message.</para>
+        /// <para>The parent message ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>76bee207-31ee-4707-8851-6b9d4da033aa</para>
@@ -70,7 +90,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ParentMessageId { get; set; }
 
         /// <summary>
-        /// <para>The role in the conversation.</para>
+        /// <para>The conversation role ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>assistant</para>
@@ -90,7 +110,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RunId { get; set; }
 
         /// <summary>
-        /// <para>The name of the execution step.</para>
+        /// <para>The execution step name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sub_agent_performance_diagnose_mysql</para>
@@ -99,8 +119,12 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string StepName { get; set; }
 
+        [NameInMap("StepStatus")]
+        [Validation(Required=false)]
+        public string StepStatus { get; set; }
+
         /// <summary>
-        /// <para>The identifier of the callback tool.</para>
+        /// <para>The callback tool class.</para>
         /// 
         /// <b>Example:</b>
         /// <para>das_api</para>
@@ -119,8 +143,16 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         [Validation(Required=false)]
         public string ThreadId { get; set; }
 
+        [NameInMap("Timestamp")]
+        [Validation(Required=false)]
+        public long? Timestamp { get; set; }
+
+        [NameInMap("ToolCallError")]
+        [Validation(Required=false)]
+        public string ToolCallError { get; set; }
+
         /// <summary>
-        /// <para>The tool call ID.</para>
+        /// <para>The tool calling invoke ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>call_edf9cdb69e0e4c9796a6a5a6</para>
@@ -130,7 +162,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ToolCallId { get; set; }
 
         /// <summary>
-        /// <para>The name of the tool.</para>
+        /// <para>The tool name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>das_api</para>
@@ -150,7 +182,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The value of the additional information.</para>
+        /// <para>The extension value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;CharCount&quot;:393,&quot;End&quot;:1777428785996,&quot;RequestId&quot;:&quot;BE59AED5-D831-5811-BBAD-590B917B2089&quot;,&quot;SessionId&quot;:&quot;123e4567-e89b-12d3-a456-xxxxxxxxxxxx&quot;,&quot;Start&quot;:1777428707927}</para>

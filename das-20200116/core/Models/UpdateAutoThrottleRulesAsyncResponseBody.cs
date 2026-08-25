@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class UpdateAutoThrottleRulesAsyncResponseBody : TeaModel {
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The returned status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,18 +20,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateAutoThrottleRulesAsyncResponseBodyData Data { get; set; }
         public class UpdateAutoThrottleRulesAsyncResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the asynchronous request was complete. Valid values:</para>
+            /// <para>Indicates whether the asynchronous request is complete. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
+            /// <item><description><para><b>true</b>: The request is complete.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b></para>
+            /// <item><description><para><b>false</b>: The request is not complete.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -43,9 +43,9 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Complete { get; set; }
 
             /// <summary>
-            /// <para>The returned data of the configuration.</para>
+            /// <para>The response data of the batch configuration.</para>
             /// <remarks>
-            /// <para>The data is returned only if the value of isFinish is <b>true</b>. This value indicates that the asynchronous request is complete.</para>
+            /// <para>This data is returned only when the asynchronous request is complete (that is, when isFinish is <b>true</b>).</para>
             /// </remarks>
             /// </summary>
             [NameInMap("ConfigResponse")]
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponse ConfigResponse { get; set; }
             public class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponse : TeaModel {
                 /// <summary>
-                /// <para>The number of database instances for which the parameters failed to be configured.</para>
+                /// <para>The number of database instances that failed to be configured.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -63,18 +63,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ConfigFailInstanceCount { get; set; }
 
                 /// <summary>
-                /// <para>The database instances for which the parameters failed to be configured.</para>
+                /// <para>The list of database instances that failed to be configured.</para>
                 /// </summary>
                 [NameInMap("ConfigFailInstanceList")]
                 [Validation(Required=false)]
                 public List<UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigFailInstanceList> ConfigFailInstanceList { get; set; }
                 public class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigFailInstanceList : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the parameters are configured. Valid values:</para>
+                    /// <para>Indicates whether the configuration was successful. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>true</b></para>
+                    /// <item><description><para><b>true</b>: The configuration was successful.</para>
                     /// </description></item>
-                    /// <item><description><para><b>false</b></para>
+                    /// <item><description><para><b>false</b>: The configuration failed.</para>
                     /// </description></item>
                     /// </list>
                     /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                     public bool? ConfigSuccess { get; set; }
 
                     /// <summary>
-                    /// <para>The error message returned.</para>
+                    /// <para>The error message.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>instance das autonomy service is off or can not find instance</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 }
 
                 /// <summary>
-                /// <para>The number of database instances for which the parameters are configured.</para>
+                /// <para>The number of database instances that were configured successfully.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -118,18 +118,18 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public long? ConfigSuccessInstanceCount { get; set; }
 
                 /// <summary>
-                /// <para>The database instances for which the parameters are configured.</para>
+                /// <para>The list of database instances that were configured successfully.</para>
                 /// </summary>
                 [NameInMap("ConfigSuccessInstanceList")]
                 [Validation(Required=false)]
                 public List<UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigSuccessInstanceList> ConfigSuccessInstanceList { get; set; }
                 public class UpdateAutoThrottleRulesAsyncResponseBodyDataConfigResponseConfigSuccessInstanceList : TeaModel {
                     /// <summary>
-                    /// <para>Indicates whether the parameters are configured. Valid values:</para>
+                    /// <para>Indicates whether the configuration was successful. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><para><b>true</b></para>
+                    /// <item><description><para><b>true</b>: The configuration was successful.</para>
                     /// </description></item>
-                    /// <item><description><para><b>false</b></para>
+                    /// <item><description><para><b>false</b>: The configuration failed.</para>
                     /// </description></item>
                     /// </list>
                     /// 
@@ -165,11 +165,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the asynchronous request failed. Valid values:</para>
+            /// <para>Indicates whether the request failed. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
+            /// <item><description><para><b>true</b>: The request failed.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b></para>
+            /// <item><description><para><b>false</b>: The request did not fail.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -181,11 +181,11 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public bool? Fail { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the asynchronous request was complete. Valid values:</para>
+            /// <para>Indicates whether the asynchronous request is complete. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b></para>
+            /// <item><description><para><b>true</b>: The request is complete.</para>
             /// </description></item>
-            /// <item><description><para><b>false</b></para>
+            /// <item><description><para><b>false</b>: The request is not complete.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -207,13 +207,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string ResultId { get; set; }
 
             /// <summary>
-            /// <para>The state of the asynchronous request. Valid values:</para>
+            /// <para>The execution status of the asynchronous request. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>RUNNING</b></para>
+            /// <item><description><para><b>RUNNING</b>: The request is running.</para>
             /// </description></item>
-            /// <item><description><para><b>SUCCESS</b></para>
+            /// <item><description><para><b>SUCCESS</b>: The request succeeded.</para>
             /// </description></item>
-            /// <item><description><para><b>FAIL</b></para>
+            /// <item><description><para><b>FAIL</b>: The request failed.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The time when the asynchronous request was made. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The execution time. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1645668213000</para>
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request was successful, <b>Successful</b> is returned. If the request failed, an error message such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -262,10 +262,8 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

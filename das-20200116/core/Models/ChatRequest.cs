@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ChatRequest : TeaModel {
         /// <summary>
-        /// <para>Optional. The agent ID. You can use the ID of an agent that is automatically generated when you enable DAS Agent, or the ID of a custom agent. If this parameter is omitted, the default agent is used.</para>
+        /// <para>The Agent ID used for the service. You can specify an Agent generated after enabling DAS Agent or an Agent that you manually created. If not specified, the default Agent is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag-472T0DxtmjIxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The message object.</para>
+        /// <para>The message content.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Optional. The session ID, which must be a UUID. If unspecified, a new session is created. To maintain conversational context, use the same session ID for all subsequent requests.</para>
+        /// <para>The session ID in UUID string format. If not specified, a new session is created by default. To maintain context across conversations, use the same session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string SessionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return summary information.</para>
+        /// <para>Specifies whether to output summary information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

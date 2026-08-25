@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class UpdateAutoThrottleRulesAsyncRequest : TeaModel {
         /// <summary>
-        /// <para>The duration threshold for triggering automatic SQL throttling. Set this parameter to an integer that is greater than or equal to 2. Unit: minutes.</para>
+        /// <para>The duration threshold of the anomaly that triggers automatic SQL throttling. The value must be a positive integer greater than or equal to 2. Unit: minutes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,12 +21,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public double? AbnormalDuration { get; set; }
 
         /// <summary>
-        /// <para>The threshold for the number of active sessions.</para>
+        /// <para>The active sessions threshold.	</para>
         /// <list type="bullet">
-        /// <item><description><para>If this parameter and CpuUsage are in the <b>OR</b> relationship, set this parameter to an integer that is greater than or equal to 16.</para>
-        /// </description></item>
-        /// <item><description><para>If this parameter and CpuUsage are in the <b>AND</b> relationship, set this parameter to an integer that is greater than or equal to 2.</para>
-        /// </description></item>
+        /// <item><description>If the relationship with the CPU utilization threshold is <b>OR</b>, the value must be greater than or equal to 16.</description></item>
+        /// <item><description>If the relationship with the CPU utilization threshold is <b>AND</b>, the value must be greater than or equal to 2.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -38,7 +36,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? ActiveSessions { get; set; }
 
         /// <summary>
-        /// <para>The end time of the throttling window. The time must be in UTC.</para>
+        /// <para>The end time of the throttling time window (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string AllowThrottleEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the throttling window. The time must be in UTC.</para>
+        /// <para>The start time of the throttling time window (UTC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,15 +58,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string AllowThrottleStartTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to terminate abnormal SQL statements in execution at the same time. Valid values:</para>
+        /// <para>Specifies whether to simultaneously kill abnormal SQL statements that are being executed.</para>
         /// <remarks>
-        /// <para>Abnormal SQL statements use the same template as the SQL statements to be throttled.</para>
+        /// <para>Abnormal SQL statements are those that match the SQL templates to be throttled.</para>
         /// </remarks>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -80,7 +77,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public bool? AutoKillSession { get; set; }
 
         /// <summary>
-        /// <para>The reserved parameter.</para>
+        /// <para>A reserved parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -90,12 +87,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string ConsoleContext { get; set; }
 
         /// <summary>
-        /// <para>The logical relationship between the CPU utilization threshold and the maximum number of active sessions. Valid values:</para>
+        /// <para>The logical relationship between the CPU utilization threshold and the active sessions threshold. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>AND</b></para>
-        /// </description></item>
-        /// <item><description><para><b>OR</b></para>
-        /// </description></item>
+        /// <item><description><b>AND</b>: both conditions must be met.</description></item>
+        /// <item><description><b>OR</b>: either condition must be met.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -107,7 +102,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string CpuSessionRelation { get; set; }
 
         /// <summary>
-        /// <para>The threshold for CPU utilization. Valid values: 70% to 100%.</para>
+        /// <para>The CPU utilization threshold. Valid values: 70% to 100%.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -120,7 +115,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The database instance IDs.</para>
         /// <remarks>
-        /// <para>Set this parameter to a JSON array that consists of multiple instance IDs. Separate instance IDs with commas (,). Example: <c>[\\&quot;Instance ID1\\&quot;, \\&quot;Instance ID2\\&quot;]</c>.</para>
+        /// <para>The data format is JSONArray, such as <c>[\\&quot;Instance ID 1\\&quot;,\\&quot;Instance ID 2\\&quot;]</c>. Separate instance IDs with commas (,).</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -132,7 +127,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The maximum throttling duration. Set this parameter to a positive integer. Unit: minutes.</para>
+        /// <para>The maximum throttling duration. The value must be a positive integer. Unit: minutes.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -145,7 +140,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The ID of the asynchronous request.</para>
         /// <remarks>
-        /// <para>You can leave this parameter empty when you call the operation to initiate the request for the first time, and use the value of this parameter contained in the response to the first request for subsequent requests.</para>
+        /// <para>An asynchronous call does not immediately return complete results. First, call this operation to obtain the <b>ResultId</b>. Then, use the returned <b>ResultId</b> to initiate the call again until <b>isFinish</b> is <b>true</b>, at which point the complete results are returned. This means that you must call this operation at least twice to obtain complete data.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
