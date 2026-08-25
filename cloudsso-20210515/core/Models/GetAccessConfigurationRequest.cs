@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetAccessConfigurationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the access configuration.</para>
+        /// <para>The access configuration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ac-00ccule7tadaijxc****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string AccessConfigurationId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CloudSSO directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>

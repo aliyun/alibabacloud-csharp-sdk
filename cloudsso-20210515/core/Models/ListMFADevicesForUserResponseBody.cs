@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class ListMFADevicesForUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of MFA devices.</para>
+        /// <para>The MFA device list.</para>
         /// </summary>
         [NameInMap("MFADevices")]
         [Validation(Required=false)]
@@ -37,7 +37,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DeviceName { get; set; }
 
             /// <summary>
-            /// <para>The MFA device type. Valid values: TOTP: a virtual MFA device based on the Time-based One-Time Password algorithm.</para>
+            /// <para>The MFA device type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>TOTP: a virtual MFA device based on the Time-based One-Time Password algorithm.</description></item>
+            /// <item><description>CrossPlatformPasskey: a cross-platform passkey.</description></item>
+            /// <item><description>PlatformPasskey: a platform built-in passkey.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>TOTP</para>
@@ -47,7 +52,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string DeviceType { get; set; }
 
             /// <summary>
-            /// <para>The effective period. The time is displayed in UTC in RFC 3339 format (YYYY-MM-DDTHH:mm:ssZ).</para>
+            /// <para>The effective period. The time is in UTC and follows the RFC 3339 format (YYYY-MM-DDTHH:mm:ssZ).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-29T09:14:06Z</para>
@@ -56,6 +61,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             [Validation(Required=false)]
             public string EffectiveTime { get; set; }
 
+            /// <summary>
+            /// <para>The last time the MFA device was used.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-08-12T07:26:12Z</para>
+            /// </summary>
             [NameInMap("LastUseTime")]
             [Validation(Required=false)]
             public string LastUseTime { get; set; }

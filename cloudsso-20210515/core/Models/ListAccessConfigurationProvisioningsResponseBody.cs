@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>114240524784****</para>
+            /// </summary>
+            [NameInMap("OriginTargetId")]
+            [Validation(Required=false)]
+            public string OriginTargetId { get; set; }
+
+            /// <summary>
             /// <para>The name of the custom policy that is created for an account in the resource directory.</para>
             /// </summary>
             [NameInMap("RAMPolicyNames")]

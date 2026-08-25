@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"us-west-1", "cloudsso.us-west-1.aliyuncs.com"},
-                {"eu-central-1", "cloudsso.eu-central-1.aliyuncs.com"},
                 {"cn-shanghai", "cloudsso.cn-shanghai.aliyuncs.com"},
                 {"cn-hongkong", "cloudsso.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-1", "cloudsso.ap-southeast-1.aliyuncs.com"},
                 {"ap-northeast-2", "cloudsso.ap-northeast-2.aliyuncs.com"},
+                {"ap-southeast-1", "cloudsso.ap-southeast-1.aliyuncs.com"},
+                {"us-west-1", "cloudsso.us-west-1.aliyuncs.com"},
+                {"eu-central-1", "cloudsso.eu-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cloudsso", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -708,6 +708,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["DirectoryId"] = request.DirectoryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalId))
             {
                 query["PrincipalId"] = request.PrincipalId;
@@ -776,6 +780,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
             {
                 query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalId))
             {
@@ -1520,7 +1528,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user.</para>
+        /// <para>Creates a user by calling CreateUser.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1594,7 +1602,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user.</para>
+        /// <para>Creates a user by calling CreateUser.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1668,7 +1676,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user.</para>
+        /// <para>Creates a user by calling CreateUser.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1686,7 +1694,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a user.</para>
+        /// <para>Creates a user by calling CreateUser.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1935,6 +1943,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["DirectoryId"] = request.DirectoryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalId))
             {
                 query["PrincipalId"] = request.PrincipalId;
@@ -2006,6 +2018,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
             {
                 query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalId))
             {
@@ -3427,6 +3443,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["DirectoryId"] = request.DirectoryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
             {
                 query["TargetId"] = request.TargetId;
@@ -3486,6 +3506,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
             {
                 query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
             {
@@ -4048,12 +4072,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access configuration.</para>
+        /// <para>Queries the information about an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of an access configuration with the ID <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example on how to query the information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4099,12 +4123,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access configuration.</para>
+        /// <para>Queries the information about an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of an access configuration with the ID <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example on how to query the information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4150,12 +4174,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access configuration.</para>
+        /// <para>Queries the information about an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of an access configuration with the ID <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example on how to query the information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4173,12 +4197,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an access configuration.</para>
+        /// <para>Queries the information about an access configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the details of an access configuration with the ID <c>ac-00ccule7tadaijxc****</c>.</para>
+        /// <para>This topic provides an example on how to query the information about the access configuration whose ID is <c>ac-00ccule7tadaijxc****</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6112,7 +6136,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a user.</para>
+        /// <para>Queries the information about a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6158,7 +6182,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a user.</para>
+        /// <para>Queries the information about a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6204,7 +6228,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a user.</para>
+        /// <para>Queries the information about a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6222,7 +6246,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about a user.</para>
+        /// <para>Queries the information about a specified user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7198,6 +7222,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalId))
             {
                 query["PrincipalId"] = request.PrincipalId;
@@ -7272,6 +7300,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrincipalId))
             {
@@ -7394,6 +7426,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["NextToken"] = request.NextToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisioningStatus))
             {
                 query["ProvisioningStatus"] = request.ProvisioningStatus;
@@ -7464,6 +7500,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProvisioningStatus))
             {
@@ -7544,12 +7584,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access configurations.</para>
+        /// <para>Queries the list of access configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the access configurations in the folder <c>d-00fc2p61****</c>. The response shows two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
+        /// <para>This topic provides an example on how to query the access configurations in the directory <c>d-00fc2p61****</c>. The response shows that there are two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7611,12 +7651,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access configurations.</para>
+        /// <para>Queries the list of access configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the access configurations in the folder <c>d-00fc2p61****</c>. The response shows two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
+        /// <para>This topic provides an example on how to query the access configurations in the directory <c>d-00fc2p61****</c>. The response shows that there are two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7678,12 +7718,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access configurations.</para>
+        /// <para>Queries the list of access configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the access configurations in the folder <c>d-00fc2p61****</c>. The response shows two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
+        /// <para>This topic provides an example on how to query the access configurations in the directory <c>d-00fc2p61****</c>. The response shows that there are two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7701,12 +7741,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of access configurations.</para>
+        /// <para>Queries the list of access configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example of how to query the access configurations in the folder <c>d-00fc2p61****</c>. The response shows two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
+        /// <para>This topic provides an example on how to query the access configurations in the directory <c>d-00fc2p61****</c>. The response shows that there are two access configurations: <c>VPC-Admin</c> and <c>ECS-Admin</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8472,12 +8512,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</para>
+        /// <para>Queries the MFA device list of a user. Each user can have a maximum of two MFA devices.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the MFA device list for the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
+        /// <para>This topic provides an example on how to query the MFA device list of the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8523,12 +8563,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</para>
+        /// <para>Queries the MFA device list of a user. Each user can have a maximum of two MFA devices.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the MFA device list for the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
+        /// <para>This topic provides an example on how to query the MFA device list of the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8574,12 +8614,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</para>
+        /// <para>Queries the MFA device list of a user. Each user can have a maximum of two MFA devices.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the MFA device list for the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
+        /// <para>This topic provides an example on how to query the MFA device list of the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8597,12 +8637,12 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of MFA devices for a user. Each user can have a maximum of two MFA devices.</para>
+        /// <para>Queries the MFA device list of a user. Each user can have a maximum of two MFA devices.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This topic provides an example on how to query the MFA device list for the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
+        /// <para>This topic provides an example on how to query the MFA device list of the user <c>u-00q8wbq42wiltcrk****</c>. The response shows that the user has one MFA device named <c>Alice-MFA1</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9651,6 +9691,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             {
                 query["DirectoryId"] = request.DirectoryId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
             {
                 query["TargetId"] = request.TargetId;
@@ -9710,6 +9754,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
             {
                 query["DirectoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginTargetId))
+            {
+                query["OriginTargetId"] = request.OriginTargetId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
             {

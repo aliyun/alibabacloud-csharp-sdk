@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
             /// <summary>
             /// <para>The initial access page.</para>
-            /// <para>This is the page that a CloudSSO user is redirected to after they uses the access configuration to access an account in your resource directory.</para>
+            /// <para>The URL of the initial page that is displayed when a CloudSSO user uses the access configuration to access an account in a resource directory.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://cloudsso.console.aliyun.com">https://cloudsso.console.aliyun.com</a></para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
             /// <summary>
             /// <para>The session duration.</para>
-            /// <para>The maximum session duration for a CloudSSO user who uses the access configuration to access an account in your resource directory.</para>
+            /// <para>The maximum duration of a session when a CloudSSO user uses the access configuration to access an account in a resource directory.</para>
             /// <para>Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
@@ -80,14 +80,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public int? SessionDuration { get; set; }
 
             /// <summary>
-            /// <para>The status notifications.</para>
+            /// <para>The status notification information.</para>
             /// </summary>
             [NameInMap("StatusNotifications")]
             [Validation(Required=false)]
             public List<string> StatusNotifications { get; set; }
 
             /// <summary>
-            /// <para>The tags attached to the access configuration.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -128,12 +128,10 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the response is truncated. Valid values:</para>
+        /// <para>Indicates whether the results are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The response was truncated.</para>
-        /// </description></item>
-        /// <item><description><para>false: The response was not truncated.</para>
-        /// </description></item>
+        /// <item><description>true: The results are truncated.</description></item>
+        /// <item><description>false: The results are not truncated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -144,7 +142,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -154,9 +152,9 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next page of results.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when <c>IsTruncated</c> is set to <c>true</c>.</para>
+        /// <para>This parameter is returned only when <c>IsTruncated</c> is <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -177,7 +175,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the filter conditions.</para>
+        /// <para>The total number of entries that match the request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>Indicates whether the results are truncated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// </description></item>
+        /// <item><description>true: The results are truncated.</description></item>
+        /// <item><description>false: The results are not truncated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,7 +24,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries returned per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next page of results. </para>
         /// <remarks>
         /// <para>This parameter is returned only when <c>IsTruncated</c> is <c>true</c>.</para>
         /// </remarks>
@@ -59,7 +57,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that meet the filter conditions.</para>
+        /// <para>The total number of entries that match the request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -69,14 +67,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public int? TotalCounts { get; set; }
 
         /// <summary>
-        /// <para>The list of users.</para>
+        /// <para>The user list.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListUsersResponseBodyUsers> Users { get; set; }
         public class ListUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The time when the user was created. The time is in UTC.</para>
+            /// <para>The time when the user was created (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-30T09:20:08Z</para>
@@ -116,14 +114,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The identifier of the user in an external IdP.</para>
+            /// <para>The identifier information of the user from the external identity provider.</para>
             /// </summary>
             [NameInMap("ExternalId")]
             [Validation(Required=false)]
             public ListUsersResponseBodyUsersExternalId ExternalId { get; set; }
             public class ListUsersResponseBodyUsersExternalId : TeaModel {
                 /// <summary>
-                /// <para>The identifier of the user in the external IdP.</para>
+                /// <para>The user identifier from the external identity provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c73******a5fdd5</para>
@@ -133,7 +131,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The channel for external user synchronization. Currently, only SCIM synchronization is supported.</para>
+                /// <para>The external identity synchronization channel. Currently, only SCIM-based user synchronization is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SCIM</para>
@@ -167,10 +165,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The type of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Manual: The user was manually created.</para>
-            /// </description></item>
-            /// <item><description><para>Synchronized: The user was synchronized from an external IdP.</para>
-            /// </description></item>
+            /// <item><description>Manual: The user is manually created.</description></item>
+            /// <item><description>Synchronized: The user is synchronized from an external identity provider.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -183,10 +179,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The status of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Enabled</para>
-            /// </description></item>
-            /// <item><description><para>Disabled</para>
-            /// </description></item>
+            /// <item><description>Enabled: The user is enabled.</description></item>
+            /// <item><description>Disabled: The user is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -197,7 +191,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags attached to the user.</para>
+            /// <para>The tag list.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -226,7 +220,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             }
 
             /// <summary>
-            /// <para>The time when the user was last modified. The time is in UTC.</para>
+            /// <para>The time when the user was last modified (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-30T09:20:08Z</para>

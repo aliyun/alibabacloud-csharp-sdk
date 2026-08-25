@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
     public class CreateUserRequest : TeaModel {
         /// <summary>
         /// <para>The description of the user.</para>
-        /// <para>The description can be up to 1,024 characters in length.</para>
+        /// <para>Maximum length: 1024 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a user.</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CloudSSO directory.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The display name of the user.</para>
-        /// <para>The display name can be up to 256 characters in length.</para>
+        /// <para>Maximum length: 256 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alice</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The email address of the user. The email address must be unique within the directory.</para>
-        /// <para>The email address can be up to 128 characters in length.</para>
+        /// <para>Maximum length: 128 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="mailto:Alice@example.com">Alice@example.com</a></para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The first name of the user.</para>
-        /// <para>The first name can be up to 64 characters in length.</para>
+        /// <para>Maximum length: 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alice</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The last name of the user.</para>
-        /// <para>The last name can be up to 64 characters in length.</para>
+        /// <para>Maximum length: 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Lee</para>
@@ -77,10 +77,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         /// <summary>
         /// <para>The status of the user. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Enabled (default)</para>
-        /// </description></item>
-        /// <item><description><para>Disabled</para>
-        /// </description></item>
+        /// <item><description>Enabled (default): Enabled.</description></item>
+        /// <item><description>Disabled: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +89,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
@@ -121,8 +119,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 
         /// <summary>
         /// <para>The username. The username must be unique within the directory and cannot be modified.</para>
-        /// <para>The username can contain digits, letters, and the following special characters: <c>@_-.</c>.</para>
-        /// <para>The username can be up to 64 characters in length.</para>
+        /// <para>Format: Can contain digits, letters, and the following special characters: <c>@_-.</c></para>
+        /// <para>Maximum length: 64 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Alice</para>

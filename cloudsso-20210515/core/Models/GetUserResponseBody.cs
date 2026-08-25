@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the user.</para>
+        /// <para>The user information.</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]
         public GetUserResponseBodyUser User { get; set; }
         public class GetUserResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>The time when the user was created. The time is in UTC.</para>
+            /// <para>The time when the user was created (in UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-26T03:03:42Z</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The information about the user identifier from an external IdP.</para>
+            /// <para>The user identifier information of the external identity provider.</para>
             /// </summary>
             [NameInMap("ExternalId")]
             [Validation(Required=false)]
             public GetUserResponseBodyUserExternalId ExternalId { get; set; }
             public class GetUserResponseBodyUserExternalId : TeaModel {
                 /// <summary>
-                /// <para>The user identifier from the external IdP.</para>
+                /// <para>The user identifier of the external identity provider.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c73******a5fdd5</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The channel for external user synchronization. Only SCIM synchronization is supported.</para>
+                /// <para>The external identity synchronization channel. Currently, only SCIM synchronization is supported.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SCIM</para>
@@ -118,10 +118,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The type of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Manual: The user was created manually.</para>
-            /// </description></item>
-            /// <item><description><para>Synchronized: The user was synchronized from an external IdP.</para>
-            /// </description></item>
+            /// <item><description>Manual: Manually created.</description></item>
+            /// <item><description>Synchronized: Synchronized from an external identity provider.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -134,10 +132,8 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             /// <summary>
             /// <para>The status of the user. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>Enabled</para>
-            /// </description></item>
-            /// <item><description><para>Disabled</para>
-            /// </description></item>
+            /// <item><description>Enabled: Enabled.</description></item>
+            /// <item><description>Disabled: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,7 +144,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags attached to the user.</para>
+            /// <para>The list of tags.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
@@ -177,7 +173,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             }
 
             /// <summary>
-            /// <para>The time when the user was last modified. The time is in UTC.</para>
+            /// <para>The time when the user was last modified (in UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-10-26T06:43:55Z</para>
@@ -187,7 +183,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string UpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the user.</para>
+            /// <para>The user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>u-00q8wbq42wiltcrk****</para>
@@ -197,7 +193,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The username.</para>
+            /// <para>The username of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Alice</para>

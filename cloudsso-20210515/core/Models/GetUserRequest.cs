@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
 {
     public class GetUserRequest : TeaModel {
         /// <summary>
-        /// <para>The CloudSSO directory ID.</para>
+        /// <para>The directory ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-00fc2p61****</para>

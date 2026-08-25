@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string CreateTime { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>114240524784****</para>
+            /// </summary>
+            [NameInMap("OriginTargetId")]
+            [Validation(Required=false)]
+            public string OriginTargetId { get; set; }
+
+            /// <summary>
             /// <para>The ID of the CloudSSO identity.</para>
             /// 
             /// <b>Example:</b>

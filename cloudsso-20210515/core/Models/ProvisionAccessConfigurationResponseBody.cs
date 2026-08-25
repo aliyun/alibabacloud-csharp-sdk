@@ -47,6 +47,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
             public string AccessConfigurationName { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>114240524784****</para>
+            /// </summary>
+            [NameInMap("OriginTargetId")]
+            [Validation(Required=false)]
+            public string OriginTargetId { get; set; }
+
+            /// <summary>
             /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para>InProgress: The task is running.</para>

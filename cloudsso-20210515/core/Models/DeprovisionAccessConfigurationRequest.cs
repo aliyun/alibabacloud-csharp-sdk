@@ -30,6 +30,14 @@ namespace AlibabaCloud.SDK.Cloudsso20210515.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>114240524784****</para>
+        /// </summary>
+        [NameInMap("OriginTargetId")]
+        [Validation(Required=false)]
+        public string OriginTargetId { get; set; }
+
+        /// <summary>
         /// <para>The ID of the task object.</para>
         /// 
         /// <b>Example:</b>
