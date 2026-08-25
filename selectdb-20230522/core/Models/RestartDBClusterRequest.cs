@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the cluster nodes in parallel.</para>
+        /// <para>Specifies whether to perform operations on cluster nodes in parallel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public bool? ParallelOperation { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4690g37929****</para>

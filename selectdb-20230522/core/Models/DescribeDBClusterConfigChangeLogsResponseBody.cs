@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DbInstanceName { get; set; }
 
             /// <summary>
-            /// <para>The parameter change logs.</para>
+            /// <para>The parameter change records.</para>
             /// </summary>
             [NameInMap("ParamChangeLogs")]
             [Validation(Required=false)]
             public List<DescribeDBClusterConfigChangeLogsResponseBodyDataParamChangeLogs> ParamChangeLogs { get; set; }
             public class DescribeDBClusterConfigChangeLogsResponseBodyDataParamChangeLogs : TeaModel {
                 /// <summary>
-                /// <para>The time when the task was created. The time is in GMT.</para>
+                /// <para>The task creation time (GMT).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-10-11T08:53:32Z</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string GmtCreated { get; set; }
 
                 /// <summary>
-                /// <para>The time when the task was last modified. The time is in GMT.</para>
+                /// <para>The task modification time (GMT).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-03-08T10:08Z</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public string NewValue { get; set; }
 
                 /// <summary>
-                /// <para>The original parameter value.</para>
+                /// <para>The old parameter value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>The dynamic code. This parameter is not used. Ignore this parameter.</para>
+        /// <para>The dynamic code. This parameter is not in use. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>The dynamic message. This parameter is not used. Ignore this parameter.</para>
+        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>An error occurred while processing your request.</para>

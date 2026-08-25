@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyDBClusterConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>Access denied details.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>failed</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>Return data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifyDBClusterConfigResponseBodyData Data { get; set; }
         public class ModifyDBClusterConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Cluster ID.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-7213c8*****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DbClusterId { get; set; }
 
             /// <summary>
-            /// <para>Instance numeric ID.</para>
+            /// <para>The numeric ID of the instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6585</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DbInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Instance ID.</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-7213c8*****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string DbInstanceName { get; set; }
 
             /// <summary>
-            /// <para>Task ID</para>
+            /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>107878719</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>Dynamic code, currently not in use, please ignore.</para>
+        /// <para>The dynamic code. This parameter is not in use. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DynamicCode { get; set; }
 
         /// <summary>
-        /// <para>Dynamic message, currently not in use, please ignore.</para>
+        /// <para>The dynamic message. This parameter is not in use. Ignore this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>An error occurred while processing your request.</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DynamicMessage { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BC854513-E85E-54F3-9842-B9CCD3308CDD</para>

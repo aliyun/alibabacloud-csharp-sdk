@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeVSwitchesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <remarks>
-        /// <para>Warning: This is a reserved parameter and is not supported.</para>
+        /// <para>Warning: This is a reserved parameter and is not supported.</warning></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The token for the next query.</para>
         /// <remarks>
-        /// <para>Warning: This is a reserved parameter and is not supported.</para>
+        /// <para>Warning: This is a reserved parameter and is not supported.</warning></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

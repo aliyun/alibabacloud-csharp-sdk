@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class GetCreateBEClusterInquiryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>通用优惠券可抵扣100</para>
+                /// <para>General coupon with a deduction of 100</para>
                 /// </summary>
                 [NameInMap("PromotionDesc")]
                 [Validation(Required=false)]
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 
                 /// <summary>
                 /// <b>Example:</b>
-                /// <para>通用优惠券</para>
+                /// <para>General coupon</para>
                 /// </summary>
                 [NameInMap("PromotionName")]
                 [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public Dictionary<string, string> PricingRules { get; set; }
 
             /// <summary>
-            /// <para>The amount.</para>
+            /// <para>The trade amount.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.76</para>

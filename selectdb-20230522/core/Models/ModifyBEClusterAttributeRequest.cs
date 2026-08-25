@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyBEClusterAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,8 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Attribute type to modify.
-        /// Set to DBInstanceDescription.</para>
+        /// <para>The type of the attribute to modify. Set this parameter to DBInstanceDescription.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,7 +43,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string InstanceAttributeType { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +58,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Target cluster name.</para>
+        /// <para>The new cluster name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeDBInstanceNetInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Network list of BE instances.</para>
+        /// <para>The network information list of the BE instances.</para>
         /// </summary>
         [NameInMap("DBClustersNetInfos")]
         [Validation(Required=false)]
         public List<DescribeDBInstanceNetInfoResponseBodyDBClustersNetInfos> DBClustersNetInfos { get; set; }
         public class DescribeDBInstanceNetInfoResponseBodyDBClustersNetInfos : TeaModel {
             /// <summary>
-            /// <para>Cluster ID.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-****-be</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>Connection address.</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-****-fe.selectdbfe.pre.rds.aliyuncs.com</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ConnectionString { get; set; }
 
             /// <summary>
-            /// <para>IP address.</para>
+            /// <para>The IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.131.<em><b>.</b></em></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>Network type.</para>
+            /// <para>The network type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC/PUBLIC</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string NetType { get; set; }
 
             /// <summary>
-            /// <para>Port list.</para>
+            /// <para>The port list.</para>
             /// </summary>
             [NameInMap("PortList")]
             [Validation(Required=false)]
             public List<DescribeDBInstanceNetInfoResponseBodyDBClustersNetInfosPortList> PortList { get; set; }
             public class DescribeDBInstanceNetInfoResponseBodyDBClustersNetInfosPortList : TeaModel {
                 /// <summary>
-                /// <para>Connection port number.</para>
+                /// <para>The connection port number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9030/8080</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>Port type.</para>
+                /// <para>The port type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MySQLPort/HttpPort</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the information is visible to users.</para>
+            /// <para>Indicates whether the network information is visible to users.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true/false</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public bool? UserVisible { get; set; }
 
             /// <summary>
-            /// <para>VPC ID.</para>
+            /// <para>VPC ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-****</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>VPC instance ID.</para>
+            /// <para>The VPC instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-****-fe-20230816101006</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string VpcInstanceId { get; set; }
 
             /// <summary>
-            /// <para>vSwitch ID.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-****</para>
@@ -128,14 +128,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>Instance network information.</para>
+        /// <para>The network information of the instance.</para>
         /// </summary>
         [NameInMap("DBInstanceNetInfos")]
         [Validation(Required=false)]
         public List<DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos> DBInstanceNetInfos { get; set; }
         public class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfos : TeaModel {
             /// <summary>
-            /// <para>Cluster ID.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-****-be</para>
@@ -145,7 +145,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ClusterId { get; set; }
 
             /// <summary>
-            /// <para>Connection address.</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-h033cnd****-fe.selectdbfe.pre.rds.aliyuncs.com</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string ConnectionString { get; set; }
 
             /// <summary>
-            /// <para>IP address.</para>
+            /// <para>The IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.16.XX.XX</para>
@@ -165,9 +165,9 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string Ip { get; set; }
 
             /// <summary>
-            /// <para>Network type of the instance. Valid values:</para>
+            /// <para>The network type of the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>VPC</b>: Virtual Private Cloud (VPC).</para>
+            /// <item><description><para><b>VPC</b>: virtual private cloud (VPC).</para>
             /// </description></item>
             /// <item><description><para><b>PUBLIC</b>: Internet.</para>
             /// </description></item>
@@ -181,14 +181,14 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string NetType { get; set; }
 
             /// <summary>
-            /// <para>Port object.</para>
+            /// <para>The port objects.</para>
             /// </summary>
             [NameInMap("PortList")]
             [Validation(Required=false)]
             public List<DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosPortList> PortList { get; set; }
             public class DescribeDBInstanceNetInfoResponseBodyDBInstanceNetInfosPortList : TeaModel {
                 /// <summary>
-                /// <para>Connection port number.</para>
+                /// <para>The connection port number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MySQLPort</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
                 public int? Port { get; set; }
 
                 /// <summary>
-                /// <para>Port type. Valid values:</para>
+                /// <para>The port type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><para><b>HttpPort</b>: HTTP protocol port.</para>
                 /// </description></item>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the information is visible to users. Valid values:</para>
+            /// <para>Indicates whether the network information is visible to users. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><para><b>true</b>: Visible to users.</para>
             /// </description></item>
@@ -232,7 +232,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public bool? UserVisible { get; set; }
 
             /// <summary>
-            /// <para>VPC ID.</para>
+            /// <para>VPC ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>vpc-wz90scxq6ods388ft****</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string VpcId { get; set; }
 
             /// <summary>
-            /// <para>VPC instance ID.</para>
+            /// <para>The VPC instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>selectdb-cn-h033cnd****-fe-20230816101006</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
             public string VpcInstanceId { get; set; }
 
             /// <summary>
-            /// <para>vSwitch ID.</para>
+            /// <para>The vSwitch ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vsw-uf6mlqti065rer6m0****</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ADF42B18-43FD-5100-83A9-BE81AB70C863</para>

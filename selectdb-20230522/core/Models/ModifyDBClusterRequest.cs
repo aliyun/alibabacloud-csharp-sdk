@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyDBClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The size of the reserved cache.</para>
+        /// <para>The reserved cache size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -28,22 +28,15 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ClusterNodeType { get; set; }
 
         /// <summary>
-        /// <para>The instance class of the cluster. Valid values:</para>
+        /// <para>The cluster specifications. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>selectdb.xlarge</b>: 4 cores, 32 GB memory.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.2xlarge</b>: 8 cores, 64 GB memory.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.4xlarge</b>: 16 cores, 128 GB memory.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.8xlarge</b>: 32 cores, 256 GB memory.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.16xlarge</b>: 16 cores, 512 GB memory.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.24xlarge</b>: 24 cores, 768 GB memory.</para>
-        /// </description></item>
-        /// <item><description><para><b>selectdb.32xlarge</b>: 32 cores, 1024 GB memory.</para>
-        /// </description></item>
+        /// <item><description><b>selectdb.xlarge</b>: 4 cores, 32 GB memory.</description></item>
+        /// <item><description><b>selectdb.2xlarge</b>: 8 cores, 64 GB memory.</description></item>
+        /// <item><description><b>selectdb.4xlarge</b>: 16 cores, 128 GB memory.</description></item>
+        /// <item><description><b>selectdb.8xlarge</b>: 32 cores, 256 GB memory.</description></item>
+        /// <item><description><b>selectdb.16xlarge</b>: 16 cores, 512 GB memory.</description></item>
+        /// <item><description><b>selectdb.24xlarge</b>: 24 cores, 768 GB memory.</description></item>
+        /// <item><description><b>selectdb.32xlarge</b>: 32 cores, 1024 GB memory.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -77,7 +70,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>The database type. The value is fixed to selectdb.</para>
+        /// <para>The database type. Set the value to selectdb.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? CacheSize { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The billing type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string CommodityCode { get; set; }
 
         /// <summary>
-        /// <para>The elastic computing resources.</para>
+        /// <para>The elastic compute resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? PreCacheSize { get; set; }
 
         /// <summary>
-        /// <para>The reserved computing resources.</para>
+        /// <para>The reserved compute resources.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>

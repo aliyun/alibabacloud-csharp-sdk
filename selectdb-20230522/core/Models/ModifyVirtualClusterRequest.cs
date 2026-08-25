@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyVirtualClusterRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the primary cluster.</para>
+        /// <para>The primary cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb-o2yg***-be</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the standby cluster.</para>
+        /// <para>The secondary cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>selectdb-pu6y****-be</para>

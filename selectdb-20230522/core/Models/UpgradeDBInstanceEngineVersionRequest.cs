@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class UpgradeDBInstanceEngineVersionRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Database version.</para>
+        /// <para>The database version.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string EngineVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform parallel operations on cluster nodes</para>
+        /// <para>Specifies whether to perform operations on cluster nodes in parallel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public bool? ParallelOperation { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Upgrade method.</para>
+        /// <para>The upgrade mode.</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, the system immediately upgrades the instance.</description></item>
-        /// <item><description>If you set this parameter to 1, the system upgrades the instance during the maintenance window.</description></item>
+        /// <item><description>If this parameter is left empty, the upgrade is performed immediately.</description></item>
+        /// <item><description>If this parameter is set to 1, the upgrade is performed during the maintenance window.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

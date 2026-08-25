@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class ModifyDBClusterConfigRequest : TeaModel {
         /// <summary>
-        /// <para>Configuration file to modify. For compute clusters, it is fixed as be.conf. For fe clusters, it is fixed as fe.conf.</para>
+        /// <para>The configuration file to modify. Set this parameter to be.conf for compute clusters or fe.conf for FE clusters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string ConfigKey { get; set; }
 
         /// <summary>
-        /// <para>Cluster ID.</para>
+        /// <para>The cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string DBInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Whether to operate cluster nodes in parallel</para>
+        /// <para>Specifies whether to perform operations on cluster nodes in parallel.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public bool? ParallelOperation { get; set; }
 
         /// <summary>
-        /// <para>JSON string of parameters and parameter values.</para>
+        /// <para>The JSON string of parameters and parameter values.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>Region ID.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Upgrade method. If not specified, the upgrade will be performed immediately. If set to 1, the upgrade will be performed during the maintenance window.</para>
+        /// <para>The upgrade mode. If this parameter is not specified, the upgrade takes effect immediately. Set this parameter to 1 to perform the upgrade during the maintenance window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
 {
     public class DescribeVSwitchesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of results.</para>
+        /// <para>The result list.</para>
         /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query. If this parameter is empty, all results have been returned.</para>
+        /// <para>The token for the next query. An empty value of NextToken indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>459a0909c0315bfbe0b5e8707e68181f</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries on the current page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>4773E4EC-025D-509F-AEA9-D53123FDFB0F</para>

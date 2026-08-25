@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         public bool? HasServiceLinkedRole { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1F455133-981E-5AD0-80EB-26EA1EF3C65F</para>

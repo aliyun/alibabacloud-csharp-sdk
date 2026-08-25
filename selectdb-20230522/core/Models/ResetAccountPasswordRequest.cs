@@ -23,9 +23,12 @@ namespace AlibabaCloud.SDK.Selectdb20230522.Models
         /// <summary>
         /// <para>The password of the database account. The password must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The password must consist of at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</description></item>
-        /// <item><description>The special characters are !@#$%^&amp;\*()_+-=.</description></item>
-        /// <item><description>The password must be 8 to 32 characters in length.</description></item>
+        /// <item><description><para>Contains at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</para>
+        /// </description></item>
+        /// <item><description><para>The special characters are !@#$%^&amp;*()_+-=.</para>
+        /// </description></item>
+        /// <item><description><para>The password must be 8 to 32 characters in length.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
