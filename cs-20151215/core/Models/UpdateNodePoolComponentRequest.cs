@@ -26,10 +26,39 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public Dictionary<string, object> CustomConfig { get; set; }
 
+            /// <summary>
+            /// <para>The environment variables of the node component.</para>
+            /// </summary>
+            [NameInMap("envs")]
+            [Validation(Required=false)]
+            public List<UpdateNodePoolComponentRequestConfigEnvs> Envs { get; set; }
+            public class UpdateNodePoolComponentRequestConfigEnvs : TeaModel {
+                /// <summary>
+                /// <para>The name of the environment variable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>LOG_LEVEL</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <para>The value of the environment variable.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>info</para>
+                /// </summary>
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
         /// <summary>
-        /// <para>Specifies whether to disable rolling. Default value: false. If set to false, updating the baseline configuration triggers a rolling update of nodes.</para>
+        /// <para>Specifies whether to disable log rotation. Default value: false. Updating the baseline configuration triggers log rotation on nodes.</para>
         /// </summary>
         [NameInMap("disableRolling")]
         [Validation(Required=false)]
@@ -46,21 +75,21 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The list of nodes to be included in the rolling update. By default, all nodes are included.</para>
+        /// <para>The list of nodes for log rotation. By default, all nodes are included.</para>
         /// </summary>
         [NameInMap("nodeNames")]
         [Validation(Required=false)]
         public List<string> NodeNames { get; set; }
 
         /// <summary>
-        /// <para>The rolling update policy.</para>
+        /// <para>The log rotation configuration.</para>
         /// </summary>
         [NameInMap("rollingPolicy")]
         [Validation(Required=false)]
         public UpdateNodePoolComponentRequestRollingPolicy RollingPolicy { get; set; }
         public class UpdateNodePoolComponentRequestRollingPolicy : TeaModel {
             /// <summary>
-            /// <para>The interval between batches during the upgrade. Unit: seconds.</para>
+            /// <para>The upgrade interval between batches. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -70,7 +99,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
+            /// <para>The maximum number of nodes that can fail during the rolling update. Default value: 0, which means the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -80,7 +109,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxFailedNodes { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that can be updated in parallel per batch. Default value: 1.</para>
+            /// <para>The maximum number of parallel operations per batch. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -90,7 +119,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? MaxParallelism { get; set; }
 
             /// <summary>
-            /// <para>The automatic pause policy during the node upgrade process.</para>
+            /// <para>The automatic pause policy during node upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>NotPause</para>

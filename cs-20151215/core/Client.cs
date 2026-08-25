@@ -3290,7 +3290,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes. Node pools allow you to manage and maintain nodes in a unified manner, such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3396,7 +3396,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes. Node pools allow you to manage and maintain nodes in a unified manner, such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3502,7 +3502,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes. Node pools allow you to manage and maintain nodes in a unified manner, such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3521,7 +3521,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>A node pool is a logical collection of nodes that share the same attributes, allowing unified management and O&amp;M operations such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
+        /// <para>A node pool is a logical collection of nodes that share the same attributes. Node pools allow you to manage and maintain nodes in a unified manner, such as node upgrades and elastic scaling. You can further use the automated O&amp;M capabilities of node pools, including automatic OS CVE vulnerability patching, automatic faulty node recovery, and automatic kubelet and containerd version upgrades, to reduce O&amp;M costs. You can call CreateClusterNodePool to create a node pool for a cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13804,7 +13804,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs node components. You can configure and specify nodes on which to install components.</para>
+        /// <para>Installs components on nodes. You can configure and specify nodes on which to install components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13858,7 +13858,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs node components. You can configure and specify nodes on which to install components.</para>
+        /// <para>Installs components on nodes. You can configure and specify nodes on which to install components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13912,7 +13912,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs node components. You can configure and specify nodes on which to install components.</para>
+        /// <para>Installs components on nodes. You can configure and specify nodes on which to install components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13931,7 +13931,7 @@ namespace AlibabaCloud.SDK.CS20151215
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs node components. You can configure and specify nodes on which to install components.</para>
+        /// <para>Installs components on nodes. You can configure and specify nodes on which to install components.</para>
         /// </summary>
         /// 
         /// <param name="request">

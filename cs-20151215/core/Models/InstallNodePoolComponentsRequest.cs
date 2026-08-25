@@ -33,6 +33,35 @@ namespace AlibabaCloud.SDK.CS20151215.Models
                 [Validation(Required=false)]
                 public Dictionary<string, object> CustomConfig { get; set; }
 
+                /// <summary>
+                /// <para>The environment variables of the node component.</para>
+                /// </summary>
+                [NameInMap("envs")]
+                [Validation(Required=false)]
+                public List<InstallNodePoolComponentsRequestComponentsConfigEnvs> Envs { get; set; }
+                public class InstallNodePoolComponentsRequestComponentsConfigEnvs : TeaModel {
+                    /// <summary>
+                    /// <para>The name of the environment variable.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>LOG_LEVEL</para>
+                    /// </summary>
+                    [NameInMap("name")]
+                    [Validation(Required=false)]
+                    public string Name { get; set; }
+
+                    /// <summary>
+                    /// <para>The value of the environment variable.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>info</para>
+                    /// </summary>
+                    [NameInMap("value")]
+                    [Validation(Required=false)]
+                    public string Value { get; set; }
+
+                }
+
             }
 
             /// <summary>
@@ -59,7 +88,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
         }
 
         /// <summary>
-        /// <para>The list of node names for the rolling operation. Default value: all nodes.</para>
+        /// <para>The list of node names for the rolling operation. By default, all nodes are included.</para>
         /// </summary>
         [NameInMap("nodeNames")]
         [Validation(Required=false)]
@@ -83,7 +112,7 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             public long? BatchInterval { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of nodes that are allowed to fail during the rolling process. Default value: 0, which indicates that the task fails if any node fails. If the value is greater than 0, the task fails and stops when the cumulative number of failed nodes exceeds this value.</para>
+            /// <para>The maximum number of nodes that are allowed to fail during the rolling process. Default value: 0, which indicates that the task is considered failed if any node fails. If the value is greater than 0, the task is considered failed and stops when the cumulative number of failed nodes exceeds this value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

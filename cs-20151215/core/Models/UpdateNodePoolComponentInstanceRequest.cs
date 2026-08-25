@@ -21,6 +21,28 @@ namespace AlibabaCloud.SDK.CS20151215.Models
             [Validation(Required=false)]
             public Dictionary<string, object> CustomConfig { get; set; }
 
+            [NameInMap("envs")]
+            [Validation(Required=false)]
+            public List<UpdateNodePoolComponentInstanceRequestConfigEnvs> Envs { get; set; }
+            public class UpdateNodePoolComponentInstanceRequestConfigEnvs : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>LOG_LEVEL</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>info</para>
+                /// </summary>
+                [NameInMap("value")]
+                [Validation(Required=false)]
+                public string Value { get; set; }
+
+            }
+
         }
 
         /// <summary>
