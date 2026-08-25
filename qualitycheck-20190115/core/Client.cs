@@ -5451,8 +5451,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task result of an Agent node.</para>
+        /// <para>Retrieves the task result of an agent node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
+        /// 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentTaskResultRequest
@@ -5497,8 +5503,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task result of an Agent node.</para>
+        /// <para>Retrieves the task result of an agent node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
+        /// 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentTaskResultRequest
@@ -5543,8 +5555,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task result of an Agent node.</para>
+        /// <para>Retrieves the task result of an agent node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
+        /// 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentTaskResultRequest
@@ -5561,8 +5579,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the task result of an Agent node.</para>
+        /// <para>Retrieves the task result of an agent node.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>可以查询通过<a href="https://help.aliyun.com/document_detail/139399.html">UploadAudioData</a>、<a href="https://help.aliyun.com/document_detail/111394.html">UploadData</a>上传的数据，也可以查询数据集质检任务<a href="https://help.aliyun.com/document_detail/158890.html">SubmitQualityCheckTask</a>的数据。可以根据任务ID（taskId）查询，也可以根据时间范围查询。
+        /// 此接⼝返回结果中默认只返回部分参数，可通过请求参数中的requiredFields来⾃定义设置返回参数中需要返回哪些字段。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetAgentTaskResultRequest

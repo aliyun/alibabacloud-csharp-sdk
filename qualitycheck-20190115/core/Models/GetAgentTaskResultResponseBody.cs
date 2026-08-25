@@ -30,36 +30,68 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
             [Validation(Required=false)]
             public List<GetAgentTaskResultResponseBodyDataDialogues> Dialogues { get; set; }
             public class GetAgentTaskResultResponseBodyDataDialogues : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>980</para>
+                /// </summary>
                 [NameInMap("Begin")]
                 [Validation(Required=false)]
                 public long? Begin { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>7</para>
+                /// </summary>
                 [NameInMap("EmotionValue")]
                 [Validation(Required=false)]
                 public int? EmotionValue { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>80000</para>
+                /// </summary>
                 [NameInMap("End")]
                 [Validation(Required=false)]
                 public long? End { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>00:08</para>
+                /// </summary>
                 [NameInMap("HourMinSec")]
                 [Validation(Required=false)]
                 public string HourMinSec { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>客服</para>
+                /// </summary>
                 [NameInMap("Role")]
                 [Validation(Required=false)]
                 public string Role { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>200</para>
+                /// </summary>
                 [NameInMap("SpeechRate")]
                 [Validation(Required=false)]
                 public int? SpeechRate { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>你好有什么可以帮您</para>
+                /// </summary>
                 [NameInMap("Words")]
                 [Validation(Required=false)]
                 public string Words { get; set; }
 
             }
 
+            /// <summary>
+            /// <b>Example:</b>
+            /// <para>xxxx</para>
+            /// </summary>
             [NameInMap("ErrorMessage")]
             [Validation(Required=false)]
             public string ErrorMessage { get; set; }
@@ -92,7 +124,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     /// <para>The result returned by the large language model.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>175/XL the fabric feels very comfortable, looks slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase.</para>
+                    /// <para>175/XL the fabric feels very comfortable, looks slim when worn, great clothes super good-looking, quality and feel are top-notch, very satisfied with this purchase</para>
                     /// </summary>
                     [NameInMap("Text")]
                     [Validation(Required=false)]
@@ -101,21 +133,21 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 }
 
                 /// <summary>
-                /// <para>The property extraction result.</para>
+                /// <para>The attribute extraction result.</para>
                 /// </summary>
                 [NameInMap("FieldResponse")]
                 [Validation(Required=false)]
                 public GetAgentTaskResultResponseBodyDataResponseFieldResponse FieldResponse { get; set; }
                 public class GetAgentTaskResultResponseBodyDataResponseFieldResponse : TeaModel {
                     /// <summary>
-                    /// <para>The list of properties.</para>
+                    /// <para>The list of attributes.</para>
                     /// </summary>
                     [NameInMap("FieldVoList")]
                     [Validation(Required=false)]
                     public List<GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList> FieldVoList { get; set; }
                     public class GetAgentTaskResultResponseBodyDataResponseFieldResponseFieldVoList : TeaModel {
                         /// <summary>
-                        /// <para>The property name.</para>
+                        /// <para>The attribute name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>phone</para>
@@ -135,14 +167,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         /// <para>The reasoning for the judgment.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Determined based on the first sentence of the agent.</para>
+                        /// <para>Determined based on the first sentence of the agent</para>
                         /// </summary>
                         [NameInMap("Remarks")]
                         [Validation(Required=false)]
                         public string Remarks { get; set; }
 
                         /// <summary>
-                        /// <para>The property value.</para>
+                        /// <para>The attribute value.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1234561</para>
@@ -249,14 +281,14 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         /// <para>The inspection dimension.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Service attitude.</para>
+                        /// <para>Service attitude</para>
                         /// </summary>
                         [NameInMap("Dimension")]
                         [Validation(Required=false)]
                         public string Dimension { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the label is matched.</para>
+                        /// <para>Indicates whether the tag is matched.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -276,7 +308,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         /// <para>The reasoning for the judgment.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Determined based on the first sentence of the agent.</para>
+                        /// <para>Determined based on the first sentence of the agent</para>
                         /// </summary>
                         [NameInMap("Remarks")]
                         [Validation(Required=false)]
@@ -294,24 +326,24 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 public GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse TagCategoryResponse { get; set; }
                 public class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponse : TeaModel {
                     /// <summary>
-                    /// <para>The list of labels.</para>
+                    /// <para>The list of tags.</para>
                     /// </summary>
                     [NameInMap("TagCategoryVoList")]
                     [Validation(Required=false)]
                     public List<GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList> TagCategoryVoList { get; set; }
                     public class GetAgentTaskResultResponseBodyDataResponseTagCategoryResponseTagCategoryVoList : TeaModel {
                         /// <summary>
-                        /// <para>The label dimension.</para>
+                        /// <para>The tag dimension.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Customer intent.</para>
+                        /// <para>Customer intent</para>
                         /// </summary>
                         [NameInMap("Dimension")]
                         [Validation(Required=false)]
                         public string Dimension { get; set; }
 
                         /// <summary>
-                        /// <para>Indicates whether the label is matched.</para>
+                        /// <para>Indicates whether the tag is matched.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>true</para>
@@ -331,7 +363,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         /// <para>The reasoning for the judgment.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Determined based on the first sentence of the agent.</para>
+                        /// <para>Determined based on the first sentence of the agent</para>
                         /// </summary>
                         [NameInMap("Remarks")]
                         [Validation(Required=false)]
@@ -360,56 +392,108 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                         [Validation(Required=false)]
                         public GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions Additions { get; set; }
                         public class GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseDialogueAdditions : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>38</para>
+                            /// </summary>
                             [NameInMap("Age")]
                             [Validation(Required=false)]
                             public string Age { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>中年</para>
+                            /// </summary>
                             [NameInMap("AgeGroup")]
                             [Validation(Required=false)]
                             public string AgeGroup { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>0.9</para>
+                            /// </summary>
                             [NameInMap("AgeScore")]
                             [Validation(Required=false)]
                             public float? AgeScore { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>0.6</para>
+                            /// </summary>
                             [NameInMap("BestVoiceprintScore")]
                             [Validation(Required=false)]
                             public float? BestVoiceprintScore { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>中立/neutral</para>
+                            /// </summary>
                             [NameInMap("Emotion")]
                             [Validation(Required=false)]
                             public string Emotion { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>0.9</para>
+                            /// </summary>
                             [NameInMap("EmotionScore")]
                             [Validation(Required=false)]
                             public float? EmotionScore { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>女</para>
+                            /// </summary>
                             [NameInMap("Gender")]
                             [Validation(Required=false)]
                             public string Gender { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>0.8</para>
+                            /// </summary>
                             [NameInMap("GenderScore")]
                             [Validation(Required=false)]
                             public float? GenderScore { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>true</para>
+                            /// </summary>
                             [NameInMap("IsKnownVoiceprint")]
                             [Validation(Required=false)]
                             public bool? IsKnownVoiceprint { get; set; }
 
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>12</para>
+                            /// </summary>
                             [NameInMap("Speaker")]
                             [Validation(Required=false)]
                             public string Speaker { get; set; }
 
                         }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>443</para>
+                        /// </summary>
                         [NameInMap("Begin")]
                         [Validation(Required=false)]
                         public long? Begin { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1767492840000</para>
+                        /// </summary>
                         [NameInMap("End")]
                         [Validation(Required=false)]
                         public long? End { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>不清楚</para>
+                        /// </summary>
                         [NameInMap("Words")]
                         [Validation(Required=false)]
                         public string Words { get; set; }
@@ -420,10 +504,18 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                     [Validation(Required=false)]
                     public List<GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors> Errors { get; set; }
                     public class GetAgentTaskResultResponseBodyDataResponseVoiceprintResponseErrors : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>200</para>
+                        /// </summary>
                         [NameInMap("Code")]
                         [Validation(Required=false)]
                         public string Code { get; set; }
 
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>successful</para>
+                        /// </summary>
                         [NameInMap("Message")]
                         [Validation(Required=false)]
                         public string Message { get; set; }
@@ -472,6 +564,10 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
                 [Validation(Required=false)]
                 public string OutputTokens { get; set; }
 
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>0</para>
+                /// </summary>
                 [NameInMap("TotalTokens")]
                 [Validation(Required=false)]
                 public string TotalTokens { get; set; }
