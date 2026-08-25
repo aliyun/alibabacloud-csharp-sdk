@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 {
     public class UploadDataSyncForLLMResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of a failure.</para>
+        /// <para>The result code. A value of 200 indicates success. Other values indicate failure. You can use this field to determine the cause of failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         }
 
         /// <summary>
-        /// <para>The error message if the request fails. If the request is successful, the value is <b>successful</b>.</para>
+        /// <para>The error message if the request fails. The value is <b>successful</b> if the request succeeds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -196,7 +196,7 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful. Valid values: true and false/null.</para>
+        /// <para>Indicates whether the request was successful. Valid values: true: The request was successful. false/null: The request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

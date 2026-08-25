@@ -133,6 +133,30 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
             }
 
+            [NameInMap("TagTreeLevelParam")]
+            [Validation(Required=false)]
+            public AgentInfoInstructionTypeParamTagTreeLevelParam TagTreeLevelParam { get; set; }
+            public class AgentInfoInstructionTypeParamTagTreeLevelParam : TeaModel {
+                [NameInMap("TagIds")]
+                [Validation(Required=false)]
+                public List<long?> TagIds { get; set; }
+
+                [NameInMap("TagTreeLevels")]
+                [Validation(Required=false)]
+                public List<AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels> TagTreeLevels { get; set; }
+                public class AgentInfoInstructionTypeParamTagTreeLevelParamTagTreeLevels : TeaModel {
+                    [NameInMap("Prompt")]
+                    [Validation(Required=false)]
+                    public string Prompt { get; set; }
+
+                    [NameInMap("TagTreeIds")]
+                    [Validation(Required=false)]
+                    public List<long?> TagTreeIds { get; set; }
+
+                }
+
+            }
+
         }
 
         [NameInMap("ModelType")]
