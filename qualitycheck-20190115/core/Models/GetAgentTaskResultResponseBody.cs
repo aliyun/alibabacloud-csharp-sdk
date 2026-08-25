@@ -155,6 +155,82 @@ namespace AlibabaCloud.SDK.Qualitycheck20190115.Models
 
                 }
 
+                [NameInMap("MultiLevelTagResponse")]
+                [Validation(Required=false)]
+                public GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse MultiLevelTagResponse { get; set; }
+                public class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponse : TeaModel {
+                    [NameInMap("TagList")]
+                    [Validation(Required=false)]
+                    public List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList> TagList { get; set; }
+                    public class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagList : TeaModel {
+                        [NameInMap("Children")]
+                        [Validation(Required=false)]
+                        public List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren> Children { get; set; }
+                        public class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildren : TeaModel {
+                            [NameInMap("Children")]
+                            [Validation(Required=false)]
+                            public List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren> Children { get; set; }
+                            public class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildren : TeaModel {
+                                [NameInMap("Children")]
+                                [Validation(Required=false)]
+                                public List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren> Children { get; set; }
+                                public class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildren : TeaModel {
+                                    [NameInMap("Children")]
+                                    [Validation(Required=false)]
+                                    public List<GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren> Children { get; set; }
+                                    public class GetAgentTaskResultResponseBodyDataResponseMultiLevelTagResponseTagListChildrenChildrenChildrenChildren : TeaModel {
+                                        [NameInMap("Remarks")]
+                                        [Validation(Required=false)]
+                                        public string Remarks { get; set; }
+
+                                        [NameInMap("TagName")]
+                                        [Validation(Required=false)]
+                                        public string TagName { get; set; }
+
+                                    }
+
+                                    [NameInMap("Remarks")]
+                                    [Validation(Required=false)]
+                                    public string Remarks { get; set; }
+
+                                    [NameInMap("TagName")]
+                                    [Validation(Required=false)]
+                                    public string TagName { get; set; }
+
+                                }
+
+                                [NameInMap("Remarks")]
+                                [Validation(Required=false)]
+                                public string Remarks { get; set; }
+
+                                [NameInMap("TagName")]
+                                [Validation(Required=false)]
+                                public string TagName { get; set; }
+
+                            }
+
+                            [NameInMap("Remarks")]
+                            [Validation(Required=false)]
+                            public string Remarks { get; set; }
+
+                            [NameInMap("TagName")]
+                            [Validation(Required=false)]
+                            public string TagName { get; set; }
+
+                        }
+
+                        [NameInMap("Remarks")]
+                        [Validation(Required=false)]
+                        public string Remarks { get; set; }
+
+                        [NameInMap("TagName")]
+                        [Validation(Required=false)]
+                        public string TagName { get; set; }
+
+                    }
+
+                }
+
                 /// <summary>
                 /// <para>The service quality inspection result.</para>
                 /// </summary>
