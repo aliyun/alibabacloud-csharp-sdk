@@ -10,6 +10,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
 {
     public class AsymmetricDecryptResponseBody : TeaModel {
         /// <summary>
+        /// <b>Example:</b>
+        /// <para><em><b>Ciphertext</b></em></para>
+        /// </summary>
+        [NameInMap("CiphertextForRecipient")]
+        [Validation(Required=false)]
+        public string CiphertextForRecipient { get; set; }
+
+        /// <summary>
         /// <para>The ID of the key. If the KeyId parameter in the request is a key alias or key ARN, the key ID is also returned in the response.</para>
         /// 
         /// <b>Example:</b>

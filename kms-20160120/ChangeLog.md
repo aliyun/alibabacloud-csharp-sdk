@@ -1,3 +1,6 @@
+2026-08-25 Version: 2.2.1
+- Generated csharp 2016-01-20 for Kms.
+
 2026-08-05 Version: 2.2.0
 - Support API BatchGetSecretValue.
 

@@ -24,40 +24,40 @@ namespace AlibabaCloud.SDK.Kms20160120
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"us-west-1", "kms.us-west-1.aliyuncs.com"},
-                {"us-east-1", "kms.us-east-1.aliyuncs.com"},
-                {"na-south-1", "kms.na-south-1.aliyuncs.com"},
-                {"me-east-1", "kms.me-east-1.aliyuncs.com"},
-                {"me-central-1", "kms.me-central-1.aliyuncs.com"},
-                {"eu-west-1", "kms.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "kms.eu-central-1.aliyuncs.com"},
-                {"cn-zhengzhou-jva", "kms.cn-zhengzhou-jva.aliyuncs.com"},
-                {"cn-zhangjiakou", "kms.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu", "kms.cn-wulanchabu.aliyuncs.com"},
-                {"cn-wuhan-lr", "kms.cn-wuhan-lr.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "kms.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-shenzhen", "kms.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "kms.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "kms.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "kms.cn-qingdao.aliyuncs.com"},
-                {"cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"},
-                {"cn-hongkong", "kms.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan-acdr-1", "kms.cn-heyuan-acdr-1.aliyuncs.com"},
-                {"cn-heyuan", "kms.cn-heyuan.aliyuncs.com"},
-                {"cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"},
-                {"cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "kms.cn-guangzhou.aliyuncs.com"},
-                {"cn-fuzhou", "kms.cn-fuzhou.aliyuncs.com"},
-                {"cn-chengdu", "kms.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing-finance-1", "kms.cn-beijing-finance-1.aliyuncs.com"},
-                {"cn-beijing", "kms.cn-beijing.aliyuncs.com"},
+                {"ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com"},
+                {"ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"},
                 {"ap-southeast-7", "kms.ap-southeast-7.aliyuncs.com"},
                 {"ap-southeast-6", "kms.ap-southeast-6.aliyuncs.com"},
                 {"ap-southeast-5", "kms.ap-southeast-5.aliyuncs.com"},
                 {"ap-southeast-3", "kms.ap-southeast-3.aliyuncs.com"},
                 {"ap-southeast-1", "kms.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-2", "kms.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "kms.ap-northeast-1.aliyuncs.com"},
+                {"cn-hongkong", "kms.cn-hongkong.aliyuncs.com"},
+                {"cn-chengdu", "kms.cn-chengdu.aliyuncs.com"},
+                {"cn-wulanchabu", "kms.cn-wulanchabu.aliyuncs.com"},
+                {"cn-huhehaote", "kms.cn-huhehaote.aliyuncs.com"},
+                {"cn-zhangjiakou", "kms.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-beijing", "kms.cn-beijing.aliyuncs.com"},
+                {"cn-qingdao", "kms.cn-qingdao.aliyuncs.com"},
+                {"cn-guangzhou", "kms.cn-guangzhou.aliyuncs.com"},
+                {"cn-heyuan", "kms.cn-heyuan.aliyuncs.com"},
+                {"cn-shenzhen", "kms.cn-shenzhen.aliyuncs.com"},
+                {"cn-shanghai", "kms.cn-shanghai.aliyuncs.com"},
+                {"cn-hangzhou", "kms.cn-hangzhou.aliyuncs.com"},
+                {"cn-fuzhou", "kms.cn-fuzhou.aliyuncs.com"},
+                {"cn-wuhan-lr", "kms.cn-wuhan-lr.aliyuncs.com"},
+                {"cn-zhengzhou-jva", "kms.cn-zhengzhou-jva.aliyuncs.com"},
+                {"na-south-1", "kms.na-south-1.aliyuncs.com"},
+                {"eu-central-1", "kms.eu-central-1.aliyuncs.com"},
+                {"eu-west-1", "kms.eu-west-1.aliyuncs.com"},
+                {"us-west-1", "kms.us-west-1.aliyuncs.com"},
+                {"us-east-1", "kms.us-east-1.aliyuncs.com"},
+                {"me-central-1", "kms.me-central-1.aliyuncs.com"},
+                {"me-east-1", "kms.me-east-1.aliyuncs.com"},
+                {"cn-heyuan-acdr-1", "kms.cn-heyuan-acdr-1.aliyuncs.com"},
+                {"cn-hangzhou-finance", "kms.cn-hangzhou-finance.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "kms.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "kms.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-beijing-finance-1", "kms.cn-beijing-finance-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("kms", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -182,9 +182,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["KeyVersionId"] = request.KeyVersionId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
+            {
+                body["Recipient"] = request.Recipient;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -306,9 +312,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["KeyVersionId"] = request.KeyVersionId;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
+            {
+                body["Recipient"] = request.Recipient;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3904,13 +3916,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
             {
-                query["Recipient"] = request.Recipient;
+                body["Recipient"] = request.Recipient;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -3982,13 +3996,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["EncryptionContext"] = request.EncryptionContextShrink;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
             {
-                query["Recipient"] = request.Recipient;
+                body["Recipient"] = request.Recipient;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7268,13 +7284,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["NumberOfBytes"] = request.NumberOfBytes;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
             {
-                query["Recipient"] = request.Recipient;
+                body["Recipient"] = request.Recipient;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7366,13 +7384,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["NumberOfBytes"] = request.NumberOfBytes;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
             {
-                query["Recipient"] = request.Recipient;
+                body["Recipient"] = request.Recipient;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -7947,6 +7967,110 @@ namespace AlibabaCloud.SDK.Kms20160120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GenerateMacWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从kms获取挑战</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChallengeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChallengeResponse
+        /// </returns>
+        public GetChallengeResponse GetChallengeWithOptions(GetChallengeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChallenge",
+                Version = "2016-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChallengeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从kms获取挑战</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChallengeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChallengeResponse
+        /// </returns>
+        public async Task<GetChallengeResponse> GetChallengeWithOptionsAsync(GetChallengeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetChallenge",
+                Version = "2016-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetChallengeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从kms获取挑战</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChallengeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChallengeResponse
+        /// </returns>
+        public GetChallengeResponse GetChallenge(GetChallengeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetChallengeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>从kms获取挑战</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetChallengeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetChallengeResponse
+        /// </returns>
+        public async Task<GetChallengeResponse> GetChallengeAsync(GetChallengeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetChallengeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -9671,16 +9795,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the credential value.</para>
+        /// <para>Retrieves a secret value.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>If you do not specify a version number or version status, Key Management Service (KMS) returns the credential value of the version marked as ACSCurrent by default.</description></item>
-        /// <item><description>If a customer-managed key is used to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
-        /// This topic provides a sample request to retrieve the credential value of a credential named <c>secret001</c>. The returned result shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If the secret uses a user-specified key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9718,9 +9842,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["VersionStage"] = request.VersionStage;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
+            {
+                body["Recipient"] = request.Recipient;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9739,16 +9869,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the credential value.</para>
+        /// <para>Retrieves a secret value.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>If you do not specify a version number or version status, Key Management Service (KMS) returns the credential value of the version marked as ACSCurrent by default.</description></item>
-        /// <item><description>If a customer-managed key is used to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
-        /// This topic provides a sample request to retrieve the credential value of a credential named <c>secret001</c>. The returned result shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If the secret uses a user-specified key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9786,9 +9916,15 @@ namespace AlibabaCloud.SDK.Kms20160120
             {
                 query["VersionStage"] = request.VersionStage;
             }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Recipient))
+            {
+                body["Recipient"] = request.Recipient;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
@@ -9807,16 +9943,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the credential value.</para>
+        /// <para>Retrieves a secret value.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>If you do not specify a version number or version status, Key Management Service (KMS) returns the credential value of the version marked as ACSCurrent by default.</description></item>
-        /// <item><description>If a customer-managed key is used to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
-        /// This topic provides a sample request to retrieve the credential value of a credential named <c>secret001</c>. The returned result shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If the secret uses a user-specified key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9835,16 +9971,16 @@ namespace AlibabaCloud.SDK.Kms20160120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the credential value.</para>
+        /// <para>Retrieves a secret value.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>For details about the access policy that must be granted to a Resource Access Management (RAM) user or RAM role to invoke this OpenAPI operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Resource Access Management</a>.</description></item>
-        /// <item><description>If you do not specify a version number or version status, Key Management Service (KMS) returns the credential value of the version marked as ACSCurrent by default.</description></item>
-        /// <item><description>If a customer-managed key is used to protect the credential value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
-        /// This topic provides a sample request to retrieve the credential value of a credential named <c>secret001</c>. The returned result shows that the credential value <c>SecretData</c> is <c>testdata1</c>.</description></item>
+        /// <item><description>For details about the access policy required for a Resource Access Management (RAM) user or RAM role to invoke this operation, see <a href="https://help.aliyun.com/document_detail/2767210.html">Access control</a>.</description></item>
+        /// <item><description>If you do not specify a version number or version stage, KMS returns the secret value of the version marked as ACSCurrent by default.</description></item>
+        /// <item><description>If the secret uses a user-specified key to protect the secret value, the caller must also have the <c>kms:Decrypt</c> permission on the corresponding master key.
+        /// This topic provides an example of how to retrieve the secret value of a secret named <c>secret001</c>. The response shows that the secret value <c>SecretData</c> is <c>testdata1</c>.</description></item>
         /// </list>
         /// </description>
         /// 

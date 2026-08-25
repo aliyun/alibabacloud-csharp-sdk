@@ -84,6 +84,14 @@ namespace AlibabaCloud.SDK.Kms20160120.Models
         [Validation(Required=false)]
         public string KeyVersionId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>{ &quot;AttestationDocument&quot;:&quot;base64-encoded-attestion-document&quot;,  &quot;KeyEncryptionAlgorithm&quot;:&quot;RSAES_OAEP_SHA_256&quot; }</para>
+        /// </summary>
+        [NameInMap("Recipient")]
+        [Validation(Required=false)]
+        public string Recipient { get; set; }
+
     }
 
 }
