@@ -43,6 +43,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Plan { get; set; }
 
+        [NameInMap("readOnly")]
+        [Validation(Required=false)]
+        public bool? ReadOnly { get; set; }
+
         /// <summary>
         /// <para>The resource group ID.</para>
         /// 

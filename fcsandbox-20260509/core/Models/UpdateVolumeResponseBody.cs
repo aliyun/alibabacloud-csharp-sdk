@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class UpdateVolumeResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</para>
         /// </summary>
@@ -33,6 +39,9 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The storage configuration.</para>
+        /// </summary>
         [NameInMap("volume")]
         [Validation(Required=false)]
         public E2BVolume Volume { get; set; }

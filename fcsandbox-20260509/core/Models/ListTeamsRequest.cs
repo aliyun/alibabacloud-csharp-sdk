@@ -29,6 +29,17 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The subscription plan of the team. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>eco</description></item>
+        /// <item><description>std</description></item>
+        /// <item><description>pro</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>pro</para>
+        /// </summary>
         [NameInMap("plan")]
         [Validation(Required=false)]
         public string Plan { get; set; }

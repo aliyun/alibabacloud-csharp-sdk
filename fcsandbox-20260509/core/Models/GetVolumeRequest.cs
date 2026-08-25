@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class GetVolumeRequest : TeaModel {
         /// <summary>
+        /// <para>The unique identifier of the Team.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>70d1c834-0383-58d8-97ac-5336eb91abcd</para>
         /// </summary>
