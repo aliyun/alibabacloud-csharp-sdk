@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
     public class DeleteClientsRequest : TeaModel {
         /// <summary>
-        /// <para>aliuid</para>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string CallerAliUid { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the device is managed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +31,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public bool? InManage { get; set; }
 
         /// <summary>
+        /// <para>The UUIDs of the asset instances. Separate multiple UUIDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("Uuids")]

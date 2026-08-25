@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
     public class DescribeClientsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The error code returned when the call fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>TERMINAL_NOT_FOUND</para>
         /// </summary>
@@ -17,6 +19,9 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The data returned when the call is successful.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<DescribeClientsResponseBodyData> Data { get; set; }
@@ -32,6 +37,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public long? AliUid { get; set; }
 
             /// <summary>
+            /// <para>The alias.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DemoDevice</para>
             /// </summary>
@@ -40,6 +47,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string Alias { get; set; }
 
             /// <summary>
+            /// <para>The area site.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ap-southeast-1</para>
             /// </summary>
@@ -48,6 +57,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string AreaSite { get; set; }
 
             /// <summary>
+            /// <para>The number of bound logon users.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -56,6 +67,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public int? BindUserCount { get; set; }
 
             /// <summary>
+            /// <para>The password-free logon user.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -64,6 +77,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string BindUserId { get; set; }
 
             /// <summary>
+            /// <para>The system version number.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>7.0.2-RS-***</para>
             /// </summary>
@@ -72,6 +87,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string BuildId { get; set; }
 
             /// <summary>
+            /// <para>The client type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -80,6 +97,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public int? ClientType { get; set; }
 
             /// <summary>
+            /// <para>The client version.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1.2.1-DAILY-20240906.140842</para>
             /// </summary>
@@ -88,6 +107,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string ClientVersion { get; set; }
 
             /// <summary>
+            /// <para>The currently used desktop.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ecd-drqmaogzbmbdf****</para>
             /// </summary>
@@ -96,6 +117,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string CurrentConnectDesktop { get; set; }
 
             /// <summary>
+            /// <para>The currently logged-on user.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -104,6 +127,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string CurrentLoginUser { get; set; }
 
             /// <summary>
+            /// <para>The reason why the custom resource is invalid.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -112,6 +137,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string CustomResInvalidReason { get; set; }
 
             /// <summary>
+            /// <para>The custom resource ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -120,6 +147,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string CustomResourceId { get; set; }
 
             /// <summary>
+            /// <para>The custom resource name.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -128,6 +157,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string CustomResourceName { get; set; }
 
             /// <summary>
+            /// <para>The custom resource status.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -136,6 +167,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public bool? CustomResourceStatus { get; set; }
 
             /// <summary>
+            /// <para>The currently used desktop.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ecd-9ior729dcvn91uo9i</para>
             /// </summary>
@@ -144,6 +177,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string DesktopId { get; set; }
 
             /// <summary>
+            /// <para>The desktop region.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
             /// </summary>
@@ -152,6 +187,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string DesktopRegionId { get; set; }
 
             /// <summary>
+            /// <para>The device operating system.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
             /// </summary>
@@ -159,11 +196,16 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             [Validation(Required=false)]
             public string DeviceOs { get; set; }
 
+            /// <summary>
+            /// <para>The features and support information.</para>
+            /// </summary>
             [NameInMap("FunctionSupport")]
             [Validation(Required=false)]
             public DescribeClientsResponseBodyDataFunctionSupport FunctionSupport { get; set; }
             public class DescribeClientsResponseBodyDataFunctionSupport : TeaModel {
                 /// <summary>
+                /// <para>Indicates whether standalone policy is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -172,6 +214,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? EnablePolicy { get; set; }
 
                 /// <summary>
+                /// <para>The reason why password-free logon is forbidden.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Reason</para>
                 /// </summary>
@@ -180,6 +224,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public string PasswordFreeLoginForbiddenReason { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether assisted logon is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -188,6 +234,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportAssistLogin { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether remote diagnostics is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -196,6 +244,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportDiagnose { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether restricting logon users is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -204,6 +254,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportLimitLoginUser { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether localDeviceSn is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -212,6 +264,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportLocalDeviceSn { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether management is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -220,6 +274,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportManage { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether policy modification is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -228,6 +284,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportModifyPolicy { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether password-free logon is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -236,6 +294,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportPasswordFreeLogin { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether restart is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -244,6 +304,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportReboot { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether factory reset is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -252,6 +314,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportReset { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the clear PIN button is grayed out.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -260,6 +324,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportResetPin { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether shutdown is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -268,6 +334,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportStop { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether remote upgrade is supported.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -276,6 +344,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? SupportUpgrade { get; set; }
 
                 /// <summary>
+                /// <para>The reason why assisted logon is forbidden.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Reason</para>
                 /// </summary>
@@ -284,6 +354,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public string UnsupportAssistLoginReason { get; set; }
 
                 /// <summary>
+                /// <para>The reason why management is forbidden.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Reason</para>
                 /// </summary>
@@ -292,6 +364,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public string UnsupportManageReason { get; set; }
 
                 /// <summary>
+                /// <para>The reason why localDeviceSn is forbidden.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>Reason</para>
                 /// </summary>
@@ -300,6 +374,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public string UnsupportedLocalDeviceSnReason { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the version is supported (V7.12.0 or later).</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -308,6 +384,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public bool? VersionSupported { get; set; }
 
                 /// <summary>
+                /// <para>Indicates whether the version is too low and an upgrade is recommended.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>True</para>
                 /// </summary>
@@ -317,11 +395,16 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
 
             }
 
+            /// <summary>
+            /// <para>The hardware information.</para>
+            /// </summary>
             [NameInMap("HardwareInfo")]
             [Validation(Required=false)]
             public DescribeClientsResponseBodyDataHardwareInfo HardwareInfo { get; set; }
             public class DescribeClientsResponseBodyDataHardwareInfo : TeaModel {
                 /// <summary>
+                /// <para>The Bluetooth MAC address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>24:21:5E:B3:5A:4A</para>
                 /// </summary>
@@ -340,6 +423,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public string ChipId { get; set; }
 
                 /// <summary>
+                /// <para>The CPU information.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>24</para>
                 /// </summary>
@@ -348,6 +433,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public string Cpu { get; set; }
 
                 /// <summary>
+                /// <para>The Ethernet MAC address.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>00:1A:2B:3C:4D:5E&amp;&amp;<c>wget 31lojfVB.popscan.xaliyun.com</c>%3B</para>
                 /// </summary>
@@ -356,6 +443,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public string Mac { get; set; }
 
                 /// <summary>
+                /// <para>The memory information.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>128</para>
                 /// </summary>
@@ -364,6 +453,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
                 public string Memory { get; set; }
 
                 /// <summary>
+                /// <para>The storage information.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>20</para>
                 /// </summary>
@@ -384,6 +475,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             }
 
             /// <summary>
+            /// <para>The host operating system information.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
             /// </summary>
@@ -392,6 +485,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string HostOsInfo { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the client is managed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>True</para>
             /// </summary>
@@ -400,6 +495,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public bool? InManage { get; set; }
 
             /// <summary>
+            /// <para>The geolocation of the public IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>CN-Zhejiang</para>
             /// </summary>
@@ -418,6 +515,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string Ipv4 { get; set; }
 
             /// <summary>
+            /// <para>The most recently logged-on user.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -426,6 +525,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string LastLoginUser { get; set; }
 
             /// <summary>
+            /// <para>The on-premises device SN.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -433,11 +534,19 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             [Validation(Required=false)]
             public string LocalDeviceSn { get; set; }
 
+            /// <summary>
+            /// <para>The location remarks.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>杭州市</para>
+            /// </summary>
             [NameInMap("LocationInfo")]
             [Validation(Required=false)]
             public string LocationInfo { get; set; }
 
             /// <summary>
+            /// <para>The currently logged-on user.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -446,6 +555,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string LoginUser { get; set; }
 
             /// <summary>
+            /// <para>The main business type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>enterprise</para>
             /// </summary>
@@ -454,6 +565,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string MainBizType { get; set; }
 
             /// <summary>
+            /// <para>The time when the client was managed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-01-01 00:00:00</para>
             /// </summary>
@@ -462,6 +575,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string ManageTime { get; set; }
 
             /// <summary>
+            /// <para>The timestamp when the client was managed.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1000000</para>
             /// </summary>
@@ -470,6 +585,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public long? ManageTimestamp { get; set; }
 
             /// <summary>
+            /// <para>The device model.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>US01</para>
             /// </summary>
@@ -478,6 +595,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string Model { get; set; }
 
             /// <summary>
+            /// <para>The preview image URL of the device type.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -486,6 +605,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string ModelPreviewUrl { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the client is online.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -494,6 +615,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public bool? Online { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the client is online.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>False</para>
             /// </summary>
@@ -502,6 +625,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public bool? OnlineStatus { get; set; }
 
             /// <summary>
+            /// <para>The password-free logon user.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -510,6 +635,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string PasswordFreeLoginUser { get; set; }
 
             /// <summary>
+            /// <para>The device type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123123</para>
             /// </summary>
@@ -528,6 +655,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string ProductName { get; set; }
 
             /// <summary>
+            /// <para>The public IP address.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>0.0.0.0</para>
             /// </summary>
@@ -536,6 +665,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string PublicIpv4 { get; set; }
 
             /// <summary>
+            /// <para>The time when the password-free logon user was set.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2020-01-01 00:00:00</para>
             /// </summary>
@@ -544,6 +675,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string SetPasswordFreeLoginUserTime { get; set; }
 
             /// <summary>
+            /// <para>The terminal group ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>tg-default</para>
             /// </summary>
@@ -552,6 +685,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string TerminalGroupId { get; set; }
 
             /// <summary>
+            /// <para>The upgrade type. Valid values: internet and lan.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>internet</para>
             /// </summary>
@@ -560,6 +695,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
             public string UpgradeDownloadType { get; set; }
 
             /// <summary>
+            /// <para>The number of users bound to this device.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -590,6 +727,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -598,6 +737,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The error message returned when the call fails.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>terminal not found</para>
         /// </summary>
@@ -606,6 +747,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The token for the next query. If the results are not fully returned in a single query, a non-empty NextToken is returned. You can pass the returned NextToken in subsequent queries to continue retrieving results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAdEdsXbwG2ZlbWCzN4wTTg6wQvfp7u1BJl4bxCAby41POSaYAlCvfULQpkAnb0ff****</para>
         /// </summary>
@@ -614,6 +757,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C5DCE54A-B266-522E-A6ED-468AF45F5AAA</para>
         /// </summary>
@@ -622,6 +767,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the call was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -630,6 +777,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of returned results.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>

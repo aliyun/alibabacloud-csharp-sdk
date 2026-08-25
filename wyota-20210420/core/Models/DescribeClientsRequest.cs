@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
     public class DescribeClientsRequest : TeaModel {
         /// <summary>
-        /// <para>aliuid</para>
+        /// <para>The Alibaba Cloud account ID.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -20,6 +20,7 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string CallerAliUid { get; set; }
 
         /// <summary>
+        /// <para>The client type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +31,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public int? ClientType { get; set; }
 
         /// <summary>
+        /// <para>The custom task ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cr-***</para>
         /// </summary>
@@ -37,11 +40,21 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string CustomResourceId { get; set; }
 
+        /// <summary>
+        /// <para>The effective status of the custom task. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: effective.</description></item>
+        /// <item><description>false: ineffective.</description></item>
+        /// <item><description>null: all.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("CustomResourceStatus")]
         [Validation(Required=false)]
         public bool? CustomResourceStatus { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether the client is managed.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -50,6 +63,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public bool? InManage { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to include subgroups.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -58,6 +73,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public bool? IncludeSubGroups { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>100</para>
         /// </summary>
@@ -66,6 +83,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <para>The device model.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>US02-2BFXG</para>
         /// </summary>
@@ -74,6 +93,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string Model { get; set; }
 
         /// <summary>
+        /// <para>The token for the next page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AAAAAdEdsXbwG2ZlbWCzN4wTTg6wQvfp7u1BJl4bxCAby41POSaYAlCvfULQpkAnb0ff****</para>
         /// </summary>
@@ -82,6 +103,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The soft client status.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>True</para>
         /// </summary>
@@ -90,6 +113,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public bool? OnlineStatus { get; set; }
 
         /// <summary>
+        /// <para>The soft client platform.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>linux</para>
         /// </summary>
@@ -98,6 +123,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string Platform { get; set; }
 
         /// <summary>
+        /// <para>The fuzzy search parameter. Supports fuzzy search by SN, alias, or IP address. This parameter is incompatible with exact search parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>061</para>
         /// </summary>
@@ -106,6 +133,8 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         public string SearchKeyword { get; set; }
 
         /// <summary>
+        /// <para>The group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>tg-bp103v8x70nasykdjrd1</para>
         /// </summary>
@@ -113,10 +142,16 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string TerminalGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The UUIDs of the servers to query. Separate multiple UUIDs with commas (,).</para>
+        /// </summary>
         [NameInMap("Uuids")]
         [Validation(Required=false)]
         public List<string> Uuids { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to return bound users.</para>
+        /// </summary>
         [NameInMap("WithBindUser")]
         [Validation(Required=false)]
         public bool? WithBindUser { get; set; }

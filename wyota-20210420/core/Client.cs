@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
             CheckConfig(config);
             this._endpoint = GetEndpoint("wyota", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -619,7 +619,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除桌面端、移动端纳管</para>
+        /// <para>Removes managed terminal devices by UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -677,7 +677,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除桌面端、移动端纳管</para>
+        /// <para>Removes managed terminal devices by UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -735,7 +735,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除桌面端、移动端纳管</para>
+        /// <para>Removes managed terminal devices by UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -753,7 +753,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解除桌面端、移动端纳管</para>
+        /// <para>Removes managed terminal devices by UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -771,7 +771,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面端、移动端详细信息</para>
+        /// <para>Queries information about all managed clients.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -877,7 +877,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面端、移动端详细信息</para>
+        /// <para>Queries information about all managed clients.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -983,7 +983,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面端、移动端详细信息</para>
+        /// <para>Queries information about all managed clients.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1001,7 +1001,7 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询桌面端、移动端详细信息</para>
+        /// <para>Queries information about all managed clients.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1019,7 +1019,129 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取桌面端纳管邀请码</para>
+        /// <para>Retrieves custom resource statistics information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomResourceStatsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomResourceStatsResponse
+        /// </returns>
+        public GetCustomResourceStatsResponse GetCustomResourceStatsWithOptions(GetCustomResourceStatsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainBizType))
+            {
+                body["MainBizType"] = request.MainBizType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomResourceStats",
+                Version = "2021-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomResourceStatsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves custom resource statistics information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomResourceStatsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomResourceStatsResponse
+        /// </returns>
+        public async Task<GetCustomResourceStatsResponse> GetCustomResourceStatsWithOptionsAsync(GetCustomResourceStatsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainBizType))
+            {
+                body["MainBizType"] = request.MainBizType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCustomResourceStats",
+                Version = "2021-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCustomResourceStatsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves custom resource statistics information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomResourceStatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomResourceStatsResponse
+        /// </returns>
+        public GetCustomResourceStatsResponse GetCustomResourceStats(GetCustomResourceStatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCustomResourceStatsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves custom resource statistics information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCustomResourceStatsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCustomResourceStatsResponse
+        /// </returns>
+        public async Task<GetCustomResourceStatsResponse> GetCustomResourceStatsAsync(GetCustomResourceStatsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCustomResourceStatsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves or creates an invitation code for desktop device enrollment.
+        /// Query mode: Pass only terminalGroupId to return the current invitation code and its expiration status in read-only mode.
+        /// Creation mode: Pass terminalGroupId along with an expiration duration (expireDays or expireMinutes) to generate a new code that overwrites the existing invitation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1073,7 +1195,9 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取桌面端纳管邀请码</para>
+        /// <para>Retrieves or creates an invitation code for desktop device enrollment.
+        /// Query mode: Pass only terminalGroupId to return the current invitation code and its expiration status in read-only mode.
+        /// Creation mode: Pass terminalGroupId along with an expiration duration (expireDays or expireMinutes) to generate a new code that overwrites the existing invitation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1127,7 +1251,9 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取桌面端纳管邀请码</para>
+        /// <para>Retrieves or creates an invitation code for desktop device enrollment.
+        /// Query mode: Pass only terminalGroupId to return the current invitation code and its expiration status in read-only mode.
+        /// Creation mode: Pass terminalGroupId along with an expiration duration (expireDays or expireMinutes) to generate a new code that overwrites the existing invitation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1145,7 +1271,9 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取桌面端纳管邀请码</para>
+        /// <para>Retrieves or creates an invitation code for desktop device enrollment.
+        /// Query mode: Pass only terminalGroupId to return the current invitation code and its expiration status in read-only mode.
+        /// Creation mode: Pass terminalGroupId along with an expiration duration (expireDays or expireMinutes) to generate a new code that overwrites the existing invitation code.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1159,6 +1287,126 @@ namespace AlibabaCloud.SDK.Wyota20210420
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetOrCreateInvitationCodeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the number of terminals.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTerminalCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerminalCountResponse
+        /// </returns>
+        public GetTerminalCountResponse GetTerminalCountWithOptions(GetTerminalCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
+            {
+                body["ClientType"] = request.ClientType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTerminalCount",
+                Version = "2021-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTerminalCountResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the number of terminals.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTerminalCountRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerminalCountResponse
+        /// </returns>
+        public async Task<GetTerminalCountResponse> GetTerminalCountWithOptionsAsync(GetTerminalCountRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
+            {
+                body["ClientType"] = request.ClientType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTerminalCount",
+                Version = "2021-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTerminalCountResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the number of terminals.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTerminalCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerminalCountResponse
+        /// </returns>
+        public GetTerminalCountResponse GetTerminalCount(GetTerminalCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTerminalCountWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the number of terminals.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTerminalCountRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTerminalCountResponse
+        /// </returns>
+        public async Task<GetTerminalCountResponse> GetTerminalCountAsync(GetTerminalCountRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTerminalCountWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1379,6 +1627,158 @@ namespace AlibabaCloud.SDK.Wyota20210420
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the version distribution of terminals.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVersionDistributionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVersionDistributionResponse
+        /// </returns>
+        public ListVersionDistributionResponse ListVersionDistributionWithOptions(ListVersionDistributionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
+            {
+                body["ClientType"] = request.ClientType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InManage))
+            {
+                body["InManage"] = request.InManage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainBizType))
+            {
+                body["MainBizType"] = request.MainBizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionType))
+            {
+                body["VersionType"] = request.VersionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVersionDistribution",
+                Version = "2021-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVersionDistributionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the version distribution of terminals.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVersionDistributionRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVersionDistributionResponse
+        /// </returns>
+        public async Task<ListVersionDistributionResponse> ListVersionDistributionWithOptionsAsync(ListVersionDistributionRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientType))
+            {
+                body["ClientType"] = request.ClientType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InManage))
+            {
+                body["InManage"] = request.InManage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MainBizType))
+            {
+                body["MainBizType"] = request.MainBizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Model))
+            {
+                body["Model"] = request.Model;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionType))
+            {
+                body["VersionType"] = request.VersionType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListVersionDistribution",
+                Version = "2021-04-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListVersionDistributionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the version distribution of terminals.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVersionDistributionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVersionDistributionResponse
+        /// </returns>
+        public ListVersionDistributionResponse ListVersionDistribution(ListVersionDistributionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListVersionDistributionWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the version distribution of terminals.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListVersionDistributionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListVersionDistributionResponse
+        /// </returns>
+        public async Task<ListVersionDistributionResponse> ListVersionDistributionAsync(ListVersionDistributionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListVersionDistributionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>向终端发送运维命令</para>
         /// </summary>
         /// 
@@ -1404,6 +1804,10 @@ namespace AlibabaCloud.SDK.Wyota20210420
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Msg))
             {
                 body["Msg"] = request.Msg;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpDomain))
+            {
+                body["OpDomain"] = request.OpDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsAction))
             {
@@ -1470,6 +1874,10 @@ namespace AlibabaCloud.SDK.Wyota20210420
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Msg))
             {
                 body["Msg"] = request.Msg;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpDomain))
+            {
+                body["OpDomain"] = request.OpDomain;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OpsAction))
             {

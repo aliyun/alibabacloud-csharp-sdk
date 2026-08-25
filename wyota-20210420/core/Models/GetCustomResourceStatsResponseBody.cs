@@ -8,53 +8,63 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Wyota20210420.Models
 {
-    public class GetOrCreateInvitationCodeResponseBody : TeaModel {
+    public class GetCustomResourceStatsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code returned when the call fails.</para>
+        /// <para>The status code. 200 is returned if the call is successful. An error code is returned if the call fails.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>PARAMETER_ERROR</para>
+        /// <para>PARAM_ERROR</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data returned when the call is successful.</para>
+        /// <para>The custom resource statistics information.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetOrCreateInvitationCodeResponseBodyData Data { get; set; }
-        public class GetOrCreateInvitationCodeResponseBodyData : TeaModel {
+        public GetCustomResourceStatsResponseBodyData Data { get; set; }
+        public class GetCustomResourceStatsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The authentication code for device enrollment.</para>
+            /// <para>The number of terminals with custom resources configured.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>000000</para>
+            /// <para>10</para>
             /// </summary>
-            [NameInMap("AuthCode")]
+            [NameInMap("CustomResourceCount")]
             [Validation(Required=false)]
-            public string AuthCode { get; set; }
+            public long? CustomResourceCount { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the compute group.</para>
+            /// <para>The number of terminals on which custom resources have taken effect.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1772162247</para>
+            /// <para>8</para>
             /// </summary>
-            [NameInMap("ExpireTime")]
+            [NameInMap("EffectiveCount")]
             [Validation(Required=false)]
-            public string ExpireTime { get; set; }
+            public long? EffectiveCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the invitation code has expired.</para>
+            /// <para>The number of terminals without custom resources configured.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>True</para>
+            /// <para>90</para>
             /// </summary>
-            [NameInMap("Expired")]
+            [NameInMap("NoCustomResourceCount")]
             [Validation(Required=false)]
-            public bool? Expired { get; set; }
+            public long? NoCustomResourceCount { get; set; }
+
+            /// <summary>
+            /// <para>The number of terminals on which custom resources have not taken effect.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("UnEffectiveCount")]
+            [Validation(Required=false)]
+            public long? UnEffectiveCount { get; set; }
 
         }
 
@@ -62,14 +72,14 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>400</para>
         /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails.</para>
+        /// <para>The error message. This parameter is empty if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>parameter error</para>
@@ -90,9 +100,6 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
 
         /// <summary>
         /// <para>Indicates whether the call was successful.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

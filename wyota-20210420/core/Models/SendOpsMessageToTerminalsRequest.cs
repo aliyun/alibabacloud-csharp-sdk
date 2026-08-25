@@ -17,6 +17,10 @@ namespace AlibabaCloud.SDK.Wyota20210420.Models
         [Validation(Required=false)]
         public string Msg { get; set; }
 
+        [NameInMap("OpDomain")]
+        [Validation(Required=false)]
+        public string OpDomain { get; set; }
+
         [NameInMap("OpsAction")]
         [Validation(Required=false)]
         public string OpsAction { get; set; }
