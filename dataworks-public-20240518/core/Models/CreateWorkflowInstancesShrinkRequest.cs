@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateWorkflowInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The default value is true.</para>
+        /// <para>Specifies whether to run the workflow instance immediately after creation. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public bool? AutoStartEnabled { get; set; }
 
         /// <summary>
-        /// <para>The reason for the creation.</para>
+        /// <para>The reason for creating the workflow instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>create for test</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Comment { get; set; }
 
         /// <summary>
-        /// <para>The runtime configuration.</para>
+        /// <para>The runtime configurations.</para>
         /// </summary>
         [NameInMap("DefaultRunProperties")]
         [Validation(Required=false)]
@@ -39,10 +39,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The project environment. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Prod</para>
-        /// </description></item>
-        /// <item><description><para>Dev</para>
-        /// </description></item>
+        /// <item><description>Prod: production</description></item>
+        /// <item><description>Dev: development</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the data backfilling period.</para>
+        /// <para>The data backfill period settings.</para>
         /// </summary>
         [NameInMap("Periods")]
         [Validation(Required=false)]
@@ -84,10 +82,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The tag creation policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Append: New tags are added on top of the existing tags of the manual workflow.</para>
-        /// </description></item>
-        /// <item><description><para>Overwrite: Existing tags of the manual workflow are not inherited. New tags are created directly.</para>
-        /// </description></item>
+        /// <item><description>Append: append mode. New tags are appended to the existing tags inherited from the manual workflow.</description></item>
+        /// <item><description>Overwrite: overwrite mode. Existing tags of the manual workflow are not inherited. Tags are created directly.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,14 +94,14 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string TagCreationPolicy { get; set; }
 
         /// <summary>
-        /// <para>The task tag list.</para>
+        /// <para>The list of node labels.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public string TagsShrink { get; set; }
 
         /// <summary>
-        /// <para>The task-specific parameters. The value is in the JSON format. The key specifies the task ID. You can call the GetTask operation to obtain the format of the value by querying the script parameters.</para>
+        /// <para>The node parameters used to set parameters for specific nodes. The value is in JSON format. The key is the node ID, and the value format refers to the node script parameter (the Task.Script.Parameter field in the GetTask response).</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -120,16 +116,11 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <summary>
         /// <para>The type of the workflow instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SupplementData: Data backfill. The usage of RootTaskIds and IncludeTaskIds varies based on the backfill mode. See the description of the DefaultRunProperties.Mode parameter.</para>
-        /// </description></item>
-        /// <item><description><para>ManualWorkflow: Manually triggered workflow. WorkflowId is required for a manual workflow. RootTaskIds is optional. If not specified, the system uses the default root task list of the manual workflow.</para>
-        /// </description></item>
-        /// <item><description><para>Manual: Manual task. You only need to specify RootTaskIds. This is the list of manual tasks to run.</para>
-        /// </description></item>
-        /// <item><description><para>SmokeTest: Smoke test. You only need to specify RootTaskIds. This is the list of test tasks to run.</para>
-        /// </description></item>
-        /// <item><description><para>TriggerWorkflow: Triggered Workflow You must specify the WorkflowId of the triggered workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow runs.</para>
-        /// </description></item>
+        /// <item><description>SupplementData: data backfill. The method for specifying RootTaskIds and IncludeTaskIds varies based on the data backfill pattern. For more information, see the DefaultRunProperties.Mode parameter description.</description></item>
+        /// <item><description>ManualWorkflow: manual workflow. Set WorkflowId to the ID of the manual workflow. RootTaskIds is optional. If you do not specify RootTaskIds, the default root node list of the manual workflow is used.</description></item>
+        /// <item><description>Manual: manual node. Only RootTaskIds is required, which specifies the list of manual nodes to run.</description></item>
+        /// <item><description>SmokeTest: smoke test. Only RootTaskIds is required, which specifies the list of test nodes to run.</description></item>
+        /// <item><description>TriggerWorkflow: trigger-based workflow. Set WorkflowId to the ID of the trigger-based workflow. IncludeTaskIds is optional. If you do not specify IncludeTaskIds, the entire workflow is run.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -141,7 +132,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Type { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workflow to which the instance belongs. This parameter is set to 1 for auto triggered tasks.</para>
+        /// <para>The ID of the workflow to which the instance belongs. The WorkflowId for periodic nodes is 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -152,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? WorkflowId { get; set; }
 
         /// <summary>
-        /// <para>The workflow parameters. This parameter takes effect when a specific workflow is specified (<c>WorkflowId != 1</c>). For scheduled workflows and triggered workflows, the format is key=value, and these parameters have lower priority than task parameters. For manual workflows, the format is JSON, and these parameters have higher priority than task parameters.</para>
+        /// <para>The workflow parameters. This parameter takes effect when a unique workflow is specified (<c>WorkflowId != 1</c>). For periodic workflows and trigger-based workflows, the format is key=value, and the priority is lower than node parameters. For manual workflows, the format is JSON, and the priority is higher than node parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;key=value&quot; format:

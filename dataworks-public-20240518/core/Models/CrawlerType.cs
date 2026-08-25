@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CrawlerType : TeaModel {
         /// <summary>
+        /// <para>The display name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>Data Lake Formation</para>
         /// </summary>
@@ -17,19 +19,26 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         [Validation(Required=false)]
         public string DisplayName { get; set; }
 
+        /// <summary>
+        /// <para>The list of supported entity types. The entity types have a top-down hierarchical relationship based on their declaration order.</para>
+        /// </summary>
         [NameInMap("SupportedEntityTypes")]
         [Validation(Required=false)]
         public List<CrawlerTypeSupportedEntityTypes> SupportedEntityTypes { get; set; }
         public class CrawlerTypeSupportedEntityTypes : TeaModel {
             /// <summary>
+            /// <para>Indicates whether the entity type is optional.</para>
+            /// 
             /// <b>Example:</b>
-            /// <para>true</para>
+            /// <para>For example, for the maxcompute-schema type, whether the schema level is optional (whether the three-layer model is enabled)</para>
             /// </summary>
             [NameInMap("Optional")]
             [Validation(Required=false)]
             public bool? Optional { get; set; }
 
             /// <summary>
+            /// <para>The entity subtype of the parent level. The value is null if no parent level exists.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>database</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string ParentSubType { get; set; }
 
             /// <summary>
+            /// <para>The entity subtype identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>table</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             public string SubType { get; set; }
 
             /// <summary>
+            /// <para>The entity type identifier, which is related to the crawler type. The format is (CrawlerType)-{SubType}.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>dlf-table</para>
             /// </summary>
@@ -56,6 +69,8 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         }
 
         /// <summary>
+        /// <para>The type identifier.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>dlf</para>
         /// </summary>

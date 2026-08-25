@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateBusinessRequest : TeaModel {
         /// <summary>
-        /// <para>Name of the Business Process.<br>
-        /// The name must be unique within the same project space.</para>
+        /// <para>The name of the business process. The name must be unique within the same workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +21,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string BusinessName { get; set; }
 
         /// <summary>
-        /// <para>Description of the Business Process.</para>
+        /// <para>The description of the business process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -32,8 +31,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the owner responsible for the Business Process.<br>
-        /// You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, move the mouse pointer over the profile picture in the upper-right corner of the menu bar, and view the Account ID. If this parameter is empty, the Alibaba Cloud account ID of the invoker is used by default.</para>
+        /// <para>The Alibaba Cloud account ID of the owner of the business process. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and hover over the profile picture in the upper-right corner of the top navigation bar to view the account ID. If this parameter is left empty, the Alibaba Cloud account ID of the caller is used by default.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1000000000001</para>
@@ -43,8 +41,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>The ID of the DataWorks workspace.<br>
-        /// You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a>, go to the Workspace Management page, and view the ID.</para>
+        /// <para>The ID of the DataWorks workspace. You can log on to the <a href="https://workbench.data.aliyun.com/console">DataWorks console</a> and go to the workspace management page to view the ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -54,7 +51,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? ProjectId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed when you switch workspaces at the top of the Data Development page. You must specify either this parameter or the projectid parameter to identify the DataWorks project for this API call.</para>
+        /// <para>The unique identifier of the DataWorks workspace, which is the English identifier displayed in the workspace switcher at the top of the DataStudio page. You must specify either this parameter or ProjectId to determine the DataWorks workspace on which the API operation is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dw_project</para>
@@ -64,12 +61,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ProjectIdentifier { get; set; }
 
         /// <summary>
-        /// <para>Function module to which the Business Process belongs. Valid values:</para>
+        /// <para>The functional module to which the business process belongs. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>NORMAL (Data Development)</para>
-        /// </description></item>
-        /// <item><description><para>MANUAL_BIZ (manually triggered workflow)</para>
-        /// </description></item>
+        /// <item><description>NORMAL: DataStudio.</description></item>
+        /// <item><description>MANUAL_BIZ: Manual business process.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

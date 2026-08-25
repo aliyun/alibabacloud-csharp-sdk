@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class UpdateSkillShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The downloadable URL (HTTP/HTTPS) of the bundle.zip file. Mutually exclusive with SkillMdOverride. If specified, the bundle is replaced.</para>
+        /// <para>The downloadable URL (HTTP/HTTPS) of the bundle.zip file. Mutually exclusive with SkillMdOverride. If provided, the bundle is replaced.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/skill.zip">https://example.com/skill.zip</a></para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The Skill description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>数据分析技能</para>
+        /// <para>Data analytics skill</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The SKILL.md body content. Mutually exclusive with BundleUrl.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>把大象放冰箱分为三步，把冰箱门打开，把大象放进去，把冰箱门关上。</para>
+        /// <para>Putting an elephant in a refrigerator takes three steps: open the refrigerator door, put the elephant in, and close the refrigerator door</para>
         /// </summary>
         [NameInMap("SkillMdOverride")]
         [Validation(Required=false)]
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         /// <para>The version note.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>修订说明</para>
+        /// <para>Revision note</para>
         /// </summary>
         [NameInMap("VersionNote")]
         [Validation(Required=false)]

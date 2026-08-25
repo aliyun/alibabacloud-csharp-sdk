@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class LineageTask : TeaModel {
         /// <summary>
-        /// <para>The properties of the task.</para>
+        /// <para>The task attributes.</para>
         /// </summary>
         [NameInMap("Attributes")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The type of the task.</para>
+        /// <para>The task type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>custom-sql</para>

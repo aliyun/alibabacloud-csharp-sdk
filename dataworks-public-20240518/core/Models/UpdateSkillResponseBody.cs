@@ -20,9 +20,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <list type="bullet">
-        /// <item><description></description></item>
-        /// </list>
+        /// <para>The Skill details.</para>
         /// </summary>
         [NameInMap("Skill")]
         [Validation(Required=false)]
@@ -32,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The SKILL.md body content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>把大象放冰箱分为三步，把冰箱门打开，把大象放进去，把冰箱门关上。</para>
+            /// <para>Putting an elephant in a refrigerator takes three steps: open the refrigerator door, put the elephant in, and close the refrigerator door</para>
             /// </summary>
             [NameInMap("Body")]
             [Validation(Required=false)]
@@ -52,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
             /// <para>The Skill description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>数据分析技能</para>
+            /// <para>Data analytics skill</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]

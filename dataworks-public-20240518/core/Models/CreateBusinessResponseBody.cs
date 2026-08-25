@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
 {
     public class CreateBusinessResponseBody : TeaModel {
         /// <summary>
-        /// <para>Business Process ID.</para>
+        /// <para>The ID of the business process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100001</para>
@@ -20,14 +20,12 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public long? BusinessId { get; set; }
 
         /// <summary>
-        /// <para>Error code. The value is as follows:</para>
+        /// <para>The error code. Description:</para>
         /// <list type="bullet">
-        /// <item><description><para>If the request succeeds, the ErrorCode field is not returned.</para>
-        /// </description></item>
-        /// <item><description><para>If the request fails, the ErrorCode field is returned.</para>
-        /// </description></item>
+        /// <item><description>If the request was successful, this parameter is not returned.</description></item>
+        /// <item><description>If the request failed, this parameter is returned.</description></item>
         /// </list>
-        /// <para>For more information, see the error code list in this topic.</para>
+        /// <para>For more information, see the error codes in this topic.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Invalid.Tenant.ConnectionNotExists</para>
@@ -37,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Error message.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The connection does not exist.</para>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -57,8 +55,7 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of this request.<br>
-        /// If an error occurs, you can use this ID to troubleshoot the issue.</para>
+        /// <para>The unique ID of the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0000-ABCD-EFG****</para>
@@ -68,12 +65,10 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the invocation succeeded. Valid values:</para>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The invocation succeeded.</para>
-        /// </description></item>
-        /// <item><description><para>false: The invocation failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
