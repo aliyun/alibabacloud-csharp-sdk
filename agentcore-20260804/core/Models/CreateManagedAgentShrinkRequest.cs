@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
-    public class UpdateModelShrinkRequest : TeaModel {
+    public class CreateManagedAgentShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The request body.</para>
         /// </summary>
@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The client token for idempotence. Not currently supported.</para>
+        /// <para>The reserved idempotency token. The backend does not provide idempotency guarantees in the current phase.</para>
         /// 
         /// <b>Example:</b>
         /// <para>client-token-1</para>

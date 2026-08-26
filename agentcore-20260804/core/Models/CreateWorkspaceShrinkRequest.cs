@@ -8,19 +8,19 @@ using Tea;
 
 namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
-    public class UpdateModelShrinkRequest : TeaModel {
+    public class CreateWorkspaceShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The request body.</para>
+        /// <para>The request body for creating a workspace.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string BodyShrink { get; set; }
 
         /// <summary>
-        /// <para>The client token for idempotence. Not currently supported.</para>
+        /// <para>The client idempotency token.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>client-token-1</para>
+        /// <para>workspace-create-20260805-001</para>
         /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
