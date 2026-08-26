@@ -8,17 +8,16 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
-    public class DeleteOneMetaOssieModelRequest : TeaModel {
+    public class DescribeDataAgentThemeRequest : TeaModel {
         /// <summary>
-        /// <para>The UUID of the knowledge base.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The business ID of the theme.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>86c5c290052147c***</para>
+        /// <para>0f8b2c1d************9a3e5f7b1c2d</para>
         /// </summary>
-        [NameInMap("KnowledgeUuid")]
+        [NameInMap("ThemeId")]
         [Validation(Required=false)]
-        public string KnowledgeUuid { get; set; }
+        public string ThemeId { get; set; }
 
     }
 

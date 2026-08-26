@@ -2578,6 +2578,166 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a DataAgent theme.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentThemeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentThemeResponse
+        /// </returns>
+        public CreateDataAgentThemeResponse CreateDataAgentThemeWithOptions(CreateDataAgentThemeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFrom))
+            {
+                query["FileFrom"] = request.FileFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeId))
+            {
+                query["ThemeId"] = request.ThemeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeName))
+            {
+                query["ThemeName"] = request.ThemeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeType))
+            {
+                query["ThemeType"] = request.ThemeType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataAgentTheme",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataAgentThemeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a DataAgent theme.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentThemeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentThemeResponse
+        /// </returns>
+        public async Task<CreateDataAgentThemeResponse> CreateDataAgentThemeWithOptionsAsync(CreateDataAgentThemeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFrom))
+            {
+                query["FileFrom"] = request.FileFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeId))
+            {
+                query["ThemeId"] = request.ThemeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeName))
+            {
+                query["ThemeName"] = request.ThemeName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeType))
+            {
+                query["ThemeType"] = request.ThemeType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataAgentTheme",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataAgentThemeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a DataAgent theme.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentThemeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentThemeResponse
+        /// </returns>
+        public CreateDataAgentThemeResponse CreateDataAgentTheme(CreateDataAgentThemeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataAgentThemeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a DataAgent theme.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentThemeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentThemeResponse
+        /// </returns>
+        public async Task<CreateDataAgentThemeResponse> CreateDataAgentThemeAsync(CreateDataAgentThemeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataAgentThemeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a DataAgent workspace.</para>
         /// </summary>
         /// 
@@ -3430,7 +3590,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建sql模版</para>
+        /// <para>Creates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3500,7 +3660,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建sql模版</para>
+        /// <para>Creates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3570,7 +3730,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建sql模版</para>
+        /// <para>Creates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3588,7 +3748,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建sql模版</para>
+        /// <para>Creates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5726,7 +5886,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除onemeta3.0的Ossie模型</para>
+        /// <para>Deletes an Ossie model from onemeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5768,7 +5928,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除onemeta3.0的Ossie模型</para>
+        /// <para>Deletes an Ossie model from onemeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5810,7 +5970,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除onemeta3.0的Ossie模型</para>
+        /// <para>Deletes an Ossie model from onemeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5828,7 +5988,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除onemeta3.0的Ossie模型</para>
+        /// <para>Deletes an Ossie model from onemeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5846,7 +6006,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除sql模版</para>
+        /// <para>Deletes a knowledge base in OneMeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5888,7 +6048,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除sql模版</para>
+        /// <para>Deletes a knowledge base in OneMeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5930,7 +6090,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除sql模版</para>
+        /// <para>Deletes a knowledge base in OneMeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5948,7 +6108,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除sql模版</para>
+        /// <para>Deletes a knowledge base in OneMeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6534,6 +6694,126 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeDataAgentSessionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the DescribeDataAgentTheme operation to query the details of a single DataAgent theme, including the theme name, stage, source, common scenarios, description, and creation and modification time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataAgentThemeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataAgentThemeResponse
+        /// </returns>
+        public DescribeDataAgentThemeResponse DescribeDataAgentThemeWithOptions(DescribeDataAgentThemeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeId))
+            {
+                query["ThemeId"] = request.ThemeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDataAgentTheme",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDataAgentThemeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the DescribeDataAgentTheme operation to query the details of a single DataAgent theme, including the theme name, stage, source, common scenarios, description, and creation and modification time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataAgentThemeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataAgentThemeResponse
+        /// </returns>
+        public async Task<DescribeDataAgentThemeResponse> DescribeDataAgentThemeWithOptionsAsync(DescribeDataAgentThemeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeId))
+            {
+                query["ThemeId"] = request.ThemeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeDataAgentTheme",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeDataAgentThemeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the DescribeDataAgentTheme operation to query the details of a single DataAgent theme, including the theme name, stage, source, common scenarios, description, and creation and modification time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataAgentThemeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataAgentThemeResponse
+        /// </returns>
+        public DescribeDataAgentThemeResponse DescribeDataAgentTheme(DescribeDataAgentThemeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeDataAgentThemeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the DescribeDataAgentTheme operation to query the details of a single DataAgent theme, including the theme name, stage, source, common scenarios, description, and creation and modification time.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeDataAgentThemeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeDataAgentThemeResponse
+        /// </returns>
+        public async Task<DescribeDataAgentThemeResponse> DescribeDataAgentThemeAsync(DescribeDataAgentThemeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeDataAgentThemeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -8238,6 +8518,130 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
+        /// Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentThemeUploadSignatureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentThemeUploadSignatureResponse
+        /// </returns>
+        public GetDataAgentThemeUploadSignatureResponse GetDataAgentThemeUploadSignatureWithOptions(GetDataAgentThemeUploadSignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeId))
+            {
+                query["ThemeId"] = request.ThemeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataAgentThemeUploadSignature",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataAgentThemeUploadSignatureResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
+        /// Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentThemeUploadSignatureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentThemeUploadSignatureResponse
+        /// </returns>
+        public async Task<GetDataAgentThemeUploadSignatureResponse> GetDataAgentThemeUploadSignatureWithOptionsAsync(GetDataAgentThemeUploadSignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeId))
+            {
+                query["ThemeId"] = request.ThemeId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetDataAgentThemeUploadSignature",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetDataAgentThemeUploadSignatureResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
+        /// Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentThemeUploadSignatureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentThemeUploadSignatureResponse
+        /// </returns>
+        public GetDataAgentThemeUploadSignatureResponse GetDataAgentThemeUploadSignature(GetDataAgentThemeUploadSignatureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetDataAgentThemeUploadSignatureWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Calls the GetDataAgentThemeUploadSignature operation to obtain OSS direct upload credentials for uploading a DataAgent theme file. After obtaining the credentials, use the PostObject method to upload the theme file directly to OSS. After the upload is complete, call the CreateDataAgentTheme operation with the returned ThemeId to complete theme creation.
+        /// Refer to <a href="https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/">https://www.alibabacloud.com/help/en/oss/user-guide/client-direct-transmission/</a> for instructions on uploading the theme file.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetDataAgentThemeUploadSignatureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetDataAgentThemeUploadSignatureResponse
+        /// </returns>
+        public async Task<GetDataAgentThemeUploadSignatureResponse> GetDataAgentThemeUploadSignatureAsync(GetDataAgentThemeUploadSignatureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetDataAgentThemeUploadSignatureWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the details of a collaborative workspace.</para>
         /// </summary>
         /// 
@@ -9550,7 +9954,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取onemeta3.0的Ossie模型</para>
+        /// <para>Retrieves the Ossie model of onemeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9596,7 +10000,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取onemeta3.0的Ossie模型</para>
+        /// <para>Retrieves the Ossie model of onemeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9642,7 +10046,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取onemeta3.0的Ossie模型</para>
+        /// <para>Retrieves the Ossie model of onemeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9660,7 +10064,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取onemeta3.0的Ossie模型</para>
+        /// <para>Retrieves the Ossie model of onemeta 3.0.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10290,7 +10694,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入Ossie模型</para>
+        /// <para>Creates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10360,7 +10764,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入Ossie模型</para>
+        /// <para>Creates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10430,7 +10834,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入Ossie模型</para>
+        /// <para>Creates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10448,7 +10852,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>导入Ossie模型</para>
+        /// <para>Creates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12402,6 +12806,174 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDataAgentSessionWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the ListDataAgentTheme operation to query the DataAgent theme list by paging. You can filter themes by theme stage, source, and common scenarios.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentThemeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentThemeResponse
+        /// </returns>
+        public ListDataAgentThemeResponse ListDataAgentThemeWithOptions(ListDataAgentThemeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeFrom))
+            {
+                query["ThemeFrom"] = request.ThemeFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeType))
+            {
+                query["ThemeType"] = request.ThemeType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentTheme",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentThemeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the ListDataAgentTheme operation to query the DataAgent theme list by paging. You can filter themes by theme stage, source, and common scenarios.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentThemeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentThemeResponse
+        /// </returns>
+        public async Task<ListDataAgentThemeResponse> ListDataAgentThemeWithOptionsAsync(ListDataAgentThemeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Category))
+            {
+                query["Category"] = request.Category;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeFrom))
+            {
+                query["ThemeFrom"] = request.ThemeFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeType))
+            {
+                query["ThemeType"] = request.ThemeType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentTheme",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentThemeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the ListDataAgentTheme operation to query the DataAgent theme list by paging. You can filter themes by theme stage, source, and common scenarios.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentThemeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentThemeResponse
+        /// </returns>
+        public ListDataAgentThemeResponse ListDataAgentTheme(ListDataAgentThemeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataAgentThemeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Invokes the ListDataAgentTheme operation to query the DataAgent theme list by paging. You can filter themes by theme stage, source, and common scenarios.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentThemeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentThemeResponse
+        /// </returns>
+        public async Task<ListDataAgentThemeResponse> ListDataAgentThemeAsync(ListDataAgentThemeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataAgentThemeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15514,7 +16086,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ossie模型列表</para>
+        /// <para>Retrieves a list of OSSIE models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15580,7 +16152,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ossie模型列表</para>
+        /// <para>Retrieves a list of OSSIE models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15646,7 +16218,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ossie模型列表</para>
+        /// <para>Retrieves a list of OSSIE models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15664,7 +16236,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取ossie模型列表</para>
+        /// <para>Retrieves a list of OSSIE models.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15682,7 +16254,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取sql模版</para>
+        /// <para>Retrieves SQL templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15752,7 +16324,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取sql模版</para>
+        /// <para>Retrieves SQL templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15822,7 +16394,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取sql模版</para>
+        /// <para>Retrieves SQL templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15840,7 +16412,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取sql模版</para>
+        /// <para>Retrieves SQL templates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16514,6 +17086,142 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ModifyDataAgentMcpWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyDataAgentTheme</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDataAgentThemeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataAgentThemeResponse
+        /// </returns>
+        public ModifyDataAgentThemeResponse ModifyDataAgentThemeWithOptions(ModifyDataAgentThemeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeId))
+            {
+                query["ThemeId"] = request.ThemeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeName))
+            {
+                query["ThemeName"] = request.ThemeName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDataAgentTheme",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDataAgentThemeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyDataAgentTheme</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDataAgentThemeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataAgentThemeResponse
+        /// </returns>
+        public async Task<ModifyDataAgentThemeResponse> ModifyDataAgentThemeWithOptionsAsync(ModifyDataAgentThemeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeId))
+            {
+                query["ThemeId"] = request.ThemeId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThemeName))
+            {
+                query["ThemeName"] = request.ThemeName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyDataAgentTheme",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyDataAgentThemeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyDataAgentTheme</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDataAgentThemeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataAgentThemeResponse
+        /// </returns>
+        public ModifyDataAgentThemeResponse ModifyDataAgentTheme(ModifyDataAgentThemeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyDataAgentThemeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>ModifyDataAgentTheme</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyDataAgentThemeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyDataAgentThemeResponse
+        /// </returns>
+        public async Task<ModifyDataAgentThemeResponse> ModifyDataAgentThemeAsync(ModifyDataAgentThemeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyDataAgentThemeWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -17353,12 +18061,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the user\&quot;s previous message content.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17482,12 +18188,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the user\&quot;s previous message content.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17611,12 +18315,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the user\&quot;s previous message content.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17642,12 +18344,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <description>
         /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description><c>agent_id</c> and <c>session_id</c> are required fields.</description></item>
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
         /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
-        /// <item><description><c>quoted_message</c> can be used to quote the user\&quot;s previous message content.</description></item>
-        /// <item><description>Fields such as <c>data_source</c>, <c>dms_user</c>, <c>db_metadata</c>, and <c>session_config</c> are optional but provide more detailed context information.</description></item>
+        /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20362,7 +21062,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Ossie模型</para>
+        /// <para>Updates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20432,7 +21132,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Ossie模型</para>
+        /// <para>Updates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20502,7 +21202,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Ossie模型</para>
+        /// <para>Updates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20520,7 +21220,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Ossie模型</para>
+        /// <para>Updates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20538,7 +21238,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新sql模版</para>
+        /// <para>Updates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20608,7 +21308,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新sql模版</para>
+        /// <para>Updates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20678,7 +21378,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新sql模版</para>
+        /// <para>Updates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20696,7 +21396,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新sql模版</para>
+        /// <para>Updates an SQL template.</para>
         /// </summary>
         /// 
         /// <param name="request">

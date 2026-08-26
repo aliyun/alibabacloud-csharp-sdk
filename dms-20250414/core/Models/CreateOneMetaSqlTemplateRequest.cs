@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
 {
     public class CreateOneMetaSqlTemplateRequest : TeaModel {
         /// <summary>
+        /// <para>The UUID of the associated folder.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>mc-HZ-OfjcNc2z***</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string CatalogUuid { get; set; }
 
         /// <summary>
+        /// <para>The UUID of the associated database.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>md-HZ-fp9K7r***</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string DatabaseUuid { get; set; }
 
         /// <summary>
+        /// <para>The description of the SQL template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sales template</para>
         /// </summary>
@@ -34,6 +40,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The content of the SQL template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -44,6 +51,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Expr { get; set; }
 
         /// <summary>
+        /// <para>The knowledge source of the SQL template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,6 +62,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Source { get; set; }
 
         /// <summary>
+        /// <para>The custom template parameters.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{&quot;start_day_id&quot;: &quot;2026-08-01&quot;, &quot;end_day_id&quot;: &quot;2026-08-16&quot;}</para>
         /// </summary>
@@ -62,6 +72,8 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string SqlParams { get; set; }
 
         /// <summary>
+        /// <para>The tag of the SQL template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sales</para>
         /// </summary>
@@ -70,6 +82,7 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         public string Tag { get; set; }
 
         /// <summary>
+        /// <para>The title of the SQL template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
