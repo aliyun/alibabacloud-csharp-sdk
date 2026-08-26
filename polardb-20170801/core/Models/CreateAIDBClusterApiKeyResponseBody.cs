@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public CreateAIDBClusterApiKeyResponseBodyApiKey ApiKey { get; set; }
         public class CreateAIDBClusterApiKeyResponseBodyApiKey : TeaModel {
             /// <summary>
-            /// <para>The API key of the model service.</para>
+            /// <para>The API key for model serving.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xxx</para>

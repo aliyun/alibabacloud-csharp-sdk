@@ -10,6 +10,24 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyModelApiRequest : TeaModel {
         /// <summary>
+        /// <para>The gateway retry configuration.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;failover&quot;: {
+        ///         &quot;enabled&quot;: true,
+        ///         &quot;max_provider_retries&quot;: 2,
+        ///         &quot;max_failover_providers&quot;: 1,
+        ///         &quot;retryable_status_codes&quot;: [429, 500, 502, 503, 504],
+        ///         &quot;retry_delay&quot;: 0.5
+        ///     }
+        /// }</para>
+        /// </summary>
+        [NameInMap("Config")]
+        [Validation(Required=false)]
+        public string Config { get; set; }
+
+        /// <summary>
         /// <para>The gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -32,14 +50,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelApiId { get; set; }
 
         /// <summary>
-        /// <para>The model category. Valid values:</para>
+        /// <para>The category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>text</c></para>
-        /// </description></item>
-        /// <item><description><para><c>embedding</c></para>
-        /// </description></item>
-        /// <item><description><para><c>rerank</c></para>
-        /// </description></item>
+        /// <item><description><b>text</b></description></item>
+        /// <item><description><b>embedding</b></description></item>
+        /// <item><description><b>rerank</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -64,14 +79,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>openai</c></para>
-        /// </description></item>
-        /// <item><description><para><c>anthropic</c></para>
-        /// </description></item>
-        /// <item><description><para><c>Model Studio</c></para>
-        /// </description></item>
-        /// <item><description><para><c>vllm</c></para>
-        /// </description></item>
+        /// <item><description><b>openai</b></description></item>
+        /// <item><description><b>anthropic</b></description></item>
+        /// <item><description><b>bailian</b></description></item>
+        /// <item><description><b>vllm</b></description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -83,7 +94,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The number of input units.</para>
+        /// <para>The number of input points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -93,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RecordInput { get; set; }
 
         /// <summary>
-        /// <para>The number of output units.</para>
+        /// <para>The number of output points.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -113,7 +124,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>A JSON array of routing rules, provided as a string.</para>
+        /// <para>The list of routing rules (JSON array string).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

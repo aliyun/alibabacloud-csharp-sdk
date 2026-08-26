@@ -8,16 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class DescribeAIDBClusterApiKeysRequest : TeaModel {
+    public class DescribeKnowledgeBaseAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The model space ID.</para>
+        /// <para>The unique identifier of the knowledge base.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pms-xxx</para>
+        /// <para>pkb-xxxxxx</para>
         /// </summary>
-        [NameInMap("ModelSpaceName")]
+        [NameInMap("KnowledgeBaseId")]
         [Validation(Required=false)]
-        public string ModelSpaceName { get; set; }
+        public string KnowledgeBaseId { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>

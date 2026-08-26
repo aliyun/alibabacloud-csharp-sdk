@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class AddPolarOSSAuthorizedAccountRequest : TeaModel {
         /// <summary>
+        /// <para>The list of authorized accounts to add, separated by commas. You can pass in UIDs and RAM role ARNs in mixed parameter notation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AuthorizedUserIds { get; set; }
 
         /// <summary>
+        /// <para>The ID of the PolarDB cluster.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-xxxxxxxxxxxxxxxxx</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The cold storage instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PfsInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
         /// </summary>

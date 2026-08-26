@@ -21,10 +21,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The AI node type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>SearchNode</b>: search node.</description></item>
-        /// <item><description><b>DLNode</b>: AI node.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>DLNode</para>
@@ -35,10 +31,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The CPU architecture. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>X86</b></description></item>
-        /// <item><description><b>ARM</b></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>X86</para>
@@ -48,11 +40,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Architecture { get; set; }
 
         /// <summary>
-        /// <para>The minor version update method. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>Auto: Automatic update.</description></item>
-        /// <item><description>Manual: Manual update.</description></item>
-        /// </list>
+        /// <para>The minor version update policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Manual</para>
@@ -127,10 +115,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>Indicates whether I/O performance burst is enabled for the ESSD AutoPL cloud disk. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: Enabled.</description></item>
-        /// <item><description><b>false</b>: Disabled.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -140,19 +124,19 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/183258.html">edition</a> of the cluster. Valid values:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/183258.html">product edition</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Normal</b>: Cluster Edition</description></item>
         /// <item><description><b>Basic</b>: Single Node Edition</description></item>
-        /// <item><description><b>Archive</b>: X-Engine Edition</description></item>
+        /// <item><description><b>Archive</b>: PolarDB X-Engine Edition</description></item>
         /// <item><description><b>NormalMultimaster</b>: Multi-master Cluster Edition</description></item>
-        /// <item><description><b>SENormal</b>: Standard Edition</description></item>
+        /// <item><description><b>SENormal</b>: PolarDB for MySQL Standard Edition</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>PolarDB for PostgreSQL 11 does not support Single Node Edition.</description></item>
-        /// <item><description>PolarDB for MySQL 8.0, PolarDB for MySQL 5.7, and PolarDB for PostgreSQL 14 support Standard Edition.</description></item>
-        /// <item><description>PolarDB for MySQL 8.0 supports X-Engine Edition and Multi-master Cluster Edition.</description></item>
+        /// <item><description>PolarDB for MySQL 8.0, PolarDB for MySQL 5.7, and PolarDB for PostgreSQL 14 support PolarDB for MySQL Standard Edition.</description></item>
+        /// <item><description>PolarDB for MySQL 8.0 supports PolarDB X-Engine Edition and Multi-master Cluster Edition.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -164,7 +148,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether column store tables are enabled.</para>
+        /// <para>Indicates whether the column store table is enabled.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OFF</para>
@@ -175,10 +159,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>Indicates whether storage compression is enabled. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>ON: Enabled.</description></item>
-        /// <item><description>OFF: Disabled.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -188,10 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CompressStorageMode { get; set; }
 
         /// <summary>
-        /// <para>The compressed storage data size.</para>
-        /// <remarks>
-        /// <para>This parameter is returned only when the storage compression feature is enabled for the cluster.</para>
-        /// </remarks>
+        /// <para>The size of the storage data after compression.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15529410560</para>
@@ -200,10 +177,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public long? CompressStorageUsed { get; set; }
 
+        /// <summary>
+        /// <para>The connection resource quota (AgenticDB exclusive).</para>
+        /// </summary>
         [NameInMap("ConnectionResourceQuota")]
         [Validation(Required=false)]
         public long? ConnectionResourceQuota { get; set; }
 
+        /// <summary>
+        /// <para>The number of connection resources used (AgenticDB exclusive).</para>
+        /// </summary>
         [NameInMap("ConnectionResourceUsed")]
         [Validation(Required=false)]
         public long? ConnectionResourceUsed { get; set; }
@@ -266,7 +249,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeDBClusterAttributeResponseBodyDBNodes> DBNodes { get; set; }
         public class DescribeDBClusterAttributeResponseBodyDBNodes : TeaModel {
             /// <summary>
-            /// <para>The number of CPU cores added by second-level rapid scaling.</para>
+            /// <para>The number of CPU cores added by automatically scaling local resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6</para>
@@ -336,11 +319,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeId { get; set; }
 
             /// <summary>
-            /// <para>The role of the node. Valid values: </para>
-            /// <list type="bullet">
-            /// <item><description><b>Writer</b>: primary node.</description></item>
-            /// <item><description><b>Reader</b>: read-only node.</description></item>
-            /// </list>
+            /// <para>The role of the node. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>Reader</para>
@@ -350,22 +329,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeRole { get; set; }
 
             /// <summary>
-            /// <para>The node status. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>Creating</b>: Being created. </description></item>
-            /// <item><description><b>Running</b>: Running. </description></item>
-            /// <item><description><b>Deleting</b>: Being deleted.  </description></item>
-            /// <item><description><b>Rebooting</b>: Being restarted.  </description></item>
-            /// <item><description><b>DBNodeCreating</b>: Increase node in progress.  </description></item>
-            /// <item><description><b>DBNodeDeleting</b>: Deleting a node. </description></item>
-            /// <item><description><b>ClassChanging</b>: Changing node specifications.  </description></item>
-            /// <item><description><b>NetAddressCreating</b>: Creating network connectivity.  </description></item>
-            /// <item><description><b>NetAddressDeleting</b>: Deleting network connectivity.  </description></item>
-            /// <item><description><b>NetAddressModifying</b>: Modifying network connectivity.</description></item>
-            /// <item><description><b>MinorVersionUpgrading</b>: Upgrade of the minor version in progress.</description></item>
-            /// <item><description><b>Maintaining</b>: Instance under maintenance.  </description></item>
-            /// <item><description><b>Switching</b>: Switching over.</description></item>
-            /// </list>
+            /// <para>The status of the node. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -374,8 +338,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string DBNodeStatus { get; set; }
 
+            [NameInMap("DedicatedHostModel")]
+            [Validation(Required=false)]
+            public bool? DedicatedHostModel { get; set; }
+
             /// <summary>
-            /// <para>The failover priority. Each node has a failover priority that determines the probability of the node being elected as the primary node during a failover. A higher value indicates a higher priority.
+            /// <para>The failover priority. Each node has a failover priority that determines the probability of the node being elected as the primary node during a failover. A larger value indicates a higher priority.
             /// Valid values: 1 to 15.</para>
             /// 
             /// <b>Example:</b>
@@ -387,12 +355,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>Indicates whether hot standby is enabled. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>ON</b>: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>OFF</b>: Disabled.</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -402,13 +364,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string HotReplicaMode { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether In-Memory Column Index (IMCI) is enabled. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>ON</b>: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>OFF</b>: Disabled.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>Indicates whether In-Memory Column Index is enabled. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>ON</para>
@@ -458,7 +414,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string MemorySize { get; set; }
 
             /// <summary>
-            /// <para>The name of the hot replica that corresponds to this node in the hot standby storage and compute architecture.</para>
+            /// <para>The name of the hot replica that corresponds to the node in the hot standby storage and compute architecture.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pi-bp18z52mirror*****</para>
@@ -489,12 +445,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>The Orca feature. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>on: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para>off: Disabled.</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>off</para>
@@ -527,12 +477,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
             /// <summary>
             /// <para>Indicates whether the global consistency (high-performance mode) feature is enabled for the node. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>ON</b>: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>OFF</b>: Disabled.</para>
-            /// </description></item>
-            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -543,8 +487,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SccMode { get; set; }
 
             /// <summary>
-            /// <para>The routing weight.
-            /// Valid values: 1 to 100. Default value: 1.</para>
+            /// <para>The routing weight.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -556,11 +499,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The serverless type of the node. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AgileServerless: agile serverless node.</description></item>
-            /// <item><description>SteadyServerless: steady serverless node, which is a node in a cluster with defined specifications that has serverless capabilities enabled.</description></item>
+            /// <item><description>AgileServerless: agile serverless. The node is a serverless node.</description></item>
+            /// <item><description>SteadyServerless: steady serverless. The node is a node with defined specifications that has the serverless feature enabled.</description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is supported only for serverless clusters or clusters with defined specifications that have the serverless feature enabled. For more information, see <a href="https://help.aliyun.com/document_detail/452274.html">Serverless</a>.</para>
+            /// <list type="bullet">
+            /// <item><description>This parameter is supported only for serverless clusters or clusters with defined specifications that have the serverless feature enabled. For more information, see <a href="https://help.aliyun.com/document_detail/452274.html">Serverless</a>.</description></item>
+            /// </list>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -571,8 +516,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ServerlessType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the node is in the primary zone or secondary zone. This parameter is mainly used for resource-equivalent deployments.
-            /// Valid values:</para>
+            /// <para>Indicates whether the node is in the primary zone or the secondary zone. This parameter is mainly used for resource-symmetric deployments.</para>
+            /// <para>Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Primary: primary zone.</description></item>
             /// <item><description>Standby: secondary zone.</description></item>
@@ -628,16 +573,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The status of the current minor database version. Valid values:</para>
+        /// <para>The status of the current minor version. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Stable</b>: The current version is stable.</description></item>
         /// <item><description><b>Old</b>: The current version is outdated. Upgrade to the latest version.</description></item>
         /// <item><description><b>HighRisk</b>: The current version has critical defects. Upgrade to the latest version immediately.</description></item>
-        /// <item><description><b>Beta</b>: The current version is a beta version.</description></item>
+        /// <item><description><b>Beta</b>: The current version is a Beta version.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>For information about how to upgrade the minor database version, see <a href="https://help.aliyun.com/document_detail/158572.html">Version upgrade</a>.</description></item>
+        /// <item><description>For more information about how to upgrade the minor version, see <a href="https://help.aliyun.com/document_detail/158572.html">Version upgrade</a>.</description></item>
         /// <item><description>This parameter is returned only when the database engine type (<b>DBType</b>) is <b>MySQL</b>.</description></item>
         /// </list>
         /// </remarks>
@@ -650,7 +595,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersionStatus { get; set; }
 
         /// <summary>
-        /// <para>The total size of level-1 backups (snapshots), in bytes.</para>
+        /// <para>The total size of level-1 backups (snapshots). Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>74448896</para>
@@ -660,7 +605,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? DataLevel1BackupChainSize { get; set; }
 
         /// <summary>
-        /// <para>The data replication relationship mode. Valid values:</para>
+        /// <para>The data replication mode. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>AsyncSync</b>: asynchronous</description></item>
         /// <item><description><b>SemiSync</b>: semi-synchronous</description></item>
@@ -674,7 +619,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DataSyncMode { get; set; }
 
         /// <summary>
-        /// <para>The lock status for cluster deletion. Valid values:</para>
+        /// <para>The lock status of cluster deletion. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Unlocked. The cluster can be deleted.</description></item>
         /// <item><description><b>1</b>: Locked. The cluster cannot be deleted.</description></item>
@@ -700,7 +645,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The expiration time of the cluster.</para>
         /// <remarks>
-        /// <para>A specific value is returned only for clusters whose billing method is <b>Prepaid</b> (subscription). An empty value is returned for <b>Postpaid</b> (pay-as-you-go) clusters.</para>
+        /// <para>Only clusters whose billing method is <b>Prepaid</b> (subscription) return a specific value for this parameter. <b>Postpaid</b> (pay-as-you-go) clusters return an empty value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -712,9 +657,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>Indicates whether the cluster has expired.</para>
-        /// <remarks>
-        /// <para>This parameter is returned only for clusters whose billing method is <b>Prepaid</b> (subscription).</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -724,7 +666,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Expired { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether resources are replenished for the new primary node after a cross-zone failover. Valid values:</para>
+        /// <para>Indicates whether resources for the new primary database are replenished after a cross-zone failover. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Resources are replenished.</description></item>
         /// <item><description><b>false</b>: Resources are not replenished.</description></item>
@@ -738,10 +680,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? HasCompleteStandbyRes { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the Hot Standby Cluster (and standby compute nodes) is enabled. Valid values:</para>
+        /// <para>Indicates whether the hot standby storage cluster (and Standby compute nodes) is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>StandbyClusterON</b>: The Hot Standby Cluster or both the Hot Standby Cluster and standby compute nodes are enabled. </description></item>
-        /// <item><description><b>StandbyClusterOFF</b>: The Hot Standby Cluster or both the Hot Standby Cluster and standby compute nodes are disabled.</description></item>
+        /// <item><description><b>StandbyClusterON</b>: The hot standby storage cluster and Standby compute nodes are enabled.</description></item>
+        /// <item><description><b>StandbyClusterOFF</b>: The hot standby storage cluster and Standby compute nodes are disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -753,10 +695,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The automatic IMCI-based query acceleration feature. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><c>ON</c>: Enabled.</description></item>
-        /// <item><description><c>OFF</c>: Disabled.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>OFF</para>
@@ -767,10 +705,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The failover with hot replica feature. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><c>true</c>: Enabled.</description></item>
-        /// <item><description><c>false</c>: Disabled.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -800,13 +734,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? InodeUsed { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the cluster runs the latest Milvus version. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The cluster runs the latest Milvus version.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The cluster does not run the latest Milvus version.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Indicates whether the cluster is running the latest kernel version. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -817,10 +745,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>Indicates whether the database proxy is the latest version. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>true</b>: The database proxy is the latest version.</description></item>
-        /// <item><description><b>false</b>: The database proxy is not the latest version.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -830,12 +754,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? IsProxyLatestVersion { get; set; }
 
         /// <summary>
-        /// <para>The lock mode. Valid values: </para>
-        /// <list type="bullet">
-        /// <item><description><b>Unlock</b>: Not locked.</description></item>
-        /// <item><description><b>ManualLock</b>: Manually locked. </description></item>
-        /// <item><description><b>LockByExpiration</b>: Automatically locked due to cluster expiration.</description></item>
-        /// </list>
+        /// <para>The lock mode. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Unlock</para>
@@ -856,12 +775,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The Orca feature. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>on: Enabled.</para>
-        /// </description></item>
-        /// <item><description><para>off: Disabled.</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -872,10 +785,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The billing method. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
-        /// <item><description><b>Prepaid</b>: subscription.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Prepaid</para>
@@ -885,9 +794,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × capacity - baseline performance}.</para>
-        /// <p id="p_6de_jxy_k2g" props="china" icmsditafragmentmagic=1>Baseline performance = min{1,800 + 50 × capacity, 50,000}.</para>
-        /// <note id="note_7kj_j0o_rgs" props="china" icmsditafragmentmagic=1>This parameter is supported only when StorageType is set to ESSDAUTOPL.</note>
+        /// <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2500</para>
@@ -909,8 +816,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The serverless type of the database proxy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AgileServerless: agile serverless cluster.</description></item>
-        /// <item><description>SteadyServerless: steady serverless, which is a cluster with defined specifications (billing method is subscription or pay-as-you-go).</description></item>
+        /// <item><description>AgileServerless: agile serverless, which indicates a serverless cluster.</description></item>
+        /// <item><description>SteadyServerless: steady serverless, which indicates a cluster with defined specifications (a subscription or pay-as-you-go cluster).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -932,19 +839,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The status of the database proxy. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Creating</b>: Being created.</description></item>
-        /// <item><description><b>Running</b>: Running.</description></item>
-        /// <item><description><b>Deleting</b>: Being released.</description></item>
-        /// <item><description><b>Rebooting</b>: Being restarted.</description></item>
-        /// <item><description><b>DBNodeCreating</b>: Increase node in progress.</description></item>
-        /// <item><description><b>DBNodeDeleting</b>: Deleting a node.</description></item>
-        /// <item><description><b>ClassChanging</b>: Changing node specifications.</description></item>
-        /// <item><description><b>NetAddressCreating</b>: Creating network connectivity.</description></item>
-        /// <item><description><b>NetAddressDeleting</b>: Deleting network connectivity.</description></item>
-        /// <item><description><b>NetAddressModifying</b>: Modifying network connectivity.</description></item>
-        /// <item><description><b>Deleted</b>: Released.</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Running</para>
@@ -954,11 +848,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProxyStatus { get; set; }
 
         /// <summary>
-        /// <para>The database proxy type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>Exclusive</b>: Dedicated Enterprise Edition</description></item>
-        /// <item><description><b>General</b>: Standard Enterprise Edition</description></item>
-        /// </list>
+        /// <para>The type of the database proxy. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>Exclusive</para>
@@ -999,10 +889,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>If RestoreType is <b>RestoreByTime</b> or <b>RestoreByTimeOss</b>, this value indicates the point in time to which the cluster was restored.</description></item>
-        /// <item><description>If RestoreType is <b>RestoreByBackupSet</b> or <b>RestoreByBackupSetOss</b>, this value indicates the backup set ID used for the restoration.</description></item>
+        /// <item><description>If RestoreType is <b>RestoreByTime</b> or <b>RestoreByTimeOss</b>, this value indicates the point in time to which the cluster is restored.</description></item>
+        /// <item><description>If RestoreType is <b>RestoreByBackupSet</b> or <b>RestoreByBackupSetOss</b>, this value indicates the ID of the backup set from which the cluster is restored.</description></item>
         /// </list>
-        /// <para><note>This parameter is supported only for clusters restored from a backup set or point in time after June 1, 2024.</note></para>
+        /// <para><note>This parameter is supported only for clusters that are restored from a backup set or to a point in time after June 1, 2024.</note></para>
         /// 
         /// <b>Example:</b>
         /// <para>2179639137</para>
@@ -1014,13 +904,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster restoration method. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>RestoreByTime</b>: Restored from a point in time based on a level-1 backup.</description></item>
-        /// <item><description><b>RestoreByBackupSet</b>: Restored from a backup set based on a level-1 backup.</description></item>
-        /// <item><description><b>RestoreByTimeOss</b>: Restored from a point in time based on a level-2 backup.</description></item>
-        /// <item><description><b>RestoreByBackupSetOss</b>: Restored from a backup set based on a level-2 backup.</description></item>
-        /// <item><description><b>CloneFromSourceCluster</b>: Cloned from the source cluster.</description></item>
+        /// <item><description><b>RestoreByTime</b>: Restores from a point in time based on a level-1 backup.</description></item>
+        /// <item><description><b>RestoreByBackupSet</b>: Restores from a backup set based on a level-1 backup.</description></item>
+        /// <item><description><b>RestoreByTimeOss</b>: Restores from a point in time based on a level-2 backup.</description></item>
+        /// <item><description><b>RestoreByBackupSetOss</b>: Restores from a backup set based on a level-2 backup.</description></item>
+        /// <item><description><b>CloneFromSourceCluster</b>: Clones from the source cluster.</description></item>
         /// </list>
-        /// <para><note>This parameter is supported only for clusters restored from a backup set or point in time after June 1, 2024.</note></para>
+        /// <para><note>This parameter is supported only for clusters that are restored from a backup set or a point in time after June 1, 2024.</note></para>
         /// 
         /// <b>Example:</b>
         /// <para>RestoreByTime</para>
@@ -1040,7 +930,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RowCompression { get; set; }
 
         /// <summary>
-        /// <para>The storage size of SQL statements, in bytes. A value of -1 indicates that no data is available.</para>
+        /// <para>The storage size of SQL statements. Unit: bytes. A value of -1 indicates that no data is available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -1061,9 +951,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The compressed storage data size of the search node.</para>
-        /// <remarks>
-        /// <para>This parameter is returned only when the storage compression feature is enabled for the cluster.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>15529410560</para>
@@ -1085,8 +972,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The serverless type of the cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AgileServerless: agile serverless cluster.</description></item>
-        /// <item><description>SteadyServerless: steady serverless, which is a cluster with defined specifications that has the serverless feature enabled.</description></item>
+        /// <item><description>AgileServerless: agile serverless. This value indicates a serverless cluster.</description></item>
+        /// <item><description>SteadyServerless: steady serverless. This value indicates a cluster with defined specifications that has the serverless feature enabled.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter is supported only for serverless clusters or clusters with defined specifications that have the serverless feature enabled.</para>
@@ -1100,7 +987,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessType { get; set; }
 
         /// <summary>
-        /// <para>The source cluster ID.
+        /// <para>The ID of the source cluster.
         /// <note>This parameter is supported only for clusters restored from a backup set or point in time after June 1, 2024.</note></para>
         /// 
         /// <b>Example:</b>
@@ -1111,8 +998,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceDBCluster { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the source cluster.
-        /// <note>This parameter is returned only when the source cluster ID exists.</note></para>
+        /// <para>The region ID of the source cluster.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -1124,8 +1010,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cross-zone disaster recovery mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ON</b>: Cross-zone disaster recovery is enabled.</description></item>
-        /// <item><description><b>OFF</b>: Cross-zone disaster recovery is disabled.</description></item>
+        /// <item><description><b>ON</b>: Cross-zone disaster recovery mode is enabled.</description></item>
+        /// <item><description><b>OFF</b>: Cross-zone disaster recovery mode is disabled.</description></item>
         /// <item><description><b>0</b>: Customer drill mode.</description></item>
         /// </list>
         /// 
@@ -1141,7 +1027,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StorageAutoScale { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage capacity for the current cluster specifications, in bytes.</para>
+        /// <para>The maximum storage capacity for the current cluster specifications. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10995116277760</para>
@@ -1151,10 +1037,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? StorageMax { get; set; }
 
         /// <summary>
-        /// <para>The storage billing type. Valid values:</para>
+        /// <para>The billing method for storage. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Postpaid</b>: pay-by-capacity (pay-as-you-go).</description></item>
-        /// <item><description><b>Prepaid</b>: pay-by-space (subscription).</description></item>
+        /// <item><description><b>Postpaid</b>: pay-as-you-go.</description></item>
+        /// <item><description><b>Prepaid</b>: subscription.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -1165,7 +1051,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StoragePayType { get; set; }
 
         /// <summary>
-        /// <para>The storage space for pay-by-space (subscription) billing. Unit: bytes.</para>
+        /// <para>The storage space billed by space (subscription). Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -1189,7 +1075,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? StorageUpperBound { get; set; }
 
         /// <summary>
-        /// <para>The storage usage, in bytes.</para>
+        /// <para>The storage usage. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3012558848</para>
@@ -1199,13 +1085,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? StorageUsed { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether multi-zone data strong consistency is enabled for the cluster. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para><b>ON</b>: Multi-zone data strong consistency is enabled. This applies to Standard Edition clusters deployed across three zones.</para>
-        /// </description></item>
-        /// <item><description><para><b>OFF</b>: Multi-zone data strong consistency is not enabled.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>Indicates whether multi-zone strong data consistency is enabled for the cluster. Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -1215,13 +1095,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string StrictConsistency { get; set; }
 
         /// <summary>
-        /// <para>The specification type of compute nodes. Valid values:</para>
+        /// <para>The specification type of the compute node. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Exclusive</b>: Dedicated</description></item>
         /// <item><description><b>General</b>: General-purpose</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter is returned only for PolarDB for MySQL clusters of the Cluster Edition.</para>
+        /// <para>This parameter is returned only for PolarDB for MySQL Cluster Edition clusters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

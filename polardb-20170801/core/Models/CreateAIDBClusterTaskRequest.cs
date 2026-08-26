@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The running parameters in JSON string format.</para>
+        /// <para>The running parameters in a JSON string.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>The description of the model service.</para>
+        /// <para>The model service description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxxx</para>

@@ -71,6 +71,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        [NameInMap("Filter")]
+        [Validation(Required=false)]
+        public Dictionary<string, object> Filter { get; set; }
+
         /// <summary>
         /// <para>The data granularity of performance data. Valid values:</para>
         /// <list type="bullet">
@@ -93,7 +97,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The performance metrics to query. Separate multiple values with commas (,).</para>
         /// <remarks>
-        /// <para><b>Note</b> You can specify up to 5 performance metrics.</para>
+        /// <para> You can specify up to 5 performance metrics.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -144,10 +148,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }
-
-        [NameInMap("filter")]
-        [Validation(Required=false)]
-        public Dictionary<string, object> Filter { get; set; }
 
     }
 

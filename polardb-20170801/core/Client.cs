@@ -60,28 +60,28 @@ namespace AlibabaCloud.SDK.Polardb20170801
                 {"cn-zhengzhou-nebula-1", "polardb.aliyuncs.com"},
                 {"eu-west-1-oxs", "polardb.aliyuncs.com"},
                 {"rus-west-1-pop", "polardb.aliyuncs.com"},
-                {"us-west-1", "polardb.us-west-1.aliyuncs.com"},
-                {"us-east-1", "polardb.us-east-1.aliyuncs.com"},
-                {"na-south-1", "polardb.na-south-1.aliyuncs.com"},
-                {"me-east-1", "polardb.me-east-1.aliyuncs.com"},
-                {"eu-west-1", "polardb.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "polardb.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "polardb.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "polardb.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-shenzhen", "polardb.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "polardb.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-huhehaote", "polardb.cn-huhehaote.aliyuncs.com"},
                 {"cn-hongkong", "polardb.cn-hongkong.aliyuncs.com"},
-                {"cn-guangzhou", "polardb.cn-guangzhou.aliyuncs.com"},
-                {"cn-chengdu", "polardb.cn-chengdu.aliyuncs.com"},
-                {"ap-southeast-8", "polardb.ap-southeast-8.aliyuncs.com"},
-                {"ap-southeast-7", "polardb.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "polardb.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "polardb.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "polardb.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "polardb.ap-southeast-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "polardb.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-shenzhen", "polardb.cn-shenzhen.aliyuncs.com"},
                 {"ap-northeast-2", "polardb.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "polardb.ap-northeast-1.aliyuncs.com"},
+                {"cn-chengdu", "polardb.cn-chengdu.aliyuncs.com"},
+                {"cn-guangzhou", "polardb.cn-guangzhou.aliyuncs.com"},
+                {"ap-southeast-1", "polardb.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "polardb.ap-southeast-3.aliyuncs.com"},
+                {"cn-huhehaote", "polardb.cn-huhehaote.aliyuncs.com"},
+                {"ap-southeast-5", "polardb.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-6", "polardb.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "polardb.ap-southeast-7.aliyuncs.com"},
+                {"ap-southeast-8", "polardb.ap-southeast-8.aliyuncs.com"},
+                {"na-south-1", "polardb.na-south-1.aliyuncs.com"},
+                {"eu-central-1", "polardb.eu-central-1.aliyuncs.com"},
+                {"us-west-1", "polardb.us-west-1.aliyuncs.com"},
+                {"eu-west-1", "polardb.eu-west-1.aliyuncs.com"},
+                {"us-east-1", "polardb.us-east-1.aliyuncs.com"},
+                {"me-east-1", "polardb.me-east-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "polardb.cn-shanghai-finance-1.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "polardb.cn-shenzhen-finance-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("polardb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -1175,7 +1175,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加冷存授权账号</para>
+        /// <para>Adds authorized accounts for cold storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1229,7 +1229,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加冷存授权账号</para>
+        /// <para>Adds authorized accounts for cold storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1283,7 +1283,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加冷存授权账号</para>
+        /// <para>Adds authorized accounts for cold storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1301,7 +1301,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>添加冷存授权账号</para>
+        /// <para>Adds authorized accounts for cold storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5031,7 +5031,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to create an AI cluster.</para>
+        /// <para>Creates an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5209,7 +5209,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to create an AI cluster.</para>
+        /// <para>Creates an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5387,7 +5387,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to create an AI cluster.</para>
+        /// <para>Creates an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5405,7 +5405,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This topic describes how to create an AI cluster.</para>
+        /// <para>Creates an AI cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5423,7 +5423,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model service API key.</para>
+        /// <para>Creates a model creation service API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5473,7 +5473,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model service API key.</para>
+        /// <para>Creates a model creation service API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5523,7 +5523,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model service API key.</para>
+        /// <para>Creates a model creation service API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5541,7 +5541,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model service API key.</para>
+        /// <para>Creates a model creation service API key.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7127,7 +7127,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AgenticDB 租户 API Key</para>
+        /// <para>Creates an API key for an AgenticDB tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7185,7 +7185,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AgenticDB 租户 API Key</para>
+        /// <para>Creates an API key for an AgenticDB tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7243,7 +7243,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AgenticDB 租户 API Key</para>
+        /// <para>Creates an API key for an AgenticDB tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7261,7 +7261,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建 AgenticDB 租户 API Key</para>
+        /// <para>Creates an API key for an AgenticDB tenant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13463,6 +13463,422 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public CreateKnowledgeBaseResponse CreateKnowledgeBaseWithOptions(CreateKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseType))
+            {
+                query["KnowledgeBaseType"] = request.KnowledgeBaseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeSpaceId))
+            {
+                query["KnowledgeSpaceId"] = request.KnowledgeSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
+            {
+                query["SearchMode"] = request.SearchMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBase",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseResponse> CreateKnowledgeBaseWithOptionsAsync(CreateKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseType))
+            {
+                query["KnowledgeBaseType"] = request.KnowledgeBaseType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeSpaceId))
+            {
+                query["KnowledgeSpaceId"] = request.KnowledgeSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchMode))
+            {
+                query["SearchMode"] = request.SearchMode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBase",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public CreateKnowledgeBaseResponse CreateKnowledgeBase(CreateKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateKnowledgeBaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseResponse> CreateKnowledgeBaseAsync(CreateKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge space.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeSpaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeSpaceResponse
+        /// </returns>
+        public CreateKnowledgeSpaceResponse CreateKnowledgeSpaceWithOptions(CreateKnowledgeSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
+            {
+                query["DBType"] = request.DBType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingDimension))
+            {
+                query["EmbeddingDimension"] = request.EmbeddingDimension;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingModel))
+            {
+                query["EmbeddingModel"] = request.EmbeddingModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnforceAcl))
+            {
+                query["EnforceAcl"] = request.EnforceAcl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LLMModel))
+            {
+                query["LLMModel"] = request.LLMModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSAccessKey))
+            {
+                query["OSSAccessKey"] = request.OSSAccessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSBucket))
+            {
+                query["OSSBucket"] = request.OSSBucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSSecretKey))
+            {
+                query["OSSSecretKey"] = request.OSSSecretKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankModel))
+            {
+                query["RerankModel"] = request.RerankModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardingSize))
+            {
+                query["ShardingSize"] = request.ShardingSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardingStrategy))
+            {
+                query["ShardingStrategy"] = request.ShardingStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeSpace",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeSpaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge space.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeSpaceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeSpaceResponse
+        /// </returns>
+        public async Task<CreateKnowledgeSpaceResponse> CreateKnowledgeSpaceWithOptionsAsync(CreateKnowledgeSpaceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBType))
+            {
+                query["DBType"] = request.DBType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingDimension))
+            {
+                query["EmbeddingDimension"] = request.EmbeddingDimension;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EmbeddingModel))
+            {
+                query["EmbeddingModel"] = request.EmbeddingModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnforceAcl))
+            {
+                query["EnforceAcl"] = request.EnforceAcl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LLMModel))
+            {
+                query["LLMModel"] = request.LLMModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSAccessKey))
+            {
+                query["OSSAccessKey"] = request.OSSAccessKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSBucket))
+            {
+                query["OSSBucket"] = request.OSSBucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OSSSecretKey))
+            {
+                query["OSSSecretKey"] = request.OSSSecretKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RerankModel))
+            {
+                query["RerankModel"] = request.RerankModel;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityGroupId))
+            {
+                query["SecurityGroupId"] = request.SecurityGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardingSize))
+            {
+                query["ShardingSize"] = request.ShardingSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ShardingStrategy))
+            {
+                query["ShardingStrategy"] = request.ShardingStrategy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeSpace",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeSpaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge space.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeSpaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeSpaceResponse
+        /// </returns>
+        public CreateKnowledgeSpaceResponse CreateKnowledgeSpace(CreateKnowledgeSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateKnowledgeSpaceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a knowledge space.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeSpaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeSpaceResponse
+        /// </returns>
+        public async Task<CreateKnowledgeSpaceResponse> CreateKnowledgeSpaceAsync(CreateKnowledgeSpaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateKnowledgeSpaceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a PolarFS S3 account.</para>
         /// </summary>
         /// 
@@ -13615,7 +14031,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model API.</para>
+        /// <para>Creates a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13632,6 +14048,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceModel))
             {
                 query["ForceModel"] = request.ForceModel;
@@ -13693,7 +14113,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model API.</para>
+        /// <para>Creates a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13710,6 +14130,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ForceModel))
             {
                 query["ForceModel"] = request.ForceModel;
@@ -13771,7 +14195,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model API.</para>
+        /// <para>Creates a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13789,7 +14213,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a model API.</para>
+        /// <para>Creates a routing rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17724,6 +18148,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchId))
+            {
+                query["BranchId"] = request.BranchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeClusterId))
             {
                 query["ComputeClusterId"] = request.ComputeClusterId;
@@ -17732,9 +18160,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17774,6 +18210,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BranchId))
+            {
+                query["BranchId"] = request.BranchId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ComputeClusterId))
             {
                 query["ComputeClusterId"] = request.ComputeClusterId;
@@ -17782,9 +18222,17 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProjectId))
+            {
+                query["ProjectId"] = request.ProjectId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["TenantId"] = request.TenantId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -21911,6 +22359,134 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public DeleteKnowledgeBaseResponse DeleteKnowledgeBaseWithOptions(DeleteKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeBase",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeBaseResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeBaseResponse> DeleteKnowledgeBaseWithOptionsAsync(DeleteKnowledgeBaseRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteKnowledgeBase",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteKnowledgeBaseResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public DeleteKnowledgeBaseResponse DeleteKnowledgeBase(DeleteKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteKnowledgeBaseWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteKnowledgeBaseRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteKnowledgeBaseResponse
+        /// </returns>
+        public async Task<DeleteKnowledgeBaseResponse> DeleteKnowledgeBaseAsync(DeleteKnowledgeBaseRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteKnowledgeBaseWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a PolarFS S3 account.</para>
         /// </summary>
         /// 
@@ -23987,7 +24563,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除冷存授权账号</para>
+        /// <para>Deletes authorized accounts for cold storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24041,7 +24617,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除冷存授权账号</para>
+        /// <para>Deletes authorized accounts for cold storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24095,7 +24671,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除冷存授权账号</para>
+        /// <para>Deletes authorized accounts for cold storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24113,7 +24689,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除冷存授权账号</para>
+        /// <para>Deletes authorized accounts for cold storage.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24743,7 +25319,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom instance.</para>
+        /// <para>Queries the detailed attributes of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24801,7 +25377,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom instance.</para>
+        /// <para>Queries the detailed attributes of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24859,7 +25435,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom instance.</para>
+        /// <para>Queries the detailed attributes of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24877,7 +25453,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a custom instance.</para>
+        /// <para>Queries the detailed attributes of a custom instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26007,7 +26583,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View custom clusters.</para>
+        /// <para>Queries the list of custom AI clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26097,7 +26673,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View custom clusters.</para>
+        /// <para>Queries the list of custom AI clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26187,7 +26763,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View custom clusters.</para>
+        /// <para>Queries the list of custom AI clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26205,7 +26781,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View custom clusters.</para>
+        /// <para>Queries the list of custom AI clusters.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28651,7 +29227,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 项目列表</para>
+        /// <para>Queries the list of AgenticDB projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28717,7 +29293,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 项目列表</para>
+        /// <para>Queries the list of AgenticDB projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28783,7 +29359,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 项目列表</para>
+        /// <para>Queries the list of AgenticDB projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28801,7 +29377,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 AgenticDB 项目列表</para>
+        /// <para>Queries the list of AgenticDB projects.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29639,7 +30215,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
             {
-                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "filter", "json");
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
@@ -29666,6 +30242,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["Filter"] = request.FilterShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
                 query["Interval"] = request.Interval;
@@ -29689,10 +30269,6 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
-            {
-                query["filter"] = request.FilterShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -29735,7 +30311,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
             {
-                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "filter", "json");
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "Filter", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
@@ -29762,6 +30338,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["Filter"] = request.FilterShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
                 query["Interval"] = request.Interval;
@@ -29785,10 +30365,6 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
-            }
-            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
-            {
-                query["filter"] = request.FilterShrink;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -37135,7 +37711,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the transparent data encryption (TDE) settings for a specified PolarDB cluster.</para>
+        /// <para>Queries the Transparent Data Encryption (TDE) settings of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37193,7 +37769,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the transparent data encryption (TDE) settings for a specified PolarDB cluster.</para>
+        /// <para>Queries the Transparent Data Encryption (TDE) settings of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37251,7 +37827,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the transparent data encryption (TDE) settings for a specified PolarDB cluster.</para>
+        /// <para>Queries the Transparent Data Encryption (TDE) settings of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37269,7 +37845,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the transparent data encryption (TDE) settings for a specified PolarDB cluster.</para>
+        /// <para>Queries the Transparent Data Encryption (TDE) settings of a PolarDB cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43695,6 +44271,294 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKnowledgeBaseAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKnowledgeBaseAttributeResponse
+        /// </returns>
+        public DescribeKnowledgeBaseAttributeResponse DescribeKnowledgeBaseAttributeWithOptions(DescribeKnowledgeBaseAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeKnowledgeBaseAttribute",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeKnowledgeBaseAttributeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKnowledgeBaseAttributeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKnowledgeBaseAttributeResponse
+        /// </returns>
+        public async Task<DescribeKnowledgeBaseAttributeResponse> DescribeKnowledgeBaseAttributeWithOptionsAsync(DescribeKnowledgeBaseAttributeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeBaseId))
+            {
+                query["KnowledgeBaseId"] = request.KnowledgeBaseId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeKnowledgeBaseAttribute",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeKnowledgeBaseAttributeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKnowledgeBaseAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKnowledgeBaseAttributeResponse
+        /// </returns>
+        public DescribeKnowledgeBaseAttributeResponse DescribeKnowledgeBaseAttribute(DescribeKnowledgeBaseAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeKnowledgeBaseAttributeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKnowledgeBaseAttributeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKnowledgeBaseAttributeResponse
+        /// </returns>
+        public async Task<DescribeKnowledgeBaseAttributeResponse> DescribeKnowledgeBaseAttributeAsync(DescribeKnowledgeBaseAttributeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeKnowledgeBaseAttributeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of knowledge bases.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKnowledgeBasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKnowledgeBasesResponse
+        /// </returns>
+        public DescribeKnowledgeBasesResponse DescribeKnowledgeBasesWithOptions(DescribeKnowledgeBasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeSpaceId))
+            {
+                query["KnowledgeSpaceId"] = request.KnowledgeSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeKnowledgeBases",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeKnowledgeBasesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of knowledge bases.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKnowledgeBasesRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKnowledgeBasesResponse
+        /// </returns>
+        public async Task<DescribeKnowledgeBasesResponse> DescribeKnowledgeBasesWithOptionsAsync(DescribeKnowledgeBasesRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.KnowledgeSpaceId))
+            {
+                query["KnowledgeSpaceId"] = request.KnowledgeSpaceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeKnowledgeBases",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeKnowledgeBasesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of knowledge bases.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKnowledgeBasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKnowledgeBasesResponse
+        /// </returns>
+        public DescribeKnowledgeBasesResponse DescribeKnowledgeBases(DescribeKnowledgeBasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeKnowledgeBasesWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of knowledge bases.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeKnowledgeBasesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeKnowledgeBasesResponse
+        /// </returns>
+        public async Task<DescribeKnowledgeBasesResponse> DescribeKnowledgeBasesAsync(DescribeKnowledgeBasesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeKnowledgeBasesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a PolarFS S3 account.</para>
         /// </summary>
         /// 
@@ -44831,7 +45695,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Query API</para>
+        /// <para>Queries model APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44909,7 +45773,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Query API</para>
+        /// <para>Queries model APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44987,7 +45851,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Query API</para>
+        /// <para>Queries model APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45005,7 +45869,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Model Query API</para>
+        /// <para>Queries model APIs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56543,7 +57407,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a PolarClaw plugin.</para>
+        /// <para>Installs the PolarClaw plug-in.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56597,7 +57461,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a PolarClaw plugin.</para>
+        /// <para>Installs the PolarClaw plug-in.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56651,7 +57515,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a PolarClaw plugin.</para>
+        /// <para>Installs the PolarClaw plug-in.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -56669,7 +57533,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Installs a PolarClaw plugin.</para>
+        /// <para>Installs the PolarClaw plug-in.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -70128,6 +70992,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
             {
                 query["GwClusterId"] = request.GwClusterId;
@@ -70202,6 +71070,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
+            {
+                query["Config"] = request.Config;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GwClusterId))
             {
                 query["GwClusterId"] = request.GwClusterId;

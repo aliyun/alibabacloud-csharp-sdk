@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAgenticDBTenantApiKeyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The plaintext of the API key. This value is returned only in this response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pagc_key_xxxx.yyyy</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApiKey { get; set; }
 
         /// <summary>
+        /// <para>The resource ID of the API key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>ak-xxxxxxxxxxxx</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApiKeyId { get; set; }
 
         /// <summary>
+        /// <para>The time when the API key was created.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2026-06-10T08:00:00Z</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CreateTime { get; set; }
 
         /// <summary>
+        /// <para>The expiration time of the API key. This value is empty if the API key never expires.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2027-01-01T00:00:00Z</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F45FFACC-1B2C-3D4E-5F6A-7B8C9D0E1F2A</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>t-aaaa111122223333</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TenantId { get; set; }
 
         /// <summary>
+        /// <para>The tenant name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>my-tenant</para>
         /// </summary>

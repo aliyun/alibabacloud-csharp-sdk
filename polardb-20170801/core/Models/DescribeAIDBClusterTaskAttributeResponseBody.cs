@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The ratio of data split from the training set.</para>
+            /// <para>The ratio split from the training set.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0.1</para>
@@ -202,8 +202,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The lock mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Locked.</description></item>
-        /// <item><description><b>1</b>: Unlocked.</description></item>
+        /// <item><description><b>0</b>: locked.</description></item>
+        /// <item><description><b>1</b>: unlocked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -234,7 +234,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MaintainStartTime { get; set; }
 
         /// <summary>
-        /// <para>The list of output model paths in the model fine-tuning scenario.</para>
+        /// <para>The list of model paths output in the model fine-tuning scenario.</para>
         /// </summary>
         [NameInMap("ModelPath")]
         [Validation(Required=false)]
@@ -324,8 +324,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The task type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>sft</b>: SFT-efficient training.</description></item>
-            /// <item><description><b>grpo</b>: GRPO-reinforcement learning.</description></item>
+            /// <item><description><b>sft</b>: SFT efficient training.</description></item>
+            /// <item><description><b>grpo</b>: GRPO reinforcement learning.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -339,7 +339,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The training method. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>lora</b></description></item>
-            /// <item><description><b>full</b>: full-parameter training.</description></item>
+            /// <item><description><b>full</b>: full-parameter fine-tuning.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -356,7 +356,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TuneArch { get; set; }
 
         /// <summary>
-        /// <para>The virtual private cloud (VPC) ID.</para>
+        /// <para>The VPC ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-**********</para>

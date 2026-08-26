@@ -8,22 +8,22 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class ModifyModelApiResponseBody : TeaModel {
+    public class DeleteKnowledgeBaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The model API ID.</para>
+        /// <para>The unique ID of the knowledge base.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>mi-xxxxx</para>
+        /// <para>pkb-xxxxx</para>
         /// </summary>
-        [NameInMap("ModelApiId")]
+        [NameInMap("KnowledgeBaseId")]
         [Validation(Required=false)]
-        public string ModelApiId { get; set; }
+        public string KnowledgeBaseId { get; set; }
 
         /// <summary>
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>925B84D9-CA72-432C-95CF-738C22******</para>
+        /// <para>2FED790E-FB61-4721-8C1C-07C627******</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

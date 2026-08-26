@@ -22,7 +22,6 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The npm package name, including the version number.</para>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>@larksuite/<a href="mailto:openclaw-lark@2026.4.7">openclaw-lark@2026.4.7</a></para>
@@ -32,7 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NpmPackage { get; set; }
 
         /// <summary>
-        /// <para>The plugin ID.</para>
+        /// <para>The plug-in ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to restart the gateway after installation. Defaults to true.</para>
+        /// <para>Specifies whether to restart the gateway after installation. Default value: true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

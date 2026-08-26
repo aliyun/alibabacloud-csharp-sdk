@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateModelApiResponseBody : TeaModel {
         /// <summary>
-        /// <para>The invocation endpoint.</para>
+        /// <para>The request endpoint.</para>
         /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelApiId { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>6BD9CDE4-5E7B-4BF3-9BB8-83C73E******</para>

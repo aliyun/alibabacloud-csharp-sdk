@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateAgenticDBTenantApiKeyRequest : TeaModel {
         /// <summary>
+        /// <para>The AgenticDB cluster ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,14 +21,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The description of the API key usage.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>MCP Server专用Key</para>
+        /// <para>Dedicated key for MCP Server</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The expiration time in ISO 8601 format. If this parameter is not specified, the API key never expires.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2027-01-01T00:00:00Z</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ExpireTime { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The tenant name. The name must be unique within the cluster and contain 2 to 64 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

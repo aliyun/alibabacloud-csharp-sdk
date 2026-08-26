@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteAgenticDBComputeClusterResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D4E5F6A7-B8C9-0123-DEFA-456789012DEF</para>
         /// </summary>

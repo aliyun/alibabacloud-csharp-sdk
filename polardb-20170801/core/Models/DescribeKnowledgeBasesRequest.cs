@@ -8,68 +8,67 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
-    public class DeleteAgenticDBComputeClusterRequest : TeaModel {
+    public class DescribeKnowledgeBasesRequest : TeaModel {
         /// <summary>
-        /// <para>The branch ID.</para>
+        /// <para>The keyword for searching knowledge bases.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>br-69f762b1a44f49c487d64b9e71</para>
+        /// <para>testkb</para>
         /// </summary>
-        [NameInMap("BranchId")]
+        [NameInMap("Keyword")]
         [Validation(Required=false)]
-        public string BranchId { get; set; }
+        public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The branch compute cluster ID.</para>
+        /// <para>The unique identifier of the knowledge space.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pc-g0lsayq8c5qe</para>
+        /// <para>pks-xxxxxx</para>
         /// </summary>
-        [NameInMap("ComputeClusterId")]
+        [NameInMap("KnowledgeSpaceId")]
         [Validation(Required=false)]
-        public string ComputeClusterId { get; set; }
+        public string KnowledgeSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The AgenticDB cluster ID.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>pagc-bp1abcdef1234567</para>
+        /// <para>1</para>
         /// </summary>
-        [NameInMap("DBClusterId")]
+        [NameInMap("PageNumber")]
         [Validation(Required=false)]
-        public string DBClusterId { get; set; }
+        public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The project ID to which the resource belongs.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>proj-7140b4c74b3a44978c825bac77</para>
+        /// <para>30</para>
         /// </summary>
-        [NameInMap("ProjectId")]
+        [NameInMap("PageSize")]
         [Validation(Required=false)]
-        public string ProjectId { get; set; }
+        public int? PageSize { get; set; }
 
         /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-beijing</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The tenant ID.</para>
+        /// <para>The status of the knowledge base.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>t-51121616fa9e43e98cc90e4afa</para>
+        /// <para>Activation</para>
         /// </summary>
-        [NameInMap("TenantId")]
+        [NameInMap("Status")]
         [Validation(Required=false)]
-        public string TenantId { get; set; }
+        public string Status { get; set; }
 
     }
 

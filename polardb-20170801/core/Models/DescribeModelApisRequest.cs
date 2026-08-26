@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeModelApisRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the gateway instance.</para>
+        /// <para>The gateway instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string GwClusterId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the model APIs. Separate multiple IDs with a comma.</para>
+        /// <para>The model API IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>mi-xxx,mi-xxxx</para>
@@ -33,12 +33,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The model category. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>text</b></para>
-        /// </description></item>
-        /// <item><description><para><b>embedding</b></para>
-        /// </description></item>
-        /// <item><description><para><b>rerank</b></para>
-        /// </description></item>
+        /// <item><description><b>text</b></description></item>
+        /// <item><description><b>embedding</b></description></item>
+        /// <item><description><b>rerank</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +46,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModelCategory { get; set; }
 
         /// <summary>
-        /// <para>The name of the model API.</para>
+        /// <para>The model API name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testName</para>
@@ -71,14 +68,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The number of entries per page. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>30</b></para>
-        /// </description></item>
-        /// <item><description><para><b>50</b></para>
-        /// </description></item>
-        /// <item><description><para><b>100</b>
-        /// The default value is <b>30</b>.</para>
-        /// </description></item>
+        /// <item><description><b>30</b></description></item>
+        /// <item><description><b>50</b></description></item>
+        /// <item><description><b>100</b></description></item>
         /// </list>
+        /// <para>Default value: <b>30</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -100,14 +94,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The protocol. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>openai</b></para>
-        /// </description></item>
-        /// <item><description><para><b>anthropic</b></para>
-        /// </description></item>
-        /// <item><description><para><b>bailian</b></para>
-        /// </description></item>
-        /// <item><description><para><b>vllm</b></para>
-        /// </description></item>
+        /// <item><description><b>openai</b></description></item>
+        /// <item><description><b>anthropic</b></description></item>
+        /// <item><description><b>bailian</b></description></item>
+        /// <item><description><b>vllm</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -118,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Protocol { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>

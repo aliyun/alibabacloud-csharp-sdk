@@ -10,16 +10,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeDBClusterTDEResponseBody : TeaModel {
         /// <summary>
-        /// <para>Indicates whether automatic key rotation is allowed. Valid values:</para>
+        /// <para>Indicates whether automatic key rotation is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enabled</b>: Automatic key rotation is allowed.</para>
-        /// </description></item>
-        /// <item><description><para><b>Disabled</b>: Automatic key rotation is not allowed.</para>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.<remarks>
+        /// <para>This parameter is returned only when the database engine is PostgreSQL-compatible or Oracle-syntax-compatible.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is returned only when the database engine is compatible with PostgreSQL or Oracle syntax.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Enabled</para>
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AutomaticRotation { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the cluster.</para>
+        /// <para>The cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-***************</para>
@@ -39,16 +37,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether automatic encryption is enabled for all newly created tables. Valid values:</para>
+        /// <para>Indicates whether automatic encryption of all newly created tables is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ON</b>: Automatic encryption is enabled.</para>
+        /// <item><description><para><b>ON</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>OFF</b>: Automatic encryption is disabled.</para>
+        /// <item><description><para><b>OFF</b>: Disabled.</para>
+        /// <remarks>
+        /// <para>This parameter is returned only when the database engine is MySQL-compatible.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is returned only when the database engine is compatible with MySQL.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ON</para>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EncryptNewTables { get; set; }
 
         /// <summary>
-        /// <para>The ID of the custom key.</para>
+        /// <para>The custom key ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2a4f4ac2-<b><b>-</b></b>-<b><b>-</b></b>********</para>
@@ -70,10 +68,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The status of the key. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enabled</b>: The key is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>Disabled</b>: The key is disabled.</para>
-        /// </description></item>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,7 +80,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string EncryptionKeyStatus { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E37D1508-EC3B-4E06-A24A-C7AC31******</para>
@@ -94,10 +90,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The automatic key rotation interval configured in KMS. If no automatic key rotation interval is set, 0 s is returned. Unit: s.</para>
+        /// <para>The automatic key rotation interval configured in Key Management Service (KMS). If no automatic key rotation interval is configured, 0 s is returned. Unit: s.</para>
         /// <para>For example, if the rotation interval is 7 days, 604800 s is returned.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when the database engine is compatible with PostgreSQL or Oracle syntax, and the value of <c>AutomaticRotation</c> is <c>Enabled</c>.</para>
+        /// <para>This parameter is returned only when the database engine is PostgreSQL-compatible or Oracle-syntax-compatible and the value of AutomaticRotation is Enabled.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -108,7 +104,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RotationInterval { get; set; }
 
         /// <summary>
-        /// <para>The region where the TDE key is located.</para>
+        /// <para>The region where the TDE key resides.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing</para>
@@ -118,12 +114,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string TDERegion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether TDE encryption is enabled. Valid values:</para>
+        /// <para>Indicates whether TDE is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enabled</b>: TDE encryption is enabled.</para>
-        /// </description></item>
-        /// <item><description><para><b>Disabled</b>: TDE encryption is disabled.</para>
-        /// </description></item>
+        /// <item><description><b>Enabled</b>: Enabled.</description></item>
+        /// <item><description><b>Disabled</b>: Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

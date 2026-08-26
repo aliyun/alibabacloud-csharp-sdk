@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeleteAIDBClusterResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the AI cluster.</para>
+        /// <para>The AI cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-*****************</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>3F9E6A3B-C13E-4064-A010-18582A******</para>

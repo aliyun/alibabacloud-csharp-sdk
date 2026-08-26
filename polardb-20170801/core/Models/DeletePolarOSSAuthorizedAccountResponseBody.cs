@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DeletePolarOSSAuthorizedAccountResponseBody : TeaModel {
         /// <summary>
+        /// <para>The updated list of RAM role ARNs, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>arn:sts::123456:assumed-role/myrole/*</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AuthorizedUserArnIds { get; set; }
 
         /// <summary>
+        /// <para>The updated list of UIDs, separated by commas.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1234567890,9876543210</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string AuthorizedUserIds { get; set; }
 
         /// <summary>
+        /// <para>The cold storage instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pfs-xxxxxxxxxxxxxxxxx</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PfsInstanceId { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>F45FFACC-xxx</para>
         /// </summary>

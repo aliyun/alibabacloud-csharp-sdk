@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The model space ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pms-xxx</para>
         /// </summary>
@@ -31,8 +33,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The region ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the regions of all clusters under the specified account.</description></item>
-        /// <item><description>If you leave this parameter empty, scheduled tasks across all regions under the current account are queried.</description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region information of all clusters under the specified account.</description></item>
+        /// <item><description>If this parameter is left empty, scheduled tasks in all regions under the current account are queried by default.</description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
