@@ -12,10 +12,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The visibility of the image. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PUBLIC: All members of the workspace can perform operations on the image.</para>
-        /// </description></item>
-        /// <item><description><para>PRIVATE: Only the creator can perform operations on the image.</para>
-        /// </description></item>
+        /// <item><description>PUBLIC: All members in the current workspace can access the image.</description></item>
+        /// <item><description>PRIVATE: Only the creator can access the image.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +34,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image. If you leave this parameter empty, the system automatically generates an ID.
-        /// The format is \<c>image-\\</c> followed by 18 uppercase letters, lowercase letters, or digits.</para>
+        /// <para>The image ID. If this parameter is not specified, the system automatically generates one. The format is image- followed by 18 uppercase or lowercase letters or digits.</para>
         /// 
         /// <b>Example:</b>
         /// <para>image-k83*****cv</para>
@@ -47,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The URI of the image. The URI can be reused. For more information, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a>.</para>
+        /// <para>The image URI, which can be duplicated. For information about how to view the image URI, see <a href="https://help.aliyun.com/document_detail/449118.html">ListImage</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,46 +55,28 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImageUri { get; set; }
 
         /// <summary>
-        /// <para>The labels of the image. This is an array where each item contains a key and a value.
+        /// <para>The image labels. This is an array in which each item contains a key field and a value field.
         /// Official images have the following label: system.official=true
         /// The following keys are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>system.chipType</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.cudaVersion</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.fromImageId</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.fromInstanceId</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.id</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.os</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.osVersion</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.resourceType</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.rootImageId</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.stage</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.tag</para>
-        /// </description></item>
-        /// <item><description><para>system.dsw\.type</para>
-        /// </description></item>
-        /// <item><description><para>system.framework</para>
-        /// </description></item>
-        /// <item><description><para>system.origin</para>
-        /// </description></item>
-        /// <item><description><para>system.pythonVersion</para>
-        /// </description></item>
-        /// <item><description><para>system.source</para>
-        /// </description></item>
-        /// <item><description><para>system.supported.dlc</para>
-        /// </description></item>
-        /// <item><description><para>system.supported.dsw</para>
-        /// </description></item>
+        /// <item><description>system.chipType</description></item>
+        /// <item><description>system.dsw.cudaVersion</description></item>
+        /// <item><description>system.dsw.fromImageId</description></item>
+        /// <item><description>system.dsw.fromInstanceId</description></item>
+        /// <item><description>system.dsw.id</description></item>
+        /// <item><description>system.dsw.os</description></item>
+        /// <item><description>system.dsw.osVersion</description></item>
+        /// <item><description>system.dsw.resourceType</description></item>
+        /// <item><description>system.dsw.rootImageId</description></item>
+        /// <item><description>system.dsw.stage</description></item>
+        /// <item><description>system.dsw.tag</description></item>
+        /// <item><description>system.dsw.type</description></item>
+        /// <item><description>system.framework</description></item>
+        /// <item><description>system.origin</description></item>
+        /// <item><description>system.pythonVersion</description></item>
+        /// <item><description>system.source</description></item>
+        /// <item><description>system.supported.dlc</description></item>
+        /// <item><description>system.supported.dsw</description></item>
         /// </list>
         /// </summary>
         [NameInMap("Labels")]
@@ -127,14 +106,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         }
 
         /// <summary>
-        /// <para>The image name. The naming convention is as follows:</para>
+        /// <para>The image name. Naming rules:</para>
         /// <list type="bullet">
-        /// <item><description><para>The name must be 1 to 50 characters long.</para>
-        /// </description></item>
-        /// <item><description><para>The name can contain lowercase letters, digits, and hyphens (-). It must start with a letter.</para>
-        /// </description></item>
-        /// <item><description><para>The name must be unique within the workspace.</para>
-        /// </description></item>
+        /// <item><description>The name must be 1 to 50 characters in length.</description></item>
+        /// <item><description>The name can contain lowercase letters, digits, and hyphens (-), and must start with a letter.</description></item>
+        /// <item><description>The name must be unique within the same workspace.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -146,7 +122,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The size of the image, in GB.</para>
+        /// <para>The image size, in GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -156,16 +132,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? Size { get; set; }
 
         /// <summary>
-        /// <para>The source ID of the image. If the source type is Build, this ID corresponds to the image build ID.</para>
+        /// <para>The image source ID. When the image source type is Build, the source ID corresponds to the image build ID.</para>
         /// </summary>
         [NameInMap("SourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The source type of the image. Valid values:
-        /// Import
-        /// Build</para>
+        /// <para>The image source type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Import: import.</description></item>
+        /// <item><description>Build: generate.</description></item>
+        /// </list>
         /// </summary>
         [NameInMap("SourceType")]
         [Validation(Required=false)]
@@ -176,7 +154,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string UserId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the image belongs. For more information, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
+        /// <para>The ID of the workspace to which the image belongs. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15******45</para>

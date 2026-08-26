@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size.</para>
+        /// <para>The current page size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of resources that match the filter conditions.</para>
+        /// <para>The resource count that matches the conditional filter criteria.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetVersionsRequest : TeaModel {
         /// <summary>
-        /// <para>The label keys used to filter the dataset list. Datasets are returned if their label keys contain the specified strings.</para>
+        /// <para>The dataset label used to filter the dataset list. Datasets whose label key or value contains the specified string are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>key1,key2</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string LabelKeys { get; set; }
 
         /// <summary>
-        /// <para>The label values used to filter the dataset list. Datasets are returned if their label values contain the specified strings.</para>
+        /// <para>The dataset label used to filter the dataset list. Datasets whose label key or value contains the specified string are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>value1,value2</para>
@@ -30,12 +30,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string LabelValues { get; set; }
 
         /// <summary>
-        /// <para>The sort order for the paged query. The default value is ASC. Valid values:</para>
+        /// <para>The order in which entries are sorted by the specified field in a paged query. Default value: ASC.</para>
         /// <list type="bullet">
-        /// <item><description><para>ASC: Ascending order.</para>
-        /// </description></item>
-        /// <item><description><para>DESC: Descending order.</para>
-        /// </description></item>
+        /// <item><description>ASC: ascending order.</description></item>
+        /// <item><description>DESC: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -46,7 +44,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value starts from 1. The default is 1.</para>
+        /// <para>The page number of the dataset list. Minimum value: 1. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +55,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. The default value is 10.</para>
+        /// <para>The number of entries per page for a paged query. Default value: 10.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,12 +66,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The dataset properties. Valid values:</para>
+        /// <para>The dataset property. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>DIRECTORY: Folder.</para>
-        /// </description></item>
-        /// <item><description><para>FILE: File.</para>
-        /// </description></item>
+        /// <item><description>DIRECTORY: folder.</description></item>
+        /// <item><description>FILE: file.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -84,11 +80,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Properties { get; set; }
 
         /// <summary>
-        /// <para>The field to use for sorting in a paged query. The default value is GmtCreateTime. Valid values:</para>
+        /// <para>The field by which entries are sorted in a paged query. Default value: GmtCreateTime. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>GmtCreateTime (default): Creation time.</para>
+        /// <item><description><para>GmtCreateTime (default): sort by creation time.</para>
         /// </description></item>
-        /// <item><description><para>GmtModifiedTime: Modification time.</para>
+        /// <item><description><para>GmtModifiedTime: sort by modification time.</para>
         /// </description></item>
         /// <item><description><para>SourceType</para>
         /// </description></item>
@@ -110,14 +106,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source.</para>
+        /// <para>The data source ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>If SourceTypes is USER, you can specify a custom ID.</para>
-        /// </description></item>
-        /// <item><description><para>If SourceTypes is ITAG, this is the ID of the iTAG annotation task.</para>
-        /// </description></item>
-        /// <item><description><para>If SourceTypes is PAI_PUBLIC_DATASET, this parameter is empty by default.</para>
-        /// </description></item>
+        /// <item><description>If SourceTypes is set to USER, SourceId can be customized.</description></item>
+        /// <item><description>If SourceTypes is set to ITAG, which indicates a dataset generated from iTAG labeling results, SourceId is the iTAG task ID.</description></item>
+        /// <item><description>If SourceTypes is set to PAI_PUBLIC_DATASET, which indicates a dataset created from a PAI public dataset, SourceId is empty by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -130,12 +123,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PAI-PUBLIC-DATASET: A public dataset from PAI.</para>
-        /// </description></item>
-        /// <item><description><para>ITAG: A dataset generated from the annotation results of the iTAG module.</para>
-        /// </description></item>
-        /// <item><description><para>USER: A dataset registered by a user.</para>
-        /// </description></item>
+        /// <item><description>PAI-PUBLIC-DATASET: PAI public dataset.</description></item>
+        /// <item><description>ITAG: dataset generated from iTAG labeling results.</description></item>
+        /// <item><description>USER: dataset registered by a user.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

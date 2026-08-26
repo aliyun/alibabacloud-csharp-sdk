@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class ListDatasetsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies the dataset\&quot;s visibility.</para>
+        /// <para>The visibility of the dataset.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>PUBLIC</c>: The dataset is publicly accessible.</para>
-        /// </description></item>
-        /// <item><description><para><c>PRIVATE</c>: The dataset is privately accessible.</para>
-        /// </description></item>
+        /// <item><description>PUBLIC: public.</description></item>
+        /// <item><description>PRIVATE: private.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,12 +24,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>The data source type. To specify multiple types, separate them with commas (,). Valid values:</para>
+        /// <para>The data source types. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>NAS</c>: The data source is NAS.</para>
-        /// </description></item>
-        /// <item><description><para><c>OSS</c>: The data source is OSS.</para>
-        /// </description></item>
+        /// <item><description>NAS: Alibaba Cloud Network Attached Storage (NAS).</description></item>
+        /// <item><description>OSS: Alibaba Cloud Object Storage Service (OSS).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -42,18 +38,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DataSourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The data type of the dataset. To specify multiple data types, separate them with commas (,). Valid values:</para>
+        /// <para>The data types of the dataset. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>VIDEO</c>: video.</para>
-        /// </description></item>
-        /// <item><description><para><c>COMMON</c>: general.</para>
-        /// </description></item>
-        /// <item><description><para><c>TEXT</c>: text.</para>
-        /// </description></item>
-        /// <item><description><para><c>PIC</c>: image.</para>
-        /// </description></item>
-        /// <item><description><para><c>AUDIO</c>: audio.</para>
-        /// </description></item>
+        /// <item><description>VIDEO: video.</description></item>
+        /// <item><description>COMMON: common.</description></item>
+        /// <item><description>TEXT: text.</description></item>
+        /// <item><description>PIC: image.</description></item>
+        /// <item><description>AUDIO: audio.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -64,7 +55,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DataTypes { get; set; }
 
         /// <summary>
-        /// <para>A comma-separated list of dataset IDs.</para>
+        /// <para>The dataset IDs. You can specify multiple dataset IDs separated by commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-rcdg3wxxxxxhc5jk87</para>
@@ -76,12 +67,9 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The dataset edition. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>BASIC</c>: Basic edition. Does not support file metadata management.</para>
-        /// </description></item>
-        /// <item><description><para><c>ADVANCED</c>: Advanced edition. This edition is supported only for OSS datasets. Each version can manage metadata for up to 1 million files.</para>
-        /// </description></item>
-        /// <item><description><para><c>LOGICAL</c>: Logical edition. This edition is supported only for OSS datasets and is suitable for most use cases. Each version can manage metadata for up to 1 million files. You must use an SDK with this edition.</para>
-        /// </description></item>
+        /// <item><description>BASIC: Basic Edition. Does not support dataset file metadata management.</description></item>
+        /// <item><description>ADVANCED: Advanced Edition. Supported only for OSS type. Each version supports up to 1 million file metadata entries.</description></item>
+        /// <item><description>LOGICAL: Logical Edition. Supported only for OSS type. Each version supports up to 1 million file metadata entries. Applicable to most scenarios and requires the use of the SDK.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,7 +80,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>A label used to filter datasets. The operation returns datasets whose label key or value contains the specified string.</para>
+        /// <para>The dataset label used to filter the dataset list. Datasets whose label key or value contains the specified string are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -102,7 +90,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Label { get; set; }
 
         /// <summary>
-        /// <para>The dataset name. Fuzzy search is supported.</para>
+        /// <para>The dataset name. Fuzzy match is supported based on the dataset name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>myName</para>
@@ -112,12 +100,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sort order for the results, based on the <c>SortBy</c> parameter. The default is <c>ASC</c>.</para>
+        /// <para>The sorting order for the specified sort field in paging queries. Default value: ASC.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>ASC</c>: ascending order.</para>
-        /// </description></item>
-        /// <item><description><para><c>DESC</c>: descending order.</para>
-        /// </description></item>
+        /// <item><description>ASC: ascending order.</description></item>
+        /// <item><description>DESC: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,7 +114,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>The page number for the paged query. Starts at 1. The default is 1.</para>
+        /// <para>The page number of the dataset list. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -138,7 +124,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of datasets to return per page. The default is 10.</para>
+        /// <para>The number of entries per page settings for paging queries. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -148,12 +134,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The dataset properties. To specify multiple properties, separate them with commas (,). Valid values:</para>
+        /// <para>The dataset properties. Separate multiple values with commas (,). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>DIRECTORY</c>: A folder.</para>
-        /// </description></item>
-        /// <item><description><para><c>FILE</c>: A file.</para>
-        /// </description></item>
+        /// <item><description>DIRECTORY: folder.</description></item>
+        /// <item><description>FILE: file.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -164,7 +148,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Properties { get; set; }
 
         /// <summary>
-        /// <para>The dataset provider. Set this parameter to <c>pai</c> to query public datasets on the PAI platform.</para>
+        /// <para>The dataset provider. A value of &quot;pai&quot; indicates that the dataset is a PAI platform public dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pai</para>
@@ -174,14 +158,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>A filter for shared datasets.</para>
+        /// <para>The sharing filter for datasets:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>TO_ME</c>: Returns only datasets shared with you.</para>
-        /// </description></item>
-        /// <item><description><para><c>BY_ME</c>: Returns only datasets that you have shared with others and displays details of the sharing configuration.</para>
-        /// </description></item>
-        /// <item><description><para>If this parameter is omitted or empty, the operation returns all datasets in the current workspace, including those shared with you.</para>
-        /// </description></item>
+        /// <item><description>TO_ME: returns only datasets shared with you.</description></item>
+        /// <item><description>BY_ME: returns only datasets you shared with others, with sharing configuration details displayed.</description></item>
+        /// <item><description>If this parameter is not set or is set to empty: returns all datasets in the current workspace, including TO_ME.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -192,7 +173,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ShareScope { get; set; }
 
         /// <summary>
-        /// <para>The sort field.</para>
+        /// <para>The field by which to sort the results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GmtCreateTime</para>
@@ -202,7 +183,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>The source dataset ID for an iTAG annotation set.</para>
+        /// <para>The source dataset ID of the iTAG annotation set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-rcdg3wxxxxxhc5jk87</para>
@@ -212,14 +193,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceDatasetId { get; set; }
 
         /// <summary>
-        /// <para>The source ID. The value of this parameter varies based on the <c>SourceTypes</c> value:</para>
+        /// <para>The data source ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>SourceTypes</c> is <c>USER</c>, you can specify a custom value for <c>SourceId</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>SourceTypes</c> is <c>ITAG</c>, <c>SourceId</c> is the ID of the iTAG task.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>SourceTypes</c> is <c>PAI_PUBLIC_DATASET</c>, this parameter is empty by default.</para>
-        /// </description></item>
+        /// <item><description>If SourceTypes is set to USER, you can customize the SourceId value.</description></item>
+        /// <item><description>If SourceTypes is set to ITAG, which indicates a dataset generated from iTAG annotation results, SourceId is the iTAG task ID.</description></item>
+        /// <item><description>If SourceTypes is set to PAI_PUBLIC_DATASET, which indicates a dataset created from a PAI public dataset, SourceId is empty by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -230,7 +208,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The source type. To specify multiple types, separate them with commas (,).</para>
+        /// <para>The source types. Separate multiple values with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER,ITAG</para>
@@ -240,8 +218,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace that contains the dataset. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.
-        /// If this parameter is not specified, the default workspace is used. An error is returned if the default workspace does not exist.</para>
+        /// <para>The ID of the workspace where the dataset resides. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.
+        /// If you do not specify this parameter, the default workspace is used. If the default workspace does not exist, an error is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>324**</para>

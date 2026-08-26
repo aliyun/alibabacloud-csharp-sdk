@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateDatasetFileMetasResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of file metadata records that failed to be created.</para>
+        /// <para>The list of file metadata entries that failed to be created.</para>
         /// </summary>
         [NameInMap("FailedDetails")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the batch metadata creation. A value of \<c>true\\</c> indicates that all records were created successfully. If the value is \<c>false\\</c>, check \<c>FailedDetails\\</c>.</para>
+        /// <para>The status of the batch metadata creation result. A value of true indicates that all entries are created. If the value is false, check FailedDetails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public bool? Status { get; set; }
 
         /// <summary>
-        /// <para>A list of file metadata records that were successfully created.</para>
+        /// <para>The list of file metadata entries that were created.</para>
         /// </summary>
         [NameInMap("SucceedDetails")]
         [Validation(Required=false)]

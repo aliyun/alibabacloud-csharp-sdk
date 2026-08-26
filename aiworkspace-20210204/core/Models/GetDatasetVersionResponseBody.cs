@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class GetDatasetVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of data entries.</para>
+        /// <para>The data volume.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataCount { get; set; }
 
         /// <summary>
-        /// <para>The size of the dataset.</para>
+        /// <para>The dataset size.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source.</para>
+        /// <para>The data source type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dataset.</para>
+        /// <para>The primary resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-dkdbnnap0g7b6su4yg</para>
@@ -51,7 +51,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DatasetId { get; set; }
 
         /// <summary>
-        /// <para>The description of the version.</para>
+        /// <para>DatasetTaskRamRole</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::1234567890123456:role/role-name</para>
+        /// </summary>
+        [NameInMap("DatasetTaskRamRole")]
+        [Validation(Required=false)]
+        public string DatasetTaskRamRole { get; set; }
+
+        /// <summary>
+        /// <para>The version description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a description of the dataset version.</para>
@@ -61,7 +71,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The time when the dataset version was created.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-13T10:22:05.694Z</para>
@@ -71,7 +81,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtCreateTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the dataset version was last modified.</para>
+        /// <para>The last modification time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-12-13T10:22:05.694Z</para>
@@ -81,48 +91,30 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string GmtModifiedTime { get; set; }
 
         /// <summary>
-        /// <para>The storage import configuration of the dataset. Supported storage services include OSS, NAS, and CPFS.</para>
+        /// <para>The storage import configuration of the dataset. OSS, NAS, and CPFS are supported.</para>
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>OSS</para>
-        /// </summary>
-        /// 
-        /// <para>{
-        /// &quot;region&quot;: &quot;${region}&quot;,// Region ID
-        /// &quot;bucket&quot;: &quot;${bucket}&quot;,// Bucket name
-        /// &quot;path&quot;: &quot;${path}&quot; // File path
-        /// }</para>
+        /// <summary>OSS</summary>
+        /// {
+        /// "region": "${region}",//The region ID.
+        /// "bucket": "${bucket}",//The bucket name.
+        /// "path": "${path}" //The file path.
+        /// }
         /// </details>
         /// 
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>NAS</para>
-        /// </summary>
+        /// <summary>NAS</summary>
         /// 
         /// </details>
         /// 
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>CPFS</para>
-        /// </summary>
-        /// 
-        /// <para>Block content</para>
+        /// <summary>CPFS</summary>
+        /// Block content
         /// </details>
         /// 
+        /// 
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>AI Computing CPFS</para>
-        /// </summary>
-        /// 
-        /// <para>Block content</para>
+        /// <summary>Intelligent computing CPFS</summary>
+        /// Block content
         /// </details>
         /// 
         /// <b>Example:</b>
@@ -139,19 +131,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImportInfo { get; set; }
 
         /// <summary>
-        /// <para>The tags of the resource.</para>
+        /// <para>The resource labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>The access permissions when the dataset is mounted.</para>
+        /// <para>The permission when the dataset is mounted. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>RO: Read-only mount</para>
-        /// </description></item>
-        /// <item><description><para>RW: Read-write mount</para>
-        /// </description></item>
+        /// <item><description>RO: read-only mount</description></item>
+        /// <item><description>RW: read and write mount</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -162,7 +152,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string MountAccess { get; set; }
 
         /// <summary>
-        /// <para>Additional options.</para>
+        /// <para>The extension field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -185,7 +175,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Property { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>C55DF3DA-F120-5E37-A374-F49365531701</para>
@@ -195,7 +185,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the dataset source.</para>
+        /// <para>The dataset source ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-rbvg5wzljzjhc9ks92</para>
@@ -205,7 +195,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The source type.</para>
+        /// <para>The data source type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -215,7 +205,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The URI of the dataset version.</para>
+        /// <para>The URI configuration example.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -225,8 +215,12 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [Validation(Required=false)]
         public string Uri { get; set; }
 
+        [NameInMap("UserMetricsEndpoints")]
+        [Validation(Required=false)]
+        public List<UserMetricsEndpoint> UserMetricsEndpoints { get; set; }
+
         /// <summary>
-        /// <para>The name of the dataset version.</para>
+        /// <para>The dataset version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

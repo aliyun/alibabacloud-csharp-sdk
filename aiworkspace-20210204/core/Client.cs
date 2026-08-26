@@ -1313,6 +1313,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["DataType"] = request.DataType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetTaskRamRole))
+            {
+                body["DatasetTaskRamRole"] = request.DatasetTaskRamRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -1376,6 +1380,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 body["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMetricsEndpoints))
+            {
+                body["UserMetricsEndpoints"] = request.UserMetricsEndpoints;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionDescription))
             {
@@ -1455,6 +1463,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["DataType"] = request.DataType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetTaskRamRole))
+            {
+                body["DatasetTaskRamRole"] = request.DatasetTaskRamRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -1518,6 +1530,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserId))
             {
                 body["UserId"] = request.UserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMetricsEndpoints))
+            {
+                body["UserMetricsEndpoints"] = request.UserMetricsEndpoints;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VersionDescription))
             {
@@ -1591,7 +1607,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates file metadata records for a dataset in a batch.</para>
+        /// <para>Creates file metadata records in a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1645,7 +1661,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates file metadata records for a dataset in a batch.</para>
+        /// <para>Creates file metadata records in a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1699,7 +1715,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates file metadata records for a dataset in a batch.</para>
+        /// <para>Creates file metadata records in a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1718,7 +1734,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates file metadata records for a dataset in a batch.</para>
+        /// <para>Creates file metadata records in a dataset in batches.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2259,6 +2275,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["DataSourceType"] = request.DataSourceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetTaskRamRole))
+            {
+                body["DatasetTaskRamRole"] = request.DatasetTaskRamRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -2290,6 +2310,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uri))
             {
                 body["Uri"] = request.Uri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMetricsEndpoints))
+            {
+                body["UserMetricsEndpoints"] = request.UserMetricsEndpoints;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -2345,6 +2369,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["DataSourceType"] = request.DataSourceType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetTaskRamRole))
+            {
+                body["DatasetTaskRamRole"] = request.DatasetTaskRamRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -2376,6 +2404,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uri))
             {
                 body["Uri"] = request.Uri;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMetricsEndpoints))
+            {
+                body["UserMetricsEndpoints"] = request.UserMetricsEndpoints;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4643,7 +4675,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace role.</para>
+        /// <para>Adds a workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4701,7 +4733,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace role.</para>
+        /// <para>Adds a workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4759,7 +4791,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace role.</para>
+        /// <para>Adds a workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4778,7 +4810,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a workspace role.</para>
+        /// <para>Adds a workspace role.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8953,7 +8985,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific dataset version.</para>
+        /// <para>Retrieves the information of a specified dataset version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8993,7 +9025,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific dataset version.</para>
+        /// <para>Retrieves the information of a specified dataset version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9033,7 +9065,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific dataset version.</para>
+        /// <para>Retrieves the information of a specified dataset version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9052,7 +9084,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about a specific dataset version.</para>
+        /// <para>Retrieves the information of a specified dataset version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12209,7 +12241,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the datasets in a workspace.</para>
+        /// <para>Retrieves the list of datasets in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12323,7 +12355,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the datasets in a workspace.</para>
+        /// <para>Retrieves the list of datasets in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12437,7 +12469,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the datasets in a workspace.</para>
+        /// <para>Retrieves the list of datasets in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12456,7 +12488,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the datasets in a workspace.</para>
+        /// <para>Retrieves the list of datasets in a specified workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18235,7 +18267,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information for a specific version of a dataset.</para>
+        /// <para>Updates the information of a specified dataset version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18263,6 +18295,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["DataSize"] = request.DataSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetTaskRamRole))
+            {
+                body["DatasetTaskRamRole"] = request.DatasetTaskRamRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -18270,6 +18306,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
             {
                 body["Options"] = request.Options;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMetricsEndpoints))
+            {
+                body["UserMetricsEndpoints"] = request.UserMetricsEndpoints;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -18293,7 +18333,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information for a specific version of a dataset.</para>
+        /// <para>Updates the information of a specified dataset version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18321,6 +18361,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             {
                 body["DataSize"] = request.DataSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DatasetTaskRamRole))
+            {
+                body["DatasetTaskRamRole"] = request.DatasetTaskRamRole;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 body["Description"] = request.Description;
@@ -18328,6 +18372,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Options))
             {
                 body["Options"] = request.Options;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserMetricsEndpoints))
+            {
+                body["UserMetricsEndpoints"] = request.UserMetricsEndpoints;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -18351,7 +18399,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information for a specific version of a dataset.</para>
+        /// <para>Updates the information of a specified dataset version.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18370,7 +18418,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the information for a specific version of a dataset.</para>
+        /// <para>Updates the information of a specified dataset version.</para>
         /// </summary>
         /// 
         /// <param name="request">

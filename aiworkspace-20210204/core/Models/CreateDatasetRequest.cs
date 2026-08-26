@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
 {
     public class CreateDatasetRequest : TeaModel {
         /// <summary>
-        /// <para>The visibility of the dataset in the workspace. Valid values:</para>
+        /// <para>The visibility of the workspace. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>PRIVATE (default): The dataset is visible only to its owner and administrators in the workspace.</para>
-        /// </description></item>
-        /// <item><description><para>PUBLIC: The dataset is visible to all users in the workspace.</para>
-        /// </description></item>
-        /// <item><description><para>ROLE_PUBLIC: The dataset is visible to users with specific workspace roles. The list of roles is specified in the <c>AccessibleRoleIdList</c> parameter. The dataset owner and administrators always retain visibility.</para>
-        /// </description></item>
+        /// <item><description>PRIVATE (default): visible only to yourself and administrators within the workspace.</description></item>
+        /// <item><description>PUBLIC: visible to all users in the workspace.</description></item>
+        /// <item><description>ROLE_PUBLIC: visible to specified workspace roles. For the role list, refer to AccessibleRoleIdList. Under this condition, the dataset owner and administrators always have visibility.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,7 +25,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Accessibility { get; set; }
 
         /// <summary>
-        /// <para>This parameter takes effect only when <c>Accessibility</c> is set to <c>ROLE_PUBLIC</c>. This parameter specifies a list of workspace role IDs that can view this dataset. Role IDs that start with <c>PAI.</c> are built-in roles, and role IDs that start with <c>role-</c> are custom roles.</para>
+        /// <para>Takes effect when Accessibility is set to ROLE_PUBLIC. The list of workspace role names that can view the dataset. IDs starting with PAI are basic role IDs, and IDs starting with role- are custom role IDs.</para>
         /// </summary>
         [NameInMap("AccessibleRoleIdList")]
         [Validation(Required=false)]
@@ -45,7 +42,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataCount { get; set; }
 
         /// <summary>
-        /// <para>The size of the dataset files, in bytes.</para>
+        /// <para>The size of space occupied by the dataset files. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10000</para>
@@ -55,22 +52,15 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public long? DataSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source. Valid values:</para>
+        /// <para>The data source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>OSS: Object Storage Service (OSS).</para>
-        /// </description></item>
-        /// <item><description><para>NAS: general-purpose Apsara File Storage NAS.</para>
-        /// </description></item>
-        /// <item><description><para>EXTREMENAS: Extreme NAS.</para>
-        /// </description></item>
-        /// <item><description><para>CPFS: general-purpose Cloud Parallel File Storage (CPFS).</para>
-        /// </description></item>
-        /// <item><description><para>BMCPFS: AI Computing Edition of CPFS.</para>
-        /// </description></item>
-        /// <item><description><para>MAXCOMPUTE: MaxCompute.</para>
-        /// </description></item>
-        /// <item><description><para>URL: a public HTTP or HTTPS URL.</para>
-        /// </description></item>
+        /// <item><description>OSS: Alibaba Cloud Object Storage Service (OSS).</description></item>
+        /// <item><description>NAS: Alibaba Cloud Apsara File Storage NAS General Purpose.</description></item>
+        /// <item><description>EXTREMENAS: Alibaba Cloud Apsara File Storage NAS Extreme.</description></item>
+        /// <item><description>CPFS: Alibaba Cloud Cloud Parallel File Storage (CPFS) General Purpose.</description></item>
+        /// <item><description>BMCPFS: Alibaba Cloud Cloud Parallel File Storage (CPFS) AI Edition. </description></item>
+        /// <item><description>MAXCOMPUTE: Alibaba Cloud MaxCompute.</description></item>
+        /// <item><description>URL: public HTTP/HTTPS URL.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -82,18 +72,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DataSourceType { get; set; }
 
         /// <summary>
-        /// <para>The data type of the dataset. The default value is <c>COMMON</c>. Valid values:</para>
+        /// <para>The data type of the dataset. Default value: COMMON. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>COMMON: common</para>
-        /// </description></item>
-        /// <item><description><para>PIC: image</para>
-        /// </description></item>
-        /// <item><description><para>TEXT: text</para>
-        /// </description></item>
-        /// <item><description><para>VIDEO: video</para>
-        /// </description></item>
-        /// <item><description><para>AUDIO: audio</para>
-        /// </description></item>
+        /// <item><description>COMMON: common.</description></item>
+        /// <item><description>PIC: image.</description></item>
+        /// <item><description>TEXT: text.</description></item>
+        /// <item><description>VIDEO: video.</description></item>
+        /// <item><description>AUDIO: audio.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -104,7 +89,17 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>A custom description to distinguish the dataset from other datasets.</para>
+        /// <para>DatasetTaskRamRole</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>acs:ram::1234567890123456:role/role-name</para>
+        /// </summary>
+        [NameInMap("DatasetTaskRamRole")]
+        [Validation(Required=false)]
+        public string DatasetTaskRamRole { get; set; }
+
+        /// <summary>
+        /// <para>The custom description of the dataset to distinguish it from other datasets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a description of the dataset.</para>
@@ -114,14 +109,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The edition of the dataset. The default value is BASIC. Valid values:</para>
+        /// <para>The dataset type. Default value: BASIC. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>BASIC: Basic. Does not support dataset file metadata management.</para>
-        /// </description></item>
-        /// <item><description><para>ADVANCED: Advanced. Supported only for OSS datasets. Each version supports metadata management for up to 1 million files.</para>
-        /// </description></item>
-        /// <item><description><para>LOGICAL: Logical. Supported only for OSS datasets. Each version supports metadata management for up to 3 million files.</para>
-        /// </description></item>
+        /// <item><description>BASIC: basic. Does not support dataset file metadata management.</description></item>
+        /// <item><description>ADVANCED: advanced. Only supported for OSS type. Each version supports up to 1 million file metadata entries.</description></item>
+        /// <item><description>LOGICAL: logical. Only supported for OSS type. Each version supports up to 3 million file metadata entries.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,66 +124,46 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Edition { get; set; }
 
         /// <summary>
-        /// <para>The storage import configuration of the dataset. <c>OSS</c>, <c>NAS</c>, and <c>CPFS</c> are supported.</para>
+        /// <para>The storage import configuration of the dataset. OSS, NAS, and CPFS are supported.</para>
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>OSS</para>
-        /// </summary>
-        /// 
-        /// <para>{\
-        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
-        /// &quot;bucket&quot;: &quot;${bucket}&quot;,// The bucket name.\
-        /// &quot;path&quot;: &quot;${path}&quot; // The file path.\
-        /// }</para>
+        /// <summary>OSS</summary>
+        /// {<BR>
+        /// "region": "${region}",//Region ID<BR>
+        /// "bucket": "${bucket}",//Bucket name<BR>
+        /// "path": "${path}" //File path<BR>
+        /// }<BR>
         /// </details>
         /// 
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>NAS</para>
-        /// </summary>
-        /// 
-        /// <para>{\
-        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
-        /// &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
-        /// &quot;path&quot;: &quot;${path}&quot;, // The file system path.\
-        /// &quot;mountTarget&quot;: &quot;${mount_target}&quot; // The mount target of the file system.\
-        /// }</para>
+        /// <summary>NAS</summary>
+        /// {<BR>
+        /// "region": "${region}",//Region ID<BR>
+        /// "fileSystemId": "${file_system_id}", //File system ID<BR>
+        /// "path": "${path}", //File system path<BR>
+        /// "mountTarget": "${mount_target}" //File system mount target<BR>
+        /// }<BR>
         /// </details>
         /// 
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>CPFS</para>
-        /// </summary>
-        /// 
-        /// <para>{\
-        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
-        /// &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
-        /// &quot;protocolServiceId&quot;:&quot;${protocol_service_id}&quot;, // The protocol service of the file system.\
-        /// &quot;exportId&quot;: &quot;${export_id}&quot;, // The exported directory of the file system.\
-        /// &quot;path&quot;: &quot;${path}&quot;, // The file system path.\
-        /// }</para>
+        /// <summary>CPFS</summary>
+        /// {<BR>
+        /// "region": "${region}",//Region ID<BR>
+        /// "fileSystemId": "${file_system_id}", //File system ID<BR>
+        /// "protocolServiceId":"${protocol_service_id}", //File system protocol service<BR>
+        /// "exportId": "${export_id}", //File system export directory<BR>
+        /// "path": "${path}", //File system path<BR>
+        /// }<BR>
         /// </details>
         /// 
         /// <details>
-        /// 
-        /// <summary>
-        /// 
-        /// <para>CPFS (AI Computing Edition)</para>
-        /// </summary>
-        /// 
-        /// <para>{\
-        /// &quot;region&quot;: &quot;${region}&quot;,// The region ID.\
-        /// &quot;fileSystemId&quot;: &quot;${file_system_id}&quot;, // The file system ID.\
-        /// &quot;path&quot;: &quot;${path}&quot;, // The file system path.\
-        /// &quot;mountTarget&quot;: &quot;${mount_target}&quot;, // The mount target of the file system. This parameter is specific to the AI Computing Edition.\
-        /// &quot;isVpcMount&quot;: boolean, // Specifies whether the mount target is in a VPC. This parameter is specific to the AI Computing Edition.\
-        /// }</para>
+        /// <summary>AI Edition CPFS</summary>
+        /// {<BR>
+        /// "region": "${region}",//Region ID<BR>
+        /// "fileSystemId": "${file_system_id}", //File system ID<BR>
+        /// "path": "${path}", //File system path<BR>
+        /// "mountTarget": "${mount_target}" //File system mount target, specific to AI Edition<BR>
+        /// "isVpcMount": boolean, //Whether it is a VPC mount target, specific to AI Edition<BR>
+        /// }<BR>
         /// </details>
         /// 
         /// <b>Example:</b>
@@ -208,21 +180,18 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ImportInfo { get; set; }
 
         /// <summary>
-        /// <para>A list of labels.</para>
+        /// <para>The list of labels.</para>
         /// </summary>
         [NameInMap("Labels")]
         [Validation(Required=false)]
         public List<Label> Labels { get; set; }
 
         /// <summary>
-        /// <para>A list of workspace role IDs that are granted read and write permissions when the dataset is mounted. Role IDs that start with <c>PAI.</c> are built-in roles, and role IDs that start with <c>role-</c> are custom roles. If the list contains an asterisk (\*), all roles are granted read and write permissions.</para>
+        /// <para>The list of workspace role names that have read and write permissions when the dataset is mounted. IDs starting with PAI are basic role IDs, and IDs starting with role- are custom role IDs. If the list contains &quot;*&quot;, all roles have read and write permissions.</para>
         /// <list type="bullet">
-        /// <item><description><para>Accounts with specified roles: <c>[&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;]</c></para>
-        /// </description></item>
-        /// <item><description><para>All accounts: <c>[&quot;*&quot;]</c></para>
-        /// </description></item>
-        /// <item><description><para>Dataset creator only: <c>[]</c></para>
-        /// </description></item>
+        /// <item><description>Specified roles: [&quot;PAI.AlgoOperator&quot;, &quot;role-hiuwpd01ncrokkgp21&quot;]</description></item>
+        /// <item><description>All accounts: [&quot;*&quot;]</description></item>
+        /// <item><description>Dataset creator only: []</description></item>
         /// </list>
         /// </summary>
         [NameInMap("MountAccessReadWriteRoleIdList")]
@@ -230,14 +199,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public List<string> MountAccessReadWriteRoleIdList { get; set; }
 
         /// <summary>
-        /// <para>The name of the dataset. The name must meet the following requirements:</para>
+        /// <para>The name of the dataset. Naming rules:</para>
         /// <list type="bullet">
-        /// <item><description><para>Starts with a lowercase letter, an uppercase letter, a number, or a Chinese character.</para>
-        /// </description></item>
-        /// <item><description><para>Can contain underscores (_) and hyphens (-).</para>
-        /// </description></item>
-        /// <item><description><para>Must be 1 to 127 characters long.</para>
-        /// </description></item>
+        /// <item><description>Must start with a lowercase letter, uppercase letter, digit, or Chinese character.</description></item>
+        /// <item><description>Can contain underscores (_) or hyphens (-).</description></item>
+        /// <item><description>Must be 1 to 127 characters in length.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -249,8 +215,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The extended fields, which are a JSON string.
-        /// When a Data Lake Compute (DLC) job uses the dataset, you can configure the <c>mountPath</c> field to specify the default mount path of the dataset.</para>
+        /// <para>The extended field in JsonString format.
+        /// When DLC uses the dataset, you can specify the default mount path of the dataset by configuring the mountPath field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -264,10 +230,8 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         /// <summary>
         /// <para>The property of the dataset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>FILE: A file.</para>
-        /// </description></item>
-        /// <item><description><para>DIRECTORY: A directory.</para>
-        /// </description></item>
+        /// <item><description>FILE: file.</description></item>
+        /// <item><description>DIRECTORY: folder.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -279,7 +243,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Property { get; set; }
 
         /// <summary>
-        /// <para>The provider of the dataset. You cannot set this parameter to <c>pai</c>.</para>
+        /// <para>The dataset provider. Cannot be set to pai.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Github</para>
@@ -289,12 +253,10 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Provider { get; set; }
 
         /// <summary>
-        /// <para>The type of the data source provider. Valid values:</para>
+        /// <para>The data source provider type of the dataset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Ecs (default)</para>
-        /// </description></item>
-        /// <item><description><para>Lingjun</para>
-        /// </description></item>
+        /// <item><description>Ecs (default)</description></item>
+        /// <item><description>Lingjun</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -305,7 +267,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string ProviderType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the source dataset for a labeled dataset.</para>
+        /// <para>The source dataset ID of the annotation dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-bvfasdfxxxxj8o411</para>
@@ -315,7 +277,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceDatasetId { get; set; }
 
         /// <summary>
-        /// <para>The version of the source dataset for a labeled dataset.</para>
+        /// <para>The source dataset version of the annotation dataset.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v2</para>
@@ -325,14 +287,11 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceDatasetVersion { get; set; }
 
         /// <summary>
-        /// <para>The ID of the data source.</para>
+        /// <para>The data source ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>SourceType</c> is <c>USER</c>, you can specify a custom value for <c>SourceId</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>SourceType</c> is <c>ITAG</c>, this parameter specifies the iTAG task ID from which the dataset was generated.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>SourceType</c> is <c>PAI_PUBLIC_DATASET</c>, the dataset is from a public PAI dataset, and this parameter is empty by default.</para>
-        /// </description></item>
+        /// <item><description>If SourceType is USER, SourceId can be customized.</description></item>
+        /// <item><description>If SourceType is ITAG, which indicates a dataset generated from iTAG annotation results, SourceId is the iTAG task ID.</description></item>
+        /// <item><description>If SourceType is PAI_PUBLIC_DATASET, which indicates a dataset created from a PAI public dataset, SourceId is empty by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -343,7 +302,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceId { get; set; }
 
         /// <summary>
-        /// <para>The source of the data. The default value is USER.</para>
+        /// <para>The data source type. Default value: USER.</para>
         /// 
         /// <b>Example:</b>
         /// <para>USER</para>
@@ -353,16 +312,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string SourceType { get; set; }
 
         /// <summary>
-        /// <para>The URI of the data. The URI format varies based on the <c>DataSourceType</c> value.</para>
+        /// <para>Examples of Uri configurations:</para>
         /// <list type="bullet">
-        /// <item><description><para>For an <c>OSS</c> data source: <c>oss://bucket.endpoint/object</c></para>
-        /// </description></item>
-        /// <item><description><para>For a <c>NAS</c> data source:
-        /// For general-purpose <c>NAS</c>: <c>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</c>.
-        /// For <c>CPFS</c> 1.0: <c>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</c>.
-        /// For <c>CPFS</c> 2.0: <c>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</c>.
-        /// <c>CPFS</c> 1.0 and <c>CPFS</c> 2.0 are distinguished by the format of the file system ID (fsid). The fsid for <c>CPFS</c> 1.0 is in the <c>cpfs-&lt;8-character ASCII string&gt;</c> format. The fsid for <c>CPFS</c> 2.0 is in the <c>cpfs-&lt;16-character ASCII string&gt;</c> format.</para>
-        /// </description></item>
+        /// <item><description>If the data source type is OSS: <c>oss://bucket.endpoint/object</c></description></item>
+        /// <item><description>If the data source type is NAS:
+        /// General Purpose NAS format: <c>nas://&lt;nasfisid&gt;.region/subpath/to/dir/</c>;
+        /// CPFS 1.0: <c>nas://&lt;cpfs-fsid&gt;.region/subpath/to/dir/</c>;
+        /// CPFS 2.0: <c>nas://&lt;cpfs-fsid&gt;.region/&lt;protocolserviceid&gt;/</c>.
+        /// CPFS 1.0 and CPFS 2.0 are distinguished by the fsid format: CPFS 1.0 format is cpfs-&lt;8 ASCII characters&gt;; CPFS 2.0 format is cpfs-&lt;16 ASCII characters&gt;.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -374,7 +331,7 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Uri { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the dataset owner. Workspace owners and administrators can create datasets for specified members of a workspace.</para>
+        /// <para>The Alibaba Cloud account ID of the dataset owner. Workspace owners and administrators have permissions to create datasets for specified workspace members.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2485765****023475</para>
@@ -382,6 +339,13 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }
+
+        /// <summary>
+        /// <para>UserMetricsEndpoints</para>
+        /// </summary>
+        [NameInMap("UserMetricsEndpoints")]
+        [Validation(Required=false)]
+        public List<UserMetricsEndpoint> UserMetricsEndpoints { get; set; }
 
         /// <summary>
         /// <para>The description of the initial version of the dataset.</para>
@@ -394,14 +358,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string VersionDescription { get; set; }
 
         /// <summary>
-        /// <para>A list of labels for the initial version.</para>
+        /// <para>The list of labels for the initial version.</para>
         /// </summary>
         [NameInMap("VersionLabels")]
         [Validation(Required=false)]
         public List<Label> VersionLabels { get; set; }
 
         /// <summary>
-        /// <para>The ID of the workspace to which the dataset belongs. For more information about how to obtain a workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.
+        /// <para>The ID of the workspace where the dataset resides. For information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.
         /// If this parameter is not specified, the default workspace is used. If the default workspace does not exist, an error is returned.</para>
         /// 
         /// <b>Example:</b>
