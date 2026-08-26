@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIMediaAuditJobRequest : TeaModel {
+        [NameInMap("CensorProvider")]
+        [Validation(Required=false)]
+        public string CensorProvider { get; set; }
+
         /// <summary>
         /// <para>The configuration of the review job.</para>
         /// <list type="bullet">
-        /// <item><description>Other configuration items of the review job. Currently, only the ResourceType field is supported, which is used to specify the media file type. You can adjust the review standards and rules for this type.</description></item>
-        /// <item><description>To adjust the review standards and rules for ResourceType, submit a ticket for technical support. For information about how to submit a ticket, see <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</description></item>
+        /// <item><description>For other configuration items of the review job, only the ResourceType field is currently supported. This field controls the media file type, and you can adjust the review standards and rules for the specified type.</description></item>
+        /// <item><description>To adjust the review standards and rules for a ResourceType, submit a ticket for technical support. For information about how to submit a ticket, refer to <a href="https://help.aliyun.com/document_detail/464625.html">Contact us</a>.</description></item>
         /// <item><description>Usage notes for ResourceType: Only letters, digits, and underscores (_) are allowed.</description></item>
         /// </list>
         /// 
@@ -45,6 +49,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string MediaType { get; set; }
 
+        [NameInMap("ServiceParameters")]
+        [Validation(Required=false)]
+        public string ServiceParameters { get; set; }
+
         /// <summary>
         /// <para>The AI template ID. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
@@ -63,9 +71,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The custom settings. The value is a JSON string that supports settings such as message callbacks. For more information, see <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
+        /// <para>The custom settings. The value is a JSON string that supports settings such as message callbacks. For more information, refer to <a href="https://help.aliyun.com/document_detail/86952.html">UserData</a>.</para>
         /// <remarks>
-        /// <para>To use the message callback in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, see <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</para>
+        /// <para>To use message callbacks in this parameter, you must configure an HTTP callback URL and select the corresponding callback event types in the console. Otherwise, the callback settings do not take effect. For information about how to configure HTTP callbacks in the console, refer to <a href="https://help.aliyun.com/document_detail/86071.html">Callback settings</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,6 +82,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [NameInMap("UserData")]
         [Validation(Required=false)]
         public string UserData { get; set; }
+
+        [NameInMap("VideoService")]
+        [Validation(Required=false)]
+        public string VideoService { get; set; }
+
+        [NameInMap("VoiceService")]
+        [Validation(Required=false)]
+        public string VoiceService { get; set; }
 
     }
 

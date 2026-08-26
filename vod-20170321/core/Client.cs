@@ -97,14 +97,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AI template used for automated review and smart thumbnail tasks.</para>
+        /// <para>Adds an AI template for automated review and smart thumbnail tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Before adding an AI template for automated review or smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</description></item>
+        /// <item><description>&lt;props=&quot;china&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</description></item>
+        /// <item><description>&lt;props=&quot;intl&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated automated review or smart thumbnail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -155,14 +156,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AI template used for automated review and smart thumbnail tasks.</para>
+        /// <para>Adds an AI template for automated review and smart thumbnail tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Before adding an AI template for automated review or smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</description></item>
+        /// <item><description>&lt;props=&quot;china&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</description></item>
+        /// <item><description>&lt;props=&quot;intl&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated automated review or smart thumbnail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -213,14 +215,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AI template used for automated review and smart thumbnail tasks.</para>
+        /// <para>Adds an AI template for automated review and smart thumbnail tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Before adding an AI template for automated review or smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</description></item>
+        /// <item><description>&lt;props=&quot;china&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</description></item>
+        /// <item><description>&lt;props=&quot;intl&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated automated review or smart thumbnail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -239,14 +242,15 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds an AI template used for automated review and smart thumbnail tasks.</para>
+        /// <para>Adds an AI template for automated review and smart thumbnail tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
         /// <item><description>Currently, this operation is supported in the following regions: <b>China (Beijing)</b>, <b>China (Shanghai)</b>, and <b>Singapore</b>.</description></item>
-        /// <item><description>Before adding an AI template for automated review or smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</description></item>
+        /// <item><description>&lt;props=&quot;china&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated <a href="https://ai.aliyun.com/vi/censor">automated review</a> or <a href="https://ai.aliyun.com/vi/cover">smart thumbnail</a>.</description></item>
+        /// <item><description>&lt;props=&quot;intl&quot;&gt;Before adding an AI template for automated review and smart thumbnail tasks, make sure that you have activated automated review or smart thumbnail.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -20898,7 +20902,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <h3>Usage notes</h3>
         /// <para>This operation is supported only in the Singapore region.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The maximum queries per second (QPS) for a single user for this operation is 20. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>You can call this operation up to 20 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20949,7 +20953,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <h3>Usage notes</h3>
         /// <para>This operation is supported only in the Singapore region.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The maximum queries per second (QPS) for a single user for this operation is 20. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>You can call this operation up to 20 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21000,7 +21004,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <h3>Usage notes</h3>
         /// <para>This operation is supported only in the Singapore region.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The maximum queries per second (QPS) for a single user for this operation is 20. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>You can call this operation up to 20 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21027,7 +21031,7 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <h3>Usage notes</h3>
         /// <para>This operation is supported only in the Singapore region.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The maximum queries per second (QPS) for a single user for this operation is 20. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
+        /// <para>You can call this operation up to 20 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. For more information, see <a href="https://help.aliyun.com/document_detail/342790.html">QPS limit</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30201,7 +30205,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image automated review task. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</para>
+        /// <para>Submits an automated review task for an image. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -30229,6 +30233,14 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CensorProvider))
+            {
+                query["CensorProvider"] = request.CensorProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageService))
+            {
+                query["ImageService"] = request.ImageService;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaAuditConfiguration))
             {
                 query["MediaAuditConfiguration"] = request.MediaAuditConfiguration;
@@ -30252,6 +30264,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -30278,7 +30294,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image automated review task. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</para>
+        /// <para>Submits an automated review task for an image. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -30306,6 +30322,14 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CensorProvider))
+            {
+                query["CensorProvider"] = request.CensorProvider;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageService))
+            {
+                query["ImageService"] = request.ImageService;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaAuditConfiguration))
             {
                 query["MediaAuditConfiguration"] = request.MediaAuditConfiguration;
@@ -30329,6 +30353,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
@@ -30355,7 +30383,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image automated review task. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</para>
+        /// <para>Submits an automated review task for an image. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -30384,7 +30412,7 @@ namespace AlibabaCloud.SDK.Vod20170321
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits an image automated review task. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</para>
+        /// <para>Submits an automated review task for an image. The task is asynchronously executed after it is submitted. The task may not be complete when the response is returned.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -30847,11 +30875,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this API, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;see <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</b></description></item>
+        /// <item><description><b>Before using this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;refer to <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</b></description></item>
         /// <item><description>This operation currently supports only the <b>Shanghai</b>, <b>Beijing</b>, and <b>Singapore</b> regions.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</description></item>
-        /// <item><description>For the development guide on submitting automated review jobs, see <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</description></item>
-        /// <item><description>After an automated review job is complete, the image resources generated during the job are retained free of charge for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</description></item>
+        /// <item><description>For the development guide on submitting automated review jobs, refer to <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</description></item>
+        /// <item><description>After an automated review job is complete, the image resources generated during the job are retained for free for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30869,6 +30897,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CensorProvider))
+            {
+                query["CensorProvider"] = request.CensorProvider;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaAuditConfiguration))
             {
                 query["MediaAuditConfiguration"] = request.MediaAuditConfiguration;
@@ -30881,6 +30913,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             {
                 query["MediaType"] = request.MediaType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -30888,6 +30924,14 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
                 query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoService))
+            {
+                query["VideoService"] = request.VideoService;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceService))
+            {
+                query["VoiceService"] = request.VoiceService;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -30916,11 +30960,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this API, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;see <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</b></description></item>
+        /// <item><description><b>Before using this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;refer to <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</b></description></item>
         /// <item><description>This operation currently supports only the <b>Shanghai</b>, <b>Beijing</b>, and <b>Singapore</b> regions.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</description></item>
-        /// <item><description>For the development guide on submitting automated review jobs, see <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</description></item>
-        /// <item><description>After an automated review job is complete, the image resources generated during the job are retained free of charge for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</description></item>
+        /// <item><description>For the development guide on submitting automated review jobs, refer to <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</description></item>
+        /// <item><description>After an automated review job is complete, the image resources generated during the job are retained for free for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -30938,6 +30982,10 @@ namespace AlibabaCloud.SDK.Vod20170321
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CensorProvider))
+            {
+                query["CensorProvider"] = request.CensorProvider;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MediaAuditConfiguration))
             {
                 query["MediaAuditConfiguration"] = request.MediaAuditConfiguration;
@@ -30950,6 +30998,10 @@ namespace AlibabaCloud.SDK.Vod20170321
             {
                 query["MediaType"] = request.MediaType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceParameters))
+            {
+                query["ServiceParameters"] = request.ServiceParameters;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TemplateId))
             {
                 query["TemplateId"] = request.TemplateId;
@@ -30957,6 +31009,14 @@ namespace AlibabaCloud.SDK.Vod20170321
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserData))
             {
                 query["UserData"] = request.UserData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VideoService))
+            {
+                query["VideoService"] = request.VideoService;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VoiceService))
+            {
+                query["VoiceService"] = request.VoiceService;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -30985,11 +31045,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this API, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;see <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</b></description></item>
+        /// <item><description><b>Before using this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;refer to <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</b></description></item>
         /// <item><description>This operation currently supports only the <b>Shanghai</b>, <b>Beijing</b>, and <b>Singapore</b> regions.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</description></item>
-        /// <item><description>For the development guide on submitting automated review jobs, see <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</description></item>
-        /// <item><description>After an automated review job is complete, the image resources generated during the job are retained free of charge for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</description></item>
+        /// <item><description>For the development guide on submitting automated review jobs, refer to <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</description></item>
+        /// <item><description>After an automated review job is complete, the image resources generated during the job are retained for free for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31014,11 +31074,11 @@ namespace AlibabaCloud.SDK.Vod20170321
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description><b>Before using this API, make sure that you understand the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;see <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</b></description></item>
+        /// <item><description><b>Before using this operation, make sure that you are familiar with the billing methods and pricing of ApsaraVideo VOD. Automated review is a paid feature. For billing details, &lt;props=&quot;china&quot;&gt;refer to <a href="~~188310#section-g7l-s3o-9ng~~">Automated review billing</a>.&lt;props=&quot;intl&quot;&gt;submit a ticket or contact your Alibaba Cloud account manager.</b></description></item>
         /// <item><description>This operation currently supports only the <b>Shanghai</b>, <b>Beijing</b>, and <b>Singapore</b> regions.</description></item>
-        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, the task ID is returned. The task is not complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</description></item>
-        /// <item><description>For the development guide on submitting automated review jobs, see <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</description></item>
-        /// <item><description>After an automated review job is complete, the image resources generated during the job are retained free of charge for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</description></item>
+        /// <item><description>This is an <a href="https://help.aliyun.com/document_detail/3027551.html">asynchronous operation</a>. After you submit a task, a task ID is returned. The task is not yet complete at this point and enters a queue for asynchronous execution. The final result is sent through a callback notification. You can also call <a href="https://help.aliyun.com/document_detail/454959.html">Query automated review job</a> to query the task status.</description></item>
+        /// <item><description>For the development guide on submitting automated review jobs, refer to <a href="https://help.aliyun.com/document_detail/101148.html">Automated review</a>.</description></item>
+        /// <item><description>After an automated review job is complete, the image resources generated during the job are retained for free for only two weeks in the VOD system bucket allocated by ApsaraVideo VOD. The images are automatically deleted after two weeks.</description></item>
         /// </list>
         /// </description>
         /// 

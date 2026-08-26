@@ -9,15 +9,23 @@ using Tea;
 namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class SubmitAIImageAuditJobRequest : TeaModel {
+        [NameInMap("CensorProvider")]
+        [Validation(Required=false)]
+        public string CensorProvider { get; set; }
+
+        [NameInMap("ImageService")]
+        [Validation(Required=false)]
+        public string ImageService { get; set; }
+
         /// <summary>
         /// <para>The review node configuration.</para>
         /// <list type="bullet">
-        /// <item><description>Other configuration items of the review node. Currently, only the ResourceType field is supported, which is used to specify the media file type and adjust the review standards and rules for the specified type.</description></item>
-        /// <item><description>Usage notes for ResourceType: only letters, digits, and underscores are allowed.</description></item>
+        /// <item><description>Other configuration items of the review node. Currently, only the ResourceType field is supported, which is used to specify the media file type. You can adjust the review standards and rules for the specified type.</description></item>
+        /// <item><description>Usage notes for ResourceType: Only letters, digits, and underscores (_) are allowed.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can customize the ResourceType field as described in the usage notes. After customization, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a Yida form</a> to commit to Alibaba Cloud for spooling before the configuration takes effect.</description></item>
+        /// <item><description>You can customize the ResourceType field based on the usage notes. After customization, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a Yida form</a> to commit to Alibaba Cloud for spooling before the configuration takes effect.</description></item>
         /// <item><description>To adjust the review standards and rules for a specific ResourceType, <a href="https://yida.alibaba-inc.com/o/ticketapply">submit a Yida form</a> to request technical support.</description></item>
         /// </list>
         /// </remarks>
@@ -57,11 +65,15 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
         [Validation(Required=false)]
         public string ResourceOwnerId { get; set; }
 
+        [NameInMap("ServiceParameters")]
+        [Validation(Required=false)]
+        public string ServiceParameters { get; set; }
+
         /// <summary>
         /// <para>The AI template ID. You can obtain the ID by using one of the following methods:</para>
         /// <list type="bullet">
-        /// <item><description>When you call the <a href="https://help.aliyun.com/document_detail/102930.html">Add AI template</a> operation to add an AI template, the AI template ID is the value of TemplateId in the response.</description></item>
-        /// <item><description>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">Query AI template list</a> operation to obtain the AI template ID, which is the value of TemplateId in the response.</description></item>
+        /// <item><description>Call the <a href="https://help.aliyun.com/document_detail/102930.html">Add AI template</a> operation to add an AI template. The AI template ID is the value of TemplateId in the response.</description></item>
+        /// <item><description>After the AI template is added, call the <a href="https://help.aliyun.com/document_detail/102936.html">Query AI template list</a> operation to query the AI template ID, which is the value of TemplateId in the response.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

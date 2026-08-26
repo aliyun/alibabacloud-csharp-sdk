@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetMediaAuditResultRequest : TeaModel {
         /// <summary>
-        /// <para>The video ID or image ID to query.</para>
+        /// <para>The ID of the video or image to query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

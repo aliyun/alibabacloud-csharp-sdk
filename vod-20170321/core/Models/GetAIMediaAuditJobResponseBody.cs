@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
 {
     public class GetAIMediaAuditJobResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the automated review job.</para>
+        /// <para>The automated review job information.</para>
         /// </summary>
         [NameInMap("MediaAuditJob")]
         [Validation(Required=false)]
         public GetAIMediaAuditJobResponseBodyMediaAuditJob MediaAuditJob { get; set; }
         public class GetAIMediaAuditJobResponseBodyMediaAuditJob : TeaModel {
             /// <summary>
-            /// <para>The error code of the job. Check this field when Status is fail.</para>
+            /// <para>The error code of the job. This field is relevant when Status is fail.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public GetAIMediaAuditJobResponseBodyMediaAuditJobData Data { get; set; }
             public class GetAIMediaAuditJobResponseBodyMediaAuditJobData : TeaModel {
                 /// <summary>
-                /// <para>The content types that contain violations. Multiple values are separated by commas (,). Valid values:</para>
+                /// <para>The content that violates the moderation rules. Multiple values are separated by commas (,). Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>video</b>: video.</description></item>
                 /// <item><description><b>image-cover</b>: thumbnail.</description></item>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     /// <summary>
                     /// <para>The review result suggestion. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>block</b>: Violation detected.</description></item>
+                    /// <item><description><b>block</b>: Violation.</description></item>
                     /// <item><description><b>review</b>: Suspected violation.</description></item>
                     /// <item><description><b>pass</b>: Passed.</description></item>
                     /// </list>
@@ -145,10 +145,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     /// <para>The category of the image review result. Multiple values are separated by commas (,). Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>porn</b>: pornography.</description></item>
-                    /// <item><description><b>terrorism</b>: terrorist content or politically sensitive content.</description></item>
-                    /// <item><description><b>ad</b>: image or text violation.</description></item>
-                    /// <item><description><b>live</b>: undesirable scene.</description></item>
-                    /// <item><description><b>logo</b>: logo in image.</description></item>
+                    /// <item><description><b>terrorism</b>: terrorist content and political sensitivity.</description></item>
+                    /// <item><description><b>ad</b>: image and text violations.</description></item>
+                    /// <item><description><b>live</b>: undesirable scenes.</description></item>
+                    /// <item><description><b>logo</b>: logo in images.</description></item>
                     /// <item><description><b>normal</b>: normal.</description></item>
                     /// </list>
                     /// 
@@ -178,37 +178,37 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <list type="bullet">
                         /// <item><description><b>normal</b>: normal.</description></item>
                         /// <item><description><b>bloody</b>: bloody content.</description></item>
-                        /// <item><description><b>explosion</b>: explosion or smoke.</description></item>
-                        /// <item><description><b>outfit</b>: special outfit.</description></item>
-                        /// <item><description><b>logo</b>: special logo.</description></item>
-                        /// <item><description><b>weapon</b>: weapon.</description></item>
+                        /// <item><description><b>explosion</b>: explosions and smoke.</description></item>
+                        /// <item><description><b>outfit</b>: special outfits.</description></item>
+                        /// <item><description><b>logo</b>: special logos.</description></item>
+                        /// <item><description><b>weapon</b>: weapons.</description></item>
                         /// <item><description><b>politics</b>: politically sensitive content.</description></item>
-                        /// <item><description><b>violence</b>: violence.</description></item>
-                        /// <item><description><b>crowd</b>: crowd gathering.</description></item>
-                        /// <item><description><b>parade</b>: parade.</description></item>
-                        /// <item><description><b>carcrash</b>: car crash scene.</description></item>
-                        /// <item><description><b>flag</b>: flag.</description></item>
-                        /// <item><description><b>location</b>: landmark.</description></item>
+                        /// <item><description><b>violence</b>: fighting.</description></item>
+                        /// <item><description><b>crowd</b>: crowds.</description></item>
+                        /// <item><description><b>parade</b>: parades.</description></item>
+                        /// <item><description><b>carcrash</b>: car accident scenes.</description></item>
+                        /// <item><description><b>flag</b>: flags.</description></item>
+                        /// <item><description><b>location</b>: landmarks.</description></item>
                         /// <item><description><b>others</b>: others.</description></item>
                         /// </list>
                         /// <para>When scene is <b>ad</b>, valid values:</para>
                         /// <list type="bullet">
                         /// <item><description><b>normal</b>: normal.</description></item>
-                        /// <item><description><b>ad</b>: other advertisement.</description></item>
-                        /// <item><description><b>politics</b>: text contains politically sensitive content.</description></item>
-                        /// <item><description><b>porn</b>: text contains pornographic content.</description></item>
-                        /// <item><description><b>abuse</b>: text contains abusive content.</description></item>
-                        /// <item><description><b>terrorism</b>: text contains terrorist content.</description></item>
-                        /// <item><description><b>contraband</b>: text contains prohibited content.</description></item>
-                        /// <item><description><b>spam</b>: text contains other spam content.</description></item>
-                        /// <item><description><b>npx</b>: psoriasis advertisement.</description></item>
-                        /// <item><description><b>qrcode</b>: contains a QR code.</description></item>
-                        /// <item><description><b>programCode</b>: contains a mini program code.</description></item>
+                        /// <item><description><b>ad</b>: other advertisements.</description></item>
+                        /// <item><description><b>politics</b>: text containing politically sensitive content.</description></item>
+                        /// <item><description><b>porn</b>: text containing pornographic content.</description></item>
+                        /// <item><description><b>abuse</b>: text containing abusive content.</description></item>
+                        /// <item><description><b>terrorism</b>: text containing terrorist content.</description></item>
+                        /// <item><description><b>contraband</b>: text containing prohibited content.</description></item>
+                        /// <item><description><b>spam</b>: text containing other spam content.</description></item>
+                        /// <item><description><b>npx</b>: psoriasis advertisements.</description></item>
+                        /// <item><description><b>qrcode</b>: contains QR codes.</description></item>
+                        /// <item><description><b>programCode</b>: contains mini program codes.</description></item>
                         /// </list>
                         /// <para>When scene is <b>live</b>, valid values:</para>
                         /// <list type="bullet">
                         /// <item><description><b>normal</b>: normal.</description></item>
-                        /// <item><description><b>meaningless</b>: no content in the image (such as black screen or white screen).</description></item>
+                        /// <item><description><b>meaningless</b>: no content in the image (such as a black or white screen).</description></item>
                         /// <item><description><b>PIP</b>: Picture-in-Picture (PiP).</description></item>
                         /// <item><description><b>smoking</b>: smoking.</description></item>
                         /// <item><description><b>drivelive</b>: in-car live streaming.</description></item>
@@ -216,8 +216,8 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <para>When scene is <b>logo</b>, valid values:</para>
                         /// <list type="bullet">
                         /// <item><description><b>normal</b>: normal.</description></item>
-                        /// <item><description><b>TV</b>: contains a controlled logo.</description></item>
-                        /// <item><description><b>trademark</b>: contains a trademark.</description></item>
+                        /// <item><description><b>TV</b>: contains regulated logos.</description></item>
+                        /// <item><description><b>trademark</b>: contains trademarks.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -231,10 +231,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <para>The review scene. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description><b>porn</b>: pornography detection.</description></item>
-                        /// <item><description><b>terrorism</b>: terrorist content or politically sensitive content.</description></item>
-                        /// <item><description><b>ad</b>: image or text violation.</description></item>
-                        /// <item><description><b>live</b>: undesirable scene.</description></item>
-                        /// <item><description><b>logo</b>: logo in image.</description></item>
+                        /// <item><description><b>terrorism</b>: terrorist content and political sensitivity.</description></item>
+                        /// <item><description><b>ad</b>: image and text violations.</description></item>
+                        /// <item><description><b>live</b>: undesirable scenes.</description></item>
+                        /// <item><description><b>logo</b>: logo in images.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public string Scene { get; set; }
 
                         /// <summary>
-                        /// <para>The score of the image that hits the label. Value range: <c>[0, 100]</c>. The score indicates the probability of the corresponding label. A higher score indicates higher accuracy.</para>
+                        /// <para>The score of the image that hits the label. Value range: <c>[0, 100]</c>. The score indicates the probability of the corresponding label. A higher value indicates higher accuracy.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>0</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <summary>
                         /// <para>The review result suggestion. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>block</b>: Violation detected.</description></item>
+                        /// <item><description><b>block</b>: Violation.</description></item>
                         /// <item><description><b>review</b>: Suspected violation.</description></item>
                         /// <item><description><b>pass</b>: Passed.</description></item>
                         /// </list>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     /// <summary>
                     /// <para>The review result suggestion. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>block</b>: Violation detected.</description></item>
+                    /// <item><description><b>block</b>: Violation.</description></item>
                     /// <item><description><b>review</b>: Suspected violation.</description></item>
                     /// <item><description><b>pass</b>: Passed.</description></item>
                     /// </list>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Suggestion { get; set; }
 
                     /// <summary>
-                    /// <para>The image type. Valid values: <b>cover</b> (thumbnail).</para>
+                    /// <para>The image category. Valid values: <b>cover</b> (thumbnail).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cover</para>
@@ -312,10 +312,10 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <para>The category of the review result. Multiple values are separated by commas (,). Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>porn</b>: pornography.</description></item>
-                /// <item><description><b>terrorism</b>: terrorist content or politically sensitive content.</description></item>
-                /// <item><description><b>ad</b>: image or text violation.</description></item>
-                /// <item><description><b>live</b>: undesirable scene.</description></item>
-                /// <item><description><b>logo</b>: logo in image.</description></item>
+                /// <item><description><b>terrorism</b>: terrorist content and political sensitivity.</description></item>
+                /// <item><description><b>ad</b>: image and text violations.</description></item>
+                /// <item><description><b>live</b>: undesirable scenes.</description></item>
+                /// <item><description><b>logo</b>: logo in images.</description></item>
                 /// <item><description><b>audio</b>: audio anti-spam.</description></item>
                 /// <item><description><b>normal</b>: normal.</description></item>
                 /// </list>
@@ -330,7 +330,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                 /// <summary>
                 /// <para>The review result suggestion. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>block</b>: Violation detected.</description></item>
+                /// <item><description><b>block</b>: Violation.</description></item>
                 /// <item><description><b>review</b>: Suspected violation.</description></item>
                 /// <item><description><b>pass</b>: Passed.</description></item>
                 /// </list>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Scene { get; set; }
 
                     /// <summary>
-                    /// <para>The score of the image that hits the label. Value range: <c>[0, 100]</c>. The score indicates the probability of the corresponding label. A higher score indicates higher accuracy.</para>
+                    /// <para>The score of the image that hits the label. Value range: <c>[0, 100]</c>. The score indicates the probability of the corresponding label. A higher value indicates higher accuracy.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     /// <summary>
                     /// <para>The review result suggestion. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>block</b>: Violation detected.</description></item>
+                    /// <item><description><b>block</b>: Violation.</description></item>
                     /// <item><description><b>review</b>: Suspected violation.</description></item>
                     /// <item><description><b>pass</b>: Passed.</description></item>
                     /// </list>
@@ -450,7 +450,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public string AverageScore { get; set; }
 
                         /// <summary>
-                        /// <para>The categories of the review results and the number of video snapshots in each category.</para>
+                        /// <para>The review result categories and the number of video snapshots for each category.</para>
                         /// </summary>
                         [NameInMap("CounterList")]
                         [Validation(Required=false)]
@@ -470,16 +470,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                             /// <para>The category of the advertisement review result. Valid values:</para>
                             /// <list type="bullet">
                             /// <item><description><b>normal</b>: normal.</description></item>
-                            /// <item><description><b>ad</b>: other advertisement.</description></item>
-                            /// <item><description><b>politics</b>: text contains politically sensitive content.</description></item>
-                            /// <item><description><b>porn</b>: text contains pornographic content.</description></item>
-                            /// <item><description><b>abuse</b>: text contains abusive content.</description></item>
-                            /// <item><description><b>terrorism</b>: text contains terrorist content.</description></item>
-                            /// <item><description><b>contraband</b>: text contains prohibited content.</description></item>
-                            /// <item><description><b>spam</b>: text contains other spam content.</description></item>
-                            /// <item><description><b>npx</b>: psoriasis advertisement.</description></item>
-                            /// <item><description><b>qrcode</b>: contains a QR code.</description></item>
-                            /// <item><description><b>programCode</b>: contains a mini program code.</description></item>
+                            /// <item><description><b>ad</b>: other advertisements.</description></item>
+                            /// <item><description><b>politics</b>: text containing politically sensitive content.</description></item>
+                            /// <item><description><b>porn</b>: text containing pornographic content.</description></item>
+                            /// <item><description><b>abuse</b>: text containing abusive content.</description></item>
+                            /// <item><description><b>terrorism</b>: text containing terrorist content.</description></item>
+                            /// <item><description><b>contraband</b>: text containing prohibited content.</description></item>
+                            /// <item><description><b>spam</b>: text containing other spam content.</description></item>
+                            /// <item><description><b>npx</b>: psoriasis advertisements.</description></item>
+                            /// <item><description><b>qrcode</b>: contains QR codes.</description></item>
+                            /// <item><description><b>programCode</b>: contains mini program codes.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -495,16 +495,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <para>The category of the advertisement review result. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description><b>normal</b>: normal.</description></item>
-                        /// <item><description><b>ad</b>: other advertisement.</description></item>
-                        /// <item><description><b>politics</b>: text contains politically sensitive content.</description></item>
-                        /// <item><description><b>porn</b>: text contains pornographic content.</description></item>
-                        /// <item><description><b>abuse</b>: text contains abusive content.</description></item>
-                        /// <item><description><b>terrorism</b>: text contains terrorist content.</description></item>
-                        /// <item><description><b>contraband</b>: text contains prohibited content.</description></item>
-                        /// <item><description><b>spam</b>: text contains other spam content.</description></item>
-                        /// <item><description><b>npx</b>: psoriasis advertisement.</description></item>
-                        /// <item><description><b>qrcode</b>: contains a QR code.</description></item>
-                        /// <item><description><b>programCode</b>: contains a mini program code.</description></item>
+                        /// <item><description><b>ad</b>: other advertisements.</description></item>
+                        /// <item><description><b>politics</b>: text containing politically sensitive content.</description></item>
+                        /// <item><description><b>porn</b>: text containing pornographic content.</description></item>
+                        /// <item><description><b>abuse</b>: text containing abusive content.</description></item>
+                        /// <item><description><b>terrorism</b>: text containing terrorist content.</description></item>
+                        /// <item><description><b>contraband</b>: text containing prohibited content.</description></item>
+                        /// <item><description><b>spam</b>: text containing other spam content.</description></item>
+                        /// <item><description><b>npx</b>: psoriasis advertisements.</description></item>
+                        /// <item><description><b>qrcode</b>: contains QR codes.</description></item>
+                        /// <item><description><b>programCode</b>: contains mini program codes.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -527,7 +527,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <summary>
                         /// <para>The review result suggestion. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>block</b>: Violation detected.</description></item>
+                        /// <item><description><b>block</b>: Violation.</description></item>
                         /// <item><description><b>review</b>: Suspected violation.</description></item>
                         /// <item><description><b>pass</b>: Passed.</description></item>
                         /// </list>
@@ -550,16 +550,16 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                             /// <para>The category of the advertisement review result. Valid values:</para>
                             /// <list type="bullet">
                             /// <item><description><b>normal</b>: normal.</description></item>
-                            /// <item><description><b>ad</b>: other advertisement.</description></item>
-                            /// <item><description><b>politics</b>: text contains politically sensitive content.</description></item>
-                            /// <item><description><b>porn</b>: text contains pornographic content.</description></item>
-                            /// <item><description><b>abuse</b>: text contains abusive content.</description></item>
-                            /// <item><description><b>terrorism</b>: text contains terrorist content.</description></item>
-                            /// <item><description><b>contraband</b>: text contains prohibited content.</description></item>
-                            /// <item><description><b>spam</b>: text contains other spam content.</description></item>
-                            /// <item><description><b>npx</b>: psoriasis advertisement.</description></item>
-                            /// <item><description><b>qrcode</b>: contains a QR code.</description></item>
-                            /// <item><description><b>programCode</b>: contains a mini program code.</description></item>
+                            /// <item><description><b>ad</b>: other advertisements.</description></item>
+                            /// <item><description><b>politics</b>: text containing politically sensitive content.</description></item>
+                            /// <item><description><b>porn</b>: text containing pornographic content.</description></item>
+                            /// <item><description><b>abuse</b>: text containing abusive content.</description></item>
+                            /// <item><description><b>terrorism</b>: text containing terrorist content.</description></item>
+                            /// <item><description><b>contraband</b>: text containing prohibited content.</description></item>
+                            /// <item><description><b>spam</b>: text containing other spam content.</description></item>
+                            /// <item><description><b>npx</b>: psoriasis advertisements.</description></item>
+                            /// <item><description><b>qrcode</b>: contains QR codes.</description></item>
+                            /// <item><description><b>programCode</b>: contains mini program codes.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -604,13 +604,110 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     }
 
                     /// <summary>
+                    /// <para>The GreenEnhanced review result.</para>
+                    /// </summary>
+                    [NameInMap("GreenEnhancedResult")]
+                    [Validation(Required=false)]
+                    public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultGreenEnhancedResult GreenEnhancedResult { get; set; }
+                    public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultGreenEnhancedResult : TeaModel {
+                        /// <summary>
+                        /// <para>The average confidence score of hit frames. This field is not returned if no frame is hit.</para>
+                        /// </summary>
+                        [NameInMap("AverageScore")]
+                        [Validation(Required=false)]
+                        public string AverageScore { get; set; }
+
+                        /// <summary>
+                        /// <para>The violation label count aggregation: Label (Green label) / Count (number of hit frames for the label).</para>
+                        /// </summary>
+                        [NameInMap("CounterList")]
+                        [Validation(Required=false)]
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultGreenEnhancedResultCounterList> CounterList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultGreenEnhancedResultCounterList : TeaModel {
+                            /// <summary>
+                            /// <para>The number of captured video frames for the corresponding label.</para>
+                            /// </summary>
+                            [NameInMap("Count")]
+                            [Validation(Required=false)]
+                            public int? Count { get; set; }
+
+                            /// <summary>
+                            /// <para>The review result category.</para>
+                            /// </summary>
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>The union of hit Green native labels (comma-separated, such as pornographic_adultContent_tii). The value is normal if no label is hit.</para>
+                        /// </summary>
+                        [NameInMap("Label")]
+                        [Validation(Required=false)]
+                        public string Label { get; set; }
+
+                        /// <summary>
+                        /// <para>The highest confidence score of hit frames. This field is not returned if no frame is hit.</para>
+                        /// </summary>
+                        [NameInMap("MaxScore")]
+                        [Validation(Required=false)]
+                        public string MaxScore { get; set; }
+
+                        /// <summary>
+                        /// <para>The frame review conclusion mapped from frameResult.riskLevel: high→block, medium/low→review, none→pass.</para>
+                        /// </summary>
+                        [NameInMap("Suggestion")]
+                        [Validation(Required=false)]
+                        public string Suggestion { get; set; }
+
+                        /// <summary>
+                        /// <para>The hit frame details (sorted by confidence in descending order).</para>
+                        /// </summary>
+                        [NameInMap("TopList")]
+                        [Validation(Required=false)]
+                        public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultGreenEnhancedResultTopList> TopList { get; set; }
+                        public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultGreenEnhancedResultTopList : TeaModel {
+                            /// <summary>
+                            /// <para>The review result category.</para>
+                            /// </summary>
+                            [NameInMap("Label")]
+                            [Validation(Required=false)]
+                            public string Label { get; set; }
+
+                            /// <summary>
+                            /// <para>The confidence score of the video snapshot that hit the label.</para>
+                            /// </summary>
+                            [NameInMap("Score")]
+                            [Validation(Required=false)]
+                            public string Score { get; set; }
+
+                            /// <summary>
+                            /// <para>The position of the video snapshot in the video.</para>
+                            /// </summary>
+                            [NameInMap("Timestamp")]
+                            [Validation(Required=false)]
+                            public string Timestamp { get; set; }
+
+                            /// <summary>
+                            /// <para>The URL of the video snapshot.</para>
+                            /// </summary>
+                            [NameInMap("Url")]
+                            [Validation(Required=false)]
+                            public string Url { get; set; }
+
+                        }
+
+                    }
+
+                    /// <summary>
                     /// <para>The category of the review result. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description><b>porn</b>: pornography.</description></item>
-                    /// <item><description><b>terrorism</b>: terrorist content or politically sensitive content.</description></item>
-                    /// <item><description><b>ad</b>: image or text violation.</description></item>
-                    /// <item><description><b>live</b>: undesirable scene.</description></item>
-                    /// <item><description><b>logo</b>: logo in image.</description></item>
+                    /// <item><description><b>terrorism</b>: terrorist content and political sensitivity.</description></item>
+                    /// <item><description><b>ad</b>: image and text violations.</description></item>
+                    /// <item><description><b>live</b>: undesirable scenes.</description></item>
+                    /// <item><description><b>logo</b>: logo in images.</description></item>
                     /// <item><description><b>normal</b>: normal.</description></item>
                     /// </list>
                     /// 
@@ -622,7 +719,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Label { get; set; }
 
                     /// <summary>
-                    /// <para>The undesirable content review result.</para>
+                    /// <para>The review results for inappropriate content.</para>
                     /// </summary>
                     [NameInMap("LiveResult")]
                     [Validation(Required=false)]
@@ -658,11 +755,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                             /// <summary>
                             /// <para>The category of the review result. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description><b>normal</b>: normal.</description></item>
-                            /// <item><description><b>meaningless</b>: no content in the image (such as black screen or white screen).</description></item>
+                            /// <item><description><b>normal</b>: Normal.</description></item>
+                            /// <item><description><b>meaningless</b>: No content in the image (for example, black screen or white screen).</description></item>
                             /// <item><description><b>PIP</b>: Picture-in-Picture (PiP).</description></item>
-                            /// <item><description><b>smoking</b>: smoking.</description></item>
-                            /// <item><description><b>drivelive</b>: in-car live streaming.</description></item>
+                            /// <item><description><b>smoking</b>: Smoking.</description></item>
+                            /// <item><description><b>drivelive</b>: In-car live streaming.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -677,11 +774,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <summary>
                         /// <para>The category of the review result. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>normal</b>: normal.</description></item>
-                        /// <item><description><b>meaningless</b>: no content in the image (such as black screen or white screen).</description></item>
+                        /// <item><description><b>normal</b>: Normal.</description></item>
+                        /// <item><description><b>meaningless</b>: No content in the image (for example, black screen or white screen).</description></item>
                         /// <item><description><b>PIP</b>: Picture-in-Picture (PiP).</description></item>
-                        /// <item><description><b>smoking</b>: smoking.</description></item>
-                        /// <item><description><b>drivelive</b>: in-car live streaming.</description></item>
+                        /// <item><description><b>smoking</b>: Smoking.</description></item>
+                        /// <item><description><b>drivelive</b>: In-car live streaming.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -704,7 +801,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <summary>
                         /// <para>The review result suggestion. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>block</b>: Violation detected.</description></item>
+                        /// <item><description><b>block</b>: Violation.</description></item>
                         /// <item><description><b>review</b>: Suspected violation.</description></item>
                         /// <item><description><b>pass</b>: Passed.</description></item>
                         /// </list>
@@ -726,11 +823,11 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                             /// <summary>
                             /// <para>The category of the review result. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description><b>normal</b>: normal.</description></item>
-                            /// <item><description><b>meaningless</b>: no content in the image (such as black screen or white screen).</description></item>
+                            /// <item><description><b>normal</b>: Normal.</description></item>
+                            /// <item><description><b>meaningless</b>: No content in the image (for example, black screen or white screen).</description></item>
                             /// <item><description><b>PIP</b>: Picture-in-Picture (PiP).</description></item>
-                            /// <item><description><b>smoking</b>: smoking.</description></item>
-                            /// <item><description><b>drivelive</b>: in-car live streaming.</description></item>
+                            /// <item><description><b>smoking</b>: Smoking.</description></item>
+                            /// <item><description><b>drivelive</b>: In-car live streaming.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -782,7 +879,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult LogoResult { get; set; }
                     public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultLogoResult : TeaModel {
                         /// <summary>
-                        /// <para>The average score of the video snapshots that hit the label.</para>
+                        /// <para>The average score of video snapshots that hit the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
@@ -811,9 +908,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                             /// <summary>
                             /// <para>The category of the logo review result. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description><b>normal</b>: normal.</description></item>
-                            /// <item><description><b>TV</b>: contains a controlled logo.</description></item>
-                            /// <item><description><b>trademark</b>: contains a trademark.</description></item>
+                            /// <item><description><b>normal</b>: Normal.</description></item>
+                            /// <item><description><b>TV</b>: Contains a regulated logo.</description></item>
+                            /// <item><description><b>trademark</b>: Contains a trademark.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -828,9 +925,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <summary>
                         /// <para>The category of the logo review result. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>normal</b>: normal.</description></item>
-                        /// <item><description><b>TV</b>: contains a controlled logo.</description></item>
-                        /// <item><description><b>trademark</b>: contains a trademark.</description></item>
+                        /// <item><description><b>normal</b>: Normal.</description></item>
+                        /// <item><description><b>TV</b>: Contains a regulated logo.</description></item>
+                        /// <item><description><b>trademark</b>: Contains a trademark.</description></item>
                         /// </list>
                         /// 
                         /// <b>Example:</b>
@@ -841,7 +938,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// <para>The highest score of the video snapshots that hit the label.</para>
+                        /// <para>The highest score of video snapshots that hit the label.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
@@ -853,7 +950,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <summary>
                         /// <para>The logo review suggestion. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>block</b>: Violation detected.</description></item>
+                        /// <item><description><b>block</b>: Violation.</description></item>
                         /// <item><description><b>review</b>: Suspected violation.</description></item>
                         /// <item><description><b>pass</b>: Passed.</description></item>
                         /// </list>
@@ -875,9 +972,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                             /// <summary>
                             /// <para>The category of the logo review result. Valid values:</para>
                             /// <list type="bullet">
-                            /// <item><description><b>normal</b>: normal.</description></item>
-                            /// <item><description><b>TV</b>: contains a controlled logo.</description></item>
-                            /// <item><description><b>trademark</b>: contains a trademark.</description></item>
+                            /// <item><description><b>normal</b>: Normal.</description></item>
+                            /// <item><description><b>TV</b>: Contains a regulated logo.</description></item>
+                            /// <item><description><b>trademark</b>: Contains a trademark.</description></item>
                             /// </list>
                             /// 
                             /// <b>Example:</b>
@@ -929,7 +1026,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult PornResult { get; set; }
                     public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultPornResult : TeaModel {
                         /// <summary>
-                        /// <para>The average score of the video snapshots that hit the label. Value range: <c>[0, 100]</c>. The value is accurate to 10 decimal places. The score indicates the probability of the corresponding label. A higher score indicates higher accuracy.</para>
+                        /// <para>The average score of video snapshots that hit the label. Value range: <c>[0, 100]</c>, with a precision of 10 decimal places. The score indicates the probability of the corresponding label. A higher value indicates higher accuracy.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
@@ -939,7 +1036,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public string AverageScore { get; set; }
 
                         /// <summary>
-                        /// <para>The categories of the review results and the number of video snapshots in each category.</para>
+                        /// <para>The review result categories and the number of video snapshots for each category.</para>
                         /// </summary>
                         [NameInMap("CounterList")]
                         [Validation(Required=false)]
@@ -988,7 +1085,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// <para>The highest score of the video snapshots that hit the label. Value range: <c>[0, 100]</c>. The value is accurate to 10 decimal places. The score indicates the probability of the corresponding label. A higher score indicates higher accuracy.</para>
+                        /// <para>The highest score of video snapshots that hit the label. Value range: <c>[0, 100]</c>, with a precision of 10 decimal places. The score indicates the probability of the corresponding label. A higher value indicates higher accuracy.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
@@ -1000,7 +1097,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         /// <summary>
                         /// <para>The pornography detection suggestion. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>block</b>: Violation detected.</description></item>
+                        /// <item><description><b>block</b>: Violation.</description></item>
                         /// <item><description><b>review</b>: Suspected violation.</description></item>
                         /// <item><description><b>pass</b>: Passed.</description></item>
                         /// </list>
@@ -1035,7 +1132,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                             public string Label { get; set; }
 
                             /// <summary>
-                            /// <para>The score of the video snapshot that hits the label. Value range: <c>[0, 100]</c>. The value is accurate to 10 decimal places. The score indicates the probability of the corresponding label. A higher score indicates higher accuracy.</para>
+                            /// <para>The score of the video snapshot that hits the label. Value range: <c>[0, 100]</c>, with a precision of 10 decimal places. The score indicates the probability of the corresponding label. A higher value indicates higher accuracy.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>100</para>
@@ -1071,7 +1168,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     /// <summary>
                     /// <para>The video review result suggestion. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description><b>block</b>: Violation detected.</description></item>
+                    /// <item><description><b>block</b>: Violation.</description></item>
                     /// <item><description><b>review</b>: Suspected violation.</description></item>
                     /// <item><description><b>pass</b>: Passed.</description></item>
                     /// </list>
@@ -1084,14 +1181,14 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                     public string Suggestion { get; set; }
 
                     /// <summary>
-                    /// <para>The terrorism and politically sensitive content review result.</para>
+                    /// <para>The terrorism and political sensitivity review result.</para>
                     /// </summary>
                     [NameInMap("TerrorismResult")]
                     [Validation(Required=false)]
                     public GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult TerrorismResult { get; set; }
                     public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResult : TeaModel {
                         /// <summary>
-                        /// <para>The average score of the video snapshots that hit the label. Value range: <c>[0, 100]</c>. The value is accurate to 10 decimal places. The score indicates the probability of the corresponding label. A higher score indicates higher accuracy.</para>
+                        /// <para>The average score of video snapshots that hit the label. Value range: <c>[0, 100]</c>, with a precision of 10 decimal places. The score indicates the probability of the corresponding label. A higher value indicates higher accuracy.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
@@ -1101,7 +1198,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public string AverageScore { get; set; }
 
                         /// <summary>
-                        /// <para>The categories of the terrorism and politically sensitive content review results and the number of video snapshots in each category.</para>
+                        /// <para>The terrorism and political sensitivity result categories and the number of video snapshots for each category.</para>
                         /// </summary>
                         [NameInMap("CounterList")]
                         [Validation(Required=false)]
@@ -1118,21 +1215,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                             public int? Count { get; set; }
 
                             /// <summary>
-                            /// <para>The terrorism and politically sensitive content review result. Valid values:</para>
+                            /// <para>The terrorism and political sensitivity review result. Valid values:</para>
                             /// <list type="bullet">
                             /// <item><description><b>normal</b>: normal.</description></item>
                             /// <item><description><b>bloody</b>: bloody content.</description></item>
-                            /// <item><description><b>explosion</b>: explosion or smoke.</description></item>
-                            /// <item><description><b>outfit</b>: special outfit.</description></item>
-                            /// <item><description><b>logo</b>: special logo.</description></item>
-                            /// <item><description><b>weapon</b>: weapon.</description></item>
+                            /// <item><description><b>explosion</b>: explosions and smoke.</description></item>
+                            /// <item><description><b>outfit</b>: special outfits.</description></item>
+                            /// <item><description><b>logo</b>: special logos.</description></item>
+                            /// <item><description><b>weapon</b>: weapons.</description></item>
                             /// <item><description><b>politics</b>: politically sensitive content.</description></item>
-                            /// <item><description><b>violence</b>: violence.</description></item>
-                            /// <item><description><b>crowd</b>: crowd gathering.</description></item>
-                            /// <item><description><b>parade</b>: parade.</description></item>
-                            /// <item><description><b>carcrash</b>: car crash scene.</description></item>
-                            /// <item><description><b>flag</b>: flag.</description></item>
-                            /// <item><description><b>location</b>: landmark.</description></item>
+                            /// <item><description><b>violence</b>: fighting.</description></item>
+                            /// <item><description><b>crowd</b>: crowds.</description></item>
+                            /// <item><description><b>parade</b>: parades.</description></item>
+                            /// <item><description><b>carcrash</b>: car accident scenes.</description></item>
+                            /// <item><description><b>flag</b>: flags.</description></item>
+                            /// <item><description><b>location</b>: landmarks.</description></item>
                             /// <item><description><b>others</b>: others.</description></item>
                             /// </list>
                             /// 
@@ -1146,21 +1243,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         }
 
                         /// <summary>
-                        /// <para>The terrorism and politically sensitive content review result. Valid values:</para>
+                        /// <para>The terrorism and political sensitivity review result. Valid values:</para>
                         /// <list type="bullet">
                         /// <item><description><b>normal</b>: normal.</description></item>
                         /// <item><description><b>bloody</b>: bloody content.</description></item>
-                        /// <item><description><b>explosion</b>: explosion or smoke.</description></item>
-                        /// <item><description><b>outfit</b>: special outfit.</description></item>
-                        /// <item><description><b>logo</b>: special logo.</description></item>
-                        /// <item><description><b>weapon</b>: weapon.</description></item>
+                        /// <item><description><b>explosion</b>: explosions and smoke.</description></item>
+                        /// <item><description><b>outfit</b>: special outfits.</description></item>
+                        /// <item><description><b>logo</b>: special logos.</description></item>
+                        /// <item><description><b>weapon</b>: weapons.</description></item>
                         /// <item><description><b>politics</b>: politically sensitive content.</description></item>
-                        /// <item><description><b>violence</b>: violence.</description></item>
-                        /// <item><description><b>crowd</b>: crowd gathering.</description></item>
-                        /// <item><description><b>parade</b>: parade.</description></item>
-                        /// <item><description><b>carcrash</b>: car crash scene.</description></item>
-                        /// <item><description><b>flag</b>: flag.</description></item>
-                        /// <item><description><b>location</b>: landmark.</description></item>
+                        /// <item><description><b>violence</b>: fighting.</description></item>
+                        /// <item><description><b>crowd</b>: crowds.</description></item>
+                        /// <item><description><b>parade</b>: parades.</description></item>
+                        /// <item><description><b>carcrash</b>: car accident scenes.</description></item>
+                        /// <item><description><b>flag</b>: flags.</description></item>
+                        /// <item><description><b>location</b>: landmarks.</description></item>
                         /// <item><description><b>others</b>: others.</description></item>
                         /// </list>
                         /// 
@@ -1172,7 +1269,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public string Label { get; set; }
 
                         /// <summary>
-                        /// <para>The highest score of the video snapshots that hit the label. Value range: <c>[0, 100]</c>. The value is accurate to 10 decimal places. The score indicates the probability of the corresponding label. A higher score indicates higher accuracy.</para>
+                        /// <para>The highest score of video snapshots that hit the label. Value range: <c>[0, 100]</c>, with a precision of 10 decimal places. The score indicates the probability of the corresponding label. A higher value indicates higher accuracy.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>100</para>
@@ -1182,9 +1279,9 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public string MaxScore { get; set; }
 
                         /// <summary>
-                        /// <para>The terrorism and politically sensitive content review suggestion. Valid values:</para>
+                        /// <para>The terrorism and political sensitivity review suggestion. Valid values:</para>
                         /// <list type="bullet">
-                        /// <item><description><b>block</b>: Violation detected.</description></item>
+                        /// <item><description><b>block</b>: Violation.</description></item>
                         /// <item><description><b>review</b>: Suspected violation.</description></item>
                         /// <item><description><b>pass</b>: Passed.</description></item>
                         /// </list>
@@ -1204,21 +1301,21 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                         public List<GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList> TopList { get; set; }
                         public class GetAIMediaAuditJobResponseBodyMediaAuditJobDataVideoResultTerrorismResultTopList : TeaModel {
                             /// <summary>
-                            /// <para>The terrorism and politically sensitive content review result. Valid values:</para>
+                            /// <para>The terrorism and political sensitivity review result. Valid values:</para>
                             /// <list type="bullet">
                             /// <item><description><b>normal</b>: normal.</description></item>
                             /// <item><description><b>bloody</b>: bloody content.</description></item>
-                            /// <item><description><b>explosion</b>: explosion or smoke.</description></item>
-                            /// <item><description><b>outfit</b>: special outfit.</description></item>
-                            /// <item><description><b>logo</b>: special logo.</description></item>
-                            /// <item><description><b>weapon</b>: weapon.</description></item>
+                            /// <item><description><b>explosion</b>: explosions and smoke.</description></item>
+                            /// <item><description><b>outfit</b>: special outfits.</description></item>
+                            /// <item><description><b>logo</b>: special logos.</description></item>
+                            /// <item><description><b>weapon</b>: weapons.</description></item>
                             /// <item><description><b>politics</b>: politically sensitive content.</description></item>
-                            /// <item><description><b>violence</b>: violence.</description></item>
-                            /// <item><description><b>crowd</b>: crowd gathering.</description></item>
-                            /// <item><description><b>parade</b>: parade.</description></item>
-                            /// <item><description><b>carcrash</b>: car crash scene.</description></item>
-                            /// <item><description><b>flag</b>: flag.</description></item>
-                            /// <item><description><b>location</b>: landmark.</description></item>
+                            /// <item><description><b>violence</b>: fighting.</description></item>
+                            /// <item><description><b>crowd</b>: crowds.</description></item>
+                            /// <item><description><b>parade</b>: parades.</description></item>
+                            /// <item><description><b>carcrash</b>: car accident scenes.</description></item>
+                            /// <item><description><b>flag</b>: flags.</description></item>
+                            /// <item><description><b>location</b>: landmarks.</description></item>
                             /// <item><description><b>others</b>: others.</description></item>
                             /// </list>
                             /// 
@@ -1230,7 +1327,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
                             public string Label { get; set; }
 
                             /// <summary>
-                            /// <para>The score of the video snapshot that hits the label. Value range: <c>[0, 100]</c>. The value is accurate to 10 decimal places. The score indicates the probability of the corresponding label. A higher score indicates higher accuracy.</para>
+                            /// <para>The score of the video snapshot that hits the label. Value range: <c>[0, 100]</c>, with a precision of 10 decimal places. The score indicates the probability of the corresponding label. A higher value indicates higher accuracy.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>100</para>
@@ -1288,7 +1385,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string MediaId { get; set; }
 
             /// <summary>
-            /// <para>The error message of the job. Check this field when Status is fail.</para>
+            /// <para>The error message of the job. This field is relevant when Status is fail.</para>
             /// 
             /// <b>Example:</b>
             /// <para>OK</para>
@@ -1303,7 +1400,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             /// <item><description><b>success</b>: The job is successful.</description></item>
             /// <item><description><b>fail</b>: The job failed.</description></item>
             /// <item><description><b>init</b>: The job is being initialized.</description></item>
-            /// <item><description><b>processing</b>: The job is being processed.</description></item>
+            /// <item><description><b>processing</b>: The job is in progress.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -1314,7 +1411,7 @@ namespace AlibabaCloud.SDK.Vod20170321.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The job type. Only automated review is supported.</para>
+            /// <para>The job type. Only &quot;automated review&quot; is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AIMediaAudit</para>
