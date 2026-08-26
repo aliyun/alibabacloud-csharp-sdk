@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public GetPrometheusInstanceResponseBodyPrometheusInstance PrometheusInstance { get; set; }
         public class GetPrometheusInstanceResponseBodyPrometheusInstance : TeaModel {
             /// <summary>
-            /// <para>The access type. Valid values:</para>
+            /// <para>The permission type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>readWrite</description></item>
             /// <item><description>readOnly</description></item>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AccessType { get; set; }
 
             /// <summary>
-            /// <para>The number of days that data is automatically archived after the storage period expires. A value of 0 indicates that data is not archived. A value of 3650 indicates that data is permanently retained.</para>
+            /// <para>The number of days for automatic archiving after storage expires. A value of 0 indicates no archiving, and a value of 3650 indicates permanent retention.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AuthFreeWritePolicy { get; set; }
 
             /// <summary>
-            /// <para>The authentication token.</para>
+            /// <para>The authentication token string.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eJwixxxxx</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string AuthToken { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was created. The time is in UTC+0 and in the yyyy-MM-ddTHH:mmZ format.</para>
+            /// <para>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-10T02:07:53Z</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <para>The name of the associated managed Grafana instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>共享版</para>
+            /// <para>Shared Edition</para>
             /// </summary>
             [NameInMap("grafanaInstanceName")]
             [Validation(Required=false)]
@@ -209,8 +209,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             /// <summary>
             /// <para>The billing method. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>POSTPAY: pay-as-you-go based on the number of reported metrics.</description></item>
-            /// <item><description>POSTPAY_GB: pay-as-you-go based on the volume of written metrics.</description></item>
+            /// <item><description>POSTPAY: pay-as-you-go by metric reporting volume.</description></item>
+            /// <item><description>POSTPAY_GB: pay-as-you-go by metric write volume.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string PaymentType { get; set; }
 
             /// <summary>
-            /// <para>The time when the billing method of the instance was last modified, in UTC format.</para>
+            /// <para>The time when the instance billing method was modified, in UTC format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-08-10T02:07:53Z</para>
@@ -371,7 +371,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Fixed value: PrometheusInstance.</para>
+            /// <para>The fixed value: PrometheusInstance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Prometheus</para>
@@ -391,7 +391,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The storage duration, in days.</para>
+            /// <para>The storage duration in days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>90</para>
@@ -399,6 +399,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("storageDuration")]
             [Validation(Required=false)]
             public int? StorageDuration { get; set; }
+
+            /// <summary>
+            /// <para>The Prometheus storage configuration.</para>
+            /// </summary>
+            [NameInMap("storeConfig")]
+            [Validation(Required=false)]
+            public PrometheusInstanceStoreConfig StoreConfig { get; set; }
 
             /// <summary>
             /// <para>The supported authentication types.</para>

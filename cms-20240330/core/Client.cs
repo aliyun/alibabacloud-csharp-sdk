@@ -24323,6 +24323,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             {
                 body["storageDuration"] = request.StorageDuration;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreConfig))
+            {
+                body["storeConfig"] = request.StoreConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
             {
                 body["workspace"] = request.Workspace;
@@ -24413,6 +24417,10 @@ namespace AlibabaCloud.SDK.Cms20240330
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StorageDuration))
             {
                 body["storageDuration"] = request.StorageDuration;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StoreConfig))
+            {
+                body["storeConfig"] = request.StoreConfig;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Workspace))
             {

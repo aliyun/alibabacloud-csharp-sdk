@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class UpdatePrometheusInstanceRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days for automatic archiving after storage expires. A value of 0 indicates no archiving. Valid values for archiving days:
-        /// V1: 1 to 365 days. Supported only for billing by metric write volume.
+        /// <para>The number of days for automatic archiving after storage expires. A value of 0 indicates no archiving. Valid values for archive days:
+        /// V1: 1 to 365 days. Only supported for billing by metric write volume.
         /// V2: 1 to 3650 days (3650 indicates permanent retention).</para>
         /// 
         /// <b>Example:</b>
@@ -93,11 +93,9 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public bool? EnableAuthToken { get; set; }
 
         /// <summary>
-        /// <para>The billing method. This parameter can be modified only once during the instance lifetime. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>POSTPAY: pay-as-you-go by metric reporting volume.</description></item>
-        /// <item><description>POSTPAY_GB: pay-as-you-go by metric write volume.</description></item>
-        /// </list>
+        /// <para>The billing method. This can be modified only once during the instance lifetime:
+        /// POSTPAY: pay-as-you-go by metric reporting volume.
+        /// POSTPAY_GB: pay-as-you-go by metric write volume.</para>
         /// 
         /// <b>Example:</b>
         /// <para>POSTPAY_GB</para>
@@ -117,7 +115,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string PrometheusInstanceName { get; set; }
 
         /// <summary>
-        /// <para>Instance storage database status of the instance. Only RUNNING is supported. If this parameter is left empty, instance storage database status remains unchanged.</para>
+        /// <para>Instance storage database status of the instance. Only RUNNING is supported. If left empty, instance storage database status is not changed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING</para>
@@ -128,8 +126,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 
         /// <summary>
         /// <para>The storage duration (days):
-        /// By write volume: 90 or 180.
-        /// By metric reporting volume: 15, 30, 60, 90, or 180.</para>
+        /// By write volume: 90, 180.
+        /// By metric reporting volume: 15, 30, 60, 90, 180.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90</para>
@@ -137,6 +135,13 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         [NameInMap("storageDuration")]
         [Validation(Required=false)]
         public int? StorageDuration { get; set; }
+
+        /// <summary>
+        /// <para>The Prometheus storage configuration.</para>
+        /// </summary>
+        [NameInMap("storeConfig")]
+        [Validation(Required=false)]
+        public PrometheusInstanceStoreConfig StoreConfig { get; set; }
 
         /// <summary>
         /// <para>The workspace to which the instance belongs.</para>
