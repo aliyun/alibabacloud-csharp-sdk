@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
 {
     public class ListSoftwarelibSoftwareRequest : TeaModel {
         /// <summary>
-        /// <para>The software classification ID. You can obtain the value from <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a>.</para>
+        /// <para>The software classification ID. You can call <a href="~~ListSoftwarelibClassify~~">ListSoftwarelibClassify</a> to obtain the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>softwarelib-classify-61b7ccc63cae****</para>

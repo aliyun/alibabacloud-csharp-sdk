@@ -169,6 +169,16 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string OfficialDownloadUrl { get; set; }
 
             /// <summary>
+            /// <para>The execution account (only supported on Windows).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>admin</para>
+            /// </summary>
+            [NameInMap("RunAsAccount")]
+            [Validation(Required=false)]
+            public string RunAsAccount { get; set; }
+
+            /// <summary>
             /// <para>The software ID.</para>
             /// 
             /// <b>Example:</b>
@@ -189,7 +199,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
             public string SoftwareName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the built-in library source has been removed.</para>
+            /// <para>Indicates whether the built-in library source has been deleted.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -296,7 +306,7 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 public string PublisherType { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the software to which the version belongs.</para>
+                /// <para>The ID of the software to which this version belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>softwarelib-software-1da844a39729****</para>
@@ -338,8 +348,8 @@ namespace AlibabaCloud.SDK.Csas20230120.Models
                 /// <summary>
                 /// <para>The version publish status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>published</b>: Published.</description></item>
-                /// <item><description><b>unpublished</b>: Not published.</description></item>
+                /// <item><description><b>published</b>: published.</description></item>
+                /// <item><description><b>unpublished</b>: not published.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
