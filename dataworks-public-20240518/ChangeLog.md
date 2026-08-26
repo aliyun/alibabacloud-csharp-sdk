@@ -1,3 +1,7 @@
+2026-08-26 Version: 6.5.0
+- Support API DeleteImage.
+
+
 2026-08-26 Version: 6.4.0
 - Support API CreateServerIdeInstance.
 - Support API UpdateServerIdeInstance.

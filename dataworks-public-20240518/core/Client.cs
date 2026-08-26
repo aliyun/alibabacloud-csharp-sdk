@@ -17276,6 +17276,158 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteImageResponse
+        /// </returns>
+        public DeleteImageResponse DeleteImageWithOptions(DeleteImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteImage",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteImageResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteImageRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteImageResponse
+        /// </returns>
+        public async Task<DeleteImageResponse> DeleteImageWithOptionsAsync(DeleteImageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
+            {
+                body["Id"] = request.Id;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteImage",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteImageResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteImageResponse
+        /// </returns>
+        public DeleteImageResponse DeleteImage(DeleteImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteImageWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an image.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <ol>
+        /// <item><description>You must purchase DataWorks Basic Edition or a higher edition to use this operation.</description></item>
+        /// <item><description><b>Before calling this operation, make sure that the service-linked role AliyunServiceRoleForDataWorks has been created.</b></description></item>
+        /// </ol>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteImageRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteImageResponse
+        /// </returns>
+        public async Task<DeleteImageResponse> DeleteImageAsync(DeleteImageRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteImageWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a specified data lineage relationship from DataWorks Data Map.</para>
         /// </summary>
         /// 
