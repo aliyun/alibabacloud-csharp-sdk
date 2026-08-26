@@ -85,6 +85,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public class GetAuthorizationResourceResponseBodyAuthorizationResourceConditionCredentialCondition : TeaModel {
                     /// <summary>
                     /// <para>Specifies whether same-name identity accounts are supported.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("AllowSameNameIdentity")]
                     [Validation(Required=false)]

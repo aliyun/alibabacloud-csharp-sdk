@@ -28,11 +28,11 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListAuthorizationResourcesRequestFilter> Filter { get; set; }
         public class ListAuthorizationResourcesRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The name of the filter field. Valid values:</para>
+            /// <para>The filter field name. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para>AuthorizationResourceEntityType: the type of the resource entity associated with the authorization resource.</para>
+            /// <item><description><para>AuthorizationResourceEntityType: the resource entity type associated with the authorization resource</para>
             /// </description></item>
-            /// <item><description><para>AuthorizationResourceEntityId: the ID of the resource entity associated with the authorization resource.</para>
+            /// <item><description><para>AuthorizationResourceEntityId: the resource entity ID associated with the authorization resource</para>
             /// </description></item>
             /// </list>
             /// 
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that identifies the start position of the next page.</para>
+        /// <para>The pagination token that marks the starting position of the next page.</para>
         /// <list type="bullet">
         /// <item><description>If this parameter is not specified, the query starts from the first page.</description></item>
         /// </list>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public List<ListAuthorizationResourcesResponseBodyAuthorizationResources> AuthorizationResources { get; set; }
         public class ListAuthorizationResourcesResponseBodyAuthorizationResources : TeaModel {
             /// <summary>
-            /// <para>The ID of the resource entity associated with the authorization resource.</para>
+            /// <para>The resource entity ID associated with the authorization resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>carole_01kmek49aqxxxx</para>
@@ -27,9 +27,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             public string AuthorizationResourceEntityId { get; set; }
 
             /// <summary>
-            /// <para>The type of the resource entity associated with the authorization resource. Valid values:</para>
+            /// <para>The resource entity type associated with the authorization resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>cloud_account_role: cloud role.</description></item>
+            /// <item><description>cloud_account_role: cloud role</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,6 +85,9 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
                 public class ListAuthorizationResourcesResponseBodyAuthorizationResourcesConditionCredentialCondition : TeaModel {
                     /// <summary>
                     /// <para>Specifies whether same-name identity accounts are supported.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>true</para>
                     /// </summary>
                     [NameInMap("AllowSameNameIdentity")]
                     [Validation(Required=false)]
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1787023451494</para>
+            /// <para>1768789292000</para>
             /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
@@ -118,7 +121,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
             /// <para>The update time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1787023451494</para>
+            /// <para>1768789292000</para>
             /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
@@ -127,7 +130,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. This parameter is used for paging.</para>
+        /// <para>The number of rows per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -137,7 +140,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token returned for the next page query.</para>
+        /// <para>The pagination token returned by this call, used for the next page query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>NTxxxexample</para>

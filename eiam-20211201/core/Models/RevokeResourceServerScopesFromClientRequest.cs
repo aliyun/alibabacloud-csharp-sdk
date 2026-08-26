@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
 {
     public class RevokeResourceServerScopesFromClientRequest : TeaModel {
         /// <summary>
-        /// <para>The unique identifier of the client application.</para>
+        /// <para>The unique identifier of the Client application.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Eiam20211201.Models
         public string ResourceServerApplicationId { get; set; }
 
         /// <summary>
-        /// <para>The list of scope permission IDs under the ResourceServer.</para>
+        /// <para>The list of Scope permission IDs under the ResourceServer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

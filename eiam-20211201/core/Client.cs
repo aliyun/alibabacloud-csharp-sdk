@@ -2125,7 +2125,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a specified ResourceServer for a Client application.</para>
+        /// <para>Grants a specified ResourceServer to a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2175,7 +2175,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a specified ResourceServer for a Client application.</para>
+        /// <para>Grants a specified ResourceServer to a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2225,7 +2225,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a specified ResourceServer for a Client application.</para>
+        /// <para>Grants a specified ResourceServer to a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2243,7 +2243,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Authorizes a specified ResourceServer for a Client application.</para>
+        /// <para>Grants a specified ResourceServer to a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7489,6 +7489,158 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrustedOriginResponse
+        /// </returns>
+        public CreateTrustedOriginResponse CreateTrustedOriginWithOptions(CreateTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustOriginName))
+            {
+                query["TrustOriginName"] = request.TrustOriginName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginScene))
+            {
+                query["TrustedOriginScene"] = request.TrustedOriginScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTrustedOriginResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrustedOriginResponse
+        /// </returns>
+        public async Task<CreateTrustedOriginResponse> CreateTrustedOriginWithOptionsAsync(CreateTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustOriginName))
+            {
+                query["TrustOriginName"] = request.TrustOriginName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginScene))
+            {
+                query["TrustedOriginScene"] = request.TrustedOriginScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateTrustedOriginResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrustedOriginResponse
+        /// </returns>
+        public CreateTrustedOriginResponse CreateTrustedOrigin(CreateTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateTrustedOriginWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateTrustedOriginResponse
+        /// </returns>
+        public async Task<CreateTrustedOriginResponse> CreateTrustedOriginAsync(CreateTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateTrustedOriginWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates an EIAM account in a specified EIAM instance.</para>
         /// </summary>
         /// 
@@ -11325,6 +11477,142 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteResourceServerScopeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTrustedOriginResponse
+        /// </returns>
+        public DeleteTrustedOriginResponse DeleteTrustedOriginWithOptions(DeleteTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginId))
+            {
+                query["TrustedOriginId"] = request.TrustedOriginId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTrustedOriginResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTrustedOriginResponse
+        /// </returns>
+        public async Task<DeleteTrustedOriginResponse> DeleteTrustedOriginWithOptionsAsync(DeleteTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginId))
+            {
+                query["TrustedOriginId"] = request.TrustedOriginId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteTrustedOriginResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTrustedOriginResponse
+        /// </returns>
+        public DeleteTrustedOriginResponse DeleteTrustedOrigin(DeleteTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteTrustedOriginWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteTrustedOriginResponse
+        /// </returns>
+        public async Task<DeleteTrustedOriginResponse> DeleteTrustedOriginAsync(DeleteTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteTrustedOriginWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -15205,6 +15493,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Disables a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableTrustedOriginResponse
+        /// </returns>
+        public DisableTrustedOriginResponse DisableTrustedOriginWithOptions(DisableTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginId))
+            {
+                query["TrustedOriginId"] = request.TrustedOriginId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableTrustedOriginResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableTrustedOriginResponse
+        /// </returns>
+        public async Task<DisableTrustedOriginResponse> DisableTrustedOriginWithOptionsAsync(DisableTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginId))
+            {
+                query["TrustedOriginId"] = request.TrustedOriginId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DisableTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DisableTrustedOriginResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableTrustedOriginResponse
+        /// </returns>
+        public DisableTrustedOriginResponse DisableTrustedOrigin(DisableTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DisableTrustedOriginWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Disables a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DisableTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DisableTrustedOriginResponse
+        /// </returns>
+        public async Task<DisableTrustedOriginResponse> DisableTrustedOriginAsync(DisableTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DisableTrustedOriginWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Sets an account status to disabled. If the account is already disabled, the operation returns success directly.</para>
         /// </summary>
         /// 
@@ -18793,6 +19209,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await EnableResourceServerCustomSubjectWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableTrustedOriginResponse
+        /// </returns>
+        public EnableTrustedOriginResponse EnableTrustedOriginWithOptions(EnableTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginId))
+            {
+                query["TrustedOriginId"] = request.TrustedOriginId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableTrustedOriginResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableTrustedOriginResponse
+        /// </returns>
+        public async Task<EnableTrustedOriginResponse> EnableTrustedOriginWithOptionsAsync(EnableTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginId))
+            {
+                query["TrustedOriginId"] = request.TrustedOriginId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "EnableTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<EnableTrustedOriginResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableTrustedOriginResponse
+        /// </returns>
+        public EnableTrustedOriginResponse EnableTrustedOrigin(EnableTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return EnableTrustedOriginWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Enables a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// EnableTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// EnableTrustedOriginResponse
+        /// </returns>
+        public async Task<EnableTrustedOriginResponse> EnableTrustedOriginAsync(EnableTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await EnableTrustedOriginWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -26437,6 +26981,134 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrustedOriginResponse
+        /// </returns>
+        public GetTrustedOriginResponse GetTrustedOriginWithOptions(GetTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginId))
+            {
+                query["TrustedOriginId"] = request.TrustedOriginId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTrustedOriginResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrustedOriginResponse
+        /// </returns>
+        public async Task<GetTrustedOriginResponse> GetTrustedOriginWithOptionsAsync(GetTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginId))
+            {
+                query["TrustedOriginId"] = request.TrustedOriginId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTrustedOriginResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrustedOriginResponse
+        /// </returns>
+        public GetTrustedOriginResponse GetTrustedOrigin(GetTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTrustedOriginWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrustedOriginResponse
+        /// </returns>
+        public async Task<GetTrustedOriginResponse> GetTrustedOriginAsync(GetTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTrustedOriginWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of an EIAM account.</para>
         /// </summary>
         /// 
@@ -29040,6 +29712,11 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <para>Queries a list of authorization resource information.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When calling this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListAuthorizationResourcesRequest
         /// </param>
@@ -29097,6 +29774,11 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <summary>
         /// <para>Queries a list of authorization resource information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When calling this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAuthorizationResourcesRequest
@@ -29156,6 +29838,11 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <para>Queries a list of authorization resource information.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When calling this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListAuthorizationResourcesRequest
         /// </param>
@@ -29173,6 +29860,11 @@ namespace AlibabaCloud.SDK.Eiam20211201
         /// <summary>
         /// <para>Queries a list of authorization resource information.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>This operation queries only the direct permissions of an organization, that is, applications directly assigned to the organization. When calling this operation, you can use the <b>ApplicationIds</b> parameter to filter applications.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListAuthorizationResourcesRequest
@@ -35669,6 +36361,174 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the list of trusted origins.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTrustedOriginsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTrustedOriginsResponse
+        /// </returns>
+        public ListTrustedOriginsResponse ListTrustedOriginsWithOptions(ListTrustedOriginsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustOriginName))
+            {
+                query["TrustOriginName"] = request.TrustOriginName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginScene))
+            {
+                query["TrustedOriginScene"] = request.TrustedOriginScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTrustedOrigins",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTrustedOriginsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of trusted origins.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTrustedOriginsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTrustedOriginsResponse
+        /// </returns>
+        public async Task<ListTrustedOriginsResponse> ListTrustedOriginsWithOptionsAsync(ListTrustedOriginsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Origin))
+            {
+                query["Origin"] = request.Origin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["Status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustOriginName))
+            {
+                query["TrustOriginName"] = request.TrustOriginName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginScene))
+            {
+                query["TrustedOriginScene"] = request.TrustedOriginScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListTrustedOrigins",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListTrustedOriginsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of trusted origins.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTrustedOriginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTrustedOriginsResponse
+        /// </returns>
+        public ListTrustedOriginsResponse ListTrustedOrigins(ListTrustedOriginsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListTrustedOriginsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of trusted origins.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListTrustedOriginsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListTrustedOriginsResponse
+        /// </returns>
+        public async Task<ListTrustedOriginsResponse> ListTrustedOriginsAsync(ListTrustedOriginsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListTrustedOriginsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Lists the mappings for third-party logon accounts.</para>
         /// </summary>
         /// 
@@ -38829,7 +39689,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the authorization granted by a specified ResourceServer to a Client application.</para>
+        /// <para>Revokes the authorization granted by a specified ResourceServer to a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38879,7 +39739,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the authorization granted by a specified ResourceServer to a Client application.</para>
+        /// <para>Revokes the authorization granted by a specified ResourceServer to a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38929,7 +39789,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the authorization granted by a specified ResourceServer to a Client application.</para>
+        /// <para>Revokes the authorization granted by a specified ResourceServer to a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38947,7 +39807,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the authorization granted by a specified ResourceServer to a Client application.</para>
+        /// <para>Revokes the authorization granted by a specified ResourceServer to a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38965,7 +39825,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the scope permissions of a specified ResourceServer from a client application.</para>
+        /// <para>Revokes the Scope permissions of a specified ResourceServer from a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39019,7 +39879,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the scope permissions of a specified ResourceServer from a client application.</para>
+        /// <para>Revokes the Scope permissions of a specified ResourceServer from a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39073,7 +39933,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the scope permissions of a specified ResourceServer from a client application.</para>
+        /// <para>Revokes the Scope permissions of a specified ResourceServer from a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -39091,7 +39951,7 @@ namespace AlibabaCloud.SDK.Eiam20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Revokes the scope permissions of a specified ResourceServer from a client application.</para>
+        /// <para>Revokes the Scope permissions of a specified ResourceServer from a Client application.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49861,6 +50721,158 @@ namespace AlibabaCloud.SDK.Eiam20211201
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateResourceServerScopeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTrustedOriginResponse
+        /// </returns>
+        public UpdateTrustedOriginResponse UpdateTrustedOriginWithOptions(UpdateTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustOriginName))
+            {
+                query["TrustOriginName"] = request.TrustOriginName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginId))
+            {
+                query["TrustedOriginId"] = request.TrustedOriginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginScene))
+            {
+                query["TrustedOriginScene"] = request.TrustedOriginScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTrustedOriginResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTrustedOriginRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTrustedOriginResponse
+        /// </returns>
+        public async Task<UpdateTrustedOriginResponse> UpdateTrustedOriginWithOptionsAsync(UpdateTrustedOriginRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
+            {
+                query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustOriginName))
+            {
+                query["TrustOriginName"] = request.TrustOriginName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginId))
+            {
+                query["TrustedOriginId"] = request.TrustedOriginId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustedOriginScene))
+            {
+                query["TrustedOriginScene"] = request.TrustedOriginScene;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateTrustedOrigin",
+                Version = "2021-12-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateTrustedOriginResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTrustedOriginResponse
+        /// </returns>
+        public UpdateTrustedOriginResponse UpdateTrustedOrigin(UpdateTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateTrustedOriginWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies a trusted origin.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateTrustedOriginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateTrustedOriginResponse
+        /// </returns>
+        public async Task<UpdateTrustedOriginResponse> UpdateTrustedOriginAsync(UpdateTrustedOriginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateTrustedOriginWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
