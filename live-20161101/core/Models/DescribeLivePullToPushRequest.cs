@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the task is launched. Valid values:</para>
+        /// <para>The region where the task is started. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ap-southeast-1 (Singapore)</description></item>
         /// <item><description>ap-southeast-5 (Indonesia)</description></item>

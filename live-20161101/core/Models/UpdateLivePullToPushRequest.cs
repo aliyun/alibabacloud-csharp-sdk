@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class UpdateLivePullToPushRequest : TeaModel {
+        [NameInMap("AuthKey")]
+        [Validation(Required=false)]
+        public string AuthKey { get; set; }
+
         /// <summary>
         /// <para>The callback URL. Default value: empty.</para>
         /// <remarks>
@@ -16,7 +20,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <item><description>The URL that receives task-related callbacks.</description></item>
         /// <item><description>Maximum length: 2000 characters.</description></item>
         /// <item><description>If this parameter is not specified, task events are not sent as callbacks.</description></item>
-        /// <item><description>The update takes effect when the next event is triggered.</description></item>
+        /// <item><description>The update takes effect only when the next event is triggered.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -34,7 +38,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <item><description>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</description></item>
         /// <item><description>EndTime must be later than StartTime.</description></item>
         /// <item><description>EndTime must be later than the current time.</description></item>
-        /// <item><description>If the task has already ended, this update does not take effect.</description></item>
+        /// <item><description>If the task has ended, the update does not take effect.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -48,7 +52,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The video index. Default value: 0.</para>
         /// <remarks>
-        /// <para>Update this parameter while the task is stopped. The update takes effect after the task is restarted.</para>
+        /// <para>The update must be performed when the task is stopped and takes effect after the task is restarted.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -58,14 +62,18 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? FileIndex { get; set; }
 
+        [NameInMap("NotifyItemSwitch")]
+        [Validation(Required=false)]
+        public string NotifyItemSwitch { get; set; }
+
         /// <summary>
-        /// <para>The start offset of the video file, in seconds. The value must be greater than 0.</para>
+        /// <para>The start offset of the video file, in seconds. Valid values: greater than 0.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>Specifies the position relative to the first frame from which to start reading.</description></item>
+        /// <item><description>Specifies the position to start reading from, relative to the first frame.</description></item>
         /// <item><description>This parameter applies only to video-on-demand or third-party video streams.</description></item>
         /// <item><description>This parameter takes effect only when the first video in the playlist is played.</description></item>
-        /// <item><description>Update this parameter while the task is stopped. The update takes effect after the task is restarted.</description></item>
+        /// <item><description>The update must be performed when the task is stopped and takes effect after the task is restarted.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -81,12 +89,12 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region where the task is launched. Valid values:</para>
+        /// <para>The region where the task is started. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>ap-southeast-1 (Singapore)</description></item>
         /// <item><description>ap-southeast-5 (Indonesia)</description></item>
         /// <item><description>cn-beijing (Beijing)</description></item>
-        /// <item><description>cn-shanghai (Shanghai).</description></item>
+        /// <item><description>cn-shanghai (Shanghai)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -110,9 +118,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <summary>
         /// <para>The number of times playback repeats after the playlist finishes. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0 (default): no repeat.</description></item>
-        /// <item><description>-1: loop indefinitely.</description></item>
-        /// <item><description>Other positive integers: the number of times playback repeats after the playlist finishes.</description></item>
+        /// <item><description>0 (default): No repeat playback.</description></item>
+        /// <item><description>-1: Loops indefinitely.</description></item>
+        /// <item><description>Other positive integers: The number of times playback repeats after the playlist finishes.</description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
@@ -128,6 +136,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [Validation(Required=false)]
         public int? RepeatNumber { get; set; }
 
+        [NameInMap("ReqAuth")]
+        [Validation(Required=false)]
+        public string ReqAuth { get; set; }
+
         /// <summary>
         /// <para>The list of source stream URLs.</para>
         /// <remarks>
@@ -138,7 +150,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <item><description>For the vod type, specify ApsaraVideo VOD media asset IDs.</description></item>
         /// <item><description>The url type supports MP4 and HTTP-FLV protocols.</description></item>
         /// <item><description>For live source streams, the update takes effect immediately. For video file source streams, the update takes effect after the currently playing video ends, and playback restarts from the beginning of the updated video list.</description></item>
-        /// <item><description>Update this parameter while the task is stopped. The update takes effect after the task is restarted.</description></item>
+        /// <item><description>The update must be performed when the task is stopped and takes effect after the task is restarted.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -154,7 +166,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</description></item>
-        /// <item><description>If the task has already started running, this update does not take effect.</description></item>
+        /// <item><description>If the task has already started running, the update does not take effect.</description></item>
         /// </list>
         /// </remarks>
         /// 

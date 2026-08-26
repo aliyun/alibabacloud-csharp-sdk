@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
             public string StreamUrl { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the data. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+            /// <para>The statistical time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC+8).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2016-09-13T16:04:00Z</para>

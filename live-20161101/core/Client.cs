@@ -12340,6 +12340,10 @@ namespace AlibabaCloud.SDK.Live20161101
                 request.SourceUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceUrls, "SourceUrls", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthKey))
+            {
+                query["AuthKey"] = request.AuthKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
                 query["CallbackUrl"] = request.CallbackUrl;
@@ -12355,6 +12359,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIndex))
             {
                 query["FileIndex"] = request.FileIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyItemSwitch))
+            {
+                query["NotifyItemSwitch"] = request.NotifyItemSwitch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
@@ -12375,6 +12383,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatNumber))
             {
                 query["RepeatNumber"] = request.RepeatNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqAuth))
+            {
+                query["ReqAuth"] = request.ReqAuth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryCount))
             {
@@ -12465,6 +12477,10 @@ namespace AlibabaCloud.SDK.Live20161101
                 request.SourceUrlsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SourceUrls, "SourceUrls", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AuthKey))
+            {
+                query["AuthKey"] = request.AuthKey;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CallbackUrl))
             {
                 query["CallbackUrl"] = request.CallbackUrl;
@@ -12480,6 +12496,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileIndex))
             {
                 query["FileIndex"] = request.FileIndex;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NotifyItemSwitch))
+            {
+                query["NotifyItemSwitch"] = request.NotifyItemSwitch;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Offset))
             {
@@ -12500,6 +12520,10 @@ namespace AlibabaCloud.SDK.Live20161101
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepeatNumber))
             {
                 query["RepeatNumber"] = request.RepeatNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqAuth))
+            {
+                query["ReqAuth"] = request.ReqAuth;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RetryCount))
             {
@@ -39108,17 +39132,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeLivePullToPush to query a pull-to-push streaming task.</para>
+        /// <para>Queries a stream pulling-to-pushing task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this API operation to query a pull-to-push streaming task.</description></item>
-        /// <item><description>Supports querying the configuration information and status information of a task with a specified ID.</description></item>
+        /// <item><description>Queries a stream pulling-to-pushing task.</description></item>
+        /// <item><description>You can query the configuration and status information of a task with a specified ID.</description></item>
         /// </list>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. Exceeding the limit will result in API throttling, which may affect your business. Please call this API appropriately.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39156,17 +39180,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeLivePullToPush to query a pull-to-push streaming task.</para>
+        /// <para>Queries a stream pulling-to-pushing task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this API operation to query a pull-to-push streaming task.</description></item>
-        /// <item><description>Supports querying the configuration information and status information of a task with a specified ID.</description></item>
+        /// <item><description>Queries a stream pulling-to-pushing task.</description></item>
+        /// <item><description>You can query the configuration and status information of a task with a specified ID.</description></item>
         /// </list>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. Exceeding the limit will result in API throttling, which may affect your business. Please call this API appropriately.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39204,17 +39228,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeLivePullToPush to query a pull-to-push streaming task.</para>
+        /// <para>Queries a stream pulling-to-pushing task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this API operation to query a pull-to-push streaming task.</description></item>
-        /// <item><description>Supports querying the configuration information and status information of a task with a specified ID.</description></item>
+        /// <item><description>Queries a stream pulling-to-pushing task.</description></item>
+        /// <item><description>You can query the configuration and status information of a task with a specified ID.</description></item>
         /// </list>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. Exceeding the limit will result in API throttling, which may affect your business. Please call this API appropriately.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39232,17 +39256,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls DescribeLivePullToPush to query a pull-to-push streaming task.</para>
+        /// <para>Queries a stream pulling-to-pushing task.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this API operation to query a pull-to-push streaming task.</description></item>
-        /// <item><description>Supports querying the configuration information and status information of a task with a specified ID.</description></item>
+        /// <item><description>Queries a stream pulling-to-pushing task.</description></item>
+        /// <item><description>You can query the configuration and status information of a task with a specified ID.</description></item>
         /// </list>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. Exceeding the limit will result in API throttling, which may affect your business. Please call this API appropriately.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this API is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this API appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39260,17 +39284,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fuzzy query for stream pulling and pushing tasks.</para>
+        /// <para>Queries stream pulling and pushing tasks by using fuzzy match.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this API to query the list of stream pulling and pushing tasks.</description></item>
-        /// <item><description>Supports paginated query of the task list, and supports fuzzy search by task ID, task name, and destination push stream URL.</description></item>
+        /// <item><description>Invoke this operation to query the list of stream pulling and stream ingest nodes.</description></item>
+        /// <item><description>Supports paging query of the node list, and fuzzy search by node ID, node name, and destination stream ingest URL.</description></item>
         /// </list>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. Exceeding the limit will result in API throttling, which may affect your business. Please call this API appropriately.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39308,17 +39332,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fuzzy query for stream pulling and pushing tasks.</para>
+        /// <para>Queries stream pulling and pushing tasks by using fuzzy match.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this API to query the list of stream pulling and pushing tasks.</description></item>
-        /// <item><description>Supports paginated query of the task list, and supports fuzzy search by task ID, task name, and destination push stream URL.</description></item>
+        /// <item><description>Invoke this operation to query the list of stream pulling and stream ingest nodes.</description></item>
+        /// <item><description>Supports paging query of the node list, and fuzzy search by node ID, node name, and destination stream ingest URL.</description></item>
         /// </list>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. Exceeding the limit will result in API throttling, which may affect your business. Please call this API appropriately.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39356,17 +39380,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fuzzy query for stream pulling and pushing tasks.</para>
+        /// <para>Queries stream pulling and pushing tasks by using fuzzy match.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this API to query the list of stream pulling and pushing tasks.</description></item>
-        /// <item><description>Supports paginated query of the task list, and supports fuzzy search by task ID, task name, and destination push stream URL.</description></item>
+        /// <item><description>Invoke this operation to query the list of stream pulling and stream ingest nodes.</description></item>
+        /// <item><description>Supports paging query of the node list, and fuzzy search by node ID, node name, and destination stream ingest URL.</description></item>
         /// </list>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. Exceeding the limit will result in API throttling, which may affect your business. Please call this API appropriately.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -39384,17 +39408,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Fuzzy query for stream pulling and pushing tasks.</para>
+        /// <para>Queries stream pulling and pushing tasks by using fuzzy match.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this API to query the list of stream pulling and pushing tasks.</description></item>
-        /// <item><description>Supports paginated query of the task list, and supports fuzzy search by task ID, task name, and destination push stream URL.</description></item>
+        /// <item><description>Invoke this operation to query the list of stream pulling and stream ingest nodes.</description></item>
+        /// <item><description>Supports paging query of the node list, and fuzzy search by node ID, node name, and destination stream ingest URL.</description></item>
         /// </list>
-        /// <h2>QPS Limit</h2>
-        /// <para>The single-user QPS limit for this API is 10 calls per second. Exceeding the limit will result in API throttling, which may affect your business. Please call this API appropriately.</para>
+        /// <h2>QPS limit</h2>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -42560,17 +42584,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed audio and video frame rates and bitrates of a live stream that uses the Real-Time Messaging Protocol (RTMP).</para>
+        /// <para>Queries the detailed audio and video frame rates and bitrates of an RTMP live stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the audio and video frame rates and bitrates of a live stream that uses RTMP within a specified time range.</description></item>
-        /// <item><description>This operation is used to query monitoring data. Because the data collection method is different from the one used for billing, do not use the returned data for billing purposes.</description></item>
-        /// <item><description>You can query data from the last 90 days.</description></item>
-        /// <item><description>The data returned by this operation has a latency of 3 to 5 minutes.</description></item>
-        /// <item><description>The maximum time range that you can specify in a single request is 1 hour.</description></item>
+        /// <item><description>Call this operation to query a set of audio and video frame rates and bitrates of an RTMP live stream within a specified time range.</description></item>
+        /// <item><description>This operation is a monitoring data operation. The data collection and processing method differs from that used for billing. Do not use this operation to calculate usage for billing reconciliation.</description></item>
+        /// <item><description>You can query historical data within the last 90 days.</description></item>
+        /// <item><description>Data latency is 3 to 5 minutes.</description></item>
+        /// <item><description>The maximum time span for a single request is 1 hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -42637,17 +42661,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed audio and video frame rates and bitrates of a live stream that uses the Real-Time Messaging Protocol (RTMP).</para>
+        /// <para>Queries the detailed audio and video frame rates and bitrates of an RTMP live stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the audio and video frame rates and bitrates of a live stream that uses RTMP within a specified time range.</description></item>
-        /// <item><description>This operation is used to query monitoring data. Because the data collection method is different from the one used for billing, do not use the returned data for billing purposes.</description></item>
-        /// <item><description>You can query data from the last 90 days.</description></item>
-        /// <item><description>The data returned by this operation has a latency of 3 to 5 minutes.</description></item>
-        /// <item><description>The maximum time range that you can specify in a single request is 1 hour.</description></item>
+        /// <item><description>Call this operation to query a set of audio and video frame rates and bitrates of an RTMP live stream within a specified time range.</description></item>
+        /// <item><description>This operation is a monitoring data operation. The data collection and processing method differs from that used for billing. Do not use this operation to calculate usage for billing reconciliation.</description></item>
+        /// <item><description>You can query historical data within the last 90 days.</description></item>
+        /// <item><description>Data latency is 3 to 5 minutes.</description></item>
+        /// <item><description>The maximum time span for a single request is 1 hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -42714,17 +42738,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed audio and video frame rates and bitrates of a live stream that uses the Real-Time Messaging Protocol (RTMP).</para>
+        /// <para>Queries the detailed audio and video frame rates and bitrates of an RTMP live stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the audio and video frame rates and bitrates of a live stream that uses RTMP within a specified time range.</description></item>
-        /// <item><description>This operation is used to query monitoring data. Because the data collection method is different from the one used for billing, do not use the returned data for billing purposes.</description></item>
-        /// <item><description>You can query data from the last 90 days.</description></item>
-        /// <item><description>The data returned by this operation has a latency of 3 to 5 minutes.</description></item>
-        /// <item><description>The maximum time range that you can specify in a single request is 1 hour.</description></item>
+        /// <item><description>Call this operation to query a set of audio and video frame rates and bitrates of an RTMP live stream within a specified time range.</description></item>
+        /// <item><description>This operation is a monitoring data operation. The data collection and processing method differs from that used for billing. Do not use this operation to calculate usage for billing reconciliation.</description></item>
+        /// <item><description>You can query historical data within the last 90 days.</description></item>
+        /// <item><description>Data latency is 3 to 5 minutes.</description></item>
+        /// <item><description>The maximum time span for a single request is 1 hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -42743,17 +42767,17 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed audio and video frame rates and bitrates of a live stream that uses the Real-Time Messaging Protocol (RTMP).</para>
+        /// <para>Queries the detailed audio and video frame rates and bitrates of an RTMP live stream.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can call this operation to query the audio and video frame rates and bitrates of a live stream that uses RTMP within a specified time range.</description></item>
-        /// <item><description>This operation is used to query monitoring data. Because the data collection method is different from the one used for billing, do not use the returned data for billing purposes.</description></item>
-        /// <item><description>You can query data from the last 90 days.</description></item>
-        /// <item><description>The data returned by this operation has a latency of 3 to 5 minutes.</description></item>
-        /// <item><description>The maximum time range that you can specify in a single request is 1 hour.</description></item>
+        /// <item><description>Call this operation to query a set of audio and video frame rates and bitrates of an RTMP live stream within a specified time range.</description></item>
+        /// <item><description>This operation is a monitoring data operation. The data collection and processing method differs from that used for billing. Do not use this operation to calculate usage for billing reconciliation.</description></item>
+        /// <item><description>You can query historical data within the last 90 days.</description></item>
+        /// <item><description>Data latency is 3 to 5 minutes.</description></item>
+        /// <item><description>The maximum time span for a single request is 1 hour.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -80752,19 +80776,19 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a stream pulling and pushing task by calling UpdateLivePullToPush.</para>
+        /// <para>Updates a stream pulling task by calling UpdateLivePullToPush.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to update a stream pulling and pushing task.</description></item>
+        /// <item><description>Call this operation to update a stream pulling task.</description></item>
         /// <item><description>If the task has not reached the configured start time, you can update the Region parameter.</description></item>
-        /// <item><description>While the task is running (including during abnormal retry states), only CallbackUrl and RepeatTime can be updated, and the updates take effect immediately.</description></item>
+        /// <item><description>If the task is running (including in an abnormal retry state), only CallbackUrl and RepeatTime can be updated, and the updates take effect immediately.</description></item>
         /// <item><description>If the task is stopped, all parameters except Region can be updated.</description></item>
         /// </list>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -80808,19 +80832,19 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a stream pulling and pushing task by calling UpdateLivePullToPush.</para>
+        /// <para>Updates a stream pulling task by calling UpdateLivePullToPush.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to update a stream pulling and pushing task.</description></item>
+        /// <item><description>Call this operation to update a stream pulling task.</description></item>
         /// <item><description>If the task has not reached the configured start time, you can update the Region parameter.</description></item>
-        /// <item><description>While the task is running (including during abnormal retry states), only CallbackUrl and RepeatTime can be updated, and the updates take effect immediately.</description></item>
+        /// <item><description>If the task is running (including in an abnormal retry state), only CallbackUrl and RepeatTime can be updated, and the updates take effect immediately.</description></item>
         /// <item><description>If the task is stopped, all parameters except Region can be updated.</description></item>
         /// </list>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -80864,19 +80888,19 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a stream pulling and pushing task by calling UpdateLivePullToPush.</para>
+        /// <para>Updates a stream pulling task by calling UpdateLivePullToPush.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to update a stream pulling and pushing task.</description></item>
+        /// <item><description>Call this operation to update a stream pulling task.</description></item>
         /// <item><description>If the task has not reached the configured start time, you can update the Region parameter.</description></item>
-        /// <item><description>While the task is running (including during abnormal retry states), only CallbackUrl and RepeatTime can be updated, and the updates take effect immediately.</description></item>
+        /// <item><description>If the task is running (including in an abnormal retry state), only CallbackUrl and RepeatTime can be updated, and the updates take effect immediately.</description></item>
         /// <item><description>If the task is stopped, all parameters except Region can be updated.</description></item>
         /// </list>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -80894,19 +80918,19 @@ namespace AlibabaCloud.SDK.Live20161101
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates a stream pulling and pushing task by calling UpdateLivePullToPush.</para>
+        /// <para>Updates a stream pulling task by calling UpdateLivePullToPush.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Call this operation to update a stream pulling and pushing task.</description></item>
+        /// <item><description>Call this operation to update a stream pulling task.</description></item>
         /// <item><description>If the task has not reached the configured start time, you can update the Region parameter.</description></item>
-        /// <item><description>While the task is running (including during abnormal retry states), only CallbackUrl and RepeatTime can be updated, and the updates take effect immediately.</description></item>
+        /// <item><description>If the task is running (including in an abnormal retry state), only CallbackUrl and RepeatTime can be updated, and the updates take effect immediately.</description></item>
         /// <item><description>If the task is stopped, all parameters except Region can be updated.</description></item>
         /// </list>
         /// <h2>QPS limit</h2>
-        /// <para>The single-user QPS limit for this operation is 10 calls per second. If this limit is exceeded, the API calls are throttled, which may affect your business. Call this operation appropriately.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Call this operation appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">

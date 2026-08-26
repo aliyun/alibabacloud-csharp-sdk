@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>Your ingest domain or streaming domain.</para>
+        /// <para>The ingest domain.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,9 +32,9 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The end time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC+8).</para>
         /// <remarks>
-        /// <para>If you specify an invalid time range, or if you leave both StartTime and EndTime empty, data from the last hour is queried by default.</para>
+        /// <para>If StartTime and EndTime are invalid or not specified, data from the last 1 hour is returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range to query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC+8).</para>
         /// 
         /// <b>Example:</b>
         /// <para>2017-12-21T08:00:00Z</para>

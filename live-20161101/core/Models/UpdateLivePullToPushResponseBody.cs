@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         /// <para>The return code.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The value &quot;0&quot; is returned if the call is successful.</description></item>
-        /// <item><description>For exceptions, refer to the error code list below.</description></item>
+        /// <item><description>The value &quot;0&quot; is returned if the operation is successful.</description></item>
+        /// <item><description>For exceptions, refer to the error codes listed below.</description></item>
         /// </list>
         /// </remarks>
         /// 

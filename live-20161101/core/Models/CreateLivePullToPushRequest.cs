@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Live20161101.Models
 {
     public class CreateLivePullToPushRequest : TeaModel {
+        [NameInMap("AuthKey")]
+        [Validation(Required=false)]
+        public string AuthKey { get; set; }
+
         /// <summary>
         /// <para>HTTP callback URL. Default value: empty.</para>
         /// <remarks>
@@ -70,6 +74,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("FileIndex")]
         [Validation(Required=false)]
         public int? FileIndex { get; set; }
+
+        [NameInMap("NotifyItemSwitch")]
+        [Validation(Required=false)]
+        public string NotifyItemSwitch { get; set; }
 
         /// <summary>
         /// <para>Start offset. The offset value from the beginning of the video file. Unit: seconds. Valid values: greater than 0.</para>
@@ -136,6 +144,10 @@ namespace AlibabaCloud.SDK.Live20161101.Models
         [NameInMap("RepeatNumber")]
         [Validation(Required=false)]
         public int? RepeatNumber { get; set; }
+
+        [NameInMap("ReqAuth")]
+        [Validation(Required=false)]
+        public string ReqAuth { get; set; }
 
         /// <summary>
         /// <para>Number of retries. Default value: 3.</para>
