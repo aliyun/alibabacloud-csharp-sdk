@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews a TTS voice.</para>
+        /// <para>Auditions a TTS voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -240,6 +240,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlsServiceType))
+            {
+                query["NlsServiceType"] = request.NlsServiceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PitchRate))
             {
@@ -286,7 +290,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews a TTS voice.</para>
+        /// <para>Auditions a TTS voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -322,6 +326,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceId))
             {
                 query["InstanceId"] = request.InstanceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NlsServiceType))
+            {
+                query["NlsServiceType"] = request.NlsServiceType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PitchRate))
             {
@@ -368,7 +376,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews a TTS voice.</para>
+        /// <para>Auditions a TTS voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -386,7 +394,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Previews a TTS voice.</para>
+        /// <para>Auditions a TTS voice.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -404,7 +412,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation.</para>
+        /// <para>Starts a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -466,7 +474,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation.</para>
+        /// <para>Starts a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -528,7 +536,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation.</para>
+        /// <para>Starts a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -546,7 +554,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Starts a conversation.</para>
+        /// <para>Starts a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1148,7 +1156,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugs the number collection process.</para>
+        /// <para>Collects digits in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1198,7 +1206,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugs the number collection process.</para>
+        /// <para>Collects digits in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1248,7 +1256,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugs the number collection process.</para>
+        /// <para>Collects digits in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1266,7 +1274,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Debugs the number collection process.</para>
+        /// <para>Collects digits in the debug environment.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1660,7 +1668,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the context of a specified conversation.</para>
+        /// <para>Queries the context data of a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1698,7 +1706,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the context of a specified conversation.</para>
+        /// <para>Queries the context data of a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1736,7 +1744,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the context of a specified conversation.</para>
+        /// <para>Queries the context data of a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1754,7 +1762,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the context of a specified conversation.</para>
+        /// <para>Queries the context data of a session.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5516,7 +5524,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles the silence timeout event in a conversation.</para>
+        /// <para>Triggers a silence timeout.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5570,7 +5578,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles the silence timeout event in a conversation.</para>
+        /// <para>Triggers a silence timeout.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5624,7 +5632,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles the silence timeout event in a conversation.</para>
+        /// <para>Triggers a silence timeout.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5642,7 +5650,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles the silence timeout event in a conversation.</para>
+        /// <para>Triggers a silence timeout.</para>
         /// </summary>
         /// 
         /// <param name="request">

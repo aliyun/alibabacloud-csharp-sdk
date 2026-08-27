@@ -60,6 +60,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        [NameInMap("NlsServiceType")]
+        [Validation(Required=false)]
+        public string NlsServiceType { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>0</para>
@@ -90,11 +94,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string SpeechRate { get; set; }
 
         /// <summary>
-        /// <para>The preview text.</para>
+        /// <para>The audition text.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>你好</para>
+        /// <para>Hello</para>
         /// </summary>
         [NameInMap("Text")]
         [Validation(Required=false)]

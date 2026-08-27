@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class SilenceTimeoutResponseBody : TeaModel {
         /// <summary>
-        /// <para>The system\&quot;s next action.</para>
+        /// <para>The action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>TransferToAgent</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>Parameters for the action defined in the Action parameter.</para>
+        /// <para>The action parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{ &quot;skillGroupId&quot;: &quot;ABC&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the action is interruptible.</para>
+        /// <para>Indicates whether the action can be interrupted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The text response to play to the user.</para>
+        /// <para>The text response.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>正在为你转接人工坐席</para>
+        /// <para>Transferring you to a human agent</para>
         /// </summary>
         [NameInMap("TextResponse")]
         [Validation(Required=false)]

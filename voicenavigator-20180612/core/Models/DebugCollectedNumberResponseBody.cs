@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DebugCollectedNumberResponseBody : TeaModel {
         /// <summary>
-        /// <para>The next action that Voice Navigator performs.</para>
+        /// <para>The action.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Broadcast</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Action { get; set; }
 
         /// <summary>
-        /// <para>The parameters for the next action.</para>
+        /// <para>The action parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ActionParams { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the voice response can be interrupted.</para>
+        /// <para>Indicates whether the IVR announcement can be interrupted.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public bool? Interruptible { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>abb4aa26-3a8e-43dd-82f8-0c3898c9c67f</para>
@@ -50,10 +50,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The text that Voice Navigator plays to the user.</para>
+        /// <para>The text content of the announcement.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>您好，欢迎致电智能助手</para>
+        /// <para>Hello, welcome to the intelligent assistant</para>
         /// </summary>
         [NameInMap("TextResponse")]
         [Validation(Required=false)]

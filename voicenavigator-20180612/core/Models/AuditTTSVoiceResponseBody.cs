@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class AuditTTSVoiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The preview URL.</para>
+        /// <para>The audition URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://voicenavigator-cn-shanghai.oss-cn-shanghai.aliyuncs.com/exported_files/2020-02-20/ttsConfig-1582188148528-abd8e407de0a49b381bb591bd91fc073.wav?Expires=1582188208&OSSAccessKeyId=LTAIppQY*******&Signature=FaBassElzqGEB0H2TvTKPJsOJHs%3D">http://voicenavigator-cn-shanghai.oss-cn-shanghai.aliyuncs.com/exported_files/2020-02-20/ttsConfig-1582188148528-abd8e407de0a49b381bb591bd91fc073.wav?Expires=1582188208&amp;OSSAccessKeyId=LTAIppQY*******&amp;Signature=FaBassElzqGEB0H2TvTKPJsOJHs%3D</a></para>

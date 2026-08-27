@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class ModifyUnrecognizingConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The rejection action performed after the final rejection prompt is played.</para>
+        /// <para>The rejection action.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string FinalAction { get; set; }
 
         /// <summary>
-        /// <para>The action parameters for the rejection action, in JSON format.</para>
+        /// <para>The action parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -31,11 +31,11 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string FinalActionParams { get; set; }
 
         /// <summary>
-        /// <para>The final rejection prompt. The service plays this prompt when the rejection threshold is met.</para>
+        /// <para>The final rejection prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>再见</para>
+        /// <para>Goodbye</para>
         /// </summary>
         [NameInMap("FinalPrompt")]
         [Validation(Required=false)]
@@ -53,18 +53,18 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The rejection prompt played when the service fails to recognize user input.</para>
+        /// <para>The rejection prompt.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>我不理解您的意思，请再说一遍</para>
+        /// <para>I don\&quot;t understand what you mean, please say it again</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]
         public string Prompt { get; set; }
 
         /// <summary>
-        /// <para>The rejection threshold. The maximum number of consecutive rejections before the service triggers the rejection action.</para>
+        /// <para>The maximum number of rejections.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

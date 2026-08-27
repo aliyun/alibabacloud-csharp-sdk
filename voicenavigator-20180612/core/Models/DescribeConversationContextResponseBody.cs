@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
 {
     public class DescribeConversationContextResponseBody : TeaModel {
         /// <summary>
-        /// <para>The conversation context, returned as a JSON string.</para>
+        /// <para>The session context data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{         &quot;CallingNumber&quot;: &quot;135815***&quot;,         &quot;AdditionalContext&quot;: &quot;&quot;,         &quot;ConversationId&quot;: &quot;361c8a53-0e29-42f3-8aa7-c7752d010399&quot;     }</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string ConversationContext { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b19af5ce5314ac08108d1b33fe20e15</para>
