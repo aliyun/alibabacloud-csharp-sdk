@@ -8,24 +8,23 @@ using Tea;
 
 namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
-    public class GetGraphSchemaRequest : TeaModel {
+    public class OfflineAnnouncementRequest : TeaModel {
         /// <summary>
-        /// <para>The graph name. Call listGraphs first to obtain this value.</para>
+        /// <para>The business ID of the announcement.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>1001</para>
         /// </summary>
-        [NameInMap("graphName")]
+        [NameInMap("announcementId")]
         [Validation(Required=false)]
-        public string GraphName { get; set; }
+        public long? AnnouncementId { get; set; }
 
         /// <summary>
-        /// <para>The effective tenant ID.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The tenant ID. This is a common parameter. In winnexo-cli, pass this explicitly with --tenant-id.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>21577</para>
+        /// <para>10000</para>
         /// </summary>
         [NameInMap("tenantId")]
         [Validation(Required=false)]

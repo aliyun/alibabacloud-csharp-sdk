@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.WinNexo20260512
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shanghai", "winnexo.cn-shanghai.aliyuncs.com"},
+                {"cn-zhangjiakou", "winnexo.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-hangzhou", "winnexo.cn-hangzhou.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("winnexo", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -246,6 +252,212 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Adds multiple tenant members to a specified user group in a single request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports batch addition of members by providing a user group ID and one or more user IDs.</description></item>
+        /// <item><description>Duplicate entries in the user ID list do not cause errors. The system automatically handles duplicates to ensure each user is added only once.</description></item>
+        /// <item><description>The caller must have the required permissions to perform this operation.</description></item>
+        /// <item><description>This operation is applicable to scenarios that require quick team structure management or access control policy adjustments.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// AddUserGroupMembersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMembersResponse
+        /// </returns>
+        public AddUserGroupMembersResponse AddUserGroupMembersWithOptions(AddUserGroupMembersRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddUserGroupMembersShrinkRequest request = new AddUserGroupMembersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIds))
+            {
+                request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                body["userGroupId"] = request.UserGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdsShrink))
+            {
+                body["userIds"] = request.UserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddUserGroupMembers",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/addUserGroupMembers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddUserGroupMembersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple tenant members to a specified user group in a single request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports batch addition of members by providing a user group ID and one or more user IDs.</description></item>
+        /// <item><description>Duplicate entries in the user ID list do not cause errors. The system automatically handles duplicates to ensure each user is added only once.</description></item>
+        /// <item><description>The caller must have the required permissions to perform this operation.</description></item>
+        /// <item><description>This operation is applicable to scenarios that require quick team structure management or access control policy adjustments.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// AddUserGroupMembersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMembersResponse
+        /// </returns>
+        public async Task<AddUserGroupMembersResponse> AddUserGroupMembersWithOptionsAsync(AddUserGroupMembersRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            AddUserGroupMembersShrinkRequest request = new AddUserGroupMembersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIds))
+            {
+                request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                body["userGroupId"] = request.UserGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdsShrink))
+            {
+                body["userIds"] = request.UserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "AddUserGroupMembers",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/addUserGroupMembers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<AddUserGroupMembersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple tenant members to a specified user group in a single request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports batch addition of members by providing a user group ID and one or more user IDs.</description></item>
+        /// <item><description>Duplicate entries in the user ID list do not cause errors. The system automatically handles duplicates to ensure each user is added only once.</description></item>
+        /// <item><description>The caller must have the required permissions to perform this operation.</description></item>
+        /// <item><description>This operation is applicable to scenarios that require quick team structure management or access control policy adjustments.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddUserGroupMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMembersResponse
+        /// </returns>
+        public AddUserGroupMembersResponse AddUserGroupMembers(AddUserGroupMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return AddUserGroupMembersWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Adds multiple tenant members to a specified user group in a single request.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports batch addition of members by providing a user group ID and one or more user IDs.</description></item>
+        /// <item><description>Duplicate entries in the user ID list do not cause errors. The system automatically handles duplicates to ensure each user is added only once.</description></item>
+        /// <item><description>The caller must have the required permissions to perform this operation.</description></item>
+        /// <item><description>This operation is applicable to scenarios that require quick team structure management or access control policy adjustments.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// AddUserGroupMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// AddUserGroupMembersResponse
+        /// </returns>
+        public async Task<AddUserGroupMembersResponse> AddUserGroupMembersAsync(AddUserGroupMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await AddUserGroupMembersWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Performs a service health check.</para>
         /// </summary>
         /// 
@@ -372,6 +584,304 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CheckHealthWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service notice.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</para>
+        /// <list type="bullet">
+        /// <item><description><c>priority</c>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</description></item>
+        /// <item><description><c>targetTenantIds</c> / <c>targetRoleCodes</c>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</description></item>
+        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 timestamps with time zone information.</description></item>
+        /// <item><description><c>publishNow</c>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAnnouncementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAnnouncementResponse
+        /// </returns>
+        public CreateAnnouncementResponse CreateAnnouncementWithOptions(CreateAnnouncementRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAnnouncementShrinkRequest request = new CreateAnnouncementShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TargetRoleCodes))
+            {
+                request.TargetRoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TargetRoleCodes, "targetRoleCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TargetTenantIds))
+            {
+                request.TargetTenantIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TargetTenantIds, "targetTenantIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayPage))
+            {
+                body["displayPage"] = request.DisplayPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayType))
+            {
+                body["displayType"] = request.DisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveEnd))
+            {
+                body["effectiveEnd"] = request.EffectiveEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveStart))
+            {
+                body["effectiveStart"] = request.EffectiveStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishNow))
+            {
+                body["publishNow"] = request.PublishNow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetRoleCodesShrink))
+            {
+                body["targetRoleCodes"] = request.TargetRoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetRoleMode))
+            {
+                body["targetRoleMode"] = request.TargetRoleMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetTenantIdsShrink))
+            {
+                body["targetTenantIds"] = request.TargetTenantIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetTenantMode))
+            {
+                body["targetTenantMode"] = request.TargetTenantMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAnnouncement",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createAnnouncement",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAnnouncementResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service notice.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</para>
+        /// <list type="bullet">
+        /// <item><description><c>priority</c>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</description></item>
+        /// <item><description><c>targetTenantIds</c> / <c>targetRoleCodes</c>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</description></item>
+        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 timestamps with time zone information.</description></item>
+        /// <item><description><c>publishNow</c>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAnnouncementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAnnouncementResponse
+        /// </returns>
+        public async Task<CreateAnnouncementResponse> CreateAnnouncementWithOptionsAsync(CreateAnnouncementRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAnnouncementShrinkRequest request = new CreateAnnouncementShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TargetRoleCodes))
+            {
+                request.TargetRoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TargetRoleCodes, "targetRoleCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TargetTenantIds))
+            {
+                request.TargetTenantIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TargetTenantIds, "targetTenantIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Content))
+            {
+                body["content"] = request.Content;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayPage))
+            {
+                body["displayPage"] = request.DisplayPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayType))
+            {
+                body["displayType"] = request.DisplayType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveEnd))
+            {
+                body["effectiveEnd"] = request.EffectiveEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EffectiveStart))
+            {
+                body["effectiveStart"] = request.EffectiveStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                body["priority"] = request.Priority;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublishNow))
+            {
+                body["publishNow"] = request.PublishNow;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetRoleCodesShrink))
+            {
+                body["targetRoleCodes"] = request.TargetRoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetRoleMode))
+            {
+                body["targetRoleMode"] = request.TargetRoleMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetTenantIdsShrink))
+            {
+                body["targetTenantIds"] = request.TargetTenantIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetTenantMode))
+            {
+                body["targetTenantMode"] = request.TargetTenantMode;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
+            {
+                body["title"] = request.Title;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAnnouncement",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createAnnouncement",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAnnouncementResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service notice.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</para>
+        /// <list type="bullet">
+        /// <item><description><c>priority</c>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</description></item>
+        /// <item><description><c>targetTenantIds</c> / <c>targetRoleCodes</c>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</description></item>
+        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 timestamps with time zone information.</description></item>
+        /// <item><description><c>publishNow</c>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAnnouncementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAnnouncementResponse
+        /// </returns>
+        public CreateAnnouncementResponse CreateAnnouncement(CreateAnnouncementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAnnouncementWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a service notice.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates a service notice. The caller identity must be mapped to a real platform user in the system O&amp;M tenant and must have notice management permissions.</para>
+        /// <list type="bullet">
+        /// <item><description><c>priority</c>: The importance level of the notice. Valid values: URGENT, IMPORTANT, and GENERAL.</description></item>
+        /// <item><description><c>targetTenantIds</c> / <c>targetRoleCodes</c>: Used only when the corresponding target mode is set to SPECIFIED. Pass values as a JSON array.</description></item>
+        /// <item><description><c>effectiveStart</c> / <c>effectiveEnd</c>: ISO 8601 timestamps with time zone information.</description></item>
+        /// <item><description><c>publishNow</c>: If set to true, the notice is published immediately after creation. Otherwise, it is saved as a draft.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAnnouncementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAnnouncementResponse
+        /// </returns>
+        public async Task<CreateAnnouncementResponse> CreateAnnouncementAsync(CreateAnnouncementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAnnouncementWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1010,6 +1520,534 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a group-level DingTalk chat knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</description></item>
+        /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
+        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateGroupDingtalkChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupDingtalkChatResponse
+        /// </returns>
+        public CreateGroupDingtalkChatResponse CreateGroupDingtalkChatWithOptions(CreateGroupDingtalkChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGroupDingtalkChatShrinkRequest request = new CreateGroupDingtalkChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatName))
+            {
+                body["chatName"] = request.ChatName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupDingtalkChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupDingtalkChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupDingtalkChatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a group-level DingTalk chat knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</description></item>
+        /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
+        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateGroupDingtalkChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupDingtalkChatResponse
+        /// </returns>
+        public async Task<CreateGroupDingtalkChatResponse> CreateGroupDingtalkChatWithOptionsAsync(CreateGroupDingtalkChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGroupDingtalkChatShrinkRequest request = new CreateGroupDingtalkChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatName))
+            {
+                body["chatName"] = request.ChatName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupDingtalkChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupDingtalkChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupDingtalkChatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a group-level DingTalk chat knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</description></item>
+        /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
+        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupDingtalkChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupDingtalkChatResponse
+        /// </returns>
+        public CreateGroupDingtalkChatResponse CreateGroupDingtalkChat(CreateGroupDingtalkChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGroupDingtalkChatWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a group-level DingTalk chat knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk chat to the knowledge base of a group that the caller has joined.</description></item>
+        /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to GROUP, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>groupId, chatId, and historyStartTime are required.</description></item>
+        /// <item><description>updateFrequency can be configured by using a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The server verifies the caller\&quot;s group membership and the target group directory permissions. The same chat can be created as different sources.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupDingtalkChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupDingtalkChatResponse
+        /// </returns>
+        public async Task<CreateGroupDingtalkChatResponse> CreateGroupDingtalkChatAsync(CreateGroupDingtalkChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGroupDingtalkChatWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateGroupFeishuDocRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFeishuDocResponse
+        /// </returns>
+        public CreateGroupFeishuDocResponse CreateGroupFeishuDocWithOptions(CreateGroupFeishuDocRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGroupFeishuDocShrinkRequest request = new CreateGroupFeishuDocShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectBindings))
+            {
+                request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SyncConfig))
+            {
+                request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocUrl))
+            {
+                body["docUrl"] = request.DocUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectBindingsShrink))
+            {
+                body["objectBindings"] = request.ObjectBindingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncConfigShrink))
+            {
+                body["syncConfig"] = request.SyncConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupFeishuDoc",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupFeishuDoc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupFeishuDocResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateGroupFeishuDocRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFeishuDocResponse
+        /// </returns>
+        public async Task<CreateGroupFeishuDocResponse> CreateGroupFeishuDocWithOptionsAsync(CreateGroupFeishuDocRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateGroupFeishuDocShrinkRequest request = new CreateGroupFeishuDocShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectBindings))
+            {
+                request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SyncConfig))
+            {
+                request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocUrl))
+            {
+                body["docUrl"] = request.DocUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectBindingsShrink))
+            {
+                body["objectBindings"] = request.ObjectBindingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncConfigShrink))
+            {
+                body["syncConfig"] = request.SyncConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateGroupFeishuDoc",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createGroupFeishuDoc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateGroupFeishuDocResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupFeishuDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFeishuDocResponse
+        /// </returns>
+        public CreateGroupFeishuDocResponse CreateGroupFeishuDoc(CreateGroupFeishuDocRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateGroupFeishuDocWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a group knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + GROUP</c>. <c>groupId</c> is required. If <c>directoryId</c> is omitted, the root directory of the group knowledge base is used. Group membership and directory write permissions are verified by the backend.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateGroupFeishuDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateGroupFeishuDocResponse
+        /// </returns>
+        public async Task<CreateGroupFeishuDocResponse> CreateGroupFeishuDocAsync(CreateGroupFeishuDocRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateGroupFeishuDocWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Uploads an AliDing online document to the enterprise knowledge base. Management permissions are required.</para>
         /// </summary>
         /// 
@@ -1458,6 +2496,252 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateKnowledgeBaseDirectoryWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a single Lark online document in the enterprise knowledge base using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + TENANT</c>. <c>directoryId</c> is required. The invoker must have the enterprise knowledge base feature permission and knowledge base management permission on the target knowledge base.</h2>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKnowledgeBaseFeishuDocRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseFeishuDocResponse
+        /// </returns>
+        public CreateKnowledgeBaseFeishuDocResponse CreateKnowledgeBaseFeishuDocWithOptions(CreateKnowledgeBaseFeishuDocRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKnowledgeBaseFeishuDocShrinkRequest request = new CreateKnowledgeBaseFeishuDocShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectBindings))
+            {
+                request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SyncConfig))
+            {
+                request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocUrl))
+            {
+                body["docUrl"] = request.DocUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectBindingsShrink))
+            {
+                body["objectBindings"] = request.ObjectBindingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncConfigShrink))
+            {
+                body["syncConfig"] = request.SyncConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBaseFeishuDoc",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createKnowledgeBaseFeishuDoc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseFeishuDocResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a single Lark online document in the enterprise knowledge base using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + TENANT</c>. <c>directoryId</c> is required. The invoker must have the enterprise knowledge base feature permission and knowledge base management permission on the target knowledge base.</h2>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateKnowledgeBaseFeishuDocRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseFeishuDocResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseFeishuDocResponse> CreateKnowledgeBaseFeishuDocWithOptionsAsync(CreateKnowledgeBaseFeishuDocRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateKnowledgeBaseFeishuDocShrinkRequest request = new CreateKnowledgeBaseFeishuDocShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectBindings))
+            {
+                request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SyncConfig))
+            {
+                request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocUrl))
+            {
+                body["docUrl"] = request.DocUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectBindingsShrink))
+            {
+                body["objectBindings"] = request.ObjectBindingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncConfigShrink))
+            {
+                body["syncConfig"] = request.SyncConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateKnowledgeBaseFeishuDoc",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createKnowledgeBaseFeishuDoc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateKnowledgeBaseFeishuDocResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a single Lark online document in the enterprise knowledge base using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + TENANT</c>. <c>directoryId</c> is required. The invoker must have the enterprise knowledge base feature permission and knowledge base management permission on the target knowledge base.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseFeishuDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseFeishuDocResponse
+        /// </returns>
+        public CreateKnowledgeBaseFeishuDocResponse CreateKnowledgeBaseFeishuDoc(CreateKnowledgeBaseFeishuDocRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateKnowledgeBaseFeishuDocWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a single Lark online document in the enterprise knowledge base using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + TENANT</c>. <c>directoryId</c> is required. The invoker must have the enterprise knowledge base feature permission and knowledge base management permission on the target knowledge base.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateKnowledgeBaseFeishuDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateKnowledgeBaseFeishuDocResponse
+        /// </returns>
+        public async Task<CreateKnowledgeBaseFeishuDocResponse> CreateKnowledgeBaseFeishuDocAsync(CreateKnowledgeBaseFeishuDocRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateKnowledgeBaseFeishuDocWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2968,6 +4252,272 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             return await CreatePersonalAlidingKnowledgeBaseWithOptionsAsync(request, headers, runtime);
         }
 
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal DingTalk group chat knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk group chat to the personal knowledge base of the current user.</description></item>
+        /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The same group chat can be created as different sources. Each source is isolated by sourceId.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePersonalDingtalkChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalDingtalkChatResponse
+        /// </returns>
+        public CreatePersonalDingtalkChatResponse CreatePersonalDingtalkChatWithOptions(CreatePersonalDingtalkChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePersonalDingtalkChatShrinkRequest request = new CreatePersonalDingtalkChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatName))
+            {
+                body["chatName"] = request.ChatName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalDingtalkChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalDingtalkChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalDingtalkChatResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal DingTalk group chat knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk group chat to the personal knowledge base of the current user.</description></item>
+        /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The same group chat can be created as different sources. Each source is isolated by sourceId.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePersonalDingtalkChatRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalDingtalkChatResponse
+        /// </returns>
+        public async Task<CreatePersonalDingtalkChatResponse> CreatePersonalDingtalkChatWithOptionsAsync(CreatePersonalDingtalkChatRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePersonalDingtalkChatShrinkRequest request = new CreatePersonalDingtalkChatShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UpdateFrequency))
+            {
+                request.UpdateFrequencyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UpdateFrequency, "updateFrequency", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatId))
+            {
+                body["chatId"] = request.ChatId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChatName))
+            {
+                body["chatName"] = request.ChatName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HistoryStartTime))
+            {
+                body["historyStartTime"] = request.HistoryStartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateFrequencyShrink))
+            {
+                body["updateFrequency"] = request.UpdateFrequencyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalDingtalkChat",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalDingtalkChat",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalDingtalkChatResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal DingTalk group chat knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk group chat to the personal knowledge base of the current user.</description></item>
+        /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The same group chat can be created as different sources. Each source is isolated by sourceId.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalDingtalkChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalDingtalkChatResponse
+        /// </returns>
+        public CreatePersonalDingtalkChatResponse CreatePersonalDingtalkChat(CreatePersonalDingtalkChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreatePersonalDingtalkChatWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal DingTalk group chat knowledge source.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>Connects a specified DingTalk group chat to the personal knowledge base of the current user.</description></item>
+        /// <item><description>The resource type is fixed to DINGTALK, the scope is fixed to PERSONAL, and the owning user is parsed from the gateway authentication identity.</description></item>
+        /// <item><description>historyStartTime is required and supports YYYY-MM-DD or YYYY-MM-DD HH:MM:SS format.</description></item>
+        /// <item><description>updateFrequency can be configured with a preset or a five-field cron expression for subsequent synchronization frequency.</description></item>
+        /// <item><description>The same group chat can be created as different sources. Each source is isolated by sourceId.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalDingtalkChatRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalDingtalkChatResponse
+        /// </returns>
+        public async Task<CreatePersonalDingtalkChatResponse> CreatePersonalDingtalkChatAsync(CreatePersonalDingtalkChatRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreatePersonalDingtalkChatWithOptionsAsync(request, headers, runtime);
+        }
+
         /// <term><b>Deprecated</b></term>
         /// 
         /// OpenAPI CreatePersonalDingtalkMeeting is deprecated
@@ -3938,6 +5488,252 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreatePersonalFeishuChatWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + PERSONAL</c>. The Lark connector user is determined by the trusted OpenAPI identity. If <c>directoryId</c> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePersonalFeishuDocRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalFeishuDocResponse
+        /// </returns>
+        public CreatePersonalFeishuDocResponse CreatePersonalFeishuDocWithOptions(CreatePersonalFeishuDocRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePersonalFeishuDocShrinkRequest request = new CreatePersonalFeishuDocShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectBindings))
+            {
+                request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SyncConfig))
+            {
+                request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocUrl))
+            {
+                body["docUrl"] = request.DocUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectBindingsShrink))
+            {
+                body["objectBindings"] = request.ObjectBindingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncConfigShrink))
+            {
+                body["syncConfig"] = request.SyncConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalFeishuDoc",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalFeishuDoc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalFeishuDocResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + PERSONAL</c>. The Lark connector user is determined by the trusted OpenAPI identity. If <c>directoryId</c> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreatePersonalFeishuDocRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalFeishuDocResponse
+        /// </returns>
+        public async Task<CreatePersonalFeishuDocResponse> CreatePersonalFeishuDocWithOptionsAsync(CreatePersonalFeishuDocRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreatePersonalFeishuDocShrinkRequest request = new CreatePersonalFeishuDocShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ObjectBindings))
+            {
+                request.ObjectBindingsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ObjectBindings, "objectBindings", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.SyncConfig))
+            {
+                request.SyncConfigShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.SyncConfig, "syncConfig", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DocUrl))
+            {
+                body["docUrl"] = request.DocUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Notes))
+            {
+                body["notes"] = request.Notes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ObjectBindingsShrink))
+            {
+                body["objectBindings"] = request.ObjectBindingsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperatingObjectName))
+            {
+                body["operatingObjectName"] = request.OperatingObjectName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceTags))
+            {
+                body["sourceTags"] = request.SourceTags;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SyncConfigShrink))
+            {
+                body["syncConfig"] = request.SyncConfigShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreatePersonalFeishuDoc",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createPersonalFeishuDoc",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreatePersonalFeishuDocResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + PERSONAL</c>. The Lark connector user is determined by the trusted OpenAPI identity. If <c>directoryId</c> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalFeishuDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalFeishuDocResponse
+        /// </returns>
+        public CreatePersonalFeishuDocResponse CreatePersonalFeishuDoc(CreatePersonalFeishuDocRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreatePersonalFeishuDocWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a personal knowledge resource from a single Lark online document using the current user\&quot;s Lark authorization.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\n\nFixed as <c>ONLINE_DOC + FEISHU + PERSONAL</c>. The Lark connector user is determined by the trusted OpenAPI identity. If <c>directoryId</c> is omitted, the current user\&quot;s default personal root directory is used.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreatePersonalFeishuDocRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreatePersonalFeishuDocResponse
+        /// </returns>
+        public async Task<CreatePersonalFeishuDocResponse> CreatePersonalFeishuDocAsync(CreatePersonalFeishuDocRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreatePersonalFeishuDocWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5706,6 +7502,434 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates a user group under the tenant to which the authenticated identity belongs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>WinNexo user management OpenAPI: Creates a user group. The tenant identity is derived from the authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
+        public CreateUserGroupResponse CreateUserGroupWithOptions(CreateUserGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
+            {
+                body["parentId"] = request.ParentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupName))
+            {
+                body["userGroupName"] = request.UserGroupName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserGroup",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createUserGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user group under the tenant to which the authenticated identity belongs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>WinNexo user management OpenAPI: Creates a user group. The tenant identity is derived from the authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
+        public async Task<CreateUserGroupResponse> CreateUserGroupWithOptionsAsync(CreateUserGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
+            {
+                body["parentId"] = request.ParentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupName))
+            {
+                body["userGroupName"] = request.UserGroupName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserGroup",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createUserGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user group under the tenant to which the authenticated identity belongs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>WinNexo user management OpenAPI: Creates a user group. The tenant identity is derived from the authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
+        public CreateUserGroupResponse CreateUserGroup(CreateUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateUserGroupWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user group under the tenant to which the authenticated identity belongs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>WinNexo user management OpenAPI: Creates a user group. The tenant identity is derived from the authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserGroupResponse
+        /// </returns>
+        public async Task<CreateUserGroupResponse> CreateUserGroupAsync(CreateUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateUserGroupWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a WINNEXO user in the current tenant and assigns roles and user groups to the user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user and sets initial roles and user groups via OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parses roleCodes → role_ids (system role enumeration validation)
+        ///     2. Checks whether the user already exists (used to return the isNewUser flag)
+        ///     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
+        ///     4. Returns the creation result (including the isNewUser flag)
+        ///     Error codes:
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
+        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
+        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateUserWithGroupsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserWithGroupsResponse
+        /// </returns>
+        public CreateUserWithGroupsResponse CreateUserWithGroupsWithOptions(CreateUserWithGroupsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateUserWithGroupsShrinkRequest request = new CreateUserWithGroupsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoleCodes))
+            {
+                request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "roleCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserGroupIds))
+            {
+                request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "userGroupIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PasswordEncrypted))
+            {
+                body["passwordEncrypted"] = request.PasswordEncrypted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCodesShrink))
+            {
+                body["roleCodes"] = request.RoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIdsShrink))
+            {
+                body["userGroupIds"] = request.UserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WnAccountId))
+            {
+                body["wnAccountId"] = request.WnAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserWithGroups",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createUserWithGroups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserWithGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a WINNEXO user in the current tenant and assigns roles and user groups to the user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user and sets initial roles and user groups via OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parses roleCodes → role_ids (system role enumeration validation)
+        ///     2. Checks whether the user already exists (used to return the isNewUser flag)
+        ///     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
+        ///     4. Returns the creation result (including the isNewUser flag)
+        ///     Error codes:
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
+        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
+        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateUserWithGroupsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserWithGroupsResponse
+        /// </returns>
+        public async Task<CreateUserWithGroupsResponse> CreateUserWithGroupsWithOptionsAsync(CreateUserWithGroupsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateUserWithGroupsShrinkRequest request = new CreateUserWithGroupsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.RoleCodes))
+            {
+                request.RoleCodesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RoleCodes, "roleCodes", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserGroupIds))
+            {
+                request.UserGroupIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserGroupIds, "userGroupIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayName))
+            {
+                body["displayName"] = request.DisplayName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PasswordEncrypted))
+            {
+                body["passwordEncrypted"] = request.PasswordEncrypted;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RoleCodesShrink))
+            {
+                body["roleCodes"] = request.RoleCodesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupIdsShrink))
+            {
+                body["userGroupIds"] = request.UserGroupIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WnAccountId))
+            {
+                body["wnAccountId"] = request.WnAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateUserWithGroups",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/createUserWithGroups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateUserWithGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a WINNEXO user in the current tenant and assigns roles and user groups to the user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user and sets initial roles and user groups via OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parses roleCodes → role_ids (system role enumeration validation)
+        ///     2. Checks whether the user already exists (used to return the isNewUser flag)
+        ///     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
+        ///     4. Returns the creation result (including the isNewUser flag)
+        ///     Error codes:
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
+        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
+        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserWithGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserWithGroupsResponse
+        /// </returns>
+        public CreateUserWithGroupsResponse CreateUserWithGroups(CreateUserWithGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateUserWithGroupsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a WINNEXO user in the current tenant and assigns roles and user groups to the user.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user and sets initial roles and user groups via OpenAPI.
+        ///     Business orchestration:
+        ///     1. Parses roleCodes → role_ids (system role enumeration validation)
+        ///     2. Checks whether the user already exists (used to return the isNewUser flag)
+        ///     3. Validates the tenant ownership of userGroupIds and completes creation/joining (the password must be passed in by the caller as RSA ciphertext)
+        ///     4. Returns the creation result (including the isNewUser flag)
+        ///     Error codes:
+        ///     - ERR.User.DeactivatedInTenant: The user is deactivated in the tenant. Use updateUser to resume.
+        ///     - ERR.User.AlreadyInTenant: The user is already an active member of the tenant.
+        ///     - ERR.User.DisplayNameDuplicateInTenant: The display name is duplicate within the tenant.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateUserWithGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateUserWithGroupsResponse
+        /// </returns>
+        public async Task<CreateUserWithGroupsResponse> CreateUserWithGroupsAsync(CreateUserWithGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateUserWithGroupsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes a session.</para>
         /// </summary>
         /// 
@@ -6850,7 +9074,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the active Graph Schema that is readable by the current user.</para>
+        /// <para>Retrieves the active Graph Schema readable by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6907,7 +9131,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the active Graph Schema that is readable by the current user.</para>
+        /// <para>Retrieves the active Graph Schema readable by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6964,7 +9188,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the active Graph Schema that is readable by the current user.</para>
+        /// <para>Retrieves the active Graph Schema readable by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -6988,7 +9212,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the active Graph Schema that is readable by the current user.</para>
+        /// <para>Retrieves the active Graph Schema readable by the current user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -7812,6 +10036,176 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetScheduledTaskExecutionRecordsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the push configuration options for scheduled tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the channels and methods available to the current user for scheduled task push notifications.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetScheduledTaskPushOptionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetScheduledTaskPushOptionsResponse
+        /// </returns>
+        public GetScheduledTaskPushOptionsResponse GetScheduledTaskPushOptionsWithOptions(GetScheduledTaskPushOptionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
+            {
+                body["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalEmployeeName))
+            {
+                body["digitalEmployeeName"] = request.DigitalEmployeeName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetScheduledTaskPushOptions",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getScheduledTaskPushOptions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetScheduledTaskPushOptionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the push configuration options for scheduled tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the channels and methods available to the current user for scheduled task push notifications.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetScheduledTaskPushOptionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetScheduledTaskPushOptionsResponse
+        /// </returns>
+        public async Task<GetScheduledTaskPushOptionsResponse> GetScheduledTaskPushOptionsWithOptionsAsync(GetScheduledTaskPushOptionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationGroupId))
+            {
+                body["collaborationGroupId"] = request.CollaborationGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DigitalEmployeeName))
+            {
+                body["digitalEmployeeName"] = request.DigitalEmployeeName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetScheduledTaskPushOptions",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getScheduledTaskPushOptions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetScheduledTaskPushOptionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the push configuration options for scheduled tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the channels and methods available to the current user for scheduled task push notifications.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetScheduledTaskPushOptionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetScheduledTaskPushOptionsResponse
+        /// </returns>
+        public GetScheduledTaskPushOptionsResponse GetScheduledTaskPushOptions(GetScheduledTaskPushOptionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetScheduledTaskPushOptionsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the push configuration options for scheduled tasks.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the channels and methods available to the current user for scheduled task push notifications.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetScheduledTaskPushOptionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetScheduledTaskPushOptionsResponse
+        /// </returns>
+        public async Task<GetScheduledTaskPushOptionsResponse> GetScheduledTaskPushOptionsAsync(GetScheduledTaskPushOptionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetScheduledTaskPushOptionsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Deprecated</b></term>
@@ -8906,6 +11300,200 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves an API token and ensures that it is active.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the INSTANCE token for a user and ensures that it is in an active state (idempotent).
+        ///     Business logic:
+        ///     1. Obtains user_id from identity (caller_type=user is enforced).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls ensure_active_token:
+        ///        - If an ACTIVE token exists, returns the token in plaintext as-is (no reset, no key rotation).
+        ///        - If an INACTIVE token exists, automatically re-enables it and returns the plaintext.
+        ///        - If no token exists (or only expired RESET records exist), creates a new token and returns the plaintext.
+        ///     Difference from EnableToken: When an ACTIVE token already exists, EnableToken returns only the masked value. This operation guarantees that a usable plaintext credential is returned without destroying the existing token.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTokenEnsureEnableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTokenEnsureEnableResponse
+        /// </returns>
+        public GetTokenEnsureEnableResponse GetTokenEnsureEnableWithOptions(GetTokenEnsureEnableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WnUserId))
+            {
+                body["wnUserId"] = request.WnUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTokenEnsureEnable",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getTokenEnsureEnable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTokenEnsureEnableResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an API token and ensures that it is active.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the INSTANCE token for a user and ensures that it is in an active state (idempotent).
+        ///     Business logic:
+        ///     1. Obtains user_id from identity (caller_type=user is enforced).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls ensure_active_token:
+        ///        - If an ACTIVE token exists, returns the token in plaintext as-is (no reset, no key rotation).
+        ///        - If an INACTIVE token exists, automatically re-enables it and returns the plaintext.
+        ///        - If no token exists (or only expired RESET records exist), creates a new token and returns the plaintext.
+        ///     Difference from EnableToken: When an ACTIVE token already exists, EnableToken returns only the masked value. This operation guarantees that a usable plaintext credential is returned without destroying the existing token.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTokenEnsureEnableRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTokenEnsureEnableResponse
+        /// </returns>
+        public async Task<GetTokenEnsureEnableResponse> GetTokenEnsureEnableWithOptionsAsync(GetTokenEnsureEnableRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WnUserId))
+            {
+                body["wnUserId"] = request.WnUserId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTokenEnsureEnable",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getTokenEnsureEnable",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTokenEnsureEnableResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an API token and ensures that it is active.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the INSTANCE token for a user and ensures that it is in an active state (idempotent).
+        ///     Business logic:
+        ///     1. Obtains user_id from identity (caller_type=user is enforced).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls ensure_active_token:
+        ///        - If an ACTIVE token exists, returns the token in plaintext as-is (no reset, no key rotation).
+        ///        - If an INACTIVE token exists, automatically re-enables it and returns the plaintext.
+        ///        - If no token exists (or only expired RESET records exist), creates a new token and returns the plaintext.
+        ///     Difference from EnableToken: When an ACTIVE token already exists, EnableToken returns only the masked value. This operation guarantees that a usable plaintext credential is returned without destroying the existing token.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTokenEnsureEnableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTokenEnsureEnableResponse
+        /// </returns>
+        public GetTokenEnsureEnableResponse GetTokenEnsureEnable(GetTokenEnsureEnableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetTokenEnsureEnableWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an API token and ensures that it is active.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the INSTANCE token for a user and ensures that it is in an active state (idempotent).
+        ///     Business logic:
+        ///     1. Obtains user_id from identity (caller_type=user is enforced).
+        ///     2. Constructs an AuthContext and delegates permission verification to UserTokenAuthorizedService.
+        ///     3. Calls ensure_active_token:
+        ///        - If an ACTIVE token exists, returns the token in plaintext as-is (no reset, no key rotation).
+        ///        - If an INACTIVE token exists, automatically re-enables it and returns the plaintext.
+        ///        - If no token exists (or only expired RESET records exist), creates a new token and returns the plaintext.
+        ///     Difference from EnableToken: When an ACTIVE token already exists, EnableToken returns only the masked value. This operation guarantees that a usable plaintext credential is returned without destroying the existing token.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetTokenEnsureEnableRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTokenEnsureEnableResponse
+        /// </returns>
+        public async Task<GetTokenEnsureEnableResponse> GetTokenEnsureEnableAsync(GetTokenEnsureEnableRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetTokenEnsureEnableWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the token status of a user.</para>
         /// </summary>
         /// 
@@ -9468,6 +12056,200 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a specified user group, including its parent group, child groups, and members.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</description></item>
+        /// <item><description><c>userGroupId</c> is a required parameter that must be provided in the request body.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter that can be passed through the query string.</description></item>
+        /// <item><description>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>The content type for both requests and responses is <c>application/json</c>.</description></item>
+        /// <item><description>Ensure that you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupResponse
+        /// </returns>
+        public GetUserGroupResponse GetUserGroupWithOptions(GetUserGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                body["userGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserGroup",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getUserGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified user group, including its parent group, child groups, and members.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</description></item>
+        /// <item><description><c>userGroupId</c> is a required parameter that must be provided in the request body.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter that can be passed through the query string.</description></item>
+        /// <item><description>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>The content type for both requests and responses is <c>application/json</c>.</description></item>
+        /// <item><description>Ensure that you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupResponse
+        /// </returns>
+        public async Task<GetUserGroupResponse> GetUserGroupWithOptionsAsync(GetUserGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                body["userGroupId"] = request.UserGroupId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetUserGroup",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/getUserGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetUserGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified user group, including its parent group, child groups, and members.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</description></item>
+        /// <item><description><c>userGroupId</c> is a required parameter that must be provided in the request body.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter that can be passed through the query string.</description></item>
+        /// <item><description>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>The content type for both requests and responses is <c>application/json</c>.</description></item>
+        /// <item><description>Ensure that you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupResponse
+        /// </returns>
+        public GetUserGroupResponse GetUserGroup(GetUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetUserGroupWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified user group, including its parent group, child groups, and members.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation retrieves the details of a specified user group, including the basic information of the user group, parent user group information, direct child user group list, and direct member list.</description></item>
+        /// <item><description><c>userGroupId</c> is a required parameter that must be provided in the request body.</description></item>
+        /// <item><description><c>tenantId</c> is an optional parameter that can be passed through the query string.</description></item>
+        /// <item><description>The operation supports multiple authentication methods, including AK, BearerToken, and APP authentication.</description></item>
+        /// <item><description>The content type for both requests and responses is <c>application/json</c>.</description></item>
+        /// <item><description>Ensure that you have the required permissions (such as <c>winnexo:GetUserGroup</c>) before calling this operation.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetUserGroupResponse
+        /// </returns>
+        public async Task<GetUserGroupResponse> GetUserGroupAsync(GetUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetUserGroupWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the complete information of the authenticated user through OpenAPI, including basic information and tenant list.</para>
         /// </summary>
         /// 
@@ -9892,6 +12674,180 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GrantAgentUsersWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries currently effective service notices.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListActiveAnnouncementsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListActiveAnnouncementsResponse
+        /// </returns>
+        public ListActiveAnnouncementsResponse ListActiveAnnouncementsWithOptions(ListActiveAnnouncementsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListActiveAnnouncements",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listActiveAnnouncements",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListActiveAnnouncementsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries currently effective service notices.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListActiveAnnouncementsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListActiveAnnouncementsResponse
+        /// </returns>
+        public async Task<ListActiveAnnouncementsResponse> ListActiveAnnouncementsWithOptionsAsync(ListActiveAnnouncementsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                body["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListActiveAnnouncements",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listActiveAnnouncements",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListActiveAnnouncementsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries currently effective service notices.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListActiveAnnouncementsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListActiveAnnouncementsResponse
+        /// </returns>
+        public ListActiveAnnouncementsResponse ListActiveAnnouncements(ListActiveAnnouncementsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListActiveAnnouncementsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries currently effective service notices.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Performs a paging query for published platform notices that are effective within the current database time window. The invoking identity must be a real user who has the notice viewing permission in the system O&amp;M tenant.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListActiveAnnouncementsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListActiveAnnouncementsResponse
+        /// </returns>
+        public async Task<ListActiveAnnouncementsResponse> ListActiveAnnouncementsAsync(ListActiveAnnouncementsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListActiveAnnouncementsWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13162,6 +16118,180 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Returns the multi-level user group tree for the current tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query the complete user group hierarchy under a specified tenant, including the basic information of each user group and its direct child user group list. Use the <c>tenantId</c> parameter to specify the tenant ID to query. If this parameter is not provided, the caller\&quot;s tenant ID is used by default.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation returns only the direct member count and direct child user group count. It does not include information about indirect members or child groups.</description></item>
+        /// <item><description>The external synchronization status field is empty when data is normal. It is populated with relevant information only when data is out of sync between an external system (such as WeCom) and the internal system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsResponse
+        /// </returns>
+        public ListUserGroupsResponse ListUserGroupsWithOptions(ListUserGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserGroups",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listUserGroups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserGroupsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns the multi-level user group tree for the current tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query the complete user group hierarchy under a specified tenant, including the basic information of each user group and its direct child user group list. Use the <c>tenantId</c> parameter to specify the tenant ID to query. If this parameter is not provided, the caller\&quot;s tenant ID is used by default.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation returns only the direct member count and direct child user group count. It does not include information about indirect members or child groups.</description></item>
+        /// <item><description>The external synchronization status field is empty when data is normal. It is populated with relevant information only when data is out of sync between an external system (such as WeCom) and the internal system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsResponse
+        /// </returns>
+        public async Task<ListUserGroupsResponse> ListUserGroupsWithOptionsAsync(ListUserGroupsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListUserGroups",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/listUserGroups",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListUserGroupsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns the multi-level user group tree for the current tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query the complete user group hierarchy under a specified tenant, including the basic information of each user group and its direct child user group list. Use the <c>tenantId</c> parameter to specify the tenant ID to query. If this parameter is not provided, the caller\&quot;s tenant ID is used by default.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation returns only the direct member count and direct child user group count. It does not include information about indirect members or child groups.</description></item>
+        /// <item><description>The external synchronization status field is empty when data is normal. It is populated with relevant information only when data is out of sync between an external system (such as WeCom) and the internal system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsResponse
+        /// </returns>
+        public ListUserGroupsResponse ListUserGroups(ListUserGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListUserGroupsWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Returns the multi-level user group tree for the current tenant.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>This API is used to query the complete user group hierarchy under a specified tenant, including the basic information of each user group and its direct child user group list. Use the <c>tenantId</c> parameter to specify the tenant ID to query. If this parameter is not provided, the caller\&quot;s tenant ID is used by default.</para>
+        /// <h3>Precautions</h3>
+        /// <list type="bullet">
+        /// <item><description>This operation returns only the direct member count and direct child user group count. It does not include information about indirect members or child groups.</description></item>
+        /// <item><description>The external synchronization status field is empty when data is normal. It is populated with relevant information only when data is out of sync between an external system (such as WeCom) and the internal system.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListUserGroupsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListUserGroupsResponse
+        /// </returns>
+        public async Task<ListUserGroupsResponse> ListUserGroupsAsync(ListUserGroupsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListUserGroupsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the knowledge base directory content visible to the current OpenAPI user.</para>
         /// </summary>
         /// 
@@ -14742,6 +17872,176 @@ namespace AlibabaCloud.SDK.WinNexo20260512
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Offlines a service notice.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Idempotently offlines a platform announcement by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is offlined for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
+        /// The caller must belong to the system operations tenant and have announcement management permissions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OfflineAnnouncementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineAnnouncementResponse
+        /// </returns>
+        public OfflineAnnouncementResponse OfflineAnnouncementWithOptions(OfflineAnnouncementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnnouncementId))
+            {
+                body["announcementId"] = request.AnnouncementId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OfflineAnnouncement",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/offlineAnnouncement",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OfflineAnnouncementResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Offlines a service notice.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Idempotently offlines a platform announcement by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is offlined for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
+        /// The caller must belong to the system operations tenant and have announcement management permissions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OfflineAnnouncementRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineAnnouncementResponse
+        /// </returns>
+        public async Task<OfflineAnnouncementResponse> OfflineAnnouncementWithOptionsAsync(OfflineAnnouncementRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnnouncementId))
+            {
+                body["announcementId"] = request.AnnouncementId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OfflineAnnouncement",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/offlineAnnouncement",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OfflineAnnouncementResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Offlines a service notice.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Idempotently offlines a platform announcement by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is offlined for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
+        /// The caller must belong to the system operations tenant and have announcement management permissions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OfflineAnnouncementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineAnnouncementResponse
+        /// </returns>
+        public OfflineAnnouncementResponse OfflineAnnouncement(OfflineAnnouncementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return OfflineAnnouncementWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Offlines a service notice.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Idempotently offlines a platform announcement by announcement ID. Returns <c>changed=true</c> when a PUBLISHED announcement is offlined for the first time. Returns <c>changed=false</c> when the announcement is already offline or expired.
+        /// The caller must belong to the system operations tenant and have announcement management permissions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OfflineAnnouncementRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineAnnouncementResponse
+        /// </returns>
+        public async Task<OfflineAnnouncementResponse> OfflineAnnouncementAsync(OfflineAnnouncementRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await OfflineAnnouncementWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Previews the knowledge content in a specified enterprise knowledge base.</para>
         /// </summary>
         /// 
@@ -16134,6 +19434,216 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RemoveUserWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes direct member relationships in bulk from a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports batch removal of direct member relationships between users and a specified user group by providing the user group ID and one or more user IDs.</description></item>
+        /// <item><description>The <c>userIds</c> parameter accepts an integer array that represents the list of platform user IDs to be removed.</description></item>
+        /// <item><description>If a user you attempt to remove is not a direct member of the user group, the final result count is not affected.</description></item>
+        /// <item><description>After a successful call, the response returns information such as the number of members actually removed and the number of members before the request was processed.</description></item>
+        /// <item><description>This operation requires appropriate permission authentication and is recorded in operation logs.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RemoveUserGroupMembersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUserGroupMembersResponse
+        /// </returns>
+        public RemoveUserGroupMembersResponse RemoveUserGroupMembersWithOptions(RemoveUserGroupMembersRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RemoveUserGroupMembersShrinkRequest request = new RemoveUserGroupMembersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIds))
+            {
+                request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                body["userGroupId"] = request.UserGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdsShrink))
+            {
+                body["userIds"] = request.UserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveUserGroupMembers",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/removeUserGroupMembers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveUserGroupMembersResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes direct member relationships in bulk from a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports batch removal of direct member relationships between users and a specified user group by providing the user group ID and one or more user IDs.</description></item>
+        /// <item><description>The <c>userIds</c> parameter accepts an integer array that represents the list of platform user IDs to be removed.</description></item>
+        /// <item><description>If a user you attempt to remove is not a direct member of the user group, the final result count is not affected.</description></item>
+        /// <item><description>After a successful call, the response returns information such as the number of members actually removed and the number of members before the request was processed.</description></item>
+        /// <item><description>This operation requires appropriate permission authentication and is recorded in operation logs.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RemoveUserGroupMembersRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUserGroupMembersResponse
+        /// </returns>
+        public async Task<RemoveUserGroupMembersResponse> RemoveUserGroupMembersWithOptionsAsync(RemoveUserGroupMembersRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RemoveUserGroupMembersShrinkRequest request = new RemoveUserGroupMembersShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.UserIds))
+            {
+                request.UserIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.UserIds, "userIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                body["userGroupId"] = request.UserGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserIdsShrink))
+            {
+                body["userIds"] = request.UserIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RemoveUserGroupMembers",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/removeUserGroupMembers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RemoveUserGroupMembersResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes direct member relationships in bulk from a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports batch removal of direct member relationships between users and a specified user group by providing the user group ID and one or more user IDs.</description></item>
+        /// <item><description>The <c>userIds</c> parameter accepts an integer array that represents the list of platform user IDs to be removed.</description></item>
+        /// <item><description>If a user you attempt to remove is not a direct member of the user group, the final result count is not affected.</description></item>
+        /// <item><description>After a successful call, the response returns information such as the number of members actually removed and the number of members before the request was processed.</description></item>
+        /// <item><description>This operation requires appropriate permission authentication and is recorded in operation logs.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveUserGroupMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUserGroupMembersResponse
+        /// </returns>
+        public RemoveUserGroupMembersResponse RemoveUserGroupMembers(RemoveUserGroupMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RemoveUserGroupMembersWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Removes direct member relationships in bulk from a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>This operation supports batch removal of direct member relationships between users and a specified user group by providing the user group ID and one or more user IDs.</description></item>
+        /// <item><description>The <c>userIds</c> parameter accepts an integer array that represents the list of platform user IDs to be removed.</description></item>
+        /// <item><description>If a user you attempt to remove is not a direct member of the user group, the final result count is not affected.</description></item>
+        /// <item><description>After a successful call, the response returns information such as the number of members actually removed and the number of members before the request was processed.</description></item>
+        /// <item><description>This operation requires appropriate permission authentication and is recorded in operation logs.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RemoveUserGroupMembersRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RemoveUserGroupMembersResponse
+        /// </returns>
+        public async Task<RemoveUserGroupMembersResponse> RemoveUserGroupMembersAsync(RemoveUserGroupMembersRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RemoveUserGroupMembersWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -18670,6 +22180,466 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RunSkillWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves group outputs in batches to the collaboration group repository.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Saves specified group outputs to the repository directory of the same collaboration group.</description></item>
+        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a platform user and a member of the target group. The caller can archive group outputs visible to them, including outputs created by other members.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the default repository directory of the target group is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</description></item>
+        /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure of a single entry does not affect other entries.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SaveGroupOutputFileToGroupResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGroupOutputFileToGroupResourceResponse
+        /// </returns>
+        public SaveGroupOutputFileToGroupResourceResponse SaveGroupOutputFileToGroupResourceWithOptions(SaveGroupOutputFileToGroupResourceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SaveGroupOutputFileToGroupResourceShrinkRequest request = new SaveGroupOutputFileToGroupResourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ItemIds))
+            {
+                request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "itemIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemIdsShrink))
+            {
+                body["itemIds"] = request.ItemIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                body["mode"] = request.Mode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveGroupOutputFileToGroupResource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/saveGroupOutputFileToGroupResource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveGroupOutputFileToGroupResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves group outputs in batches to the collaboration group repository.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Saves specified group outputs to the repository directory of the same collaboration group.</description></item>
+        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a platform user and a member of the target group. The caller can archive group outputs visible to them, including outputs created by other members.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the default repository directory of the target group is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</description></item>
+        /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure of a single entry does not affect other entries.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SaveGroupOutputFileToGroupResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGroupOutputFileToGroupResourceResponse
+        /// </returns>
+        public async Task<SaveGroupOutputFileToGroupResourceResponse> SaveGroupOutputFileToGroupResourceWithOptionsAsync(SaveGroupOutputFileToGroupResourceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SaveGroupOutputFileToGroupResourceShrinkRequest request = new SaveGroupOutputFileToGroupResourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ItemIds))
+            {
+                request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "itemIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemIdsShrink))
+            {
+                body["itemIds"] = request.ItemIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                body["mode"] = request.Mode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveGroupOutputFileToGroupResource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/saveGroupOutputFileToGroupResource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveGroupOutputFileToGroupResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves group outputs in batches to the collaboration group repository.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Saves specified group outputs to the repository directory of the same collaboration group.</description></item>
+        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a platform user and a member of the target group. The caller can archive group outputs visible to them, including outputs created by other members.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the default repository directory of the target group is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</description></item>
+        /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure of a single entry does not affect other entries.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveGroupOutputFileToGroupResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGroupOutputFileToGroupResourceResponse
+        /// </returns>
+        public SaveGroupOutputFileToGroupResourceResponse SaveGroupOutputFileToGroupResource(SaveGroupOutputFileToGroupResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SaveGroupOutputFileToGroupResourceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves group outputs in batches to the collaboration group repository.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Saves specified group outputs to the repository directory of the same collaboration group.</description></item>
+        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a platform user and a member of the target group. The caller can archive group outputs visible to them, including outputs created by other members.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the default repository directory of the target group is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. If any entry does not exist, is not visible, or cannot be operated on, the entire batch fails.</description></item>
+        /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure of a single entry does not affect other entries.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveGroupOutputFileToGroupResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGroupOutputFileToGroupResourceResponse
+        /// </returns>
+        public async Task<SaveGroupOutputFileToGroupResourceResponse> SaveGroupOutputFileToGroupResourceAsync(SaveGroupOutputFileToGroupResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SaveGroupOutputFileToGroupResourceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch saves group outputs to the current operator\&quot;s personal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</description></item>
+        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the current operator\&quot;s default personal directory is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</description></item>
+        /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure to save a single entry does not affect other entries.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SaveGroupOutputFileToPersonalResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGroupOutputFileToPersonalResourceResponse
+        /// </returns>
+        public SaveGroupOutputFileToPersonalResourceResponse SaveGroupOutputFileToPersonalResourceWithOptions(SaveGroupOutputFileToPersonalResourceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SaveGroupOutputFileToPersonalResourceShrinkRequest request = new SaveGroupOutputFileToPersonalResourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ItemIds))
+            {
+                request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "itemIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemIdsShrink))
+            {
+                body["itemIds"] = request.ItemIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                body["mode"] = request.Mode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveGroupOutputFileToPersonalResource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/saveGroupOutputFileToPersonalResource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveGroupOutputFileToPersonalResourceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch saves group outputs to the current operator\&quot;s personal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</description></item>
+        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the current operator\&quot;s default personal directory is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</description></item>
+        /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure to save a single entry does not affect other entries.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SaveGroupOutputFileToPersonalResourceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGroupOutputFileToPersonalResourceResponse
+        /// </returns>
+        public async Task<SaveGroupOutputFileToPersonalResourceResponse> SaveGroupOutputFileToPersonalResourceWithOptionsAsync(SaveGroupOutputFileToPersonalResourceRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SaveGroupOutputFileToPersonalResourceShrinkRequest request = new SaveGroupOutputFileToPersonalResourceShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.ItemIds))
+            {
+                request.ItemIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.ItemIds, "itemIds", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DirectoryId))
+            {
+                body["directoryId"] = request.DirectoryId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupId))
+            {
+                body["groupId"] = request.GroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ItemIdsShrink))
+            {
+                body["itemIds"] = request.ItemIdsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Mode))
+            {
+                body["mode"] = request.Mode;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveGroupOutputFileToPersonalResource",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/saveGroupOutputFileToPersonalResource",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveGroupOutputFileToPersonalResourceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch saves group outputs to the current operator\&quot;s personal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</description></item>
+        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the current operator\&quot;s default personal directory is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</description></item>
+        /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure to save a single entry does not affect other entries.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveGroupOutputFileToPersonalResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGroupOutputFileToPersonalResourceResponse
+        /// </returns>
+        public SaveGroupOutputFileToPersonalResourceResponse SaveGroupOutputFileToPersonalResource(SaveGroupOutputFileToPersonalResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SaveGroupOutputFileToPersonalResourceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Batch saves group outputs to the current operator\&quot;s personal knowledge base.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <list type="bullet">
+        /// <item><description>Saves specified group outputs to the current operator\&quot;s personal knowledge base.</description></item>
+        /// <item><description>Supports two modes: <c>link</c> (maintains output association) and <c>copy</c> (creates an independent snapshot).</description></item>
+        /// <item><description>The caller must be a member of the target group who is associated with a platform user. Regular members can only archive outputs they created, while group administrators can archive visible outputs from other members. Personal ownership is always derived from the gateway authentication identity.</description></item>
+        /// <item><description>If <c>directoryId</c> is not specified, the current operator\&quot;s default personal directory is used.</description></item>
+        /// <item><description>A maximum of 50 outputs can be processed per batch. All entries are validated before saving. The entire batch fails if any entry does not exist, is not visible, or cannot be operated on.</description></item>
+        /// <item><description>After unified validation passes, entries are saved one by one. The response results maintain the same order as <c>itemIds</c>. A failure to save a single entry does not affect other entries.</description></item>
+        /// </list>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SaveGroupOutputFileToPersonalResourceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveGroupOutputFileToPersonalResourceResponse
+        /// </returns>
+        public async Task<SaveGroupOutputFileToPersonalResourceResponse> SaveGroupOutputFileToPersonalResourceAsync(SaveGroupOutputFileToPersonalResourceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SaveGroupOutputFileToPersonalResourceWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -22436,6 +26406,200 @@ namespace AlibabaCloud.SDK.WinNexo20260512
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateUserWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, and parent relationship of a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>WinNexo user management OpenAPI: updates a user group. The tenant identity is obtained from the authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateUserGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserGroupResponse
+        /// </returns>
+        public UpdateUserGroupResponse UpdateUserGroupWithOptions(UpdateUserGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MoveToRoot))
+            {
+                body["moveToRoot"] = request.MoveToRoot;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
+            {
+                body["parentId"] = request.ParentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                body["userGroupId"] = request.UserGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupName))
+            {
+                body["userGroupName"] = request.UserGroupName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUserGroup",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/updateUserGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserGroupResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, and parent relationship of a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>WinNexo user management OpenAPI: updates a user group. The tenant identity is obtained from the authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateUserGroupRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserGroupResponse
+        /// </returns>
+        public async Task<UpdateUserGroupResponse> UpdateUserGroupWithOptionsAsync(UpdateUserGroupRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TenantId))
+            {
+                query["tenantId"] = request.TenantId;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MoveToRoot))
+            {
+                body["moveToRoot"] = request.MoveToRoot;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ParentId))
+            {
+                body["parentId"] = request.ParentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupId))
+            {
+                body["userGroupId"] = request.UserGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserGroupName))
+            {
+                body["userGroupName"] = request.UserGroupName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateUserGroup",
+                Version = "2026-05-12",
+                Protocol = "HTTPS",
+                Pathname = "/openapi/updateUserGroup",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateUserGroupResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, and parent relationship of a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>WinNexo user management OpenAPI: updates a user group. The tenant identity is obtained from the authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserGroupResponse
+        /// </returns>
+        public UpdateUserGroupResponse UpdateUserGroup(UpdateUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateUserGroupWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the name, description, and parent relationship of a specified user group.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>WinNexo user management OpenAPI: updates a user group. The tenant identity is obtained from the authentication context.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateUserGroupRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateUserGroupResponse
+        /// </returns>
+        public async Task<UpdateUserGroupResponse> UpdateUserGroupAsync(UpdateUserGroupRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateUserGroupWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string FilesShrink { get; set; }
 
         /// <summary>
-        /// <para>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, a new session uses standard, and an existing session retains its current tier.</para>
+        /// <para>The abstract model tier. Valid values: quick, standard, and flagship. If not specified, new sessions use standard, and existing sessions retain their current tier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>quick</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public bool? Stream { get; set; }
 
         /// <summary>
-        /// <para>The task execution metadata returned by executeScheduledTask. If specified, the request is processed through the task execution pipeline.</para>
+        /// <para>The task execution metadata returned by executeScheduledTask. When provided, the request is processed through the task execution pipeline.</para>
         /// </summary>
         [NameInMap("taskExecution")]
         [Validation(Required=false)]

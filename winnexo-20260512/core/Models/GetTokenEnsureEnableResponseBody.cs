@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.WinNexo20260512.Models
 {
-    public class GetGraphSchemaResponseBody : TeaModel {
+    public class GetTokenEnsureEnableResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,21 +20,20 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The graph name.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The creation time.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>string_value</para>
+        /// <para>2026-08-25T10:00:00+08:00</para>
         /// </summary>
-        [NameInMap("graphName")]
+        [NameInMap("gmtCreate")]
         [Validation(Required=false)]
-        public string GraphName { get; set; }
+        public string GmtCreate { get; set; }
 
         /// <summary>
-        /// <para>The status code description.</para>
+        /// <para>The description of the status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ok</para>
+        /// <para>successful</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]
@@ -51,36 +50,24 @@ namespace AlibabaCloud.SDK.WinNexo20260512.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The active QueryAgent registered schema ID corresponding to the graph. The value is null if not yet registered.</para>
+        /// <para>The temporary access credential for the data catalog.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>schema_123456</para>
+        /// <para>example_token_value</para>
         /// </summary>
-        [NameInMap("schemaId")]
+        [NameInMap("token")]
         [Validation(Required=false)]
-        public string SchemaId { get; set; }
+        public string Token { get; set; }
 
         /// <summary>
-        /// <para>The version.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The masked token value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>string_value</para>
         /// </summary>
-        [NameInMap("schemaVersion")]
+        [NameInMap("tokenMasked")]
         [Validation(Required=false)]
-        public string SchemaVersion { get; set; }
-
-        /// <summary>
-        /// <para>The raw YAML text of the Graph Schema trimmed by READ permissions, retaining $ref references within the authorized subgraph.</para>
-        /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>string_value</para>
-        /// </summary>
-        [NameInMap("yamlEdit")]
-        [Validation(Required=false)]
-        public string YamlEdit { get; set; }
+        public string TokenMasked { get; set; }
 
     }
 
