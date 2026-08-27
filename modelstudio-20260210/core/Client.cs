@@ -24,7 +24,6 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
                 {"cn-beijing", "modelstudio.cn-beijing.aliyuncs.com"},
                 {"cn-hongkong", "modelstudio.cn-hongkong.aliyuncs.com"},
                 {"ap-southeast-1", "modelstudio.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-1", "modelstudio.ap-northeast-1.aliyuncs.com"},
                 {"us-east-1", "modelstudio.us-east-1.aliyuncs.com"},
                 {"eu-central-1", "modelstudio.eu-central-1.aliyuncs.com"},
             };
@@ -1740,6 +1739,418 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetApiKeyWithOptionsAsync(apiKeyId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询账单概览</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetBillingOverviewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBillingOverviewResponse
+        /// </returns>
+        public GetBillingOverviewResponse GetBillingOverviewWithOptions(GetBillingOverviewRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetBillingOverviewShrinkRequest request = new GetBillingOverviewShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "filter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupBy))
+            {
+                request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "groupBy", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillMonth))
+            {
+                query["billMonth"] = request.BillMonth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
+            {
+                query["groupBy"] = request.GroupByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locale))
+            {
+                query["locale"] = request.Locale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopNum))
+            {
+                query["topNum"] = request.TopNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroFilter))
+            {
+                query["zeroFilter"] = request.ZeroFilter;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBillingOverview",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/billing/overview",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBillingOverviewResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询账单概览</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetBillingOverviewRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBillingOverviewResponse
+        /// </returns>
+        public async Task<GetBillingOverviewResponse> GetBillingOverviewWithOptionsAsync(GetBillingOverviewRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetBillingOverviewShrinkRequest request = new GetBillingOverviewShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "filter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupBy))
+            {
+                request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "groupBy", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BillMonth))
+            {
+                query["billMonth"] = request.BillMonth;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
+            {
+                query["groupBy"] = request.GroupByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locale))
+            {
+                query["locale"] = request.Locale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopNum))
+            {
+                query["topNum"] = request.TopNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroFilter))
+            {
+                query["zeroFilter"] = request.ZeroFilter;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBillingOverview",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/billing/overview",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBillingOverviewResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询账单概览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBillingOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBillingOverviewResponse
+        /// </returns>
+        public GetBillingOverviewResponse GetBillingOverview(GetBillingOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetBillingOverviewWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询账单概览</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBillingOverviewRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBillingOverviewResponse
+        /// </returns>
+        public async Task<GetBillingOverviewResponse> GetBillingOverviewAsync(GetBillingOverviewRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetBillingOverviewWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询账单趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetBillingTrendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBillingTrendResponse
+        /// </returns>
+        public GetBillingTrendResponse GetBillingTrendWithOptions(GetBillingTrendRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetBillingTrendShrinkRequest request = new GetBillingTrendShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "filter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupBy))
+            {
+                request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "groupBy", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TimePeriod))
+            {
+                request.TimePeriodShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TimePeriod, "timePeriod", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
+            {
+                query["groupBy"] = request.GroupByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locale))
+            {
+                query["locale"] = request.Locale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimePeriodShrink))
+            {
+                query["timePeriod"] = request.TimePeriodShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopNum))
+            {
+                query["topNum"] = request.TopNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroFilter))
+            {
+                query["zeroFilter"] = request.ZeroFilter;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBillingTrend",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/billing/trend",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBillingTrendResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询账单趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// GetBillingTrendRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBillingTrendResponse
+        /// </returns>
+        public async Task<GetBillingTrendResponse> GetBillingTrendWithOptionsAsync(GetBillingTrendRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetBillingTrendShrinkRequest request = new GetBillingTrendShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Filter))
+            {
+                request.FilterShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Filter, "filter", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.GroupBy))
+            {
+                request.GroupByShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.GroupBy, "groupBy", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TimePeriod))
+            {
+                request.TimePeriodShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TimePeriod, "timePeriod", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FilterShrink))
+            {
+                query["filter"] = request.FilterShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Granularity))
+            {
+                query["granularity"] = request.Granularity;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupByShrink))
+            {
+                query["groupBy"] = request.GroupByShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Locale))
+            {
+                query["locale"] = request.Locale;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["regionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimePeriodShrink))
+            {
+                query["timePeriod"] = request.TimePeriodShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TopNum))
+            {
+                query["topNum"] = request.TopNum;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZeroFilter))
+            {
+                query["zeroFilter"] = request.ZeroFilter;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBillingTrend",
+                Version = "2026-02-10",
+                Protocol = "HTTPS",
+                Pathname = "/modelstudio/billing/trend",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBillingTrendResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询账单趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBillingTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBillingTrendResponse
+        /// </returns>
+        public GetBillingTrendResponse GetBillingTrend(GetBillingTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetBillingTrendWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询账单趋势</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBillingTrendRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBillingTrendResponse
+        /// </returns>
+        public async Task<GetBillingTrendResponse> GetBillingTrendAsync(GetBillingTrendRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetBillingTrendWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4918,7 +5329,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务空间模型授权</para>
+        /// <para>Updates model authorization for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4972,7 +5383,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务空间模型授权</para>
+        /// <para>Updates model authorization for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5026,7 +5437,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务空间模型授权</para>
+        /// <para>Updates model authorization for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5045,7 +5456,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新业务空间模型授权</para>
+        /// <para>Updates model authorization for a workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
