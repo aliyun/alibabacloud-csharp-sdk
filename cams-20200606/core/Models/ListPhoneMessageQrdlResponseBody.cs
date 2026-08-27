@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListPhoneMessageQrdlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denied details.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PhoneNumber { get; set; }
 
             /// <summary>
-            /// <para>The prefilled message content.</para>
+            /// <para>The message content.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Hello</para>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

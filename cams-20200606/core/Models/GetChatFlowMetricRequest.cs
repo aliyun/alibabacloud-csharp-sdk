@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to open the canvas and view the flow version.</para>
+        /// <para>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the flow editor canvas page and view the flow version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -77,13 +77,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The extended parameter for the metric query. When MetricName is set to nodeErrorDetails, pass in a JSON string. Valid values for the JSON fields:</para>
+        /// <para>The extended parameter for the metric query. When MetricName is set to nodeErrorDetails, pass in a JSON string. Valid JSON fields:</para>
         /// <list type="bullet">
         /// <item><description><para>pageNo: the current page number.</para>
         /// </description></item>
         /// <item><description><para>pageSize: the number of entries per page.</para>
         /// </description></item>
-        /// <item><description><para>nodeId: the node ID. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to open the canvas and copy the node ID.</para>
+        /// <item><description><para>nodeId: the node ID. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page, click the flow name to enter the canvas orchestration page and copy the node ID.</para>
         /// </description></item>
         /// </list>
         /// 

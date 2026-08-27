@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetFlowResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
@@ -38,7 +44,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// <para>The API version.</para>
+            /// <para>The API version information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3.0</para>
@@ -48,6 +54,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string DataApiVersion { get; set; }
 
             /// <summary>
+            /// <para>The URL of the WA Flow Endpoint</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="http://abc.com">http://abc.com</a></para>
             /// </summary>
@@ -56,7 +64,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string EndpointUri { get; set; }
 
             /// <summary>
-            /// <para>The flow ID.</para>
+            /// <para>Flow ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>92675332812643****</para>
@@ -66,7 +74,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>The flow name.</para>
+            /// <para>The Flow name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>flow_001</para>
@@ -76,7 +84,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string FlowName { get; set; }
 
             /// <summary>
-            /// <para>The JSON version.</para>
+            /// <para>The JSON version information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.1</para>
@@ -106,7 +114,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? PreviewUrlExpires { get; set; }
 
             /// <summary>
-            /// <para>The status of the flow.</para>
+            /// <para>The status of the Flow. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PUBLISHED: Published.</description></item>
+            /// <item><description>DRAFT: Draft.</description></item>
+            /// <item><description>DEPRECATED: Deprecated.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>DRAFT</para>

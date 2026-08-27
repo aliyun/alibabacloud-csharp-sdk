@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateChatFlowShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The business tenant code. The default value is ALICOM_OPAAS.</para>
+        /// <para>The business tenant code. Default value: ALICOM_OPAAS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALICOM_OPAAS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. The default value is an empty collection.</para>
+        /// <para>The business extension information. Default value: an empty collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizExtendShrink { get; set; }
 
         /// <summary>
-        /// <para>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// <para>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ccc41**************************</para>
@@ -44,10 +44,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The updated remarks for the flow.</para>
+        /// <para>The updated flow remark.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>流程备注</para>
+        /// <para>FlowRemark.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -62,10 +62,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The updated name of the flow.</para>
+        /// <para>The updated flow name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试流程</para>
+        /// <para>TestFlow.</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

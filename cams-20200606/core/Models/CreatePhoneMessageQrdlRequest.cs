@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustSpaceId { get; set; }
 
         /// <summary>
-        /// <para>The type of the generated image. Valid values:</para>
+        /// <para>The type of image to generate. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>PNG</para>
         /// </description></item>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The phone number. You can view the phone number on the
+        /// <para>The phone number. You can view it on the
         /// &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement"><b>Channel Management</b></a>
-        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>&gt; <b>Manage</b> &gt; <b>WABA Management</b> &gt; <b>Number Management</b> page.</para>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a>&gt;<b>Manage</b>&gt;<b>WABA Management</b>&gt;<b>Number Management</b> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

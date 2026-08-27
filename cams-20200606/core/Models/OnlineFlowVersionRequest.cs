@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class OnlineFlowVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The business tenant code. The default value is ALICOM_OPAAS.</para>
+        /// <para>The business tenant code. Default value: ALICOM_OPAAS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALICOM_OPAAS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>Business extension information. The default value is an empty object.</para>
+        /// <para>The business extension information. Default value: an empty collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
-        /// <para>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// <para>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f4912c16943b4dfba44bd6fedacf****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The flow version. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the flow name to open the orchestration canvas and view the flow version.</para>
+        /// <para>The flow version. You can click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page to go to the canvas page and view the flow version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the flow. You can view the remarks in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// <para>The flow remark. You can view the flow remark on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>通过API触发下发验证模板</para>
+        /// <para>Trigger verification template delivery through API.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]

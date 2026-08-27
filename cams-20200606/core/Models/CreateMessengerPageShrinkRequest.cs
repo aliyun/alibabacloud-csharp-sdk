@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateMessengerPageShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The IDs of the authorized ad accounts.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AdAccountIds")]
@@ -17,30 +18,33 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AdAccountIdsShrink { get; set; }
 
         /// <summary>
+        /// <para>The authorization code obtained after the embedded authorization is completed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>EAA****</para>
         /// </summary>
         [NameInMap("AuthenticationCode")]
         [Validation(Required=false)]
         public string AuthenticationCode { get; set; }
 
         /// <summary>
+        /// <para>The Business platform ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>293***</para>
         /// </summary>
         [NameInMap("BusinessId")]
         [Validation(Required=false)]
         public string BusinessId { get; set; }
 
         /// <summary>
+        /// <para>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>cams-s***</para>
         /// </summary>
         [NameInMap("CustSpaceId")]
         [Validation(Required=false)]
@@ -51,10 +55,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The PageId of the messenger.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>19283***</para>
         /// </summary>
         [NameInMap("PageId")]
         [Validation(Required=false)]

@@ -10,18 +10,28 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeleteContactsShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The business code.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值</para>
+        /// <para>ALICOM_OPAAS</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
+        /// <summary>
+        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public string BizExtendShrink { get; set; }
 
         /// <summary>
+        /// <para>The contact details.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1507486****</para>
         /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ContactDetails { get; set; }
 
         /// <summary>
+        /// <para>The contact name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>hahaha</para>
         /// </summary>
@@ -38,6 +50,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ContactName { get; set; }
 
         /// <summary>
+        /// <para>The country.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>China</para>
         /// </summary>
@@ -46,6 +60,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Country { get; set; }
 
         /// <summary>
+        /// <para>The file path.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>http://****</para>
         /// </summary>

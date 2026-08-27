@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class GetFlowPreviewUrlResponseBody : TeaModel {
         /// <summary>
         /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -34,7 +37,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public GetFlowPreviewUrlResponseBodyData Data { get; set; }
         public class GetFlowPreviewUrlResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The flow ID.</para>
+            /// <para>Flow ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>92675332812643****</para>

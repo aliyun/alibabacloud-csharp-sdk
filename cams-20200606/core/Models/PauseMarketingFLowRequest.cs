@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class PauseMarketingFLowRequest : TeaModel {
         /// <summary>
+        /// <para>The activity code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>439859845**234</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ActivityCode { get; set; }
 
         /// <summary>
+        /// <para>The activity ID (deprecated).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>N/A</para>
         /// </summary>

@@ -10,14 +10,17 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class DeprecateFlowResponseBody : TeaModel {
         /// <summary>
-        /// <para>The reason why access was denied.</para>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>OK indicates that the request was successful.</para>
+        /// <para>The response code. OK indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

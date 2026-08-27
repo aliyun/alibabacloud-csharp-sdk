@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListFlowNodePrototypeV2Request : TeaModel {
         /// <summary>
-        /// <para>The business tenant code. The default value is ALICOM_OPAAS.</para>
+        /// <para>The business tenant code. Default value: ALICOM_OPAAS.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,15 +21,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The code for the component group. Valid values:</para>
+        /// <para>The component group code. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Messaging: Message components.</para>
+        /// <item><description><para>Messaging: messaging components.</para>
         /// </description></item>
-        /// <item><description><para>Core: Core components.</para>
+        /// <item><description><para>Core: core components.</para>
         /// </description></item>
-        /// <item><description><para>Intelligence: Intelligence components.</para>
+        /// <item><description><para>Intelligence: intelligent components.</para>
         /// </description></item>
-        /// <item><description><para>Contact: Contact management components.</para>
+        /// <item><description><para>Contact: contact management components.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string GroupCode { get; set; }
 
         /// <summary>
-        /// <para>The search keyword. This parameter is used to perform a fuzzy query by flow component name.</para>
+        /// <para>The search keyword. This parameter is used for fuzzy match based on the flow component name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WhatsApp</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

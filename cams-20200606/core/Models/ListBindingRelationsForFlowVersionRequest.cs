@@ -12,17 +12,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The channel type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>INSTAGRAM</para>
-        /// </description></item>
-        /// <item><description><para>WHATSAPP</para>
-        /// </description></item>
-        /// <item><description><para>MESSENGER</para>
-        /// </description></item>
+        /// <item><description>INSTAGRAM</description></item>
+        /// <item><description>WHATSAPP</description></item>
+        /// <item><description>MESSENGER</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>VIBER</description></item>
-        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;- VIBER</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,7 +27,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The flow code. You can view the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// <para>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

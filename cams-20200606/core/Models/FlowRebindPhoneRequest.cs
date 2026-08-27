@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class FlowRebindPhoneRequest : TeaModel {
         /// <summary>
-        /// <para>The message channel code, which is the channel ID. You can view the channel ID on the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> page.</para>
-        /// <para>This parameter is required.</para>
+        /// <para>The message channel code, which is the channel ID. You can view the channel ID in the <a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a> console.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cams-8c8*********</para>
@@ -41,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The flow code. You can view it on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page.</para>
+        /// <para>The flow code. You can view this in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,7 +51,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The flow version. On the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, click the flow name to open the flow builder canvas and view the flow version.</para>
+        /// <para>The flow version. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> console, click the flow name to open the flow editor canvas and view the flow version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,6 +59,42 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("FlowVersion")]
         [Validation(Required=false)]
         public string FlowVersion { get; set; }
+
+        /// <summary>
+        /// <para>The multi-WABA binding configurations.</para>
+        /// </summary>
+        [NameInMap("MultiWabaPhoneNumbers")]
+        [Validation(Required=false)]
+        public List<FlowRebindPhoneRequestMultiWabaPhoneNumbers> MultiWabaPhoneNumbers { get; set; }
+        public class FlowRebindPhoneRequestMultiWabaPhoneNumbers : TeaModel {
+            /// <summary>
+            /// <para>The channel code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
+            [NameInMap("ChannelCode")]
+            [Validation(Required=false)]
+            public string ChannelCode { get; set; }
+
+            /// <summary>
+            /// <para>The list of phone numbers.</para>
+            /// </summary>
+            [NameInMap("PhoneNumbers")]
+            [Validation(Required=false)]
+            public List<string> PhoneNumbers { get; set; }
+
+            /// <summary>
+            /// <para>wabaId</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>示例值示例值</para>
+            /// </summary>
+            [NameInMap("WabaId")]
+            [Validation(Required=false)]
+            public string WabaId { get; set; }
+
+        }
 
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
@@ -83,12 +118,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The WABA account ID, PageId, or AccountId&lt;props=&quot;intl&quot;&gt;, or ServiceId.</para>
         /// <list type="bullet">
-        /// <item><description><para>If ChannelType is set to WHATSAPP, specify the WABA account ID. You can view the WABA account ID on the Channel Management &gt; Manage &gt; WABA Management page.</para>
+        /// <item><description><para>If ChannelType is set to WHATSAPP, specify the WABA account ID. You can view the WABA account ID in Channel Management &gt; Manage &gt; WABA Management.</para>
         /// </description></item>
         /// <item><description><para>If ChannelType is not set to WHATSAPP, specify the PageId for MESSENGER, the AccountId for INSTAGRAM&lt;props=&quot;intl&quot;&gt;, or the ServiceId for VIBER.</para>
         /// </description></item>
         /// </list>
-        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1952************</para>

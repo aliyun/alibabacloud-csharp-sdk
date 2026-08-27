@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetAuditRequestByTypeUnAuditRequest : TeaModel {
         /// <summary>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer. You can view the Space ID on the <a href="https://chatapp.console.aliyun.com/CustomerList">China-China interconnection</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +25,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The request type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -30,6 +30,26 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizExtendShrink { get; set; }
 
         /// <summary>
+        /// <para>flowCode</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SampleValueSampleValue</para>
+        /// </summary>
+        [NameInMap("FlowCode")]
+        [Validation(Required=false)]
+        public string FlowCode { get; set; }
+
+        /// <summary>
+        /// <para>The flow status.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SampleValueSampleValue</para>
+        /// </summary>
+        [NameInMap("FlowStatus")]
+        [Validation(Required=false)]
+        public string FlowStatus { get; set; }
+
+        /// <summary>
         /// <para>The flow trigger type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>TriggeredManually</description></item>
@@ -56,6 +76,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("OwnerId")]
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
@@ -80,10 +104,28 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public long? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The phone number.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SampleValue</para>
+        /// </summary>
+        [NameInMap("PhoneNumber")]
+        [Validation(Required=false)]
+        public string PhoneNumber { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ResourceOwnerAccount")]
         [Validation(Required=false)]
         public string ResourceOwnerAccount { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
@@ -113,6 +155,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("Status")]
         [Validation(Required=false)]
         public string Status { get; set; }
+
+        /// <summary>
+        /// <para>The title.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SampleValueSampleValue</para>
+        /// </summary>
+        [NameInMap("Title")]
+        [Validation(Required=false)]
+        public string Title { get; set; }
 
     }
 

@@ -30,6 +30,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizExtendShrink { get; set; }
 
         /// <summary>
+        /// <para>The draft version.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample valueSample value</para>
+        /// </summary>
+        [NameInMap("DraftVersion")]
+        [Validation(Required=false)]
+        public string DraftVersion { get; set; }
+
+        /// <summary>
         /// <para>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</para>
         /// 
         /// <b>Example:</b>

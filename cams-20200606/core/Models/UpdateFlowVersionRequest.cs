@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateFlowVersionRequest : TeaModel {
         /// <summary>
-        /// <para>The tenant code. Default value: ALICOM_OPAAS.</para>
+        /// <para>The business tenant code. Default value: ALICOM_OPAAS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALICOM_OPAAS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The extended business information. The default value is an empty collection.</para>
+        /// <para>The business extension information. Default value: an empty collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
-        /// <para>The code of the flow. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// <para>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ccc41**************************</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The version of the flow. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the flow name to open the canvas and view the flow version.</para>
+        /// <para>The flow version. You can click a flow name on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">flow editor</a> page to go to the flow editor canvas page and view the flow version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowVersion { get; set; }
 
         /// <summary>
-        /// <para>The DSL data of the flow version, in JSON format. To obtain this data, orchestrate the components on the canvas in the Flow Editor. After you save the flow, click <b>Settings</b> &gt; <b>Export</b> in the upper-right corner of the canvas to export the flow as a JSON data file.</para>
+        /// <para>The DSL data of the flow version. This is a JSON-formatted data string. You can orchestrate flow components on the flow editor canvas in advance, save the flow, and then click <b>Settings</b> &gt; <b>Export</b> in the upper-right corner of the canvas orchestration page to export a JSON-formatted data file for viewing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -74,10 +74,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the version.</para>
+        /// <para>The version remarks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>修复发送WhatsApp消息错误</para>
+        /// <para>Fix WhatsApp message sending error</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -90,6 +90,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("ResourceOwnerId")]
         [Validation(Required=false)]
         public long? ResourceOwnerId { get; set; }
+
+        /// <summary>
+        /// <para>The save type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Sample value</para>
+        /// </summary>
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
 
     }
 

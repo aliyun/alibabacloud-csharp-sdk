@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateChatFlowByImportShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The business tenant code. The default value is ALICOM_OPAAS.</para>
+        /// <para>The business tenant code. Default value: ALICOM_OPAAS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALICOM_OPAAS</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The business extension information. The default value is an empty collection.</para>
+        /// <para>The business extension information. Default value: an empty collection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizExtendShrink { get; set; }
 
         /// <summary>
-        /// <para>The flow DSL data to import. This is a block of data in JSON format. To obtain this data, arrange the components on the canvas in the Flow Editor, save the flow, and then click <b>Settings</b> &gt; <b>Export</b> in the upper-right corner of the canvas. The flow is exported as a JSON data file.</para>
+        /// <para>The imported flow DSL data, which is a JSON-formatted string. You can arrange flow components on the canvas in the flow orchestration console in advance, save the flow, and then click <b>Settings</b> &gt; <b>Export</b> in the upper-right corner of the canvas to export a JSON data file for viewing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -54,10 +54,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The remarks for the flow.</para>
+        /// <para>The flow remarks.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>触发订阅</para>
+        /// <para>Trigger Subscription.</para>
         /// </summary>
         [NameInMap("Remark")]
         [Validation(Required=false)]
@@ -72,10 +72,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The title of the flow.</para>
+        /// <para>The flow title.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>WhatsApp触发订阅</para>
+        /// <para>WhatsApp Trigger Subscription.</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]

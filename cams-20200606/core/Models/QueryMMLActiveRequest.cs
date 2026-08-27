@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class QueryMMLActiveRequest : TeaModel {
         /// <summary>
+        /// <para>The SpaceId of the ISV sub-customer.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>erer-retreerew**</para>
         /// </summary>

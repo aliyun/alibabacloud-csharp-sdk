@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListPhoneMessageQrdlRequest : TeaModel {
         /// <summary>
-        /// <para>The space ID of the ISV sub-customer, or the instance ID of the direct customer.</para>
+        /// <para>The space ID of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cams-8filvjc8snw</para>

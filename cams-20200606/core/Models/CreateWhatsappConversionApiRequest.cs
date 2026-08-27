@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class CreateWhatsappConversionApiRequest : TeaModel {
         /// <summary>
+        /// <para>The embedded code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>code</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>131</para>
         /// </summary>
@@ -29,6 +33,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public long? OwnerId { get; set; }
 
+        /// <summary>
+        /// <para>The list of embedded permissions.</para>
+        /// </summary>
         [NameInMap("Permissions")]
         [Validation(Required=false)]
         public List<string> Permissions { get; set; }

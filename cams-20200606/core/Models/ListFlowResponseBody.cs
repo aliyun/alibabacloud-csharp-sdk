@@ -11,13 +11,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class ListFlowResponseBody : TeaModel {
         /// <summary>
         /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>A value of OK indicates that the request was successful.</para>
+        /// <para>The result. OK indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -41,7 +44,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<string> Categories { get; set; }
 
             /// <summary>
-            /// <para>The flow ID.</para>
+            /// <para>Flow ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>92675332812643****</para>
@@ -51,7 +54,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>The name of the flow.</para>
+            /// <para>The Flow name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>flow-02020</para>
@@ -66,7 +69,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

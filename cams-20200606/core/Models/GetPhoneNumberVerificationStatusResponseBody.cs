@@ -11,6 +11,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
     public class GetPhoneNumberVerificationStatusResponseBody : TeaModel {
         /// <summary>
         /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -19,7 +22,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The request status code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the request was successful.</para>
+        /// <item><description><para>OK: The request was successful.</para>
         /// </description></item>
         /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
@@ -40,7 +43,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public GetPhoneNumberVerificationStatusResponseBodyData Data { get; set; }
         public class GetPhoneNumberVerificationStatusResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The verification status.</para>
+            /// <para>The verification status of the phone number. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NOT_VERIFIED: Not verified.</description></item>
+            /// <item><description>VERIFIED: Verified.</description></item>
+            /// <item><description>EXPIRED: Verification expired.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>VERIFIED</para>
@@ -50,7 +58,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CodeVerificationStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the phone number.</para>
+            /// <para>The phone number ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222434****</para>

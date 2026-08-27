@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ReadChatFlowLogSettingRequest : TeaModel {
         /// <summary>
-        /// <para>The code of the flow. You can find the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// <para>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a> page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9ccc41**************************</para>

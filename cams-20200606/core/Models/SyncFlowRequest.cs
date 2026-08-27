@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class SyncFlowRequest : TeaModel {
         /// <summary>
-        /// <para>通道实例</para>
+        /// <para>The channel instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

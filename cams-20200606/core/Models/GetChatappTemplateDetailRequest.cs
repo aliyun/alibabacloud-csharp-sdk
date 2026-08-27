@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetChatappTemplateDetailRequest : TeaModel {
         /// <summary>
-        /// <para>The SpaceId of the ISV sub-customer or the instance ID of a direct customer.</para>
+        /// <para>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28251486512358****</para>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The WabaId of the ISV customer.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Use CustSpaceId instead.</para>
+        /// <para>Deprecated parameter. Use CustSpaceId instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -35,6 +35,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Obsolete]
         public string CustWabaId { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
         /// <para>The ISV verification code, which is used to verify whether the sub-account is authorized by the ISV.</para>
         /// 
@@ -43,6 +45,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
+        [Obsolete]
         public string IsvCode { get; set; }
 
         /// <summary>
@@ -77,7 +80,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The templatetype.</para>
+        /// <para>The templatetype. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>WHATSAPP</b></para>
         /// </description></item>

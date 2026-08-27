@@ -10,18 +10,27 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class MoveContactToGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The business tenant code. Default value: ALICOM_OPAAS.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>ALICOM_OPAAS</para>
         /// </summary>
         [NameInMap("BizCode")]
         [Validation(Required=false)]
         public string BizCode { get; set; }
 
+        /// <summary>
+        /// <para>The business extension information. Default value: an empty collection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("BizExtend")]
         [Validation(Required=false)]
         public Dictionary<string, object> BizExtend { get; set; }
 
         /// <summary>
+        /// <para>The list of contacts whose group associations are to be modified.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,6 +41,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Contacts { get; set; }
 
         /// <summary>
+        /// <para>The list of existing group IDs to associate with.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;id&quot;:1}]</para>
         /// </summary>
@@ -40,6 +51,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string LinkExistGroups { get; set; }
 
         /// <summary>
+        /// <para>The list of new group names to associate with.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>[{&quot;groupName&quot;:&quot;aaa&quot;}]</para>
         /// </summary>

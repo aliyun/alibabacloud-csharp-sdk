@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class GetFlowJSONAssestResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details about the access denial.</para>
+        /// <para>The details about the access denial.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -44,7 +47,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string FilePath { get; set; }
 
             /// <summary>
-            /// <para>The flow ID.</para>
+            /// <para>Flow ID。</para>
             /// 
             /// <b>Example:</b>
             /// <para>92675332812643****</para>

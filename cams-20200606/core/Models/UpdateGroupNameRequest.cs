@@ -10,20 +10,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdateGroupNameRequest : TeaModel {
         /// <summary>
+        /// <para>The group ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值示例值</para>
+        /// <para>Sample value sample value sample value.</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The group name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>示例值示例值</para>
+        /// <para>Sample value sample value.</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

@@ -10,15 +10,15 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListChatappTemplateShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The review state of the template. Valid values:</para>
+        /// <para>The review status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>pass</b>: The template is approved.</para>
+        /// <item><description><para><b>pass</b>: Approved.</para>
         /// </description></item>
-        /// <item><description><para><b>fail</b>: The template is rejected.</para>
+        /// <item><description><para><b>fail</b>: Rejected.</para>
         /// </description></item>
-        /// <item><description><para><b>auditing</b>: The template is being reviewed.</para>
+        /// <item><description><para><b>auditing</b>: Under review.</para>
         /// </description></item>
-        /// <item><description><para><b>unaudit</b>: The review is suspended.</para>
+        /// <item><description><para><b>unaudit</b>: Review suspended.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -30,6 +30,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AuditStatus { get; set; }
 
         /// <summary>
+        /// <para>The category of the template.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AUTHENTICATION</para>
         /// </summary>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>The code of the message template.</para>
+        /// <para>The code of the template.</para>
         /// 
         /// <b>Example:</b>
         /// <para>838888822*****</para>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The space ID of the RAM user within the ISV account.</para>
+        /// <para>The space ID of the ISV sub-customer, or the instance ID of a direct customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28251486512358****</para>
@@ -60,9 +62,9 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The WhatsApp Business Account (WABA) ID of the RAM user within the independent software vendor (ISV) account.</para>
+        /// <para>The WabaId of the ISV customer.</para>
         /// <remarks>
-        /// <para>CustWabaId is an obsolete parameter. Use CustSpaceId instead.</para>
+        /// <para>This is a deprecated parameter. Use CustSpaceId instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -74,7 +76,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CustWabaId { get; set; }
 
         /// <summary>
-        /// <para>The ISV verification code. This parameter is used to verify whether the RAM user is authorized by the ISV account.</para>
+        /// <para>The ISV verification code, which is used to verify whether the RAM user is authorized by the ISV.</para>
         /// 
         /// <b>Example:</b>
         /// <para>skdi3kksloslikdkkdk</para>
@@ -84,7 +86,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// <para>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
+        /// <para>The language of the template. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en</para>
@@ -126,7 +128,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The type of the message template.</para>
+        /// <para>The templatetype. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>WHATSAPP</b></para>
         /// </description></item>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class UpdatePhoneMessageQrdlResponseBody : TeaModel {
         /// <summary>
-        /// <para>The access denial details.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>None</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string PrefilledMessage { get; set; }
 
             /// <summary>
-            /// <para>The QR code image URL.</para>
+            /// <para>The URL of the QR code image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://img.png">https://img.png</a></para>

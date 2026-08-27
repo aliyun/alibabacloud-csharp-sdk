@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <list type="bullet">
         /// <item><description><para>OK: The request was successful.</para>
         /// </description></item>
-        /// <item><description><para>For other values, see the <a href="https://help.aliyun.com/document_detail/196974.html">error code list</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public List<ListChatGroupParticipantsResponseBodyDataList> List { get; set; }
             public class ListChatGroupParticipantsResponseBodyDataList : TeaModel {
                 /// <summary>
-                /// <para>The phone number of the group member.</para>
+                /// <para>The group member number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>861382***</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             }
 
             /// <summary>
-            /// <para>The total number of participants.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -94,12 +94,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The request failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

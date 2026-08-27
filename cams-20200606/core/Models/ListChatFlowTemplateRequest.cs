@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BizCode { get; set; }
 
         /// <summary>
-        /// <para>The keyword for the search. The operation performs a fuzzy query for template names based on this keyword.</para>
+        /// <para>The search keyword. Used for fuzzy match of template names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LLM</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of records per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -63,18 +63,13 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The trigger type of the flow. Valid values:</para>
+        /// <para>The flow trigger type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>TriggeredManually</para>
-        /// </description></item>
-        /// <item><description><para>TriggeredByWhatsApp</para>
-        /// </description></item>
-        /// <item><description><para>TriggeredByInstagram</para>
-        /// </description></item>
-        /// <item><description><para>TriggeredByViber</para>
-        /// </description></item>
-        /// <item><description><para>TriggeredByMessenger</para>
-        /// </description></item>
+        /// <item><description>TriggeredManually</description></item>
+        /// <item><description>TriggeredByWhatsApp</description></item>
+        /// <item><description>TriggeredByInstagram</description></item>
+        /// <item><description>TriggeredByViber</description></item>
+        /// <item><description>TriggeredByMessenger</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

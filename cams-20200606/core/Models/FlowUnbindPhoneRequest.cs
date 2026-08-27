@@ -19,10 +19,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <item><description><para>MESSENGER</para>
         /// </description></item>
         /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <list type="bullet">
-        /// <item><description>VIBER</description></item>
-        /// </list>
+        /// <para>&lt;props=&quot;intl&quot;&gt;- VIBER</para>
         /// 
         /// <b>Example:</b>
         /// <para>WHATSAPP</para>
@@ -32,7 +29,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ChannelType { get; set; }
 
         /// <summary>
-        /// <para>The flow code. View the flow code in the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>.</para>
+        /// <para>The flow code. You can view the flow code on the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +40,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string FlowCode { get; set; }
 
         /// <summary>
-        /// <para>The flow version. In the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Editor</a>, click the flow name to go to the orchestration canvas and view the flow version.</para>
+        /// <para>The flow version. You can view the flow version by going to the <a href="https://chatapp.console.aliyun.com/ChatFlowBuilder">Flow Builder</a> page, clicking the flow name, and entering the flow editor canvas page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,7 +54,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>A list of phone numbers, Page IDs, Account IDs, or Service IDs for the channel instance.</para>
+        /// <para>The list of phone numbers, PageIds, AccountIds,&lt;props=&quot;intl&quot;&gt; or ServiceIds under the channel instance.</para>
         /// </summary>
         [NameInMap("PhoneNumbers")]
         [Validation(Required=false)]

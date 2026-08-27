@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The response content.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Response")]
         [Validation(Required=false)]

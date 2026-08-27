@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class ListInstanceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The request status code.</para>
+        /// <para>The response code.</para>
         /// <list type="bullet">
-        /// <item><description><para><c>OK</c> indicates that the request was successful.</para>
+        /// <item><description><para>OK indicates that the request was successful.</para>
         /// </description></item>
-        /// <item><description><para>For other error codes, see the <a href="https://help.aliyun.com/document_detail/196974.html">Error Code List</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>An array of objects, each representing an instance.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string CustSpaceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated Facebook Business Manager account.</para>
+            /// <para>The bound Facebook ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string InstanceName { get; set; }
 
             /// <summary>
-            /// <para>The ISV terms.</para>
+            /// <para>The ISV/Client agreement file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aa</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string IsvTerms { get; set; }
 
             /// <summary>
-            /// <para>The office address.</para>
+            /// <para>The enterprise address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>example</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the resource is located.</para>
+            /// <para>The region to which the resource belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string ResourceRegionId { get; set; }
 
             /// <summary>
-            /// <para>The state of the instance.</para>
+            /// <para>The status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>published</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string State { get; set; }
 
             /// <summary>
-            /// <para>The time when the instance was submitted.</para>
+            /// <para>The submit time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-12-12 00:00:00</para>
@@ -205,12 +205,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call succeeded.</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: The call succeeded.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: The call failed.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -221,7 +219,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries that match the specified criteria.</para>
+        /// <para>The total number of records that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

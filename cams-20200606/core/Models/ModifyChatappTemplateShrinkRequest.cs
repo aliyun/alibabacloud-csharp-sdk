@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Category { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to pause sending when a Utility template is changed to Marketing type.</para>
+        /// <para>When a Utility template is changed to Marketing type, the template is paused for sending.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The list of message template components.</para>
         /// <remarks>
-        /// <para>When Category is set to AUTHENTICATION, Components cannot contain a node with Type set to HEADER. When Type is set to BODY or FOOTER and the Text content is empty, the content is automatically generated.</para>
+        /// <para>When Category is AUTHENTICATION, Components cannot contain a node with Type set to HEADER. When Type is BODY/FOOTER, the Text content is empty and is automatically generated.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string ComponentsShrink { get; set; }
 
         /// <summary>
-        /// <para>The SpaceId of the ISV sub-customer or the instance ID of a direct customer.</para>
+        /// <para>The SpaceId of the ISV sub-customer or the instance ID of the direct customer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28251486512358****</para>
@@ -50,12 +50,10 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [Validation(Required=false)]
         public string CustSpaceId { get; set; }
 
-        /// <term><b>Obsolete</b></term>
-        /// 
         /// <summary>
         /// <para>The ISV customer WabaId.</para>
         /// <remarks>
-        /// <para>Deprecated parameter. Use CustSpaceId instead.</para>
+        /// <para>This parameter is deprecated. Use CustSpaceId instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,28 +61,30 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// </summary>
         [NameInMap("CustWabaId")]
         [Validation(Required=false)]
-        [Obsolete]
         public string CustWabaId { get; set; }
 
         /// <summary>
-        /// <para>The examples for creating the template.</para>
+        /// <para>The example for creating a template.</para>
         /// </summary>
         [NameInMap("Example")]
         [Validation(Required=false)]
         public string ExampleShrink { get; set; }
 
+        /// <term><b>Obsolete</b></term>
+        /// 
         /// <summary>
-        /// <para>The ISV verification code used to verify whether the RAM user is authorized by the ISV.</para>
+        /// <para>The ISV verification code used to verify whether the sub-account is authorized by the ISV.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ksiekdki39ksks93939</para>
         /// </summary>
         [NameInMap("IsvCode")]
         [Validation(Required=false)]
+        [Obsolete]
         public string IsvCode { get; set; }
 
         /// <summary>
-        /// <para>The template language. For detailed language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
+        /// <para>The template language. For language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -97,8 +97,8 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <summary>
         /// <para>The validity period for sending template messages in WhatsApp.</para>
         /// <list type="bullet">
-        /// <item><description>AUTHENTICATION: valid values are 30 to 900. </description></item>
-        /// <item><description>UTILITY: valid values are 30 to 43200.</description></item>
+        /// <item><description>AUTHENTICATION: valid values range from 30 to 900. </description></item>
+        /// <item><description>UTILITY: valid values range from 30 to 43200.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -107,6 +107,16 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         [NameInMap("MessageSendTtlSeconds")]
         [Validation(Required=false)]
         public int? MessageSendTtlSeconds { get; set; }
+
+        /// <summary>
+        /// <para>productSetId</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>939***</para>
+        /// </summary>
+        [NameInMap("ProductSetId")]
+        [Validation(Required=false)]
+        public string ProductSetId { get; set; }
 
         /// <summary>
         /// <para>The message template code.</para>

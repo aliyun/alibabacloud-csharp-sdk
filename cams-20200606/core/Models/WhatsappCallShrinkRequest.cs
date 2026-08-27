@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
 {
     public class WhatsappCallShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The business number.</para>
+        /// <para>The business phone number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string BusinessNumber { get; set; }
 
         /// <summary>
-        /// <para>The action to perform on the call.</para>
+        /// <para>The call action.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,8 +42,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string CallId { get; set; }
 
         /// <summary>
-        /// <para>The Space ID of the ISV sub-customer, or the instance ID of the direct customer. View the Space ID on the</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
+        /// <para>The space ID or instance ID of the ISV sub-customer. This is the channel ID, which can be viewed on the &lt;props=&quot;china&quot;&gt;<a href="https://chatapp.console.aliyun.com/ChannelsManagement">Channel Management</a>&lt;props=&quot;intl&quot;&gt;<a href="https://chatapp.console.alibabacloud.com/CustomerList">Channel Management</a> page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +72,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string SessionShrink { get; set; }
 
         /// <summary>
-        /// <para>The user\&quot;s number.</para>
+        /// <para>The user phone number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86131***</para>

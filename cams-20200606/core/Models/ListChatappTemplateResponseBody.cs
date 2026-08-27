@@ -13,18 +13,18 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         /// <para>The details about the access denial.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>None</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code returned.</para>
+        /// <para>The response code.</para>
         /// <list type="bullet">
-        /// <item><description><para>A value of OK indicates that the call is successful.</para>
+        /// <item><description><para>A value of OK indicates that the request was successful.</para>
         /// </description></item>
-        /// <item><description><para>Other values indicate that the call fails. For more information, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
+        /// <item><description><para>For other error codes, see <a href="https://help.aliyun.com/document_detail/196974.html">Error codes</a>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,22 +36,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The message templates.</para>
+        /// <para>The list data.</para>
         /// </summary>
         [NameInMap("ListTemplate")]
         [Validation(Required=false)]
         public List<ListChatappTemplateResponseBodyListTemplate> ListTemplate { get; set; }
         public class ListChatappTemplateResponseBodyListTemplate : TeaModel {
             /// <summary>
-            /// <para>The review state of the template. Valid values:</para>
+            /// <para>The review status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>pass</b>: The template is approved.</para>
+            /// <item><description><para><b>pass</b>: Approved.</para>
             /// </description></item>
-            /// <item><description><para><b>fail</b>: The template is rejected.</para>
+            /// <item><description><para><b>fail</b>: Rejected.</para>
             /// </description></item>
-            /// <item><description><para><b>auditing</b>: The template is being reviewed.</para>
+            /// <item><description><para><b>auditing</b>: Under review.</para>
             /// </description></item>
-            /// <item><description><para><b>unaudit</b>: The review is suspended.</para>
+            /// <item><description><para><b>unaudit</b>: Review suspended.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -63,34 +63,22 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string AuditStatus { get; set; }
 
             /// <summary>
-            /// <para>The category of the WhatsApp message template. Valid values:</para>
+            /// <para>The WhatsApp template category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>UTILITY</b></para>
+            /// <item><description><para><b>UTILITY</b>: Transaction-related.</para>
             /// </description></item>
-            /// <item><description><para><b>MARKETING</b></para>
+            /// <item><description><para><b>MARKETING</b>: Marketing template.</para>
             /// </description></item>
-            /// <item><description><para><b>AUTHENTICATION</b></para>
+            /// <item><description><para><b>AUTHENTICATION</b>: Identity verification.</para>
             /// </description></item>
             /// </list>
-            /// <para>The category of the Viber template. Valid values:</para>
+            /// <para>Viber template category. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>text</b>: template that contains only text</para>
+            /// <item><description><para><b>UTILITY</b>: Transaction-related.</para>
             /// </description></item>
-            /// <item><description><para><b>image</b>: template that contains only images</para>
+            /// <item><description><para><b>MARKETING</b>: Marketing template.</para>
             /// </description></item>
-            /// <item><description><para><b>text_image_button</b>: template that contains text, images, and buttons</para>
-            /// </description></item>
-            /// <item><description><para><b>text_button</b>: template that contains text and buttons</para>
-            /// </description></item>
-            /// <item><description><para><b>document</b>: template that contains only documents</para>
-            /// </description></item>
-            /// <item><description><para><b>video</b>: template that contains only videos</para>
-            /// </description></item>
-            /// <item><description><para><b>text_video</b>: template that contains text and videos</para>
-            /// </description></item>
-            /// <item><description><para><b>text_video_button</b>: template that contains text, videos, and buttons</para>
-            /// </description></item>
-            /// <item><description><para><b>text_image</b>: template that contains text and images</para>
+            /// <item><description><para><b>AUTHENTICATION</b>: Identity verification.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -102,7 +90,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Category { get; set; }
 
             /// <summary>
-            /// <para>The language that is used in the message template. For more information, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
+            /// <para>The language of the template. For more information about language codes, see <a href="https://help.aliyun.com/document_detail/463420.html">Language codes</a>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>en</para>
@@ -112,7 +100,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The time when the template was last modified. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+            /// <para>The time when the template was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1711006633000</para>
@@ -122,7 +110,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public long? LastUpdateTime { get; set; }
 
             /// <summary>
-            /// <para>The reason why the template was rejected.</para>
+            /// <para>The reason why the template was rejected during review.</para>
             /// 
             /// <b>Example:</b>
             /// <para>None</para>
@@ -132,7 +120,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string Reason { get; set; }
 
             /// <summary>
-            /// <para>The code of the message template.</para>
+            /// <para>The code of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>744c4b5c79c9432497a075bdfca3****</para>
@@ -142,7 +130,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string TemplateCode { get; set; }
 
             /// <summary>
-            /// <para>The name of the message template.</para>
+            /// <para>The name of the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hello_whatsapp</para>
@@ -152,7 +140,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
             public string TemplateName { get; set; }
 
             /// <summary>
-            /// <para>The type of the template. Valid values: WHATSAPP and VIBER.</para>
+            /// <para>The templatetype. Valid values: WHATSAPP and VIBER.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WHATSAPP</para>
@@ -164,7 +152,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         }
 
         /// <summary>
-        /// <para>The error message returned.</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>User not authorized to operate on the specified resource.</para>
@@ -174,7 +162,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>90E63D28-E31D-1EB2-8939-A9486641****</para>
@@ -184,6 +172,12 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The request was successful.</description></item>
+        /// <item><description><b>false</b>: The request failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -192,7 +186,7 @@ namespace AlibabaCloud.SDK.Cams20200606.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
