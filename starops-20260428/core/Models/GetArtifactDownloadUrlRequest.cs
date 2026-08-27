@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetArtifactDownloadUrlRequest : TeaModel {
         /// <summary>
+        /// <para>The artifact file path, relative to the digital worker artifact root directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

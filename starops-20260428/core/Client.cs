@@ -44,12 +44,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建产物上传凭证</para>
+        /// <para>Creates an artifact upload credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取上传内容所需链接，适用于大文件。</para>
+        /// <para>Obtains the link required to upload content. This operation is applicable to large files.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -95,12 +95,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建产物上传凭证</para>
+        /// <para>Creates an artifact upload credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取上传内容所需链接，适用于大文件。</para>
+        /// <para>Obtains the link required to upload content. This operation is applicable to large files.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -146,12 +146,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建产物上传凭证</para>
+        /// <para>Creates an artifact upload credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取上传内容所需链接，适用于大文件。</para>
+        /// <para>Obtains the link required to upload content. This operation is applicable to large files.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -170,12 +170,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建产物上传凭证</para>
+        /// <para>Creates an artifact upload credential.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>获取上传内容所需链接，适用于大文件。</para>
+        /// <para>Obtains the link required to upload content. This operation is applicable to large files.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -194,12 +194,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>New conversation</para>
+        /// <para>Creates a conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Starts a session.</para>
+        /// <para>Initiates a conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -261,12 +261,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>New conversation</para>
+        /// <para>Creates a conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Starts a session.</para>
+        /// <para>Initiates a conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -328,12 +328,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>New conversation</para>
+        /// <para>Creates a conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Starts a session.</para>
+        /// <para>Initiates a conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -352,12 +352,12 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>New conversation</para>
+        /// <para>Creates a conversation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Starts a session.</para>
+        /// <para>Initiates a conversation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -376,7 +376,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital employee.</para>
+        /// <para>Creates a DigitalEmployee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -467,7 +467,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital employee.</para>
+        /// <para>Creates a DigitalEmployee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -558,7 +558,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital employee.</para>
+        /// <para>Creates a DigitalEmployee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -582,7 +582,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a digital employee.</para>
+        /// <para>Creates a DigitalEmployee.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -2152,8 +2152,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产物下载链接</para>
+        /// <para>Retrieves the download URL for an artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the download URL for artifact content. This operation is suitable for large files.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetArtifactDownloadUrlRequest
@@ -2198,8 +2203,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产物下载链接</para>
+        /// <para>Retrieves the download URL for an artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the download URL for artifact content. This operation is suitable for large files.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetArtifactDownloadUrlRequest
@@ -2244,8 +2254,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产物下载链接</para>
+        /// <para>Retrieves the download URL for an artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the download URL for artifact content. This operation is suitable for large files.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetArtifactDownloadUrlRequest
@@ -2263,8 +2278,13 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取产物下载链接</para>
+        /// <para>Retrieves the download URL for an artifact.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the download URL for artifact content. This operation is suitable for large files.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetArtifactDownloadUrlRequest
@@ -3454,7 +3474,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of digital employees.</para>
+        /// <para>Lists digital employees.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3535,7 +3555,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of digital employees.</para>
+        /// <para>Lists digital employees.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3616,7 +3636,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of digital employees.</para>
+        /// <para>Lists digital employees.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -3640,7 +3660,7 @@ namespace AlibabaCloud.SDK.STAROps20260428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a list of digital employees.</para>
+        /// <para>Lists digital employees.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

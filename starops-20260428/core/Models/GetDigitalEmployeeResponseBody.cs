@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ARN of the RAM role.</para>
+        /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>acs:ram::12345678912:role/testrole</para>
@@ -246,6 +246,26 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public GetDigitalEmployeeResponseBodyToolPolicyAliyun Aliyun { get; set; }
             public class GetDigitalEmployeeResponseBodyToolPolicyAliyun : TeaModel {
                 /// <summary>
+                /// <para>The auto-pass policy. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:<em>. Matched requests are automatically approved without human confirmation. If empty or not configured, built-in read-only operations (Get</em>, List*, Describe*) are automatically approved. Unmatched requests require human-in-the-loop (HIL) confirmation.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;log:Get*&quot;,&quot;log:List*&quot;]</para>
+                /// </summary>
+                [NameInMap("autoPassPolicy")]
+                [Validation(Required=false)]
+                public List<string> AutoPassPolicy { get; set; }
+
+                /// <summary>
+                /// <para>The explicit deny policy with the highest priority. Each entry is a RAM Action string in the format of product:ApiName, product:Prefix*, or product:*. If empty or not configured, no operations are actively denied. STAROps directly rejects matched requests. The Pop side performs a secondary fallback check.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>[&quot;ecs:RunCommand&quot;,&quot;ecs:Delete*&quot;]</para>
+                /// </summary>
+                [NameInMap("denyPolicy")]
+                [Validation(Required=false)]
+                public List<string> DenyPolicy { get; set; }
+
+                /// <summary>
                 /// <para>Indicates whether the policy is enabled.</para>
                 /// 
                 /// <b>Example:</b>
@@ -255,6 +275,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 [Validation(Required=false)]
                 public bool? Enable { get; set; }
 
+                /// <term><b>Obsolete</b></term>
+                /// 
                 /// <summary>
                 /// <para>The list of Aliyun CLI tool policy statements.</para>
                 /// 
@@ -263,6 +285,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
                 /// </summary>
                 [NameInMap("statements")]
                 [Validation(Required=false)]
+                [Obsolete]
                 public List<GetDigitalEmployeeResponseBodyToolPolicyAliyunStatements> Statements { get; set; }
                 public class GetDigitalEmployeeResponseBodyToolPolicyAliyunStatements : TeaModel {
                     /// <summary>

@@ -10,7 +10,13 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class CreateChatRequest : TeaModel {
         /// <summary>
-        /// <para>The operation type. Valid values: <c>create</c> (default), <c>reconnect</c>, and <c>stop</c>.</para>
+        /// <para>The action type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>create: creates a conversation.</description></item>
+        /// <item><description>reconnect: reconnects to an existing conversation.</description></item>
+        /// <item><description>stop: stops the conversation.</description></item>
+        /// </list>
+        /// <para>Default value: create.</para>
         /// 
         /// <b>Example:</b>
         /// <para>create</para>
@@ -30,14 +36,14 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string DigitalEmployeeName { get; set; }
 
         /// <summary>
-        /// <para>The message list.</para>
+        /// <para>The list of messages.</para>
         /// </summary>
         [NameInMap("messages")]
         [Validation(Required=false)]
         public List<CreateChatRequestMessages> Messages { get; set; }
         public class CreateChatRequestMessages : TeaModel {
             /// <summary>
-            /// <para>The multimodal content of the message.</para>
+            /// <para>The text or multimodal array.</para>
             /// </summary>
             [NameInMap("contents")]
             [Validation(Required=false)]
@@ -66,7 +72,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             }
 
             /// <summary>
-            /// <para>A unique identifier for the message.</para>
+            /// <para>The unique identifier of the current message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>message_id02</para>
@@ -86,7 +92,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
             public string Role { get; set; }
 
             /// <summary>
-            /// <para>The tool call list.</para>
+            /// <para>The list of tool invocations.</para>
             /// </summary>
             [NameInMap("tools")]
             [Validation(Required=false)]
@@ -95,7 +101,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         }
 
         /// <summary>
-        /// <para>The session thread ID.</para>
+        /// <para>The conversation thread ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>thread_id01</para>
@@ -105,7 +111,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string ThreadId { get; set; }
 
         /// <summary>
-        /// <para>The set of variables.</para>
+        /// <para>The list of variables.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

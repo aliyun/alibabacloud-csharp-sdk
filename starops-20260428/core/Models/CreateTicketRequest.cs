@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
     public class CreateTicketRequest : TeaModel {
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>The access token expiration time, in seconds. This specifies the expiration time for the user to access page operations. Default value: 86400 (one day). Valid values: 0 to 86400 (one day).</para>
+        /// <item><description><para>The expiration time (in seconds) of the access token, which specifies how long the user can access page operations. Default value: 86400 (one day). Valid values: 0 to 86400 (one day).</para>
         /// </description></item>
         /// <item><description><para>The actual access token expiration time is the minimum value of accessTokenExpirationTime and expirationTime.</para>
         /// </description></item>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description>The expiration time, in seconds. This specifies the expiration time of the embedded page URL. Default value: 86400 (one day). Valid values: 0 to 2592000 (30 days).</description></item>
+        /// <item><description>The expiration time (in seconds) of the embedded page URL. Default value: 86400 (one day). Valid values: 0 to 2592000 (30 days).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

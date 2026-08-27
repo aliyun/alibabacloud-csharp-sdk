@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
 {
     public class GetArtifactDownloadUrlResponseBody : TeaModel {
         /// <summary>
+        /// <para>The expiration time of the download URL. This value is a UNIX timestamp in seconds.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1770000000</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public long? Expire { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0A1B2C3D-4E5F-6789-ABCD-1234567890AB</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.STAROps20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>The temporary download URL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/agents/123/sample-agent/home/starops/reports/summary.pdf?response-content-disposition=attachment&Expires=1770000000&OSSAccessKeyId=LTAI******&Signature=">https://example-bucket.oss-cn-shanghai.aliyuncs.com/agents/123/sample-agent/home/starops/reports/summary.pdf?response-content-disposition=attachment&amp;Expires=1770000000&amp;OSSAccessKeyId=LTAI******&amp;Signature=</a>******</para>
         /// </summary>
