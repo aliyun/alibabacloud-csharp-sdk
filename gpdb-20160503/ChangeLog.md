@@ -1,3 +1,7 @@
+2026-08-27 Version: 3.13.0
+- Support API DescribeDBVersion.
+
+
 2026-08-13 Version: 3.12.2
 - Update API CreateSupabaseProject: add request parameters Lightweight.
 - Update API GetSupabaseProject: add response parameters Body.Lightweight.

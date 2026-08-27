@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? AutoScale { get; set; }
 
         /// <summary>
-        /// <para>The idempotency token. Ensures that repeated requests do not execute the same operation more than once.</para>
+        /// <para>The idempotency token. Ensures that duplicate requests do not result in duplicate operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public bool? Lightweight { get; set; }
 
         /// <summary>
-        /// <para>The billing method. If this parameter is not specified, the default value Free is used.</para>
+        /// <para>The billing type. If this parameter is not specified, the default value Free is used.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Free: Free tier.</description></item>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Gpdb20160503.Models
         public string SecurityIPList { get; set; }
 
         /// <summary>
-        /// <para>The storage size. Unit: GB. If this parameter is not specified for non-Free billing types, the default value is 1 GB.</para>
+        /// <para>The storage size, in GB. If this parameter is not specified for non-Free billing types, the default value is 1 GB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
