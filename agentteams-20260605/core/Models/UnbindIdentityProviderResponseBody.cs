@@ -9,22 +9,52 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class UnbindIdentityProviderResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>req-xxx</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the call is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

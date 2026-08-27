@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class GetServiceEndpointRequest : TeaModel {
         /// <summary>
+        /// <para><b>Endpoint ID</b></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,11 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string EndpointId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agentteams-demo</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

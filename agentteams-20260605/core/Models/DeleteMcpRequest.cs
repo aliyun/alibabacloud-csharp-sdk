@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class DeleteMcpRequest : TeaModel {
         /// <summary>
+        /// <para>Optional. Fuzzy matches by instance name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,7 +21,11 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string Id { get; set; }
 
         /// <summary>
+        /// <para>The ID of the AgentTeams instance.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ins-xxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

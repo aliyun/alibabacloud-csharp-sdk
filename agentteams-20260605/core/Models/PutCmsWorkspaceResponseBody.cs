@@ -9,36 +9,84 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class PutCmsWorkspaceResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The response code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SUCCESS</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public PutCmsWorkspaceResponseBodyData Data { get; set; }
         public class PutCmsWorkspaceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The request ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>req-xxx</para>
+            /// </summary>
             [NameInMap("RequestId")]
             [Validation(Required=false)]
             public string RequestId { get; set; }
 
+            /// <summary>
+            /// <para>The workspace name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>magic-workspace-at-xxx</para>
+            /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]
             public string WorkspaceName { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>200</para>
+        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
 
+        /// <summary>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
+        /// <summary>
+        /// <para>The request ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>req-xxx</para>
+        /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

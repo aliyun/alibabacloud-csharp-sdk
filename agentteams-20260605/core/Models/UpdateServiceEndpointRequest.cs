@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class UpdateServiceEndpointRequest : TeaModel {
         /// <summary>
+        /// <para>The new SSL certificate identifier. If this parameter is not specified, the existing certificate is retained.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>22584627-cn-hangzhou</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         [Validation(Required=false)]
         public string CertIdentifier { get; set; }
 
+        /// <summary>
+        /// <para>The idempotency token that is used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>client-token-xxx</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para>The new domain name. If this parameter is not specified, the existing domain name is retained.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>api.example.com</para>
         /// </summary>
@@ -30,6 +40,7 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string Domain { get; set; }
 
         /// <summary>
+        /// <para>The globally unique endpoint ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,7 +51,11 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string EndpointId { get; set; }
 
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agentteams-demo</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]

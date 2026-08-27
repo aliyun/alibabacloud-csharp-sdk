@@ -9,15 +9,29 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class ListSslCertsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The error code. This field is typically empty when the request is successful.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>null</para>
+        /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The list of certificates.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[...]</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<ListSslCertsResponseBodyItems> Items { get; set; }
         public class ListSslCertsResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The certificate algorithm.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RSA</para>
             /// </summary>
@@ -26,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public string Algorithm { get; set; }
 
             /// <summary>
+            /// <para>The certificate ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>123</para>
             /// </summary>
@@ -34,6 +50,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public long? CertId { get; set; }
 
             /// <summary>
+            /// <para>The certificate identifier used by APIG. Pass this value when creating or updating an HTTPS domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>22584627-cn-hangzhou</para>
             /// </summary>
@@ -42,6 +60,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public string CertIdentifier { get; set; }
 
             /// <summary>
+            /// <para>The certificate name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example-cert</para>
             /// </summary>
@@ -50,6 +70,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public string CertName { get; set; }
 
             /// <summary>
+            /// <para>Indicates whether the certificate chain is complete.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>true</para>
             /// </summary>
@@ -58,6 +80,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public bool? ChainCompleted { get; set; }
 
             /// <summary>
+            /// <para>The certificate common name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
             /// </summary>
@@ -66,6 +90,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public string CommonName { get; set; }
 
             /// <summary>
+            /// <para>The certificate domain name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>example.com</para>
             /// </summary>
@@ -74,6 +100,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public string Domain { get; set; }
 
             /// <summary>
+            /// <para>The certificate issuer.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DigiCert</para>
             /// </summary>
@@ -82,6 +110,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public string Issuer { get; set; }
 
             /// <summary>
+            /// <para>The expiration timestamp, in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1893456000000</para>
             /// </summary>
@@ -90,6 +120,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public long? NotAfterTimestamp { get; set; }
 
             /// <summary>
+            /// <para>The effective period UNIX timestamp, in milliseconds.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1704067200000</para>
             /// </summary>
@@ -99,15 +131,29 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 
         }
 
+        /// <summary>
+        /// <para>The maximum number of records to return in this request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The response message.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>success</para>
+        /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next page. The value is <c>null</c> if no more pages are available.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -116,6 +162,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>req-123</para>
         /// </summary>
@@ -124,6 +172,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -132,6 +182,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public bool? Success { get; set; }
 
         /// <summary>
+        /// <para>The total number of certificates.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>11</para>
         /// </summary>

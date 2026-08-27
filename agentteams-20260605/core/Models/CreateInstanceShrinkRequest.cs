@@ -9,11 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class CreateInstanceShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The idempotency token that is used to ensure the idempotence of the request.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>client-token-xxx</para>
+        /// </summary>
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
         /// <summary>
+        /// <para><c>instanceName</c>: <c>string</c>, required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,6 +31,7 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string InstanceName { get; set; }
 
         /// <summary>
+        /// <para><c>instanceSpec</c>: <c>string</c>, optional, default <c>SMALL_X1</c></para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,6 +42,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string InstanceSpec { get; set; }
 
         /// <summary>
+        /// <para><c>networkType</c>: <c>string</c>, optional, default <c>PRIVATE_NET</c><br>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><c>PRIVATE_PUBNET</c></description></item>
+        /// <item><description><c>PRIVATE_NET</c></description></item>
+        /// <item><description><c>PUB_NET</c></description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,11 +57,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         [Validation(Required=false)]
         public string NetworkType { get; set; }
 
+        /// <summary>
+        /// <para>The billing method.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Subscription</para>
+        /// </summary>
         [NameInMap("PaymentType")]
         [Validation(Required=false)]
         public string PaymentType { get; set; }
 
         /// <summary>
+        /// <para><c>vpcId</c>: <c>string</c>, required.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,6 +78,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         [Validation(Required=false)]
         public string VpcId { get; set; }
 
+        /// <summary>
+        /// <para>The zones.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[]</para>
+        /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]
         public string ZonesShrink { get; set; }

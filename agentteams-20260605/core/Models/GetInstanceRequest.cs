@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class GetInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

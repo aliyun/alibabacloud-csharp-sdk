@@ -9,18 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class GetTokenTrendRequest : TeaModel {
+        /// <summary>
+        /// <para>The query end time. Unit: milliseconds (UNIX timestamp).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1718086400000</para>
+        /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
         public string EndTime { get; set; }
 
+        /// <summary>
+        /// <para>The grouping dimension, such as by day or by hour.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>day</para>
+        /// </summary>
         [NameInMap("GroupBy")]
         [Validation(Required=false)]
         public string GroupBy { get; set; }
 
+        /// <summary>
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>i-xxx</para>
+        /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The query start time. Unit: milliseconds (UNIX timestamp).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1718000000000</para>
+        /// </summary>
         [NameInMap("StartTime")]
         [Validation(Required=false)]
         public string StartTime { get; set; }

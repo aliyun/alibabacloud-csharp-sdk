@@ -18,7 +18,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-beijing", "agentteams.cn-beijing.aliyuncs.com"},
+                {"ap-southeast-1", "agentteams.ap-southeast-1.aliyuncs.com"},
+                {"cn-hangzhou", "agentteams.cn-hangzhou.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("agentteams", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,8 +45,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定上游身份提供商</para>
+        /// <para>Binds an upstream identity provider to a specified instance and triggers a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This is an asynchronous operation that immediately returns binding task information after the call.</description></item>
+        /// <item><description>Use <c>GetInstanceAsyncTask</c> to poll for the asynchronous task result. The default polling interval is 30 seconds, with a maximum of 20 attempts.</description></item>
+        /// <item><description>The <c>IdpMetadata</c> parameter contains sensitive information. Ensure secure transmission.</description></item>
+        /// <item><description>The default values of <c>LoginEnabled</c> and <c>SyncEnabled</c> are <c>true</c> and <c>false</c>, respectively. If not explicitly specified, the default values are used.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindIdentityProviderRequest
@@ -103,8 +120,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定上游身份提供商</para>
+        /// <para>Binds an upstream identity provider to a specified instance and triggers a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This is an asynchronous operation that immediately returns binding task information after the call.</description></item>
+        /// <item><description>Use <c>GetInstanceAsyncTask</c> to poll for the asynchronous task result. The default polling interval is 30 seconds, with a maximum of 20 attempts.</description></item>
+        /// <item><description>The <c>IdpMetadata</c> parameter contains sensitive information. Ensure secure transmission.</description></item>
+        /// <item><description>The default values of <c>LoginEnabled</c> and <c>SyncEnabled</c> are <c>true</c> and <c>false</c>, respectively. If not explicitly specified, the default values are used.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindIdentityProviderRequest
@@ -167,8 +195,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定上游身份提供商</para>
+        /// <para>Binds an upstream identity provider to a specified instance and triggers a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This is an asynchronous operation that immediately returns binding task information after the call.</description></item>
+        /// <item><description>Use <c>GetInstanceAsyncTask</c> to poll for the asynchronous task result. The default polling interval is 30 seconds, with a maximum of 20 attempts.</description></item>
+        /// <item><description>The <c>IdpMetadata</c> parameter contains sensitive information. Ensure secure transmission.</description></item>
+        /// <item><description>The default values of <c>LoginEnabled</c> and <c>SyncEnabled</c> are <c>true</c> and <c>false</c>, respectively. If not explicitly specified, the default values are used.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindIdentityProviderRequest
@@ -185,8 +224,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>绑定上游身份提供商</para>
+        /// <para>Binds an upstream identity provider to a specified instance and triggers a synchronization task.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description>This is an asynchronous operation that immediately returns binding task information after the call.</description></item>
+        /// <item><description>Use <c>GetInstanceAsyncTask</c> to poll for the asynchronous task result. The default polling interval is 30 seconds, with a maximum of 20 attempts.</description></item>
+        /// <item><description>The <c>IdpMetadata</c> parameter contains sensitive information. Ensure secure transmission.</description></item>
+        /// <item><description>The default values of <c>LoginEnabled</c> and <c>SyncEnabled</c> are <c>true</c> and <c>false</c>, respectively. If not explicitly specified, the default values are used.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// BindIdentityProviderRequest
@@ -203,19 +253,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为指定AgentTeams实例异步开通并配置阿里云公网NAT网关。</para>
+        /// <para>Activates and configures an Internet NAT gateway for a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于为特定的AgentTeams实例创建公网NAT网关，并自动完成EIP申请、绑定以及SNAT规则的设置。</description></item>
-        /// <item><description>接口调用后将返回一个异步任务ID，实际的NAT网关、EIP及SNAT资源ID会在异步任务完成后通过任务结果提供。</description></item>
-        /// <item><description>NAT网关名称由系统自动生成，格式为<c>magic-create-for-vpc-{vpcId}</c>。</description></item>
-        /// <item><description>支持GET和POST方法进行请求。</description></item>
-        /// <item><description><c>eipBandwidth</c>参数指定了自动申请EIP时的带宽大小，默认值为5Mbps，范围在1-200Mbps之间。</description></item>
-        /// <item><description>如果<c>instanceId</c>为空或无效，或者提供的<c>eipBandwidth</c>不在允许范围内，API将返回错误响应。</description></item>
+        /// <item><description>This operation creates an Internet NAT gateway and automatically applies for an elastic IP address (EIP), bindS the EIP, and configures SNAT rules.</description></item>
+        /// <item><description>An asynchronous task ID is returned after the call. The actual resource ID is provided in the task result.</description></item>
+        /// <item><description>NAT gateway name format: <c>magic-create-for-vpc-{vpcId}</c>.</description></item>
+        /// <item><description>GET and POST methods are supported.</description></item>
+        /// <item><description>The <c>eipBandwidth</c> parameter ranges from 1 to 200 Mbit/s. Default value: 5 Mbit/s.</description></item>
+        /// <item><description>If <c>InstanceId</c> is invalid or <c>eipBandwidth</c> is out of range, the API returns an error response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -280,19 +330,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为指定AgentTeams实例异步开通并配置阿里云公网NAT网关。</para>
+        /// <para>Activates and configures an Internet NAT gateway for a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于为特定的AgentTeams实例创建公网NAT网关，并自动完成EIP申请、绑定以及SNAT规则的设置。</description></item>
-        /// <item><description>接口调用后将返回一个异步任务ID，实际的NAT网关、EIP及SNAT资源ID会在异步任务完成后通过任务结果提供。</description></item>
-        /// <item><description>NAT网关名称由系统自动生成，格式为<c>magic-create-for-vpc-{vpcId}</c>。</description></item>
-        /// <item><description>支持GET和POST方法进行请求。</description></item>
-        /// <item><description><c>eipBandwidth</c>参数指定了自动申请EIP时的带宽大小，默认值为5Mbps，范围在1-200Mbps之间。</description></item>
-        /// <item><description>如果<c>instanceId</c>为空或无效，或者提供的<c>eipBandwidth</c>不在允许范围内，API将返回错误响应。</description></item>
+        /// <item><description>This operation creates an Internet NAT gateway and automatically applies for an elastic IP address (EIP), bindS the EIP, and configures SNAT rules.</description></item>
+        /// <item><description>An asynchronous task ID is returned after the call. The actual resource ID is provided in the task result.</description></item>
+        /// <item><description>NAT gateway name format: <c>magic-create-for-vpc-{vpcId}</c>.</description></item>
+        /// <item><description>GET and POST methods are supported.</description></item>
+        /// <item><description>The <c>eipBandwidth</c> parameter ranges from 1 to 200 Mbit/s. Default value: 5 Mbit/s.</description></item>
+        /// <item><description>If <c>InstanceId</c> is invalid or <c>eipBandwidth</c> is out of range, the API returns an error response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -357,19 +407,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为指定AgentTeams实例异步开通并配置阿里云公网NAT网关。</para>
+        /// <para>Activates and configures an Internet NAT gateway for a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于为特定的AgentTeams实例创建公网NAT网关，并自动完成EIP申请、绑定以及SNAT规则的设置。</description></item>
-        /// <item><description>接口调用后将返回一个异步任务ID，实际的NAT网关、EIP及SNAT资源ID会在异步任务完成后通过任务结果提供。</description></item>
-        /// <item><description>NAT网关名称由系统自动生成，格式为<c>magic-create-for-vpc-{vpcId}</c>。</description></item>
-        /// <item><description>支持GET和POST方法进行请求。</description></item>
-        /// <item><description><c>eipBandwidth</c>参数指定了自动申请EIP时的带宽大小，默认值为5Mbps，范围在1-200Mbps之间。</description></item>
-        /// <item><description>如果<c>instanceId</c>为空或无效，或者提供的<c>eipBandwidth</c>不在允许范围内，API将返回错误响应。</description></item>
+        /// <item><description>This operation creates an Internet NAT gateway and automatically applies for an elastic IP address (EIP), bindS the EIP, and configures SNAT rules.</description></item>
+        /// <item><description>An asynchronous task ID is returned after the call. The actual resource ID is provided in the task result.</description></item>
+        /// <item><description>NAT gateway name format: <c>magic-create-for-vpc-{vpcId}</c>.</description></item>
+        /// <item><description>GET and POST methods are supported.</description></item>
+        /// <item><description>The <c>eipBandwidth</c> parameter ranges from 1 to 200 Mbit/s. Default value: 5 Mbit/s.</description></item>
+        /// <item><description>If <c>InstanceId</c> is invalid or <c>eipBandwidth</c> is out of range, the API returns an error response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -388,19 +438,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>为指定AgentTeams实例异步开通并配置阿里云公网NAT网关。</para>
+        /// <para>Activates and configures an Internet NAT gateway for a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口用于为特定的AgentTeams实例创建公网NAT网关，并自动完成EIP申请、绑定以及SNAT规则的设置。</description></item>
-        /// <item><description>接口调用后将返回一个异步任务ID，实际的NAT网关、EIP及SNAT资源ID会在异步任务完成后通过任务结果提供。</description></item>
-        /// <item><description>NAT网关名称由系统自动生成，格式为<c>magic-create-for-vpc-{vpcId}</c>。</description></item>
-        /// <item><description>支持GET和POST方法进行请求。</description></item>
-        /// <item><description><c>eipBandwidth</c>参数指定了自动申请EIP时的带宽大小，默认值为5Mbps，范围在1-200Mbps之间。</description></item>
-        /// <item><description>如果<c>instanceId</c>为空或无效，或者提供的<c>eipBandwidth</c>不在允许范围内，API将返回错误响应。</description></item>
+        /// <item><description>This operation creates an Internet NAT gateway and automatically applies for an elastic IP address (EIP), bindS the EIP, and configures SNAT rules.</description></item>
+        /// <item><description>An asynchronous task ID is returned after the call. The actual resource ID is provided in the task result.</description></item>
+        /// <item><description>NAT gateway name format: <c>magic-create-for-vpc-{vpcId}</c>.</description></item>
+        /// <item><description>GET and POST methods are supported.</description></item>
+        /// <item><description>The <c>eipBandwidth</c> parameter ranges from 1 to 200 Mbit/s. Default value: 5 Mbit/s.</description></item>
+        /// <item><description>If <c>InstanceId</c> is invalid or <c>eipBandwidth</c> is out of range, the API returns an error response.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -419,8 +469,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭证</para>
+        /// <para>Creates a new key-value credential under a specified AgentTeams instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>ApiKey</c> is a sensitive field and is not returned in plaintext.</description></item>
+        /// <item><description><c>ClientToken</c> is used to ensure idempotence of the request. This parameter is optional but recommended.</description></item>
+        /// <item><description>The credential name (Name) must match the regular expression <c>^[A-Z_][A-Z0-9_]*$</c>.</description></item>
+        /// <item><description>If the specified credential name already exists in the specified instance, the error code <c>Credential.Name.AlreadyExists</c> is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCredentialRequest
@@ -479,8 +540,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭证</para>
+        /// <para>Creates a new key-value credential under a specified AgentTeams instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>ApiKey</c> is a sensitive field and is not returned in plaintext.</description></item>
+        /// <item><description><c>ClientToken</c> is used to ensure idempotence of the request. This parameter is optional but recommended.</description></item>
+        /// <item><description>The credential name (Name) must match the regular expression <c>^[A-Z_][A-Z0-9_]*$</c>.</description></item>
+        /// <item><description>If the specified credential name already exists in the specified instance, the error code <c>Credential.Name.AlreadyExists</c> is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCredentialRequest
@@ -539,8 +611,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭证</para>
+        /// <para>Creates a new key-value credential under a specified AgentTeams instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>ApiKey</c> is a sensitive field and is not returned in plaintext.</description></item>
+        /// <item><description><c>ClientToken</c> is used to ensure idempotence of the request. This parameter is optional but recommended.</description></item>
+        /// <item><description>The credential name (Name) must match the regular expression <c>^[A-Z_][A-Z0-9_]*$</c>.</description></item>
+        /// <item><description>If the specified credential name already exists in the specified instance, the error code <c>Credential.Name.AlreadyExists</c> is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCredentialRequest
@@ -557,8 +640,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建凭证</para>
+        /// <para>Creates a new key-value credential under a specified AgentTeams instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <list type="bullet">
+        /// <item><description><c>ApiKey</c> is a sensitive field and is not returned in plaintext.</description></item>
+        /// <item><description><c>ClientToken</c> is used to ensure idempotence of the request. This parameter is optional but recommended.</description></item>
+        /// <item><description>The credential name (Name) must match the regular expression <c>^[A-Z_][A-Z0-9_]*$</c>.</description></item>
+        /// <item><description>If the specified credential name already exists in the specified instance, the error code <c>Credential.Name.AlreadyExists</c> is returned.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateCredentialRequest
@@ -575,18 +669,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建指定配置的集群实例。</para>
+        /// <para>Asynchronously creates a cluster instance with the specified configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口支持通过表单参数或 query 参数传递请求信息。</description></item>
-        /// <item><description><c>instanceSpec</c> 和 <c>networkType</c> 等部分参数有默认值，若未指定则使用默认值。</description></item>
-        /// <item><description>必须提供 <c>instanceName</c>, <c>regionId</c>, <c>vpcId</c>, 和 <c>vSwitchId</c> 参数。</description></item>
-        /// <item><description><c>networkType</c> 支持三种选项：<c>PRIVATE_PUBNET</c>, <c>PRIVATE_NET</c>, <c>PUB_NET</c>，默认为 <c>PRIVATE_NET</c>。</description></item>
-        /// <item><description>如果指定了 <c>zoneId</c>，则会尝试在该可用区创建实例；否则将根据系统策略选择合适的可用区。</description></item>
+        /// <item><description>This is an asynchronous operation. After a successful call, the instance status changes to CREATING.</description></item>
+        /// <item><description>The actual resource creation is completed asynchronously in the background. Poll the creation result by calling the <c>GetInstance</c> operation.</description></item>
+        /// <item><description>You can pass request information by using form parameters or query parameters.</description></item>
+        /// <item><description>If optional parameters are not provided, default values are used.</description></item>
+        /// <item><description>Use <c>ClientToken</c> to ensure the idempotence of the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -661,18 +755,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建指定配置的集群实例。</para>
+        /// <para>Asynchronously creates a cluster instance with the specified configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口支持通过表单参数或 query 参数传递请求信息。</description></item>
-        /// <item><description><c>instanceSpec</c> 和 <c>networkType</c> 等部分参数有默认值，若未指定则使用默认值。</description></item>
-        /// <item><description>必须提供 <c>instanceName</c>, <c>regionId</c>, <c>vpcId</c>, 和 <c>vSwitchId</c> 参数。</description></item>
-        /// <item><description><c>networkType</c> 支持三种选项：<c>PRIVATE_PUBNET</c>, <c>PRIVATE_NET</c>, <c>PUB_NET</c>，默认为 <c>PRIVATE_NET</c>。</description></item>
-        /// <item><description>如果指定了 <c>zoneId</c>，则会尝试在该可用区创建实例；否则将根据系统策略选择合适的可用区。</description></item>
+        /// <item><description>This is an asynchronous operation. After a successful call, the instance status changes to CREATING.</description></item>
+        /// <item><description>The actual resource creation is completed asynchronously in the background. Poll the creation result by calling the <c>GetInstance</c> operation.</description></item>
+        /// <item><description>You can pass request information by using form parameters or query parameters.</description></item>
+        /// <item><description>If optional parameters are not provided, default values are used.</description></item>
+        /// <item><description>Use <c>ClientToken</c> to ensure the idempotence of the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -747,18 +841,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建指定配置的集群实例。</para>
+        /// <para>Asynchronously creates a cluster instance with the specified configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口支持通过表单参数或 query 参数传递请求信息。</description></item>
-        /// <item><description><c>instanceSpec</c> 和 <c>networkType</c> 等部分参数有默认值，若未指定则使用默认值。</description></item>
-        /// <item><description>必须提供 <c>instanceName</c>, <c>regionId</c>, <c>vpcId</c>, 和 <c>vSwitchId</c> 参数。</description></item>
-        /// <item><description><c>networkType</c> 支持三种选项：<c>PRIVATE_PUBNET</c>, <c>PRIVATE_NET</c>, <c>PUB_NET</c>，默认为 <c>PRIVATE_NET</c>。</description></item>
-        /// <item><description>如果指定了 <c>zoneId</c>，则会尝试在该可用区创建实例；否则将根据系统策略选择合适的可用区。</description></item>
+        /// <item><description>This is an asynchronous operation. After a successful call, the instance status changes to CREATING.</description></item>
+        /// <item><description>The actual resource creation is completed asynchronously in the background. Poll the creation result by calling the <c>GetInstance</c> operation.</description></item>
+        /// <item><description>You can pass request information by using form parameters or query parameters.</description></item>
+        /// <item><description>If optional parameters are not provided, default values are used.</description></item>
+        /// <item><description>Use <c>ClientToken</c> to ensure the idempotence of the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -777,18 +871,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建指定配置的集群实例。</para>
+        /// <para>Asynchronously creates a cluster instance with the specified configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>本接口支持通过表单参数或 query 参数传递请求信息。</description></item>
-        /// <item><description><c>instanceSpec</c> 和 <c>networkType</c> 等部分参数有默认值，若未指定则使用默认值。</description></item>
-        /// <item><description>必须提供 <c>instanceName</c>, <c>regionId</c>, <c>vpcId</c>, 和 <c>vSwitchId</c> 参数。</description></item>
-        /// <item><description><c>networkType</c> 支持三种选项：<c>PRIVATE_PUBNET</c>, <c>PRIVATE_NET</c>, <c>PUB_NET</c>，默认为 <c>PRIVATE_NET</c>。</description></item>
-        /// <item><description>如果指定了 <c>zoneId</c>，则会尝试在该可用区创建实例；否则将根据系统策略选择合适的可用区。</description></item>
+        /// <item><description>This is an asynchronous operation. After a successful call, the instance status changes to CREATING.</description></item>
+        /// <item><description>The actual resource creation is completed asynchronously in the background. Poll the creation result by calling the <c>GetInstance</c> operation.</description></item>
+        /// <item><description>You can pass request information by using form parameters or query parameters.</description></item>
+        /// <item><description>If optional parameters are not provided, default values are used.</description></item>
+        /// <item><description>Use <c>ClientToken</c> to ensure the idempotence of the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -807,18 +901,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建MCP</para>
+        /// <para>Creates an MCP server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
+        /// <item><description>You must specify the <c>InstanceId</c>, <c>Name</c>, and <c>Addresses</c> parameters when you create an MCP server.</description></item>
+        /// <item><description>The <c>CreateType</c> parameter defaults to <c>DIRECT_PROXY</c>. If you select the <c>HTTP_TO_MCP</c> mode, you must also specify <c>SwaggerConfig</c>.</description></item>
+        /// <item><description>Set <c>AuthEnabled</c> to enable or disable authentication. If authentication is enabled, you must specify <c>AuthConfig</c>.</description></item>
+        /// <item><description>Use <c>ClientToken</c> to ensure the idempotence of the request.</description></item>
+        /// <item><description>Custom protocol types are supported. The <c>streamable</c> protocol is used by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -905,18 +999,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建MCP</para>
+        /// <para>Creates an MCP server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
+        /// <item><description>You must specify the <c>InstanceId</c>, <c>Name</c>, and <c>Addresses</c> parameters when you create an MCP server.</description></item>
+        /// <item><description>The <c>CreateType</c> parameter defaults to <c>DIRECT_PROXY</c>. If you select the <c>HTTP_TO_MCP</c> mode, you must also specify <c>SwaggerConfig</c>.</description></item>
+        /// <item><description>Set <c>AuthEnabled</c> to enable or disable authentication. If authentication is enabled, you must specify <c>AuthConfig</c>.</description></item>
+        /// <item><description>Use <c>ClientToken</c> to ensure the idempotence of the request.</description></item>
+        /// <item><description>Custom protocol types are supported. The <c>streamable</c> protocol is used by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1003,18 +1097,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建MCP</para>
+        /// <para>Creates an MCP server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
+        /// <item><description>You must specify the <c>InstanceId</c>, <c>Name</c>, and <c>Addresses</c> parameters when you create an MCP server.</description></item>
+        /// <item><description>The <c>CreateType</c> parameter defaults to <c>DIRECT_PROXY</c>. If you select the <c>HTTP_TO_MCP</c> mode, you must also specify <c>SwaggerConfig</c>.</description></item>
+        /// <item><description>Set <c>AuthEnabled</c> to enable or disable authentication. If authentication is enabled, you must specify <c>AuthConfig</c>.</description></item>
+        /// <item><description>Use <c>ClientToken</c> to ensure the idempotence of the request.</description></item>
+        /// <item><description>Custom protocol types are supported. The <c>streamable</c> protocol is used by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1033,18 +1127,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建MCP</para>
+        /// <para>Creates an MCP server.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
+        /// <item><description>You must specify the <c>InstanceId</c>, <c>Name</c>, and <c>Addresses</c> parameters when you create an MCP server.</description></item>
+        /// <item><description>The <c>CreateType</c> parameter defaults to <c>DIRECT_PROXY</c>. If you select the <c>HTTP_TO_MCP</c> mode, you must also specify <c>SwaggerConfig</c>.</description></item>
+        /// <item><description>Set <c>AuthEnabled</c> to enable or disable authentication. If authentication is enabled, you must specify <c>AuthConfig</c>.</description></item>
+        /// <item><description>Use <c>ClientToken</c> to ensure the idempotence of the request.</description></item>
+        /// <item><description>Custom protocol types are supported. The <c>streamable</c> protocol is used by default.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1063,19 +1157,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型</para>
+        /// <para>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1151,19 +1238,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型</para>
+        /// <para>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1239,19 +1319,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型</para>
+        /// <para>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1269,19 +1342,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型</para>
+        /// <para>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Creates an AI model under a specified AgentTeams instance. You must specify the model name, the model provider, and the list of supported protocols.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1299,19 +1365,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型</para>
+        /// <para>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1391,19 +1450,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型</para>
+        /// <para>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -1483,19 +1535,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型</para>
+        /// <para>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1513,19 +1558,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建模型</para>
+        /// <para>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Creates an AI model provider under a specified AgentTeams instance. You must specify the provider name, address, supported protocol list, and API keys.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -1543,17 +1581,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建指定实例的Endpoint，支持多种组件和网关类型。</para>
+        /// <para>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</para>
         /// <list type="bullet">
-        /// <item><description>当前controller使用的是普通参数绑定，不是<c>@RequestBody</c>，因此参数更适合按query/form方式传递。</description></item>
-        /// <item><description><c>domain</c>字段会在服务端进行<c>trim + lowerCase</c>处理。</description></item>
-        /// <item><description><c>query</c>和<c>headers</c>必须是JSON object字符串格式，不能为数组。</description></item>
-        /// <item><description>创建操作仅将数据保存到数据库；只有在更新时，如果满足<c>ELEMENT/MATRIX + AI_GATEWAY + INTERNET</c>且域名或证书发生变化，才会触发AI Gateway域名同步逻辑。</description></item>
+        /// <item><description>The current controller uses standard parameter binding instead of @RequestBody, so parameters are better suited for query/form-based transmission.</description></item>
+        /// <item><description>The domain field is trimmed and converted to lowercase on the server side.</description></item>
+        /// <item><description>The query and headers must be in JSON object string format and cannot be arrays.</description></item>
+        /// <item><description>The create operation only saves data to the database. The AI Gateway domain name synchronization logic is triggered only during an update when the conditions ELEMENT/MATRIX + AI_GATEWAY + INTERNET are met and the domain name or certificate has changed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1618,17 +1656,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建指定实例的Endpoint，支持多种组件和网关类型。</para>
+        /// <para>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</para>
         /// <list type="bullet">
-        /// <item><description>当前controller使用的是普通参数绑定，不是<c>@RequestBody</c>，因此参数更适合按query/form方式传递。</description></item>
-        /// <item><description><c>domain</c>字段会在服务端进行<c>trim + lowerCase</c>处理。</description></item>
-        /// <item><description><c>query</c>和<c>headers</c>必须是JSON object字符串格式，不能为数组。</description></item>
-        /// <item><description>创建操作仅将数据保存到数据库；只有在更新时，如果满足<c>ELEMENT/MATRIX + AI_GATEWAY + INTERNET</c>且域名或证书发生变化，才会触发AI Gateway域名同步逻辑。</description></item>
+        /// <item><description>The current controller uses standard parameter binding instead of @RequestBody, so parameters are better suited for query/form-based transmission.</description></item>
+        /// <item><description>The domain field is trimmed and converted to lowercase on the server side.</description></item>
+        /// <item><description>The query and headers must be in JSON object string format and cannot be arrays.</description></item>
+        /// <item><description>The create operation only saves data to the database. The AI Gateway domain name synchronization logic is triggered only during an update when the conditions ELEMENT/MATRIX + AI_GATEWAY + INTERNET are met and the domain name or certificate has changed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1693,17 +1731,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建指定实例的Endpoint，支持多种组件和网关类型。</para>
+        /// <para>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</para>
         /// <list type="bullet">
-        /// <item><description>当前controller使用的是普通参数绑定，不是<c>@RequestBody</c>，因此参数更适合按query/form方式传递。</description></item>
-        /// <item><description><c>domain</c>字段会在服务端进行<c>trim + lowerCase</c>处理。</description></item>
-        /// <item><description><c>query</c>和<c>headers</c>必须是JSON object字符串格式，不能为数组。</description></item>
-        /// <item><description>创建操作仅将数据保存到数据库；只有在更新时，如果满足<c>ELEMENT/MATRIX + AI_GATEWAY + INTERNET</c>且域名或证书发生变化，才会触发AI Gateway域名同步逻辑。</description></item>
+        /// <item><description>The current controller uses standard parameter binding instead of @RequestBody, so parameters are better suited for query/form-based transmission.</description></item>
+        /// <item><description>The domain field is trimmed and converted to lowercase on the server side.</description></item>
+        /// <item><description>The query and headers must be in JSON object string format and cannot be arrays.</description></item>
+        /// <item><description>The create operation only saves data to the database. The AI Gateway domain name synchronization logic is triggered only during an update when the conditions ELEMENT/MATRIX + AI_GATEWAY + INTERNET are met and the domain name or certificate has changed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1722,17 +1760,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于创建指定实例的Endpoint，支持多种组件和网关类型。</para>
+        /// <para>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Creates an endpoint for a specified instance. Multiple component types and gateway types are supported.</para>
         /// <list type="bullet">
-        /// <item><description>当前controller使用的是普通参数绑定，不是<c>@RequestBody</c>，因此参数更适合按query/form方式传递。</description></item>
-        /// <item><description><c>domain</c>字段会在服务端进行<c>trim + lowerCase</c>处理。</description></item>
-        /// <item><description><c>query</c>和<c>headers</c>必须是JSON object字符串格式，不能为数组。</description></item>
-        /// <item><description>创建操作仅将数据保存到数据库；只有在更新时，如果满足<c>ELEMENT/MATRIX + AI_GATEWAY + INTERNET</c>且域名或证书发生变化，才会触发AI Gateway域名同步逻辑。</description></item>
+        /// <item><description>The current controller uses standard parameter binding instead of @RequestBody, so parameters are better suited for query/form-based transmission.</description></item>
+        /// <item><description>The domain field is trimmed and converted to lowercase on the server side.</description></item>
+        /// <item><description>The query and headers must be in JSON object string format and cannot be arrays.</description></item>
+        /// <item><description>The create operation only saves data to the database. The AI Gateway domain name synchronization logic is triggered only during an update when the conditions ELEMENT/MATRIX + AI_GATEWAY + INTERNET are met and the domain name or certificate has changed.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -1751,8 +1789,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建团队</para>
+        /// <para>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateTeamRequest
@@ -1821,8 +1864,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建团队</para>
+        /// <para>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateTeamRequest
@@ -1891,8 +1939,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建团队</para>
+        /// <para>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTeamRequest
@@ -1909,8 +1962,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建团队</para>
+        /// <para>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a team under a specified instance. You can set the team name, description, administrator, and initial member list.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateTeamRequest
@@ -1927,8 +1985,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -1999,8 +2062,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -2071,8 +2139,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -2089,8 +2162,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建用户</para>
+        /// <para>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a user under a specified instance. You can set the username, display name, email address, authentication method, note, and password. If no password is specified, the system automatically generates an initial password and returns it in the response.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateUserRequest
@@ -2107,8 +2185,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Worker</para>
+        /// <para>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateWorkerRequest
@@ -2253,8 +2336,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Worker</para>
+        /// <para>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// CreateWorkerRequest
@@ -2399,8 +2487,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Worker</para>
+        /// <para>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWorkerRequest
@@ -2417,8 +2510,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Worker</para>
+        /// <para>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a Worker instance with specified configurations such as model, skills, template, MCP servers, and channels.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWorkerRequest
@@ -2435,8 +2533,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Worker本地纳管启动Token</para>
+        /// <para>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWorkerBootstrapTokenRequest
@@ -2485,8 +2588,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Worker本地纳管启动Token</para>
+        /// <para>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWorkerBootstrapTokenRequest
@@ -2535,8 +2643,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Worker本地纳管启动Token</para>
+        /// <para>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWorkerBootstrapTokenRequest
@@ -2553,8 +2666,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建Worker本地纳管启动Token</para>
+        /// <para>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a local management bootstrap token for a Worker, with support for specifying the network type.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateWorkerBootstrapTokenRequest
@@ -2571,8 +2689,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除凭证</para>
+        /// <para>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCredentialRequest
@@ -2623,8 +2746,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除凭证</para>
+        /// <para>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCredentialRequest
@@ -2675,8 +2803,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除凭证</para>
+        /// <para>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCredentialRequest
@@ -2693,8 +2826,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除凭证</para>
+        /// <para>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an existing credential from a specified AgentTeams instance. The credential cannot be deleted if it is still attached to a Worker.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteCredentialRequest
@@ -2711,18 +2849,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于释放指定的AgentTeams实例，并清理相关资源。</para>
+        /// <para>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>本API支持<c>GET</c>和<c>POST</c>方法，两者语义相同。</description></item>
-        /// <item><description>使用<c>POST</c>方法时，参数通过<c>application/x-www-form-urlencoded</c>格式提交。</description></item>
-        /// <item><description>当前实例状态为<c>CREATING</c>、<c>DELETING</c>或<c>DELETED</c>时，请求将被拒绝。</description></item>
-        /// <item><description>成功调用后，实例状态将首先更改为<c>DELETING</c>，实际的资源清理过程由后台异步执行。</description></item>
-        /// </list>
+        /// <para>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2764,18 +2896,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于释放指定的AgentTeams实例，并清理相关资源。</para>
+        /// <para>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>本API支持<c>GET</c>和<c>POST</c>方法，两者语义相同。</description></item>
-        /// <item><description>使用<c>POST</c>方法时，参数通过<c>application/x-www-form-urlencoded</c>格式提交。</description></item>
-        /// <item><description>当前实例状态为<c>CREATING</c>、<c>DELETING</c>或<c>DELETED</c>时，请求将被拒绝。</description></item>
-        /// <item><description>成功调用后，实例状态将首先更改为<c>DELETING</c>，实际的资源清理过程由后台异步执行。</description></item>
-        /// </list>
+        /// <para>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2817,18 +2943,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于释放指定的AgentTeams实例，并清理相关资源。</para>
+        /// <para>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>本API支持<c>GET</c>和<c>POST</c>方法，两者语义相同。</description></item>
-        /// <item><description>使用<c>POST</c>方法时，参数通过<c>application/x-www-form-urlencoded</c>格式提交。</description></item>
-        /// <item><description>当前实例状态为<c>CREATING</c>、<c>DELETING</c>或<c>DELETED</c>时，请求将被拒绝。</description></item>
-        /// <item><description>成功调用后，实例状态将首先更改为<c>DELETING</c>，实际的资源清理过程由后台异步执行。</description></item>
-        /// </list>
+        /// <para>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2846,18 +2966,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于释放指定的AgentTeams实例，并清理相关资源。</para>
+        /// <para>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>本API支持<c>GET</c>和<c>POST</c>方法，两者语义相同。</description></item>
-        /// <item><description>使用<c>POST</c>方法时，参数通过<c>application/x-www-form-urlencoded</c>格式提交。</description></item>
-        /// <item><description>当前实例状态为<c>CREATING</c>、<c>DELETING</c>或<c>DELETED</c>时，请求将被拒绝。</description></item>
-        /// <item><description>成功调用后，实例状态将首先更改为<c>DELETING</c>，实际的资源清理过程由后台异步执行。</description></item>
-        /// </list>
+        /// <para>Releases a specified AgentTeams instance and cleans up related resources. Supports GET and POST methods. After a successful call, the instance status changes to DELETING, and resource cleanup is performed asynchronously in the background.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2875,19 +2989,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除MCP</para>
+        /// <para>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2933,19 +3040,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除MCP</para>
+        /// <para>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2991,19 +3091,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除MCP</para>
+        /// <para>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3021,19 +3114,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除MCP</para>
+        /// <para>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an MCP server from a specified AgentTeams instance. The server cannot be deleted if it is associated with any Workers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3051,19 +3137,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3113,19 +3192,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3175,19 +3247,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3205,19 +3270,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型</para>
+        /// <para>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an AI model from a specified AgentTeams instance. The model cannot be deleted if it is still associated with a Worker.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3235,19 +3293,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型供应商</para>
+        /// <para>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3293,19 +3344,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型供应商</para>
+        /// <para>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3351,19 +3395,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型供应商</para>
+        /// <para>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3381,19 +3418,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除模型供应商</para>
+        /// <para>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Deletes an AI model provider from a specified AgentTeams instance. The provider cannot be deleted if it still has associated models.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3411,17 +3441,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除指定AgentTeams实例下的endpoint，并清理相关资源。</para>
+        /// <para>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</para>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过GET或POST方法调用。</description></item>
-        /// <item><description>如果目标endpoint是<c>WORKER</c>类型，系统将自动清理与之关联的APIG/AI Gateway云资源及KubeOne worker service配置。</description></item>
-        /// <item><description>请求参数必须包含<c>instanceId</c>和<c>endpointId</c>，且不能为空。</description></item>
-        /// <item><description>成功响应会返回HTTP状态码200以及成功标志；错误响应则根据具体情况返回相应的HTTP状态码（如400、404、409）及错误信息。</description></item>
+        /// <item><description>This operation supports GET or POST methods.</description></item>
+        /// <item><description>If the target endpoint is of the WORKER type, the system automatically cleans up associated APIG/AI Gateway cloud resources and KubeOne worker service configurations.</description></item>
+        /// <item><description>The request parameters must include instanceId and endpointId, and neither can be empty.</description></item>
+        /// <item><description>A successful response returns HTTP status code 200 and a success flag. An error response returns the corresponding HTTP status code (such as 400, 404, or 409) and an error message.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3470,17 +3500,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除指定AgentTeams实例下的endpoint，并清理相关资源。</para>
+        /// <para>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</para>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过GET或POST方法调用。</description></item>
-        /// <item><description>如果目标endpoint是<c>WORKER</c>类型，系统将自动清理与之关联的APIG/AI Gateway云资源及KubeOne worker service配置。</description></item>
-        /// <item><description>请求参数必须包含<c>instanceId</c>和<c>endpointId</c>，且不能为空。</description></item>
-        /// <item><description>成功响应会返回HTTP状态码200以及成功标志；错误响应则根据具体情况返回相应的HTTP状态码（如400、404、409）及错误信息。</description></item>
+        /// <item><description>This operation supports GET or POST methods.</description></item>
+        /// <item><description>If the target endpoint is of the WORKER type, the system automatically cleans up associated APIG/AI Gateway cloud resources and KubeOne worker service configurations.</description></item>
+        /// <item><description>The request parameters must include instanceId and endpointId, and neither can be empty.</description></item>
+        /// <item><description>A successful response returns HTTP status code 200 and a success flag. An error response returns the corresponding HTTP status code (such as 400, 404, or 409) and an error message.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3529,17 +3559,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除指定AgentTeams实例下的endpoint，并清理相关资源。</para>
+        /// <para>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</para>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过GET或POST方法调用。</description></item>
-        /// <item><description>如果目标endpoint是<c>WORKER</c>类型，系统将自动清理与之关联的APIG/AI Gateway云资源及KubeOne worker service配置。</description></item>
-        /// <item><description>请求参数必须包含<c>instanceId</c>和<c>endpointId</c>，且不能为空。</description></item>
-        /// <item><description>成功响应会返回HTTP状态码200以及成功标志；错误响应则根据具体情况返回相应的HTTP状态码（如400、404、409）及错误信息。</description></item>
+        /// <item><description>This operation supports GET or POST methods.</description></item>
+        /// <item><description>If the target endpoint is of the WORKER type, the system automatically cleans up associated APIG/AI Gateway cloud resources and KubeOne worker service configurations.</description></item>
+        /// <item><description>The request parameters must include instanceId and endpointId, and neither can be empty.</description></item>
+        /// <item><description>A successful response returns HTTP status code 200 and a success flag. An error response returns the corresponding HTTP status code (such as 400, 404, or 409) and an error message.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3558,17 +3588,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于删除指定AgentTeams实例下的endpoint，并清理相关资源。</para>
+        /// <para>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Deletes an endpoint from a specified AgentTeams instance and cleans up related resources.</para>
         /// <list type="bullet">
-        /// <item><description>该接口支持通过GET或POST方法调用。</description></item>
-        /// <item><description>如果目标endpoint是<c>WORKER</c>类型，系统将自动清理与之关联的APIG/AI Gateway云资源及KubeOne worker service配置。</description></item>
-        /// <item><description>请求参数必须包含<c>instanceId</c>和<c>endpointId</c>，且不能为空。</description></item>
-        /// <item><description>成功响应会返回HTTP状态码200以及成功标志；错误响应则根据具体情况返回相应的HTTP状态码（如400、404、409）及错误信息。</description></item>
+        /// <item><description>This operation supports GET or POST methods.</description></item>
+        /// <item><description>If the target endpoint is of the WORKER type, the system automatically cleans up associated APIG/AI Gateway cloud resources and KubeOne worker service configurations.</description></item>
+        /// <item><description>The request parameters must include instanceId and endpointId, and neither can be empty.</description></item>
+        /// <item><description>A successful response returns HTTP status code 200 and a success flag. An error response returns the corresponding HTTP status code (such as 400, 404, or 409) and an error message.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -3587,8 +3617,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除团队</para>
+        /// <para>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTeamRequest
@@ -3633,8 +3668,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除团队</para>
+        /// <para>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTeamRequest
@@ -3679,8 +3719,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除团队</para>
+        /// <para>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTeamRequest
@@ -3697,8 +3742,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除团队</para>
+        /// <para>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a team under a specified instance. After deletion, the team and associated resources enter an asynchronous cleanup process.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteTeamRequest
@@ -3715,8 +3765,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserRequest
@@ -3761,8 +3816,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserRequest
@@ -3807,8 +3867,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserRequest
@@ -3825,8 +3890,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除用户</para>
+        /// <para>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified user from a specified instance. After deletion, the user cannot log on to or access instance resources. Proceed with caution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteUserRequest
@@ -3843,8 +3913,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Worker</para>
+        /// <para>Deletes a Worker under a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a Worker under a specified instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkerRequest
@@ -3889,8 +3964,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Worker</para>
+        /// <para>Deletes a Worker under a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a Worker under a specified instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkerRequest
@@ -3935,8 +4015,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Worker</para>
+        /// <para>Deletes a Worker under a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a Worker under a specified instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkerRequest
@@ -3953,8 +4038,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除Worker</para>
+        /// <para>Deletes a Worker under a specified instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a Worker under a specified instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteWorkerRequest
@@ -3971,8 +4061,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证详情</para>
+        /// <para>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCredentialRequest
@@ -4017,8 +4112,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证详情</para>
+        /// <para>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCredentialRequest
@@ -4063,8 +4163,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证详情</para>
+        /// <para>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCredentialRequest
@@ -4081,8 +4186,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证详情</para>
+        /// <para>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified credential under an AgentTeams instance, including the status, description, and list of bound Workers.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetCredentialRequest
@@ -4099,8 +4209,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定类型的上游身份提供商详情</para>
+        /// <para>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIdentityProviderRequest
@@ -4145,8 +4260,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定类型的上游身份提供商详情</para>
+        /// <para>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIdentityProviderRequest
@@ -4191,8 +4311,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定类型的上游身份提供商详情</para>
+        /// <para>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIdentityProviderRequest
@@ -4209,8 +4334,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定类型的上游身份提供商详情</para>
+        /// <para>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the binding details of an upstream identity provider for a specified instance and identity provider type, including the logon callback URL and metadata.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetIdentityProviderRequest
@@ -4227,20 +4357,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID查询指定实例的详细信息。</para>
+        /// <para>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口支持<c>GET</c>和<c>POST</c>方法。</description></item>
-        /// <item><description>请求时必须在头部包含<c>X-User-Id</c>，用于校验实例归属。</description></item>
-        /// <item><description><c>X-Acs-Request-Id</c>为可选项，如果提供，则响应中的<c>requestId</c>将优先使用此值。</description></item>
-        /// <item><description>必须通过<c>instanceId</c>参数指定要查询的实例。</description></item>
-        /// <item><description>成功响应会返回实例的详细配置信息及状态。</description></item>
-        /// <item><description>如果请求失败，根据错误类型返回相应的HTTP状态码及错误消息。</description></item>
-        /// </list>
+        /// <para>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4282,20 +4404,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID查询指定实例的详细信息。</para>
+        /// <para>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口支持<c>GET</c>和<c>POST</c>方法。</description></item>
-        /// <item><description>请求时必须在头部包含<c>X-User-Id</c>，用于校验实例归属。</description></item>
-        /// <item><description><c>X-Acs-Request-Id</c>为可选项，如果提供，则响应中的<c>requestId</c>将优先使用此值。</description></item>
-        /// <item><description>必须通过<c>instanceId</c>参数指定要查询的实例。</description></item>
-        /// <item><description>成功响应会返回实例的详细配置信息及状态。</description></item>
-        /// <item><description>如果请求失败，根据错误类型返回相应的HTTP状态码及错误消息。</description></item>
-        /// </list>
+        /// <para>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4337,20 +4451,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID查询指定实例的详细信息。</para>
+        /// <para>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口支持<c>GET</c>和<c>POST</c>方法。</description></item>
-        /// <item><description>请求时必须在头部包含<c>X-User-Id</c>，用于校验实例归属。</description></item>
-        /// <item><description><c>X-Acs-Request-Id</c>为可选项，如果提供，则响应中的<c>requestId</c>将优先使用此值。</description></item>
-        /// <item><description>必须通过<c>instanceId</c>参数指定要查询的实例。</description></item>
-        /// <item><description>成功响应会返回实例的详细配置信息及状态。</description></item>
-        /// <item><description>如果请求失败，根据错误类型返回相应的HTTP状态码及错误消息。</description></item>
-        /// </list>
+        /// <para>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4368,20 +4474,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>通过实例ID查询指定实例的详细信息。</para>
+        /// <para>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口支持<c>GET</c>和<c>POST</c>方法。</description></item>
-        /// <item><description>请求时必须在头部包含<c>X-User-Id</c>，用于校验实例归属。</description></item>
-        /// <item><description><c>X-Acs-Request-Id</c>为可选项，如果提供，则响应中的<c>requestId</c>将优先使用此值。</description></item>
-        /// <item><description>必须通过<c>instanceId</c>参数指定要查询的实例。</description></item>
-        /// <item><description>成功响应会返回实例的详细配置信息及状态。</description></item>
-        /// <item><description>如果请求失败，根据错误类型返回相应的HTTP状态码及错误消息。</description></item>
-        /// </list>
+        /// <para>Queries the details of a specified instance by instance ID. Supports GET and POST methods. A successful response returns the detailed configuration and status of the instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4399,19 +4497,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定AgentTeams实例关联的异步任务状态，支持分页。</para>
+        /// <para>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with pagination support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with paging support.</para>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询特定AgentTeams实例下的异步任务执行状态。</description></item>
-        /// <item><description>目前仅支持查询与实例生命周期相关的创建实例任务。</description></item>
-        /// <item><description>可通过<c>taskCode</c>参数指定要查询的任务类型，默认为创建实例任务。</description></item>
-        /// <item><description>支持使用<c>maxResults</c>和<c>nextToken</c>进行结果分页。</description></item>
-        /// <item><description>当任务处于暂停(<c>PAUSED</c>)状态时，会返回用户需要采取行动的信息(<c>recoveryMessage</c>)。</description></item>
-        /// <item><description>注意：当前不支持通过<c>taskId</c>直接查询任务状态。</description></item>
+        /// <item><description>This operation queries the execution status of asynchronous tasks under a specific AgentTeams instance.</description></item>
+        /// <item><description>Currently, only instance creation tasks related to the instance lifecycle are supported.</description></item>
+        /// <item><description>Use the taskCode parameter to specify the task type to query. The default is the instance creation task.</description></item>
+        /// <item><description>Use maxResults and nextToken for result paging.</description></item>
+        /// <item><description>When a task is in the PAUSED state, the response includes information about the action the user needs to take (recoveryMessage).</description></item>
+        /// <item><description>Querying task status directly by taskId is not currently supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4470,19 +4568,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定AgentTeams实例关联的异步任务状态，支持分页。</para>
+        /// <para>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with pagination support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with paging support.</para>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询特定AgentTeams实例下的异步任务执行状态。</description></item>
-        /// <item><description>目前仅支持查询与实例生命周期相关的创建实例任务。</description></item>
-        /// <item><description>可通过<c>taskCode</c>参数指定要查询的任务类型，默认为创建实例任务。</description></item>
-        /// <item><description>支持使用<c>maxResults</c>和<c>nextToken</c>进行结果分页。</description></item>
-        /// <item><description>当任务处于暂停(<c>PAUSED</c>)状态时，会返回用户需要采取行动的信息(<c>recoveryMessage</c>)。</description></item>
-        /// <item><description>注意：当前不支持通过<c>taskId</c>直接查询任务状态。</description></item>
+        /// <item><description>This operation queries the execution status of asynchronous tasks under a specific AgentTeams instance.</description></item>
+        /// <item><description>Currently, only instance creation tasks related to the instance lifecycle are supported.</description></item>
+        /// <item><description>Use the taskCode parameter to specify the task type to query. The default is the instance creation task.</description></item>
+        /// <item><description>Use maxResults and nextToken for result paging.</description></item>
+        /// <item><description>When a task is in the PAUSED state, the response includes information about the action the user needs to take (recoveryMessage).</description></item>
+        /// <item><description>Querying task status directly by taskId is not currently supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4541,19 +4639,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定AgentTeams实例关联的异步任务状态，支持分页。</para>
+        /// <para>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with pagination support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with paging support.</para>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询特定AgentTeams实例下的异步任务执行状态。</description></item>
-        /// <item><description>目前仅支持查询与实例生命周期相关的创建实例任务。</description></item>
-        /// <item><description>可通过<c>taskCode</c>参数指定要查询的任务类型，默认为创建实例任务。</description></item>
-        /// <item><description>支持使用<c>maxResults</c>和<c>nextToken</c>进行结果分页。</description></item>
-        /// <item><description>当任务处于暂停(<c>PAUSED</c>)状态时，会返回用户需要采取行动的信息(<c>recoveryMessage</c>)。</description></item>
-        /// <item><description>注意：当前不支持通过<c>taskId</c>直接查询任务状态。</description></item>
+        /// <item><description>This operation queries the execution status of asynchronous tasks under a specific AgentTeams instance.</description></item>
+        /// <item><description>Currently, only instance creation tasks related to the instance lifecycle are supported.</description></item>
+        /// <item><description>Use the taskCode parameter to specify the task type to query. The default is the instance creation task.</description></item>
+        /// <item><description>Use maxResults and nextToken for result paging.</description></item>
+        /// <item><description>When a task is in the PAUSED state, the response includes information about the action the user needs to take (recoveryMessage).</description></item>
+        /// <item><description>Querying task status directly by taskId is not currently supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4572,19 +4670,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定AgentTeams实例关联的异步任务状态，支持分页。</para>
+        /// <para>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with pagination support.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the status of asynchronous tasks associated with a specified AgentTeams instance, with paging support.</para>
         /// <list type="bullet">
-        /// <item><description>本接口用于查询特定AgentTeams实例下的异步任务执行状态。</description></item>
-        /// <item><description>目前仅支持查询与实例生命周期相关的创建实例任务。</description></item>
-        /// <item><description>可通过<c>taskCode</c>参数指定要查询的任务类型，默认为创建实例任务。</description></item>
-        /// <item><description>支持使用<c>maxResults</c>和<c>nextToken</c>进行结果分页。</description></item>
-        /// <item><description>当任务处于暂停(<c>PAUSED</c>)状态时，会返回用户需要采取行动的信息(<c>recoveryMessage</c>)。</description></item>
-        /// <item><description>注意：当前不支持通过<c>taskId</c>直接查询任务状态。</description></item>
+        /// <item><description>This operation queries the execution status of asynchronous tasks under a specific AgentTeams instance.</description></item>
+        /// <item><description>Currently, only instance creation tasks related to the instance lifecycle are supported.</description></item>
+        /// <item><description>Use the taskCode parameter to specify the task type to query. The default is the instance creation task.</description></item>
+        /// <item><description>Use maxResults and nextToken for result paging.</description></item>
+        /// <item><description>When a task is in the PAUSED state, the response includes information about the action the user needs to take (recoveryMessage).</description></item>
+        /// <item><description>Querying task status directly by taskId is not currently supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4603,17 +4701,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例 OSS 挂载到 ACS 所需的 RAM 授权链接。</para>
+        /// <para>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口支持<c>GET</c>和<c>POST</c>方法。</description></item>
-        /// <item><description>请求时必须在头部包含<c>X-User-Id</c>，用于校验实例归属。</description></item>
-        /// <item><description>必须通过<c>instanceId</c>参数指定实例，后端会根据实例信息生成授权链接。</description></item>
-        /// <item><description>成功响应会返回 RAM 控制台授权链接，不会创建 RAM 角色或策略。</description></item>
+        /// <item><description>This operation supports GET and POST methods.</description></item>
+        /// <item><description>The X-User-Id header must be included in the request to verify instance ownership.</description></item>
+        /// <item><description>The InstanceId parameter is required to specify the instance. The backend generates the authorization URL based on the instance information.</description></item>
+        /// <item><description>A successful response returns the RAM console authorization URL without creating a RAM role or policy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4656,17 +4754,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例 OSS 挂载到 ACS 所需的 RAM 授权链接。</para>
+        /// <para>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口支持<c>GET</c>和<c>POST</c>方法。</description></item>
-        /// <item><description>请求时必须在头部包含<c>X-User-Id</c>，用于校验实例归属。</description></item>
-        /// <item><description>必须通过<c>instanceId</c>参数指定实例，后端会根据实例信息生成授权链接。</description></item>
-        /// <item><description>成功响应会返回 RAM 控制台授权链接，不会创建 RAM 角色或策略。</description></item>
+        /// <item><description>This operation supports GET and POST methods.</description></item>
+        /// <item><description>The X-User-Id header must be included in the request to verify instance ownership.</description></item>
+        /// <item><description>The InstanceId parameter is required to specify the instance. The backend generates the authorization URL based on the instance information.</description></item>
+        /// <item><description>A successful response returns the RAM console authorization URL without creating a RAM role or policy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4709,17 +4807,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例 OSS 挂载到 ACS 所需的 RAM 授权链接。</para>
+        /// <para>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口支持<c>GET</c>和<c>POST</c>方法。</description></item>
-        /// <item><description>请求时必须在头部包含<c>X-User-Id</c>，用于校验实例归属。</description></item>
-        /// <item><description>必须通过<c>instanceId</c>参数指定实例，后端会根据实例信息生成授权链接。</description></item>
-        /// <item><description>成功响应会返回 RAM 控制台授权链接，不会创建 RAM 角色或策略。</description></item>
+        /// <item><description>This operation supports GET and POST methods.</description></item>
+        /// <item><description>The X-User-Id header must be included in the request to verify instance ownership.</description></item>
+        /// <item><description>The InstanceId parameter is required to specify the instance. The backend generates the authorization URL based on the instance information.</description></item>
+        /// <item><description>A successful response returns the RAM console authorization URL without creating a RAM role or policy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4738,17 +4836,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取实例 OSS 挂载到 ACS 所需的 RAM 授权链接。</para>
+        /// <para>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Retrieves the RAM authorization URL required to mount OSS to ACS for an instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口支持<c>GET</c>和<c>POST</c>方法。</description></item>
-        /// <item><description>请求时必须在头部包含<c>X-User-Id</c>，用于校验实例归属。</description></item>
-        /// <item><description>必须通过<c>instanceId</c>参数指定实例，后端会根据实例信息生成授权链接。</description></item>
-        /// <item><description>成功响应会返回 RAM 控制台授权链接，不会创建 RAM 角色或策略。</description></item>
+        /// <item><description>This operation supports GET and POST methods.</description></item>
+        /// <item><description>The X-User-Id header must be included in the request to verify instance ownership.</description></item>
+        /// <item><description>The InstanceId parameter is required to specify the instance. The backend generates the authorization URL based on the instance information.</description></item>
+        /// <item><description>A successful response returns the RAM console authorization URL without creating a RAM role or policy.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -4767,19 +4865,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MCP详情</para>
+        /// <para>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4825,19 +4916,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MCP详情</para>
+        /// <para>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4883,19 +4967,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MCP详情</para>
+        /// <para>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4913,19 +4990,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MCP详情</para>
+        /// <para>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the details of a specified MCP server, including the address, authentication configuration, deployment status, and protocol.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4943,8 +5013,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型调用摘要</para>
+        /// <para>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetModelInvocationSummaryRequest
@@ -4993,8 +5068,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型调用摘要</para>
+        /// <para>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetModelInvocationSummaryRequest
@@ -5043,8 +5123,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型调用摘要</para>
+        /// <para>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetModelInvocationSummaryRequest
@@ -5061,8 +5146,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>模型调用摘要</para>
+        /// <para>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the model call summary for a specified AgentTeams instance within a specified time range, including today\&quot;s and this week\&quot;s call counts, change rates, call frequency, and provider distribution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetModelInvocationSummaryRequest
@@ -5079,19 +5169,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型供应商详情</para>
+        /// <para>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5137,19 +5220,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型供应商详情</para>
+        /// <para>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5195,19 +5271,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型供应商详情</para>
+        /// <para>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5225,19 +5294,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型供应商详情</para>
+        /// <para>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the details of a single AI model provider, including the name, address, protocol list, API keys, and deployment status.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5255,18 +5317,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定实例的NAT网关及其SNAT规则的配置状态。</para>
+        /// <para>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过此API，您可以获取特定实例关联的NAT网关配置详情及SNAT规则的状态。该接口支持GET或POST方法调用，并需要提供<c>instanceId</c>作为请求参数来指定要查询的实例。</para>
-        /// <h3>注意事项</h3>
+        /// <para>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</para>
         /// <list type="bullet">
-        /// <item><description>确保提供的<c>instanceId</c>是有效的且属于您的账户。</description></item>
-        /// <item><description>根据返回的状态值（如<c>READY</c>, <c>NEED_CONFIGURE_NAT_GATEWAY</c>, <c>NEED_CONFIGURE_SNAT_RULE</c>），采取相应的操作以完成NAT网关或SNAT规则的配置。</description></item>
-        /// <item><description>当状态为<c>NEED_CONFIGURE_NAT_GATEWAY</c>时，表示当前VPC下没有可用的NAT网关；而<c>NEED_CONFIGURE_SNAT_RULE</c>则意味着虽然存在NAT网关但某些子网CIDR未被SNAT规则覆盖。</description></item>
+        /// <item><description>This API allows you to retrieve the NAT gateway configuration details and SNAT rule status associated with a specific instance. This operation supports GET or POST method calls and requires the instanceId as a request parameter to specify the instance to query.</description></item>
+        /// <item><description>Ensure that the provided instanceId is valid and belongs to your account.</description></item>
+        /// <item><description>Based on the returned status values (such as READY, NEED_CONFIGURE_NAT_GATEWAY, or NEED_CONFIGURE_SNAT_RULE), take the corresponding actions to complete the NAT gateway or SNAT rule configuration.</description></item>
+        /// <item><description>When the status is NEED_CONFIGURE_NAT_GATEWAY, it indicates that no available NAT gateway exists in the current VPC. NEED_CONFIGURE_SNAT_RULE means that a NAT gateway exists but some subnet CIDRs are not covered by SNAT rules.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5309,18 +5370,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定实例的NAT网关及其SNAT规则的配置状态。</para>
+        /// <para>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过此API，您可以获取特定实例关联的NAT网关配置详情及SNAT规则的状态。该接口支持GET或POST方法调用，并需要提供<c>instanceId</c>作为请求参数来指定要查询的实例。</para>
-        /// <h3>注意事项</h3>
+        /// <para>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</para>
         /// <list type="bullet">
-        /// <item><description>确保提供的<c>instanceId</c>是有效的且属于您的账户。</description></item>
-        /// <item><description>根据返回的状态值（如<c>READY</c>, <c>NEED_CONFIGURE_NAT_GATEWAY</c>, <c>NEED_CONFIGURE_SNAT_RULE</c>），采取相应的操作以完成NAT网关或SNAT规则的配置。</description></item>
-        /// <item><description>当状态为<c>NEED_CONFIGURE_NAT_GATEWAY</c>时，表示当前VPC下没有可用的NAT网关；而<c>NEED_CONFIGURE_SNAT_RULE</c>则意味着虽然存在NAT网关但某些子网CIDR未被SNAT规则覆盖。</description></item>
+        /// <item><description>This API allows you to retrieve the NAT gateway configuration details and SNAT rule status associated with a specific instance. This operation supports GET or POST method calls and requires the instanceId as a request parameter to specify the instance to query.</description></item>
+        /// <item><description>Ensure that the provided instanceId is valid and belongs to your account.</description></item>
+        /// <item><description>Based on the returned status values (such as READY, NEED_CONFIGURE_NAT_GATEWAY, or NEED_CONFIGURE_SNAT_RULE), take the corresponding actions to complete the NAT gateway or SNAT rule configuration.</description></item>
+        /// <item><description>When the status is NEED_CONFIGURE_NAT_GATEWAY, it indicates that no available NAT gateway exists in the current VPC. NEED_CONFIGURE_SNAT_RULE means that a NAT gateway exists but some subnet CIDRs are not covered by SNAT rules.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5363,18 +5423,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定实例的NAT网关及其SNAT规则的配置状态。</para>
+        /// <para>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过此API，您可以获取特定实例关联的NAT网关配置详情及SNAT规则的状态。该接口支持GET或POST方法调用，并需要提供<c>instanceId</c>作为请求参数来指定要查询的实例。</para>
-        /// <h3>注意事项</h3>
+        /// <para>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</para>
         /// <list type="bullet">
-        /// <item><description>确保提供的<c>instanceId</c>是有效的且属于您的账户。</description></item>
-        /// <item><description>根据返回的状态值（如<c>READY</c>, <c>NEED_CONFIGURE_NAT_GATEWAY</c>, <c>NEED_CONFIGURE_SNAT_RULE</c>），采取相应的操作以完成NAT网关或SNAT规则的配置。</description></item>
-        /// <item><description>当状态为<c>NEED_CONFIGURE_NAT_GATEWAY</c>时，表示当前VPC下没有可用的NAT网关；而<c>NEED_CONFIGURE_SNAT_RULE</c>则意味着虽然存在NAT网关但某些子网CIDR未被SNAT规则覆盖。</description></item>
+        /// <item><description>This API allows you to retrieve the NAT gateway configuration details and SNAT rule status associated with a specific instance. This operation supports GET or POST method calls and requires the instanceId as a request parameter to specify the instance to query.</description></item>
+        /// <item><description>Ensure that the provided instanceId is valid and belongs to your account.</description></item>
+        /// <item><description>Based on the returned status values (such as READY, NEED_CONFIGURE_NAT_GATEWAY, or NEED_CONFIGURE_SNAT_RULE), take the corresponding actions to complete the NAT gateway or SNAT rule configuration.</description></item>
+        /// <item><description>When the status is NEED_CONFIGURE_NAT_GATEWAY, it indicates that no available NAT gateway exists in the current VPC. NEED_CONFIGURE_SNAT_RULE means that a NAT gateway exists but some subnet CIDRs are not covered by SNAT rules.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5393,18 +5452,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定实例的NAT网关及其SNAT规则的配置状态。</para>
+        /// <para>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <para>通过此API，您可以获取特定实例关联的NAT网关配置详情及SNAT规则的状态。该接口支持GET或POST方法调用，并需要提供<c>instanceId</c>作为请求参数来指定要查询的实例。</para>
-        /// <h3>注意事项</h3>
+        /// <para>Queries the configuration status of the NAT gateway and its SNAT rules for a specified instance.</para>
         /// <list type="bullet">
-        /// <item><description>确保提供的<c>instanceId</c>是有效的且属于您的账户。</description></item>
-        /// <item><description>根据返回的状态值（如<c>READY</c>, <c>NEED_CONFIGURE_NAT_GATEWAY</c>, <c>NEED_CONFIGURE_SNAT_RULE</c>），采取相应的操作以完成NAT网关或SNAT规则的配置。</description></item>
-        /// <item><description>当状态为<c>NEED_CONFIGURE_NAT_GATEWAY</c>时，表示当前VPC下没有可用的NAT网关；而<c>NEED_CONFIGURE_SNAT_RULE</c>则意味着虽然存在NAT网关但某些子网CIDR未被SNAT规则覆盖。</description></item>
+        /// <item><description>This API allows you to retrieve the NAT gateway configuration details and SNAT rule status associated with a specific instance. This operation supports GET or POST method calls and requires the instanceId as a request parameter to specify the instance to query.</description></item>
+        /// <item><description>Ensure that the provided instanceId is valid and belongs to your account.</description></item>
+        /// <item><description>Based on the returned status values (such as READY, NEED_CONFIGURE_NAT_GATEWAY, or NEED_CONFIGURE_SNAT_RULE), take the corresponding actions to complete the NAT gateway or SNAT rule configuration.</description></item>
+        /// <item><description>When the status is NEED_CONFIGURE_NAT_GATEWAY, it indicates that no available NAT gateway exists in the current VPC. NEED_CONFIGURE_SNAT_RULE means that a NAT gateway exists but some subnet CIDRs are not covered by SNAT rules.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5423,18 +5481,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定ID的Endpoint详细信息，支持通过实例ID进行校验。</para>
+        /// <para>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</para>
         /// <list type="bullet">
-        /// <item><description>该API用于根据<c>endpointId</c>查询单个Endpoint的具体配置与状态信息。</description></item>
-        /// <item><description>可选参数<c>instanceId</c>用于验证Endpoint是否属于特定实例。</description></item>
-        /// <item><description>请求方式支持<c>GET</c>和<c>POST</c>，其中<c>GET</c>使用query string传递参数，而<c>POST</c>则可以通过form参数提交。</description></item>
-        /// <item><description>如果<c>endpointId</c>缺失或为空，则会返回<c>InvalidParameter</c>错误。</description></item>
-        /// <item><description>当请求的Endpoint不存在、不属于提供的实例或者不属于当前用户时，将收到相应的资源不存在类错误响应。</description></item>
+        /// <item><description>This API operation queries the configuration and status information of a single endpoint based on the endpointId.</description></item>
+        /// <item><description>The optional parameter instanceId is used to verify whether the endpoint belongs to a specific instance.</description></item>
+        /// <item><description>The request supports both GET and POST methods. GET passes parameters through the query string, while POST submits parameters through form data.</description></item>
+        /// <item><description>If endpointId is missing or empty, an InvalidParameter error is returned.</description></item>
+        /// <item><description>If the requested endpoint does not exist, does not belong to the specified instance, or does not belong to the current user, a resource-not-found error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5481,18 +5539,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定ID的Endpoint详细信息，支持通过实例ID进行校验。</para>
+        /// <para>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</para>
         /// <list type="bullet">
-        /// <item><description>该API用于根据<c>endpointId</c>查询单个Endpoint的具体配置与状态信息。</description></item>
-        /// <item><description>可选参数<c>instanceId</c>用于验证Endpoint是否属于特定实例。</description></item>
-        /// <item><description>请求方式支持<c>GET</c>和<c>POST</c>，其中<c>GET</c>使用query string传递参数，而<c>POST</c>则可以通过form参数提交。</description></item>
-        /// <item><description>如果<c>endpointId</c>缺失或为空，则会返回<c>InvalidParameter</c>错误。</description></item>
-        /// <item><description>当请求的Endpoint不存在、不属于提供的实例或者不属于当前用户时，将收到相应的资源不存在类错误响应。</description></item>
+        /// <item><description>This API operation queries the configuration and status information of a single endpoint based on the endpointId.</description></item>
+        /// <item><description>The optional parameter instanceId is used to verify whether the endpoint belongs to a specific instance.</description></item>
+        /// <item><description>The request supports both GET and POST methods. GET passes parameters through the query string, while POST submits parameters through form data.</description></item>
+        /// <item><description>If endpointId is missing or empty, an InvalidParameter error is returned.</description></item>
+        /// <item><description>If the requested endpoint does not exist, does not belong to the specified instance, or does not belong to the current user, a resource-not-found error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5539,18 +5597,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定ID的Endpoint详细信息，支持通过实例ID进行校验。</para>
+        /// <para>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</para>
         /// <list type="bullet">
-        /// <item><description>该API用于根据<c>endpointId</c>查询单个Endpoint的具体配置与状态信息。</description></item>
-        /// <item><description>可选参数<c>instanceId</c>用于验证Endpoint是否属于特定实例。</description></item>
-        /// <item><description>请求方式支持<c>GET</c>和<c>POST</c>，其中<c>GET</c>使用query string传递参数，而<c>POST</c>则可以通过form参数提交。</description></item>
-        /// <item><description>如果<c>endpointId</c>缺失或为空，则会返回<c>InvalidParameter</c>错误。</description></item>
-        /// <item><description>当请求的Endpoint不存在、不属于提供的实例或者不属于当前用户时，将收到相应的资源不存在类错误响应。</description></item>
+        /// <item><description>This API operation queries the configuration and status information of a single endpoint based on the endpointId.</description></item>
+        /// <item><description>The optional parameter instanceId is used to verify whether the endpoint belongs to a specific instance.</description></item>
+        /// <item><description>The request supports both GET and POST methods. GET passes parameters through the query string, while POST submits parameters through form data.</description></item>
+        /// <item><description>If endpointId is missing or empty, an InvalidParameter error is returned.</description></item>
+        /// <item><description>If the requested endpoint does not exist, does not belong to the specified instance, or does not belong to the current user, a resource-not-found error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5569,18 +5627,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定ID的Endpoint详细信息，支持通过实例ID进行校验。</para>
+        /// <para>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the details of an endpoint with a specified ID. You can verify the endpoint by instance ID.</para>
         /// <list type="bullet">
-        /// <item><description>该API用于根据<c>endpointId</c>查询单个Endpoint的具体配置与状态信息。</description></item>
-        /// <item><description>可选参数<c>instanceId</c>用于验证Endpoint是否属于特定实例。</description></item>
-        /// <item><description>请求方式支持<c>GET</c>和<c>POST</c>，其中<c>GET</c>使用query string传递参数，而<c>POST</c>则可以通过form参数提交。</description></item>
-        /// <item><description>如果<c>endpointId</c>缺失或为空，则会返回<c>InvalidParameter</c>错误。</description></item>
-        /// <item><description>当请求的Endpoint不存在、不属于提供的实例或者不属于当前用户时，将收到相应的资源不存在类错误响应。</description></item>
+        /// <item><description>This API operation queries the configuration and status information of a single endpoint based on the endpointId.</description></item>
+        /// <item><description>The optional parameter instanceId is used to verify whether the endpoint belongs to a specific instance.</description></item>
+        /// <item><description>The request supports both GET and POST methods. GET passes parameters through the query string, while POST submits parameters through form data.</description></item>
+        /// <item><description>If endpointId is missing or empty, an InvalidParameter error is returned.</description></item>
+        /// <item><description>If the requested endpoint does not exist, does not belong to the specified instance, or does not belong to the current user, a resource-not-found error is returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -5599,8 +5657,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务统计摘要</para>
+        /// <para>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTaskStatsSummaryRequest
@@ -5649,8 +5712,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务统计摘要</para>
+        /// <para>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTaskStatsSummaryRequest
@@ -5699,8 +5767,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务统计摘要</para>
+        /// <para>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTaskStatsSummaryRequest
@@ -5717,8 +5790,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>任务统计摘要</para>
+        /// <para>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task statistics summary of a specified AgentTeams instance within a specified time range, including total tasks, average task duration, token consumption, and status distribution.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTaskStatsSummaryRequest
@@ -5735,8 +5813,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队详情</para>
+        /// <para>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTeamRequest
@@ -5781,8 +5864,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队详情</para>
+        /// <para>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTeamRequest
@@ -5827,8 +5915,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队详情</para>
+        /// <para>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTeamRequest
@@ -5845,8 +5938,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队详情</para>
+        /// <para>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified team under a specified instance, including the description, administrator, leader, members, associated workers, and room status.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTeamRequest
@@ -5863,8 +5961,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Token趋势统计</para>
+        /// <para>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTokenTrendRequest
@@ -5917,8 +6020,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Token趋势统计</para>
+        /// <para>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTokenTrendRequest
@@ -5971,8 +6079,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Token趋势统计</para>
+        /// <para>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTokenTrendRequest
@@ -5989,8 +6102,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Token趋势统计</para>
+        /// <para>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the token consumption trend of a specified AgentTeams instance within a specified time range, supports grouping by time dimension, and returns time series data that can be used for charting.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetTokenTrendRequest
@@ -6007,8 +6125,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具调用分布</para>
+        /// <para>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetToolCallDistributionRequest
@@ -6057,8 +6180,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具调用分布</para>
+        /// <para>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetToolCallDistributionRequest
@@ -6107,8 +6235,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具调用分布</para>
+        /// <para>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetToolCallDistributionRequest
@@ -6125,8 +6258,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>工具调用分布</para>
+        /// <para>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the tool calling distribution of a specified AgentTeams instance within a specified time range, and returns the number of calls for each tool and the total number of calls.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetToolCallDistributionRequest
@@ -6143,8 +6281,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户详情</para>
+        /// <para>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -6189,8 +6332,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户详情</para>
+        /// <para>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -6235,8 +6383,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户详情</para>
+        /// <para>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -6253,8 +6406,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户详情</para>
+        /// <para>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified user under a specified instance, including the username, display name, email address, authentication method, status, and creation time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserRequest
@@ -6271,8 +6429,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户初始密码</para>
+        /// <para>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPasswordRequest
@@ -6317,8 +6480,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户初始密码</para>
+        /// <para>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPasswordRequest
@@ -6363,8 +6531,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户初始密码</para>
+        /// <para>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPasswordRequest
@@ -6381,8 +6554,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取用户初始密码</para>
+        /// <para>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Retrieves the initial password of a specified user under a specified instance. The initial password is generated by the system or specified by the user when the user is created.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetUserPasswordRequest
@@ -6399,8 +6577,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker详情</para>
+        /// <para>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerRequest
@@ -6445,8 +6628,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker详情</para>
+        /// <para>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerRequest
@@ -6491,8 +6679,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker详情</para>
+        /// <para>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerRequest
@@ -6509,8 +6702,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker详情</para>
+        /// <para>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified worker, including configurations such as model, skills, sub-agents, MCP servers, channels, and quotas.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerRequest
@@ -6527,8 +6725,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker本地纳管启动选项</para>
+        /// <para>Queries the startup options for local Worker management and returns available network types.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the startup options for local Worker management and returns available network types.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerBootstrapOptionsRequest
@@ -6573,8 +6776,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker本地纳管启动选项</para>
+        /// <para>Queries the startup options for local Worker management and returns available network types.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the startup options for local Worker management and returns available network types.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerBootstrapOptionsRequest
@@ -6619,8 +6827,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker本地纳管启动选项</para>
+        /// <para>Queries the startup options for local Worker management and returns available network types.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the startup options for local Worker management and returns available network types.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerBootstrapOptionsRequest
@@ -6637,8 +6850,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker本地纳管启动选项</para>
+        /// <para>Queries the startup options for local Worker management and returns available network types.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the startup options for local Worker management and returns available network types.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerBootstrapOptionsRequest
@@ -6655,8 +6873,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker最大可升级版本</para>
+        /// <para>Queries the maximum upgradable version of a worker.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the maximum upgradable version of a worker.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerMaxVersionRequest
@@ -6697,8 +6920,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker最大可升级版本</para>
+        /// <para>Queries the maximum upgradable version of a worker.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the maximum upgradable version of a worker.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerMaxVersionRequest
@@ -6739,8 +6967,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker最大可升级版本</para>
+        /// <para>Queries the maximum upgradable version of a worker.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the maximum upgradable version of a worker.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerMaxVersionRequest
@@ -6757,8 +6990,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker最大可升级版本</para>
+        /// <para>Queries the maximum upgradable version of a worker.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the maximum upgradable version of a worker.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerMaxVersionRequest
@@ -6775,8 +7013,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Worker统计摘要</para>
+        /// <para>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerStatsSummaryRequest
@@ -6825,8 +7068,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Worker统计摘要</para>
+        /// <para>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerStatsSummaryRequest
@@ -6875,8 +7123,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Worker统计摘要</para>
+        /// <para>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerStatsSummaryRequest
@@ -6893,8 +7146,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Worker统计摘要</para>
+        /// <para>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the Worker statistics summary, including the total number of workers, the number of running workers, the number of stopped workers, and more.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// GetWorkerStatsSummaryRequest
@@ -6911,8 +7169,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证列表</para>
+        /// <para>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -6965,8 +7228,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证列表</para>
+        /// <para>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -7019,8 +7287,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证列表</para>
+        /// <para>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -7037,8 +7310,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询凭证列表</para>
+        /// <para>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the credential list under a specified AgentTeams instance with paging, returning credential summary information and the number of Workers attached to each credential.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListCredentialsRequest
@@ -7055,8 +7333,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上游身份提供商绑定列表</para>
+        /// <para>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIdentityProvidersRequest
@@ -7105,8 +7388,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上游身份提供商绑定列表</para>
+        /// <para>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIdentityProvidersRequest
@@ -7155,8 +7443,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上游身份提供商绑定列表</para>
+        /// <para>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIdentityProvidersRequest
@@ -7173,8 +7466,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询上游身份提供商绑定列表</para>
+        /// <para>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of upstream identity provider bindings for a specified instance, with support for paginated responses.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListIdentityProvidersRequest
@@ -7191,31 +7489,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查询符合条件的实例列表，并支持分页和模糊匹配。</para>
+        /// <para>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><b>分页规则</b>：<list type="bullet">
-        /// <item><description>如果传了 <c>NextToken</c>，优先按 <c>NextToken</c> 解析 offset。</description></item>
-        /// <item><description>如果没传 <c>NextToken</c>，则使用 <c>skip</c>。</description></item>
-        /// <item><description><c>MaxResults</c> 的取值范围为 1 到 100，非法值会返回 <c>400</c> 错误。</description></item>
-        /// <item><description><c>NextToken</c> 必须是有效的整数，否则会返回 <c>400</c> 错误。</description></item>
-        /// <item><description><c>skip</c> 的值不能小于 0，否则会返回 <c>400</c> 错误。</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>排序规则</b>：列表按创建时间倒序返回。</description></item>
-        /// <item><description><b>请求参数</b>：<list type="bullet">
-        /// <item><description><c>instanceName</c>：实例名称，支持模糊匹配。</description></item>
-        /// <item><description><c>status</c>：实例状态。</description></item>
-        /// <item><description><c>MaxResults</c>：分页大小，默认值为 20。</description></item>
-        /// <item><description><c>NextToken</c>：下一页游标。</description></item>
-        /// <item><description><c>skip</c>：跳过的记录数，默认值为 0。</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7273,31 +7552,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查询符合条件的实例列表，并支持分页和模糊匹配。</para>
+        /// <para>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><b>分页规则</b>：<list type="bullet">
-        /// <item><description>如果传了 <c>NextToken</c>，优先按 <c>NextToken</c> 解析 offset。</description></item>
-        /// <item><description>如果没传 <c>NextToken</c>，则使用 <c>skip</c>。</description></item>
-        /// <item><description><c>MaxResults</c> 的取值范围为 1 到 100，非法值会返回 <c>400</c> 错误。</description></item>
-        /// <item><description><c>NextToken</c> 必须是有效的整数，否则会返回 <c>400</c> 错误。</description></item>
-        /// <item><description><c>skip</c> 的值不能小于 0，否则会返回 <c>400</c> 错误。</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>排序规则</b>：列表按创建时间倒序返回。</description></item>
-        /// <item><description><b>请求参数</b>：<list type="bullet">
-        /// <item><description><c>instanceName</c>：实例名称，支持模糊匹配。</description></item>
-        /// <item><description><c>status</c>：实例状态。</description></item>
-        /// <item><description><c>MaxResults</c>：分页大小，默认值为 20。</description></item>
-        /// <item><description><c>NextToken</c>：下一页游标。</description></item>
-        /// <item><description><c>skip</c>：跳过的记录数，默认值为 0。</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7355,31 +7615,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查询符合条件的实例列表，并支持分页和模糊匹配。</para>
+        /// <para>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><b>分页规则</b>：<list type="bullet">
-        /// <item><description>如果传了 <c>NextToken</c>，优先按 <c>NextToken</c> 解析 offset。</description></item>
-        /// <item><description>如果没传 <c>NextToken</c>，则使用 <c>skip</c>。</description></item>
-        /// <item><description><c>MaxResults</c> 的取值范围为 1 到 100，非法值会返回 <c>400</c> 错误。</description></item>
-        /// <item><description><c>NextToken</c> 必须是有效的整数，否则会返回 <c>400</c> 错误。</description></item>
-        /// <item><description><c>skip</c> 的值不能小于 0，否则会返回 <c>400</c> 错误。</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>排序规则</b>：列表按创建时间倒序返回。</description></item>
-        /// <item><description><b>请求参数</b>：<list type="bullet">
-        /// <item><description><c>instanceName</c>：实例名称，支持模糊匹配。</description></item>
-        /// <item><description><c>status</c>：实例状态。</description></item>
-        /// <item><description><c>MaxResults</c>：分页大小，默认值为 20。</description></item>
-        /// <item><description><c>NextToken</c>：下一页游标。</description></item>
-        /// <item><description><c>skip</c>：跳过的记录数，默认值为 0。</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7397,31 +7638,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于查询符合条件的实例列表，并支持分页和模糊匹配。</para>
+        /// <para>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description><b>分页规则</b>：<list type="bullet">
-        /// <item><description>如果传了 <c>NextToken</c>，优先按 <c>NextToken</c> 解析 offset。</description></item>
-        /// <item><description>如果没传 <c>NextToken</c>，则使用 <c>skip</c>。</description></item>
-        /// <item><description><c>MaxResults</c> 的取值范围为 1 到 100，非法值会返回 <c>400</c> 错误。</description></item>
-        /// <item><description><c>NextToken</c> 必须是有效的整数，否则会返回 <c>400</c> 错误。</description></item>
-        /// <item><description><c>skip</c> 的值不能小于 0，否则会返回 <c>400</c> 错误。</description></item>
-        /// </list>
-        /// </description></item>
-        /// <item><description><b>排序规则</b>：列表按创建时间倒序返回。</description></item>
-        /// <item><description><b>请求参数</b>：<list type="bullet">
-        /// <item><description><c>instanceName</c>：实例名称，支持模糊匹配。</description></item>
-        /// <item><description><c>status</c>：实例状态。</description></item>
-        /// <item><description><c>MaxResults</c>：分页大小，默认值为 20。</description></item>
-        /// <item><description><c>NextToken</c>：下一页游标。</description></item>
-        /// <item><description><c>skip</c>：跳过的记录数，默认值为 0。</description></item>
-        /// </list>
-        /// </description></item>
-        /// </list>
+        /// <para>Queries a list of instances that meet the specified conditions. Supports pagination and fuzzy match. Supports GET and POST methods. The list is returned in reverse chronological order by creation time.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7439,19 +7661,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试模型供应商和模型</para>
+        /// <para>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有Magic实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7497,19 +7712,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试模型供应商和模型</para>
+        /// <para>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有Magic实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7555,19 +7763,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试模型供应商和模型</para>
+        /// <para>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有Magic实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7585,19 +7786,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试模型供应商和模型</para>
+        /// <para>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有Magic实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of tools provided by a specified MCP server, including tool names, titles, descriptions, and input schemas.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7615,19 +7809,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MCP列表</para>
+        /// <para>Queries the MCP server list under a specified AgentTeams instance by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the MCP server list under a specified AgentTeams instance by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7677,19 +7864,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MCP列表</para>
+        /// <para>Queries the MCP server list under a specified AgentTeams instance by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the MCP server list under a specified AgentTeams instance by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7739,19 +7919,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MCP列表</para>
+        /// <para>Queries the MCP server list under a specified AgentTeams instance by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the MCP server list under a specified AgentTeams instance by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7769,19 +7942,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询MCP列表</para>
+        /// <para>Queries the MCP server list under a specified AgentTeams instance by using paging.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the MCP server list under a specified AgentTeams instance by using paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7799,19 +7965,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型供应商列表</para>
+        /// <para>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7861,19 +8020,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型供应商列表</para>
+        /// <para>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7923,19 +8075,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型供应商列表</para>
+        /// <para>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7953,19 +8098,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型供应商列表</para>
+        /// <para>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of AI model providers under a specified AgentTeams instance. Paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7983,19 +8121,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型列表</para>
+        /// <para>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8057,19 +8188,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型列表</para>
+        /// <para>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8131,19 +8255,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型列表</para>
+        /// <para>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8161,19 +8278,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询模型列表</para>
+        /// <para>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Queries the list of AI models under a specified AgentTeams instance. You can filter results by model name or provider name, and paging is supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8191,16 +8301,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>此API用于查询指定实例下的AI网关端点列表。</para>
+        /// <para>Queries the list of AI gateway endpoints under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>This API queries the list of AI gateway endpoints under a specified instance.</para>
         /// <list type="bullet">
-        /// <item><description><c>instanceId</c> 是必填参数，用来指定 AgentTeams 实例 ID。</description></item>
-        /// <item><description>可选参数包括 <c>component</c>, <c>serviceName</c>, <c>networkType</c>, 和 <c>domainType</c>，用于进一步筛选返回的端点列表。</description></item>
-        /// <item><description>不支持通过 <c>status</c> 参数进行筛选。</description></item>
+        /// <item><description>instanceId is a required parameter that specifies the AgentTeams instance ID.</description></item>
+        /// <item><description>Optional parameters include component, serviceName, networkType, and domainType, which are used to further filter the returned endpoint list.</description></item>
+        /// <item><description>Filtering by the status parameter is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8271,16 +8381,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>此API用于查询指定实例下的AI网关端点列表。</para>
+        /// <para>Queries the list of AI gateway endpoints under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>This API queries the list of AI gateway endpoints under a specified instance.</para>
         /// <list type="bullet">
-        /// <item><description><c>instanceId</c> 是必填参数，用来指定 AgentTeams 实例 ID。</description></item>
-        /// <item><description>可选参数包括 <c>component</c>, <c>serviceName</c>, <c>networkType</c>, 和 <c>domainType</c>，用于进一步筛选返回的端点列表。</description></item>
-        /// <item><description>不支持通过 <c>status</c> 参数进行筛选。</description></item>
+        /// <item><description>instanceId is a required parameter that specifies the AgentTeams instance ID.</description></item>
+        /// <item><description>Optional parameters include component, serviceName, networkType, and domainType, which are used to further filter the returned endpoint list.</description></item>
+        /// <item><description>Filtering by the status parameter is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8351,16 +8461,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>此API用于查询指定实例下的AI网关端点列表。</para>
+        /// <para>Queries the list of AI gateway endpoints under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>This API queries the list of AI gateway endpoints under a specified instance.</para>
         /// <list type="bullet">
-        /// <item><description><c>instanceId</c> 是必填参数，用来指定 AgentTeams 实例 ID。</description></item>
-        /// <item><description>可选参数包括 <c>component</c>, <c>serviceName</c>, <c>networkType</c>, 和 <c>domainType</c>，用于进一步筛选返回的端点列表。</description></item>
-        /// <item><description>不支持通过 <c>status</c> 参数进行筛选。</description></item>
+        /// <item><description>instanceId is a required parameter that specifies the AgentTeams instance ID.</description></item>
+        /// <item><description>Optional parameters include component, serviceName, networkType, and domainType, which are used to further filter the returned endpoint list.</description></item>
+        /// <item><description>Filtering by the status parameter is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8379,16 +8489,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>此API用于查询指定实例下的AI网关端点列表。</para>
+        /// <para>Queries the list of AI gateway endpoints under a specified instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>This API queries the list of AI gateway endpoints under a specified instance.</para>
         /// <list type="bullet">
-        /// <item><description><c>instanceId</c> 是必填参数，用来指定 AgentTeams 实例 ID。</description></item>
-        /// <item><description>可选参数包括 <c>component</c>, <c>serviceName</c>, <c>networkType</c>, 和 <c>domainType</c>，用于进一步筛选返回的端点列表。</description></item>
-        /// <item><description>不支持通过 <c>status</c> 参数进行筛选。</description></item>
+        /// <item><description>instanceId is a required parameter that specifies the AgentTeams instance ID.</description></item>
+        /// <item><description>Optional parameters include component, serviceName, networkType, and domainType, which are used to further filter the returned endpoint list.</description></item>
+        /// <item><description>Filtering by the status parameter is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8407,17 +8517,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户侧APIG可用的SSL证书列表</para>
+        /// <para>Queries the list of SSL certificates available to the user in APIG.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the list of SSL certificates available to the user in APIG.</para>
         /// <list type="bullet">
-        /// <item><description>该API用于获取与指定AgentTeams实例相关的SSL证书列表。</description></item>
-        /// <item><description>可通过<c>certNameLike</c>和<c>domainName</c>参数进行模糊搜索或精确匹配证书名称及绑定域名。</description></item>
-        /// <item><description>分页参数<c>pageNumber</c>和<c>pageSize</c>允许客户端控制返回结果的数量和页码，默认每页显示10条记录。</description></item>
-        /// <item><description>成功响应将包含请求ID、是否成功标志、错误代码（如果有的话）、HTTP状态码、本次请求的最大结果数、下一页标记（如果有更多数据的话）、总证书数量以及具体的证书详情列表。</description></item>
+        /// <item><description>This API retrieves the list of SSL certificates associated with a specified AgentTeams instance.</description></item>
+        /// <item><description>The pagination parameters MaxResults and NextToken allow the client to control the number of returned results and retrieve the next page of data.</description></item>
+        /// <item><description>A successful response includes the request ID, success flag, error code, next page token, total certificate count, and the certificate details list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8468,17 +8577,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户侧APIG可用的SSL证书列表</para>
+        /// <para>Queries the list of SSL certificates available to the user in APIG.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the list of SSL certificates available to the user in APIG.</para>
         /// <list type="bullet">
-        /// <item><description>该API用于获取与指定AgentTeams实例相关的SSL证书列表。</description></item>
-        /// <item><description>可通过<c>certNameLike</c>和<c>domainName</c>参数进行模糊搜索或精确匹配证书名称及绑定域名。</description></item>
-        /// <item><description>分页参数<c>pageNumber</c>和<c>pageSize</c>允许客户端控制返回结果的数量和页码，默认每页显示10条记录。</description></item>
-        /// <item><description>成功响应将包含请求ID、是否成功标志、错误代码（如果有的话）、HTTP状态码、本次请求的最大结果数、下一页标记（如果有更多数据的话）、总证书数量以及具体的证书详情列表。</description></item>
+        /// <item><description>This API retrieves the list of SSL certificates associated with a specified AgentTeams instance.</description></item>
+        /// <item><description>The pagination parameters MaxResults and NextToken allow the client to control the number of returned results and retrieve the next page of data.</description></item>
+        /// <item><description>A successful response includes the request ID, success flag, error code, next page token, total certificate count, and the certificate details list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8529,17 +8637,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户侧APIG可用的SSL证书列表</para>
+        /// <para>Queries the list of SSL certificates available to the user in APIG.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the list of SSL certificates available to the user in APIG.</para>
         /// <list type="bullet">
-        /// <item><description>该API用于获取与指定AgentTeams实例相关的SSL证书列表。</description></item>
-        /// <item><description>可通过<c>certNameLike</c>和<c>domainName</c>参数进行模糊搜索或精确匹配证书名称及绑定域名。</description></item>
-        /// <item><description>分页参数<c>pageNumber</c>和<c>pageSize</c>允许客户端控制返回结果的数量和页码，默认每页显示10条记录。</description></item>
-        /// <item><description>成功响应将包含请求ID、是否成功标志、错误代码（如果有的话）、HTTP状态码、本次请求的最大结果数、下一页标记（如果有更多数据的话）、总证书数量以及具体的证书详情列表。</description></item>
+        /// <item><description>This API retrieves the list of SSL certificates associated with a specified AgentTeams instance.</description></item>
+        /// <item><description>The pagination parameters MaxResults and NextToken allow the client to control the number of returned results and retrieve the next page of data.</description></item>
+        /// <item><description>A successful response includes the request ID, success flag, error code, next page token, total certificate count, and the certificate details list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8558,17 +8665,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户侧APIG可用的SSL证书列表</para>
+        /// <para>Queries the list of SSL certificates available to the user in APIG.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the list of SSL certificates available to the user in APIG.</para>
         /// <list type="bullet">
-        /// <item><description>该API用于获取与指定AgentTeams实例相关的SSL证书列表。</description></item>
-        /// <item><description>可通过<c>certNameLike</c>和<c>domainName</c>参数进行模糊搜索或精确匹配证书名称及绑定域名。</description></item>
-        /// <item><description>分页参数<c>pageNumber</c>和<c>pageSize</c>允许客户端控制返回结果的数量和页码，默认每页显示10条记录。</description></item>
-        /// <item><description>成功响应将包含请求ID、是否成功标志、错误代码（如果有的话）、HTTP状态码、本次请求的最大结果数、下一页标记（如果有更多数据的话）、总证书数量以及具体的证书详情列表。</description></item>
+        /// <item><description>This API retrieves the list of SSL certificates associated with a specified AgentTeams instance.</description></item>
+        /// <item><description>The pagination parameters MaxResults and NextToken allow the client to control the number of returned results and retrieve the next page of data.</description></item>
+        /// <item><description>A successful response includes the request ID, success flag, error code, next page token, total certificate count, and the certificate details list.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8587,8 +8693,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>团队详情列表</para>
+        /// <para>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamDetailsRequest
@@ -8645,8 +8756,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>团队详情列表</para>
+        /// <para>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamDetailsRequest
@@ -8703,8 +8819,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>团队详情列表</para>
+        /// <para>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamDetailsRequest
@@ -8721,8 +8842,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>团队详情列表</para>
+        /// <para>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the statistical details of teams under a specified instance, including aggregate metrics such as the number of workers, number of tasks, success rate, and token usage for each team.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamDetailsRequest
@@ -8739,8 +8865,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Team任务列表</para>
+        /// <para>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamTasksRequest
@@ -8793,8 +8924,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Team任务列表</para>
+        /// <para>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamTasksRequest
@@ -8847,8 +8983,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Team任务列表</para>
+        /// <para>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamTasksRequest
@@ -8865,8 +9006,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Team任务列表</para>
+        /// <para>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the task list of a specified team under a specified instance. The task metadata is sourced from the OSS bucket bound to the instance.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamTasksRequest
@@ -8883,8 +9029,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队列表</para>
+        /// <para>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamsRequest
@@ -8937,8 +9088,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队列表</para>
+        /// <para>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamsRequest
@@ -8991,8 +9147,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队列表</para>
+        /// <para>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamsRequest
@@ -9009,8 +9170,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询团队列表</para>
+        /// <para>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of teams under a specified instance, with support for fuzzy filtering by name and pagination.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListTeamsRequest
@@ -9027,8 +9193,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -9081,8 +9252,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -9135,8 +9311,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -9153,8 +9334,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询用户列表</para>
+        /// <para>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of users under a specified instance. Supports fuzzy match by username and paging query. The list is returned in reverse chronological order by creation time.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListUsersRequest
@@ -9171,8 +9357,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Worker统计详情列表</para>
+        /// <para>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkerStatsDetailsRequest
@@ -9229,8 +9420,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Worker统计详情列表</para>
+        /// <para>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkerStatsDetailsRequest
@@ -9287,8 +9483,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Worker统计详情列表</para>
+        /// <para>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkerStatsDetailsRequest
@@ -9305,8 +9506,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Worker统计详情列表</para>
+        /// <para>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries a list of Worker statistics details by paging, including task count, token usage, and LLM call count.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkerStatsDetailsRequest
@@ -9323,8 +9529,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker列表</para>
+        /// <para>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListWorkersRequest
@@ -9419,8 +9630,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker列表</para>
+        /// <para>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// ListWorkersRequest
@@ -9515,8 +9731,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker列表</para>
+        /// <para>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkersRequest
@@ -9533,8 +9754,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Worker列表</para>
+        /// <para>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of Workers under a specified instance by using paging, with support for filtering by name, model, template, and other conditions.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListWorkersRequest
@@ -9551,8 +9777,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新CMS工作空间</para>
+        /// <para>Creates or updates a CMS workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates or updates a CMS workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutCmsWorkspaceRequest
@@ -9593,8 +9824,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新CMS工作空间</para>
+        /// <para>Creates or updates a CMS workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates or updates a CMS workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutCmsWorkspaceRequest
@@ -9635,8 +9871,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新CMS工作空间</para>
+        /// <para>Creates or updates a CMS workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates or updates a CMS workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutCmsWorkspaceRequest
@@ -9653,8 +9894,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建或更新CMS工作空间</para>
+        /// <para>Creates or updates a CMS workspace.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates or updates a CMS workspace.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// PutCmsWorkspaceRequest
@@ -9671,19 +9917,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定实例、worker、团队或个人的功能特性状态。</para>
+        /// <para>Queries the attribute status of a specified instance, worker, team, or individual.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the feature status of a specified instance, worker, team, or individual.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询特定<c>instanceId</c>下的不同目标（如<c>INSTANCE</c>、<c>WORKER</c>、<c>TEAM</c>、<c>HUMAN</c>）的功能特性状态。</description></item>
-        /// <item><description><c>targetScope</c>参数定义了查询的目标类型，根据不同的<c>targetScope</c>值，可能需要提供额外的<c>resourceName</c>参数来指定具体的资源名称。</description></item>
-        /// <item><description>如果提供了<c>featureCodes</c>列表，则返回这些特定功能特性的状态；否则，将返回指定<c>targetScope</c>下所有功能特性的状态。</description></item>
-        /// <item><description>当使用<c>WORKER</c>、<c>TEAM</c>或<c>HUMAN</c>作为<c>targetScope</c>时，请确保正确填写对应的<c>resourceName</c>。</description></item>
-        /// <item><description>对于<c>INSTANCE</c>级别的查询，无需提供<c>resourceName</c>。</description></item>
-        /// <item><description>特性支持情况受基础版本、工作器版本等因素影响，并通过<c>unsupportedReasonCode</c>和<c>unsupportedReason</c>字段给出不支持的具体原因。</description></item>
+        /// <item><description>This operation queries the feature status of different targets (such as INSTANCE, WORKER, TEAM, or HUMAN) under a specific instanceId.</description></item>
+        /// <item><description>The targetScope parameter defines the target type for the query. Depending on the targetScope value, you may need to provide an additional resourceName parameter to specify the resource name.</description></item>
+        /// <item><description>If a featureCodes list is provided, the status of those specific features is returned. Otherwise, the status of all features under the specified targetScope is returned.</description></item>
+        /// <item><description>When using WORKER, TEAM, or HUMAN as the targetScope, make sure to correctly specify the corresponding resourceName.</description></item>
+        /// <item><description>For INSTANCE-level queries, resourceName is not required.</description></item>
+        /// <item><description>Feature support is affected by factors such as the base version and worker version. The unsupportedReasonCode and unsupportedReason fields provide the specific reason why a feature is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9734,19 +9980,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定实例、worker、团队或个人的功能特性状态。</para>
+        /// <para>Queries the attribute status of a specified instance, worker, team, or individual.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the feature status of a specified instance, worker, team, or individual.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询特定<c>instanceId</c>下的不同目标（如<c>INSTANCE</c>、<c>WORKER</c>、<c>TEAM</c>、<c>HUMAN</c>）的功能特性状态。</description></item>
-        /// <item><description><c>targetScope</c>参数定义了查询的目标类型，根据不同的<c>targetScope</c>值，可能需要提供额外的<c>resourceName</c>参数来指定具体的资源名称。</description></item>
-        /// <item><description>如果提供了<c>featureCodes</c>列表，则返回这些特定功能特性的状态；否则，将返回指定<c>targetScope</c>下所有功能特性的状态。</description></item>
-        /// <item><description>当使用<c>WORKER</c>、<c>TEAM</c>或<c>HUMAN</c>作为<c>targetScope</c>时，请确保正确填写对应的<c>resourceName</c>。</description></item>
-        /// <item><description>对于<c>INSTANCE</c>级别的查询，无需提供<c>resourceName</c>。</description></item>
-        /// <item><description>特性支持情况受基础版本、工作器版本等因素影响，并通过<c>unsupportedReasonCode</c>和<c>unsupportedReason</c>字段给出不支持的具体原因。</description></item>
+        /// <item><description>This operation queries the feature status of different targets (such as INSTANCE, WORKER, TEAM, or HUMAN) under a specific instanceId.</description></item>
+        /// <item><description>The targetScope parameter defines the target type for the query. Depending on the targetScope value, you may need to provide an additional resourceName parameter to specify the resource name.</description></item>
+        /// <item><description>If a featureCodes list is provided, the status of those specific features is returned. Otherwise, the status of all features under the specified targetScope is returned.</description></item>
+        /// <item><description>When using WORKER, TEAM, or HUMAN as the targetScope, make sure to correctly specify the corresponding resourceName.</description></item>
+        /// <item><description>For INSTANCE-level queries, resourceName is not required.</description></item>
+        /// <item><description>Feature support is affected by factors such as the base version and worker version. The unsupportedReasonCode and unsupportedReason fields provide the specific reason why a feature is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9797,19 +10043,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定实例、worker、团队或个人的功能特性状态。</para>
+        /// <para>Queries the attribute status of a specified instance, worker, team, or individual.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the feature status of a specified instance, worker, team, or individual.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询特定<c>instanceId</c>下的不同目标（如<c>INSTANCE</c>、<c>WORKER</c>、<c>TEAM</c>、<c>HUMAN</c>）的功能特性状态。</description></item>
-        /// <item><description><c>targetScope</c>参数定义了查询的目标类型，根据不同的<c>targetScope</c>值，可能需要提供额外的<c>resourceName</c>参数来指定具体的资源名称。</description></item>
-        /// <item><description>如果提供了<c>featureCodes</c>列表，则返回这些特定功能特性的状态；否则，将返回指定<c>targetScope</c>下所有功能特性的状态。</description></item>
-        /// <item><description>当使用<c>WORKER</c>、<c>TEAM</c>或<c>HUMAN</c>作为<c>targetScope</c>时，请确保正确填写对应的<c>resourceName</c>。</description></item>
-        /// <item><description>对于<c>INSTANCE</c>级别的查询，无需提供<c>resourceName</c>。</description></item>
-        /// <item><description>特性支持情况受基础版本、工作器版本等因素影响，并通过<c>unsupportedReasonCode</c>和<c>unsupportedReason</c>字段给出不支持的具体原因。</description></item>
+        /// <item><description>This operation queries the feature status of different targets (such as INSTANCE, WORKER, TEAM, or HUMAN) under a specific instanceId.</description></item>
+        /// <item><description>The targetScope parameter defines the target type for the query. Depending on the targetScope value, you may need to provide an additional resourceName parameter to specify the resource name.</description></item>
+        /// <item><description>If a featureCodes list is provided, the status of those specific features is returned. Otherwise, the status of all features under the specified targetScope is returned.</description></item>
+        /// <item><description>When using WORKER, TEAM, or HUMAN as the targetScope, make sure to correctly specify the corresponding resourceName.</description></item>
+        /// <item><description>For INSTANCE-level queries, resourceName is not required.</description></item>
+        /// <item><description>Feature support is affected by factors such as the base version and worker version. The unsupportedReasonCode and unsupportedReason fields provide the specific reason why a feature is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9828,19 +10074,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询指定实例、worker、团队或个人的功能特性状态。</para>
+        /// <para>Queries the attribute status of a specified instance, worker, team, or individual.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Queries the feature status of a specified instance, worker, team, or individual.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于查询特定<c>instanceId</c>下的不同目标（如<c>INSTANCE</c>、<c>WORKER</c>、<c>TEAM</c>、<c>HUMAN</c>）的功能特性状态。</description></item>
-        /// <item><description><c>targetScope</c>参数定义了查询的目标类型，根据不同的<c>targetScope</c>值，可能需要提供额外的<c>resourceName</c>参数来指定具体的资源名称。</description></item>
-        /// <item><description>如果提供了<c>featureCodes</c>列表，则返回这些特定功能特性的状态；否则，将返回指定<c>targetScope</c>下所有功能特性的状态。</description></item>
-        /// <item><description>当使用<c>WORKER</c>、<c>TEAM</c>或<c>HUMAN</c>作为<c>targetScope</c>时，请确保正确填写对应的<c>resourceName</c>。</description></item>
-        /// <item><description>对于<c>INSTANCE</c>级别的查询，无需提供<c>resourceName</c>。</description></item>
-        /// <item><description>特性支持情况受基础版本、工作器版本等因素影响，并通过<c>unsupportedReasonCode</c>和<c>unsupportedReason</c>字段给出不支持的具体原因。</description></item>
+        /// <item><description>This operation queries the feature status of different targets (such as INSTANCE, WORKER, TEAM, or HUMAN) under a specific instanceId.</description></item>
+        /// <item><description>The targetScope parameter defines the target type for the query. Depending on the targetScope value, you may need to provide an additional resourceName parameter to specify the resource name.</description></item>
+        /// <item><description>If a featureCodes list is provided, the status of those specific features is returned. Otherwise, the status of all features under the specified targetScope is returned.</description></item>
+        /// <item><description>When using WORKER, TEAM, or HUMAN as the targetScope, make sure to correctly specify the corresponding resourceName.</description></item>
+        /// <item><description>For INSTANCE-level queries, resourceName is not required.</description></item>
+        /// <item><description>Feature support is affected by factors such as the base version and worker version. The unsupportedReasonCode and unsupportedReason fields provide the specific reason why a feature is not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9859,12 +10105,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前AgentTeams Resource Pool配置支持的所有可用区ID。</para>
+        /// <para>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9910,12 +10156,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前AgentTeams Resource Pool配置支持的所有可用区ID。</para>
+        /// <para>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9961,12 +10207,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前AgentTeams Resource Pool配置支持的所有可用区ID。</para>
+        /// <para>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -9984,12 +10230,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取当前AgentTeams Resource Pool配置支持的所有可用区ID。</para>
+        /// <para>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Retrieves all zone IDs supported by the current AgentTeams Resource Pool configuration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10007,8 +10253,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户密码</para>
+        /// <para>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetUserPasswordRequest
@@ -10057,8 +10308,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户密码</para>
+        /// <para>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetUserPasswordRequest
@@ -10107,8 +10363,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户密码</para>
+        /// <para>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetUserPasswordRequest
@@ -10125,8 +10386,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>设置用户密码</para>
+        /// <para>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Resets the password of a specified user under a specified instance. After the reset, the user must log on with the new password.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ResetUserPasswordRequest
@@ -10143,19 +10409,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试模型供应商和模型</para>
+        /// <para>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10213,19 +10472,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试模型供应商和模型</para>
+        /// <para>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10283,19 +10535,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试模型供应商和模型</para>
+        /// <para>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10313,19 +10558,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>测试模型供应商和模型</para>
+        /// <para>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Tests the connectivity of an AI model provider and model under a specified AgentTeams instance by sending a test prompt and returning the call result, latency, and token usage.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10343,8 +10581,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑上游身份提供商</para>
+        /// <para>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnbindIdentityProviderRequest
@@ -10389,8 +10632,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑上游身份提供商</para>
+        /// <para>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnbindIdentityProviderRequest
@@ -10435,8 +10683,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑上游身份提供商</para>
+        /// <para>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnbindIdentityProviderRequest
@@ -10453,8 +10706,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解绑上游身份提供商</para>
+        /// <para>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Unbinds the upstream identity provider from a specified instance, dissociates the identity federation relationship, and cleans up associated user identities and data.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UnbindIdentityProviderRequest
@@ -10471,16 +10729,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证密钥</para>
+        /// <para>Updates the plaintext key of an existing credential in an AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Updates the plaintext key of an existing credential in an AgentTeams instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于更新 AgentTeams 实例下已有 Credential 的密钥明文。</description></item>
-        /// <item><description>仅更新 Agent Identity TokenVault 中同名 APIKeyCredentialProvider 的密钥值，不修改本地元数据（description、createTime、updateTime、status）。</description></item>
-        /// <item><description>响应不包含 apiKey 明文；如需绑定 Worker 明细请调用 GetCredential。</description></item>
+        /// <item><description>This operation updates the plaintext key of an existing Credential in an AgentTeams instance.</description></item>
+        /// <item><description>Only the key value of the APIKeyCredentialProvider with the same name in the Agent Identity TokenVault is updated. Local metadata (description, createTime, updateTime, and status) is not modified.</description></item>
+        /// <item><description>The response does not contain the apiKey plaintext. To obtain Worker details, call GetCredential.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10541,16 +10799,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证密钥</para>
+        /// <para>Updates the plaintext key of an existing credential in an AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Updates the plaintext key of an existing credential in an AgentTeams instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于更新 AgentTeams 实例下已有 Credential 的密钥明文。</description></item>
-        /// <item><description>仅更新 Agent Identity TokenVault 中同名 APIKeyCredentialProvider 的密钥值，不修改本地元数据（description、createTime、updateTime、status）。</description></item>
-        /// <item><description>响应不包含 apiKey 明文；如需绑定 Worker 明细请调用 GetCredential。</description></item>
+        /// <item><description>This operation updates the plaintext key of an existing Credential in an AgentTeams instance.</description></item>
+        /// <item><description>Only the key value of the APIKeyCredentialProvider with the same name in the Agent Identity TokenVault is updated. Local metadata (description, createTime, updateTime, and status) is not modified.</description></item>
+        /// <item><description>The response does not contain the apiKey plaintext. To obtain Worker details, call GetCredential.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10611,16 +10869,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证密钥</para>
+        /// <para>Updates the plaintext key of an existing credential in an AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Updates the plaintext key of an existing credential in an AgentTeams instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于更新 AgentTeams 实例下已有 Credential 的密钥明文。</description></item>
-        /// <item><description>仅更新 Agent Identity TokenVault 中同名 APIKeyCredentialProvider 的密钥值，不修改本地元数据（description、createTime、updateTime、status）。</description></item>
-        /// <item><description>响应不包含 apiKey 明文；如需绑定 Worker 明细请调用 GetCredential。</description></item>
+        /// <item><description>This operation updates the plaintext key of an existing Credential in an AgentTeams instance.</description></item>
+        /// <item><description>Only the key value of the APIKeyCredentialProvider with the same name in the Agent Identity TokenVault is updated. Local metadata (description, createTime, updateTime, and status) is not modified.</description></item>
+        /// <item><description>The response does not contain the apiKey plaintext. To obtain Worker details, call GetCredential.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10639,16 +10897,16 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新凭证密钥</para>
+        /// <para>Updates the plaintext key of an existing credential in an AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Updates the plaintext key of an existing credential in an AgentTeams instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于更新 AgentTeams 实例下已有 Credential 的密钥明文。</description></item>
-        /// <item><description>仅更新 Agent Identity TokenVault 中同名 APIKeyCredentialProvider 的密钥值，不修改本地元数据（description、createTime、updateTime、status）。</description></item>
-        /// <item><description>响应不包含 apiKey 明文；如需绑定 Worker 明细请调用 GetCredential。</description></item>
+        /// <item><description>This operation updates the plaintext key of an existing Credential in an AgentTeams instance.</description></item>
+        /// <item><description>Only the key value of the APIKeyCredentialProvider with the same name in the Agent Identity TokenVault is updated. Local metadata (description, createTime, updateTime, and status) is not modified.</description></item>
+        /// <item><description>The response does not contain the apiKey plaintext. To obtain Worker details, call GetCredential.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -10667,8 +10925,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上游身份提供商绑定</para>
+        /// <para>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIdentityProviderRequest
@@ -10731,8 +10994,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上游身份提供商绑定</para>
+        /// <para>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIdentityProviderRequest
@@ -10795,8 +11063,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上游身份提供商绑定</para>
+        /// <para>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIdentityProviderRequest
@@ -10813,8 +11086,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新上游身份提供商绑定</para>
+        /// <para>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the upstream identity provider configuration bound to a specified instance. You can adjust the logon switch and user synchronization switch.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateIdentityProviderRequest
@@ -10831,18 +11109,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定AgentTeams实例的名称，支持通过GET或POST方法调用。</para>
+        /// <para>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>推荐使用<c>POST</c>方法，并以表单形式提交参数。</description></item>
-        /// <item><description>当前实现不支持JSON格式的请求体，请勿尝试使用<c>@RequestBody</c>方式调用。</description></item>
-        /// <item><description>必须提供有效的<c>instanceId</c>和非空的<c>instanceName</c>作为参数。</description></item>
-        /// <item><description>该接口仅允许修改实例名称(<c>instanceName</c>)，不允许通过此接口变更命名空间(<c>namespace</c>)。</description></item>
-        /// </list>
+        /// <para>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10908,18 +11180,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定AgentTeams实例的名称，支持通过GET或POST方法调用。</para>
+        /// <para>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>推荐使用<c>POST</c>方法，并以表单形式提交参数。</description></item>
-        /// <item><description>当前实现不支持JSON格式的请求体，请勿尝试使用<c>@RequestBody</c>方式调用。</description></item>
-        /// <item><description>必须提供有效的<c>instanceId</c>和非空的<c>instanceName</c>作为参数。</description></item>
-        /// <item><description>该接口仅允许修改实例名称(<c>instanceName</c>)，不允许通过此接口变更命名空间(<c>namespace</c>)。</description></item>
-        /// </list>
+        /// <para>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10985,18 +11251,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定AgentTeams实例的名称，支持通过GET或POST方法调用。</para>
+        /// <para>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>推荐使用<c>POST</c>方法，并以表单形式提交参数。</description></item>
-        /// <item><description>当前实现不支持JSON格式的请求体，请勿尝试使用<c>@RequestBody</c>方式调用。</description></item>
-        /// <item><description>必须提供有效的<c>instanceId</c>和非空的<c>instanceName</c>作为参数。</description></item>
-        /// <item><description>该接口仅允许修改实例名称(<c>instanceName</c>)，不允许通过此接口变更命名空间(<c>namespace</c>)。</description></item>
-        /// </list>
+        /// <para>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11014,18 +11274,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更改指定AgentTeams实例的名称，支持通过GET或POST方法调用。</para>
+        /// <para>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>推荐使用<c>POST</c>方法，并以表单形式提交参数。</description></item>
-        /// <item><description>当前实现不支持JSON格式的请求体，请勿尝试使用<c>@RequestBody</c>方式调用。</description></item>
-        /// <item><description>必须提供有效的<c>instanceId</c>和非空的<c>instanceName</c>作为参数。</description></item>
-        /// <item><description>该接口仅允许修改实例名称(<c>instanceName</c>)，不允许通过此接口变更命名空间(<c>namespace</c>)。</description></item>
-        /// </list>
+        /// <para>Changes the name of a specified AgentTeams instance. This operation supports GET and POST methods. You can only modify the instance name through this operation. You cannot change the namespace through this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11043,17 +11297,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启暂停中的创建实例异步任务。</para>
+        /// <para>Restarts a paused asynchronous task for creating an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Restarts a paused asynchronous task for creating an instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于重新启动一个处于暂停状态的创建实例任务。</description></item>
-        /// <item><description>目前仅支持 <c>agentteams:pay-order:create</c> 类型的任务。</description></item>
-        /// <item><description>确保提供的 <c>instanceId</c>、<c>taskCode</c> 和 <c>taskId</c> 参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果任务不是暂停状态（PAUSED），则不允许调用此接口进行更新。</description></item>
+        /// <item><description>This operation restarts a create-instance task that is in the paused state.</description></item>
+        /// <item><description>Only tasks of the agentteams:pay-order:create type are supported.</description></item>
+        /// <item><description>Ensure that the InstanceId, TaskCode, and TaskId parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If the task is not in the paused state (PAUSED), you cannot call this operation to update the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11108,17 +11362,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启暂停中的创建实例异步任务。</para>
+        /// <para>Restarts a paused asynchronous task for creating an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Restarts a paused asynchronous task for creating an instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于重新启动一个处于暂停状态的创建实例任务。</description></item>
-        /// <item><description>目前仅支持 <c>agentteams:pay-order:create</c> 类型的任务。</description></item>
-        /// <item><description>确保提供的 <c>instanceId</c>、<c>taskCode</c> 和 <c>taskId</c> 参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果任务不是暂停状态（PAUSED），则不允许调用此接口进行更新。</description></item>
+        /// <item><description>This operation restarts a create-instance task that is in the paused state.</description></item>
+        /// <item><description>Only tasks of the agentteams:pay-order:create type are supported.</description></item>
+        /// <item><description>Ensure that the InstanceId, TaskCode, and TaskId parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If the task is not in the paused state (PAUSED), you cannot call this operation to update the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11173,17 +11427,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启暂停中的创建实例异步任务。</para>
+        /// <para>Restarts a paused asynchronous task for creating an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Restarts a paused asynchronous task for creating an instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于重新启动一个处于暂停状态的创建实例任务。</description></item>
-        /// <item><description>目前仅支持 <c>agentteams:pay-order:create</c> 类型的任务。</description></item>
-        /// <item><description>确保提供的 <c>instanceId</c>、<c>taskCode</c> 和 <c>taskId</c> 参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果任务不是暂停状态（PAUSED），则不允许调用此接口进行更新。</description></item>
+        /// <item><description>This operation restarts a create-instance task that is in the paused state.</description></item>
+        /// <item><description>Only tasks of the agentteams:pay-order:create type are supported.</description></item>
+        /// <item><description>Ensure that the InstanceId, TaskCode, and TaskId parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If the task is not in the paused state (PAUSED), you cannot call this operation to update the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11202,17 +11456,17 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启暂停中的创建实例异步任务。</para>
+        /// <para>Restarts a paused asynchronous task for creating an instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Restarts a paused asynchronous task for creating an instance.</para>
         /// <list type="bullet">
-        /// <item><description>该接口用于重新启动一个处于暂停状态的创建实例任务。</description></item>
-        /// <item><description>目前仅支持 <c>agentteams:pay-order:create</c> 类型的任务。</description></item>
-        /// <item><description>确保提供的 <c>instanceId</c>、<c>taskCode</c> 和 <c>taskId</c> 参数准确无误，否则可能导致请求失败。</description></item>
-        /// <item><description>如果任务不是暂停状态（PAUSED），则不允许调用此接口进行更新。</description></item>
+        /// <item><description>This operation restarts a create-instance task that is in the paused state.</description></item>
+        /// <item><description>Only tasks of the agentteams:pay-order:create type are supported.</description></item>
+        /// <item><description>Ensure that the InstanceId, TaskCode, and TaskId parameters are accurate. Otherwise, the request may fail.</description></item>
+        /// <item><description>If the task is not in the paused state (PAUSED), you cannot call this operation to update the task.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11231,19 +11485,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新MCP</para>
+        /// <para>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11323,19 +11570,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新MCP</para>
+        /// <para>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11415,19 +11655,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新MCP</para>
+        /// <para>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11445,19 +11678,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新MCP</para>
+        /// <para>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the configuration of a specified MCP server, including the address list, authentication information, and description.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11475,19 +11701,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates the description and other information of an AI model in a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the description and other information of an AI model in a specified AgentTeams instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11541,19 +11760,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates the description and other information of an AI model in a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the description and other information of an AI model in a specified AgentTeams instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11607,19 +11819,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates the description and other information of an AI model in a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the description and other information of an AI model in a specified AgentTeams instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11637,19 +11842,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型</para>
+        /// <para>Updates the description and other information of an AI model in a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the description and other information of an AI model in a specified AgentTeams instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11667,19 +11865,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型供应商</para>
+        /// <para>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11755,19 +11946,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型供应商</para>
+        /// <para>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -11843,19 +12027,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型供应商</para>
+        /// <para>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11873,19 +12050,12 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型供应商</para>
+        /// <para>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
-        /// <list type="bullet">
-        /// <item><description>该接口用于查询当前登录用户所拥有的所有AgentTeams实例。</description></item>
-        /// <item><description>用户身份通过请求头<c>X-User-Id</c>传递，服务端会根据此ID自动过滤只返回属于该用户的实例数据。</description></item>
-        /// <item><description>支持使用<c>instanceName</c>进行模糊匹配以及通过<c>status</c>参数精确匹配实例状态来过滤查询结果。</description></item>
-        /// <item><description>默认情况下，结果将按照创建时间倒序排列，并且可以通过设置<c>limit</c>和<c>offset</c>参数来进行分页控制，默认每页显示20条记录。</description></item>
-        /// <item><description>如果请求中缺少<c>X-User-Id</c>或者其值为空，则会返回400错误；如果指定的实例不存在或不属于当前用户，则返回404错误。</description></item>
-        /// </list>
+        /// <para>Updates the address, protocol list, API key, and other information of an AI model provider in a specified AgentTeams instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11903,19 +12073,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新指定Endpoint的域名和SSL证书信息。</para>
+        /// <para>Updates the domain name and SSL certificate information for a specified endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Updates the domain name and SSL certificate information for a specified endpoint.</para>
         /// <list type="bullet">
-        /// <item><description>本API支持更新<c>ELEMENT</c>、<c>MATRIX</c>类型的Endpoint。</description></item>
-        /// <item><description>如果尝试更新其他类型的Endpoint，将返回400错误。</description></item>
-        /// <item><description>当<c>endpointId</c>不存在或不属于当前用户实例时，将返回404错误。</description></item>
-        /// <item><description>更新域名时，系统会创建或复用新的HTTPS domain，并将其绑定到原endpoint route上，同时解绑旧domain，但不会删除旧domain。</description></item>
-        /// <item><description>若不提供<c>domain</c>或<c>certIdentifier</c>参数，则保持原有设置不变。</description></item>
-        /// <item><description>其他如<c>component</c>、<c>gatewayType</c>等字段即使传入也不会被更新。</description></item>
+        /// <item><description>This API operation supports updating endpoints of the ELEMENT or MATRIX type.</description></item>
+        /// <item><description>If you attempt to update an endpoint of another type, a 400 error is returned.</description></item>
+        /// <item><description>If the endpointId does not exist or does not belong to the current user instance, a 404 error is returned.</description></item>
+        /// <item><description>When updating a domain name, the system creates or reuses a new HTTPS domain and binds it to the original endpoint route. The old domain is unbound but not deleted.</description></item>
+        /// <item><description>If the domain or certIdentifier parameter is not specified, the existing settings are retained.</description></item>
+        /// <item><description>Other fields such as component and gatewayType are not updated even if they are specified in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -11976,19 +12146,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新指定Endpoint的域名和SSL证书信息。</para>
+        /// <para>Updates the domain name and SSL certificate information for a specified endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Updates the domain name and SSL certificate information for a specified endpoint.</para>
         /// <list type="bullet">
-        /// <item><description>本API支持更新<c>ELEMENT</c>、<c>MATRIX</c>类型的Endpoint。</description></item>
-        /// <item><description>如果尝试更新其他类型的Endpoint，将返回400错误。</description></item>
-        /// <item><description>当<c>endpointId</c>不存在或不属于当前用户实例时，将返回404错误。</description></item>
-        /// <item><description>更新域名时，系统会创建或复用新的HTTPS domain，并将其绑定到原endpoint route上，同时解绑旧domain，但不会删除旧domain。</description></item>
-        /// <item><description>若不提供<c>domain</c>或<c>certIdentifier</c>参数，则保持原有设置不变。</description></item>
-        /// <item><description>其他如<c>component</c>、<c>gatewayType</c>等字段即使传入也不会被更新。</description></item>
+        /// <item><description>This API operation supports updating endpoints of the ELEMENT or MATRIX type.</description></item>
+        /// <item><description>If you attempt to update an endpoint of another type, a 400 error is returned.</description></item>
+        /// <item><description>If the endpointId does not exist or does not belong to the current user instance, a 404 error is returned.</description></item>
+        /// <item><description>When updating a domain name, the system creates or reuses a new HTTPS domain and binds it to the original endpoint route. The old domain is unbound but not deleted.</description></item>
+        /// <item><description>If the domain or certIdentifier parameter is not specified, the existing settings are retained.</description></item>
+        /// <item><description>Other fields such as component and gatewayType are not updated even if they are specified in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12049,19 +12219,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新指定Endpoint的域名和SSL证书信息。</para>
+        /// <para>Updates the domain name and SSL certificate information for a specified endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Updates the domain name and SSL certificate information for a specified endpoint.</para>
         /// <list type="bullet">
-        /// <item><description>本API支持更新<c>ELEMENT</c>、<c>MATRIX</c>类型的Endpoint。</description></item>
-        /// <item><description>如果尝试更新其他类型的Endpoint，将返回400错误。</description></item>
-        /// <item><description>当<c>endpointId</c>不存在或不属于当前用户实例时，将返回404错误。</description></item>
-        /// <item><description>更新域名时，系统会创建或复用新的HTTPS domain，并将其绑定到原endpoint route上，同时解绑旧domain，但不会删除旧domain。</description></item>
-        /// <item><description>若不提供<c>domain</c>或<c>certIdentifier</c>参数，则保持原有设置不变。</description></item>
-        /// <item><description>其他如<c>component</c>、<c>gatewayType</c>等字段即使传入也不会被更新。</description></item>
+        /// <item><description>This API operation supports updating endpoints of the ELEMENT or MATRIX type.</description></item>
+        /// <item><description>If you attempt to update an endpoint of another type, a 400 error is returned.</description></item>
+        /// <item><description>If the endpointId does not exist or does not belong to the current user instance, a 404 error is returned.</description></item>
+        /// <item><description>When updating a domain name, the system creates or reuses a new HTTPS domain and binds it to the original endpoint route. The old domain is unbound but not deleted.</description></item>
+        /// <item><description>If the domain or certIdentifier parameter is not specified, the existing settings are retained.</description></item>
+        /// <item><description>Other fields such as component and gatewayType are not updated even if they are specified in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12080,19 +12250,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>用于更新指定Endpoint的域名和SSL证书信息。</para>
+        /// <para>Updates the domain name and SSL certificate information for a specified endpoint.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>请求说明</h2>
+        /// <para>Updates the domain name and SSL certificate information for a specified endpoint.</para>
         /// <list type="bullet">
-        /// <item><description>本API支持更新<c>ELEMENT</c>、<c>MATRIX</c>类型的Endpoint。</description></item>
-        /// <item><description>如果尝试更新其他类型的Endpoint，将返回400错误。</description></item>
-        /// <item><description>当<c>endpointId</c>不存在或不属于当前用户实例时，将返回404错误。</description></item>
-        /// <item><description>更新域名时，系统会创建或复用新的HTTPS domain，并将其绑定到原endpoint route上，同时解绑旧domain，但不会删除旧domain。</description></item>
-        /// <item><description>若不提供<c>domain</c>或<c>certIdentifier</c>参数，则保持原有设置不变。</description></item>
-        /// <item><description>其他如<c>component</c>、<c>gatewayType</c>等字段即使传入也不会被更新。</description></item>
+        /// <item><description>This API operation supports updating endpoints of the ELEMENT or MATRIX type.</description></item>
+        /// <item><description>If you attempt to update an endpoint of another type, a 400 error is returned.</description></item>
+        /// <item><description>If the endpointId does not exist or does not belong to the current user instance, a 404 error is returned.</description></item>
+        /// <item><description>When updating a domain name, the system creates or reuses a new HTTPS domain and binds it to the original endpoint route. The old domain is unbound but not deleted.</description></item>
+        /// <item><description>If the domain or certIdentifier parameter is not specified, the existing settings are retained.</description></item>
+        /// <item><description>Other fields such as component and gatewayType are not updated even if they are specified in the request.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12111,8 +12281,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新团队</para>
+        /// <para>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateTeamRequest
@@ -12177,8 +12352,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新团队</para>
+        /// <para>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateTeamRequest
@@ -12243,8 +12423,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新团队</para>
+        /// <para>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTeamRequest
@@ -12261,8 +12446,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新团队</para>
+        /// <para>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the description and member list of a team under a specified instance, and returns the latest team information after the update.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateTeamRequest
@@ -12279,8 +12469,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户信息</para>
+        /// <para>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -12347,8 +12542,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户信息</para>
+        /// <para>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -12415,8 +12615,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户信息</para>
+        /// <para>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -12433,8 +12638,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新用户信息</para>
+        /// <para>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the information of a specified user under a specified instance, including the display name, email address, authentication method, and remarks.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateUserRequest
@@ -12451,8 +12661,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Worker</para>
+        /// <para>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateWorkerRequest
@@ -12573,8 +12788,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Worker</para>
+        /// <para>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</para>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// UpdateWorkerRequest
@@ -12695,8 +12915,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Worker</para>
+        /// <para>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateWorkerRequest
@@ -12713,8 +12938,13 @@ namespace AlibabaCloud.SDK.AgentTeams20260605
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新Worker</para>
+        /// <para>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified Worker, including model, skills, template, MCP servers, channels, and quotas.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// UpdateWorkerRequest

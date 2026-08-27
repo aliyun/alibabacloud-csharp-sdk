@@ -10,22 +10,42 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class ListTeamTasksRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agentteams-test-001</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of records to return in this request. Valid values: 1 to 100. Default value: 10.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("MaxResults")]
         [Validation(Required=false)]
         public int? MaxResults { get; set; }
 
+        /// <summary>
+        /// <para>The pagination token, which is the offset integer string returned from the previous page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
         [NameInMap("NextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
         /// <summary>
+        /// <para>The team name.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>my-team</para>
         /// </summary>
         [NameInMap("Team")]
         [Validation(Required=false)]

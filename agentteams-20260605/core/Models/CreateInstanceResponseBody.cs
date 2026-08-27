@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class CreateInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para><b>The response code.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The returned data.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateInstanceResponseBodyData Data { get; set; }
         public class CreateInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para><b>The instance ID.</b></para>
+            /// 
             /// <b>Example:</b>
             /// <para>agentteams-test-001</para>
             /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para><b>The order ID.</b></para>
+            /// 
             /// <b>Example:</b>
             /// <para>open-create-agentteams-test-001-req-create-001</para>
             /// </summary>
@@ -40,6 +52,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         }
 
         /// <summary>
+        /// <para><b>The HTTP status code.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -48,13 +62,18 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>InstanceId</para>
+        /// <para>The instance ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>agentteams-test-001</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -63,6 +82,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>req-create-001</para>
         /// </summary>
@@ -71,6 +92,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para><b>Indicates whether the request was successful.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

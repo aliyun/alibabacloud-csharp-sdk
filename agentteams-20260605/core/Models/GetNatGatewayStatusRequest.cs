@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class GetNatGatewayStatusRequest : TeaModel {
         /// <summary>
+        /// <para>The instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

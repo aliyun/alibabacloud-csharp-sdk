@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class UpdateInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code in the successful response.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -17,14 +19,32 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The details of the updated instance.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public UpdateInstanceResponseBodyData Data { get; set; }
         public class UpdateInstanceResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>The ID of the AgentTeams instance.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>agentteams-abc123</para>
+            /// </summary>
             [NameInMap("InstanceId")]
             [Validation(Required=false)]
             public string InstanceId { get; set; }
 
+            /// <summary>
+            /// <para>The new instance name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>New instance name.</para>
+            /// </summary>
             [NameInMap("InstanceName")]
             [Validation(Required=false)]
             public string InstanceName { get; set; }
@@ -32,6 +52,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         }
 
         /// <summary>
+        /// <para><b>The HTTP status code.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -40,6 +62,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para><b>The response message.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -48,6 +72,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para><b>The request ID.</b></para>
+        /// 
         /// <b>Example:</b>
         /// <para>request-xxx</para>
         /// </summary>
@@ -56,6 +82,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class DeleteInstanceResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OK</para>
         /// </summary>
@@ -17,11 +19,19 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The object that contains the released instance ID and the asynchronous release task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteInstanceResponseBodyData Data { get; set; }
         public class DeleteInstanceResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The ID of the released instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>inst-xxx</para>
             /// </summary>
@@ -30,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
             public string InstanceId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the asynchronous release task. You can use this ID to query the task status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>task-xxx</para>
             /// </summary>
@@ -40,6 +52,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -48,6 +62,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>req-xxx</para>
         /// </summary>
@@ -56,6 +72,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

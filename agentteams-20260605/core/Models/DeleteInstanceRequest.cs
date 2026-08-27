@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class DeleteInstanceRequest : TeaModel {
         /// <summary>
+        /// <para>The ID of the AgentTeams instance to release.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class DeleteServiceEndpointResponseBody : TeaModel {
         /// <summary>
+        /// <para>The business response code. The value is <c>SUCCESS</c> upon success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string Code { get; set; }
 
         /// <summary>
+        /// <para>The value is <c>true</c> when the deletion is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public bool? Data { get; set; }
 
         /// <summary>
+        /// <para><b>Response message</b>, which is fixed to <c>success</c> upon success.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para><b>Request ID</b>, which preferentially uses the <c>requestId</c> from the request context, and then the <c>traceId</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation is successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

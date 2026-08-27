@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class QueryFeaturesRequest : TeaModel {
         /// <summary>
+        /// <para>The AgentTeams instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string InstanceId { get; set; }
 
         /// <summary>
+        /// <para>The target resource name. Required for <c>WORKER</c>, <c>TEAM</c>, and <c>HUMAN</c>. Not required for <c>INSTANCE</c>.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>worker-a</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string ResourceName { get; set; }
 
         /// <summary>
+        /// <para>The query target type: <c>INSTANCE</c> / <c>WORKER</c> / <c>TEAM</c> / <c>HUMAN</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

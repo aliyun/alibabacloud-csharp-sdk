@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class CreateServiceEndpointResponseBody : TeaModel {
         /// <summary>
+        /// <para>The status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
         /// </summary>
@@ -17,14 +19,36 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        /// <summary>
+        /// <para>The response data returned after the endpoint is created.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateServiceEndpointResponseBodyData Data { get; set; }
         public class CreateServiceEndpointResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Endpoint ID</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ep-xxx</para>
+            /// </summary>
             [NameInMap("EndpointId")]
             [Validation(Required=false)]
             public string EndpointId { get; set; }
 
+            /// <summary>
+            /// <para>The status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CONFIGURED: Configured.</description></item>
+            /// <item><description>DELETED: Deleted.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CONFIGURED</para>
+            /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
@@ -32,6 +56,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         }
 
         /// <summary>
+        /// <para>The HTTP status code.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>200</para>
         /// </summary>
@@ -40,6 +66,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
+        /// <para>The response message.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -48,6 +76,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2b7f1c2d-xxx</para>
         /// </summary>
@@ -56,6 +86,8 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

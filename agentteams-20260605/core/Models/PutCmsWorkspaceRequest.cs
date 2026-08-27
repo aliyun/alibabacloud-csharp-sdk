@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.AgentTeams20260605.Models
 {
     public class PutCmsWorkspaceRequest : TeaModel {
         /// <summary>
+        /// <para>The AgentTeams instance ID.</para>
         /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>at-xxx</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
