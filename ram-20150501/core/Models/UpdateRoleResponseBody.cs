@@ -20,14 +20,24 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the RAM role.</para>
+        /// <para>The information of the RAM role.</para>
         /// </summary>
         [NameInMap("Role")]
         [Validation(Required=false)]
         public UpdateRoleResponseBodyRole Role { get; set; }
         public class UpdateRoleResponseBodyRole : TeaModel {
             /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the RAM role.</para>
+            /// <para>Specifies whether the RAM role is allowed to log on to the console.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("AllowConsoleLogin")]
+            [Validation(Required=false)]
+            public bool? AllowConsoleLogin { get; set; }
+
+            /// <summary>
+            /// <para>The resource descriptor of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acs:ram::123456789012****:role/ECSAdmin</para>
@@ -37,7 +47,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string Arn { get; set; }
 
             /// <summary>
-            /// <para>The trust policy that specifies the trusted entity to assume the RAM role.</para>
+            /// <para>The trust policy of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;Statement&quot;: [ { &quot;Action&quot;: &quot;sts:AssumeRole&quot;, &quot;Effect&quot;: &quot;Allow&quot;, &quot;Principal&quot;: { &quot;RAM&quot;: &quot;acs:ram::123456789012****:root&quot; } } ], &quot;Version&quot;: &quot;1&quot; }</para>
@@ -60,14 +70,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <para>The description of the RAM role.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>ECS administrator</para>
+            /// <para>ECS management role</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The maximum session time of the RAM role.</para>
+            /// <para>The maximum session duration of the RAM role.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3600</para>
@@ -97,7 +107,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string RoleName { get; set; }
 
             /// <summary>
-            /// <para>The time when the description of the RAM role was changed.</para>
+            /// <para>The time when the RAM role was updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>

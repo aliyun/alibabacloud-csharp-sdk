@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the parameter is returned, you can call this operation again and set this parameter to obtain the truncated part.````</para>
+        /// <para>This parameter is returned only when <c>IsTruncated</c> is <c>true</c>. If the value of <c>IsTruncated</c> is <c>true</c>, call this operation again and use <c>Marker</c> to retrieve the truncated content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>
@@ -47,6 +47,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             [Validation(Required=false)]
             public List<ListRolesResponseBodyRolesRole> Role { get; set; }
             public class ListRolesResponseBodyRolesRole : TeaModel {
+                [NameInMap("AllowConsoleLogin")]
+                [Validation(Required=false)]
+                public bool? AllowConsoleLogin { get; set; }
+
                 [NameInMap("Arn")]
                 [Validation(Required=false)]
                 public string Arn { get; set; }

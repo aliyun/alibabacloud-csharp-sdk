@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
     public class CreateUserRequest : TeaModel {
         /// <summary>
         /// <para>The description of the RAM user.</para>
-        /// <para>The description must be 1 to 128 characters in length.</para>
+        /// <para>It must be 1 to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a cloud computing engineer.</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         /// <summary>
         /// <para>The display name of the RAM user.</para>
-        /// <para>The name must be 1 to 128 characters in length.</para>
+        /// <para>It must be 1 to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <summary>
         /// <para>The email address of the RAM user.</para>
         /// <remarks>
-        /// <para> This parameter applies only to the China site (aliyun.com).</para>
+        /// <para>This parameter applies only to the China site (aliyun.com).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,9 +46,9 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         /// <summary>
         /// <para>The mobile phone number of the RAM user.</para>
-        /// <para>Format: \<Country code>-\<Mobile phone number>.</para>
+        /// <para>Format: \<Country code>-\<Phone number>.</para>
         /// <remarks>
-        /// <para> This parameter applies only to the China site (aliyun.com).</para>
+        /// <para>This parameter applies only to the China site (aliyun.com).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         /// <summary>
         /// <para>The name of the RAM user.</para>
-        /// <para>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</para>
+        /// <para>It must be 1 to 64 characters in length, and can contain letters, digits, periods (.), hyphens (-), and underscores (_).</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>

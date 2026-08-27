@@ -36,8 +36,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 /// <summary>
                 /// <para>Indicates whether Resource Access Management (RAM) users can manage their AccessKey pairs. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -59,8 +61,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 /// <summary>
                 /// <para>Indicates whether RAM users can change their passwords. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -73,8 +77,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 /// <summary>
                 /// <para>Indicates whether RAM users can save security codes for MFA during logon. Each security code is valid for seven days. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -87,8 +93,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 /// <summary>
                 /// <para>The subnet mask that indicates the IP addresses from which logon to the Alibaba Cloud Management Console is allowed. This parameter applies to password-based logon and single sign-on (SSO). However, this parameter does not apply to API calls that are authenticated based on AccessKey pairs.</para>
                 /// <list type="bullet">
-                /// <item><description>If you specify a subnet mask, RAM users can use only the IP addresses in the subnet mask to log on to the Alibaba Cloud Management Console.</description></item>
-                /// <item><description>If you do not specify a subnet mask, RAM users can use all IP addresses to log on to the Alibaba Cloud Management Console.</description></item>
+                /// <item><description><para>If you specify a subnet mask, RAM users can use only the IP addresses in the subnet mask to log on to the Alibaba Cloud Management Console.</para>
+                /// </description></item>
+                /// <item><description><para>If you do not specify a subnet mask, RAM users can use all IP addresses to log on to the Alibaba Cloud Management Console.</para>
+                /// </description></item>
                 /// </list>
                 /// <para>If you want to specify more than one subnet mask, separate the masks with semicolons (;). Example: 192.168.0.0/16;10.0.0.0/8.</para>
                 /// 
@@ -121,8 +129,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 /// <summary>
                 /// <para>Indicates whether RAM users can manage their MFA devices. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -137,7 +147,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The public key preference.</para>
             /// <remarks>
-            /// <para> This parameter is valid only for the Japan site.</para>
+            /// <para>This parameter is valid only for the Japan site.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("PublicKeyPreference")]
@@ -147,8 +157,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 /// <summary>
                 /// <para>Indicates whether RAM users can manage their public keys. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

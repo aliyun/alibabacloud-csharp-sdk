@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <para>The description of the policy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Query ECS instances in a specific region</para>
+            /// <para>View ECS instances in a specified region</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The type of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Custom</description></item>
-            /// <item><description>System</description></item>
+            /// <item><description><para>Custom</para>
+            /// </description></item>
+            /// <item><description><para>System</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

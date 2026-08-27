@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class DecodeDiagnosticMessageResponseBody : TeaModel {
         /// <summary>
-        /// <para>The decoded diagnostic information.</para>
+        /// <para>The decoded diagnostic message.</para>
         /// </summary>
         [NameInMap("DecodedDiagnosticMessage")]
         [Validation(Required=false)]
         public DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessage DecodedDiagnosticMessage { get; set; }
         public class DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessage : TeaModel {
             /// <summary>
-            /// <para>The operation that is used for authentication in the request.</para>
+            /// <para>The action used for authentication in the user request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ram:DecodeDiagnosticMessage</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The conditions that are used for authentication in the request.</para>
+            /// <para>The list of conditions used for authentication in the user request.</para>
             /// </summary>
             [NameInMap("AuthConditions")]
             [Validation(Required=false)]
             public List<DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessageAuthConditions> AuthConditions { get; set; }
             public class DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessageAuthConditions : TeaModel {
                 /// <summary>
-                /// <para>The key of the condition.</para>
+                /// <para>The key of the authentication condition.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:SourceIp</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string ConditionKey { get; set; }
 
                 /// <summary>
-                /// <para>The values that correspond to the key.</para>
+                /// <para>The list of values corresponding to the authentication condition key.</para>
                 /// </summary>
                 [NameInMap("ConditionValues")]
                 [Validation(Required=false)]
@@ -53,18 +53,21 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             }
 
             /// <summary>
-            /// <para>The operator that is used for authentication in the request.</para>
+            /// <para>The principal used for authentication in the user request.</para>
             /// </summary>
             [NameInMap("AuthPrincipal")]
             [Validation(Required=false)]
             public DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessageAuthPrincipal AuthPrincipal { get; set; }
             public class DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessageAuthPrincipal : TeaModel {
                 /// <summary>
-                /// <para>The identity.</para>
+                /// <para>The identity identifier used for authentication in the user request, as follows:</para>
                 /// <list type="bullet">
-                /// <item><description>If the operator is a RAM user, the ID of the user is displayed.</description></item>
-                /// <item><description>If the operator is a RAM role, the name and session name of the role are displayed. Example: RoleName:RoleSessionName.</description></item>
-                /// <item><description>If the operator is an SSO federated identity, the type and name of the identity provider (IdP) are displayed. Example: saml-provider/AzureAD.</description></item>
+                /// <item><description><para>RAM user: The UID of the RAM user.</para>
+                /// </description></item>
+                /// <item><description><para>RAM role: The role name and role session name (for example, RoleName:RoleSessionName).</para>
+                /// </description></item>
+                /// <item><description><para>SSO federated identity: The identity provider type and name (for example, saml-provider/AzureAD).</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -75,7 +78,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string AuthPrincipalDisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the Alibaba Cloud account to which the identity belongs.</para>
+                /// <para>The Alibaba Cloud account UID of the identity used for authentication in the user request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>196813200012****</para>
@@ -85,13 +88,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string AuthPrincipalOwnerId { get; set; }
 
                 /// <summary>
-                /// <para>The identity type that is used for authentication in the request.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>SubUser: RAM user</description></item>
-                /// <item><description>AssumedRoleUser: RAM role</description></item>
-                /// <item><description>Federated: SSO federated identity</description></item>
-                /// </list>
+                /// <para>The identity type used for authentication in the user request.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SubUser</para>
@@ -103,7 +100,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             }
 
             /// <summary>
-            /// <para>The resource that is used for authentication in the request.</para>
+            /// <para>The resource used for authentication in the user request.</para>
             /// 
             /// <b>Example:</b>
             /// <list type="bullet">
@@ -115,12 +112,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string AuthResource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the access denied error is caused by an explicit deny.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
-            /// </list>
+            /// <para>Indicates whether the denial is explicit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -130,21 +122,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public bool? ExplicitDeny { get; set; }
 
             /// <summary>
-            /// <para>The policies that are matched.</para>
+            /// <para>The list of policies matched during authentication.</para>
             /// </summary>
             [NameInMap("MatchedPolicies")]
             [Validation(Required=false)]
             public List<DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessageMatchedPolicies> MatchedPolicies { get; set; }
             public class DecodeDiagnosticMessageResponseBodyDecodedDiagnosticMessageMatchedPolicies : TeaModel {
                 /// <summary>
-                /// <para>The type of the entity to which the policy is attached.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>RamUser: RAM user</description></item>
-                /// <item><description>RamRole: RAM role</description></item>
-                /// <item><description>ResourceDirectoryTarget: entity in a resource directory</description></item>
-                /// <item><description>RamGroup: RAM user group</description></item>
-                /// </list>
+                /// <para>The entity type to which the policy is attached.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RamUser</para>
@@ -154,13 +139,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string AttachedEntityType { get; set; }
 
                 /// <summary>
-                /// <para>The authorization scope of the policy.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Account: Alibaba Cloud account</description></item>
-                /// <item><description>Folder: folder in the resource directory</description></item>
-                /// <item><description>ResourceGroup: resource group</description></item>
-                /// </list>
+                /// <para>The scope to which the policy is attached.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Account</para>
@@ -170,23 +149,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string AttachedScope { get; set; }
 
                 /// <summary>
-                /// <para>The effect of the policy.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>Deny</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// </description></item>
-                /// <item><description><para>Allow</para>
-                /// <!-- -->
-                /// 
-                /// <!-- -->
-                /// 
-                /// <!-- --></description></item>
-                /// </list>
+                /// <para>The policy effect.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Deny</para>
@@ -196,10 +159,12 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string Effect { get; set; }
 
                 /// <summary>
-                /// <para>The identifier of the policy.</para>
+                /// <para>The policy name, as follows:</para>
                 /// <list type="bullet">
-                /// <item><description>Control policy: the ID of the control policy</description></item>
-                /// <item><description>RAM policy: the name of the policy</description></item>
+                /// <item><description><para>Control policy: The control policy ID.</para>
+                /// </description></item>
+                /// <item><description><para>RAM access policy: The access policy name.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -210,12 +175,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string PolicyIdentifier { get; set; }
 
                 /// <summary>
-                /// <para>The type of the policy.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>Custom: custom policy</description></item>
-                /// <item><description>System: system policy</description></item>
-                /// </list>
+                /// <para>The policy type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Custom</para>
@@ -225,7 +185,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
                 public string PolicyType { get; set; }
 
                 /// <summary>
-                /// <para>The version number of the policy.</para>
+                /// <para>The policy version number.</para>
                 /// <remarks>
                 /// <para>Only custom policies have version numbers.</para>
                 /// </remarks>
@@ -240,15 +200,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             }
 
             /// <summary>
-            /// <para>The type of the policy that causes the access denied error.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>AssumeRolePolicy: role-specific trust policy</description></item>
-            /// <item><description>ControlPolicy: control policy</description></item>
-            /// <item><description>AccountLevelIdentityBasedPolicy: identity-based policy at the account level</description></item>
-            /// <item><description>ResourceGroupLevelIdentityBasedPolicy: identity-based policy at the resource group level</description></item>
-            /// <item><description>SessionPolicy: session policy</description></item>
-            /// </list>
+            /// <para>The policy type that caused the permission denial.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AccountLevelIdentityBasedPolicy</para>

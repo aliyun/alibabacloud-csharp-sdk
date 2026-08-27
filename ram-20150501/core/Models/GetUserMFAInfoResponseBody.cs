@@ -29,8 +29,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The type of the MFA device. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>VMFA: virtual MFA device.</description></item>
-            /// <item><description>U2F: Universal 2nd Factor (U2F) security key.</description></item>
+            /// <item><description><para>VMFA: virtual MFA device.</para>
+            /// </description></item>
+            /// <item><description><para>U2F: Universal 2nd Factor (U2F) security key.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

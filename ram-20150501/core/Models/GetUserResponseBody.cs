@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetUserResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2D69A58F-345C-4FDE-88E4-BF5189484043</para>
@@ -27,17 +27,17 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public GetUserResponseBodyUser User { get; set; }
         public class GetUserResponseBodyUser : TeaModel {
             /// <summary>
-            /// <para>The description of the RAM user.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Cloud computing engineer</para>
+            /// <para>This is a cloud computing engineer.</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]
             public string Comments { get; set; }
 
             /// <summary>
-            /// <para>The point in time when the RAM user was created. The time is displayed in UTC.</para>
+            /// <para>The time when the RAM user was created. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The display name of the RAM user.</para>
+            /// <para>The display name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The email address of the RAM user.</para>
             /// <remarks>
-            /// <para> This parameter can be returned only on the China site (aliyun.com).</para>
+            /// <para>This parameter is available only on the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string Email { get; set; }
 
             /// <summary>
-            /// <para>The point in time when the RAM user last logged on to the Alibaba Cloud Management Console by using the password. The time is displayed in UTC.</para>
+            /// <para>The last time the user logged on with a password. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The mobile phone number of the RAM user.</para>
             /// <remarks>
-            /// <para> This parameter can be returned only on the China site (aliyun.com).</para>
+            /// <para>This parameter is available only on the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string MobilePhone { get; set; }
 
             /// <summary>
-            /// <para>The point in time when the information about the RAM user was last modified. The time is displayed in UTC.</para>
+            /// <para>The time when the RAM user was last updated. The time is in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-02-11T03:15:21Z</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string UpdateDate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the RAM user.</para>
+            /// <para>The unique ID of the RAM user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222748924538****</para>
@@ -113,7 +113,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string UserId { get; set; }
 
             /// <summary>
-            /// <para>The username of the RAM user.</para>
+            /// <para>The name of the RAM user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>

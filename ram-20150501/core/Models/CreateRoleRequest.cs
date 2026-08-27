@@ -10,9 +10,26 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The trust policy that specifies one or more trusted entities to assume the RAM role. The trusted entities can be Alibaba Cloud accounts, Alibaba Cloud services, or identity providers (IdPs).</para>
+        /// <para>Specifies whether console logon is allowed for the RAM role. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Console logon is allowed.</description></item>
+        /// <item><description>false: Console logon is not allowed.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// 
+        /// <b>if can be null:</b>
+        /// <c>false</c>
+        /// </summary>
+        [NameInMap("AllowConsoleLogin")]
+        [Validation(Required=false)]
+        public bool? AllowConsoleLogin { get; set; }
+
+        /// <summary>
+        /// <para>The trust policy. Specifies one or more principals that are allowed to assume the RAM role. The principal can be an Alibaba Cloud account, an Alibaba Cloud service, or an identity provider.</para>
         /// <remarks>
-        /// <para> RAM users cannot assume the RAM roles of trusted Alibaba Cloud services.</para>
+        /// <para>Resource Access Management (RAM) users cannot assume RAM roles whose trusted entity is an Alibaba Cloud service.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,19 +41,19 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         /// <summary>
         /// <para>The description of the RAM role.</para>
-        /// <para>The description must be 1 to 1,024 characters in length.</para>
+        /// <para>The description must be 1 to 1024 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>ECS administrator</para>
+        /// <para>ECS management role.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The maximum session time of the RAM role.</para>
+        /// <para>The maximum session duration of the RAM role.</para>
         /// <para>Valid values: 3600 to 43200. Unit: seconds. Default value: 3600.</para>
-        /// <para>If you do not specify this parameter, the default value is used.</para>
+        /// <para>If you leave this parameter empty, the default value is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3600</para>
@@ -47,7 +64,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 
         /// <summary>
         /// <para>The name of the RAM role.</para>
-        /// <para>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</para>
+        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECSAdmin</para>
@@ -64,7 +81,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public List<CreateRoleRequestTag> Tag { get; set; }
         public class CreateRoleRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>k1</para>
@@ -74,7 +91,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v1</para>

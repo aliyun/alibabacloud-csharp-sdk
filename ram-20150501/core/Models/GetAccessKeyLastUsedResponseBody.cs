@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetAccessKeyLastUsedResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the time when the AccessKey pair was used for the last time.</para>
+        /// <para>Information about the last time the AccessKey pair was used.</para>
         /// </summary>
         [NameInMap("AccessKeyLastUsed")]
         [Validation(Required=false)]
         public GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed AccessKeyLastUsed { get; set; }
         public class GetAccessKeyLastUsedResponseBodyAccessKeyLastUsed : TeaModel {
             /// <summary>
-            /// <para>The time when the AccessKey pair was used for the last time.</para>
+            /// <para>The last time the AccessKey pair was used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-10-21T06:37:40Z</para>

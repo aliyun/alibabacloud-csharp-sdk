@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The <c>marker</c>. If part of a previous response is truncated, you can use this parameter to obtain the truncated part.</para>
+        /// <para>The marker. If the response is truncated, you can use <c>Marker</c> to obtain the content that starts from the position after the truncation point.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return. If a response is truncated because it reaches the value of <c>MaxItems</c>, the value of <c>IsTruncated</c> will be <c>true</c>.</para>
+        /// <para>The number of entries to return. If the response is truncated because it reaches the <c>MaxItems</c> limit, the <c>IsTruncated</c> response parameter equals <c>true</c>.</para>
         /// <para>Valid values: 1 to 1000. Default value: 100.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public int? MaxItems { get; set; }
 
         /// <summary>
-        /// <para>The type of the policies. Valid values: <c>System</c> and <c>Custom</c>. If you do not specify the parameter, all policies are returned.``</para>
+        /// <para>The type of the access policy. Valid values: <c>System</c> and <c>Custom</c>. If this parameter is not specified, all access policies are listed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>System</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public List<ListPoliciesRequestTag> Tag { get; set; }
         public class ListPoliciesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of the tag.</para>
+            /// <para>The tag key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>owner</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of the tag.</para>
+            /// <para>The tag value.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>

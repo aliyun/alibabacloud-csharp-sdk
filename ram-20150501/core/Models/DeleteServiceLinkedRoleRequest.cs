@@ -8,16 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ram20150501.Models
 {
-    public class GetLoginProfileRequest : TeaModel {
+    public class DeleteServiceLinkedRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The username.</para>
+        /// <para>The role name.</para>
+        /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>zhangq****</para>
+        /// <para>AliyunServiceRoleForPolarDB</para>
         /// </summary>
-        [NameInMap("UserName")]
+        [NameInMap("RoleName")]
         [Validation(Required=false)]
-        public string UserName { get; set; }
+        public string RoleName { get; set; }
 
     }
 

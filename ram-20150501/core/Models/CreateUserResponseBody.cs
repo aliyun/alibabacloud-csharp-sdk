@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string Comments { get; set; }
 
             /// <summary>
-            /// <para>The point in time when the RAM user was created. The time is displayed in UTC.</para>
+            /// <para>The point in time when the RAM user was created. It is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The email address of the RAM user.</para>
             /// <remarks>
-            /// <para> This parameter applies only to the China site (aliyun.com).</para>
+            /// <para>This parameter applies only to the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The mobile phone number of the RAM user.</para>
             /// <remarks>
-            /// <para> This parameter applies only to the China site (aliyun.com).</para>
+            /// <para>This parameter applies only to the China site (aliyun.com).</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

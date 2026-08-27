@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the RAM user group.</para>
+        /// <para>The name of the user group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Dev-Team</para>

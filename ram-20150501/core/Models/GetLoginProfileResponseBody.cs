@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetLoginProfileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The logon configurations of the RAM user.</para>
+        /// <para>The logon configuration information.</para>
         /// </summary>
         [NameInMap("LoginProfile")]
         [Validation(Required=false)]
         public GetLoginProfileResponseBodyLoginProfile LoginProfile { get; set; }
         public class GetLoginProfileResponseBodyLoginProfile : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The creation time in UTC. Format: <c>YYYY-MM-DDThh:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether a multi-factor authentication (MFA) device must be bound to the RAM user.</para>
+            /// <para>Indicates whether the user must bind a multi-factor authentication device.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public bool? MFABindRequired { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the RAM user must change the password upon logon.</para>
+            /// <para>Indicates whether the user must reset the password at the next logon.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public bool? PasswordResetRequired { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM user.</para>
+            /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
             /// <para>zhangq****</para>

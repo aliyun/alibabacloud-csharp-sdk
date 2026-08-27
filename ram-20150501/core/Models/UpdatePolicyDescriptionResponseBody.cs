@@ -59,8 +59,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>The type of the policy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Custom</description></item>
-            /// <item><description>System</description></item>
+            /// <item><description><para>Custom</para>
+            /// </description></item>
+            /// <item><description><para>System</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

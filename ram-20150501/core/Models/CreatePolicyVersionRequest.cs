@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <para>The rotation strategy of the policy. The rotation strategy can be used to delete an early policy version.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>None</c>: disables the rotation strategy.</description></item>
-        /// <item><description><c>DeleteOldestNonDefaultVersionWhenLimitExceeded</c>: deletes the earliest non-active version if the number of versions exceeds the limit.</description></item>
+        /// <item><description><para><c>None</c>: disables the rotation strategy.</para>
+        /// </description></item>
+        /// <item><description><para><c>DeleteOldestNonDefaultVersionWhenLimitExceeded</c>: deletes the earliest non-active version if the number of versions exceeds the limit.</para>
+        /// </description></item>
         /// </list>
         /// <para>Default value: <c>None</c>.</para>
         /// 

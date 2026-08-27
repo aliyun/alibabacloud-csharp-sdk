@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ListPoliciesForRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the RAM role.</para>
+        /// <para>The name of the role.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AdminRole</para>

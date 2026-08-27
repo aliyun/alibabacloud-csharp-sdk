@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class AttachPolicyToGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the RAM user group.</para>
+        /// <para>The name of the user group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dev</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The name of the access policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS-Administrator</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The type of the policy. Valid values: <c>System</c> and <c>Custom</c>.</para>
+        /// <para>The type of the access policy. Valid values: <c>System</c> or <c>Custom</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Custom</para>
@@ -39,6 +39,12 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         [Validation(Required=false)]
         public string PolicyType { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-9gLOoK****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }

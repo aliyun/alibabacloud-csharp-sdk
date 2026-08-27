@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the parameter is returned, you can call this operation again and set <c>Marker</c> to obtain the truncated part.``</para>
+        /// <para>The marker. This parameter is returned only if the value of <c>IsTruncated</c> is <c>true</c>. If the parameter is returned, you can call this operation again and set <c>Marker</c> to obtain the truncated part.\<c>\\</c></para>
         /// 
         /// <b>Example:</b>
         /// <para>EXAMPLE</para>

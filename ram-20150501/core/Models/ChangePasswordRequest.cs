@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class ChangePasswordRequest : TeaModel {
         /// <summary>
-        /// <para>The new password that is used to log on to the console.</para>
-        /// <para>The password must meet the complexity requirements. For more information, see <a href="https://help.aliyun.com/document_detail/28739.html">SetPasswordPolicy</a>.</para>
+        /// <para>The new console logon password of the Resource Access Management (RAM) user.</para>
+        /// <para>The password must meet the password strength requirements. For more information, see <a href="https://help.aliyun.com/document_detail/28739.html">SetPasswordPolicy</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aw$2****</para>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string NewPassword { get; set; }
 
         /// <summary>
-        /// <para>The old password that is used to log on to the console.</para>
+        /// <para>The old console logon password of the Resource Access Management (RAM) user.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12****</para>

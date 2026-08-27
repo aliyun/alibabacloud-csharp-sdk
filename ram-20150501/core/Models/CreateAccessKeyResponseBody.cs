@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class CreateAccessKeyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the AccessKey pair.</para>
+        /// <para>The AccessKey pair.</para>
         /// </summary>
         [NameInMap("AccessKey")]
         [Validation(Required=false)]
         public CreateAccessKeyResponseBodyAccessKey AccessKey { get; set; }
         public class CreateAccessKeyResponseBodyAccessKey : TeaModel {
             /// <summary>
-            /// <para>The AccessKey ID.</para>
+            /// <para>The identity of the AccessKey pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0wNEpMMlzy7s****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string AccessKeyId { get; set; }
 
             /// <summary>
-            /// <para>The AccessKey secret.</para>
+            /// <para>The AccessKey pair.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PupkTg8jdmau1cXxYacgE736PJ****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string AccessKeySecret { get; set; }
 
             /// <summary>
-            /// <para>The time when the AccessKey pair was created.</para>
+            /// <para>The time when the AccessKey pair was created. The time is in UTC. Format: <c>YYYY-MM-DDThh:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The status of the AccessKey pair. Valid values: Active and Inactive.</para>
+            /// <para>The status. Valid values: Active and Inactive.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>

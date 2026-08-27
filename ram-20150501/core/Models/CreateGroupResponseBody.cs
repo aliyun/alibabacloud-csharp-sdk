@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Dev-Team</para>
+            /// <para>Development team</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]

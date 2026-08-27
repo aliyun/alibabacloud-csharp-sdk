@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether the response is truncated. Valid values:</para>
+        /// <para>Indicates whether the returned results are truncated. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false</description></item>
@@ -56,9 +56,9 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public bool? IsTruncated { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for querying the next page of results.</para>
         /// <remarks>
-        /// <para> This parameter is returned only when <c>IsTruncated</c> is <c>true</c>.</para>
+        /// <para>This parameter is returned only when <c>IsTruncated</c> is <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string Marker { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>065527AA-2F2E-AD7C-7484-F2626CFE4934</para>

@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <para>The value can be up to 128 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Dev-Team</para>
+        /// <para>Development team</para>
         /// </summary>
         [NameInMap("Comments")]
         [Validation(Required=false)]

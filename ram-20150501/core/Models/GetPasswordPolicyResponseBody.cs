@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             /// <summary>
             /// <para>Indicates whether a password expires. Valid values: <c>true</c> and <c>false</c>. Default value: <c>false</c>. If the parameter is unspecified, the default value false is returned.</para>
             /// <list type="bullet">
-            /// <item><description>If this parameter is set to <c>true</c>, the Alibaba Cloud account to which the RAM users belong must reset the password before the RAM users can log on to the Alibaba Cloud Management Console.</description></item>
-            /// <item><description>If this parameter is set to <c>false</c>, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.</description></item>
+            /// <item><description><para>If this parameter is set to <c>true</c>, the Alibaba Cloud account to which the RAM users belong must reset the password before the RAM users can log on to the Alibaba Cloud Management Console.</para>
+            /// </description></item>
+            /// <item><description><para>If this parameter is set to <c>false</c>, the RAM users can change the passwords after the passwords expire and then log on to the Alibaba Cloud Management Console.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

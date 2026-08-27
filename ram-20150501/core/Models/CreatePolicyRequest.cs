@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         /// <para>The description must be 1 to 1,024 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Query ECS instances in a specific region</para>
+        /// <para>View ECS instances in a specified region</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]

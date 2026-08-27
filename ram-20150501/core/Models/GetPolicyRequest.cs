@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the policy.</para>
+        /// <para>The name of the access policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OSS-Administrator</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The type of the policy. Valid values: <c>System</c> and <c>Custom</c>.</para>
+        /// <para>The type of the access policy. Valid values: <c>System</c>, <c>Custom</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Custom</para>

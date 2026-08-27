@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetPolicyVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the policy version.</para>
+        /// <para>The version information of the access policy.</para>
         /// </summary>
         [NameInMap("PolicyVersion")]
         [Validation(Required=false)]
         public GetPolicyVersionResponseBodyPolicyVersion PolicyVersion { get; set; }
         public class GetPolicyVersionResponseBodyPolicyVersion : TeaModel {
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the version was created. The time is in UTC and in the format of <c>YYYY-MM-DDThh:mm:ssZ</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the policy version is the default version.</para>
+            /// <para>Indicates whether this is the default version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public bool? IsDefaultVersion { get; set; }
 
             /// <summary>
-            /// <para>The document of the policy.</para>
+            /// <para>The policy document of the permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{ &quot;Statement&quot;: [{ &quot;Action&quot;: [&quot;oss:<em>&quot;], &quot;Effect&quot;: &quot;Allow&quot;, &quot;Resource&quot;: [&quot;acs:oss:</em>:<em>:</em>&quot;]}], &quot;Version&quot;: &quot;1&quot;}</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string PolicyDocument { get; set; }
 
             /// <summary>
-            /// <para>The ID of the policy version.</para>
+            /// <para>The ID of the access policy version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>v3</para>

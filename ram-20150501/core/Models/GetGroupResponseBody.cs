@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the RAM user group.</para>
+        /// <para>The user group information.</para>
         /// </summary>
         [NameInMap("Group")]
         [Validation(Required=false)]
         public GetGroupResponseBodyGroup Group { get; set; }
         public class GetGroupResponseBodyGroup : TeaModel {
             /// <summary>
-            /// <para>The description of the RAM user group.</para>
+            /// <para>The remarks.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Dev-Team</para>
+            /// <para>Development team</para>
             /// </summary>
             [NameInMap("Comments")]
             [Validation(Required=false)]
             public string Comments { get; set; }
 
             /// <summary>
-            /// <para>The time when the RAM user group was created.</para>
+            /// <para>The creation time in UTC. The time is displayed in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-01-23T12:33:18Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string CreateDate { get; set; }
 
             /// <summary>
-            /// <para>The ID of the RAM user group.</para>
+            /// <para>The ID of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>g-FpMEHiMysofp****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the RAM user group.</para>
+            /// <para>The name of the user group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Dev-Team</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
             public string GroupName { get; set; }
 
             /// <summary>
-            /// <para>The modification time.</para>
+            /// <para>The update time in UTC. The time is displayed in the <c>YYYY-MM-DDThh:mm:ssZ</c> format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015-02-11T03:15:21Z</para>

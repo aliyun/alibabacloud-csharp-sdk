@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.Ram20150501.Models
 {
     public class GetRoleRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the RAM role.</para>
-        /// <para>The name must be 1 to 64 characters in length, and can contain letters, digits, periods (.), and hyphens (-).</para>
+        /// <para>The name of the role.</para>
+        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, periods (.), and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>ECSAdmin</para>
