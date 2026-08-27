@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"public", "realtranslationagent.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("realtranslationagent", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -246,8 +250,18 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消翻译任务</para>
+        /// <para>Cancels a translation task that is currently running.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Billing description</em>*
+        /// After the task is successfully canceled, the Credits frozen for this translation task will be fully refunded to your account.
+        /// <b>Before you begin</b></para>
+        /// <list type="bullet">
+        /// <item><description>This operation only supports canceling translation tasks that are in the processing state. Tasks that are completed or failed cannot be canceled.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelTranslationTaskRequest
@@ -294,8 +308,18 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消翻译任务</para>
+        /// <para>Cancels a translation task that is currently running.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Billing description</em>*
+        /// After the task is successfully canceled, the Credits frozen for this translation task will be fully refunded to your account.
+        /// <b>Before you begin</b></para>
+        /// <list type="bullet">
+        /// <item><description>This operation only supports canceling translation tasks that are in the processing state. Tasks that are completed or failed cannot be canceled.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelTranslationTaskRequest
@@ -342,8 +366,18 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消翻译任务</para>
+        /// <para>Cancels a translation task that is currently running.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Billing description</em>*
+        /// After the task is successfully canceled, the Credits frozen for this translation task will be fully refunded to your account.
+        /// <b>Before you begin</b></para>
+        /// <list type="bullet">
+        /// <item><description>This operation only supports canceling translation tasks that are in the processing state. Tasks that are completed or failed cannot be canceled.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelTranslationTaskRequest
@@ -360,8 +394,18 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>取消翻译任务</para>
+        /// <para>Cancels a translation task that is currently running.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Billing description</em>*
+        /// After the task is successfully canceled, the Credits frozen for this translation task will be fully refunded to your account.
+        /// <b>Before you begin</b></para>
+        /// <list type="bullet">
+        /// <item><description>This operation only supports canceling translation tasks that are in the processing state. Tasks that are completed or failed cannot be canceled.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// CancelTranslationTaskRequest
@@ -378,7 +422,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取原文文件下载URL</para>
+        /// <para>Retrieves the download URL of the original file for a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -426,7 +470,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取原文文件下载URL</para>
+        /// <para>Retrieves the download URL of the original file for a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -474,7 +518,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取原文文件下载URL</para>
+        /// <para>Retrieves the download URL of the original file for a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -492,7 +536,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取原文文件下载URL</para>
+        /// <para>Retrieves the download URL of the original file for a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -510,7 +554,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取译文文件下载URL</para>
+        /// <para>Retrieves the download URL of the translated file for a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -558,7 +602,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取译文文件下载URL</para>
+        /// <para>Retrieves the download URL of the translated file for a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -606,7 +650,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取译文文件下载URL</para>
+        /// <para>Retrieves the download URL of the translated file for a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -624,7 +668,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取译文文件下载URL</para>
+        /// <para>Retrieves the download URL of the translated file for a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -642,7 +686,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取翻译任务详情</para>
+        /// <para>Retrieves the details of a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -690,7 +734,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取翻译任务详情</para>
+        /// <para>Retrieves the details of a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -738,7 +782,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取翻译任务详情</para>
+        /// <para>Retrieves the details of a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -756,7 +800,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取翻译任务详情</para>
+        /// <para>Retrieves the details of a translation task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -774,7 +818,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取翻译任务列表</para>
+        /// <para>Queries translation tasks by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -852,7 +896,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取翻译任务列表</para>
+        /// <para>Queries translation tasks by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -930,7 +974,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取翻译任务列表</para>
+        /// <para>Queries translation tasks by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -948,7 +992,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取翻译任务列表</para>
+        /// <para>Queries translation tasks by paging.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -966,8 +1010,23 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交翻译任务</para>
+        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Billing</em>*
+        /// This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <c>UploadTranslationFile</c>, you can check the <c>CreditsAvailable</c> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <c>CreditBreakdown</c> field.
+        /// <b>Task submission</b></para>
+        /// <list type="bullet">
+        /// <item><description>To submit a new translation task, pass in the <c>TaskId</c> returned by the <c>UploadTranslationFile</c> operation.</description></item>
+        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <c>BaseTaskId</c>.</description></item>
+        /// <item><description>You must pass in either <c>TaskId</c> or <c>BaseTaskId</c>. You cannot pass in both at the same time.
+        /// <b>Precautions</b></description></item>
+        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</description></item>
+        /// <item><description>For new tasks, you can obtain the list of available fonts from the <c>Fonts</c> field in the response of <c>UploadTranslationFile</c>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <c>GetTranslationTask</c> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitTranslationTaskRequest
@@ -1036,8 +1095,23 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交翻译任务</para>
+        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Billing</em>*
+        /// This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <c>UploadTranslationFile</c>, you can check the <c>CreditsAvailable</c> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <c>CreditBreakdown</c> field.
+        /// <b>Task submission</b></para>
+        /// <list type="bullet">
+        /// <item><description>To submit a new translation task, pass in the <c>TaskId</c> returned by the <c>UploadTranslationFile</c> operation.</description></item>
+        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <c>BaseTaskId</c>.</description></item>
+        /// <item><description>You must pass in either <c>TaskId</c> or <c>BaseTaskId</c>. You cannot pass in both at the same time.
+        /// <b>Precautions</b></description></item>
+        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</description></item>
+        /// <item><description>For new tasks, you can obtain the list of available fonts from the <c>Fonts</c> field in the response of <c>UploadTranslationFile</c>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <c>GetTranslationTask</c> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="tmpReq">
         /// SubmitTranslationTaskRequest
@@ -1106,8 +1180,23 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交翻译任务</para>
+        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Billing</em>*
+        /// This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <c>UploadTranslationFile</c>, you can check the <c>CreditsAvailable</c> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <c>CreditBreakdown</c> field.
+        /// <b>Task submission</b></para>
+        /// <list type="bullet">
+        /// <item><description>To submit a new translation task, pass in the <c>TaskId</c> returned by the <c>UploadTranslationFile</c> operation.</description></item>
+        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <c>BaseTaskId</c>.</description></item>
+        /// <item><description>You must pass in either <c>TaskId</c> or <c>BaseTaskId</c>. You cannot pass in both at the same time.
+        /// <b>Precautions</b></description></item>
+        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</description></item>
+        /// <item><description>For new tasks, you can obtain the list of available fonts from the <c>Fonts</c> field in the response of <c>UploadTranslationFile</c>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <c>GetTranslationTask</c> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitTranslationTaskRequest
@@ -1124,8 +1213,23 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>提交翻译任务</para>
+        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para><em>Billing</em>*
+        /// This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <c>UploadTranslationFile</c>, you can check the <c>CreditsAvailable</c> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <c>CreditBreakdown</c> field.
+        /// <b>Task submission</b></para>
+        /// <list type="bullet">
+        /// <item><description>To submit a new translation task, pass in the <c>TaskId</c> returned by the <c>UploadTranslationFile</c> operation.</description></item>
+        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <c>BaseTaskId</c>.</description></item>
+        /// <item><description>You must pass in either <c>TaskId</c> or <c>BaseTaskId</c>. You cannot pass in both at the same time.
+        /// <b>Precautions</b></description></item>
+        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</description></item>
+        /// <item><description>For new tasks, you can obtain the list of available fonts from the <c>Fonts</c> field in the response of <c>UploadTranslationFile</c>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <c>GetTranslationTask</c> operation.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// SubmitTranslationTaskRequest
@@ -1142,8 +1246,30 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析文档</para>
+        /// <para>Uploads a document, parses document-related information, and generates a translation task. After a successful upload, the task ID and document parsing results are returned, including word count, page count, estimated Credits consumption, estimated translation time, detected language type, and font list. The system also performs sensitive information detection on the uploaded document, and you can decide whether to proceed with submitting the translation task based on the detection results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation only involves document upload and information estimation. <b>No fees are incurred.</b> Credits consumption starts only after you <b>officially submit the translation</b> task.
+        /// <b>Language detection</b>
+        /// The system automatically detects the language type of the uploaded document. Currently, Chinese is supported.
+        /// <b>Sensitive information detection</b>
+        /// The system performs sensitive information detection on the uploaded document. If sensitive information is detected, the <c>SensitiveDetected</c> field in the response is set to <c>true</c>, and the <c>SensitiveTags</c> field returns the list of matched keywords.</description></item>
+        /// <item><description>You can decide whether to proceed with submitting the translation task based on your actual needs.</description></item>
+        /// <item><description>If the translation quality setting is set to ultimate mode when you submit the task, the system automatically switches the <b>portions containing sensitive information</b> to auto mode.
+        /// <b>Notes</b></description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Make sure the uploaded document format is supported by the system. Otherwise, parsing may fail.</description></item>
+        /// <item><description>The <c>EstimatedCostCredits</c> value in the response is the estimated Credits consumption. The actual consumption is based on the settlement after the translation task is officially submitted.</description></item>
+        /// <item><description>The <c>EstimatedTime</c> value in the response is the estimated translation duration in milliseconds. The actual translation duration may vary depending on document complexity.</description></item>
+        /// <item><description>The <c>Fonts</c> field in the response contains the languages that support font modification and the corresponding font lists. You can select an appropriate font based on the target language.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadTranslationFileRequest
@@ -1192,8 +1318,30 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析文档</para>
+        /// <para>Uploads a document, parses document-related information, and generates a translation task. After a successful upload, the task ID and document parsing results are returned, including word count, page count, estimated Credits consumption, estimated translation time, detected language type, and font list. The system also performs sensitive information detection on the uploaded document, and you can decide whether to proceed with submitting the translation task based on the detection results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation only involves document upload and information estimation. <b>No fees are incurred.</b> Credits consumption starts only after you <b>officially submit the translation</b> task.
+        /// <b>Language detection</b>
+        /// The system automatically detects the language type of the uploaded document. Currently, Chinese is supported.
+        /// <b>Sensitive information detection</b>
+        /// The system performs sensitive information detection on the uploaded document. If sensitive information is detected, the <c>SensitiveDetected</c> field in the response is set to <c>true</c>, and the <c>SensitiveTags</c> field returns the list of matched keywords.</description></item>
+        /// <item><description>You can decide whether to proceed with submitting the translation task based on your actual needs.</description></item>
+        /// <item><description>If the translation quality setting is set to ultimate mode when you submit the task, the system automatically switches the <b>portions containing sensitive information</b> to auto mode.
+        /// <b>Notes</b></description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Make sure the uploaded document format is supported by the system. Otherwise, parsing may fail.</description></item>
+        /// <item><description>The <c>EstimatedCostCredits</c> value in the response is the estimated Credits consumption. The actual consumption is based on the settlement after the translation task is officially submitted.</description></item>
+        /// <item><description>The <c>EstimatedTime</c> value in the response is the estimated translation duration in milliseconds. The actual translation duration may vary depending on document complexity.</description></item>
+        /// <item><description>The <c>Fonts</c> field in the response contains the languages that support font modification and the corresponding font lists. You can select an appropriate font based on the target language.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadTranslationFileRequest
@@ -1242,8 +1390,30 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析文档</para>
+        /// <para>Uploads a document, parses document-related information, and generates a translation task. After a successful upload, the task ID and document parsing results are returned, including word count, page count, estimated Credits consumption, estimated translation time, detected language type, and font list. The system also performs sensitive information detection on the uploaded document, and you can decide whether to proceed with submitting the translation task based on the detection results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation only involves document upload and information estimation. <b>No fees are incurred.</b> Credits consumption starts only after you <b>officially submit the translation</b> task.
+        /// <b>Language detection</b>
+        /// The system automatically detects the language type of the uploaded document. Currently, Chinese is supported.
+        /// <b>Sensitive information detection</b>
+        /// The system performs sensitive information detection on the uploaded document. If sensitive information is detected, the <c>SensitiveDetected</c> field in the response is set to <c>true</c>, and the <c>SensitiveTags</c> field returns the list of matched keywords.</description></item>
+        /// <item><description>You can decide whether to proceed with submitting the translation task based on your actual needs.</description></item>
+        /// <item><description>If the translation quality setting is set to ultimate mode when you submit the task, the system automatically switches the <b>portions containing sensitive information</b> to auto mode.
+        /// <b>Notes</b></description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Make sure the uploaded document format is supported by the system. Otherwise, parsing may fail.</description></item>
+        /// <item><description>The <c>EstimatedCostCredits</c> value in the response is the estimated Credits consumption. The actual consumption is based on the settlement after the translation task is officially submitted.</description></item>
+        /// <item><description>The <c>EstimatedTime</c> value in the response is the estimated translation duration in milliseconds. The actual translation duration may vary depending on document complexity.</description></item>
+        /// <item><description>The <c>Fonts</c> field in the response contains the languages that support font modification and the corresponding font lists. You can select an appropriate font based on the target language.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadTranslationFileRequest
@@ -1260,8 +1430,30 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>解析文档</para>
+        /// <para>Uploads a document, parses document-related information, and generates a translation task. After a successful upload, the task ID and document parsing results are returned, including word count, page count, estimated Credits consumption, estimated translation time, detected language type, and font list. The system also performs sensitive information detection on the uploaded document, and you can decide whether to proceed with submitting the translation task based on the detection results.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This operation only involves document upload and information estimation. <b>No fees are incurred.</b> Credits consumption starts only after you <b>officially submit the translation</b> task.
+        /// <b>Language detection</b>
+        /// The system automatically detects the language type of the uploaded document. Currently, Chinese is supported.
+        /// <b>Sensitive information detection</b>
+        /// The system performs sensitive information detection on the uploaded document. If sensitive information is detected, the <c>SensitiveDetected</c> field in the response is set to <c>true</c>, and the <c>SensitiveTags</c> field returns the list of matched keywords.</description></item>
+        /// <item><description>You can decide whether to proceed with submitting the translation task based on your actual needs.</description></item>
+        /// <item><description>If the translation quality setting is set to ultimate mode when you submit the task, the system automatically switches the <b>portions containing sensitive information</b> to auto mode.
+        /// <b>Notes</b></description></item>
+        /// </list>
+        /// </remarks>
+        /// <list type="bullet">
+        /// <item><description>Make sure the uploaded document format is supported by the system. Otherwise, parsing may fail.</description></item>
+        /// <item><description>The <c>EstimatedCostCredits</c> value in the response is the estimated Credits consumption. The actual consumption is based on the settlement after the translation task is officially submitted.</description></item>
+        /// <item><description>The <c>EstimatedTime</c> value in the response is the estimated translation duration in milliseconds. The actual translation duration may vary depending on document complexity.</description></item>
+        /// <item><description>The <c>Fonts</c> field in the response contains the languages that support font modification and the corresponding font lists. You can select an appropriate font based on the target language.</description></item>
+        /// </list>
+        /// </description>
         /// 
         /// <param name="request">
         /// UploadTranslationFileRequest
