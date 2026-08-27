@@ -5,6 +5,13 @@
 - Support API StopChat.
 
 
+2026-08-27 Version: 2.7.0
+- Support API ListChatMessages.
+- Support API ListChatSessions.
+- Support API StartChat.
+- Support API StopChat.
+
+
 2026-06-08 Version: 2.6.1
 - Update API GenerateTemplatePolicy: add request parameters GenerateOptions.
 - Update API GenerateTemplatePolicy: add request parameters Parameters.
