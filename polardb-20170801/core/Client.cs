@@ -26379,14 +26379,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of model operators for a specified PolarDB database instance.</para>
+        /// <para>Retrieves the list of template operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports filtering and returning the list of model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>This operation supports filtering and returning the list of template operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
         /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
@@ -26416,6 +26416,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -26454,14 +26462,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of model operators for a specified PolarDB database instance.</para>
+        /// <para>Retrieves the list of template operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports filtering and returning the list of model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>This operation supports filtering and returning the list of template operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
         /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
@@ -26491,6 +26499,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OwnerId))
             {
                 query["OwnerId"] = request.OwnerId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -26529,14 +26545,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of model operators for a specified PolarDB database instance.</para>
+        /// <para>Retrieves the list of template operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports filtering and returning the list of model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>This operation supports filtering and returning the list of template operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
         /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
@@ -26556,14 +26572,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of model operators for a specified PolarDB database instance.</para>
+        /// <para>Retrieves the list of template operators for a specified PolarDB database instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Description</h2>
+        /// <h2>Request description</h2>
         /// <list type="bullet">
-        /// <item><description>This operation supports filtering and returning the list of model operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
+        /// <item><description>This operation supports filtering and returning the list of template operators based on the <c>RelativeDBClusterId</c> and <c>KubeType</c> parameters.</description></item>
         /// <item><description>Note: Ensure that the <c>RelativeDBClusterId</c> provided in the request matches an existing PolarDB database instance ID. Otherwise, data cannot be retrieved correctly.</description></item>
         /// </list>
         /// </description>
@@ -29691,12 +29707,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed information of a specified PolarDB application.</para>
+        /// <para>Retrieves the details of a specified PolarDB instance application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to query all related information of a specific PolarDB application, including but not limited to component details and endpoints.</para>
+        /// <para>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29738,12 +29754,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed information of a specified PolarDB application.</para>
+        /// <para>Retrieves the details of a specified PolarDB instance application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to query all related information of a specific PolarDB application, including but not limited to component details and endpoints.</para>
+        /// <para>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29785,12 +29801,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed information of a specified PolarDB application.</para>
+        /// <para>Retrieves the details of a specified PolarDB instance application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to query all related information of a specific PolarDB application, including but not limited to component details and endpoints.</para>
+        /// <para>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -29808,12 +29824,12 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the detailed information of a specified PolarDB application.</para>
+        /// <para>Retrieves the details of a specified PolarDB instance application.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API is used to query all related information of a specific PolarDB application, including but not limited to component details and endpoints.</para>
+        /// <para>This API operation queries all information about a specific PolarDB application, including but not limited to component details and endpoints.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30555,6 +30571,126 @@ namespace AlibabaCloud.SDK.Polardb20170801
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeApplicationPromptsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the SSL configuration of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationSSLResponse
+        /// </returns>
+        public DescribeApplicationSSLResponse DescribeApplicationSSLWithOptions(DescribeApplicationSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationSSL",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationSSLResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the SSL configuration of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationSSLRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationSSLResponse
+        /// </returns>
+        public async Task<DescribeApplicationSSLResponse> DescribeApplicationSSLWithOptionsAsync(DescribeApplicationSSLRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ApplicationId))
+            {
+                query["ApplicationId"] = request.ApplicationId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeApplicationSSL",
+                Version = "2017-08-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeApplicationSSLResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the SSL configuration of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationSSLResponse
+        /// </returns>
+        public DescribeApplicationSSLResponse DescribeApplicationSSL(DescribeApplicationSSLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeApplicationSSLWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the SSL configuration of an application.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeApplicationSSLRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeApplicationSSLResponse
+        /// </returns>
+        public async Task<DescribeApplicationSSLResponse> DescribeApplicationSSLAsync(DescribeApplicationSSLRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeApplicationSSLWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -52935,7 +53071,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more vSwitches.</para>
+        /// <para>查询交换机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53021,7 +53157,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more vSwitches.</para>
+        /// <para>查询交换机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53107,7 +53243,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more vSwitches.</para>
+        /// <para>查询交换机</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53125,7 +53261,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries one or more vSwitches.</para>
+        /// <para>查询交换机</para>
         /// </summary>
         /// 
         /// <param name="request">

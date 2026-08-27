@@ -42,6 +42,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string Architecture { get; set; }
 
+        /// <summary>
+        /// <para>Indicates whether SNAT can be disabled.</para>
+        /// </summary>
         [NameInMap("CanDisableSnat")]
         [Validation(Required=false)]
         public bool? CanDisableSnat { get; set; }
@@ -124,8 +127,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ComponentType { get; set; }
 
             /// <summary>
-            /// <para>The list of security groups at the subcomponent level.</para>
-            /// <para>If the security groups at the subcomponent level are the same as those at the application level, this response element is omitted.</para>
+            /// <para>The list of subcomponent-level security groups.</para>
+            /// <para>If the subcomponent-level security groups are the same as the application-level security groups, this response element is omitted.</para>
             /// </summary>
             [NameInMap("SecurityGroups")]
             [Validation(Required=false)]
@@ -155,7 +158,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the security group.</para>
+                /// <para>The security group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sg-*******************</para>
@@ -177,8 +180,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The list of whitelists at the subcomponent level.</para>
-            /// <para>If the whitelists at the subcomponent level are the same as those at the application level, this response element is omitted.</para>
+            /// <para>The list of subcomponent-level whitelist addresses.</para>
+            /// <para>If the subcomponent-level whitelists are the same as the application-level whitelists, this response element is omitted.</para>
             /// </summary>
             [NameInMap("SecurityIPArrays")]
             [Validation(Required=false)]
@@ -205,7 +208,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string SecurityIPArrayTag { get; set; }
 
                 /// <summary>
-                /// <para>The IP addresses in the whitelist, separated by commas (,).</para>
+                /// <para>The whitelisted IP addresses, separated by commas (,).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>127.0.0.1</para>
@@ -254,7 +257,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public DescribeApplicationAttributeResponseBodyComponentsTopology Topology { get; set; }
             public class DescribeApplicationAttributeResponseBodyComponentsTopology : TeaModel {
                 /// <summary>
-                /// <para>The list of child node IDs or child node component types in the topology of the current application subcomponent.</para>
+                /// <para>The list of topology child node IDs or child node subcomponent types of the current application subcomponent.</para>
                 /// </summary>
                 [NameInMap("Children")]
                 [Validation(Required=false)]
@@ -271,7 +274,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
                 public string Layer { get; set; }
 
                 /// <summary>
-                /// <para>The list of parent node IDs or parent node component types in the topology of the current application subcomponent.</para>
+                /// <para>The list of topology parent node IDs or parent node subcomponent types of the current application subcomponent.</para>
                 /// </summary>
                 [NameInMap("Parents")]
                 [Validation(Required=false)]
@@ -312,7 +315,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of endpoints of the application.</para>
+        /// <para>The list of endpoints for the application.</para>
         /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
@@ -390,7 +393,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The expiration time.</para>
-        /// <para>This value is empty when the billing method is Postpaid.</para>
+        /// <para>This value is empty when the billing type is Postpaid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-25T09:37:10Z</para>
@@ -410,7 +413,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? Expired { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current version is the latest version.</para>
+        /// <para>Indicates whether this is the latest version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -444,7 +447,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LockMode { get; set; }
 
         /// <summary>
-        /// <para>The end time of the maintenance window.</para>
+        /// <para>The maintenance end time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19:00Z</para>
@@ -454,7 +457,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the maintenance window.</para>
+        /// <para>The maintenance start time.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18:00Z</para>
@@ -491,6 +494,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string EmbedderModelName { get; set; }
 
             /// <summary>
+            /// <para>The graph LLM model support.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>qwen3-max</para>
             /// </summary>
@@ -529,6 +534,55 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RerankerModelName { get; set; }
 
             /// <summary>
+            /// <para>The Mem0 full session information storage configuration.</para>
+            /// </summary>
+            [NameInMap("SessionStore")]
+            [Validation(Required=false)]
+            public DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore SessionStore { get; set; }
+            public class DescribeApplicationAttributeResponseBodyMemApplicationAttributeSessionStore : TeaModel {
+                /// <summary>
+                /// <para>The account source. Valid values: reuse_vector and existing. This parameter is returned only when the status is ENABLED.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>existing</para>
+                /// </summary>
+                [NameInMap("AccountMode")]
+                [Validation(Required=false)]
+                public string AccountMode { get; set; }
+
+                /// <summary>
+                /// <para>The PolarDB cluster ID used for session storage. This parameter is returned only when the status is ENABLED.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>pc-xxx</para>
+                /// </summary>
+                [NameInMap("DBClusterId")]
+                [Validation(Required=false)]
+                public string DBClusterId { get; set; }
+
+                /// <summary>
+                /// <para>The session database name. This parameter is returned only when the status is ENABLED.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>contextdb_example</para>
+                /// </summary>
+                [NameInMap("DBName")]
+                [Validation(Required=false)]
+                public string DBName { get; set; }
+
+                /// <summary>
+                /// <para>The session storage status. Valid values: DISABLED, ENABLING, ENABLED, and DISABLING.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ENABLED</para>
+                /// </summary>
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The username.</para>
             /// 
             /// <b>Example:</b>
@@ -551,6 +605,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MinorVersion { get; set; }
 
         /// <summary>
+        /// <para>The NAT gateway ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pc-xxx</para>
         /// </summary>
@@ -559,7 +615,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The billing method.</para>
+        /// <para>The billing type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Postpaid</para>
@@ -602,7 +658,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The instance ID of PolarFS cold storage or high-performance edition.</para>
+        /// <para>The instance ID of PolarFS Cold Storage Edition or High Performance Edition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pfs-**************</para>
@@ -632,7 +688,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of security groups at the application level.</para>
+        /// <para>The list of application-level security groups.</para>
         /// </summary>
         [NameInMap("SecurityGroups")]
         [Validation(Required=false)]
@@ -662,7 +718,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the security group.</para>
+            /// <para>The security group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sg-**************</para>
@@ -684,7 +740,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The list of whitelists at the application level.</para>
+        /// <para>The list of application-level whitelists.</para>
         /// </summary>
         [NameInMap("SecurityIPArrays")]
         [Validation(Required=false)]
@@ -711,7 +767,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SecurityIPArrayTag { get; set; }
 
             /// <summary>
-            /// <para>The IP addresses in the whitelist, separated by commas (,).</para>
+            /// <para>The whitelisted IP addresses, separated by commas (,).</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.0.1</para>
@@ -757,6 +813,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ServerlessType { get; set; }
 
         /// <summary>
+        /// <para>The SNAT status. Valid values: on and off.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>off</para>
         /// </summary>
@@ -770,12 +828,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <item><description>Creating: Being created.</description></item>
         /// <item><description>Activated: Running.</description></item>
         /// <item><description>Maintaining: Under maintenance.</description></item>
-        /// <item><description>ClassChanging: Changing specifications.</description></item>
+        /// <item><description>ClassChanging: Configuration is being changed.</description></item>
         /// <item><description>Transing: Being migrated.</description></item>
-        /// <item><description>MinorVersionUpgrading: Minor version being upgraded.</description></item>
-        /// <item><description>NetCreating: Endpoint being created.</description></item>
-        /// <item><description>NetDeleting: Endpoint being deleted.</description></item>
-        /// <item><description>NetModifying: Endpoint being modified.</description></item>
+        /// <item><description>MinorVersionUpgrading: Minor version is being upgraded.</description></item>
+        /// <item><description>NetCreating: Endpoint is being created.</description></item>
+        /// <item><description>NetDeleting: Endpoint is being deleted.</description></item>
+        /// <item><description>NetModifying: Endpoint is being modified.</description></item>
         /// <item><description>Restarting: Being restarted.</description></item>
         /// <item><description>Locking: Being locked.</description></item>
         /// <item><description>Locked: Locked.</description></item>

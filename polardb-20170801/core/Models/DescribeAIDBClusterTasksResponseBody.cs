@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string DBNodeDescription { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the model operator.</para>
+            /// <para>The template operator instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pm-2ze***</para>
@@ -196,11 +196,35 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             [Validation(Required=false)]
             public string TrainType { get; set; }
 
+            /// <summary>
+            /// <para>The tuning framework.</para>
+            /// </summary>
             [NameInMap("TuneArch")]
             [Validation(Required=false)]
             public string TuneArch { get; set; }
 
         }
+
+        /// <summary>
+        /// <para>The page number.</para>
+        /// </summary>
+        [NameInMap("PageNumber")]
+        [Validation(Required=false)]
+        public long? PageNumber { get; set; }
+
+        /// <summary>
+        /// <para>The total number of records on the current page.</para>
+        /// </summary>
+        [NameInMap("PageRecordCount")]
+        [Validation(Required=false)]
+        public string PageRecordCount { get; set; }
+
+        /// <summary>
+        /// <para>The number of records per page.</para>
+        /// </summary>
+        [NameInMap("PageSize")]
+        [Validation(Required=false)]
+        public string PageSize { get; set; }
 
         /// <summary>
         /// <para>The ID of the PolarDB cluster.</para>
@@ -231,6 +255,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("TaskType")]
         [Validation(Required=false)]
         public string TaskType { get; set; }
+
+        /// <summary>
+        /// <para>The total number of records.</para>
+        /// </summary>
+        [NameInMap("TotalRecordCount")]
+        [Validation(Required=false)]
+        public string TotalRecordCount { get; set; }
 
     }
 
