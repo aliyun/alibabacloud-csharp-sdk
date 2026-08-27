@@ -139,7 +139,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string GatewayId { get; set; }
 
             /// <summary>
-            /// <para>The running mode of AI multi-tenant V2. Default value: ENTERPRISE. Only AI + MultiTenantServerless allows this parameter.</para>
+            /// <para>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. Only AI + MultiTenantServerless allows this parameter. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ENTERPRISE: default.</description></item>
+            /// <item><description>STANDARD: allowed only for AI multi-tenant V2.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>STANDARD</para>
@@ -300,8 +304,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 /// <summary>
                 /// <para>The status of load balancing. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Ready: active.</description></item>
-                /// <item><description>NotCreate: not associated with an instance.</description></item>
+                /// <item><description>Ready: Active.</description></item>
+                /// <item><description>NotCreate: No associated instance.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

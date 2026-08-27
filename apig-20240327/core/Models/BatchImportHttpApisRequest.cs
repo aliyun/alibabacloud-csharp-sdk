@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class BatchImportHttpApisRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("allowUpdate")]
         [Validation(Required=false)]
         public bool? AllowUpdate { get; set; }
@@ -47,6 +51,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>b3BlbmFwaTogMy4wLjAKaW5mbzoKICAgIHRpdGxlOiBkZW1vCiAgICBkZXNjcmlwdGlvbjogdGhpc2lzZGVtbwogICAgdmVyc2lvbjogIiIKcGF0aHM6CiAgICAvdXNlci97dXNlcklkfToKICAgICAgICBnZXQ6CiAgICAgICAgICAgIHN1bW1hcnk6IOiOt+WPlueUqOaIt+S/oeaBrwogICAgICAgICAgICBkZXNjcmlwdGlvbjog6I635Y+W55So5oi35L+h5oGvCiAgICAgICAgICAgIG9wZXJhdGlvbklkOiBHZXRVc2VySW5mbwogICAgICAgICAgICByZXNwb25zZXM6CiAgICAgICAgICAgICAgICAiMjAwIjoKICAgICAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjog5oiQ5YqfCiAgICAgICAgICAgICAgICAgICAgY29udGVudDoKICAgICAgICAgICAgICAgICAgICAgICAgYXBwbGljYXRpb24vanNvbjtjaGFyc2V0PXV0Zi04OgogICAgICAgICAgICAgICAgICAgICAgICAgICAgc2NoZW1hOiBudWxsCnNlcnZlcnM6CiAgICAtIHVybDogaHR0cDovL2FwaS5leGFtcGxlLmNvbS92MQo=</para>
+        /// </summary>
         [NameInMap("specContentBase64")]
         [Validation(Required=false)]
         public string SpecContentBase64 { get; set; }

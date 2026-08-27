@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class AiStatisticsPathField : TeaModel {
         /// <summary>
-        /// <para>The secondary category.</para>
+        /// <para>The secondary business category of the field. Optional. Valid values: conversation (conversation content), config (configuration parameters), tools (tool calling), usage (usage statistics), metadata (metadata), choices (candidate results), identity (identity identifier), cache (cache information), media (multimedia content), logprobs (log probabilities), and custom (custom field). Set custom fields to custom.</para>
         /// 
         /// <b>Example:</b>
         /// <para>conversation</para>
@@ -23,14 +23,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The field description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>用户输入的问题内容</para>
+        /// <para>The question content entered by the user</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The log key.</para>
+        /// <para>The log key (field name).</para>
         /// 
         /// <b>Example:</b>
         /// <para>question</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string FieldKey { get; set; }
 
         /// <summary>
-        /// <para>The request or response direction.</para>
+        /// <para>The request or response attribution. The backend normalizes this to request or response based on source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>request</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Io { get; set; }
 
         /// <summary>
-        /// <para>The corresponding JSON path (GJSON syntax).</para>
+        /// <para>The corresponding jsonPath (gjson syntax).</para>
         /// 
         /// <b>Example:</b>
         /// <para>messages.#.content</para>
@@ -60,17 +60,17 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string JsonPath { get; set; }
 
         /// <summary>
-        /// <para>The display name of the field.</para>
+        /// <para>The annotation for the field key name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>问题内容</para>
+        /// <para>Question content</para>
         /// </summary>
         [NameInMap("name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether collection is enabled.</para>
+        /// <para>Indicates whether collection is enabled to create a log record for the corresponding field in AI request logs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -80,12 +80,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? RecordEnabled { get; set; }
 
         /// <summary>
-        /// <para>The rule used for streaming response extraction. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>append: appends content</description></item>
-        /// <item><description>first: retrieves the first value</description></item>
-        /// <item><description>replace: retrieves the last value</description></item>
-        /// </list>
+        /// <para>The aggregation rule for streaming response fields. Valid values: append, first, and replace. append: appends the matched values from each streaming chunk in sequence. first: retains the first matched value. replace: uses the last matched value. When source is response_streaming_body and rule is not specified, first is used by default. This field is not required for non-streaming scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>append</para>
@@ -95,7 +90,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Rule { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the field is sensitive.</para>
+        /// <para>Specifies whether the field is sensitive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -105,7 +100,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? Sensitive { get; set; }
 
         /// <summary>
-        /// <para>The data source.</para>
+        /// <para>The source of the field value. Valid values: fixed_value (fixed value), request_body (request body), request_header (request header), response_header (response header), response_body (non-streaming response body), and response_streaming_body (streaming response body).</para>
         /// 
         /// <b>Example:</b>
         /// <para>request_body</para>
