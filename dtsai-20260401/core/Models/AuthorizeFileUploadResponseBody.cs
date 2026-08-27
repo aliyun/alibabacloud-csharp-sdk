@@ -19,6 +19,24 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [Validation(Required=false)]
         public string AccessKeyId { get; set; }
 
+        [NameInMap("Authorizations")]
+        [Validation(Required=false)]
+        public List<AuthorizeFileUploadResponseBodyAuthorizations> Authorizations { get; set; }
+        public class AuthorizeFileUploadResponseBodyAuthorizations : TeaModel {
+            [NameInMap("EncodedPolicy")]
+            [Validation(Required=false)]
+            public string EncodedPolicy { get; set; }
+
+            [NameInMap("ObjectKey")]
+            [Validation(Required=false)]
+            public string ObjectKey { get; set; }
+
+            [NameInMap("Signature")]
+            [Validation(Required=false)]
+            public string Signature { get; set; }
+
+        }
+
         /// <summary>
         /// <para>The destination OSS bucket.</para>
         /// 
@@ -69,6 +87,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
+        [NameInMap("ExpireTime")]
+        [Validation(Required=false)]
+        public long? ExpireTime { get; set; }
+
         /// <summary>
         /// <para>The business-level HTTP status code.</para>
         /// 
@@ -100,7 +122,7 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The Security Token Service (STS) token.</para>
+        /// <para>The Security Token Service (STS) temporary security token.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAISxxx</para>

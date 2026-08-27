@@ -271,6 +271,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             {
                 query["AgentName"] = request.AgentName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchSize))
+            {
+                query["BatchSize"] = request.BatchSize;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFormat))
             {
                 query["FileFormat"] = request.FileFormat;
@@ -320,6 +324,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
             {
                 query["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchSize))
+            {
+                query["BatchSize"] = request.BatchSize;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileFormat))
             {

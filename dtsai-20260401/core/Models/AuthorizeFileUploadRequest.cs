@@ -19,6 +19,10 @@ namespace AlibabaCloud.SDK.DtsAI20260401.Models
         [Validation(Required=false)]
         public string AgentName { get; set; }
 
+        [NameInMap("BatchSize")]
+        [Validation(Required=false)]
+        public string BatchSize { get; set; }
+
         /// <summary>
         /// <para>The format of the file to be uploaded.</para>
         /// 
