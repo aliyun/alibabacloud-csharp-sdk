@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The error code that is returned when the risk detection fails.</para>
             /// <remarks>
-            /// <para> This parameter is not returned if the risk detection is successful.</para>
+            /// <para>This parameter is not returned if the risk detection is successful.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The error message that is returned when the risk detection fails.</para>
             /// <remarks>
-            /// <para> This parameter is not returned if the risk detection is successful.</para>
+            /// <para>This parameter is not returned if the risk detection is successful.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The ID of the request when the risk detection fails.</para>
             /// <remarks>
-            /// <para> This parameter is not returned if the risk detection is successful.</para>
+            /// <para>This parameter is not returned if the risk detection is successful.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -115,10 +115,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The type of the risk. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Referenced: The resource is referenced by other resources.</description></item>
-            /// <item><description>MaybeReferenced: The resource may be referenced by other resources.</description></item>
-            /// <item><description>AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.</description></item>
-            /// <item><description>OperationIgnored: The operation does not take effect for the resource.</description></item>
+            /// <item><description><para>Referenced: The resource is referenced by other resources.</para>
+            /// </description></item>
+            /// <item><description><para>MaybeReferenced: The resource may be referenced by other resources.</para>
+            /// </description></item>
+            /// <item><description><para>AdditionalRiskCheckRequired: An additional risk detection is required for a nested stack.</para>
+            /// </description></item>
+            /// <item><description><para>OperationIgnored: The operation does not take effect for the resource.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

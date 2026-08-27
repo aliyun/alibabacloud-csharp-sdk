@@ -66,10 +66,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                     /// <summary>
                     /// <para>The name of the Terraform command that is run. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>apply</description></item>
-                    /// <item><description>plan</description></item>
-                    /// <item><description>destroy</description></item>
-                    /// <item><description>version</description></item>
+                    /// <item><description><para>apply</para>
+                    /// </description></item>
+                    /// <item><description><para>plan</para>
+                    /// </description></item>
+                    /// <item><description><para>destroy</para>
+                    /// </description></item>
+                    /// <item><description><para>version</para>
+                    /// </description></item>
                     /// </list>
                     /// <para>For more information about Terraform commands, see <a href="https://www.terraform.io/cli/commands">Basic CLI Features</a>.</para>
                     /// 
@@ -93,8 +97,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                     /// <summary>
                     /// <para>The output stream. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>stdout: standard output stream</description></item>
-                    /// <item><description>stderr: standard error stream</description></item>
+                    /// <item><description><para>stdout: standard output stream</para>
+                    /// </description></item>
+                    /// <item><description><para>stderr: standard error stream</para>
+                    /// </description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -167,10 +173,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// <para>The action that is performed on the resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Add</description></item>
-                /// <item><description>Modify</description></item>
-                /// <item><description>Remove</description></item>
-                /// <item><description>None</description></item>
+                /// <item><description><para>Add</para>
+                /// </description></item>
+                /// <item><description><para>Modify</para>
+                /// </description></item>
+                /// <item><description><para>Remove</para>
+                /// </description></item>
+                /// <item><description><para>None</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -224,9 +234,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// <para>Indicates whether a replacement update is performed on the template. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>True: A replacement update is performed on the template.</description></item>
-                /// <item><description>False: A change is made on the template.</description></item>
-                /// <item><description>Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.</description></item>
+                /// <item><description><para>True: A replacement update is performed on the template.</para>
+                /// </description></item>
+                /// <item><description><para>False: A change is made on the template.</para>
+                /// </description></item>
+                /// <item><description><para>Conditional: A replacement update may be performed on the template. You can check whether a replacement update is performed when the template is in use.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
                 /// <para>This parameter is returned only if Action is set to Modify.</para>

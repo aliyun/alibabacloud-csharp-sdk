@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackResourcesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The region ID of the stack. You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region to which the stack belongs. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The stack ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

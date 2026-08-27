@@ -10,10 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class UpdateStackGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples: oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</para>
-        /// <remarks>
-        /// <para> You must specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</para>
-        /// </remarks>
+        /// <para>The IDs of the destination accounts in which to deploy stacks in self-managed permission mode. You can specify a maximum of 50 destination account IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;12****&quot;]</para>
@@ -23,11 +20,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> AccountIds { get; set; }
 
         /// <summary>
-        /// <para>The key of parameter N. If you do not specify the key and value of the parameter, ROS uses the default key and value in the template.</para>
-        /// <para>Maximum value of N: 200.</para>
-        /// <remarks>
-        /// <para> The Parameters parameter is optional. If you set the Parameters parameter, you must set the Parameters.N.ParameterKey parameter.</para>
-        /// </remarks>
+        /// <para>The name of the RAM administrator role that is assumed by ROS. This parameter is required when you create a stack group that has self-managed permissions. If you do not specify a value, \<c>AliyunROSStackGroupAdministrationRole\\</c> is used as the default value. ROS assumes this role to perform operations on the stacks in the stack group. ROS uses the credentials of this role to assume the execution role (\<c>AliyunROSStackGroupExecutionRole\\</c>).</para>
+        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunROSStackGroupAdministrationRole</para>
@@ -37,10 +31,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string AdministrationRoleName { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the folders in the resource directory. You can specify up to five folder IDs.</para>
-        /// <para>You can create stacks within all members in the specified folders. If you create stacks in the Root folder, the stacks are created within all members in the resource directory.</para>
+        /// <para>The automatic deployment settings.</para>
         /// <remarks>
-        /// <para> To view the folder IDs, go to the <b>Overview</b> page in the <b>Resource Management</b> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information of a folder</a>.</para>
+        /// <para>This parameter is required only when \<c>PermissionModel\\</c> is set to \<c>SERVICE_MANAGED\\</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,10 +44,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public UpdateStackGroupRequestAutoDeployment AutoDeployment { get; set; }
         public class UpdateStackGroupRequestAutoDeployment : TeaModel {
             /// <summary>
-            /// <para>The IDs of the members in the resource directory. You can specify a maximum of 20 member IDs.</para>
-            /// <remarks>
-            /// <para> To view the member IDs, go to the <b>Overview</b> page in the <b>Resource Management</b> console. For more information, see <a href="https://help.aliyun.com/document_detail/111624.html">View the detailed information of a member</a>.</para>
-            /// </remarks>
+            /// <para>Specifies whether to enable automatic deployment.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Enables automatic deployment. If you enable automatic deployment, ROS automatically deploys stacks to the new member accounts that are added to the folder. If a member account is removed from the folder, ROS automatically deletes the stacks from the account.</para>
+            /// </description></item>
+            /// <item><description><para>false: Disables automatic deployment. If you disable automatic deployment, the stacks remain unchanged when the member accounts in the folder change.</para>
+            /// </description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -64,9 +61,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public bool? Enabled { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the members in the resource directory. You can specify a maximum of 20 member IDs.</para>
+            /// <para>Specifies whether to retain the stacks in the member accounts that are removed from the folder.</para>
+            /// <para>Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>true: Retains the stacks.</para>
+            /// </description></item>
+            /// <item><description><para>false: Deletes the stacks.</para>
+            /// </description></item>
+            /// </list>
             /// <remarks>
-            /// <para> To view the member IDs, go to the <b>Overview</b> page in the <b>Resource Management</b> console. For more information, see <a href="https://help.aliyun.com/document_detail/111624.html">View the detailed information of a member</a>.</para>
+            /// <para>This parameter is required only when \<c>Enabled\\</c> is set to true.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -79,17 +83,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The option for the stack group. You can specify up to one option.</para>
+        /// <para>The options for the stack group. You can specify up to one option.</para>
         /// </summary>
         [NameInMap("Capabilities")]
         [Validation(Required=false)]
         public List<string> Capabilities { get; set; }
 
         /// <summary>
-        /// <para>The ID of the template. This parameter applies to shared and private templates.</para>
-        /// <remarks>
-        /// <para> You must specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</para>
-        /// </remarks>
+        /// <para>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.<br>The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).<br>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -98,12 +99,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The deployment options for a stack group with service-managed permissions. You can specify up to one deployment option.</para>
+        /// </summary>
         [NameInMap("DeploymentOptions")]
         [Validation(Required=false)]
         public List<string> DeploymentOptions { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The deployment targets to which you want to deploy stacks in service-managed permission mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;RdFolderIds&quot;: [&quot;fd-4PvlVLOL8v&quot;]}</para>
@@ -113,14 +117,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public UpdateStackGroupRequestDeploymentTargets DeploymentTargets { get; set; }
         public class UpdateStackGroupRequestDeploymentTargets : TeaModel {
             /// <summary>
-            /// <para>The list of one or more Alibaba Cloud accounts with which you want to share or unshare the template.</para>
+            /// <para>The IDs of the member accounts in the resource directory. You can specify a maximum of 30 member account IDs.</para>
+            /// <remarks>
+            /// <para>You can view the member account IDs on the <b>Overview</b> page of the <b>Resource Management</b> console. For more information, see <a href="https://help.aliyun.com/document_detail/111624.html">View the details of a member</a>.</para>
+            /// </remarks>
             /// </summary>
             [NameInMap("AccountIds")]
             [Validation(Required=false)]
             public List<string> AccountIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the operation.</para>
+            /// <para>The IDs of the folders in the resource directory.</para>
             /// </summary>
             [NameInMap("RdFolderIds")]
             [Validation(Required=false)]
@@ -129,10 +136,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</para>
-        /// <remarks>
-        /// <para> You must specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</para>
-        /// </remarks>
+        /// <para>The description of the stack group.</para>
+        /// <para>The description must be 1 to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>My Stack Group</para>
@@ -142,11 +147,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The value of parameter N.</para>
-        /// <para>Maximum value of N: 200.</para>
-        /// <remarks>
-        /// <para> The Parameters parameter is optional. If you set the Parameters parameter, you must set the Parameters.N.ParameterValue parameter.</para>
-        /// </remarks>
+        /// <para>The name of the RAM execution role that is assumed by the administrator role (\<c>AliyunROSStackGroupAdministrationRole\\</c>). This parameter is required when you create a stack group that has self-managed permissions. If you do not specify a value, \<c>AliyunROSStackGroupExecutionRole\\</c> is used as the default value. ROS assumes this role to perform operations on the stacks in the stack group.</para>
+        /// <para>The name must be 1 to 64 characters in length and can contain letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>AliyunROSStackGroupExecutionRole</para>
@@ -156,10 +158,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ExecutionRoleName { get; set; }
 
         /// <summary>
-        /// <para>The version of the template. If you do not specify a version, the latest version is used.</para>
-        /// <remarks>
-        /// <para> This parameter takes effect only if the TemplateId parameter is set.</para>
-        /// </remarks>
+        /// <para>The description of the operation to update the stack group.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Update stack instances in hangzhou</para>
@@ -169,7 +168,48 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string OperationDescription { get; set; }
 
         /// <summary>
-        /// <para>The list of parameters.</para>
+        /// <para>The preferences for the stack group operation.</para>
+        /// <para>The following parameters are included:</para>
+        /// <list type="bullet">
+        /// <item><description><para>FailureToleranceCount</para>
+        /// <para>The number of accounts in each region where stack operation failures are allowed. If the number of failed operations in a region exceeds this value, Resource Orchestration Service (ROS) stops the operations in that region. If the operation is stopped in one region, the operation is not initiated in other regions.</para>
+        /// <para>The value must be an integer from 0 to 20.</para>
+        /// <para>If you do not specify this parameter, 0 is used as the default value.</para>
+        /// </description></item>
+        /// <item><description><para>FailureTolerancePercentage</para>
+        /// <para>The percentage of accounts in each region where stack operation failures are allowed. If the percentage of failed operations in a region exceeds this value, ROS stops the operations in that region.</para>
+        /// <para>The value must be an integer from 0 to 100. If the percentage is not an integer, ROS rounds down the percentage to the nearest integer.</para>
+        /// <para>If you do not specify this parameter, 0 is used as the default value.</para>
+        /// </description></item>
+        /// <item><description><para>MaxConcurrentCount</para>
+        /// <para>The maximum number of accounts in each region where stacks are deployed at the same time.</para>
+        /// <para>The value must be an integer from 1 to 20.</para>
+        /// <para>If you do not specify this parameter, 1 is used as the default value.</para>
+        /// </description></item>
+        /// <item><description><para>MaxConcurrentPercentage</para>
+        /// <para>The maximum percentage of accounts in each region where stacks are deployed at the same time.</para>
+        /// <para>The value must be an integer from 1 to 100. If the percentage is not an integer, ROS rounds down the percentage to the nearest integer.</para>
+        /// <para>If you do not specify this parameter, 1 is used as the default value.</para>
+        /// </description></item>
+        /// <item><description><para>RegionConcurrencyType
+        /// The concurrency type of deployment regions. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>SEQUENTIAL (default): Deploys stacks in the specified regions sequentially. At any given time, stacks are deployed in only one region.</para>
+        /// </description></item>
+        /// <item><description><para>PARALLEL: Deploys stacks in all the specified regions in parallel.</para>
+        /// </description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// <para>Separate multiple parameters with commas (,).</para>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description><para>You can specify only one of \<c>MaxConcurrentCount\\</c> and \<c>MaxConcurrentPercentage\\</c>.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify only one of \<c>FailureToleranceCount\\</c> and \<c>FailureTolerancePercentage\\</c>.</para>
+        /// </description></item>
+        /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;FailureToleranceCount&quot;: 1,&quot;MaxConcurrentCount&quot;: 2}</para>
@@ -179,26 +219,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public Dictionary<string, object> OperationPreferences { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable automatic deployment.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: enables automatic deployment. If you add a member to the folder to which the stack group belongs after you enable automatic deployment, the stack group deploys its stack instances within the member. If you remove a member from the folder, the stack group deletes stack instances that are deployed within the member.</description></item>
-        /// <item><description>false: disables automatic deployment. After you disable automatic deployment, the stack instances remain unchanged even if members in the folder change.</description></item>
-        /// </list>
+        /// <para>The parameters of the stack group.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<UpdateStackGroupRequestParameters> Parameters { get; set; }
         public class UpdateStackGroupRequestParameters : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to retain stacks in a member when you remove the member from the folder.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>true: retains the stacks.</description></item>
-            /// <item><description>false: deletes the stacks.</description></item>
-            /// </list>
+            /// <para>The key of the parameter. If you do not specify the key and value of a parameter, ROS uses the default name and value that are specified in the template.</para>
+            /// <para>You can specify a maximum of 200 parameters.</para>
             /// <remarks>
-            /// <para> This parameter is required if the Enabled parameter is set to true.</para>
+            /// <para>The \<c>Parameters\\</c> parameter is optional. If you specify \<c>Parameters\\</c>, you must specify \<c>Parameters.N.ParameterKey\\</c>.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -210,7 +241,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// <para>The folders in which you want to use service-managed permissions to update stacks.</para>
+            /// <para>The value of the parameter.</para>
+            /// <para>You can specify a maximum of 200 parameters.</para>
+            /// <remarks>
+            /// <para>The \<c>Parameters\\</c> parameter is optional. If you specify \<c>Parameters\\</c>, you must specify \<c>Parameters.N.ParameterValue\\</c>.</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -223,15 +258,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The folder IDs in the resource directory. You can specify a maximum of five folder IDs.</para>
-        /// <para>You must set at least one of the RdFolderIds and AccountIds parameters. The parameters are subject to the following items:</para>
+        /// <para>The permission model.</para>
+        /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you set only the RdFolderIds parameter, stacks are deployed within all the members in the specified folders. If you specify the Root folder, ROS deploys the stacks within all the members in the resource directory.</description></item>
-        /// <item><description>If you set only the AccountIds parameter, stacks are deployed within the specified members.</description></item>
-        /// <item><description>If you set both parameters, the accounts specified by AccountIds must be contained in the folders specified by RdFolderIds.</description></item>
+        /// <item><description><para>SELF_MANAGED (default): Self-managed permissions. If you use this permission model, you must create RAM roles in the administrator and member accounts so that the accounts can be associated with each other. Then, you can deploy stacks in the member accounts.</para>
+        /// </description></item>
+        /// <item><description><para>SERVICE_MANAGED: Service-managed permissions. If you use this permission model, ROS creates service-linked roles for the administrator and member accounts. The administrator account uses the service-linked roles to deploy stacks in the member accounts.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> To view the folder IDs, go to the <b>Overview</b> page in the <b>Resource Management</b> console. For more information, see <a href="https://help.aliyun.com/document_detail/111223.html">View the basic information of a folder</a>.</para>
+        /// <list type="bullet">
+        /// <item><description><para>If stack instances exist in the stack group, you cannot change the permission model.</para>
+        /// </description></item>
+        /// <item><description><para>If you use the service-managed permission model to deploy stacks, the current account must be the management account or a delegated administrator account of your resource directory, and trusted access must be enabled for the account. For more information, see <a href="https://help.aliyun.com/document_detail/308253.html">Set a delegated administrator account</a> and <a href="https://help.aliyun.com/document_detail/298229.html">Enable trusted access</a>.</para>
+        /// </description></item>
+        /// </list>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -242,7 +283,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string PermissionModel { get; set; }
 
         /// <summary>
-        /// <para>The region IDs of stack instances. You can specify a maximum of 20 region IDs.</para>
+        /// <para>The ID of the region where the stack group is located. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -253,7 +294,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The description of the operation to update the stack group.</para>
+        /// <para>The IDs of the regions where you want to deploy the stacks. You can specify a maximum of 20 region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;cn-hangzhou&quot;, &quot;cn-beijing&quot;]</para>
@@ -263,7 +304,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> RegionIds { get; set; }
 
         /// <summary>
-        /// <para>The region IDs of stack instances. You can specify a maximum of 20 region IDs.</para>
+        /// <para>The name of the stack group. The name must be unique within a region.<br>The name can be up to 255 characters in length and must start with a digit or a letter. The name can contain digits, letters, hyphens (-), and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -274,8 +315,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackGroupName { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role to be assumed by the administrator account in ROS. This parameter is required if you want to grant self-managed permissions to the stack group. If you do not specify a value for this parameter, the default value AliyunROSStackGroupAdministrationRole is used. You can use the administrator role in ROS to assume the execution role AliyunROSStackGroupExecutionRole to perform operations on the stacks that correspond to stack instances in the stack group.</para>
-        /// <para>The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).</para>
+        /// <para>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body is large, pass the parameter in the request body using the HTTP POST and Body Param method to prevent request failures caused by an excessively long URL.</para>
+        /// <remarks>
+        /// <para>You can specify only one of the \<c>TemplateBody\\</c>, \<c>TemplateURL\\</c>, and \<c>TemplateId\\</c> parameters.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;}</para>
@@ -285,17 +328,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// <para>The permission model.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>SELF_MANAGED: the self-managed permission model. This is the default value. If you use the self-managed model for the stack group, you must create RAM roles for the administrator and execution accounts, and establish a trust relationship between the accounts to deploy stacks within the execution account.</description></item>
-        /// <item><description>SERVICE_MANAGED: the service-managed permission model. If you use the service-managed model for the stack group, ROS creates service-linked roles for the administrator and execution accounts, and the administrator account uses its role to deploy stacks within the execution account.</description></item>
-        /// </list>
+        /// <para>The ID of the template. This parameter applies to shared templates and private templates.</para>
         /// <remarks>
-        /// <list type="bullet">
-        /// <item><description>If stack instances have been created in the stack group, you cannot switch the permission mode of the stack group.</description></item>
-        /// <item><description>If you want to use the service-managed permission model to deploy stacks, your account must be the management account or a delegated administrator account of your resource directory and the trusted access feature is enabled for the account. For more information, see <a href="https://help.aliyun.com/document_detail/308253.html">Step 1: (Optional) Create a delegated administrator account</a> and <a href="https://help.aliyun.com/document_detail/298229.html">Step 2: Enable trusted access</a>.</description></item>
-        /// </list>
+        /// <para>You can specify only one of the \<c>TemplateBody\\</c>, \<c>TemplateURL\\</c>, and \<c>TemplateId\\</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -306,8 +341,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role to be assumed by the administrator role AliyunROSStackGroupAdministrationRole. This parameter is required if you want to grant self-managed permissions to the stack group. If you do not specify a value for this parameter, the default value AliyunROSStackGroupExecutionRole is used. You can use this role in ROS to perform operations on the stacks that correspond to stack instances in the stack group.</para>
-        /// <para>The name must be 1 to 64 characters in length, and can contain letters, digits, and hyphens (-).</para>
+        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. For example, the URL of an OSS bucket can be oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region of the OSS bucket, the value of the \<c>RegionId\\</c> parameter is used.</para>
+        /// <remarks>
+        /// <para>You can specify only one of the \<c>TemplateBody\\</c>, \<c>TemplateURL\\</c>, and \<c>TemplateId\\</c> parameters.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>oss://ros-template/demo</para>
@@ -317,9 +354,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateURL { get; set; }
 
         /// <summary>
-        /// <para>The information about automatic deployment settings.</para>
+        /// <para>The version of the template. If you do not specify this parameter, the latest version is used.</para>
         /// <remarks>
-        /// <para> This parameter is required only if the PermissionModel parameter is set to SERVICE_MANAGED.</para>
+        /// <para>\<c>TemplateVersion\\</c> takes effect only when \<c>TemplateId\\</c> is specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

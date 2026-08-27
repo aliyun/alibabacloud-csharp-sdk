@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateStackGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>14A07460-EBE7-47CA-9757-12CC4761D47A</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the stack group.</para>
+        /// <para>The stack group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2c036e78-9e82-428e-afd6-177f5d04****</para>

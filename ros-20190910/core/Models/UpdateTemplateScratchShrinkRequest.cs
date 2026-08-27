@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The description of the scenario.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The description of the scenario.</para>
+        /// <para>Copy VPC resources.</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The execution mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Async (default)</description></item>
-        /// <item><description>Sync</description></item>
+        /// <item><description><para>Async (default)</para>
+        /// </description></item>
+        /// <item><description><para>Sync</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>If you have a wide scope of resources, Sync takes longer. If you set ExecutionMode to Sync, we recommend that you specify ClientToken to prevent the execution timeout.</para>
@@ -50,12 +52,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The policy based on which the logical ID is generated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</description></item>
-        /// <item><description>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</description></item>
-        /// <item><description>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</description></item>
+        /// <item><description><para>LongTypePrefixAndIndexSuffix: long-type prefix + index-type suffix</para>
+        /// </description></item>
+        /// <item><description><para>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</para>
+        /// </description></item>
+        /// <item><description><para>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> If you set TemplateScratchType to ArchitectureDetection, the default value of LogicalIdStrategy is LongTypePrefixAndHashSuffix. In other cases, the default value of LogicalIdStrategy is LongTypePrefixAndIndexSuffix.</para>
+        /// <para>If you set TemplateScratchType to ArchitectureDetection, the default value of LogicalIdStrategy is LongTypePrefixAndHashSuffix. In other cases, the default value of LogicalIdStrategy is LongTypePrefixAndIndexSuffix.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -97,7 +102,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The source resource group.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</para>
+        /// <para>You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SourceResourceGroup")]
@@ -107,7 +112,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The source resources.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</para>
+        /// <para>You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SourceResources")]
@@ -117,7 +122,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The source tag.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</para>
+        /// <para>You must specify only one of the following parameters: SourceResources, SourceTag, and SourceResourceGroup.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("SourceTag")]
@@ -128,7 +133,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The ID of the resource scenario.</para>
         /// <para>The valid values of the ParameterKey and ParameterValue request parameters vary based on the IDs of different types of resource scenarios. For more information, see the &quot;Additional information about request parameters&quot; section of this topic.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/610832.html">ListTemplateScratches</a> operation to query the ID of a resource scenario.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/610832.html">ListTemplateScratches</a> operation to query the ID of a resource scenario.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

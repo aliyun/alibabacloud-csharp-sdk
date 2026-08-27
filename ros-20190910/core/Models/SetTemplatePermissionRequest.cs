@@ -10,18 +10,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class SetTemplatePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The Alibaba Cloud accounts with or from which you want to share or unshare the template.\
+        /// <para>The Alibaba Cloud accounts with or from which you want to share or unshare the template.<br>
         /// Valid values of N: 1, 2, 3, 4, and 5.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter cannot be set to the ID of the Alibaba Cloud account that owns the template, or the RAM users of this Alibaba Cloud account.</description></item>
-        /// <item><description>When ShareOption is set to CancelSharing, you can unshare the template from all the specified Alibaba Cloud accounts by using an asterisk (\*).</description></item>
+        /// <item><description><para>This parameter cannot be set to the ID of the Alibaba Cloud account that owns the template, or the RAM users of this Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>When ShareOption is set to CancelSharing, you can unshare the template from all the specified Alibaba Cloud accounts by using an asterisk (\*).</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>123456789</para>
+        /// <para>151266687691****</para>
         /// </summary>
         [NameInMap("AccountIds")]
         [Validation(Required=false)]
@@ -31,8 +33,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The sharing option.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ShareToAccounts: shares the template with other Alibaba Cloud accounts.</description></item>
-        /// <item><description>CancelSharing: unshares the template.</description></item>
+        /// <item><description><para>ShareToAccounts: shares the template with other Alibaba Cloud accounts.</para>
+        /// </description></item>
+        /// <item><description><para>CancelSharing: unshares the template.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -69,10 +73,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The version option for the shared template. This parameter takes effect only if you set ShareOption to ShareToAccounts.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>AllVersions (default): shares all versions of the template.</description></item>
-        /// <item><description>Latest: shares only the latest version of template. When the version of the template is updated, ROS updates the shared version to the latest version.</description></item>
-        /// <item><description>Current: shares only the current version of the template. When the version of the template is updated, ROS does not update the shared version.</description></item>
-        /// <item><description>Specified: shares only the specified version of the template.</description></item>
+        /// <item><description><para>AllVersions (default): shares all versions of the template.</para>
+        /// </description></item>
+        /// <item><description><para>Latest: shares only the latest version of template. When the version of the template is updated, ROS updates the shared version to the latest version.</para>
+        /// </description></item>
+        /// <item><description><para>Current: shares only the current version of the template. When the version of the template is updated, ROS does not update the shared version.</para>
+        /// </description></item>
+        /// <item><description><para>Specified: shares only the specified version of the template.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

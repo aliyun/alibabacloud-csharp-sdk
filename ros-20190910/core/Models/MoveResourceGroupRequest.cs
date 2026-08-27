@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string NewResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the resource.\
+        /// <para>The region ID of the resource.<br>
         /// You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,9 +46,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>stack: stack</description></item>
-        /// <item><description>stackgroup: stack group</description></item>
-        /// <item><description>template: template</description></item>
+        /// <item><description><para>stack: stack</para>
+        /// </description></item>
+        /// <item><description><para>stackgroup: stack group</para>
+        /// </description></item>
+        /// <item><description><para>template: template</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

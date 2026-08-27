@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ChangeSetName { get; set; }
 
             /// <summary>
-            /// <para>The type of the change set.</para>
+            /// <para>The type of the change set. Valid values: CREATE, UPDATE, and DELETE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>UPDATE</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ChangeSetType { get; set; }
 
             /// <summary>
-            /// <para>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the change set was created. The time is displayed in UTC+0 based on the ISO 8601 standard without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-08-01T05:16:31</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ExecutionStatus { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the change set.</para>
+            /// <para>The region ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -86,12 +86,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string RegionId { get; set; }
 
+            /// <summary>
+            /// <para>The resource group ID.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>rg-acfmxazb4ph6aiy****</para>
+            /// </summary>
             [NameInMap("ResourceGroupId")]
             [Validation(Required=false)]
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the stack with which the change set is associated.</para>
+            /// <para>The ID of the stack to which the change set belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string StackId { get; set; }
 
             /// <summary>
-            /// <para>The name of the stack with which the change set is associated.</para>
+            /// <para>The name of the stack to which the change set belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MyStack</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason why the change set is in its current state.</para>
+            /// <para>The reason why the change set is in its current status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>too many changes</para>
@@ -130,14 +136,29 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             [Validation(Required=false)]
             public string StatusReason { get; set; }
 
+            /// <summary>
+            /// <para>The tags of the change set.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListChangeSetsResponseBodyChangeSetsTags> Tags { get; set; }
             public class ListChangeSetsResponseBodyChangeSetsTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>usage</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>test</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -147,7 +168,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number in paging query. The value is an integer with a minimum value of 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -157,7 +178,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -167,7 +188,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</para>

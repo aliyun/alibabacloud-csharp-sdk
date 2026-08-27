@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The version ID. If you want to delete a version of the resource type, you must specify this parameter.</para>
+        /// <para>The version ID. Specify this parameter to delete a specific version of the resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

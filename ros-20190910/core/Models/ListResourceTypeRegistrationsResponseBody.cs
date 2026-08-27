@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListResourceTypeRegistrationsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The registration records of the resource.</para>
+        /// <para>The list of resource registration records.</para>
         /// </summary>
         [NameInMap("Registrations")]
         [Validation(Required=false)]
         public List<ListResourceTypeRegistrationsResponseBodyRegistrations> Registrations { get; set; }
         public class ListResourceTypeRegistrationsResponseBodyRegistrations : TeaModel {
             /// <summary>
-            /// <para>The creation time. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</para>
+            /// <para>The time when the registration record was created. The time is displayed in UTC+0 based on the ISO 8601 standard but without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-02T07:28:35</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The entity type. Only Module may be returned.</para>
+            /// <para>The entity type. Valid values: Module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Module</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the registration record.</para>
+            /// <para>The registration ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The registration state. Valid values:</para>
+            /// <para>The registration status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>IN_PROGRESS: The registration is in progress.</description></item>
-            /// <item><description>COMPLETE: The registration is successful.</description></item>
-            /// <item><description>FAILED: The registration failed.</description></item>
+            /// <item><description>IN_PROGRESS: In progress.</description></item>
+            /// <item><description>COMPLETE: Succeeded.</description></item>
+            /// <item><description>FAILED: Failed.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason for the state.</para>
+            /// <para>The reason for the status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Module is created successfully</para>

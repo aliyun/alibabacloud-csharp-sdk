@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The description of the AI task.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Create an ECS instance and deploy the Nginx service.</para>
+            /// <para>Create an ECS instance and deploy an Nginx service</para>
             /// </summary>
             [NameInMap("Prompt")]
             [Validation(Required=false)]

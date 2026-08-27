@@ -10,19 +10,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteStackRequest : TeaModel {
         /// <summary>
-        /// <para>The options for deleting the stack.</para>
+        /// <para>Stack deletion options.</para>
         /// </summary>
         [NameInMap("DeleteOptions")]
         [Validation(Required=false)]
         public List<string> DeleteOptions { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of concurrent operations that can be performed on resources.</para>
-        /// <para>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</para>
+        /// <para>Maximum number of concurrent resource operations.</para>
+        /// <para>Default: empty. Accepts an integer &gt;= 0.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to an integer that is greater than 0, the integer is used. If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</description></item>
-        /// <item><description>If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack, such as an update operation.</description></item>
+        /// <item><description><para>A value greater than 0 is used as-is. A value of 0 or empty imposes no limit on ROS stacks. For Terraform stacks, the Terraform default (typically 10) applies.</para>
+        /// </description></item>
+        /// <item><description><para>This value persists on the stack and affects subsequent operations such as updates.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -34,10 +36,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? Parallelism { get; set; }
 
         /// <summary>
-        /// <para>The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
-        /// ROS assumes the role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.\
-        /// If you leave this parameter empty when you call the DeleteStack operation, ROS cannot assume the existing RAM role that is associated with the stack. If you want ROS to assume a RAM role, you must specify this parameter. If no RAM roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\
-        /// The name of the RAM role can be up to 64 bytes in length.</para>
+        /// <para>The RAM role name. ROS assumes this role to create the stack and call Alibaba Cloud service APIs.<br> Even if you have stack operation permissions but lack RAM role permissions, ROS still assumes the role. Ensure the role follows the least-privilege principle.<br> If empty, ROS cannot assume the existing RAM role associated with the stack. To have ROS assume a role, specify this parameter. If no RAM role is available, ROS uses a temporary credential from your account credentials.<br> Maximum length: 64 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-role</para>
@@ -47,7 +46,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RamRoleName { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the stack. Call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,11 +57,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to retain all resources in the stack.</para>
+        /// <para>Whether to retain all resources in the stack.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -73,7 +74,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public bool? RetainAllResources { get; set; }
 
         /// <summary>
-        /// <para>The resources that you want to retain.</para>
+        /// <para>Resources to retain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WebServer</para>

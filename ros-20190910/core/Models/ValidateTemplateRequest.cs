@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ValidateTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
-        /// <para>The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. The client generates the value, which must be unique.</para>
+        /// <para>The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).</para>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the template. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the stack template. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent list of Alibaba Cloud regions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -32,9 +32,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\
-        /// If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.\
-        /// You can specify the TemplateBody or TemplateURL parameter, but not both parameters.</para>
+        /// <para>The structure of the template body. The template body can be 1 to 524,288 bytes in length.<br>If the template body is long, use a POST request and place the parameter in the request body. This prevents a request failure caused by an excessively long URL.<br>You can specify either TemplateBody or TemplateURL, but not both.<br><br></para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</para>
@@ -44,11 +42,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</para>
+        /// <para>The location of the file that contains the template body. The URL must point to a template that is located on an HTTP web server or in an Alibaba Cloud OSS bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. The template can be up to 524,288 bytes in size.</para>
         /// <remarks>
-        /// <para>If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</para>
+        /// <para>If you do not specify the region of the OSS bucket, the value of the RegionId parameter is used.</para>
         /// </remarks>
-        /// <para>You can specify one of TemplateBody and TemplateURL, but not both of them. The URL can be up to 1,024 bytes in length.\</para>
+        /// <para>You can specify either TemplateBody or TemplateURL, but not both.<br>The URL can be up to 1,024 bytes in length.<br></para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://ros/template/demo</para>
@@ -58,7 +56,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateURL { get; set; }
 
         /// <summary>
-        /// <para>The options that are used to control the generation of information about the stack update. You can specify up to two options.</para>
+        /// <para>The list of options for the update information. The list can contain up to two options.</para>
         /// </summary>
         [NameInMap("UpdateInfoOptions")]
         [Validation(Required=false)]
@@ -67,12 +65,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>Specifies whether to enable additional validation for the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>None (default): does not enable additional validation.</description></item>
-        /// <item><description>EnableTerraformValidation: runs the <c>terraform validate</c> command in the Terraform CLI to enable additional validation for a Terraform template.</description></item>
-        /// <item><description>EnableFastTerraformValidation: runs a command that is similar to the <c>terraform validate</c> command in the Terraform CLI to enable additional validation for a Terraform template.</description></item>
+        /// <item><description><para>None (default): No additional validation is enabled.</para>
+        /// </description></item>
+        /// <item><description><para>EnableTerraformValidation: For a Terraform template, the <c>terraform validate</c> command of the Terraform command-line interface (CLI) is used to enable additional validation.</para>
+        /// </description></item>
+        /// <item><description><para>EnableFastTerraformValidation: For a Terraform template, a command that is similar to the <c>terraform validate</c> command of the Terraform CLI is used to enable additional validation.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Compared with the EnableTerraformValidation method, the EnableFastTerraformValidation method validates a template at a faster speed but a lower integrity level.</para>
+        /// <para>Compared with EnableTerraformValidation, EnableFastTerraformValidation is faster but less comprehensive.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

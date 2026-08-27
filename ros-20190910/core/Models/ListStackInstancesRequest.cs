@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The number of the page to return.</para>
         /// <list type="bullet">
-        /// <item><description>Pages start from page 1.</description></item>
-        /// <item><description>Default value: 1.</description></item>
+        /// <item><description><para>Pages start from page 1.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 1.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,8 +28,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 50.</description></item>
-        /// <item><description>Default value: 10.</description></item>
+        /// <item><description><para>Valid values: 1 to 50.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The name of the stack group. The name must be unique within a region.\
+        /// <para>The name of the stack group. The name must be unique within a region.<br>
         /// The name can be up to 255 characters in length, and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or letter.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -63,8 +67,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The ID of the destination account to which the stack belongs.</para>
         /// <list type="bullet">
-        /// <item><description>If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.</description></item>
-        /// <item><description>If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.</description></item>
+        /// <item><description><para>If the stack group is granted self-managed permissions, the stack belongs to an Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>If the stack group is granted service-managed permissions, the stack belongs to a member in a resource directory.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>For more information about the destination account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</para>

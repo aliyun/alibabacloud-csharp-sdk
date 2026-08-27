@@ -19,7 +19,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The name of the parameter. If you do not specify the name and value of a parameter, Resource Orchestration Service (ROS) uses the default name and value that are specified in the template.</para>
             /// <remarks>
-            /// <para>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.</para>
+            /// <para>Parameters is optional. If you specify Parameters, you must specify ParameterKey.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The value of the parameter.</para>
             /// <remarks>
-            /// <para>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</para>
+            /// <para>Parameters is optional. If you specify Parameters, you must specify ParameterValue.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -58,50 +58,85 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The services.</para>
+        /// <para>The list of Alibaba Cloud services.</para>
         /// </summary>
         [NameInMap("Services")]
         [Validation(Required=false)]
         public List<GetServiceProvisionsRequestServices> Services { get; set; }
         public class GetServiceProvisionsRequestServices : TeaModel {
             /// <summary>
-            /// <para>The name of the service or feature. Valid values:</para>
+            /// <para>The name of the Alibaba Cloud service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AHAS: Application High Availability Service</description></item>
-            /// <item><description>ARMS: Application Real-Time Monitoring Service (ARMS)</description></item>
-            /// <item><description>ApiGateway: API Gateway</description></item>
-            /// <item><description>BatchCompute: Batch Compute</description></item>
-            /// <item><description>BrainIndustrial: Industrial Brain</description></item>
-            /// <item><description>CloudStorageGateway: Cloud Storage Gateway (CSG)</description></item>
-            /// <item><description>CMS: CloudMonitor</description></item>
-            /// <item><description>CR: Container Registry</description></item>
-            /// <item><description>CS: Container Service for Kubernetes (ACK)</description></item>
-            /// <item><description>DCDN: Dynamic Content Delivery Network (DCDN)</description></item>
-            /// <item><description>DataHub: DataHub</description></item>
-            /// <item><description>DataWorks: DataWorks</description></item>
-            /// <item><description>EDAS: Enterprise Distributed Application Service (EDAS)</description></item>
-            /// <item><description>EHPC: E-HPC</description></item>
-            /// <item><description>EMAS: Enterprise Mobile Application Studio (EMAS)</description></item>
-            /// <item><description>FC: Function Compute</description></item>
-            /// <item><description>FNF: CloudFlow (SWF)</description></item>
-            /// <item><description>MaxCompute: MaxCompute</description></item>
-            /// <item><description>MNS: Message Service (MNS)</description></item>
-            /// <item><description>HBR: Cloud Backup</description></item>
-            /// <item><description>IMM: Intelligent Media Management (IMM)</description></item>
-            /// <item><description>IOT: IoT Platform</description></item>
-            /// <item><description>KMS: Key Management Service (KMS)</description></item>
-            /// <item><description>NAS: File Storage NAS (NAS)</description></item>
-            /// <item><description>NLP: Natural Language Processing (NLP)</description></item>
-            /// <item><description>OSS: Object Storage Service (OSS)</description></item>
-            /// <item><description>OTS: Tablestore</description></item>
-            /// <item><description>PrivateLink: PrivateLink</description></item>
-            /// <item><description>PrivateZone: Alibaba Cloud DNS PrivateZone</description></item>
-            /// <item><description>RocketMQ: ApsaraMQ for RocketMQ</description></item>
-            /// <item><description>SAE: Serverless App Engine (SAE)</description></item>
-            /// <item><description>SLS: Simple Log Service (SLS)</description></item>
-            /// <item><description>TrafficMirror: traffic mirroring</description></item>
-            /// <item><description>VS: Video Surveillance System</description></item>
-            /// <item><description>Xtrace: Managed Service for OpenTelemetry</description></item>
+            /// <item><description><para>AHAS: Application High Availability Service.</para>
+            /// </description></item>
+            /// <item><description><para>ARMS: Application Real-Time Monitoring Service.</para>
+            /// </description></item>
+            /// <item><description><para>ApiGateway: API Gateway.</para>
+            /// </description></item>
+            /// <item><description><para>BatchCompute: Batch Compute.</para>
+            /// </description></item>
+            /// <item><description><para>BrainIndustrial: Industrial Intelligence.</para>
+            /// </description></item>
+            /// <item><description><para>CloudStorageGateway: Cloud Storage Gateway.</para>
+            /// </description></item>
+            /// <item><description><para>CMS: Cloud Monitor.</para>
+            /// </description></item>
+            /// <item><description><para>CR: Container Registry.</para>
+            /// </description></item>
+            /// <item><description><para>CS: Container Service.</para>
+            /// </description></item>
+            /// <item><description><para>DCDN: DCDN.</para>
+            /// </description></item>
+            /// <item><description><para>DataHub: DataHub.</para>
+            /// </description></item>
+            /// <item><description><para>DataWorks: DataWorks.</para>
+            /// </description></item>
+            /// <item><description><para>EDAS: Enterprise Distributed Application Service.</para>
+            /// </description></item>
+            /// <item><description><para>EHPC: Elastic High Performance Computing.</para>
+            /// </description></item>
+            /// <item><description><para>EMAS: Enterprise Mobile Application Studio.</para>
+            /// </description></item>
+            /// <item><description><para>FC: Function Compute.</para>
+            /// </description></item>
+            /// <item><description><para>FNF: CloudFlow.</para>
+            /// </description></item>
+            /// <item><description><para>MaxCompute: MaxCompute.</para>
+            /// </description></item>
+            /// <item><description><para>SMQ: Simple Message Queue (formerly MNS).</para>
+            /// </description></item>
+            /// <item><description><para>HBR: Cloud Backup.</para>
+            /// </description></item>
+            /// <item><description><para>IMM: Intelligent Media Management.</para>
+            /// </description></item>
+            /// <item><description><para>IOT: IoT Platform.</para>
+            /// </description></item>
+            /// <item><description><para>KMS: Key Management Service.</para>
+            /// </description></item>
+            /// <item><description><para>NAS: File Storage NAS.</para>
+            /// </description></item>
+            /// <item><description><para>NLP: Natural Language Processing.</para>
+            /// </description></item>
+            /// <item><description><para>OSS: Object Storage Service.</para>
+            /// </description></item>
+            /// <item><description><para>OTS: Tablestore.</para>
+            /// </description></item>
+            /// <item><description><para>PrivateLink: PrivateLink.</para>
+            /// </description></item>
+            /// <item><description><para>PrivateZone: PrivateZone.</para>
+            /// </description></item>
+            /// <item><description><para>RocketMQ: Message Queue for Apache RocketMQ.</para>
+            /// </description></item>
+            /// <item><description><para>SAE: Serverless App Engine.</para>
+            /// </description></item>
+            /// <item><description><para>SLS: Simple Log Service.</para>
+            /// </description></item>
+            /// <item><description><para>TrafficMirror: Traffic Mirroring.</para>
+            /// </description></item>
+            /// <item><description><para>VS: Video Surveillance.</para>
+            /// </description></item>
+            /// <item><description><para>Xtrace: Tracing Analysis.</para>
+            /// </description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -115,10 +150,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs. You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</para>
+        /// <para>The structure of the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend to use the HTTP POST + Body Param method to pass the parameter in the request body to avoid request failures caused by an excessively long URL.</para>
+        /// <remarks>
+        /// <para>You can specify only one of the TemplateBody, TemplateURL, TemplateId, and Services parameters.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,&quot;Resources&quot;: {&quot;ApiGateway&quot;: {&quot;Type&quot;: &quot;ALIYUN::ApiGateway::Group&quot;,&quot;Properties&quot;: { &quot;GroupName&quot;: &quot;ros_example&quot; }},&quot;FC&quot;: {&quot;Type&quot;: &quot;ALIYUN::FC::Service&quot;,&quot;Properties&quot;: {&quot;ServiceName&quot;: &quot;ros_example&quot;}}}}</para>
+        /// <para>ROSTemplateFormatVersion: \&quot;2015-09-01\&quot;\r\nResources:\r\n  Vpc:\r\n    Type: ALIYUN::ECS::VPC\r\n    Properties:\r\n      CidrBlock: 192.168.0.0/24\r\n      VpcName: TestVpc</para>
         /// </summary>
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
@@ -126,7 +164,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// <para>The template ID. This parameter applies to shared and private templates.</para>
-        /// <para>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</para>
+        /// <para>You can specify only one of the TemplateBody, TemplateURL, TemplateId, and Services parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5ecd1e10-b0e9-4389-a565-e4c15efc****</para>
@@ -136,8 +174,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body must be 1 to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</para>
-        /// <para>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and Services.</para>
+        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket. The template body must be 1 to 524,288 bytes in length. Examples of OSS URLs: oss\://ros/template/demo and oss\://ros/template/demo?RegionId=cn-hangzhou. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</para>
+        /// <para>You can specify only one of the TemplateBody, TemplateURL, TemplateId, and Services parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>oss://ros-template/demo</para>
@@ -148,7 +186,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// <para>The version of the template. If you do not specify this parameter, the latest version is used.</para>
-        /// <para>This parameter takes effect only when TemplateId is specified.</para>
+        /// <para>This parameter takes effect only when you specify TemplateId.</para>
         /// 
         /// <b>Example:</b>
         /// <para>v1</para>

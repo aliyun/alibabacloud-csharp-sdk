@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetTemplateParameterConstraintsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The constraints of the parameters.</para>
+        /// <para>The information about the parameter constraints.</para>
         /// </summary>
         [NameInMap("ParameterConstraints")]
         [Validation(Required=false)]
         public List<GetTemplateParameterConstraintsResponseBodyParameterConstraints> ParameterConstraints { get; set; }
         public class GetTemplateParameterConstraintsResponseBodyParameterConstraints : TeaModel {
             /// <summary>
-            /// <para>The values of the parameter.</para>
+            /// <para>The list of valid values of the parameter.</para>
             /// </summary>
             [NameInMap("AllowedValues")]
             [Validation(Required=false)]
@@ -33,12 +33,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The behavior of the parameter. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NoLimit: No limit is imposed on the value of this parameter.</description></item>
-            /// <item><description>NotSupport: The value of this parameter cannot be queried.</description></item>
-            /// <item><description>QueryError: This parameter failed to be queried.</description></item>
+            /// <item><description><para>NoLimit: The parameter has no limit on its valid values.</para>
+            /// </description></item>
+            /// <item><description><para>NotSupport: The valid values of the parameter cannot be queried.</para>
+            /// </description></item>
+            /// <item><description><para>QueryError: The query failed.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>If AllowedValues is not returned, Behavior and BehaviorReason are returned.</para>
+            /// <para>If AllowedValues is not returned, Behavior and BehaviorReason are returned to indicate the behavior of the parameter and the reason for the behavior.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -49,7 +52,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Behavior { get; set; }
 
             /// <summary>
-            /// <para>The reason why the behavior of the parameter is returned.</para>
+            /// <para>The reason for the behavior of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>No resource property refer to the parameter</para>
@@ -59,9 +62,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string BehaviorReason { get; set; }
 
             /// <summary>
-            /// <para>The values that do not conform to the parameter constraints.</para>
+            /// <para>The values that do not match the parameter constraints.</para>
             /// <remarks>
-            /// <para>If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</para>
+            /// <para>If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned to indicate the invalid values that are filtered out by the parameter constraints and template rules.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("IllegalValueByParameterConstraints")]
@@ -69,9 +72,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<object> IllegalValueByParameterConstraints { get; set; }
 
             /// <summary>
-            /// <para>The values that do not match the rules in the template.</para>
+            /// <para>The values that do not match the template rules.</para>
             /// <remarks>
-            /// <para>If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned at the same time.</para>
+            /// <para>If AllowedValues is returned, IllegalValueByParameterConstraints and IllegalValueByRules are returned to indicate the invalid values that are filtered out by the parameter constraints and template rules.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("IllegalValueByRules")]
@@ -79,7 +82,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<object> IllegalValueByRules { get; set; }
 
             /// <summary>
-            /// <para>The unsupported resource in the template.</para>
+            /// <para>The details of the unsupported resources.</para>
             /// </summary>
             [NameInMap("NotSupportResources")]
             [Validation(Required=false)]
@@ -108,21 +111,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// <para>The original constraint information.</para>
+            /// <para>The information about the original constraints.</para>
             /// </summary>
             [NameInMap("OriginalConstraints")]
             [Validation(Required=false)]
             public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints> OriginalConstraints { get; set; }
             public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsOriginalConstraints : TeaModel {
                 /// <summary>
-                /// <para>The values of the parameter.</para>
+                /// <para>The list of valid values of the parameter.</para>
                 /// </summary>
                 [NameInMap("AllowedValues")]
                 [Validation(Required=false)]
                 public List<object> AllowedValues { get; set; }
 
                 /// <summary>
-                /// <para>Behavior of the parameter</para>
+                /// <para>The behavior of the parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>QueryError</para>
@@ -132,7 +135,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string Behavior { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the parameter behavior</para>
+                /// <para>The reason for the behavior of the parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>No resource property refer to the parameter</para>
@@ -141,12 +144,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public string BehaviorReason { get; set; }
 
+                /// <summary>
+                /// <para>The query parameters that are used during the query of parameter constraints.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>{
+                ///     &quot;ZoneId&quot;:&quot;cn-hangzhou-h&quot;,
+                ///     &quot;SystemDiskCategory&quot;:&quot;cloud_essd&quot;
+                /// }</para>
+                /// </summary>
                 [NameInMap("PropertiesData")]
                 [Validation(Required=false)]
                 public string PropertiesData { get; set; }
 
                 /// <summary>
-                /// <para>The name of the resource property.</para>
+                /// <para>The name of the property.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ZoneId</para>
@@ -155,6 +167,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 [Validation(Required=false)]
                 public string PropertyName { get; set; }
 
+                /// <summary>
+                /// <para>The request information of the operation that is called to query the parameter constraints of a cloud service.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>ecs:2014-05-26:DescribeAvailableResource:4C5B6929-EB64-5086-A821-9CCB553A5AE9</para>
+                /// </summary>
                 [NameInMap("RequestInfo")]
                 [Validation(Required=false)]
                 public string RequestInfo { get; set; }
@@ -192,14 +210,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// <para>The error that is returned when the request fails.</para>
+            /// <para>The details of the query failure.</para>
             /// </summary>
             [NameInMap("QueryErrors")]
             [Validation(Required=false)]
             public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors> QueryErrors { get; set; }
             public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryErrors : TeaModel {
                 /// <summary>
-                /// <para>The error message.</para>
+                /// <para>The error details.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::ECS::InstanceGroup</para>
@@ -209,7 +227,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>The resource name.</para>
+                /// <para>The name of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MyECS</para>
@@ -231,14 +249,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// <para>Query the details of timeout.</para>
+            /// <para>The details of the query timeout.</para>
             /// </summary>
             [NameInMap("QueryTimeoutDetails")]
             [Validation(Required=false)]
             public List<GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails> QueryTimeoutDetails { get; set; }
             public class GetTemplateParameterConstraintsResponseBodyParameterConstraintsQueryTimeoutDetails : TeaModel {
                 /// <summary>
-                /// <para>Error message.</para>
+                /// <para>The error message.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>query property SlaveZoneIds.* in resource rds error, error message: query 8 seconds timeout</para>
@@ -248,7 +266,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ErrorMessage { get; set; }
 
                 /// <summary>
-                /// <para>Resource name.</para>
+                /// <para>The name of the resource.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rds</para>
@@ -258,7 +276,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ResourceName { get; set; }
 
                 /// <summary>
-                /// <para>Resource type.</para>
+                /// <para>The resource type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::RDS::DBInstance</para>
@@ -270,7 +288,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// <para>The data type of the parameter.</para>
+            /// <para>The type of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>String</para>

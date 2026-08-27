@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplateScratchesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the resource scenario list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The number of entries per page in a paged query. Settings for paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D1C09606-C58B-558F-9B4E-5BF263D17D09</para>
@@ -47,8 +47,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<ListTemplateScratchesResponseBodyTemplateScratches> TemplateScratches { get; set; }
         public class ListTemplateScratchesResponseBodyTemplateScratches : TeaModel {
             /// <summary>
-            /// <para>The time when the resource scenario was created.</para>
-            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the resource scenario was created. The time is displayed in UTC+0 and follows the ISO 8601 standard without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-07T08:06:44</para>
@@ -61,17 +60,24 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The description of the resource scenario.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The description of the scenario.</para>
+            /// <para>纳管VPC资源。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The status code of the resource scenario that failed to be generated.</para>
+            /// <para>The status code that indicates why the resource scenario failed to be generated. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>InvalidZoneId: invalid zone ID.</description></item>
+            /// <item><description>IncorrectInstanceStatus: the instance status does not support this operation.</description></item>
+            /// <item><description>RecommendEmpty.DiskCategoryNotRecommended: the cloud disk category is unavailable.</description></item>
+            /// <item><description>Forbidden.RAM: insufficient RAM permissions.</description></item>
+            /// </list>
             /// <remarks>
-            /// <para> This parameter is returned only if the value of Status is GENERATE_FAILED.</para>
+            /// <para>This parameter is returned only if Status is GENERATE_FAILED.</para>
             /// </remarks>
+            /// <para>This information is generated based on call logs and may be incomplete. Verify the information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>InvalidZoneId</para>
@@ -81,11 +87,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string FailedCode { get; set; }
 
             /// <summary>
-            /// <para>The policy based on which the logical ID is generated. Valid values:</para>
+            /// <para>The logical ID generation strategy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</description></item>
-            /// <item><description>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</description></item>
-            /// <item><description>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</description></item>
+            /// <item><description><para>LongTypePrefixAndIndexSuffix (default): long type prefix with index suffix.</para>
+            /// </description></item>
+            /// <item><description><para>LongTypePrefixAndHashSuffix: long type prefix with hash suffix.</para>
+            /// </description></item>
+            /// <item><description><para>ShortTypePrefixAndHashSuffix: short type prefix with hash suffix.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,14 +105,39 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string LogicalIdStrategy { get; set; }
 
             /// <summary>
-            /// <para>The preference parameters of the resource scenario.</para>
+            /// <para>The configuration parameters of the resource scenario.</para>
             /// </summary>
             [NameInMap("PreferenceParameters")]
             [Validation(Required=false)]
             public List<ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters> PreferenceParameters { get; set; }
             public class ListTemplateScratchesResponseBodyTemplateScratchesPreferenceParameters : TeaModel {
                 /// <summary>
-                /// <para>The parameter name.</para>
+                /// <para>The parameter name. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>AlbAddressIpVersion: the IP version of the ALB address.</description></item>
+                /// <item><description>AlbAddressType: the ALB address type.</description></item>
+                /// <item><description>AlbLoadBalancerEdition: the ALB load balancing edition.</description></item>
+                /// <item><description>AlbZoneMappings: the ALB active zone mappings.</description></item>
+                /// <item><description>RamAttachedPolicyReplication: RAM policy replication.</description></item>
+                /// <item><description>DeletionPolicy: the delete policy.</description></item>
+                /// <item><description>DisableNameUnique: specifies whether to disable name uniqueness.</description></item>
+                /// <item><description>InstanceAmount: the number of instances.</description></item>
+                /// <item><description>InstanceDataReplication: instance data replication.</description></item>
+                /// <item><description>InstancePeriod: the instance epoch.</description></item>
+                /// <item><description>InstancePeriodUnit: the instance epoch unit.</description></item>
+                /// <item><description>NamePrefix: the name prefix.</description></item>
+                /// <item><description>RamAttachedPolicyReplication: RAM attached policy replication.</description></item>
+                /// <item><description>RegionId: the region ID.</description></item>
+                /// <item><description>RegionIds: the list of region IDs.</description></item>
+                /// <item><description>ResourceView: the resource view.</description></item>
+                /// <item><description>ReuseStrategy: the reuse strategy.</description></item>
+                /// <item><description>SlbListenerProtocols: the SLB listener protocols.</description></item>
+                /// <item><description>TemplateType: the template type.</description></item>
+                /// <item><description>VSwitchId: the vSwitch ID.</description></item>
+                /// <item><description>VpcId: the VPC ID.</description></item>
+                /// <item><description>ZoneId: the zone ID.</description></item>
+                /// </list>
+                /// <para>This information is generated based on call logs and may be incomplete. Verify the information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DeletionPolicy</para>
@@ -125,7 +159,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfm4nxcvht4pmi</para>
@@ -142,7 +176,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public ListTemplateScratchesResponseBodyTemplateScratchesSourceResourceGroup SourceResourceGroup { get; set; }
             public class ListTemplateScratchesResponseBodyTemplateScratchesSourceResourceGroup : TeaModel {
                 /// <summary>
-                /// <para>The ID of the source resource group.</para>
+                /// <para>The source resource group ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>rg-acfmzawhxxc****</para>
@@ -152,7 +186,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The resource types for filtering resources.</para>
+                /// <para>The resource type filter.</para>
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -178,7 +212,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ResourceId { get; set; }
 
                 /// <summary>
-                /// <para>The resource type.</para>
+                /// <para>The resource type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>ALIYUN::ALB::LoadBalancer: Application Load Balancer (ALB) for load balancing.</description></item>
+                /// <item><description>ALIYUN::ECS::Instance: Elastic Compute Service (ECS) instance.</description></item>
+                /// <item><description>ALIYUN::RAM::Role: RAM role.</description></item>
+                /// </list>
+                /// <para>This information is generated based on call logs and may be incomplete. Verify the information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::ECS::VPC</para>
@@ -197,7 +237,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public ListTemplateScratchesResponseBodyTemplateScratchesSourceTag SourceTag { get; set; }
             public class ListTemplateScratchesResponseBodyTemplateScratchesSourceTag : TeaModel {
                 /// <summary>
-                /// <para>The source tags.</para>
+                /// <para>The source tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;a&quot;: &quot;b&quot;}</para>
@@ -207,7 +247,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public Dictionary<string, object> ResourceTags { get; set; }
 
                 /// <summary>
-                /// <para>The resource types for filtering resources.</para>
+                /// <para>The resource type filter.</para>
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -216,7 +256,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// <para>The state of the resource scenario.</para>
+            /// <para>The status of the resource scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GENERATE_COMPLETE</para>
@@ -228,7 +268,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The reason why the resource scenario failed to be generated.</para>
             /// <remarks>
-            /// <para> This parameter is returned only if the value of Status is GENERATE_FAILED.</para>
+            /// <para>This parameter is returned only if Status is GENERATE_FAILED.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -280,8 +320,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The type of the resource scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ResourceImport: resource management</description></item>
-            /// <item><description>ArchitectureReplication: resource replication</description></item>
+            /// <item><description><para>ResourceImport: resource management.</para>
+            /// </description></item>
+            /// <item><description><para>ArchitectureReplication: resource replication.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -292,8 +334,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string TemplateScratchType { get; set; }
 
             /// <summary>
-            /// <para>The time when the resource scenario was updated.</para>
-            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the resource scenario was last updated. The time is displayed in UTC+0 and follows the ISO 8601 standard without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-07T08:06:44</para>
@@ -305,7 +346,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The total number of scenarios.</para>
+        /// <para>The total number of resource scenarios.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

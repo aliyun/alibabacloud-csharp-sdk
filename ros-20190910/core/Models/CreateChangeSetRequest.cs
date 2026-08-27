@@ -10,10 +10,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateChangeSetRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the change set.\
-        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or a letter.</para>
+        /// <para>The change set name. Maximum length: 255 characters. The name can contain digits, letters, hyphens (-), and underscores (_), and must start with a digit or letter.</para>
         /// <remarks>
-        /// <para>Make sure that the name is unique among all names of change sets that are associated with the specified stack.</para>
+        /// <para>The name of the change set must be unique within the stack.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,19 +26,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The type of the change set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>CREATE: creates a change set for a new stack.</description></item>
-        /// <item><description>UPDATE (default): creates a change set for an existing stack.</description></item>
-        /// <item><description>IMPORT: creates a change set for a new stack or an existing stack to import resources that are not managed by ROS.</description></item>
+        /// <item><description><para>CREATE: creates a change set for a new stack.</para>
+        /// </description></item>
+        /// <item><description><para>UPDATE (default): creates a change set for an existing stack.</para>
+        /// </description></item>
+        /// <item><description><para>IMPORT: creates a change set for a new stack or an existing stack to import resources that are not managed by ROS.</para>
+        /// </description></item>
         /// </list>
-        /// <para>If you set ChangeSetType to CREATE, ROS creates a stack. The stack remains in the <c>REVIEW_IN_PROGRESS</c> state until you execute the change set.</para>
+        /// <para>If you set the value of ChangeSetType to CREATE, ROS creates a new stack. The stack is in the <c>REVIEW_IN_PROGRESS</c> state until you execute the change set.</para>
         /// <remarks>
-        /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>You cannot set ChangeSetType to UPDATE when you create a change set for a new stack. You cannot set ChangeSetType to CREATE when you create a change set for an existing stack.</para>
+        /// <item><description><para>You cannot use the UPDATE type to create a change set for a new stack or the CREATE type to create a change set for an existing stack.</para>
         /// </description></item>
-        /// <item><description><para>If you set ChangeSetType to Import, you cannot configure a stack policy. You can specify ChangeSetType only when you create or update a stack.</para>
+        /// <item><description><para>You cannot set a stack policy for a change set of the IMPORT type. You can set a stack policy when you create or update a stack.</para>
         /// </description></item>
         /// </list>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>UPDATE</para>
@@ -49,9 +51,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ChangeSetType { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests.\
-        /// The token can contain letters, digits, hyphens (-), and underscores (_) and cannot exceed 64 characters in length.\
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token used to ensure request idempotence. The token must be unique across requests and can be up to 64 characters in length, containing letters, digits, hyphens (-), and underscores (_). <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -71,14 +71,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable rollback when the stack fails to be created.\
-        /// Valid values:</para>
+        /// <para>Specifies whether to disable rollback on stack creation failure. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: disables rollback for the stack when the stack fails to be created.</description></item>
-        /// <item><description>false (default): enables rollback for the stack when the stack fails to be created.</description></item>
+        /// <item><description><para>true: disables rollback on creation failure.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): enables rollback on creation failure.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only if you set ChangeSetType to CREATE or IMPORT.</para>
+        /// <para>This parameter takes effect only when ChangeSetType is set to CREATE or IMPORT.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -89,7 +90,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public bool? DisableRollback { get; set; }
 
         /// <summary>
-        /// <para>The callback URLs that are used to receive stack events.</para>
+        /// <para>The list of webhook addresses for receiving stack event notifications.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://my-site.com/ros-notify">http://my-site.com/ros-notify</a></para>
@@ -99,20 +100,25 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> NotificationURLs { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of concurrent operations that can be performed on resources. By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0. If you set this parameter to a specific value, ROS associates the value with the stack. The value can affect subsequent operations on the stack.</para>
-        /// <para>This parameter takes effect only if you set ChangeSetType to CREATE or UPDATE.</para>
+        /// <para>The maximum number of concurrent resource operations. By default, this value is empty. Once set, the value is associated with the stack and affects subsequent operations.</para>
+        /// <para>This parameter takes effect only when ChangeSetType is set to CREATE or UPDATE. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values for change sets of the CREATE type:</para>
+        /// <item><description><para>If ChangeSetType is set to CREATE</para>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to an integer that is greater than 0, the integer is used.</description></item>
-        /// <item><description>If you set this parameter to 0 or leave this parameter empty, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</description></item>
+        /// <item><description><para>If you set this parameter to an integer that is greater than 0, the integer is used.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter to 0 or do not set this parameter, no limit is imposed on ROS stacks. For Terraform stacks, the default value of Terraform is used, which is 10.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>Valid values for change sets of the UPDATE type:</para>
+        /// <item><description><para>If ChangeSetType is set to UPDATE</para>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to an integer that is greater than 0, the integer is used.</description></item>
-        /// <item><description>If you set this parameter to 0, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</description></item>
-        /// <item><description>If you leave this parameter empty, the value that you specified for this parameter in the previous request is used. If you left this parameter empty in the previous request, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</description></item>
+        /// <item><description><para>If you set this parameter to an integer that is greater than 0, the integer is used.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter to 0, no limit is imposed on ROS stacks. For Terraform stacks, the default value of Terraform is used, which is 10.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not set this parameter, the value that you specified in the previous operation is used. If you did not set this parameter in the previous operation, no limit is imposed on ROS stacks. For Terraform stacks, the default value of Terraform is used, which is 10.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -132,9 +138,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<CreateChangeSetRequestParameters> Parameters { get; set; }
         public class CreateChangeSetRequestParameters : TeaModel {
             /// <summary>
-            /// <para>The key of parameter N that is defined in the template. If you do not specify the key and value of a parameter, ROS uses the default name and value that are defined in the template. Maximum value of N: 200.</para>
+            /// <para>The name of the parameter that is defined in the template. If you do not specify the name and value of a parameter, ROS uses the default name and value that are specified in the template. The value of N can be up to 200.</para>
             /// <remarks>
-            /// <para> Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.</para>
+            /// <para>The Parameters parameter is optional. If you specify Parameters, you must also specify Parameters.N.ParameterKey.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -146,9 +152,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// <para>The value of parameter N that is defined in the template. Maximum value of N: 200.</para>
+            /// <para>The value of the parameter that is defined in the template. The value of N can be up to 200.</para>
             /// <remarks>
-            /// <para> Parameters is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.</para>
+            /// <para>The Parameters parameter is optional. If you specify Parameters, you must also specify Parameters.N.ParameterValue.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -162,11 +168,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The name of the Resource Access Management (RAM) role. ROS assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
-        /// ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack, ROS assumes the RAM role even if you do not have permissions to use the RAM role. You must make sure that permissions are granted to the RAM role based on the principle of least privilege.\
-        /// If you do not specify this parameter, ROS assumes the existing role of the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\
-        /// The RAM role name can be up to 64 characters in length.</para>
-        /// <para>For more information about RAM roles, see <a href="https://help.aliyun.com/document_detail/2568025.html">Use a stack role</a>.</para>
+        /// <para>The RAM role name. ROS assumes this role to call Alibaba Cloud service APIs and always uses it for all stack operations. If you lack the required permissions, ROS assumes the role specified by RamRoleName. If unspecified, ROS uses the existing stack role. If no role is available, ROS uses a temporary credential from your account. Maximum length: 64 bytes.</para>
+        /// <para><a href="https://help.aliyun.com/document_detail/2568025.html">Stack roles</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-role</para>
@@ -177,7 +180,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// <para>The region ID of the change set.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -188,13 +191,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable replacement update if a resource property is changed and you cannot modify the new resource property. For a change, the physical ID of the resource remains unchanged. For a replacement update, the existing resource is deleted, a new resource is created, and the physical ID of the resource is changed. Valid values:</para>
+        /// <para>Specifies whether to enable replacement update when a resource property change does not support modification updates. A replacement update deletes the existing resource and creates a new one with a new physical ID. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled</description></item>
-        /// <item><description>Disabled (default)</description></item>
+        /// <item><description><para>Enabled: enables replacement update.</para>
+        /// </description></item>
+        /// <item><description><para>Disabled (default): disables replacement update.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>Operations that you perform to modify the resource properties for an update take precedence over operations you perform to replace the resource properties for an update. This parameter takes effect only if you set ChangeSetType to UPDATE.</para>
+        /// <para>Modification updates are preferentially used. This parameter takes effect only when ChangeSetType is set to UPDATE.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -204,21 +209,27 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ReplacementOption { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID. If unspecified, the stack is added to the default resource group. <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazb4ph6aiy****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The resources that you want to import to the stack.</para>
+        /// <para>The list of resources to be imported.</para>
         /// </summary>
         [NameInMap("ResourcesToImport")]
         [Validation(Required=false)]
         public List<CreateChangeSetRequestResourcesToImport> ResourcesToImport { get; set; }
         public class CreateChangeSetRequestResourcesToImport : TeaModel {
             /// <summary>
-            /// <para>The logical ID of resource N. The logical ID is the name of the resource defined in the template.</para>
+            /// <para>The logical ID of the resource. The logical ID is the resource name that is defined in the template.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only when ChangeSetType is set to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must specify ResourcesToImport.N.LogicalResourceId.</para>
+            /// <para>This parameter takes effect only when ChangeSetType is set to IMPORT. The ResourcesToImport parameter is optional. If you specify ResourcesToImport, you must also specify ResourcesToImport.N.LogicalResourceId.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -229,11 +240,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string LogicalResourceId { get; set; }
 
             /// <summary>
-            /// <para>The key-value mapping between strings. The key-value mapping is used to identify resource N that you want to import. The key-value mapping must be a JSON string.\
-            /// A key is an identifier property of a resource and a value is the property value. For example, the key of the ALIYUN::ECS::VPC resource is VpcId and the value is <c>vpc-2zevx9ios****</c>.</para>
-            /// <para>You can call the <a href="https://help.aliyun.com/document_detail/172485.html">GetTemplateSummary</a> operation to query the identifier property of the resource.</para>
+            /// <para>A key-value mapping between strings. The value is a JSON string that is used to identify the resource to be imported. The key is the identifier property of the resource, such as the VpcId of an ALIYUN::ECS::VPC resource. The value is the value of the property, such as <c>vpc-2zevx9ios****</c>.</para>
+            /// <para>Call <a href="https://help.aliyun.com/document_detail/172485.html">GetTemplateSummary</a> to query resource identifier properties.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only when ChangeSetType is set to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must specify ResourcesToImport.N.ResourceIdentifier.</para>
+            /// <para>This parameter takes effect only when ChangeSetType is set to IMPORT. The ResourcesToImport parameter is optional. If you specify ResourcesToImport, you must also specify ResourcesToImport.N.ResourceIdentifier.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -244,9 +254,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ResourceIdentifier { get; set; }
 
             /// <summary>
-            /// <para>The type of resource N. The resource type must be the same as the resource type that is defined in the template.</para>
+            /// <para>The type of the resource. The resource type must be the same as the resource type that is defined in the template.</para>
             /// <remarks>
-            /// <para> This parameter takes effect only when ChangeSetType is set to IMPORT. ResourcesToImport is optional. If you specify ResourcesToImport, you must specify ResourcesToImport.N.ResourceType.</para>
+            /// <para>This parameter takes effect only when ChangeSetType is set to IMPORT. The ResourcesToImport parameter is optional. If you specify ResourcesToImport, you must also specify ResourcesToImport.N.ResourceType.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -259,10 +269,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The ID of the stack for which you want to create the change set. ROS compares the stack information with the information that you submit, such as an updated template or parameter value, to generate the change set.\
-        /// You can call the <a href="https://help.aliyun.com/document_detail/610818.html">ListStacks</a> operation to query the stack ID.</para>
+        /// <para>The stack ID. ROS compares the stack information with the submitted changes, such as a modified template or different parameter values, to generate the change set. Call <a href="https://help.aliyun.com/document_detail/610818.html">ListStacks</a> to query stack IDs.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only when ChangeSetType is set to UPDATE or IMPORT.</para>
+        /// <para>This parameter takes effect only when ChangeSetType is set to UPDATE or IMPORT.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -273,10 +282,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackId { get; set; }
 
         /// <summary>
-        /// <para>The name of the stack for which you want to create the change set.\
-        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). The name must start with a digit or a letter.</para>
+        /// <para>The stack name. Maximum length: 255 characters. The name can contain digits, letters, hyphens (-), and underscores (_), and must start with a digit or letter.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only if you set ChangeSetType to CREATE or IMPORT.</para>
+        /// <para>This parameter takes effect only when ChangeSetType is set to CREATE or IMPORT.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -287,14 +295,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackName { get; set; }
 
         /// <summary>
-        /// <para>The structure that contains the stack policy body. The policy body must be 1 to 16,384 bytes in length.</para>
-        /// <para>If you set ChangeSetType to <b>CREATE</b>, you can specify StackPolicyBody or StackPolicyURL.</para>
-        /// <para>If you set ChangeSetType to <b>UPDATE</b>, you can specify only one of the following parameters:</para>
+        /// <para>The structure of the stack policy. The policy body must be 1 to 16,384 bytes in length.</para>
+        /// <para>When ChangeSetType is set to <b>CREATE</b>, you can specify only one of the StackPolicyBody and StackPolicyURL parameters.</para>
+        /// <para>When ChangeSetType is set to <b>UPDATE</b>, you can specify only one of the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description>StackPolicyBody</description></item>
-        /// <item><description>StackPolicyURL</description></item>
-        /// <item><description>StackPolicyDuringUpdateBody</description></item>
-        /// <item><description>StackPolicyDuringUpdateURL</description></item>
+        /// <item><description><para>StackPolicyBody</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyURL</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyDuringUpdateBody</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyDuringUpdateURL</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -305,14 +317,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackPolicyBody { get; set; }
 
         /// <summary>
-        /// <para>The structure of the temporary overriding stack policy. The policy body must be 1 to 16,384 bytes in length.\
-        /// If you need to update protected resources, specify a temporary overriding stack policy for the resources during the update. If you do not specify a temporary overriding stack policy, the existing stack policy that is associated with the stack is used.\
-        /// This parameter takes effect only if you set ChangeSetType to UPDATE. You can specify only one of the following parameters:</para>
+        /// <para>The temporary overriding stack policy body. Length: 1 to 16,384 bytes. To update protected resources, specify a temporary overriding policy. If unspecified, the current stack policy applies. This parameter takes effect only when ChangeSetType is set to UPDATE. You can specify only one of the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description>StackPolicyBody</description></item>
-        /// <item><description>StackPolicyURL</description></item>
-        /// <item><description>StackPolicyDuringUpdateBody</description></item>
-        /// <item><description>StackPolicyDuringUpdateURL</description></item>
+        /// <item><description><para>StackPolicyBody</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyURL</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyDuringUpdateBody</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyDuringUpdateURL</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -323,17 +337,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackPolicyDuringUpdateBody { get; set; }
 
         /// <summary>
-        /// <para>The URL of the stack policy based on which the stack is updated. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length.</para>
+        /// <para>The URL of the temporary overriding stack policy file. The URL must point to a policy on a web server (HTTP or HTTPS) or in an OSS bucket, such as oss\://ros/stack-policy/demo or oss\://ros/stack-policy/demo?RegionId=cn-hangzhou. Maximum policy file size: 16,384 bytes.</para>
         /// <remarks>
         /// <para>If you do not specify the region of the OSS bucket, the value of RegionId is used.</para>
         /// </remarks>
-        /// <para>The URL can be up to 1,350 bytes in length.\
-        /// If you need to update protected resources, specify a temporary overriding stack policy for the resources during the update. If you do not specify a stack policy, the existing policy that is associated with the stack is used. This parameter takes effect only if you set ChangeSetType to UPDATE. You can specify only one of the following parameters:</para>
+        /// <para>Maximum URL length: 1,350 bytes. To update protected resources, specify a temporary overriding stack policy. If unspecified, the current stack policy applies. This parameter takes effect only when ChangeSetType is set to UPDATE. You can specify only one of the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description>StackPolicyBody</description></item>
-        /// <item><description>StackPolicyURL</description></item>
-        /// <item><description>StackPolicyDuringUpdateBody</description></item>
-        /// <item><description>StackPolicyDuringUpdateURL</description></item>
+        /// <item><description><para>StackPolicyBody</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyURL</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyDuringUpdateBody</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyDuringUpdateURL</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -344,18 +361,22 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackPolicyDuringUpdateURL { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length.</para>
-        /// <para>The URL can be up to 1,350 bytes in length.</para>
+        /// <para>The URL of the stack policy file. The URL must point to a policy on a web server (HTTP or HTTPS) or in an OSS bucket, such as oss\://ros/stack-policy/demo or oss\://ros/stack-policy/demo?RegionId=cn-hangzhou. Maximum policy file size: 16,384 bytes.</para>
+        /// <para>Maximum URL length: 1,350 bytes.</para>
         /// <remarks>
-        /// <para> If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</para>
+        /// <para>If you do not specify the region of the OSS bucket, the value of RegionId is used.</para>
         /// </remarks>
-        /// <para>If you set ChangeSetType to <b>CREATE</b>, you can specify StackPolicyBody or StackPolicyURL.</para>
-        /// <para>If you set ChangeSetType to <b>UPDATE</b>, you can specify only one of the following parameters:</para>
+        /// <para>When ChangeSetType is set to <b>CREATE</b>, you can specify only one of the StackPolicyBody and StackPolicyURL parameters.</para>
+        /// <para>When ChangeSetType is set to <b>UPDATE</b>, you can specify only one of the following parameters:</para>
         /// <list type="bullet">
-        /// <item><description>StackPolicyBody</description></item>
-        /// <item><description>StackPolicyURL</description></item>
-        /// <item><description>StackPolicyDuringUpdateBody</description></item>
-        /// <item><description>StackPolicyDuringUpdateURL</description></item>
+        /// <item><description><para>StackPolicyBody</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyURL</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyDuringUpdateBody</para>
+        /// </description></item>
+        /// <item><description><para>StackPolicyDuringUpdateURL</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -365,28 +386,59 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackPolicyURL { get; set; }
 
+        /// <summary>
+        /// <para>The tags of the change set.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<CreateChangeSetRequestTags> Tags { get; set; }
         public class CreateChangeSetRequestTags : TeaModel {
+            /// <summary>
+            /// <para>The tag key of the stack.</para>
+            /// <para>The value of N can be from 1 to 20.</para>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description><para>The Tags parameter is optional. If you specify Tags, you must also specify Tags.N.Key.</para>
+            /// </description></item>
+            /// <item><description><para>The tag is propagated to each stack resource that supports tags. <a href="https://help.aliyun.com/document_detail/201421.html">Propagate tags</a>.</para>
+            /// </description></item>
+            /// </list>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>usage</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value of the stack.</para>
+            /// <para>The value of N can be from 1 to 20.</para>
+            /// <remarks>
+            /// <para>The tag is propagated to each stack resource that supports tags. For more information, see <a href="https://help.aliyun.com/document_detail/201421.html">Propagate tags</a>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
 
         }
 
+        /// <summary>
+        /// <para>The list of resources to be marked as dirty.</para>
+        /// </summary>
         [NameInMap("TaintResources")]
         [Validation(Required=false)]
         public List<string> TaintResources { get; set; }
 
         /// <summary>
-        /// <para>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</para>
+        /// <para>The template body. Length: 1 to 524,288 bytes. For large templates, use HTTP POST with a body parameter to avoid URL length limits.</para>
         /// <remarks>
-        /// <para> You must and can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</para>
+        /// <para>You can specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -398,9 +450,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// <para>The template ID. This parameter applies to shared templates and private templates.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/610842.html">ListTemplates</a> operation to query the template ID.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/610842.html">ListTemplates</a> to query template IDs.</para>
         /// <remarks>
-        /// <para> You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</para>
+        /// <para>You can specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -411,10 +463,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource scenario. In this example, this parameter specifies the ID of a resource management scenario.</para>
-        /// <para>This parameter takes effect only when ChangeSetType is set to IMPORT. TemplateScratchId is supported only when you import resources to create a new stack.</para>
-        /// <para>If you want to use a resource management scenario to import resources, you can specify only TemplateScratchId rather than configuring parameters related to templates.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/610832.html">ListTemplateScratches</a> operation to query the ID of the resource management scenario.</para>
+        /// <para>The resource scenario ID, which is the resource management scenario ID.</para>
+        /// <para>This parameter takes effect only when ChangeSetType is set to IMPORT. This parameter supports only the creation of new stacks for resource import.</para>
+        /// <para>If you want to import resources in a resource management scenario, specify only this parameter. Do not specify parameters related to templates.</para>
+        /// <para>Call <a href="https://help.aliyun.com/document_detail/610832.html">ListTemplateScratches</a> to query scenario IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>
@@ -424,11 +476,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateScratchId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo and oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</para>
+        /// <para>The URL of the template file. The URL must point to a template on a web server (HTTP or HTTPS) or in an OSS bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. Maximum template body size: 524,288 bytes.</para>
         /// <remarks>
         /// <para>If you do not specify the region of the OSS bucket, the value of RegionId is used.</para>
         /// </remarks>
-        /// <para>You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</para>
+        /// <para>You can specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</para>
         /// <para>The URL can be up to 1,024 bytes in length.</para>
         /// 
         /// <b>Example:</b>
@@ -441,7 +493,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The version of the template.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only if you specify TemplateId.</para>
+        /// <para>This parameter takes effect only when TemplateId is specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -452,12 +504,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateVersion { get; set; }
 
         /// <summary>
-        /// <para>The amount of time that can elapse before the stack enters the CREATE_FAILED or UPDATE_FAILED state.\
-        /// If you set ChangeSetType to CREATE, this parameter is required. If you set ChangeSetType to UPDATE, this parameter is optional.</para>
+        /// <para>The timeout period before the stack enters CREATE_FAILED or UPDATE_FAILED state. Required when ChangeSetType is CREATE. Optional when ChangeSetType is UPDATE.</para>
         /// <list type="bullet">
-        /// <item><description>Unit: minutes.</description></item>
-        /// <item><description>Valid values: 10 to 1440.</description></item>
-        /// <item><description>Default value: 60.</description></item>
+        /// <item><description><para>Unit: minutes.</para>
+        /// </description></item>
+        /// <item><description><para>Valid values: 10 to 1440.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 60.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -468,13 +522,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? TimeoutInMinutes { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the values that were passed last time for the parameters that you do not specify in the current request. Valid values:</para>
+        /// <para>Specifies whether to use the values of parameters that were last used. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter takes effect only if you set ChangeSetType to UPDATE or IMPORT.</para>
+        /// <para>This parameter takes effect only when ChangeSetType is set to UPDATE or IMPORT.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

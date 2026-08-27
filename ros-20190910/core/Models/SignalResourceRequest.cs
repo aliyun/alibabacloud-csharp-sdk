@@ -57,9 +57,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The status of the signal. Failure signals can cause stack creation or update to fail. If all signals are warnings, the stack cannot be created or updated. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SUCCESS</description></item>
-        /// <item><description>FAILURE</description></item>
-        /// <item><description>WARNING</description></item>
+        /// <item><description><para>SUCCESS</para>
+        /// </description></item>
+        /// <item><description><para>FAILURE</para>
+        /// </description></item>
+        /// <item><description><para>WARNING</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

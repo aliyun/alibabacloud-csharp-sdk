@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListResourceTypeRegistrationsRequest : TeaModel {
         /// <summary>
-        /// <para>The entity type. Set the value to Module.</para>
+        /// <para>The entity type. Valid values: Module.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Module</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The page number. Pages start from page 1. Default value: 1.</para>
+        /// <para>The page number for paging. Minimum value: 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Valid values: 1 to 50. Default value: 10.</para>
+        /// <para>The number of entries per page for paging. Valid values: 1 to 50. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the registration record.</para>
+        /// <para>The registration ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegistrationId { get; set; }
 
         /// <summary>
-        /// <para>The resource type. The resource type can contain letters, digits, colons (:), and asterisks (\<em>). You can use an asterisk (\</em>) to perform a fuzzy match.</para>
+        /// <para>The resource type. The value can contain uppercase and lowercase letters, digits, colons (:), and asterisks (*). If you use an asterisk, fuzzy match is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MODULE::MyOrganization::MyService::MyUsecase</para>
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The registration state. Valid values:</para>
+        /// <para>The registration status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>IN_PROGRESS</description></item>
-        /// <item><description>COMPLETE</description></item>
-        /// <item><description>FAILED</description></item>
+        /// <item><description>IN_PROGRESS: In progress.</description></item>
+        /// <item><description>COMPLETE: Succeeded.</description></item>
+        /// <item><description>FAILED: Failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

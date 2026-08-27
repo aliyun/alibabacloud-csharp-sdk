@@ -43,10 +43,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>stack: stack</description></item>
-        /// <item><description>stackgroup: stack group</description></item>
-        /// <item><description>template: template</description></item>
-        /// <item><description>templatescratch: scenario</description></item>
+        /// <item><description><para>stack: stack</para>
+        /// </description></item>
+        /// <item><description><para>stackgroup: stack group</para>
+        /// </description></item>
+        /// <item><description><para>template: template</para>
+        /// </description></item>
+        /// <item><description><para>templatescratch: scenario</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -65,7 +69,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<ListTagResourcesRequestTag> Tag { get; set; }
         public class ListTagResourcesRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.\
+            /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.<br>
             /// The tag key can be up to 128 characters in length and cannot contain <c>http://</c> or <c>https://</c>. The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
             /// 
             /// <b>Example:</b>
@@ -76,7 +80,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.\
+            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.<br>
             /// The tag value can be up to 128 characters in length, and cannot contain <c>http://</c> or <c>https://</c>. The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</para>
             /// 
             /// <b>Example:</b>

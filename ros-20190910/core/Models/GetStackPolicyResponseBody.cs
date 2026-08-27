@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The structure that contains the stack policy body. The stack policy body must be 1 to 16,384 bytes in length.</para>
+        /// <para>The stack policy body. Length: 1 to 16,384 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;Statement&quot;: [{&quot;Action&quot;: &quot;Update:<em>&quot;, &quot;Effect&quot;: &quot;Allow&quot;,&quot;Principal&quot;: &quot;</em>&quot;,&quot;Resource&quot;: &quot;*&quot;}]}</para>

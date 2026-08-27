@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStacksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The page number of the stack list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page in paging Settings.  </para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -42,14 +42,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details of the stacks.</para>
+        /// <para>The list of stacks.</para>
         /// </summary>
         [NameInMap("Stacks")]
         [Validation(Required=false)]
         public List<ListStacksResponseBodyStacks> Stacks { get; set; }
         public class ListStacksResponseBodyStacks : TeaModel {
             /// <summary>
-            /// <para>The time when the stack was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the stack was created. The time is displayed in UTC+0 in the ISO 8601 standard format without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-10T06:44:36</para>
@@ -61,11 +61,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>Indicates whether deletion protection is enabled for the stack. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Enabled: Deletion protection is enabled for the stack.</description></item>
-            /// <item><description>Disabled: Deletion protection is disabled for the stack. In this case, you can delete the stack by using the console or calling the <a href="https://help.aliyun.com/document_detail/610812.html">DeleteStack</a> operation.</description></item>
+            /// <item><description>Enabled: Deletion protection is enabled.</description></item>
+            /// <item><description>Disabled: Deletion protection is disabled. You can delete the stack by using the console or by calling the <a href="https://help.aliyun.com/document_detail/610812.html">DeleteStack</a> operation.</description></item>
             /// </list>
             /// <remarks>
-            /// <para> Deletion protection of a nested stack is the same as that of its root stack.</para>
+            /// <para>The deletion protection mechanism of a nested stack is the same as that of the root stack.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -78,8 +78,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>Indicates whether rollback is disabled when the stack fails to be created. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false (default)</description></item>
+            /// <item><description>true: Rollback is disabled.</description></item>
+            /// <item><description>false (default): Rollback is enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -100,9 +100,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string DriftDetectionTime { get; set; }
 
             /// <summary>
-            /// <para>The supplementary information that is returned if an error occurs on a stack operation.</para>
+            /// <para>The supplementary information that is returned when an error occurs during a stack operation.</para>
             /// <remarks>
-            /// <para> This parameter is returned only under specific conditions, and is returned together with at least one sub-parameter. For example, an error occurred when an API operation of another Alibaba Cloud service was called.</para>
+            /// <para>This response property is returned only in specific cases and contains at least one sub-property. For example, an error occurs when another cloud service API is called.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("OperationInfo")]
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public ListStacksResponseBodyStacksOperationInfo OperationInfo { get; set; }
             public class ListStacksResponseBodyStacksOperationInfo : TeaModel {
                 /// <summary>
-                /// <para>The name of the API operation that belongs to another Alibaba Cloud service.</para>
+                /// <para>The name of the API operation called on another cloud service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DeleteSecurityGroup</para>
@@ -120,7 +120,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string Action { get; set; }
 
                 /// <summary>
-                /// <para>The error code.</para>
+                /// <para>The error code. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>Forbidden.RAM: Access denied by RAM.</description></item>
+                /// <item><description>InvalidAccountStatus.NotEnoughBalance: Insufficient account balance.</description></item>
+                /// <item><description>OrderError.EIP: EIP order error.</description></item>
+                /// <item><description>QuotaExceeded.Eip: EIP quota exceeded.</description></item>
+                /// </list>
+                /// <para>This information is generated based on call logs and may be incomplete. Verify the information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DependencyViolation</para>
@@ -150,7 +157,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string Message { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the request that is initiated to call the API operation of another Alibaba Cloud service.</para>
+                /// <para>The request ID of the API call to another cloud service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>071D6166-3F6B-5C7B-A1F0-0113FBB643A8</para>
@@ -160,7 +167,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string RequestId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the resource on which the operation error occurred.</para>
+                /// <para>The resource type on which the operation error occurred.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALIYUN::ECS::SecurityGroup</para>
@@ -182,7 +189,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ParentStackId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+            /// <para>The region ID of the stack. You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -192,7 +199,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-aek2frunvw7****</para>
@@ -202,10 +209,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the stack is a managed stack. Valid values:</para>
+            /// <para>Indicates whether the stack is a managed stack. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description><para>true: The stack is a managed stack.  </para>
+            /// </description></item>
+            /// <item><description><para>false: The stack is not a managed stack.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -216,7 +225,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public bool? ServiceManaged { get; set; }
 
             /// <summary>
-            /// <para>The name of the service to which the managed stack belongs.</para>
+            /// <para>The service name to which the managed stack belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ACVS</para>
@@ -226,11 +235,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ServiceName { get; set; }
 
             /// <summary>
-            /// <para>The state of the stack on which the most recent successful drift detection was performed. Valid values:</para>
+            /// <para>The drift status of the stack in the most recent successful drift detection. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>DRIFTED: The stack has drifted.</description></item>
-            /// <item><description>NOT_CHECKED: No successful drift detection is performed on the stack.</description></item>
-            /// <item><description>IN_SYNC: The stack is being synchronized.</description></item>
+            /// <item><description>NOT_CHECKED: No successful drift detection has been performed on the stack.</description></item>
+            /// <item><description>IN_SYNC: The stack is in sync.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -263,8 +272,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The stack type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ROS: ROS stack. The stack is created by using a ROS template.</description></item>
-            /// <item><description>Terraform: Terraform stack. The stack is created by using a Terraform template.</description></item>
+            /// <item><description>ROS: The stack uses an ROS template.</description></item>
+            /// <item><description>Terraform: The stack uses a Terraform template.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -275,7 +284,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string StackType { get; set; }
 
             /// <summary>
-            /// <para>The state of the stack.</para>
+            /// <para>The stack status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREATE_COMPLETE</para>
@@ -285,7 +294,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason why the stack is in its current state.</para>
+            /// <para>The reason why the stack is in its current status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Stack CREATE completed successfully</para>
@@ -324,7 +333,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// <para>The timeout period for creating the stack. Unit: minutes.</para>
+            /// <para>The timeout period for creating the stack. Unit: minutes. Valid values: 10, 20, 60, 120, and 1440.</para>
+            /// <para>This information is generated based on call logs and may be incomplete. Verify the information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60</para>
@@ -334,7 +344,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public int? TimeoutInMinutes { get; set; }
 
             /// <summary>
-            /// <para>The time when the stack was updated. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the stack was last updated. The time is displayed in UTC+0 in the ISO 8601 standard format without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-03-10T07:44:36</para>

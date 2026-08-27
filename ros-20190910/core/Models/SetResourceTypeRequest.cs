@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class SetResourceTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the default version. You can use this parameter to specify the default version of the resource type.</para>
+        /// <para>The ID of the default version. Specify this parameter to set the default version for the resource type.</para>
         /// <remarks>
-        /// <para>You can specify only one of the VersionId and DefaultVersionId parameters.</para>
+        /// <para>You can specify either VersionId or DefaultVersionId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string DefaultVersionId { get; set; }
 
         /// <summary>
-        /// <para>The description of the resource type or resource type version. The description can be up to 512 characters in length.</para>
+        /// <para>The description of the resource type or a version of the resource type. The description can be up to 512 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>It is a demo.</para>
@@ -44,9 +44,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The version ID. If you want to modify a version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is modified.</para>
+        /// <para>The version ID. Specify this parameter to modify a specific version of the resource type. Otherwise, the description of the resource type itself is modified.</para>
         /// <remarks>
-        /// <para>You can specify only one of the VersionId and DefaultVersionId parameters.</para>
+        /// <para>You can specify either VersionId or DefaultVersionId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -12,11 +12,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>Indicates whether stack deletion protection is enabled. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled: enables the stack deletion protection.</description></item>
-        /// <item><description>Disabled (default): Resource stack deletion protection is Disabled. You can use the console or API(DeleteStack) to release the stack resources.</description></item>
+        /// <item><description><para>Enabled: enables the stack deletion protection.</para>
+        /// </description></item>
+        /// <item><description><para>Disabled (default): Resource stack deletion protection is Disabled. You can use the console or API(DeleteStack) to release the stack resources.</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The deletion of nested stacks is the same as the root stack.</para>
+        /// <para>The deletion of nested stacks is the same as the root stack.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

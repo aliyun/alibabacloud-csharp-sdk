@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
     public class GetTemplateScratchRequest : TeaModel {
         /// <summary>
         /// <para>The region ID of the resource scenario.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,14 +24,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The data display option. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Sources: displays only the data of source nodes. This setting takes effect only when TemplateScratchType is set to ArchitectureDetection.</description></item>
-        /// <item><description>Source: displays only the data of the source node. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.</description></item>
-        /// <item><description>Provisions: displays only the data of new nodes. This setting takes effect only when TemplateScratchType is not set to ArchitectureDetection.</description></item>
-        /// <item><description>All: displays all data.</description></item>
+        /// <item><description><para>Sources: displays only source node data. This value is applicable when TemplateScratchType is set to ArchitectureDetection.</para>
+        /// </description></item>
+        /// <item><description><para>Source: displays only source node data. This value is applicable when TemplateScratchType is not set to ArchitectureDetection.</para>
+        /// </description></item>
+        /// <item><description><para>Provisions: displays only new node data. This value is applicable when TemplateScratchType is not set to ArchitectureDetection.</para>
+        /// </description></item>
+        /// <item><description><para>All: displays all data.</para>
+        /// </description></item>
         /// </list>
         /// <para>For more information about source nodes and new nodes, see <a href="https://help.aliyun.com/document_detail/352074.html">Overview</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the node data is not displayed.</para>
+        /// <para>If you do not specify this parameter, node data is not displayed by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

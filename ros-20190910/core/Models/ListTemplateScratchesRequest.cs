@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTemplateScratchesRequest : TeaModel {
         /// <summary>
-        /// <para>The number of the page to return.</para>
-        /// <para>Pages start from page 1.</para>
-        /// <para>Default value: 1</para>
+        /// <para>The page number of the resource scenario list.</para>
+        /// <para>Start value: 1.</para>
+        /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page in a paged query. Settings for paging.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -34,8 +34,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the scenario.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the resource scenario.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -56,11 +56,11 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The status of the scenario. Valid values:</para>
+        /// <para>The status of the resource scenario. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>GENERATE_IN_PROGRESS: The scenario is being created.</description></item>
-        /// <item><description>GENERATE_COMPLETE: The scenario is created.</description></item>
-        /// <item><description>GENERATE_FAILED: The scenario fails to be created.</description></item>
+        /// <item><description>GENERATE_IN_PROGRESS: being generated.</description></item>
+        /// <item><description>GENERATE_COMPLETE: generated.</description></item>
+        /// <item><description>GENERATE_FAILED: failed to be generated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -71,16 +71,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The tags of the scenario.</para>
+        /// <para>The tags of the resource scenario.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<ListTemplateScratchesRequestTags> Tags { get; set; }
         public class ListTemplateScratchesRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the scenario.</para>
+            /// <para>The tag key of the resource scenario.</para>
             /// <remarks>
-            /// <para>Tags is optional. If you want to specify Tags, you must specify Key.</para>
+            /// <para>Tags is optional. If you specify Tags, you must specify Tags.N.Key.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the scenario.</para>
+            /// <para>The tag value of the resource scenario.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The ID of the scenario.</para>
+        /// <para>The ID of the resource scenario.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ts-7f7a704cf71c49a6****</para>
@@ -116,10 +116,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The type of the resource scenario. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>ArchitectureReplication: resource replication</description></item>
-        /// <item><description>ArchitectureDetection: resource detection</description></item>
-        /// <item><description>ResourceImport: resource management</description></item>
-        /// <item><description>ResourceMigration: resource migration</description></item>
+        /// <item><description><para>ArchitectureReplication: resource replication.</para>
+        /// </description></item>
+        /// <item><description><para>ArchitectureDetection: resource detection.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceImport: resource management.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceMigration: resource migration.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

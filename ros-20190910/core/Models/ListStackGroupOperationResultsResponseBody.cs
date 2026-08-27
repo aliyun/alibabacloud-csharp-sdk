@@ -49,11 +49,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The ID of the account to which the stack instance belongs.</para>
             /// <list type="bullet">
-            /// <item><description>If the stack group has self-managed permissions, the stack instance belongs to an Alibaba Cloud account.</description></item>
-            /// <item><description>If the stack group has service-managed permissions, the stack instance belongs to a member account in the resource directory.</description></item>
+            /// <item><description><para>If the stack group has self-managed permissions, the stack instance belongs to an Alibaba Cloud account.</para>
+            /// </description></item>
+            /// <item><description><para>If the stack group has service-managed permissions, the stack instance belongs to a member account in the resource directory.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para> For more information about the account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</para>
+            /// <para>For more information about the account, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -66,7 +68,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The folder ID of the resource directory.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when the stack group is granted service-managed permissions.</para>
+            /// <para>This parameter is returned only when the stack group is granted service-managed permissions.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -90,11 +92,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The status of the operation.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RUNNING: The operation is being performed.</description></item>
-            /// <item><description>SUCCEEDED: The operation succeeded.</description></item>
-            /// <item><description>FAILED: The operation failed.</description></item>
-            /// <item><description>STOPPING: The operation is being stopped.</description></item>
-            /// <item><description>STOPPED: The operation is stopped.</description></item>
+            /// <item><description><para>RUNNING: The operation is being performed.</para>
+            /// </description></item>
+            /// <item><description><para>SUCCEEDED: The operation succeeded.</para>
+            /// </description></item>
+            /// <item><description><para>FAILED: The operation failed.</para>
+            /// </description></item>
+            /// <item><description><para>STOPPING: The operation is being stopped.</para>
+            /// </description></item>
+            /// <item><description><para>STOPPED: The operation is stopped.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -107,7 +114,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The reason why the operation is in a specific state.</para>
             /// <remarks>
-            /// <para> This parameter is returned only when stack instances are in the OUTDATED state.</para>
+            /// <para>This parameter is returned only when stack instances are in the OUTDATED state.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

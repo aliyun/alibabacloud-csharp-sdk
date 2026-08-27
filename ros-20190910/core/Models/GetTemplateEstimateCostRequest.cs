@@ -14,11 +14,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>Maximum value of N: 200.</para>
         /// <para>Examples:</para>
         /// <list type="bullet">
-        /// <item><description>Parameters.1.ParameterKey: <c>Name</c></description></item>
-        /// <item><description>Parameters.2.ParameterKey: <c>Netmode</c></description></item>
+        /// <item><description><para>Parameters.1.ParameterKey: <c>Name</c></para>
+        /// </description></item>
+        /// <item><description><para>Parameters.2.ParameterKey: <c>Netmode</c></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</para>
+        /// <para>The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,7 +65,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The ID of the template. This parameter applies to shared and private templates.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</para>
+        /// <para>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -93,7 +95,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>The parameters.</para>
+        /// <para>ROSTemplateFormatVersion: \&quot;2015-09-01\&quot;\nResources:\n  vpc:\n    Type: ALIYUN::ECS::VPC</para>
         /// </summary>
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
@@ -104,11 +106,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>Maximum value of N: 200.</para>
         /// <para>Examples:</para>
         /// <list type="bullet">
-        /// <item><description>Parameters.1.ParameterValue: <c>DemoEip</c></description></item>
-        /// <item><description>Parameters.2.ParameterValue: <c>public</c></description></item>
+        /// <item><description><para>Parameters.1.ParameterValue: <c>DemoEip</c></para>
+        /// </description></item>
+        /// <item><description><para>Parameters.2.ParameterValue: <c>public</c></para>
+        /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</para>
+        /// <para>The Parameters parameter is optional. If you want to specify Parameters, you must specify both Parameters.N.ParameterKey and Parameters.N.ParameterValue.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -155,7 +159,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The ID of the scenario.</para>
         /// <para>For more information about how to query the IDs of scenarios, see <a href="https://help.aliyun.com/document_detail/363050.html">ListTemplateScratches</a>.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</para>
+        /// <para>You must specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

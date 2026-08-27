@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>Supplementary information for the public template.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;DeploymentDuration&quot;:null,&quot;Title&quot;:&quot;Self-Built_ElasticSearch_Snapshot_Saved_To_OSS&quot;,&quot;Labels&quot;:{&quot;ResourceTypes&quot;:[&quot;ALIYUN::ECS::Instance&quot;,&quot;ALIYUN::ECS::SecurityGroup&quot;,&quot;ALIYUN::ECS::VPC&quot;,&quot;ALIYUN::ECS::VSwitch&quot;,&quot;ALIYUN::OSS::Bucket&quot;,&quot;ALIYUN::ROS::WaitCondition&quot;,&quot;ALIYUN::ROS::WaitConditionHandle&quot;],&quot;DeployTypes&quot;:[&quot;ROS&quot;],&quot;ApplicationScenes&quot;:[&quot;其他&quot;]},&quot;Provider&quot;:&quot;ROS&quot;,&quot;Categories&quot;:[&quot;Solution&quot;]}</para>
+        /// <para>{&quot;DeploymentDuration&quot;:null,&quot;Title&quot;:&quot;Self-Built_ElasticSearch_Snapshot_Saved_To_OSS&quot;,&quot;Labels&quot;:{&quot;ResourceTypes&quot;:[&quot;ALIYUN::ECS::Instance&quot;,&quot;ALIYUN::ECS::SecurityGroup&quot;,&quot;ALIYUN::ECS::VPC&quot;,&quot;ALIYUN::ECS::VSwitch&quot;,&quot;ALIYUN::OSS::Bucket&quot;,&quot;ALIYUN::ROS::WaitCondition&quot;,&quot;ALIYUN::ROS::WaitConditionHandle&quot;],&quot;DeployTypes&quot;:[&quot;ROS&quot;],&quot;ApplicationScenes&quot;:[&quot;other&quot;]},&quot;Provider&quot;:&quot;ROS&quot;,&quot;Categories&quot;:[&quot;Solution&quot;]}</para>
         /// </summary>
         [NameInMap("AdditionalInfo")]
         [Validation(Required=false)]
@@ -33,8 +33,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The time when the template was created. This parameter is returned only if you specify TemplateId.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you specify TemplateVersion, the creation time of the template whose version is specified by TemplateVersion is returned.</description></item>
-        /// <item><description>If you do not specify TemplateVersion, the creation time of the template whose version is the default version is returned.</description></item>
+        /// <item><description><para>If you specify TemplateVersion, the creation time of the template whose version is specified by TemplateVersion is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify TemplateVersion, the creation time of the template whose version is the default version is returned.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -79,8 +81,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>Details of the sharing status of the template. This parameter is returned only if you specify TemplateId and set IncludePermission to Enabled.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If TemplateVersion is not specified or does not take effect, the details of the sharing status of the template whose version is the default version is returned.</description></item>
-        /// <item><description>If TemplateVersion is specified and takes effect, the details of the sharing status of the template whose version is specified by TemplateVersion is returned.</description></item>
+        /// <item><description><para>If TemplateVersion is not specified or does not take effect, the details of the sharing status of the template whose version is the default version is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If TemplateVersion is specified and takes effect, the details of the sharing status of the template whose version is specified by TemplateVersion is returned.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// </summary>
@@ -112,16 +116,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The service that is used for resource sharing. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ROS: Resources are shared from ROS by using the ROS console or calling the ROS API.</description></item>
-            /// <item><description>ResourceDirectory: Resources are shared with accounts in a resource directory from Resource Management by using the resource sharing feature.<remarks>
-            /// <list type="bullet">
-            /// <item><description>The number of accounts with which resources are shared from ROS is independent of the number of accounts with which resources are shared from the resource directory.</description></item>
-            /// <item><description>The shared resources from ROS cannot override or overwrite the shared resources from the resource directory.</description></item>
-            /// <item><description>The shared resources from the resource directory can overwrite the shared resources from ROS.</description></item>
-            /// </list>
-            /// </remarks>
+            /// <item><description><para>ROS: Resources are shared from ROS by using the ROS console or calling the ROS API.</para>
+            /// </description></item>
+            /// <item><description><para>ResourceDirectory: Resources are shared with accounts in a resource directory from Resource Management by using the resource sharing feature.</para>
             /// </description></item>
             /// </list>
+            /// <remarks>
+            /// <list type="bullet">
+            /// <item><description><para>The number of accounts with which resources are shared from ROS is independent of the number of accounts with which resources are shared from the resource directory.</para>
+            /// </description></item>
+            /// <item><description><para>The shared resources from ROS cannot override or overwrite the shared resources from the resource directory.</para>
+            /// </description></item>
+            /// <item><description><para>The shared resources from the resource directory can overwrite the shared resources from ROS.</para>
+            /// </description></item>
+            /// </list>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>ROS</para>
@@ -145,10 +154,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The version option for the shared template. This parameter is returned only if you set ShareOption to ShareToAccounts.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>AllVersions: All template versions are shared.</description></item>
-            /// <item><description>Latest: Only the latest template version is shared. When the version of the template is updated, Resource Orchestration Service (ROS) updates the shared version to the latest version.</description></item>
-            /// <item><description>Current: Only the latest template version is shared. When the version of the template is updated, ROS does not update the shared version.</description></item>
-            /// <item><description>Specified: Only the specified template version is shared.</description></item>
+            /// <item><description><para>AllVersions: All template versions are shared.</para>
+            /// </description></item>
+            /// <item><description><para>Latest: Only the latest template version is shared. When the version of the template is updated, Resource Orchestration Service (ROS) updates the shared version to the latest version.</para>
+            /// </description></item>
+            /// <item><description><para>Current: Only the latest template version is shared. When the version of the template is updated, ROS does not update the shared version.</para>
+            /// </description></item>
+            /// <item><description><para>Specified: Only the specified template version is shared.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -194,8 +207,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The sharing type of the template. This parameter is returned only if you specify TemplateId.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Private: The template belongs to the template owner.</description></item>
-        /// <item><description>Shared: The template is shared by other users.</description></item>
+        /// <item><description><para>Private: The template belongs to the template owner.</para>
+        /// </description></item>
+        /// <item><description><para>Shared: The template is shared by other users.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -289,8 +304,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The name of the template. This parameter is returned only if you specify TemplateId.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.</description></item>
-        /// <item><description>If you not specify TemplateVersion, the name of the template whose version is the default version is returned.</description></item>
+        /// <item><description><para>If you specify TemplateVersion, the name of the template whose version is specified by TemplateVersion is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If you not specify TemplateVersion, the name of the template whose version is the default version is returned.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -302,7 +319,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The version of the template. This parameter is returned only if you specify TemplateId.\
+        /// <para>The version of the template. This parameter is returned only if you specify TemplateId.<br>
         /// If TemplateVersion is not specified or does not take effect, the default version is used.</para>
         /// <para>If the template is a shared template, this parameter is returned only if you set VersionOption to AllVersions.</para>
         /// 
@@ -317,8 +334,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The time when the template was last updated. This parameter is returned only if you specify TemplateId.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you specify TemplateVersion, the last update time of the template whose version is specified by TemplateVersion is returned.</description></item>
-        /// <item><description>If you do not specify TemplateVersion, the last update time of the template whose version is the default version is returned.</description></item>
+        /// <item><description><para>If you specify TemplateVersion, the last update time of the template whose version is specified by TemplateVersion is returned.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify TemplateVersion, the last update time of the template whose version is the default version is returned.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 

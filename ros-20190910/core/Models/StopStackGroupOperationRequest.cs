@@ -10,8 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class StopStackGroupOperationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the operation.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/151342.html">ListStackGroupOperations</a> operation to obtain the operation ID.</para>
+        /// <para>The operation ID. Call the <a href="https://help.aliyun.com/document_detail/151342.html">ListStackGroupOperations</a> operation to query operation IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,7 +21,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string OperationId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the stack. Call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query available regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

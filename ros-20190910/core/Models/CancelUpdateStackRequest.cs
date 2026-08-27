@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The method to cancel the update operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Quick: cancels the update of a stack as soon as possible.</description></item>
-        /// <item><description>Safe: cancels the update of a stack as safely as possible.</description></item>
+        /// <item><description><para>Quick: cancels the update of a stack as soon as possible.</para>
+        /// </description></item>
+        /// <item><description><para>Safe: cancels the update of a stack as safely as possible.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

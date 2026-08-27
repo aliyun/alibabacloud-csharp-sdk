@@ -50,10 +50,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The operation type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CREATE</description></item>
-            /// <item><description>UPDATE</description></item>
-            /// <item><description>DELETE</description></item>
-            /// <item><description>DETECT_DRIFT</description></item>
+            /// <item><description><para>CREATE</para>
+            /// </description></item>
+            /// <item><description><para>UPDATE</para>
+            /// </description></item>
+            /// <item><description><para>DELETE</para>
+            /// </description></item>
+            /// <item><description><para>DETECT_DRIFT</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -127,11 +131,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The state of the operation.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>SUCCEEDED</description></item>
-            /// <item><description>FAILED</description></item>
-            /// <item><description>STOPPING</description></item>
-            /// <item><description>STOPPED</description></item>
+            /// <item><description><para>RUNNING</para>
+            /// </description></item>
+            /// <item><description><para>SUCCEEDED</para>
+            /// </description></item>
+            /// <item><description><para>FAILED</para>
+            /// </description></item>
+            /// <item><description><para>STOPPING</para>
+            /// </description></item>
+            /// <item><description><para>STOPPED</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

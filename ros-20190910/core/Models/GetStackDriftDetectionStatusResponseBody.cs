@@ -22,9 +22,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The drift detection status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DETECTION_COMPLETE: The drift detection operation has been completed for all resources that support drift detection in the stack.</description></item>
-        /// <item><description>DETECTION_FAILED: The stack drift detection operation has failed for at least one resource in the stack.</description></item>
-        /// <item><description>DETECTION_IN_PROGRESS: The stack drift detection operation is in progress.</description></item>
+        /// <item><description><para>DETECTION_COMPLETE: The drift detection operation has been completed for all resources that support drift detection in the stack.</para>
+        /// </description></item>
+        /// <item><description><para>DETECTION_FAILED: The stack drift detection operation has failed for at least one resource in the stack.</para>
+        /// </description></item>
+        /// <item><description><para>DETECTION_IN_PROGRESS: The stack drift detection operation is in progress.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -77,9 +80,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The drift status of the stack. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DRIFTED: The actual configuration of the stack differs, or has drifted, from its expected template configuration. A stack is considered to have drifted if one or more of its resources have drifted.</description></item>
-        /// <item><description>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</description></item>
-        /// <item><description>IN_SYNC: The current configuration of each supported resource matches its expected template configuration. A stack with no resources that support drift detection also has a status of IN_SYNC.</description></item>
+        /// <item><description><para>DRIFTED: The actual configuration of the stack differs, or has drifted, from its expected template configuration. A stack is considered to have drifted if one or more of its resources have drifted.</para>
+        /// </description></item>
+        /// <item><description><para>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</para>
+        /// </description></item>
+        /// <item><description><para>IN_SYNC: The current configuration of each supported resource matches its expected template configuration. A stack with no resources that support drift detection also has a status of IN_SYNC.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

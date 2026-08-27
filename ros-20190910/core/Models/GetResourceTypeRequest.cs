@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetResourceTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The resource type.<br>For more information about the resource types supported by ROS, see <a href="https://help.aliyun.com/document_detail/127039.html">Resource type index</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,9 +21,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The version ID. If you want to query a specific version of the resource type, you must specify this parameter. If you do not specify this parameter, only the resource type is queried.</para>
+        /// <para>The version ID. To query a specific version of the resource type, specify this parameter. Otherwise, the resource type is queried.</para>
         /// <remarks>
-        /// <para>This parameter is supported only for modules.</para>
+        /// <para>Only modules support versions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

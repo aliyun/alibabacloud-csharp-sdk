@@ -174,8 +174,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// <para>Indicates whether the resource scope can be specified by source resource group. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -188,8 +190,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// <para>Indicates whether the resource scope can be specified by source resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -202,8 +206,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// <para>Indicates whether the resource scope can be specified by source tag, resource group, or resource. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -216,8 +222,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// <para>Indicates whether the resource scope can be specified by source tag. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true</para>
+                /// </description></item>
+                /// <item><description><para>false</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

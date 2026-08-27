@@ -40,14 +40,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ChangeSetType { get; set; }
 
         /// <summary>
-        /// <para>The changes of the change set.</para>
+        /// <para>The changes in the change set.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>See examples.</para>
         /// </summary>
         [NameInMap("Changes")]
         [Validation(Required=false)]
         public List<Dictionary<string, object>> Changes { get; set; }
 
         /// <summary>
-        /// <para>The time when the change set was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+        /// <para>The time when the change set was created. The time is in UTC and uses the <c>YYYY-MM-DDThh:mm:ss</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-01T02:20:56</para>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether rollback was performed when the stack failed to be created or updated.</para>
+        /// <para>Indicates whether to disable rollback when a stack creation or update fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -87,16 +90,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ExecutionStatus { get; set; }
 
         /// <summary>
-        /// <para>The output logs of the change set.</para>
+        /// <para>Logs for the change set.</para>
         /// </summary>
         [NameInMap("Log")]
         [Validation(Required=false)]
         public GetChangeSetResponseBodyLog Log { get; set; }
         public class GetChangeSetResponseBodyLog : TeaModel {
             /// <summary>
-            /// <para>The Terraform logs. This parameter is returned only for change sets of Terraform stacks.</para>
+            /// <para>The Terraform output logs. This parameter is returned only for change sets of Terraform-based stacks.</para>
             /// <remarks>
-            /// <para>This parameter is not returned for change sets that are in the Creating state. This parameter indicates the logs of the change set creation operation for Terraform stacks.</para>
+            /// <para>This parameter is unavailable while a change set is being created because the logs are generated only after the creation is complete.</para>
             /// </remarks>
             /// </summary>
             [NameInMap("TerraformLogs")]
@@ -104,14 +107,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<GetChangeSetResponseBodyLogTerraformLogs> TerraformLogs { get; set; }
             public class GetChangeSetResponseBodyLogTerraformLogs : TeaModel {
                 /// <summary>
-                /// <para>The name of the Terraform command that is run. Valid values:</para>
+                /// <para>The name of the Terraform command that was executed. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>apply</description></item>
-                /// <item><description>plan</description></item>
-                /// <item><description>destroy</description></item>
-                /// <item><description>version</description></item>
+                /// <item><description><para>apply</para>
+                /// </description></item>
+                /// <item><description><para>plan</para>
+                /// </description></item>
+                /// <item><description><para>destroy</para>
+                /// </description></item>
+                /// <item><description><para>version</para>
+                /// </description></item>
                 /// </list>
-                /// <para>For more information about Terraform commands, see <a href="https://www.terraform.io/cli/commands">Command</a>.</para>
+                /// <para>For more information about the commands, see <a href="https://www.terraform.io/cli/commands">Command</a>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>apply</para>
@@ -121,7 +128,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string Command { get; set; }
 
                 /// <summary>
-                /// <para>The content of the output stream that is returned after the command is run.</para>
+                /// <para>The content that the command wrote to the specified stream.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Apply complete! Resources: 42 added, 0 changed, 0 destroyed.</para>
@@ -133,8 +140,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// <para>The output stream. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>stdout: standard output stream</description></item>
-                /// <item><description>stderr: standard error stream</description></item>
+                /// <item><description><para><c>stdout</c>: standard output</para>
+                /// </description></item>
+                /// <item><description><para><c>stderr</c>: standard error</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -156,7 +165,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<GetChangeSetResponseBodyParameters> Parameters { get; set; }
         public class GetChangeSetResponseBodyParameters : TeaModel {
             /// <summary>
-            /// <para>The key of the parameter.</para>
+            /// <para>The name of the parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALIYUN::Region</para>
@@ -178,7 +187,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the change set.</para>
+        /// <para>The region ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -188,7 +197,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3766EE04-76DD-50F9-9C23-3AF136CD5708</para>
@@ -197,12 +206,18 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource group.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.<br></para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-acfmxazb4ph6aiy****</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the stack with which the change set is associated.</para>
+        /// <para>The ID of the stack to which the change set belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a486fc19-ebb7-4ce9-a70b-554a7c3d****</para>
@@ -212,7 +227,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackId { get; set; }
 
         /// <summary>
-        /// <para>The name of the stack with which the change set is associated.</para>
+        /// <para>The name of the stack to which the change set belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>stack_2021-10-13</para>
@@ -232,7 +247,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The reason why the change set is in its current state.</para>
+        /// <para>The reason for the change set\&quot;s abnormal status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>too many changes.</para>
@@ -241,14 +256,29 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StatusReason { get; set; }
 
+        /// <summary>
+        /// <para>The tags of the change set.</para>
+        /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
         public List<GetChangeSetResponseBodyTags> Tags { get; set; }
         public class GetChangeSetResponseBodyTags : TeaModel {
+            /// <summary>
+            /// <para>The key of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>usage</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The value of the tag.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>test</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }
@@ -258,7 +288,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The template body of the change set.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only if you set ShowTemplate to true.</para>
+        /// <para>This parameter is returned only when <c>ShowTemplate</c> is set to <c>true</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -269,7 +299,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// <para>The timeout period that is specified for the stack creation or update operation.</para>
+        /// <para>The timeout period for creating or updating the stack.</para>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>

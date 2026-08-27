@@ -12,10 +12,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The one or more features that you want to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Terraform: the Terraform hosting feature.</description></item>
-        /// <item><description>ResourceCleaner: the resource cleaner feature. You can use ALIYUN::ROS::ResourceCleaner to create a resource cleaner.</description></item>
-        /// <item><description>TemplateScratch: the scenario feature.</description></item>
-        /// <item><description>All: all features that are supported by ROS.</description></item>
+        /// <item><description><para>Terraform: the Terraform hosting feature.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceCleaner: the resource cleaner feature. You can use ALIYUN::ROS::ResourceCleaner to create a resource cleaner.</para>
+        /// </description></item>
+        /// <item><description><para>TemplateScratch: the scenario feature.</para>
+        /// </description></item>
+        /// <item><description><para>All: all features that are supported by ROS.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

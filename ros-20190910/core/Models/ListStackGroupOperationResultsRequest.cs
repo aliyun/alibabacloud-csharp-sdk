@@ -24,8 +24,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The number of the page to return.</para>
         /// <list type="bullet">
-        /// <item><description>Pages start from page 1.</description></item>
-        /// <item><description>Default value: 1.</description></item>
+        /// <item><description><para>Pages start from page 1.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 1.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,8 +40,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The number of entries to return on each page.</para>
         /// <list type="bullet">
-        /// <item><description>Valid values: 1 to 50.</description></item>
-        /// <item><description>Default value: 10.</description></item>
+        /// <item><description><para>Valid values: 1 to 50.</para>
+        /// </description></item>
+        /// <item><description><para>Default value: 10.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

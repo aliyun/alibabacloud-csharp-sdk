@@ -44,10 +44,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The type of the resource. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>stack: stack</description></item>
-        /// <item><description>stackgroup: stack group</description></item>
-        /// <item><description>template: template</description></item>
-        /// <item><description>templatescratch: scenario</description></item>
+        /// <item><description><para>stack: stack</para>
+        /// </description></item>
+        /// <item><description><para>stackgroup: stack group</para>
+        /// </description></item>
+        /// <item><description><para>template: template</para>
+        /// </description></item>
+        /// <item><description><para>templatescratch: scenario</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

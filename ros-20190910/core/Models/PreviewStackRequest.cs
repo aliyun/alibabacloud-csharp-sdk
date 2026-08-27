@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class PreviewStackRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-        /// The token can be up to 64 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).\
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.
+        /// The token can be up to 64 characters in length, and can contain letters, digits, underscores (_), and hyphens (-).
         /// For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -24,8 +24,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>Specifies whether to disable rollback for the resources when the stack fails to be created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -39,8 +41,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>Specifies whether to query the parameters that you want to use in compliance precheck.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -116,8 +120,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The stack ID. You can use this parameter to preview a stack that you want to update.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You must and can specify only one of StackName and StackId.</description></item>
-        /// <item><description>In the scenario in which you preview a stack that you want to create or update, you cannot preview the resources in its nested stacks.</description></item>
+        /// <item><description><para>You must and can specify only one of StackName and StackId.</para>
+        /// </description></item>
+        /// <item><description><para>In the scenario in which you preview a stack that you want to create or update, you cannot preview the resources in its nested stacks.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -155,7 +161,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackPolicyBody { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</para>
+        /// <para>The URL of the file that contains the stack policy. The URL must point to a policy that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss\://ros/stack-policy/demo or oss\://ros/stack-policy/demo?RegionId=cn-hangzhou. The policy file can be up to 16,384 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</para>
         /// <remarks>
         /// <para>You can specify only one of StackPolicyBody and StackPolicyURL.</para>
         /// </remarks>
@@ -168,6 +174,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string StackPolicyURL { get; set; }
 
+        /// <summary>
+        /// <para>The resources marked as tainted.</para>
+        /// </summary>
         [NameInMap("TaintResources")]
         [Validation(Required=false)]
         public List<string> TaintResources { get; set; }
@@ -224,7 +233,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateScratchRegionId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</para>
+        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an OSS bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</para>
         /// <remarks>
         /// <para>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</para>
         /// </remarks>
@@ -258,6 +267,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public long? TimeoutInMinutes { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to use the values of parameters that were last used.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para>true: The parameters that were last used are reused.</para>
+        /// </description></item>
+        /// <item><description><para>false: The parameters that were last used are not reused.</para>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("UsePreviousParameters")]
         [Validation(Required=false)]
         public bool? UsePreviousParameters { get; set; }

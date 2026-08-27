@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTagKeysResponseBody : TeaModel {
         /// <summary>
-        /// <para>The tag keys.</para>
+        /// <para>The list of tag keys.</para>
         /// </summary>
         [NameInMap("Keys")]
         [Validation(Required=false)]
         public List<string> Keys { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0*****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C429473A-5C66-4661-B5F8-4F900CD4330A</para>

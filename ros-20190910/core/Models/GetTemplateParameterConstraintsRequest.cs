@@ -10,9 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetTemplateParameterConstraintsRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).</para>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_). For more information, refer to <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -22,16 +20,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The name of parameter N in the template.</para>
+        /// <para>The parameters that are defined in the template.</para>
         /// </summary>
         [NameInMap("Parameters")]
         [Validation(Required=false)]
         public List<GetTemplateParameterConstraintsRequestParameters> Parameters { get; set; }
         public class GetTemplateParameterConstraintsRequestParameters : TeaModel {
             /// <summary>
-            /// <para>The name of parameter N in the template.</para>
+            /// <para>The name of the parameter that is defined in the template.</para>
             /// <remarks>
-            /// <para> The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterKey parameter.</para>
+            /// <para>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterKey.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -43,9 +41,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// <para>The value of parameter N in the template.</para>
+            /// <para>The value of the parameter that is defined in the template.</para>
             /// <remarks>
-            /// <para> The Parameters parameter is optional. If you specify the Parameters parameter, you must specify the Parameters.N.ParameterValue parameter.</para>
+            /// <para>The Parameters parameter is optional. If you specify Parameters, you must specify ParameterValue.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -59,25 +57,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The parameters whose values you want to query.</para>
+        /// <para>The list of parameters to be queried.</para>
         /// </summary>
         [NameInMap("ParametersKeyFilter")]
         [Validation(Required=false)]
         public List<string> ParametersKeyFilter { get; set; }
 
         /// <summary>
-        /// <para>The order in which associated parameters are arranged.</para>
-        /// <remarks>
-        /// <para> By default, the order of the associated parameters specified in the <c>Metadata</c> section of the template is used.</para>
-        /// </remarks>
+        /// <para>The dependency of the parameters.</para>
         /// </summary>
         [NameInMap("ParametersOrder")]
         [Validation(Required=false)]
         public List<string> ParametersOrder { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the template.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,6 +83,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         /// <summary>
         /// <para>The ID of the stack.</para>
+        /// <para>If you specify this parameter, the parameter constraints for an upgrade or downgrade scenario are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c754d2a4-28f1-46df-b557-9586173a****</para>
@@ -98,23 +93,45 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackId { get; set; }
 
         /// <summary>
-        /// <para>The structure that contains the template body.</para>
-        /// <para>The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</para>
+        /// <para>The structure of the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommended to use the HTTP POST + Body Param method to pass the parameter in the request body to avoid request failures caused by an excessively long URL.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</para>
+        /// <para>You can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>{&quot;Parameters&quot;:{&quot;ZoneInfo&quot;:{&quot;Type&quot;: &quot;String&quot;},&quot;InstanceType&quot;: {&quot;Type&quot;: &quot;String&quot;}},&quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,&quot;Resources&quot;:{&quot;ECS&quot;:{&quot;Properties&quot;:{&quot;ZoneId&quot;:{&quot;Ref&quot;: &quot;ZoneInfo&quot;},&quot;InstanceType&quot;: {&quot;Ref&quot;: &quot;InstanceType&quot;}},&quot;Type&quot;: &quot;ALIYUN::ECS::Instance&quot;}}}</para>
+        /// <para>{
+        ///   &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,
+        ///   &quot;Parameters&quot;: {
+        ///     &quot;ZoneInfo&quot;: {
+        ///       &quot;Type&quot;: &quot;String&quot;
+        ///     },
+        ///     &quot;InstanceType&quot;: {
+        ///       &quot;Type&quot;: &quot;String&quot;
+        ///     }
+        ///   },
+        ///   &quot;Resources&quot;: {
+        ///     &quot;ECS&quot;: {
+        ///       &quot;Type&quot;: &quot;ALIYUN::ECS::Instance&quot;,
+        ///       &quot;Properties&quot;: {
+        ///         &quot;ZoneId&quot;: {
+        ///           &quot;Ref&quot;: &quot;ZoneInfo&quot;
+        ///         },
+        ///         &quot;InstanceType&quot;: {
+        ///           &quot;Ref&quot;: &quot;InstanceType&quot;
+        ///         }
+        ///       }
+        ///     }
+        ///   }
+        /// }</para>
         /// </summary>
         [NameInMap("TemplateBody")]
         [Validation(Required=false)]
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// <para>The ID of the template. This parameter applies to shared and private templates.</para>
+        /// <para>The ID of the template. This parameter applies to shared templates and private templates.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</para>
+        /// <para>You can specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -125,9 +142,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify the region ID of the OSS bucket, the value of the RegionId parameter is used.</para>
+        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud OSS bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. The template must be 1 to 524,288 bytes in length. If the OSS region is not specified, the default is the same as the RegionId parameter.</para>
         /// <remarks>
-        /// <para> You must specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId.</para>
+        /// <para>You can specify only one of the TemplateBody, TemplateURL, and TemplateId parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -140,7 +157,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The version of the template. If you do not specify this parameter, the latest version is used.</para>
         /// <remarks>
-        /// <para> This parameter takes effect only if the TemplateId parameter is specified.</para>
+        /// <para>TemplateVersion is valid only when TemplateId is specified.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

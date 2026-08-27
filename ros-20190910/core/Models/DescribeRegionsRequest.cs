@@ -12,9 +12,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The language in which you want to display the results. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh-CN (default): Chinese</description></item>
-        /// <item><description>en-US: English</description></item>
-        /// <item><description>ja: Japanese</description></item>
+        /// <item><description><para>zh-CN (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para>en-US: English</para>
+        /// </description></item>
+        /// <item><description><para>ja: Japanese</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

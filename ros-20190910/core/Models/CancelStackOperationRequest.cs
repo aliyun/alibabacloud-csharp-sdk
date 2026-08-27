@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The method that you want to use to cancel the operations. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Quick: cancels the operations on the stack at the earliest opportunity. In this case, Resource Orchestration Service (ROS) stops scheduling new resources and stops running resources at the earliest opportunity. If you use this method, the resource status may become invalid and subsequent stack operations may be affected.</description></item>
-        /// <item><description>Safe (default): cancels the operations on the stack in a secure manner. In this case, ROS stops scheduling new resources and waits for running resources to be stopped.</description></item>
+        /// <item><description><para>Quick: cancels the operations on the stack at the earliest opportunity. In this case, Resource Orchestration Service (ROS) stops scheduling new resources and stops running resources at the earliest opportunity. If you use this method, the resource status may become invalid and subsequent stack operations may be affected.</para>
+        /// </description></item>
+        /// <item><description><para>Safe (default): cancels the operations on the stack in a secure manner. In this case, ROS stops scheduling new resources and waits for running resources to be stopped.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

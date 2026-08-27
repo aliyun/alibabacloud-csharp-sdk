@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class RegisterResourceTypeRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-        /// The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).\
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.<br>
+        /// The token can be up to 64 characters in length, and can contain letters, digits, hyphens (-), and underscores (_).<br>
         /// For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">Ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
@@ -57,8 +57,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. The template body is used as the module content. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect only when EntityType is set to Module.</description></item>
-        /// <item><description>You can specify only one of the TemplateBody and TemplateURL parameters.</description></item>
+        /// <item><description><para>This parameter takes effect only when EntityType is set to Module.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify only one of the TemplateBody and TemplateURL parameters.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -70,12 +72,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. The template body is used as the module content.</para>
+        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. The template body is used as the module content.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</description></item>
-        /// <item><description>This parameter takes effect only when EntityType is set to Module.</description></item>
-        /// <item><description>You can specify only one of the TemplateBody and TemplateURL parameters.</description></item>
+        /// <item><description><para>If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</para>
+        /// </description></item>
+        /// <item><description><para>This parameter takes effect only when EntityType is set to Module.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify only one of the TemplateBody and TemplateURL parameters.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// <para>The URL can be up to 1,024 bytes in length.</para>

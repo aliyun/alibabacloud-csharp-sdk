@@ -30,10 +30,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The operation type.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>CREATE</description></item>
-            /// <item><description>UPDATE</description></item>
-            /// <item><description>DELETE</description></item>
-            /// <item><description>DETECT_DRIFT</description></item>
+            /// <item><description><para>CREATE</para>
+            /// </description></item>
+            /// <item><description><para>UPDATE</para>
+            /// </description></item>
+            /// <item><description><para>DELETE</para>
+            /// </description></item>
+            /// <item><description><para>DETECT_DRIFT</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -208,8 +212,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>Indicates whether stacks are retained when the associated stack instances are deleted. When you delete a stack instance, you can choose to delete or retain the stack with which the stack instance is associated.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Stacks are retained when the associated stack instances are deleted.</description></item>
-            /// <item><description>false: Stacks are deleted when the associated stack instances are deleted. Proceed with caution.</description></item>
+            /// <item><description><para>true: Stacks are retained when the associated stack instances are deleted.</para>
+            /// </description></item>
+            /// <item><description><para>false: Stacks are deleted when the associated stack instances are deleted. Proceed with caution.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is returned only if you delete stack instances.</para>
@@ -246,11 +252,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <para>The drift detection state.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>COMPLETED: Drift detection is performed on the stack group and all stack instances passed the drift detection.</description></item>
-                /// <item><description>FAILED: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection exceeds the specified threshold.</description></item>
-                /// <item><description>PARTIAL_SUCCESS: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection does not exceed the specified threshold.</description></item>
-                /// <item><description>IN_PROGRESS: Drift detection is being performed on the stack group.</description></item>
-                /// <item><description>STOPPED: Drift detection is canceled for the stack group.</description></item>
+                /// <item><description><para>COMPLETED: Drift detection is performed on the stack group and all stack instances passed the drift detection.</para>
+                /// </description></item>
+                /// <item><description><para>FAILED: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection exceeds the specified threshold.</para>
+                /// </description></item>
+                /// <item><description><para>PARTIAL_SUCCESS: Drift detection is performed on the stack group. The number of stack instances that failed the drift detection does not exceed the specified threshold.</para>
+                /// </description></item>
+                /// <item><description><para>IN_PROGRESS: Drift detection is being performed on the stack group.</para>
+                /// </description></item>
+                /// <item><description><para>STOPPED: Drift detection is canceled for the stack group.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -314,9 +325,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <para>The drift state of the stack group.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DRIFTED: At least one stack instance in the stack group has drifted.</description></item>
-                /// <item><description>NOT_CHECKED: No successful drift detection is performed in the stack group.</description></item>
-                /// <item><description>IN_SYNC: All the stack instances in the stack group are being synchronized.</description></item>
+                /// <item><description><para>DRIFTED: At least one stack instance in the stack group has drifted.</para>
+                /// </description></item>
+                /// <item><description><para>NOT_CHECKED: No successful drift detection is performed in the stack group.</para>
+                /// </description></item>
+                /// <item><description><para>IN_SYNC: All the stack instances in the stack group are being synchronized.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -362,11 +376,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The state of the operation.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>RUNNING</description></item>
-            /// <item><description>SUCCEEDED</description></item>
-            /// <item><description>FAILED</description></item>
-            /// <item><description>STOPPING</description></item>
-            /// <item><description>STOPPED</description></item>
+            /// <item><description><para>RUNNING</para>
+            /// </description></item>
+            /// <item><description><para>SUCCEEDED</para>
+            /// </description></item>
+            /// <item><description><para>FAILED</para>
+            /// </description></item>
+            /// <item><description><para>STOPPING</para>
+            /// </description></item>
+            /// <item><description><para>STOPPED</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

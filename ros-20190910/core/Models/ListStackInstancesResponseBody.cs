@@ -96,9 +96,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The state of the stack when the last successful drift detection was performed on the stack group.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DRIFTED: The stack has drifted.</description></item>
-            /// <item><description>NOT_CHECKED: No successful drift detection is performed on the stack.</description></item>
-            /// <item><description>IN_SYNC: The stack is being synchronized.</description></item>
+            /// <item><description><para>DRIFTED: The stack has drifted.</para>
+            /// </description></item>
+            /// <item><description><para>NOT_CHECKED: No successful drift detection is performed on the stack.</para>
+            /// </description></item>
+            /// <item><description><para>IN_SYNC: The stack is being synchronized.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter is returned only if drift detection is performed on the stack group.</para>
@@ -152,9 +155,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// </description></item>
             /// <item><description><para>OUTDATED: The stack is not up-to-date with the stack group. Stacks are in the OUTDATED state due to the following possible reasons:</para>
             /// <list type="bullet">
-            /// <item><description>When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.</description></item>
-            /// <item><description>When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.</description></item>
-            /// <item><description>The creation or update operation is not complete.</description></item>
+            /// <item><description><para>When the CreateStackInstances operation is called to create stacks, the stacks fail to be created.</para>
+            /// </description></item>
+            /// <item><description><para>When the UpdateStackInstances or UpdateStackGroup operation is called to update stacks, the stacks fail to be updated, or only specific stacks are updated.</para>
+            /// </description></item>
+            /// <item><description><para>The creation or update operation is not complete.</para>
+            /// </description></item>
             /// </list>
             /// </description></item>
             /// </list>

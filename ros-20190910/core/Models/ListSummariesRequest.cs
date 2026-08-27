@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListSummariesRequest : TeaModel {
+        /// <summary>
+        /// <para>Output information options.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>StackDetail</para>
+        /// </summary>
         [NameInMap("Option")]
         [Validation(Required=false)]
         public string Option { get; set; }

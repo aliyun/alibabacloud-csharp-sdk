@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class CreateStackInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</para>
+        /// <para>The IDs of the destination accounts where you want to create stacks using self-managed permissions. You can specify up to 50 account IDs.</para>
         /// <remarks>
-        /// <para>You must specify one of the following parameters: <c>AccountIds</c> and <c>DeploymentTargets</c>.</para>
+        /// <para>You can specify only one of the <c>AccountIds</c> and <c>DeploymentTargets</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,9 +23,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string AccountIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-        /// The token can contain letters, digits, hyphens (-), and underscores (_), and cannot exceed 64 characters in length.\
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. The client generates the token, which must be globally unique.<br>The token can be up to 64 characters in length and can contain letters, digits, hyphens (-), and underscores (_).<br>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -34,14 +32,17 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        /// <summary>
+        /// <para>The deployment options for deploying stacks in service-managed permission mode. You can specify up to one deployment option.</para>
+        /// </summary>
         [NameInMap("DeploymentOptions")]
         [Validation(Required=false)]
         public List<string> DeploymentOptions { get; set; }
 
         /// <summary>
-        /// <para>The folders in which ROS deploy stacks in service-managed permission model.</para>
+        /// <para>The deployment targets for deploying stacks in service-managed permission mode.</para>
         /// <remarks>
-        /// <para>You must specify one of the following parameters: <c>AccountIds</c> and <c>DeploymentTargets</c>.</para>
+        /// <para>You can specify only one of the <c>AccountIds</c> and <c>DeploymentTargets</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -52,11 +53,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string DeploymentTargetsShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to disable rollback when the stack fails to be created.</para>
+        /// <para>Indicates whether to disable rollback when a stack fails to be created.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true: Disables rollback.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): Enables rollback.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +70,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public bool? DisableRollback { get; set; }
 
         /// <summary>
-        /// <para>The description of the stack creation operation.</para>
+        /// <para>The description of the operation to create the stacks.</para>
         /// <para>The description must be 1 to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
@@ -78,42 +81,45 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string OperationDescription { get; set; }
 
         /// <summary>
-        /// <para>The preference settings of the stack creation operation.</para>
+        /// <para>The preferences for the operation.</para>
         /// <para>The following parameters are available:</para>
         /// <list type="bullet">
         /// <item><description><para>{&quot;FailureToleranceCount&quot;: N}</para>
-        /// <para> The number of accounts within which stack operation failures are allowed in each region. If the value of this parameter is exceeded in a region, Resource Orchestration Service (ROS) stops the operation in the region. If ROS stops the operation in one region, ROS stops the operation in other regions.</para>
-        /// <para> Valid values of N: 0 to 20.</para>
-        /// <para> If you do not specify FailureToleranceCount, 0 is used as the default value.</para>
+        /// <para>The number of accounts per region in which the operation can fail. If the number of failed operations in a region exceeds this value, Resource Orchestration Service (ROS) stops the operation in that region. If the operation is stopped in a region, the operation is not performed in other regions.</para>
+        /// <para>The value of N can be an integer from 0 to 20.</para>
+        /// <para>If you do not specify this parameter, the default value is 0.</para>
         /// </description></item>
         /// <item><description><para>{&quot;FailureTolerancePercentage&quot;: N}</para>
-        /// <para> The percentage of the number of accounts within which stack operation failures are allowed to the total number of accounts in each region. If the value of this parameter is exceeded, ROS stops the operation in the region.</para>
-        /// <para> Valid values of N: 0 to 100. If the numeric value in the percentage is not an integer, ROS rounds the value down to the nearest integer.</para>
-        /// <para> If you do not specify FailureTolerancePercentage, 0 is used as the default value.</para>
+        /// <para>The percentage of accounts per region in which the operation can fail, relative to the total number of accounts. If the percentage of failed operations in a region exceeds this value, ROS stops the operation in that region.</para>
+        /// <para>The value of N can be an integer from 0 to 100. If the percentage is not an integer, ROS rounds down the value.</para>
+        /// <para>If you do not specify this parameter, the default value is 0.</para>
         /// </description></item>
         /// <item><description><para>{&quot;MaxConcurrentCount&quot;: N}</para>
-        /// <para>The maximum number of accounts within which multiple stacks are deployed at the same time in each region.</para>
-        /// <para>Valid values of N: 1 to 20.</para>
-        /// <para>If you do not specify MaxConcurrentCount, 1 is used as the default value.</para>
+        /// <para>The maximum number of accounts in each region where stacks can be deployed at the same time.</para>
+        /// <para>The value of N can be an integer from 1 to 20.</para>
+        /// <para>If you do not specify this parameter, the default value is 1.</para>
         /// </description></item>
         /// <item><description><para>{&quot;MaxConcurrentPercentage&quot;: N}</para>
-        /// <para> The percentage of the maximum number of accounts within which multiple stacks are deployed at the same time to the total number of accounts in each region.</para>
-        /// <para> Valid values: 1 to 100. If the numeric value in the percentage is not an integer, ROS rounds the number down to the nearest integer.</para>
-        /// <para> If you do not specify MaxConcurrentPercentage, 1 is used as the default value.</para>
+        /// <para>The percentage of accounts in each region where stacks can be deployed at the same time, relative to the total number of accounts.</para>
+        /// <para>The value of N can be an integer from 1 to 100. If the percentage is not an integer, ROS rounds down the value.</para>
+        /// <para>If you do not specify this parameter, the default value is 1.</para>
         /// </description></item>
-        /// <item><description><para>{&quot;RegionConcurrencyType&quot;: N}\
-        ///  The mode that you want to use to deploy stacks across regions. Valid values: </para>
+        /// <item><description><para>{&quot;RegionConcurrencyType&quot;: N}<br>The concurrency type of deployment regions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SEQUENTIAL (default): deploys stacks in each specified region based on the specified sequence of regions. ROS deploys stacks in one region at a time. </description></item>
-        /// <item><description>PARALLEL: deploys stacks in parallel across all specified regions.</description></item>
+        /// <item><description><para>SEQUENTIAL (default): Deploys stacks in the specified regions one by one. Stacks are deployed in only one region at a time.</para>
+        /// </description></item>
+        /// <item><description><para>PARALLEL: Deploys stacks in all specified regions at the same time.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <para>Separate multiple parameters with commas (,).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can specify only one of the following parameters: MaxConcurrentCount and MaxConcurrentPercentage.</description></item>
-        /// <item><description>You can specify only one of the following parameters: FailureToleranceCount and FailureTolerancePercentage.</description></item>
+        /// <item><description><para>You cannot specify MaxConcurrentCount and MaxConcurrentPercentage at the same time.</para>
+        /// </description></item>
+        /// <item><description><para>You cannot specify FailureToleranceCount and FailureTolerancePercentage at the same time.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -125,19 +131,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string OperationPreferencesShrink { get; set; }
 
         /// <summary>
-        /// <para>The parameters that are used to override specific parameters.</para>
+        /// <para>A list of parameters that overwrite the template parameters.</para>
         /// </summary>
         [NameInMap("ParameterOverrides")]
         [Validation(Required=false)]
         public List<CreateStackInstancesShrinkRequestParameterOverrides> ParameterOverrides { get; set; }
         public class CreateStackInstancesShrinkRequestParameterOverrides : TeaModel {
             /// <summary>
-            /// <para>The key of parameter N that you want to use to override a specific parameter. If you do not specify this parameter, ROS uses the name that you specified when you created the stack group.</para>
-            /// <para>Maximum value of N: 200.</para>
+            /// <para>The name of the parameter to overwrite. If you do not specify this parameter, ROS uses the parameter name that was specified when the stack group was created.</para>
+            /// <para>You can specify up to 200 parameters.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>ParameterOverrides is optional.</description></item>
-            /// <item><description>If you specify ParameterOverrides, you must specify ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</description></item>
+            /// <item><description><para>ParameterOverrides is optional.</para>
+            /// </description></item>
+            /// <item><description><para>If you specify ParameterOverrides, you must specify both ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// <para>This parameter is required.</para>
@@ -150,12 +158,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ParameterKey { get; set; }
 
             /// <summary>
-            /// <para>The value of parameter N that you want to use to override a specific parameter. If you do not specify this parameter, ROS uses the value that you specify when you create the stack group.</para>
-            /// <para>Maximum value of N: 200.</para>
+            /// <para>The value of the parameter to overwrite. If you do not specify this parameter, ROS uses the parameter value that was specified when the stack group was created.</para>
+            /// <para>You can specify up to 200 parameters.</para>
             /// <remarks>
             /// <list type="bullet">
-            /// <item><description>ParameterOverrides is optional.</description></item>
-            /// <item><description>If you specify ParameterOverrides, you must specify ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</description></item>
+            /// <item><description><para>ParameterOverrides is optional.</para>
+            /// </description></item>
+            /// <item><description><para>If you specify ParameterOverrides, you must specify both ParameterOverrides.N.ParameterKey and ParameterOverrides.N.ParameterValue.</para>
+            /// </description></item>
             /// </list>
             /// </remarks>
             /// <para>This parameter is required.</para>
@@ -170,7 +180,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the stack group.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -181,7 +192,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the regions where you want to create the stacks. You can specify up to 20 region IDs.</para>
+        /// <para>The IDs of the destination regions. You can specify up to 20 region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -192,8 +203,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the stack group. The name must be unique within a region.\
-        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</para>
+        /// <para>The name of the stack group. The name must be unique within a region.<br>The name can be up to 255 characters in length. It must start with a letter or a digit and can contain letters, digits, hyphens (-), and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -204,10 +214,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackGroupName { get; set; }
 
         /// <summary>
-        /// <para>The timeout period within which you can create the stack.</para>
+        /// <para>The timeout period for creating the stacks.</para>
         /// <list type="bullet">
-        /// <item><description>Default value: 60.</description></item>
-        /// <item><description>Unit: minutes.</description></item>
+        /// <item><description><para>Default value: 60.</para>
+        /// </description></item>
+        /// <item><description><para>Unit: minutes.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

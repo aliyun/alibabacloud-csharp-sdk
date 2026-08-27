@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class EnableServiceAccessResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>23045A5D-720E-5D11-A752-E1568F725C93</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The trusted service access information.</para>
+        /// </summary>
         [NameInMap("ServiceAccessInfo")]
         [Validation(Required=false)]
         public EnableServiceAccessResponseBodyServiceAccessInfo ServiceAccessInfo { get; set; }
         public class EnableServiceAccessResponseBodyServiceAccessInfo : TeaModel {
             /// <summary>
+            /// <para>The trusted service access status.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ENABLED</para>
             /// </summary>

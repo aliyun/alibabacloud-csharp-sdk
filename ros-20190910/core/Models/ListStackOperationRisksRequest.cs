@@ -22,8 +22,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The type of the operation of which you want to detect risks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DeleteStack: detects high risks that may arise in resources when you delete a stack.</description></item>
-        /// <item><description>CreateStack: detects the missing permissions when you fail to create a stack.</description></item>
+        /// <item><description><para>DeleteStack: detects high risks that may arise in resources when you delete a stack.</para>
+        /// </description></item>
+        /// <item><description><para>CreateStack: detects the missing permissions when you fail to create a stack.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,8 +38,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The name of the RAM role.</para>
         /// <list type="bullet">
-        /// <item><description>If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.</description></item>
-        /// <item><description>If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.</description></item>
+        /// <item><description><para>If you specify a RAM role, ROS creates stacks based on the permissions that are granted to the RAM role and uses the credentials of the RAM role to call the API operations of Alibaba Cloud services.</para>
+        /// </description></item>
+        /// <item><description><para>If you do not specify a RAM role, ROS creates stacks based on the permissions of your Alibaba Cloud account.</para>
+        /// </description></item>
         /// </list>
         /// <para>The name of the RAM role can be up to 64 bytes in length.</para>
         /// 
@@ -62,8 +66,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>Specifies whether to retain all resources in the stack. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
+        /// <item><description><para>true</para>
+        /// </description></item>
+        /// <item><description><para>false (default)</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only if you set OperationType to DeleteStack.</para>
@@ -102,7 +108,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</para>
         /// <remarks>
-        /// <para> You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</para>
+        /// <para>You must and can specify only one of the following parameters: TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -126,7 +132,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo and oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify RegionId in the URL, the region ID of the stack is used.</para>
+        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss\://ros/stack-policy/demo and oss\://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length. If you do not specify RegionId in the URL, the region ID of the stack is used.</para>
         /// <remarks>
         /// <para>You must specify one of TemplateBody, TemplateURL, TemplateId, and TemplateScratchId.</para>
         /// </remarks>

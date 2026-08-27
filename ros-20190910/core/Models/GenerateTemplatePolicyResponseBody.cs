@@ -10,28 +10,28 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GenerateTemplatePolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the policy.</para>
+        /// <para>The access policy information.</para>
         /// </summary>
         [NameInMap("Policy")]
         [Validation(Required=false)]
         public GenerateTemplatePolicyResponseBodyPolicy Policy { get; set; }
         public class GenerateTemplatePolicyResponseBodyPolicy : TeaModel {
             /// <summary>
-            /// <para>The statements that are contained in the policy.</para>
+            /// <para>The access policy statement details.</para>
             /// </summary>
             [NameInMap("Statement")]
             [Validation(Required=false)]
             public List<GenerateTemplatePolicyResponseBodyPolicyStatement> Statement { get; set; }
             public class GenerateTemplatePolicyResponseBodyPolicyStatement : TeaModel {
                 /// <summary>
-                /// <para>The operations that are performed on the specified resource.</para>
+                /// <para>The operation on the specific resource.</para>
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
                 public List<string> Action { get; set; }
 
                 /// <summary>
-                /// <para>The condition that is required for the policy to take effect.</para>
+                /// <para>The condition for the authorization to take effect.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -45,10 +45,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public Dictionary<string, object> Condition { get; set; }
 
                 /// <summary>
-                /// <para>The effect of the statement. Valid values:</para>
+                /// <para>The authorization effect. Valid values:  </para>
                 /// <list type="bullet">
-                /// <item><description>Allow</description></item>
-                /// <item><description>Deny</description></item>
+                /// <item><description><para>Allow: Allowed.  </para>
+                /// </description></item>
+                /// <item><description><para>Deny: Denied.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string Effect { get; set; }
 
                 /// <summary>
-                /// <para>The objects that the statement covers. An asterisk (\*) indicates all resources.</para>
+                /// <para>The specific resource that is authorized. An asterisk (*) indicates all resources.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <list type="bullet">
@@ -84,50 +86,98 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
         }
 
+        /// <summary>
+        /// <para>The policy function configurations.</para>
+        /// </summary>
         [NameInMap("PolicyFunctions")]
         [Validation(Required=false)]
         public List<GenerateTemplatePolicyResponseBodyPolicyFunctions> PolicyFunctions { get; set; }
         public class GenerateTemplatePolicyResponseBodyPolicyFunctions : TeaModel {
+            /// <summary>
+            /// <para>The action in the policy function.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>accept</para>
+            /// </summary>
             [NameInMap("Action")]
             [Validation(Required=false)]
             public string Action { get; set; }
 
+            /// <summary>
+            /// <para>The policy function list.</para>
+            /// </summary>
             [NameInMap("ActionPolicyFunctions")]
             [Validation(Required=false)]
             public List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions> ActionPolicyFunctions { get; set; }
             public class GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctions : TeaModel {
+                /// <summary>
+                /// <para>The policy function list.</para>
+                /// </summary>
                 [NameInMap("Functions")]
                 [Validation(Required=false)]
                 public List<GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions> Functions { get; set; }
                 public class GenerateTemplatePolicyResponseBodyPolicyFunctionsActionPolicyFunctionsFunctions : TeaModel {
+                    /// <summary>
+                    /// <para>The function in the policy function.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>notContains</para>
+                    /// </summary>
                     [NameInMap("Function")]
                     [Validation(Required=false)]
                     public string Function { get; set; }
 
+                    /// <summary>
+                    /// <para>The operation type.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>CreateStack</para>
+                    /// </summary>
                     [NameInMap("OperationType")]
                     [Validation(Required=false)]
                     public string OperationType { get; set; }
 
+                    /// <summary>
+                    /// <para>The list of related properties.</para>
+                    /// </summary>
                     [NameInMap("RelatedProperties")]
                     [Validation(Required=false)]
                     public List<string> RelatedProperties { get; set; }
 
+                    /// <summary>
+                    /// <para>The requirement level of the function.</para>
+                    /// </summary>
                     [NameInMap("RequirementLevel")]
                     [Validation(Required=false)]
                     public string RequirementLevel { get; set; }
 
                 }
 
+                /// <summary>
+                /// <para>The logical resource ID of the policy function.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>SLBLoadBalancer_00001</para>
+                /// </summary>
                 [NameInMap("LogicalResourceId")]
                 [Validation(Required=false)]
                 public string LogicalResourceId { get; set; }
 
+                /// <summary>
+                /// <para>The resource type associated with the policy function.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>stack</para>
+                /// </summary>
                 [NameInMap("ResourceType")]
                 [Validation(Required=false)]
                 public string ResourceType { get; set; }
 
             }
 
+            /// <summary>
+            /// <para>The requirement level of the policy function.</para>
+            /// </summary>
             [NameInMap("RequirementLevel")]
             [Validation(Required=false)]
             public string RequirementLevel { get; set; }
@@ -135,7 +185,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B288A0BE-D927-4888-B0F7-B35EF84B6E6</para>

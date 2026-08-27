@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,18 +47,20 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<ListStackGroupsResponseBodyStackGroups> StackGroups { get; set; }
         public class ListStackGroupsResponseBodyStackGroups : TeaModel {
             /// <summary>
-            /// <para>The information about automatic deployment settings.</para>
+            /// <para>The automatic deployment settings.</para>
             /// </summary>
             [NameInMap("AutoDeployment")]
             [Validation(Required=false)]
             public ListStackGroupsResponseBodyStackGroupsAutoDeployment AutoDeployment { get; set; }
             public class ListStackGroupsResponseBodyStackGroupsAutoDeployment : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether automatic deployment is enabled.</para>
+                /// <para>Whether automatic deployment is enabled.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true: Automatic deployment is enabled. If you add a member to the folder to which the stack group belongs after automatic deployment is enabled, Resource Orchestration Service (ROS) automatically adds the stack instances in the stack group to the specified region of the member. If you delete the member from the folder, ROS automatically deletes the stack instances in the stack group from the specified region of the member.</description></item>
-                /// <item><description>false: Automatic deployment is disabled. After you disable automatic deployment, the stack instances remain unchanged when you change the member in the folder.</description></item>
+                /// <item><description><para>true: Automatic deployment is enabled. When a member account is added to the target folder, ROS deploys a stack instance for it. When a member account is removed, ROS deletes the stack instance.</para>
+                /// </description></item>
+                /// <item><description><para>false: Automatic deployment is disabled. Stack instances remain unchanged when folder membership changes.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -69,14 +71,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public bool? Enabled { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the stacks within a member are retained when you delete the member from the folder.</para>
+                /// <para>Whether stacks are retained when member accounts are removed from the folder.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: The stacks are retained.</para>
+                /// </description></item>
+                /// <item><description><para>false: The stacks are deleted.</para>
+                /// </description></item>
                 /// </list>
                 /// <remarks>
-                /// <para>This parameter is returned only if Enabled is set to true.</para>
+                /// <para>Returned only when Enabled is true.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -88,6 +92,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             }
 
+            /// <summary>
+            /// <para>The creation time of the stack group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-01-05T05:38:31</para>
+            /// </summary>
             [NameInMap("CreateTime")]
             [Validation(Required=false)]
             public string CreateTime { get; set; }
@@ -103,7 +113,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the most recent successful drift detection was performed on the stack group.</para>
+            /// <para>The time of the last successful drift detection on the stack group.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-02-27T07:47:47</para>
@@ -113,14 +123,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string DriftDetectionTime { get; set; }
 
             /// <summary>
-            /// <para>The permission model of the stack group.</para>
+            /// <para>The permission model.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SELF_MANAGED</description></item>
-            /// <item><description>SERVICE_MANAGED</description></item>
+            /// <item><description><para>SELF_MANAGED: self-managed permissions.</para>
+            /// </description></item>
+            /// <item><description><para>SERVICE_MANAGED: service-managed permissions.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>For more information about the permission models of stack groups, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</para>
+            /// <para>For details on permission models of stack groups, see <a href="https://help.aliyun.com/document_detail/154578.html">Overview</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -141,12 +153,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The drift state of the stack group on which the most recent successful drift detection was performed.</para>
+            /// <para>The drift status of the stack group from the last successful drift detection.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DRIFTED: The stack group has drifted.</description></item>
-            /// <item><description>NOT_CHECKED: No drift detection is performed on the stack group.</description></item>
-            /// <item><description>IN_SYNC: No drifts are detected on the stack group.</description></item>
+            /// <item><description><para>DRIFTED: The stack group has drifted from its template.</para>
+            /// </description></item>
+            /// <item><description><para>NOT_CHECKED: No drift detection has been performed.</para>
+            /// </description></item>
+            /// <item><description><para>IN_SYNC: The stack group matches its template.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -177,11 +192,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string StackGroupName { get; set; }
 
             /// <summary>
-            /// <para>The state of the stack group.</para>
+            /// <para>The status of the stack group.</para>
             /// <para>Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ACTIVE</description></item>
-            /// <item><description>DELETED</description></item>
+            /// <item><description><para>ACTIVE</para>
+            /// </description></item>
+            /// <item><description><para>DELETED</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -192,14 +209,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The tags that are added to the stack group.</para>
+            /// <para>The tags of the stack group.</para>
             /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<ListStackGroupsResponseBodyStackGroupsTags> Tags { get; set; }
             public class ListStackGroupsResponseBodyStackGroupsTags : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag that is added to the stack group.</para>
+                /// <para>The tag key of the stack group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>usage1</para>
@@ -209,7 +226,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag that is added to the stack group.</para>
+                /// <para>The tag value of the stack group.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test1</para>
@@ -220,6 +237,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             }
 
+            /// <summary>
+            /// <para>The last update time of the stack group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2024-02-15T16:40:25</para>
+            /// </summary>
             [NameInMap("UpdateTime")]
             [Validation(Required=false)]
             public string UpdateTime { get; set; }

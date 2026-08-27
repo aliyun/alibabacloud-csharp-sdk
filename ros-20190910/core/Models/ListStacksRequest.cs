@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStacksRequest : TeaModel {
         /// <summary>
-        /// <para>The end of the time range during which data was queried. The time follows the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time is displayed in UTC.</para>
+        /// <para>The end of the time range for filtering by creation time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-01T15:16:00Z</para>
@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The page number.</para>
-        /// <para>Pages start from page 1.</para>
+        /// <para>The page number of the stack list.  </para>
+        /// <para>Start value: 1.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page when paging is used.  </para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ParentStackId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the stack. You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -65,8 +65,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.\
-        /// For more information about resource groups, see the &quot;Resource Group&quot; section of the <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management?</a> topic.</para>
+        /// <para>The resource group ID.<br>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -76,13 +75,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return nested stacks. Valid values:</para>
+        /// <para>Specifies whether to list nested stacks. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true</description></item>
         /// <item><description>false (default)</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you specify ParentStackId, you must set ShowNestedStack to true.</para>
+        /// <para>If ParentStackId is specified, this value is set to true.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -93,7 +92,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public bool? ShowNestedStack { get; set; }
 
         /// <summary>
-        /// <para>The stack ID. You can specify this parameter to query only the stack ID. If you want to query the detailed information about the stack, call the GetStack operation.</para>
+        /// <para>The stack ID. If you do not need detailed stack information, you can specify this parameter instead of calling the GetStack operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>
@@ -103,14 +102,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the stacks.</para>
+        /// <para>The list of stack IDs.</para>
         /// </summary>
         [NameInMap("StackIds")]
         [Validation(Required=false)]
         public List<string> StackIds { get; set; }
 
         /// <summary>
-        /// <para>The names of the stacks.</para>
+        /// <para>The stack name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MyStack</para>
@@ -120,7 +119,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> StackName { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</para>
+        /// <para>The beginning of the time range for filtering by creation time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-01T15:10:00Z</para>
@@ -130,7 +129,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StartTime { get; set; }
 
         /// <summary>
-        /// <para>The status of the stack.</para>
+        /// <para>The stack status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATE_COMPLETE</para>
@@ -147,8 +146,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<ListStacksRequestTag> Tag { get; set; }
         public class ListStacksRequestTag : TeaModel {
             /// <summary>
-            /// <para>The key of tag N.\
-            /// Valid values of N: 1 to 20.</para>
+            /// <para>The tag key of the stack.<br>Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>usage</para>
@@ -158,8 +156,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The value of tag N.\
-            /// Valid values of N: 1 to 20.</para>
+            /// <para>The tag value of the stack.<br>Valid values of N: 1 to 20.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

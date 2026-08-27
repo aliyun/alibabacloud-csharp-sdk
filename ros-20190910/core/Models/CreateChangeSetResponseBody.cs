@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ChangeSetId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B288A0BE-D927-4888-B0F7-B35EF84B6E6F</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the stack.</para>
+        /// <para>The stack ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4a6c9851-3b0f-4f5f-b4ca-a14bf691****</para>

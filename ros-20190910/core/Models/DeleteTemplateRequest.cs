@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteTemplateRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the template. This parameter applies to only private templates.</para>
+        /// <para>The template ID. Applies to private templates only.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

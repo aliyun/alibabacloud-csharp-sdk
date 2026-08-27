@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The logical IDs of the resources.</para>
+        /// <para>The logical resource ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>WebServer</para>
@@ -20,9 +20,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public List<string> LogicalResourceId { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return.\
-        /// Pages start from page 1.\
-        /// Default value: 1.</para>
+        /// <para>The page number of the event list.<br>Minimum value: 1.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -32,9 +30,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.\
-        /// Maximum value: 50.\
-        /// Default value: 10.</para>
+        /// <para>The number of entries per page in a paged query. Settings for paging.<br>Maximum value: 50.<br>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -44,7 +40,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public long? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the stack. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the stack. You can call <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,7 +51,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource types.</para>
+        /// <para>The resource type list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALIYUN::ECS::Instance</para>
@@ -76,7 +72,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackId { get; set; }
 
         /// <summary>
-        /// <para>The status of the resource.</para>
+        /// <para>The resource status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CREATE_IN_PROGRESS</para>

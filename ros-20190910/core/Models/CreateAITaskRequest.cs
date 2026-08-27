@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>创建一台ECS，部署nignx服务</para>
+        /// <para>Create oneECS, and deploynignx service</para>
         /// </summary>
         [NameInMap("Prompt")]
         [Validation(Required=false)]

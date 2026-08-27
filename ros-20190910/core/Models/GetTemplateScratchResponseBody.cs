@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class GetTemplateScratchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A8E0EF98-6FBD-5656-8298-FC8194F0F7B7</para>
@@ -27,8 +27,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public GetTemplateScratchResponseBodyTemplateScratch TemplateScratch { get; set; }
         public class GetTemplateScratchResponseBodyTemplateScratch : TeaModel {
             /// <summary>
-            /// <para>The time at which the resource scenario was created.</para>
-            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the resource scenario was created. The time is displayed in UTC+0 and follows the ISO 8601 standard without the trailing Z. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-22T01:49:22</para>
@@ -41,16 +40,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The description of the resource scenario.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>The description of the resource scenario.</para>
+            /// <para>复制VPC资源。</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The status code of the resource scenario that fails to be created.</para>
+            /// <para>The status code that indicates why the resource scenario failed to be generated.</para>
             /// <remarks>
-            /// <para>This parameter is returned only if you set Status to GENERATE_FAILED.</para>
+            /// <para>This parameter is returned only when Status is set to GENERATE_FAILED.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -61,11 +60,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string FailedCode { get; set; }
 
             /// <summary>
-            /// <para>The policy based on which the logical ID is generated. Valid values:</para>
+            /// <para>The logical ID generation strategy. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>LongTypePrefixAndIndexSuffix (default): long-type prefix + index-type suffix</description></item>
-            /// <item><description>LongTypePrefixAndHashSuffix: long-type prefix + hash-type suffix</description></item>
-            /// <item><description>ShortTypePrefixAndHashSuffix: short-type prefix + hash-type suffix</description></item>
+            /// <item><description><para>LongTypePrefixAndIndexSuffix (default): long type prefix with index suffix.</para>
+            /// </description></item>
+            /// <item><description><para>LongTypePrefixAndHashSuffix: long type prefix with hash suffix.</para>
+            /// </description></item>
+            /// <item><description><para>ShortTypePrefixAndHashSuffix: short type prefix with hash suffix.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -76,7 +78,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string LogicalIdStrategy { get; set; }
 
             /// <summary>
-            /// <para>The preference parameters of the resource scenario.</para>
+            /// <para>The configuration parameters of the resource scenario.</para>
             /// </summary>
             [NameInMap("PreferenceParameters")]
             [Validation(Required=false)]
@@ -105,7 +107,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-acfmzmhzoaad5oq</para>
@@ -132,7 +134,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public string ResourceGroupId { get; set; }
 
                 /// <summary>
-                /// <para>The resource type filters.</para>
+                /// <para>The resource type filter.</para>
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -148,7 +150,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public List<GetTemplateScratchResponseBodyTemplateScratchSourceResources> SourceResources { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchSourceResources : TeaModel {
                 /// <summary>
-                /// <para>The related resource type filters.</para>
+                /// <para>The filter for related resource types.</para>
                 /// </summary>
                 [NameInMap("RelatedResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -184,7 +186,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public GetTemplateScratchResponseBodyTemplateScratchSourceTag SourceTag { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchSourceTag : TeaModel {
                 /// <summary>
-                /// <para>The source tags.</para>
+                /// <para>The source tag.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;a&quot;: &quot;b&quot;}</para>
@@ -194,7 +196,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public Dictionary<string, object> ResourceTags { get; set; }
 
                 /// <summary>
-                /// <para>The resource type filters.</para>
+                /// <para>The resource type filter.</para>
                 /// </summary>
                 [NameInMap("ResourceTypeFilter")]
                 [Validation(Required=false)]
@@ -203,17 +205,19 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// <para>The preset information of the stack.</para>
+            /// <para>The stack provisioning information.</para>
             /// </summary>
             [NameInMap("StackProvision")]
             [Validation(Required=false)]
             public GetTemplateScratchResponseBodyTemplateScratchStackProvision StackProvision { get; set; }
             public class GetTemplateScratchResponseBodyTemplateScratchStackProvision : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether the resource is replicated by calling the <a href="https://help.aliyun.com/document_detail/132086.html">CreateStack</a> operation. Valid values:</para>
+                /// <para>Indicates whether you can call <a href="https://help.aliyun.com/document_detail/132086.html">CreateStack</a> to create a stack for resource replication. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: Supported.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not supported.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -224,10 +228,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 public bool? Creatable { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the resource is managed by calling the <a href="https://help.aliyun.com/document_detail/131051.html">CreateChangeSet</a> operation. Valid values:</para>
+                /// <para>Indicates whether you can call <a href="https://help.aliyun.com/document_detail/131051.html">CreateChangeSet</a> to create a change set for resource management. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>true</description></item>
-                /// <item><description>false</description></item>
+                /// <item><description><para>true: Supported.</para>
+                /// </description></item>
+                /// <item><description><para>false: Not supported.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -240,7 +246,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// <para>The stacks that are associated with the resource scenario.</para>
+            /// <para>The list of stacks associated with the resource scenario.</para>
             /// </summary>
             [NameInMap("Stacks")]
             [Validation(Required=false)]
@@ -269,8 +275,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// <para>The purpose of the stack. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ResourceImport: resource management</description></item>
-                /// <item><description>ArchitectureReplication: resource replication</description></item>
+                /// <item><description><para>ResourceImport: resource management.</para>
+                /// </description></item>
+                /// <item><description><para>ArchitectureReplication: resource replication.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -283,11 +291,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             }
 
             /// <summary>
-            /// <para>The state of the resource scenario. Valid values:</para>
+            /// <para>The status of the resource scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>GENERATE_IN_PROGRESS: The resource scenario is being created.</description></item>
-            /// <item><description>GENERATE_COMPLETE: The resource scenario is created.</description></item>
-            /// <item><description>GENERATE_FAILED: The resource scenario fails to be created.</description></item>
+            /// <item><description><para>GENERATE_IN_PROGRESS: being generated.</para>
+            /// </description></item>
+            /// <item><description><para>GENERATE_COMPLETE: generated.</para>
+            /// </description></item>
+            /// <item><description><para>GENERATE_FAILED: failed to be generated.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -298,9 +309,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason why the resource scenario fails to be created.</para>
+            /// <para>The reason why the resource scenario failed to be generated.</para>
             /// <remarks>
-            /// <para>This parameter is returned only if you set Status to GENERATE_FAILED.</para>
+            /// <para>This parameter is returned only when Status is set to GENERATE_FAILED.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -312,6 +323,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 
             /// <summary>
             /// <para>The resource scenario data.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>参见返回示例</para>
             /// </summary>
             [NameInMap("TemplateScratchData")]
             [Validation(Required=false)]
@@ -330,8 +344,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The type of the resource scenario. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ResourceImport: resource management</description></item>
-            /// <item><description>ArchitectureReplication: resource replication</description></item>
+            /// <item><description><para>ResourceImport: resource management.</para>
+            /// </description></item>
+            /// <item><description><para>ArchitectureReplication: resource replication.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -342,8 +358,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string TemplateScratchType { get; set; }
 
             /// <summary>
-            /// <para>The time at which the resource scenario was updated.</para>
-            /// <para>The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the resource scenario was last updated. The time is displayed in UTC+0 and follows the ISO 8601 standard without the trailing Z. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-22T01:49:23</para>

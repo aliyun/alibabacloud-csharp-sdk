@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>Specifies whether only to validate the stack in the request. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: only validates the stack.</description></item>
-        /// <item><description>false (default): validates and continues to create the stack.</description></item>
+        /// <item><description><para>true: only validates the stack.</para>
+        /// </description></item>
+        /// <item><description><para>false (default): validates and continues to create the stack.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,10 +31,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <item><description><para>Recreate (default)</para>
         /// <para>If you set this parameter to Recreate, ROS continues to create only the following types of resources:</para>
         /// <list type="bullet">
-        /// <item><description>Resources that fail to be created</description></item>
-        /// <item><description>Resources that you specify for RecreatingResources.N</description></item>
-        /// <item><description>Dependencies of the resources that you specify for RecreatingResources.N</description></item>
-        /// <item><description>Resources that you have not created</description></item>
+        /// <item><description><para>Resources that fail to be created</para>
+        /// </description></item>
+        /// <item><description><para>Resources that you specify for RecreatingResources.N</para>
+        /// </description></item>
+        /// <item><description><para>Dependencies of the resources that you specify for RecreatingResources.N</para>
+        /// </description></item>
+        /// <item><description><para>Resources that you have not created</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -42,8 +48,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <list type="bullet">
         /// <item><description><para>Ignore</para>
         /// <list type="bullet">
-        /// <item><description>ROS ignores and discards resources that fail to be created and you have not created, and considers that the stack is successfully created.</description></item>
-        /// <item><description>The body of the template that you use to create the stack is changed.</description></item>
+        /// <item><description><para>ROS ignores and discards resources that fail to be created and you have not created, and considers that the stack is successfully created.</para>
+        /// </description></item>
+        /// <item><description><para>The body of the template that you use to create the stack is changed.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -63,10 +71,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>By default, this parameter is empty. You can set this parameter to an integer that is greater than or equal to 0.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you set this parameter to an integer that is greater than 0, the integer is used.</description></item>
-        /// <item><description>If you set this parameter to 0, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</description></item>
-        /// <item><description>If you leave this parameter empty, the value that you specified for this parameter in the previous request is used. If you left this parameter empty in the previous request, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</description></item>
-        /// <item><description>If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack.</description></item>
+        /// <item><description><para>If you set this parameter to an integer that is greater than 0, the integer is used.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter to 0, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</para>
+        /// </description></item>
+        /// <item><description><para>If you leave this parameter empty, the value that you specified for this parameter in the previous request is used. If you left this parameter empty in the previous request, no limit is imposed on ROS stacks. However, the default value in Terraform is used for Terraform stacks. In most cases, the default value in Terraform is 10.</para>
+        /// </description></item>
+        /// <item><description><para>If you set this parameter to a specific value, ROS associates the value with the stack. The value affects subsequent operations on the stack.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -102,8 +114,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <para>The value of template parameter N that you want to use to override a specific parameter. Maximum value of N: 200.</para>
             /// <para>For ROS stacks, the template parameters that you use to override specific parameters are subject to the following limits:</para>
             /// <list type="bullet">
-            /// <item><description>You cannot change the condition values in the Conditions section of a template from true to false or from false to true.</description></item>
-            /// <item><description>The template parameters can be referenced only by resources that ROS continues to create.</description></item>
+            /// <item><description><para>You cannot change the condition values in the Conditions section of a template from true to false or from false to true.</para>
+            /// </description></item>
+            /// <item><description><para>The template parameters can be referenced only by resources that ROS continues to create.</para>
+            /// </description></item>
             /// </list>
             /// <remarks>
             /// <para>This parameter takes effect only when Mode is set to Recreate.</para>
@@ -120,9 +134,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.\
-        /// ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.\
-        /// If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.\
+        /// <para>The name of the RAM role. Resource Orchestration Service (ROS) assumes the RAM role to create the stack and uses the credentials of the role to call the APIs of Alibaba Cloud services.<br>
+        /// ROS assumes the RAM role to perform operations on the stack. If you have permissions to perform operations on the stack but do not have permissions to use the RAM role, ROS still assumes the RAM role. You must make sure that the least privileges are granted to the RAM role.<br>
+        /// If you do not specify this parameter, ROS assumes the existing role that is associated with the stack. If no roles are available, ROS uses a temporary credential that is generated from the credentials of your account.<br>
         /// The name of the RAM role can be up to 64 bytes in length.</para>
         /// 
         /// <b>Example:</b>
@@ -175,7 +189,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string StackId { get; set; }
 
         /// <summary>
-        /// <para>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.\
+        /// <para>The structure that contains the template body. The template body must be 1 to 524,288 bytes in length.<br>
         /// If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</para>
         /// <para>A ROS template is subject to the following limits:</para>
         /// <list type="bullet">
@@ -185,16 +199,21 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// </description></item>
         /// <item><description><para>The Resources section is subject to the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>You cannot delete the resources or change the template body for the resources that you do not want to continue to create.</description></item>
-        /// <item><description>You can delete the resources or change the template body for the resources that you want to continue to create.</description></item>
-        /// <item><description>You can add resources to this section.</description></item>
+        /// <item><description><para>You cannot delete the resources or change the template body for the resources that you do not want to continue to create.</para>
+        /// </description></item>
+        /// <item><description><para>You can delete the resources or change the template body for the resources that you want to continue to create.</para>
+        /// </description></item>
+        /// <item><description><para>You can add resources to this section.</para>
+        /// </description></item>
         /// </list>
         /// </description></item>
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect only when Mode is set to Recreate.</description></item>
-        /// <item><description>You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId. If you do not specify the parameters, the existing template is used.</description></item>
+        /// <item><description><para>This parameter takes effect only when Mode is set to Recreate.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId. If you do not specify the parameters, the existing template is used.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -209,8 +228,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The template ID. This parameter applies to shared and private templates.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect when <c>Mode</c> is set to <c>Recreate</c>. When you specify TemplateId of a template, the template is subject to the limits that are described for <c>TemplateBody</c> in this topic.</description></item>
-        /// <item><description>You can specify only one of the following parameters: <c>TemplateBody</c>, <c>TemplateURL</c>, and <c>TemplateId</c>. If you do not specify the parameters, the existing template is used.</description></item>
+        /// <item><description><para>This parameter takes effect when <c>Mode</c> is set to <c>Recreate</c>. When you specify TemplateId of a template, the template is subject to the limits that are described for <c>TemplateBody</c> in this topic.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify only one of the following parameters: <c>TemplateBody</c>, <c>TemplateURL</c>, and <c>TemplateId</c>. If you do not specify the parameters, the existing template is used.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -222,12 +243,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss://ros/template/demo or oss://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</para>
+        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Object Storage Service (OSS) bucket, such as oss\://ros/template/demo or oss\://ros/template/demo?RegionId=cn-hangzhou. The template body can be up to 524,288 bytes in length.</para>
         /// <para>If you do not specify the region ID of the OSS bucket, the value of RegionId is used.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect only when Mode is set to Recreate. When you specify TemplateURL of a template, the template is subject to the limits that are described for TemplateBody in this topic.</description></item>
-        /// <item><description>You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId. If you do not specify the parameters, the existing template is used.</description></item>
+        /// <item><description><para>This parameter takes effect only when Mode is set to Recreate. When you specify TemplateURL of a template, the template is subject to the limits that are described for TemplateBody in this topic.</para>
+        /// </description></item>
+        /// <item><description><para>You can specify only one of the following parameters: TemplateBody, TemplateURL, and TemplateId. If you do not specify the parameters, the existing template is used.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 

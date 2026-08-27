@@ -20,8 +20,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.\
-        /// For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">Resource groups</a>.</para>
+        /// <para>The ID of the resource group.
+        /// For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfmxazb4ph6aiy****</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The tag key of the template.</para>
             /// <remarks>
-            /// <para>Tags is optional. If you need to specify Tags, you must also specify Key.</para>
+            /// <para>Tags is an optional parameter. If you specify Tags, you must specify \<c>Tags.N.Key\\</c>.</para>
             /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
@@ -64,21 +64,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The structure of the template body. The template body must be 1 to 524,288 bytes in length. If the length of the template body exceeds the upper limit, we recommend that you add parameters to the HTTP POST request body to prevent request failures caused by excessively long URLs.</para>
+        /// <para>The structure of the template body. The template body must be 1 to 524,288 bytes in length. If the template body is large, specify the parameter in the request body to prevent request failures caused by an excessively long URL.</para>
         /// <remarks>
-        /// <para>You must specify TemplateBody or TemplateURL.</para>
+        /// <para>You can specify only one of the \<c>TemplateBody\\</c>, \<c>TemplateURL\\</c>, and \<c>TemplateId\\</c> parameters.</para>
         /// </remarks>
-        /// <para>You can create a Terraform template based on your business requirements. The following sample code provides an example on how to create a Terraform template:</para>
-        /// <pre><c>{
-        ///   &quot;ROSTemplateFormatVersion&quot;: &quot;2015-09-01&quot;,
-        ///   &quot;Transform&quot;: &quot;Aliyun::Terraform-v1.0&quot;,
-        ///   &quot;Workspace&quot;: {
-        ///     &quot;main.tf&quot;: &quot;variable  \\&quot;name\\&quot; {  default = \\&quot;auto_provisioning_group\\&quot;}&quot;
-        ///   },
-        ///   &quot;Outputs&quot;: {}
-        /// }
-        /// </c></pre>
-        /// <para>For more information about Terraform templates, see <a href="https://help.aliyun.com/document_detail/184397.html">Structure of Terraform templates</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;ROSTemplateFormatVersion&quot;:&quot;2015-09-01&quot;}</para>
@@ -88,8 +77,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateBody { get; set; }
 
         /// <summary>
-        /// <para>The name of the template.\
-        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</para>
+        /// <para>The name of the template. The name can be up to 255 characters in length. It must start with a digit, letter, or Chinese character. It can contain digits, letters, Chinese characters, hyphens (-), and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -100,9 +88,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateName { get; set; }
 
         /// <summary>
-        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on an HTTP or HTTPS web server or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss://ros/stack-policy/demo or oss://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body must be 1 to 1,024 bytes in length. If you do not specify the region of the OSS bucket, the value of RegionId is used.</para>
+        /// <para>The URL of the file that contains the template body. The URL must point to a template that is located on a web server (HTTP or HTTPS) or in an Alibaba Cloud Object Storage Service (OSS) bucket, such as oss\://ros/stack-policy/demo or oss\://ros/stack-policy/demo?RegionId=cn-hangzhou. The template body must be 1 to 1,024 bytes in length. If you do not specify the region of the OSS bucket, the value of the RegionId parameter is used.</para>
         /// <remarks>
-        /// <para>You must specify TemplateBody or TemplateURL.</para>
+        /// <para>You must specify only one of the \<c>TemplateBody\\</c> and \<c>TemplateURL\\</c> parameters.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -112,6 +100,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string TemplateURL { get; set; }
 
+        /// <summary>
+        /// <para>The validation options.</para>
+        /// <para>By default, no options are enabled and strict validation is performed.</para>
+        /// </summary>
         [NameInMap("ValidationOptions")]
         [Validation(Required=false)]
         public List<string> ValidationOptions { get; set; }

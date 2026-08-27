@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The versions of the resource types.</para>
+        /// <para>The list of resource type version information.</para>
         /// </summary>
         [NameInMap("ResourceTypeVersions")]
         [Validation(Required=false)]
         public List<ListResourceTypeVersionsResponseBodyResourceTypeVersions> ResourceTypeVersions { get; set; }
         public class ListResourceTypeVersionsResponseBodyResourceTypeVersions : TeaModel {
             /// <summary>
-            /// <para>The time when the version was created. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</para>
+            /// <para>The time when the version was created. The time is displayed in UTC+0 based on the ISO 8601 standard but without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-24T08:25:21</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The description of the version.</para>
+            /// <para>The version description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>It is a demo.</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The entity type. Only Module may be returned.</para>
+            /// <para>The entity type. Valid values: Module, which indicates a module.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Module</para>
@@ -59,8 +59,8 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>Indicates whether the version is the default version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true</description></item>
-            /// <item><description>false</description></item>
+            /// <item><description>true: The version is the default version.</description></item>
+            /// <item><description>false: The version is not the default version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -71,10 +71,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public bool? IsDefaultVersion { get; set; }
 
             /// <summary>
-            /// <para>The provider of the resource type. Valid values:</para>
+            /// <para>The resource type provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ROS: ROS</description></item>
-            /// <item><description>Self: yourself</description></item>
+            /// <item><description>ROS: Resource Orchestration Service.</description></item>
+            /// <item><description>Self: The user.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>The time when the version was updated. The time is displayed in UTC. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format.</para>
+            /// <para>The time when the version was last updated. The time is displayed in UTC+0 based on the ISO 8601 standard but without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-02-24T08:25:21</para>

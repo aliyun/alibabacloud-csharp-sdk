@@ -139,9 +139,12 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
                 /// <summary>
                 /// <para>The drift type of the resource property. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>ADD: The value is added to a resource property whose data type is Array or List.</description></item>
-                /// <item><description>REMOVE: The property is deleted from the current resource configuration.</description></item>
-                /// <item><description>NOT_EQUAL: The current property value differs from the expected value that is defined in the stack template.</description></item>
+                /// <item><description><para>ADD: The value is added to a resource property whose data type is Array or List.</para>
+                /// </description></item>
+                /// <item><description><para>REMOVE: The property is deleted from the current resource configuration.</para>
+                /// </description></item>
+                /// <item><description><para>NOT_EQUAL: The current property value differs from the expected value that is defined in the stack template.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -176,10 +179,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             /// <summary>
             /// <para>The drift state of the resource. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</description></item>
-            /// <item><description>MODIFIED: The actual configuration of the resource differs from its expected template configuration.</description></item>
-            /// <item><description>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</description></item>
-            /// <item><description>IN_SYNC: The actual configuration of the resource matches its expected template configuration.</description></item>
+            /// <item><description><para>DELETED: The actual configuration of the resource differs from its expected template configuration because the resource is deleted.</para>
+            /// </description></item>
+            /// <item><description><para>MODIFIED: The actual configuration of the resource differs from its expected template configuration.</para>
+            /// </description></item>
+            /// <item><description><para>NOT_CHECKED: Resource Orchestration Service (ROS) has not checked whether the actual configuration of the resource differs from its expected template configuration.</para>
+            /// </description></item>
+            /// <item><description><para>IN_SYNC: The actual configuration of the resource matches its expected template configuration.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

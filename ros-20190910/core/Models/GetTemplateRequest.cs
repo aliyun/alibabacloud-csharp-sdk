@@ -25,8 +25,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>Specifies whether to query the shared information about the template. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled</description></item>
-        /// <item><description>Disabled (default)</description></item>
+        /// <item><description><para>Enabled</para>
+        /// </description></item>
+        /// <item><description><para>Disabled (default)</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>Only the template owner can query the shared information of a template.</para>
@@ -42,8 +44,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <summary>
         /// <para>Specifies whether to query the information about tags. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Enabled</description></item>
-        /// <item><description>Disabled (default)</description></item>
+        /// <item><description><para>Enabled</para>
+        /// </description></item>
+        /// <item><description><para>Disabled (default)</para>
+        /// </description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only if you specify TemplateId.</para>
@@ -110,8 +114,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>The stage of the template. This parameter takes effect only if you specify StackId, ChangeSetId, or StackGroupName.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Processed (default): returns the processed template.</description></item>
-        /// <item><description>Original: returns the original template.</description></item>
+        /// <item><description><para>Processed (default): returns the processed template.</para>
+        /// </description></item>
+        /// <item><description><para>Original: returns the original template.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -122,7 +128,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string TemplateStage { get; set; }
 
         /// <summary>
-        /// <para>The version of the template. This parameter takes effect only if you specify TemplateId.\
+        /// <para>The version of the template. This parameter takes effect only if you specify TemplateId.<br>
         /// If the template is a shared template, you can specify this parameter only if VersionOption is set to AllVersions. For more information, see <a href="https://help.aliyun.com/document_detail/194768.html">SetTemplatePermission</a>.</para>
         /// <para>Valid values: v1 to v100.</para>
         /// 

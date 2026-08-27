@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class DeleteStackInstancesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the execution accounts within which you want to deploy stacks in self-managed mode. You can specify up to 20 execution account IDs.</para>
+        /// <para>The IDs of the accounts from which to delete stack instances. This parameter applies only to stack groups that use self-managed permissions. You can specify up to 50 account IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;151266687691****&quot;]</para>
@@ -20,9 +20,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string AccountIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.\
-        /// The token can contain letters, digits, hyphens (-), and underscores (_), and cannot exceed 64 characters in length.\
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</para>
+        /// <para>A client token that is used to ensure the idempotence of the request. You can use your client to generate the token, but you must make sure that the token is unique among different requests.<br>The token can be up to 64 characters long and can contain letters, digits, hyphens (-), and underscores (_).<br>For more information, see <a href="https://help.aliyun.com/document_detail/134212.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-42665544****</para>
@@ -32,15 +30,15 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The folders in which you want to deploy stacks in service-managed mode.</para>
+        /// <para>The deployment targets from which to delete stack instances. This parameter applies only to stack groups that use service-managed permissions.</para>
         /// </summary>
         [NameInMap("DeploymentTargets")]
         [Validation(Required=false)]
         public string DeploymentTargetsShrink { get; set; }
 
         /// <summary>
-        /// <para>The description of the delete operation.</para>
-        /// <para>The description must be 1 to 256 characters in length.</para>
+        /// <para>The description of the operation to delete stack instances.</para>
+        /// <para>The description can be 1 to 256 characters long.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Delete stack instances in hangzhou and beijing</para>
@@ -50,35 +48,35 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string OperationDescription { get; set; }
 
         /// <summary>
-        /// <para>The preference settings of the delete operation.</para>
-        /// <para>The following parameters are available:</para>
+        /// <para>The preferences for the operation to delete stack instances.</para>
+        /// <para>This parameter contains the following subparameters:</para>
         /// <list type="bullet">
         /// <item><description><para>{&quot;FailureToleranceCount&quot;: N}</para>
-        /// <para> The number of accounts within which stack operation failures are allowed in each region. If the value of this parameter is exceeded in a region, ROS stops the operation in the region. If ROS stops the operation in one region, ROS stops the operation in other regions.</para>
-        /// <para> Valid values of N: 0 to 20.</para>
-        /// <para> If you do not specify FailureToleranceCount, 0 is used as the default value.</para>
+        /// <para>The number of accounts in each region for which the deletion of stack instances can fail. If the number of failures in a region exceeds this value, the operation stops in that region. If the operation stops in one region, it does not continue in other regions.</para>
+        /// <para>The value of N must be an integer from 0 to 20.</para>
+        /// <para>If you do not specify FailureToleranceCount, the default value is 0.</para>
         /// </description></item>
         /// <item><description><para>{&quot;FailureTolerancePercentage&quot;: N}</para>
-        /// <para> The percentage of the number of accounts within which stack operation failures are allowed to the total number of accounts in each region. If the value of this parameter is exceeded, ROS stops the operation in the region.</para>
-        /// <para> Valid values of N: 0 to 100. If the numeric value in the percentage is not an integer, ROS rounds the value down to the nearest integer.</para>
-        /// <para> If you do not specify FailureTolerancePercentage, 0 is used as the default value.</para>
+        /// <para>The percentage of accounts in each region for which the deletion of stack instances can fail. If the percentage of failures in a region exceeds this value, the operation stops in that region.</para>
+        /// <para>The value of N must be an integer from 0 to 100. If the calculated percentage is not an integer, ROS rounds it down to the nearest integer.</para>
+        /// <para>If you do not specify FailureTolerancePercentage, the default value is 0.</para>
         /// </description></item>
         /// <item><description><para>{&quot;MaxConcurrentCount&quot;: N}</para>
-        /// <para> The maximum number of accounts within which multiple stacks are deployed at the same time in each region.</para>
-        /// <para> Valid values of N: 1 to 20.</para>
-        /// <para> If you do not specify MaxConcurrentCount, 1 is used as the default value.</para>
+        /// <para>The maximum number of accounts in each region for which stack instances can be deleted at the same time.</para>
+        /// <para>The value of N must be an integer from 1 to 20.</para>
+        /// <para>If you do not specify MaxConcurrentCount, the default value is 1.</para>
         /// </description></item>
         /// <item><description><para>{&quot;MaxConcurrentPercentage&quot;: N}</para>
-        /// <para> The percentage of the maximum number of accounts within which stacks are deployed at the same time to the total number of accounts in each region.</para>
-        /// <para> Valid values of N: 1 to 100. If the numeric value in the percentage is not an integer, ROS rounds the number down to the nearest integer.</para>
-        /// <para> If you do not specify MaxConcurrentPercentage, 1 is used as the default value.</para>
+        /// <para>The maximum percentage of accounts in each region for which stack instances can be deleted at the same time.</para>
+        /// <para>The value of N must be an integer from 1 to 100. If the calculated percentage is not an integer, ROS rounds it down to the nearest integer.</para>
+        /// <para>If you do not specify MaxConcurrentPercentage, the default value is 1.</para>
         /// </description></item>
-        /// <item><description><para>{&quot;RegionConcurrencyType&quot;: N}</para>
-        /// <para>The mode that you want to use to deploy stacks across regions. Valid values:</para>
+        /// <item><description><para>{&quot;RegionConcurrencyType&quot;: N}
+        /// The concurrency model for deleting stack instances in different regions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SEQUENTIAL (default): deploys stacks in the specified regions one by one in sequence. This way, ROS deploys stacks in only one region at a time. </para>
+        /// <item><description><para>SEQUENTIAL (default): Deletes stack instances in each specified region sequentially. At any given time, the operation deletes stack instances in only one region.</para>
         /// </description></item>
-        /// <item><description><para>PARALLEL: deploys stacks in all the specified regions in parallel.</para>
+        /// <item><description><para>PARALLEL: Deletes stack instances in all specified regions in parallel.</para>
         /// </description></item>
         /// </list>
         /// </description></item>
@@ -86,8 +84,10 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         /// <para>Separate multiple parameters with commas (,).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>You can specify only one of the following parameters: MaxConcurrentCount and MaxConcurrentPercentage.</description></item>
-        /// <item><description>You can specify only one of the following parameters: FailureToleranceCount and FailureTolerancePercentage.</description></item>
+        /// <item><description><para>You cannot specify both MaxConcurrentCount and MaxConcurrentPercentage.</para>
+        /// </description></item>
+        /// <item><description><para>You cannot specify both FailureToleranceCount and FailureTolerancePercentage.</para>
+        /// </description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string OperationPreferencesShrink { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the stack group. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID of the stack group. Call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the regions where you want to delete the stacks. You can specify up to 20 region IDs.</para>
+        /// <para>The IDs of the regions where the stack instances are deployed. You can specify up to 20 region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -121,11 +121,13 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to delete the stacks.</para>
+        /// <para>Specifies whether to retain the stacks.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: retains the stacks.</description></item>
-        /// <item><description>false: deletes the stacks.</description></item>
+        /// <item><description><para>true: The stacks are retained.</para>
+        /// </description></item>
+        /// <item><description><para>false: The stacks are deleted.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -137,8 +139,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public bool? RetainStacks { get; set; }
 
         /// <summary>
-        /// <para>The name of the stack group. The name must be unique within a region.\
-        /// The name can be up to 255 characters in length and can contain digits, letters, hyphens (-), and underscores (_). It must start with a digit or a letter.</para>
+        /// <para>The name of the stack group. The name must be unique within a region.<br>The name can be up to 255 characters long. It must start with a letter or a digit and can contain letters, digits, hyphens (-), and underscores (_).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

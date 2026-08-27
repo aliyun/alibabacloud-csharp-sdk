@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListStackEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The events.</para>
+        /// <para>The list of event objects.</para>
         /// </summary>
         [NameInMap("Events")]
         [Validation(Required=false)]
         public List<ListStackEventsResponseBodyEvents> Events { get; set; }
         public class ListStackEventsResponseBodyEvents : TeaModel {
             /// <summary>
-            /// <para>The time when the event was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ss format. The time is displayed in UTC.</para>
+            /// <para>The time when the event was created. The time is displayed in UTC+0 and follows the ISO 8601 standard without the Z suffix. Format: YYYY-MM-DDThh:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-08-01T04:07:39</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The logical ID of the resource. The logical ID indicates the name of the resource that is defined in the template.</para>
+            /// <para>The logical resource ID, which is the resource name defined in the template.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WebServer</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string StackName { get; set; }
 
             /// <summary>
-            /// <para>The state of the resource.</para>
+            /// <para>The status of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CREATE_COMPLETE</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The reason why the resource is in the current state.</para>
+            /// <para>The reason for the status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>state changed</para>
@@ -109,9 +109,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         }
 
         /// <summary>
-        /// <para>The page number of the returned page.\
-        /// Pages start from page 1.\
-        /// Default value: 1.</para>
+        /// <para>The page number of the event list.<br>Minimum value: 1.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -121,9 +119,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.\
-        /// Maximum value: 50.\
-        /// Default value: 10.</para>
+        /// <para>The number of entries per page in a paged query. Settings for paging.<br>Maximum value: 50.<br>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -143,7 +139,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of returned events.</para>
+        /// <para>The total number of events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class EnableServicesRequest : TeaModel {
         /// <summary>
+        /// <para>The region where the service is enabled.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -19,6 +20,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>A list of services to enable.</para>
+        /// </summary>
         [NameInMap("ServiceNames")]
         [Validation(Required=false)]
         public List<string> ServiceNames { get; set; }

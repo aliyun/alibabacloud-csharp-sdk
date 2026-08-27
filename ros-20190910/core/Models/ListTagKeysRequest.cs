@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
 {
     public class ListTagKeysRequest : TeaModel {
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The token that is used to start the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0*****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the tag key. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/131035.html">DescribeRegions</a> operation to query the latest list of Alibaba Cloud regions.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,12 +31,16 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource. Valid values:</para>
+        /// <para>The resource type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>stack: stack</description></item>
-        /// <item><description>stackgroup: stack group</description></item>
-        /// <item><description>template: template</description></item>
-        /// <item><description>templatescratch: scenario</description></item>
+        /// <item><description><para>stack: stack.</para>
+        /// </description></item>
+        /// <item><description><para>stackgroup: stack group.</para>
+        /// </description></item>
+        /// <item><description><para>template: template.</para>
+        /// </description></item>
+        /// <item><description><para>templatescratch: resource scenario.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

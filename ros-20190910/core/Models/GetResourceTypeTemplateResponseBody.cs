@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The structure that contains the template body. The template body must be 1 to 51,200 bytes in length. For more information, see <a href="https://help.aliyun.com/document_detail/28857.html">Template syntax</a>.</para>
+        /// <para>The structure of the template body. The template body must be 1 to 51,200 bytes in length. For more information, see <a href="https://help.aliyun.com/document_detail/28857.html">Template syntax</a>.</para>
         /// <remarks>
-        /// <para>We recommend that use TemplateContent instead of TemplateBody.</para>
+        /// <para>This parameter is not recommended. Use TemplateContent instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.ROS20190910.Models
         public Dictionary<string, object> TemplateBody { get; set; }
 
         /// <summary>
-        /// <para>The JSON-formatted structure of the template body. For more information, see <a href="https://help.aliyun.com/document_detail/28857.html">Template syntax</a>.</para>
+        /// <para>The structure of the template body in JSON format. For more information, see <a href="https://help.aliyun.com/document_detail/28857.html">Template syntax</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
