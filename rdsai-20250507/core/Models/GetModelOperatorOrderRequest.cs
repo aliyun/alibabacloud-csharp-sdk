@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class GetModelOperatorOrderRequest : TeaModel {
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
+
     }
 
 }

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeModelOperatorRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID.</para>
+        /// <para>The instance name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rds_copilot***_public_cn-*********6</para>
@@ -18,6 +18,16 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
+
+        /// <summary>
+        /// <para>The region.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-beijing</para>
+        /// </summary>
+        [NameInMap("Region")]
+        [Validation(Required=false)]
+        public string Region { get; set; }
 
     }
 

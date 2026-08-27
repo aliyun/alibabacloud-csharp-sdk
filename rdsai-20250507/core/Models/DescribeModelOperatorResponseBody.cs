@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
 {
     public class DescribeModelOperatorResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The request result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeModelOperatorResponseBodyData Data { get; set; }
         public class DescribeModelOperatorResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The API key.</para>
+            /// <para>The system API key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sk-rds-xxx</para>
@@ -29,10 +29,8 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             /// <summary>
             /// <para>Indicates whether auto-renewal is enabled for the instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>true</b>: Enabled.</para>
-            /// </description></item>
-            /// <item><description><para><b>false</b> (default): Disabled.</para>
-            /// </description></item>
+            /// <item><description><b>true</b>: Enabled.</description></item>
+            /// <item><description><b>false</b> (default): Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -43,7 +41,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public bool? AutoRenew { get; set; }
 
             /// <summary>
-            /// <para>The endpoint URL for model requests.</para>
+            /// <para>The URL for model invocation.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxx.yy/v1">http://xxx.yy/v1</a></para>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string BaseUrl { get; set; }
 
             /// <summary>
-            /// <para>The billing method. Valid values: <c>PREPAY</c> (subscription) and <c>POSTPAY</c> (pay-as-you-go).</para>
+            /// <para>The billing type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PREPAY / POSTPAY</para>
@@ -63,14 +61,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The daily token usage.</para>
+            /// <para>The daily usage list.</para>
             /// </summary>
             [NameInMap("DailyUsage")]
             [Validation(Required=false)]
             public List<DescribeModelOperatorResponseBodyDataDailyUsage> DailyUsage { get; set; }
             public class DescribeModelOperatorResponseBodyDataDailyUsage : TeaModel {
                 /// <summary>
-                /// <para>The date of the usage record.</para>
+                /// <para>The date (accurate to the day).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-03-31</para>
@@ -80,7 +78,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string Date { get; set; }
 
                 /// <summary>
-                /// <para>The number of tokens used on this date.</para>
+                /// <para>The token usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100000</para>
@@ -92,7 +90,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>The UNIX timestamp, in milliseconds, indicating when the instance expires.</para>
+            /// <para>The end time of the instance. Format: Timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1775145600000</para>
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceClass { get; set; }
 
             /// <summary>
-            /// <para>The instance ID.</para>
+            /// <para>The instance name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rds_copilot***_public_cn-*********6</para>
@@ -122,14 +120,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The usage of each API key, including deleted keys.</para>
+            /// <para>The usage of each key (including deleted keys).</para>
             /// </summary>
             [NameInMap("KeyUsageList")]
             [Validation(Required=false)]
             public List<DescribeModelOperatorResponseBodyDataKeyUsageList> KeyUsageList { get; set; }
             public class DescribeModelOperatorResponseBodyDataKeyUsageList : TeaModel {
                 /// <summary>
-                /// <para>The API key.</para>
+                /// <para>API Key</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sk-rds-*****</para>
@@ -139,14 +137,14 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string ApiKey { get; set; }
 
                 /// <summary>
-                /// <para>The daily usage for the API key.</para>
+                /// <para>The daily usage of the API key.</para>
                 /// </summary>
                 [NameInMap("DailyUsage")]
                 [Validation(Required=false)]
                 public List<DescribeModelOperatorResponseBodyDataKeyUsageListDailyUsage> DailyUsage { get; set; }
                 public class DescribeModelOperatorResponseBodyDataKeyUsageListDailyUsage : TeaModel {
                     /// <summary>
-                    /// <para>The date of the usage record.</para>
+                    /// <para>The date (accurate to the day).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2026-03-31</para>
@@ -156,7 +154,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                     public string Date { get; set; }
 
                     /// <summary>
-                    /// <para>The number of tokens used by the API key on this date.</para>
+                    /// <para>The number of tokens used.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2000</para>
@@ -168,7 +166,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether the API key has been deleted.</para>
+                /// <para>Indicates whether the API key is deleted.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fase</para>
@@ -178,7 +176,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public bool? Deleted { get; set; }
 
                 /// <summary>
-                /// <para>The name of the API key.</para>
+                /// <para>The API key name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>api-*****</para>
@@ -188,7 +186,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyName { get; set; }
 
                 /// <summary>
-                /// <para>The type of the API key.</para>
+                /// <para>The key type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>fixed</para>
@@ -198,7 +196,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyType { get; set; }
 
                 /// <summary>
-                /// <para>The total number of tokens used by this API key.</para>
+                /// <para>The total token usage.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100000</para>
@@ -208,7 +206,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
                 public string KeyUsed { get; set; }
 
                 /// <summary>
-                /// <para>The token usage for the current cycle.</para>
+                /// <para>The used token quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2000000</para>
@@ -220,7 +218,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether prefix caching is enabled.</para>
+            /// <para>Indicates whether the prefix routing persistence feature is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -229,12 +227,15 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             [Validation(Required=false)]
             public bool? PrefixCacheEnabled { get; set; }
 
+            /// <summary>
+            /// <para>The list of headers used for routing persistence. The headers consist of lowercase letters, digits, and hyphens (-).</para>
+            /// </summary>
             [NameInMap("SessionIds")]
             [Validation(Required=false)]
             public List<string> SessionIds { get; set; }
 
             /// <summary>
-            /// <para>The UNIX timestamp, in milliseconds, indicating when the instance started.</para>
+            /// <para>The start time of the instance. Format: Timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1772439028000</para>
@@ -244,7 +245,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? StartTime { get; set; }
 
             /// <summary>
-            /// <para>The status.</para>
+            /// <para>The module status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>active/creating</para>
@@ -254,7 +255,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total quota for the current cycle, such as the monthly quota.</para>
+            /// <para>The total quota for the current cycle (such as the monthly total).</para>
             /// 
             /// <b>Example:</b>
             /// <para>200000000</para>
@@ -264,7 +265,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
             public long? TotalQuota { get; set; }
 
             /// <summary>
-            /// <para>The usage in the current cycle, such as the monthly usage.</para>
+            /// <para>The used quota for the current cycle (such as the monthly usage).</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000000</para>
@@ -286,7 +287,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>FE9C65D7-930F-57A5-A207-8C396329241C</para>
@@ -296,7 +297,7 @@ namespace AlibabaCloud.SDK.RdsAi20250507.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>The request result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
