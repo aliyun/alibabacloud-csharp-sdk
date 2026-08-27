@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
-    public class GetDataAgentTaskModelUsageRequest : TeaModel {
+    public class GetDataAgentTaskModelUsageMetricsShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The start time of the query time range. The value is a UNIX timestamp in seconds. The recommended interval length is no longer than one month.</para>
         /// 
@@ -17,10 +17,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// </summary>
         [NameInMap("BeginTime")]
         [Validation(Required=false)]
-        public long? BeginTime { get; set; }
+        public string BeginTime { get; set; }
 
         /// <summary>
-        /// <para>The current Data Management unit.</para>
+        /// <para>The current DMS unit.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -37,11 +37,11 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// </summary>
         [NameInMap("EndTime")]
         [Validation(Required=false)]
-        public long? EndTime { get; set; }
+        public string EndTime { get; set; }
 
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
-        public List<string> InstanceIds { get; set; }
+        public string InstanceIdsShrink { get; set; }
 
         [NameInMap("PayLevel")]
         [Validation(Required=false)]

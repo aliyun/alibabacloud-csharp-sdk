@@ -8,71 +8,65 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Dms20250414.Models
 {
-    public class GetDataAgentTaskModelUsageMetricsResponseBody : TeaModel {
+    public class DeleteDataAgentSkillMetaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of TPM time series metrics for model usage, returned in chronological order.</para>
+        /// <para>The response struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public List<GetDataAgentTaskModelUsageMetricsResponseBodyData> Data { get; set; }
-        public class GetDataAgentTaskModelUsageMetricsResponseBodyData : TeaModel {
+        public DeleteDataAgentSkillMetaResponseBodyData Data { get; set; }
+        public class DeleteDataAgentSkillMetaResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The start time of the statistical interval for this time series data point. The value is a UNIX timestamp in seconds.</para>
+            /// <para>The skill ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1735660800</para>
+            /// <para>ski-04pomiln*************j0</para>
             /// </summary>
-            [NameInMap("BeginTime")]
+            [NameInMap("SkillId")]
             [Validation(Required=false)]
-            public long? BeginTime { get; set; }
+            public string SkillId { get; set; }
 
             /// <summary>
-            /// <para>The end time of the statistical interval for this time series data point. The value is a UNIX timestamp in seconds.</para>
+            /// <para>Indicates whether the operation was successful. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>true</b>: The operation was successful.                                 </description></item>
+            /// <item><description><b>false</b>: The operation failed.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>1735660860</para>
+            /// <para>true</para>
             /// </summary>
-            [NameInMap("EndTime")]
+            [NameInMap("Success")]
             [Validation(Required=false)]
-            public long? EndTime { get; set; }
-
-            /// <summary>
-            /// <para>The TPM for this time series data point, which is the number of tokens consumed within the statistical interval.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>1200</para>
-            /// </summary>
-            [NameInMap("Tpm")]
-            [Validation(Required=false)]
-            public long? Tpm { get; set; }
+            public bool? Success { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The error code returned when the request is abnormal.</para>
+        /// <para>The error code returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>DMS-DA-40411</para>
+        /// <para>InvalidTid</para>
         /// </summary>
         [NameInMap("ErrorCode")]
         [Validation(Required=false)]
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message returned when the call fails.</para>
+        /// <para>The error message returned if the call failed.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>UnknownError</para>
+        /// <para>Specified parameter Tid is not valid.</para>
         /// </summary>
         [NameInMap("ErrorMessage")]
         [Validation(Required=false)]
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which is used to locate logs and troubleshoot issues.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>67E910F2-***7695C</para>
+        /// <para>E0D21075-CD3E-4D98-8264-FD8AD04A63B6</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
@@ -84,6 +78,9 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
         /// <item><description><b>true</b>: The request was successful.</description></item>
         /// <item><description><b>false</b>: The request failed.</description></item>
         /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -2578,6 +2578,150 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Creates and registers a DataAgent skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentSkillMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentSkillMetaResponse
+        /// </returns>
+        public CreateDataAgentSkillMetaResponse CreateDataAgentSkillMetaWithOptions(CreateDataAgentSkillMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                query["SkillName"] = request.SkillName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadLocation))
+            {
+                query["UploadLocation"] = request.UploadLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataAgentSkillMeta",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataAgentSkillMetaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and registers a DataAgent skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentSkillMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentSkillMetaResponse
+        /// </returns>
+        public async Task<CreateDataAgentSkillMetaResponse> CreateDataAgentSkillMetaWithOptionsAsync(CreateDataAgentSkillMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                query["SkillName"] = request.SkillName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UploadLocation))
+            {
+                query["UploadLocation"] = request.UploadLocation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataAgentSkillMeta",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataAgentSkillMetaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and registers a DataAgent skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentSkillMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentSkillMetaResponse
+        /// </returns>
+        public CreateDataAgentSkillMetaResponse CreateDataAgentSkillMeta(CreateDataAgentSkillMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataAgentSkillMetaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates and registers a DataAgent skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentSkillMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentSkillMetaResponse
+        /// </returns>
+        public async Task<CreateDataAgentSkillMetaResponse> CreateDataAgentSkillMetaAsync(CreateDataAgentSkillMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataAgentSkillMetaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a DataAgent theme.</para>
         /// </summary>
         /// 
@@ -4714,6 +4858,134 @@ namespace AlibabaCloud.SDK.Dms20250414
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DeleteDataAgentMemoryWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a DataAgent skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentSkillMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentSkillMetaResponse
+        /// </returns>
+        public DeleteDataAgentSkillMetaResponse DeleteDataAgentSkillMetaWithOptions(DeleteDataAgentSkillMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
+            {
+                query["SkillId"] = request.SkillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataAgentSkillMeta",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataAgentSkillMetaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a DataAgent skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentSkillMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentSkillMetaResponse
+        /// </returns>
+        public async Task<DeleteDataAgentSkillMetaResponse> DeleteDataAgentSkillMetaWithOptionsAsync(DeleteDataAgentSkillMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
+            {
+                query["SkillId"] = request.SkillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteDataAgentSkillMeta",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteDataAgentSkillMetaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a DataAgent skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentSkillMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentSkillMetaResponse
+        /// </returns>
+        public DeleteDataAgentSkillMetaResponse DeleteDataAgentSkillMeta(DeleteDataAgentSkillMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteDataAgentSkillMetaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a DataAgent skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteDataAgentSkillMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteDataAgentSkillMetaResponse
+        /// </returns>
+        public async Task<DeleteDataAgentSkillMetaResponse> DeleteDataAgentSkillMetaAsync(DeleteDataAgentSkillMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteDataAgentSkillMetaWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7322,6 +7594,126 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the signature information for uploading skill files.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSkillFileUploadSignatureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSkillFileUploadSignatureResponse
+        /// </returns>
+        public DescribeSkillFileUploadSignatureResponse DescribeSkillFileUploadSignatureWithOptions(DescribeSkillFileUploadSignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSkillFileUploadSignature",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSkillFileUploadSignatureResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the signature information for uploading skill files.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSkillFileUploadSignatureRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSkillFileUploadSignatureResponse
+        /// </returns>
+        public async Task<DescribeSkillFileUploadSignatureResponse> DescribeSkillFileUploadSignatureWithOptionsAsync(DescribeSkillFileUploadSignatureRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSkillFileUploadSignature",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSkillFileUploadSignatureResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the signature information for uploading skill files.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSkillFileUploadSignatureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSkillFileUploadSignatureResponse
+        /// </returns>
+        public DescribeSkillFileUploadSignatureResponse DescribeSkillFileUploadSignature(DescribeSkillFileUploadSignatureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSkillFileUploadSignatureWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the signature information for uploading skill files.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSkillFileUploadSignatureRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSkillFileUploadSignatureResponse
+        /// </returns>
+        public async Task<DescribeSkillFileUploadSignatureResponse> DescribeSkillFileUploadSignatureAsync(DescribeSkillFileUploadSignatureRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSkillFileUploadSignatureWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Calls back after a file is uploaded.</para>
         /// </summary>
         /// 
@@ -8179,10 +8571,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetDataAgentTaskModelUsageRequest
         /// </param>
         /// <param name="runtime">
@@ -8192,9 +8584,15 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <returns>
         /// GetDataAgentTaskModelUsageResponse
         /// </returns>
-        public GetDataAgentTaskModelUsageResponse GetDataAgentTaskModelUsageWithOptions(GetDataAgentTaskModelUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetDataAgentTaskModelUsageResponse GetDataAgentTaskModelUsageWithOptions(GetDataAgentTaskModelUsageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDataAgentTaskModelUsageShrinkRequest request = new GetDataAgentTaskModelUsageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
             {
@@ -8207,6 +8605,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayLevel))
             {
@@ -8242,10 +8644,10 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetDataAgentTaskModelUsageRequest
         /// </param>
         /// <param name="runtime">
@@ -8255,9 +8657,15 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <returns>
         /// GetDataAgentTaskModelUsageResponse
         /// </returns>
-        public async Task<GetDataAgentTaskModelUsageResponse> GetDataAgentTaskModelUsageWithOptionsAsync(GetDataAgentTaskModelUsageRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetDataAgentTaskModelUsageResponse> GetDataAgentTaskModelUsageWithOptionsAsync(GetDataAgentTaskModelUsageRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDataAgentTaskModelUsageShrinkRequest request = new GetDataAgentTaskModelUsageShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
             {
@@ -8270,6 +8678,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayLevel))
             {
@@ -8305,7 +8717,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8328,7 +8740,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor model resource consumption of DataAgent analysis tasks.</para>
+        /// <para>Queries the model usage summary of DataAgent analysis tasks within a specified time range, including the number of models used, total model call count, total tokens consumed, and peak TPM. This operation is used to analyze and monitor the model resource consumption of DataAgent analysis tasks.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8354,7 +8766,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <para>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetDataAgentTaskModelUsageMetricsRequest
         /// </param>
         /// <param name="runtime">
@@ -8364,9 +8776,15 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <returns>
         /// GetDataAgentTaskModelUsageMetricsResponse
         /// </returns>
-        public GetDataAgentTaskModelUsageMetricsResponse GetDataAgentTaskModelUsageMetricsWithOptions(GetDataAgentTaskModelUsageMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetDataAgentTaskModelUsageMetricsResponse GetDataAgentTaskModelUsageMetricsWithOptions(GetDataAgentTaskModelUsageMetricsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDataAgentTaskModelUsageMetricsShrinkRequest request = new GetDataAgentTaskModelUsageMetricsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
             {
@@ -8379,6 +8797,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayLevel))
             {
@@ -8417,7 +8839,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <para>Queries the TPM time series metrics of DataAgent analysis task model usage within a specified time range. The metrics are returned at minute-level granularity, showing the number of tokens consumed in each statistical interval for analyzing model usage trends over time.</para>
         /// </description>
         /// 
-        /// <param name="request">
+        /// <param name="tmpReq">
         /// GetDataAgentTaskModelUsageMetricsRequest
         /// </param>
         /// <param name="runtime">
@@ -8427,9 +8849,15 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <returns>
         /// GetDataAgentTaskModelUsageMetricsResponse
         /// </returns>
-        public async Task<GetDataAgentTaskModelUsageMetricsResponse> GetDataAgentTaskModelUsageMetricsWithOptionsAsync(GetDataAgentTaskModelUsageMetricsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetDataAgentTaskModelUsageMetricsResponse> GetDataAgentTaskModelUsageMetricsWithOptionsAsync(GetDataAgentTaskModelUsageMetricsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            GetDataAgentTaskModelUsageMetricsShrinkRequest request = new GetDataAgentTaskModelUsageMetricsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.InstanceIds))
+            {
+                request.InstanceIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.InstanceIds, "InstanceIds", "json");
+            }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
             {
@@ -8442,6 +8870,10 @@ namespace AlibabaCloud.SDK.Dms20250414
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIdsShrink))
+            {
+                query["InstanceIds"] = request.InstanceIdsShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PayLevel))
             {
@@ -12810,6 +13242,174 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the list of DataAgent skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentSkillMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentSkillMetaResponse
+        /// </returns>
+        public ListDataAgentSkillMetaResponse ListDataAgentSkillMetaWithOptions(ListDataAgentSkillMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillFrom))
+            {
+                query["SkillFrom"] = request.SkillFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
+            {
+                query["SkillId"] = request.SkillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                query["SkillName"] = request.SkillName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentSkillMeta",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentSkillMetaResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of DataAgent skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentSkillMetaRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentSkillMetaResponse
+        /// </returns>
+        public async Task<ListDataAgentSkillMetaResponse> ListDataAgentSkillMetaWithOptionsAsync(ListDataAgentSkillMetaRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchKey))
+            {
+                query["SearchKey"] = request.SearchKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillFrom))
+            {
+                query["SkillFrom"] = request.SkillFrom;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
+            {
+                query["SkillId"] = request.SkillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                query["SkillName"] = request.SkillName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDataAgentSkillMeta",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDataAgentSkillMetaResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of DataAgent skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentSkillMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentSkillMetaResponse
+        /// </returns>
+        public ListDataAgentSkillMetaResponse ListDataAgentSkillMeta(ListDataAgentSkillMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDataAgentSkillMetaWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the list of DataAgent skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDataAgentSkillMetaRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDataAgentSkillMetaResponse
+        /// </returns>
+        public async Task<ListDataAgentSkillMetaResponse> ListDataAgentSkillMetaAsync(ListDataAgentSkillMetaRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDataAgentSkillMetaWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Invokes the ListDataAgentTheme operation to query the DataAgent theme list by paging. You can filter themes by theme stage, source, and common scenarios.</para>
         /// </summary>
         /// 
@@ -17090,7 +17690,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyDataAgentTheme</para>
+        /// <para>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17140,7 +17740,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyDataAgentTheme</para>
+        /// <para>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17190,7 +17790,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyDataAgentTheme</para>
+        /// <para>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -17208,7 +17808,7 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>ModifyDataAgentTheme</para>
+        /// <para>Calls the ModifyDataAgentTheme operation to modify the display name and description of a DataAgent theme. Passing null for a parameter value indicates that the corresponding field is not modified. Passing an empty string clears the field.</para>
         /// </summary>
         /// 
         /// <param name="request">
