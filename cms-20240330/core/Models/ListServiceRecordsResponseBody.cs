@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The list of ticket operation records.</para>
+        /// <para>The list of operation records.</para>
         /// </summary>
         [NameInMap("records")]
         [Validation(Required=false)]
@@ -72,6 +72,16 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             [NameInMap("serviceId")]
             [Validation(Required=false)]
             public string ServiceId { get; set; }
+
+            /// <summary>
+            /// <para>The service name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>agentrun-ai-customer-sales-test-qa</para>
+            /// </summary>
+            [NameInMap("serviceName")]
+            [Validation(Required=false)]
+            public string ServiceName { get; set; }
 
             /// <summary>
             /// <para>The workspace.</para>

@@ -10,10 +10,30 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
 {
     public class DescribeMetricMetaListShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The language.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh</para>
+        /// </summary>
+        [NameInMap("aliyunLang")]
+        [Validation(Required=false)]
+        public string AliyunLang { get; set; }
+
+        /// <summary>
+        /// <para>The category.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ecs</para>
+        /// </summary>
+        [NameInMap("category")]
+        [Validation(Required=false)]
+        public string Category { get; set; }
+
+        /// <summary>
         /// <para>The keyword.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>实例理论</para>
+        /// <para>Instance theory</para>
         /// </summary>
         [NameInMap("keywords")]
         [Validation(Required=false)]
@@ -27,7 +47,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <item><description>alertUnit: the recommended alert unit.</description></item>
         /// <item><description>unitFactor: the unit conversion factor.</description></item>
         /// <item><description>minAlertPeriod: the minimum alert period.</description></item>
-        /// <item><description>productCategory: the service type category.</description></item>
+        /// <item><description>productCategory: the product type category.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("labels")]
@@ -38,7 +58,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
         /// <para>The metadata source. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>CMS: CloudMonitor Basic monitoring metrics.</description></item>
-        /// <item><description>PROM_BASIC: Prometheus CloudMonitor basic monitoring metrics.</description></item>
+        /// <item><description>PROM_BASIC: Prometheus CloudMonitor Basic monitoring metrics.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

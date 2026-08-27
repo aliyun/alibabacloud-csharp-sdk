@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The dimension description.</para>
+            /// <para>The dimension information description.</para>
             /// </summary>
             [NameInMap("dimensionDescription")]
             [Validation(Required=false)]
@@ -90,8 +90,8 @@ namespace AlibabaCloud.SDK.Cms20240330.Models
             public Dictionary<string, string> Labels { get; set; }
 
             /// <summary>
-            /// <para>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics. PROM_BASIC indicates Prometheus CloudMonitor basic monitoring metrics.</para>
-            /// <para>Sample value:
+            /// <para>The metadata source. CMS indicates CloudMonitor Basic monitoring metrics. PROM_BASIC indicates Prometheus CloudMonitor Basic monitoring metrics.</para>
+            /// <para>Example value:
             /// CMS
             /// Valid values:
             /// CMS
