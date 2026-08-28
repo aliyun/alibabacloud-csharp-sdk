@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class DescribeSqlLogTasksRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the query range. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The end time of the query. Specify a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1608888296000</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>An array of filter conditions.</para>
+        /// <para>The list of query filter conditions.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             /// <summary>
             /// <para>The filter parameter.</para>
             /// <remarks>
-            /// <para>See <b>Additional information about request parameters</b> for the supported filter parameters and their valid values.</para>
+            /// <para>For supported filter parameters and their values, refer to <b>Supplementary description of request parameters</b>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         }
 
         /// <summary>
-        /// <para>The ID of the database instance.</para>
+        /// <para>The database instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>r-bp1nti25tc7bq5****</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The node ID.</para>
         /// <remarks>
-        /// <para>For cluster instances only. You can specify a node ID to query its offline tasks. If this parameter is omitted, the offline tasks of the primary node are returned by default.</para>
+        /// <para>This parameter is applicable only to Cluster Edition instances. You can specify a node to query its batch tasks. If you do not specify this parameter, the batch tasks of the primary node are returned by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string NodeId { get; set; }
 
         /// <summary>
-        /// <para>The page number. The value must be a positive integer. Default value: 1.</para>
+        /// <para>The page number for the paging query. Pages start from 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Maximum value: 100. Default value: 10.</para>
+        /// <para>The maximum number of records per page. Maximum value: 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query range. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</para>
+        /// <para>The start time of the query. Specify a UNIX timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1596177993000</para>

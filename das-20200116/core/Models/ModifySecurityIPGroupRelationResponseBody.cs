@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>ListResult<InstanceSSL></para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ModifySecurityIPGroupRelationResponseBodyData Data { get; set; }
         public class ModifySecurityIPGroupRelationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The information about the cross-product IP address whitelist template that is attached to the instance.</para>
+            /// <para>The binding information of the cross-engine IP whitelist template.</para>
             /// </summary>
             [NameInMap("GlobalSecurityIPGroupRel")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 /// <summary>
                 /// <para>The IP addresses in the whitelist template.</para>
                 /// <remarks>
-                /// <para>Separate multiple IP addresses with commas (,). A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP address whitelists.</para>
+                /// <para>Separate multiple IP addresses with commas (,). You can add up to 1,000 IP addresses or CIDR blocks across all IP whitelists.</para>
                 /// </remarks>
                 /// 
                 /// <b>Example:</b>
@@ -47,13 +47,13 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string GIpList { get; set; }
 
                 /// <summary>
-                /// <para>The name of the IP address whitelist template. The name must meet the following requirements:</para>
+                /// <para>The name of the IP whitelist template. The name must meet the following requirements:</para>
                 /// <list type="bullet">
-                /// <item><description><para>It must consist of lowercase letters, digits, and underscores (_).</para>
+                /// <item><description><para>Contains only lowercase letters, digits, and underscores (_).</para>
                 /// </description></item>
-                /// <item><description><para>It must start with a letter and end with a letter or a digit.</para>
+                /// <item><description><para>Starts with a letter and ends with a letter or digit.</para>
                 /// </description></item>
-                /// <item><description><para>It must be 2 to 120 characters in length.</para>
+                /// <item><description><para>Contains 2 to 120 characters in length.</para>
                 /// </description></item>
                 /// </list>
                 /// 
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
                 public string GlobalIgName { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the IP address whitelist template.</para>
+                /// <para>The ID of the IP whitelist template.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>g-v8kwereyd6u7kx****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         /// <summary>
         /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request is successful, Successful is returned. If the request fails, an error message, such as an error code, is returned.</para>
+        /// <para>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -122,12 +122,10 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
+        /// <para>Indicates whether the request is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request is successful.</description></item>
+        /// <item><description>false: The request fails.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

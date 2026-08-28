@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDasAgentSSEResponseBody : TeaModel {
         /// <summary>
-        /// <para>The content of the response.</para>
+        /// <para>The answer content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-xxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Answer { get; set; }
 
         /// <summary>
-        /// <para>The type of the response message.</para>
+        /// <para>The type of the returned answer information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>summary</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Event { get; set; }
 
         /// <summary>
-        /// <para>The session ID. This is the same as the SessionId in the request.</para>
+        /// <para>The session ID, which is the same as the SessionId in the request parameters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public GetDasAgentSSEResponseBodyMetadata Metadata { get; set; }
         public class GetDasAgentSSEResponseBodyMetadata : TeaModel {
             /// <summary>
-            /// <para>The number of characters in the response.</para>
+            /// <para>The number of characters in the answer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1403</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public long? CharCount { get; set; }
 
             /// <summary>
-            /// <para>The error code. This parameter is empty if no exception occurs.</para>
+            /// <para>The error type returned when an exception occurs. This field is empty when no exception occurs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>-1810001</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The name of the tool used.</para>
+            /// <para>The tool command that is called.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SqlFilter</para>

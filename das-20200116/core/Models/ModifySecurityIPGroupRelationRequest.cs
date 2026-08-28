@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class ModifySecurityIPGroupRelationRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the IP address whitelist template.</para>
+        /// <para>The ID of the IP whitelist template.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the automated operations report.</para>
+        /// <para>The ID of the operations report.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

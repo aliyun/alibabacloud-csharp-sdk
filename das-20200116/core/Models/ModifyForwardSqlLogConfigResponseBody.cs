@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.DAS20200116.Models
 {
-    public class GetInstanceGroupInspectReportDetailResponseBody : TeaModel {
+    public class ModifyForwardSqlLogConfigResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code returned.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,38 +20,48 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>ReportDetail</para>
+        /// <para>ForwardSqlLogResult</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public GetInstanceGroupInspectReportDetailResponseBodyData Data { get; set; }
-        public class GetInstanceGroupInspectReportDetailResponseBodyData : TeaModel {
+        public ModifyForwardSqlLogConfigResponseBodyData Data { get; set; }
+        public class ModifyForwardSqlLogConfigResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The content of the operations report, which mainly includes the report date and diagnostic details of managed instances.</para>
+            /// <para>The LogStore name for real-time delivery to Simple Log Service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>&quot;### Summary\n\nReport date: 2025-12-10  \nComparison period: [previous day] → 2025-12-10 The rest is omitted&quot;</para>
+            /// <para>cdn222</para>
             /// </summary>
-            [NameInMap("ReportDetail")]
+            [NameInMap("Logstore")]
             [Validation(Required=false)]
-            public string ReportDetail { get; set; }
+            public string Logstore { get; set; }
 
             /// <summary>
-            /// <para>The report ID.</para>
+            /// <para>The project.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>13f52040-5a6e-42c3-bb84-051f5d6d****</para>
+            /// <para>facedetect7</para>
             /// </summary>
-            [NameInMap("ReportId")]
+            [NameInMap("Project")]
             [Validation(Required=false)]
-            public string ReportId { get; set; }
+            public string Project { get; set; }
+
+            /// <summary>
+            /// <para>The VPC endpoint of the component.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>cn-beijing-intranet.log.aliyuncs.com</para>
+            /// </summary>
+            [NameInMap("VpcEndpoint")]
+            [Validation(Required=false)]
+            public string VpcEndpoint { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The message returned for the request.</para>
+        /// <para>The returned message.</para>
         /// <remarks>
-        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, exception information such as an error code is returned.</para>
+        /// <para>If the request is successful, <b>Successful</b> is returned. If the request fails, an error message that contains information such as an error code is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

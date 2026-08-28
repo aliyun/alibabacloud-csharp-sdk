@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
 {
     public class GetDasAgentSSERequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the agent to use. This parameter is optional. If you do not specify this parameter, the service uses the default agent. You can provide the ID of an agent that was generated when you enabled the DAS Agent service or that you manually created.</para>
+        /// <para>Optional. By default, the default agent is used. You can also specify an agent that was generated after enabling the DAS Agent service or an agent that you manually created.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ag-472T0DxtmjIxxxxx</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string AgentId { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. Specify the instance ID in the Query parameter.</para>
+        /// <para>Deprecated parameter. The instance ID is passed through the Query field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rm-xxxx</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The natural language query for the agent.</para>
+        /// <para>The natural language description for the query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.DAS20200116.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The session ID, which must be in the UUID format. This parameter is optional. If you do not provide a session ID, the service creates a new session. To continue an existing conversation, use the same session ID in subsequent requests.</para>
+        /// <para>Optional. The session ID in UUID string format. If not specified, a new session is created. To maintain context across conversations, use the same session ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</para>
