@@ -57,6 +57,20 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string KnowledgeBaseId { get; set; }
 
             /// <summary>
+            /// <para>The type of the knowledge base. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PUBLIC: public.</description></item>
+            /// <item><description>PERSONAL: personal.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PUBLIC</para>
+            /// </summary>
+            [NameInMap("KnowledgeBaseType")]
+            [Validation(Required=false)]
+            public string KnowledgeBaseType { get; set; }
+
+            /// <summary>
             /// <para>The ID of the knowledge space.</para>
             /// 
             /// <b>Example:</b>

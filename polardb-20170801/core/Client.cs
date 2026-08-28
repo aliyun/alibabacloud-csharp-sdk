@@ -44535,7 +44535,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of knowledge bases.</para>
+        /// <para>Queries the list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44597,7 +44597,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of knowledge bases.</para>
+        /// <para>Queries the list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44659,7 +44659,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of knowledge bases.</para>
+        /// <para>Queries the list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44677,7 +44677,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of knowledge bases.</para>
+        /// <para>Queries the list of knowledge bases.</para>
         /// </summary>
         /// 
         /// <param name="request">
