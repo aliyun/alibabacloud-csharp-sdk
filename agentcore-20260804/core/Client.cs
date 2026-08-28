@@ -193,6 +193,678 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchUploadSkillsViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUploadSkillsViaOssResponse
+        /// </returns>
+        public BatchUploadSkillsViaOssResponse BatchUploadSkillsViaOssWithOptions(string workspaceId, BatchUploadSkillsViaOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchUploadSkillsViaOssShrinkRequest request = new BatchUploadSkillsViaOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUploadSkillsViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skill-actions/batch-upload-via-oss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchUploadSkillsViaOssResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// BatchUploadSkillsViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUploadSkillsViaOssResponse
+        /// </returns>
+        public async Task<BatchUploadSkillsViaOssResponse> BatchUploadSkillsViaOssWithOptionsAsync(string workspaceId, BatchUploadSkillsViaOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            BatchUploadSkillsViaOssShrinkRequest request = new BatchUploadSkillsViaOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BatchUploadSkillsViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skill-actions/batch-upload-via-oss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BatchUploadSkillsViaOssResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchUploadSkillsViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUploadSkillsViaOssResponse
+        /// </returns>
+        public BatchUploadSkillsViaOssResponse BatchUploadSkillsViaOss(string workspaceId, BatchUploadSkillsViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return BatchUploadSkillsViaOssWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Uploads Skill ZIP packages in bulk through OSS and returns the processing result of each Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// BatchUploadSkillsViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BatchUploadSkillsViaOssResponse
+        /// </returns>
+        public async Task<BatchUploadSkillsViaOssResponse> BatchUploadSkillsViaOssAsync(string workspaceId, BatchUploadSkillsViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await BatchUploadSkillsViaOssWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAgentIMChannelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentIMChannelResponse
+        /// </returns>
+        public CreateAgentIMChannelResponse CreateAgentIMChannelWithOptions(string workspaceId, string agentId, CreateAgentIMChannelRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAgentIMChannelShrinkRequest request = new CreateAgentIMChannelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentIMChannel",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentIMChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAgentIMChannelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentIMChannelResponse
+        /// </returns>
+        public async Task<CreateAgentIMChannelResponse> CreateAgentIMChannelWithOptionsAsync(string workspaceId, string agentId, CreateAgentIMChannelRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAgentIMChannelShrinkRequest request = new CreateAgentIMChannelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentIMChannel",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentIMChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgentIMChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentIMChannelResponse
+        /// </returns>
+        public CreateAgentIMChannelResponse CreateAgentIMChannel(string workspaceId, string agentId, CreateAgentIMChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAgentIMChannelWithOptions(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an IM channel for a specified agent and binds a publicly accessible ServiceEndpoint.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgentIMChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentIMChannelResponse
+        /// </returns>
+        public async Task<CreateAgentIMChannelResponse> CreateAgentIMChannelAsync(string workspaceId, string agentId, CreateAgentIMChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAgentIMChannelWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAgentSpecRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSpecResponse
+        /// </returns>
+        public CreateAgentSpecResponse CreateAgentSpecWithOptions(string workspaceId, CreateAgentSpecRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAgentSpecShrinkRequest request = new CreateAgentSpecShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentSpec",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAgentSpecRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSpecResponse
+        /// </returns>
+        public async Task<CreateAgentSpecResponse> CreateAgentSpecWithOptionsAsync(string workspaceId, CreateAgentSpecRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAgentSpecShrinkRequest request = new CreateAgentSpecShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentSpec",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgentSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSpecResponse
+        /// </returns>
+        public CreateAgentSpecResponse CreateAgentSpec(string workspaceId, CreateAgentSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAgentSpecWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates an AgentSpec in the specified workspace and generates the first draft version. Returns a resource conflict error if an AgentSpec with the same name already exists.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgentSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSpecResponse
+        /// </returns>
+        public async Task<CreateAgentSpecResponse> CreateAgentSpecAsync(string workspaceId, CreateAgentSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAgentSpecWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAgentSpecVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSpecVersionResponse
+        /// </returns>
+        public CreateAgentSpecVersionResponse CreateAgentSpecVersionWithOptions(string workspaceId, string agentSpecName, CreateAgentSpecVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAgentSpecVersionShrinkRequest request = new CreateAgentSpecVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentSpecVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/versions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentSpecVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateAgentSpecVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSpecVersionResponse
+        /// </returns>
+        public async Task<CreateAgentSpecVersionResponse> CreateAgentSpecVersionWithOptionsAsync(string workspaceId, string agentSpecName, CreateAgentSpecVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateAgentSpecVersionShrinkRequest request = new CreateAgentSpecVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentSpecVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/versions",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentSpecVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgentSpecVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSpecVersionResponse
+        /// </returns>
+        public CreateAgentSpecVersionResponse CreateAgentSpecVersion(string workspaceId, string agentSpecName, CreateAgentSpecVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateAgentSpecVersionWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Creates a new draft version for an existing AgentSpec. The AgentSpec must exist, and there must not be a draft currently being edited.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateAgentSpecVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSpecVersionResponse
+        /// </returns>
+        public async Task<CreateAgentSpecVersionResponse> CreateAgentSpecVersionAsync(string workspaceId, string agentSpecName, CreateAgentSpecVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateAgentSpecVersionWithOptionsAsync(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>创建凭证</para>
         /// </summary>
         /// 
@@ -343,6 +1015,330 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateCredentialWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an external agent in a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an external agent in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateExternalAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExternalAgentResponse
+        /// </returns>
+        public CreateExternalAgentResponse CreateExternalAgentWithOptions(string workspaceId, CreateExternalAgentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateExternalAgentShrinkRequest request = new CreateExternalAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExternalAgent",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExternalAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an external agent in a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an external agent in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateExternalAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExternalAgentResponse
+        /// </returns>
+        public async Task<CreateExternalAgentResponse> CreateExternalAgentWithOptionsAsync(string workspaceId, CreateExternalAgentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateExternalAgentShrinkRequest request = new CreateExternalAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExternalAgent",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExternalAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an external agent in a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an external agent in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExternalAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExternalAgentResponse
+        /// </returns>
+        public CreateExternalAgentResponse CreateExternalAgent(string workspaceId, CreateExternalAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateExternalAgentWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an external agent in a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates an external agent in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExternalAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExternalAgentResponse
+        /// </returns>
+        public async Task<CreateExternalAgentResponse> CreateExternalAgentAsync(string workspaceId, CreateExternalAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateExternalAgentWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExternalAgentBootstrapTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExternalAgentBootstrapTokenResponse
+        /// </returns>
+        public CreateExternalAgentBootstrapTokenResponse CreateExternalAgentBootstrapTokenWithOptions(string workspaceId, string agentId, CreateExternalAgentBootstrapTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["networkType"] = request.NetworkType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExternalAgentBootstrapToken",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/bootstrap/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExternalAgentBootstrapTokenResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExternalAgentBootstrapTokenRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExternalAgentBootstrapTokenResponse
+        /// </returns>
+        public async Task<CreateExternalAgentBootstrapTokenResponse> CreateExternalAgentBootstrapTokenWithOptionsAsync(string workspaceId, string agentId, CreateExternalAgentBootstrapTokenRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkType))
+            {
+                query["networkType"] = request.NetworkType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateExternalAgentBootstrapToken",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/bootstrap/create",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateExternalAgentBootstrapTokenResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExternalAgentBootstrapTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExternalAgentBootstrapTokenResponse
+        /// </returns>
+        public CreateExternalAgentBootstrapTokenResponse CreateExternalAgentBootstrapToken(string workspaceId, string agentId, CreateExternalAgentBootstrapTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateExternalAgentBootstrapTokenWithOptions(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Creates a Bootstrap Token and CMS configuration required for connecting a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateExternalAgentBootstrapTokenRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateExternalAgentBootstrapTokenResponse
+        /// </returns>
+        public async Task<CreateExternalAgentBootstrapTokenResponse> CreateExternalAgentBootstrapTokenAsync(string workspaceId, string agentId, CreateExternalAgentBootstrapTokenRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateExternalAgentBootstrapTokenWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -639,6 +1635,184 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateManagedAgentWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMcpRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpResponse
+        /// </returns>
+        public CreateMcpResponse CreateMcpWithOptions(string workspaceId, CreateMcpRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMcpShrinkRequest request = new CreateMcpShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcp",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcpResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateMcpRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpResponse
+        /// </returns>
+        public async Task<CreateMcpResponse> CreateMcpWithOptionsAsync(string workspaceId, CreateMcpRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateMcpShrinkRequest request = new CreateMcpShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateMcp",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateMcpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMcpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpResponse
+        /// </returns>
+        public CreateMcpResponse CreateMcp(string workspaceId, CreateMcpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateMcpWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates an MCP service in a specified workspace. The creation is an asynchronous process. You can check whether the service is ready by using the returned status or by calling a query operation.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateMcpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateMcpResponse
+        /// </returns>
+        public async Task<CreateMcpResponse> CreateMcpAsync(string workspaceId, CreateMcpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateMcpWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -947,6 +2121,172 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await CreateModelConnectionWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSkillDraftRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSkillDraftResponse
+        /// </returns>
+        public CreateSkillDraftResponse CreateSkillDraftWithOptions(string workspaceId, CreateSkillDraftRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSkillDraftShrinkRequest request = new CreateSkillDraftShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSkillDraft",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSkillDraftResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// CreateSkillDraftRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSkillDraftResponse
+        /// </returns>
+        public async Task<CreateSkillDraftResponse> CreateSkillDraftWithOptionsAsync(string workspaceId, CreateSkillDraftRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            CreateSkillDraftShrinkRequest request = new CreateSkillDraftShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSkillDraft",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSkillDraftResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSkillDraftRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSkillDraftResponse
+        /// </returns>
+        public CreateSkillDraftResponse CreateSkillDraft(string workspaceId, CreateSkillDraftRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return CreateSkillDraftWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Creates a Skill in the specified workspace and generates a draft version that can be further edited. You can derive a draft from an existing version or specify a target version and commit message.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// CreateSkillDraftRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSkillDraftResponse
+        /// </returns>
+        public async Task<CreateSkillDraftResponse> CreateSkillDraftAsync(string workspaceId, CreateSkillDraftRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await CreateSkillDraftWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1575,6 +2915,440 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes an IM channel of a specified agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an IM channel of a specified agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentIMChannelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentIMChannelResponse
+        /// </returns>
+        public DeleteAgentIMChannelResponse DeleteAgentIMChannelWithOptions(string workspaceId, string agentId, string imChannelId, DeleteAgentIMChannelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentIMChannel",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(imChannelId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentIMChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IM channel of a specified agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an IM channel of a specified agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentIMChannelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentIMChannelResponse
+        /// </returns>
+        public async Task<DeleteAgentIMChannelResponse> DeleteAgentIMChannelWithOptionsAsync(string workspaceId, string agentId, string imChannelId, DeleteAgentIMChannelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentIMChannel",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(imChannelId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentIMChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IM channel of a specified agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an IM channel of a specified agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentIMChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentIMChannelResponse
+        /// </returns>
+        public DeleteAgentIMChannelResponse DeleteAgentIMChannel(string workspaceId, string agentId, string imChannelId, DeleteAgentIMChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAgentIMChannelWithOptions(workspaceId, agentId, imChannelId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes an IM channel of a specified agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes an IM channel of a specified agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentIMChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentIMChannelResponse
+        /// </returns>
+        public async Task<DeleteAgentIMChannelResponse> DeleteAgentIMChannelAsync(string workspaceId, string agentId, string imChannelId, DeleteAgentIMChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAgentIMChannelWithOptionsAsync(workspaceId, agentId, imChannelId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSpecRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSpecResponse
+        /// </returns>
+        public DeleteAgentSpecResponse DeleteAgentSpecWithOptions(string workspaceId, string agentSpecName, DeleteAgentSpecRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentSpec",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSpecRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSpecResponse
+        /// </returns>
+        public async Task<DeleteAgentSpecResponse> DeleteAgentSpecWithOptionsAsync(string workspaceId, string agentSpecName, DeleteAgentSpecRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentSpec",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSpecResponse
+        /// </returns>
+        public DeleteAgentSpecResponse DeleteAgentSpec(string workspaceId, string agentSpecName, DeleteAgentSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAgentSpecWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a specified AgentSpec along with all its versions and metadata. This operation is irreversible.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSpecResponse
+        /// </returns>
+        public async Task<DeleteAgentSpecResponse> DeleteAgentSpecAsync(string workspaceId, string agentSpecName, DeleteAgentSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAgentSpecWithOptionsAsync(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSpecVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSpecVersionResponse
+        /// </returns>
+        public DeleteAgentSpecVersionResponse DeleteAgentSpecVersionWithOptions(string workspaceId, string agentSpecName, DeleteAgentSpecVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentSpecVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/draft",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentSpecVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSpecVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSpecVersionResponse
+        /// </returns>
+        public async Task<DeleteAgentSpecVersionResponse> DeleteAgentSpecVersionWithOptionsAsync(string workspaceId, string agentSpecName, DeleteAgentSpecVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentSpecVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/draft",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentSpecVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSpecVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSpecVersionResponse
+        /// </returns>
+        public DeleteAgentSpecVersionResponse DeleteAgentSpecVersion(string workspaceId, string agentSpecName, DeleteAgentSpecVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteAgentSpecVersionWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes the draft version currently being edited for a specified AgentSpec and clears the draft version pointer.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSpecVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSpecVersionResponse
+        /// </returns>
+        public async Task<DeleteAgentSpecVersionResponse> DeleteAgentSpecVersionAsync(string workspaceId, string agentSpecName, DeleteAgentSpecVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteAgentSpecVersionWithOptionsAsync(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>删除凭证</para>
         /// </summary>
         /// 
@@ -1701,6 +3475,144 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteCredentialWithOptionsAsync(workspaceId, credentialId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExternalAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExternalAgentResponse
+        /// </returns>
+        public DeleteExternalAgentResponse DeleteExternalAgentWithOptions(string workspaceId, string agentId, DeleteExternalAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExternalAgent",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExternalAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExternalAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExternalAgentResponse
+        /// </returns>
+        public async Task<DeleteExternalAgentResponse> DeleteExternalAgentWithOptionsAsync(string workspaceId, string agentId, DeleteExternalAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteExternalAgent",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteExternalAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExternalAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExternalAgentResponse
+        /// </returns>
+        public DeleteExternalAgentResponse DeleteExternalAgent(string workspaceId, string agentId, DeleteExternalAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteExternalAgentWithOptions(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Deletes a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteExternalAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteExternalAgentResponse
+        /// </returns>
+        public async Task<DeleteExternalAgentResponse> DeleteExternalAgentAsync(string workspaceId, string agentId, DeleteExternalAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteExternalAgentWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -1949,6 +3861,148 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteManagedAgentWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpResponse
+        /// </returns>
+        public DeleteMcpResponse DeleteMcpWithOptions(string mcpServerId, string workspaceId, DeleteMcpRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMcp",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMcpResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpResponse
+        /// </returns>
+        public async Task<DeleteMcpResponse> DeleteMcpWithOptionsAsync(string mcpServerId, string workspaceId, DeleteMcpRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteMcp",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteMcpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpResponse
+        /// </returns>
+        public DeleteMcpResponse DeleteMcp(string mcpServerId, string workspaceId, DeleteMcpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteMcpWithOptions(mcpServerId, workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a specified MCP service. The deletion is an asynchronous process. After the deletion is complete, the MCP service is no longer returned.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteMcpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteMcpResponse
+        /// </returns>
+        public async Task<DeleteMcpResponse> DeleteMcpAsync(string mcpServerId, string workspaceId, DeleteMcpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteMcpWithOptionsAsync(mcpServerId, workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2209,6 +4263,290 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await DeleteModelConnectionWithOptionsAsync(workspaceId, connectionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillResponse
+        /// </returns>
+        public DeleteSkillResponse DeleteSkillWithOptions(string workspaceId, string skillName, DeleteSkillRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSkill",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillResponse
+        /// </returns>
+        public async Task<DeleteSkillResponse> DeleteSkillWithOptionsAsync(string workspaceId, string skillName, DeleteSkillRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSkill",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName),
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillResponse
+        /// </returns>
+        public DeleteSkillResponse DeleteSkill(string workspaceId, string skillName, DeleteSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSkillWithOptions(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes a skill and its related version data from a specified workspace. This operation is irreversible.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillResponse
+        /// </returns>
+        public async Task<DeleteSkillResponse> DeleteSkillAsync(string workspaceId, string skillName, DeleteSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSkillWithOptionsAsync(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillDraftRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillDraftResponse
+        /// </returns>
+        public DeleteSkillDraftResponse DeleteSkillDraftWithOptions(string workspaceId, string skillName, DeleteSkillDraftRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSkillDraft",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/draft",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSkillDraftResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillDraftRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillDraftResponse
+        /// </returns>
+        public async Task<DeleteSkillDraftResponse> DeleteSkillDraftWithOptionsAsync(string workspaceId, string skillName, DeleteSkillDraftRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSkillDraft",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/draft",
+                Method = "DELETE",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSkillDraftResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillDraftRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillDraftResponse
+        /// </returns>
+        public DeleteSkillDraftResponse DeleteSkillDraft(string workspaceId, string skillName, DeleteSkillDraftRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DeleteSkillDraftWithOptions(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Deletes the draft version currently being edited for a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DeleteSkillDraftRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSkillDraftResponse
+        /// </returns>
+        public async Task<DeleteSkillDraftResponse> DeleteSkillDraftAsync(string workspaceId, string skillName, DeleteSkillDraftRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DeleteSkillDraftWithOptionsAsync(workspaceId, skillName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2611,6 +4949,1186 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadAgentSpecViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadAgentSpecViaOssResponse
+        /// </returns>
+        public DownloadAgentSpecViaOssResponse DownloadAgentSpecViaOssWithOptions(string workspaceId, string agentSpecName, DownloadAgentSpecViaOssRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpecVersion))
+            {
+                query["agentSpecVersion"] = request.AgentSpecVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadAgentSpecViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/actions/download-via-oss",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadAgentSpecViaOssResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadAgentSpecViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadAgentSpecViaOssResponse
+        /// </returns>
+        public async Task<DownloadAgentSpecViaOssResponse> DownloadAgentSpecViaOssWithOptionsAsync(string workspaceId, string agentSpecName, DownloadAgentSpecViaOssRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpecVersion))
+            {
+                query["agentSpecVersion"] = request.AgentSpecVersion;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadAgentSpecViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/actions/download-via-oss",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadAgentSpecViaOssResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadAgentSpecViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadAgentSpecViaOssResponse
+        /// </returns>
+        public DownloadAgentSpecViaOssResponse DownloadAgentSpecViaOss(string workspaceId, string agentSpecName, DownloadAgentSpecViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DownloadAgentSpecViaOssWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec ZIP package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified AgentSpec, which is used to download the AgentSpec ZIP package.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadAgentSpecViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadAgentSpecViaOssResponse
+        /// </returns>
+        public async Task<DownloadAgentSpecViaOssResponse> DownloadAgentSpecViaOssAsync(string workspaceId, string agentSpecName, DownloadAgentSpecViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DownloadAgentSpecViaOssWithOptionsAsync(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadSkillVersionViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSkillVersionViaOssResponse
+        /// </returns>
+        public DownloadSkillVersionViaOssResponse DownloadSkillVersionViaOssWithOptions(string workspaceId, string skillName, string skillVersion, DownloadSkillVersionViaOssRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadSkillVersionViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion) + "/actions/download-via-oss",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadSkillVersionViaOssResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadSkillVersionViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSkillVersionViaOssResponse
+        /// </returns>
+        public async Task<DownloadSkillVersionViaOssResponse> DownloadSkillVersionViaOssWithOptionsAsync(string workspaceId, string skillName, string skillVersion, DownloadSkillVersionViaOssRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DownloadSkillVersionViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion) + "/actions/download-via-oss",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DownloadSkillVersionViaOssResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadSkillVersionViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSkillVersionViaOssResponse
+        /// </returns>
+        public DownloadSkillVersionViaOssResponse DownloadSkillVersionViaOss(string workspaceId, string skillName, string skillVersion, DownloadSkillVersionViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return DownloadSkillVersionViaOssWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Retrieves a pre-signed OSS download URL for a specified Skill version, which is used to download the corresponding Skill ZIP package.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DownloadSkillVersionViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DownloadSkillVersionViaOssResponse
+        /// </returns>
+        public async Task<DownloadSkillVersionViaOssResponse> DownloadSkillVersionViaOssAsync(string workspaceId, string skillName, string skillVersion, DownloadSkillVersionViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await DownloadSkillVersionViaOssWithOptionsAsync(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ForcePublishSkillVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ForcePublishSkillVersionResponse
+        /// </returns>
+        public ForcePublishSkillVersionResponse ForcePublishSkillVersionWithOptions(string workspaceId, string skillName, string skillVersion, ForcePublishSkillVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ForcePublishSkillVersionShrinkRequest request = new ForcePublishSkillVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ForcePublishSkillVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion) + "/actions/force-publish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ForcePublishSkillVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// ForcePublishSkillVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ForcePublishSkillVersionResponse
+        /// </returns>
+        public async Task<ForcePublishSkillVersionResponse> ForcePublishSkillVersionWithOptionsAsync(string workspaceId, string skillName, string skillVersion, ForcePublishSkillVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ForcePublishSkillVersionShrinkRequest request = new ForcePublishSkillVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ForcePublishSkillVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion) + "/actions/force-publish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ForcePublishSkillVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ForcePublishSkillVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ForcePublishSkillVersionResponse
+        /// </returns>
+        public ForcePublishSkillVersionResponse ForcePublishSkillVersion(string workspaceId, string skillName, string skillVersion, ForcePublishSkillVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ForcePublishSkillVersionWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Skips the regular review process and forcibly publishes the specified Skill version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ForcePublishSkillVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ForcePublishSkillVersionResponse
+        /// </returns>
+        public async Task<ForcePublishSkillVersionResponse> ForcePublishSkillVersionAsync(string workspaceId, string skillName, string skillVersion, ForcePublishSkillVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ForcePublishSkillVersionWithOptionsAsync(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified agent IM channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified agent IM channel.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentIMChannelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentIMChannelResponse
+        /// </returns>
+        public GetAgentIMChannelResponse GetAgentIMChannelWithOptions(string workspaceId, string agentId, string imChannelId, GetAgentIMChannelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentIMChannel",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(imChannelId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentIMChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified agent IM channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified agent IM channel.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentIMChannelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentIMChannelResponse
+        /// </returns>
+        public async Task<GetAgentIMChannelResponse> GetAgentIMChannelWithOptionsAsync(string workspaceId, string agentId, string imChannelId, GetAgentIMChannelRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentIMChannel",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(imChannelId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentIMChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified agent IM channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified agent IM channel.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentIMChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentIMChannelResponse
+        /// </returns>
+        public GetAgentIMChannelResponse GetAgentIMChannel(string workspaceId, string agentId, string imChannelId, GetAgentIMChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentIMChannelWithOptions(workspaceId, agentId, imChannelId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified agent IM channel.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified agent IM channel.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentIMChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentIMChannelResponse
+        /// </returns>
+        public async Task<GetAgentIMChannelResponse> GetAgentIMChannelAsync(string workspaceId, string agentId, string imChannelId, GetAgentIMChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentIMChannelWithOptionsAsync(workspaceId, agentId, imChannelId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecResponse
+        /// </returns>
+        public GetAgentSpecResponse GetAgentSpecWithOptions(string workspaceId, string agentSpecName, GetAgentSpecRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentSpec",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecResponse
+        /// </returns>
+        public async Task<GetAgentSpecResponse> GetAgentSpecWithOptionsAsync(string workspaceId, string agentSpecName, GetAgentSpecRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentSpec",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecResponse
+        /// </returns>
+        public GetAgentSpecResponse GetAgentSpec(string workspaceId, string agentSpecName, GetAgentSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentSpecWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the governance details of a specified AgentSpec, including basic information, governance pointers, and summaries of all versions.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecResponse
+        /// </returns>
+        public async Task<GetAgentSpecResponse> GetAgentSpecAsync(string workspaceId, string agentSpecName, GetAgentSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentSpecWithOptionsAsync(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecImportFileUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecImportFileUrlResponse
+        /// </returns>
+        public GetAgentSpecImportFileUrlResponse GetAgentSpecImportFileUrlWithOptions(string workspaceId, GetAgentSpecImportFileUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                query["contentType"] = request.ContentType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentSpecImportFileUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-spec-actions/get-import-file-url",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentSpecImportFileUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecImportFileUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecImportFileUrlResponse
+        /// </returns>
+        public async Task<GetAgentSpecImportFileUrlResponse> GetAgentSpecImportFileUrlWithOptionsAsync(string workspaceId, GetAgentSpecImportFileUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                query["contentType"] = request.ContentType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentSpecImportFileUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-spec-actions/get-import-file-url",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentSpecImportFileUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecImportFileUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecImportFileUrlResponse
+        /// </returns>
+        public GetAgentSpecImportFileUrlResponse GetAgentSpecImportFileUrl(string workspaceId, GetAgentSpecImportFileUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentSpecImportFileUrlWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing an AgentSpec ZIP package. After the upload is complete, call the AgentSpec OSS upload operation to complete the import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecImportFileUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecImportFileUrlResponse
+        /// </returns>
+        public async Task<GetAgentSpecImportFileUrlResponse> GetAgentSpecImportFileUrlAsync(string workspaceId, GetAgentSpecImportFileUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentSpecImportFileUrlWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecLatestRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecLatestResponse
+        /// </returns>
+        public GetAgentSpecLatestResponse GetAgentSpecLatestWithOptions(string workspaceId, string agentSpecName, GetAgentSpecLatestRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentSpecLatest",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/latest",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentSpecLatestResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecLatestRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecLatestResponse
+        /// </returns>
+        public async Task<GetAgentSpecLatestResponse> GetAgentSpecLatestWithOptionsAsync(string workspaceId, string agentSpecName, GetAgentSpecLatestRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentSpecLatest",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/latest",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentSpecLatestResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecLatestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecLatestResponse
+        /// </returns>
+        public GetAgentSpecLatestResponse GetAgentSpecLatest(string workspaceId, string agentSpecName, GetAgentSpecLatestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentSpecLatestWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the full content of the latest version of a specified AgentSpec for editing or viewing.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecLatestRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecLatestResponse
+        /// </returns>
+        public async Task<GetAgentSpecLatestResponse> GetAgentSpecLatestAsync(string workspaceId, string agentSpecName, GetAgentSpecLatestRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentSpecLatestWithOptionsAsync(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecVersionResponse
+        /// </returns>
+        public GetAgentSpecVersionResponse GetAgentSpecVersionWithOptions(string workspaceId, string agentSpecName, string agentSpecVersion, GetAgentSpecVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentSpecVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecVersion),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentSpecVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecVersionResponse
+        /// </returns>
+        public async Task<GetAgentSpecVersionResponse> GetAgentSpecVersionWithOptionsAsync(string workspaceId, string agentSpecName, string agentSpecVersion, GetAgentSpecVersionRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentSpecVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecVersion),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentSpecVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecVersionResponse
+        /// </returns>
+        public GetAgentSpecVersionResponse GetAgentSpecVersion(string workspaceId, string agentSpecName, string agentSpecVersion, GetAgentSpecVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetAgentSpecVersionWithOptions(workspaceId, agentSpecName, agentSpecVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the complete content of a specified AgentSpec version, including manifest content, resource files, and metadata.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetAgentSpecVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentSpecVersionResponse
+        /// </returns>
+        public async Task<GetAgentSpecVersionResponse> GetAgentSpecVersionAsync(string workspaceId, string agentSpecName, string agentSpecVersion, GetAgentSpecVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetAgentSpecVersionWithOptionsAsync(workspaceId, agentSpecName, agentSpecVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询凭证</para>
         /// </summary>
         /// 
@@ -2725,6 +6243,282 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetCredentialWithOptionsAsync(workspaceId, credentialId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExternalAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExternalAgentResponse
+        /// </returns>
+        public GetExternalAgentResponse GetExternalAgentWithOptions(string workspaceId, string agentId, GetExternalAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetExternalAgent",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetExternalAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExternalAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExternalAgentResponse
+        /// </returns>
+        public async Task<GetExternalAgentResponse> GetExternalAgentWithOptionsAsync(string workspaceId, string agentId, GetExternalAgentRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetExternalAgent",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetExternalAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExternalAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExternalAgentResponse
+        /// </returns>
+        public GetExternalAgentResponse GetExternalAgent(string workspaceId, string agentId, GetExternalAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetExternalAgentWithOptions(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the details of a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExternalAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExternalAgentResponse
+        /// </returns>
+        public async Task<GetExternalAgentResponse> GetExternalAgentAsync(string workspaceId, string agentId, GetExternalAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetExternalAgentWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available network types for a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the available network types for a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExternalAgentBootstrapOptionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExternalAgentBootstrapOptionsResponse
+        /// </returns>
+        public GetExternalAgentBootstrapOptionsResponse GetExternalAgentBootstrapOptionsWithOptions(string workspaceId, string agentId, GetExternalAgentBootstrapOptionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetExternalAgentBootstrapOptions",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/bootstrap/options",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetExternalAgentBootstrapOptionsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available network types for a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the available network types for a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExternalAgentBootstrapOptionsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExternalAgentBootstrapOptionsResponse
+        /// </returns>
+        public async Task<GetExternalAgentBootstrapOptionsResponse> GetExternalAgentBootstrapOptionsWithOptionsAsync(string workspaceId, string agentId, GetExternalAgentBootstrapOptionsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetExternalAgentBootstrapOptions",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/bootstrap/options",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetExternalAgentBootstrapOptionsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available network types for a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the available network types for a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExternalAgentBootstrapOptionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExternalAgentBootstrapOptionsResponse
+        /// </returns>
+        public GetExternalAgentBootstrapOptionsResponse GetExternalAgentBootstrapOptions(string workspaceId, string agentId, GetExternalAgentBootstrapOptionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetExternalAgentBootstrapOptionsWithOptions(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the available network types for a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the available network types for a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetExternalAgentBootstrapOptionsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetExternalAgentBootstrapOptionsResponse
+        /// </returns>
+        public async Task<GetExternalAgentBootstrapOptionsResponse> GetExternalAgentBootstrapOptionsAsync(string workspaceId, string agentId, GetExternalAgentBootstrapOptionsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetExternalAgentBootstrapOptionsWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -2965,6 +6759,148 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMcpRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpResponse
+        /// </returns>
+        public GetMcpResponse GetMcpWithOptions(string workspaceId, string mcpServerId, GetMcpRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMcp",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMcpResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMcpRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpResponse
+        /// </returns>
+        public async Task<GetMcpResponse> GetMcpWithOptionsAsync(string workspaceId, string mcpServerId, GetMcpRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetMcp",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetMcpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMcpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpResponse
+        /// </returns>
+        public GetMcpResponse GetMcp(string workspaceId, string mcpServerId, GetMcpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetMcpWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the details of a specified MCP service, including its address, type, status, authentication configuration, and protocol.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetMcpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetMcpResponse
+        /// </returns>
+        public async Task<GetMcpResponse> GetMcpAsync(string workspaceId, string mcpServerId, GetMcpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetMcpWithOptionsAsync(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the detailed configuration and region of a model in a specified workspace.</para>
         /// </summary>
         /// 
@@ -3197,6 +7133,720 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await GetModelConnectionWithOptionsAsync(workspaceId, connectionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified service endpoint, including target routing, access URLs, authentication configuration, and current status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nQueries the details of a specified service endpoint. A service endpoint (ServiceEndpoint) provides a stable access URL for a specific agent version (AgentVersion) or workspace collaboration component. The response includes target routing, access URL list, authentication configuration, and current lifecycle status.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceEndpointResponse
+        /// </returns>
+        public GetServiceEndpointResponse GetServiceEndpointWithOptions(string workspaceId, string serviceEndpointId, GetServiceEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceEndpoint",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/service-endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceEndpointId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceEndpointResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified service endpoint, including target routing, access URLs, authentication configuration, and current status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nQueries the details of a specified service endpoint. A service endpoint (ServiceEndpoint) provides a stable access URL for a specific agent version (AgentVersion) or workspace collaboration component. The response includes target routing, access URL list, authentication configuration, and current lifecycle status.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceEndpointRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceEndpointResponse
+        /// </returns>
+        public async Task<GetServiceEndpointResponse> GetServiceEndpointWithOptionsAsync(string workspaceId, string serviceEndpointId, GetServiceEndpointRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceEndpoint",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/service-endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceEndpointId),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceEndpointResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified service endpoint, including target routing, access URLs, authentication configuration, and current status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nQueries the details of a specified service endpoint. A service endpoint (ServiceEndpoint) provides a stable access URL for a specific agent version (AgentVersion) or workspace collaboration component. The response includes target routing, access URL list, authentication configuration, and current lifecycle status.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceEndpointResponse
+        /// </returns>
+        public GetServiceEndpointResponse GetServiceEndpoint(string workspaceId, string serviceEndpointId, GetServiceEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetServiceEndpointWithOptions(workspaceId, serviceEndpointId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the details of a specified service endpoint, including target routing, access URLs, authentication configuration, and current status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nQueries the details of a specified service endpoint. A service endpoint (ServiceEndpoint) provides a stable access URL for a specific agent version (AgentVersion) or workspace collaboration component. The response includes target routing, access URL list, authentication configuration, and current lifecycle status.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceEndpointRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceEndpointResponse
+        /// </returns>
+        public async Task<GetServiceEndpointResponse> GetServiceEndpointAsync(string workspaceId, string serviceEndpointId, GetServiceEndpointRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetServiceEndpointWithOptionsAsync(workspaceId, serviceEndpointId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the currently active API Key and its invocation method for a specified service endpoint within a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the currently active API Key for a specified service endpoint. The call succeeds only when the service endpoint has API_KEY authentication enabled and the gateway consumer and credentials are ready. The service reads the API Key from the gateway in real time. AgentCore does not persist the plaintext. Keep the returned API Key secure and avoid logging it or exposing it in public configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceEndpointApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceEndpointApiKeyResponse
+        /// </returns>
+        public GetServiceEndpointApiKeyResponse GetServiceEndpointApiKeyWithOptions(string workspaceId, string serviceEndpointId, GetServiceEndpointApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceEndpointApiKey",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/service-endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceEndpointId) + "/api-key/get",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceEndpointApiKeyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the currently active API Key and its invocation method for a specified service endpoint within a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the currently active API Key for a specified service endpoint. The call succeeds only when the service endpoint has API_KEY authentication enabled and the gateway consumer and credentials are ready. The service reads the API Key from the gateway in real time. AgentCore does not persist the plaintext. Keep the returned API Key secure and avoid logging it or exposing it in public configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceEndpointApiKeyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceEndpointApiKeyResponse
+        /// </returns>
+        public async Task<GetServiceEndpointApiKeyResponse> GetServiceEndpointApiKeyWithOptionsAsync(string workspaceId, string serviceEndpointId, GetServiceEndpointApiKeyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetServiceEndpointApiKey",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/service-endpoints/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(serviceEndpointId) + "/api-key/get",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetServiceEndpointApiKeyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the currently active API Key and its invocation method for a specified service endpoint within a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the currently active API Key for a specified service endpoint. The call succeeds only when the service endpoint has API_KEY authentication enabled and the gateway consumer and credentials are ready. The service reads the API Key from the gateway in real time. AgentCore does not persist the plaintext. Keep the returned API Key secure and avoid logging it or exposing it in public configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceEndpointApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceEndpointApiKeyResponse
+        /// </returns>
+        public GetServiceEndpointApiKeyResponse GetServiceEndpointApiKey(string workspaceId, string serviceEndpointId, GetServiceEndpointApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetServiceEndpointApiKeyWithOptions(workspaceId, serviceEndpointId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the currently active API Key and its invocation method for a specified service endpoint within a workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the currently active API Key for a specified service endpoint. The call succeeds only when the service endpoint has API_KEY authentication enabled and the gateway consumer and credentials are ready. The service reads the API Key from the gateway in real time. AgentCore does not persist the plaintext. Keep the returned API Key secure and avoid logging it or exposing it in public configurations.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetServiceEndpointApiKeyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetServiceEndpointApiKeyResponse
+        /// </returns>
+        public async Task<GetServiceEndpointApiKeyResponse> GetServiceEndpointApiKeyAsync(string workspaceId, string serviceEndpointId, GetServiceEndpointApiKeyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetServiceEndpointApiKeyWithOptionsAsync(workspaceId, serviceEndpointId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillDetailResponse
+        /// </returns>
+        public GetSkillDetailResponse GetSkillDetailWithOptions(string workspaceId, string skillName, GetSkillDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSkillDetail",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSkillDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillDetailResponse
+        /// </returns>
+        public async Task<GetSkillDetailResponse> GetSkillDetailWithOptionsAsync(string workspaceId, string skillName, GetSkillDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSkillDetail",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSkillDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillDetailResponse
+        /// </returns>
+        public GetSkillDetailResponse GetSkillDetail(string workspaceId, string skillName, GetSkillDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSkillDetailWithOptions(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the basic information, version status, labels, visibility scope, and version list of a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillDetailResponse
+        /// </returns>
+        public async Task<GetSkillDetailResponse> GetSkillDetailAsync(string workspaceId, string skillName, GetSkillDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSkillDetailWithOptionsAsync(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillImportFileUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillImportFileUrlResponse
+        /// </returns>
+        public GetSkillImportFileUrlResponse GetSkillImportFileUrlWithOptions(string workspaceId, GetSkillImportFileUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                query["contentType"] = request.ContentType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSkillImportFileUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skill-actions/get-import-file-url",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSkillImportFileUrlResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillImportFileUrlRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillImportFileUrlResponse
+        /// </returns>
+        public async Task<GetSkillImportFileUrlResponse> GetSkillImportFileUrlWithOptionsAsync(string workspaceId, GetSkillImportFileUrlRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ContentType))
+            {
+                query["contentType"] = request.ContentType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSkillImportFileUrl",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skill-actions/get-import-file-url",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSkillImportFileUrlResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillImportFileUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillImportFileUrlResponse
+        /// </returns>
+        public GetSkillImportFileUrlResponse GetSkillImportFileUrl(string workspaceId, GetSkillImportFileUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSkillImportFileUrlWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Retrieves the OSS pre-signed upload URL and object name required for importing a Skill ZIP package. After the upload is complete, call the Skill OSS upload operation to complete the import.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillImportFileUrlRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillImportFileUrlResponse
+        /// </returns>
+        public async Task<GetSkillImportFileUrlResponse> GetSkillImportFileUrlAsync(string workspaceId, GetSkillImportFileUrlRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSkillImportFileUrlWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillVersionDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillVersionDetailResponse
+        /// </returns>
+        public GetSkillVersionDetailResponse GetSkillVersionDetailWithOptions(string workspaceId, string skillName, string skillVersion, GetSkillVersionDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSkillVersionDetail",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSkillVersionDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillVersionDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillVersionDetailResponse
+        /// </returns>
+        public async Task<GetSkillVersionDetailResponse> GetSkillVersionDetailWithOptionsAsync(string workspaceId, string skillName, string skillVersion, GetSkillVersionDetailRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSkillVersionDetail",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSkillVersionDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillVersionDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillVersionDetailResponse
+        /// </returns>
+        public GetSkillVersionDetailResponse GetSkillVersionDetail(string workspaceId, string skillName, string skillVersion, GetSkillVersionDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetSkillVersionDetailWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the complete details of a specified Skill version, including version metadata, Skill content, and associated resources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetSkillVersionDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSkillVersionDetailResponse
+        /// </returns>
+        public async Task<GetSkillVersionDetailResponse> GetSkillVersionDetailAsync(string workspaceId, string skillName, string skillVersion, GetSkillVersionDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetSkillVersionDetailWithOptionsAsync(workspaceId, skillName, skillVersion, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -3575,6 +8225,852 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the plug-in status of a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspacePluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspacePluginResponse
+        /// </returns>
+        public GetWorkspacePluginResponse GetWorkspacePluginWithOptions(string workspaceId, string pluginName, GetWorkspacePluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkspacePlugin",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/plugins/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pluginName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkspacePluginResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the plug-in status of a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspacePluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspacePluginResponse
+        /// </returns>
+        public async Task<GetWorkspacePluginResponse> GetWorkspacePluginWithOptionsAsync(string workspaceId, string pluginName, GetWorkspacePluginRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetWorkspacePlugin",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/plugins/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pluginName),
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetWorkspacePluginResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the plug-in status of a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspacePluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspacePluginResponse
+        /// </returns>
+        public GetWorkspacePluginResponse GetWorkspacePlugin(string workspaceId, string pluginName, GetWorkspacePluginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return GetWorkspacePluginWithOptions(workspaceId, pluginName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the plug-in status of a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nQueries the plug-in status of a specified workspace. Returns whether the plug-in is enabled, its lifecycle status, and the currently effective configuration. Currently, two types of plug-ins are supported: collaboration and agentloop. If a plug-in is not installed, its status is DISABLED.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// GetWorkspacePluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetWorkspacePluginResponse
+        /// </returns>
+        public async Task<GetWorkspacePluginResponse> GetWorkspacePluginAsync(string workspaceId, string pluginName, GetWorkspacePluginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await GetWorkspacePluginWithOptionsAsync(workspaceId, pluginName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a plugin for a specified AgentCore workspace. Currently supports the collaboration plugin. The installation process is executed asynchronously.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nInstalls a plugin for a specified AgentCore workspace. Currently supports the <c>collaboration</c> plugin. Plugin configuration is passed through the <c>Config</c> parameter, and different plugins can define their own configuration structures. The <c>collaboration</c> plugin uses <c>Config.NetworkConfiguration</c> to specify VPC and public network access policies. The installation process is executed asynchronously. When you repeatedly call this operation for a plugin with the same name that is being installed or already installed, the operation returns the current status with idempotent semantics if the configuration is the same. If the configuration is different, the operation returns an operation conflict error.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// InstallWorkspacePluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallWorkspacePluginResponse
+        /// </returns>
+        public InstallWorkspacePluginResponse InstallWorkspacePluginWithOptions(string workspaceId, string pluginName, InstallWorkspacePluginRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InstallWorkspacePluginShrinkRequest request = new InstallWorkspacePluginShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InstallWorkspacePlugin",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/plugins/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pluginName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InstallWorkspacePluginResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a plugin for a specified AgentCore workspace. Currently supports the collaboration plugin. The installation process is executed asynchronously.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nInstalls a plugin for a specified AgentCore workspace. Currently supports the <c>collaboration</c> plugin. Plugin configuration is passed through the <c>Config</c> parameter, and different plugins can define their own configuration structures. The <c>collaboration</c> plugin uses <c>Config.NetworkConfiguration</c> to specify VPC and public network access policies. The installation process is executed asynchronously. When you repeatedly call this operation for a plugin with the same name that is being installed or already installed, the operation returns the current status with idempotent semantics if the configuration is the same. If the configuration is different, the operation returns an operation conflict error.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// InstallWorkspacePluginRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallWorkspacePluginResponse
+        /// </returns>
+        public async Task<InstallWorkspacePluginResponse> InstallWorkspacePluginWithOptionsAsync(string workspaceId, string pluginName, InstallWorkspacePluginRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            InstallWorkspacePluginShrinkRequest request = new InstallWorkspacePluginShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InstallWorkspacePlugin",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/plugins/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(pluginName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InstallWorkspacePluginResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a plugin for a specified AgentCore workspace. Currently supports the collaboration plugin. The installation process is executed asynchronously.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nInstalls a plugin for a specified AgentCore workspace. Currently supports the <c>collaboration</c> plugin. Plugin configuration is passed through the <c>Config</c> parameter, and different plugins can define their own configuration structures. The <c>collaboration</c> plugin uses <c>Config.NetworkConfiguration</c> to specify VPC and public network access policies. The installation process is executed asynchronously. When you repeatedly call this operation for a plugin with the same name that is being installed or already installed, the operation returns the current status with idempotent semantics if the configuration is the same. If the configuration is different, the operation returns an operation conflict error.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallWorkspacePluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallWorkspacePluginResponse
+        /// </returns>
+        public InstallWorkspacePluginResponse InstallWorkspacePlugin(string workspaceId, string pluginName, InstallWorkspacePluginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return InstallWorkspacePluginWithOptions(workspaceId, pluginName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs a plugin for a specified AgentCore workspace. Currently supports the collaboration plugin. The installation process is executed asynchronously.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description\nInstalls a plugin for a specified AgentCore workspace. Currently supports the <c>collaboration</c> plugin. Plugin configuration is passed through the <c>Config</c> parameter, and different plugins can define their own configuration structures. The <c>collaboration</c> plugin uses <c>Config.NetworkConfiguration</c> to specify VPC and public network access policies. The installation process is executed asynchronously. When you repeatedly call this operation for a plugin with the same name that is being installed or already installed, the operation returns the current status with idempotent semantics if the configuration is the same. If the configuration is different, the operation returns an operation conflict error.\n.</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// InstallWorkspacePluginRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallWorkspacePluginResponse
+        /// </returns>
+        public async Task<InstallWorkspacePluginResponse> InstallWorkspacePluginAsync(string workspaceId, string pluginName, InstallWorkspacePluginRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await InstallWorkspacePluginWithOptionsAsync(workspaceId, pluginName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentIMChannelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentIMChannelsResponse
+        /// </returns>
+        public ListAgentIMChannelsResponse ListAgentIMChannelsWithOptions(string workspaceId, string agentId, ListAgentIMChannelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["channelType"] = request.ChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentIMChannels",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentIMChannelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentIMChannelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentIMChannelsResponse
+        /// </returns>
+        public async Task<ListAgentIMChannelsResponse> ListAgentIMChannelsWithOptionsAsync(string workspaceId, string agentId, ListAgentIMChannelsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ChannelType))
+            {
+                query["channelType"] = request.ChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentIMChannels",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentIMChannelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentIMChannelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentIMChannelsResponse
+        /// </returns>
+        public ListAgentIMChannelsResponse ListAgentIMChannels(string workspaceId, string agentId, ListAgentIMChannelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAgentIMChannelsWithOptions(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the IM channel list of a specified agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentIMChannelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentIMChannelsResponse
+        /// </returns>
+        public async Task<ListAgentIMChannelsResponse> ListAgentIMChannelsAsync(string workspaceId, string agentId, ListAgentIMChannelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAgentIMChannelsWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentSpecsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentSpecsResponse
+        /// </returns>
+        public ListAgentSpecsResponse ListAgentSpecsWithOptions(string workspaceId, ListAgentSpecsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpecName))
+            {
+                query["agentSpecName"] = request.AgentSpecName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizTag))
+            {
+                query["bizTag"] = request.BizTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["pageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["scope"] = request.Scope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithCapabilities))
+            {
+                query["withCapabilities"] = request.WithCapabilities;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentSpecs",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentSpecsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentSpecsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentSpecsResponse
+        /// </returns>
+        public async Task<ListAgentSpecsResponse> ListAgentSpecsWithOptionsAsync(string workspaceId, ListAgentSpecsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSpecName))
+            {
+                query["agentSpecName"] = request.AgentSpecName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizTag))
+            {
+                query["bizTag"] = request.BizTag;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["pageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["scope"] = request.Scope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithCapabilities))
+            {
+                query["withCapabilities"] = request.WithCapabilities;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentSpecs",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentSpecsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentSpecsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentSpecsResponse
+        /// </returns>
+        public ListAgentSpecsResponse ListAgentSpecs(string workspaceId, ListAgentSpecsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAgentSpecsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries AgentSpec resources in a specified workspace by using paging, supporting name search, sorting, and filtering by owner, visibility scope, and business labels.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListAgentSpecsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentSpecsResponse
+        /// </returns>
+        public async Task<ListAgentSpecsResponse> ListAgentSpecsAsync(string workspaceId, ListAgentSpecsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAgentSpecsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAgentTeamsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentTeamsResponse
+        /// </returns>
+        public ListAgentTeamsResponse ListAgentTeamsWithOptions(string workspaceId, ListAgentTeamsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAgentTeamsShrinkRequest request = new ListAgentTeamsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentTeams",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-team-memberships",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentTeamsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// ListAgentTeamsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentTeamsResponse
+        /// </returns>
+        public async Task<ListAgentTeamsResponse> ListAgentTeamsWithOptionsAsync(string workspaceId, ListAgentTeamsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            ListAgentTeamsShrinkRequest request = new ListAgentTeamsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListAgentTeams",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-team-memberships",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListAgentTeamsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentTeamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentTeamsResponse
+        /// </returns>
+        public ListAgentTeamsResponse ListAgentTeams(string workspaceId, ListAgentTeamsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListAgentTeamsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of teams to which specified agents belong. Specify the agent IDs through agentIds to retrieve the membership information between each agent and its teams, including the team ID, team name, and the role that the agent assumes in the team.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListAgentTeamsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListAgentTeamsResponse
+        /// </returns>
+        public async Task<ListAgentTeamsResponse> ListAgentTeamsAsync(string workspaceId, ListAgentTeamsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListAgentTeamsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询凭证列表</para>
         /// </summary>
         /// 
@@ -3725,6 +9221,164 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListCredentialsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of external agents in a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of external agents in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExternalAgentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExternalAgentsResponse
+        /// </returns>
+        public ListExternalAgentsResponse ListExternalAgentsWithOptions(string workspaceId, ListExternalAgentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExternalAgents",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExternalAgentsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of external agents in a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of external agents in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExternalAgentsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExternalAgentsResponse
+        /// </returns>
+        public async Task<ListExternalAgentsResponse> ListExternalAgentsWithOptionsAsync(string workspaceId, ListExternalAgentsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListExternalAgents",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListExternalAgentsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of external agents in a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of external agents in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExternalAgentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExternalAgentsResponse
+        /// </returns>
+        public ListExternalAgentsResponse ListExternalAgents(string workspaceId, ListExternalAgentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListExternalAgentsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of external agents in a specified workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the list of external agents in a specified workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListExternalAgentsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListExternalAgentsResponse
+        /// </returns>
+        public async Task<ListExternalAgentsResponse> ListExternalAgentsAsync(string workspaceId, ListExternalAgentsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListExternalAgentsWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4021,6 +9675,330 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListManagedAgentsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpToolsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpToolsResponse
+        /// </returns>
+        public ListMcpToolsResponse ListMcpToolsWithOptions(string workspaceId, string mcpServerId, ListMcpToolsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcpTools",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId) + "/tools",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpToolsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpToolsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpToolsResponse
+        /// </returns>
+        public async Task<ListMcpToolsResponse> ListMcpToolsWithOptionsAsync(string workspaceId, string mcpServerId, ListMcpToolsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcpTools",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId) + "/tools",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpToolsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpToolsResponse
+        /// </returns>
+        public ListMcpToolsResponse ListMcpTools(string workspaceId, string mcpServerId, ListMcpToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMcpToolsWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries the list of tools exposed by a specified MCP service and their input/output schemas.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpToolsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpToolsResponse
+        /// </returns>
+        public async Task<ListMcpToolsResponse> ListMcpToolsAsync(string workspaceId, string mcpServerId, ListMcpToolsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMcpToolsWithOptionsAsync(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpsResponse
+        /// </returns>
+        public ListMcpsResponse ListMcpsWithOptions(string workspaceId, ListMcpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcps",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpsResponse
+        /// </returns>
+        public async Task<ListMcpsResponse> ListMcpsWithOptionsAsync(string workspaceId, ListMcpsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListMcps",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListMcpsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpsResponse
+        /// </returns>
+        public ListMcpsResponse ListMcps(string workspaceId, ListMcpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListMcpsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Queries MCP services and their configurations and statuses in a specified workspace by using paging.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListMcpsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListMcpsResponse
+        /// </returns>
+        public async Task<ListMcpsResponse> ListMcpsAsync(string workspaceId, ListMcpsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListMcpsWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4585,6 +10563,430 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries service endpoints in a specified workspace by using paging. Supports filtering by target type, agent, collaboration component, and status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceEndpointsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceEndpointsResponse
+        /// </returns>
+        public ListServiceEndpointsResponse ListServiceEndpointsWithOptions(string workspaceId, ListServiceEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                query["agentVersion"] = request.AgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationComponent))
+            {
+                query["collaborationComponent"] = request.CollaborationComponent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceBindingId))
+            {
+                query["resourceBindingId"] = request.ResourceBindingId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceEndpoints",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/service-endpoints",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceEndpointsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service endpoints in a specified workspace by using paging. Supports filtering by target type, agent, collaboration component, and status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceEndpointsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceEndpointsResponse
+        /// </returns>
+        public async Task<ListServiceEndpointsResponse> ListServiceEndpointsWithOptionsAsync(string workspaceId, ListServiceEndpointsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentId))
+            {
+                query["agentId"] = request.AgentId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                query["agentVersion"] = request.AgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CollaborationComponent))
+            {
+                query["collaborationComponent"] = request.CollaborationComponent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceBindingId))
+            {
+                query["resourceBindingId"] = request.ResourceBindingId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["targetType"] = request.TargetType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListServiceEndpoints",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/service-endpoints",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListServiceEndpointsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service endpoints in a specified workspace by using paging. Supports filtering by target type, agent, collaboration component, and status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceEndpointsResponse
+        /// </returns>
+        public ListServiceEndpointsResponse ListServiceEndpoints(string workspaceId, ListServiceEndpointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListServiceEndpointsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries service endpoints in a specified workspace by using paging. Supports filtering by target type, agent, collaboration component, and status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description\nQueries service endpoints in a specified workspace by using paging. Filter results by targetType, agentId, agentVersion, resourceBindingId, collaborationComponent, and status. Use maxResults to specify the maximum number of records per page, and use nextToken to retrieve the next page. If maxResults is not specified, the server returns 20 records by default.\n</h2>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListServiceEndpointsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListServiceEndpointsResponse
+        /// </returns>
+        public async Task<ListServiceEndpointsResponse> ListServiceEndpointsAsync(string workspaceId, ListServiceEndpointsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListServiceEndpointsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSkillsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSkillsResponse
+        /// </returns>
+        public ListSkillsResponse ListSkillsWithOptions(string workspaceId, ListSkillsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["pageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["scope"] = request.Scope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                query["skillName"] = request.SkillName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSkills",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSkillsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSkillsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSkillsResponse
+        /// </returns>
+        public async Task<ListSkillsResponse> ListSkillsWithOptionsAsync(string workspaceId, ListSkillsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderBy))
+            {
+                query["orderBy"] = request.OrderBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                query["owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNo))
+            {
+                query["pageNo"] = request.PageNo;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Scope))
+            {
+                query["scope"] = request.Scope;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Search))
+            {
+                query["search"] = request.Search;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                query["skillName"] = request.SkillName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSkills",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSkillsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSkillsResponse
+        /// </returns>
+        public ListSkillsResponse ListSkills(string workspaceId, ListSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSkillsWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Performs a paged query of Skills in a specified workspace, and returns basic Skill information, version status, and paging details.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSkillsResponse
+        /// </returns>
+        public async Task<ListSkillsResponse> ListSkillsAsync(string workspaceId, ListSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSkillsWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>查询团队列表</para>
         /// </summary>
         /// 
@@ -5051,6 +11453,836 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// OfflineSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineSkillResponse
+        /// </returns>
+        public OfflineSkillResponse OfflineSkillWithOptions(string workspaceId, string skillName, OfflineSkillRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OfflineSkillShrinkRequest request = new OfflineSkillShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OfflineSkill",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/actions/offline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OfflineSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// OfflineSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineSkillResponse
+        /// </returns>
+        public async Task<OfflineSkillResponse> OfflineSkillWithOptionsAsync(string workspaceId, string skillName, OfflineSkillRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OfflineSkillShrinkRequest request = new OfflineSkillShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OfflineSkill",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/actions/offline",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OfflineSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OfflineSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineSkillResponse
+        /// </returns>
+        public OfflineSkillResponse OfflineSkill(string workspaceId, string skillName, OfflineSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return OfflineSkillWithOptions(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Takes the online version of a specified Skill offline so that it is no longer used as the online version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OfflineSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OfflineSkillResponse
+        /// </returns>
+        public async Task<OfflineSkillResponse> OfflineSkillAsync(string workspaceId, string skillName, OfflineSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await OfflineSkillWithOptionsAsync(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets a specified Skill version as the online version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Sets a specified Skill version as the online version.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// OnlineSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineSkillResponse
+        /// </returns>
+        public OnlineSkillResponse OnlineSkillWithOptions(string workspaceId, string skillName, OnlineSkillRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OnlineSkillShrinkRequest request = new OnlineSkillShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OnlineSkill",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/actions/online",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OnlineSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets a specified Skill version as the online version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Sets a specified Skill version as the online version.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// OnlineSkillRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineSkillResponse
+        /// </returns>
+        public async Task<OnlineSkillResponse> OnlineSkillWithOptionsAsync(string workspaceId, string skillName, OnlineSkillRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            OnlineSkillShrinkRequest request = new OnlineSkillShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "OnlineSkill",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/actions/online",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<OnlineSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets a specified Skill version as the online version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Sets a specified Skill version as the online version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OnlineSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineSkillResponse
+        /// </returns>
+        public OnlineSkillResponse OnlineSkill(string workspaceId, string skillName, OnlineSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return OnlineSkillWithOptions(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Sets a specified Skill version as the online version.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Sets a specified Skill version as the online version.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// OnlineSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// OnlineSkillResponse
+        /// </returns>
+        public async Task<OnlineSkillResponse> OnlineSkillAsync(string workspaceId, string skillName, OnlineSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await OnlineSkillWithOptionsAsync(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// PrecheckSkillUploadViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckSkillUploadViaOssResponse
+        /// </returns>
+        public PrecheckSkillUploadViaOssResponse PrecheckSkillUploadViaOssWithOptions(string workspaceId, PrecheckSkillUploadViaOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PrecheckSkillUploadViaOssShrinkRequest request = new PrecheckSkillUploadViaOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PrecheckSkillUploadViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skill-actions/precheck-upload-via-oss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PrecheckSkillUploadViaOssResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// PrecheckSkillUploadViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckSkillUploadViaOssResponse
+        /// </returns>
+        public async Task<PrecheckSkillUploadViaOssResponse> PrecheckSkillUploadViaOssWithOptionsAsync(string workspaceId, PrecheckSkillUploadViaOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PrecheckSkillUploadViaOssShrinkRequest request = new PrecheckSkillUploadViaOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PrecheckSkillUploadViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skill-actions/precheck-upload-via-oss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PrecheckSkillUploadViaOssResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PrecheckSkillUploadViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckSkillUploadViaOssResponse
+        /// </returns>
+        public PrecheckSkillUploadViaOssResponse PrecheckSkillUploadViaOss(string workspaceId, PrecheckSkillUploadViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PrecheckSkillUploadViaOssWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Parses and checks one or more Skill ZIP packages uploaded to OSS, and returns the name, version, and conflict check results.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PrecheckSkillUploadViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PrecheckSkillUploadViaOssResponse
+        /// </returns>
+        public async Task<PrecheckSkillUploadViaOssResponse> PrecheckSkillUploadViaOssAsync(string workspaceId, PrecheckSkillUploadViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PrecheckSkillUploadViaOssWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// PublishSkillVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishSkillVersionResponse
+        /// </returns>
+        public PublishSkillVersionResponse PublishSkillVersionWithOptions(string workspaceId, string skillName, string skillVersion, PublishSkillVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PublishSkillVersionShrinkRequest request = new PublishSkillVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishSkillVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion) + "/actions/publish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishSkillVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// PublishSkillVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishSkillVersionResponse
+        /// </returns>
+        public async Task<PublishSkillVersionResponse> PublishSkillVersionWithOptionsAsync(string workspaceId, string skillName, string skillVersion, PublishSkillVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            PublishSkillVersionShrinkRequest request = new PublishSkillVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "PublishSkillVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion) + "/actions/publish",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<PublishSkillVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishSkillVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishSkillVersionResponse
+        /// </returns>
+        public PublishSkillVersionResponse PublishSkillVersion(string workspaceId, string skillName, string skillVersion, PublishSkillVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return PublishSkillVersionWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Publishes a specified Skill version to change its state to published.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// PublishSkillVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// PublishSkillVersionResponse
+        /// </returns>
+        public async Task<PublishSkillVersionResponse> PublishSkillVersionAsync(string workspaceId, string skillName, string skillVersion, PublishSkillVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await PublishSkillVersionWithOptionsAsync(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RedraftSkillVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RedraftSkillVersionResponse
+        /// </returns>
+        public RedraftSkillVersionResponse RedraftSkillVersionWithOptions(string workspaceId, string skillName, string skillVersion, RedraftSkillVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RedraftSkillVersionShrinkRequest request = new RedraftSkillVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RedraftSkillVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion) + "/actions/redraft",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RedraftSkillVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// RedraftSkillVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RedraftSkillVersionResponse
+        /// </returns>
+        public async Task<RedraftSkillVersionResponse> RedraftSkillVersionWithOptionsAsync(string workspaceId, string skillName, string skillVersion, RedraftSkillVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            RedraftSkillVersionShrinkRequest request = new RedraftSkillVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RedraftSkillVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion) + "/actions/redraft",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RedraftSkillVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RedraftSkillVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RedraftSkillVersionResponse
+        /// </returns>
+        public RedraftSkillVersionResponse RedraftSkillVersion(string workspaceId, string skillName, string skillVersion, RedraftSkillVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RedraftSkillVersionWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Converts a specified Skill version back into an editable draft for further modifications.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// RedraftSkillVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RedraftSkillVersionResponse
+        /// </returns>
+        public async Task<RedraftSkillVersionResponse> RedraftSkillVersionAsync(string workspaceId, string skillName, string skillVersion, RedraftSkillVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RedraftSkillVersionWithOptionsAsync(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>重置用户密码</para>
         /// </summary>
         /// 
@@ -5189,6 +12421,852 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ResetUserPasswordWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitAgentSpecVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAgentSpecVersionResponse
+        /// </returns>
+        public SubmitAgentSpecVersionResponse SubmitAgentSpecVersionWithOptions(string workspaceId, string agentSpecName, string agentSpecVersion, SubmitAgentSpecVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitAgentSpecVersionShrinkRequest request = new SubmitAgentSpecVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAgentSpecVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecVersion) + "/actions/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAgentSpecVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitAgentSpecVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAgentSpecVersionResponse
+        /// </returns>
+        public async Task<SubmitAgentSpecVersionResponse> SubmitAgentSpecVersionWithOptionsAsync(string workspaceId, string agentSpecName, string agentSpecVersion, SubmitAgentSpecVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitAgentSpecVersionShrinkRequest request = new SubmitAgentSpecVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitAgentSpecVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecVersion) + "/actions/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitAgentSpecVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitAgentSpecVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAgentSpecVersionResponse
+        /// </returns>
+        public SubmitAgentSpecVersionResponse SubmitAgentSpecVersion(string workspaceId, string agentSpecName, string agentSpecVersion, SubmitAgentSpecVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitAgentSpecVersionWithOptions(workspaceId, agentSpecName, agentSpecVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Submits a specified AgentSpec draft version for review. If no release pipeline is configured, the version is published directly to online status.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitAgentSpecVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitAgentSpecVersionResponse
+        /// </returns>
+        public async Task<SubmitAgentSpecVersionResponse> SubmitAgentSpecVersionAsync(string workspaceId, string agentSpecName, string agentSpecVersion, SubmitAgentSpecVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitAgentSpecVersionWithOptionsAsync(workspaceId, agentSpecName, agentSpecVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a specified draft version of a skill for review.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Submits a specified draft version of a skill for review.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitSkillVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSkillVersionResponse
+        /// </returns>
+        public SubmitSkillVersionResponse SubmitSkillVersionWithOptions(string workspaceId, string skillName, string skillVersion, SubmitSkillVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitSkillVersionShrinkRequest request = new SubmitSkillVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSkillVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion) + "/actions/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSkillVersionResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a specified draft version of a skill for review.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Submits a specified draft version of a skill for review.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitSkillVersionRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSkillVersionResponse
+        /// </returns>
+        public async Task<SubmitSkillVersionResponse> SubmitSkillVersionWithOptionsAsync(string workspaceId, string skillName, string skillVersion, SubmitSkillVersionRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitSkillVersionShrinkRequest request = new SubmitSkillVersionShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitSkillVersion",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/versions/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillVersion) + "/actions/submit",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitSkillVersionResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a specified draft version of a skill for review.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Submits a specified draft version of a skill for review.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitSkillVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSkillVersionResponse
+        /// </returns>
+        public SubmitSkillVersionResponse SubmitSkillVersion(string workspaceId, string skillName, string skillVersion, SubmitSkillVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return SubmitSkillVersionWithOptions(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Submits a specified draft version of a skill for review.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Submits a specified draft version of a skill for review.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// SubmitSkillVersionRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitSkillVersionResponse
+        /// </returns>
+        public async Task<SubmitSkillVersionResponse> SubmitSkillVersionAsync(string workspaceId, string skillName, string skillVersion, SubmitSkillVersionRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await SubmitSkillVersionWithOptionsAsync(workspaceId, skillName, skillVersion, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAgentIMChannelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentIMChannelResponse
+        /// </returns>
+        public UpdateAgentIMChannelResponse UpdateAgentIMChannelWithOptions(string workspaceId, string agentId, string imChannelId, UpdateAgentIMChannelRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentIMChannelShrinkRequest request = new UpdateAgentIMChannelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentIMChannel",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(imChannelId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentIMChannelResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAgentIMChannelRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentIMChannelResponse
+        /// </returns>
+        public async Task<UpdateAgentIMChannelResponse> UpdateAgentIMChannelWithOptionsAsync(string workspaceId, string agentId, string imChannelId, UpdateAgentIMChannelRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentIMChannelShrinkRequest request = new UpdateAgentIMChannelShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentIMChannel",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(imChannelId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentIMChannelResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentIMChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentIMChannelResponse
+        /// </returns>
+        public UpdateAgentIMChannelResponse UpdateAgentIMChannel(string workspaceId, string agentId, string imChannelId, UpdateAgentIMChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAgentIMChannelWithOptions(workspaceId, agentId, imChannelId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the ServiceEndpoint binding, enabled/disabled status, or channel behavior configuration of an IM channel. At least one updatable field must be provided.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentIMChannelRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentIMChannelResponse
+        /// </returns>
+        public async Task<UpdateAgentIMChannelResponse> UpdateAgentIMChannelAsync(string workspaceId, string agentId, string imChannelId, UpdateAgentIMChannelRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAgentIMChannelWithOptionsAsync(workspaceId, agentId, imChannelId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAgentIMChannelCredentialRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentIMChannelCredentialResponse
+        /// </returns>
+        public UpdateAgentIMChannelCredentialResponse UpdateAgentIMChannelCredentialWithOptions(string workspaceId, string agentId, string imChannelId, UpdateAgentIMChannelCredentialRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentIMChannelCredentialShrinkRequest request = new UpdateAgentIMChannelCredentialShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentIMChannelCredential",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(imChannelId) + "/actions/update-credential",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentIMChannelCredentialResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAgentIMChannelCredentialRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentIMChannelCredentialResponse
+        /// </returns>
+        public async Task<UpdateAgentIMChannelCredentialResponse> UpdateAgentIMChannelCredentialWithOptionsAsync(string workspaceId, string agentId, string imChannelId, UpdateAgentIMChannelCredentialRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentIMChannelCredentialShrinkRequest request = new UpdateAgentIMChannelCredentialShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentIMChannelCredential",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId) + "/im-channels/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(imChannelId) + "/actions/update-credential",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentIMChannelCredentialResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentIMChannelCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentIMChannelCredentialResponse
+        /// </returns>
+        public UpdateAgentIMChannelCredentialResponse UpdateAgentIMChannelCredential(string workspaceId, string agentId, string imChannelId, UpdateAgentIMChannelCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAgentIMChannelCredentialWithOptions(workspaceId, agentId, imChannelId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Performs a full update of the channel credential for a specified IM channel of an agent. Secrets are not returned in the response.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentIMChannelCredentialRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentIMChannelCredentialResponse
+        /// </returns>
+        public async Task<UpdateAgentIMChannelCredentialResponse> UpdateAgentIMChannelCredentialAsync(string workspaceId, string agentId, string imChannelId, UpdateAgentIMChannelCredentialRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAgentIMChannelCredentialWithOptionsAsync(workspaceId, agentId, imChannelId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAgentSpecRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentSpecResponse
+        /// </returns>
+        public UpdateAgentSpecResponse UpdateAgentSpecWithOptions(string workspaceId, string agentSpecName, UpdateAgentSpecRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentSpecShrinkRequest request = new UpdateAgentSpecShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentSpec",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentSpecResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateAgentSpecRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentSpecResponse
+        /// </returns>
+        public async Task<UpdateAgentSpecResponse> UpdateAgentSpecWithOptionsAsync(string workspaceId, string agentSpecName, UpdateAgentSpecRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateAgentSpecShrinkRequest request = new UpdateAgentSpecShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAgentSpec",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-specs/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentSpecName),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAgentSpecResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentSpecResponse
+        /// </returns>
+        public UpdateAgentSpecResponse UpdateAgentSpec(string workspaceId, string agentSpecName, UpdateAgentSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAgentSpecWithOptions(workspaceId, agentSpecName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the business tags, version labels, and visibility scope of a specified AgentSpec. Fields that are not provided remain unchanged.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateAgentSpecRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAgentSpecResponse
+        /// </returns>
+        public async Task<UpdateAgentSpecResponse> UpdateAgentSpecAsync(string workspaceId, string agentSpecName, UpdateAgentSpecRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAgentSpecWithOptionsAsync(workspaceId, agentSpecName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5343,6 +13421,180 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateCredentialWithOptionsAsync(workspaceId, credentialId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateExternalAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExternalAgentResponse
+        /// </returns>
+        public UpdateExternalAgentResponse UpdateExternalAgentWithOptions(string workspaceId, string agentId, UpdateExternalAgentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateExternalAgentShrinkRequest request = new UpdateExternalAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateExternalAgent",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateExternalAgentResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateExternalAgentRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExternalAgentResponse
+        /// </returns>
+        public async Task<UpdateExternalAgentResponse> UpdateExternalAgentWithOptionsAsync(string workspaceId, string agentId, UpdateExternalAgentRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateExternalAgentShrinkRequest request = new UpdateExternalAgentShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateExternalAgent",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/external-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateExternalAgentResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExternalAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExternalAgentResponse
+        /// </returns>
+        public UpdateExternalAgentResponse UpdateExternalAgent(string workspaceId, string agentId, UpdateExternalAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateExternalAgentWithOptions(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the configuration of a specified external agent.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Updates the configuration of a specified external agent.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateExternalAgentRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateExternalAgentResponse
+        /// </returns>
+        public async Task<UpdateExternalAgentResponse> UpdateExternalAgentAsync(string workspaceId, string agentId, UpdateExternalAgentRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateExternalAgentWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5536,7 +13788,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
                 Version = "2026-08-04",
                 Protocol = "HTTPS",
                 Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/managed-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId),
-                Method = "PATCH",
+                Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "formData",
@@ -5594,7 +13846,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
                 Version = "2026-08-04",
                 Protocol = "HTTPS",
                 Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/managed-agents/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(agentId),
-                Method = "PATCH",
+                Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "formData",
@@ -5639,6 +13891,184 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateManagedAgentWithOptionsAsync(workspaceId, agentId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMcpRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpResponse
+        /// </returns>
+        public UpdateMcpResponse UpdateMcpWithOptions(string workspaceId, string mcpServerId, UpdateMcpRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMcpShrinkRequest request = new UpdateMcpShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMcp",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMcpResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateMcpRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpResponse
+        /// </returns>
+        public async Task<UpdateMcpResponse> UpdateMcpWithOptionsAsync(string workspaceId, string mcpServerId, UpdateMcpRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateMcpShrinkRequest request = new UpdateMcpShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["clientToken"] = request.ClientToken;
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateMcp",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/mcp-servers/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(mcpServerId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateMcpResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMcpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpResponse
+        /// </returns>
+        public UpdateMcpResponse UpdateMcp(string workspaceId, string mcpServerId, UpdateMcpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateMcpWithOptions(workspaceId, mcpServerId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the address, description, authentication, or Swagger configuration of a specified MCP service. The MCP type and protocol cannot be modified after creation. The update is an asynchronous process.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateMcpRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateMcpResponse
+        /// </returns>
+        public async Task<UpdateMcpResponse> UpdateMcpAsync(string workspaceId, string mcpServerId, UpdateMcpRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateMcpWithOptionsAsync(workspaceId, mcpServerId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -5690,7 +14120,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
                 Version = "2026-08-04",
                 Protocol = "HTTPS",
                 Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelId),
-                Method = "PATCH",
+                Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "formData",
@@ -5748,7 +14178,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
                 Version = "2026-08-04",
                 Protocol = "HTTPS",
                 Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/models/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(modelId),
-                Method = "PATCH",
+                Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "formData",
@@ -5797,7 +14227,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型连接</para>
+        /// <para>Updates the mutable configuration of a specified model connection and resubmits the publish task. The protocol cannot be modified after the model connection is created.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5844,7 +14274,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
                 Version = "2026-08-04",
                 Protocol = "HTTPS",
                 Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/model-connections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectionId),
-                Method = "PATCH",
+                Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "formData",
@@ -5855,7 +14285,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型连接</para>
+        /// <para>Updates the mutable configuration of a specified model connection and resubmits the publish task. The protocol cannot be modified after the model connection is created.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5902,7 +14332,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
                 Version = "2026-08-04",
                 Protocol = "HTTPS",
                 Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/model-connections/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(connectionId),
-                Method = "PATCH",
+                Method = "PUT",
                 AuthType = "AK",
                 Style = "ROA",
                 ReqBodyType = "formData",
@@ -5913,7 +14343,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型连接</para>
+        /// <para>Updates the mutable configuration of a specified model connection and resubmits the publish task. The protocol cannot be modified after the model connection is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5932,7 +14362,7 @@ namespace AlibabaCloud.SDK.AgentCore20260804
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新模型连接</para>
+        /// <para>Updates the mutable configuration of a specified model connection and resubmits the publish task. The protocol cannot be modified after the model connection is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5947,6 +14377,504 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateModelConnectionWithOptionsAsync(workspaceId, connectionId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSkillBizTagsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillBizTagsResponse
+        /// </returns>
+        public UpdateSkillBizTagsResponse UpdateSkillBizTagsWithOptions(string workspaceId, string skillName, UpdateSkillBizTagsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSkillBizTagsShrinkRequest request = new UpdateSkillBizTagsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSkillBizTags",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/biz-tags",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSkillBizTagsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSkillBizTagsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillBizTagsResponse
+        /// </returns>
+        public async Task<UpdateSkillBizTagsResponse> UpdateSkillBizTagsWithOptionsAsync(string workspaceId, string skillName, UpdateSkillBizTagsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSkillBizTagsShrinkRequest request = new UpdateSkillBizTagsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSkillBizTags",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/biz-tags",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSkillBizTagsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSkillBizTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillBizTagsResponse
+        /// </returns>
+        public UpdateSkillBizTagsResponse UpdateSkillBizTags(string workspaceId, string skillName, UpdateSkillBizTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateSkillBizTagsWithOptions(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Updates the business tags of a specified Skill. Other attributes that are not included in the request remain unchanged.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSkillBizTagsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillBizTagsResponse
+        /// </returns>
+        public async Task<UpdateSkillBizTagsResponse> UpdateSkillBizTagsAsync(string workspaceId, string skillName, UpdateSkillBizTagsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateSkillBizTagsWithOptionsAsync(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version labels and their mappings for a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Updates the version labels and their mappings for a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSkillLabelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillLabelsResponse
+        /// </returns>
+        public UpdateSkillLabelsResponse UpdateSkillLabelsWithOptions(string workspaceId, string skillName, UpdateSkillLabelsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSkillLabelsShrinkRequest request = new UpdateSkillLabelsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSkillLabels",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/labels",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSkillLabelsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version labels and their mappings for a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Updates the version labels and their mappings for a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSkillLabelsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillLabelsResponse
+        /// </returns>
+        public async Task<UpdateSkillLabelsResponse> UpdateSkillLabelsWithOptionsAsync(string workspaceId, string skillName, UpdateSkillLabelsRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSkillLabelsShrinkRequest request = new UpdateSkillLabelsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSkillLabels",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/labels",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSkillLabelsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version labels and their mappings for a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Updates the version labels and their mappings for a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSkillLabelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillLabelsResponse
+        /// </returns>
+        public UpdateSkillLabelsResponse UpdateSkillLabels(string workspaceId, string skillName, UpdateSkillLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateSkillLabelsWithOptions(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the version labels and their mappings for a specified Skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Updates the version labels and their mappings for a specified Skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSkillLabelsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillLabelsResponse
+        /// </returns>
+        public async Task<UpdateSkillLabelsResponse> UpdateSkillLabelsAsync(string workspaceId, string skillName, UpdateSkillLabelsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateSkillLabelsWithOptionsAsync(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the visibility scope of a specified skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Updates the visibility scope of a specified skill.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSkillScopeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillScopeResponse
+        /// </returns>
+        public UpdateSkillScopeResponse UpdateSkillScopeWithOptions(string workspaceId, string skillName, UpdateSkillScopeRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSkillScopeShrinkRequest request = new UpdateSkillScopeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSkillScope",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/scope",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSkillScopeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the visibility scope of a specified skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Updates the visibility scope of a specified skill.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UpdateSkillScopeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillScopeResponse
+        /// </returns>
+        public async Task<UpdateSkillScopeResponse> UpdateSkillScopeWithOptionsAsync(string workspaceId, string skillName, UpdateSkillScopeRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UpdateSkillScopeShrinkRequest request = new UpdateSkillScopeShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSkillScope",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skills/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(skillName) + "/scope",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSkillScopeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the visibility scope of a specified skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Updates the visibility scope of a specified skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSkillScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillScopeResponse
+        /// </returns>
+        public UpdateSkillScopeResponse UpdateSkillScope(string workspaceId, string skillName, UpdateSkillScopeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateSkillScopeWithOptions(workspaceId, skillName, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the visibility scope of a specified skill.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Request description</h2>
+        /// <para>Updates the visibility scope of a specified skill.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UpdateSkillScopeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSkillScopeResponse
+        /// </returns>
+        public async Task<UpdateSkillScopeResponse> UpdateSkillScopeAsync(string workspaceId, string skillName, UpdateSkillScopeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateSkillScopeWithOptionsAsync(workspaceId, skillName, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6429,6 +15357,338 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateWorkspaceWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UploadAgentSpecViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentSpecViaOssResponse
+        /// </returns>
+        public UploadAgentSpecViaOssResponse UploadAgentSpecViaOssWithOptions(string workspaceId, UploadAgentSpecViaOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UploadAgentSpecViaOssShrinkRequest request = new UploadAgentSpecViaOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadAgentSpecViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-spec-actions/upload-via-oss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadAgentSpecViaOssResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UploadAgentSpecViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentSpecViaOssResponse
+        /// </returns>
+        public async Task<UploadAgentSpecViaOssResponse> UploadAgentSpecViaOssWithOptionsAsync(string workspaceId, UploadAgentSpecViaOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UploadAgentSpecViaOssShrinkRequest request = new UploadAgentSpecViaOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadAgentSpecViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/agent-spec-actions/upload-via-oss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadAgentSpecViaOssResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UploadAgentSpecViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentSpecViaOssResponse
+        /// </returns>
+        public UploadAgentSpecViaOssResponse UploadAgentSpecViaOss(string workspaceId, UploadAgentSpecViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UploadAgentSpecViaOssWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves an uploaded AgentSpec ZIP package from OSS, parses it, and imports the AgentSpec into the current workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UploadAgentSpecViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadAgentSpecViaOssResponse
+        /// </returns>
+        public async Task<UploadAgentSpecViaOssResponse> UploadAgentSpecViaOssAsync(string workspaceId, UploadAgentSpecViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UploadAgentSpecViaOssWithOptionsAsync(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UploadSkillViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSkillViaOssResponse
+        /// </returns>
+        public UploadSkillViaOssResponse UploadSkillViaOssWithOptions(string workspaceId, UploadSkillViaOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UploadSkillViaOssShrinkRequest request = new UploadSkillViaOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadSkillViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skill-actions/upload-via-oss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadSkillViaOssResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="tmpReq">
+        /// UploadSkillViaOssRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSkillViaOssResponse
+        /// </returns>
+        public async Task<UploadSkillViaOssResponse> UploadSkillViaOssWithOptionsAsync(string workspaceId, UploadSkillViaOssRequest tmpReq, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            UploadSkillViaOssShrinkRequest request = new UploadSkillViaOssShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Body))
+            {
+                request.BodyShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Body, "body", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BodyShrink))
+            {
+                body["body"] = request.BodyShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UploadSkillViaOss",
+                Version = "2026-08-04",
+                Protocol = "HTTPS",
+                Pathname = "/workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/skill-actions/upload-via-oss",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UploadSkillViaOssResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UploadSkillViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSkillViaOssResponse
+        /// </returns>
+        public UploadSkillViaOssResponse UploadSkillViaOss(string workspaceId, UploadSkillViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UploadSkillViaOssWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <h2>Operation description</h2>
+        /// <para>Retrieves an uploaded Skill ZIP package from OSS, parses it, and imports the Skill into the current workspace.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// UploadSkillViaOssRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UploadSkillViaOssResponse
+        /// </returns>
+        public async Task<UploadSkillViaOssResponse> UploadSkillViaOssAsync(string workspaceId, UploadSkillViaOssRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UploadSkillViaOssWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
     }

@@ -9,10 +9,19 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class UpdateModelConnectionShrinkRequest : TeaModel {
+        /// <summary>
+        /// <para>The request body.</para>
+        /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]
         public string BodyShrink { get; set; }
 
+        /// <summary>
+        /// <para>The client token used for idempotence. Not currently supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>client-token-1</para>
+        /// </summary>
         [NameInMap("clientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
