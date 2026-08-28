@@ -18,7 +18,11 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"cn-shanghai", "chatbot.cn-shanghai.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("chatbot", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -11963,12 +11967,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation returns debugging information for the large language model (LLM) Q&amp;A process.</para>
+        /// <para>Debugging information for large language model Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only the latest version of chatbots and can query data from only the last 90 days.</para>
+        /// <para>Only supported for new version chatbots. Only data within the last 90 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12018,12 +12022,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation returns debugging information for the large language model (LLM) Q&amp;A process.</para>
+        /// <para>Debugging information for large language model Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only the latest version of chatbots and can query data from only the last 90 days.</para>
+        /// <para>Only supported for new version chatbots. Only data within the last 90 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12073,12 +12077,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation returns debugging information for the large language model (LLM) Q&amp;A process.</para>
+        /// <para>Debugging information for large language model Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only the latest version of chatbots and can query data from only the last 90 days.</para>
+        /// <para>Only supported for new version chatbots. Only data within the last 90 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12096,12 +12100,12 @@ namespace AlibabaCloud.SDK.Chatbot20220408
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation returns debugging information for the large language model (LLM) Q&amp;A process.</para>
+        /// <para>Debugging information for large language model Q&amp;A.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation supports only the latest version of chatbots and can query data from only the last 90 days.</para>
+        /// <para>Only supported for new version chatbots. Only data within the last 90 days can be queried.</para>
         /// </description>
         /// 
         /// <param name="request">

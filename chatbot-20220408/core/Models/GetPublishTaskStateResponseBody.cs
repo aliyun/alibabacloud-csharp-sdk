@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;faq&quot;: [
-        ///         &quot;答案资源未发布, 资源类型: 全局服务,名称: 动态答案服务&quot;
+        ///         &quot;答案资源未发布，资源类型：全局服务，名称：动态答案服务&quot;
         ///     ]
         /// }</para>
         /// </summary>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Chatbot20220408.Models
         /// <b>Example:</b>
         /// <para>{
         ///     &quot;faq&quot;: [
-        ///         &quot;答案资源未发布,类型:service名称:null,答案资源未发布,类型:service名称:null&quot;
+        ///         &quot;答案资源未发布，类型：service，名称：null，答案资源未发布，类型：service，名称：null&quot;
         ///     ]
         /// }</para>
         /// </summary>
