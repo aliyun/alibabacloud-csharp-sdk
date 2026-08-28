@@ -72,26 +72,32 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation applies only to AI gateways running version 2.1.19 or later.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
-        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
+        /// <item><description><ol>
+        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun to true.</description></item>
+        /// <item><description>Set dryRun=true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
+        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description><ol start="2">
+        /// <item><description>Submit the request after confirmation.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflicts: dryRun=false, overwrite=false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflicts exist and you confirm overwrite: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -155,6 +161,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["ruleName"] = request.RuleName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubjectType))
+            {
+                body["subjectType"] = request.SubjectType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
             {
                 body["timezone"] = request.Timezone;
@@ -190,26 +200,32 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation applies only to AI gateways running version 2.1.19 or later.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
-        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
+        /// <item><description><ol>
+        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun to true.</description></item>
+        /// <item><description>Set dryRun=true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
+        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description><ol start="2">
+        /// <item><description>Submit the request after confirmation.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflicts: dryRun=false, overwrite=false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflicts exist and you confirm overwrite: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -273,6 +289,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 body["ruleName"] = request.RuleName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubjectType))
+            {
+                body["subjectType"] = request.SubjectType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
             {
                 body["timezone"] = request.Timezone;
@@ -308,26 +328,32 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation applies only to AI gateways running version 2.1.19 or later.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
-        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
+        /// <item><description><ol>
+        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun to true.</description></item>
+        /// <item><description>Set dryRun=true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
+        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description><ol start="2">
+        /// <item><description>Submit the request after confirmation.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflicts: dryRun=false, overwrite=false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflicts exist and you confirm overwrite: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -355,26 +381,32 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation applies only to AI gateways running version 2.1.19 or later.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
-        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
+        /// <item><description><ol>
+        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun to true.</description></item>
+        /// <item><description>Set dryRun=true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
+        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description><ol start="2">
+        /// <item><description>Submit the request after confirmation.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflicts: dryRun=false, overwrite=false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflicts exist and you confirm overwrite: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -8976,6 +9008,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Publishes an MCP server.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
+        /// </description>
+        /// 
         /// <param name="headers">
         /// map
         /// </param>
@@ -9011,6 +9048,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Publishes an MCP server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
+        /// </description>
         /// 
         /// <param name="headers">
         /// map
@@ -9048,6 +9090,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <para>Publishes an MCP server.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
+        /// </description>
+        /// 
         /// <returns>
         /// DeployMcpServerResponse
         /// </returns>
@@ -9062,6 +9109,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <summary>
         /// <para>Publishes an MCP server.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before deployment, the MCP server must have domainIds configured through CreateMcpServer or UpdateMcpServer. Call GetMcpServer to confirm the domain name bindng status.</para>
+        /// </description>
         /// 
         /// <returns>
         /// DeployMcpServerResponse
@@ -11030,6 +11082,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             {
                 query["withConsumers"] = request.WithConsumers;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithSubjects))
+            {
+                query["withSubjects"] = request.WithSubjects;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -11088,6 +11144,10 @@ namespace AlibabaCloud.SDK.APIG20240327
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithConsumers))
             {
                 query["withConsumers"] = request.WithConsumers;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WithSubjects))
+            {
+                query["withSubjects"] = request.WithSubjects;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -11164,7 +11224,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the usage details of a consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11223,7 +11283,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the usage details of a consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11282,7 +11342,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the usage details of a consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11306,7 +11366,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation retrieves the usage details of a consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -15567,7 +15627,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the external service information of a gateway.</para>
+        /// <para>Retrieves external service information for a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15634,7 +15694,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the external service information of a gateway.</para>
+        /// <para>Retrieves external service information for a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15701,7 +15761,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the external service information of a gateway.</para>
+        /// <para>Retrieves external service information for a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -15725,7 +15785,7 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the external service information of a gateway.</para>
+        /// <para>Retrieves external service information for a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -19059,6 +19119,136 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>获取用户插件webide工作空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginWorkspaceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginWorkspaceResponse
+        /// </returns>
+        public ListPluginWorkspaceResponse ListPluginWorkspaceWithOptions(ListPluginWorkspaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                query["gatewayType"] = request.GatewayType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPluginWorkspace",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/plugin-workspaces",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPluginWorkspaceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户插件webide工作空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginWorkspaceRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginWorkspaceResponse
+        /// </returns>
+        public async Task<ListPluginWorkspaceResponse> ListPluginWorkspaceWithOptionsAsync(ListPluginWorkspaceRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayType))
+            {
+                query["gatewayType"] = request.GatewayType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPluginWorkspace",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/plugin-workspaces",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPluginWorkspaceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户插件webide工作空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginWorkspaceResponse
+        /// </returns>
+        public ListPluginWorkspaceResponse ListPluginWorkspace(ListPluginWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListPluginWorkspaceWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>获取用户插件webide工作空间列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPluginWorkspaceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPluginWorkspaceResponse
+        /// </returns>
+        public async Task<ListPluginWorkspaceResponse> ListPluginWorkspaceAsync(ListPluginWorkspaceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListPluginWorkspaceWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves a list of plugins.</para>
         /// </summary>
         /// 
@@ -19609,6 +19799,160 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询风险检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRiskCheckResultsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRiskCheckResultsResponse
+        /// </returns>
+        public ListRiskCheckResultsResponse ListRiskCheckResultsWithOptions(string gatewayId, ListRiskCheckResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRiskCheckResults",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/risk-check/results",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRiskCheckResultsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询风险检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRiskCheckResultsRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRiskCheckResultsResponse
+        /// </returns>
+        public async Task<ListRiskCheckResultsResponse> ListRiskCheckResultsWithOptionsAsync(string gatewayId, ListRiskCheckResultsRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["maxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListRiskCheckResults",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/risk-check/results",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListRiskCheckResultsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询风险检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRiskCheckResultsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRiskCheckResultsResponse
+        /// </returns>
+        public ListRiskCheckResultsResponse ListRiskCheckResults(string gatewayId, ListRiskCheckResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListRiskCheckResultsWithOptions(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询风险检测结果</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListRiskCheckResultsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListRiskCheckResultsResponse
+        /// </returns>
+        public async Task<ListRiskCheckResultsResponse> ListRiskCheckResultsAsync(string gatewayId, ListRiskCheckResultsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListRiskCheckResultsWithOptionsAsync(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Lists secret references.</para>
         /// </summary>
         /// 
@@ -20119,6 +20463,168 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries sources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSourcesResponse
+        /// </returns>
+        public ListSourcesResponse ListSourcesWithOptions(ListSourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSources",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/sources",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSourcesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSourcesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSourcesResponse
+        /// </returns>
+        public async Task<ListSourcesResponse> ListSourcesWithOptionsAsync(ListSourcesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceGroupId))
+            {
+                query["resourceGroupId"] = request.ResourceGroupId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSources",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/sources",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSourcesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSourcesResponse
+        /// </returns>
+        public ListSourcesResponse ListSources(ListSourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSourcesWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries sources.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSourcesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSourcesResponse
+        /// </returns>
+        public async Task<ListSourcesResponse> ListSourcesAsync(ListSourcesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSourcesWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves a list of certificates.</para>
         /// </summary>
         /// 
@@ -20269,6 +20775,152 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ListSslCertsWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询已同步的MCP Server列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSyncMCPServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSyncMCPServerResponse
+        /// </returns>
+        public ListSyncMCPServerResponse ListSyncMCPServerWithOptions(ListSyncMCPServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSyncMCPServer",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/mcp-servers/sync-mcp-server/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSyncMCPServerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询已同步的MCP Server列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSyncMCPServerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSyncMCPServerResponse
+        /// </returns>
+        public async Task<ListSyncMCPServerResponse> ListSyncMCPServerWithOptionsAsync(ListSyncMCPServerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Namespace))
+            {
+                query["namespace"] = request.Namespace;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceId))
+            {
+                query["sourceId"] = request.SourceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSyncMCPServer",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/mcp-servers/sync-mcp-server/list",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSyncMCPServerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询已同步的MCP Server列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSyncMCPServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSyncMCPServerResponse
+        /// </returns>
+        public ListSyncMCPServerResponse ListSyncMCPServer(ListSyncMCPServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListSyncMCPServerWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询已同步的MCP Server列表</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSyncMCPServerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSyncMCPServerResponse
+        /// </returns>
+        public async Task<ListSyncMCPServerResponse> ListSyncMCPServerAsync(ListSyncMCPServerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListSyncMCPServerWithOptionsAsync(request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -20811,6 +21463,136 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>刷新插件托管仓库的oauth code</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshPluginOAuthCodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshPluginOAuthCodeResponse
+        /// </returns>
+        public RefreshPluginOAuthCodeResponse RefreshPluginOAuthCodeWithOptions(RefreshPluginOAuthCodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["code"] = request.Code;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshPluginOAuthCode",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/plugin-oauth-codes",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshPluginOAuthCodeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>刷新插件托管仓库的oauth code</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshPluginOAuthCodeRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshPluginOAuthCodeResponse
+        /// </returns>
+        public async Task<RefreshPluginOAuthCodeResponse> RefreshPluginOAuthCodeWithOptionsAsync(RefreshPluginOAuthCodeRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Code))
+            {
+                body["code"] = request.Code;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RefreshPluginOAuthCode",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/plugin-oauth-codes",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RefreshPluginOAuthCodeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>刷新插件托管仓库的oauth code</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshPluginOAuthCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshPluginOAuthCodeResponse
+        /// </returns>
+        public RefreshPluginOAuthCodeResponse RefreshPluginOAuthCode(RefreshPluginOAuthCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RefreshPluginOAuthCodeWithOptions(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>刷新插件托管仓库的oauth code</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RefreshPluginOAuthCodeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RefreshPluginOAuthCodeResponse
+        /// </returns>
+        public async Task<RefreshPluginOAuthCodeResponse> RefreshPluginOAuthCodeAsync(RefreshPluginOAuthCodeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RefreshPluginOAuthCodeWithOptionsAsync(request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes an API consumer authorization rule.</para>
         /// </summary>
         /// 
@@ -20918,16 +21700,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways running version 2.1.19 or later. Resetting a rule clears the historical usage of consumers associated with the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation only takes effect for AI gateways with versions later than 2.1.19. Resetting clears the historical usage of consumers on the rule.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
         /// <item><description><ol>
         /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun to true.</description></item>
+        /// <item><description>Set dryRun=true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -20939,11 +21721,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -21026,16 +21808,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways running version 2.1.19 or later. Resetting a rule clears the historical usage of consumers associated with the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation only takes effect for AI gateways with versions later than 2.1.19. Resetting clears the historical usage of consumers on the rule.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
         /// <item><description><ol>
         /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun to true.</description></item>
+        /// <item><description>Set dryRun=true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -21047,11 +21829,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -21134,16 +21916,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways running version 2.1.19 or later. Resetting a rule clears the historical usage of consumers associated with the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation only takes effect for AI gateways with versions later than 2.1.19. Resetting clears the historical usage of consumers on the rule.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
         /// <item><description><ol>
         /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun to true.</description></item>
+        /// <item><description>Set dryRun=true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -21155,11 +21937,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -21187,16 +21969,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways running version 2.1.19 or later. Resetting a rule clears the historical usage of consumers associated with the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation only takes effect for AI gateways with versions later than 2.1.19. Resetting clears the historical usage of consumers on the rule.</para>
         /// <remarks>
-        /// <para> Recommended call sequence:</para>
+        /// <para> Recommended call logic:</para>
         /// <list type="bullet">
         /// <item><description><ol>
         /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun to true.</description></item>
+        /// <item><description>Set dryRun=true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
@@ -21208,11 +21990,11 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -21333,6 +22115,124 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await RestartGatewayWithOptionsAsync(gatewayId, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>插件工作空间运行流水线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunPluginPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunPluginPipelineResponse
+        /// </returns>
+        public RunPluginPipelineResponse RunPluginPipelineWithOptions(string workspaceId, RunPluginPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunPluginPipeline",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/plugin-workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/pipeline-run",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunPluginPipelineResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>插件工作空间运行流水线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunPluginPipelineRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunPluginPipelineResponse
+        /// </returns>
+        public async Task<RunPluginPipelineResponse> RunPluginPipelineWithOptionsAsync(string workspaceId, RunPluginPipelineRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "RunPluginPipeline",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/plugin-workspaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(workspaceId) + "/pipeline-run",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<RunPluginPipelineResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>插件工作空间运行流水线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunPluginPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunPluginPipelineResponse
+        /// </returns>
+        public RunPluginPipelineResponse RunPluginPipeline(string workspaceId, RunPluginPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return RunPluginPipelineWithOptions(workspaceId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>插件工作空间运行流水线</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// RunPluginPipelineRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// RunPluginPipelineResponse
+        /// </returns>
+        public async Task<RunPluginPipelineResponse> RunPluginPipelineAsync(string workspaceId, RunPluginPipelineRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await RunPluginPipelineWithOptionsAsync(workspaceId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -22663,6 +23563,136 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新消费者授权规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAuthorizationRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAuthorizationRuleResponse
+        /// </returns>
+        public UpdateAuthorizationRuleResponse UpdateAuthorizationRuleWithOptions(string consumerAuthorizationRuleId, UpdateAuthorizationRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                body["resources"] = request.Resources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAuthorizationRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/authorization-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerAuthorizationRuleId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAuthorizationRuleResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新消费者授权规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAuthorizationRuleRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAuthorizationRuleResponse
+        /// </returns>
+        public async Task<UpdateAuthorizationRuleResponse> UpdateAuthorizationRuleWithOptionsAsync(string consumerAuthorizationRuleId, UpdateAuthorizationRuleRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Resources))
+            {
+                body["resources"] = request.Resources;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateAuthorizationRule",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/authorization-rules/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerAuthorizationRuleId),
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateAuthorizationRuleResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新消费者授权规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAuthorizationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAuthorizationRuleResponse
+        /// </returns>
+        public UpdateAuthorizationRuleResponse UpdateAuthorizationRule(string consumerAuthorizationRuleId, UpdateAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateAuthorizationRuleWithOptions(consumerAuthorizationRuleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新消费者授权规则</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateAuthorizationRuleRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateAuthorizationRuleResponse
+        /// </returns>
+        public async Task<UpdateAuthorizationRuleResponse> UpdateAuthorizationRuleAsync(string consumerAuthorizationRuleId, UpdateAuthorizationRuleRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateAuthorizationRuleWithOptionsAsync(consumerAuthorizationRuleId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates a consumer.</para>
         /// </summary>
         /// 
@@ -23521,6 +24551,136 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>更新网关弹性策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayElasticPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayElasticPolicyResponse
+        /// </returns>
+        public UpdateGatewayElasticPolicyResponse UpdateGatewayElasticPolicyWithOptions(string gatewayId, UpdateGatewayElasticPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPolicy))
+            {
+                body["elasticPolicy"] = request.ElasticPolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGatewayElasticPolicy",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/elastic-policy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGatewayElasticPolicyResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关弹性策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayElasticPolicyRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayElasticPolicyResponse
+        /// </returns>
+        public async Task<UpdateGatewayElasticPolicyResponse> UpdateGatewayElasticPolicyWithOptionsAsync(string gatewayId, UpdateGatewayElasticPolicyRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ElasticPolicy))
+            {
+                body["elasticPolicy"] = request.ElasticPolicy;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGatewayElasticPolicy",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/elastic-policy",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGatewayElasticPolicyResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关弹性策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayElasticPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayElasticPolicyResponse
+        /// </returns>
+        public UpdateGatewayElasticPolicyResponse UpdateGatewayElasticPolicy(string gatewayId, UpdateGatewayElasticPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateGatewayElasticPolicyWithOptions(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关弹性策略</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayElasticPolicyRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayElasticPolicyResponse
+        /// </returns>
+        public async Task<UpdateGatewayElasticPolicyResponse> UpdateGatewayElasticPolicyAsync(string gatewayId, UpdateGatewayElasticPolicyRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateGatewayElasticPolicyWithOptionsAsync(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Updates the attribute parameters of a gateway.</para>
         /// </summary>
         /// 
@@ -23647,6 +24807,152 @@ namespace AlibabaCloud.SDK.APIG20240327
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await UpdateGatewayFeatureWithOptionsAsync(gatewayId, name, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关负载均衡器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayLoadBalancerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayLoadBalancerResponse
+        /// </returns>
+        public UpdateGatewayLoadBalancerResponse UpdateGatewayLoadBalancerWithOptions(string gatewayId, UpdateGatewayLoadBalancerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerDTO))
+            {
+                body["loadBalancerDTO"] = request.LoadBalancerDTO;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Option))
+            {
+                body["option"] = request.Option;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ports))
+            {
+                body["ports"] = request.Ports;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGatewayLoadBalancer",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/update-load-balancer",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGatewayLoadBalancerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关负载均衡器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayLoadBalancerRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayLoadBalancerResponse
+        /// </returns>
+        public async Task<UpdateGatewayLoadBalancerResponse> UpdateGatewayLoadBalancerWithOptionsAsync(string gatewayId, UpdateGatewayLoadBalancerRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LoadBalancerDTO))
+            {
+                body["loadBalancerDTO"] = request.LoadBalancerDTO;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Option))
+            {
+                body["option"] = request.Option;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ports))
+            {
+                body["ports"] = request.Ports;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateGatewayLoadBalancer",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/gateways/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(gatewayId) + "/update-load-balancer",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateGatewayLoadBalancerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关负载均衡器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayLoadBalancerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayLoadBalancerResponse
+        /// </returns>
+        public UpdateGatewayLoadBalancerResponse UpdateGatewayLoadBalancer(string gatewayId, UpdateGatewayLoadBalancerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return UpdateGatewayLoadBalancerWithOptions(gatewayId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>更新网关负载均衡器</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateGatewayLoadBalancerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateGatewayLoadBalancerResponse
+        /// </returns>
+        public async Task<UpdateGatewayLoadBalancerResponse> UpdateGatewayLoadBalancerAsync(string gatewayId, UpdateGatewayLoadBalancerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await UpdateGatewayLoadBalancerWithOptionsAsync(gatewayId, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -23935,16 +25241,19 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a quota throttling rule on a gateway.</para>
+        /// <para>Edits a quota rate-limiting rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.19. Editing a rule preserves the historical usage of consumers on the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. Editing preserves the historical usage of consumers on the rule.</para>
         /// <remarks>
         /// <para> Recommended call logic:</para>
         /// <list type="bullet">
-        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
+        /// <item><description><ol>
+        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
         /// <item><description>Set dryRun to true.</description></item>
         /// </list>
@@ -23953,13 +25262,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description><ol start="2">
+        /// <item><description>Submit the request after confirmation.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and overwrite confirmed: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -24037,16 +25349,19 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a quota throttling rule on a gateway.</para>
+        /// <para>Edits a quota rate-limiting rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.19. Editing a rule preserves the historical usage of consumers on the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. Editing preserves the historical usage of consumers on the rule.</para>
         /// <remarks>
         /// <para> Recommended call logic:</para>
         /// <list type="bullet">
-        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
+        /// <item><description><ol>
+        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
         /// <item><description>Set dryRun to true.</description></item>
         /// </list>
@@ -24055,13 +25370,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description><ol start="2">
+        /// <item><description>Submit the request after confirmation.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and overwrite confirmed: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -24139,16 +25457,19 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a quota throttling rule on a gateway.</para>
+        /// <para>Edits a quota rate-limiting rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.19. Editing a rule preserves the historical usage of consumers on the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. Editing preserves the historical usage of consumers on the rule.</para>
         /// <remarks>
         /// <para> Recommended call logic:</para>
         /// <list type="bullet">
-        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
+        /// <item><description><ol>
+        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
         /// <item><description>Set dryRun to true.</description></item>
         /// </list>
@@ -24157,13 +25478,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description><ol start="2">
+        /// <item><description>Submit the request after confirmation.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and overwrite confirmed: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -24186,16 +25510,19 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a quota throttling rule on a gateway.</para>
+        /// <para>Edits a quota rate-limiting rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.19. Editing a rule preserves the historical usage of consumers on the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. Editing preserves the historical usage of consumers on the rule.</para>
         /// <remarks>
         /// <para> Recommended call logic:</para>
         /// <list type="bullet">
-        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
+        /// <item><description><ol>
+        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
         /// <item><description>Set dryRun to true.</description></item>
         /// </list>
@@ -24204,13 +25531,16 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
+        /// <item><description><ol start="2">
+        /// <item><description>Submit the request after confirmation.</description></item>
+        /// </ol>
+        /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflict exists and overwrite confirmed: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>

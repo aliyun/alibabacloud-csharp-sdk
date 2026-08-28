@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public GetGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class GetGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The base timestamp of the period.</para>
+            /// <para>The period base timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1745846400000</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ConsumerCount { get; set; }
 
             /// <summary>
-            /// <para>The list of principals (consumers) bound to this rule.</para>
+            /// <para>The list of subjects (consumers) bound to this rule.</para>
             /// </summary>
             [NameInMap("consumers")]
             [Validation(Required=false)]
             public List<GetGatewayQuotaRuleResponseBodyDataConsumers> Consumers { get; set; }
             public class GetGatewayQuotaRuleResponseBodyDataConsumers : TeaModel {
                 /// <summary>
-                /// <para>The ID of the principal (consumer).</para>
+                /// <para>The subject (consumer) ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c-aaa</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The name of the principal (consumer).</para>
+                /// <para>The subject (consumer) name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>consumer-a</para>
@@ -139,7 +139,66 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public string RuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The time zone for the calendar period, in UTC+x format.</para>
+            /// <para>The number of associated subjects.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>120</para>
+            /// </summary>
+            [NameInMap("subjectCount")]
+            [Validation(Required=false)]
+            public long? SubjectCount { get; set; }
+
+            /// <summary>
+            /// <para>The rule subject type. Valid values: consumer or consumer_group.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>consumer_group</para>
+            /// </summary>
+            [NameInMap("subjectType")]
+            [Validation(Required=false)]
+            public string SubjectType { get; set; }
+
+            /// <summary>
+            /// <para>The general subject list bound to this rule. Returned only when withSubjects is set to true.</para>
+            /// </summary>
+            [NameInMap("subjects")]
+            [Validation(Required=false)]
+            public List<GetGatewayQuotaRuleResponseBodyDataSubjects> Subjects { get; set; }
+            public class GetGatewayQuotaRuleResponseBodyDataSubjects : TeaModel {
+                /// <summary>
+                /// <para>The subject ID.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>cs-xxx</para>
+                /// </summary>
+                [NameInMap("id")]
+                [Validation(Required=false)]
+                public string Id { get; set; }
+
+                /// <summary>
+                /// <para>The subject name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>consumer-a</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <para>The subject type. Valid values: consumer or consumer_group.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>consumer</para>
+                /// </summary>
+                [NameInMap("subjectType")]
+                [Validation(Required=false)]
+                public string SubjectType { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The time zone corresponding to the calendar period, in UTC+x format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>GMT+8</para>

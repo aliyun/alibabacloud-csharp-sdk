@@ -8,39 +8,30 @@ using Tea;
 
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
-    public class CreateGatewayResponseBody : TeaModel {
+    public class ListSyncMCPServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response status code.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>Ok</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        /// <summary>
-        /// <para>The response data.</para>
-        /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public CreateGatewayResponseBodyData Data { get; set; }
-        public class CreateGatewayResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The gateway ID.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>gw-cq2vundlhtg***</para>
-            /// </summary>
-            [NameInMap("gatewayId")]
+        public ListSyncMCPServerResponseBodyData Data { get; set; }
+        public class ListSyncMCPServerResponseBodyData : TeaModel {
+            [NameInMap("domainIds")]
             [Validation(Required=false)]
-            public string GatewayId { get; set; }
+            public List<string> DomainIds { get; set; }
+
+            [NameInMap("mcpServers")]
+            [Validation(Required=false)]
+            public List<string> McpServers { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The response message.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>success</para>
         /// </summary>
@@ -49,10 +40,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>9CDE3E69-69C2-5402-83AD-ACA80B1AF35B</para>
+        /// <para>211B1C7E-DD93-58D3-AA4B-9B392B63258C</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]

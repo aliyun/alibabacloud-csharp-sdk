@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PluginId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the backend service that the plug-in depends on is healthy.</para>
+        /// <para>Indicates whether the backend service that the plugin depends on is healthy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

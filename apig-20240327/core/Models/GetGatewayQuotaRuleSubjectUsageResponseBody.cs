@@ -70,6 +70,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public long? CachedAmount { get; set; }
 
                     /// <summary>
+                    /// <para>The consumer name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>consumer-a</para>
+                    /// </summary>
+                    [NameInMap("consumer")]
+                    [Validation(Required=false)]
+                    public string Consumer { get; set; }
+
+                    /// <summary>
                     /// <para>The input token consumption.</para>
                     /// 
                     /// <b>Example:</b>
@@ -98,6 +108,16 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     [NameInMap("outputAmount")]
                     [Validation(Required=false)]
                     public long? OutputAmount { get; set; }
+
+                    /// <summary>
+                    /// <para>The request ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>req-123456</para>
+                    /// </summary>
+                    [NameInMap("requestId")]
+                    [Validation(Required=false)]
+                    public string RequestId { get; set; }
 
                     /// <summary>
                     /// <para>The consumption (request) time in the format of YYYY-MM-DD.</para>
@@ -174,7 +194,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? OutputAmount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the limit is exceeded.</para>
+            /// <para>Indicates whether the quota limit is exceeded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -182,6 +202,20 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             [NameInMap("overLimit")]
             [Validation(Required=false)]
             public bool? OverLimit { get; set; }
+
+            /// <summary>
+            /// <para>The subject type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>consumer</description></item>
+            /// <item><description>consumer_group</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>consumer_group</para>
+            /// </summary>
+            [NameInMap("subjectType")]
+            [Validation(Required=false)]
+            public string SubjectType { get; set; }
 
             /// <summary>
             /// <para>The total quota of the subject.</para>
@@ -194,7 +228,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? TotalQuota { get; set; }
 
             /// <summary>
-            /// <para>The total used amount of the subject.</para>
+            /// <para>The total used quota of the subject.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>

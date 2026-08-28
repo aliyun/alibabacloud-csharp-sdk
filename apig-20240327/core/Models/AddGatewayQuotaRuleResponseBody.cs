@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public AddGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class AddGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</para>
+            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public AddGatewayQuotaRuleResponseBodyDataConflictPreview ConflictPreview { get; set; }
             public class AddGatewayQuotaRuleResponseBodyDataConflictPreview : TeaModel {
                 /// <summary>
-                /// <para>The hash of the conflict snapshot.</para>
+                /// <para>The conflict hash.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541fxxxxxxxx</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConflictHash { get; set; }
 
                 /// <summary>
-                /// <para>The list of conflicting entities (consumers).</para>
+                /// <para>The list of conflicting subjects (consumers).</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
                 public List<AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class AddGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the consumer. A value of day, week, or month indicates that the conflicting rule uses a daily, weekly, or monthly period respectively.</para>
+                    /// <para>The period type of the existing conflicting rule on the consumer. A value of day, week, or month indicates the conflicting rule has a daily, weekly, or monthly period respectively.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>week</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the consumer. A value of calendar indicates that the conflicting rule uses a calendar period. A value of epoch indicates that the conflicting rule uses a custom period.</para>
+                    /// <para>The type of the existing conflicting rule on the consumer. A value of calendar indicates the conflicting rule uses a calendar period. A value of epoch indicates the conflicting rule uses an epoch period.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>calendar</para>
@@ -102,6 +102,36 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     [NameInMap("consumerName")]
                     [Validation(Required=false)]
                     public string ConsumerName { get; set; }
+
+                    /// <summary>
+                    /// <para>The ID of the conflicting subject.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>cs-xxx</para>
+                    /// </summary>
+                    [NameInMap("subjectId")]
+                    [Validation(Required=false)]
+                    public string SubjectId { get; set; }
+
+                    /// <summary>
+                    /// <para>The name of the conflicting subject.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>consumer-a</para>
+                    /// </summary>
+                    [NameInMap("subjectName")]
+                    [Validation(Required=false)]
+                    public string SubjectName { get; set; }
+
+                    /// <summary>
+                    /// <para>The type of the conflicting subject. Valid values: consumer and consumer_group.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>consumer</para>
+                    /// </summary>
+                    [NameInMap("subjectType")]
+                    [Validation(Required=false)]
+                    public string SubjectType { get; set; }
 
                 }
 
@@ -150,7 +180,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

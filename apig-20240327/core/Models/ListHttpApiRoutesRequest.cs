@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string DeployStatuses { get; set; }
 
         /// <summary>
-        /// <para>The domain name ID used to filter route information.</para>
+        /// <para>Filters route information by domain name ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>d-xxx</para>
@@ -110,7 +110,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size. Valid values: 1 to 100. Default value: 10.</para>
+        /// <para>The page size. Valid range: 1 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PathLike { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include consumer authorization information in the response.</para>
+        /// <para>Includes consumer authorization information in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? WithAuthPolicyInfo { get; set; }
 
         /// <summary>
-        /// <para>Specifies a consumer ID so that the response includes the authorization rule list for the specified consumer in each route.</para>
+        /// <para>Includes the authorization rule list of the specified consumer ID for each route in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cs-xxx</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string WithConsumerInfoById { get; set; }
 
         /// <summary>
-        /// <para>Specifies a plug-in ID so that the response includes the mount information of the specified plug-in in each route.</para>
+        /// <para>Includes the plug-in attachment information of the specified plug-in ID for each route in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pl-xxx</para>

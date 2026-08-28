@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public bool? ImportableOnly { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return. Valid range: (0, 100]. Default value: 10.</para>
+        /// <para>The maximum number of results to return. Valid range: (0, 100]. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The API name for fuzzy match.</para>
+        /// <para>Fuzzy search by API name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>imah</para>
@@ -50,14 +50,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string PaiWorkspaceId { get; set; }
 
         /// <summary>
-        /// <para>The service source type used to filter results. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>MSE_NACOS: services from MSE Nacos.</description></item>
-        /// <item><description>K8S: services from a Kubernetes cluster in Container Service.</description></item>
-        /// <item><description>FC3: services from Function Compute.</description></item>
-        /// <item><description>VIP: services from a fixed address.</description></item>
-        /// <item><description>DNS: services from a domain name.</description></item>
-        /// </list>
+        /// <para>The service source type used to query services. This parameter is essentially required. If not provided, the API returns 400 InvalidParameter.WithValue. Valid values: SAE_K8S_SERVICE, PAI_EAS_SERVICE, CloudFlow, K8S, FC3, PAI_WORKSPACE, and MSE_NACOS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FC3</para>

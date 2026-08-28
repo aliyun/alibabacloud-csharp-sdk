@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The number of consumers per page.</para>
+        /// <para>The page size of the consumer list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -36,11 +36,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string ConsumerPageSize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to include the consumer list in the response.</para>
+        /// <para>Specifies whether to return the consumer list.</para>
         /// </summary>
         [NameInMap("withConsumers")]
         [Validation(Required=false)]
         public bool? WithConsumers { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to return the general subject list. This parameter applies to both consumer and consumer group rules.</para>
+        /// </summary>
+        [NameInMap("withSubjects")]
+        [Validation(Required=false)]
+        public bool? WithSubjects { get; set; }
 
     }
 
