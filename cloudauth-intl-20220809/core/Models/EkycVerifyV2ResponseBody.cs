@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public EkycVerifyV2ResponseBodyResult Result { get; set; }
         public class EkycVerifyV2ResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The face verification result information.</para>
+            /// <para>The face result information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -62,12 +62,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtFaceInfo { get; set; }
 
             /// <summary>
-            /// <para>The document recognition result. This parameter is returned only when the API response is successful.</para>
+            /// <para>The identity document recognition result. Returned only when the API response is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
             ///  &quot;ocrIdInfo&quot;: {
-            ///  &quot;firstName&quot;: &quot;<b>龙&quot;,
+            ///  &quot;firstName&quot;: &quot;<b>Long&quot;,
             ///  &quot;lastName&quot;: &quot;</b>&quot;,
             ///  &quot;countryCode&quot;: &quot;CHN&quot;,
             ///  &quot;docType&quot;: &quot;01560001&quot;,
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the verification is passed. Valid values: Y (passed) and N (not passed).</para>
+            /// <para>Indicates whether the verification passed. A value of Y indicates passed, and a value of N indicates not passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Y</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string SubCode { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the authentication request.</para>
+            /// <para>The unique identifier of the verification request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4ab0b***cbde97</para>

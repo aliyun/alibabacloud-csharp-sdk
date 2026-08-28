@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public FaceCompareV2ResponseBodyResult Result { get; set; }
         public class FaceCompareV2ResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The additional result information.</para>
+            /// <para>The related result information.</para>
             /// </summary>
             [NameInMap("ExtFaceInfo")]
             [Validation(Required=false)]
@@ -104,22 +104,52 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
                 [Validation(Required=false)]
                 public double? SharpnessScore { get; set; }
 
+                /// <summary>
+                /// <para>The overall quality score of the target reference face image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>39.04</para>
+                /// </summary>
                 [NameInMap("TargetFaceQualityScore")]
                 [Validation(Required=false)]
                 public double? TargetFaceQualityScore { get; set; }
 
+                /// <summary>
+                /// <para>The illumination score of the target reference face image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>0.02</para>
+                /// </summary>
                 [NameInMap("TargetIlluminationScore")]
                 [Validation(Required=false)]
                 public double? TargetIlluminationScore { get; set; }
 
+                /// <summary>
+                /// <para>The key area occlusion score of the target reference face image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>20</para>
+                /// </summary>
                 [NameInMap("TargetKaOcclusionScore")]
                 [Validation(Required=false)]
                 public double? TargetKaOcclusionScore { get; set; }
 
+                /// <summary>
+                /// <para>The occlusion score of the target reference face image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>50.26</para>
+                /// </summary>
                 [NameInMap("TargetOcclusionScore")]
                 [Validation(Required=false)]
                 public double? TargetOcclusionScore { get; set; }
 
+                /// <summary>
+                /// <para>The sharpness score of the target reference face image.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>86.47</para>
+                /// </summary>
                 [NameInMap("TargetSharpnessScore")]
                 [Validation(Required=false)]
                 public double? TargetSharpnessScore { get; set; }
@@ -127,7 +157,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             }
 
             /// <summary>
-            /// <para>The comparison score between the submitted face image and the reference face image during the verification process. Valid values: 0 to 100.</para>
+            /// <para>The comparison score between the submitted face photo and the target reference face image during verification. Value range: 0 to 100.</para>
             /// 
             /// <b>Example:</b>
             /// <para>98</para>
@@ -137,7 +167,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public double? FaceComparisonScore { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the verification is passed. Valid values:</para>
+            /// <para>Indicates whether the verification passed.</para>
             /// <list type="bullet">
             /// <item><description>Y: Passed.</description></item>
             /// <item><description>N: Not passed.</description></item>
@@ -151,7 +181,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string Passed { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the verification request.</para>
+            /// <para>The unique identifier of the verification request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08573be80f944d95ac812e019e3655a8</para>

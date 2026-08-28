@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialRecognitionIntlRequest : TeaModel {
         /// <summary>
+        /// <para>The field check rule configuration, in JSON string format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;address_rule&quot;: &quot;Includes Adrress 杭州市***&quot;,
+        ///     &quot;name_rule&quot;: &quot;Includes Name  张*&quot;,
+        ///     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
+        /// }</para>
+        /// </summary>
+        [NameInMap("CheckRuleConfig")]
+        [Validation(Required=false)]
+        public string CheckRuleConfig { get; set; }
+
+        /// <summary>
         /// <para>The Base64-encoded image. If you choose to pass in the image by using IdOcrPictureBase64 (Base64-encoded photo), check the photo size and do not pass in an excessively large photo.</para>
         /// 
         /// <b>Example:</b>
@@ -30,9 +44,9 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string CredentialOcrPictureUrl { get; set; }
 
         /// <summary>
-        /// <para>The credential type. Valid values:</para>
+        /// <para>The credential type.</para>
         /// <list type="bullet">
-        /// <item><description>01: transaction credential (including electronic bill images for water, electricity, gas, credit cards, and other types).</description></item>
+        /// <item><description>Transaction credential: 01 (includes various electronic bill images such as water, electricity, gas, and credit card bills)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,9 +73,19 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FraudCheck { get; set; }
 
         /// <summary>
-        /// <para>The extraction type. Valid values:</para>
+        /// <para>Specifies whether to enable quality detection. Valid values: Y (enabled) and N (disabled).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
+        [NameInMap("IdQuality")]
+        [Validation(Required=false)]
+        public string IdQuality { get; set; }
+
+        /// <summary>
+        /// <para>The extraction type:</para>
         /// <list type="bullet">
-        /// <item><description>0101: electronic bill address and name module (extracts the address and name module through intelligent analysis).</description></item>
+        /// <item><description>0101: Electronic bill address and name module (extracts address and name through intelligent analysis)</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -71,6 +95,26 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [NameInMap("OcrArea")]
         [Validation(Required=false)]
         public string OcrArea { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable translation. Valid values: 0 (disabled) and 1 (enabled).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("OcrTranslation")]
+        [Validation(Required=false)]
+        public string OcrTranslation { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable OCR result standardization. Valid values: 0 (disabled) and 1 (enabled).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("OcrValueStandard")]
+        [Validation(Required=false)]
+        public string OcrValueStandard { get; set; }
 
         /// <summary>
         /// <para>The product solution to use. Set this to CREDENTIAL_RECOGNITION.</para>

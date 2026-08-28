@@ -2017,12 +2017,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name from the credential.</para>
+        /// <para>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2047,15 +2047,31 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FraudCheck"] = request.FraudCheck;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdQuality))
+            {
+                query["IdQuality"] = request.IdQuality;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
             {
                 query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrTranslation))
+            {
+                query["OcrTranslation"] = request.OcrTranslation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckRuleConfig))
+            {
+                body["CheckRuleConfig"] = request.CheckRuleConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
             {
                 body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
@@ -2086,12 +2102,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name from the credential.</para>
+        /// <para>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2116,15 +2132,31 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FraudCheck"] = request.FraudCheck;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdQuality))
+            {
+                query["IdQuality"] = request.IdQuality;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
             {
                 query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrTranslation))
+            {
+                query["OcrTranslation"] = request.OcrTranslation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
                 query["ProductCode"] = request.ProductCode;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckRuleConfig))
+            {
+                body["CheckRuleConfig"] = request.CheckRuleConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
             {
                 body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
@@ -2155,12 +2187,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name from the credential.</para>
+        /// <para>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2178,12 +2210,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>An API operation that uploads a credential image, such as a utility bill or credit card statement, and uses Qwen-VL to intelligently fetch the billing address and name from the credential.</para>
+        /// <para>An API operation that uploads credential images, including utility bills and credit card statements, and uses Qwen-VL to intelligently fetch billing addresses and names.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Uses AI technology to detect whether a credential (such as a water, electricity, gas, or credit card electronic bill) has been forged, and extracts key information from the credential.</para>
+        /// <para>Uses AI technology to detect whether credentials (such as water, electricity, gas, and credit card electronic bills) are forged, and extracts key information from the credentials.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2206,7 +2238,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation and returns a transactionId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2231,6 +2263,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FraudCheck"] = request.FraudCheck;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdQuality))
+            {
+                query["IdQuality"] = request.IdQuality;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
                 query["MerchantBizId"] = request.MerchantBizId;
@@ -2238,6 +2274,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
             {
                 query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrTranslation))
+            {
+                query["OcrTranslation"] = request.OcrTranslation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
@@ -2248,6 +2292,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 query["SceneCode"] = request.SceneCode;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckRuleConfig))
+            {
+                body["CheckRuleConfig"] = request.CheckRuleConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
             {
                 body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
@@ -2283,7 +2331,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation and returns a transactionId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2308,6 +2356,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["FraudCheck"] = request.FraudCheck;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdQuality))
+            {
+                query["IdQuality"] = request.IdQuality;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MerchantBizId))
             {
                 query["MerchantBizId"] = request.MerchantBizId;
@@ -2315,6 +2367,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrArea))
             {
                 query["OcrArea"] = request.OcrArea;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrTranslation))
+            {
+                query["OcrTranslation"] = request.OcrTranslation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OcrValueStandard))
+            {
+                query["OcrValueStandard"] = request.OcrValueStandard;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
             {
@@ -2325,6 +2385,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
                 query["SceneCode"] = request.SceneCode;
             }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckRuleConfig))
+            {
+                body["CheckRuleConfig"] = request.CheckRuleConfig;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CredentialOcrPictureBase64))
             {
                 body["CredentialOcrPictureBase64"] = request.CredentialOcrPictureBase64;
@@ -2360,7 +2424,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation and returns a transactionId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2383,7 +2447,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Initializes the credential recognition OCR operation and retrieves a transactionId.</para>
+        /// <para>Initializes the credential recognition OCR operation and returns a transactionId.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5302,6 +5366,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdSpoof))
+            {
+                query["IdSpoof"] = request.IdSpoof;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
             {
                 query["IdThreshold"] = request.IdThreshold;
@@ -5398,6 +5466,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             {
                 query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdSpoof))
+            {
+                query["IdSpoof"] = request.IdSpoof;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
             {
                 query["IdThreshold"] = request.IdThreshold;
@@ -5481,7 +5553,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The eKYC solution server-side API.</para>
+        /// <para>Provides a server-side-only API for the eKYC solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5529,6 +5601,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
             {
                 query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdSpoof))
+            {
+                query["IdSpoof"] = request.IdSpoof;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
             {
@@ -5585,7 +5661,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The eKYC solution server-side API.</para>
+        /// <para>Provides a server-side-only API for the eKYC solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5633,6 +5709,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdOcrPictureUrl))
             {
                 query["IdOcrPictureUrl"] = request.IdOcrPictureUrl;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdSpoof))
+            {
+                query["IdSpoof"] = request.IdSpoof;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IdThreshold))
             {
@@ -5689,7 +5769,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The eKYC solution server-side API.</para>
+        /// <para>Provides a server-side-only API for the eKYC solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5707,7 +5787,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>The eKYC solution server-side API.</para>
+        /// <para>Provides a server-side-only API for the eKYC solution.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6141,7 +6221,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images by using face recognition technology and returns the comparison result and a similarity score.</para>
+        /// <para>Compares two face images using face recognition technology and returns the comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6217,7 +6297,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images by using face recognition technology and returns the comparison result and a similarity score.</para>
+        /// <para>Compares two face images using face recognition technology and returns the comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6293,7 +6373,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images by using face recognition technology and returns the comparison result and a similarity score.</para>
+        /// <para>Compares two face images using face recognition technology and returns the comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6311,7 +6391,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares two face images by using face recognition technology and returns the comparison result and a similarity score.</para>
+        /// <para>Compares two face images using face recognition technology and returns the comparison result and similarity score.</para>
         /// </summary>
         /// 
         /// <param name="request">

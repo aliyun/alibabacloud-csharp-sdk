@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class EkycVerifyV2AdvanceRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable authoritative identity verification. Currently, this feature is applicable only to second-generation ID cards of mainland China.</para>
+        /// <para>Specifies whether to enable authoritative identity verification. Currently, this parameter applies only to second-generation mainland China ID cards.</para>
         /// 
         /// <b>Example:</b>
         /// <para>T</para>
@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Authorize { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether cropping is allowed. Not allowed by default. Valid values: T and F.</para>
+        /// <para>Specifies whether cropping is allowed. By default, cropping is not allowed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>T: Cropping is allowed.</description></item>
-        /// <item><description>F: Cropping is not allowed. (Default: F)</description></item>
+        /// <item><description>T: Detection is required.</description></item>
+        /// <item><description>F: Detection is required (default value: F).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -34,17 +34,17 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string Crop { get; set; }
 
         /// <summary>
-        /// <para>The real name of the user. When Authorize=\&quot;T\&quot; and the document type is a mainland China ID card, at least one of the following groups must be provided: document key information (DocName, DocNo) or document image (IdOcrPictureBase64/URL). Note: Supports combinations of Chinese characters with a length of at least 1 character. Special characters are not supported, except for the middle dot (·) used in ethnic minority names.</para>
+        /// <para>The real name of the user. When Authorize=\&quot;T\&quot; and the document type is a mainland China ID card, you must provide at least one of the following: key document information (DocName, DocNo) or document images (IdOcrPictureBase64/URL). Note: Supports a combination of Chinese characters with a minimum length of 1 character. No special characters are allowed, except for the middle dot (·) used in ethnic minority names.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张**</para>
+        /// <para>Zhang**</para>
         /// </summary>
         [NameInMap("DocName")]
         [Validation(Required=false)]
         public string DocName { get; set; }
 
         /// <summary>
-        /// <para>The document number of the user. When Authorize=\&quot;T\&quot; and the document type is a mainland China ID card, at least one of the following groups must be provided: document key information (DocName, DocNo) or document image (IdOcrPictureBase64/URL). Note: Supports a combination of letters and digits with a length of 18 characters.</para>
+        /// <para>The document number of the user. When Authorize=\&quot;T\&quot; and the document type is a mainland China ID card, you must provide at least one of the following: key document information (DocName, DocNo) or document images (IdOcrPictureBase64/URL). Note: Supports a combination of letters and numbers with a length of 18 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>410***************</para>
@@ -67,8 +67,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <para>The Base64-encoded face image.</para>
         /// <para>Note:</para>
         /// <list type="bullet">
-        /// <item><description>If you use this method to pass the face image, check the photo size and do not pass an overly large photo.</description></item>
-        /// <item><description>You can only specify one of FacePictureBase64, FacePictureUrl, and FacePictureFile.</description></item>
+        /// <item><description>If you choose this method to pass in the face image, check the photo size and do not pass in an excessively large photo.</description></item>
+        /// <item><description>Specify one of the following parameters: FacePictureBase64, FacePictureUrl, or FacePictureFile.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -98,15 +98,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         [Validation(Required=false)]
         public string FacePictureUrl { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable face quality detection.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
         [NameInMap("FaceQualityCheck")]
         [Validation(Required=false)]
         public string FaceQualityCheck { get; set; }
 
         /// <summary>
-        /// <para>The Base64-encoded document image. Note:</para>
+        /// <para>The Base64-encoded identity document image. Note:</para>
         /// <list type="bullet">
-        /// <item><description>If you use this method to pass the document image, check the photo size and do not pass an overly large photo.</description></item>
-        /// <item><description>You can only specify one of IdOcrPictureBase64, IdOcrPictureUrl, and IdOcrPictureFile.</description></item>
+        /// <item><description>If you choose this method to pass in the document image, check the photo size and do not pass in an excessively large photo.</description></item>
+        /// <item><description>Specify one of the following parameters: IdOcrPictureBase64, IdOcrPictureUrl, or IdOcrPictureFile.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +123,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdOcrPictureBase64 { get; set; }
 
         /// <summary>
-        /// <para>The file stream of the front side of the document image.</para>
+        /// <para>The file stream of the front side of the identity document image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>InputStream</para>
@@ -127,7 +133,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public Stream IdOcrPictureFileObject { get; set; }
 
         /// <summary>
-        /// <para>The URL of the front side of the document image.</para>
+        /// <para>The URL of the front side of the identity document image.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg">https://digital-cardocr-prod8.oss-cn-hangzhou.aliyuncs.com/1669520556530-expo/default/face/20221127114236530_w3kx2e6t.jpg</a></para>
@@ -137,12 +143,22 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdOcrPictureUrl { get; set; }
 
         /// <summary>
-        /// <para>The custom OCR quality detection threshold mode:</para>
+        /// <para>Specifies whether to enable document anti-spoofing.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
+        [NameInMap("IdSpoof")]
+        [Validation(Required=false)]
+        public string IdSpoof { get; set; }
+
+        /// <summary>
+        /// <para>The custom OCR quality detection threshold mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: System default.</description></item>
-        /// <item><description>1: Strict mode.</description></item>
-        /// <item><description>2: Lenient mode.</description></item>
-        /// <item><description>3 (Default): Quality detection is disabled.</description></item>
+        /// <item><description>0: system default.</description></item>
+        /// <item><description>1: strict mode.</description></item>
+        /// <item><description>2: loose mode.</description></item>
+        /// <item><description>3 (default): quality detection disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -153,7 +169,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string IdThreshold { get; set; }
 
         /// <summary>
-        /// <para>A unique business identifier customized by the merchant, used for subsequent troubleshooting. Supports a combination of letters and digits with a length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>A custom business unique identifier defined by the merchant, used for subsequent issue tracking and troubleshooting. Supports a combination of letters and numbers up to 32 characters in length. Ensure that this value is unique.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e0c34a77f5ac40a5aa5e6ed20c353888</para>

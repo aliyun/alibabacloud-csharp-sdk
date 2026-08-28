@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             /// <summary>
             /// <para>The extraction result. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>S: Succeeded.</description></item>
+            /// <item><description>S: Successful.</description></item>
             /// <item><description>F: Failed.</description></item>
             /// </list>
             /// 

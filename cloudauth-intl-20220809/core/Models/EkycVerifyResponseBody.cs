@@ -40,14 +40,14 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response result.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public EkycVerifyResponseBodyResult Result { get; set; }
         public class EkycVerifyResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The face verification result.</para>
+            /// <para>The face verification result information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -62,12 +62,12 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtFaceInfo { get; set; }
 
             /// <summary>
-            /// <para>The document recognition result. This field is returned only when the API response is successful.</para>
+            /// <para>The document recognition result. Returned only when the API response is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
             ///  &quot;ocrIdInfo&quot;: {
-            ///  &quot;firstName&quot;: &quot;<b>龙&quot;,
+            ///  &quot;firstName&quot;: &quot;<b>Long&quot;,
             ///  &quot;lastName&quot;: &quot;</b>&quot;,
             ///  &quot;countryCode&quot;: &quot;CHN&quot;,
             ///  &quot;docType&quot;: &quot;01560001&quot;,
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
             public string ExtIdInfo { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the verification is passed. Valid values: T (passed) and F (not passed).</para>
+            /// <para>Indicates whether the verification is passed. T indicates passed, and F indicates not passed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Y</para>

@@ -10,6 +10,20 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
 {
     public class CredentialSubmitIntlRequest : TeaModel {
         /// <summary>
+        /// <para>The field validation rule configuration in JSON string format.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{
+        ///     &quot;address_rule&quot;: &quot;Includes Address Hangzhou***&quot;,
+        ///     &quot;name_rule&quot;: &quot;Includes Name Zhang*&quot;,
+        ///     &quot;date_of_issue_rule&quot;: &quot;Whthin 2026.05.20&quot;
+        /// }</para>
+        /// </summary>
+        [NameInMap("CheckRuleConfig")]
+        [Validation(Required=false)]
+        public string CheckRuleConfig { get; set; }
+
+        /// <summary>
         /// <para>The Base64-encoded image. If you use this method to submit a photo, check the photo size and do not submit an excessively large photo.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +46,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The credential type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>02: vehicle registration certificate.</description></item>
+        /// <item><description>02: vehicle registration certificate</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -46,8 +60,8 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>Specifies whether to enable tampering detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Enable.</description></item>
-        /// <item><description>false: Disable.</description></item>
+        /// <item><description>true: Enabled.</description></item>
+        /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -59,7 +73,21 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string FraudCheck { get; set; }
 
         /// <summary>
-        /// <para>The merchant-side custom business unique identifier, used for subsequent troubleshooting. The value can be a combination of letters and digits with a maximum length of 32 characters. Ensure that the value is unique.</para>
+        /// <para>Specifies whether to enable quality detection. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Y: Enabled.</description></item>
+        /// <item><description>N: Disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Y</para>
+        /// </summary>
+        [NameInMap("IdQuality")]
+        [Validation(Required=false)]
+        public string IdQuality { get; set; }
+
+        /// <summary>
+        /// <para>The merchant-defined unique business identifier, used for subsequent troubleshooting. The value can be a combination of letters and numbers with a maximum length of 32 characters. Ensure that the value is unique.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -72,7 +100,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         /// <summary>
         /// <para>The extraction type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0201: Thailand vehicle registration certificate.</description></item>
+        /// <item><description>0201: Thailand vehicle registration certificate</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -84,7 +112,35 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string OcrArea { get; set; }
 
         /// <summary>
-        /// <para>The product solution to use. Set this parameter to CREDENTIAL_RECOGNITION.</para>
+        /// <para>Specifies whether to enable translation. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Disabled.</description></item>
+        /// <item><description>1: Enabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("OcrTranslation")]
+        [Validation(Required=false)]
+        public string OcrTranslation { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to enable OCR result standardization. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>0: Disabled.</description></item>
+        /// <item><description>1: Enabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("OcrValueStandard")]
+        [Validation(Required=false)]
+        public string OcrValueStandard { get; set; }
+
+        /// <summary>
+        /// <para>The product solution to use. Set this to CREDENTIAL_RECOGNITION.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -95,7 +151,7 @@ namespace AlibabaCloud.SDK.Cloudauth_intl20220809.Models
         public string ProductCode { get; set; }
 
         /// <summary>
-        /// <para>The custom authentication scenario ID. You can use this scenario ID to query related records in the console. The value can be a combination of letters, digits, or underscores with a maximum length of 10 characters.</para>
+        /// <para>The custom authentication scenario ID. You can use this ID to query related records in the console. The value can be a combination of letters, numbers, or underscores with a maximum length of 10 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
