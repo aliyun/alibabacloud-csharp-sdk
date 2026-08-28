@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public bool? HasSeat { get; set; }
 
         /// <summary>
-        /// <para>Fuzzy filter by member name. Matches accountName or email and is case-insensitive.</para>
+        /// <para>Fuzzy filter by member name. Matches accountName or email, case-insensitive.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>成员名称</para>
+        /// <para>MemberName</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters by member status, such as ACTIVE or FROZEN. Set to null to disable filtering.</para>
+        /// <para>Filters by member status, such as ACTIVE or FROZEN. A value of null indicates no filtering.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ACTIVE</para>

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string AccountBizId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the member account.</para>
+            /// <para>The ID of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>acc_123456789</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string AccountId { get; set; }
 
             /// <summary>
-            /// <para>The name of the member account.</para>
+            /// <para>The name of the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test_001</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public string ApiKeyId { get; set; }
 
             /// <summary>
-            /// <para>The email address of the member.</para>
+            /// <para>The member email address.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="mailto:test@email.com">test@email.com</a></para>
@@ -106,6 +106,48 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             [Validation(Required=false)]
             public string OrgId { get; set; }
 
+            [NameInMap("PackLimitInfo")]
+            [Validation(Required=false)]
+            public ListOrganizationMembersResponseBodyDataPackLimitInfo PackLimitInfo { get; set; }
+            public class ListOrganizationMembersResponseBodyDataPackLimitInfo : TeaModel {
+                [NameInMap("AvailableLimit")]
+                [Validation(Required=false)]
+                public double? AvailableLimit { get; set; }
+
+                [NameInMap("CycleEndTime")]
+                [Validation(Required=false)]
+                public long? CycleEndTime { get; set; }
+
+                [NameInMap("CycleStartTime")]
+                [Validation(Required=false)]
+                public long? CycleStartTime { get; set; }
+
+                [NameInMap("FrozenCredits")]
+                [Validation(Required=false)]
+                public double? FrozenCredits { get; set; }
+
+                [NameInMap("HasShareLimit")]
+                [Validation(Required=false)]
+                public bool? HasShareLimit { get; set; }
+
+                [NameInMap("IsAvailable")]
+                [Validation(Required=false)]
+                public bool? IsAvailable { get; set; }
+
+                [NameInMap("LastConfirmedTime")]
+                [Validation(Required=false)]
+                public long? LastConfirmedTime { get; set; }
+
+                [NameInMap("UpperLimit")]
+                [Validation(Required=false)]
+                public double? UpperLimit { get; set; }
+
+                [NameInMap("UsedCredits")]
+                [Validation(Required=false)]
+                public double? UsedCredits { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The list of member roles.</para>
             /// </summary>
@@ -114,7 +156,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             public List<string> Roles { get; set; }
 
             /// <summary>
-            /// <para>The ID used to allocate the seat resource.</para>
+            /// <para>The seat resource allocate ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>seat_123456</para>
@@ -128,7 +170,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             /// <list type="bullet">
             /// <item><description>standard: Standard seat.</description></item>
             /// <item><description>pro: Pro seat.</description></item>
-            /// <item><description>max: Premium seat.</description></item>
+            /// <item><description>max: Max seat.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -147,6 +189,70 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
+
+            [NameInMap("SubscriptionInfo")]
+            [Validation(Required=false)]
+            public ListOrganizationMembersResponseBodyDataSubscriptionInfo SubscriptionInfo { get; set; }
+            public class ListOrganizationMembersResponseBodyDataSubscriptionInfo : TeaModel {
+                [NameInMap("EndTime")]
+                [Validation(Required=false)]
+                public long? EndTime { get; set; }
+
+                [NameInMap("EquityList")]
+                [Validation(Required=false)]
+                public List<ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList> EquityList { get; set; }
+                public class ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList : TeaModel {
+                    [NameInMap("CycleEndTime")]
+                    [Validation(Required=false)]
+                    public long? CycleEndTime { get; set; }
+
+                    [NameInMap("CycleStartTime")]
+                    [Validation(Required=false)]
+                    public long? CycleStartTime { get; set; }
+
+                    [NameInMap("CycleSurplusValue")]
+                    [Validation(Required=false)]
+                    public double? CycleSurplusValue { get; set; }
+
+                    [NameInMap("CycleTotalValue")]
+                    [Validation(Required=false)]
+                    public double? CycleTotalValue { get; set; }
+
+                    [NameInMap("EquityType")]
+                    [Validation(Required=false)]
+                    public string EquityType { get; set; }
+
+                    [NameInMap("EquityUnit")]
+                    [Validation(Required=false)]
+                    public string EquityUnit { get; set; }
+
+                }
+
+                [NameInMap("InstanceCode")]
+                [Validation(Required=false)]
+                public string InstanceCode { get; set; }
+
+                [NameInMap("PayMode")]
+                [Validation(Required=false)]
+                public string PayMode { get; set; }
+
+                [NameInMap("ProductCode")]
+                [Validation(Required=false)]
+                public string ProductCode { get; set; }
+
+                [NameInMap("SpecType")]
+                [Validation(Required=false)]
+                public string SpecType { get; set; }
+
+                [NameInMap("StartTime")]
+                [Validation(Required=false)]
+                public long? StartTime { get; set; }
+
+                [NameInMap("Status")]
+                [Validation(Required=false)]
+                public string Status { get; set; }
+
+            }
 
         }
 
@@ -181,7 +287,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

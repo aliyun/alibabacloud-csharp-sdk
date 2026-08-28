@@ -1743,7 +1743,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单概览</para>
+        /// <para>Queries the bill overview.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1823,7 +1823,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单概览</para>
+        /// <para>Queries the bill overview.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -1903,7 +1903,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单概览</para>
+        /// <para>Queries the bill overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1922,7 +1922,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单概览</para>
+        /// <para>Queries the bill overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1941,7 +1941,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单趋势</para>
+        /// <para>Queries bill trends.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2029,7 +2029,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单趋势</para>
+        /// <para>Queries bill trends.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -2117,7 +2117,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单趋势</para>
+        /// <para>Queries bill trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2136,7 +2136,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询账单趋势</para>
+        /// <para>Queries bill trends.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3893,7 +3893,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of organization members including seat information. Supports filtering by name, status, and seat assignment, and supports pagination.</para>
+        /// <para>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3955,7 +3955,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of organization members including seat information. Supports filtering by name, status, and seat assignment, and supports pagination.</para>
+        /// <para>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4017,7 +4017,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of organization members including seat information. Supports filtering by name, status, and seat assignment, and supports pagination.</para>
+        /// <para>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4036,7 +4036,7 @@ namespace AlibabaCloud.SDK.ModelStudio20260210
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of organization members including seat information. Supports filtering by name, status, and seat assignment, and supports pagination.</para>
+        /// <para>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</para>
         /// </summary>
         /// 
         /// <param name="request">
