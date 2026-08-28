@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The business status code, which is always 200. Use success to determine whether the business request is successful.</para>
+        /// <para>The business status code, which is always 200. Use success to determine whether the business request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the business request is successful.</para>
+        /// <para>Indicates whether the business request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

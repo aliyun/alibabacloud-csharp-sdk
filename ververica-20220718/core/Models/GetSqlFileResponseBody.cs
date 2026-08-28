@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetSqlFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>The complete SQL script information returned when the request is successful. This field is valid when success is true.</para>
+        /// <para>The complete SQL script information returned when the request succeeds. This field is valid when success is true.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>See the response example.</para>
+        /// <para>See the response example</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]

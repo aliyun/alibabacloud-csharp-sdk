@@ -8,35 +8,38 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class GetAutopilotPolicyResponseBody : TeaModel {
+    public class TriggerPatrolResponseBody : TeaModel {
         /// <summary>
-        /// <para>The Autopilot tuning policy response data.</para>
+        /// <para>The response data of the triggered inspection.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
-        public GetAutopilotPolicyResponseBodyData Data { get; set; }
-        public class GetAutopilotPolicyResponseBodyData : TeaModel {
+        public TriggerPatrolResponseBodyData Data { get; set; }
+        public class TriggerPatrolResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether automatic tuning is enabled. A value of true indicates that automatic tuning is active (ACTIVE). A value of false indicates that tuning is not enabled.</para>
+            /// <para>The generated report ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>false</para>
+            /// <para>inspection-cf8f8843-64e4-4b45-9500-06790107130f</para>
             /// </summary>
-            [NameInMap("enabled")]
+            [NameInMap("reportId")]
             [Validation(Required=false)]
-            public bool? Enabled { get; set; }
+            public string ReportId { get; set; }
 
             /// <summary>
-            /// <para>The tuning policy configuration.</para>
+            /// <para>The report status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>COMPLETED</para>
             /// </summary>
-            [NameInMap("policyConfig")]
+            [NameInMap("status")]
             [Validation(Required=false)]
-            public AutopilotPolicy PolicyConfig { get; set; }
+            public string Status { get; set; }
 
         }
 
         /// <summary>
-        /// <para>The error code. This field is not empty when success is false. This field is empty when success is true.</para>
+        /// <para>When success is false, this value is not empty and indicates the business error code. When success is true, this value is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -46,7 +49,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This field is not empty when success is false. This field is empty when success is true.</para>
+        /// <para>When success is false, this value is not empty and indicates the business error message. When success is true, this value is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -56,7 +59,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The business status code, which is always 200. Use the success field to determine whether the request is successful.</para>
+        /// <para>The business status code, which is uniformly 200. Use success to determine whether the business request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -76,7 +79,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request is successful.</para>
+        /// <para>Indicates whether the business request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

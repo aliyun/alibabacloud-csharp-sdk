@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetDatabasesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the database. If you do not specify this parameter, information about all databases in the catalog is returned.</para>
+        /// <para>The database name. If this parameter is left empty, information about all databases is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>paimon-ods</para>

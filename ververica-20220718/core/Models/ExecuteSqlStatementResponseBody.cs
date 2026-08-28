@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ExecuteSqlStatementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the SQL statement execution for metadata.</para>
+        /// <para>The execution result of the metadata SQL statement.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If \<c>success\\</c> is \<c>false\\</c>, an error code is returned.</para>
+        /// <item><description><para>If success is false, a business error code is returned.</para>
         /// </description></item>
-        /// <item><description><para>If \<c>success\\</c> is \<c>true\\</c>, this parameter is empty.</para>
+        /// <item><description><para>If success is true, an empty value is returned.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If \<c>success\\</c> is \<c>false\\</c>, an error message is returned.</para>
+        /// <item><description><para>If success is false, a business error message is returned.</para>
         /// </description></item>
-        /// <item><description><para>If \<c>success\\</c> is \<c>true\\</c>, this parameter is empty.</para>
+        /// <item><description><para>If success is true, an empty value is returned.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The status code. The value is always 200. Use the \<c>success\\</c> parameter to determine whether the request was successful.</para>
+        /// <para>The HTTP status code, which is always 200. Use the success field to determine whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

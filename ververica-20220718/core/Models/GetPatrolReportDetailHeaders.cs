@@ -8,7 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
-    public class GetFolderHeaders : TeaModel {
+    public class GetPatrolReportDetailHeaders : TeaModel {
         [NameInMap("commonHeaders")]
         [Validation(Required=false)]
         public Dictionary<string, string> CommonHeaders { get; set; }
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>a14bda1c4a****</para>
+        /// <para>a14bd5d90a****</para>
         /// </summary>
         [NameInMap("workspace")]
         [Validation(Required=false)]

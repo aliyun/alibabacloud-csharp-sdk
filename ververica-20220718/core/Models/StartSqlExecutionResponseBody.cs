@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class StartSqlExecutionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The complete information of the SQL script returned upon success. This parameter is valid when success is true.</para>
+        /// <para>The complete SQL script information returned upon success. This parameter is valid when success is true.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>如返回示例所示</para>
+        /// <para>See the response example</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
         public StartSqlExecutionResult Data { get; set; }
 
         /// <summary>
-        /// <para>The business error code. This parameter is not empty when success is false. This parameter is empty when success is true.</para>
+        /// <para>The business error code. This parameter is not empty when success is false, and is empty when success is true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The business error message. This parameter is not empty when success is false. This parameter is empty when success is true.</para>
+        /// <para>The business error message. This parameter is not empty when success is false, and is empty when success is true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The business status code, which is always 200. Use success to determine whether the request was successful.</para>
+        /// <para>The business status code, which is always 200. Use success to determine whether the business request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the business request was successful.</para>
+        /// <para>Indicates whether the business request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public SqlFile Data { get; set; }
 
         /// <summary>
-        /// <para>The business error code. This value is not empty when success is false, and is empty when success is true.</para>
+        /// <para>The business error code. This value is not empty when success is false. This value is empty when success is true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The business error message. This value is not empty when success is false, and is empty when success is true.</para>
+        /// <para>The business error message. This value is not empty when success is false. This value is empty when success is true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The business status code, which is always 200. Use success to determine whether the request was successful.</para>
+        /// <para>The business status code, which is uniformly 200. Use success to determine whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

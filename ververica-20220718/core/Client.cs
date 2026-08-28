@@ -21,24 +21,24 @@ namespace AlibabaCloud.SDK.Ververica20220718
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
+                {"cn-qingdao", "ververica.cn-qingdao.aliyuncs.com"},
+                {"cn-shenzhen", "ververica.cn-shenzhen.aliyuncs.com"},
+                {"cn-wulanchabu", "ververica.cn-wulanchabu.aliyuncs.com"},
+                {"cn-beijing", "ververica.cn-beijing.aliyuncs.com"},
+                {"ap-northeast-1", "ververica.ap-northeast-1.aliyuncs.com"},
+                {"cn-chengdu", "ververica.cn-chengdu.aliyuncs.com"},
+                {"cn-shanghai", "ververica.cn-shanghai.aliyuncs.com"},
+                {"cn-hongkong", "ververica.cn-hongkong.aliyuncs.com"},
+                {"ap-southeast-1", "ververica.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "ververica.ap-southeast-3.aliyuncs.com"},
+                {"ap-southeast-5", "ververica.ap-southeast-5.aliyuncs.com"},
+                {"cn-zhangjiakou", "ververica.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-hangzhou", "ververica.cn-hangzhou.aliyuncs.com"},
                 {"us-west-1", "ververica.us-west-1.aliyuncs.com"},
                 {"us-east-1", "ververica.us-east-1.aliyuncs.com"},
-                {"eu-west-1", "ververica.eu-west-1.aliyuncs.com"},
                 {"eu-central-1", "ververica.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "ververica.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu", "ververica.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "ververica.cn-shenzhen.aliyuncs.com"},
+                {"eu-west-1", "ververica.eu-west-1.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "ververica.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "ververica.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "ververica.cn-qingdao.aliyuncs.com"},
-                {"cn-hongkong", "ververica.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou", "ververica.cn-hangzhou.aliyuncs.com"},
-                {"cn-chengdu", "ververica.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing", "ververica.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-5", "ververica.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "ververica.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "ververica.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-1", "ververica.ap-northeast-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ververica", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -4320,7 +4320,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes Data Definition Language (DDL) and Data Manipulation Language (DML) statements on metadata. Data Query Language (DQL) is not supported.</para>
+        /// <para>Runs metadata-related SQL statements. Only DDL and DML statements are supported. DQL statements are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4370,7 +4370,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes Data Definition Language (DDL) and Data Manipulation Language (DML) statements on metadata. Data Query Language (DQL) is not supported.</para>
+        /// <para>Runs metadata-related SQL statements. Only DDL and DML statements are supported. DQL statements are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4420,7 +4420,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes Data Definition Language (DDL) and Data Manipulation Language (DML) statements on metadata. Data Query Language (DQL) is not supported.</para>
+        /// <para>Runs metadata-related SQL statements. Only DDL and DML statements are supported. DQL statements are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4439,7 +4439,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes Data Definition Language (DDL) and Data Manipulation Language (DML) statements on metadata. Data Query Language (DQL) is not supported.</para>
+        /// <para>Runs metadata-related SQL statements. Only DDL and DML statements are supported. DQL statements are not supported.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5216,7 +5216,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</para>
+        /// <para>Retrieves the Autopilot tuning configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5265,7 +5265,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</para>
+        /// <para>Retrieves the Autopilot tuning configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5314,7 +5314,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</para>
+        /// <para>Retrieves the Autopilot tuning configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5333,7 +5333,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Autopilot tuning configuration. Returns the enabled status and full configuration. Does not affect the existing V2 configuration.</para>
+        /// <para>Retrieves the Autopilot tuning configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5500,7 +5500,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about one or more databases in a specified catalog.</para>
+        /// <para>Retrieves information about a specified database or lists all databases under a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5555,7 +5555,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about one or more databases in a specified catalog.</para>
+        /// <para>Retrieves information about a specified database or lists all databases under a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5610,7 +5610,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about one or more databases in a specified catalog.</para>
+        /// <para>Retrieves information about a specified database or lists all databases under a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5629,7 +5629,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about one or more databases in a specified catalog.</para>
+        /// <para>Retrieves information about a specified database or lists all databases under a specified catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6884,7 +6884,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves specific folder information.</para>
+        /// <para>Retrieves the details of a specific folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6943,7 +6943,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves specific folder information.</para>
+        /// <para>Retrieves the details of a specific folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7002,7 +7002,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves specific folder information.</para>
+        /// <para>Retrieves the details of a specific folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7021,7 +7021,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves specific folder information.</para>
+        /// <para>Retrieves the details of a specific folder.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7898,6 +7898,306 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves the inspection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPatrolConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetPatrolConfigHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPatrolConfigResponse
+        /// </returns>
+        public GetPatrolConfigResponse GetPatrolConfigWithOptions(string namespace_, GetPatrolConfigRequest request, GetPatrolConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPatrolConfig",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/patrol-config",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPatrolConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the inspection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPatrolConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetPatrolConfigHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPatrolConfigResponse
+        /// </returns>
+        public async Task<GetPatrolConfigResponse> GetPatrolConfigWithOptionsAsync(string namespace_, GetPatrolConfigRequest request, GetPatrolConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPatrolConfig",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/patrol-config",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPatrolConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the inspection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPatrolConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPatrolConfigResponse
+        /// </returns>
+        public GetPatrolConfigResponse GetPatrolConfig(string namespace_, GetPatrolConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetPatrolConfigHeaders headers = new GetPatrolConfigHeaders();
+            return GetPatrolConfigWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the inspection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPatrolConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPatrolConfigResponse
+        /// </returns>
+        public async Task<GetPatrolConfigResponse> GetPatrolConfigAsync(string namespace_, GetPatrolConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetPatrolConfigHeaders headers = new GetPatrolConfigHeaders();
+            return await GetPatrolConfigWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an inspection report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPatrolReportDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetPatrolReportDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPatrolReportDetailResponse
+        /// </returns>
+        public GetPatrolReportDetailResponse GetPatrolReportDetailWithOptions(string namespace_, GetPatrolReportDetailRequest request, GetPatrolReportDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
+            {
+                query["date"] = request.Date;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["reportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                query["timezone"] = request.Timezone;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPatrolReportDetail",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/patrol-reports/details",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPatrolReportDetailResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an inspection report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPatrolReportDetailRequest
+        /// </param>
+        /// <param name="headers">
+        /// GetPatrolReportDetailHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPatrolReportDetailResponse
+        /// </returns>
+        public async Task<GetPatrolReportDetailResponse> GetPatrolReportDetailWithOptionsAsync(string namespace_, GetPatrolReportDetailRequest request, GetPatrolReportDetailHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Date))
+            {
+                query["date"] = request.Date;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
+            {
+                query["reportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                query["timezone"] = request.Timezone;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetPatrolReportDetail",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/patrol-reports/details",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetPatrolReportDetailResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an inspection report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPatrolReportDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPatrolReportDetailResponse
+        /// </returns>
+        public GetPatrolReportDetailResponse GetPatrolReportDetail(string namespace_, GetPatrolReportDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetPatrolReportDetailHeaders headers = new GetPatrolReportDetailHeaders();
+            return GetPatrolReportDetailWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the details of an inspection report.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetPatrolReportDetailRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetPatrolReportDetailResponse
+        /// </returns>
+        public async Task<GetPatrolReportDetailResponse> GetPatrolReportDetailAsync(string namespace_, GetPatrolReportDetailRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            GetPatrolReportDetailHeaders headers = new GetPatrolReportDetailHeaders();
+            return await GetPatrolReportDetailWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>获取上传文件URL</para>
         /// </summary>
         /// 
@@ -8422,7 +8722,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific table or all tables in a database within a specified catalog.</para>
+        /// <para>Retrieves the details of a specific table or information about all tables under a specified database in a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8477,7 +8777,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific table or all tables in a database within a specified catalog.</para>
+        /// <para>Retrieves the details of a specific table or information about all tables under a specified database in a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8532,7 +8832,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific table or all tables in a database within a specified catalog.</para>
+        /// <para>Retrieves the details of a specific table or information about all tables under a specified database in a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8551,7 +8851,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a specific table or all tables in a database within a specified catalog.</para>
+        /// <para>Retrieves the details of a specific table or information about all tables under a specified database in a catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10408,6 +10708,202 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the list of inspection reports.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPatrolReportsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListPatrolReportsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPatrolReportsResponse
+        /// </returns>
+        public ListPatrolReportsResponse ListPatrolReportsWithOptions(string namespace_, ListPatrolReportsRequest request, ListPatrolReportsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["endDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeType))
+            {
+                query["scopeType"] = request.ScopeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["startDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                query["triggerType"] = request.TriggerType;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPatrolReports",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/patrol-reports",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPatrolReportsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of inspection reports.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPatrolReportsRequest
+        /// </param>
+        /// <param name="headers">
+        /// ListPatrolReportsHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPatrolReportsResponse
+        /// </returns>
+        public async Task<ListPatrolReportsResponse> ListPatrolReportsWithOptionsAsync(string namespace_, ListPatrolReportsRequest request, ListPatrolReportsHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndDate))
+            {
+                query["endDate"] = request.EndDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Page))
+            {
+                query["page"] = request.Page;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeType))
+            {
+                query["scopeType"] = request.ScopeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Size))
+            {
+                query["size"] = request.Size;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartDate))
+            {
+                query["startDate"] = request.StartDate;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                query["status"] = request.Status;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TriggerType))
+            {
+                query["triggerType"] = request.TriggerType;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListPatrolReports",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/patrol-reports",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListPatrolReportsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of inspection reports.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPatrolReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPatrolReportsResponse
+        /// </returns>
+        public ListPatrolReportsResponse ListPatrolReports(string namespace_, ListPatrolReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListPatrolReportsHeaders headers = new ListPatrolReportsHeaders();
+            return ListPatrolReportsWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the list of inspection reports.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListPatrolReportsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListPatrolReportsResponse
+        /// </returns>
+        public async Task<ListPatrolReportsResponse> ListPatrolReportsAsync(string namespace_, ListPatrolReportsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            ListPatrolReportsHeaders headers = new ListPatrolReportsHeaders();
+            return await ListPatrolReportsWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Obtains a list of savepoints or checkpoints.</para>
         /// </summary>
         /// 
@@ -11908,7 +12404,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes an SQL query script task.</para>
+        /// <para>Executes an SQL data query script task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -11958,7 +12454,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes an SQL query script task.</para>
+        /// <para>Executes an SQL data query script task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12008,7 +12504,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes an SQL query script task.</para>
+        /// <para>Executes an SQL data query script task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12027,7 +12523,7 @@ namespace AlibabaCloud.SDK.Ververica20220718
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Executes an SQL query script task.</para>
+        /// <para>Executes an SQL data query script task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12706,6 +13202,162 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             SubmitSqlPreviewHeaders headers = new SubmitSqlPreviewHeaders();
             return await SubmitSqlPreviewWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers an inspection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerPatrolRequest
+        /// </param>
+        /// <param name="headers">
+        /// TriggerPatrolHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerPatrolResponse
+        /// </returns>
+        public TriggerPatrolResponse TriggerPatrolWithOptions(string namespace_, TriggerPatrolRequest request, TriggerPatrolHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeConfig))
+            {
+                body["scopeConfig"] = request.ScopeConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeType))
+            {
+                body["scopeType"] = request.ScopeType;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TriggerPatrol",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/patrol-reports/trigger",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TriggerPatrolResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers an inspection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerPatrolRequest
+        /// </param>
+        /// <param name="headers">
+        /// TriggerPatrolHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerPatrolResponse
+        /// </returns>
+        public async Task<TriggerPatrolResponse> TriggerPatrolWithOptionsAsync(string namespace_, TriggerPatrolRequest request, TriggerPatrolHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeConfig))
+            {
+                body["scopeConfig"] = request.ScopeConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeType))
+            {
+                body["scopeType"] = request.ScopeType;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "TriggerPatrol",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/patrol-reports/trigger",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<TriggerPatrolResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers an inspection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerPatrolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerPatrolResponse
+        /// </returns>
+        public TriggerPatrolResponse TriggerPatrol(string namespace_, TriggerPatrolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TriggerPatrolHeaders headers = new TriggerPatrolHeaders();
+            return TriggerPatrolWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Triggers an inspection.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// TriggerPatrolRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// TriggerPatrolResponse
+        /// </returns>
+        public async Task<TriggerPatrolResponse> TriggerPatrolAsync(string namespace_, TriggerPatrolRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            TriggerPatrolHeaders headers = new TriggerPatrolHeaders();
+            return await TriggerPatrolWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -13860,6 +14512,186 @@ namespace AlibabaCloud.SDK.Ververica20220718
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             UpdateMemberHeaders headers = new UpdateMemberHeaders();
             return await UpdateMemberWithOptionsAsync(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the inspection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePatrolConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdatePatrolConfigHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePatrolConfigResponse
+        /// </returns>
+        public UpdatePatrolConfigResponse UpdatePatrolConfigWithOptions(string namespace_, UpdatePatrolConfigRequest request, UpdatePatrolConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cron))
+            {
+                body["cron"] = request.Cron;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeConfig))
+            {
+                body["scopeConfig"] = request.ScopeConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeType))
+            {
+                body["scopeType"] = request.ScopeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["timezone"] = request.Timezone;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePatrolConfig",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/patrol-config",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePatrolConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the inspection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePatrolConfigRequest
+        /// </param>
+        /// <param name="headers">
+        /// UpdatePatrolConfigHeaders
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePatrolConfigResponse
+        /// </returns>
+        public async Task<UpdatePatrolConfigResponse> UpdatePatrolConfigWithOptionsAsync(string namespace_, UpdatePatrolConfigRequest request, UpdatePatrolConfigHeaders headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Cron))
+            {
+                body["cron"] = request.Cron;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enabled))
+            {
+                body["enabled"] = request.Enabled;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeConfig))
+            {
+                body["scopeConfig"] = request.ScopeConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScopeType))
+            {
+                body["scopeType"] = request.ScopeType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Timezone))
+            {
+                body["timezone"] = request.Timezone;
+            }
+            Dictionary<string, string> realHeaders = new Dictionary<string, string>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.CommonHeaders))
+            {
+                realHeaders = headers.CommonHeaders;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(headers.Workspace))
+            {
+                realHeaders["workspace"] = AlibabaCloud.TeaUtil.Common.ToJSONString(headers.Workspace);
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = realHeaders,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdatePatrolConfig",
+                Version = "2022-07-18",
+                Protocol = "HTTPS",
+                Pathname = "/autopilot/v2/namespaces/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(namespace_) + "/patrol-config",
+                Method = "PATCH",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdatePatrolConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the inspection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePatrolConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePatrolConfigResponse
+        /// </returns>
+        public UpdatePatrolConfigResponse UpdatePatrolConfig(string namespace_, UpdatePatrolConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdatePatrolConfigHeaders headers = new UpdatePatrolConfigHeaders();
+            return UpdatePatrolConfigWithOptions(namespace_, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the inspection configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdatePatrolConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdatePatrolConfigResponse
+        /// </returns>
+        public async Task<UpdatePatrolConfigResponse> UpdatePatrolConfigAsync(string namespace_, UpdatePatrolConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            UpdatePatrolConfigHeaders headers = new UpdatePatrolConfigHeaders();
+            return await UpdatePatrolConfigWithOptionsAsync(namespace_, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

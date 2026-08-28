@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class BasicResourceSetting : TeaModel {
         /// <summary>
-        /// <para>The resource configuration of the JobManager.</para>
+        /// <para>The JobManager resource settings.</para>
         /// </summary>
         [NameInMap("jobmanagerResourceSettingSpec")]
         [Validation(Required=false)]
         public BasicResourceSettingSpec JobmanagerResourceSettingSpec { get; set; }
 
         /// <summary>
-        /// <para>The parallelism for a deployment.</para>
+        /// <para>The concurrency.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public long? Parallelism { get; set; }
 
         /// <summary>
-        /// <para>The resource configuration of a TaskManager.</para>
+        /// <para>The TaskManager resource settings.</para>
         /// </summary>
         [NameInMap("taskmanagerResourceSettingSpec")]
         [Validation(Required=false)]

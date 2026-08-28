@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>default</para>
+        /// <para>oss</para>
         /// </summary>
         [NameInMap("loggingProfile")]
         [Validation(Required=false)]

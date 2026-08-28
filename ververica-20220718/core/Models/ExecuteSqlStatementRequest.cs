@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class ExecuteSqlStatementRequest : TeaModel {
         /// <summary>
-        /// <para>The SQL statements for metadata.</para>
+        /// <para>The metadata-related SQL statement.</para>
         /// </summary>
         [NameInMap("body")]
         [Validation(Required=false)]

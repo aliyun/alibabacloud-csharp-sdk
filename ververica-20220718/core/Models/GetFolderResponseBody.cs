@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetFolderResponseBody : TeaModel {
         /// <summary>
-        /// <para>Folder data structure.</para>
+        /// <para>The folder information data structure.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If success is false, the business error code is returned.</para>
+        /// <item><description><para>When success is false, a business error code is returned.</para>
         /// </description></item>
-        /// <item><description><para>If success is true, an empty value is returned.</para>
+        /// <item><description><para>When success is true, an empty value is returned.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If success is false, the business error message is returned.</para>
+        /// <item><description><para>When success is false, a business error message is returned.</para>
         /// </description></item>
-        /// <item><description><para>If success is true, an empty value is returned.</para>
+        /// <item><description><para>When success is true, an empty value is returned.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>Indicates task success or failure. If the parameter is not empty and not 200, it means failure.</para>
+        /// <para>The business status code. If this value is not empty and is not 200, the business request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the business request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 {
     public class GetDatabasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of databases. This parameter is returned only if the request is successful. If the request fails, this parameter is empty.</para>
+        /// <para>The list of databases that meet the specified conditions when success is true. This value is empty when success is false.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -18,9 +18,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If \<c>success\\</c> is \<c>false\\</c>, an error code is returned.</para>
+        /// <item><description><para>If success is false, a business error code is returned.</para>
         /// </description></item>
-        /// <item><description><para>If \<c>success\\</c> is \<c>true\\</c>, this parameter is empty.</para>
+        /// <item><description><para>If success is true, an empty value is returned.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><para>If \<c>success\\</c> is \<c>false\\</c>, an error message is returned.</para>
+        /// <item><description><para>If success is false, a business error message is returned.</para>
         /// </description></item>
-        /// <item><description><para>If \<c>success\\</c> is \<c>true\\</c>, this parameter is empty.</para>
+        /// <item><description><para>If success is true, an empty value is returned.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>The HTTP status code. A value of 200 is always returned. To determine whether the request was successful, check the value of the \<c>success\\</c> parameter.</para>
+        /// <para>The HTTP status code, which is always 200. Use the success field to determine whether the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         public int? HttpCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CBC799F0-AS7S-1D30-8A4F-882ED4DD****</para>

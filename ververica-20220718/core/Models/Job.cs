@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Ververica20220718.Models
         /// <para>If the job instance runs on a Session cluster, this shows the Session cluster name; otherwise, it is null.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>preview</para>
         /// </summary>
         [NameInMap("sessionClusterName")]
         [Validation(Required=false)]
