@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622.Models
 {
     public class SubmitTranslationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The API key that is the identity of the member accounts. You can obtain this from the RuiYiBao console.</para>
+        /// <para>The API key that identifies the identity of the member account. You can obtain this from the RuiYiBao console.</para>
         /// 
         /// <b>Example:</b>
         /// <hr>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622.Models
         public string APIKey { get; set; }
 
         /// <summary>
-        /// <para>The task ID of a previously submitted translation task. Pass in this parameter when resubmitting a translation task.</para>
+        /// <para>The translation task ID of a previously submitted translation task. Pass in this parameter when resubmitting a translation task.</para>
         /// <list type="bullet">
         /// <item><description>You must pass in either this parameter or TaskId.</description></item>
         /// </list>
@@ -53,6 +53,16 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622.Models
             public string Agent { get; set; }
 
             /// <summary>
+            /// <para>The agent ID passed to the Agent Console platform.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>app-11111111</para>
+            /// </summary>
+            [NameInMap("AgentId")]
+            [Validation(Required=false)]
+            public string AgentId { get; set; }
+
+            /// <summary>
             /// <para>The font.</para>
             /// <list type="bullet">
             /// <item><description>For new tasks, obtain this from UploadTranslationFile.</description></item>
@@ -78,7 +88,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622.Models
             public string SourceLanguage { get; set; }
 
             /// <summary>
-            /// <para>The translation style. This parameter takes effect only when the translation file is a PPT file.</para>
+            /// <para>The translation style. Takes effect only when the translation file is a PPT file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>minimal</para>
@@ -103,7 +113,7 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622.Models
         /// <summary>
         /// <para>The custom terms.</para>
         /// <remarks>
-        /// <para>Notice: Custom terms are for reference only. The actual translation results may differ. Refer to the final output as the definitive result.</notice></para>
+        /// <para>Notice: Custom terms are for reference only. Actual translation results may differ. Refer to the final output for the definitive result.</notice></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

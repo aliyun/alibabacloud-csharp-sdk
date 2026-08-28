@@ -1010,20 +1010,20 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</para>
+        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query translation progress and results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Billing</em>*
+        /// <para><em>Billing description</em>*
         /// This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <c>UploadTranslationFile</c>, you can check the <c>CreditsAvailable</c> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <c>CreditBreakdown</c> field.
-        /// <b>Task submission</b></para>
+        /// <b>Task submission description</b></para>
         /// <list type="bullet">
         /// <item><description>To submit a new translation task, pass in the <c>TaskId</c> returned by the <c>UploadTranslationFile</c> operation.</description></item>
-        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <c>BaseTaskId</c>.</description></item>
+        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task, which is the <c>BaseTaskId</c>.</description></item>
         /// <item><description>You must pass in either <c>TaskId</c> or <c>BaseTaskId</c>. You cannot pass in both at the same time.
         /// <b>Precautions</b></description></item>
-        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</description></item>
+        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for files in other formats has no effect.</description></item>
         /// <item><description>For new tasks, you can obtain the list of available fonts from the <c>Fonts</c> field in the response of <c>UploadTranslationFile</c>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <c>GetTranslationTask</c> operation.</description></item>
         /// </list>
         /// </description>
@@ -1095,20 +1095,20 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</para>
+        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query translation progress and results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Billing</em>*
+        /// <para><em>Billing description</em>*
         /// This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <c>UploadTranslationFile</c>, you can check the <c>CreditsAvailable</c> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <c>CreditBreakdown</c> field.
-        /// <b>Task submission</b></para>
+        /// <b>Task submission description</b></para>
         /// <list type="bullet">
         /// <item><description>To submit a new translation task, pass in the <c>TaskId</c> returned by the <c>UploadTranslationFile</c> operation.</description></item>
-        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <c>BaseTaskId</c>.</description></item>
+        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task, which is the <c>BaseTaskId</c>.</description></item>
         /// <item><description>You must pass in either <c>TaskId</c> or <c>BaseTaskId</c>. You cannot pass in both at the same time.
         /// <b>Precautions</b></description></item>
-        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</description></item>
+        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for files in other formats has no effect.</description></item>
         /// <item><description>For new tasks, you can obtain the list of available fonts from the <c>Fonts</c> field in the response of <c>UploadTranslationFile</c>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <c>GetTranslationTask</c> operation.</description></item>
         /// </list>
         /// </description>
@@ -1180,20 +1180,20 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</para>
+        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query translation progress and results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Billing</em>*
+        /// <para><em>Billing description</em>*
         /// This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <c>UploadTranslationFile</c>, you can check the <c>CreditsAvailable</c> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <c>CreditBreakdown</c> field.
-        /// <b>Task submission</b></para>
+        /// <b>Task submission description</b></para>
         /// <list type="bullet">
         /// <item><description>To submit a new translation task, pass in the <c>TaskId</c> returned by the <c>UploadTranslationFile</c> operation.</description></item>
-        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <c>BaseTaskId</c>.</description></item>
+        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task, which is the <c>BaseTaskId</c>.</description></item>
         /// <item><description>You must pass in either <c>TaskId</c> or <c>BaseTaskId</c>. You cannot pass in both at the same time.
         /// <b>Precautions</b></description></item>
-        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</description></item>
+        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for files in other formats has no effect.</description></item>
         /// <item><description>For new tasks, you can obtain the list of available fonts from the <c>Fonts</c> field in the response of <c>UploadTranslationFile</c>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <c>GetTranslationTask</c> operation.</description></item>
         /// </list>
         /// </description>
@@ -1213,20 +1213,20 @@ namespace AlibabaCloud.SDK.RealTranslationAgent20260622
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query the translation progress and results.</para>
+        /// <para>Submits a translation task. You can submit a new translation task by passing in a TaskId, or resubmit a historical task for translation by passing in a BaseTaskId. After successful submission, the translation task ID and current task status are returned. You can use the task ID to call subsequent operations to query translation progress and results.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Billing</em>*
+        /// <para><em>Billing description</em>*
         /// This operation involves Credits consumption. Before submitting a translation task, ensure that your account has sufficient Credits balance. After calling <c>UploadTranslationFile</c>, you can check the <c>CreditsAvailable</c> field in the response to confirm whether your current balance meets the requirements of this translation task. For detailed billing information, refer to the <c>CreditBreakdown</c> field.
-        /// <b>Task submission</b></para>
+        /// <b>Task submission description</b></para>
         /// <list type="bullet">
         /// <item><description>To submit a new translation task, pass in the <c>TaskId</c> returned by the <c>UploadTranslationFile</c> operation.</description></item>
-        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task as <c>BaseTaskId</c>.</description></item>
+        /// <item><description>To resubmit a historical task for translation, pass in the task ID of a previously submitted translation task, which is the <c>BaseTaskId</c>.</description></item>
         /// <item><description>You must pass in either <c>TaskId</c> or <c>BaseTaskId</c>. You cannot pass in both at the same time.
         /// <b>Precautions</b></description></item>
-        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for other file formats has no effect.</description></item>
+        /// <item><description>The <c>Style</c> parameter takes effect only when the translation file is a PPT file. Passing in this parameter for files in other formats has no effect.</description></item>
         /// <item><description>For new tasks, you can obtain the list of available fonts from the <c>Fonts</c> field in the response of <c>UploadTranslationFile</c>. For retranslation of historical tasks, you can obtain the list of available fonts by calling the <c>GetTranslationTask</c> operation.</description></item>
         /// </list>
         /// </description>
