@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task submit status.</para>
+        /// <para>The asynchronous task submit result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The description message.</para>
+        /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Translation processing</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</para>
+        /// <para>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call fails.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

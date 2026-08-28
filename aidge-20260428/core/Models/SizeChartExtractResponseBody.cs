@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public SizeChartExtractResponseBodyData Data { get; set; }
         public class SizeChartExtractResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID, which is used to query the result later.</para>
+            /// <para>The asynchronous task ID, used to query the result later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-xxxxx</para>

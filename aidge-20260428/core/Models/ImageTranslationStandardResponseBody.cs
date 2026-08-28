@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public List<string> Font { get; set; }
 
                 /// <summary>
-                /// <para>The product area rectangles.</para>
+                /// <para>The product area rectangle.</para>
                 /// </summary>
                 [NameInMap("GoodsRects")]
                 [Validation(Required=false)]
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public List<string> Languages { get; set; }
 
                 /// <summary>
-                /// <para>The original image URL.</para>
+                /// <para>The URL of the original image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg">https://xiuxiu-pro.meitudata.com/posters/34d78f9157e5560a4d612949ca6f6485.jpg</a></para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string PictUrl { get; set; }
 
                 /// <summary>
-                /// <para>The repaired image URL.</para>
+                /// <para>The URL of the repaired image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.png</a></para>
@@ -373,7 +373,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         /// <para>The text value.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>Solid Wood Wardrobe.</para>
+                        /// <para>Solid Wood Wardrobe</para>
                         /// </summary>
                         [NameInMap("Value")]
                         [Validation(Required=false)]
@@ -406,7 +406,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The URL of the image generated after image translation.</para>
+            /// <para>The URL of the image generated from the image translation result.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></para>
@@ -416,7 +416,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>The usage information, including the number of images processed.</para>
+            /// <para>The usage information, including the number of processed images.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ProcessedImageCount&quot;:1}</para>
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. Returns &quot;Success&quot; for successful calls, and returns specific error information for failed calls.</para>
+        /// <para>The error message. &quot;Success&quot; is returned for successful calls, and a specific error message is returned for failed calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -438,7 +438,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The request ID, used to uniquely identify a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1CEC4D94-905A-1ED1-A7B4-1BFEFFB3D850</para>

@@ -59,7 +59,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values: true: successful. false: failed.</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>false: The call failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

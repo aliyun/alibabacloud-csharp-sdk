@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the reference image. When this parameter is not empty, multi-image comparison mode is used.</para>
+        /// <para>The URL of the reference image. Optional. When this parameter is not empty, the system performs multi-image differential comparison.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://example.com/reference.jpg">https://example.com/reference.jpg</a></para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageRefer { get; set; }
 
         /// <summary>
-        /// <para>The URL of the target image to inspect.</para>
+        /// <para>The URL of the target image to be inspected.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The business request identity. This value is returned as-is in the response for Tracing Analysis purposes.</para>
+        /// <para>The business request identity. Optional. This value is returned as-is in the response for Tracing Analysis purposes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>req-2026-06-04-001</para>
@@ -51,10 +51,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ReqId { get; set; }
 
         /// <summary>
-        /// <para>The rule prompt in natural language that defines the inspection criteria.</para>
+        /// <para>The rule prompt in natural language that describes the inspection criteria.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>门型展架必须摆放在入口区域；功能台卡必须摆放在中柜台面</para>
+        /// <para>The door-shaped display stand must be placed in the entrance area; the functional display card must be placed on the counter surface</para>
         /// </summary>
         [NameInMap("Rules")]
         [Validation(Required=false)]

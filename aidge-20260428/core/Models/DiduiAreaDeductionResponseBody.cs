@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public long? LatencyMs { get; set; }
 
             /// <summary>
-            /// <para>The workflow description.</para>
+            /// <para>The workflow description message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Success</para>

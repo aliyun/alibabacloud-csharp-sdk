@@ -10,24 +10,24 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRemoveResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code.</para>
+        /// <para>The status code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>200</para>
+        /// <para>&quot;success&quot;</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The intelligent erasure result.</para>
+        /// <para>The intelligent removal result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageRemoveResponseBodyData Data { get; set; }
         public class ImageRemoveResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The height of the result image, in pixels.</para>
+            /// <para>The height of the result image in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -37,10 +37,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? Height { get; set; }
 
             /// <summary>
-            /// <para>The URL of the result image after erasure.</para>
+            /// <para>The URL of the result image after removal.</para>
             /// 
             /// <b>Example:</b>
-            /// <para><a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a></para>
+            /// <para>“<a href="http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg">http://dashscope-7c2c.oss-cn-shanghai.aliyuncs.com/xxx.jpg</a>
+            /// ”</para>
             /// </summary>
             [NameInMap("ImageUrl")]
             [Validation(Required=false)]
@@ -57,7 +58,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public Dictionary<string, long?> UsageMap { get; set; }
 
             /// <summary>
-            /// <para>The width of the result image, in pixels.</para>
+            /// <para>The width of the result image in pixels.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -72,7 +73,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>OK</para>
+        /// <para>“The parameters contain sensitive information, please try other inputs”</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

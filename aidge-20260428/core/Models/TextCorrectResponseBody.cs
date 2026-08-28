@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class TextCorrectResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code. Returns &quot;success&quot; during normal calls.</para>
+        /// <para>The response code. The value &quot;success&quot; is returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Intelligent error correction result data.</para>
+        /// <para>The intelligent correction result data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string CorrectedText { get; set; }
 
             /// <summary>
-            /// <para>Usage information, including the number of input characters.</para>
+            /// <para>The usage information, including the number of input characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;InputCharacterCount&quot;:9}</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>Error message. Returns &quot;Success&quot; during normal calls. Returns specific error information during exceptions, such as &quot;The parameters contain sensitive information. Please try a different input.&quot;</para>
+        /// <para>The error message. The value &quot;Success&quot; is returned if the call is successful. A specific error message is returned if an exception occurs, such as &quot;The parameters contain sensitive information. Try other input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Request ID, used to identify a unique request call.</para>
+        /// <para>The request ID, which uniquely identifies the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>32882AD0-50D1-1D90-A221-3987325EC03E</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the call was successful. true indicates success, false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

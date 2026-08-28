@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous node result.</para>
+        /// <para>The asynchronous task result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string Result { get; set; }
 
             /// <summary>
-            /// <para>The status of the task.</para>
+            /// <para>The task status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The ID of the downstream task.</para>
+            /// <para>The downstream task ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-xxxxx</para>
@@ -86,9 +86,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call was successful. Valid values:</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call was successful.</description></item>
+        /// <item><description>true: The call is successful.</description></item>
         /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 

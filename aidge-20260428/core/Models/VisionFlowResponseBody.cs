@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The submit status data of the asynchronous task, which contains the asynchronous task ID.</para>
+        /// <para>The asynchronous task submit status data, which contains the asynchronous task ID.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public VisionFlowResponseBodyData Data { get; set; }
         public class VisionFlowResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID. Use this ID to query the processing result through QueryAsyncTaskResult.</para>
+            /// <para>The asynchronous task ID, used to query processing results later through QueryAsyncTaskResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e4c48e88-3c34-91e3-ab8a-08484dc4d402</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the API call.</para>
+        /// <para>The request ID, used to uniquely identify a single API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F3E65785-0180-1227-91B0-2F5F52F679FB</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

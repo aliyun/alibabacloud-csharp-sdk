@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class MerchandisePlacementDetectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<MerchandisePlacementDetectionResponseBodyDataData> Data { get; set; }
             public class MerchandisePlacementDetectionResponseBodyDataData : TeaModel {
                 /// <summary>
-                /// <para>The position coordinates of the detection box in the format [x1,y1,x2,y2].</para>
+                /// <para>The position coordinates of the detection box in the format [x1, y1, x2, y2].</para>
                 /// </summary>
                 [NameInMap("Bbox")]
                 [Validation(Required=false)]
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     /// <para>The name of the recalled product.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Bright Milk 500ml.</para>
+                    /// <para>光明牛奶500ml</para>
                     /// </summary>
                     [NameInMap("SkuName")]
                     [Validation(Required=false)]
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                     /// <para>The name of the recalled product.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>Bright Milk 500ml.</para>
+                    /// <para>光明牛奶500ml</para>
                     /// </summary>
                     [NameInMap("SkuName")]
                     [Validation(Required=false)]
@@ -161,7 +161,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The usage information. The key is the usage metric name, and the value is the count.</para>
+            /// <para>The usage information. The key is the usage name and the value is the count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ProcessingCount&quot;:1}</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -193,9 +193,9 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <para>Indicates whether the call was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: The call is successful.</description></item>
+        /// <item><description>true: The call was successful.</description></item>
         /// <item><description>false: The call failed.</description></item>
         /// </list>
         /// 

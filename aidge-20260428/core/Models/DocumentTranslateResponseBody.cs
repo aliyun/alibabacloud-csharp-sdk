@@ -39,7 +39,8 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. Not returned for successful calls.</para>
+        /// <para>The error message, such as &quot;The parameters contain sensitive information. Try other input.&quot;
+        /// This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -49,7 +50,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The unique request identity, used for troubleshooting and tracing.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39E8A74B-F99E-1195-A5FF-3ECC5F94F304</para>
@@ -59,7 +60,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. true: successful. false: failed.</para>
+        /// <para>Indicates whether the call was successful. Valid values: true: The call was successful. false: The call failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

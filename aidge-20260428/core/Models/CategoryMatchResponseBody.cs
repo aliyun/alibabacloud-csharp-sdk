@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class CategoryMatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The status code. The value &quot;success&quot; is returned for a successful call.</para>
+        /// <para>The status code. The value &quot;success&quot; is returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public CategoryMatchResponseBodyData Data { get; set; }
         public class CategoryMatchResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The ID of the matched category.</para>
+            /// <para>The matched category ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1522</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string CategoryId { get; set; }
 
             /// <summary>
-            /// <para>The name of the matched category.</para>
+            /// <para>The matched category name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>位置和活动跟踪器</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string CategoryName { get; set; }
 
             /// <summary>
-            /// <para>The full path of the category, separated by forward slashes (/).</para>
+            /// <para>The full path of the category, separated by &quot;/&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>宠物用品/猫用品/猫挂饰、项圈、牵引带/位置和活动跟踪器</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? Confidence { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the match is successful.</para>
+            /// <para>Indicates whether the matching is successful.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public bool? MatchSuccessful { get; set; }
 
             /// <summary>
-            /// <para>The reason for the match.</para>
+            /// <para>The explanation of the matching reason.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>商品核心为带 AirTag 定位功能的猫项圈，属\&quot;位置和活动跟踪器\&quot;类目，叶子节点语义精准匹配其追踪功能与猫用属性。</para>
+            /// <para>The product core is a cat collar with AirTag positioning function, belonging to the \&quot;Location and Activity Trackers\&quot; category, with leaf node semantics precisely matching its tracking function and cat-use attributes</para>
             /// </summary>
             [NameInMap("Reason")]
             [Validation(Required=false)]
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. The value &quot;Success&quot; is returned for a successful call.</para>
+        /// <para>The error message. The value &quot;Success&quot; is returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The request ID, which uniquely identifies the API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2157065A-D6C8-1F3E-A4D0-B1234567890</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values: true and false.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

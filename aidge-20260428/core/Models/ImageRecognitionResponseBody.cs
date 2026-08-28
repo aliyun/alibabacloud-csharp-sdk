@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageRecognitionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -166,7 +166,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>

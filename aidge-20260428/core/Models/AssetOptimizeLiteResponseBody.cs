@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class AssetOptimizeLiteResponseBody : TeaModel {
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Asynchronous task submission result</para>
+        /// <para>The submit result of the asynchronous task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AssetOptimizeLiteResponseBodyData Data { get; set; }
         public class AssetOptimizeLiteResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Asynchronous task ID, used for subsequent result queries</para>
+            /// <para>The asynchronous task ID, used to query results later.</para>
             /// 
             /// <b>Example:</b>
             /// <para>task-xxxxxx</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the call was successful</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

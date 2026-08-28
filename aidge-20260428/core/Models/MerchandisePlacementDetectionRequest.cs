@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ApiId { get; set; }
 
         /// <summary>
-        /// <para>The URL of the shelf or floor-stack image to be recognized (accessible via the public network or OSS).</para>
+        /// <para>The URL of the shelf or floor-stack image to be recognized (accessible over the public network or from OSS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>The customer-specific SKU vector library ID that determines which library to retrieve from. The library must be created in advance through the library creation process.</para>
+        /// <para>The ID of the customer\&quot;s dedicated SKU vector library, which determines which library is used for retrieval. The library must be created in advance through the library creation process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rag_xxx</para>
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RagId { get; set; }
 
         /// <summary>
-        /// <para>The business type (reserved for future routing by business line). The current release supports skincare &amp; lotion.</para>
+        /// <para>The business type (reserved for future routing by business line). The current phase supports skincare &amp; lotion.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Lotion.</para>
+        /// <para>水乳</para>
         /// </summary>
         [NameInMap("Type")]
         [Validation(Required=false)]

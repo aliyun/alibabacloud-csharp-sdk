@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The ID of the customer-specific SKU vector database that determines which database is used for retrieval. The database must be created in advance through the database creation process.</para>
+        /// <para>The ID of the customer-specific SKU vector store that determines which store is used for retrieval. The store must be created in advance through the store creation process.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rag_xxx</para>

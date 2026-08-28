@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class CategoryAttributeMatchResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. This parameter is not returned if the call is successful.</para>
+        /// <para>The error code. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned result.</para>
+        /// <para>The response data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public int? AttrId { get; set; }
 
                 /// <summary>
-                /// <para>The matching confidence score. Valid values: 0 to 100.</para>
+                /// <para>The matching confidence score, ranging from 0 to 100.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public int? Confidence { get; set; }
 
                 /// <summary>
-                /// <para>The input type of the attribute.</para>
+                /// <para>The attribute input type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>单选下拉</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                 public string NameEn { get; set; }
 
                 /// <summary>
-                /// <para>The reason for the matching result.</para>
+                /// <para>The explanation for the matching result.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>a_reason</para>
@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? TotalAttributes { get; set; }
 
             /// <summary>
-            /// <para>The usage fields.</para>
+            /// <para>The usage information.</para>
             /// </summary>
             [NameInMap("UsageMap")]
             [Validation(Required=false)]
@@ -201,7 +201,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if the call is successful.</para>
+        /// <para>The error message. This parameter is not returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>null</para>

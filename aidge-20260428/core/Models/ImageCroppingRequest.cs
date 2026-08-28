@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageCroppingRequest : TeaModel {
         /// <summary>
-        /// <para>URL of the image to be processed</para>
+        /// <para>The URL of the image to process.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Target height</para>
+        /// <para>The target height.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public int? TargetHeight { get; set; }
 
         /// <summary>
-        /// <para>Target width</para>
+        /// <para>The target width.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

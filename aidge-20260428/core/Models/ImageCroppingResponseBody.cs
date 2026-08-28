@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageCroppingResponseBody : TeaModel {
         /// <summary>
-        /// <para>Response code</para>
+        /// <para>The response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Crop result</para>
+        /// <para>The cropping result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public ImageCroppingResponseBodyData Data { get; set; }
         public class ImageCroppingResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Image height</para>
+            /// <para>The image height.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public int? Height { get; set; }
 
             /// <summary>
-            /// <para>URL of the cropped image</para>
+            /// <para>The URL of the cropped image.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.com/cropped.jpg">https://example.com/cropped.jpg</a></para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public string ImageUrl { get; set; }
 
             /// <summary>
-            /// <para>Usage information</para>
+            /// <para>The usage information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;ProcessedImageCount&quot;:1}</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public Dictionary<string, long?> UsageMap { get; set; }
 
             /// <summary>
-            /// <para>Image width</para>
+            /// <para>The image width.</para>
             /// 
             /// <b>Example:</b>
             /// <para>800</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>Error message</para>
+        /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -89,7 +89,11 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the call was successful: true indicates success, false indicates failure</para>
+        /// <para>Indicates whether the call is successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Successful.</description></item>
+        /// <item><description>false: Failed.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result data of the asynchronous task submission, which contains the asynchronous task ID.</para>
+        /// <para>The asynchronous task submission result data, which contains the asynchronous task ID.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public AssetOptimizeProResponseBodyData Data { get; set; }
         public class AssetOptimizeProResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The asynchronous task ID, which is used to query the processing result by calling QueryAsyncTaskResult.</para>
+            /// <para>The asynchronous task ID, used to query processing results through QueryAsyncTaskResult.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8080345d-b28a-9e2e-9ad7-370f8e236949</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the API call.</para>
+        /// <para>The request ID, used to uniquely identify a single API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4FCCA90A-A7A4-1D37-88C3-C17549886E70</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
+        /// <para>Indicates whether the call was successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

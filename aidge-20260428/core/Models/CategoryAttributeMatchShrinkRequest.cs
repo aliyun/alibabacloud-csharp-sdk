@@ -13,14 +13,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>The product details.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>真丝，春季新款</para>
+        /// <para>Silk, new spring style</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The product image URLs. A maximum of 10 images are supported.</para>
+        /// <para>The product image URLs (up to 10 images are supported).</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://frametour-assets.oss-cn-shanghai.aliyuncs.com/user-faces/viid_face/dd0dd06c-9351-4e5f-bc70-24166a754d7f.jpg">https://frametour-assets.oss-cn-shanghai.aliyuncs.com/user-faces/viid_face/dd0dd06c-9351-4e5f-bc70-24166a754d7f.jpg</a></para>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>例如商品的材质等。输入商品属性名称和属性内容</para>
+        /// <para>For example, the material of the product. Enter the attribute name and attribute value</para>
         /// </summary>
         [NameInMap("ItemSpec")]
         [Validation(Required=false)]
@@ -56,14 +56,14 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>衣服</para>
+        /// <para>Clothing</para>
         /// </summary>
         [NameInMap("SourceCategory")]
         [Validation(Required=false)]
         public string SourceCategory { get; set; }
 
         /// <summary>
-        /// <para>The source platform from which the product originates.</para>
+        /// <para>The source platform where the product originates.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string SourcePlatform { get; set; }
 
         /// <summary>
-        /// <para>The target listing platform. Currently, only temu is supported.</para>
+        /// <para>The target listing platform. Currently only temu is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>女士春季新款衣服</para>
+        /// <para>Women\&quot;s new spring clothing</para>
         /// </summary>
         [NameInMap("Title")]
         [Validation(Required=false)]
