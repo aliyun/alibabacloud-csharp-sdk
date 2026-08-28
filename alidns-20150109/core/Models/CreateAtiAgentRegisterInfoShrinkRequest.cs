@@ -41,6 +41,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string AgentHost { get; set; }
 
+        [NameInMap("AgentSubHost")]
+        [Validation(Required=false)]
+        public string AgentSubHost { get; set; }
+
         /// <summary>
         /// <para>The version of the agent.</para>
         /// <para>This parameter is required.</para>
@@ -61,6 +65,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("ClientToken")]
         [Validation(Required=false)]
         public string ClientToken { get; set; }
+
+        [NameInMap("DomainMode")]
+        [Validation(Required=false)]
+        public string DomainMode { get; set; }
 
         /// <summary>
         /// <para>The endpoint information of the agent.</para>

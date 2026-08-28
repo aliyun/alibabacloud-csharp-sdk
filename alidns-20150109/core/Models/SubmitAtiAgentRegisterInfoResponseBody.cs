@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class SubmitAtiAgentRegisterInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This field is returned only when the RAM authentication fails.</para>
+        /// <para>The access denied details. This field is returned only when RAM authentication fails.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authorized principal.</para>
+            /// <para>The display name of the authorization principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015555733387XXXX</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authorized principal.</para>
+            /// <para>The owner ID of the authorization principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10469733312XXX</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encrypted diagnostic message.</para>
+            /// <para>The encrypted complete diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The reason why the authentication failed. Valid values:</para>
+            /// <para>The reason for the authentication failure. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ExplicitDeny: Explicit denial.</description></item>
-            /// <item><description>ImplicitDeny: Implicit denial.</description></item>
+            /// <item><description>ExplicitDeny: explicit deny.</description></item>
+            /// <item><description>ImplicitDeny: implicit deny.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -105,12 +105,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <summary>
         /// <para>The Agent status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Draft: The Agent registration form is being filled out and has not been formally submitted. In the Draft state, only modification and detail viewing are supported. Other operations are not supported.</description></item>
-        /// <item><description>Private CA Pending Issuance: The Agent registration has been formally submitted. Alibaba Cloud has completed the ACME DNS-01 pre-check and submitted the registration information along with the generated DNS records to CNNIC. The system is waiting for CNNIC to approve and issue the Private CA certificate and complete the TL sealing.</description></item>
-        /// <item><description>DNS Pending Verification: CNNIC has approved and issued the Private CA certificate and completed the TL sealing, but the DNS records of the user have not been verified. The user needs to add the corresponding DNS records in the domain name resolution and complete the verification.</description></item>
-        /// <item><description>Active: All processes are complete. The Private CA certificate has been issued, the TL has been sealed, and the DNS records have been verified. The Agent is activated and can be discovered and trusted across the network.</description></item>
-        /// <item><description>Expired: The Agent identity certificate has expired because the user did not complete the certificate renewal within the validity period.</description></item>
-        /// <item><description>Revoked: The Agent certificate has been revoked, the DNS records have been cleaned up, and the Agent can no longer be discovered or trusted. The Agent cannot be restored to the Active state.</description></item>
+        /// <item><description>Draft: The Agent registration form is being filled in and has not been formally submitted. In the Draft state, only modification and detail viewing operations are supported. Other operations are not supported.</description></item>
+        /// <item><description>Private CA Pending Issuance: The Agent registration has been formally submitted. Alibaba Cloud has completed the ACME DNS-01 pre-check and submitted the registration information and generated DNS records to CNNIC. The system is waiting for CNNIC to approve and issue the Private CA and complete TL sealing.</description></item>
+        /// <item><description>DNS Pending Verification: CNNIC has approved the request, issued the Private CA certificate, and completed TL sealing, but the DNS records of the user have not been verified. The user needs to add the corresponding DNS records in domain name resolution and complete verification.</description></item>
+        /// <item><description>Active: All processes are complete. The Private CA certificate has been issued, TL has been sealed, and DNS records have been verified. The Agent is activated and can be discovered and trusted across the network.</description></item>
+        /// <item><description>Expired: The Agent identity certificate has expired, and the user did not complete certificate renewal within the validity period.</description></item>
+        /// <item><description>Revoked: The Agent certificate has been revoked, DNS records have been cleaned up, and the Agent cannot be discovered or trusted. It cannot be restored to the Active state.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

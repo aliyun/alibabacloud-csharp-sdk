@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateAtiRegistrantResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details about the access denial. This field is returned only when RAM authentication fails.</para>
+        /// <para>The details of the access denial. This field is returned only when RAM authentication fails.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The encoded complete diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</para>

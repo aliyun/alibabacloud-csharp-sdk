@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class UpdateAtiAlertSettingsResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details about the access denial. This parameter is returned only when RAM authentication fails.</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public UpdateAtiAlertSettingsResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class UpdateAtiAlertSettingsResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
+            /// <para>The unauthorized operation that was attempted.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>RemoveRspDomainServerHoldStatusForGateway</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthAction { get; set; }
 
             /// <summary>
+            /// <para>The display name of the authorization principal.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2015555733387XXXX</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the authorization principal owner.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>10469733312XXX</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
+            /// <para>The identity type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>SubUser</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
+            /// <para>The encoded diagnostic message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</para>
             /// </summary>
@@ -54,6 +67,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
+            /// <para>The reason for the authentication failure. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ExplicitDeny: explicit deny.</description></item>
+            /// <item><description>ImplicitDeny: implicit deny.</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
             /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
+            /// <para>The policy type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>DlpSend</para>
             /// </summary>
@@ -72,6 +93,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
         /// </summary>
@@ -80,6 +103,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the operation was successful. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>true</b>: The call was successful.</description></item>
+        /// <item><description><b>false</b>: The call failed.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

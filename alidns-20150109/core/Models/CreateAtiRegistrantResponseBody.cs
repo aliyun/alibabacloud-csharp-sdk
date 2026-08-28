@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encrypted complete diagnostic message.</para>
+            /// <para>The encrypted diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</para>
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// <summary>
             /// <para>The reason for the authentication failure. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ExplicitDeny: Explicit deny.</description></item>
-            /// <item><description>ImplicitDeny: Implicit deny.</description></item>
+            /// <item><description>ExplicitDeny: explicit deny.</description></item>
+            /// <item><description>ImplicitDeny: implicit deny.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,17 +103,17 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public long? CreateTimestamp { get; set; }
 
         /// <summary>
-        /// <para>The name of the real-name verified registrant.</para>
+        /// <para>The name of the real-name registrant.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张xx</para>
+        /// <para>Zhang XX</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the real-name verified registrant.</para>
+        /// <para>The ID of the real-name registrant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2072277378616354816</para>
@@ -136,12 +136,12 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The real-name verification status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Approved.</description></item>
-        /// <item><description>Under review.</description></item>
+        /// <item><description>Pending review.</description></item>
         /// <item><description>Rejected.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>审核通过</para>
+        /// <para>Approved</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The display name of the Agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试Agent</para>
+        /// <para>TestAgent</para>
         /// </summary>
         [NameInMap("AgentDisplayName")]
         [Validation(Required=false)]
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AgentHost { get; set; }
 
         /// <summary>
-        /// <para>The Agent ID, which is uniformly assigned by CNNIC after real-name verification through CNNIC. The AgentID serves as the unique identifier that binds the Agent to the real-name verified registrant.</para>
+        /// <para>The Agent ID, which is uniformly assigned by CNNIC after real-name verification. The AgentID serves as the unique identifier that binds the Agent to the verified registrant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>liuq@azt400</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AgentVersion { get; set; }
 
         /// <summary>
-        /// <para>Ensures the idempotency of the request. Generate a unique parameter value from your client to ensure that the value is unique across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJhbGciOiJIUzI1NiIsInR5cC.....</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of records to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The current page number. Minimum value: 1. Default value: 1.</para>
+        /// <para>The current page number. The start value is 1. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The page size for the paged query. This parameter specifies the number of entries per page for paging.</para>
+        /// <para>The page size for the paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The status of the Agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>活跃</para>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]

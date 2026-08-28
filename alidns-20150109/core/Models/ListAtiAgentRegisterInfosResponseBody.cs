@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encrypted diagnostic message.</para>
+            /// <para>The encrypted complete diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</para>
@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The cause of the authentication failure. Valid values:</para>
+            /// <para>The reason for the authentication failure. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ExplicitDeny: Explicit denial.</description></item>
-            /// <item><description>ImplicitDeny: Implicit denial.</description></item>
+            /// <item><description>ExplicitDeny: explicit denial.</description></item>
+            /// <item><description>ImplicitDeny: implicit denial.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,6 +148,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
                 [Validation(Required=false)]
                 public string Status { get; set; }
 
+                [NameInMap("TrustLevel")]
+                [Validation(Required=false)]
+                public string TrustLevel { get; set; }
+
                 [NameInMap("UpdateTimestamp")]
                 [Validation(Required=false)]
                 public string UpdateTimestamp { get; set; }
@@ -157,7 +161,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries to return in this request.</para>
+        /// <para>The maximum number of records to return in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>500</para>
@@ -177,7 +181,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The current page number. Minimum value: 1. Default value: 1.</para>
+        /// <para>The current page number. The start value is 1. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -187,7 +191,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page set for the paged query. This is the paging size. Maximum value: <b>100</b>. Default value: <b>20</b>. Settings determine how many rows are displayed per page.</para>
+        /// <para>The number of entries per page in the Settings for the paging query. Maximum value: <b>100</b>. Default value: <b>20</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -197,7 +201,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>536E9CAD-DB30-4647-AC87-AA5CC38C5382</para>
@@ -207,7 +211,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>11</para>

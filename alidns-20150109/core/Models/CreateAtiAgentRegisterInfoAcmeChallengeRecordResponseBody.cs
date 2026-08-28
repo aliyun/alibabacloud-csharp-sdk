@@ -152,6 +152,34 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string RecordValue { get; set; }
 
+        [NameInMap("Records")]
+        [Validation(Required=false)]
+        public CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecords Records { get; set; }
+        public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecords : TeaModel {
+            [NameInMap("Record")]
+            [Validation(Required=false)]
+            public List<CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord> Record { get; set; }
+            public class CreateAtiAgentRegisterInfoAcmeChallengeRecordResponseBodyRecordsRecord : TeaModel {
+                [NameInMap("DomainScope")]
+                [Validation(Required=false)]
+                public string DomainScope { get; set; }
+
+                [NameInMap("RecordName")]
+                [Validation(Required=false)]
+                public string RecordName { get; set; }
+
+                [NameInMap("RecordType")]
+                [Validation(Required=false)]
+                public string RecordType { get; set; }
+
+                [NameInMap("RecordValue")]
+                [Validation(Required=false)]
+                public string RecordValue { get; set; }
+
+            }
+
+        }
+
         /// <summary>
         /// <para>The request ID.</para>
         /// 

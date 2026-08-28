@@ -21,6 +21,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
+                {"cn-hangzhou", "alidns.aliyuncs.com"},
                 {"public", "alidns.aliyuncs.com"},
             };
             CheckConfig(config);
@@ -3770,6 +3771,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["AgentHost"] = request.AgentHost;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSubHost))
+            {
+                query["AgentSubHost"] = request.AgentSubHost;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
             {
                 query["AgentVersion"] = request.AgentVersion;
@@ -3777,6 +3782,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainMode))
+            {
+                query["DomainMode"] = request.DomainMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
             {
@@ -3842,6 +3851,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["AgentHost"] = request.AgentHost;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSubHost))
+            {
+                query["AgentSubHost"] = request.AgentSubHost;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
             {
                 query["AgentVersion"] = request.AgentVersion;
@@ -3849,6 +3862,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainMode))
+            {
+                query["DomainMode"] = request.DomainMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
             {
@@ -7887,7 +7904,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Agent registration.</para>
+        /// <para>Queries the details of Agent registration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7933,7 +7950,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Agent registration.</para>
+        /// <para>Queries the details of Agent registration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7979,7 +7996,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Agent registration.</para>
+        /// <para>Queries the details of Agent registration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7997,7 +8014,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an Agent registration.</para>
+        /// <para>Queries the details of Agent registration information.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8011,6 +8028,166 @@ namespace AlibabaCloud.SDK.Alidns20150109
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeAtiAgentRegisterInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries agent information from the Agent marketplace for the SDK.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAtiAgentRegisterInfoMarketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAtiAgentRegisterInfoMarketResponse
+        /// </returns>
+        public DescribeAtiAgentRegisterInfoMarketResponse DescribeAtiAgentRegisterInfoMarketWithOptions(DescribeAtiAgentRegisterInfoMarketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentHost))
+            {
+                query["AgentHost"] = request.AgentHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                query["AgentVersion"] = request.AgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustLevel))
+            {
+                query["TrustLevel"] = request.TrustLevel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAtiAgentRegisterInfoMarket",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAtiAgentRegisterInfoMarketResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries agent information from the Agent marketplace for the SDK.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAtiAgentRegisterInfoMarketRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAtiAgentRegisterInfoMarketResponse
+        /// </returns>
+        public async Task<DescribeAtiAgentRegisterInfoMarketResponse> DescribeAtiAgentRegisterInfoMarketWithOptionsAsync(DescribeAtiAgentRegisterInfoMarketRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentHost))
+            {
+                query["AgentHost"] = request.AgentHost;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
+            {
+                query["AgentVersion"] = request.AgentVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustLevel))
+            {
+                query["TrustLevel"] = request.TrustLevel;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeAtiAgentRegisterInfoMarket",
+                Version = "2015-01-09",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeAtiAgentRegisterInfoMarketResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries agent information from the Agent marketplace for the SDK.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAtiAgentRegisterInfoMarketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAtiAgentRegisterInfoMarketResponse
+        /// </returns>
+        public DescribeAtiAgentRegisterInfoMarketResponse DescribeAtiAgentRegisterInfoMarket(DescribeAtiAgentRegisterInfoMarketRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeAtiAgentRegisterInfoMarketWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries agent information from the Agent marketplace for the SDK.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeAtiAgentRegisterInfoMarketRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeAtiAgentRegisterInfoMarketResponse
+        /// </returns>
+        public async Task<DescribeAtiAgentRegisterInfoMarketResponse> DescribeAtiAgentRegisterInfoMarketAsync(DescribeAtiAgentRegisterInfoMarketRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeAtiAgentRegisterInfoMarketWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -23511,7 +23688,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of real-name registered contacts.</para>
+        /// <para>Queries the list of real-name registrants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23585,7 +23762,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of real-name registered contacts.</para>
+        /// <para>Queries the list of real-name registrants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23659,7 +23836,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of real-name registered contacts.</para>
+        /// <para>Queries the list of real-name registrants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23677,7 +23854,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of real-name registered contacts.</para>
+        /// <para>Queries the list of real-name registrants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23695,7 +23872,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实名注册人列表</para>
+        /// <para>Queries the list of real-name verified registrants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23761,7 +23938,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实名注册人列表</para>
+        /// <para>Queries the list of real-name verified registrants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23827,7 +24004,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实名注册人列表</para>
+        /// <para>Queries the list of real-name verified registrants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23845,7 +24022,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询实名注册人列表</para>
+        /// <para>Queries the list of real-name verified registrants.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32162,6 +32339,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["AgentRegisterInfoId"] = request.AgentRegisterInfoId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSubHost))
+            {
+                query["AgentSubHost"] = request.AgentSubHost;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
             {
                 query["AgentVersion"] = request.AgentVersion;
@@ -32169,6 +32350,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainMode))
+            {
+                query["DomainMode"] = request.DomainMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
             {
@@ -32238,6 +32423,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["AgentRegisterInfoId"] = request.AgentRegisterInfoId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentSubHost))
+            {
+                query["AgentSubHost"] = request.AgentSubHost;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentVersion))
             {
                 query["AgentVersion"] = request.AgentVersion;
@@ -32245,6 +32434,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DomainMode))
+            {
+                query["DomainMode"] = request.DomainMode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndpointsShrink))
             {
@@ -32311,7 +32504,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新告警设置</para>
+        /// <para>Updates alert settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32361,7 +32554,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新告警设置</para>
+        /// <para>Updates alert settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32411,7 +32604,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新告警设置</para>
+        /// <para>Updates alert settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32429,7 +32622,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>更新告警设置</para>
+        /// <para>Updates alert settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32447,7 +32640,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a registrant profile.</para>
+        /// <para>Modifies a real-name registrant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32533,7 +32726,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a registrant profile.</para>
+        /// <para>Modifies a real-name registrant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32619,7 +32812,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a registrant profile.</para>
+        /// <para>Modifies a real-name registrant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32637,7 +32830,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a registrant profile.</para>
+        /// <para>Modifies a real-name registrant.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40284,6 +40477,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             {
                 query["ClientToken"] = request.ClientToken;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustLevel))
+            {
+                query["TrustLevel"] = request.TrustLevel;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -40329,6 +40526,10 @@ namespace AlibabaCloud.SDK.Alidns20150109
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
             {
                 query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TrustLevel))
+            {
+                query["TrustLevel"] = request.TrustLevel;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -40387,7 +40588,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发 ACME 预检</para>
+        /// <para>Triggers an ACME pre-check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40433,7 +40634,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发 ACME 预检</para>
+        /// <para>Triggers an ACME pre-check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40479,7 +40680,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发 ACME 预检</para>
+        /// <para>Triggers an ACME pre-check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -40497,7 +40698,7 @@ namespace AlibabaCloud.SDK.Alidns20150109
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>触发 ACME 预检</para>
+        /// <para>Triggers an ACME pre-check.</para>
         /// </summary>
         /// 
         /// <param name="request">

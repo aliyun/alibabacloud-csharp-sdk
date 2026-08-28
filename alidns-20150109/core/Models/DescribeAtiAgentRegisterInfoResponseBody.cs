@@ -67,10 +67,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The cause of the authentication failure. Valid values:</para>
+            /// <para>The reason for the authentication failure. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ExplicitDeny: explicit deny.</description></item>
-            /// <item><description>ImplicitDeny: implicit deny.</description></item>
+            /// <item><description>ExplicitDeny: Explicit deny.</description></item>
+            /// <item><description>ImplicitDeny: Implicit deny.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -93,10 +93,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The description of the Agent capabilities.</para>
+        /// <para>The capability description of the Agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>支付服务</para>
+        /// <para>Payment service</para>
         /// </summary>
         [NameInMap("AgentDescription")]
         [Validation(Required=false)]
@@ -106,14 +106,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The display name of the Agent.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>测试Agent</para>
+        /// <para>TestAgent</para>
         /// </summary>
         [NameInMap("AgentDisplayName")]
         [Validation(Required=false)]
         public string AgentDisplayName { get; set; }
 
         /// <summary>
-        /// <para>The endpoint domain name through which the Agent provides services.</para>
+        /// <para>The endpoint domain name through which the Agent provides external services.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string AgentHost { get; set; }
 
         /// <summary>
-        /// <para>The Agent ID, which is uniformly assigned by CNNIC after real-name verification. The AgentId serves as the unique identifier that binds the Agent to the verified registrant.</para>
+        /// <para>The Agent ID, which is uniformly assigned by CNNIC after real-name authentication. The Agent ID serves as the unique identifier that binds the Agent to the authenticated registrant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>019f3672-9705-7a7a-88fd-9a6a211aa5f2</para>
@@ -141,6 +141,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("AgentRegisterInfoId")]
         [Validation(Required=false)]
         public string AgentRegisterInfoId { get; set; }
+
+        [NameInMap("AgentSubHost")]
+        [Validation(Required=false)]
+        public string AgentSubHost { get; set; }
 
         /// <summary>
         /// <para>The version of the Agent.</para>
@@ -176,6 +180,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [NameInMap("CreateTimestamp")]
         [Validation(Required=false)]
         public long? CreateTimestamp { get; set; }
+
+        [NameInMap("DomainMode")]
+        [Validation(Required=false)]
+        public string DomainMode { get; set; }
 
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
@@ -215,14 +223,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>Ignore.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>忽略</para>
+        /// <para>Ignore</para>
         /// </summary>
         [NameInMap("IdentityCertSerialNumber")]
         [Validation(Required=false)]
         public string IdentityCertSerialNumber { get; set; }
 
         /// <summary>
-        /// <para>The ID of the verified registrant.</para>
+        /// <para>The ID of the authenticated registrant.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2072277378616354816</para>
@@ -235,14 +243,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The name of the registrant.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张xx</para>
+        /// <para>Zhang xx</para>
         /// </summary>
         [NameInMap("RegistrantName")]
         [Validation(Required=false)]
         public string RegistrantName { get; set; }
 
         /// <summary>
-        /// <para>The reason why the Agent registration review failed.</para>
+        /// <para>The reason for Agent registration review failure.</para>
         /// </summary>
         [NameInMap("RejectReason")]
         [Validation(Required=false)]
@@ -252,14 +260,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// <para>The detailed information about the Agent registration failure.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>非法状态</para>
+            /// <para>Invalid status</para>
             /// </summary>
             [NameInMap("Message")]
             [Validation(Required=false)]
             public string Message { get; set; }
 
             /// <summary>
-            /// <para>The type of the review failure. Valid values:</para>
+            /// <para>The type of review failure. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ACME_VERIFY_FAILED: ACME verification failed.  </description></item>
             /// <item><description>INFO_AUDIT_FAILED: Agent information review failed.</description></item>
@@ -288,25 +296,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>Ignore.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>忽略</para>
+        /// <para>Ignore</para>
         /// </summary>
         [NameInMap("ServerCertSerialNumber")]
         [Validation(Required=false)]
         public string ServerCertSerialNumber { get; set; }
 
         /// <summary>
-        /// <para>The status of the Agent. Valid values:</para>
+        /// <para>The Agent status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Draft: The Agent registration form is being filled out and has not been formally submitted. In the Draft state, only modification and detail viewing operations are supported.</description></item>
-        /// <item><description>Private CA Pending Issuance: The Agent registration has been formally submitted. Alibaba Cloud has completed the ACME DNS-01 pre-check and submitted the registration information along with the generated DNS records to CNNIC. The system is waiting for CNNIC to approve and issue the Private CA and complete the TL sealing.</description></item>
-        /// <item><description>DNS Pending Verification: CNNIC has approved the registration, issued the Private CA certificate, and completed the TL sealing, but the DNS records of the user have not been verified. The user needs to add the corresponding DNS records in the domain name resolution and complete verification.</description></item>
-        /// <item><description>Active: All processes are complete. The Private CA certificate has been issued, the TL has been sealed, and the DNS records have been verified. The Agent is activated and can be discovered and trusted across the network.</description></item>
-        /// <item><description>Expired: The Agent identity certificate has expired because the user did not renew the certificate within the validity period.</description></item>
-        /// <item><description>Revoked: The Agent certificate has been revoked, the DNS records have been cleaned up, and the Agent can no longer be discovered or trusted. The Agent cannot be restored to the Active state.</description></item>
+        /// <item><description>Draft: The Agent registration form is being filled out and has not been formally submitted. In draft status, only modification and detail viewing operations are supported.</description></item>
+        /// <item><description>Private CA Pending Issuance: The Agent registration has been formally submitted. Alibaba Cloud has completed the ACME DNS-01 pre-check and submitted the registration information and generated DNS records to CNNIC. Currently waiting for CNNIC to approve and issue the Private CA and complete TL sealing.</description></item>
+        /// <item><description>DNS Pending Verification: CNNIC has approved and issued the Private CA certificate and completed TL sealing, but the DNS records of the user have not been verified. Waiting for the user to add the corresponding DNS records in domain name resolution and complete verification.</description></item>
+        /// <item><description>Active: All processes are complete. The Private CA certificate has been issued, TL has been sealed, and DNS records have been verified. The Agent is activated and can be discovered and trust-verified across the network.</description></item>
+        /// <item><description>Expired: The Agent identity certificate has expired, and the user did not complete certificate renewal within the validity period.</description></item>
+        /// <item><description>Revoked: The Agent certificate has been revoked, DNS records have been cleaned up, and the Agent cannot be discovered or trust-verified. It cannot be restored to active status.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>活跃</para>
+        /// <para>Active</para>
         /// </summary>
         [NameInMap("Status")]
         [Validation(Required=false)]
@@ -316,21 +324,25 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>Ignore.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>忽略</para>
+        /// <para>Ignore</para>
         /// </summary>
         [NameInMap("TrustCard")]
         [Validation(Required=false)]
         public string TrustCard { get; set; }
 
         /// <summary>
-        /// <para>Deprecated.</para>
+        /// <para><b>[Deprecated]</b></para>
         /// 
         /// <b>Example:</b>
-        /// <para>已废弃</para>
+        /// <para>Deprecated</para>
         /// </summary>
         [NameInMap("TrustCardUrl")]
         [Validation(Required=false)]
         public string TrustCardUrl { get; set; }
+
+        [NameInMap("TrustLevel")]
+        [Validation(Required=false)]
+        public string TrustLevel { get; set; }
 
         /// <summary>
         /// <para>The update time (timestamp).</para>

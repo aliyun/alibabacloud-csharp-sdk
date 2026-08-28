@@ -31,6 +31,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         [Validation(Required=false)]
         public string ClientToken { get; set; }
 
+        [NameInMap("TrustLevel")]
+        [Validation(Required=false)]
+        public string TrustLevel { get; set; }
+
     }
 
 }

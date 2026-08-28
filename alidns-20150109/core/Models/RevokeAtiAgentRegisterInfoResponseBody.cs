@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The display name of the authorized principal.</para>
+            /// <para>The display name of the authorization principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2015555733387XXXX</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The owner ID of the authorized principal.</para>
+            /// <para>The owner ID of the authorization principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10469733312XXX</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encoded diagnostic message.</para>
+            /// <para>The encrypted complete diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6856BCF6-11D6-4D7E-AC53-FD579933522B</para>
@@ -103,11 +103,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: The request was successful.</description></item>
-        /// <item><description>false: The request failed.</description></item>
-        /// </list>
+        /// <para>Indicates whether the request was successful. Valid values: <c>true</c>: The request was successful. <c>false</c>: The request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

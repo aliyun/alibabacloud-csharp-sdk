@@ -10,11 +10,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
 {
     public class CreateAtiRegistrantRequest : TeaModel {
         /// <summary>
-        /// <para>The country or region of the registrant. Specify a 2-character country or region code in compliance with GB/T 2659.1-2022.</para>
+        /// <para>The country or region of the registrant. Specify a 2-character country or region code (refer to GB/T 2659.1-2022).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>中国</para>
+        /// <para>CN</para>
         /// </summary>
         [NameInMap("Cc")]
         [Validation(Required=false)]
@@ -25,16 +25,16 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>杭州市</para>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("City")]
         [Validation(Required=false)]
         public string City { get; set; }
 
         /// <summary>
-        /// <para>Ensures the idempotency of the request. Generate a unique parameter value from your client to ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// <para>Ensures the idempotency of the request. Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters and cannot exceed 64 characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The document number of the registrant. The value cannot exceed 50 characters in length.</para>
+        /// <para>The document number of the registrant. The number cannot exceed 50 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -56,11 +56,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DocumentCode { get; set; }
 
         /// <summary>
-        /// <para>The document image of the registrant in Base64 encoding. The original file size must be between 50 KB and 3 MB.</para>
+        /// <para>The document image of the registrant (base64-encoded). The original file size must be between 50 KB and 3 MB.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>证件图片</para>
+        /// <para>Document image</para>
         /// </summary>
         [NameInMap("DocumentImage")]
         [Validation(Required=false)]
@@ -185,27 +185,27 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// </tr>
         /// <tr>
         /// <td>BJWSXX</td>
-        /// <td>Beijing operating license for schools for children of foreign embassy staff</td>
+        /// <td>Operating license for schools for children of foreign embassy staff in Beijing</td>
         /// </tr>
         /// <tr>
         /// <td>JWJG</td>
-        /// <td>Overseas institution certificate</td>
+        /// <td>Certificate of overseas institution</td>
         /// </tr>
         /// <tr>
         /// <td>JWFZFDBJ</td>
-        /// <td>Overseas non-governmental organization representative office registration certificate</td>
+        /// <td>Registration certificate for representative offices of overseas non-governmental organizations</td>
         /// </tr>
         /// <tr>
         /// <td>WGCZJG</td>
-        /// <td>Foreign enterprise permanent representative office registration certificate</td>
+        /// <td>Registration certificate for permanent representative offices of foreign enterprises</td>
         /// </tr>
         /// <tr>
         /// <td>WGZHWH</td>
-        /// <td>Foreign cultural center registration certificate in China</td>
+        /// <td>Registration certificate for foreign cultural centers in China</td>
         /// </tr>
         /// <tr>
         /// <td>WGZHXWJG</td>
-        /// <td>Foreign news agency certificate in China</td>
+        /// <td>Certificate for foreign news agencies in China</td>
         /// </tr>
         /// <tr>
         /// <td>WJLSFZ</td>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// </tr>
         /// <tr>
         /// <td>WLCZJG</td>
-        /// <td>Approval registration certificate for permanent representative offices of foreign government tourism departments</td>
+        /// <td>Registration certificate for permanent representative offices of foreign government tourism departments</td>
         /// </tr>
         /// <tr>
         /// <td>QT</td>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string DocumentType { get; set; }
 
         /// <summary>
-        /// <para>The email address. The value cannot exceed 300 characters in length.</para>
+        /// <para>The email address. The address cannot exceed 300 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -241,11 +241,11 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string Email { get; set; }
 
         /// <summary>
-        /// <para>The name of the registrant. The value cannot exceed 255 characters in length.</para>
+        /// <para>The name of the registrant. The name cannot exceed 255 characters in length.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张xx</para>
+        /// <para>Zhang XX</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>浙江省</para>
+        /// <para>Zhejiang</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
@@ -277,7 +277,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The address of the registrant. The value cannot exceed 255 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx区xx街道</para>
+        /// <para>XX District, XX Street</para>
         /// </summary>
         [NameInMap("Street")]
         [Validation(Required=false)]

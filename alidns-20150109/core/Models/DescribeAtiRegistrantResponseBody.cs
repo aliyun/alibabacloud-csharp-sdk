@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encrypted diagnostic message.</para>
+            /// <para>The encrypted complete diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaNIARXXXXUQwNjE0LUQzN0XXXXVEQy1BQzExLTMzXXXXNTkxRjk1Ng==</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The country.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>中国</para>
+        /// <para>China</para>
         /// </summary>
         [NameInMap("Cc")]
         [Validation(Required=false)]
@@ -106,14 +106,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The city. Default value: Hangzhou.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>杭州市</para>
+        /// <para>Hangzhou</para>
         /// </summary>
         [NameInMap("City")]
         [Validation(Required=false)]
         public string City { get; set; }
 
         /// <summary>
-        /// <para>The creation time (timestamp).</para>
+        /// <para>The creation time (UNIX timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1533773400000</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The name of the registrant. The name can be up to 255 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>张xx</para>
+        /// <para>Zhang xx</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
@@ -186,14 +186,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The reason why the real-name verification was rejected.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>以实际返回为准</para>
+        /// <para>Subject to the actual response</para>
         /// </summary>
         [NameInMap("RejectReason")]
         [Validation(Required=false)]
         public string RejectReason { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B57C121B-A45F-44D8-A9B2-13E5A5044195</para>
@@ -203,10 +203,10 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the public recursive service.</para>
+        /// <para>The state or province.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>浙江省</para>
+        /// <para>Zhejiang</para>
         /// </summary>
         [NameInMap("State")]
         [Validation(Required=false)]
@@ -231,14 +231,14 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         /// <para>The street address.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>xx区xx街道</para>
+        /// <para>xx District, xx Street</para>
         /// </summary>
         [NameInMap("Street")]
         [Validation(Required=false)]
         public string Street { get; set; }
 
         /// <summary>
-        /// <para>The update time (timestamp).</para>
+        /// <para>The update time (UNIX timestamp).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1527690629357</para>

@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
-            /// <para>The encrypted diagnostic message.</para>
+            /// <para>The encrypted complete diagnostic message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AQFohtp4aIbaeEXXXXQxNjFDLUIzMzgtNTXXXX05NkFCLUI2RkY5XXXXzAzQQ==</para>
@@ -69,8 +69,8 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
             /// <summary>
             /// <para>The reason for the authentication failure. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ExplicitDeny: explicit deny.</description></item>
-            /// <item><description>ImplicitDeny: implicit deny.</description></item>
+            /// <item><description>ExplicitDeny: explicit deny</description></item>
+            /// <item><description>ImplicitDeny: implicit deny</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Alidns20150109.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B57C121B-A45F-44D8-A9B2-13E5A5044195</para>
