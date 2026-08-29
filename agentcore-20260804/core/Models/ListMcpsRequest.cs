@@ -20,6 +20,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>my-mcp-server</para>
+        /// </summary>
+        [NameInMap("name")]
+        [Validation(Required=false)]
+        public string Name { get; set; }
+
+        /// <summary>
         /// <para>The pagination token for the next page.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +36,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [NameInMap("nextToken")]
         [Validation(Required=false)]
         public string NextToken { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>blur</para>
+        /// </summary>
+        [NameInMap("searchType")]
+        [Validation(Required=false)]
+        public string SearchType { get; set; }
 
     }
 

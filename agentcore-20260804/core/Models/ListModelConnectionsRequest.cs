@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.AgentCore20260804.Models
 {
     public class ListModelConnectionsRequest : TeaModel {
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>false</para>
+        /// </summary>
         [NameInMap("includeModels")]
         [Validation(Required=false)]
         public bool? IncludeModels { get; set; }
@@ -52,6 +56,14 @@ namespace AlibabaCloud.SDK.AgentCore20260804.Models
         [NameInMap("providerType")]
         [Validation(Required=false)]
         public string ProviderType { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>blur</para>
+        /// </summary>
+        [NameInMap("searchType")]
+        [Validation(Required=false)]
+        public string SearchType { get; set; }
 
     }
 

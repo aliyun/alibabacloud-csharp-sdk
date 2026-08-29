@@ -9871,9 +9871,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["maxResults"] = request.MaxResults;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
+            {
+                query["searchType"] = request.SearchType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -9927,9 +9935,17 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["maxResults"] = request.MaxResults;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                query["name"] = request.Name;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["nextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
+            {
+                query["searchType"] = request.SearchType;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -10006,6 +10022,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <para>查询模型连接列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定 AgentCore 工作空间中的模型连接。支持通过 <c>Name</c> 按名称筛选，并通过 <c>SearchType</c> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListModelConnectionsRequest
         /// </param>
@@ -10047,6 +10068,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["providerType"] = request.ProviderType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
+            {
+                query["searchType"] = request.SearchType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -10071,6 +10096,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <summary>
         /// <para>查询模型连接列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定 AgentCore 工作空间中的模型连接。支持通过 <c>Name</c> 按名称筛选，并通过 <c>SearchType</c> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelConnectionsRequest
@@ -10113,6 +10143,10 @@ namespace AlibabaCloud.SDK.AgentCore20260804
             {
                 query["providerType"] = request.ProviderType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchType))
+            {
+                query["searchType"] = request.SearchType;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -10138,6 +10172,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <para>查询模型连接列表</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定 AgentCore 工作空间中的模型连接。支持通过 <c>Name</c> 按名称筛选，并通过 <c>SearchType</c> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ListModelConnectionsRequest
         /// </param>
@@ -10156,6 +10195,11 @@ namespace AlibabaCloud.SDK.AgentCore20260804
         /// <summary>
         /// <para>查询模型连接列表</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定 AgentCore 工作空间中的模型连接。支持通过 <c>Name</c> 按名称筛选，并通过 <c>SearchType</c> 选择精确匹配或模糊匹配；支持按模型提供商类型和调用协议筛选，并支持分页查询。</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ListModelConnectionsRequest
