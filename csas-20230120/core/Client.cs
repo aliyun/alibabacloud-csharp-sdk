@@ -1236,6 +1236,146 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Associates user labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSaseUserTagResponse
+        /// </returns>
+        public BindSaseUserTagResponse BindSaseUserTagWithOptions(BindSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaseUserIds))
+            {
+                bodyFlat["SaseUserIds"] = request.SaseUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BindSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BindSaseUserTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates user labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSaseUserTagResponse
+        /// </returns>
+        public async Task<BindSaseUserTagResponse> BindSaseUserTagWithOptionsAsync(BindSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaseUserIds))
+            {
+                bodyFlat["SaseUserIds"] = request.SaseUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "BindSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<BindSaseUserTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates user labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSaseUserTagResponse
+        /// </returns>
+        public BindSaseUserTagResponse BindSaseUserTag(BindSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return BindSaseUserTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Associates user labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// BindSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// BindSaseUserTagResponse
+        /// </returns>
+        public async Task<BindSaseUserTagResponse> BindSaseUserTagAsync(BindSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await BindSaseUserTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Cancels multiple virus scan tasks that have not yet expired in a batch. After cancellation, terminals no longer pull and execute the tasks. Scans already running on terminals are not interrupted.</para>
         /// </summary>
         /// 
@@ -4880,6 +5020,134 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateRegistrationPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaseUserTagResponse
+        /// </returns>
+        public CreateSaseUserTagResponse CreateSaseUserTagWithOptions(CreateSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSaseUserTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaseUserTagResponse
+        /// </returns>
+        public async Task<CreateSaseUserTagResponse> CreateSaseUserTagWithOptionsAsync(CreateSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateSaseUserTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaseUserTagResponse
+        /// </returns>
+        public CreateSaseUserTagResponse CreateSaseUserTag(CreateSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateSaseUserTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateSaseUserTagResponse
+        /// </returns>
+        public async Task<CreateSaseUserTagResponse> CreateSaseUserTagAsync(CreateSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateSaseUserTagWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10136,6 +10404,138 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Deletes user tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaseUserTagResponse
+        /// </returns>
+        public DeleteSaseUserTagResponse DeleteSaseUserTagWithOptions(DeleteSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSaseUserTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes user tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaseUserTagResponse
+        /// </returns>
+        public async Task<DeleteSaseUserTagResponse> DeleteSaseUserTagWithOptionsAsync(DeleteSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteSaseUserTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes user tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaseUserTagResponse
+        /// </returns>
+        public DeleteSaseUserTagResponse DeleteSaseUserTag(DeleteSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteSaseUserTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes user tags.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteSaseUserTagResponse
+        /// </returns>
+        public async Task<DeleteSaseUserTagResponse> DeleteSaseUserTagAsync(DeleteSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteSaseUserTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Deletes user endpoint devices in batches.</para>
         /// </summary>
         /// 
@@ -13984,6 +14384,126 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Retrieves a single user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSaseUserTagResponse
+        /// </returns>
+        public GetSaseUserTagResponse GetSaseUserTagWithOptions(GetSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagId))
+            {
+                body["TagId"] = request.TagId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSaseUserTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a single user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSaseUserTagResponse
+        /// </returns>
+        public async Task<GetSaseUserTagResponse> GetSaseUserTagWithOptionsAsync(GetSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagId))
+            {
+                body["TagId"] = request.TagId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetSaseUserTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a single user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSaseUserTagResponse
+        /// </returns>
+        public GetSaseUserTagResponse GetSaseUserTag(GetSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetSaseUserTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves a single user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetSaseUserTagResponse
+        /// </returns>
+        public async Task<GetSaseUserTagResponse> GetSaseUserTagAsync(GetSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetSaseUserTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a user endpoint device under the current Alibaba Cloud account.</para>
         /// </summary>
         /// 
@@ -16508,6 +17028,322 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await ListDevicesForVulnerabilityWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists DLP outbound file transfer logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDlpOutboundLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDlpOutboundLogsResponse
+        /// </returns>
+        public ListDlpOutboundLogsResponse ListDlpOutboundLogsWithOptions(ListDlpOutboundLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogId))
+            {
+                body["LogId"] = request.LogId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyAction))
+            {
+                body["PolicyAction"] = request.PolicyAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcFileName))
+            {
+                body["SrcFileName"] = request.SrcFileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubChannelType))
+            {
+                body["SubChannelType"] = request.SubChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDlpOutboundLogs",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDlpOutboundLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists DLP outbound file transfer logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDlpOutboundLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDlpOutboundLogsResponse
+        /// </returns>
+        public async Task<ListDlpOutboundLogsResponse> ListDlpOutboundLogsWithOptionsAsync(ListDlpOutboundLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                body["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                body["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LogId))
+            {
+                body["LogId"] = request.LogId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                body["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyAction))
+            {
+                body["PolicyAction"] = request.PolicyAction;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SrcFileName))
+            {
+                body["SrcFileName"] = request.SrcFileName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                body["StartTime"] = request.StartTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SubChannelType))
+            {
+                body["SubChannelType"] = request.SubChannelType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UserName))
+            {
+                body["UserName"] = request.UserName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDlpOutboundLogs",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDlpOutboundLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists DLP outbound file transfer logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDlpOutboundLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDlpOutboundLogsResponse
+        /// </returns>
+        public ListDlpOutboundLogsResponse ListDlpOutboundLogs(ListDlpOutboundLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDlpOutboundLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Lists DLP outbound file transfer logs.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListDlpOutboundLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDlpOutboundLogsResponse
+        /// </returns>
+        public async Task<ListDlpOutboundLogsResponse> ListDlpOutboundLogsAsync(ListDlpOutboundLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDlpOutboundLogsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Internet access logs of endpoints by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the Internet access logs of endpoints under the current tenant by using paging. The logs contain full records of Internet access behavior.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDomainAccessLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDomainAccessLogsResponse
+        /// </returns>
+        public ListDomainAccessLogsResponse ListDomainAccessLogsWithOptions(ListDomainAccessLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDomainAccessLogs",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDomainAccessLogsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Internet access logs of endpoints by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the Internet access logs of endpoints under the current tenant by using paging. The logs contain full records of Internet access behavior.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDomainAccessLogsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDomainAccessLogsResponse
+        /// </returns>
+        public async Task<ListDomainAccessLogsResponse> ListDomainAccessLogsWithOptionsAsync(ListDomainAccessLogsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, string> query = AlibabaCloud.OpenApiUtil.Client.Query(AlibabaCloud.TeaUtil.Common.ToMap(request));
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListDomainAccessLogs",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListDomainAccessLogsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Internet access logs of endpoints by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the Internet access logs of endpoints under the current tenant by using paging. The logs contain full records of Internet access behavior.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDomainAccessLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDomainAccessLogsResponse
+        /// </returns>
+        public ListDomainAccessLogsResponse ListDomainAccessLogs(ListDomainAccessLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListDomainAccessLogsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the Internet access logs of endpoints by using paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the Internet access logs of endpoints under the current tenant by using paging. The logs contain full records of Internet access behavior.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListDomainAccessLogsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListDomainAccessLogsResponse
+        /// </returns>
+        public async Task<ListDomainAccessLogsResponse> ListDomainAccessLogsAsync(ListDomainAccessLogsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListDomainAccessLogsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -24544,6 +25380,146 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Unbinds user labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSaseUserTagResponse
+        /// </returns>
+        public UnbindSaseUserTagResponse UnbindSaseUserTagWithOptions(UnbindSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaseUserIds))
+            {
+                bodyFlat["SaseUserIds"] = request.SaseUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnbindSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnbindSaseUserTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds user labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSaseUserTagResponse
+        /// </returns>
+        public async Task<UnbindSaseUserTagResponse> UnbindSaseUserTagWithOptionsAsync(UnbindSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            Dictionary<string, object> bodyFlat = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaseUserIds))
+            {
+                bodyFlat["SaseUserIds"] = request.SaseUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagIds))
+            {
+                bodyFlat["TagIds"] = request.TagIds;
+            }
+            body = TeaConverter.merge<object>
+            (
+                body,
+                AlibabaCloud.OpenApiUtil.Client.Query(bodyFlat)
+            );
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UnbindSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UnbindSaseUserTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds user labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSaseUserTagResponse
+        /// </returns>
+        public UnbindSaseUserTagResponse UnbindSaseUserTag(UnbindSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UnbindSaseUserTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Unbinds user labels.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UnbindSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UnbindSaseUserTagResponse
+        /// </returns>
+        public async Task<UnbindSaseUserTagResponse> UnbindSaseUserTagAsync(UnbindSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UnbindSaseUserTagWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Configures the real-time anti-virus defense policy for the current Alibaba Cloud account. The first call creates the policy, and subsequent calls update it. The complete updated configuration is returned. When configuring for the first time, Status, MatchMode, HighRiskOperation, MidRiskOperation, LowRiskOperation, and ScanTargets are all required. ScanTargets and Whitelist are full replacements. The collection you pass in replaces the existing configuration. When MatchMode is set to UserGroupNormal, you must pass in the complete UserGroupIds on every call. When Status is not set to Disabled, the system validates the endpoint hardening license count. The call fails if the count exceeds the purchased licenses.</para>
         /// </summary>
         /// 
@@ -28868,6 +29844,142 @@ namespace AlibabaCloud.SDK.Csas20230120
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateRiskStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSaseUserTagResponse
+        /// </returns>
+        public UpdateSaseUserTagResponse UpdateSaseUserTagWithOptions(UpdateSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagId))
+            {
+                body["TagId"] = request.TagId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSaseUserTagResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSaseUserTagRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSaseUserTagResponse
+        /// </returns>
+        public async Task<UpdateSaseUserTagResponse> UpdateSaseUserTagWithOptionsAsync(UpdateSaseUserTagRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
+            {
+                body["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Name))
+            {
+                body["Name"] = request.Name;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TagId))
+            {
+                body["TagId"] = request.TagId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateSaseUserTag",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateSaseUserTagResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSaseUserTagResponse
+        /// </returns>
+        public UpdateSaseUserTagResponse UpdateSaseUserTag(UpdateSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateSaseUserTagWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates a user tag.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateSaseUserTagRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateSaseUserTagResponse
+        /// </returns>
+        public async Task<UpdateSaseUserTagResponse> UpdateSaseUserTagAsync(UpdateSaseUserTagRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateSaseUserTagWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
