@@ -10,6 +10,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616.Models
 {
     public class PostEventDisposeAndWhiteruleListRequest : TeaModel {
         /// <summary>
+        /// <para>幂等令牌。</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426614174000</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// <para>A comma-separated list of response strategy IDs.</para>
         /// 
         /// <b>Example:</b>

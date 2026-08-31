@@ -7848,7 +7848,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to Threat Analysis and creates the AliyunServiceRoleForSasCloudSiem service-linked role.</para>
+        /// <para>Authorizes the user and creates the threat detection and response service-linked role AliyunServiceRoleForSasCloudSiem.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7868,6 +7868,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSubmit))
             {
                 body["AutoSubmit"] = request.AutoSubmit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -7902,7 +7906,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to Threat Analysis and creates the AliyunServiceRoleForSasCloudSiem service-linked role.</para>
+        /// <para>Authorizes the user and creates the threat detection and response service-linked role AliyunServiceRoleForSasCloudSiem.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7922,6 +7926,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoSubmit))
             {
                 body["AutoSubmit"] = request.AutoSubmit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -7956,7 +7964,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to Threat Analysis and creates the AliyunServiceRoleForSasCloudSiem service-linked role.</para>
+        /// <para>Authorizes the user and creates the threat detection and response service-linked role AliyunServiceRoleForSasCloudSiem.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7974,7 +7982,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Grants permissions to Threat Analysis and creates the AliyunServiceRoleForSasCloudSiem service-linked role.</para>
+        /// <para>Authorizes the user and creates the threat detection and response service-linked role AliyunServiceRoleForSasCloudSiem.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13105,6 +13113,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisposeStrategyIds))
             {
                 body["DisposeStrategyIds"] = request.DisposeStrategyIds;
@@ -13191,6 +13203,10 @@ namespace AlibabaCloud.SDK.Cloud_siem20220616
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                body["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisposeStrategyIds))
             {
                 body["DisposeStrategyIds"] = request.DisposeStrategyIds;
