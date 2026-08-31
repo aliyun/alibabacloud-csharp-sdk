@@ -83,6 +83,14 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127.Models
 
         /// <summary>
         /// <b>Example:</b>
+        /// <para>[&quot;WITHIN_15_SECONDS&quot;, &quot;FROM_1_TO_3_MINUTES&quot;]</para>
+        /// </summary>
+        [NameInMap("DurationRangeList")]
+        [Validation(Required=false)]
+        public List<string> DurationRangeList { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
         /// <para>[&quot;有意向&quot;, &quot;高净值&quot;]</para>
         /// </summary>
         [NameInMap("LabelTags")]

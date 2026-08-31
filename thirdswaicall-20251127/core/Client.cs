@@ -389,6 +389,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 request.DisplayStatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DisplayStatusList, "DisplayStatusList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DurationRangeList))
+            {
+                request.DurationRangeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DurationRangeList, "DurationRangeList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelTags))
             {
                 request.LabelTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelTags, "LabelTags", "json");
@@ -429,6 +433,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayStatusListShrink))
             {
                 body["DisplayStatusList"] = request.DisplayStatusListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DurationRangeListShrink))
+            {
+                body["DurationRangeList"] = request.DurationRangeListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelTagsShrink))
             {
@@ -497,6 +505,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             {
                 request.DisplayStatusListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DisplayStatusList, "DisplayStatusList", "json");
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DurationRangeList))
+            {
+                request.DurationRangeListShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DurationRangeList, "DurationRangeList", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.LabelTags))
             {
                 request.LabelTagsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.LabelTags, "LabelTags", "json");
@@ -537,6 +549,10 @@ namespace AlibabaCloud.SDK.ThirdswAicall20251127
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DisplayStatusListShrink))
             {
                 body["DisplayStatusList"] = request.DisplayStatusListShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DurationRangeListShrink))
+            {
+                body["DurationRangeList"] = request.DurationRangeListShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LabelTagsShrink))
             {
