@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class DeleteRegisterLineageRequest : TeaModel {
         /// <summary>
-        /// <para>The command for deleting registered lineage.</para>
+        /// <para>The command for deleting registered data lineage.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeleteRegisterLineageCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteRegisterLineageRequestDeleteRegisterLineageCommand DeleteRegisterLineageCommand { get; set; }
         public class DeleteRegisterLineageRequestDeleteRegisterLineageCommand : TeaModel {
             /// <summary>
-            /// <para>Specifies whether to automatically delete the object lineage after all detailed lineage entries are deleted. Default value: true.</para>
+            /// <para>Specifies whether to automatically delete the object lineage after all detailedLineage entries are deleted. Default value: true.</para>
             /// </summary>
             [NameInMap("CascadeDeleteLineage")]
             [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public DeleteRegisterLineageRequestDeleteRegisterLineageCommandDetailedLineagesSource Source { get; set; }
                 public class DeleteRegisterLineageRequestDeleteRegisterLineageCommandDetailedLineagesSource : TeaModel {
                     /// <summary>
-                    /// <para>The catalog asset property. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                    /// <para>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dataphin</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Catalog { get; set; }
 
                     /// <summary>
-                    /// <para>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                    /// <para>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DEV, PROD</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public Dictionary<string, object> ExtProperties { get; set; }
 
                     /// <summary>
-                    /// <para>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</para>
+                    /// <para>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps.300000001.project1.table1</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Guid { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type. Set this parameter based on the actual scenario.</para>
+                    /// <para>The asset type. Set this parameter as needed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>COLUMN</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string MetadataType { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                    /// <para>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>column1</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ReferenceType { get; set; }
 
                     /// <summary>
-                    /// <para>The schema asset property. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                    /// <para>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>project1, bizUnit1</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public DeleteRegisterLineageRequestDeleteRegisterLineageCommandDetailedLineagesTarget Target { get; set; }
                 public class DeleteRegisterLineageRequestDeleteRegisterLineageCommandDetailedLineagesTarget : TeaModel {
                     /// <summary>
-                    /// <para>The catalog asset property. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                    /// <para>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>dataphin</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Catalog { get; set; }
 
                     /// <summary>
-                    /// <para>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                    /// <para>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>DEV, PROD</para>
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public Dictionary<string, object> ExtProperties { get; set; }
 
                     /// <summary>
-                    /// <para>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</para>
+                    /// <para>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps.300000001.project1.table1</para>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Guid { get; set; }
 
                     /// <summary>
-                    /// <para>The asset type. Set this parameter based on the actual scenario.</para>
+                    /// <para>The asset type. Set this parameter as needed.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>COLUMN</para>
@@ -191,7 +191,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string MetadataType { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                    /// <para>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>column1</para>
@@ -221,7 +221,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string ReferenceType { get; set; }
 
                     /// <summary>
-                    /// <para>The schema asset property. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                    /// <para>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>project1, bizUnit1</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The source of the lineage.</para>
+            /// <para>The source of the data lineage.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Source")]
@@ -243,7 +243,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public DeleteRegisterLineageRequestDeleteRegisterLineageCommandSource Source { get; set; }
             public class DeleteRegisterLineageRequestDeleteRegisterLineageCommandSource : TeaModel {
                 /// <summary>
-                /// <para>The catalog asset property. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                /// <para>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dataphin</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Catalog { get; set; }
 
                 /// <summary>
-                /// <para>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                /// <para>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEV, PROD</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public Dictionary<string, object> ExtProperties { get; set; }
 
                 /// <summary>
-                /// <para>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</para>
+                /// <para>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.300000001.project1.table1</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Guid { get; set; }
 
                 /// <summary>
-                /// <para>The asset subtype. Specify this parameter only when metadataType is set to TABLE and referenceType is not set to BY_GUID.</para>
+                /// <para>The asset subtype. Specify this parameter only when MetadataType is set to TABLE and ReferenceType is not BY_GUID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT, SUM_BIZ_UNIT</para>
@@ -290,7 +290,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string MetadataSubType { get; set; }
 
                 /// <summary>
-                /// <para>The asset type. Set this parameter based on the actual scenario.</para>
+                /// <para>The asset type. Set this parameter as needed.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -301,7 +301,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string MetadataType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                /// <para>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>table1</para>
@@ -311,7 +311,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The asset reference data type. Valid values: BY_GUID, BY_PROPERTY.</para>
+                /// <para>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ReferenceType { get; set; }
 
                 /// <summary>
-                /// <para>The schema asset property. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                /// <para>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>project1, bizUnit1</para>
@@ -334,7 +334,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The target of the lineage.</para>
+            /// <para>The target of the data lineage.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("Target")]
@@ -342,7 +342,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public DeleteRegisterLineageRequestDeleteRegisterLineageCommandTarget Target { get; set; }
             public class DeleteRegisterLineageRequestDeleteRegisterLineageCommandTarget : TeaModel {
                 /// <summary>
-                /// <para>The catalog asset property. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                /// <para>The catalog, which is an asset property. For tables, the catalog of compute source tables or logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dataphin</para>
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Catalog { get; set; }
 
                 /// <summary>
-                /// <para>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                /// <para>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DEV, PROD</para>
@@ -369,7 +369,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public Dictionary<string, object> ExtProperties { get; set; }
 
                 /// <summary>
-                /// <para>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</para>
+                /// <para>The asset GUID. This parameter is required when ReferenceType is set to BY_GUID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>odps.300000001.project1.table1</para>
@@ -379,7 +379,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Guid { get; set; }
 
                 /// <summary>
-                /// <para>The asset subtype. Specify this parameter only when metadataType is set to TABLE and referenceType is not set to BY_GUID.</para>
+                /// <para>The asset subtype. Specify this parameter only when MetadataType is set to TABLE and ReferenceType is not BY_GUID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT,SUM_BIZ_UNIT</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string MetadataSubType { get; set; }
 
                 /// <summary>
-                /// <para>The asset type. Set this parameter based on the actual scenario.</para>
+                /// <para>The asset type. Set this parameter as needed.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -400,7 +400,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string MetadataType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                /// <para>The asset name. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>table1</para>
@@ -410,7 +410,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The asset reference data type. Valid values: BY_GUID, BY_PROPERTY.</para>
+                /// <para>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -421,7 +421,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ReferenceType { get; set; }
 
                 /// <summary>
-                /// <para>The schema asset property. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</para>
+                /// <para>The schema, which is an asset property. For tables, this is typically a project or business unit. This property is used to identify the corresponding asset by property when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property does not need to be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>project1, bizUnit1</para>
@@ -443,7 +443,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? TenantId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the current user.</para>
+            /// <para>The current user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300004567</para>
@@ -464,6 +464,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

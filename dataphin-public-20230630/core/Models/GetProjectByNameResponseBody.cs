@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The display name of the business unit to which the project belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("BizUnitDisplayName")]
             [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BizUnitId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated compute source.</para>
+            /// <para>The ID of the bound compute source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>101711</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ComputeSourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the associated compute source.</para>
+            /// <para>The name of the bound compute source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds1</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The project description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in the format of yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The creation time, in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The update time, in the format of yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The modification time, in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -169,8 +169,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The namespace type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>PUBLIC: public type</description></item>
-            /// <item><description>APPLICATION: application type</description></item>
+            /// <item><description>PUBLIC: common pattern.</description></item>
+            /// <item><description>APPLICATION: application type.</description></item>
             /// <item><description>BASE: base type.</description></item>
             /// </list>
             /// 
@@ -195,14 +195,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The project owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>John</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]
             public string OwnerName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated real-time compute source.</para>
+            /// <para>The ID of the bound streaming compute source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>201711</para>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? StreamComputeSourceId { get; set; }
 
             /// <summary>
-            /// <para>The name of the associated real-time compute source.</para>
+            /// <para>The name of the bound streaming compute source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds2</para>
@@ -224,7 +224,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The project type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>DISTILL: distillation project</description></item>
+            /// <item><description>DISTILL: distillation project.</description></item>
             /// <item><description>GENERAL: general project.</description></item>
             /// </list>
             /// 
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx 白名单</para>
+                /// <para>xx whitelist</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

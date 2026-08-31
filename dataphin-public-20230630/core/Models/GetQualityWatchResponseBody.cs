@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The details of the monitored object.</para>
+        /// <para>The monitoring object details.</para>
         /// </summary>
         [NameInMap("QualityWatchInfo")]
         [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The creator name.</para>
+            /// <para>The name of the creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreatorName { get; set; }
 
             /// <summary>
-            /// <para>The datasource config details.</para>
+            /// <para>The data source details.</para>
             /// </summary>
             [NameInMap("DataSourceInfo")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Creator { get; set; }
 
                 /// <summary>
-                /// <para>The creator name.</para>
+                /// <para>The name of the creator.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -116,8 +116,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The environment identifier. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>PROD</description></item>
-                /// <item><description>DEV.</description></item>
+                /// <item><description>PROD: production environment.</description></item>
+                /// <item><description>DEV: development environment.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The data source type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>MAX_COMPUTE</description></item>
-                /// <item><description>HADOOP.</description></item>
+                /// <item><description>HADOOP</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -204,7 +204,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? EnabledRuleCount { get; set; }
 
             /// <summary>
-            /// <para>The monitor ID.</para>
+            /// <para>The watchtask ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -261,13 +261,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CellSumLogicTableName { get; set; }
 
                 /// <summary>
-                /// <para>The metric computation type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>AUTO</description></item>
-                /// <item><description>CUSTOM</description></item>
-                /// <item><description>MOUNT</description></item>
-                /// <item><description>COMBINE.</description></item>
-                /// </list>
+                /// <para>The metric computation type. Valid values: AUTO, CUSTOM, MOUNT, and COMBINE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AUTO</para>
@@ -310,7 +304,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The statistical granularity name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>全站汇总表</para>
+                /// <para>Site-wide aggregate table</para>
                 /// </summary>
                 [NameInMap("GranularityDisplayName")]
                 [Validation(Required=false)]
@@ -397,10 +391,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ProjectName { get; set; }
 
                 /// <summary>
-                /// <para>The metric type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>INDEX.</description></item>
-                /// </list>
+                /// <para>The metric type. Valid values: INDEX.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>INDEX</para>
@@ -412,7 +403,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The ID of the most recent quality watchtask for the monitored object.</para>
+            /// <para>The ID of the latest quality watchtask.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -422,7 +413,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? LatestWatchTaskId { get; set; }
 
             /// <summary>
-            /// <para>The status of the most recent quality watchtask for the monitored object.</para>
+            /// <para>The status of the latest quality watchtask.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>
@@ -494,8 +485,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ENABLE</description></item>
-            /// <item><description>DISABLE.</description></item>
+            /// <item><description>ENABLE: Enabled.</description></item>
+            /// <item><description>DISABLE: Disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -575,8 +566,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The environment identifier. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>DEV</description></item>
-                /// <item><description>PROD.</description></item>
+                /// <item><description>DEV: development environment.</description></item>
+                /// <item><description>PROD: production environment.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -677,7 +668,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The monitored object type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>TABLE: Dataphin table.</description></item>
-            /// <item><description>DATASOURCE_TABLE: full-domain table.</description></item>
+            /// <item><description>DATASOURCE_TABLE: global table.</description></item>
             /// <item><description>DATASOURCE: data source.</description></item>
             /// <item><description>INDEX: metric.</description></item>
             /// <item><description>REALTIME_LOGICAL_TABLE: real-time meta table.</description></item>

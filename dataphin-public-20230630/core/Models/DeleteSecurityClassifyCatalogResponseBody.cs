@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public DeleteSecurityClassifyCatalogResponseBodyData Data { get; set; }
         public class DeleteSecurityClassifyCatalogResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of full paths of child catalogs that were also deleted.</para>
+            /// <para>The list of full paths of child catalogs that were deleted as a result of the cascading deletion.</para>
             /// </summary>
             [NameInMap("ChildCatalogFullPathList")]
             [Validation(Required=false)]
             public List<string> ChildCatalogFullPathList { get; set; }
 
             /// <summary>
-            /// <para>The list of classification IDs that were also deleted.</para>
+            /// <para>The list of classification IDs that were deleted as a result of the cascading deletion.</para>
             /// </summary>
             [NameInMap("ClassifyIdList")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

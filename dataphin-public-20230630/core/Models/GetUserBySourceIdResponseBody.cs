@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The display name of the user.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xx_test</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]

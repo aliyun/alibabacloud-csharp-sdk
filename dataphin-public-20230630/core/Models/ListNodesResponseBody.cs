@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListNodesResponseBodyPageResult PageResult { get; set; }
         public class ListNodesResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>The list of nodes on the current page.</para>
+            /// <para>The paginated list of nodes.</para>
             /// </summary>
             [NameInMap("NodeList")]
             [Validation(Required=false)]
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The name of the business unit to which the node belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xxTest</para>
                 /// </summary>
                 [NameInMap("BizUnitName")]
                 [Validation(Required=false)]
                 public string BizUnitName { get; set; }
 
                 /// <summary>
-                /// <para>The creation time.</para>
+                /// <para>The time when the node was created.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-30 16:47:13</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string CreateTime { get; set; }
 
                 /// <summary>
-                /// <para>The creator.</para>
+                /// <para>The creator of the node.</para>
                 /// </summary>
                 [NameInMap("Creator")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The username.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx测试</para>
+                    /// <para>xxTest</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The description.</para>
+                /// <para>The description of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>xx test</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? DryRun { get; set; }
 
                 /// <summary>
-                /// <para>The extended information.</para>
+                /// <para>The extended information of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{&quot;xx&quot;:&quot;zz&quot;}</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ExtendInfo { get; set; }
 
                 /// <summary>
-                /// <para>The source.</para>
+                /// <para>The source of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DATA_PROCESS</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string From { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a development environment exists.</para>
+                /// <para>Indicates whether the node has a development environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? HasDev { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether a production environment exists.</para>
+                /// <para>Indicates whether the node has a production environment.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The last modification time.</para>
+                /// <para>The time when the node was last modified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2024-05-30 16:47:13</para>
@@ -203,7 +203,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The username.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx测试</para>
+                    /// <para>xxTest</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -212,10 +212,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The node name.</para>
+                /// <para>The name of the node.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>xx测试</para>
+                /// <para>xxTest</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The username.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx测试</para>
+                    /// <para>xxTest</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -278,7 +278,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The project name.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>xx测试</para>
+                    /// <para>xxTest</para>
                     /// </summary>
                     [NameInMap("Name")]
                     [Validation(Required=false)]
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>Indicates whether scheduling is paused.</para>
+                /// <para>Indicates whether the node is paused.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -304,14 +304,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<string> SchedulePeriodList { get; set; }
 
                 /// <summary>
-                /// <para>The sub-business types. Valid values:</para>
+                /// <para>The sub-business type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>MAX_COMPUTE_SQL</description></item>
                 /// <item><description>HIVE_SQL</description></item>
                 /// <item><description>SHELL</description></item>
                 /// <item><description>PYTHON</description></item>
                 /// <item><description>ONE_SERVICE_SQL</description></item>
-                /// <item><description>DATABASE_SQL.</description></item>
+                /// <item><description>DATABASE_SQL, etc.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -322,7 +322,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string SubDetailType { get; set; }
 
                 /// <summary>
-                /// <para>The node type.</para>
+                /// <para>The type of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DATA_PROCESS</para>

@@ -18,6 +18,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateComputeSourceRequestCreateCommand CreateCommand { get; set; }
         public class CreateComputeSourceRequestCreateCommand : TeaModel {
             /// <summary>
+            /// <para>The ID of the associated cluster. This parameter takes effect only when CreateType is not specified or is set to COMPUTE_SOURCE, which creates a compute source that references a cluster. This parameter is mutually exclusive with CreateType=CLUSTER.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>102311</para>
+            /// </summary>
+            [NameInMap("ClusterId")]
+            [Validation(Required=false)]
+            public long? ClusterId { get; set; }
+
+            /// <summary>
             /// <para>The connection configuration items.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
@@ -48,6 +58,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Value { get; set; }
 
             }
+
+            /// <summary>
+            /// <para>The type of entity to create. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CLUSTER: Creates a cluster. ClusterId cannot be specified.</description></item>
+            /// <item><description>COMPUTE_SOURCE: Creates a compute source. This is the default value.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CLUSTER</para>
+            /// </summary>
+            [NameInMap("CreateType")]
+            [Validation(Required=false)]
+            public string CreateType { get; set; }
 
             /// <summary>
             /// <para>The description.</para>
@@ -81,6 +105,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public string Type { get; set; }
 
+            /// <summary>
+            /// <para>The version of the compute source type.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>CDH6</para>
+            /// </summary>
+            [NameInMap("TypeVersion")]
+            [Validation(Required=false)]
+            public string TypeVersion { get; set; }
+
         }
 
         /// <summary>
@@ -93,6 +127,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

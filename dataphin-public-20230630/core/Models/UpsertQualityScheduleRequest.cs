@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
+
+        /// <summary>
         /// <para>The update instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -44,7 +52,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>The ID of the schedule resource. If specified, the operation updates the existing resource. If not specified, the operation creates a new resource.</para>
+            /// <para>The schedule object ID. If this parameter is specified, the schedule is updated. If this parameter is not specified, a schedule is created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -54,7 +62,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the schedule resource.</para>
+            /// <para>The name of the schedule object.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,7 +73,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The partition expression for custom expressions.</para>
+            /// <para>The custom partition expression.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds=${yyyyMMdd}</para>
@@ -78,8 +86,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The partition type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>EVERY_DAY: every day.</description></item>
-            /// <item><description>PRE_DAY: previous day.</description></item>
-            /// <item><description>TODAY: current day.</description></item>
+            /// <item><description>PRE_DAY: yesterday.</description></item>
+            /// <item><description>TODAY: today.</description></item>
             /// <item><description>FIRST_DAY_OF_WEEK: first day of the week (Sunday).</description></item>
             /// <item><description>CUSTOM: custom.</description></item>
             /// </list>
@@ -92,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PartitionType { get; set; }
 
             /// <summary>
-            /// <para>The scheduling interval type for timed scheduling. Valid values:</para>
+            /// <para>The schedule interval type for timed scheduling. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>DAILY: day.</description></item>
             /// <item><description>WEEKLY: week.</description></item>
@@ -109,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PeriodScheduleIntervalType { get; set; }
 
             /// <summary>
-            /// <para>The scheduling interval values for timed scheduling.</para>
+            /// <para>The schedule interval values for timed scheduling.</para>
             /// </summary>
             [NameInMap("PeriodScheduleParamList")]
             [Validation(Required=false)]
@@ -118,9 +126,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The trigger method for fixed task triggers. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>ALL_TASKS_FINISHED</description></item>
-            /// <item><description>ONE_TASKS_FINISHED</description></item>
-            /// <item><description>PRE_ONE_TASKS_START.</description></item>
+            /// <item><description>ALL_TASKS_FINISHED: triggered when all tasks are finished.</description></item>
+            /// <item><description>ONE_TASKS_FINISHED: triggered when one task is finished.</description></item>
+            /// <item><description>PRE_ONE_TASKS_START: triggered when the previous task starts.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -131,7 +139,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StaticTaskTriggerType { get; set; }
 
             /// <summary>
-            /// <para>The checklist of trigger nodes for trigger scheduling.</para>
+            /// <para>The list of trigger nodes for trigger scheduling.</para>
             /// </summary>
             [NameInMap("TriggerNodeList")]
             [Validation(Required=false)]
@@ -152,7 +160,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TriggerType { get; set; }
 
             /// <summary>
-            /// <para>The scheduling type. Valid values:</para>
+            /// <para>The schedule type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PERIOD_SCHEDULE: timed scheduling.</description></item>
             /// <item><description>MANUAL_SCHEDULE: manual trigger.</description></item>
@@ -184,7 +192,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ValidatePartitionType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the monitored object.</para>
+            /// <para>The monitored object ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

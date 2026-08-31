@@ -28,6 +28,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
+
+        /// <summary>
         /// <para>The GUID of the table, which is the unique identifier of the asset.</para>
         /// <para>This parameter is required.</para>
         /// 

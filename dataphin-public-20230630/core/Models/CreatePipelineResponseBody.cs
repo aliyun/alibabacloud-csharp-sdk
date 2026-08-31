@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreatePipelineResponseBody : TeaModel {
         /// <summary>
-        /// <para>Backend response code</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Integration pipeline/workflow task creation result</para>
+        /// <para>The creation result of the integration pipeline or workflow task.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreatePipelineResponseBodyData Data { get; set; }
         public class CreatePipelineResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Server-side execution machine name and IP</para>
+            /// <para>The name and IP address of the server machine that executes the task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>hostName:hostIp</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string HostMachine { get; set; }
 
             /// <summary>
-            /// <para>Scheduling node ID of the pipeline/workflow task after successful creation</para>
+            /// <para>The scheduling node ID of the pipeline or workflow task after successful creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>Pipeline/workflow ID after successful creation</para>
+            /// <para>The pipeline or workflow ID after successful creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -57,8 +57,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? PipelineId { get; set; }
 
             /// <summary>
-            /// <para>Submit ID of the pending release list generated after successfully submitting the pipeline, used for release through the release domain.
-            /// Workflow tasks only support PROD, so this value is not applicable.</para>
+            /// <para>The submit ID of the pending publish list generated after the pipeline is submitted. Use this ID to publish through the publish domain.
+            /// Workflow tasks support only PROD, so this value is not returned for workflow tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -68,8 +68,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? SubmitId { get; set; }
 
             /// <summary>
-            /// <para>Pending release version number generated after pipeline submission.
-            /// Workflow tasks only support PROD, so this value is not applicable.</para>
+            /// <para>The pending publish version number generated after the pipeline is submitted.
+            /// Workflow tasks support only PROD, so this value is not returned for workflow tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>HTTP status code</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Backend response exception details</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request was successful</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

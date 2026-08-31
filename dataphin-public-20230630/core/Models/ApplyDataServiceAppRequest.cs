@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? AppId { get; set; }
 
             /// <summary>
-            /// <para>The expiration date in the format of yyyy-MM-dd.</para>
+            /// <para>The expiration date in yyyy-MM-dd format.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -62,6 +62,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
         /// <summary>
         /// <para>The data service project ID.</para>

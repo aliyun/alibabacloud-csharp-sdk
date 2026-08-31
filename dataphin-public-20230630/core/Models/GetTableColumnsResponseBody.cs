@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetTableColumnsResponseBody : TeaModel {
         /// <summary>
-        /// <para>Backend response code.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>List of asset table columns.</para>
+        /// <para>The list of asset table columns.</para>
         /// </summary>
         [NameInMap("ColumnList")]
         [Validation(Required=false)]
         public List<GetTableColumnsResponseBodyColumnList> ColumnList { get; set; }
         public class GetTableColumnsResponseBodyColumnList : TeaModel {
             /// <summary>
-            /// <para>Data classification ID.</para>
+            /// <para>The ID of the data classification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12345</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ClassifyId { get; set; }
 
             /// <summary>
-            /// <para>Data classification name.</para>
+            /// <para>The name of the data classification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ClassifyName { get; set; }
 
             /// <summary>
-            /// <para>Column comment.</para>
+            /// <para>The comment of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Comment { get; set; }
 
             /// <summary>
-            /// <para>Creation time.</para>
+            /// <para>The creation time of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>Creator.</para>
+            /// <para>The creator of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012011</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>Data source ID.</para>
+            /// <para>The ID of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3301</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>Data source type.</para>
+            /// <para>The type of the data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceType { get; set; }
 
             /// <summary>
-            /// <para>Data type.</para>
+            /// <para>The data type of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>varchar</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataType { get; set; }
 
             /// <summary>
-            /// <para>Default value.</para>
+            /// <para>The default value of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -117,17 +117,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DefaultValue { get; set; }
 
             /// <summary>
-            /// <para>Column display name.</para>
+            /// <para>The display name of the field.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>年龄</para>
+            /// <para>Age</para>
             /// </summary>
             [NameInMap("DisplayName")]
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>Environment: dev or prod.</para>
+            /// <para>The environment to which the column belongs. Valid values: dev and prod.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dev</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>Column GUID.</para>
+            /// <para>The GUID of the column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1121.col1</para>
@@ -147,28 +147,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Guid { get; set; }
 
             /// <summary>
-            /// <para>Whether this is a foreign key.</para>
+            /// <para>Indicates whether the field is a foreign key.</para>
             /// </summary>
             [NameInMap("IsForeignKey")]
             [Validation(Required=false)]
             public bool? IsForeignKey { get; set; }
 
             /// <summary>
-            /// <para>Whether this is a partition column.</para>
+            /// <para>Indicates whether the field is a partition key.</para>
             /// </summary>
             [NameInMap("IsPartitionColumn")]
             [Validation(Required=false)]
             public bool? IsPartitionColumn { get; set; }
 
             /// <summary>
-            /// <para>Whether this is a primary key.</para>
+            /// <para>Indicates whether the field is a primary key.</para>
             /// </summary>
             [NameInMap("IsPrimaryKey")]
             [Validation(Required=false)]
             public bool? IsPrimaryKey { get; set; }
 
             /// <summary>
-            /// <para>Last modifier.</para>
+            /// <para>The last modifier of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30012011</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
-            /// <para>Data level abbreviation.</para>
+            /// <para>The abbreviation of the data level.</para>
             /// 
             /// <b>Example:</b>
             /// <para>L1</para>
@@ -188,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LevelAbbreviation { get; set; }
 
             /// <summary>
-            /// <para>Modification time.</para>
+            /// <para>The modification time of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-30 00:00:00</para>
@@ -198,7 +198,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ModifyTime { get; set; }
 
             /// <summary>
-            /// <para>Column name.</para>
+            /// <para>The name of the field.</para>
             /// 
             /// <b>Example:</b>
             /// <para>age</para>
@@ -208,14 +208,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Whether null values are allowed.</para>
+            /// <para>Indicates whether the field allows null values.</para>
             /// </summary>
             [NameInMap("Nullable")]
             [Validation(Required=false)]
             public bool? Nullable { get; set; }
 
             /// <summary>
-            /// <para>Sequence number.</para>
+            /// <para>The sequence number of the column.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? SeqNumber { get; set; }
 
             /// <summary>
-            /// <para>Table GUID.</para>
+            /// <para>The GUID of the table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1121</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TableGuid { get; set; }
 
             /// <summary>
-            /// <para>Table name.</para>
+            /// <para>The table name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t_test</para>
@@ -245,7 +245,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TableName { get; set; }
 
             /// <summary>
-            /// <para>Query count in the last 30 days.</para>
+            /// <para>The number of queries in the last 30 days.</para>
             /// 
             /// <b>Example:</b>
             /// <para>99</para>
@@ -257,7 +257,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>HTTP response code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -267,7 +267,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Backend response exception details.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -287,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Whether the request is successful.</para>
+        /// <para>Indicates whether the request was successful.</para>
         /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]

@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListKgRelationResponseBodyPageResult PageResult { get; set; }
         public class ListKgRelationResponseBodyPageResult : TeaModel {
             /// <summary>
-            /// <para>The paged relationship record list.</para>
+            /// <para>The list of paged relationship records.</para>
             /// </summary>
             [NameInMap("RelationList")]
             [Validation(Required=false)]
             public List<ListKgRelationResponseBodyPageResultRelationList> RelationList { get; set; }
             public class ListKgRelationResponseBodyPageResultRelationList : TeaModel {
                 /// <summary>
-                /// <para>The relationship record property list.</para>
+                /// <para>The list of properties for the relationship record.</para>
                 /// </summary>
                 [NameInMap("PropertyList")]
                 [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (float), BOOLEAN (boolean), DATE (date), LIST (list), and others.</para>
+                    /// <para>The data type of the property. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), and LIST (list).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>STRING</para>

@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListNodeDownStreamRequestListQuery ListQuery { get; set; }
         public class ListNodeDownStreamRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The depth. Default value: 3.</para>
+            /// <para>The depth of the downstream query. Default value: 3.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? DownStreamDepth { get; set; }
 
             /// <summary>
-            /// <para>The filters. You can include or exclude results based on projects or nodes. Default value: empty.</para>
+            /// <para>The list of filters. You can include or exclude results based on projects and nodes. Default value: empty.</para>
             /// </summary>
             [NameInMap("FilterList")]
             [Validation(Required=false)]
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <list type="bullet">
                 /// <item><description>PROJECT: project</description></item>
                 /// <item><description>PHYSICAL_NODE_ID: physical node ID</description></item>
-                /// <item><description>LOGICAL_TABLE_NODE_ID: logical table ID.</description></item>
+                /// <item><description>LOGICAL_TABLE_NODE_ID: logical table ID</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<ListNodeDownStreamRequestListQueryNodeIdList> NodeIdList { get; set; }
             public class ListNodeDownStreamRequestListQueryNodeIdList : TeaModel {
                 /// <summary>
-                /// <para>The list of field IDs. This parameter can be specified when the node ID is a logical table node ID. If this parameter is not specified, all fields in the table are used by default.</para>
+                /// <para>The list of field IDs. This parameter can be specified when the node ID is a logical table node ID. If this parameter is not specified, the full table is used by default.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>112</para>
@@ -134,6 +134,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

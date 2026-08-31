@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ImportKgSchemaRequest : TeaModel {
         /// <summary>
-        /// <para>The instruction for importing the knowledge graph definition.</para>
+        /// <para>The command for importing the knowledge graph definition.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,6 +62,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
         /// <summary>
         /// <para>The workspace ID.</para>

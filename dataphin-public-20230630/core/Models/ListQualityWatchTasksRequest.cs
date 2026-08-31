@@ -27,35 +27,35 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizDate { get; set; }
 
             /// <summary>
-            /// <para>The business unit names.</para>
+            /// <para>The name of the business unit to which the object belongs.</para>
             /// </summary>
             [NameInMap("BizUnitNameList")]
             [Validation(Required=false)]
             public List<string> BizUnitNameList { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to query only the quality monitoring node objects owned by the current user.</para>
+            /// <para>Specifies whether to query only the watchtask objects owned by the current user.</para>
             /// </summary>
             [NameInMap("CurrentUserOwned")]
             [Validation(Required=false)]
             public bool? CurrentUserOwned { get; set; }
 
             /// <summary>
-            /// <para>The data source IDs.</para>
+            /// <para>The data source ID.</para>
             /// </summary>
             [NameInMap("DataSourceIdList")]
             [Validation(Required=false)]
             public List<string> DataSourceIdList { get; set; }
 
             /// <summary>
-            /// <para>The data source owners.</para>
+            /// <para>The data source owner.</para>
             /// </summary>
             [NameInMap("DataSourceOwnerList")]
             [Validation(Required=false)]
             public List<string> DataSourceOwnerList { get; set; }
 
             /// <summary>
-            /// <para>The data source scopes. Valid values:</para>
+            /// <para>The data source scope. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>STREAMING: real-time only.</description></item>
             /// <item><description>OFFLINE: offline only.</description></item>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> DataSourceScopeList { get; set; }
 
             /// <summary>
-            /// <para>The data source types, such as MAX_COMPUTE, HADOOP, and MYSQL.</para>
+            /// <para>The data source type, such as MAX_COMPUTE, HADOOP, or MYSQL.</para>
             /// </summary>
             [NameInMap("DataSourceTypeList")]
             [Validation(Required=false)]
             public List<string> DataSourceTypeList { get; set; }
 
             /// <summary>
-            /// <para>The rule exception types. Valid values:</para>
+            /// <para>The rule exception type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>STRONG: strong.</description></item>
             /// <item><description>WEAK: weak.</description></item>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> ErrorRuleStrengthList { get; set; }
 
             /// <summary>
-            /// <para>The search keyword, which is the name of the monitored table.</para>
+            /// <para>The search keyword. This parameter specifies the name of the monitored table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -115,21 +115,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The project names.</para>
+            /// <para>The name of the project to which the object belongs.</para>
             /// </summary>
             [NameInMap("ProjectNameList")]
             [Validation(Required=false)]
             public List<string> ProjectNameList { get; set; }
 
             /// <summary>
-            /// <para>The quality owners.</para>
+            /// <para>The quality owner.</para>
             /// </summary>
             [NameInMap("QualityOwnerList")]
             [Validation(Required=false)]
             public List<string> QualityOwnerList { get; set; }
 
             /// <summary>
-            /// <para>The task statuses. Valid values:</para>
+            /// <para>The task status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>NOT_RUN: not executed.</description></item>
             /// <item><description>WAITING: waiting.</description></item>
@@ -146,14 +146,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> StatusList { get; set; }
 
             /// <summary>
-            /// <para>The table owners.</para>
+            /// <para>The table owner.</para>
             /// </summary>
             [NameInMap("TableOwnerList")]
             [Validation(Required=false)]
             public List<string> TableOwnerList { get; set; }
 
             /// <summary>
-            /// <para>The table types. Valid values:</para>
+            /// <para>The table type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>LOGIC_DIM_TABLE: logical dimension table.</description></item>
             /// <item><description>LOGIC_FACT_TABLE: logical fact table.</description></item>
@@ -168,10 +168,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> TableTypeList { get; set; }
 
             /// <summary>
-            /// <para>The monitored object types. Valid values:</para>
+            /// <para>The monitored object type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>TABLE: Dataphin table.</description></item>
-            /// <item><description>DATASOURCE_TABLE: global table.</description></item>
+            /// <item><description>DATASOURCE_TABLE: global domain table.</description></item>
             /// <item><description>DATASOURCE: data source.</description></item>
             /// <item><description>INDEX: metric.</description></item>
             /// <item><description>REALTIME_LOGICAL_TABLE: real-time meta table.</description></item>
@@ -193,6 +193,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

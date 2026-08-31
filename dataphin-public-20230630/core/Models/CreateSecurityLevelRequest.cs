@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The sort order of the classification level. If this parameter is not specified, the current maximum order ID is used by default.</para>
+            /// <para>The order of the classification level. If this parameter is not specified, the current maximum order ID is used by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -70,6 +70,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

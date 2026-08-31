@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string HostMachine { get; set; }
 
             /// <summary>
-            /// <para>The scheduling node ID of the workflow node after successful creation.</para>
+            /// <para>The scheduling node ID of the workflow node created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n_123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The workflow ID after successful creation.</para>
+            /// <para>The workflow ID generated after successful creation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? PipelineId { get; set; }
 
             /// <summary>
-            /// <para>The submit ID generated for the pending publish list after submission. Use this ID to publish through the publish domain. You can ignore this value for BASIC projects.</para>
+            /// <para>The submit ID of the pending publish list generated after a successful submission. Use this ID to publish through the publish domain. You can ignore this value for BASIC projects.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7891</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error details returned by the backend.</para>
+        /// <para>The error message returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

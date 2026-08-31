@@ -21,6 +21,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
+
+        /// <summary>
         /// <para>The update instruction.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -68,12 +76,12 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The visibility scope of the classification folder. This parameter takes effect only when the parent folder is the root folder. Valid values:</para>
+            /// <para>The visibility scope of the classification. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PUBLIC: visible to all users.</description></item>
-            /// <item><description>PRIVATE: visible only to administrators.
-            /// Default value: PUBLIC.</description></item>
+            /// <item><description>PRIVATE: visible only to administrators.</description></item>
             /// </list>
+            /// <para>Default value: PUBLIC. This parameter takes effect only when the parent folder is the root folder.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PUBLIC</para>

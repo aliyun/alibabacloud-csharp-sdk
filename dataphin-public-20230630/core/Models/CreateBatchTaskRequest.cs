@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateBatchTaskRequestCreateCommand CreateCommand { get; set; }
         public class CreateBatchTaskRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The catalog for a database SQL node. This parameter takes effect only for data source types that require a catalog, such as Presto.</para>
+            /// <para>The catalog for database SQL nodes. This parameter takes effect only for data source types that require a catalog, such as Presto.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql_catalog</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceCatalog { get; set; }
 
             /// <summary>
-            /// <para>The data source ID for a database SQL node.</para>
+            /// <para>The data source ID for database SQL nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12131111</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The schema for a database SQL node. This parameter takes effect only for data source types that require a schema, such as Oracle.</para>
+            /// <para>The schema for database SQL nodes. This parameter takes effect only for data source types that require a schema, such as Oracle.</para>
             /// 
             /// <b>Example:</b>
             /// <para>erp</para>
@@ -59,6 +59,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The list of development owner IDs.</para>
+            /// </summary>
+            [NameInMap("DevelopOwnerIdList")]
+            [Validation(Required=false)]
+            public List<string> DevelopOwnerIdList { get; set; }
+
+            /// <summary>
             /// <para>The folder path in the menu tree to which the node belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
@@ -70,11 +77,20 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The execution engine for the node, such as a Python node. Valid values:</para>
+            /// <para>The execution engine for the node, such as for Python nodes. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>1: PYTHON2_7</description></item>
-            /// <item><description>2: PYTHON3_7</description></item>
-            /// <item><description>3: PYTHON3_11.</description></item>
+            /// <item><description><ol>
+            /// <item><description>PYTHON2_7</description></item>
+            /// </ol>
+            /// </description></item>
+            /// <item><description><ol start="2">
+            /// <item><description>PYTHON3_7</description></item>
+            /// </ol>
+            /// </description></item>
+            /// <item><description><ol start="3">
+            /// <item><description>PYTHON3_11</description></item>
+            /// </ol>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,6 +112,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
+            /// <para>The list of O&amp;M owner IDs.</para>
+            /// </summary>
+            [NameInMap("OpsOwnerIdList")]
+            [Validation(Required=false)]
+            public List<string> OpsOwnerIdList { get; set; }
+
+            /// <summary>
             /// <para>The ID of the project to which the node belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
@@ -107,14 +130,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The list of third-party Python packages that the node depends on.</para>
+            /// <para>The list of Python third-party packages that the node depends on.</para>
             /// </summary>
             [NameInMap("PythonModuleList")]
             [Validation(Required=false)]
             public List<string> PythonModuleList { get; set; }
 
             /// <summary>
-            /// <para>The scheduling type. Valid values:</para>
+            /// <para>The schedule type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: periodic node.</description></item>
             /// <item><description>3: manual node.</description></item>
@@ -174,7 +197,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <item><description>SPARK_SQL: 80</description></item>
             /// <item><description>GAUSS_SQL: 81</description></item>
             /// <item><description>DATABASE_SQL: 998</description></item>
-            /// <item><description>EXTERNAL_TRIGGER: 997.</description></item>
+            /// <item><description>EXTERNAL_TRIGGER: 997</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -197,6 +220,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

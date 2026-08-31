@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListSecurityIdentifyRecordsRequestListQuery ListQuery { get; set; }
         public class ListSecurityIdentifyRecordsRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>The datasource environment identifier. This parameter is required only for datasource tables.</para>
+            /// <para>The data source environment identifier. This parameter is required only for data source tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DatasourceEnv { get; set; }
 
             /// <summary>
-            /// <para>The datasource name. This parameter is required only for datasource tables.</para>
+            /// <para>The data source name. This parameter is required only for data source tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FieldName { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether the table is a datasource table. Default value: false (treated as a Dataphin table).</para>
+            /// <para>Specifies whether the table is a data source table. Default value: false (treated as a Dataphin table).</para>
             /// </summary>
             [NameInMap("IsDatasourceTable")]
             [Validation(Required=false)]
             public bool? IsDatasourceTable { get; set; }
 
             /// <summary>
-            /// <para>The search keyword. The search scope is the field name.</para>
+            /// <para>The search keyword. The search scope is field names.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The table catalog. For datasource tables, specify the database or schema name. For Dataphin physical tables, specify the project name in English. For Dataphin logical tables, specify the business unit name in English.</para>
+            /// <para>The table catalog. For data source tables, specify the database or schema name. For Dataphin physical tables, specify the project name in English. For Dataphin logical tables, specify the business unit name in English.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -119,6 +119,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

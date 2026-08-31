@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The node details.</para>
+        /// <para>The task details.</para>
         /// </summary>
         [NameInMap("TaskInfo")]
         [Validation(Required=false)]
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo TaskInfo { get; set; }
         public class GetBatchTaskInfoByVersionResponseBodyTaskInfo : TeaModel {
             /// <summary>
-            /// <para>The node code.</para>
+            /// <para>The task code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>show tables;</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The cron expression for automatic scheduling. For more information, refer to the Linux cron expression syntax.</para>
+            /// <para>The cron expression for automatic scheduling. Refer to the Linux cron expression syntax.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 1 * * ?</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The ID of the DAG to which the node belongs.</para>
+            /// <para>The ID of the DAG to which the task belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dag_102121211</para>
@@ -183,7 +183,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceSchema { get; set; }
 
             /// <summary>
-            /// <para>The node ID in the node directory tree.</para>
+            /// <para>The list of development owner IDs.</para>
+            /// </summary>
+            [NameInMap("DevelopOwnerIdList")]
+            [Validation(Required=false)]
+            public List<string> DevelopOwnerIdList { get; set; }
+
+            /// <summary>
+            /// <para>The list of development owner names.</para>
+            /// </summary>
+            [NameInMap("DevelopOwnerNameList")]
+            [Validation(Required=false)]
+            public List<string> DevelopOwnerNameList { get; set; }
+
+            /// <summary>
+            /// <para>The node ID in the directory tree.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12113111</para>
@@ -193,34 +207,34 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? FileId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the node has a development environment node.</para>
+            /// <para>Indicates whether the task has a development environment node.</para>
             /// </summary>
             [NameInMap("HasDevNode")]
             [Validation(Required=false)]
             public bool? HasDevNode { get; set; }
 
             /// <summary>
-            /// <para>The node name.</para>
+            /// <para>The task name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试任务1</para>
+            /// <para>TestTask1</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the node needs to be published.</para>
+            /// <para>Indicates whether the task needs to be published.</para>
             /// </summary>
             [NameInMap("NeedPublish")]
             [Validation(Required=false)]
             public bool? NeedPublish { get; set; }
 
             /// <summary>
-            /// <para>The node description.</para>
+            /// <para>The task description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xxTest</para>
             /// </summary>
             [NameInMap("NodeDescription")]
             [Validation(Required=false)]
@@ -250,7 +264,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The node name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试任务1</para>
+            /// <para>TestTask1</para>
             /// </summary>
             [NameInMap("NodeName")]
             [Validation(Required=false)]
@@ -289,10 +303,24 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OperatorUserId { get; set; }
 
             /// <summary>
+            /// <para>The list of O&amp;M owner IDs.</para>
+            /// </summary>
+            [NameInMap("OpsOwnerIdList")]
+            [Validation(Required=false)]
+            public List<string> OpsOwnerIdList { get; set; }
+
+            /// <summary>
+            /// <para>The list of O&amp;M owner names.</para>
+            /// </summary>
+            [NameInMap("OpsOwnerNameList")]
+            [Validation(Required=false)]
+            public List<string> OpsOwnerNameList { get; set; }
+
+            /// <summary>
             /// <para>The name of the node owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>John</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]
@@ -309,7 +337,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OwnerUserId { get; set; }
 
             /// <summary>
-            /// <para>The list of custom node parameters.</para>
+            /// <para>The list of custom parameters for the node.</para>
             /// </summary>
             [NameInMap("ParamList")]
             [Validation(Required=false)]
@@ -338,7 +366,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether the node scheduling is paused.</para>
+            /// <para>Indicates whether the node is paused for scheduling.</para>
             /// </summary>
             [NameInMap("Paused")]
             [Validation(Required=false)]
@@ -365,7 +393,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the node has been published.</para>
+            /// <para>Indicates whether the task is published.</para>
             /// </summary>
             [NameInMap("Published")]
             [Validation(Required=false)]
@@ -396,7 +424,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <item><description>WEEKLY</description></item>
             /// <item><description>DAILY</description></item>
             /// <item><description>HOURLY</description></item>
-            /// <item><description>MINUTELY.</description></item>
+            /// <item><description>MINUTELY</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -407,7 +435,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SchedulePeriod { get; set; }
 
             /// <summary>
-            /// <para>The scheduling type. Valid values:</para>
+            /// <para>The node type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: periodic node.</description></item>
             /// <item><description>3: manual node.</description></item>
@@ -428,7 +456,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetBatchTaskInfoByVersionResponseBodyTaskInfoSparkClientInfo SparkClientInfo { get; set; }
             public class GetBatchTaskInfoByVersionResponseBodyTaskInfoSparkClientInfo : TeaModel {
                 /// <summary>
-                /// <para>The Spark client version.</para>
+                /// <para>The Spark client version name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abc</para>
@@ -440,7 +468,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The publish status. Valid values:</para>
+            /// <para>The submit status. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>0: draft.</description></item>
             /// <item><description>1: submitted.</description></item>
@@ -448,14 +476,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>测试任务1</para>
+            /// <para>TestTask1</para>
             /// </summary>
             [NameInMap("Status")]
             [Validation(Required=false)]
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The node type. For more information, see the API operation for creating a batch task.</para>
+            /// <para>The task type. For more information, refer to the API operation for creating batch tasks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>21</para>
@@ -494,7 +522,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <item><description>CURRENT_PERIOD</description></item>
                     /// <item><description>LAST_PERIOD</description></item>
                     /// <item><description>LAST_N_PERIOD</description></item>
-                    /// <item><description>LAST_24_HOUR.</description></item>
+                    /// <item><description>LAST_24_HOUR</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -517,7 +545,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DependStrategy { get; set; }
 
                 /// <summary>
-                /// <para>The fields of the dependent logical table.</para>
+                /// <para>The dependent logical table fields.</para>
                 /// </summary>
                 [NameInMap("FieldList")]
                 [Validation(Required=false)]
@@ -538,7 +566,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The period difference. A value of 0 indicates a same-period dependency. A positive number indicates a dependency on the previous N periods.</para>
+                /// <para>The period difference. A value of 0 indicates a same-cycle dependency. A positive number indicates a dependency on the previous N cycles.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -588,7 +616,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The username of the upstream node owner.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>John</para>
                 /// </summary>
                 [NameInMap("SourceNodeUserName")]
                 [Validation(Required=false)]

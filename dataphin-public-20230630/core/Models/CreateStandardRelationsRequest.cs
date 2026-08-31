@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateStandardRelationsRequestCreateCommand CreateCommand { get; set; }
         public class CreateStandardRelationsRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The standard association type: RELATIVE.</para>
+            /// <para>The standard association relationship type: RELATIVE.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -72,6 +72,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

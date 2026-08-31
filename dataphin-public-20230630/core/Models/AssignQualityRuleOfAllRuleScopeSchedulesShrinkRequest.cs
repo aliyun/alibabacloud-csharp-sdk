@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class AssignQualityRuleOfAllRuleScopeSchedulesShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The assignment binding instruction.</para>
+        /// <para>The assignment binding command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AssignCommand")]
@@ -27,6 +27,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

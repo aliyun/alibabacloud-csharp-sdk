@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The asset type. Default value: TABLE. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>TABLE: table, including views and materialized views.</description></item>
-            /// <item><description>INDEX: technical metric.</description></item>
-            /// <item><description>BIZ_INDEX: business metric.</description></item>
-            /// <item><description>API: API.</description></item>
-            /// <item><description>PAGE: dashboard.</description></item>
+            /// <item><description>TABLE: tables, including views and materialized views.</description></item>
+            /// <item><description>INDEX: technical metrics.</description></item>
+            /// <item><description>BIZ_INDEX: business metrics.</description></item>
+            /// <item><description>API</description></item>
+            /// <item><description>PAGE: dashboards.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AssetType { get; set; }
 
             /// <summary>
-            /// <para>The search keyword. Used when queryMode is set to ASSET_SEARCH. Supports keyword matching against the asset full name, asset name, asset display name, and asset description. If this parameter is not specified, all assets are queried.</para>
+            /// <para>The search keyword. Used when queryMode is set to ASSET_SEARCH. Supports keyword matching against the asset full name, asset name, asset display name, and asset description. If not specified, all assets are returned by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Keyword { get; set; }
 
             /// <summary>
-            /// <para>The asset name. Used when queryMode is set to EXACT_MATCH. If this parameter is not specified, all assets are queried.</para>
+            /// <para>The asset name. Used when queryMode is set to EXACT_MATCH. If not specified, all assets are returned by default.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The query type. Determines whether to use name for exact matching or keyword for fuzzy search. Default value: EXACT_MATCH. Valid values:</para>
+            /// <para>The query type. Determines whether to use name for exact match or keyword for fuzzy search. Default value: EXACT_MATCH. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>EXACT_MATCH: exact match.</description></item>
             /// <item><description>ASSET_SEARCH: fuzzy search.</description></item>
@@ -87,6 +87,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [NameInMap("QueryMode")]
             [Validation(Required=false)]
             public string QueryMode { get; set; }
+
+            /// <summary>
+            /// <para>The list of folder IDs to which the assets belong. Multiple folders are matched with OR logic. Only the specified folders are matched, and subfolders are not included.</para>
+            /// </summary>
+            [NameInMap("ShelveDirectoryIds")]
+            [Validation(Required=false)]
+            public List<long?> ShelveDirectoryIds { get; set; }
 
         }
 
@@ -100,6 +107,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

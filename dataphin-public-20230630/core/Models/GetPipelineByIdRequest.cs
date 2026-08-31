@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Env { get; set; }
 
             /// <summary>
-            /// <para>The project ID to which the integration pipeline node belongs.</para>
+            /// <para>The ID of the project to which the integration pipeline node belongs.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -57,7 +57,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The query ID used to query the pipeline node.</para>
+        /// <para>The ID of the operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
+
+        /// <summary>
+        /// <para>The ID used to query the pipeline node.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("QueryId")]

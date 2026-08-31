@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Environment identifier</para>
+        /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: Development environment</description></item>
-        /// <item><description>PROD (default): Production environment</description></item>
+        /// <item><description>DEV: Development environment. </description></item>
+        /// <item><description>PROD (default): Production environment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,17 +24,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>Query Request</para>
+        /// <para>The query request.</para>
         /// </summary>
         [NameInMap("ListQuery")]
         [Validation(Required=false)]
         public ListInstancesRequestListQuery ListQuery { get; set; }
         public class ListInstancesRequestListQuery : TeaModel {
             /// <summary>
-            /// <para>Business Type</para>
+            /// <para>The business type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SCRIPT: Script Instance</description></item>
-            /// <item><description>LOGICAL_TABLE: Logical Table</description></item>
+            /// <item><description>SCRIPT: Script instance.</description></item>
+            /// <item><description>LOGICAL_TABLE: Logical table.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BizType { get; set; }
 
             /// <summary>
-            /// <para>Business unit ID. Required when querying summary logical tables.</para>
+            /// <para>The business unit ID. Required when querying aggregate logical tables.</para>
             /// 
             /// <b>Example:</b>
             /// <para>6232322111</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BizUnitId { get; set; }
 
             /// <summary>
-            /// <para>Workflow ID</para>
+            /// <para>The workflow ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1021</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FlowId { get; set; }
 
             /// <summary>
-            /// <para>End business date and time. The time format must conform to the partition format specified by the business unit.</para>
+            /// <para>The end business date and time. The time format must match the partition format specified by the business unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-31</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MaxBizDate { get; set; }
 
             /// <summary>
-            /// <para>Maximum instance run time</para>
+            /// <para>The maximum instance run time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-31</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MaxRunDate { get; set; }
 
             /// <summary>
-            /// <para>Start business date and time. The time format must conform to the partition format specified by the business unit.</para>
+            /// <para>The start business date and time. The time format must match the partition format specified by the business unit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-30</para>
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MinBizDate { get; set; }
 
             /// <summary>
-            /// <para>Minimum instance run time</para>
+            /// <para>The minimum instance run time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-05-30</para>
@@ -105,7 +105,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MinRunDate { get; set; }
 
             /// <summary>
-            /// <para>Node ID</para>
+            /// <para>The node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n_23131</para>
@@ -115,14 +115,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>Node Owner</para>
+            /// <para>The node owners.</para>
             /// </summary>
             [NameInMap("OwnerList")]
             [Validation(Required=false)]
             public List<string> OwnerList { get; set; }
 
             /// <summary>
-            /// <para>Page Number</para>
+            /// <para>The page number.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>Page Size</para>
+            /// <para>The number of entries per page.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Priority</para>
+            /// <para>The priority. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HIGHEST</description></item>
             /// <item><description>HIGH</description></item>
@@ -158,7 +158,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> PriorityList { get; set; }
 
             /// <summary>
-            /// <para>Project ID</para>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -169,16 +169,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>Running status</para>
+            /// <para>The run status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>INIT: Initialized</description></item>
-            /// <item><description>WAIT_SUBMISSION: Waiting for Submission</description></item>
-            /// <item><description>WAIT_SCHEDULE: Waiting for Schedule Time</description></item>
-            /// <item><description>DISPATCH_BLOCKED: Throttled</description></item>
-            /// <item><description>WAIT_RESOURCE: Waiting for Scheduling Resources</description></item>
-            /// <item><description>RUNNING: Running</description></item>
-            /// <item><description>SUCCESS: Succeeded</description></item>
-            /// <item><description>FAILED: Failed</description></item>
+            /// <item><description>INIT: Init.</description></item>
+            /// <item><description>WAIT_SUBMISSION: Waiting for submission.</description></item>
+            /// <item><description>WAIT_SCHEDULE: Waiting for schedule time.</description></item>
+            /// <item><description>DISPATCH_BLOCKED: Throttled.</description></item>
+            /// <item><description>WAIT_RESOURCE: Waiting for schedule resource.</description></item>
+            /// <item><description>RUNNING: Running.</description></item>
+            /// <item><description>SUCCESS: Succeeded.</description></item>
+            /// <item><description>FAILED: Failed.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("RunStatusList")]
@@ -186,14 +186,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> RunStatusList { get; set; }
 
             /// <summary>
-            /// <para>Whether scheduling is paused</para>
+            /// <para>Specifies whether scheduling is paused.</para>
             /// </summary>
             [NameInMap("SchedulePaused")]
             [Validation(Required=false)]
             public bool? SchedulePaused { get; set; }
 
             /// <summary>
-            /// <para>Schedule Period</para>
+            /// <para>The scheduling period. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>YEARLY</description></item>
             /// <item><description>MONTHLY</description></item>
@@ -208,10 +208,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> SchedulePeriodList { get; set; }
 
             /// <summary>
-            /// <para>Instance schedule type</para>
+            /// <para>The instance scheduling type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NORMAL (Periodic Instance)</description></item>
-            /// <item><description>MANUAL (Manual Instance)</description></item>
+            /// <item><description>NORMAL: Periodic instance.</description></item>
+            /// <item><description>MANUAL: Manual instance.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -223,7 +223,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ScheduleType { get; set; }
 
             /// <summary>
-            /// <para>Fuzzy match by node name or exact match by node ID</para>
+            /// <para>Fuzzy match by node name or exact match by node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xx</para>
@@ -233,7 +233,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string SearchText { get; set; }
 
             /// <summary>
-            /// <para>Sub-business Type</para>
+            /// <para>The sub-business type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>MAX_COMPUTE_SQL</description></item>
             /// <item><description>HIVE_SQL</description></item>
@@ -247,10 +247,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             [Validation(Required=false)]
             public List<string> SubBizTypeList { get; set; }
 
+            /// <summary>
+            /// <para>The node tag filter list. Each element is a numeric string of a node tag ID (such as &quot;123&quot;). Filters the instance list by node tags. If not specified or empty, no filtering is applied and all instances are returned. Multiple tags use OR logic. Invalid elements (non-numeric or overflow) are ignored.</para>
+            /// </summary>
+            [NameInMap("TagList")]
+            [Validation(Required=false)]
+            public List<string> TagList { get; set; }
+
         }
 
         /// <summary>
-        /// <para>Tenant ID</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -259,6 +266,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The operator user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

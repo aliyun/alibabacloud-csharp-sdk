@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public List<GetPhysicalInstanceLogResponseBodyTaskrunLogList> TaskrunLogList { get; set; }
         public class GetPhysicalInstanceLogResponseBodyTaskrunLogList : TeaModel {
             /// <summary>
-            /// <para>The execution duration of the task. Unit: seconds.</para>
+            /// <para>The task execution duration, in seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>60s</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The execution log content. This value is empty if the task has not been run.</para>
+            /// <para>The run log content. This value is empty if the task has not been run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xx</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The execution status.</para>
+            /// <para>The run status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUCCESS</para>

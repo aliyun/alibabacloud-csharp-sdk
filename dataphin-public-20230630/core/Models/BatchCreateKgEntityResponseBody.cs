@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public BatchCreateKgEntityResponseBodyCreateResult CreateResult { get; set; }
         public class BatchCreateKgEntityResponseBodyCreateResult : TeaModel {
             /// <summary>
-            /// <para>The number of failed records.</para>
+            /// <para>The number of entity records that failed to be created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? FailCount { get; set; }
 
             /// <summary>
-            /// <para>The number of successfully created records.</para>
+            /// <para>The number of successfully created entity records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

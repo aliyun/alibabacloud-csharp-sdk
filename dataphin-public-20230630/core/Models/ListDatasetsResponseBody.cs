@@ -313,6 +313,281 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 [Validation(Required=false)]
                 public List<ListDatasetsResponseBodyPageResultResultDataVersionList> VersionList { get; set; }
                 public class ListDatasetsResponseBodyPageResultResultDataVersionList : TeaModel {
+                    [NameInMap("ApiInfo")]
+                    [Validation(Required=false)]
+                    public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo ApiInfo { get; set; }
+                    public class ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>1012</para>
+                        /// </summary>
+                        [NameInMap("ApiNo")]
+                        [Validation(Required=false)]
+                        public long? ApiNo { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>60</para>
+                        /// </summary>
+                        [NameInMap("ExecTimeout")]
+                        [Validation(Required=false)]
+                        public int? ExecTimeout { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
+                        [NameInMap("ExecuteMode")]
+                        [Validation(Required=false)]
+                        public int? ExecuteMode { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1011</para>
+                        /// </summary>
+                        [NameInMap("OsApiGroup")]
+                        [Validation(Required=false)]
+                        public int? OsApiGroup { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>test</para>
+                        /// </summary>
+                        [NameInMap("OsApiGroupName")]
+                        [Validation(Required=false)]
+                        public string OsApiGroupName { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1012</para>
+                        /// </summary>
+                        [NameInMap("OsProject")]
+                        [Validation(Required=false)]
+                        public int? OsProject { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>test</para>
+                        /// </summary>
+                        [NameInMap("OsProjectName")]
+                        [Validation(Required=false)]
+                        public string OsProjectName { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
+                        [NameInMap("Protocol")]
+                        [Validation(Required=false)]
+                        public int? Protocol { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>1</para>
+                        /// </summary>
+                        [NameInMap("RequestMethod")]
+                        [Validation(Required=false)]
+                        public int? RequestMethod { get; set; }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// </summary>
+                        [NameInMap("RequestParamList")]
+                        [Validation(Required=false)]
+                        public List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList> RequestParamList { get; set; }
+                        public class ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>yyyyMMdd</para>
+                            /// </summary>
+                            [NameInMap("DateFormat")]
+                            [Validation(Required=false)]
+                            public string DateFormat { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>test</para>
+                            /// </summary>
+                            [NameInMap("DefaultValue")]
+                            [Validation(Required=false)]
+                            public string DefaultValue { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>test</para>
+                            /// </summary>
+                            [NameInMap("Descr")]
+                            [Validation(Required=false)]
+                            public string Descr { get; set; }
+
+                            [NameInMap("IsUrl")]
+                            [Validation(Required=false)]
+                            public bool? IsUrl { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>col02</para>
+                            /// </summary>
+                            [NameInMap("MappingColumn")]
+                            [Validation(Required=false)]
+                            public string MappingColumn { get; set; }
+
+                            [NameInMap("Must")]
+                            [Validation(Required=false)]
+                            public bool? Must { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>=</para>
+                            /// </summary>
+                            [NameInMap("Operator")]
+                            [Validation(Required=false)]
+                            public string Operator { get; set; }
+
+                            [NameInMap("Optional")]
+                            [Validation(Required=false)]
+                            public bool? Optional { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>colx</para>
+                            /// </summary>
+                            [NameInMap("OriginalColumn")]
+                            [Validation(Required=false)]
+                            public string OriginalColumn { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>p1</para>
+                            /// </summary>
+                            [NameInMap("ParamName")]
+                            [Validation(Required=false)]
+                            public string ParamName { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>int</para>
+                            /// </summary>
+                            [NameInMap("ParamType")]
+                            [Validation(Required=false)]
+                            public string ParamType { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>test</para>
+                            /// </summary>
+                            [NameInMap("Sample")]
+                            [Validation(Required=false)]
+                            public string Sample { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>1</para>
+                            /// </summary>
+                            [NameInMap("SeqNum")]
+                            [Validation(Required=false)]
+                            public int? SeqNum { get; set; }
+
+                        }
+
+                        [NameInMap("ResponseParamList")]
+                        [Validation(Required=false)]
+                        public List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList> ResponseParamList { get; set; }
+                        public class ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>yyyyMMdd</para>
+                            /// </summary>
+                            [NameInMap("DateFormat")]
+                            [Validation(Required=false)]
+                            public string DateFormat { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>test</para>
+                            /// </summary>
+                            [NameInMap("Descr")]
+                            [Validation(Required=false)]
+                            public string Descr { get; set; }
+
+                            [NameInMap("IsUrl")]
+                            [Validation(Required=false)]
+                            public bool? IsUrl { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>col1</para>
+                            /// </summary>
+                            [NameInMap("MappingColumn")]
+                            [Validation(Required=false)]
+                            public string MappingColumn { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>colx</para>
+                            /// </summary>
+                            [NameInMap("OriginalColumn")]
+                            [Validation(Required=false)]
+                            public string OriginalColumn { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>p2</para>
+                            /// </summary>
+                            [NameInMap("ParamName")]
+                            [Validation(Required=false)]
+                            public string ParamName { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>int</para>
+                            /// </summary>
+                            [NameInMap("ParamType")]
+                            [Validation(Required=false)]
+                            public string ParamType { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>test</para>
+                            /// </summary>
+                            [NameInMap("Sample")]
+                            [Validation(Required=false)]
+                            public string Sample { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>1</para>
+                            /// </summary>
+                            [NameInMap("SeqNum")]
+                            [Validation(Required=false)]
+                            public string SeqNum { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>This parameter is required.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>60</para>
+                        /// </summary>
+                        [NameInMap("Timeout")]
+                        [Validation(Required=false)]
+                        public int? Timeout { get; set; }
+
+                    }
+
                     /// <summary>
                     /// <para>The creator ID.</para>
                     /// 

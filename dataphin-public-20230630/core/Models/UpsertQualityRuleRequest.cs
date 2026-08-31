@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class UpsertQualityRuleRequest : TeaModel {
         /// <summary>
-        /// <para>Tenant ID.</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
-        /// <para>The upsert command.</para>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
+
+        /// <summary>
+        /// <para>The update command.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("UpsertCommand")]
@@ -29,14 +39,44 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpsertQualityRuleRequestUpsertCommand UpsertCommand { get; set; }
         public class UpsertQualityRuleRequestUpsertCommand : TeaModel {
             /// <summary>
-            /// <para>The rule business attribute configuration.</para>
+            /// <para>The exception archive mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>ONLY_ERROR_FIELD: Archives only the exception fields.</description></item>
+            /// <item><description>FULL_RECORD: Archives the complete record.</description></item>
+            /// </list>
+            /// <para>Default value: ONLY_ERROR_FIELD.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ONLY_ERROR_FIELD</para>
+            /// </summary>
+            [NameInMap("ArchiveMode")]
+            [Validation(Required=false)]
+            public string ArchiveMode { get; set; }
+
+            /// <summary>
+            /// <para>The exception archive storage type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>FILE_SYSTEM: File system.</description></item>
+            /// <item><description>CUSTOM_TABLE: Custom table.</description></item>
+            /// </list>
+            /// <para>Default value: FILE_SYSTEM.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>FILE_SYSTEM</para>
+            /// </summary>
+            [NameInMap("ArchiveStoreType")]
+            [Validation(Required=false)]
+            public string ArchiveStoreType { get; set; }
+
+            /// <summary>
+            /// <para>The rule business property configuration.</para>
             /// </summary>
             [NameInMap("AttributeWithValueList")]
             [Validation(Required=false)]
             public List<UpsertQualityRuleRequestUpsertCommandAttributeWithValueList> AttributeWithValueList { get; set; }
             public class UpsertQualityRuleRequestUpsertCommandAttributeWithValueList : TeaModel {
                 /// <summary>
-                /// <para>The attribute details.</para>
+                /// <para>The property details.</para>
                 /// </summary>
                 [NameInMap("AttributeInfo")]
                 [Validation(Required=false)]
@@ -53,14 +93,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Description { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to enable the attribute.</para>
+                    /// <para>Indicates whether the property is enabled.</para>
                     /// </summary>
                     [NameInMap("Enabled")]
                     [Validation(Required=false)]
                     public bool? Enabled { get; set; }
 
                     /// <summary>
-                    /// <para>The attribute ID.</para>
+                    /// <para>The property ID.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>711484689131</para>
@@ -70,7 +110,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>The attribute name.</para>
+                    /// <para>The property name.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>attr01</para>
@@ -80,28 +120,36 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Name { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether the attribute is required.</para>
+                    /// <para>Indicates whether the property is required.</para>
                     /// </summary>
                     [NameInMap("Required")]
                     [Validation(Required=false)]
                     public bool? Required { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether the attribute is searchable.</para>
+                    /// <para>Indicates whether the property is searchable.</para>
                     /// </summary>
                     [NameInMap("Searchable")]
                     [Validation(Required=false)]
                     public bool? Searchable { get; set; }
 
                     /// <summary>
-                    /// <para>The attribute value configuration details.</para>
+                    /// <para>The property value configuration details.</para>
                     /// </summary>
                     [NameInMap("ValueConfig")]
                     [Validation(Required=false)]
                     public UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeInfoValueConfig ValueConfig { get; set; }
                     public class UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeInfoValueConfig : TeaModel {
                         /// <summary>
-                        /// <para>The attribute field type. Valid values: STRING (Text), BIGINT (Integer), DOUBLE (Floating-point), BOOLEAN (Boolean), DATE (Date), DATETIME (Datetime).</para>
+                        /// <para>The property field data type. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>STRING: text.</description></item>
+                        /// <item><description>BIGINT: integer.</description></item>
+                        /// <item><description>DOUBLE: floating-point.</description></item>
+                        /// <item><description>BOOLEAN: Boolean.</description></item>
+                        /// <item><description>DATE: date.</description></item>
+                        /// <item><description>DATETIME: datetime.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>STRING</para>
@@ -111,28 +159,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string DataType { get; set; }
 
                         /// <summary>
-                        /// <para>The attribute default value.</para>
+                        /// <para>The property default value.</para>
                         /// </summary>
                         [NameInMap("DefaultValue")]
                         [Validation(Required=false)]
                         public UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeInfoValueConfigDefaultValue DefaultValue { get; set; }
                         public class UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeInfoValueConfigDefaultValue : TeaModel {
                             /// <summary>
-                            /// <para>Specifies whether to include the maximum value.</para>
+                            /// <para>Indicates whether the maximum value is included.</para>
                             /// </summary>
                             [NameInMap("IncludeMaxValue")]
                             [Validation(Required=false)]
                             public bool? IncludeMaxValue { get; set; }
 
                             /// <summary>
-                            /// <para>Specifies whether to include the minimum value.</para>
+                            /// <para>Indicates whether the minimum value is included.</para>
                             /// </summary>
                             [NameInMap("IncludeMinValue")]
                             [Validation(Required=false)]
                             public bool? IncludeMinValue { get; set; }
 
                             /// <summary>
-                            /// <para>The maximum value. Applicable to range interval attributes.</para>
+                            /// <para>The maximum value. This parameter applies to range interval properties.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>11</para>
@@ -142,7 +190,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public string MaxValue { get; set; }
 
                             /// <summary>
-                            /// <para>The minimum value. Applicable to range interval attributes.</para>
+                            /// <para>The minimum value. This parameter applies to range interval properties.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>1</para>
@@ -152,7 +200,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                             public string MinValue { get; set; }
 
                             /// <summary>
-                            /// <para>The attribute value list. Applicable to attributes with the custom input, single-select dropdown, or multi-select dropdown input method.</para>
+                            /// <para>The property value list. This parameter applies to properties whose input method is custom input, single-select dropdown, or multi-select dropdown.</para>
                             /// </summary>
                             [NameInMap("ValueList")]
                             [Validation(Required=false)]
@@ -161,7 +209,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         }
 
                         /// <summary>
-                        /// <para>The attribute field length. Used to constrain the maximum length of text-type attribute values.</para>
+                        /// <para>The property field length. You can use this parameter to constrain the maximum length of text-type property values.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>986992</para>
@@ -171,7 +219,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public int? Length { get; set; }
 
                         /// <summary>
-                        /// <para>The attribute value input method. Valid values: CUSTOMIZED (Custom input), SINGLE_ENUM (Single-select dropdown), MULTIPLE_ENUMS (Multi-select dropdown), RANGE (Range interval).</para>
+                        /// <para>The property value input method. Valid values:</para>
+                        /// <list type="bullet">
+                        /// <item><description>CUSTOMIZED: custom input.</description></item>
+                        /// <item><description>SINGLE_ENUM: single-select dropdown.</description></item>
+                        /// <item><description>MULTIPLE_ENUMS: multi-select dropdown.</description></item>
+                        /// <item><description>RANGE: range interval.</description></item>
+                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>CUSTOMIZED</para>
@@ -181,7 +235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                         public string Type { get; set; }
 
                         /// <summary>
-                        /// <para>The attribute option values. Only applicable to attributes with the single-select dropdown or multi-select dropdown input method.</para>
+                        /// <para>The property option values. This parameter applies only to properties whose input method is single-select dropdown or multi-select dropdown.</para>
                         /// </summary>
                         [NameInMap("ValueEnumList")]
                         [Validation(Required=false)]
@@ -192,28 +246,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The attribute value.</para>
+                /// <para>The property value.</para>
                 /// </summary>
                 [NameInMap("AttributeValue")]
                 [Validation(Required=false)]
                 public UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeValue AttributeValue { get; set; }
                 public class UpsertQualityRuleRequestUpsertCommandAttributeWithValueListAttributeValue : TeaModel {
                     /// <summary>
-                    /// <para>Specifies whether to include the maximum value.</para>
+                    /// <para>Indicates whether the maximum value is included.</para>
                     /// </summary>
                     [NameInMap("IncludeMaxValue")]
                     [Validation(Required=false)]
                     public bool? IncludeMaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies whether to include the minimum value.</para>
+                    /// <para>Indicates whether the minimum value is included.</para>
                     /// </summary>
                     [NameInMap("IncludeMinValue")]
                     [Validation(Required=false)]
                     public bool? IncludeMinValue { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum value. Applicable to range interval attributes.</para>
+                    /// <para>The maximum value. This parameter applies to range interval properties.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>11</para>
@@ -223,7 +277,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string MaxValue { get; set; }
 
                     /// <summary>
-                    /// <para>The minimum value. Applicable to range interval attributes.</para>
+                    /// <para>The minimum value. This parameter applies to range interval properties.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1</para>
@@ -233,7 +287,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string MinValue { get; set; }
 
                     /// <summary>
-                    /// <para>The attribute value list. Applicable to attributes with the custom input, single-select dropdown, or multi-select dropdown input method.</para>
+                    /// <para>The property value list. This parameter applies to properties whose input method is custom input, single-select dropdown, or multi-select dropdown.</para>
                     /// </summary>
                     [NameInMap("ValueList")]
                     [Validation(Required=false)]
@@ -244,7 +298,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The rule category. Valid values: CONSISTENT (Consistency), EFFECTIVE (Effectiveness), TIMELINESE (Timeliness), ACCURATE (Accuracy), UNIQUENESS (Uniqueness), COMPLETENESS (Completeness), STABILITY (Stability), CUSTOM (Custom).</para>
+            /// <para>The rule catalog. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CONSISTENT: consistency.</description></item>
+            /// <item><description>EFFECTIVE: validity.</description></item>
+            /// <item><description>TIMELINESE: timeliness.</description></item>
+            /// <item><description>ACCURATE: accuracy.</description></item>
+            /// <item><description>UNIQUENESS: uniqueness.</description></item>
+            /// <item><description>COMPLETENESS: completeness.</description></item>
+            /// <item><description>STABILITY: stability.</description></item>
+            /// <item><description>CUSTOM: custom.</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("CatalogList")]
@@ -252,7 +316,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> CatalogList { get; set; }
 
             /// <summary>
-            /// <para>The description of the quality rule.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -269,14 +333,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? EnableErrorArchive { get; set; }
 
             /// <summary>
-            /// <para>The rule configuration key-value pairs. The configuration varies based on the template type. Different template types return different form key-value pair configurations.</para>
+            /// <para>The rule configuration key-value pairs. These are related to the templatetype. Different template types return different form key-value pair configurations.</para>
             /// </summary>
             [NameInMap("FormPropertyList")]
             [Validation(Required=false)]
             public List<UpsertQualityRuleRequestUpsertCommandFormPropertyList> FormPropertyList { get; set; }
             public class UpsertQualityRuleRequestUpsertCommandFormPropertyList : TeaModel {
                 /// <summary>
-                /// <para>The component type.</para>
+                /// <para>The control type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>expression</para>
@@ -308,7 +372,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Rule ID. A non-empty value indicates a modification, and an empty value indicates a creation.</para>
+            /// <para>The rule ID. If this parameter is not empty, the operation updates the rule. If this parameter is empty, the operation creates a rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -329,7 +393,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The rule strength. Valid values: STRONG, WEAK.</para>
+            /// <para>The rule strength. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>STRONG</description></item>
+            /// <item><description>WEAK</description></item>
+            /// </list>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -351,39 +419,39 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? TemplateId { get; set; }
 
             /// <summary>
-            /// <para>The template type. Valid values:</para>
+            /// <para>The templatetype. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>FIELD_NULL_VALUE_VALIDATE: Field null value validation</description></item>
-            /// <item><description>FIELD_EMPTY_STRING_VALIDATE: Field empty string validation</description></item>
-            /// <item><description>FIELD_UNIQUE_VALIDATE: Field uniqueness validation</description></item>
-            /// <item><description>FIELD_GROUP_COUNT_VALIDATE: Field unique value count validation</description></item>
-            /// <item><description>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: Field duplicate value count validation</description></item>
-            /// <item><description>FUNCTION_TIME_COMPARE: Time function comparison</description></item>
-            /// <item><description>SINGLE_TABLE_TIME_COMPARE: Single-table time field comparison</description></item>
-            /// <item><description>DOUBLE_TABLE_TIME_COMPARE: Cross-table time field comparison</description></item>
-            /// <item><description>FIELD_FORMAT_VALIDATE: Field format validation</description></item>
-            /// <item><description>FIELD_LENGTH_VALIDATE: Field length validation</description></item>
-            /// <item><description>FIELD_VALUE_RANGE_VALIDATE: Field value range validation</description></item>
-            /// <item><description>CODE_TABLE_COMPARE: Code table reference comparison</description></item>
-            /// <item><description>STANDARD_CODE_TABLE_COMPARE: Data standard code table reference comparison</description></item>
-            /// <item><description>SINGLE_TABLE_FIELD_VALUE_COMPARE: Single-table field value consistency comparison</description></item>
-            /// <item><description>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: Single-table field statistical value consistency comparison</description></item>
-            /// <item><description>SINGLE_TABLE_FIELD_EXP_COMPARE: Single-table field business logic consistency comparison</description></item>
-            /// <item><description>DOUBLE_TABLE_FIELD_VALUE_COMPARE: Cross-table field value consistency comparison</description></item>
-            /// <item><description>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: Cross-table field statistical value consistency comparison</description></item>
-            /// <item><description>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: Cross-source cross-table field statistical value consistency comparison</description></item>
-            /// <item><description>DOUBLE_TABLE_FIELD_EXP_COMPARE: Cross-table field business logic consistency comparison</description></item>
-            /// <item><description>TABLE_STABILITY_VALIDATE: Table stability validation</description></item>
-            /// <item><description>TABLE_FLUCTUATION_VALIDATE: Table fluctuation validation</description></item>
-            /// <item><description>FIELD_STABILITY_VALIDATE: Field stability validation</description></item>
-            /// <item><description>FIELD_FLUCTUATION_VALIDATE: Field fluctuation validation</description></item>
-            /// <item><description>CUSTOM_STATISTICAL_VALIDATE: Custom statistical metric validation</description></item>
-            /// <item><description>CUSTOM_DATA_DETAILS_VALIDATE: Custom data details validation</description></item>
-            /// <item><description>DATASOURCE_AVAILABLE_CHECK: Data source connectivity check</description></item>
-            /// <item><description>TABLE_SCHEMA_CHECK: Table schema change monitoring</description></item>
-            /// <item><description>REAL_TIME_OFFLINE_COMPARE: Real-time offline comparison</description></item>
-            /// <item><description>REAL_TIME_STATISTICAL_VALIDATE: Real-time statistical value monitoring</description></item>
-            /// <item><description>REAL_TIME_MULTI_CHAIN_COMPARE: Real-time multi-chain comparison, etc.</description></item>
+            /// <item><description>FIELD_NULL_VALUE_VALIDATE: field null value check.</description></item>
+            /// <item><description>FIELD_EMPTY_STRING_VALIDATE: field empty string check.</description></item>
+            /// <item><description>FIELD_UNIQUE_VALIDATE: field uniqueness check.</description></item>
+            /// <item><description>FIELD_GROUP_COUNT_VALIDATE: field unique value count check.</description></item>
+            /// <item><description>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check.</description></item>
+            /// <item><description>FUNCTION_TIME_COMPARE: time function comparison.</description></item>
+            /// <item><description>SINGLE_TABLE_TIME_COMPARE: single-table time field comparison.</description></item>
+            /// <item><description>DOUBLE_TABLE_TIME_COMPARE: two-table time field comparison.</description></item>
+            /// <item><description>FIELD_FORMAT_VALIDATE: field format check.</description></item>
+            /// <item><description>FIELD_LENGTH_VALIDATE: field length check.</description></item>
+            /// <item><description>FIELD_VALUE_RANGE_VALIDATE: field value range check.</description></item>
+            /// <item><description>CODE_TABLE_COMPARE: lookup table reference comparison.</description></item>
+            /// <item><description>STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison.</description></item>
+            /// <item><description>SINGLE_TABLE_FIELD_VALUE_COMPARE: single-table field value consistency comparison.</description></item>
+            /// <item><description>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: single-table field statistical value consistency comparison.</description></item>
+            /// <item><description>SINGLE_TABLE_FIELD_EXP_COMPARE: single-table field business logic consistency comparison.</description></item>
+            /// <item><description>DOUBLE_TABLE_FIELD_VALUE_COMPARE: two-table field value consistency comparison.</description></item>
+            /// <item><description>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: two-table field statistical value consistency comparison.</description></item>
+            /// <item><description>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source two-table field statistical value consistency comparison.</description></item>
+            /// <item><description>DOUBLE_TABLE_FIELD_EXP_COMPARE: two-table field business logic consistency comparison.</description></item>
+            /// <item><description>TABLE_STABILITY_VALIDATE: table stability check.</description></item>
+            /// <item><description>TABLE_FLUCTUATION_VALIDATE: table fluctuation check.</description></item>
+            /// <item><description>FIELD_STABILITY_VALIDATE: field stability check.</description></item>
+            /// <item><description>FIELD_FLUCTUATION_VALIDATE: field fluctuation check.</description></item>
+            /// <item><description>CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check.</description></item>
+            /// <item><description>CUSTOM_DATA_DETAILS_VALIDATE: custom data details check.</description></item>
+            /// <item><description>DATASOURCE_AVAILABLE_CHECK: datasource connectivity monitoring.</description></item>
+            /// <item><description>TABLE_SCHEMA_CHECK: table schema change monitoring.</description></item>
+            /// <item><description>REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison.</description></item>
+            /// <item><description>REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value monitoring.</description></item>
+            /// <item><description>REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// 
@@ -402,7 +470,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<UpsertQualityRuleRequestUpsertCommandValidateConditionList> ValidateConditionList { get; set; }
             public class UpsertQualityRuleRequestUpsertCommandValidateConditionList : TeaModel {
                 /// <summary>
-                /// <para>The ID of the condition node.</para>
+                /// <para>The condition node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>268</para>
@@ -422,7 +490,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Metric { get; set; }
 
                 /// <summary>
-                /// <para>The operator. Valid values: EQUAL, NOT_EQUAL, LARGER, SMALLER, LARGE_OR_EQUAL, SMALLER_OR_EQUAL, AND, OR.</para>
+                /// <para>The operator. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>EQUAL</description></item>
+                /// <item><description>NOT_EQUAL</description></item>
+                /// <item><description>LARGER</description></item>
+                /// <item><description>SMALLER</description></item>
+                /// <item><description>LARGE_OR_EQUAL</description></item>
+                /// <item><description>SMALLER_OR_EQUAL</description></item>
+                /// <item><description>AND</description></item>
+                /// <item><description>OR</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>AND</para>
@@ -432,7 +510,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Operator { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the parent condition node.</para>
+                /// <para>The parent condition node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -442,7 +520,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ParentId { get; set; }
 
                 /// <summary>
-                /// <para>The condition type. Valid values: RELATION, EXPRESSION.</para>
+                /// <para>The condition type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>RELATION: relationship.</description></item>
+                /// <item><description>EXPRESSION: expression.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>RELATION</para>
@@ -464,7 +546,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The ID of the associated monitor.</para>
+            /// <para>The ID of the associated watch.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

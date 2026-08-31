@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The node name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>xxTest</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]

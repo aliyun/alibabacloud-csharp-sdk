@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class ListPipelinesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. OK indicates that the request was successful.</para>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public ListPipelinesResponseBodyData Data { get; set; }
         public class ListPipelinesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The list of task information on the current page.</para>
+            /// <para>The list of node information on the current page.</para>
             /// </summary>
             [NameInMap("List")]
             [Validation(Required=false)]
@@ -41,10 +41,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<string> DevelopOwners { get; set; }
 
                 /// <summary>
-                /// <para>The directory in which the task resides.</para>
+                /// <para>The directory where the node is located.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>/dwd/Finance/</para>
+                /// <para>/dwd/finance_domain/</para>
                 /// </summary>
                 [NameInMap("Directory")]
                 [Validation(Required=false)]
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? FileId { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling node ID.</para>
+                /// <para>The schedule node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>n_6793582765516849152</para>
@@ -113,14 +113,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? ScheduleType { get; set; }
 
                 /// <summary>
-                /// <para>The list of task tag names.</para>
+                /// <para>The list of node tag names.</para>
                 /// </summary>
                 [NameInMap("Tags")]
                 [Validation(Required=false)]
                 public List<string> Tags { get; set; }
 
                 /// <summary>
-                /// <para>The task status. Valid values:</para>
+                /// <para>The node status. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>DRAFT: draft.</description></item>
                 /// <item><description>SUBMITTING: being submitted.</description></item>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string TaskStatus { get; set; }
 
                 /// <summary>
-                /// <para>The task type. Valid values:</para>
+                /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>0: offline integration.</description></item>
                 /// <item><description>1: real-time integration.</description></item>
@@ -185,7 +185,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of records that match the conditions. On the first page request, the actual total is returned. On subsequent page requests (when nextCursor is passed in), if totalCount is included in the request, the same value is returned. Otherwise, this field is not returned. The total value is a snapshot taken at the time of the first page query and is not updated in real time as data changes during pagination.</para>
+            /// <para>The total number of records that match the conditions. For the first page request, the actual total count is returned. For subsequent page requests (when nextCursor is passed in), if totalCount is included in the request, the same value is returned. Otherwise, this field is not returned. The total value is a snapshot taken at the time of the first page query and is not updated in real time as data changes during pagination.</para>
             /// 
             /// <b>Example:</b>
             /// <para>105</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The error message returned if the request failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>

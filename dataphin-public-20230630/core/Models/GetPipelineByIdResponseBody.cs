@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetPipelineByIdResponseBodyData Data { get; set; }
         public class GetPipelineByIdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The integration pipeline configuration mode.</para>
+            /// <para>The configuration mode of the integration pipeline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PIPELINE</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public GetPipelineByIdResponseBodyDataNodeInfo NodeInfo { get; set; }
             public class GetPipelineByIdResponseBodyDataNodeInfo : TeaModel {
                 /// <summary>
-                /// <para>The node description.</para>
+                /// <para>The description of the node.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>comment</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Desc { get; set; }
 
                 /// <summary>
-                /// <para>The folder of the integration pipeline node. The default value is the root folder. This folder must exist. If it does not exist, call the relevant API operation to create a folder of the offlinePipeline type.</para>
+                /// <para>The folder of the integration pipeline node. The default value is the root folder. The folder must already exist. If it does not exist, call the relevant API operation to create a folder of the offlinePipeline type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Directory { get; set; }
 
                 /// <summary>
-                /// <para>The pipeline file ID. This value is empty during initial creation. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</para>
+                /// <para>The pipeline file ID. This value is empty when the node is first created. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public long? FileId { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling node ID of the pipeline node. This value is empty during initial creation. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</para>
+                /// <para>The scheduling node ID of the pipeline node. This value is empty when the node is first created. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>n_123</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The pipeline node ID. This value is empty during initial creation. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</para>
+                /// <para>The pipeline node ID. This value is empty when the node is first created. When updating a pipeline node, at least one of pipelineId, fileId, or nodeId must be specified.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -106,28 +106,28 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The integration pipeline component configuration.</para>
+            /// <para>The component configuration of the integration pipeline.</para>
             /// </summary>
             [NameInMap("PipelineConfig")]
             [Validation(Required=false)]
             public GetPipelineByIdResponseBodyDataPipelineConfig PipelineConfig { get; set; }
             public class GetPipelineByIdResponseBodyDataPipelineConfig : TeaModel {
                 /// <summary>
-                /// <para>The directed acyclic graph (DAG) link configuration that describes the connections between all components.</para>
+                /// <para>The DAG (directed acyclic graph) link configuration that describes the connections between all components.</para>
                 /// </summary>
                 [NameInMap("Hops")]
                 [Validation(Required=false)]
                 public List<GetPipelineByIdResponseBodyDataPipelineConfigHops> Hops { get; set; }
                 public class GetPipelineByIdResponseBodyDataPipelineConfigHops : TeaModel {
                     /// <summary>
-                    /// <para>Specifies the conditional distribution setting. Set this parameter to true when the downstream condition is true for a conditional distribution component. Otherwise, set it to false.</para>
+                    /// <para>Specifies the condition for a conditional distribution component. Set this parameter to true when the downstream connection condition is true, or false otherwise.</para>
                     /// </summary>
                     [NameInMap("SendTo")]
                     [Validation(Required=false)]
                     public bool? SendTo { get; set; }
 
                     /// <summary>
-                    /// <para>The input step name, which corresponds to Steps[*].StepName.</para>
+                    /// <para>The name of the input step, which corresponds to Steps[*].StepName.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>mysql_reader</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Source { get; set; }
 
                     /// <summary>
-                    /// <para>The output step name, which corresponds to Steps[*].StepName.</para>
+                    /// <para>The name of the output step, which corresponds to Steps[*].StepName.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>odps_writer</para>
@@ -156,10 +156,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<GetPipelineByIdResponseBodyDataPipelineConfigSteps> Steps { get; set; }
                 public class GetPipelineByIdResponseBodyDataPipelineConfigSteps : TeaModel {
                     /// <summary>
-                    /// <para>Specifies the data distribution mode when the current component has multiple downstream components. Valid values:</para>
+                    /// <para>Specifies the data distribution method when the current component has multiple downstream components. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>true: the data of the current component is distributed to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. Default value: true.</description></item>
-                    /// <item><description>false: the full data of the current component is sent to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive 100 records.</description></item>
+                    /// <item><description>true: The data of the current component is sent to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. Default value: true.</description></item>
+                    /// <item><description>false: The full data of the current component is sent to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive 100 records.</description></item>
                     /// </list>
                     /// </summary>
                     [NameInMap("IsDistribute")]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>The specific component configuration in JSON string format. Refer to the toJsonString method of the subclasses of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</para>
+                    /// <para>The specific component configuration. The value is a JSON string. Refer to the toJsonString method of the subclasses of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit this component configuration class and implement the corresponding component configuration. Each component configuration has the same structure as the pipeline configuration created on the Dataphin console.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>{}</para>
@@ -218,7 +218,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The integration pipeline script mode configuration.</para>
+            /// <para>The script mode configuration of the integration pipeline.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PipelineJson { get; set; }
 
             /// <summary>
-            /// <para>The pipeline node type.</para>
+            /// <para>The type of the pipeline node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -238,7 +238,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PipelineType { get; set; }
 
             /// <summary>
-            /// <para>The integration pipeline scheduling configuration. The value is a JSON string. You can use the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.vo.OAScheduleConfigVO to deserialize it.</para>
+            /// <para>The scheduling configuration of the integration pipeline. The value is a JSON string. You can deserialize it by using the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.vo.OAScheduleConfigVO.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -248,7 +248,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ScheduleConfig { get; set; }
 
             /// <summary>
-            /// <para>The integration pipeline channel configuration. The value is a JSON string. You can use the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting to deserialize it.</para>
+            /// <para>The channel configuration of the integration pipeline. The value is a JSON string. You can deserialize it by using the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{}</para>
@@ -270,7 +270,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The error message returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetTableLineageByTaskIdResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code. OK indicates a successful request.</para>
+        /// <para>The error code. A value of OK indicates that the request was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The query results.</para>
+        /// <para>The query result.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public List<GetTableLineageByTaskIdResponseBodyData> Data { get; set; }
         public class GetTableLineageByTaskIdResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The business unit ID of the input table.</para>
+            /// <para>The ID of the business unit to which the input table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? InputBizUnitId { get; set; }
 
             /// <summary>
-            /// <para>The data source ID of the input table.</para>
+            /// <para>The ID of the data source to which the input table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? InputDataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the input table.</para>
+            /// <para>The storage format of the input table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputDataSourceType { get; set; }
 
             /// <summary>
-            /// <para>The data source type of the input table.</para>
+            /// <para>The type of the input data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputDbType { get; set; }
 
             /// <summary>
-            /// <para>The environment of the input table: DEV or PROD.</para>
+            /// <para>The environment to which the input table belongs. Valid values: DEV and PROD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputEnv { get; set; }
 
             /// <summary>
-            /// <para>The project ID of the input table.</para>
+            /// <para>The ID of the project to which the input table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? InputProjectId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the input table is deleted.</para>
+            /// <para>Indicates whether the input table has been deleted.</para>
             /// </summary>
             [NameInMap("InputTableDeleted")]
             [Validation(Required=false)]
@@ -119,19 +119,19 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputTableName { get; set; }
 
             /// <summary>
-            /// <para>The type of the input table. </para>
+            /// <para>The type of the input table. Valid values: </para>
             /// <list type="bullet">
-            /// <item><description>PHYSICAL_TABLE Physical table (compute source)</description></item>
-            /// <item><description>DIM_LOGIC_TABLE Dimension logical table</description></item>
-            /// <item><description>FACT_LOGIC_TABLE Fact logical table</description></item>
-            /// <item><description>SUM_LOGIC_TABLE Aggregate logical table</description></item>
-            /// <item><description>REAL_TIME_LOGIC_TABLE Real-time meta table</description></item>
-            /// <item><description>REAL_TIME_MIRROR_TABLE Real-time mirror table</description></item>
-            /// <item><description>PHYSICAL_VIEW Physical view</description></item>
-            /// <item><description>LOGICAL_VIEW Logical view</description></item>
-            /// <item><description>DATA_SOURCE_PHYSICAL_TABLE Data source table</description></item>
-            /// <item><description>DATA_SOURCE_VIEW Data source view</description></item>
-            /// <item><description>DATA_SOURCE_MATERIALIZED_VIEW Data source materialized view</description></item>
+            /// <item><description>PHYSICAL_TABLE: physical table (compute source).</description></item>
+            /// <item><description>DIM_LOGIC_TABLE: logical dimension table.</description></item>
+            /// <item><description>FACT_LOGIC_TABLE: fact logical table.</description></item>
+            /// <item><description>SUM_LOGIC_TABLE: aggregate logical table.</description></item>
+            /// <item><description>REAL_TIME_LOGIC_TABLE: real-time meta table.</description></item>
+            /// <item><description>REAL_TIME_MIRROR_TABLE: real-time mirror table.</description></item>
+            /// <item><description>PHYSICAL_VIEW: physical view.</description></item>
+            /// <item><description>LOGICAL_VIEW: logical view.</description></item>
+            /// <item><description>DATA_SOURCE_PHYSICAL_TABLE: data source table.</description></item>
+            /// <item><description>DATA_SOURCE_VIEW: data source view.</description></item>
+            /// <item><description>DATA_SOURCE_MATERIALIZED_VIEW: data source materialized view.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string InputTableType { get; set; }
 
             /// <summary>
-            /// <para>The business unit ID of the output table.</para>
+            /// <para>The ID of the business unit to which the output table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -152,7 +152,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? OutputBizUnitId { get; set; }
 
             /// <summary>
-            /// <para>The data source ID of the output table.</para>
+            /// <para>The ID of the data source to which the output table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -162,7 +162,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? OutputDataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The storage type of the output table.</para>
+            /// <para>The storage format of the output table.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
@@ -172,7 +172,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OutputDataSourceType { get; set; }
 
             /// <summary>
-            /// <para>The data source type of the output table.</para>
+            /// <para>The type of the output data source.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OutputDbType { get; set; }
 
             /// <summary>
-            /// <para>The environment of the output table: DEV or PROD.</para>
+            /// <para>The environment to which the output table belongs. Valid values: DEV and PROD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV/PROD</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OutputEnv { get; set; }
 
             /// <summary>
-            /// <para>The project ID of the output table.</para>
+            /// <para>The ID of the project to which the output table belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123</para>
@@ -202,7 +202,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? OutputProjectId { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the output table is deleted.</para>
+            /// <para>Indicates whether the output table has been deleted.</para>
             /// </summary>
             [NameInMap("OutputTableDeleted")]
             [Validation(Required=false)]
@@ -239,7 +239,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string OutputTableType { get; set; }
 
             /// <summary>
-            /// <para>The environment of the task (node) associated with the lineage: DEV or PROD.</para>
+            /// <para>The environment of the node associated with the lineage. Valid values: DEV and PROD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
@@ -249,7 +249,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TaskEnv { get; set; }
 
             /// <summary>
-            /// <para>The task (node) ID associated with the lineage.</para>
+            /// <para>The ID of the node associated with the lineage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>n_123</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The HTTP status code.</para>
+        /// <para>The HTTP status code returned by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>

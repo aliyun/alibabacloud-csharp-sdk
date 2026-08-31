@@ -21,6 +21,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
+
+        /// <summary>
         /// <para>The update request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -29,7 +39,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public UpdateBatchTaskRequestUpdateCommand UpdateCommand { get; set; }
         public class UpdateBatchTaskRequestUpdateCommand : TeaModel {
             /// <summary>
-            /// <para>The node code.</para>
+            /// <para>The code of the node.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -40,7 +50,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The cron expression for automatic scheduling. Refer to the Linux cron expression syntax.</para>
+            /// <para>The cron expression for automatic scheduling. Refer to Linux cron expressions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0 0 1 * * ?</para>
@@ -50,7 +60,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CronExpression { get; set; }
 
             /// <summary>
-            /// <para>The custom scheduling interval configuration.</para>
+            /// <para>The custom schedule interval configuration.</para>
             /// </summary>
             [NameInMap("CustomScheduleConfig")]
             [Validation(Required=false)]
@@ -81,7 +91,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The interval unit. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>MINUTE: minute</description></item>
+                /// <item><description>MINUTE: minute.</description></item>
                 /// <item><description>HOUR: hour.</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
@@ -94,14 +104,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string IntervalUnit { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling period. Valid values:</para>
+                /// <para>The schedule period. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>YEARLY</description></item>
                 /// <item><description>MONTHLY</description></item>
                 /// <item><description>WEEKLY</description></item>
                 /// <item><description>DAILY</description></item>
                 /// <item><description>HOURLY</description></item>
-                /// <item><description>MINUTELY.</description></item>
+                /// <item><description>MINUTELY</description></item>
                 /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
@@ -126,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The catalog for database SQL nodes. This parameter takes effect only for data source types that require a catalog, such as Presto.</para>
+            /// <para>The catalog for database SQL nodes. This parameter applies only to datasource types that require a catalog, such as Presto.</para>
             /// 
             /// <b>Example:</b>
             /// <para>mysql_catalog</para>
@@ -136,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceCatalog { get; set; }
 
             /// <summary>
-            /// <para>The data source ID for database SQL nodes.</para>
+            /// <para>The datasource ID for database SQL nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12131111</para>
@@ -146,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceId { get; set; }
 
             /// <summary>
-            /// <para>The schema for database SQL nodes. This parameter takes effect only for data source types that require a schema, such as Oracle.</para>
+            /// <para>The schema for database SQL nodes. This parameter applies only to datasource types that require a schema, such as Oracle.</para>
             /// 
             /// <b>Example:</b>
             /// <para>erp</para>
@@ -156,11 +166,18 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceSchema { get; set; }
 
             /// <summary>
-            /// <para>The execution engine for the node, such as a Python node. Valid values:</para>
+            /// <para>The list of development owner IDs.</para>
+            /// </summary>
+            [NameInMap("DevelopOwnerIdList")]
+            [Validation(Required=false)]
+            public List<string> DevelopOwnerIdList { get; set; }
+
+            /// <summary>
+            /// <para>The execution engine for the node, such as for Python nodes. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>PYTHON2_7</description></item>
             /// <item><description>PYTHON3_7</description></item>
-            /// <item><description>PYTHON3_11.</description></item>
+            /// <item><description>PYTHON3_11</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -171,7 +188,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Engine { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node in the folder tree.</para>
+            /// <para>The node ID in the folder tree.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -196,7 +213,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The description of the node.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>Test_description</para>
             /// </summary>
             [NameInMap("NodeDescription")]
             [Validation(Required=false)]
@@ -277,21 +294,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The third-party Python packages that the node depends on.</para>
+            /// <para>The third-party Python packages required by the node.</para>
             /// </summary>
             [NameInMap("PythonModuleList")]
             [Validation(Required=false)]
             public List<string> PythonModuleList { get; set; }
 
             /// <summary>
-            /// <para>The scheduling period. Valid values:</para>
+            /// <para>The schedule period. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>YEARLY</description></item>
             /// <item><description>MONTHLY</description></item>
             /// <item><description>WEEKLY</description></item>
             /// <item><description>DAILY</description></item>
             /// <item><description>HOURLY</description></item>
-            /// <item><description>MINUTELY.</description></item>
+            /// <item><description>MINUTELY</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -363,7 +380,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public int? PeriodOffset { get; set; }
 
                     /// <summary>
-                    /// <para>The dependency period type. Valid values:</para>
+                    /// <para>The type of the dependency period. Valid values:</para>
                     /// <list type="bullet">
                     /// <item><description>CURRENT_PERIOD: current period.</description></item>
                     /// <item><description>LAST_PERIOD: previous period.</description></item>
@@ -419,7 +436,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeType { get; set; }
 
                 /// <summary>
-                /// <para>The period offset. A value of 0 indicates a same-period dependency. A positive integer indicates a dependency on the previous N periods.</para>
+                /// <para>The period difference. A value of 0 indicates same-period dependency. A positive number indicates dependency on the previous N periods.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -430,7 +447,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public int? PeriodDiff { get; set; }
 
                 /// <summary>
-                /// <para>Specifies whether the upstream node is enabled.</para>
+                /// <para>Indicates whether the upstream node is enabled.</para>
                 /// </summary>
                 [NameInMap("SourceNodeEnabled")]
                 [Validation(Required=false)]

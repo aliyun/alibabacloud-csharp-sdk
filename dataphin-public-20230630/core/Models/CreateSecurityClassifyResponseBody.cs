@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The data classification ID.</para>
+        /// <para>The data category ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

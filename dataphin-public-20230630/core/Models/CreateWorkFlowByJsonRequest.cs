@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateWorkFlowByJsonRequestCreateCommand CreateCommand { get; set; }
         public class CreateWorkFlowByJsonRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>The description of the node.</para>
+            /// <para>The node description.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cooment</para>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The schedule configuration. This parameter is required for periodic nodes. The value is a JSON string. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method.</para>
+            /// <para>The schedule configuration (required for periodic nodes). The value is a JSON string. Refer to the utility class: com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;cronExpression&quot;:&quot;0 0 0 * * ?&quot;}</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? Submit { get; set; }
 
             /// <summary>
-            /// <para>The name of the node.</para>
+            /// <para>The node name.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TaskName { get; set; }
 
             /// <summary>
-            /// <para>The scheduling type of the node. Valid values:</para>
+            /// <para>The node scheduling type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: periodic scheduling.</description></item>
             /// <item><description>3: manual scheduling.</description></item>
@@ -141,6 +141,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

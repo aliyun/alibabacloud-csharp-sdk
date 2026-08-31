@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class AddProjectMemberRequest : TeaModel {
         /// <summary>
-        /// <para>The command to add members.</para>
+        /// <para>The command for adding members.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("AddCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public AddProjectMemberRequestAddCommand AddCommand { get; set; }
         public class AddProjectMemberRequestAddCommand : TeaModel {
             /// <summary>
-            /// <para>The environment identifier. Valid values: DEV and PROD.</para>
+            /// <para>The environment identifier. Valid values: DEV, PROD.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<AddProjectMemberRequestAddCommandUserList> UserList { get; set; }
             public class AddProjectMemberRequestAddCommandUserList : TeaModel {
                 /// <summary>
-                /// <para>The member role. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</para>
+                /// <para>The member roles. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</para>
                 /// <para>This parameter is required.</para>
                 /// </summary>
                 [NameInMap("RoleList")]
@@ -80,6 +80,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

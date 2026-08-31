@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<long?> NotExistStandardIdList { get; set; }
 
             /// <summary>
-            /// <para>The number of successfully added items.</para>
+            /// <para>The number of successfully added associations.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

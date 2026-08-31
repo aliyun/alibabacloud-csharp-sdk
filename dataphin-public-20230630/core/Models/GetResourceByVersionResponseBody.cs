@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class GetResourceByVersionResponseBody : TeaModel {
         /// <summary>
-        /// <para>Backend response code.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>HTTP status code.</para>
+        /// <para>The HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>Backend error details.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Resource file details.</para>
+        /// <para>The details of the resource file.</para>
         /// </summary>
         [NameInMap("ResourceInfo")]
         [Validation(Required=false)]
         public GetResourceByVersionResponseBodyResourceInfo ResourceInfo { get; set; }
         public class GetResourceByVersionResponseBodyResourceInfo : TeaModel {
             /// <summary>
-            /// <para>Compute engine type.</para>
+            /// <para>The compute engine source type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>MAX_COMPUTE</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ComputeEngineType { get; set; }
 
             /// <summary>
-            /// <para>Creator.</para>
+            /// <para>The creator.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30011021</para>
@@ -77,17 +77,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>Description.</para>
+            /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试</para>
+            /// <para>Test</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Storage directory.</para>
+            /// <para>The storage folder.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>Creation time, format: yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The creation time, in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>Modification time, format: yyyy-MM-dd HH:mm:ss.</para>
+            /// <para>The update time, in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>Resource ID.</para>
+            /// <para>The resource ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10200121011</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>Last modifier.</para>
+            /// <para>The last modifier.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30011021</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastModifier { get; set; }
 
             /// <summary>
-            /// <para>Resource file name.</para>
+            /// <para>The name of the resource file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>udf_sleep.jar</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Project ID.</para>
+            /// <para>The project ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1030111021</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>Resource type.</para>
+            /// <para>The resource type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>JAR</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ResourceType { get; set; }
 
             /// <summary>
-            /// <para>Resource size, unit: bytes.</para>
+            /// <para>The size of the resource, in bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>102400</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? Size { get; set; }
 
             /// <summary>
-            /// <para>Resource storage address.</para>
+            /// <para>The storage address of the resource.</para>
             /// 
             /// <b>Example:</b>
             /// <para>300011448/711833/cdcd1c44-f1ee-46bb-b318-1d123dbabf6c</para>

@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateBatchTaskResponseBodyCreateResult CreateResult { get; set; }
         public class CreateBatchTaskResponseBodyCreateResult : TeaModel {
             /// <summary>
-            /// <para>The node ID in the node directory tree.</para>
+            /// <para>The node ID in the folder tree.</para>
             /// 
             /// <b>Example:</b>
             /// <para>12113111</para>

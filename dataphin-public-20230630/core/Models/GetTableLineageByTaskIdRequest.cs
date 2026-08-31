@@ -21,6 +21,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
+
+        /// <summary>
         /// <para>The data structure for querying table lineage.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
@@ -36,7 +46,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? NeedNotExistObject { get; set; }
 
             /// <summary>
-            /// <para>The environment of the task to query: DEV or PROD.</para>
+            /// <para>The environment of the node used to filter the query. Valid values: DEV and PROD.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DEV</para>
@@ -46,7 +56,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TaskEnv { get; set; }
 
             /// <summary>
-            /// <para>The task (node) ID used to filter the query.</para>
+            /// <para>The ID of the node used to filter the query.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

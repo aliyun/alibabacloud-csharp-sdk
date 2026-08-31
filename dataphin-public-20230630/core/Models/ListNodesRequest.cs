@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         /// <summary>
         /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment </description></item>
-        /// <item><description>PROD (default): production environment.</description></item>
+        /// <item><description>DEV: Development environment. </description></item>
+        /// <item><description>PROD (default): Production environment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The node business type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>SCRIPT: script</description></item>
+            /// <item><description>SCRIPT: script.</description></item>
             /// <item><description>LOGICAL_TABLE: logical table.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string NodeBizType { get; set; }
 
             /// <summary>
-            /// <para>The sub-business types. Valid values:</para>
+            /// <para>The sub-business type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>MAX_COMPUTE_SQL</description></item>
             /// <item><description>HIVE_SQL</description></item>
             /// <item><description>SHELL</description></item>
             /// <item><description>PYTHON</description></item>
             /// <item><description>ONE_SERVICE_SQL</description></item>
-            /// <item><description>DATABASE_SQL.</description></item>
+            /// <item><description>DATABASE_SQL, etc.</description></item>
             /// </list>
             /// <para>This parameter is required.</para>
             /// </summary>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Page { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of records per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -100,13 +100,13 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The node priorities. Valid values:</para>
+            /// <para>The node priority. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HIGHEST</description></item>
             /// <item><description>HIGH</description></item>
             /// <item><description>MIDDLE</description></item>
             /// <item><description>LOW</description></item>
-            /// <item><description>LOWEST.</description></item>
+            /// <item><description>LOWEST</description></item>
             /// </list>
             /// </summary>
             [NameInMap("PriorityList")]
@@ -135,14 +135,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? SchedulePaused { get; set; }
 
             /// <summary>
-            /// <para>The scheduling periods. Valid values:</para>
+            /// <para>The scheduling period. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>YEARLY</description></item>
             /// <item><description>MONTHLY</description></item>
             /// <item><description>WEEKLY</description></item>
             /// <item><description>DAILY</description></item>
             /// <item><description>HOURLY</description></item>
-            /// <item><description>MINUTELY.</description></item>
+            /// <item><description>MINUTELY</description></item>
             /// </list>
             /// </summary>
             [NameInMap("SchedulePeriodList")]
@@ -152,9 +152,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>The node scheduling type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>NORMAL: periodic scheduling</description></item>
-            /// <item><description>SUPPLEMENT: data backfill</description></item>
-            /// <item><description>MANUAL: manual scheduling.</description></item>
+            /// <item><description>NORMAL: Periodic.</description></item>
+            /// <item><description>SUPPLEMENT: Data backfill.</description></item>
+            /// <item><description>MANUAL: Manual.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -165,7 +165,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ScheduleType { get; set; }
 
             /// <summary>
-            /// <para>The search keyword. Fuzzy search by node name and exact search by node ID are supported.</para>
+            /// <para>The search keyword. Supports fuzzy match by node name and exact match by node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>xx</para>
@@ -186,6 +186,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

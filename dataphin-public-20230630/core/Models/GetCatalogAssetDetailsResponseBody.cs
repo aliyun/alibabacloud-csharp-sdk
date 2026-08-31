@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public GetCatalogAssetDetailsResponseBodyData Data { get; set; }
         public class GetCatalogAssetDetailsResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The API call mode. Returned when the asset type is API. Valid values: 1 (synchronous call) and 2 (asynchronous call).</para>
+            /// <para>The API call mode. Returned when the asset type is API. Valid values: 1=Synchronous call, 2=Asynchronous call.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The API group name. Returned when the asset type is API.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>默认API分组</para>
+            /// <para>Default API group</para>
             /// </summary>
             [NameInMap("ApiGroupName")]
             [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ApiId { get; set; }
 
             /// <summary>
-            /// <para>The API operation type. Returned when the asset type is API. Valid values: 1 (Get), 2 (List), 3 (Create), 4 (Update), and 5 (Delete).</para>
+            /// <para>The API operation type. Returned when the asset type is API. Valid values: 1=Get, 2=List, 3=Create, 4=Update, 5=Delete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ApiRequestMethod { get; set; }
 
             /// <summary>
-            /// <para>The asset description.</para>
+            /// <para>The description of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AssetDescription { get; set; }
 
             /// <summary>
-            /// <para>The URL of the asset catalog details page.</para>
+            /// <para>The URL of the asset catalog detail page.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="https://dataphin.poc.lydaas.com/market/catalog/detail/table/">https://dataphin.poc.lydaas.com/market/catalog/detail/table/</a>...</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AssetDetailUrl { get; set; }
 
             /// <summary>
-            /// <para>The asset display name. Returned when the asset type is TABLE, INDEX, or BIZ_INDEX.</para>
+            /// <para>The display name of the asset. This parameter is returned when the asset type is TABLE, INDEX, or BIZ_INDEX.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc表</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AssetDisplayName { get; set; }
 
             /// <summary>
-            /// <para>The asset source. For TABLE (physical table), the value is in the format of &quot;Dataphin-Workspace Type-Project Chinese Name (Project English Name)&quot;. For TABLE (logical table), the value is in the format of &quot;Dataphin-Workspace Type-Data Domain Chinese Name (Data Domain English Name)&quot;. For TABLE (data source table), the value is in the format of &quot;Source System Name-Data Source Name-Database/Schema Name&quot;. For INDEX (standard modeling metric), the value is the asset source of the associated aggregate table. For INDEX (custom metric), the value is the asset source of the source table. For API, the value is the data service project name. For PAGE, the value is the application system name.</para>
+            /// <para>The source of the asset. TABLE (physical table) returns &quot;Dataphin-workspace type-project Chinese name (project English name)&quot;. TABLE (logical table) returns &quot;Dataphin-workspace type-data domain Chinese name (data domain English name)&quot;. TABLE (data source table) returns &quot;source system name-data source name-database/schema name&quot;. INDEX (standard modeling metric) returns the asset source of the associated aggregate logical table. INDEX (custom metric) returns the asset source of the source table. API returns &quot;data service project name&quot;. PAGE returns &quot;application system name&quot;.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Dataphin-中间层-服饰零售 (LD_Fashion)</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AssetFrom { get; set; }
 
             /// <summary>
-            /// <para>The full name of the asset. Returned when the asset type is TABLE or INDEX.</para>
+            /// <para>The full name of the asset. This parameter is returned when the asset type is TABLE or INDEX.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dwd_all.abc</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AssetFullName { get; set; }
 
             /// <summary>
-            /// <para>The asset name.</para>
+            /// <para>The name of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>abc</para>
@@ -127,14 +127,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AssetName { get; set; }
 
             /// <summary>
-            /// <para>The asset tags.</para>
+            /// <para>The tags of the asset.</para>
             /// </summary>
             [NameInMap("AssetTags")]
             [Validation(Required=false)]
             public List<string> AssetTags { get; set; }
 
             /// <summary>
-            /// <para>The asset type. Valid values: TABLE (table, including views and materialized views), INDEX (technical metric), BIZ_INDEX (business metric), API, and PAGE (dashboard).</para>
+            /// <para>The asset type. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>TABLE: table, including views and materialized views.</description></item>
+            /// <item><description>INDEX: technical metric.</description></item>
+            /// <item><description>BIZ_INDEX: business metric.</description></item>
+            /// <item><description>API: API.</description></item>
+            /// <item><description>PAGE: dashboard.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>TABLE</para>
@@ -144,7 +151,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string AssetType { get; set; }
 
             /// <summary>
-            /// <para>The BI workspace or directory to which the asset belongs. Returned when the asset type is PAGE (dashboard).</para>
+            /// <para>The BI workspace or folder to which the asset belongs. Returned when the asset type is PAGE (dashboard).</para>
             /// 
             /// <b>Example:</b>
             /// <para>dataphin演示空间</para>
@@ -154,7 +161,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string BiCatalog { get; set; }
 
             /// <summary>
-            /// <para>The ID of the business unit to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</para>
+            /// <para>The ID of the data domain to which the asset belongs. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</para>
             /// 
             /// <b>Example:</b>
             /// <para>6865277495315392</para>
@@ -164,7 +171,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? BizUnitId { get; set; }
 
             /// <summary>
-            /// <para>The name of the business unit to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</para>
+            /// <para>The name of the data domain to which the asset belongs. This parameter is returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</para>
             /// 
             /// <b>Example:</b>
             /// <para>服饰零售（LD_Fashion）</para>
@@ -184,7 +191,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ChartCount { get; set; }
 
             /// <summary>
-            /// <para>The number of favorites.</para>
+            /// <para>The collection count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -194,21 +201,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? CollectionCount { get; set; }
 
             /// <summary>
-            /// <para>The field list. Returned when the asset type is TABLE.</para>
+            /// <para>The list of columns. This parameter is returned when the asset type is TABLE.</para>
             /// </summary>
             [NameInMap("Columns")]
             [Validation(Required=false)]
             public List<GetCatalogAssetDetailsResponseBodyDataColumns> Columns { get; set; }
             public class GetCatalogAssetDetailsResponseBodyDataColumns : TeaModel {
                 /// <summary>
-                /// <para>The associated entity. Returned when the business type is DIMENSION.</para>
+                /// <para>The associated entity. This parameter is returned when the business type is DIMENSION.</para>
                 /// </summary>
                 [NameInMap("AssociatedEntity")]
                 [Validation(Required=false)]
                 public GetCatalogAssetDetailsResponseBodyDataColumnsAssociatedEntity AssociatedEntity { get; set; }
                 public class GetCatalogAssetDetailsResponseBodyDataColumnsAssociatedEntity : TeaModel {
                     /// <summary>
-                    /// <para>The business unit ID.</para>
+                    /// <para>The ID of the business unit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>7137404445633152</para>
@@ -218,7 +225,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? BizUnitId { get; set; }
 
                     /// <summary>
-                    /// <para>The business unit name.</para>
+                    /// <para>The name of the business unit.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>LD_train</para>
@@ -228,7 +235,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string BizUnitName { get; set; }
 
                     /// <summary>
-                    /// <para>The dimension display name.</para>
+                    /// <para>The display name of the dimension.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>上药erp数据源</para>
@@ -238,7 +245,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string DimensionDisplayName { get; set; }
 
                     /// <summary>
-                    /// <para>The dimension ID.</para>
+                    /// <para>The ID of the dimension.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>68014359</para>
@@ -248,7 +255,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? DimensionId { get; set; }
 
                     /// <summary>
-                    /// <para>The dimension name.</para>
+                    /// <para>The name of the dimension.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>etl_source</para>
@@ -262,9 +269,9 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <summary>
                 /// <para>The business type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>INDEX: Metric.</description></item>
-                /// <item><description>STAT_PERIOD: Statistical period.</description></item>
-                /// <item><description>DIMENSION: Dimension.</description></item>
+                /// <item><description>INDEX: metric.</description></item>
+                /// <item><description>STAT_PERIOD: statistical period.</description></item>
+                /// <item><description>DIMENSION: dimension.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -285,7 +292,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string ClassifyName { get; set; }
 
                 /// <summary>
-                /// <para>The field data type.</para>
+                /// <para>The data type of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>double</para>
@@ -295,7 +302,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string DataType { get; set; }
 
                 /// <summary>
-                /// <para>The field description.</para>
+                /// <para>The description of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -305,17 +312,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Description { get; set; }
 
                 /// <summary>
-                /// <para>The field display name.</para>
+                /// <para>The display name of the column.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>门店客流转化率</para>
+                /// <para>Store traffic conversion rate</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
                 public string DisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The field GUID.</para>
+                /// <para>The GUID of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>dp_table.300023201.ld_fashion.dws_lulu_location.conversion_rate</para>
@@ -325,7 +332,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Guid { get; set; }
 
                 /// <summary>
-                /// <para>The data sensitivity level.</para>
+                /// <para>The data classification level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>L4</para>
@@ -335,7 +342,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string LevelShortName { get; set; }
 
                 /// <summary>
-                /// <para>The field name.</para>
+                /// <para>The name of the column.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>conversion_rate</para>
@@ -362,7 +369,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public List<GetCatalogAssetDetailsResponseBodyDataColumnsStandards> Standards { get; set; }
                 public class GetCatalogAssetDetailsResponseBodyDataColumnsStandards : TeaModel {
                     /// <summary>
-                    /// <para>The standard code.</para>
+                    /// <para>The code of the standard.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>hr_person_id</para>
@@ -372,7 +379,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Code { get; set; }
 
                     /// <summary>
-                    /// <para>The standard ID.</para>
+                    /// <para>The ID of the standard.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>120350</para>
@@ -382,7 +389,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public long? Id { get; set; }
 
                     /// <summary>
-                    /// <para>The standard name.</para>
+                    /// <para>The name of the standard.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>id</para>
@@ -413,12 +420,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<GetCatalogAssetDetailsResponseBodyDataCustomAttributes> CustomAttributes { get; set; }
             public class GetCatalogAssetDetailsResponseBodyDataCustomAttributes : TeaModel {
                 /// <summary>
-                /// <para>The attribute type. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>BUSINESS: Business attribute.</description></item>
-                /// <item><description>MANAGEMENT: Management attribute.</description></item>
-                /// <item><description>TECHNOLOGY: Technical attribute.</description></item>
-                /// </list>
+                /// <para>The attribute type. Valid values: BUSINESS (business attribute), MANAGEMENT (management attribute), TECHNOLOGY (technical attribute).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>MANAGEMENT</para>
@@ -441,7 +443,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The attribute name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>归口管理部门</para>
+                /// <para>Supervising department</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -460,7 +462,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The ID of the subject domain to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</para>
+            /// <para>The ID of the data domain. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</para>
             /// 
             /// <b>Example:</b>
             /// <para>49837403</para>
@@ -470,17 +472,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataCellId { get; set; }
 
             /// <summary>
-            /// <para>The name of the subject domain to which the asset belongs. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</para>
+            /// <para>The name of the data domain. Returned when the asset type is TABLE (logical tables only) or INDEX (technical metrics whose source table is a logical table only).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>课程域</para>
+            /// <para>Course domain</para>
             /// </summary>
             [NameInMap("DataCellName")]
             [Validation(Required=false)]
             public string DataCellName { get; set; }
 
             /// <summary>
-            /// <para>The name of the data source to which the asset belongs. Returned when the asset type is TABLE (data source tables only) or INDEX (technical metrics whose source table is a data source table only).</para>
+            /// <para>The name of the data source to which the asset belongs. This parameter is returned when the asset type is TABLE (data source tables only) or INDEX (technical metrics whose source table is a data source table only).</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo_mysql</para>
@@ -490,7 +492,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string DataSourceName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the data source to which the asset belongs. Returned when the asset type is TABLE (data source tables only) or INDEX (technical metrics whose source table is a data source table only).</para>
+            /// <para>The ID of the data source to which the asset belongs. This parameter is returned when the asset type is TABLE (data source tables only) or INDEX (technical metrics whose source table is a data source table only).</para>
             /// 
             /// <b>Example:</b>
             /// <para>7305549302863001856</para>
@@ -507,6 +509,65 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<GetCatalogAssetDetailsResponseBodyDataDirectories> Directories { get; set; }
             public class GetCatalogAssetDetailsResponseBodyDataDirectories : TeaModel {
                 /// <summary>
+                /// <para>The complete directory hierarchy chain from the top-level directory to the current directory, including the current directory.</para>
+                /// </summary>
+                [NameInMap("DirectoryChain")]
+                [Validation(Required=false)]
+                public List<GetCatalogAssetDetailsResponseBodyDataDirectoriesDirectoryChain> DirectoryChain { get; set; }
+                public class GetCatalogAssetDetailsResponseBodyDataDirectoriesDirectoryChain : TeaModel {
+                    /// <summary>
+                    /// <para>The directory description.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Data assets related to transactions</para>
+                    /// </summary>
+                    [NameInMap("DirectoryDescription")]
+                    [Validation(Required=false)]
+                    public string DirectoryDescription { get; set; }
+
+                    /// <summary>
+                    /// <para>The directory ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>2001</para>
+                    /// </summary>
+                    [NameInMap("DirectoryId")]
+                    [Validation(Required=false)]
+                    public long? DirectoryId { get; set; }
+
+                    /// <summary>
+                    /// <para>The directory name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Transaction domain</para>
+                    /// </summary>
+                    [NameInMap("DirectoryName")]
+                    [Validation(Required=false)]
+                    public string DirectoryName { get; set; }
+
+                    /// <summary>
+                    /// <para>The folder level.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>1</para>
+                    /// </summary>
+                    [NameInMap("Level")]
+                    [Validation(Required=false)]
+                    public int? Level { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The directory description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Data tables related to order details</para>
+                /// </summary>
+                [NameInMap("DirectoryDescription")]
+                [Validation(Required=false)]
+                public string DirectoryDescription { get; set; }
+
+                /// <summary>
                 /// <para>The directory ID.</para>
                 /// 
                 /// <b>Example:</b>
@@ -520,11 +581,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The directory name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>线上电商平台</para>
+                /// <para>Online e-commerce platform</para>
                 /// </summary>
                 [NameInMap("DirectoryName")]
                 [Validation(Required=false)]
                 public string DirectoryName { get; set; }
+
+                /// <summary>
+                /// <para>The topic description.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Core data asset catalog for the entire company, covering all online and offline channels</para>
+                /// </summary>
+                [NameInMap("TopicDescription")]
+                [Validation(Required=false)]
+                public string TopicDescription { get; set; }
 
                 /// <summary>
                 /// <para>The topic ID.</para>
@@ -540,7 +611,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The topic name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>全渠道数据专题</para>
+                /// <para>Omni-channel data topic</para>
                 /// </summary>
                 [NameInMap("TopicName")]
                 [Validation(Required=false)]
@@ -549,7 +620,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The first listing time.</para>
+            /// <para>The time of the first listing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-22 10:06:20</para>
@@ -559,7 +630,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string FirstOnShelveTime { get; set; }
 
             /// <summary>
-            /// <para>The user who first listed the asset.</para>
+            /// <para>The user who performed the first listing.</para>
             /// </summary>
             [NameInMap("FirstOnShelveUser")]
             [Validation(Required=false)]
@@ -569,7 +640,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>John</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -591,14 +662,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The statistical granularity name of the technical metric. Returned when the asset type is INDEX.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>课程</para>
+            /// <para>Course</para>
             /// </summary>
             [NameInMap("Granularity")]
             [Validation(Required=false)]
             public string Granularity { get; set; }
 
             /// <summary>
-            /// <para>The asset GUID, which serves as the unique identifier of the asset.</para>
+            /// <para>The GUID of the asset, which serves as the unique identifier of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dp_ds_table.300023201.7311626611751680256.load_test.abc</para>
@@ -627,8 +698,8 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <summary>
             /// <para>Indicates whether the table is a partitioned table. Returned when the asset type is TABLE. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: Yes.</description></item>
-            /// <item><description>false: No.</description></item>
+            /// <item><description>true: The table is a partitioned table.</description></item>
+            /// <item><description>false: The table is not a partitioned table.</description></item>
             /// </list>
             /// </summary>
             [NameInMap("IsPartitionTable")]
@@ -636,7 +707,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? IsPartitionTable { get; set; }
 
             /// <summary>
-            /// <para>The last DDL change time.</para>
+            /// <para>The time of the last DDL change.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-11 16:10:19</para>
@@ -646,7 +717,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastDdlTime { get; set; }
 
             /// <summary>
-            /// <para>The last DML update time.</para>
+            /// <para>The time of the last DML update.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2024-10-11 16:10:19</para>
@@ -656,7 +727,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastDmlTime { get; set; }
 
             /// <summary>
-            /// <para>The last listing time.</para>
+            /// <para>The time of the last listing.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-05-22 10:06:20</para>
@@ -666,7 +737,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string LastOnShelveTime { get; set; }
 
             /// <summary>
-            /// <para>The user who last listed the asset.</para>
+            /// <para>The user who performed the last listing.</para>
             /// </summary>
             [NameInMap("LastOnShelveUser")]
             [Validation(Required=false)]
@@ -676,7 +747,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>John</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -702,14 +773,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> MaintainUserGroups { get; set; }
 
             /// <summary>
-            /// <para>The listing maintenance personnel.</para>
+            /// <para>The IDs of the listing maintenance users.</para>
             /// </summary>
             [NameInMap("MaintainUserIds")]
             [Validation(Required=false)]
             public List<string> MaintainUserIds { get; set; }
 
             /// <summary>
-            /// <para>The highest sensitivity level. Returned when the asset type is TABLE.</para>
+            /// <para>The maximum sensitivity level. This parameter is returned when the asset type is TABLE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>L3</para>
@@ -739,7 +810,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 /// <para>The username.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>张三</para>
+                /// <para>John</para>
                 /// </summary>
                 [NameInMap("DisplayName")]
                 [Validation(Required=false)]
@@ -758,7 +829,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The partition field. Returned when the asset type is TABLE.</para>
+            /// <para>The partition key. Returned when the asset type is TABLE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ds</para>
@@ -778,11 +849,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string PrimaryKey { get; set; }
 
             /// <summary>
-            /// <para>The visibility scope type of the profiling report. Returned when the asset type is TABLE or INDEX. Valid values:</para>
+            /// <para>The visibility scope type of the profiling report. This parameter is returned only when the asset type is TABLE or INDEX. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>ALL_USERS_CAN_VIEW: Visible to all users.</description></item>
             /// <item><description>PART_USERS_CAN_VIEW: Visible to some users.</description></item>
-            /// <item><description>ALL_USERS_CAN_NOT_VIEW: Not visible to any user.</description></item>
+            /// <item><description>ALL_USERS_CAN_NOT_VIEW: Not visible to any users.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -807,7 +878,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> ProfilingReportViewScopeUserIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the project to which the asset belongs. Returned when the asset type is TABLE (physical tables only) or INDEX (technical metrics whose source table is a physical table only).</para>
+            /// <para>The ID of the project to which the asset belongs. This parameter is returned when the asset type is TABLE (physical tables only) or INDEX (technical metrics whose source table is a physical table only).</para>
             /// 
             /// <b>Example:</b>
             /// <para>6865331517728384</para>
@@ -817,7 +888,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>The name of the project to which the asset belongs. Returned when the asset type is TABLE (physical tables only) or INDEX (technical metrics whose source table is a physical table only).</para>
+            /// <para>The name of the project to which the asset belongs. This parameter is returned when the asset type is TABLE (physical tables only) or INDEX (technical metrics whose source table is a physical table only).</para>
             /// 
             /// <b>Example:</b>
             /// <para>train</para>
@@ -827,7 +898,125 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string ProjectName { get; set; }
 
             /// <summary>
-            /// <para>The number of views.</para>
+            /// <para>The quality score radar chart information. This parameter is returned only when includeDetailedAttributes is set to true. It contains the total score, the number of passed/validated rules, and the score details for each dimension.</para>
+            /// </summary>
+            [NameInMap("QualityScoreRadar")]
+            [Validation(Required=false)]
+            public GetCatalogAssetDetailsResponseBodyDataQualityScoreRadar QualityScoreRadar { get; set; }
+            public class GetCatalogAssetDetailsResponseBodyDataQualityScoreRadar : TeaModel {
+                /// <summary>
+                /// <para>The list of dimension scores.</para>
+                /// </summary>
+                [NameInMap("CatalogScores")]
+                [Validation(Required=false)]
+                public List<GetCatalogAssetDetailsResponseBodyDataQualityScoreRadarCatalogScores> CatalogScores { get; set; }
+                public class GetCatalogAssetDetailsResponseBodyDataQualityScoreRadarCatalogScores : TeaModel {
+                    /// <summary>
+                    /// <para>The dimension name.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>Completeness</para>
+                    /// </summary>
+                    [NameInMap("Catalog")]
+                    [Validation(Required=false)]
+                    public string Catalog { get; set; }
+
+                    /// <summary>
+                    /// <para>The number of field-level rules.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>7</para>
+                    /// </summary>
+                    [NameInMap("FieldRuleCount")]
+                    [Validation(Required=false)]
+                    public int? FieldRuleCount { get; set; }
+
+                    /// <summary>
+                    /// <para>The pass rate.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>0.83</para>
+                    /// </summary>
+                    [NameInMap("PassRate")]
+                    [Validation(Required=false)]
+                    public double? PassRate { get; set; }
+
+                    /// <summary>
+                    /// <para>The number of passed rules.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>10</para>
+                    /// </summary>
+                    [NameInMap("PassRuleCount")]
+                    [Validation(Required=false)]
+                    public int? PassRuleCount { get; set; }
+
+                    /// <summary>
+                    /// <para>The dimension score.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>85.5</para>
+                    /// </summary>
+                    [NameInMap("Score")]
+                    [Validation(Required=false)]
+                    public double? Score { get; set; }
+
+                    /// <summary>
+                    /// <para>The number of table-level rules.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>5</para>
+                    /// </summary>
+                    [NameInMap("TableRuleCount")]
+                    [Validation(Required=false)]
+                    public int? TableRuleCount { get; set; }
+
+                    /// <summary>
+                    /// <para>The number of validated rules.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>12</para>
+                    /// </summary>
+                    [NameInMap("ValidateRuleCount")]
+                    [Validation(Required=false)]
+                    public int? ValidateRuleCount { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The number of passed rules.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>10</para>
+                /// </summary>
+                [NameInMap("PassRuleCount")]
+                [Validation(Required=false)]
+                public int? PassRuleCount { get; set; }
+
+                /// <summary>
+                /// <para>The total quality score.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>85.5</para>
+                /// </summary>
+                [NameInMap("TotalScore")]
+                [Validation(Required=false)]
+                public double? TotalScore { get; set; }
+
+                /// <summary>
+                /// <para>The number of validated rules.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>12</para>
+                /// </summary>
+                [NameInMap("ValidateRuleCount")]
+                [Validation(Required=false)]
+                public int? ValidateRuleCount { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The view count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -883,7 +1072,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string BizUnit { get; set; }
 
                 /// <summary>
-                /// <para>The environment to which the node belongs.</para>
+                /// <para>The environment to which the asset belongs.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PROD</para>
@@ -913,11 +1102,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeName { get; set; }
 
                 /// <summary>
-                /// <para>The scheduling method. Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>NORMAL: Timed scheduling.</description></item>
-                /// <item><description>MANUAL: Manual scheduling.</description></item>
-                /// </list>
+                /// <para>The scheduling type. Valid values: NORMAL (timed scheduling), MANUAL (manual scheduling).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>NORMAL</para>
@@ -937,7 +1122,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     /// <para>The username.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>张三</para>
+                    /// <para>John</para>
                     /// </summary>
                     [NameInMap("DisplayName")]
                     [Validation(Required=false)]
@@ -985,7 +1170,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 }
 
                 /// <summary>
-                /// <para>The node type. Example valid values: DLINK (offline integration) and PYTHON37 (Python compute node).</para>
+                /// <para>The node type. Example valid values: DLINK (offline integration), PYTHON37 (Python compute node).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>DLINK</para>
@@ -997,7 +1182,23 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>The subtype. Valid values: DIM_NORMAL (common logical dimension table), DIM_ENUM (enumeration logical dimension table), DIM_VIRTUAL (virtual logical dimension table), SUM_BIZ_UNIT (aggregate table), FACT_EVENT (event fact logical table), FACT_SNAPSHOT (snapshot fact logical table), DATASOURCE_TABLE (data source table), PHYSICAL_TABLE (physical table), DATASOURCE_VIEW (data source view), PHYSICAL_VIEW (physical view), MATERIALIZED_VIEW (materialized view), BIZ_INDEX (business metric), INDEX (technical metric - standard modeling metric), and CUSTOM_INDEX (technical metric - custom metric).</para>
+            /// <para>The subtype. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>DIM_NORMAL: common logical dimension table.</description></item>
+            /// <item><description>DIM_ENUM: enumeration logical dimension table.</description></item>
+            /// <item><description>DIM_VIRTUAL: virtual logical dimension table.</description></item>
+            /// <item><description>SUM_BIZ_UNIT: aggregate logical table.</description></item>
+            /// <item><description>FACT_EVENT: event fact logical table.</description></item>
+            /// <item><description>FACT_SNAPSHOT: snapshot fact logical table.</description></item>
+            /// <item><description>DATASOURCE_TABLE: data source table.</description></item>
+            /// <item><description>PHYSICAL_TABLE: physical table.</description></item>
+            /// <item><description>DATASOURCE_VIEW: view (data source view).</description></item>
+            /// <item><description>PHYSICAL_VIEW: physical view.</description></item>
+            /// <item><description>MATERIALIZED_VIEW: materialized view.</description></item>
+            /// <item><description>BIZ_INDEX: business metric.</description></item>
+            /// <item><description>INDEX: technical metric (standard modeling metric).</description></item>
+            /// <item><description>CUSTOM_INDEX: technical metric (custom metric).</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>DIM_NORMAL</para>
@@ -1037,7 +1238,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string TableLifeCycle { get; set; }
 
             /// <summary>
-            /// <para>The storage size in bytes. Returned when the asset type is TABLE.</para>
+            /// <para>The storage size. This parameter is returned only when the asset type is TABLE.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -1059,7 +1260,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend response exception.</para>
+        /// <para>The backend response exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

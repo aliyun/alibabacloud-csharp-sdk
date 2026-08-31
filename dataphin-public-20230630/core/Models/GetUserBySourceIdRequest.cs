@@ -21,6 +21,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public long? OpTenantId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
+
+        /// <summary>
         /// <para>The user source ID.</para>
         /// <para>This parameter is required.</para>
         /// 
@@ -30,6 +40,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("SourceId")]
         [Validation(Required=false)]
         public string SourceId { get; set; }
+
+        /// <summary>
+        /// <para>The user source type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>aliyun</para>
+        /// </summary>
+        [NameInMap("SourceType")]
+        [Validation(Required=false)]
+        public string SourceType { get; set; }
 
     }
 

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateNodeSupplementRequest : TeaModel {
         /// <summary>
-        /// <para>Create backfill request</para>
+        /// <para>The data backfill request.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("CreateCommand")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public CreateNodeSupplementRequestCreateCommand CreateCommand { get; set; }
         public class CreateNodeSupplementRequestCreateCommand : TeaModel {
             /// <summary>
-            /// <para>Bulk mode: Include all downstream nodes. Default value: false.</para>
+            /// <para>Specifies whether to include all downstream nodes in batch mode. Default value: false.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -28,21 +28,21 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public bool? ContainAllDownStream { get; set; }
 
             /// <summary>
-            /// <para>Downstream node IDs. Specifies downstream nodes for execution.</para>
+            /// <para>The IDs of downstream nodes to run. This parameter takes effect only when ContainAllDownStream is set to false.</para>
             /// </summary>
             [NameInMap("DownStreamNodeIdList")]
             [Validation(Required=false)]
             public List<CreateNodeSupplementRequestCreateCommandDownStreamNodeIdList> DownStreamNodeIdList { get; set; }
             public class CreateNodeSupplementRequestCreateCommandDownStreamNodeIdList : TeaModel {
                 /// <summary>
-                /// <para>Field ID</para>
+                /// <para>The field ID.</para>
                 /// </summary>
                 [NameInMap("FieldIdList")]
                 [Validation(Required=false)]
                 public List<string> FieldIdList { get; set; }
 
                 /// <summary>
-                /// <para>Node ID</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2323232</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>End business date</para>
+            /// <para>The end business date.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string EndBizDate { get; set; }
 
             /// <summary>
-            /// <para>Filter list: Used together with ContainAllDownStream. You can include or exclude items based on project, node, and other criteria. Default value: empty.</para>
+            /// <para>The list of filters. This parameter is used together with ContainAllDownStream to include or exclude nodes based on criteria such as project or node. Default value: empty.</para>
             /// </summary>
             [NameInMap("FilterList")]
             [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public bool? Exclude { get; set; }
 
                 /// <summary>
-                /// <para>Filter key. Valid values:</para>
+                /// <para>The filter key. Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description>PROJECT: project</description></item>
                 /// <item><description>NODE_OUTPUT_NAME: node output name</description></item>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Filter value list</para>
+                /// <para>The list of filter values.</para>
                 /// </summary>
                 [NameInMap("ValueList")]
                 [Validation(Required=false)]
@@ -109,14 +109,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Runtime global parameters</para>
+            /// <para>The runtime global parameters.</para>
             /// </summary>
             [NameInMap("GlobalParamList")]
             [Validation(Required=false)]
             public List<CreateNodeSupplementRequestCreateCommandGlobalParamList> GlobalParamList { get; set; }
             public class CreateNodeSupplementRequestCreateCommandGlobalParamList : TeaModel {
                 /// <summary>
-                /// <para>Parameter key</para>
+                /// <para>The parameter.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>param1</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>Parameter value</para>
+                /// <para>The parameter value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>value1</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Latest trigger time (HH:MM). This parameter applies only to hourly tasks.</para>
+            /// <para>The latest trigger time in the HH:MM format. This parameter is applicable only to hourly nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20:59</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MaxDueTime { get; set; }
 
             /// <summary>
-            /// <para>Earliest trigger time (HH:MM). This parameter applies only to hourly tasks.</para>
+            /// <para>The earliest trigger time in the HH:MM format. This parameter is applicable only to hourly nodes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>00:00</para>
@@ -158,17 +158,17 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string MinDueTime { get; set; }
 
             /// <summary>
-            /// <para>Backfill name. If not specified, a name is automatically generated by the system.</para>
+            /// <para>The name of the data backfill. If this parameter is not specified, the system automatically generates a name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>xx测试</para>
+            /// <para>TestBackfill</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>Root nodes for backfill. Multiple root nodes are supported.</para>
+            /// <para>The root nodes for data backfill. Multiple root nodes are supported.</para>
             /// <para>This parameter is required.</para>
             /// </summary>
             [NameInMap("NodeIdList")]
@@ -176,14 +176,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<CreateNodeSupplementRequestCreateCommandNodeIdList> NodeIdList { get; set; }
             public class CreateNodeSupplementRequestCreateCommandNodeIdList : TeaModel {
                 /// <summary>
-                /// <para>Field ID list: Can be specified when the node is a logical table node ID. If not specified, the entire table is used by default.</para>
+                /// <para>The list of field IDs. This parameter is applicable when the node ID is a logical table node ID. If this parameter is not specified, all fields in the table are used by default.</para>
                 /// </summary>
                 [NameInMap("FieldIdList")]
                 [Validation(Required=false)]
                 public List<string> FieldIdList { get; set; }
 
                 /// <summary>
-                /// <para>Node ID</para>
+                /// <para>The node ID.</para>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -196,14 +196,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Runtime custom parameters, configured per node</para>
+            /// <para>The runtime custom parameters configured by node.</para>
             /// </summary>
             [NameInMap("NodeParamsList")]
             [Validation(Required=false)]
             public List<CreateNodeSupplementRequestCreateCommandNodeParamsList> NodeParamsList { get; set; }
             public class CreateNodeSupplementRequestCreateCommandNodeParamsList : TeaModel {
                 /// <summary>
-                /// <para>Node ID</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>n_23324</para>
@@ -213,14 +213,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                 public string NodeId { get; set; }
 
                 /// <summary>
-                /// <para>Parameter list</para>
+                /// <para>The parameter list.</para>
                 /// </summary>
                 [NameInMap("ParamList")]
                 [Validation(Required=false)]
                 public List<CreateNodeSupplementRequestCreateCommandNodeParamsListParamList> ParamList { get; set; }
                 public class CreateNodeSupplementRequestCreateCommandNodeParamsListParamList : TeaModel {
                     /// <summary>
-                    /// <para>Parameter key</para>
+                    /// <para>The parameter.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>param1</para>
@@ -230,7 +230,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
                     public string Key { get; set; }
 
                     /// <summary>
-                    /// <para>Parameter value</para>
+                    /// <para>The parameter value.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>value1</para>
@@ -244,7 +244,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             }
 
             /// <summary>
-            /// <para>Concurrency. Default value: 1.</para>
+            /// <para>The concurrency. Default value: 1.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -254,7 +254,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public int? Parallelism { get; set; }
 
             /// <summary>
-            /// <para>Project ID</para>
+            /// <para>The project ID.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -265,7 +265,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public long? ProjectId { get; set; }
 
             /// <summary>
-            /// <para>Start business date</para>
+            /// <para>Corresponds to the &quot;Task Run Time&quot; option in the data backfill dialog box. If this parameter is set to true, the scheduled run time of instances is ignored and all instances run immediately. If this parameter is set to false, instances wait for their scheduled run time before running. Default value: true.</para>
+            /// </summary>
+            [NameInMap("RunImmediately")]
+            [Validation(Required=false)]
+            public bool? RunImmediately { get; set; }
+
+            /// <summary>
+            /// <para>The start business date.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -278,10 +285,10 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>Environment identifier.</para>
+        /// <para>The environment identifier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DEV: development environment.</description></item>
-        /// <item><description>PROD (default): production environment.</description></item>
+        /// <item><description>DEV: Development environment. </description></item>
+        /// <item><description>PROD (default): Production environment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -292,7 +299,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public string Env { get; set; }
 
         /// <summary>
-        /// <para>Tenant ID</para>
+        /// <para>The tenant ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -301,6 +308,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

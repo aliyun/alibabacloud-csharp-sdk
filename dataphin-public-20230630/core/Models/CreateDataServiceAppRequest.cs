@@ -45,14 +45,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>默认应用</para>
+            /// <para>Default application</para>
             /// </summary>
             [NameInMap("AppName")]
             [Validation(Required=false)]
             public string AppName { get; set; }
 
             /// <summary>
-            /// <para>The app secret.
+            /// <para>The application secret.
             /// If this parameter is not specified, the system automatically generates a new AppSecret value.
             /// The secret must be 8 to 127 characters in length and can contain letters, digits, underscores (_), and hyphens (-).
             /// This parameter can be customized only when using Alibaba Cloud API Gateway or the built-in gateway. This parameter is ignored when using a dedicated cloud gateway.</para>
@@ -73,11 +73,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public List<string> OwnerIds { get; set; }
 
             /// <summary>
-            /// <para>Common scenarios.</para>
+            /// <para>The common scenarios.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>数据分析</para>
+            /// <para>Data analytics</para>
             /// </summary>
             [NameInMap("Scenarios")]
             [Validation(Required=false)]
@@ -95,6 +95,16 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <para>The ID of the operator.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
     }
 

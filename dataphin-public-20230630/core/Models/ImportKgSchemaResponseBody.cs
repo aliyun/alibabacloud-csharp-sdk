@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         }
 
         /// <summary>
-        /// <para>The backend exception details.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

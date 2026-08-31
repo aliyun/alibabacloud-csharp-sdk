@@ -17,6 +17,164 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [Validation(Required=false)]
         public CreateDatasetRequestCreateCommand CreateCommand { get; set; }
         public class CreateDatasetRequestCreateCommand : TeaModel {
+            [NameInMap("ApiInfo")]
+            [Validation(Required=false)]
+            public CreateDatasetRequestCreateCommandApiInfo ApiInfo { get; set; }
+            public class CreateDatasetRequestCreateCommandApiInfo : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>60</para>
+                /// </summary>
+                [NameInMap("ExecTimeout")]
+                [Validation(Required=false)]
+                public int? ExecTimeout { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("ExecuteMode")]
+                [Validation(Required=false)]
+                public int? ExecuteMode { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1011</para>
+                /// </summary>
+                [NameInMap("OsApiGroup")]
+                [Validation(Required=false)]
+                public int? OsApiGroup { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1022</para>
+                /// </summary>
+                [NameInMap("OsProject")]
+                [Validation(Required=false)]
+                public int? OsProject { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("Protocol")]
+                [Validation(Required=false)]
+                public int? Protocol { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("RequestMethod")]
+                [Validation(Required=false)]
+                public int? RequestMethod { get; set; }
+
+                [NameInMap("RequestParamList")]
+                [Validation(Required=false)]
+                public List<CreateDatasetRequestCreateCommandApiInfoRequestParamList> RequestParamList { get; set; }
+                public class CreateDatasetRequestCreateCommandApiInfoRequestParamList : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
+                    [NameInMap("DefaultValue")]
+                    [Validation(Required=false)]
+                    public string DefaultValue { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
+                    [NameInMap("Descr")]
+                    [Validation(Required=false)]
+                    public string Descr { get; set; }
+
+                    [NameInMap("IsUrl")]
+                    [Validation(Required=false)]
+                    public bool? IsUrl { get; set; }
+
+                    [NameInMap("Must")]
+                    [Validation(Required=false)]
+                    public bool? Must { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>col01</para>
+                    /// </summary>
+                    [NameInMap("ParamName")]
+                    [Validation(Required=false)]
+                    public string ParamName { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>int</para>
+                    /// </summary>
+                    [NameInMap("ParamType")]
+                    [Validation(Required=false)]
+                    public string ParamType { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
+                    [NameInMap("Sample")]
+                    [Validation(Required=false)]
+                    public string Sample { get; set; }
+
+                }
+
+                [NameInMap("ResponseParamList")]
+                [Validation(Required=false)]
+                public List<CreateDatasetRequestCreateCommandApiInfoResponseParamList> ResponseParamList { get; set; }
+                public class CreateDatasetRequestCreateCommandApiInfoResponseParamList : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
+                    [NameInMap("Descr")]
+                    [Validation(Required=false)]
+                    public string Descr { get; set; }
+
+                    [NameInMap("IsUrl")]
+                    [Validation(Required=false)]
+                    public bool? IsUrl { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>col01</para>
+                    /// </summary>
+                    [NameInMap("ParamName")]
+                    [Validation(Required=false)]
+                    public string ParamName { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>int</para>
+                    /// </summary>
+                    [NameInMap("ParamType")]
+                    [Validation(Required=false)]
+                    public string ParamType { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>test</para>
+                    /// </summary>
+                    [NameInMap("Sample")]
+                    [Validation(Required=false)]
+                    public string Sample { get; set; }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>60</para>
+                /// </summary>
+                [NameInMap("Timeout")]
+                [Validation(Required=false)]
+                public int? Timeout { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The dataset content type. Valid values: GENERAL, TEXT, AUDIO, VIDEO, IMAGE, TABLE, INDEX.</para>
             /// <para>This parameter is required.</para>
@@ -674,6 +832,14 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         [NameInMap("OpTenantId")]
         [Validation(Required=false)]
         public long? OpTenantId { get; set; }
+
+        /// <summary>
+        /// <b>Example:</b>
+        /// <para>30001011</para>
+        /// </summary>
+        [NameInMap("OpUserId")]
+        [Validation(Required=false)]
+        public string OpUserId { get; set; }
 
         /// <summary>
         /// <para>The project ID.</para>

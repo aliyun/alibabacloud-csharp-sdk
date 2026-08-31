@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
 {
     public class CreateDataServiceAppResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code returned by the backend.</para>
+        /// <para>The backend response code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>OK</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error details returned by the backend.</para>
+        /// <para>The details of the backend exception.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>

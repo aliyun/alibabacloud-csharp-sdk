@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The details of the backend exception.</para>
+        /// <para>The backend exception details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>internal error</para>
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             /// <para>The category. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1: window function.</description></item>
-            /// <item><description>2: aggregate function.</description></item>
-            /// <item><description>3: numeric function.</description></item>
+            /// <item><description>2: statistical function.</description></item>
+            /// <item><description>3: numerical function.</description></item>
             /// <item><description>4: string function.</description></item>
             /// <item><description>5: time function.</description></item>
-            /// <item><description>6: IP address utility function.</description></item>
+            /// <item><description>6: IP address helper function.</description></item>
             /// <item><description>7: URL-related function.</description></item>
             /// <item><description>8: encoding and decoding function.</description></item>
             /// <item><description>9: business-related function.</description></item>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string CommandHelp { get; set; }
 
             /// <summary>
-            /// <para>The compute engine. Valid values: HADOOP, MAX_COMPUTE, and FLINK.</para>
+            /// <para>The compute engine type. Valid values: HADOOP, MAX_COMPUTE, and FLINK.</para>
             /// 
             /// <b>Example:</b>
             /// <para>HADOOP</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The directory where the function is stored.</para>
+            /// <para>The storage folder.</para>
             /// 
             /// <b>Example:</b>
             /// <para>/</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string Directory { get; set; }
 
             /// <summary>
-            /// <para>The creation time, in the yyyy-MM-d HH:mm:ss format.</para>
+            /// <para>The creation time. Format: yyyy-MM-d HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Dataphin_public20230630.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time, in the yyyy-MM-d HH:mm:ss format.</para>
+            /// <para>The update time. Format: yyyy-MM-d HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-06-10 10:01:01</para>
