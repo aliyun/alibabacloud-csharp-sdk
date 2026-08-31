@@ -25,6 +25,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public class DescribePriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
                 /// <para>The currency unit.</para>
+                /// <para>China site: CNY.</para>
+                /// <para>International site: USD.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY</para>
@@ -139,6 +141,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                 public class DescribePriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice : TeaModel {
                     /// <summary>
                     /// <para>The currency unit.</para>
+                    /// <para>China site: CNY.</para>
+                    /// <para>International site: USD.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CNY</para>

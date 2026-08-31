@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string CommandId { get; set; }
 
         /// <summary>
-        /// <para>The encoding mode of the CommandContent and Output fields in the response. Valid values:</para>
+        /// <para>The encoding mode of the <c>CommandContent</c> and <c>Output</c> fields in the response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>PlainText: returns the original script content and output.</description></item>
-        /// <item><description>Base64: returns Base64-encoded script content and output.</description></item>
+        /// <item><description>PlainText: Returns the original script content and output.</description></item>
+        /// <item><description>Base64: Returns the Base64-encoded script content and output.</description></item>
         /// </list>
         /// <para>Default value: Base64.</para>
         /// 
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The description of the command.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the Provider parameter is specified parameter query public commands, fuzzy match is supported by default.</para>
+        /// <item><description><para>When the <c>Provider</c> parameter is specified parameter query public commands, fuzzy match is supported by default.</para>
         /// </description></item>
-        /// <item><description><para>If the Provider parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <c>test*</c> to search for all commands whose descriptions start with <c>test</c>, enter <c>*test</c> to search for all commands whose descriptions end with <c>test</c>, or enter <c>*test*</c> to search for all commands whose descriptions contain <c>test</c>.</para>
+        /// <item><description><para>When the <c>Provider</c> parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <c>test*</c> to search for all commands whose descriptions start with <c>test</c>, enter <c>*test</c> to search for all commands whose descriptions end with <c>test</c>, or enter <c>*test*</c> to search for all commands whose descriptions contain <c>test</c>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -53,9 +53,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to query only the latest version of public commands when the query results include public commands. This parameter does not affect the query of private commands.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: queries only the latest version of public commands.</para>
+        /// <item><description><para>true: Queries only the latest version of public commands.</para>
         /// </description></item>
-        /// <item><description><para>false: queries all versions of public commands.</para>
+        /// <item><description><para>false: Queries all versions of public commands.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: false.</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Latest { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for paging queries.</para>
+        /// <para>The maximum number of entries per page for a paged query.</para>
         /// <para>Maximum value: 50.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -82,9 +82,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the command.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the Provider parameter is specified parameter query public commands, fuzzy match is supported by default.</para>
+        /// <item><description><para>When the <c>Provider</c> parameter is specified parameter query public commands, fuzzy match is supported by default.</para>
         /// </description></item>
-        /// <item><description><para>If the Provider parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <c>command*</c> to search for all commands whose names start with <c>command</c>, enter <c>*command</c> to search for all commands whose names end with <c>command</c>, or enter <c>*command*</c> to search for all commands whose names contain <c>command</c>.</para>
+        /// <item><description><para>When the <c>Provider</c> parameter is not specified parameter query private commands, fuzzy match is supported. For example, enter <c>command*</c> to search for all commands whose names start with <c>command</c>, enter <c>*command</c> to search for all commands whose names end with <c>command</c>, or enter <c>*command*</c> to search for all commands whose names contain <c>command</c>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -115,7 +115,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</para>
+        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to complete paged query operations. For paging, use NextToken and MaxResults instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to be deprecated. Use NextToken and MaxResults to perform paging queries.</para>
+        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to complete paged query operations. For paging, use NextToken and MaxResults instead.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -140,11 +140,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The provider of the public command. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If you do not specify this parameter, all Cloud Assistant commands that you manually created are queried by default.</description></item>
-        /// <item><description>If you set this parameter to <c>AlibabaCloud</c>, all public commands provided by Alibaba Cloud are queried.</description></item>
-        /// <item><description>If you set this parameter to a specific public command provider, all public commands provided by the provider are queried. Examples:<list type="bullet">
-        /// <item><description>If you set Provider to <c>AlibabaCloud.ECS.GuestOS</c>, all public commands provided by <c>AlibabaCloud.ECS.GuestOS</c> are queried.</description></item>
-        /// <item><description>If you set Provider to <c>AlibabaCloud.ECS.GuestOSDiagnose</c>, all public commands provided by <c>AlibabaCloud.ECS.GuestOSDiagnose</c> are queried.</description></item>
+        /// <item><description>If this parameter is not specified, all Cloud Assistant commands that you manually created are queried by default.</description></item>
+        /// <item><description>If this parameter is set to <c>AlibabaCloud</c>, all public commands provided by Alibaba Cloud are queried.</description></item>
+        /// <item><description>If this parameter is set to a specific public command provider, all public commands provided by that provider are queried. Examples:<list type="bullet">
+        /// <item><description>If <c>Provider=AlibabaCloud.ECS.GuestOS</c>, public commands provided by <c>AlibabaCloud.ECS.GuestOS</c> are queried.</description></item>
+        /// <item><description>If <c>Provider=AlibabaCloud.ECS.GuestOSDiagnose</c>, public commands provided by <c>AlibabaCloud.ECS.GuestOSDiagnose</c> are queried.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -194,8 +194,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeCommandsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key of the command. Valid values of N: 1 to 20. The tag key cannot be an empty string.</para>
-            /// <para>If you use a single tag to filter resources, the resource count with the tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all the specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
-            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with this tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count with all specified tags attached cannot exceed 1,000. If the resource count exceeds 1,000, use the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query resources.</para>
+            /// <para>The tag key can be up to 64 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -222,7 +222,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description>RunBatScript: Bat script that runs on Windows instances.</description></item>
         /// <item><description>RunPowerShellScript: PowerShell script that runs on Windows instances.</description></item>
-        /// <item><description>RunShellScript: shell script that runs on Linux instances.</description></item>
+        /// <item><description>RunShellScript: Shell script that runs on Linux instances.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

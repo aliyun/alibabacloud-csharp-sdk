@@ -18,6 +18,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The CPU architecture. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>X86.</description></item>
+        /// <item><description>ARM.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>X86</para>
@@ -35,6 +39,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The GPU type.</para>
+        /// <remarks>
+        /// <para>Fuzzy matching is supported. For example, if the GPU type of an instance type is NVIDIA V100, you can enter NVIDIA to query information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>NVIDIA V100</para>
@@ -58,7 +65,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceCategories { get; set; }
 
         /// <summary>
-        /// <para>The instance type category. Valid values:</para>
+        /// <para>The categorization of the instance type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>General-purpose: general-purpose.</description></item>
+        /// <item><description>Compute-optimized: compute-optimized.</description></item>
+        /// <item><description>Memory-optimized: memory-optimized.</description></item>
+        /// <item><description>Big data: big data.</description></item>
+        /// <item><description>Local SSDs: instance families with local SSDs.</description></item>
+        /// <item><description>High Clock Speed: high frequency.</description></item>
+        /// <item><description>Enhanced: enhanced instance families.</description></item>
+        /// <item><description>Shared: shared.</description></item>
+        /// <item><description>Compute-optimized with GPU: GPU computing.</description></item>
+        /// <item><description>Visual Compute-optimized: visual compute-optimized.</description></item>
+        /// <item><description>Heterogeneous Service: heterogeneous service.</description></item>
+        /// <item><description>Compute-optimized with FPGA: FPGA-accelerated compute-optimized.</description></item>
+        /// <item><description>Compute-optimized with NPU: NPU compute-optimized.</description></item>
+        /// <item><description>ECS Bare Metal: ECS Bare Metal server.</description></item>
+        /// <item><description>Super Computing Cluster: Super Computing Cluster (SCC).</description></item>
+        /// <item><description>High Performance Compute: high-performance computing (HPC).</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Big data</para>
@@ -69,6 +94,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The level of the instance family. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>EntryLevel: entry level (shared).</description></item>
+        /// <item><description>EnterpriseLevel: enterprise level.</description></item>
+        /// <item><description>CreditEntryLevel: credit-based entry level.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>EntryLevel</para>
@@ -85,7 +115,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceTypeFamilies { get; set; }
 
         /// <summary>
-        /// <para>The instance family to which the instance type belongs. For more information, see <a href="https://help.aliyun.com/document_detail/25621.html">DescribeInstanceTypeFamilies</a>.</para>
+        /// <para>The instance family to which the instance type belongs. For more information about valid values, see <a href="https://help.aliyun.com/document_detail/25621.html">DescribeInstanceTypeFamilies</a>.</para>
+        /// <para>For more information about instance families, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6</para>
@@ -105,14 +136,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> InstanceTypes { get; set; }
 
         /// <summary>
-        /// <para>The specified local disk types. Array length: 1 to 2.</para>
+        /// <para>The specified local disk categories. Array length: 1 to 2.</para>
         /// </summary>
         [NameInMap("LocalStorageCategories")]
         [Validation(Required=false)]
         public List<string> LocalStorageCategories { get; set; }
 
         /// <summary>
-        /// <para>The local disk type. For more information, see <a href="~~63138#section_n2w_8yc_5u1~~">Local disks</a>. Valid values:</para>
+        /// <para>The category of local disks. For more information, see <a href="~~63138#section_n2w_8yc_5u1~~">Local disks</a>. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>local_hdd_pro: SATA HDDs used by the d1ne and d1 instance families.</description></item>
+        /// <item><description>local_ssd_pro: NVMe SSDs used by the i2, i2g, i1, ga1, and gn5 instance families.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>local_ssd_pro</para>
@@ -122,7 +157,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LocalStorageCategory { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query. Maximum value: 1600. This parameter is used for paging.</para>
+        /// <para>The maximum number of entries per page for paging. Maximum value: 1600.</para>
+        /// <para>Default value: 1600.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -136,6 +172,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected maximum number of vCPU cores when querying instance types. Valid values: positive integers.</para>
+        /// <remarks>
+        /// <para>If the number of vCPU cores of a queried instance type is greater than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -146,6 +185,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected maximum clock speed when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the clock speed of a queried instance type is greater than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>3.2</para>
@@ -156,6 +198,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected maximum turbo frequency when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the turbo frequency of a queried instance type is greater than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>4.1</para>
@@ -166,6 +211,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected maximum number of GPUs when querying instance types. Valid values: positive integers.</para>
+        /// <remarks>
+        /// <para>If the number of GPUs of a queried instance type is greater than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -176,6 +224,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected maximum memory size when querying instance types. Unit: GiB.</para>
+        /// <remarks>
+        /// <para>If the memory size of a queried instance type is greater than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>60</para>
@@ -185,7 +236,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? MaximumMemorySize { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum baseline vCPU computing performance (sum of all vCPUs) for burstable instances t5 and t6 when querying instance types.</para>
+        /// <para>The expected minimum baseline vCPU computing performance (sum of all vCPUs) of burstable instances t5 and t6 when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the baseline vCPU computing performance (sum of all vCPUs) of burstable instances t5 and t6 of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -196,6 +250,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum number of vCPU cores when querying instance types. Valid values: positive integers.</para>
+        /// <remarks>
+        /// <para>If the number of vCPU cores of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -206,6 +263,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum clock speed when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the clock speed of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2.5</para>
@@ -216,6 +276,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum turbo frequency when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the turbo frequency of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>3.2</para>
@@ -226,6 +289,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum number of cloud disks that can be attached when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the maximum number of cloud disks that can be attached to a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -235,7 +301,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumDiskQuantity { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum number of IPv6 addresses per Elastic Network Interface (ENI) when querying instance types.</para>
+        /// <para>The expected minimum number of IPv6 addresses per network interface controller (NIC) when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the maximum number of IPv6 addresses per network interface controller (NIC) of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -245,7 +314,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumEniIpv6AddressQuantity { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum number of IPv4 addresses per Elastic Network Interface (ENI) when querying instance types.</para>
+        /// <para>The expected minimum number of IPv4 addresses per network interface controller (NIC) when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the maximum number of IPv4 addresses per network interface controller (NIC) of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -256,6 +328,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum number of Elastic Network Interfaces (ENIs) that can be attached when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the maximum number of network interface controllers (NICs) that can be attached to a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -266,6 +341,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum number of Elastic RDMA Interfaces (ERIs) when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the number of Elastic RDMA Interfaces (ERIs) of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -276,6 +354,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum number of GPUs when querying instance types. Valid values: positive integers.</para>
+        /// <remarks>
+        /// <para>If the number of GPUs of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>
@@ -285,7 +366,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumGPUAmount { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum initial vCPU credits for burstable instances t5 and t6 when querying instance types.</para>
+        /// <para>The expected minimum initial vCPU CPU credits value of burstable instances t5 and t6 when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the initial vCPU CPU credits value of burstable instances t5 and t6 of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>12</para>
@@ -296,6 +380,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum inbound internal bandwidth when querying instance types. Unit: kbit/s.</para>
+        /// <remarks>
+        /// <para>If the inbound internal bandwidth of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>12288</para>
@@ -306,6 +393,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum outbound internal bandwidth when querying instance types. Unit: kbit/s.</para>
+        /// <remarks>
+        /// <para>If the outbound internal bandwidth of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>12288</para>
@@ -316,6 +406,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum inbound packet forwarding rate over the internal network when querying instance types. Unit: pps.</para>
+        /// <remarks>
+        /// <para>If the inbound packet forwarding rate over the internal network of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -326,6 +419,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum outbound packet forwarding rate over the internal network when querying instance types. Unit: pps.</para>
+        /// <remarks>
+        /// <para>If the outbound packet forwarding rate over the internal network of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>
@@ -336,6 +432,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum number of local disks attached to the instance when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the number of local disks attached to a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -345,7 +444,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumLocalStorageAmount { get; set; }
 
         /// <summary>
-        /// <para>The capacity of each local disk attached to the instance. Unit: GiB.</para>
+        /// <para>The capacity of a single local disk attached to the instance. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>
@@ -356,6 +455,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum memory size when querying instance types. Unit: GiB.</para>
+        /// <remarks>
+        /// <para>If the memory size of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -365,7 +467,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public float? MinimumMemorySize { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum number of default queues for the primary ENI when querying instance types.</para>
+        /// <para>The expected minimum default queue number of the primary ENI when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the default queue number of the primary ENI of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -376,6 +481,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The expected minimum number of QueuePair (QP) queues per Elastic RDMA Interface (ERI) when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the maximum number of QP queues per ERI of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>8</para>
@@ -385,7 +493,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumQueuePairNumber { get; set; }
 
         /// <summary>
-        /// <para>The expected minimum number of default queues for the secondary Elastic Network Interface (ENI) when querying instance types.</para>
+        /// <para>The expected minimum default queue number of secondary Elastic Network Interfaces (ENIs) when querying instance types.</para>
+        /// <remarks>
+        /// <para>If the default queue number of secondary network interface controllers (NICs) of a queried instance type is less than the specified value, the system does not return information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>4</para>
@@ -395,7 +506,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? MinimumSecondaryEniQueueNumber { get; set; }
 
         /// <summary>
-        /// <para>The query token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first call.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>
@@ -409,6 +520,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>Specifies whether the cloud disks attached to the instance type support NVMe. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>required: Supported. Cloud disks are attached in NVMe mode.</description></item>
+        /// <item><description>unsupported: Not supported. Cloud disks are not attached in NVMe mode.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>required</para>
@@ -427,6 +542,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The processor model.</para>
+        /// <remarks>
+        /// <para>Fuzzy matching is supported. For example, if the processor model of an instance type is Intel Xeon(Ice Lake) Platinum 8369B, you can enter Intel to query information about that instance type.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Intel Xeon(Ice Lake) Platinum 8369B</para>

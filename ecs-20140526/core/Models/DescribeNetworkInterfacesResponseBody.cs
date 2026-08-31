@@ -272,7 +272,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The paging query parameter.</para>
+        /// <para>The paging parameter.</para>
+        /// <remarks>
+        /// <para>This parameter is being deprecated. Use NextToken and MaxResults for paging.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -282,7 +285,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The paging query parameter.</para>
+        /// <para>The paging parameter.</para>
+        /// <remarks>
+        /// <para>This parameter is being deprecated. Use NextToken and MaxResults for paging.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -303,6 +309,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The total number of Elastic Network Interfaces (ENIs) returned.</para>
+        /// <remarks>
+        /// <para>When you use the <c>MaxResults</c> and <c>NextToken</c> parameters for paging, the returned <c>TotalCount</c> value is meaningless.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

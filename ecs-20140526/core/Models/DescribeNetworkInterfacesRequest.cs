@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The IPv6 address of the network interface controller (NIC). N indicates that you can configure multiple IPv6 addresses. Valid values of N: 1 to 100.</para>
+        /// <para>The IPv6 address of the network interface controller (NIC). N indicates that you can specify multiple IPv6 addresses. Valid values of N: 1 to 100.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2408:4321:180:1701:94c7:bc38:3bfa:****</para>
@@ -30,7 +30,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> Ipv6Address { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for paging query. Valid values: 10 to 500.</para>
+        /// <para>The maximum number of entries per page for paging. Valid values: 10 to 500.</para>
+        /// <para>Default value:</para>
+        /// <list type="bullet">
+        /// <item><description>If you do not set this parameter or set it to a value less than 10, the default value is 10.</description></item>
+        /// <item><description>If you set this parameter to a value greater than 500, the default value is 500.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -50,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public List<string> NetworkInterfaceId { get; set; }
 
         /// <summary>
-        /// <para>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and can contain characters under the Unicode letter categorization (including English letters, Chinese characters, and digits). It can also contain colons (:), underscores (_), periods (.), and hyphens (-).</para>
+        /// <para>The name of the network interface controller (NIC). The name must be 2 to 128 characters in length and can contain characters from the Unicode letter categorization (which includes English letters, Chinese characters, and digits). The name can contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test-eni-name</para>
@@ -60,7 +65,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string NetworkInterfaceName { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the <c>NextToken</c> value returned in the previous API call.</para>
+        /// <para>For information about how to view the returned data, refer to the operation description above.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAdDWBF2****</para>
@@ -80,7 +86,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> Use MaxResults or NextToken for pagination instead.</para>
+        /// <remarks>
+        /// <para>This parameter is deprecated. Use the MaxResults and NextToken parameters for pagination.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -93,7 +101,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para><b>[Deprecated]</b> Use MaxResults or NextToken for pagination instead.</para>
+        /// <remarks>
+        /// <para>This parameter is deprecated. Use the MaxResults and NextToken parameters for pagination.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -135,7 +145,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The resource group ID. When you use this parameter to filter resources, the resource count cannot exceed 1000.</para>
+        /// <para>The resource group ID. If you use this parameter to filter resources, the resource count cannot exceed 1,000.</para>
+        /// <remarks>
+        /// <para>Filtering by the default resource group is not supported.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>rg-bp67acfmxazb4p****</para>
@@ -153,7 +166,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The security group ID associated with the secondary ENI.</para>
+        /// <para>The security group ID of the secondary ENI.</para>
+        /// <list type="bullet">
+        /// <item><description>To query information about a secondary ENI by security group ID, specify this parameter.</description></item>
+        /// <item><description>To query information about a primary ENI by security group ID, call <a href="https://help.aliyun.com/document_detail/25506.html">DescribeInstances</a> and specify the <c>SecurityGroupId</c> parameter.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>sg-bp144yr32sx6ndw****</para>
@@ -163,7 +180,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string SecurityGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a Virtual Network Operator (VNO).</para>
+        /// <para>Indicates whether the user of the network interface controller (NIC) is an Alibaba Cloud service or a Virtual Network Operator (VNO).</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -174,6 +191,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The status of the network interface controller (NIC). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Available: available.</description></item>
+        /// <item><description>Attaching: being attached.</description></item>
+        /// <item><description>InUse: attached.</description></item>
+        /// <item><description>Detaching: being detached.</description></item>
+        /// <item><description>Deleting: being deleted.</description></item>
+        /// </list>
+        /// <para>Default value: null, which indicates that all statuses are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -201,6 +226,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>The tag value of the network interface controller (NIC). Valid values of N: 1 to 20.</para>
+            /// <para>If you use a single tag to filter resources, the resource count with the specified tag cannot exceed 1,000. If you use multiple tags to filter resources, the resource count of resources that are attached to all specified tags cannot exceed 1,000. If the resource count exceeds 1,000, call the <a href="https://help.aliyun.com/document_detail/110425.html">ListTagResources</a> operation to query the resources.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>
@@ -212,7 +238,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The type of the network interface controller (NIC). Valid values:</para>
+        /// <para>The type of the Elastic Network Interface (ENI). Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Primary: primary network interface controller (NIC).</description></item>
+        /// <item><description>Secondary: secondary ENI.</description></item>
+        /// </list>
+        /// <para>Default value: null, which indicates that all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Secondary</para>

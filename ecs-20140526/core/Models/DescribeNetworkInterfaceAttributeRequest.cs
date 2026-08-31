@@ -10,7 +10,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 {
     public class DescribeNetworkInterfaceAttributeRequest : TeaModel {
         /// <summary>
-        /// <para>The network interface controller (NIC) attribute. Valid values:</para>
+        /// <para>The property of the Elastic Network Interface (ENI). Valid values:</para>
+        /// <para>attachment: queries the attachment information of member network interface controllers (NICs) for a trunk network interface controller (NIC). This parameter is in invitational preview and is not available for use.</para>
+        /// <para>connectionTrackingConfiguration: queries the network connectivity tracking configuration.</para>
+        /// <para>Default value:</para>
         /// 
         /// <b>Example:</b>
         /// <para>attachment</para>
@@ -20,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Attribute { get; set; }
 
         /// <summary>
-        /// <para>The network interface controller (NIC) ID.</para>
+        /// <para>The ID of the network interface controller (NIC).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the network interface controller (NIC). You can call <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
+        /// <para>The region ID of the network interface controller (NIC). You can invoke <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not yet available for use.</para>
+        /// <para>This parameter is not available for use.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Tag")]
@@ -68,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public class DescribeNetworkInterfaceAttributeRequestTag : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not yet available for use.</para>
+            /// <para>This parameter is not available for use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -80,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not yet available for use.</para>
+            /// <para>This parameter is not available for use.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

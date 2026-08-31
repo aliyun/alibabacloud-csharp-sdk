@@ -14,7 +14,16 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public ModifyInstanceSpecRequestSystemDisk SystemDisk { get; set; }
         public class ModifyInstanceSpecRequestSystemDisk : TeaModel {
             /// <summary>
-            /// <para>The new system disk category. Valid values:</para>
+            /// <para>The new category of the system disk. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><para>cloud_efficiency: ultra disk</para>
+            /// </description></item>
+            /// <item><description><para>cloud_ssd: standard SSD</para>
+            /// </description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to an <a href="https://help.aliyun.com/document_detail/25378.html">instance family that is available for purchase</a> and change a non-I/O optimized instance to an I/O optimized instance.</para>
+            /// </remarks>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_ssd</para>
@@ -68,7 +77,21 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether cross-cluster instance type upgrades are supported.</para>
+        /// <para>Specifies whether cross-cluster instance type upgrade is supported. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Supported.</description></item>
+        /// <item><description>false: Not supported.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// <para>If you set the parameter <c>AllowMigrateAcrossZone</c> to true and upgrade the Elastic Compute Service instance based on the response, note the following:</para>
+        /// <para>Classic network type instances:</para>
+        /// <list type="bullet">
+        /// <item><description><para>For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the private IP address, disk device names, and software authorization codes of the instance change. For Linux instances, basic disks (<c>cloud</c>) are identified as <b>xvda</b> or <b>xvdb</b>, and ultra disks (<c>cloud_efficiency</c>) and standard SSDs (<c>cloud_ssd</c>) are identified as <b>vda</b> or <b>vdb</b>.</para>
+        /// </description></item>
+        /// <item><description><para>For <a href="https://help.aliyun.com/document_detail/25378.html">instance families that are available for purchase</a>, the private IP address of the instance changes.</para>
+        /// </description></item>
+        /// </list>
+        /// <para>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the server disk device names and software authorization codes of the instance change. For Linux instances, basic disks (<c>cloud</c>) are identified as <b>xvda</b> or <b>xvdb</b>, and ultra disks (<c>cloud_efficiency</c>) and standard SSDs (<c>cloud_ssd</c>) are identified as <b>vda</b> or <b>vdb</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -79,6 +102,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>Specifies whether to submit an asynchronous request. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The request is submitted asynchronously.</description></item>
+        /// <item><description>false: The request is not submitted asynchronously.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -146,6 +174,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>Specifies whether to perform only a dry run. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: performs only a dry run. The instance type and public bandwidth are not modified. The system checks whether the required parameters are specified, whether the request format is valid, whether business restrictions are met, and whether ECS resources are available. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</description></item>
+        /// <item><description>false (default): performs a dry run and sends the request. If the check succeeds, the instance type and public bandwidth are directly modified.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -166,7 +198,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The target instance type of the instance. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>. You can also invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</para>
+        /// <para>The target instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a>. You can also invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a> to query the most recent instance type list.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecs.g6.large</para>
@@ -176,7 +208,14 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The maximum inbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values:</para>
+        /// <para>The maximum inbound public bandwidth. Unit: Mbit/s. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>If the purchased outbound public bandwidth is less than or equal to 10 Mbit/s: 1 to 10. Default value: 10.</description></item>
+        /// <item><description>If the purchased outbound public bandwidth is greater than 10 Mbit/s: 1 to the value of <c>InternetMaxBandwidthOut</c>. Default value: the value of <c>InternetMaxBandwidthOut</c>.</description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are used as bandwidth upper limits and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -186,7 +225,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InternetMaxBandwidthIn { get; set; }
 
         /// <summary>
-        /// <para>The maximum outbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values: 0 to 100.</para>
+        /// <para>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 0 to 100.</para>
+        /// <remarks>
+        /// <para>In <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are used as bandwidth upper limits and are not guaranteed. When resource contention occurs, the peak bandwidths may be limited. If your business requires guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

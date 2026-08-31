@@ -115,15 +115,25 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             }
 
+            /// <summary>
+            /// <para>The related price.</para>
+            /// </summary>
             [NameInMap("RelatedPrice")]
             [Validation(Required=false)]
             public DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice RelatedPrice { get; set; }
             public class DescribeRenewalPriceResponseBodyPriceInfoRelatedPrice : TeaModel {
+                /// <summary>
+                /// <para>The Alibaba Cloud Marketplace image price.</para>
+                /// </summary>
                 [NameInMap("MarketplaceImagePrice")]
                 [Validation(Required=false)]
                 public DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice MarketplaceImagePrice { get; set; }
                 public class DescribeRenewalPriceResponseBodyPriceInfoRelatedPriceMarketplaceImagePrice : TeaModel {
                     /// <summary>
+                    /// <para>The currency unit.</para>
+                    /// <para>China site: CNY.</para>
+                    /// <para>International site: USD.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>CNY</para>
                     /// </summary>
@@ -132,6 +142,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public string Currency { get; set; }
 
                     /// <summary>
+                    /// <para>The discount.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
                     /// </summary>
@@ -140,6 +152,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public float? DiscountPrice { get; set; }
 
                     /// <summary>
+                    /// <para>The original price.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
                     /// </summary>
@@ -148,6 +162,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     public float? OriginalPrice { get; set; }
 
                     /// <summary>
+                    /// <para>The transaction price, which is equal to the original price minus the discount.</para>
+                    /// 
                     /// <b>Example:</b>
                     /// <para>200</para>
                     /// </summary>
