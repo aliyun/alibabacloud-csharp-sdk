@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The AI parsing result (JSON string).</para>
             /// 
             /// <b>Example:</b>
-            /// <para>{&quot;触达日期&quot;:&quot;2026-07-17 10:00:01&quot;}</para>
+            /// <para>{&quot;TouchDate&quot;:&quot;2026-07-17 10:00:01&quot;}</para>
             /// </summary>
             [NameInMap("AiResult")]
             [Validation(Required=false)]
@@ -53,6 +53,13 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             [Validation(Required=false)]
             public List<CustomerNoteListDetailResponseBodyDataAttachment> Attachment { get; set; }
             public class CustomerNoteListDetailResponseBodyDataAttachment : TeaModel {
+                /// <summary>
+                /// <para>The attachment signature.</para>
+                /// </summary>
+                [NameInMap("DownloadUrl")]
+                [Validation(Required=false)]
+                public string DownloadUrl { get; set; }
+
                 /// <summary>
                 /// <para>The attachment ID.</para>
                 /// 
@@ -67,7 +74,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 /// <para>The attachment name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>课程培训</para>
+                /// <para>Course Training</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -84,7 +91,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
                 public string Signature { get; set; }
 
                 /// <summary>
-                /// <para>The attachment size, in bytes.</para>
+                /// <para>The attachment size in bytes.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>111222121</para>
@@ -119,7 +126,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The contact name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>John</para>
             /// </summary>
             [NameInMap("ContactName")]
             [Validation(Required=false)]
@@ -136,10 +143,10 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public long? Creator { get; set; }
 
             /// <summary>
-            /// <para>The username of the creator.</para>
+            /// <para>The logon name of the creator.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>John</para>
             /// </summary>
             [NameInMap("CreatorName")]
             [Validation(Required=false)]
@@ -149,7 +156,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The customer name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>XXXX有限公司</para>
+            /// <para>XXXX Co., Ltd</para>
             /// </summary>
             [NameInMap("CustomerName")]
             [Validation(Required=false)]
@@ -166,7 +173,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             public long? CustomerUid { get; set; }
 
             /// <summary>
-            /// <para>The creation time (yyyy-MM-dd HH:mm:ss).</para>
+            /// <para>The creation time in the yyyy-MM-dd HH:mm:ss format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-05-07 10:27:46</para>
@@ -179,7 +186,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The note content.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>小记内容</para>
+            /// <para>Note content</para>
             /// </summary>
             [NameInMap("NoteContent")]
             [Validation(Required=false)]
@@ -209,7 +216,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
             /// <para>The note type label.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>客户</para>
+            /// <para>Customer</para>
             /// </summary>
             [NameInMap("NoteTypeLabel")]
             [Validation(Required=false)]
@@ -248,7 +255,7 @@ namespace AlibabaCloud.SDK.Agency20250227.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The prompt message, same as Message.</para>
+        /// <para>The prompt message. This is the same as Message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SUCCESS</para>
