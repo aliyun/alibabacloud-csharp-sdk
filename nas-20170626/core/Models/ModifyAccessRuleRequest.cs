@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? Priority { get; set; }
 
         /// <summary>
-        /// <para>The read and write permission that the authorized object has on the file system.</para>
+        /// <para>The read and write permissions of the authorized object on the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>RDWR (default): read and write.</description></item>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string SourceCidrIp { get; set; }
 
         /// <summary>
-        /// <para>The access permissions that the system user of the authorization object has on the file system.</para>
+        /// <para>The authorization of the system user of the authorized object on the file system.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>no_squash: allows access to the file system as the root user.</description></item>

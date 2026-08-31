@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the lifecycle policy.</para>
+        /// <para>The ID of the lifecycle management policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string LifecyclePolicyId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the list.</para>
+        /// <para>The page number.</para>
         /// <para>Default value: 1.</para>
         /// 
         /// <b>Example:</b>

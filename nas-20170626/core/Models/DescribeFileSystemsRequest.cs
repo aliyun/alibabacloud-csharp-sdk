@@ -32,8 +32,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <item><description>all (default): queries all types.</description></item>
         /// <item><description>standard: General-purpose NAS.</description></item>
         /// <item><description>extreme: Extreme NAS.</description></item>
-        /// <item><description>cpfs: Cloud Parallel File Storage (locally redundant).</description></item>
-        /// <item><description>cpfsse: Cloud Parallel File Storage SE (zone-redundant).</description></item>
+        /// <item><description>cpfs: Cloud Parallel File Storage (CPFS) with locally redundant storage.</description></item>
+        /// <item><description>cpfsse: CPFS SE with zone-redundant storage.</description></item>
         /// </list>
         /// <remarks>
         /// <para>To query multiple types, separate them with commas (,).</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of file systems on each page during a paged query.</para>
+        /// <para>The number of file systems on each page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -78,25 +78,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The storage type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>General-purpose NAS: Capacity, Performance, and Premium.</description></item>
-        /// <item><description>Extreme NAS: standard and advance.</description></item>
-        /// <item><description>CPFS: advance_100 (100 MB/s/TiB baseline), advance_200 (200 MB/s/TiB baseline), and economic.</description></item>
-        /// <item><description>CPFS SE: advance_100 (100 MB/s/TiB baseline).</description></item>
-        /// <item><description>AgenticFS: Agentic (available only when FileSystemType is set to standard).</description></item>
-        /// </list>
+        /// <para>The storage type. Currently, only CPFS for Lingjun specifications are supported for a filtered query. Other FileSystemType values are not supported. The following specifications are supported:</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Capacity</para>
+        /// <para>bm_advance_400</para>
         /// </summary>
         [NameInMap("StorageType")]
         [Validation(Required=false)]
         public string StorageType { get; set; }
 
         /// <summary>
-        /// <para>The collection of tag information.</para>
+        /// <para>The tag information.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -104,6 +96,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public class DescribeFileSystemsRequestTag : TeaModel {
             /// <summary>
             /// <para>The tag key.</para>
+            /// <para>Limits:</para>
+            /// <list type="bullet">
+            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>The tag key can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag key cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
+            /// <item><description>The tag key cannot contain <c>http://</c> or <c>https://</c>.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>testKey</para>
@@ -116,7 +115,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag value.</para>
             /// <para>Limits:</para>
             /// <list type="bullet">
-            /// <item><description>Valid values of N: 1 to 20.</description></item>
+            /// <item><description>N can be an integer from 1 to 20.</description></item>
             /// <item><description>The tag value can be up to 128 characters in length.</description></item>
             /// <item><description>The tag value cannot start with <c>aliyun</c> or <c>acs:</c>.</description></item>
             /// <item><description>The tag value cannot contain <c>http://</c> or <c>https://</c>.</description></item>

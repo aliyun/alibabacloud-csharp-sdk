@@ -37,8 +37,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Azone { get; set; }
 
             /// <summary>
-            /// <para>The time when the AgenticSpace was created.
-            /// The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The time when the AgenticSpace was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T10:08:08Z</para>
@@ -152,8 +151,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The time when the AgenticSpace was last updated.
-            /// The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
+            /// <para>The time when the AgenticSpace was last updated. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-06-10T10:08:08Z</para>

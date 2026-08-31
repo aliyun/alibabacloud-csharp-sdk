@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateAccessPointRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the permission group.</para>
+        /// <para>The permission group name.</para>
         /// <para>This parameter is required if the file system is a General-purpose NAS file system.</para>
         /// <para>Default permission group: DEFAULT_VPC_GROUP_NAME (the default permission group for VPCs).</para>
         /// <remarks>
@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessGroup { get; set; }
 
         /// <summary>
-        /// <para>The name of the access point.</para>
+        /// <para>The access point name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -48,14 +48,14 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AgenticSpaceId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable access point policy.
+        /// <para>Specifies whether to enable the RAM policy.
         /// Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: enabled.</description></item>
         /// <item><description>false (default): not enabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>After you enable access point policy for the access point, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant the corresponding access permissions through authorization and then mount and access the file system through the access point. After you disable access point policy, the access point allows anonymity mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure access point policies</a>.</para>
+        /// <para>After you enable the access point RAM policy, all Resource Access Management (RAM) users are denied access to mount and access data through the access point by default. You must grant the corresponding access permissions through authorization and mount the file system through the access point. After you disable the RAM policy, the access point allows anonymous mounting. For more information about how to configure access point permissions, see <a href="https://help.aliyun.com/document_detail/2545998.html">Configure an access point policy</a>.</para>
         /// </remarks>
         /// <remarks>
         /// <para>For Agentic file systems, this parameter must be set to true.</para>
@@ -108,8 +108,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public int? OwnerUserId { get; set; }
 
         /// <summary>
-        /// <para>The POSIX permission. Default value: &quot;0755&quot;. The value must be a four-digit octal number that starts with 0.</para>
-        /// <para>This parameter takes effect only after you specify the OwnerUserId and OwnerGroupId parameters.</para>
+        /// <para>The POSIX permission. Default value: &quot;0755&quot;. Limit: The value must be a four-digit octal number that starts with 0.</para>
+        /// <para>This parameter takes effect after you specify the OwnerUserId and OwnerGroupId parameters.</para>
         /// <remarks>
         /// <para>Not supported for Agentic file systems.</para>
         /// </remarks>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The root directory of the access point.
         /// Default value: &quot;/&quot;. If the access point directory does not exist, you must also specify the OwnerUserId and OwnerGroupId parameters.</para>
         /// <remarks>
-        /// <para>Supported only for Agentic file systems.</para>
+        /// <para>Not supported for Agentic file systems.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -185,10 +185,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag key.
             /// Limits:</para>
             /// <list type="bullet">
-            /// <item><description>Cannot be empty or an empty string.</description></item>
-            /// <item><description>Can be up to 128 characters in length.</description></item>
-            /// <item><description>Cannot start with aliyun or acs:.</description></item>
-            /// <item><description>Cannot contain http:// or https://.</description></item>
+            /// <item><description>The tag key cannot be empty or an empty string.</description></item>
+            /// <item><description>The tag key can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag key cannot start with aliyun or acs:.</description></item>
+            /// <item><description>The tag key cannot contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -202,9 +202,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <para>The tag value.
             /// Limits:</para>
             /// <list type="bullet">
-            /// <item><description>Cannot be empty or an empty string.</description></item>
-            /// <item><description>Can be up to 128 characters in length.</description></item>
-            /// <item><description>Cannot contain http:// or https://.</description></item>
+            /// <item><description>The tag value cannot be empty or an empty string.</description></item>
+            /// <item><description>The tag value can be up to 128 characters in length.</description></item>
+            /// <item><description>The tag value cannot contain http:// or https://.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

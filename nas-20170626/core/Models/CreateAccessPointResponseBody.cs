@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public CreateAccessPointResponseBodyAccessPoint AccessPoint { get; set; }
         public class CreateAccessPointResponseBodyAccessPoint : TeaModel {
             /// <summary>
-            /// <para>The domain name of the access point.</para>
+            /// <para>The access point domain name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ap-ie15ydanoz.001014****-w****.cn-hangzhou.nas.aliyuncs.com</para>

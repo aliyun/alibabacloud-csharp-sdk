@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
     public class CancelFilesetQuotaRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests.</para>
-        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How do I ensure the idempotence?</a></para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
-        /// <para> If you do not specify this parameter, the system automatically uses the request ID as the client token. The request ID may be different for each request.</para>
+        /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -25,11 +25,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run.</para>
-        /// <para>During the dry run, the system checks whether the request parameters are valid and whether the requested resources are available. During the dry run, no fileset quota is canceled and no fee is incurred.</para>
+        /// <para>A dry run validates parameter correctness and business constraints without actually canceling the fileset quota or incurring fees.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: performs a dry run. The system checks the required parameters, request syntax, and service limits. If the request fails to pass the precheck, an error message is returned. If the request passes the dry run, the HTTP status code 200 is returned. No value is returned for the DataFlowld parameter.</description></item>
-        /// <item><description>false (default): performs a dry run and sends the request. If the request passes the dry run, the fileset quota is canceled.</description></item>
+        /// <item><description>true: Sends a dry run request without canceling the quota. The system checks required parameters, request format, and business limits. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</description></item>
+        /// <item><description>false (default): Sends a normal request. After the check passes, the fileset quota is directly canceled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CPFS for LINGJUN file system. The IDs of CPFS for LINGJUN file systems must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya\<em>\</em>\<em>\</em>.</para>
+        /// <para>The ID of the CPFS for Lingjun file system. The ID must start with <c>bmcpfs-</c>. Example: bmcpfs-290w65p03ok64ya****.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The fileset ID.</para>
+        /// <para>Fileset ID。</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DeleteCpfsAccessPointRequest : TeaModel {
         /// <summary>
+        /// <para>The access point ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,13 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AccessPointId { get; set; }
 
         /// <summary>
+        /// <para>The file system ID.</para>
+        /// <list type="bullet">
+        /// <item><description><para>CPFS: The ID must start with <c>cpfs-</c>, such as cpfs-099394bd928c****.</para>
+        /// </description></item>
+        /// <item><description><para>CPFS for Lingjun: The ID must start with <c>bmcpfs-</c>, such as bmcpfs-290w65p03ok64ya****.</para>
+        /// </description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +38,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

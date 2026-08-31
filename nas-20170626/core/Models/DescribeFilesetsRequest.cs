@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The filter information for the filesets to query.</para>
+        /// <para>The filter key information for the filesets to query.</para>
         /// </summary>
         [NameInMap("Filters")]
         [Validation(Required=false)]
@@ -58,10 +58,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
             /// <summary>
             /// <para>The value of the filter key. Wildcards are not supported for this parameter.</para>
             /// <list type="bullet">
-            /// <item><description>If Key is set to FsetIds, Value is a fileset ID. You can specify one or more fileset IDs, up to a maximum of 10. Separate multiple values with commas (,). Example: <c>fset-1902718ea0ae****</c> or <c>fset-1902718ea0ae****,fset-3212718ea0ae****</c>.</description></item>
-            /// <item><description>If Key is set to FileSystemPath, Value is the path or a partial path of the fileset in the CPFS file system. The value must be 2 to 1,024 characters in length and encoded in UTF-8.</description></item>
-            /// <item><description>If Key is set to Description, Value is the description or a partial description of the fileset.</description></item>
-            /// <item><description>If Key is set to QuotaExists, Value is true or false. If this parameter is left empty, all filesets are returned.</description></item>
+            /// <item><description>If Key is set to FsetIds, Value is set to a fileset ID. You can specify one or more fileset IDs, up to a maximum of 10. Separate multiple values with commas (,). Example: <c>fset-1902718ea0ae****</c> or <c>fset-1902718ea0ae****,fset-3212718ea0ae****</c>.</description></item>
+            /// <item><description>If Key is set to FileSystemPath, Value is set to the path or a partial path of the fileset in the CPFS file system. The value must be 2 to 1,024 characters in length and encoded in UTF-8.</description></item>
+            /// <item><description>If Key is set to Description, Value is set to the description or a partial description of the fileset.</description></item>
+            /// <item><description>If Key is set to QuotaExists, Value is set to true or false. If this parameter is left empty, all filesets are returned.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +111,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string OrderByField { get; set; }
 
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>The sort order.</para>
         /// <list type="bullet">
         /// <item><description>asc (default): ascending order, which sorts results from smallest to largest.</description></item>
         /// <item><description>desc: descending order, which sorts results from largest to smallest.<remarks>

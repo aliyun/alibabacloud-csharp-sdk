@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class DescribeLifecyclePolicyLogsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution logs of the lifecycle policy.</para>
+        /// <para>The execution logs of the lifecycle management policy.</para>
         /// </summary>
         [NameInMap("LifecyclePolicyLogs")]
         [Validation(Required=false)]
@@ -37,8 +37,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The attribute of the rule.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Atime: the access time of the file.</description></item>
+                /// <item><description>Atime: the last access time of the file.</description></item>
                 /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Atime</para>
                 /// </summary>
                 [NameInMap("Attribute")]
                 [Validation(Required=false)]
@@ -50,6 +53,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <list type="bullet">
                 /// <item><description>If Attribute is set to Atime, this parameter specifies the number of days since the file was last accessed. Valid values: 1 to 365.</description></item>
                 /// </list>
+                /// 
+                /// <b>Example:</b>
+                /// <para>3</para>
                 /// </summary>
                 [NameInMap("Threshold")]
                 [Validation(Required=false)]
@@ -155,7 +161,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
                 /// <para>The attribute of the rule.</para>
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Atime: the access time of the file.</description></item>
+                /// <item><description>Atime: the last access time of the file.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -214,8 +220,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The request status.</para>
-        /// <para>Valid values:</para>
+        /// <para>The request status. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The request was successful.</description></item>
         /// <item><description>false: The request failed.</description></item>

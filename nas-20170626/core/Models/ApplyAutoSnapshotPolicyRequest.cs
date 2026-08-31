@@ -21,12 +21,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string AutoSnapshotPolicyId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of Advanced Extreme NAS file systems.</para>
+        /// <para>The IDs of the Advanced Extreme NAS file systems.</para>
         /// <para>You can specify up to 100 file system IDs in a single request. Separate multiple file system IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>extreme-233e6****,extreme -23vbp****,extreme -23vas****</para>
+        /// <para>extreme-233e6****,extreme-23vbp****,extreme-23vas****</para>
         /// </summary>
         [NameInMap("FileSystemIds")]
         [Validation(Required=false)]

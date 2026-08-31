@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The type of the file system.</para>
-        /// <para>Valid values: extreme (Extreme NAS).</para>
+        /// <para>Valid values: extreme (Extreme NAS file system).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,8 +41,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <summary>
         /// <para>The days of the week on which automatic snapshots are created.</para>
         /// <para>Cycle: week.</para>
-        /// <para>Valid values: 1 to 7, which represent Monday through Sunday.</para>
-        /// <para>To create automatic snapshots on multiple days in a week, specify multiple values separated by commas (,). You can specify a maximum of 7 values.</para>
+        /// <para>Valid values: 1 to 7, which represent Monday to Sunday.</para>
+        /// <para>To create automatic snapshots on multiple days in a week, specify multiple values separated by commas (,). You can specify up to 7 values.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>-1 (default): Automatic snapshots are permanently retained. When the snapshot quota is reached, the earliest automatic snapshots are automatically deleted.</description></item>
-        /// <item><description>1 to 65536: Automatic snapshots are retained for the specified number of days. Snapshots are subject to automatic release after the retention period expires.</description></item>
+        /// <item><description>1 to 65536: Automatic snapshots are retained for the specified number of days. Snapshots undergo automatic release after the retention period expires.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         /// <para>The time points at which automatic snapshots are created.</para>
         /// <para>Unit: hours.</para>
         /// <para>Valid values: 0 to 23, which represent the 24 time points from 00:00 to 23:00. For example, 1 indicates 01:00.</para>
-        /// <para>To create multiple automatic snapshots within a day, specify multiple time points separated by commas (,). You can specify a maximum of 24 time points.</para>
+        /// <para>To create multiple automatic snapshots within a day, specify multiple time points separated by commas (,). You can specify up to 24 time points.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

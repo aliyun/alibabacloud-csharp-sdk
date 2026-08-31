@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class ModifyCpfsAccessPointResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>70EACC9C-D07A-4A34-ADA4-77506C42B023</para>
         /// </summary>

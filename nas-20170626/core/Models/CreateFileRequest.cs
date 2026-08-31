@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CreateFileRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the file system.</para>
+        /// <para>The file system ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string FileSystemId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the portable account. The ID must be a 16-digit string. The string can contain digits and lowercase letters.</para>
+        /// <para>The portable account ID.
+        /// Limit: The value is a 16-character string that supports digits and lowercase letters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>378cc7630f26****</para>
@@ -31,17 +32,17 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Owner { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to share the directory. Valid values:</para>
+        /// <para>Specifies whether to share directory permissions. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>false (default): does not share the directory.</description></item>
-        /// <item><description>true: shares the directory.</description></item>
-        /// </list>
-        /// <remarks>
+        /// <item><description>false (default): does not share directory permissions.</description></item>
+        /// <item><description>true: shares directory permissions.<remarks>
         /// <list type="bullet">
-        /// <item><description>This parameter takes effect only if the Type parameter is set to Directory and the Owner parameter is not empty.</description></item>
-        /// <item><description>The permissions on a directory can be inherited by the owner. The owner has read and write permissions on the subdirectories and subfiles created in the directory, even if they are created by others.</description></item>
+        /// <item><description>This parameter takes effect only when Type is set to Directory and Owner is not empty.</description></item>
+        /// <item><description>The directory has inheritable Owner permissions. The Owner has read and write permissions on subdirectories and files created under this directory, even if they are created by other users.</description></item>
         /// </list>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -51,7 +52,12 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public bool? OwnerAccessInheritable { get; set; }
 
         /// <summary>
-        /// <para>The absolute path of the directory or file. The path must start and end with a forward slash (/) and must be 2 to 1024 characters in length.</para>
+        /// <para>The absolute path of the directory or file.</para>
+        /// <list type="bullet">
+        /// <item><description>The path must start and end with a forward slash (/).</description></item>
+        /// <item><description>The path must be 1 to 1,023 characters in length.</description></item>
+        /// <item><description>The path must be encoded in UTF-8.</description></item>
+        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,10 +68,10 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string Path { get; set; }
 
         /// <summary>
-        /// <para>The type of the object. Valid values:</para>
+        /// <para>The object type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>File</description></item>
-        /// <item><description>Directory</description></item>
+        /// <item><description>File: file.</description></item>
+        /// <item><description>Directory: directory.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

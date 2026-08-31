@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run for this request.</para>
-        /// <para>A dry run checks parameter validity and resource availability without actually creating or modifying the instance, and does not incur fees.</para>
+        /// <para>A dry run checks parameter validity and resource availability without actually creating or modifying the instance, and no fees are incurred.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: Sends a check request without modifying the instance. The check items include whether required parameters are specified, request format, business limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned, but FileSystemId is empty.</description></item>

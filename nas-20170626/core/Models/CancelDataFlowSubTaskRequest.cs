@@ -10,8 +10,8 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 {
     public class CancelDataFlowSubTaskRequest : TeaModel {
         /// <summary>
-        /// <para>Ensures the idempotency of the request. Generate a unique parameter value from your client to ensure that the value is unique across different requests.</para>
-        /// <para>ClientToken supports only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotency</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests.</para>
+        /// <para>The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// <remarks>
         /// <para>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may differ for each API request.</para>
         /// </remarks>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
         public string DataFlowId { get; set; }
 
         /// <summary>
-        /// <para>The data flow streaming task ID.</para>
+        /// <para>The data flow streaming subtask ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,11 +58,11 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run for this request.</para>
-        /// <para>A dry run checks parameter validity and resource availability without actually creating an instance or incurring fees.</para>
+        /// <para>A dry run checks parameter validity and resource availability without actually creating an instance or incurring charges.</para>
         /// <para>Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Sends a check request without creating an instance. The check items include whether required parameters are specified, the request format, business limitations, and NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</description></item>
-        /// <item><description>false (default): Sends a normal request. After the check passes, the instance is directly created.</description></item>
+        /// <item><description>true: Sends a dry run request without creating an instance. The check items include required parameters, request format, business limits, and NAS inventory. If the check fails, the corresponding error is returned. If the check passes, HTTP status code 200 is returned.</description></item>
+        /// <item><description>false (default): Sends a normal request and creates the instance after the check passes.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,6 +74,9 @@ namespace AlibabaCloud.SDK.NAS20170626.Models
 
         /// <summary>
         /// <para>The file system ID.</para>
+        /// <remarks>
+        /// <para>Only CPFS for Lingjun (with the bmcpfs- prefix) file systems of version 2.6.0 or later are supported.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
