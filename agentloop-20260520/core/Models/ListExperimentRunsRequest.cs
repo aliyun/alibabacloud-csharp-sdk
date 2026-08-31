@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Filters results by fuzzy match on experiment plan name.</para>
+        /// <para>Filters results by fuzzy match on the experiment plan name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>arms_agent_experiment</para>

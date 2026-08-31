@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The pipeline description. The description can be up to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>从 SLS 采集 Trace 数据清洗入 Dataset</para>
+        /// <para>Collect trace data from SLS, perform data cleaning, and ingest it into a dataset</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -27,7 +27,11 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public CreatePipelineRequestExecutePolicy ExecutePolicy { get; set; }
         public class CreatePipelineRequestExecutePolicy : TeaModel {
             /// <summary>
-            /// <para>The scheduling mode. Valid values: RunOnce (one-time execution) and Scheduled (periodic scheduling).</para>
+            /// <para>The scheduling mode. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>RunOnce: one-time execution.</description></item>
+            /// <item><description>Scheduled: periodic scheduling.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>RunOnce</para>
@@ -44,7 +48,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public CreatePipelineRequestExecutePolicyRunOnce RunOnce { get; set; }
             public class CreatePipelineRequestExecutePolicyRunOnce : TeaModel {
                 /// <summary>
-                /// <para>The start time of the data processing window, in Unix seconds. The value must be less than toTime.</para>
+                /// <para>The start time of the data processing window, in UNIX seconds. The value must be less than toTime.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800</para>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public long? FromTime { get; set; }
 
                 /// <summary>
-                /// <para>The end time of the data processing window, in Unix seconds. The value must be greater than fromTime.</para>
+                /// <para>The end time of the data processing window, in UNIX seconds. The value must be greater than fromTime.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735747200</para>
@@ -73,7 +77,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public CreatePipelineRequestExecutePolicyScheduled Scheduled { get; set; }
             public class CreatePipelineRequestExecutePolicyScheduled : TeaModel {
                 /// <summary>
-                /// <para>The scheduling start time, in Unix milliseconds.</para>
+                /// <para>The scheduling start time, in UNIX milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1735660800000</para>
@@ -121,7 +125,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The node parameters in key-value format. The parameters vary depending on the node type.</para>
+                /// <para>The node parameters in key-value format. The parameters vary based on the node type.</para>
                 /// </summary>
                 [NameInMap("parameters")]
                 [Validation(Required=false)]
@@ -142,7 +146,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The pipeline name. The name must be 3 to 63 characters in length and can contain only lowercase letters, digits, and hyphens.</para>
+        /// <para>The pipeline name. The name must be 3 to 63 characters in length and can contain only lowercase letters, digits, and hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>my-pipeline</para>
@@ -158,6 +162,152 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public CreatePipelineRequestSink Sink { get; set; }
         public class CreatePipelineRequestSink : TeaModel {
+            /// <summary>
+            /// <para>The conditional routing configuration. This parameter is used only when sink.type is set to condition.</para>
+            /// </summary>
+            [NameInMap("condition")]
+            [Validation(Required=false)]
+            public CreatePipelineRequestSinkCondition Condition { get; set; }
+            public class CreatePipelineRequestSinkCondition : TeaModel {
+                /// <summary>
+                /// <para>The default write destination used when no conditional route is matched.</para>
+                /// </summary>
+                [NameInMap("defaultSink")]
+                [Validation(Required=false)]
+                public CreatePipelineRequestSinkConditionDefaultSink DefaultSink { get; set; }
+                public class CreatePipelineRequestSinkConditionDefaultSink : TeaModel {
+                    /// <summary>
+                    /// <para>The default destination dataset.</para>
+                    /// </summary>
+                    [NameInMap("dataset")]
+                    [Validation(Required=false)]
+                    public CreatePipelineRequestSinkConditionDefaultSinkDataset Dataset { get; set; }
+                    public class CreatePipelineRequestSinkConditionDefaultSinkDataset : TeaModel {
+                        /// <summary>
+                        /// <para>The name of the AgentSpace to which the default destination dataset belongs.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>my-agent-space</para>
+                        /// </summary>
+                        [NameInMap("agentSpace")]
+                        [Validation(Required=false)]
+                        public string AgentSpace { get; set; }
+
+                        /// <summary>
+                        /// <para>The name of the default destination dataset.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>other-result</para>
+                        /// </summary>
+                        [NameInMap("dataset")]
+                        [Validation(Required=false)]
+                        public string Dataset { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <para>The default destination type. Currently, only dataset is supported.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>dataset</para>
+                    /// </summary>
+                    [NameInMap("type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+                /// <summary>
+                /// <para>The route matching mode. Currently, only all is supported.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>all</para>
+                /// </summary>
+                [NameInMap("matchMode")]
+                [Validation(Required=false)]
+                public string MatchMode { get; set; }
+
+                /// <summary>
+                /// <para>The list of conditional routes.</para>
+                /// </summary>
+                [NameInMap("routes")]
+                [Validation(Required=false)]
+                public List<CreatePipelineRequestSinkConditionRoutes> Routes { get; set; }
+                public class CreatePipelineRequestSinkConditionRoutes : TeaModel {
+                    /// <summary>
+                    /// <para>The route expression in SPL. Only where, project, and extend are supported.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <list type="bullet">
+                    /// <item><description>| where intent = \&quot;refund\&quot;</description></item>
+                    /// </list>
+                    /// </summary>
+                    [NameInMap("expression")]
+                    [Validation(Required=false)]
+                    public string Expression { get; set; }
+
+                    /// <summary>
+                    /// <para>The route ID.</para>
+                    /// 
+                    /// <b>Example:</b>
+                    /// <para>refund</para>
+                    /// </summary>
+                    [NameInMap("id")]
+                    [Validation(Required=false)]
+                    public string Id { get; set; }
+
+                    /// <summary>
+                    /// <para>The route write destination.</para>
+                    /// </summary>
+                    [NameInMap("sink")]
+                    [Validation(Required=false)]
+                    public CreatePipelineRequestSinkConditionRoutesSink Sink { get; set; }
+                    public class CreatePipelineRequestSinkConditionRoutesSink : TeaModel {
+                        /// <summary>
+                        /// <para>The route destination dataset.</para>
+                        /// </summary>
+                        [NameInMap("dataset")]
+                        [Validation(Required=false)]
+                        public CreatePipelineRequestSinkConditionRoutesSinkDataset Dataset { get; set; }
+                        public class CreatePipelineRequestSinkConditionRoutesSinkDataset : TeaModel {
+                            /// <summary>
+                            /// <para>The name of the AgentSpace to which the destination dataset belongs.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>my-agent-space</para>
+                            /// </summary>
+                            [NameInMap("agentSpace")]
+                            [Validation(Required=false)]
+                            public string AgentSpace { get; set; }
+
+                            /// <summary>
+                            /// <para>The name of the destination dataset.</para>
+                            /// 
+                            /// <b>Example:</b>
+                            /// <para>refund-result</para>
+                            /// </summary>
+                            [NameInMap("dataset")]
+                            [Validation(Required=false)]
+                            public string Dataset { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <para>The route destination type. Currently, only dataset is supported.</para>
+                        /// 
+                        /// <b>Example:</b>
+                        /// <para>dataset</para>
+                        /// </summary>
+                        [NameInMap("type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                    }
+
+                }
+
+            }
+
             /// <summary>
             /// <para>The destination dataset configuration.</para>
             /// </summary>
@@ -188,7 +338,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The sink type. Currently, Dataset is supported.</para>
+            /// <para>The sink type. Currently, only Dataset is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Dataset</para>
@@ -206,6 +356,64 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public CreatePipelineRequestSource Source { get; set; }
         public class CreatePipelineRequestSource : TeaModel {
+            /// <summary>
+            /// <para>The dataset datasource config under the current AgentSpace.</para>
+            /// </summary>
+            [NameInMap("dataset")]
+            [Validation(Required=false)]
+            public CreatePipelineRequestSourceDataset Dataset { get; set; }
+            public class CreatePipelineRequestSourceDataset : TeaModel {
+                /// <summary>
+                /// <para>The name of the source dataset.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my-dataset</para>
+                /// </summary>
+                [NameInMap("dataset")]
+                [Validation(Required=false)]
+                public string Dataset { get; set; }
+
+                /// <summary>
+                /// <para>The filter condition for the dataset data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>status = \&quot;pending\&quot;</para>
+                /// </summary>
+                [NameInMap("filter")]
+                [Validation(Required=false)]
+                public string Filter { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The input fields and field types. This parameter applies to all data source types.</para>
+            /// </summary>
+            [NameInMap("inputFields")]
+            [Validation(Required=false)]
+            public List<CreatePipelineRequestSourceInputFields> InputFields { get; set; }
+            public class CreatePipelineRequestSourceInputFields : TeaModel {
+                /// <summary>
+                /// <para>The field name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>question</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <para>The field type. Valid values: text, long, double, and json.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>text</para>
+                /// </summary>
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The SLS Logstore datasource config.</para>
             /// </summary>
@@ -260,7 +468,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         }
 
         /// <summary>
-        /// <para>The idempotency token. A unique string generated by the client to ensure the idempotence of the create operation.</para>
+        /// <para>The idempotency token. A unique string generated by the client to ensure the idempotency of the create operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>a1b2c3d4-1234-5678-90ab-cdef12345678</para>

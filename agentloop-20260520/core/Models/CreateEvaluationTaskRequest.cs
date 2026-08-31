@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class CreateEvaluationTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The task source. If this parameter is not specified, the backend uses <c>default</c>.</para>
+        /// <para>The task source. If not specified, the backend defaults to <c>default</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>default</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The data source and execution configuration. When <c>dataType</c> is set to <c>trace</c>, the backend automatically populates the SLS Project and sets <c>storeName</c> to <c>logstore-tracing</c>. For trace-level evaluation, set <c>dataScope</c> to <c>trace</c>.</para>
+        /// <para>The data source and execution configuration. When <c>dataType=trace</c>, the backend automatically populates the SLS Project and sets <c>storeName=logstore-tracing</c>. For trace-level evaluation, set <c>dataScope=trace</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;dataScope&quot;:&quot;trace&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, string> Config { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions for evaluation data. This parameter supports a JSON object or a JSON string. Common fields include <c>query</c>, <c>provided</c>, <c>maxRecords</c>, and <c>samplingRate</c>.</para>
+        /// <para>The evaluation data filter conditions. Supports a JSON object or JSON string. Common fields include <c>query</c>, <c>provided</c>, <c>maxRecords</c>, and <c>samplingRate</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string DataFilter { get; set; }
 
         /// <summary>
-        /// <para>The data source type of the evaluation object. Set this parameter to <c>trace</c> for trace-based evaluation.</para>
+        /// <para>The data source type of the evaluation target. Use <c>trace</c> for trace-based evaluation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trace</para>
@@ -50,17 +50,17 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string DataType { get; set; }
 
         /// <summary>
-        /// <para>The description of the evaluation task.</para>
+        /// <para>The evaluation task description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>评估线上 Agent 链路任务完成度</para>
+        /// <para>Evaluate the task completion of online Agent traces</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of evaluator configurations. This parameter cannot be empty. Within the same task, <c>evaluatorRef</c> takes precedence as the unique identifier. Otherwise, <c>name</c> is used.</para>
+        /// <para>The evaluator configuration list. This parameter cannot be empty. Within the same task, <c>evaluatorRef</c> takes precedence as the unique identifier. Otherwise, <c>name</c> is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;evaluatorRef&quot;:&quot;Builtin.agent_task_completion&quot;,&quot;resultName&quot;:&quot;agent_task_completion&quot;,&quot;resultType&quot;:&quot;score&quot;,&quot;variableMapping&quot;:{&quot;input&quot;:&quot;trace.input&quot;,&quot;output&quot;:&quot;trace.output&quot;,&quot;agent_trajectory&quot;:&quot;trace.agent_trajectory&quot;}}]</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<Evaluator> Evaluators { get; set; }
 
         /// <summary>
-        /// <para>The task execution strategy. This parameter supports a JSON object or a JSON string. Set this parameter to <c>backfill</c> for historical data backfill or <c>continuous</c> for continuous evaluation of new data.</para>
+        /// <para>The task execution strategies. Supports a JSON object or JSON string. <c>backfill</c> is used for historical data backfill, and <c>continuous</c> is used for continuous evaluation of new data.</para>
         /// </summary>
         [NameInMap("runStrategies")]
         [Validation(Required=false)]
         public RunStrategies RunStrategies { get; set; }
 
         /// <summary>
-        /// <para>The key-value pairs of task tags. You do not need to specify this parameter by default. Specify this parameter only when you want to associate or filter tasks by business tags.</para>
+        /// <para>The task tag key-value pairs. You do not need to specify this parameter by default. Specify this parameter only when you need to associate or filter tasks by business tags.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;env&quot;:&quot;prod&quot;,&quot;serviceId&quot;:&quot;checkout-service&quot;,&quot;planId&quot;:&quot;plan-20260703&quot;}</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public Dictionary<string, string> Tags { get; set; }
 
         /// <summary>
-        /// <para>The evaluation task mode. Set this parameter to <c>batch</c> to create a persistent evaluation task.</para>
+        /// <para>The evaluation task mode. <c>batch</c> creates a persistent evaluation task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>batch</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string TaskMode { get; set; }
 
         /// <summary>
-        /// <para>The task name. The name must be unique among non-deleted tasks within the same user and AgentSpace. The name can be up to 256 characters in length.</para>
+        /// <para>The task name. The name must be unique among non-deleted tasks under the same user and AgentSpace. The name can be up to 256 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trace_task_completion_eval</para>

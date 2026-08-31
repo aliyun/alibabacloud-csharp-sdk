@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The node parameters in key-value structure. The parameters vary depending on the node type.</para>
+                /// <para>The node parameters in key-value format. The parameters vary based on the node type.</para>
                 /// </summary>
                 [NameInMap("parameters")]
                 [Validation(Required=false)]
@@ -71,6 +71,64 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public PreviewPipelineRequestSource Source { get; set; }
         public class PreviewPipelineRequestSource : TeaModel {
+            /// <summary>
+            /// <para>The Dataset datasource config under the current AgentSpace.</para>
+            /// </summary>
+            [NameInMap("dataset")]
+            [Validation(Required=false)]
+            public PreviewPipelineRequestSourceDataset Dataset { get; set; }
+            public class PreviewPipelineRequestSourceDataset : TeaModel {
+                /// <summary>
+                /// <para>The name of the source dataset.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>my-dataset</para>
+                /// </summary>
+                [NameInMap("dataset")]
+                [Validation(Required=false)]
+                public string Dataset { get; set; }
+
+                /// <summary>
+                /// <para>The filter condition for dataset data.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>status = \&quot;pending\&quot;</para>
+                /// </summary>
+                [NameInMap("filter")]
+                [Validation(Required=false)]
+                public string Filter { get; set; }
+
+            }
+
+            /// <summary>
+            /// <para>The input fields and field types. This parameter applies to all data source types.</para>
+            /// </summary>
+            [NameInMap("inputFields")]
+            [Validation(Required=false)]
+            public List<PreviewPipelineRequestSourceInputFields> InputFields { get; set; }
+            public class PreviewPipelineRequestSourceInputFields : TeaModel {
+                /// <summary>
+                /// <para>The field name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>question</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <para>The field type. Valid values: text, long, double, and json.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>text</para>
+                /// </summary>
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             /// <summary>
             /// <para>The SLS Logstore datasource config.</para>
             /// </summary>
@@ -113,7 +171,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             }
 
             /// <summary>
-            /// <para>The data source type. Currently, only Simple Log Service (SLS) is supported.</para>
+            /// <para>The data source type. Currently, Simple Log Service (SLS) is supported.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SLS</para>

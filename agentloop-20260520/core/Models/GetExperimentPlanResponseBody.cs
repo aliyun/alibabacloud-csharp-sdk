@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class GetExperimentPlanResponseBody : TeaModel {
         /// <summary>
-        /// <para>The creation time. This value is a millisecond-level UNIX timestamp.</para>
+        /// <para>The creation time, in millisecond-level UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782816000000</para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Compare the checkout Agent baseline with the optimized version.</para>
+        /// <para>Compare the checkout Agent baseline with the optimized version</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]
@@ -79,6 +79,9 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public Dictionary<string, object> Input { get; set; }
 
+        /// <summary>
+        /// <para>The name of the associated data processing pipeline. This value is empty if no pipeline is associated.</para>
+        /// </summary>
         [NameInMap("pipelineName")]
         [Validation(Required=false)]
         public string PipelineName { get; set; }
@@ -124,7 +127,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of selected data item IDs in partial dataset mode.</para>
+        /// <para>The list of data item IDs selected in partial dataset mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;019ef4d5-a0f0-7114-832d-5542d771cd8c&quot;]</para>
@@ -144,7 +147,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The update time. This value is a millisecond-level UNIX timestamp.</para>
+        /// <para>The update time, in millisecond-level UNIX timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1782816600000</para>

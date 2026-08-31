@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class PreviewPipelineResponseBody : TeaModel {
         /// <summary>
-        /// <para>The <c>data</c> field is a collection of sample rows (an array of maps) that contains only the first N rows (up to 5 by default) and does not reflect the complete write plan.</para>
+        /// <para><c>data</c> is a collection of sample rows (maps within an array) that contains only the first N rows (up to 5 by default) and does not reflect the complete write plan.</para>
         /// </summary>
         [NameInMap("data")]
         [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public string AggQuery { get; set; }
 
             /// <summary>
-            /// <para>The <c>meta.columnTypes</c> field provides a mapping from column names to data types (string / long / double / json).</para>
+            /// <para><c>meta.columnTypes</c> provides the mapping from column names to data types (string / long / double / json).</para>
             /// </summary>
             [NameInMap("columnTypes")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public List<string> Keys { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of result rows returned.</para>
+            /// <para>The maximum number of rows that can be returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public int? Mode { get; set; }
 
             /// <summary>
-            /// <para>The number of processed data bytes.</para>
+            /// <para>The number of data bytes processed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>524288</para>
@@ -144,7 +144,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? ProcessedRows { get; set; }
 
             /// <summary>
-            /// <para>The SLS query progress. A value of Complete indicates that the query is complete.</para>
+            /// <para>The Simple Log Service (SLS) query progress. A value of Complete indicates that the query is complete.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Complete</para>
@@ -164,7 +164,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             public long? ScanBytes { get; set; }
 
             /// <summary>
-            /// <para>The column type and aggregation information.</para>
+            /// <para>The type and aggregation information of columns.</para>
             /// </summary>
             [NameInMap("terms")]
             [Validation(Required=false)]

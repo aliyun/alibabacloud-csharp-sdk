@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string Channel { get; set; }
 
         /// <summary>
-        /// <para>The data source and execution configuration. Tasks with <c>dataType=trace</c> typically include <c>project</c>, <c>storeName</c>, and <c>dataScope</c> fields populated by the backend.</para>
+        /// <para>The data source and execution configuration. Tasks with <c>dataType=trace</c> typically contain <c>project</c>, <c>storeName</c>, and <c>dataScope</c> fields that are populated by the backend.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;project&quot;:&quot;agentspace-project&quot;,&quot;storeName&quot;:&quot;logstore-tracing&quot;,&quot;dataScope&quot;:&quot;trace&quot;}</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public long? CreatedAt { get; set; }
 
         /// <summary>
-        /// <para>The filter conditions for evaluation data, returned by the backend as a JSON string.</para>
+        /// <para>The evaluation data filter condition, returned by the backend as a JSON string.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;query&quot;:&quot;serviceName=\&quot;checkout-service\&quot;&quot;,&quot;maxRecords&quot;:10,&quot;samplingRate&quot;:100}</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         /// <para>The evaluation task description.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>评估线上 Agent 链路任务完成度</para>
+        /// <para>Evaluate the task completion rate of the online Agent pipeline</para>
         /// </summary>
         [NameInMap("description")]
         [Validation(Required=false)]

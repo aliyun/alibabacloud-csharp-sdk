@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 {
     public class Evaluator : TeaModel {
         /// <summary>
-        /// <para>The evaluator runtime configuration. For inline LLM evaluators, this must include configurations such as prompt. When referencing an existing evaluator, this parameter is typically not required and is only specified when runtime parameters such as version need to be set.</para>
+        /// <para>The runtime configuration of the evaluator. For inline LLM evaluators, this must include configurations such as prompt. When referencing an existing evaluator, this parameter is typically not required and should only be specified when runtime parameters such as version need to be set.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;version&quot;:&quot;1.0.0&quot;}</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ResultName { get; set; }
 
         /// <summary>
-        /// <para>The evaluation result type. Required for inline evaluators. Defaults to score when referencing an existing evaluator and this parameter is not specified.</para>
+        /// <para>The evaluation result type. Required for inline evaluators. When referencing an existing evaluator, defaults to score if not specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>score</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public string ResultType { get; set; }
 
         /// <summary>
-        /// <para>The evaluator type. Defaults to LLM if not specified. Inline CODE evaluators are currently not supported. For CODE type evaluators, reference a previously created evaluator by using evaluatorRef.</para>
+        /// <para>The evaluator type. Defaults to LLM if not specified. Inline CODE evaluators are not currently supported. For the CODE type, reference a previously created evaluator by using evaluatorRef.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AGENT</para>
@@ -78,6 +78,13 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [NameInMap("type")]
         [Validation(Required=false)]
         public string Type { get; set; }
+
+        /// <summary>
+        /// <para>The variable extraction rule mapping that maps evaluator variables to a portion of the content within an evaluation data field. This is applicable when the variable value is not the entire field but a subset of the field content. This parameter shares the same variable name key space as variableMapping. Each variable can use only one of the two. Duplicate configurations cause an error. When referencing an existing evaluator, the variable names must exist in the evaluator definition. Call ListTraceFieldExtractionsPreview to perform a trial run for validation before saving.</para>
+        /// </summary>
+        [NameInMap("variableExtractorMapping")]
+        [Validation(Required=false)]
+        public Dictionary<string, EvaluatorVariableExtractorMappingValue> VariableExtractorMapping { get; set; }
 
         /// <summary>
         /// <para>The variable mapping that maps evaluator variables to evaluation data fields. Required for LLM/AGENT inline evaluators. When referencing an existing evaluator, the variable names must exist in the evaluator definition.</para>

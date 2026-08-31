@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public class GetPipelineResponseBodyExecutePolicy : TeaModel {
             /// <summary>
             /// <b>Example:</b>
-            /// <para>Scheduled</para>
+            /// <para>scheduled</para>
             /// </summary>
             [NameInMap("mode")]
             [Validation(Required=false)]
@@ -169,6 +169,116 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public GetPipelineResponseBodySink Sink { get; set; }
         public class GetPipelineResponseBodySink : TeaModel {
+            [NameInMap("condition")]
+            [Validation(Required=false)]
+            public GetPipelineResponseBodySinkCondition Condition { get; set; }
+            public class GetPipelineResponseBodySinkCondition : TeaModel {
+                [NameInMap("defaultSink")]
+                [Validation(Required=false)]
+                public GetPipelineResponseBodySinkConditionDefaultSink DefaultSink { get; set; }
+                public class GetPipelineResponseBodySinkConditionDefaultSink : TeaModel {
+                    [NameInMap("dataset")]
+                    [Validation(Required=false)]
+                    public GetPipelineResponseBodySinkConditionDefaultSinkDataset Dataset { get; set; }
+                    public class GetPipelineResponseBodySinkConditionDefaultSinkDataset : TeaModel {
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>my-agent-space</para>
+                        /// </summary>
+                        [NameInMap("agentSpace")]
+                        [Validation(Required=false)]
+                        public string AgentSpace { get; set; }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>other-result</para>
+                        /// </summary>
+                        [NameInMap("dataset")]
+                        [Validation(Required=false)]
+                        public string Dataset { get; set; }
+
+                    }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>dataset</para>
+                    /// </summary>
+                    [NameInMap("type")]
+                    [Validation(Required=false)]
+                    public string Type { get; set; }
+
+                }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>all</para>
+                /// </summary>
+                [NameInMap("matchMode")]
+                [Validation(Required=false)]
+                public string MatchMode { get; set; }
+
+                [NameInMap("routes")]
+                [Validation(Required=false)]
+                public List<GetPipelineResponseBodySinkConditionRoutes> Routes { get; set; }
+                public class GetPipelineResponseBodySinkConditionRoutes : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <list type="bullet">
+                    /// <item><description>| where intent = \&quot;refund\&quot;</description></item>
+                    /// </list>
+                    /// </summary>
+                    [NameInMap("expression")]
+                    [Validation(Required=false)]
+                    public string Expression { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>refund</para>
+                    /// </summary>
+                    [NameInMap("id")]
+                    [Validation(Required=false)]
+                    public string Id { get; set; }
+
+                    [NameInMap("sink")]
+                    [Validation(Required=false)]
+                    public GetPipelineResponseBodySinkConditionRoutesSink Sink { get; set; }
+                    public class GetPipelineResponseBodySinkConditionRoutesSink : TeaModel {
+                        [NameInMap("dataset")]
+                        [Validation(Required=false)]
+                        public GetPipelineResponseBodySinkConditionRoutesSinkDataset Dataset { get; set; }
+                        public class GetPipelineResponseBodySinkConditionRoutesSinkDataset : TeaModel {
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>my-agent-space</para>
+                            /// </summary>
+                            [NameInMap("agentSpace")]
+                            [Validation(Required=false)]
+                            public string AgentSpace { get; set; }
+
+                            /// <summary>
+                            /// <b>Example:</b>
+                            /// <para>refund-result</para>
+                            /// </summary>
+                            [NameInMap("dataset")]
+                            [Validation(Required=false)]
+                            public string Dataset { get; set; }
+
+                        }
+
+                        /// <summary>
+                        /// <b>Example:</b>
+                        /// <para>dataset</para>
+                        /// </summary>
+                        [NameInMap("type")]
+                        [Validation(Required=false)]
+                        public string Type { get; set; }
+
+                    }
+
+                }
+
+            }
+
             [NameInMap("dataset")]
             [Validation(Required=false)]
             public GetPipelineResponseBodySinkDataset Dataset { get; set; }
@@ -193,7 +303,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>Dataset</para>
+            /// <para>condition</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
@@ -205,6 +315,50 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         [Validation(Required=false)]
         public GetPipelineResponseBodySource Source { get; set; }
         public class GetPipelineResponseBodySource : TeaModel {
+            [NameInMap("dataset")]
+            [Validation(Required=false)]
+            public GetPipelineResponseBodySourceDataset Dataset { get; set; }
+            public class GetPipelineResponseBodySourceDataset : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>my-dataset</para>
+                /// </summary>
+                [NameInMap("dataset")]
+                [Validation(Required=false)]
+                public string Dataset { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>status = \&quot;pending\&quot;</para>
+                /// </summary>
+                [NameInMap("filter")]
+                [Validation(Required=false)]
+                public string Filter { get; set; }
+
+            }
+
+            [NameInMap("inputFields")]
+            [Validation(Required=false)]
+            public List<GetPipelineResponseBodySourceInputFields> InputFields { get; set; }
+            public class GetPipelineResponseBodySourceInputFields : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>question</para>
+                /// </summary>
+                [NameInMap("name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>text</para>
+                /// </summary>
+                [NameInMap("type")]
+                [Validation(Required=false)]
+                public string Type { get; set; }
+
+            }
+
             [NameInMap("logstore")]
             [Validation(Required=false)]
             public GetPipelineResponseBodySourceLogstore Logstore { get; set; }
@@ -239,7 +393,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
 
             /// <summary>
             /// <b>Example:</b>
-            /// <para>SLS</para>
+            /// <para>dataset</para>
             /// </summary>
             [NameInMap("type")]
             [Validation(Required=false)]
