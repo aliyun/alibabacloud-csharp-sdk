@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The service account type.</para>
+        /// <para>The type of the service account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -4883,12 +4883,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建OpenSearch实例账号</para>
+        /// <para>Creates an account for a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4942,12 +4942,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建OpenSearch实例账号</para>
+        /// <para>Creates an account for a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5001,12 +5001,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建OpenSearch实例账号</para>
+        /// <para>Creates an account for a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5024,12 +5024,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>创建OpenSearch实例账号</para>
+        /// <para>Creates an account for a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8387,12 +8387,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放OpenSearch实例</para>
+        /// <para>Releases a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定数据库实例的自定义连接地址，关闭该域名的访问入口。</para>
+        /// <para>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8438,12 +8438,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放OpenSearch实例</para>
+        /// <para>Releases a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定数据库实例的自定义连接地址，关闭该域名的访问入口。</para>
+        /// <para>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8489,12 +8489,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放OpenSearch实例</para>
+        /// <para>Releases a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定数据库实例的自定义连接地址，关闭该域名的访问入口。</para>
+        /// <para>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8512,12 +8512,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>释放OpenSearch实例</para>
+        /// <para>Releases a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>删除指定数据库实例的自定义连接地址，关闭该域名的访问入口。</para>
+        /// <para>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8535,12 +8535,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OpenSearch实例账号</para>
+        /// <para>Deletes a PolarDB-X Search instance account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8590,12 +8590,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OpenSearch实例账号</para>
+        /// <para>Deletes a PolarDB-X Search instance account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8645,12 +8645,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OpenSearch实例账号</para>
+        /// <para>Deletes a PolarDB-X Search instance account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8668,12 +8668,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OpenSearch实例账号</para>
+        /// <para>Deletes a PolarDB-X Search instance account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>&lt;props=&quot;china&quot;&gt;更多关于实例账号的信息，请参见<a href="https://help.aliyun.com/document_detail/172163.html">账号管理</a>。</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8691,15 +8691,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OpenSearch实例白名单分组</para>
+        /// <para>Deletes a PolarDB-X Search whitelist group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>binlog文件默认保存15天。</description></item>
-        /// <item><description>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</description></item>
-        /// <item><description>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</description></item>
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list contains all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8750,15 +8750,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OpenSearch实例白名单分组</para>
+        /// <para>Deletes a PolarDB-X Search whitelist group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>binlog文件默认保存15天。</description></item>
-        /// <item><description>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</description></item>
-        /// <item><description>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</description></item>
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list contains all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8809,15 +8809,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OpenSearch实例白名单分组</para>
+        /// <para>Deletes a PolarDB-X Search whitelist group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>binlog文件默认保存15天。</description></item>
-        /// <item><description>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</description></item>
-        /// <item><description>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</description></item>
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list contains all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8836,15 +8836,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>删除OpenSearch实例白名单分组</para>
+        /// <para>Deletes a PolarDB-X Search whitelist group.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>binlog文件默认保存15天。</description></item>
-        /// <item><description>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</description></item>
-        /// <item><description>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</description></item>
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list contains all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use the URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12275,14 +12275,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Context0管理凭证</para>
+        /// <para>Queries the management credentials of the context service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>PolarDB-X 2.0 SQL审计与分析功能本身免费使用，但日志服务会对存储空间、读取流量、请求数量、数据加工、数据投递等进行收费，更多关于SQL审计功能的详情，请参见<a href="https://help.aliyun.com/document_detail/184619.html">开启SQL审计与分析</a>。</description></item>
+        /// <item><description>PolarDB-X 2.0 SQL audit and analysis feature is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -12330,14 +12330,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Context0管理凭证</para>
+        /// <para>Queries the management credentials of the context service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>PolarDB-X 2.0 SQL审计与分析功能本身免费使用，但日志服务会对存储空间、读取流量、请求数量、数据加工、数据投递等进行收费，更多关于SQL审计功能的详情，请参见<a href="https://help.aliyun.com/document_detail/184619.html">开启SQL审计与分析</a>。</description></item>
+        /// <item><description>PolarDB-X 2.0 SQL audit and analysis feature is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -12385,14 +12385,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Context0管理凭证</para>
+        /// <para>Queries the management credentials of the context service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>PolarDB-X 2.0 SQL审计与分析功能本身免费使用，但日志服务会对存储空间、读取流量、请求数量、数据加工、数据投递等进行收费，更多关于SQL审计功能的详情，请参见<a href="https://help.aliyun.com/document_detail/184619.html">开启SQL审计与分析</a>。</description></item>
+        /// <item><description>PolarDB-X 2.0 SQL audit and analysis feature is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -12412,14 +12412,14 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询Context0管理凭证</para>
+        /// <para>Queries the management credentials of the context service.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>PolarDB-X 2.0 SQL审计与分析功能本身免费使用，但日志服务会对存储空间、读取流量、请求数量、数据加工、数据投递等进行收费，更多关于SQL审计功能的详情，请参见<a href="https://help.aliyun.com/document_detail/184619.html">开启SQL审计与分析</a>。</description></item>
+        /// <item><description>PolarDB-X 2.0 SQL audit and analysis feature is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</description></item>
         /// </list>
         /// </remarks>
         /// </description>
@@ -16967,12 +16967,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询OpenSearch实例列表</para>
+        /// <para>Queries the list of PolarDBX Search instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</para>
+        /// <para>Queries the list of custom endpoints that you have configured. This operation helps you manage and view the settings of private connections or VPC endpoint services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17034,12 +17034,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询OpenSearch实例列表</para>
+        /// <para>Queries the list of PolarDBX Search instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</para>
+        /// <para>Queries the list of custom endpoints that you have configured. This operation helps you manage and view the settings of private connections or VPC endpoint services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17101,12 +17101,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询OpenSearch实例列表</para>
+        /// <para>Queries the list of PolarDBX Search instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</para>
+        /// <para>Queries the list of custom endpoints that you have configured. This operation helps you manage and view the settings of private connections or VPC endpoint services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17124,12 +17124,12 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询OpenSearch实例列表</para>
+        /// <para>Queries the list of PolarDBX Search instances.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>该接口用于获取用户已配置的自定义终端节点（Endpoint）列表，便于管理和查看私有连接或VPC终端服务的设置。</para>
+        /// <para>Queries the list of custom endpoints that you have configured. This operation helps you manage and view the settings of private connections or VPC endpoint services.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17443,15 +17443,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询OpenSearch实例拓扑</para>
+        /// <para>Queries the node topology of a PolarDB-X Search cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>binlog文件默认保存15天。</description></item>
-        /// <item><description>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</description></item>
-        /// <item><description>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</description></item>
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list contains all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17498,15 +17498,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询OpenSearch实例拓扑</para>
+        /// <para>Queries the node topology of a PolarDB-X Search cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>binlog文件默认保存15天。</description></item>
-        /// <item><description>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</description></item>
-        /// <item><description>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</description></item>
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list contains all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17553,15 +17553,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询OpenSearch实例拓扑</para>
+        /// <para>Queries the node topology of a PolarDB-X Search cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>binlog文件默认保存15天。</description></item>
-        /// <item><description>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</description></item>
-        /// <item><description>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</description></item>
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list contains all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -17580,15 +17580,15 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询OpenSearch实例拓扑</para>
+        /// <para>Queries the node topology of a PolarDB-X Search cluster.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>binlog文件默认保存15天。</description></item>
-        /// <item><description>返回的日志列表中包含日志记录结束时间在查询开始时间之后，并且日志记录开始时间在查询结束时间之前的所有日志。</description></item>
-        /// <item><description>当DownloadLink不为NULL时，用户可以根据此URL下载备份文件，此URL自生成后2天内有效，请在过期时间之前下载。</description></item>
+        /// <item><description>Binary log files are retained for 15 days by default.</description></item>
+        /// <item><description>The returned log list contains all log records whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</description></item>
+        /// <item><description>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before the URL expires.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22845,6 +22845,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             {
                 query["DBInstanceName"] = request.DBInstanceName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResultRows))
+            {
+                query["MaxResultRows"] = request.MaxResultRows;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -22903,6 +22907,10 @@ namespace AlibabaCloud.SDK.Polardbx20200202
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
             {
                 query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResultRows))
+            {
+                query["MaxResultRows"] = request.MaxResultRows;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
@@ -27887,6 +27895,334 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries column store audit logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryColumnarLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryColumnarLogResponse
+        /// </returns>
+        public QueryColumnarLogResponse QueryColumnarLogWithOptions(QueryColumnarLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResultRows))
+            {
+                query["MaxResultRows"] = request.MaxResultRows;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SQL))
+            {
+                query["SQL"] = request.SQL;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryColumnarLog",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryColumnarLogResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries column store audit logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryColumnarLogRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryColumnarLogResponse
+        /// </returns>
+        public async Task<QueryColumnarLogResponse> QueryColumnarLogWithOptionsAsync(QueryColumnarLogRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResultRows))
+            {
+                query["MaxResultRows"] = request.MaxResultRows;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SQL))
+            {
+                query["SQL"] = request.SQL;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryColumnarLog",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryColumnarLogResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries column store audit logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryColumnarLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryColumnarLogResponse
+        /// </returns>
+        public QueryColumnarLogResponse QueryColumnarLog(QueryColumnarLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryColumnarLogWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries column store audit logs.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryColumnarLogRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryColumnarLogResponse
+        /// </returns>
+        public async Task<QueryColumnarLogResponse> QueryColumnarLogAsync(QueryColumnarLogRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryColumnarLogWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries complete column store audit logs by using streaming.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryColumnarLogSSERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryColumnarLogSSEResponse
+        /// </returns>
+        public QueryColumnarLogSSEResponse QueryColumnarLogSSEWithOptions(QueryColumnarLogSSERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResultRows))
+            {
+                query["MaxResultRows"] = request.MaxResultRows;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SQL))
+            {
+                query["SQL"] = request.SQL;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryColumnarLogSSE",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryColumnarLogSSEResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries complete column store audit logs by using streaming.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryColumnarLogSSERequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryColumnarLogSSEResponse
+        /// </returns>
+        public async Task<QueryColumnarLogSSEResponse> QueryColumnarLogSSEWithOptionsAsync(QueryColumnarLogSSERequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBInstanceName))
+            {
+                query["DBInstanceName"] = request.DBInstanceName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResultRows))
+            {
+                query["MaxResultRows"] = request.MaxResultRows;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SQL))
+            {
+                query["SQL"] = request.SQL;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryColumnarLogSSE",
+                Version = "2020-02-02",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryColumnarLogSSEResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries complete column store audit logs by using streaming.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryColumnarLogSSERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryColumnarLogSSEResponse
+        /// </returns>
+        public QueryColumnarLogSSEResponse QueryColumnarLogSSE(QueryColumnarLogSSERequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryColumnarLogSSEWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries complete column store audit logs by using streaming.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <hr>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryColumnarLogSSERequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryColumnarLogSSEResponse
+        /// </returns>
+        public async Task<QueryColumnarLogSSEResponse> QueryColumnarLogSSEAsync(QueryColumnarLogSSERequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryColumnarLogSSEWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Refreshes the metadata of an import task.</para>
         /// </summary>
         /// 
@@ -29703,7 +30039,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启OpenSearch实例</para>
+        /// <para>Restarts a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29754,7 +30090,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启OpenSearch实例</para>
+        /// <para>Restarts a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29805,7 +30141,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启OpenSearch实例</para>
+        /// <para>Restarts a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -29828,7 +30164,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>重启OpenSearch实例</para>
+        /// <para>Restarts a PolarDB-X Search instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>

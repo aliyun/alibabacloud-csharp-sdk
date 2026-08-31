@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
-            /// <para>The authentication principal type.</para>
+            /// <para>The type of the authentication principal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>222</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
-            /// <para>The type of the permission denial.</para>
+            /// <para>The type of the missing permission.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The service account type.</para>
+            /// <para>The type of the service account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>METADATA_READONLY</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is empty if the request is successful.</para>
+        /// <para>The error message returned if the request failed. This parameter is empty if the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DeleteOpenSearchWhitelistGroupRequest : TeaModel {
         /// <summary>
+        /// <para>The name of the instance.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The ID of the service group.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string GroupId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

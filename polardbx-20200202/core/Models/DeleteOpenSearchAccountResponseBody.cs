@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DeleteOpenSearchAccountResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the access denial.</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DeleteOpenSearchAccountResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DeleteOpenSearchAccountResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
+            /// <para>The authentication action.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
+            /// <para>The display name of the authentication principal.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
+            /// <para>The owner ID of the authentication principal.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
+            /// <para>The type of the authentication principal.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>222</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
+            /// <para>The encoded diagnostic message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
+            /// <para>NoPermissionType</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
+            /// <para>The policy type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>System</para>
             /// </summary>
@@ -71,11 +88,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         }
 
+        /// <summary>
+        /// <para>The data struct.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DeleteOpenSearchAccountResponseBodyData Data { get; set; }
         public class DeleteOpenSearchAccountResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The account name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>polardbx_meta_ro</para>
             /// </summary>
@@ -84,6 +106,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AccountName { get; set; }
 
             /// <summary>
+            /// <para>The task ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2209883</para>
             /// </summary>
@@ -94,6 +118,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>A501A191-BD70-5E50-98A9-C2A486A82****</para>
         /// </summary>

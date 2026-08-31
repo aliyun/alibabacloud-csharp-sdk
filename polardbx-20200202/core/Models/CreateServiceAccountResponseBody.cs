@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string RequestId { get; set; }
 
             /// <summary>
-            /// <para>The service account type.</para>
+            /// <para>The type of the service account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>服务账号类型</para>

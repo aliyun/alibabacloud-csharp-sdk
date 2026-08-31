@@ -21,6 +21,13 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         public string DBInstanceName { get; set; }
 
         /// <summary>
+        /// <para>The maximum number of rows to return. Default value: 100. Valid values: 1 to 1000. The actual number of returned rows is the minimum value among the code hard limit, the Biz DB limit, and the outermost LIMIT clause in the SQL statement. To retrieve data continuously, implement pagination in the SQL statement.</para>
+        /// </summary>
+        [NameInMap("MaxResultRows")]
+        [Validation(Required=false)]
+        public long? MaxResultRows { get; set; }
+
+        /// <summary>
         /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 

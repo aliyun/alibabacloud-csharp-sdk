@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class ExecuteMetaQueryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the access denial.</para>
+        /// <para>The details about the access denial.</para>
         /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
@@ -75,12 +75,32 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         [Validation(Required=false)]
         public ExecuteMetaQueryResponseBodyData Data { get; set; }
         public class ExecuteMetaQueryResponseBodyData : TeaModel {
+            [NameInMap("AppliedOffset")]
+            [Validation(Required=false)]
+            public long? AppliedOffset { get; set; }
+
+            [NameInMap("AppliedRowLimit")]
+            [Validation(Required=false)]
+            public long? AppliedRowLimit { get; set; }
+
             /// <summary>
             /// <para>The column names.</para>
             /// </summary>
             [NameInMap("Columns")]
             [Validation(Required=false)]
             public List<string> Columns { get; set; }
+
+            [NameInMap("HasMore")]
+            [Validation(Required=false)]
+            public bool? HasMore { get; set; }
+
+            [NameInMap("RecordsSizeBytes")]
+            [Validation(Required=false)]
+            public long? RecordsSizeBytes { get; set; }
+
+            [NameInMap("ReturnedRowCount")]
+            [Validation(Required=false)]
+            public long? ReturnedRowCount { get; set; }
 
             /// <summary>
             /// <para>The total number of data rows.</para>
@@ -102,7 +122,7 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
-        /// <para>The additional information returned. If the request is successful, <b>success</b> is returned. If the request fails, the corresponding error code is returned.</para>
+        /// <para>The additional information returned by the operation. success is returned if the request is successful. Otherwise, an error code is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;&quot;</para>

@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardbx20200202.Models
 {
     public class DescribeContext0ConfigResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The details of the access denial.</para>
+        /// </summary>
         [NameInMap("AccessDeniedDetail")]
         [Validation(Required=false)]
         public DescribeContext0ConfigResponseBodyAccessDeniedDetail AccessDeniedDetail { get; set; }
         public class DescribeContext0ConfigResponseBodyAccessDeniedDetail : TeaModel {
             /// <summary>
+            /// <para>The authentication action.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthAction { get; set; }
 
             /// <summary>
+            /// <para>The identity used for authentication in the request.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>xxx</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalDisplayName { get; set; }
 
             /// <summary>
+            /// <para>The owner ID of the authentication principal.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>111</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalOwnerId { get; set; }
 
             /// <summary>
+            /// <para>The type of the authentication principal.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>222</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string AuthPrincipalType { get; set; }
 
             /// <summary>
+            /// <para>The encoded diagnostic message.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string EncodedDiagnosticMessage { get; set; }
 
             /// <summary>
+            /// <para>NoPermissionType</para>
+            /// 
             /// <b>Example:</b>
             /// <para>ImplicitDeny</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string NoPermissionType { get; set; }
 
             /// <summary>
+            /// <para>The policy type.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>PRIORITY</para>
             /// </summary>
@@ -71,11 +88,16 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
 
         }
 
+        /// <summary>
+        /// <para>The paginated result of the instance list.</para>
+        /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public DescribeContext0ConfigResponseBodyData Data { get; set; }
         public class DescribeContext0ConfigResponseBodyData : TeaModel {
             /// <summary>
+            /// <para>The administrator key of the context service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>admin-key-example</para>
             /// </summary>
@@ -84,6 +106,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Context0AdminKey { get; set; }
 
             /// <summary>
+            /// <para>The name of the context service instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>context0-example</para>
             /// </summary>
@@ -92,6 +116,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Context0InstanceName { get; set; }
 
             /// <summary>
+            /// <para>The owner key of the context service.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>owner-key-example</para>
             /// </summary>
@@ -100,6 +126,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string Context0OwnerKey { get; set; }
 
             /// <summary>
+            /// <para>The name of the instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pxsp-*********</para>
             /// </summary>
@@ -108,6 +136,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
             public string DBInstanceName { get; set; }
 
             /// <summary>
+            /// <para>The name of the PolarDB-X Search instance.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pxs-*********</para>
             /// </summary>
@@ -118,6 +148,8 @@ namespace AlibabaCloud.SDK.Polardbx20200202.Models
         }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>C457B28E-9CAB-4B77-B5C6-5D71B7870B6E</para>
         /// </summary>
