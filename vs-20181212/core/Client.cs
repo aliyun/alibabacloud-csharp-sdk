@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vs20181212
             this._endpointMap = new Dictionary<string, string>
             {
                 {"cn-shenzhen", "vs.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai", "vs.cn-shanghai.aliyuncs.com"},
                 {"cn-qingdao", "vs.cn-qingdao.aliyuncs.com"},
                 {"cn-beijing", "vs.cn-beijing.aliyuncs.com"},
+                {"cn-shanghai", "vs.cn-shanghai.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("vs", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -10500,7 +10500,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This query does not support pagination. Only iterative retrieval is supported. Use the extStartTime value from the response as the StartTime parameter in a new request to retrieve the next page.</para>
+        /// <para>Currently, screenshot queries do not support pagination. Only iterative queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10565,7 +10565,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This query does not support pagination. Only iterative retrieval is supported. Use the extStartTime value from the response as the StartTime parameter in a new request to retrieve the next page.</para>
+        /// <para>Currently, screenshot queries do not support pagination. Only iterative queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10630,7 +10630,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This query does not support pagination. Only iterative retrieval is supported. Use the extStartTime value from the response as the StartTime parameter in a new request to retrieve the next page.</para>
+        /// <para>Currently, screenshot queries do not support pagination. Only iterative queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -10655,7 +10655,7 @@ namespace AlibabaCloud.SDK.Vs20181212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This query does not support pagination. Only iterative retrieval is supported. Use the extStartTime value from the response as the StartTime parameter in a new request to retrieve the next page.</para>
+        /// <para>Currently, screenshot queries do not support pagination. Only iterative queries are supported. Use the extStartTime parameter value from the response as the StartTime for a new request to retrieve the next page.</para>
         /// </remarks>
         /// </description>
         /// 

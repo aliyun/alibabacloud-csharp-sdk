@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of records displayed per page.</para>
+        /// <para>The number of records to display per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -29,6 +29,9 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
+        /// <summary>
+        /// <para>The Comfy workflow ID used as a filter condition.</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

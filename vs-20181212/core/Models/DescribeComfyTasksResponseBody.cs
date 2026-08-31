@@ -100,6 +100,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             public string HiveId { get; set; }
 
             /// <summary>
+            /// <para>The task status.</para>
+            /// </summary>
+            [NameInMap("TaskErrorMessage")]
+            [Validation(Required=false)]
+            public string TaskErrorMessage { get; set; }
+
+            /// <summary>
             /// <para>The task ID.</para>
             /// 
             /// <b>Example:</b>
@@ -118,6 +125,13 @@ namespace AlibabaCloud.SDK.Vs20181212.Models
             [NameInMap("TaskState")]
             [Validation(Required=false)]
             public string TaskState { get; set; }
+
+            /// <summary>
+            /// <para>The task status.</para>
+            /// </summary>
+            [NameInMap("TaskStateMessage")]
+            [Validation(Required=false)]
+            public string TaskStateMessage { get; set; }
 
             /// <summary>
             /// <para>The last modified time.</para>
