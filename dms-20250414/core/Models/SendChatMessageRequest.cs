@@ -150,6 +150,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     [Validation(Required=false)]
                     public List<string> AllowedColumns { get; set; }
 
+                    [NameInMap("DisallowedColumns")]
+                    [Validation(Required=false)]
+                    public List<string> DisallowedColumns { get; set; }
+
                     /// <summary>
                     /// <para>The required row filter condition for the current table. If this field is left empty, it is ignored. If specified, all SQL statements involving this table are validated to check whether they include the filter field and whether the WHERE condition meets the constraint. SQL statements that do not meet the constraint are rejected. Ensure the validation condition format is correct.</para>
                     /// 
@@ -310,6 +314,10 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
                     [NameInMap("AllowedColumns")]
                     [Validation(Required=false)]
                     public List<string> AllowedColumns { get; set; }
+
+                    [NameInMap("DisallowedColumns")]
+                    [Validation(Required=false)]
+                    public List<string> DisallowedColumns { get; set; }
 
                     /// <summary>
                     /// <para>The required row filter condition for the current table. If this field is left empty, it is ignored. If specified, all SQL statements involving this table are validated to check whether they include the filter field and whether the WHERE condition meets the constraint. SQL statements that do not meet the constraint are rejected. Ensure the validation condition format is correct.</para>
@@ -511,6 +519,22 @@ namespace AlibabaCloud.SDK.Dms20250414.Models
             [NameInMap("Mode")]
             [Validation(Required=false)]
             public string Mode { get; set; }
+
+            /// <summary>
+            /// <para>session 级权限生效机制配置，仅含未配置表的默认行为</para>
+            /// </summary>
+            [NameInMap("PermissionConfig")]
+            [Validation(Required=false)]
+            public SendChatMessageRequestSessionConfigPermissionConfig PermissionConfig { get; set; }
+            public class SendChatMessageRequestSessionConfigPermissionConfig : TeaModel {
+                /// <summary>
+                /// <para>未配置表的默认行为：allow=放行（默认），deny=拒绝</para>
+                /// </summary>
+                [NameInMap("DefaultAction")]
+                [Validation(Required=false)]
+                public string DefaultAction { get; set; }
+
+            }
 
             /// <summary>
             /// <para>Specifies whether to enable the plan. Valid values: disable, enable, force. Default value: enable.</para>
