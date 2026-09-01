@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class CreatePlaybookRequest : TeaModel {
         /// <summary>
-        /// <para>Description of the playbook.</para>
+        /// <para>The description of the playbook.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is a new version</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Name of the playbook.</para>
+        /// <para>The name of the playbook.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -31,6 +31,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string DisplayName { get; set; }
 
         /// <summary>
+        /// <para>The input configuration of the playbook.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;key1\&quot;: \&quot;value1\&quot;, \&quot;key2\&quot;: \&quot;value2\&quot;}</para>
         /// </summary>
@@ -39,10 +41,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string InputParams { get; set; }
 
         /// <summary>
-        /// <para>Language type for receiving messages. Values:</para>
+        /// <para>The language of the messages to receive. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -53,6 +57,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
+        /// <para>The output configuration of the playbook.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>{\&quot;result\&quot;: \&quot;success\&quot;}</para>
         /// </summary>
@@ -61,10 +67,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string OutputParams { get; set; }
 
         /// <summary>
-        /// <para>Playbook TaskFlow type.</para>
+        /// <para>The configuration format of the playbook.</para>
         /// <list type="bullet">
-        /// <item><description><b>x6</b> : x6</description></item>
-        /// <item><description><b>bpmn</b>: bpmn</description></item>
+        /// <item><description><para><b>xml</b>: XML format.</para>
+        /// </description></item>
+        /// <item><description><para><b>x6</b>: JSON format.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

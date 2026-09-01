@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeProcessTaskCountRequest : TeaModel {
         /// <summary>
-        /// <para>Collection of entity UUIDs.</para>
+        /// <para>The UUIDs of the entities.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("EntityUuidList")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public List<string> EntityUuidList { get; set; }
 
         /// <summary>
-        /// <para>Language type for request and response messages. Values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>zh</b> (default): Chinese.</para>
         /// </description></item>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>User ID for administrators to switch to other member\&quot;s perspective.</para>
+        /// <para>The UID of the member whose permissions you want to use to call the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>104739******259</para>
@@ -44,10 +44,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>View type.</para>
+        /// <para>The view type.</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Current Alibaba Cloud account view.</description></item>
-        /// <item><description><b>1</b>: View for all accounts under the enterprise.</description></item>
+        /// <item><description><para><b>0</b>: The view of the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para><b>1</b>: The view of all accounts that belong to the enterprise.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

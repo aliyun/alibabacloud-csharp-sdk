@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeFieldResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration content.</para>
+        /// <para>The content of the configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[&quot;ip&quot;,&quot;name&quot;,&quot;hostinfo&quot;,&quot;md5&quot;]</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BCDE6498-83CC-50A1-8307-3D5A539C42F8</para>

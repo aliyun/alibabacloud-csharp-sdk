@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class ModifyComponentAssetRequest : TeaModel {
         /// <summary>
-        /// <para>The configuration of the asset. The value is a JSON object.</para>
+        /// <para>The configuration of the component asset. This parameter is a JSON object.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string AssetConfig { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response.</para>
+        /// <para>The language of the request and response.</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

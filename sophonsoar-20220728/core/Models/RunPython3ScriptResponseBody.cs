@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class RunPython3ScriptResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates this unique ID for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F210521C-D9BF-5264-8369-83EDDC617DB0</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The execution result of the Python3 script.</para>
+        /// <para>The data returned after the script is run.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{

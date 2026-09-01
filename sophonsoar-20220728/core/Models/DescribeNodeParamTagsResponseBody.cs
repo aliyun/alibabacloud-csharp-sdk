@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeNodeParamTagsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configuration of the recommended path.</para>
+        /// <para>The recommended path configurations.</para>
         /// </summary>
         [NameInMap("ParamReferredPaths")]
         [Validation(Required=false)]
         public List<DescribeNodeParamTagsResponseBodyParamReferredPaths> ParamReferredPaths { get; set; }
         public class DescribeNodeParamTagsResponseBodyParamReferredPaths : TeaModel {
             /// <summary>
-            /// <para>The name of the upstream node.</para>
+            /// <para>The name of the ancestor node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DataFormat_1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string ParamName { get; set; }
 
             /// <summary>
-            /// <para>The paths.</para>
+            /// <para>An array of paths.</para>
             /// </summary>
             [NameInMap("ReferredPath")]
             [Validation(Required=false)]
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6BE94351-712A-505D-A40A-BC77CC8254A9</para>

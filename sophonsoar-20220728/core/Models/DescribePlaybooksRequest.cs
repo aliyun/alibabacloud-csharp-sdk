@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribePlaybooksRequest : TeaModel {
         /// <summary>
-        /// <para>Activation status of the playbook. Values:</para>
+        /// <para>The status of the playbook. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Indicates the playbook is activated.</description></item>
-        /// <item><description><b>0</b>: Indicates the playbook is not activated.</description></item>
+        /// <item><description><para><b>1</b>: The playbook is enabled.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: The playbook is disabled.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? Active { get; set; }
 
         /// <summary>
-        /// <para>End time for the query, in 13-digit timestamp format.</para>
+        /// <para>The end of the time range to query. This value is a 13-digit timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683858064361</para>
@@ -34,10 +36,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? EndMillis { get; set; }
 
         /// <summary>
-        /// <para>Specifies the language type for the request and response, default is <b>zh</b>. Values:</para>
+        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><para><b>zh</b>: Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -58,10 +62,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The sorting logic, with a default value of <b>desc</b>. Values:</para>
+        /// <para>The sort order. Default value: <b>desc</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>desc</b>: Descending order.</description></item>
-        /// <item><description><b>asc</b>: Ascending order.</description></item>
+        /// <item><description><para><b>desc</b>: descending.</para>
+        /// </description></item>
+        /// <item><description><para><b>asc</b>: ascending.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -72,10 +78,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Order { get; set; }
 
         /// <summary>
-        /// <para>Type of the playbook. Values:</para>
+        /// <para>The type of the playbook. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>preset</b>: Predefined playbook.</description></item>
-        /// <item><description><b>user</b>: Custom playbook.</description></item>
+        /// <item><description><para><b>preset</b>: predefined playbook.</para>
+        /// </description></item>
+        /// <item><description><para><b>user</b>: custom playbook.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,7 +94,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string OwnType { get; set; }
 
         /// <summary>
-        /// <para>Sets the page number from which to start displaying the query results. The default value is 1, indicating the first page.</para>
+        /// <para>The page number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -96,9 +104,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Specifies the maximum number of items to display per page in a paginated query. The default number of items per page is 20. If the PageSize parameter is empty, it will return 10 items by default.</para>
+        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 10 entries are returned by default.</para>
         /// <remarks>
-        /// <para>It is recommended that the PageSize value is not empty.</para>
+        /// <para>Specify a value for this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -109,17 +117,26 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The trigger method for the playbook, with a default value of <b>query all</b>. Values:</para>
+        /// <para>The trigger type of the playbook. If you do not specify this parameter, playbooks of all trigger types are queried. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>template-incident</b>: Security incident.</description></item>
-        /// <item><description><b>template-ip</b>: IP entity.</description></item>
-        /// <item><description><b>template-file</b>: File entity.</description></item>
-        /// <item><description><b>template-process</b>: Process entity.</description></item>
-        /// <item><description><b>template-alert</b>: Security alert.</description></item>
-        /// <item><description><b>template-domain</b>: Domain entity.</description></item>
-        /// <item><description><b>template-container</b>: Container entity.</description></item>
-        /// <item><description><b>template-host</b>: Host entity.</description></item>
-        /// <item><description><b>template-custom</b>: Custom.</description></item>
+        /// <item><description><para><b>template-incident</b>: security event.</para>
+        /// </description></item>
+        /// <item><description><para><b>template-ip</b>: IP entity.</para>
+        /// </description></item>
+        /// <item><description><para><b>template-file</b>: file entity.</para>
+        /// </description></item>
+        /// <item><description><para><b>template-process</b>: process entity.</para>
+        /// </description></item>
+        /// <item><description><para><b>template-alert</b>: security alert.</para>
+        /// </description></item>
+        /// <item><description><para><b>template-domain</b>: domain name entity.</para>
+        /// </description></item>
+        /// <item><description><para><b>template-container</b>: container entity.</para>
+        /// </description></item>
+        /// <item><description><para><b>template-host</b>: host entity.</para>
+        /// </description></item>
+        /// <item><description><para><b>template-custom</b>: custom.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,10 +149,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The UUID of the playbook.</para>
         /// <remarks>
-        /// <para>You can use the UUID to query specific playbook information.</para>
-        /// <list type="bullet">
-        /// <item><description>Call the <a href="~~CreatePlaybook~~">CreatePlaybook</a> API to obtain this parameter.</description></item>
-        /// </list>
+        /// <para>Call the <a href="~~CreatePlaybook~~">CreatePlaybook</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -146,22 +160,22 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string PlaybookUuid { get; set; }
 
         /// <summary>
-        /// <para>UUID List of the playbook.</para>
-        /// <para>Note You can use the UUID list to query specific playbook information.
-        /// Call the DescribePlaybooks API to obtain this parameter.</para>
+        /// <para>A comma-separated list of playbook UUIDs. You can specify up to 100 UUIDs.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>8baa6cff-319e-4ede-97bc-1xxxxxx,7745e6cff-319e-4ede-97bc-1xxxxxx</para>
+        /// <para>8baa6cff-319e-4ede-97bc-1xxxxxx,8rrt6cff-319e-4ede-97bc-1xxxxxx</para>
         /// </summary>
         [NameInMap("PlaybookUuids")]
         [Validation(Required=false)]
         public string PlaybookUuids { get; set; }
 
         /// <summary>
-        /// <para>The sorting basis, with a default value of <b>1</b>. Values:</para>
+        /// <para>The field to sort by. Default value: <b>1</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Last modified time.</description></item>
-        /// <item><description><b>2</b>: Most recent execution time.</description></item>
+        /// <item><description><para><b>1</b>: last modification time.</para>
+        /// </description></item>
+        /// <item><description><para><b>2</b>: last running time.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -172,7 +186,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? Sort { get; set; }
 
         /// <summary>
-        /// <para>Start time for the query, in 13-digit timestamp format.</para>
+        /// <para>The start of the time range to query. This value is a 13-digit timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683526277415</para>

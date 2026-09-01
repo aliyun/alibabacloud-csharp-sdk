@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DebugPlaybookResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>75E56B2C-C8FA-5A2F-AA08-8745E2AC33EF</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the debugging task. You can use the UUID to query the result and other details of the debugging task.</para>
+        /// <para>The run UUID of the debugging task. Use this UUID to query information, such as the task result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6d412cfa-0905-4567-8a83-xxxxxx</para>

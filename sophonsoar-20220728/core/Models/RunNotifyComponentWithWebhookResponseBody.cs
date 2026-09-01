@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public RunNotifyComponentWithWebhookResponseBodyPage Page { get; set; }
         public class RunNotifyComponentWithWebhookResponseBodyPage : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the returned page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries returned. This parameter is available only for paged queries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E7698CFB-****-5840-8EC9-691B86729E94</para>

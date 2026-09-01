@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeSophonCommandsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The commands.</para>
+        /// <para>The list of returned commands.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The parameter configurations.</para>
+            /// <para>The parameter settings.</para>
             /// </summary>
             [NameInMap("ParamConfig")]
             [Validation(Required=false)]
             public List<DescribeSophonCommandsResponseBodyDataParamConfig> ParamConfig { get; set; }
             public class DescribeSophonCommandsResponseBodyDataParamConfig : TeaModel {
                 /// <summary>
-                /// <para>The regular expression that is used to check the format of the parameter value. If the parameter is left empty, the check is not performed.</para>
+                /// <para>The regular expression that is used to check the format of the field. If this parameter is empty, no check is performed.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>[0-9]{4}\.[0-9]{4}\.[0-9]{4}\.[0-9]{4}</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 public string CheckField { get; set; }
 
                 /// <summary>
-                /// <para>The name of the parameter.</para>
+                /// <para>The name of the parameter field.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ip</para>
@@ -76,8 +76,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 /// <summary>
                 /// <para>Indicates whether the parameter is required. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>true</b> (default)</description></item>
-                /// <item><description><b>false</b></description></item>
+                /// <item><description><para><b>true</b>: The parameter is required. This is the default value.</para>
+                /// </description></item>
+                /// <item><description><para><b>false</b>: The parameter is optional.</para>
+                /// </description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -102,7 +104,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique ID for each request. You can use this ID to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1E1EC464-3BD7-518F-9937-BCC12E6855FE</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeComponentPlaybookResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the predefined components.</para>
+        /// <para>The list of component playbooks.</para>
         /// </summary>
         [NameInMap("Playbooks")]
         [Validation(Required=false)]
         public List<DescribeComponentPlaybookResponseBodyPlaybooks> Playbooks { get; set; }
         public class DescribeComponentPlaybookResponseBodyPlaybooks : TeaModel {
             /// <summary>
-            /// <para>The description of the predefined component.</para>
+            /// <para>The description of the component playbook.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aegis_kill_process</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The name of the predefined component.</para>
+            /// <para>The name of the component playbook.</para>
             /// 
             /// <b>Example:</b>
             /// <para>AegisKillQuara</para>
@@ -37,9 +37,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The input parameter configuration of the playbook. The value is a JSON array.</para>
+            /// <para>The input parameter configurations of the component playbook. The value is a JSON array.</para>
             /// <remarks>
-            /// <para> For more information, see <a href="~~DescribePlaybookInputOutput~~">DescribePlaybookInputOutput</a>.</para>
+            /// <para>For more information about the format, see <a href="~~DescribePlaybookInputOutput~~">DescribePlaybookInputOutput</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -60,6 +60,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string InputParams { get; set; }
 
             /// <summary>
+            /// <para>The input parameter type of the component playbook.</para>
+            /// <para>template-ip: IP request template.
+            /// template-file: file request template.
+            /// template-process: process request template.
+            /// custom: custom parameters.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>template-alert</para>
             /// </summary>
@@ -70,7 +76,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C5F5D6C9-DF1A-5381-92B1-39676F777D20</para>

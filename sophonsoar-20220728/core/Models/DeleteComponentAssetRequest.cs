@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DeleteComponentAssetRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the asset.</para>
+        /// <para>The asset ID of the component.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeComponentAssets~~">DescribeComponentAssets</a> operation to query the ID.</para>
+        /// <para>Call the <a href="~~DescribeComponentAssets~~">DescribeComponentAssets</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? AssetId { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

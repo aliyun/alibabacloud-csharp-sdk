@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class RunNotifyComponentWithEmailResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned.</para>
+        /// <para>The returned data.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{}</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public RunNotifyComponentWithEmailResponseBodyPage Page { get; set; }
         public class RunNotifyComponentWithEmailResponseBodyPage : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the returned page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of entries returned.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>30</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Use this ID for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D4CC979E-3D5B-5A6A-BC87-C93C9E861C7B</para>

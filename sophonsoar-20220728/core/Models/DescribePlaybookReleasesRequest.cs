@@ -12,8 +12,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +26,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1. Pages start from page 1.</para>
+        /// <para>The page number of the page to return. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -34,9 +36,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</para>
+        /// <para>The number of entries per page. Default value: 20. If you do not specify this parameter, 10 entries are returned.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Specify a value for this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -47,7 +49,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The playbook UUID.</para>
+        /// <para>The UUID of the playbook.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

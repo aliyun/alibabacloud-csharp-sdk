@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class RunNotifyComponentWithWebhookRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the action in the playbook.</para>
+        /// <para>The name of the playbook action.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ActionName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource. This parameter is deprecated.</para>
+        /// <para>The ID of the resource. This parameter is deprecated and no longer used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string AssetId { get; set; }
 
         /// <summary>
-        /// <para>The name of the component in the playbook.</para>
+        /// <para>The name of the playbook component.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ComponentName { get; set; }
 
         /// <summary>
-        /// <para>The message body sent by the DingTalk group chatbot webhook.</para>
+        /// <para>The content of the message sent by the webhook of the DingTalk group robot.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -67,10 +67,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and the response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b> (default): Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,11 +83,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The type of the webhook message. Valid values:</para>
+        /// <para>The message type of the webhook. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>text.</description></item>
-        /// <item><description>markdown.</description></item>
-        /// <item><description>actionCard.</description></item>
+        /// <item><description><para>text</para>
+        /// </description></item>
+        /// <item><description><para>markdown</para>
+        /// </description></item>
+        /// <item><description><para>actionCard</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -97,7 +102,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string MsgType { get; set; }
 
         /// <summary>
-        /// <para>The name of the node in the playbook.</para>
+        /// <para>The name of the playbook node.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -110,7 +115,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The UUID of the playbook.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/3000306.html">DescribePlaybooks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -122,7 +127,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string PlaybookUuid { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who switches from the current view to the destination view by using the management account.</para>
+        /// <para>The UID of the member that the administrator wants to switch to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>126339xxxx805497</para>
@@ -132,10 +137,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view. Valid values:</para>
+        /// <para>The view type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0 (default): the view of the current Alibaba Cloud account.</description></item>
-        /// <item><description>1: the view of all accounts for the enterprise.</description></item>
+        /// <item><description><para>0 (default): the view of the current Alibaba Cloud account.</para>
+        /// </description></item>
+        /// <item><description><para>1: the view of all accounts that belong to the enterprise.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -146,7 +153,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string RoleType { get; set; }
 
         /// <summary>
-        /// <para>The message key of the DingTalk chatbot webhook. This parameter is deprecated.</para>
+        /// <para>The secret key for the webhook of the DingTalk group robot. This parameter is deprecated and no longer used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SECc1<em><b><b>e157b32b380f</b></b></em>***bb8c70e1a67a22072</para>
@@ -156,10 +163,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Secret { get; set; }
 
         /// <summary>
-        /// <para>The IDs of chatbots that are configured in the message center. Only DingTalk chatbots are supported.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="~~ListEncryptWebhooks~~">ListEncryptWebhooks</a> operation to query the chatbot IDs.</para>
-        /// </remarks>
+        /// <para>The IDs of the DingTalk robots. Obtain the IDs on the robot management page in Message Center.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

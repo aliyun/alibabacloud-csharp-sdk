@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string InOutputInfo { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>372D8B41-AF8D-573A-9B3F-0924950F241F</para>

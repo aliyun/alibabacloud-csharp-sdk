@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The number of times that the playbook failed to be run.</para>
+            /// <para>The number of times the playbook failed to run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? FailExeNum { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the playbook. The value is a 13-digit timestamp.</para>
+            /// <para>The time when the playbook was created. This is a 13-digit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665288858000</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The modification time of the playbook. The value is a 13-digit timestamp.</para>
+            /// <para>The time when the playbook was last modified. This is a 13-digit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1677482519000</para>
@@ -67,9 +67,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The input parameter configuration of the playbook. The value is a JSON array.</para>
+            /// <para>The input parameter configuration of the playbook. The value is a JSONArray string.</para>
             /// <remarks>
-            /// <para> For more information, see <a href="~~DescribePlaybookInputOutput~~">DescribePlaybookInputOutput</a>.</para>
+            /// <para>For more information about the format, see <a href="~~DescribePlaybookInputOutput~~">DescribePlaybookInputOutput</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string InputParams { get; set; }
 
             /// <summary>
-            /// <para>The time when the playbook was last run. The value is a 13-digit timestamp.</para>
+            /// <para>The last time when the playbook was run. This is a 13-digit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1665288858000</para>
@@ -100,10 +100,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public long? LastExeTime { get; set; }
 
             /// <summary>
-            /// <para>The status of the playbook. Valid values:</para>
+            /// <para>A flag that indicates whether the playbook is enabled. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>0</b>: disabled</description></item>
-            /// <item><description><b>1</b>: enabled</description></item>
+            /// <item><description><para><b>0</b>: The playbook is disabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>1</b>: The playbook is enabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -114,7 +116,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public bool? OnlineActive { get; set; }
 
             /// <summary>
-            /// <para>The MD5 hash value in the latest published version of the playbook.</para>
+            /// <para>The MD5 value of the latest published version of the playbook.</para>
             /// 
             /// <b>Example:</b>
             /// <para>asdfsdfe232-e2b2-44fd-b2cc-xxxxx</para>
@@ -126,8 +128,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             /// <summary>
             /// <para>The type of the playbook. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>preset</b>: predefined playbook</description></item>
-            /// <item><description><b>user</b>: custom playbook</description></item>
+            /// <item><description><para><b>preset</b>: predefined playbook.</para>
+            /// </description></item>
+            /// <item><description><para><b>user</b>: custom playbook.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -148,7 +152,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string PlaybookUuid { get; set; }
 
             /// <summary>
-            /// <para>The number of times that the playbook was successfully run.</para>
+            /// <para>The number of times the playbook was successfully run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -168,10 +172,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Taskflow { get; set; }
 
             /// <summary>
-            /// <para>The playbook configuration type.</para>
+            /// <para>The configuration format of the playbook.</para>
             /// <list type="bullet">
-            /// <item><description><b>xml</b>: XML format.</description></item>
-            /// <item><description><b>x6</b>: JSON format.</description></item>
+            /// <item><description><para><b>xml</b>: XML format.</para>
+            /// </description></item>
+            /// <item><description><para><b>x6</b>: JSON format.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -184,7 +190,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. This is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2989BC59-E9F0-5C83-B453-B368857649C8</para>

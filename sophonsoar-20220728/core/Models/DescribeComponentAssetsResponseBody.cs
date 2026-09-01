@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeComponentAssetsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about the assets.</para>
+        /// <para>A list of assets.</para>
         /// </summary>
         [NameInMap("ComponentAssets")]
         [Validation(Required=false)]
         public List<DescribeComponentAssetsResponseBodyComponentAssets> ComponentAssets { get; set; }
         public class DescribeComponentAssetsResponseBodyComponentAssets : TeaModel {
             /// <summary>
-            /// <para>The UUID of the asset.</para>
+            /// <para>The asset\&quot;s UUID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ff6fe161-93e2-464c-a326-fxxxxxx</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string AssetUuid { get; set; }
 
             /// <summary>
-            /// <para>The name of the component to which the asset belongs.</para>
+            /// <para>The name of the component that the asset belongs to.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pyhton3</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Componentname { get; set; }
 
             /// <summary>
-            /// <para>The time when the asset was created. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</para>
+            /// <para>The time when the asset was created. The time is in UTC and follows the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-23T14:38Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the asset was modified. The time is in the yyyy-MM-ddTHH:mm:ssZ format and is displayed in UTC.</para>
+            /// <para>The time when the asset was last modified. The time is in UTC and follows the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-03-23T14:38Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string GmtModified { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the asset.</para>
+            /// <para>The unique ID of the asset.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7xx</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The name of the asset.</para>
+            /// <para>The asset name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test asset</para>
@@ -77,9 +77,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The configurations of the asset in the JSON string format. DescribeComponentAssetForm</para>
+            /// <para>The asset configuration in JSON format.</para>
             /// <remarks>
-            /// <para> For more information, see <a href="~~DescribeComponentAssetForm~~">DescribeComponentAssetForm</a>.</para>
+            /// <para>For more information about the format, see <a href="~~DescribeComponentAssetForm~~">DescribeComponentAssetForm</a>.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BFEFB76D-DD0E-5529-BD57-0DAC10B9B30F</para>

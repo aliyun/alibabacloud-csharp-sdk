@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeEnumItemsRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the enumeration item. Valid values:</para>
+        /// <para>The type of the enumeration. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><b>process</b>: scenarios</description></item>
+        /// <item><description><b>process</b>: The enumeration for response scenarios.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string EnumType { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh_cn</b>: Simplified Chinese (default)</description></item>
-        /// <item><description><b>en_us</b>: English</description></item>
+        /// <item><description><para><b>zh_cn</b>: The default value. Simplified Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en_us</b>: American English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

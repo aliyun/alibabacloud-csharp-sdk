@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class ModifyComponentAssetResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. This ID is unique to each request and is used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1C5F11E9-464E-51F0-9296-43BB312A0557</para>

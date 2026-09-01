@@ -19,8 +19,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             /// <summary>
             /// <para>The status of the playbook. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: enabled</description></item>
-            /// <item><description><b>0</b>: disabled</description></item>
+            /// <item><description><para><b>1</b>: The playbook is enabled.</para>
+            /// </description></item>
+            /// <item><description><para><b>0</b>: The playbook is disabled.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -51,7 +53,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The number of the tasks that are created for the playbook and failed to run.</para>
+            /// <para>The number of failed playbook runs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -93,8 +95,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             /// <summary>
             /// <para>The type of the playbook. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>preset</b>: predefined playbook</description></item>
-            /// <item><description><b>user</b>: custom playbook</description></item>
+            /// <item><description><para><b>preset</b>: predefined playbook.</para>
+            /// </description></item>
+            /// <item><description><para><b>user</b>: custom playbook.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -115,7 +119,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string PlaybookUuid { get; set; }
 
             /// <summary>
-            /// <para>The number of the tasks that are created for the playbook and were successfully run.</para>
+            /// <para>The number of successful playbook runs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -127,7 +131,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. This ID is unique to each request and is used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>567D3D0B-2153-5860-BF9A-F9DEED55FB73</para>

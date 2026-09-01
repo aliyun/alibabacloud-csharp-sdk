@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeLatestRecordSchemaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The output structure information of the playbook.</para>
+        /// <para>The output structure of the playbook.</para>
         /// </summary>
         [NameInMap("PlaybookNodeSchema")]
         [Validation(Required=false)]
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10B92EE1-4597-593B-A131-7A17D25EF5C9</para>

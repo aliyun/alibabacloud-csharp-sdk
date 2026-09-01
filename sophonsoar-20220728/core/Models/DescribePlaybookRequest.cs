@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribePlaybookRequest : TeaModel {
         /// <summary>
-        /// <para>The flag that indicates whether the playbook is of the debugging or published version. Valid values:</para>
+        /// <para>A flag that indicates whether the version is a published version or a debug version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: playbook of the debugging version</description></item>
-        /// <item><description><b>0</b>: playbook of the published version</description></item>
+        /// <item><description><para><b>1</b>: retrieves the debug version.</para>
+        /// </description></item>
+        /// <item><description><para><b>0</b>: retrieves the published version.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +26,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? DebugFlag { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. The default value is <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +44,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The UUID of the playbook.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the UUIDs of playbooks.</para>
+        /// <para>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -52,7 +56,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string PlaybookUuid { get; set; }
 
         /// <summary>
-        /// <para>The MD5 hash value of the playbook.</para>
+        /// <para>The MD5 value of the playbook configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>7a8f608dc64c242632aa578xxxxx</para>

@@ -18,7 +18,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
-            this._endpointRule = "";
+            this._endpointRule = "regional";
+            this._endpointMap = new Dictionary<string, string>
+            {
+                {"ap-southeast-1", "sophonsoar.ap-southeast-1.aliyuncs.com"},
+                {"public", "sophonsoar.aliyuncs.com"},
+            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("sophonsoar", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -39,7 +44,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares configurations between two versions of a published playbook.</para>
+        /// <para>Compares the configurations of two published playbook versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93,7 +98,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares configurations between two versions of a published playbook.</para>
+        /// <para>Compares the configurations of two published playbook versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -147,7 +152,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares configurations between two versions of a published playbook.</para>
+        /// <para>Compares the configurations of two published playbook versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -165,7 +170,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Compares configurations between two versions of a published playbook.</para>
+        /// <para>Compares the configurations of two published playbook versions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -543,13 +548,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>New Playbook.</para>
+        /// <para>Creates a new playbook.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Create Playbook.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreatePlaybookRequest
@@ -610,13 +610,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>New Playbook.</para>
+        /// <para>Creates a new playbook.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Create Playbook.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreatePlaybookRequest
@@ -677,13 +672,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>New Playbook.</para>
+        /// <para>Creates a new playbook.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Create Playbook.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreatePlaybookRequest
@@ -700,13 +690,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>New Playbook.</para>
+        /// <para>Creates a new playbook.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Create Playbook.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// CreatePlaybookRequest
@@ -867,7 +852,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the assets in a component.</para>
+        /// <para>Deletes a component asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -913,7 +898,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the assets in a component.</para>
+        /// <para>Deletes a component asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -959,7 +944,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the assets in a component.</para>
+        /// <para>Deletes a component asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -977,7 +962,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes the assets in a component.</para>
+        /// <para>Deletes a component asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -995,7 +980,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom playbook.</para>
+        /// <para>Deletes a specified custom playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1041,7 +1026,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom playbook.</para>
+        /// <para>Deletes a specified custom playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1087,7 +1072,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom playbook.</para>
+        /// <para>Deletes a specified custom playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1105,7 +1090,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes a custom playbook.</para>
+        /// <para>Deletes a specified custom playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1123,7 +1108,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata of assets in a component. The metadata of an asset refers to the fields that describe the asset.</para>
+        /// <para>Obtains the metadata for a component asset, which defines the fields that constitute the asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1161,7 +1146,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata of assets in a component. The metadata of an asset refers to the fields that describe the asset.</para>
+        /// <para>Obtains the metadata for a component asset, which defines the fields that constitute the asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1199,7 +1184,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata of assets in a component. The metadata of an asset refers to the fields that describe the asset.</para>
+        /// <para>Obtains the metadata for a component asset, which defines the fields that constitute the asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1217,7 +1202,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metadata of assets in a component. The metadata of an asset refers to the fields that describe the asset.</para>
+        /// <para>Obtains the metadata for a component asset, which defines the fields that constitute the asset.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1235,7 +1220,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of assets in a component.</para>
+        /// <para>Retrieves the asset list for a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1273,7 +1258,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of assets in a component.</para>
+        /// <para>Retrieves the asset list for a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1311,7 +1296,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of assets in a component.</para>
+        /// <para>Retrieves the asset list for a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1329,7 +1314,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of assets in a component.</para>
+        /// <para>Retrieves the asset list for a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1347,7 +1332,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of common components that are available.</para>
+        /// <para>Retrieves a list of standard components that you can use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1385,7 +1370,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of common components that are available.</para>
+        /// <para>Retrieves a list of standard components that you can use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1423,7 +1408,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of common components that are available.</para>
+        /// <para>Retrieves a list of standard components that you can use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1441,7 +1426,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of common components that are available.</para>
+        /// <para>Retrieves a list of standard components that you can use.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1459,7 +1444,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of predefined components that are available.</para>
+        /// <para>Retrieves a list of predefined components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1497,7 +1482,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of predefined components that are available.</para>
+        /// <para>Retrieves a list of predefined components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1535,7 +1520,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of predefined components that are available.</para>
+        /// <para>Retrieves a list of predefined components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1553,7 +1538,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of predefined components that are available.</para>
+        /// <para>Retrieves a list of predefined components.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1571,7 +1556,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the JavaScript file of a component. The component uses the returned JavaScript file for page rendering.</para>
+        /// <para>Obtains the JavaScript (JS) file that a component uses to render the page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1609,7 +1594,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the JavaScript file of a component. The component uses the returned JavaScript file for page rendering.</para>
+        /// <para>Obtains the JavaScript (JS) file that a component uses to render the page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1647,7 +1632,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the JavaScript file of a component. The component uses the returned JavaScript file for page rendering.</para>
+        /// <para>Obtains the JavaScript (JS) file that a component uses to render the page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1665,7 +1650,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the JavaScript file of a component. The component uses the returned JavaScript file for page rendering.</para>
+        /// <para>Obtains the JavaScript (JS) file that a component uses to render the page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1683,7 +1668,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the published versions of a playbook after deduplication.</para>
+        /// <para>Retrieves a list of distinct playbook releases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1721,7 +1706,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the published versions of a playbook after deduplication.</para>
+        /// <para>Retrieves a list of distinct playbook releases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1759,7 +1744,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the published versions of a playbook after deduplication.</para>
+        /// <para>Retrieves a list of distinct playbook releases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1777,7 +1762,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the published versions of a playbook after deduplication.</para>
+        /// <para>Retrieves a list of distinct playbook releases.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1795,7 +1780,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries enumeration items that are required by a cloud service.</para>
+        /// <para>Queries the enumeration information for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1833,7 +1818,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries enumeration items that are required by a cloud service.</para>
+        /// <para>Queries the enumeration information for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1871,7 +1856,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries enumeration items that are required by a cloud service.</para>
+        /// <para>Queries the enumeration information for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1889,7 +1874,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries enumeration items that are required by a cloud service.</para>
+        /// <para>Queries the enumeration information for a product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1907,7 +1892,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the playbooks that are available for an automatic response plan.</para>
+        /// <para>Queries a list of executable playbooks that are used to configure automated response plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1945,7 +1930,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the playbooks that are available for an automatic response plan.</para>
+        /// <para>Queries a list of executable playbooks that are used to configure automated response plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1983,7 +1968,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the playbooks that are available for an automatic response plan.</para>
+        /// <para>Queries a list of executable playbooks that are used to configure automated response plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2001,7 +1986,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the playbooks that are available for an automatic response plan.</para>
+        /// <para>Queries a list of executable playbooks that are used to configure automated response plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2019,7 +2004,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global configuration information about a cloud service.</para>
+        /// <para>Retrieves global configuration information for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2057,7 +2042,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global configuration information about a cloud service.</para>
+        /// <para>Retrieves global configuration information for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2095,7 +2080,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global configuration information about a cloud service.</para>
+        /// <para>Retrieves global configuration information for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2113,7 +2098,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the global configuration information about a cloud service.</para>
+        /// <para>Retrieves global configuration information for the product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2263,7 +2248,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output structure information of each node in a playbook based on the most recent running record of the playbook.</para>
+        /// <para>Describes the output structure of each node in a playbook based on the latest execution record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2301,7 +2286,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output structure information of each node in a playbook based on the most recent running record of the playbook.</para>
+        /// <para>Describes the output structure of each node in a playbook based on the latest execution record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2339,7 +2324,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output structure information of each node in a playbook based on the most recent running record of the playbook.</para>
+        /// <para>Describes the output structure of each node in a playbook based on the latest execution record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2357,7 +2342,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the output structure information of each node in a playbook based on the most recent running record of the playbook.</para>
+        /// <para>Describes the output structure of each node in a playbook based on the latest execution record.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2375,7 +2360,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries recommended dynamic input parameters of a component for playbook orchestration.</para>
+        /// <para>Returns the reference paths for component inputs in a playbook orchestration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2413,7 +2398,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries recommended dynamic input parameters of a component for playbook orchestration.</para>
+        /// <para>Returns the reference paths for component inputs in a playbook orchestration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2451,7 +2436,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries recommended dynamic input parameters of a component for playbook orchestration.</para>
+        /// <para>Returns the reference paths for component inputs in a playbook orchestration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2469,7 +2454,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries recommended dynamic input parameters of a component for playbook orchestration.</para>
+        /// <para>Returns the reference paths for component inputs in a playbook orchestration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2751,12 +2736,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API operations of an Alibaba Cloud service.</para>
+        /// <para>Retrieve the API list for a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or the pricing for log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before you use this API, review the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for the orchestration product, which supports threat analysis, response, log access, and traffic monitoring.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2794,12 +2779,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API operations of an Alibaba Cloud service.</para>
+        /// <para>Retrieve the API list for a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or the pricing for log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before you use this API, review the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for the orchestration product, which supports threat analysis, response, log access, and traffic monitoring.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2837,12 +2822,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API operations of an Alibaba Cloud service.</para>
+        /// <para>Retrieve the API list for a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or the pricing for log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before you use this API, review the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for the orchestration product, which supports threat analysis, response, log access, and traffic monitoring.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2860,12 +2845,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the API operations of an Alibaba Cloud service.</para>
+        /// <para>Retrieve the API list for a product.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or the pricing for log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before you use this API, review the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for the orchestration product, which supports threat analysis, response, log access, and traffic monitoring.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2883,7 +2868,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the XML configuration of a playbook.</para>
+        /// <para>Retrieves the XML configuration of a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2921,7 +2906,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the XML configuration of a playbook.</para>
+        /// <para>Retrieves the XML configuration of a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2959,7 +2944,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the XML configuration of a playbook.</para>
+        /// <para>Retrieves the XML configuration of a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2977,7 +2962,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the XML configuration of a playbook.</para>
+        /// <para>Retrieves the XML configuration of a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2995,7 +2980,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output parameter configurations of a playbook.</para>
+        /// <para>Retrieves the input and output parameter configurations for a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3033,7 +3018,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output parameter configurations of a playbook.</para>
+        /// <para>Retrieves the input and output parameter configurations for a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3071,7 +3056,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output parameter configurations of a playbook.</para>
+        /// <para>Retrieves the input and output parameter configurations for a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3089,7 +3074,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output parameter configurations of a playbook.</para>
+        /// <para>Retrieves the input and output parameter configurations for a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3107,7 +3092,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of a playbook. The metrics include the playbook name, playbook description, the number of times that the playbook is run, and the failure rate of the playbook.</para>
+        /// <para>Queries playbook metadata, including its name, description, number of runs, and failure rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3145,7 +3130,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of a playbook. The metrics include the playbook name, playbook description, the number of times that the playbook is run, and the failure rate of the playbook.</para>
+        /// <para>Queries playbook metadata, including its name, description, number of runs, and failure rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3183,7 +3168,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of a playbook. The metrics include the playbook name, playbook description, the number of times that the playbook is run, and the failure rate of the playbook.</para>
+        /// <para>Queries playbook metadata, including its name, description, number of runs, and failure rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3201,7 +3186,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the metrics of a playbook. The metrics include the playbook name, playbook description, the number of times that the playbook is run, and the failure rate of the playbook.</para>
+        /// <para>Queries playbook metadata, including its name, description, number of runs, and failure rate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3219,7 +3204,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical output data of a component node.</para>
+        /// <para>Retrieves the historical output data of a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3257,7 +3242,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical output data of a component node.</para>
+        /// <para>Retrieves the historical output data of a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3295,7 +3280,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical output data of a component node.</para>
+        /// <para>Retrieves the historical output data of a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3313,7 +3298,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the historical output data of a component node.</para>
+        /// <para>Retrieves the historical output data of a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3331,7 +3316,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of Security Orchestration Automation Response (SOAR), such as the numbers of created and enabled playbooks.</para>
+        /// <para>Retrieves metrics for the response orchestration product, including the total number of playbooks and the number of enabled playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3369,7 +3354,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of Security Orchestration Automation Response (SOAR), such as the numbers of created and enabled playbooks.</para>
+        /// <para>Retrieves metrics for the response orchestration product, including the total number of playbooks and the number of enabled playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3407,7 +3392,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of Security Orchestration Automation Response (SOAR), such as the numbers of created and enabled playbooks.</para>
+        /// <para>Retrieves metrics for the response orchestration product, including the total number of playbooks and the number of enabled playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3425,7 +3410,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of Security Orchestration Automation Response (SOAR), such as the numbers of created and enabled playbooks.</para>
+        /// <para>Retrieves metrics for the response orchestration product, including the total number of playbooks and the number of enabled playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3443,7 +3428,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the published versions of a playbook.</para>
+        /// <para>Queries a list of published versions of a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3481,7 +3466,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the published versions of a playbook.</para>
+        /// <para>Queries a list of published versions of a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3519,7 +3504,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the published versions of a playbook.</para>
+        /// <para>Queries a list of published versions of a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3537,7 +3522,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about the published versions of a playbook.</para>
+        /// <para>Queries a list of published versions of a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3555,8 +3540,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of playbooks.</para>
+        /// <para>Queries a list of playbooks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration, Automation, and Response (SOAR).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePlaybooksRequest
@@ -3593,8 +3583,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of playbooks.</para>
+        /// <para>Queries a list of playbooks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration, Automation, and Response (SOAR).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePlaybooksRequest
@@ -3631,8 +3626,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of playbooks.</para>
+        /// <para>Queries a list of playbooks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration, Automation, and Response (SOAR).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePlaybooksRequest
@@ -3649,8 +3649,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve the list of playbooks.</para>
+        /// <para>Queries a list of playbooks.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration, Automation, and Response (SOAR).</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DescribePlaybooksRequest
@@ -3667,7 +3672,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an API operation.</para>
+        /// <para>Retrieves the details of an OpenAPI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3717,7 +3722,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an API operation.</para>
+        /// <para>Retrieves the details of an OpenAPI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3767,7 +3772,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an API operation.</para>
+        /// <para>Retrieves the details of an OpenAPI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3785,7 +3790,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of an API operation.</para>
+        /// <para>Retrieves the details of an OpenAPI.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3803,12 +3808,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics.</para>
+        /// <para>Retrieves statistics information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (Cloud Threat Detection and Response (CTDR) log traffic) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3846,12 +3851,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics.</para>
+        /// <para>Retrieves statistics information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (Cloud Threat Detection and Response (CTDR) log traffic) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3889,12 +3894,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics.</para>
+        /// <para>Retrieves statistics information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (Cloud Threat Detection and Response (CTDR) log traffic) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3912,12 +3917,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries statistics.</para>
+        /// <para>Retrieves statistics information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Make sure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (Cloud Threat Detection and Response (CTDR) log traffic) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -3935,7 +3940,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of associated disposal tasks based on the entity UUID.</para>
+        /// <para>Queries the count of response tasks associated with an entity UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3973,7 +3978,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of associated disposal tasks based on the entity UUID.</para>
+        /// <para>Queries the count of response tasks associated with an entity UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4011,7 +4016,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of associated disposal tasks based on the entity UUID.</para>
+        /// <para>Queries the count of response tasks associated with an entity UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4029,7 +4034,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the number of associated disposal tasks based on the entity UUID.</para>
+        /// <para>Queries the count of response tasks associated with an entity UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4047,12 +4052,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about handling tasks. When you use Security Orchestration Automation Response (SOAR) to handle events, handling tasks are generated in the handling center.</para>
+        /// <para>Retrieves a list of disposal tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration feature (the log traffic of Cloud Threat Detection and Response (CTDR)) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4069,6 +4074,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertId))
+            {
+                query["AlertId"] = request.AlertId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
             {
                 query["Direction"] = request.Direction;
@@ -4088,6 +4097,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventUuid))
             {
                 query["EventUuid"] = request.EventUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteUuid))
+            {
+                query["ExecuteUuid"] = request.ExecuteUuid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
             {
@@ -4128,6 +4141,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqUuid))
             {
                 query["ReqUuid"] = request.ReqUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleId))
+            {
+                query["ResponseRuleId"] = request.ResponseRuleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
             {
@@ -4178,12 +4195,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about handling tasks. When you use Security Orchestration Automation Response (SOAR) to handle events, handling tasks are generated in the handling center.</para>
+        /// <para>Retrieves a list of disposal tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration feature (the log traffic of Cloud Threat Detection and Response (CTDR)) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4200,6 +4217,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlertId))
+            {
+                query["AlertId"] = request.AlertId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Direction))
             {
                 query["Direction"] = request.Direction;
@@ -4219,6 +4240,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventUuid))
             {
                 query["EventUuid"] = request.EventUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExecuteUuid))
+            {
+                query["ExecuteUuid"] = request.ExecuteUuid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OrderField))
             {
@@ -4259,6 +4284,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReqUuid))
             {
                 query["ReqUuid"] = request.ReqUuid;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResponseRuleId))
+            {
+                query["ResponseRuleId"] = request.ResponseRuleId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SceneCode))
             {
@@ -4309,12 +4338,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about handling tasks. When you use Security Orchestration Automation Response (SOAR) to handle events, handling tasks are generated in the handling center.</para>
+        /// <para>Retrieves a list of disposal tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration feature (the log traffic of Cloud Threat Detection and Response (CTDR)) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4332,12 +4361,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about handling tasks. When you use Security Orchestration Automation Response (SOAR) to handle events, handling tasks are generated in the handling center.</para>
+        /// <para>Retrieves a list of disposal tasks.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration feature (the log traffic of Cloud Threat Detection and Response (CTDR)) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4355,7 +4384,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data that is returned when a component initiates an action in a playbook task.</para>
+        /// <para>Retrieves the output data generated by a component for an action in a playbook task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4393,7 +4422,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data that is returned when a component initiates an action in a playbook task.</para>
+        /// <para>Retrieves the output data generated by a component for an action in a playbook task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4431,7 +4460,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data that is returned when a component initiates an action in a playbook task.</para>
+        /// <para>Retrieves the output data generated by a component for an action in a playbook task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4449,7 +4478,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the data that is returned when a component initiates an action in a playbook task.</para>
+        /// <para>Retrieves the output data generated by a component for an action in a playbook task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4467,7 +4496,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output data of a component action. You can call this operation after a playbook is run.</para>
+        /// <para>Retrieves the input and output data of a component action after a playbook task is executed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4505,7 +4534,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output data of a component action. You can call this operation after a playbook is run.</para>
+        /// <para>Retrieves the input and output data of a component action after a playbook task is executed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4543,7 +4572,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output data of a component action. You can call this operation after a playbook is run.</para>
+        /// <para>Retrieves the input and output data of a component action after a playbook task is executed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4561,7 +4590,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the input and output data of a component action. You can call this operation after a playbook is run.</para>
+        /// <para>Retrieves the input and output data of a component action after a playbook task is executed.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4579,7 +4608,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the execution records of a playbook.</para>
+        /// <para>Queries the execution records for a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4617,7 +4646,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the execution records of a playbook.</para>
+        /// <para>Queries the execution records for a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4655,7 +4684,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the execution records of a playbook.</para>
+        /// <para>Queries the execution records for a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4673,7 +4702,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the execution records of a playbook.</para>
+        /// <para>Queries the execution records for a playbook.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4691,7 +4720,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of a component during the running of a playbook.</para>
+        /// <para>Retrieves the component execution records for a single playbook run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4729,7 +4758,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of a component during the running of a playbook.</para>
+        /// <para>Retrieves the component execution records for a single playbook run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4767,7 +4796,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of a component during the running of a playbook.</para>
+        /// <para>Retrieves the component execution records for a single playbook run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4785,7 +4814,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of a component during the running of a playbook.</para>
+        /// <para>Retrieves the component execution records for a single playbook run.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4803,7 +4832,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the commands that can be run to obtain objects.</para>
+        /// <para>Queries the commands that are used to manage entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4845,7 +4874,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the commands that can be run to obtain objects.</para>
+        /// <para>Queries the commands that are used to manage entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4887,7 +4916,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the commands that can be run to obtain objects.</para>
+        /// <para>Queries the commands that are used to manage entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4905,7 +4934,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the commands that can be run to obtain objects.</para>
+        /// <para>Queries the commands that are used to manage entities.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5103,7 +5132,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operational logs of a Python3 script by using the UUID that is returned when the script is run. The UUID is specified by requestUuid.</para>
+        /// <para>After you submit a task for a Python 3 script, use the returned requestUuid to retrieve the operational logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5141,7 +5170,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operational logs of a Python3 script by using the UUID that is returned when the script is run. The UUID is specified by requestUuid.</para>
+        /// <para>After you submit a task for a Python 3 script, use the returned requestUuid to retrieve the operational logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5179,7 +5208,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operational logs of a Python3 script by using the UUID that is returned when the script is run. The UUID is specified by requestUuid.</para>
+        /// <para>After you submit a task for a Python 3 script, use the returned requestUuid to retrieve the operational logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5197,7 +5226,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the operational logs of a Python3 script by using the UUID that is returned when the script is run. The UUID is specified by requestUuid.</para>
+        /// <para>After you submit a task for a Python 3 script, use the returned requestUuid to retrieve the operational logs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5215,7 +5244,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about the asset that is configured for a component.</para>
+        /// <para>You can call this operation to modify the asset information for a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5261,7 +5290,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about the asset that is configured for a component.</para>
+        /// <para>You can call this operation to modify the asset information for a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5307,7 +5336,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about the asset that is configured for a component.</para>
+        /// <para>You can call this operation to modify the asset information for a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5325,7 +5354,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the information about the asset that is configured for a component.</para>
+        /// <para>You can call this operation to modify the asset information for a component.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5655,7 +5684,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes the playbook. After the playbook is published, the playbook runs based on the new logic.</para>
+        /// <para>Publishes a playbook. Once published, the playbook runs with the new logic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5701,7 +5730,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes the playbook. After the playbook is published, the playbook runs based on the new logic.</para>
+        /// <para>Publishes a playbook. Once published, the playbook runs with the new logic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5747,7 +5776,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes the playbook. After the playbook is published, the playbook runs based on the new logic.</para>
+        /// <para>Publishes a playbook. Once published, the playbook runs with the new logic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5765,7 +5794,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Publishes the playbook. After the playbook is published, the playbook runs based on the new logic.</para>
+        /// <para>Publishes a playbook. Once published, the playbook runs with the new logic.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5783,7 +5812,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all playbooks at a time.</para>
+        /// <para>Retrieves a list of all playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5821,7 +5850,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all playbooks at a time.</para>
+        /// <para>Retrieves a list of all playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5859,7 +5888,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all playbooks at a time.</para>
+        /// <para>Retrieves a list of all playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5877,7 +5906,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all playbooks at a time.</para>
+        /// <para>Retrieves a list of all playbooks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5895,7 +5924,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a playbook to a specific version. You can determine whether to publish the new playbook version during the rollback.</para>
+        /// <para>Rolls back a playbook to a specified version. You can also specify whether to publish that version after the rollback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5945,7 +5974,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a playbook to a specific version. You can determine whether to publish the new playbook version during the rollback.</para>
+        /// <para>Rolls back a playbook to a specified version. You can also specify whether to publish that version after the rollback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5995,7 +6024,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a playbook to a specific version. You can determine whether to publish the new playbook version during the rollback.</para>
+        /// <para>Rolls back a playbook to a specified version. You can also specify whether to publish that version after the rollback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6013,7 +6042,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Rolls back a playbook to a specific version. You can determine whether to publish the new playbook version during the rollback.</para>
+        /// <para>Rolls back a playbook to a specified version. You can also specify whether to publish that version after the rollback.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6031,12 +6060,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs the email notification component to send messages.</para>
+        /// <para>Runs the notification component to send an email message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before calling this operation, understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration Application Response (SOAR). SOAR is billed based on the log traffic added to the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6118,12 +6147,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs the email notification component to send messages.</para>
+        /// <para>Runs the notification component to send an email message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before calling this operation, understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration Application Response (SOAR). SOAR is billed based on the log traffic added to the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6205,12 +6234,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs the email notification component to send messages.</para>
+        /// <para>Runs the notification component to send an email message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before calling this operation, understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration Application Response (SOAR). SOAR is billed based on the log traffic added to the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6228,12 +6257,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs the email notification component to send messages.</para>
+        /// <para>Runs the notification component to send an email message.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before calling this operation, understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> for Security Orchestration Application Response (SOAR). SOAR is billed based on the log traffic added to the service.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6251,12 +6280,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Execute Notification Component - Send Message via Message Center.</para>
+        /// <para>Sends a message using the notification component in Message Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Access Traffic) before using this interface.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR). The service is billed based on the log traffic for threat analysis and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6342,12 +6371,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Execute Notification Component - Send Message via Message Center.</para>
+        /// <para>Sends a message using the notification component in Message Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Access Traffic) before using this interface.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR). The service is billed based on the log traffic for threat analysis and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6433,12 +6462,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Execute Notification Component - Send Message via Message Center.</para>
+        /// <para>Sends a message using the notification component in Message Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Access Traffic) before using this interface.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR). The service is billed based on the log traffic for threat analysis and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6456,12 +6485,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Execute Notification Component - Send Message via Message Center.</para>
+        /// <para>Sends a message using the notification component in Message Center.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Please ensure that you fully understand the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product (i.e., Threat Analysis and Response Log Access Traffic) before using this interface.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR). The service is billed based on the log traffic for threat analysis and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6479,12 +6508,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs the webhook notification component to send messages.</para>
+        /// <para>Sends a message from a notification component using a webhook.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of response orchestration. This feature is billed based on the log traffic for threat analysis and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6570,12 +6599,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs the webhook notification component to send messages.</para>
+        /// <para>Sends a message from a notification component using a webhook.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of response orchestration. This feature is billed based on the log traffic for threat analysis and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6661,12 +6690,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs the webhook notification component to send messages.</para>
+        /// <para>Sends a message from a notification component using a webhook.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of response orchestration. This feature is billed based on the log traffic for threat analysis and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6684,12 +6713,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs the webhook notification component to send messages.</para>
+        /// <para>Sends a message from a notification component using a webhook.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR) or pricing for the log data added to the Cloud Threat Detection and Response (CTDR) feature. For more information, see <a href="https://www.aliyun.com/price/product#/sas/detail/sas">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of response orchestration. This feature is billed based on the log traffic for threat analysis and response.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6707,12 +6736,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits and runs a Python3 script. You can call this operation only for data processing.</para>
+        /// <para>Executes a Python 3 code snippet for data processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.4c41281fWhbdPa#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6772,12 +6801,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits and runs a Python3 script. You can call this operation only for data processing.</para>
+        /// <para>Executes a Python 3 code snippet for data processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.4c41281fWhbdPa#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6837,12 +6866,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits and runs a Python3 script. You can call this operation only for data processing.</para>
+        /// <para>Executes a Python 3 code snippet for data processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.4c41281fWhbdPa#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6860,12 +6889,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits and runs a Python3 script. You can call this operation only for data processing.</para>
+        /// <para>Executes a Python 3 code snippet for data processing.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing method and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=openapi-amp.newDocPublishment.0.0.4c41281fWhbdPa#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of the response orchestration product.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6883,12 +6912,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an enabled custom playbook or a predefined playbook.</para>
+        /// <para>Triggers an enabled custom or predefined playbook.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Response Orchestration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6934,12 +6963,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an enabled custom playbook or a predefined playbook.</para>
+        /// <para>Triggers an enabled custom or predefined playbook.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Response Orchestration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6985,12 +7014,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an enabled custom playbook or a predefined playbook.</para>
+        /// <para>Triggers an enabled custom or predefined playbook.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Response Orchestration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7008,12 +7037,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers an enabled custom playbook or a predefined playbook.</para>
+        /// <para>Triggers an enabled custom or predefined playbook.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Before you call this operation, make sure that you understand the billing methods and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Response Orchestration.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7031,7 +7060,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs an action on a handling task that is generated by the handling center when an event is handled by using Security Orchestration Automation Response (SOAR). For example, you can call this operation to cancel blocking or isolation, or retry blocking.</para>
+        /// <para>When an event is handled using response orchestration, the response center creates a task. Perform follow-up actions on the task, such as unblocking, retrying a block, and removing from isolation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7079,7 +7108,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs an action on a handling task that is generated by the handling center when an event is handled by using Security Orchestration Automation Response (SOAR). For example, you can call this operation to cancel blocking or isolation, or retry blocking.</para>
+        /// <para>When an event is handled using response orchestration, the response center creates a task. Perform follow-up actions on the task, such as unblocking, retrying a block, and removing from isolation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7127,7 +7156,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs an action on a handling task that is generated by the handling center when an event is handled by using Security Orchestration Automation Response (SOAR). For example, you can call this operation to cancel blocking or isolation, or retry blocking.</para>
+        /// <para>When an event is handled using response orchestration, the response center creates a task. Perform follow-up actions on the task, such as unblocking, retrying a block, and removing from isolation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7145,7 +7174,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs an action on a handling task that is generated by the handling center when an event is handled by using Security Orchestration Automation Response (SOAR). For example, you can call this operation to cancel blocking or isolation, or retry blocking.</para>
+        /// <para>When an event is handled using response orchestration, the response center creates a task. Perform follow-up actions on the task, such as unblocking, retrying a block, and removing from isolation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7163,12 +7192,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a playbook or a command.</para>
+        /// <para>Triggers a playbook or a response command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7185,6 +7214,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandName))
             {
                 query["CommandName"] = request.CommandName;
@@ -7226,12 +7259,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a playbook or a command.</para>
+        /// <para>Triggers a playbook or a response command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7248,6 +7281,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CommandName))
             {
                 query["CommandName"] = request.CommandName;
@@ -7289,12 +7326,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a playbook or a command.</para>
+        /// <para>Triggers a playbook or a response command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7312,12 +7349,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Triggers a playbook or a command.</para>
+        /// <para>Triggers a playbook or a response command.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you understand the billing methods and pricing of Security Orchestration Automation Response (SOAR). For more information, see <a href="https://www.alibabacloud.com/en/pricing-calculator?_p_lc=1&spm=a2796.7960336.3034855210.1.7adab91arMeIx2#/commodity/vm_intl">Pricing</a>.</para>
+        /// <para>Make sure that you are familiar with the billing method and <a href="https://www.aliyun.com/price/product#/sas/detail/sas">pricing</a> of Security Orchestration Automation Response (SOAR) before you call this operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7335,7 +7372,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the configuration of the playbook is correct and whether the logic of the orchestration is reasonable.</para>
+        /// <para>Verifies that a playbook configuration is correct and its orchestration logic is valid.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7381,7 +7418,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the configuration of the playbook is correct and whether the logic of the orchestration is reasonable.</para>
+        /// <para>Verifies that a playbook configuration is correct and its orchestration logic is valid.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7427,7 +7464,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the configuration of the playbook is correct and whether the logic of the orchestration is reasonable.</para>
+        /// <para>Verifies that a playbook configuration is correct and its orchestration logic is valid.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7445,7 +7482,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the configuration of the playbook is correct and whether the logic of the orchestration is reasonable.</para>
+        /// <para>Verifies that a playbook configuration is correct and its orchestration logic is valid.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7463,7 +7500,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the syntax of a Python code snippet is correct.</para>
+        /// <para>Verifies the syntax of a Python code snippet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7505,7 +7542,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the syntax of a Python code snippet is correct.</para>
+        /// <para>Verifies the syntax of a Python code snippet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7547,7 +7584,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the syntax of a Python code snippet is correct.</para>
+        /// <para>Verifies the syntax of a Python code snippet.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7565,7 +7602,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Checks whether the syntax of a Python code snippet is correct.</para>
+        /// <para>Verifies the syntax of a Python code snippet.</para>
         /// </summary>
         /// 
         /// <param name="request">

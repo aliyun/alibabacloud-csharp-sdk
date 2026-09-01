@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class RevertPlaybookReleaseRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to directly publish the new playbook after the rollback.</para>
+        /// <para>Specifies whether to publish the playbook after the rollback.</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b> (default)</description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><para><b>true</b> (default): Publishes the playbook after the rollback.</para>
+        /// </description></item>
+        /// <item><description><para><b>false</b>: Rolls back the playbook without publishing it.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +26,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public bool? IsPublish { get; set; }
 
         /// <summary>
-        /// <para>The version of the playbook that you want to publish.</para>
+        /// <para>The ID of the published playbook version.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to query the playbook version.</para>
+        /// <para>Call the <a href="~~DescribePlaybookReleases~~">DescribePlaybookReleases</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -40,7 +42,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The UUID of the playbook.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</para>
+        /// <para>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

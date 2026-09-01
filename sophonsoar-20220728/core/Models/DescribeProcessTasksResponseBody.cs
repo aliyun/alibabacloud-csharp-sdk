@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public DescribeProcessTasksResponseBodyPage Page { get; set; }
         public class DescribeProcessTasksResponseBodyPage : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The current page number in the paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries returned per page in the paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The handling tasks.</para>
+        /// <para>The list of disposal tasks.</para>
         /// </summary>
         [NameInMap("ProcessTasks")]
         [Validation(Required=false)]
         public List<DescribeProcessTasksResponseBodyProcessTasks> ProcessTasks { get; set; }
         public class DescribeProcessTasksResponseBodyProcessTasks : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to submit the handling task.</para>
+            /// <para>The Alibaba Cloud account ID that submitted the disposal task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxx355</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The name of the handling entity.</para>
+            /// <para>The name of the disposed entity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.1.1.x</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string EntityName { get; set; }
 
             /// <summary>
-            /// <para>The type of the handling entity.</para>
+            /// <para>The type of the disposed entity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ip</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string EntityType { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the handling entity.</para>
+            /// <para>The UUID of the entity.</para>
             /// 
             /// <b>Example:</b>
             /// <para>69d189e2-ec17-4676-a2fe-02969234****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string EntityUuid { get; set; }
 
             /// <summary>
-            /// <para>The error code returned if the call failed.</para>
+            /// <para>The error code.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sts_openapi.Info.DefenseSceneNotSupported</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string ErrCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned if the call failed.</para>
+            /// <para>The error message.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ParamError : The parameters of your request are invalid</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string ErrMsg { get; set; }
 
             /// <summary>
-            /// <para>The error tip returned if the call failed.</para>
+            /// <para>The error tip.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Verify that the input parameters of the components are correct</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string EventUuid { get; set; }
 
             /// <summary>
-            /// <para>The creation time of the handling task. The value is a 13-digit timestamp.</para>
+            /// <para>The creation time of the disposal task. Format: 13-digit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1700031183572</para>
@@ -146,7 +146,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public long? GmtCreateMillis { get; set; }
 
             /// <summary>
-            /// <para>The modification time of the handling task. The value is a 13-digit timestamp.</para>
+            /// <para>The modification time of the disposal task. Format: 13-digit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1700031183572</para>
@@ -156,7 +156,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public long? GmtModifiedMillis { get; set; }
 
             /// <summary>
-            /// <para>The input parameter of the handling task.</para>
+            /// <para>The input parameters of the disposal task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;groupuuid&quot;:&quot;c6a9b1df-f4ac-4078-bef4-99xxxxxx&quot;}</para>
@@ -166,17 +166,17 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string InputParams { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated policy.</para>
+            /// <para>The ID of the associated strategy.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>92af3c79-1754-4646-9366-9ddbd1e45536_xxxx</para>
+            /// <para>92af3c79-1754-4646-9366-9ddbd1e45536_****</para>
             /// </summary>
             [NameInMap("ProcessStrategyUuid")]
             [Validation(Required=false)]
             public string ProcessStrategyUuid { get; set; }
 
             /// <summary>
-            /// <para>The delivery time of the handling task. The value is a 13-digit timestamp.</para>
+            /// <para>The time when the disposal task was dispatched. Format: 13-digit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1700031183572</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public long? ProcessTime { get; set; }
 
             /// <summary>
-            /// <para>The unblocking time of the handling task. The value is a 13-digit timestamp.</para>
+            /// <para>The unblocking time of the disposal task. Format: 13-digit timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1700031183572</para>
@@ -206,7 +206,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string ReqUuid { get; set; }
 
             /// <summary>
-            /// <para>The scenario code of the handling task.</para>
+            /// <para>The scene code of the disposal task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>event_xxx_whole_process</para>
@@ -216,7 +216,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string SceneCode { get; set; }
 
             /// <summary>
-            /// <para>The scenario name of the handling task.</para>
+            /// <para>The scene name of the disposal task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>waf_whole_process</para>
@@ -226,7 +226,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string SceneName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is specified in the handling task.</para>
+            /// <para>The Alibaba Cloud account ID for the disposal.</para>
             /// 
             /// <b>Example:</b>
             /// <para>123xxxxx234</para>
@@ -236,7 +236,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Scope { get; set; }
 
             /// <summary>
-            /// <para>The submission source of the handling task.</para>
+            /// <para>The submission source of the disposal task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>system</para>
@@ -246,7 +246,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Source { get; set; }
 
             /// <summary>
-            /// <para>The unique identifier of the handling task.</para>
+            /// <para>The unique identifier of the disposal task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150xxxxxxxxx95066</para>
@@ -256,7 +256,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The status of the handling task.</para>
+            /// <para>The status of the disposal task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -266,13 +266,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? TaskStatus { get; set; }
 
             /// <summary>
-            /// <para>The triggering source of the handling task. Valid values:</para>
+            /// <para>The trigger source of the disposal task. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>system</b>: triggered when you manually handle an event.</description></item>
-            /// <item><description><b>custom</b>: triggered by an event based on an automatic response rule.</description></item>
-            /// <item><description><b>custom_alert</b>: triggered by an alert based on an automatic response rule.</description></item>
-            /// <item><description><b>soar-manual</b>: triggered when you use SOAR to manually run a playbook.</description></item>
-            /// <item><description><b>soar-mdr</b>: triggered by Managed Security Service.</description></item>
+            /// <item><description><b>system</b>: Triggered by manual event disposal.</description></item>
+            /// <item><description><b>custom</b>: Triggered by an automatic response rule based on an event.</description></item>
+            /// <item><description><b>custom_alert</b>: Triggered by an automatic response rule based on an alert.</description></item>
+            /// <item><description><b>soar-manual</b>: Triggered by manually invoking a SOAR playbook.</description></item>
+            /// <item><description><b>soar-mdr</b>: Triggered by the Managed Security Service.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -283,7 +283,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string TriggerSource { get; set; }
 
             /// <summary>
-            /// <para>The code of the cloud service that is associated with the handling task.</para>
+            /// <para>The code of the cloud product associated with the disposal task.</para>
             /// 
             /// <b>Example:</b>
             /// <para>WAF</para>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E7698CFB-4E1C-5840-8EC9-691B86729E94</para>

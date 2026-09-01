@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class TriggerPlaybookRequest : TeaModel {
         /// <summary>
-        /// <para>The input parameters of the playbook.</para>
+        /// <para>The input parameters for the playbook.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string InputParam { get; set; }
 
         /// <summary>
-        /// <para>The playbook UUID.</para>
+        /// <para>The UUID of the playbook.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</para>
+        /// <para>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

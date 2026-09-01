@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class VerifyPlaybookRequest : TeaModel {
         /// <summary>
-        /// <para>The playbook UUID.</para>
+        /// <para>The UUID of the playbook.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the playbook UUID.</para>
+        /// <para>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

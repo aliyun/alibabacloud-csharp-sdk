@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             /// <para>The name of the cloud service.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Cloud Communication</para>
+            /// <para>Database</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 /// <para>The code of the cloud service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>DM</para>
+                /// <para>Rds</para>
                 /// </summary>
                 [NameInMap("Code")]
                 [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 /// <para>The default requested domain name.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>dm.aliyuncs.com</para>
+                /// <para>rds.aliyuncs.com</para>
                 /// </summary>
                 [NameInMap("DefaultDomain")]
                 [Validation(Required=false)]
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 /// <para>The description of the cloud service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>DM</para>
+                /// <para>ApsaraDB</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 /// <para>The name of the group.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Cloud Communication</para>
+                /// <para>ApsaraDB</para>
                 /// </summary>
                 [NameInMap("Group")]
                 [Validation(Required=false)]
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 /// <para>The name of the cloud service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>DirectMail</para>
+                /// <para>ApsaraDB RDS</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                     /// </list>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>All</para>
+                    /// <para>Read-only permission</para>
                     /// </summary>
                     [NameInMap("Type")]
                     [Validation(Required=false)]
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 /// <para>The Resource Access Management (RAM) code of the POP to which the resource belongs.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>dm</para>
+                /// <para>rds</para>
                 /// </summary>
                 [NameInMap("RamCode")]
                 [Validation(Required=false)]
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
                 /// <para>The short name of the cloud service.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>DM</para>
+                /// <para>RDS</para>
                 /// </summary>
                 [NameInMap("ShortName")]
                 [Validation(Required=false)]
@@ -217,7 +217,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>358E012F-****-599D-9ED0-****61CDE615</para>
+        /// <para>358E012F-B516-599D-9Exxx-A1A361CDE615</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

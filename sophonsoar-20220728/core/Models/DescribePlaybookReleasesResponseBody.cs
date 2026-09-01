@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public DescribePlaybookReleasesResponseBodyPage Page { get; set; }
         public class DescribePlaybookReleasesResponseBodyPage : TeaModel {
             /// <summary>
-            /// <para>The page number.</para>
+            /// <para>The page number of the returned page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? PageNumber { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of entries returned per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -49,14 +49,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The information about the playbook version.</para>
+        /// <para>A list of playbook versions.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<DescribePlaybookReleasesResponseBodyRecords> Records { get; set; }
         public class DescribePlaybookReleasesResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that is used to publish the version.</para>
+            /// <para>The ID of the Alibaba Cloud account that published the version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>145xxxx985</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Creator { get; set; }
 
             /// <summary>
-            /// <para>The description of the layer version.</para>
+            /// <para>The description of the version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>This is a new version</para>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the version was created. The value is a 13-digit timestamp.</para>
+            /// <para>The time when the version was created. This is a 13-digit UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1655277397000</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public long? GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The time when the version was modified. The value is a 13-digit timestamp.</para>
+            /// <para>The time when the version was last modified. This is a 13-digit UNIX timestamp.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1691460804000</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public int? Id { get; set; }
 
             /// <summary>
-            /// <para>The MD5 value configured for the published version of the playbook.</para>
+            /// <para>The MD5 hash of the playbook configuration for the published version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>be0a4ef084dd174abe47xxxxx</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3DFBE11C-6EB6-5166-92D6-3397796AFE1E</para>

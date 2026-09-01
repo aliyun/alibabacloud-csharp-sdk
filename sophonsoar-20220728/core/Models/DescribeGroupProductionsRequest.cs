@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <para>The ID of the user who switches from the current view to the destination view by using the management account.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>118******150980</para>
+        /// <para>11824150xxx50980</para>
         /// </summary>
         [NameInMap("RoleFor")]
         [Validation(Required=false)]

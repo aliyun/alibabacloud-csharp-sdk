@@ -10,9 +10,19 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class TriggerSophonPlaybookRequest : TeaModel {
         /// <summary>
+        /// <para>The idempotency token.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123e4567-e89b-12d3-a456-426614174000</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// <para>The name of the command that you want to trigger.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeSophonCommands~~">DescribeSophonCommands</a> operation to query the command name.</para>
+        /// <para>You can call the <a href="~~DescribeSophonCommands~~">DescribeSophonCommands</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +33,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string CommandName { get; set; }
 
         /// <summary>
-        /// <para>The input parameters of the command or playbook that you want to trigger.</para>
+        /// <para>The input parameters for triggering the command or playbook.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -37,7 +47,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string InputParams { get; set; }
 
         /// <summary>
-        /// <para>The custom ID. If you do not specify this parameter when the playbook is triggered, a random ID is generated for fault locating and troubleshooting.</para>
+        /// <para>The custom ID of the task. If you do not specify this parameter when triggering a playbook, a random ID is generated. This ID is used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>f916b93e-e814-459f-9662-xxxxxxxxxx</para>
@@ -47,10 +57,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string SophonTaskId { get; set; }
 
         /// <summary>
-        /// <para>The task type. Valid values:</para>
+        /// <para>The trigger type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>command</b></description></item>
-        /// <item><description><b>playbook</b></description></item>
+        /// <item><description><b>command</b>: Triggers a command task.</description></item>
+        /// <item><description><b>playbook</b>: Triggers a playbook task.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +73,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The UUID of the playbook.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</para>
+        /// <para>You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

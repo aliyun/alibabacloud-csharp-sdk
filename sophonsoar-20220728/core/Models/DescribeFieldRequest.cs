@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeFieldRequest : TeaModel {
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response messages. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese.</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,9 +26,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The key of the global configuration. Valid values:</para>
+        /// <para>The key of the global configuration. Valid value:</para>
         /// <list type="bullet">
-        /// <item><description><b>soar_filed_tags</b>: queries the input template of the playbook.</description></item>
+        /// <item><description><b>soar_filed_tags</b>: Obtains the input field template for a playbook.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

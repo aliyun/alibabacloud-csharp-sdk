@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeOpenApiListRequest : TeaModel {
         /// <summary>
-        /// <para>The operation that you want to perform.</para>
+        /// <para>The API name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>DescribePopApiItemList</para>
@@ -20,9 +20,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ApiName { get; set; }
 
         /// <summary>
-        /// <para>The version number of the API.</para>
+        /// <para>The API version number.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeGroupProductions~~">DescribeGroupProductions</a> operation to query the version number.</para>
+        /// <para>Call the <a href="~~DescribeGroupProductions~~">DescribeGroupProductions</a> API to get this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -34,10 +34,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ApiVersion { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for requests and responses. The default value is <b>zh</b>. Values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese.</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +50,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The POP code of the Alibaba Cloud service.</para>
+        /// <para>The POP CODE of the Alibaba Cloud product API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +61,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string PopCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the user who switches from the current view to the destination view by using the management account.</para>
+        /// <para>The user ID of the member whose perspective the administrator switches to.</para>
         /// 
         /// <b>Example:</b>
         /// <para>137602xxx8718726</para>
@@ -69,10 +71,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? RoleFor { get; set; }
 
         /// <summary>
-        /// <para>The type of the view. Default value: 0. Valid values:</para>
+        /// <para>The view type. The default is 0. Values:</para>
         /// <list type="bullet">
-        /// <item><description>0: the view of the current Alibaba Cloud account.</description></item>
-        /// <item><description>1: the view of all accounts for the enterprise.</description></item>
+        /// <item><description><para>0: Current Alibaba Cloud account view.</para>
+        /// </description></item>
+        /// <item><description><para>1: View of all accounts under the enterprise.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

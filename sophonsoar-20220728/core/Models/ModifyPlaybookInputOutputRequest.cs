@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class ModifyPlaybookInputOutputRequest : TeaModel {
         /// <summary>
-        /// <para>The executed mode of a playbook. The value is a JSON array.</para>
+        /// <para>The execution method for the playbook. This parameter is in the JSONObject format.</para>
         /// </summary>
         [NameInMap("ExeConfig")]
         [Validation(Required=false)]
         public string ExeConfig { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the input parameters. The value is a JSON array.</para>
+        /// <para>The input parameter configuration for the playbook. This parameter is in the JSONArray format.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,10 +38,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string InputParams { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response.</para>
+        /// <para>The language of the request and response messages.</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese (default)</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b> (default): Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -52,7 +54,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the output parameters. This parameter is unavailable. Leave it empty.</para>
+        /// <para>Playbooks do not support output parameter configurations. This parameter is fixed to an empty value.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,12 +65,16 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string OutputParams { get; set; }
 
         /// <summary>
-        /// <para>The input parameter type.</para>
+        /// <para>The type of the input parameter for the playbook.</para>
         /// <list type="bullet">
-        /// <item><description><b>template-ip</b></description></item>
-        /// <item><description><b>template-file</b></description></item>
-        /// <item><description><b>template-process</b></description></item>
-        /// <item><description><b>custom</b></description></item>
+        /// <item><description><para><b>template-ip</b>: IP request template.</para>
+        /// </description></item>
+        /// <item><description><para><b>template-file</b>: file request template.</para>
+        /// </description></item>
+        /// <item><description><para><b>template-process</b>: process request template.</para>
+        /// </description></item>
+        /// <item><description><para><b>custom</b>: custom parameter.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The UUID of the playbook.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a>operation to query the playbook UUID.</para>
+        /// <para>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,10 +10,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class TriggerProcessTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the action. Valid values:</para>
+        /// <para>The type of the handling action. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>remove</b>: cancels blocking or isolation.</description></item>
-        /// <item><description><b>retry</b>: submits the task again.</description></item>
+        /// <item><description><para><b>remove</b>: Removes a block or an asset from isolation.</para>
+        /// </description></item>
+        /// <item><description><para><b>retry</b>: Resubmits the task.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,9 +27,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ActionType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the handling task.</para>
+        /// <para>The unique ID of the handling task.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeProcessTasks~~">DescribeProcessTasks</a> operation to query the IDs of handling tasks.</para>
+        /// <para>Call the <a href="~~DescribeProcessTasks~~">DescribeProcessTasks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

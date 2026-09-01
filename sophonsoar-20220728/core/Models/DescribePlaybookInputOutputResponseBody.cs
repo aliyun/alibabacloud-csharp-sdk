@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribePlaybookInputOutputResponseBody : TeaModel {
         /// <summary>
-        /// <para>The configurations.</para>
+        /// <para>The configuration information.</para>
         /// </summary>
         [NameInMap("Config")]
         [Validation(Required=false)]
         public DescribePlaybookInputOutputResponseBodyConfig Config { get; set; }
         public class DescribePlaybookInputOutputResponseBodyConfig : TeaModel {
             /// <summary>
-            /// <para>The execution method of the playbook is in JSONObject format.</para>
+            /// <para>The execution method of the playbook. The value is in the JSONObject format.</para>
             /// </summary>
             [NameInMap("ExeConfig")]
             [Validation(Required=false)]
             public string ExeConfig { get; set; }
 
             /// <summary>
-            /// <para>The input parameter configuration of the playbook. The value is a JSON array.</para>
+            /// <para>The input parameter configurations of the playbook. The value is in the JSONArray format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string InputParams { get; set; }
 
             /// <summary>
-            /// <para>The output parameter configuration. This parameter is unavailable and is always left empty.</para>
+            /// <para>Playbooks do not support output parameter configurations. This parameter is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>[]</para>
@@ -54,12 +54,16 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string OutputParams { get; set; }
 
             /// <summary>
-            /// <para>The input parameter type of the playbook. Valid values:</para>
+            /// <para>The type of the input parameters for the playbook.</para>
             /// <list type="bullet">
-            /// <item><description><b>template-ip</b></description></item>
-            /// <item><description><b>template-file</b></description></item>
-            /// <item><description><b>template-process</b></description></item>
-            /// <item><description><b>custom</b></description></item>
+            /// <item><description><para><b>template-ip</b>: IP request template.</para>
+            /// </description></item>
+            /// <item><description><para><b>template-file</b>: file request template.</para>
+            /// </description></item>
+            /// <item><description><para><b>template-process</b>: process request template.</para>
+            /// </description></item>
+            /// <item><description><para><b>custom</b>: custom parameters.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -82,7 +86,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>688B4CCD-5272-5DCF-9D76-FE5EFEF545F8</para>

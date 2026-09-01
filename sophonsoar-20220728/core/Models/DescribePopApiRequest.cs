@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribePopApiRequest : TeaModel {
         /// <summary>
-        /// <para>The operation name of the Alibaba Cloud service.</para>
+        /// <para>The name of the Alibaba Cloud product API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,9 +22,6 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 
         /// <summary>
         /// <para>The version number of the API.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="~~DescribePopApiVersionList~~">DescribePopApiVersionList</a> operation to query the version number.</para>
-        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -35,10 +32,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ApiVersion { get; set; }
 
         /// <summary>
-        /// <para>The POP code of the Alibaba Cloud service.</para>
-        /// <remarks>
-        /// <para> You can call the <a href="~~DescribeApiList~~">DescribeApiList</a> operation to query the POP code.</para>
-        /// </remarks>
+        /// <para>The POP code of the Alibaba Cloud product API.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

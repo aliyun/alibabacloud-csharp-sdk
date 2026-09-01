@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribePlaybookNodesOutputResponseBody : TeaModel {
         /// <summary>
-        /// <para>The output data of the component node.</para>
+        /// <para>The output data of the node.</para>
         /// </summary>
         [NameInMap("PlaybookNodesOutput")]
         [Validation(Required=false)]
         public DescribePlaybookNodesOutputResponseBodyPlaybookNodesOutput PlaybookNodesOutput { get; set; }
         public class DescribePlaybookNodesOutputResponseBodyPlaybookNodesOutput : TeaModel {
             /// <summary>
-            /// <para>The name of the component node.</para>
+            /// <para>The name of the playbook node.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DataFormat_1</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string NodeName { get; set; }
 
             /// <summary>
-            /// <para>The historical output data of the component node. The value is in the JSON string format. If no data is found, the parameter is left empty.</para>
+            /// <para>The historical output data of the component. The data is in the JSON format. If no data exists, this parameter is empty.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A491170C-FE1F-520E-83D4-72ED205B72ED</para>

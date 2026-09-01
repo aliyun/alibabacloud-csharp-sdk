@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeDistinctReleasesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about versions.</para>
+        /// <para>The version records.</para>
         /// </summary>
         [NameInMap("Records")]
         [Validation(Required=false)]
         public List<DescribeDistinctReleasesResponseBodyRecords> Records { get; set; }
         public class DescribeDistinctReleasesResponseBodyRecords : TeaModel {
             /// <summary>
-            /// <para>The version description.</para>
+            /// <para>The description of the version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo version</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The MD5 value of the version XML configuration.</para>
+            /// <para>The MD5 value of the version\&quot;s XML configuration.</para>
             /// 
             /// <b>Example:</b>
             /// <para>17cf53049bc8efa941207xxxxx</para>
@@ -37,10 +37,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string TaskflowMd5 { get; set; }
 
             /// <summary>
-            /// <para>The format of the playbook. Valid values:</para>
+            /// <para>The configuration format of the playbook.</para>
             /// <list type="bullet">
-            /// <item><description><b>xml</b>: XML format.</description></item>
-            /// <item><description><b>x6</b>: JSON format.</description></item>
+            /// <item><description><para><b>xml</b>: XML format.</para>
+            /// </description></item>
+            /// <item><description><para><b>x6</b>: JSON format.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +55,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. This ID is unique to each request and is used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>145CACF6-D276-5197-8549-CB1AD76E2AC8</para>

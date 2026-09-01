@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request. If you have an issue with a request, provide this ID for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>D4CC979E-3D5B-5A6A-BC87-C93C9E861C7B</para>

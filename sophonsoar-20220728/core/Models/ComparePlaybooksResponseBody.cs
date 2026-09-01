@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class ComparePlaybooksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The comparison result.</para>
+        /// <para>The result of the comparison.</para>
         /// </summary>
         [NameInMap("CompareResult")]
         [Validation(Required=false)]
@@ -27,10 +27,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the second version provides more information than the first version. Valid values:</para>
+            /// <para>Indicates whether the second version used for comparison is a new version.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: The version is new.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: The version is not new.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -41,10 +43,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
             public bool? New { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the configurations of the two versions are the same. Valid values:</para>
+            /// <para>Indicates whether the two versions are identical.</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><para><b>true</b>: Identical.</para>
+            /// </description></item>
+            /// <item><description><para><b>false</b>: Not identical.</para>
+            /// </description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -57,10 +61,10 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique ID of the request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>2EC05B06-BF3C-5F3E-8FE8-3B1FAD76087A</para>
+        /// <para>2EC05B06-<b><b>-5F3E-</b></b>-3B1FAD76087A</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]

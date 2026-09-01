@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class RevertPlaybookReleaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. This ID is unique to the request and can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>B3FED5B9-190A-5952-93A4-24FBF0F0C573</para>

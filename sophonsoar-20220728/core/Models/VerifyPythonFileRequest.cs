@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class VerifyPythonFileRequest : TeaModel {
         /// <summary>
-        /// <para>The Python code snippet.</para>
+        /// <para>The Python code snippet to verify.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

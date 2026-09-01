@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The UUID of the component action.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeSoarTaskAndActions~~">DescribeSoarTaskAndActions</a> operation to query the UUID.</para>
+        /// <para>Call the <a href="~~DescribeSoarTaskAndActions~~">DescribeSoarTaskAndActions</a> operation to get this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,10 +24,12 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ActionUuid { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +40,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1. Pages start from page 1.</para>
+        /// <para>The page number of the results to return. Default value: 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,9 +51,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</para>
+        /// <para>The number of entries to return on each page. Default value: 20. If you leave this parameter empty, 10 entries are returned.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>We recommend that you specify a value for this parameter.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

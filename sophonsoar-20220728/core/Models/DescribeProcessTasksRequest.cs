@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class DescribeProcessTasksRequest : TeaModel {
+        [NameInMap("AlertId")]
+        [Validation(Required=false)]
+        public string AlertId { get; set; }
+
         /// <summary>
-        /// <para>The sort order. Valid values:</para>
+        /// <para>The sort direction. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>desc</b> (default).</description></item>
-        /// <item><description><b>asc</b>.</description></item>
+        /// <item><description><b>desc</b>: Descending (default).</description></item>
+        /// <item><description><b>asc</b>: Ascending.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +28,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Direction { get; set; }
 
         /// <summary>
-        /// <para>The name of the handling entity.</para>
+        /// <para>The name of the entity to be disposed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.0.1</para>
@@ -34,11 +38,11 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string EntityName { get; set; }
 
         /// <summary>
-        /// <para>The type of the handling entity. Valid values:</para>
+        /// <para>The type of the entity to be disposed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ip</b>.</description></item>
-        /// <item><description><b>file</b>.</description></item>
-        /// <item><description><b>process</b>.</description></item>
+        /// <item><description><b>ip</b>: IP address entity.</description></item>
+        /// <item><description><b>file</b>: File entity.</description></item>
+        /// <item><description><b>process</b>: Process entity.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -49,7 +53,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string EntityType { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the handling entity.</para>
+        /// <para>The UUID of the entity.</para>
         /// 
         /// <b>Example:</b>
         /// <para>69d189e2-ec17-4676-a2fe-02969234****</para>
@@ -68,10 +72,14 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         [Validation(Required=false)]
         public string EventUuid { get; set; }
 
+        [NameInMap("ExecuteUuid")]
+        [Validation(Required=false)]
+        public string ExecuteUuid { get; set; }
+
         /// <summary>
-        /// <para>The field that you use to sort the result.</para>
+        /// <para>The field used to sort the results.</para>
         /// <remarks>
-        /// <para> You can obtain the field from the response result.</para>
+        /// <para>You can obtain the sort field from the response of this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -82,7 +90,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string OrderField { get; set; }
 
         /// <summary>
-        /// <para>The page number. Default value: 1. Pages start from page 1.</para>
+        /// <para>The page number of the page to return. Default value: 1, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,9 +100,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page. Default value: 10. If you do not specify the PageSize parameter, 10 entries are returned by default.</para>
+        /// <para>The maximum number of entries to return on each page for paging queries. Default value: 20. If the PageSize parameter is left empty, 10 entries are returned by default.</para>
         /// <remarks>
-        /// <para> We recommend that you do not leave this parameter empty.</para>
+        /// <para>Do not leave PageSize empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -105,7 +113,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The handling entity, handling scenario, or handling parameter that is used for fuzzy match.</para>
+        /// <para>The fuzzy match content. This parameter queries the entity, disposal scene, and disposal parameter fields.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12.x.x.x</para>
@@ -115,7 +123,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string ParamContent { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for a handling task. The value is a 13-digit timestamp.</para>
+        /// <para>The end time of the query range for the disposal time. Format: 13-digit timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1700031183572</para>
@@ -125,7 +133,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? ProcessActionEnd { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for a handling task. The value is a 13-digit timestamp.</para>
+        /// <para>The start time of the query range for the disposal time. Format: 13-digit timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1700031183572</para>
@@ -135,7 +143,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? ProcessActionStart { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for an unblocking task. The value is a 13-digit timestamp.</para>
+        /// <para>The end time of the query range for the unblocking time. Format: 13-digit timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1700031183572</para>
@@ -145,7 +153,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? ProcessRemoveEnd { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range for an unblocking task. The value is a 13-digit timestamp.</para>
+        /// <para>The start time of the query range for the unblocking time. Format: 13-digit timestamp.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1700031183572</para>
@@ -155,26 +163,36 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public long? ProcessRemoveStart { get; set; }
 
         /// <summary>
-        /// <para>The UUID of the handling policy.</para>
+        /// <para>The UUID of the disposal strategy.</para>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2584440.html">ListDisposeStrategy</a> operation to query the UUID of the handling policy.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/2584440.html">ListDisposeStrategy</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>92af3c79-1754-4646-9366-9ddbd1e45536_xxxx</para>
+        /// <para>92af3c79-1754-4646-9366-9ddbd1e45536_****</para>
         /// </summary>
         [NameInMap("ProcessStrategyUuid")]
         [Validation(Required=false)]
         public string ProcessStrategyUuid { get; set; }
 
+        /// <summary>
+        /// <para>The trigger ID of the playbook.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>b73d0b08-f1bd-4e8f-967a-8e2982c9****</para>
+        /// </summary>
         [NameInMap("ReqUuid")]
         [Validation(Required=false)]
         public string ReqUuid { get; set; }
 
+        [NameInMap("ResponseRuleId")]
+        [Validation(Required=false)]
+        public string ResponseRuleId { get; set; }
+
         /// <summary>
-        /// <para>The scenario code of the handling task.</para>
+        /// <para>The scene code of the disposal task.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeEnumItems~~">DescribeEnumItems</a> operation to query the scenario code of the handling task. This parameter is available when you set <b>EnumType</b> to <b>process</b>.</para>
+        /// <para>You can call the <a href="~~DescribeEnumItems~~">DescribeEnumItems</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -185,7 +203,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string SceneCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that is specified in the handling task.</para>
+        /// <para>The Alibaba Cloud account ID for the disposal.</para>
         /// 
         /// <b>Example:</b>
         /// <para>125xxxxx9870</para>
@@ -195,13 +213,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Scope { get; set; }
 
         /// <summary>
-        /// <para>The triggering source of the handling task. The value is a string array. Valid values:</para>
+        /// <para>The trigger source of the disposal task, in array string format. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>system</b>: triggered when you manually handle an event.</description></item>
-        /// <item><description><b>custom</b>: triggered by an event based on an automatic response rule.</description></item>
-        /// <item><description><b>custom_alert</b>: triggered by an alert based on an automatic response rule.</description></item>
-        /// <item><description><b>soar-manual</b>: triggered when you use SOAR to manually run a playbook.</description></item>
-        /// <item><description><b>soar-mdr</b>: triggered by Managed Security Service.</description></item>
+        /// <item><description><b>system</b>: Triggered by manual event disposal.</description></item>
+        /// <item><description><b>custom</b>: Triggered by an automatic response rule based on an event.</description></item>
+        /// <item><description><b>custom_alert</b>: Triggered by an automatic response rule based on an alert.</description></item>
+        /// <item><description><b>soar-manual</b>: Triggered by manually invoking a SOAR playbook.</description></item>
+        /// <item><description><b>soar-mdr</b>: Triggered by the Managed Security Service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -212,9 +230,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the handling task.</para>
+        /// <para>The unique identifier of the disposal task.</para>
         /// <remarks>
-        /// <para> This parameter is used to query a specific task. You can obtain the value from the response result.</para>
+        /// <para>This parameter is used to query a specific task. You can obtain the value from the response of this operation.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -225,17 +243,17 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The status of the handling task. The value is a string. Valid values:</para>
+        /// <para>The status list of the disposal task, in data string format. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>11</b>: being handled.</description></item>
-        /// <item><description><b>21</b>: being blocked.</description></item>
-        /// <item><description><b>22</b>: being quarantined.</description></item>
-        /// <item><description><b>23</b>: completed.</description></item>
-        /// <item><description><b>24</b>: added to the whitelist.</description></item>
-        /// <item><description><b>20</b>: successful.</description></item>
-        /// <item><description><b>90</b>: failed.</description></item>
-        /// <item><description><b>91</b>: unblocking failed.</description></item>
-        /// <item><description><b>92</b>: restoring quarantined files failed</description></item>
+        /// <item><description><b>11</b>: Disposing.</description></item>
+        /// <item><description><b>21</b>: Blocking.</description></item>
+        /// <item><description><b>22</b>: Isolating.</description></item>
+        /// <item><description><b>23</b>: Ended.</description></item>
+        /// <item><description><b>24</b>: Whitelisted.</description></item>
+        /// <item><description><b>20</b>: Succeeded.</description></item>
+        /// <item><description><b>90</b>: Failed.</description></item>
+        /// <item><description><b>91</b>: Unblocking failed.</description></item>
+        /// <item><description><b>92</b>: Unisolation failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -246,13 +264,13 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The triggering source of the handling task. Valid values:</para>
+        /// <para>The trigger source of the disposal task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>system</b>: triggered when you manually handle an event.</description></item>
-        /// <item><description><b>custom</b>: triggered by an event based on an automatic response rule.</description></item>
-        /// <item><description><b>custom_alert</b>: triggered by an alert based on an automatic response rule.</description></item>
-        /// <item><description><b>soar-manual</b>: triggered when you use SOAR to manually run a playbook.</description></item>
-        /// <item><description><b>soar-mdr</b>: triggered by Managed Security Service.</description></item>
+        /// <item><description><b>system</b>: Triggered by manual event disposal.</description></item>
+        /// <item><description><b>custom</b>: Triggered by an automatic response rule based on an event.</description></item>
+        /// <item><description><b>custom_alert</b>: Triggered by an automatic response rule based on an alert.</description></item>
+        /// <item><description><b>soar-manual</b>: Triggered by manually invoking a SOAR playbook.</description></item>
+        /// <item><description><b>soar-mdr</b>: Triggered by the Managed Security Service.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -263,9 +281,9 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string TriggerSource { get; set; }
 
         /// <summary>
-        /// <para>The cloud service that is associated with the handling task. The value is a string. Valid values:</para>
+        /// <para>The cloud product associated with the disposal task, in data string format. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WAF</b>: Web Application Firewall (WAF).</description></item>
+        /// <item><description><b>WAF</b>: Web Application Firewall.</description></item>
         /// <item><description><b>CFW</b>: Cloud Firewall.</description></item>
         /// <item><description><b>Aegis</b>: Security Center.</description></item>
         /// </list>

@@ -10,7 +10,15 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class QueryTreeDataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The returned information about the playbook. The value is a JSON string.</para>
+        /// <para>A list of playbooks in JSON string format. The string contains the following fields:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>active</b>: Indicates whether the playbook is active. A value of <b>true</b> means the playbook is active. A value of <b>false</b> means the playbook is inactive.</para>
+        /// </description></item>
+        /// <item><description><para><b>displayName</b>: The name of the playbook.</para>
+        /// </description></item>
+        /// <item><description><para><b>playbookUuid</b>: The UUID of the playbook.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>[
@@ -28,7 +36,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string Playbooks { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates this unique ID for each request. Use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>EF2ECA2D-D8E6-5021-BF5C-19DD6D52C5B2</para>

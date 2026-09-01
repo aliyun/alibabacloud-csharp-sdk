@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
 {
     public class RunPython3ScriptRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the node in the playbook.</para>
+        /// <para>The name of the playbook node.</para>
         /// 
         /// <b>Example:</b>
         /// <para>python3_3</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string NodeName { get; set; }
 
         /// <summary>
-        /// <para>The input parameters of the Python3 script.</para>
+        /// <para>The input parameters for the Python 3 script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         /// <summary>
         /// <para>The UUID of the playbook.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to query the UUIDs of playbooks.</para>
+        /// <para>Call the <a href="~~DescribePlaybooks~~">DescribePlaybooks</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string PlaybookUuid { get; set; }
 
         /// <summary>
-        /// <para>The Python3 script.</para>
+        /// <para>The Python 3 script.</para>
         /// 
         /// <b>Example:</b>
         /// <para>import logging
@@ -63,6 +63,8 @@ namespace AlibabaCloud.SDK.Sophonsoar20220728.Models
         public string PythonScript { get; set; }
 
         /// <summary>
+        /// <para>The Python version.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>python2.0</para>
         /// </summary>
