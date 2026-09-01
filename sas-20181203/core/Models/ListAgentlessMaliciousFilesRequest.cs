@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string FuzzyMaliciousName { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English.</description></item>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MaliciousMd5 { get; set; }
 
         /// <summary>
-        /// <para>The alert type.</para>
+        /// <para>The Alarm Metric.</para>
         /// <para>If Lang is set to zh, valid values:</para>
         /// <list type="bullet">
         /// <item><description>WebShell: WebShell</description></item>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PageSize { get; set; }
 
         /// <summary>
-        /// <para>The asset information for the vulnerability query. You can set this parameter to the asset name, public IP address, or private IP address. Fuzzy match is supported.</para>
+        /// <para>The asset information to query. You can set this parameter to the asset name, public IP address, or private IP address. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>

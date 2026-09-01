@@ -77,6 +77,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MaliciousCount { get; set; }
 
             /// <summary>
+            /// <para>The URL of the latest parallel sandbox HTML report.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="https://bucket.oss.region.aliyuncs.com/report/html">https://bucket.oss.region.aliyuncs.com/report/html</a></para>
+            /// </summary>
+            [NameInMap("ReportUrlHtml")]
+            [Validation(Required=false)]
+            public string ReportUrlHtml { get; set; }
+
+            /// <summary>
             /// <para>The timestamp of the scan. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
@@ -129,14 +139,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The paging information for the query.</para>
+        /// <para>The paging information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListAgentlessRiskUuidResponseBodyPageInfo PageInfo { get; set; }
         public class ListAgentlessRiskUuidResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the current page when using paging.</para>
+            /// <para>The current page number when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -168,7 +178,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>05AE6B16-741A-5A75-9BF0-BC747DD9****</para>

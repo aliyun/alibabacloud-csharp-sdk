@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateUnknownThreatDetectStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The number of days the model learns for after its creation.</para>
+        /// <para>The number of days after the model is initially created before learning stops.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DurationDaysAfterInit { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive days without new processes before the model stops learning.</para>
+        /// <para>The number of days after which the model ends if no new processes are added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DurationDaysAfterStop { get; set; }
 
         /// <summary>
-        /// <para>The ID of the unknown threat detection strategy to update.</para>
+        /// <para>The ID of the policy to delete.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Id { get; set; }
 
         /// <summary>
-        /// <para>The name of the unknown threat detection strategy.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>strategy****</para>
@@ -51,12 +51,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The whitelist mode. Valid values are:</para>
+        /// <para>The whitelist mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>hash</b>: process hash</para>
-        /// </description></item>
-        /// <item><description><para><b>path</b>: process path</para>
-        /// </description></item>
+        /// <item><description><b>hash</b>: process hash</description></item>
+        /// <item><description><b>path</b>: process path</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

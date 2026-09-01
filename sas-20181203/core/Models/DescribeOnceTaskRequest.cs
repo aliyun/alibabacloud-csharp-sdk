@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeOnceTaskRequest : TeaModel {
         /// <summary>
-        /// <para>The page number of the page to return. Default value: <b>1</b>.</para>
+        /// <para>The page number of the page to return. Default value: <b>1</b>, which indicates the first page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTimeQuery { get; set; }
 
         /// <summary>
-        /// <para>The number of client tasks per page in a paged query. Default value: <b>20</b>.</para>
+        /// <para>Settings for the number of client tasks on each page in a paged query. Default value: <b>20</b>, which indicates that each page contains 20 client tasks.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -92,7 +92,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>VUL_CHECK_TASK</b>: vulnerability scanning node</description></item>
         /// <item><description><b>CLIENT_PROBLEM_CHECK</b>: client node</description></item>
         /// <item><description><b>CLIENT_DEV_OPS</b>: cloud O&amp;M node</description></item>
-        /// <item><description><b>ASSET_SECURITY_CHECK</b>: asset information collection node<remarks>
+        /// <item><description><b>ASSET_SECURITY_CHECK</b>: asset information collection node</description></item>
+        /// <item><description><b>ASSET_REFRESH_HOST</b>: host asset synchronization node<remarks>
         /// <para><b>TaskType</b> and <b>RootTaskId</b> cannot both be empty.</para>
         /// </remarks>
         /// </description></item>

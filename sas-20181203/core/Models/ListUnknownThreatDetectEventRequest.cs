@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AnalyzeResult { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query. This parameter is used for paging.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page in a paged query. This parameter is used for paging.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ProcessPath { get; set; }
 
         /// <summary>
-        /// <para>The filter condition. You can filter by instance name or IP address.</para>
+        /// <para>The filter condition based on instance name or IP address.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.167.XX.XX</para>

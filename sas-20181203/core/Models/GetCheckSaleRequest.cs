@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The region of the Security Center instance. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>cn-hangzhou:</b> the Chinese mainland</description></item>
-        /// <item><description><b>ap-southeast-1:</b> outside the Chinese mainland.</description></item>
+        /// <item><description><b>cn-hangzhou:</b> China</description></item>
+        /// <item><description><b>ap-southeast-1:</b> outside China.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

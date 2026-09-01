@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterNetworkRequest : TeaModel {
         /// <summary>
-        /// <para>The end timestamp of the query. Unit: milliseconds.</para>
+        /// <para>The end timestamp. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>The days between the start timestamp and the end timestamp cannot exceed <b>seven</b> days.</para>
+        /// <para>The difference between the start timestamp and end timestamp cannot exceed <b>7</b> days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The start timestamp of the query. Unit: milliseconds.</para>
+        /// <para>The start timestamp. Unit: milliseconds.</para>
         /// <remarks>
-        /// <para>The days between the start timestamp and the end timestamp cannot exceed <b>seven</b> days.</para>
+        /// <para>The difference between the start timestamp and end timestamp cannot exceed <b>7</b> days.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

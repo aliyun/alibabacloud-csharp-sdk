@@ -22,6 +22,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string MachineTypes { get; set; }
 
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
         /// <para>Specifies whether the keyword that you specify for fuzzy search can be automatically matched. Default value: <b>false</b>. Valid values:</para>
         /// <list type="bullet">

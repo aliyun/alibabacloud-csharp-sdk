@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language type for requests and responses. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -32,6 +32,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("Lang")]
         [Validation(Required=false)]
         public string Lang { get; set; }
+
+        /// <summary>
+        /// <para>The business source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>OSS</b>: OSS</description></item>
+        /// <item><description><b>NAS</b>: NAS</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>OSS</para>
+        /// </summary>
+        [NameInMap("Source")]
+        [Validation(Required=false)]
+        public string Source { get; set; }
 
     }
 

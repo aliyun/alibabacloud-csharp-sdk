@@ -12,11 +12,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The authorization version of the asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>6</b>: Anti-virus Edition</description></item>
-        /// <item><description><b>5</b>: Advanced Edition</description></item>
-        /// <item><description><b>3</b>: Enterprise Edition</description></item>
-        /// <item><description><b>7</b>: Ultimate Edition</description></item>
-        /// <item><description><b>10</b>: Value-added Service Edition.</description></item>
+        /// <item><description><b>6</b>: Anti-virus Edition.</description></item>
+        /// <item><description><b>5</b>: Premium Edition.</description></item>
+        /// <item><description><b>3</b>: Enterprise Edition.</description></item>
+        /// <item><description><b>7</b>: Ultimate Edition.</description></item>
+        /// <item><description><b>10</b>: Value-added service Edition.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -29,8 +29,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic binding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Disabled.</description></item>
-        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disable automatic binding.</description></item>
+        /// <item><description><b>1</b>: Enable automatic binding.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AutoBind { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers to bind.</para>
+        /// <para>The collection of UUIDs to bind.</para>
         /// <remarks>
         /// <para><b>Bind</b> and <b>UnBind</b> cannot both be empty.</para>
         /// </remarks>
@@ -65,7 +65,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? BindAll { get; set; }
 
         /// <summary>
-        /// <para>The search conditions for assets. This parameter is in JSON format. Note that the parameter values are case-sensitive.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The conditions for searching assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</para>
         /// <remarks>
         /// <para>You can search for assets by instance ID, instance name, VPC ID, region, or public IP address. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
         /// </remarks>
@@ -97,8 +104,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The logical relationship among multiple search conditions. Default value: <b>OR</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>: The search conditions are evaluated with a logical OR.</description></item>
-        /// <item><description><b>AND</b>: The search conditions are evaluated with a logical AND.</description></item>
+        /// <item><description><b>OR</b>: The search conditions are evaluated using a logical OR.</description></item>
+        /// <item><description><b>AND</b>: The search conditions are evaluated using a logical AND.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -109,12 +116,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The order version associated with the pre-binding. Valid values:</para>
+        /// <para>The order version associated with the pre-binding operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>level7</b>: Anti-virus Edition</description></item>
-        /// <item><description><b>level3</b>: Advanced Edition</description></item>
-        /// <item><description><b>level2</b>: Enterprise Edition</description></item>
-        /// <item><description><b>level8</b>: Ultimate Edition</description></item>
+        /// <item><description><b>level7</b>: Anti-virus Edition.</description></item>
+        /// <item><description><b>level3</b>: Premium Edition.</description></item>
+        /// <item><description><b>level2</b>: Enterprise Edition.</description></item>
+        /// <item><description><b>level8</b>: Ultimate Edition.</description></item>
         /// <item><description><b>level10</b>: Value-added service only.</description></item>
         /// </list>
         /// 
@@ -126,7 +133,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NtmVersion { get; set; }
 
         /// <summary>
-        /// <para>The order ID associated with the pre-binding.</para>
+        /// <para>The order ID associated with the pre-binding operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>233016**0482</para>
@@ -135,10 +142,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? PreBindOrderId { get; set; }
 
+        [NameInMap("ProductCode")]
+        [Validation(Required=false)]
+        public string ProductCode { get; set; }
+
         /// <summary>
-        /// <para>The ID of the member accounts in the resource folder (Alibaba Cloud account).</para>
+        /// <para>The ID of the member accounts (Alibaba Cloud account) in the resource directory.</para>
         /// <remarks>
-        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -149,7 +160,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>The UUIDs of the servers to unbind.</para>
+        /// <para>The collection of UUIDs to unbind.</para>
         /// <remarks>
         /// <para><b>Bind</b> and <b>UnBind</b> cannot both be empty.</para>
         /// </remarks>

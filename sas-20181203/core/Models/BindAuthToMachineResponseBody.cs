@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The status code of the binding result. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Succeeded.</description></item>
-        /// <item><description><b>1</b>: Invalid parameters.</description></item>
+        /// <item><description><b>1</b>: Parameter error.</description></item>
         /// <item><description><b>2</b>: Insufficient server authorization quota.</description></item>
         /// <item><description><b>3</b>: Insufficient server core authorization quota.</description></item>
         /// </list>

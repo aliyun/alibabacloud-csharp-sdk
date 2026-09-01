@@ -149,7 +149,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Layer { get; set; }
 
                     /// <summary>
-                    /// <para>The details of the vulnerability match.</para>
+                    /// <para>The detailed information about the vulnerability match.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>python-perf version less than 0:3.10.0-693.21.1.el7</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public string Path { get; set; }
 
                     /// <summary>
-                    /// <para>The command to fix the vulnerability.</para>
+                    /// <para>The command used to fix the vulnerability.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>apt-get update &amp;&amp; apt-get install libseccomp2  --only-upgrade</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability was first detected. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was first detected, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620752053000</para>
@@ -271,7 +271,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability was last detected, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620404763000</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MaliciousSource { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the vulnerability status was modified. Unit: milliseconds.</para>
+            /// <para>The timestamp when the vulnerability status was modified, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1620404763000</para>
@@ -401,7 +401,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RepoNamespace { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the scan. Unit: milliseconds.</para>
+            /// <para>The timestamp of the scan, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1649814050000</para>

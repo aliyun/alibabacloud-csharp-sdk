@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddClientUserDefineRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The action of the custom defense rule. Valid values:</para>
+        /// <para>The action type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: allow</description></item>
         /// <item><description><b>1</b>: block</description></item>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string IP { get; set; }
 
         /// <summary>
-        /// <para>The hash values of processes.</para>
+        /// <para>The list of process hashes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c9045b5bec90f9825f1f3f64dd4****</para>
@@ -75,18 +75,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Md5List { get; set; }
 
         /// <summary>
-        /// <para>The name of the custom defense rule.</para>
+        /// <para>The name of the custom rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>规则1</para>
+        /// <para>Rule1</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The new file path after the file is renamed.</para>
+        /// <para>The new file path for file rename.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/etc/pam****</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ParentCmdline { get; set; }
 
         /// <summary>
-        /// <para>The path to the parent process.</para>
+        /// <para>The parent process path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c:/windows/system32/i****</para>
@@ -116,11 +116,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ParentProcPath { get; set; }
 
         /// <summary>
-        /// <para>The type of the operating system. Valid values:</para>
+        /// <para>The operating system type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>windows</b>: Windows</description></item>
         /// <item><description><b>linux</b>: Linux</description></item>
-        /// <item><description><b>all</b>: all types</description></item>
+        /// <item><description><b>all</b>: all</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PortStr { get; set; }
 
         /// <summary>
-        /// <para>The path to the process.</para>
+        /// <para>The process path.</para>
         /// 
         /// <b>Example:</b>
         /// <para>c:/windows/system32/i****</para>
@@ -181,10 +181,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegistryKey { get; set; }
 
         /// <summary>
-        /// <para>Whether machines are automatically added to the rule. Default value: add. Valid values:  </para>
+        /// <para>Specifies whether machines are automatically added to the rule. Default value: add. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>add</b>: Added by default  </description></item>
-        /// <item><description><b>del</b>: Not added by default</description></item>
+        /// <item><description><b>add</b>: Automatically added by default.</description></item>
+        /// <item><description><b>del</b>: Not automatically added by default.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -195,18 +195,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetDefault { get; set; }
 
         /// <summary>
-        /// <para>The type of the custom defense rule. Valid values:</para>
+        /// <para>The rule type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: Process hash</description></item>
-        /// <item><description><b>2</b>: Command line</description></item>
-        /// <item><description><b>3</b>: Process Network</description></item>
-        /// <item><description><b>4</b>: File Read and Write</description></item>
-        /// <item><description><b>5</b>: Operation on Registry</description></item>
-        /// <item><description><b>6</b>: Dynamic-link Library Loading</description></item>
-        /// <item><description><b>7</b>: File Renaming</description></item>
-        /// <item><description><b>8</b>: Network domain name</description></item>
-        /// <item><description><b>9</b>: Network ip</description></item>
-        /// <item><description><b>10</b>: File Path</description></item>
+        /// <item><description><b>1</b>: process hash</description></item>
+        /// <item><description><b>2</b>: command line</description></item>
+        /// <item><description><b>3</b>: process network</description></item>
+        /// <item><description><b>4</b>: file read/write</description></item>
+        /// <item><description><b>5</b>: registry operation</description></item>
+        /// <item><description><b>6</b>: dynamic-link library loading</description></item>
+        /// <item><description><b>7</b>: file rename</description></item>
+        /// <item><description><b>8</b>: network domain name</description></item>
+        /// <item><description><b>9</b>: network IP</description></item>
+        /// <item><description><b>10</b>: file path</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

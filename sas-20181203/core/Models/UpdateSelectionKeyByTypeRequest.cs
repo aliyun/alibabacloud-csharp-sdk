@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The business type of the asset selection. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>VIRUS_SCAN_CYCLE_CONFIG</b>: virus scan configuration.</description></item>
-        /// <item><description><b>VIRUS_SCAN_ONCE_TASK</b>: one-time virus scan.</description></item>
+        /// <item><description><b>VIRUS_SCAN_ONCE_TASK</b>: one-time virus scan task.</description></item>
         /// <item><description><b>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</b>: agentless detection alert whitelisting rule.</description></item>
         /// <item><description><b>AGENTLESS_VUL_WHITE_LIST_[ID]</b>: agentless detection vulnerability whitelisting rule.</description></item>
         /// <item><description><b>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</b>: core file protection.</description></item>
@@ -25,6 +25,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("BusinessType")]
         [Validation(Required=false)]
         public string BusinessType { get; set; }
+
+        /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
 
         /// <summary>
         /// <para>The unique identifier of the asset selection.</para>

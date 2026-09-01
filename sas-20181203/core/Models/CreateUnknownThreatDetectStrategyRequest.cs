@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateUnknownThreatDetectStrategyRequest : TeaModel {
         /// <summary>
-        /// <para>The asset selection type.</para>
+        /// <para>The asset selection identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>UNKNOWN_THREAT_DETECT_CONFIG_****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AssetSelectionType { get; set; }
 
         /// <summary>
-        /// <para>The duration of the initial learning period, in days.</para>
+        /// <para>The number of days after the model is initially created before learning ends.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DurationDaysAfterInit { get; set; }
 
         /// <summary>
-        /// <para>The number of consecutive days without detecting new processes before the learning process stops.</para>
+        /// <para>The number of days after no new processes are added to the model before learning ends.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DurationDaysAfterStop { get; set; }
 
         /// <summary>
-        /// <para>The strategy name.</para>
+        /// <para>The policy name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>strategy****</para>
@@ -52,10 +52,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The whitelist mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>hash</b>: The process hash.</para>
-        /// </description></item>
-        /// <item><description><para><b>path</b>: The process path.</para>
-        /// </description></item>
+        /// <item><description><b>hash</b>: process hash</description></item>
+        /// <item><description><b>path</b>: process path</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

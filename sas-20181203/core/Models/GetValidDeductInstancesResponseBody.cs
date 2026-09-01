@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetValidDeductInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Returned data.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public GetValidDeductInstancesResponseBodyData Data { get; set; }
         public class GetValidDeductInstancesResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Whether eligible for trial. Values:</para>
+            /// <para>Indicates whether you are eligible for a trial. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b>: Eligible</description></item>
-            /// <item><description><b>false</b>: Not eligible</description></item>
+            /// <item><description><b>true</b>: Eligible.</description></item>
+            /// <item><description><b>false</b>: Not eligible.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,14 +31,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? CanTry { get; set; }
 
             /// <summary>
-            /// <para>List of resource package usage details.</para>
+            /// <para>The list of resource plan usage details.</para>
             /// </summary>
             [NameInMap("DeductPackageList")]
             [Validation(Required=false)]
             public List<GetValidDeductInstancesResponseBodyDataDeductPackageList> DeductPackageList { get; set; }
             public class GetValidDeductInstancesResponseBodyDataDeductPackageList : TeaModel {
                 /// <summary>
-                /// <para>Authorized consumption in the current billing cycle.</para>
+                /// <para>The number of consumed quotas in the current metering cycle.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? CurrentPeriodUsed { get; set; }
 
                 /// <summary>
-                /// <para>End time.</para>
+                /// <para>The end time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1737734400000</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? EndTime { get; set; }
 
                 /// <summary>
-                /// <para>Total amount of the resource package.</para>
+                /// <para>The total capacity of the resource plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1000</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public double? InitCapacity { get; set; }
 
                 /// <summary>
-                /// <para>Resource package instance ID.</para>
+                /// <para>The resource plan instance ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sas_**_dp_cn-2***</para>
@@ -78,11 +78,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string InstanceId { get; set; }
 
                 /// <summary>
-                /// <para>Module code. Values:</para>
+                /// <para>The module code. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>POST_HOST</b>: Host and container protection</description></item>
-                /// <item><description><b>CSPM</b>: Cloud product configuration check</description></item>
-                /// <item><description><b>VUL</b>: Vulnerability scan</description></item>
+                /// <item><description><b>POST_HOST</b>: host and container protection</description></item>
+                /// <item><description><b>CSPM</b>: cloud product configuration check</description></item>
+                /// <item><description><b>VUL</b>: vulnerability scanning</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Module { get; set; }
 
                 /// <summary>
-                /// <para>Authorized consumption up to the previous billing cycle.</para>
+                /// <para>The number of consumed quotas up to the previous billing cycle.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public double? PeriodCapacity { get; set; }
 
                 /// <summary>
-                /// <para>Start timestamp (milliseconds).</para>
+                /// <para>The start timestamp, in milliseconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1737734400000</para>
@@ -113,10 +113,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? StartTime { get; set; }
 
                 /// <summary>
-                /// <para>Resource package status. Values:</para>
+                /// <para>The status of the resource plan. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>valid</b>: Valid</description></item>
-                /// <item><description><b>invalid</b>: Invalid</description></item>
+                /// <item><description><b>valid</b>: Active.</description></item>
+                /// <item><description><b>invalid</b>: Expired.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -128,10 +128,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("TrialVersion")]
+            [Validation(Required=false)]
+            public int? TrialVersion { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The ID of this call request, a unique identifier generated by Alibaba Cloud for the request, which can be used to troubleshoot and locate issues.</para>
+        /// <para>The request ID. It is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6D56A5C4-9C78-5EB1-9246-60B7FAECA1D5</para>

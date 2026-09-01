@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateAssetSelectionConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The feature that you want to select for the asset. Valid values:</para>
+        /// <para>The business type of the asset selection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VIRUS_SCAN_CYCLE_CONFIG</b>: virus detection and removal</description></item>
-        /// <item><description><b>VIRUS_SCAN_ONCE_TASK</b>: one-time scan for viruses</description></item>
-        /// <item><description><b>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</b>: a whitelist rule for alerts that are detected by using the agentless detection feature</description></item>
-        /// <item><description><b>AGENTLESS_VUL_WHITE_LIST_[ID]</b>: a whitelist rule for vulnerabilities that are detected by using the agentless detection feature</description></item>
-        /// <item><description><b>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</b>: core file protection</description></item>
+        /// <item><description><b>VIRUS_SCAN_CYCLE_CONFIG</b>: trojan scan configuration.</description></item>
+        /// <item><description><b>VIRUS_SCAN_ONCE_TASK</b>: trojan scan one-time scan.</description></item>
+        /// <item><description><b>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</b>: agentless detection alert whitelisting rule.</description></item>
+        /// <item><description><b>AGENTLESS_VUL_WHITE_LIST_[ID]</b>: agentless detection vulnerability whitelisting rule.</description></item>
+        /// <item><description><b>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</b>: core file protection.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,25 +28,27 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BusinessType { get; set; }
 
         /// <summary>
-        /// <para>The operating system of the asset. Valid values:</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The operating system of the target asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all</b>: all operating systems</description></item>
-        /// <item><description><b>windows</b>: the Windows operating system</description></item>
-        /// <item><description><b>linux</b>: the Linux operating system</description></item>
+        /// <item><description><b>all</b>: all operating systems.</description></item>
+        /// <item><description><b>windows</b>: Windows operating system.</description></item>
+        /// <item><description><b>linux</b>: Linux operating system.<remarks>
+        /// <para>If this parameter is left empty, the default value is determined based on the <b>BusinessType</b> value.</para>
+        /// <list type="bullet">
+        /// <item><description><b>VIRUS_SCAN_CYCLE_CONFIG</b>: the value is <b>all</b>.</description></item>
+        /// <item><description><b>VIRUS_SCAN_ONCE_TASK</b>: the value is <b>all</b>.</description></item>
+        /// <item><description><b>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</b>: the value is <b>all</b>.</description></item>
+        /// <item><description><b>AGENTLESS_VUL_WHITE_LIST_[ID]</b>: the value is <b>all</b>.</description></item>
+        /// <item><description><b>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</b>: the value is <b>linux</b>.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para> If you leave this parameter empty, the system automatically selects a value for the parameter based on the value of the <b>BusinessType</b> parameter.</para>
         /// </remarks>
-        /// <list type="bullet">
-        /// <item><description><para>If the BusinessType parameter is set to <b>VIRUS_SCAN_CYCLE_CONFIG</b>, the value of the Platform parameter is <b>all</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If the BusinessType parameter is set to <b>VIRUS_SCAN_ONCE_TASK</b>, the value of the Platform parameter is <b>all</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If the BusinessType parameter is set to <b>AGENTLESS_MALICIOUS_WHITE_LIST_[ID]</b>, the value of the Platform parameter is <b>all</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If the BusinessType parameter is set to <b>AGENTLESS_VUL_WHITE_LIST_[ID]</b> the value of the Platform parameter is <b>all</b>.</para>
-        /// </description></item>
-        /// <item><description><para>If the BusinessType parameter is set to <b>FILE_PROTECT_RULE_SWITCH_TYPE_[ID]</b>, the value of the Platform parameter is <b>linux</b>.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -58,11 +60,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Platform { get; set; }
 
         /// <summary>
-        /// <para>The dimension based on which you want to select the asset. Valid values:</para>
+        /// <para>The target asset type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>instance</b>: selects the asset by server.</description></item>
-        /// <item><description><b>group</b>: selects the asset by group.</description></item>
-        /// <item><description><b>vpc</b>: selects the asset by virtual private cloud (VPC).</description></item>
+        /// <item><description><b>all_instance</b>: all servers.</description></item>
+        /// <item><description><b>instance</b>: select by server.</description></item>
+        /// <item><description><b>group</b>: select by group.</description></item>
+        /// <item><description><b>vpc</b>: select by VPC.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

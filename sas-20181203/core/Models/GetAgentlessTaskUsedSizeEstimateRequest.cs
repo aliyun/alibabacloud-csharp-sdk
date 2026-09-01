@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetAgentlessTaskUsedSizeEstimateRequest : TeaModel {
         /// <summary>
-        /// <para>Asset selection identifier.</para>
+        /// <para>The asset selection identifier.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

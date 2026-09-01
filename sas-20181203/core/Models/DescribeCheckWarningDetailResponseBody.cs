@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<Dictionary<string, string>> CheckDetailAssetInfo { get; set; }
 
         /// <summary>
-        /// <para>The details of the check content.</para>
+        /// <para>The check content details.</para>
         /// </summary>
         [NameInMap("CheckDetailColumns")]
         [Validation(Required=false)]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The display name that corresponds to the key of the check content.</para>
+                /// <para>The display name corresponding to the check content key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>UserName</para>
@@ -63,8 +63,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The display type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>grid</b>: grid</description></item>
-                /// <item><description><b>text</b>: text.</description></item>
+                /// <item><description><b>grid</b>: check grid</description></item>
+                /// <item><description><b>text</b>: text</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The display name that corresponds to the key of the check content.</para>
+            /// <para>The display name corresponding to the check content key.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ContainerName</para>
@@ -99,8 +99,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The display type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>grid</b>: grid</description></item>
-            /// <item><description><b>text</b>: text.</description></item>
+            /// <item><description><b>grid</b>: check grid</description></item>
+            /// <item><description><b>text</b>: text</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

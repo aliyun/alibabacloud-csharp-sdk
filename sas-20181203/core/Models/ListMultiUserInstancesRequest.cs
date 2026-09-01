@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListMultiUserInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Number of items per page in a paginated query. The maximum value is 100. Range: 10 - 100, default value: 10.</para>
+        /// <para>The number of entries per page for a paged query. Maximum value: 100. Valid values: 10 to 100. Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Used for paginated queries. Leave it empty for the first request, and fill in the NextToken value returned from the previous response for subsequent requests.</para>
+        /// <para>The token used for paging. Leave this parameter empty for the first request. For subsequent requests, set this parameter to the NextToken value returned in the previous response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAB4SwmEAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM0NzY3YTZjNjI3NjZmNmU3MjcxNjk3NDY5MzY3MjY4****</para>

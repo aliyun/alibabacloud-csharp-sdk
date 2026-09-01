@@ -10,10 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateCycleTaskRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// <para>Specifies whether to enable the task. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>1</b>: yes</description></item>
-        /// <item><description><b>0</b>: no</description></item>
+        /// <item><description><b>1</b>: enabled.</description></item>
+        /// <item><description><b>0</b>: disabled.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -25,7 +32,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Enable { get; set; }
 
         /// <summary>
-        /// <para>The first time when the task is performed.</para>
+        /// <para>The first execution time.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? FirstDateStr { get; set; }
 
         /// <summary>
-        /// <para>The interval of the task.</para>
+        /// <para>The interval period.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? IntervalPeriod { get; set; }
 
         /// <summary>
-        /// <para>The additional information.</para>
+        /// <para>The extended information field.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -72,8 +79,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The unit of the scan interval. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>day</b>: days</description></item>
-        /// <item><description><b>hour</b>: hours</description></item>
+        /// <item><description><b>day</b>: day.</description></item>
+        /// <item><description><b>hour</b>: hour.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -85,7 +92,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The additional source for the task.</para>
+        /// <para>The source from which the task is added.</para>
         /// 
         /// <b>Example:</b>
         /// <para>console_batch</para>
@@ -95,7 +102,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Source { get; set; }
 
         /// <summary>
-        /// <para>The time when the task ends. Unit: hours.</para>
+        /// <para>The task end time, in hours.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -106,7 +113,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TargetEndTime { get; set; }
 
         /// <summary>
-        /// <para>The time when the task is started. Unit: hours.</para>
+        /// <para>The task start time, in hours.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -117,11 +124,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TargetStartTime { get; set; }
 
         /// <summary>
-        /// <para>The name of the task. Valid values:</para>
+        /// <para>The task name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan task</description></item>
-        /// <item><description><b>IMAGE_SCAN</b>: image scan task</description></item>
-        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: urgent vulnerability scan task</description></item>
+        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan.</description></item>
+        /// <item><description><b>IMAGE_SCAN</b>: image scan.</description></item>
+        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: emergency vulnerability scanning.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -133,11 +140,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TaskName { get; set; }
 
         /// <summary>
-        /// <para>The type of the task. Valid values:</para>
+        /// <para>The task type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan task</description></item>
-        /// <item><description><b>IMAGE_SCAN</b>: image scan task</description></item>
-        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: urgent vulnerability scan task</description></item>
+        /// <item><description><b>VIRUS_VUL_SCHEDULE_SCAN</b>: virus scan.</description></item>
+        /// <item><description><b>IMAGE_SCAN</b>: image scan.</description></item>
+        /// <item><description><b>EMG_VUL_SCHEDULE_SCAN</b>: emergency vulnerability scanning.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

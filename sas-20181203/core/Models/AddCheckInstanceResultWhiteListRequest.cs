@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddCheckInstanceResultWhiteListRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the group to which the check item belongs.</para>
+        /// <para>The ID of the check group to which the check item belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cQFq20UzZ49K6gRSJD1301****</para>
@@ -22,7 +22,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The ID of the check item.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of check items.</para>
+        /// <para>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,23 +33,30 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? CheckId { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs of the assets.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The collection of asset instance IDs.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The asset instances.</para>
+        /// <para>The collection of asset instance information.</para>
         /// </summary>
         [NameInMap("InstanceList")]
         [Validation(Required=false)]
         public List<AddCheckInstanceResultWhiteListRequestInstanceList> InstanceList { get; set; }
         public class AddCheckInstanceResultWhiteListRequestInstanceList : TeaModel {
             /// <summary>
-            /// <para>The instance ID of the asset.</para>
+            /// <para>The asset instance ID.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to query the instance IDs of assets.</para>
+            /// <para>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -60,9 +67,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the asset.</para>
+            /// <para>The region where the asset resides.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to query the region ID of the asset.</para>
+            /// <para>Call the <a href="~~ListCheckInstanceResult~~">ListCheckInstanceResult</a> operation to obtain this parameter.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -75,7 +82,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The description. The value of this parameter can be up to 65,535 bytes in length.</para>
+        /// <para>The remarks. Maximum length: 65535 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -85,9 +92,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Default value: <b>WHITE</b>. Valid value:</para>
+        /// <para>The rule type. Default value: <b>WHITE</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>WHITE: adds check items to the whitelist.</description></item>
+        /// <item><description>WHITE: whitelist</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <para>Valid values:</para>
                 /// <list type="bullet">
                 /// <item><description><b>text</b>: plain text</description></item>
-                /// <item><description><b>html</b>: rich text.</description></item>
+                /// <item><description><b>html</b>: rich text</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
                 /// <summary>
                 /// <para>The additional attribute information of the exception event.
-                /// For example, the logon time or logon location of an unusual logon alert, or the trojan file path or trojan type of an alert.</para>
+                /// For example, the logon time or logon location for an unusual logon alert, or the trojan file path or trojan type for a trojan alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>getopt</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The name (subtype) of the alert event.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>恶意脚本代码执行</para>
+            /// <para>Malicious Software-Trojan</para>
             /// </summary>
             [NameInMap("EventName")]
             [Validation(Required=false)]

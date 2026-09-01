@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The IDs of the check items.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to query the IDs of the check items.</para>
+        /// <para>Call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("CheckIds")]
@@ -20,14 +20,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> CheckIds { get; set; }
 
         /// <summary>
-        /// <para>IDs of the cloud product instances that need to be whitelisted. Separate multiple IDs with a comma (,).</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The instance IDs of the cloud service instances to add to the whitelist. Separate multiple instance IDs with commas (,).</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The description. The value of this parameter can be up to 65,535 bytes in length.</para>
+        /// <para>The remarks. Maximum length: 65,535 bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -37,9 +44,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The type of the rule. Default value: <b>WHITE</b>. Valid value:</para>
+        /// <para>The rule type. Default value: <b>WHITE</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>WHITE</b>: Add check items to the whitelist.</description></item>
+        /// <item><description><b>WHITE</b>: adds to the whitelist.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public long? EndTime { get; set; }
 
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
         /// <para>The source of the security score. If left empty, the default value is Security Center. Valid values:</para>
         /// <para>0: Security Center.</para>

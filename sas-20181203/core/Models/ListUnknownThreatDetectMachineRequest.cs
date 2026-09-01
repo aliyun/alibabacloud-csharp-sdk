@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectMachineRequest : TeaModel {
         /// <summary>
-        /// <para>The page number to return.</para>
+        /// <para>The page number of the current page when using paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -19,8 +19,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public int? CurrentPage { get; set; }
 
+        [NameInMap("EventStatus")]
+        [Validation(Required=false)]
+        public int? EventStatus { get; set; }
+
         /// <summary>
-        /// <para>The maximum number of entries to return per page.</para>
+        /// <para>The maximum number of entries per page when using paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,16 +44,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Remark { get; set; }
 
         /// <summary>
-        /// <para>The status of the machine. Valid values:</para>
+        /// <para>The running status of the machine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>monitoring</b>: Monitoring</para>
-        /// </description></item>
-        /// <item><description><para><b>blocking</b>: Blocking</para>
-        /// </description></item>
-        /// <item><description><para><b>studying</b>: Learning</para>
-        /// </description></item>
-        /// <item><description><para><b>study_finish</b>: Learning complete</para>
-        /// </description></item>
+        /// <item><description><b>monitoring</b>: Warning.</description></item>
+        /// <item><description><b>blocking</b>: Blocking.</description></item>
+        /// <item><description><b>studying</b>: Learning.</description></item>
+        /// <item><description><b>study_finish</b>: Learning completed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -62,10 +62,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The whitelist mode. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>hash</b>: process hash</para>
-        /// </description></item>
-        /// <item><description><para><b>path</b>: process path</para>
-        /// </description></item>
+        /// <item><description><b>hash</b>: process hash</description></item>
+        /// <item><description><b>path</b>: process path</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -76,7 +74,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StudyMode { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range for model creation, specified as a timestamp in milliseconds.</para>
+        /// <para>The end of the model creation time range. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1768891966346</para>
@@ -86,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? StudyTimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start of the time range for model creation, specified as a timestamp in milliseconds.</para>
+        /// <para>The start of the model creation time range. The value is a timestamp in milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1768891966344</para>

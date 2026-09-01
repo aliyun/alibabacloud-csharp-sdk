@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SubmitCheckResponseBody : TeaModel {
         /// <summary>
-        /// <para>The data returned if the call is successful.</para>
+        /// <para>The data returned when the API call is successful.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public SubmitCheckResponseBodyData Data { get; set; }
         public class SubmitCheckResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The operation code of the configuration assessment task.</para>
+            /// <para>The operation code of the cloud service configuration check task.</para>
             /// <list type="bullet">
-            /// <item><description><b>Throttling</b>: frequency limit</description></item>
-            /// <item><description><b>AuthorizationExhaust</b>: insufficient quota</description></item>
+            /// <item><description><b>Throttling</b>: rate limited</description></item>
+            /// <item><description><b>AuthorizationExhaust</b>: insufficient authorization quota</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperateCode { get; set; }
 
             /// <summary>
-            /// <para>The throttling duration. Unit: seconds.</para>
+            /// <para>The rate limit duration. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1800</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID. Alibaba Cloud generates a unique ID for each API request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CE8369A6-A843-5E1B-A613-78E6920D****</para>
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the configuration assessment task.</para>
+        /// <para>The ID of the task that runs the cloud service configuration check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5fe3f65d-4012-455d-8232-2a98a858****</para>

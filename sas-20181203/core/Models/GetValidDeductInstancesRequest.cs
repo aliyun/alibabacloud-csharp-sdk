@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetValidDeductInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Resource package instance ID, can be queried through <a href="">QueryResourcePackageInstances</a>.</para>
+        /// <para>Instance ID of the resource plan instance. You can call <a href="">QueryResourcePackageInstances</a> to query instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>sas_cspm_dp_cn-***80001</para>
@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Resource package name code, values:</para>
+        /// <para>The code of the resource plan. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>Vulnerability resource package: <b>sas_vul_dp_cn</b></description></item>
-        /// <item><description>CSPM resource package: <b>sas_cspm_dp_cn</b></description></item>
-        /// <item><description>Anti-virus resource package: <b>sas_viruspackage_dp_cn</b></description></item>
+        /// <item><description>Vulnerability resource plan: <b>sas_vul_dp_cn</b></description></item>
+        /// <item><description>CSPM resource plan: <b>sas_cspm_dp_cn</b></description></item>
+        /// <item><description>Anti-virus Edition resource plan: <b>sas_viruspackage_dp_cn</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Modules { get; set; }
 
         /// <summary>
-        /// <para>Resource package status, default is valid (valid), not modifiable.</para>
+        /// <para>The status of the resource plan. The default value is valid. This parameter does not support modification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>

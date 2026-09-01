@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifySecurityCheckScheduleConfigRequest : TeaModel {
         /// <summary>
-        /// <para>The days on which the automatic configuration check runs. You can specify multiple days. Separate multiple days with commas (,). Valid values:</para>
+        /// <para>The detection cycle. You can specify multiple days. Separate multiple days with commas (,). Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Monday</description></item>
         /// <item><description><b>2</b>: Tuesday</description></item>
@@ -30,13 +30,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DaysOfWeek { get; set; }
 
         /// <summary>
-        /// <para>The time period during which the automatic configuration check ends. Valid values:</para>
+        /// <para>The end time of the detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: 00:00 to 06:00</description></item>
-        /// <item><description><b>6</b>: 06:00 to 12:00</description></item>
-        /// <item><description><b>12</b>: 12:00 to 18:00</description></item>
-        /// <item><description><b>18</b>: 18:00 to 24:00</description></item>
+        /// <item><description><b>0</b>: The detection ends between 00:00 and 06:00.</description></item>
+        /// <item><description><b>6</b>: The detection ends between 06:00 and 12:00.</description></item>
+        /// <item><description><b>12</b>: The detection ends between 12:00 and 18:00.</description></item>
+        /// <item><description><b>18</b>: The detection ends between 18:00 and 24:00.</description></item>
         /// </list>
+        /// <para>Unit: hours. The value is an on-the-hour value from 0 to 24 of the current day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +48,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language type of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -75,13 +76,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The time period during which the automatic configuration check starts. Valid values:</para>
+        /// <para>The start time of the detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: 00:00 to 06:00</description></item>
-        /// <item><description><b>6</b>: 06:00 to 12:00</description></item>
-        /// <item><description><b>12</b>: 12:00 to 18:00</description></item>
-        /// <item><description><b>18</b>: 18:00 to 24:00</description></item>
+        /// <item><description><b>0</b>: The detection starts between 00:00 and 06:00.</description></item>
+        /// <item><description><b>6</b>: The detection starts between 06:00 and 12:00.</description></item>
+        /// <item><description><b>12</b>: The detection starts between 12:00 and 18:00.</description></item>
+        /// <item><description><b>18</b>: The detection starts between 18:00 and 24:00.</description></item>
         /// </list>
+        /// <para>Unit: hours. The value is an on-the-hour value from 0 to 24 of the current day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

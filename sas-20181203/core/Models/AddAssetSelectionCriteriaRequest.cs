@@ -10,9 +10,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class AddAssetSelectionCriteriaRequest : TeaModel {
         /// <summary>
-        /// <para>The search conditions that are used to query assets. The value of this parameter is in the JSON format and is case-sensitive.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The conditions for searching assets. This parameter is in JSON format. Pay attention to the letter case when you specify this parameter.</para>
         /// <remarks>
-        /// <para>A search condition can be an instance ID, instance name, virtual private cloud (VPC) ID, region, or public IP address. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The type of the operation on search conditions. Valid values:</para>
+        /// <para>The operation type for criteria. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>add</b>: adds assets.</description></item>
         /// <item><description><b>del</b>: deletes assets.</description></item>
@@ -37,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string CriteriaOperation { get; set; }
 
         /// <summary>
-        /// <para>The unique ID of the asset.</para>
+        /// <para>The unique identifier of the asset selection.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,10 +62,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<AddAssetSelectionCriteriaRequestTargetOperationList> TargetOperationList { get; set; }
         public class AddAssetSelectionCriteriaRequestTargetOperationList : TeaModel {
             /// <summary>
-            /// <para>The type of the operation. Valid values:</para>
+            /// <para>The operation type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>add</b></description></item>
-            /// <item><description><b>del</b></description></item>
+            /// <item><description><b>add</b>: adds the asset.</description></item>
+            /// <item><description><b>del</b>: deletes the asset.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -69,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Operation { get; set; }
 
             /// <summary>
-            /// <para>The ID of the asset.</para>
+            /// <para>The asset ID. If you select assets by machine, the value is the UUID of the machine. If you select assets by group, the value is the group ID. If you select assets by VPC, the value is the VPC ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1188****</para>

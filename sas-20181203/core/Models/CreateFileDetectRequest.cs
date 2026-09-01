@@ -10,16 +10,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateFileDetectRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to decompress the archive for detection. Valid values:</para>
+        /// <para>Specifies whether to identify and decompress compressed files. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Yes.</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: No.</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: Yes.</description></item>
+        /// <item><description><b>false</b>: No.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>This parameter is not supported when <c>Type</c> is set to <c>6</c>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -29,11 +24,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? Decompress { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of files that can be decompressed from an archive. The maximum value is 1000.</para>
-        /// <para>This parameter is required if you set <c>Decompress</c> to <c>true</c>.</para>
-        /// <remarks>
-        /// <para>This parameter is not supported when <c>Type</c> is set to <c>6</c>.</para>
-        /// </remarks>
+        /// <para>The maximum number of files to decompress. Maximum value: 1000.</para>
+        /// <para>This parameter is required when Decompress is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -43,11 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DecompressMaxFileCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of decompression layers for nested archives. The maximum value is 5.</para>
-        /// <para>This parameter is required if you set <c>Decompress</c> to <c>true</c>.</para>
-        /// <remarks>
-        /// <para>This parameter is not supported when <c>Type</c> is set to <c>6</c>.</para>
-        /// </remarks>
+        /// <para>The maximum number of decompression layers when compressed files are nested within a compressed package. Maximum value: 5.</para>
+        /// <para>This parameter is required when Decompress is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -57,10 +46,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? DecompressMaxLayer { get; set; }
 
         /// <summary>
-        /// <para>The download link for the file. You can provide a public URL to trigger file detection without uploading the file.</para>
-        /// <remarks>
-        /// <para>Skill archives can be submitted only by providing a download link. Therefore, this parameter is required when <c>Type</c> is set to <c>6</c>.</para>
-        /// </remarks>
+        /// <para>The download URL of the file. You can pass in a file download URL (public URL) to directly trigger file detection without uploading the file in advance.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&OSSAccessKeyId=xxx">https://xxxxxxxx.oss-cn-hangzhou-1.aliyuncs.com/xxxxx/xxxxxxxxxxxxxx?Expires=1671448125&amp;OSSAccessKeyId=xxx</a></para>
@@ -70,9 +56,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string DownloadUrl { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the file.</para>
-        /// <para>This parameter is required if <c>Type</c> is <c>0</c>. Its value must be the MD5 or SHA-256 hash of the file.</para>
-        /// <para>If you set <c>Type</c> to <c>6</c>, you do not need to specify this parameter. The operation returns the file\&quot;s unique identifier in the response.</para>
+        /// <para>The unique identifier of the file. This parameter is required and must be the MD5 or SHA-256 of the file.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0a212417e65c26ff133cfff28f6c****</para>
@@ -82,11 +66,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string HashKey { get; set; }
 
         /// <summary>
-        /// <para>The storage key of the file in an Object Storage Service (OSS) bucket.</para>
-        /// <para>If you submit the file by using the <c>DownloadUrl</c> parameter, you can leave this parameter empty. To obtain the value of this parameter, call the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.</para>
-        /// <remarks>
-        /// <para>This parameter is not supported when <c>Type</c> is set to <c>6</c>.</para>
-        /// </remarks>
+        /// <para>The storage key of the file in the OSS bucket.</para>
+        /// <para>If you push the file for detection by using DownloadUrl, this parameter is optional. This parameter is obtained from the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1/2022/06/23/15/41/16559701077444693a0c6-33b2-4cc2-a99f-9f38b8b8****</para>
@@ -96,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OssKey { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the source.</para>
+        /// <para>The IP address of the access source.</para>
         /// 
         /// <b>Example:</b>
         /// <para>115.213.XX.XX</para>
@@ -106,12 +87,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string SourceIp { get; set; }
 
         /// <summary>
-        /// <para>The type of the file to detect. Valid values:</para>
+        /// <para>The type of file to detect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: Malicious file detection</para>
-        /// </description></item>
-        /// <item><description><para><b>6</b>: Skill archive detection</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: malicious file detection</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

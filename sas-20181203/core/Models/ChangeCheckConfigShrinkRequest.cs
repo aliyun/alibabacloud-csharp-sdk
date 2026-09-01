@@ -10,10 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ChangeCheckConfigShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The list of check items that you want to add to the policy.</para>
-        /// <remarks>
-        /// <para> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.</para>
-        /// </remarks>
+        /// <para>The list of check items to add to the policy.
+        /// <notice> If ConfigStandardIds or ConfigRequirementIds is specified, this parameter does not take effect.</para>
         /// </summary>
         [NameInMap("AddedCheck")]
         [Validation(Required=false)]
@@ -22,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The ID of the check item.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</para>
+            /// <para>Call <a href="~~ListCheckResult~~">ListCheckResult</a> to obtain check item IDs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -45,9 +43,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The requirement IDs that you want to specify for the check policy.</para>
+        /// <para>The client token used to ensure request idempotency. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>Configures the check policy by specifying requirement IDs.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the requirement ID. If the ConfigStandardIds parameter is configured, this parameter does not take effect.</para>
+        /// <para>Call <a href="~~ListCheckResult~~">ListCheckResult</a> to obtain requirement IDs. If ConfigStandardIds is specified, this parameter does not take effect.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ConfigRequirementIds")]
@@ -55,9 +60,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ConfigRequirementIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The standard IDs that you want to specify for the check policy.</para>
+        /// <para>Configures the check policy by specifying standard IDs.</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the standard ID.</para>
+        /// <para>Call <a href="~~ListCheckResult~~">ListCheckResult</a> to obtain standard IDs.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("ConfigStandardIds")]
@@ -65,9 +70,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ConfigStandardIdsShrink { get; set; }
 
         /// <summary>
-        /// <para>The configuration of the check item. Valid value:</para>
+        /// <para>The field configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>all</b>: Add all check items.</description></item>
+        /// <item><description><b>all:</b> Adds all check items.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -78,17 +83,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Configure { get; set; }
 
         /// <summary>
-        /// <para>The days in a week on which a check is performed.</para>
+        /// <para>The scheduled check days.</para>
         /// </summary>
         [NameInMap("CycleDays")]
         [Validation(Required=false)]
         public List<int?> CycleDays { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to check the new check items in the selected requirement item. Valid values:</para>
+        /// <para>Specifies whether to automatically include newly added check items from the selected requirements. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true:</b> Enabled.</description></item>
+        /// <item><description><b>false:</b> Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,10 +104,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? EnableAddCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable the automatic periodical check feature. Valid values:</para>
+        /// <para>Specifies whether to enable automatic scheduled checks. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true:</b> Enabled.</description></item>
+        /// <item><description><b>false:</b> Disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -113,12 +118,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? EnableAutoCheck { get; set; }
 
         /// <summary>
-        /// <para>The end time of the check. The value specifies a point in time in a day. The time period that is specified by the start time and end time must be one of the following time periods:</para>
+        /// <para>The end hour of the check time window, expressed as an hour of the day. The start and end times must fall within one of the following time ranges. Valid values: 6, 12, 18, 24.</para>
         /// <list type="bullet">
-        /// <item><description><b>00:00 to 06:00:</b> If you set the StartTime parameter to 0, you must set the EndTime parameter to 6.</description></item>
-        /// <item><description><b>06:00 to 12:00</b>: If you set the StartTime parameter to 6, you must set the EndTime parameter to 12.</description></item>
-        /// <item><description><b>12:00 to 18:00</b>: If you set the StartTime parameter to 12, you must set the EndTime parameter to 18.</description></item>
-        /// <item><description><b>18:00 to 24:00:</b> If you set the StartTime parameter to 18, you must set the EndTime parameter to 24.</description></item>
+        /// <item><description><b>0~6:</b> If the start time is 0, set the end time to 6.</description></item>
+        /// <item><description><b>6~12:</b> If the start time is 6, set the end time to 12.</description></item>
+        /// <item><description><b>12~18:</b> If the start time is 12, set the end time to 18.</description></item>
+        /// <item><description><b>18~24:</b> If the start time is 18, set the end time to 24.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -129,10 +134,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? EndTime { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the bastion host to query.</para>
-        /// <remarks>
-        /// <para> For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</para>
-        /// </remarks>
+        /// <para>The region of the Security Center instance. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>cn-hangzhou:</b> China (Hangzhou)</description></item>
+        /// <item><description><b>ap-southeast-1:</b> Singapore</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -142,10 +148,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of the check items that you want to remove from the policy.</para>
-        /// <remarks>
-        /// <para> If the ConfigStandardIds or ConfigRequirementIds parameter is configured, this parameter does not take effect.</para>
-        /// </remarks>
+        /// <para>The list of check items to remove from the policy.
+        /// <notice> If ConfigStandardIds or ConfigRequirementIds is specified, this parameter does not take effect.</para>
         /// </summary>
         [NameInMap("RemovedCheck")]
         [Validation(Required=false)]
@@ -154,7 +158,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The ID of the check item.</para>
             /// <remarks>
-            /// <para> You can call the <a href="~~ListCheckResult~~">ListCheckResult</a> operation to obtain the ID of the check item.</para>
+            /// <para>Call <a href="~~ListCheckResult~~">ListCheckResult</a> to obtain check item IDs.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -177,9 +181,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member in the resource directory.</para>
+        /// <para>The ID of the resource directory member accounts (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the IDs.</para>
+        /// <para>Call <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -190,14 +194,20 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the information about the check item.</para>
+        /// <para>This parameter is deprecated. You do not need to configure it.</para>
         /// </summary>
         [NameInMap("StandardIds")]
         [Validation(Required=false)]
         public List<long?> StandardIds { get; set; }
 
         /// <summary>
-        /// <para>The start time of the check. The value specifies a point in time in a day.</para>
+        /// <para>The start hour of the check time window, expressed as an hour of the day. The start and end times must fall within one of the following time ranges. Valid values: 0, 6, 12, 18.</para>
+        /// <list type="bullet">
+        /// <item><description><b>0~6:</b> If the start time is 0, set the end time to 6.</description></item>
+        /// <item><description><b>6~12:</b> If the start time is 6, set the end time to 12.</description></item>
+        /// <item><description><b>12~18:</b> If the start time is 12, set the end time to 18.</description></item>
+        /// <item><description><b>18~24:</b> If the start time is 18, set the end time to 24.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -207,10 +217,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? StartTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the configuration automatically generated by the system. Valid values:</para>
+        /// <para>Specifies whether to use the system-generated configuration. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true:</b> Yes.</description></item>
+        /// <item><description><b>false:</b> No.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -221,7 +231,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? SystemConfig { get; set; }
 
         /// <summary>
-        /// <para>The cloud service providers.</para>
+        /// <para>The list of cloud vendors.</para>
         /// </summary>
         [NameInMap("Vendors")]
         [Validation(Required=false)]

@@ -10,7 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyCreateVulWhitelistRequest : TeaModel {
         /// <summary>
-        /// <para>The reason why you add the vulnerability to the whitelist.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The reason for adding the vulnerability to the whitelist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This vulnerability is not harmful</para>
@@ -19,23 +26,24 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string Reason { get; set; }
 
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
-        /// <para>The applicable scope of the whitelist. The value of this parameter is in the JSON format and contains the following fields:</para>
+        /// <para>The scope in which the whitelist takes effect. The value is a JSON string that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>type</b>: the type of the applicable scope. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>GroupId</b>: the ID of a server group.</description></item>
-        /// <item><description><b>Uuid</b>: the UUID of a server.</description></item>
+        /// <item><description><b>type</b>: The scope type. Valid values:<list type="bullet">
+        /// <item><description><b>GroupId</b>: server group</description></item>
+        /// <item><description><b>Uuid</b>: host asset</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>uuids</b>: the UUIDs of servers. This field is of the string type.</para>
-        /// </description></item>
-        /// <item><description><para><b>groupIds</b>: the IDs of server groups. This field is of the long type.</para>
-        /// </description></item>
-        /// </list>
-        /// <remarks>
-        /// <para> If you leave this parameter empty, the applicable scope is all servers. If you set the <b>type</b> field to <b>GroupId</b>, you must also specify the <b>groupIds</b> field. If you set the <b>type</b> field to <b>Uuid</b>, you must also specify the <b>uuids</b> field.</para>
+        /// <item><description><b>uuids</b>: The collection of host asset UUIDs. The field type is String.</description></item>
+        /// <item><description><b>groupIds</b>: The collection of server group IDs. The field type is Long.<remarks>
+        /// <para>If this parameter is left empty, the whitelist takes effect on all hosts. If <b>type</b> is set to <b>GroupId</b>, <b>groupIds</b> cannot be empty. If <b>type</b> is set to <b>Uuid</b>, <b>uuids</b> cannot be empty.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;type&quot;:&quot;Uuid&quot;,&quot;uuids&quot;:[&quot;b31a708f-5fea-426e-bebe-a7b0893****&quot;,&quot;1f749687-3b5d-4e11-8140-d964673****&quot;],&quot;groupIds&quot;:[]}</para>
@@ -45,44 +53,44 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TargetInfo { get; set; }
 
         /// <summary>
-        /// <para>The information about the vulnerability that you want to add to the whitelist. The value is a JSON string that contains the following fields:</para>
+        /// <para>The information about the vulnerability to add to the whitelist. The value is a JSON string that contains the following fields:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Status</b>: the status of the vulnerability.</para>
+        /// <item><description><para><b>Status</b>: The vulnerability status.</para>
         /// </description></item>
-        /// <item><description><para><b>GmtLast</b>: the timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
+        /// <item><description><para><b>GmtLast</b>: The timestamp when the vulnerability was last detected. Unit: milliseconds.</para>
         /// </description></item>
-        /// <item><description><para><b>LaterCount</b>: the number of vulnerabilities that have the medium priority.</para>
+        /// <item><description><para><b>LaterCount</b>: The number of medium-priority vulnerabilities.</para>
         /// </description></item>
-        /// <item><description><para><b>AsapCount</b>: the number of vulnerabilities that have the high priority.</para>
+        /// <item><description><para><b>AsapCount</b>: The number of high-priority vulnerabilities.</para>
         /// </description></item>
-        /// <item><description><para><b>Name</b>: the name of the vulnerability.</para>
+        /// <item><description><para><b>Name</b>: The vulnerability name.</para>
         /// </description></item>
-        /// <item><description><para><b>Type</b>: the type of the vulnerability. Valid values:</para>
+        /// <item><description><para><b>Type</b>: The vulnerability type. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability</description></item>
         /// <item><description><b>cms</b>: Web-CMS vulnerability</description></item>
         /// <item><description><b>app</b>: application vulnerability</description></item>
-        /// <item><description><b>emg</b>: urgent vulnerability</description></item>
+        /// <item><description><b>emg</b>: emergency vulnerability</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para><b>Related</b>: the Common Vulnerabilities and Exposures (CVE) ID of the vulnerability.</para>
+        /// <item><description><para><b>Related</b>: The CVE ID of the vulnerability.</para>
         /// </description></item>
-        /// <item><description><para><b>HandledCount</b>: the number of handled vulnerabilities.</para>
+        /// <item><description><para><b>HandledCount</b>: The number of handled vulnerabilities.</para>
         /// </description></item>
-        /// <item><description><para><b>AliasName</b>: the alias of the vulnerability.</para>
+        /// <item><description><para><b>AliasName</b>: The alias of the vulnerability.</para>
         /// </description></item>
-        /// <item><description><para><b>RuleModifyTime</b>: the time when the vulnerability was last disclosed.</para>
+        /// <item><description><para><b>RuleModifyTime</b>: The time when the vulnerability was last published.</para>
         /// </description></item>
-        /// <item><description><para><b>NntfCount</b>: the number of vulnerabilities that have the low priority.</para>
+        /// <item><description><para><b>NntfCount</b>: The number of low-priority vulnerabilities.</para>
         /// </description></item>
-        /// <item><description><para><b>TotalFixCount</b>: the total number of fixed vulnerabilities.</para>
+        /// <item><description><para><b>TotalFixCount</b>: The total number of fixed vulnerabilities.</para>
         /// </description></item>
-        /// <item><description><para><b>Tags</b>: the tag that is added to the vulnerability.</para>
+        /// <item><description><para><b>Tags</b>: The vulnerability tags.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> operation to query the information about the vulnerability that you want to add to the whitelist.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedVul~~">DescribeGroupedVul</a> operation to obtain the vulnerability information to add to the whitelist.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 

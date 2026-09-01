@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetInterceptionSummaryRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cluster.</para>
+        /// <para>The ID of the cluster to query. This parameter takes effect only on the InterceptionCountInDays response parameter.</para>
         /// <remarks>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/421736.html">DescribeGroupedContainerInstances</a> operation to query the IDs of clusters.</para>
+        /// <para>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -21,6 +21,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("ClusterId")]
         [Validation(Required=false)]
         public string ClusterId { get; set; }
+
+        /// <summary>
+        /// <para>The list of cluster types to exclude.</para>
+        /// </summary>
+        [NameInMap("ExcludeClusterTypes")]
+        [Validation(Required=false)]
+        public List<string> ExcludeClusterTypes { get; set; }
 
     }
 

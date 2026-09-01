@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateCycleTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the task configuration.</para>
+        /// <para>The ID of the configuration.</para>
         /// 
         /// <b>Example:</b>
         /// <para>00cfa8161da093089e6804ba6a33****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ConfigId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>86CFF42E-E00A-57A3-8656-22291EFB****</para>

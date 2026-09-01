@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateSimilarSecurityEventsQueryTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response for creating a task to query similar alert events.</para>
+        /// <para>The response information of the task for querying similar security alerts.</para>
         /// </summary>
         [NameInMap("CreateSimilarSecurityEventsQueryTaskResponse")]
         [Validation(Required=false)]

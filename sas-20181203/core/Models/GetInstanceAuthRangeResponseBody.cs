@@ -10,19 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetInstanceAuthRangeResponseBody : TeaModel {
         /// <summary>
-        /// <para>Instance range validation</para>
+        /// <para>The instance authorization range validation.</para>
         /// </summary>
         [NameInMap("InstanceAuthRange")]
         [Validation(Required=false)]
         public GetInstanceAuthRangeResponseBodyInstanceAuthRange InstanceAuthRange { get; set; }
         public class GetInstanceAuthRangeResponseBodyInstanceAuthRange : TeaModel {
             /// <summary>
-            /// <para>Advanced version count. Values:</para>
+            /// <para>The number of instances for the Advanced Edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-2000000000</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-2000000000</b>: range</description></item>
+            /// <item><description><b>1</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -33,12 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AdvancedCount { get; set; }
 
             /// <summary>
-            /// <para>Anti-ransomware capacity. Values:</para>
+            /// <para>The anti-ransomware capacity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-9000000000</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>10</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-9000000000</b>: range</description></item>
+            /// <item><description><b>10</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -49,12 +45,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AntiRansomwareCapacity { get; set; }
 
             /// <summary>
-            /// <para>Anti-ransomware service. Values:</para>
+            /// <para>The anti-ransomware managed service. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Not enabled</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Enabled</para>
-            /// </description></item>
+            /// <item><description><b>0</b>: Not activated.</description></item>
+            /// <item><description><b>1</b>: Activated.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -65,12 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? AntiRansomwareService { get; set; }
 
             /// <summary>
-            /// <para>Anti-virus core count. Values:</para>
+            /// <para>The number of cores for Anti-virus Edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-2000000000</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-2000000000</b>: range</description></item>
+            /// <item><description><b>1</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -81,12 +73,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AntiVirusCore { get; set; }
 
             /// <summary>
-            /// <para>Flagship version core count. Values:</para>
+            /// <para>The number of cores for the Ultimate Edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-2000000000</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-2000000000</b>: range</description></item>
+            /// <item><description><b>1</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -97,12 +87,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerCore { get; set; }
 
             /// <summary>
-            /// <para>Flagship version count. Values:</para>
+            /// <para>The number of instances for the Ultimate Edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-2000000000</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-2000000000</b>: range</description></item>
+            /// <item><description><b>1</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -113,12 +101,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerCount { get; set; }
 
             /// <summary>
-            /// <para>Number of cloud platform configuration check scans. Value:</para>
+            /// <para>The number of cloud platform configuration check scans. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>15000-9999999999</b>:Range</para>
-            /// </description></item>
-            /// <item><description><para><b>55000</b>:Step</para>
-            /// </description></item>
+            /// <item><description><b>15000-9999999999</b>: range</description></item>
+            /// <item><description><b>55000</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -128,13 +114,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string CspmCapacity { get; set; }
 
+            [NameInMap("CspmInstanceCapacity")]
+            [Validation(Required=false)]
+            public string CspmInstanceCapacity { get; set; }
+
             /// <summary>
-            /// <para>Enterprise version count. Range:</para>
+            /// <para>The number of instances for the Enterprise Edition. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Value</b>: 1-2000000000</para>
-            /// </description></item>
-            /// <item><description><para><b>Step</b>: 1</para>
-            /// </description></item>
+            /// <item><description><b>Value</b>: 1-2000000000</description></item>
+            /// <item><description><b>Step</b>: 1</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -145,12 +133,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EnterpriseCount { get; set; }
 
             /// <summary>
-            /// <para>Number of authorized honeypots. Value:</para>
+            /// <para>The number of honeypot authorizations. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>20-500</b>:Range</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>:Step</para>
-            /// </description></item>
+            /// <item><description><b>20-500</b>: range</description></item>
+            /// <item><description><b>1</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -161,12 +147,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string HoneypotCapacity { get; set; }
 
             /// <summary>
-            /// <para>Image scan authorization count. Values:</para>
+            /// <para>The number of image scan authorizations. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-200000</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>20</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-200000</b>: range</description></item>
+            /// <item><description><b>20</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -177,12 +161,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageScanCapacity { get; set; }
 
             /// <summary>
-            /// <para>Application protection count. Values:</para>
+            /// <para>The number of application protection authorizations. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-100000000</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-100000000</b>: range</description></item>
+            /// <item><description><b>1</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -193,12 +175,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string RaspCapacity { get; set; }
 
             /// <summary>
-            /// <para>Number of authorized malicious file detection SDKs. Value:</para>
+            /// <para>The number of malicious file detection SDK authorizations. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>10-9999999999</b>:Range</para>
-            /// </description></item>
-            /// <item><description><para><b>10</b>:Step</para>
-            /// </description></item>
+            /// <item><description><b>10-9999999999</b>: range</description></item>
+            /// <item><description><b>10</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -209,12 +189,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SdkCapacity { get; set; }
 
             /// <summary>
-            /// <para>Log storage capacity. Values:</para>
+            /// <para>The log storage capacity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-600000000</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>10</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-600000000</b>: range</description></item>
+            /// <item><description><b>10</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -225,12 +203,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SlsCapacity { get; set; }
 
             /// <summary>
-            /// <para>Threat analysis capacity. Values:</para>
+            /// <para>The threat analysis capacity. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-9999999999</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>1000</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-9999999999</b>: range</description></item>
+            /// <item><description><b>1000</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -241,12 +217,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ThreatAnalysisCapacity { get; set; }
 
             /// <summary>
-            /// <para>Threat analysis and response log access traffic. Values:</para>
+            /// <para>The log ingestion traffic for threat detection and response. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-9999999999</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>100</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-9999999999</b>: range</description></item>
+            /// <item><description><b>100</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -257,12 +231,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ThreatAnalysisFlow { get; set; }
 
             /// <summary>
-            /// <para>Web tamper-proof authorization count. Values:</para>
+            /// <para>The number of web tamper-proofing authorizations. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1-9999</b>: Range</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Step</para>
-            /// </description></item>
+            /// <item><description><b>1-9999</b>: range</description></item>
+            /// <item><description><b>1</b>: step</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -275,7 +247,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the current call request, which is a unique identifier generated by Alibaba Cloud for this request and can be used to troubleshoot and locate issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F8B6F758-BCD4-597A-8A2C-DA5A552C****</para>

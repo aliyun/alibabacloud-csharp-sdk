@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeSuspEventsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The number of entries returned on the current page.</para>
+        /// <para>The number of entries on the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The page number of the returned page.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned per page.</para>
+        /// <para>The maximum number of entries per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The ID of this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0D6E20E4-8326-1D03-A553-2182BE9E82F9</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the alert events.</para>
+        /// <para>The security alert information.</para>
         /// </summary>
         [NameInMap("SuspEvents")]
         [Validation(Required=false)]
         public List<DescribeSuspEventsResponseBodySuspEvents> SuspEvents { get; set; }
         public class DescribeSuspEventsResponseBodySuspEvents : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the alert event was analyzed offline.</para>
+            /// <para>Indicates whether this is an offline analysis alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? Advanced { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert event.</para>
+            /// <para>The name of the security alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>login_common_location</para>
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AlarmEventName { get; set; }
 
             /// <summary>
-            /// <para>The name of the alert.</para>
+            /// <para>The alert name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Login with unusual location</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AlarmEventNameDisplay { get; set; }
 
             /// <summary>
-            /// <para>The type of the alert event.</para>
+            /// <para>The alerting event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Unusual Logon</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AlarmEventType { get; set; }
 
             /// <summary>
-            /// <para>The display name of the type of the alert event.</para>
+            /// <para>The alerting event type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Unusual Logon</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AlarmUniqueInfo { get; set; }
 
             /// <summary>
-            /// <para>The name of the application to which the alert event belongs.</para>
+            /// <para>The name of the application to which the security alert belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pro-deploy-tibasic</para>
@@ -137,10 +137,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? AutoBreaking { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether you can handle the alert event online, such as quarantining the source file of the malicious process. Valid values:</para>
+            /// <para>Indicates whether the alert event can be handled online, such as quarantine. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Online handling is supported.</description></item>
+            /// <item><description><b>false</b>: Online handling is not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -151,11 +151,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? CanBeDealOnLine { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether you can cancel marking the alert event as a false positive. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
-            /// </list>
+            /// <para>Indicates whether the false positive mark can be unmarked. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -165,10 +161,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? CanCancelFault { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the safeguard mode for major activities is enabled for the server. Valid values:</para>
+            /// <para>Indicates whether critical event protection mode is enabled for the server. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Enabled.</description></item>
+            /// <item><description><b>false</b>: Not enabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -179,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? ContainHwMode { get; set; }
 
             /// <summary>
-            /// <para>The ID of the container.</para>
+            /// <para>The container ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>container_1648601865161_14925_02_000****</para>
@@ -189,7 +185,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the container image.</para>
+            /// <para>The container image ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sha256:2e5a3b0ae5f452b3cb458789a9a7542ef40035a84318469a8528c5e444db1****</para>
@@ -199,7 +195,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerImageId { get; set; }
 
             /// <summary>
-            /// <para>The name of the container image.</para>
+            /// <para>The container image name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>centos7_apache:v1.0.1</para>
@@ -209,7 +205,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerImageName { get; set; }
 
             /// <summary>
-            /// <para>The source of data. This parameter can be ignored.</para>
+            /// <para>The data source. You can ignore this parameter.</para>
             /// 
             /// <b>Example:</b>
             /// <para>aegis_suspicious_****</para>
@@ -219,7 +215,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DataSource { get; set; }
 
             /// <summary>
-            /// <para>The impact of the alert event.</para>
+            /// <para>The download URL of the file deep analysis report.</para>
+            /// </summary>
+            [NameInMap("DeepAnalyzeReportUrl")]
+            [Validation(Required=false)]
+            public string DeepAnalyzeReportUrl { get; set; }
+
+            /// <summary>
+            /// <para>The description of the impact of the security alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>webshell</para>
@@ -229,14 +232,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Desc { get; set; }
 
             /// <summary>
-            /// <para>The details of the alert event.</para>
+            /// <para>The details of the security alert.</para>
             /// </summary>
             [NameInMap("Details")]
             [Validation(Required=false)]
             public List<DescribeSuspEventsResponseBodySuspEventsDetails> Details { get; set; }
             public class DescribeSuspEventsResponseBodySuspEventsDetails : TeaModel {
                 /// <summary>
-                /// <para>The display name of the alert event.</para>
+                /// <para>The display name of the security alert.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Login with unusual location</para>
@@ -246,7 +249,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string NameDisplay { get; set; }
 
                 /// <summary>
-                /// <para>The type of the alert event.</para>
+                /// <para>The alerting event type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>text</para>
@@ -256,7 +259,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Type { get; set; }
 
                 /// <summary>
-                /// <para>The path of the alert event.</para>
+                /// <para>The path where the security alert occurred.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/etc/crontab</para>
@@ -266,7 +269,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Value { get; set; }
 
                 /// <summary>
-                /// <para>The display name of the path of the alert event.</para>
+                /// <para>The path where the security alert occurred.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>/etc/crontab</para>
@@ -278,7 +281,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Source of discovery (invalid field)</para>
+            /// <para>The discovery source. This parameter is invalid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>linux</para>
@@ -288,11 +291,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string DetectSource { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the alert event can be detected by cloud sandbox. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
-            /// </list>
+            /// <para>Indicates whether cloud sandbox detection is supported. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -302,14 +301,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? DisplaySandboxResult { get; set; }
 
             /// <summary>
-            /// <para>The note information about the alert event.</para>
+            /// <para>The remarks of the security alert.</para>
             /// </summary>
             [NameInMap("EventNotes")]
             [Validation(Required=false)]
             public List<DescribeSuspEventsResponseBodySuspEventsEventNotes> EventNotes { get; set; }
             public class DescribeSuspEventsResponseBodySuspEventsEventNotes : TeaModel {
                 /// <summary>
-                /// <para>The note.</para>
+                /// <para>The remark information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Test</para>
@@ -319,7 +318,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Note { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the note.</para>
+                /// <para>The event record ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>123</para>
@@ -329,7 +328,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? NoteId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the note was created.</para>
+                /// <para>The event record time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2018-09-26 01:51:01</para>
@@ -341,17 +340,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The status of the alert event. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>1</b>: pending handling</description></item>
-            /// <item><description><b>2</b>: ignored</description></item>
-            /// <item><description><b>4</b>: confirmed</description></item>
-            /// <item><description><b>8</b>: marked as a false positive</description></item>
-            /// <item><description><b>16</b>: handling</description></item>
-            /// <item><description><b>32</b>: handled</description></item>
-            /// <item><description><b>64</b>: expired</description></item>
-            /// <item><description><b>604</b>: marked as a false positive by the system</description></item>
-            /// </list>
+            /// <para>The status of the security alert. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>8</para>
@@ -361,7 +350,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? EventStatus { get; set; }
 
             /// <summary>
-            /// <para>The subtype of the alert event.</para>
+            /// <para>The subtype of the security alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>login_common_location</para>
@@ -371,11 +360,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string EventSubType { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the alert event has tracing information. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
-            /// </list>
+            /// <para>Indicates whether the security alert has tracing information. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -395,7 +380,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The UUID of the image.</para>
+            /// <para>The image UUID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>70489fb520cea585ad9761d5a842****</para>
@@ -405,7 +390,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ImageUuid { get; set; }
 
             /// <summary>
-            /// <para>The instance ID of the affected asset.</para>
+            /// <para>The ID of the asset instance affected by the security alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-9dp6dwsxdl9z5u1e2f****</para>
@@ -445,7 +430,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string IntranetIp { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Kubernetes cluster.</para>
+            /// <para>The Kubernetes cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c517b37e1401e4961b3951863a49a****</para>
@@ -465,7 +450,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string K8sClusterName { get; set; }
 
             /// <summary>
-            /// <para>The namespace of the Kubernetes cluster.</para>
+            /// <para>The Kubernetes namespace.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -475,7 +460,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string K8sNamespace { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Kubernetes node.</para>
+            /// <para>The Kubernetes node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp14a1ay8e0aa9t0****</para>
@@ -485,7 +470,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string K8sNodeId { get; set; }
 
             /// <summary>
-            /// <para>The name of the Kubernetes node.</para>
+            /// <para>The Kubernetes node name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>N/A</para>
@@ -495,7 +480,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string K8sNodeName { get; set; }
 
             /// <summary>
-            /// <para>The name of the Kubernetes pod.</para>
+            /// <para>The Kubernetes pod name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>myapp-pod</para>
@@ -505,10 +490,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string K8sPodName { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the large model analysis tag is supported. Valid values:</para>
+            /// <para>Indicates whether large model analysis tags are supported. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>true</b></description></item>
-            /// <item><description><b>false</b></description></item>
+            /// <item><description><b>true</b>: Supported.</description></item>
+            /// <item><description><b>false</b>: Not supported.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -519,7 +504,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public bool? LargeModel { get; set; }
 
             /// <summary>
-            /// <para>The time when the alert event was last detected.</para>
+            /// <para>The most recent time when the security alert occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-09-26 01:51:01</para>
@@ -529,7 +514,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string LastTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the alert event was last detected. Unit: milliseconds.</para>
+            /// <para>The timestamp of the last occurrence, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1631699497000</para>
@@ -539,11 +524,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastTimeStamp { get; set; }
 
             /// <summary>
-            /// <para>The severity of the alert event. Valid values:</para>
+            /// <para>The risk level of the alert event. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>serious</b></description></item>
-            /// <item><description><b>suspicious</b></description></item>
-            /// <item><description><b>remind</b></description></item>
+            /// <item><description><b>serious</b>: critical</description></item>
+            /// <item><description><b>suspicious</b>: suspicious</description></item>
+            /// <item><description><b>remind</b>: reminder</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -555,10 +540,6 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             /// <summary>
             /// <para>The status of the malicious behavior defense rule. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>open</b></description></item>
-            /// <item><description><b>close</b></description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>open</para>
@@ -568,14 +549,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MaliciousRuleStatus { get; set; }
 
             /// <summary>
-            /// <para>The tags of the alert events.</para>
+            /// <para>The collection of security alert tags.</para>
             /// </summary>
             [NameInMap("MarkList")]
             [Validation(Required=false)]
             public List<string> MarkList { get; set; }
 
             /// <summary>
-            /// <para>The advanced whitelist rule.</para>
+            /// <para>The advanced whitelisting rules.</para>
             /// 
             /// <b>Example:</b>
             /// <para><b>1.</b>&amp;nbsp&amp;nbsppath&amp;nbsp&amp;nbspcontain&amp;nbsp&amp;nbsp232&amp;nbsp&amp;nbsp</para>
@@ -585,7 +566,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string MarkMisRules { get; set; }
 
             /// <summary>
-            /// <para>The complete name of the alert event.</para>
+            /// <para>The full name of the security alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Unusual Logon-Login with unusual location</para>
@@ -595,7 +576,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The time when the alert event was first detected.</para>
+            /// <para>The time when the security alert first occurred.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2018-09-26 01:51:01</para>
@@ -605,7 +586,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OccurrenceTime { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the alert event was first detected. Unit: milliseconds.</para>
+            /// <para>The timestamp of the first occurrence, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1631699497000</para>
@@ -615,7 +596,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? OccurrenceTimeStamp { get; set; }
 
             /// <summary>
-            /// <para>The handling result code of the alert event.</para>
+            /// <para>The error code of the security alert operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>kill_and_quara.Success</para>
@@ -625,7 +606,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperateErrorCode { get; set; }
 
             /// <summary>
-            /// <para>The handing result message of the alert event.</para>
+            /// <para>The remarks of the security alert operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>success</para>
@@ -635,7 +616,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OperateMsg { get; set; }
 
             /// <summary>
-            /// <para>The handling timestamp of the alert event. Unit: milliseconds.</para>
+            /// <para>The timestamp of the security alert operation, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1631699497000</para>
@@ -645,11 +626,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? OperateTime { get; set; }
 
             /// <summary>
-            /// <para>The edition of Security Center in which the alert event can be detected. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><b>0</b>: Basic edition</description></item>
-            /// <item><description><b>1</b>: Enterprise edition</description></item>
-            /// </list>
+            /// <para>The product edition that supports the detection of this security alert. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -659,7 +636,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SaleVersion { get; set; }
 
             /// <summary>
-            /// <para>The ID of the associated alert event.</para>
+            /// <para>The IDs of the security alerts associated with this security alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>270789</para>
@@ -669,7 +646,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string SecurityEventIds { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account within which an alert is generated.</para>
+            /// <para>The Alibaba Cloud account ID that generated the alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>196072141348****</para>
@@ -679,7 +656,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? SourceAliUid { get; set; }
 
             /// <summary>
-            /// <para>The stage at which the attack is detected.</para>
+            /// <para>The attack stage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>&quot;[&quot;authority_maintenance&quot;]&quot;</para>
@@ -689,11 +666,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Stages { get; set; }
 
             /// <summary>
-            /// <para>Supported alarm operation types: </para>
+            /// <para>The operation types supported by the alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>AI.false_positive</b>: Suspected false positive </description></item>
-            /// <item><description><b>AI.real_attack</b>: Real attack </description></item>
-            /// <item><description><b>AI.Insufficient_information_to_evaluate</b>: Insufficient information to evaluate</description></item>
+            /// <item><description><b>AI.false_positive</b>: suspected false positive.</description></item>
+            /// <item><description><b>AI.real_attack</b>: real attack.</description></item>
+            /// <item><description><b>AI.Insufficient_information_to_evaluate</b>: unable to determine.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -711,7 +688,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public List<DescribeSuspEventsResponseBodySuspEventsTacticItems> TacticItems { get; set; }
             public class DescribeSuspEventsResponseBodySuspEventsTacticItems : TeaModel {
                 /// <summary>
-                /// <para>The tactic name of ATT\&amp;CK.</para>
+                /// <para>The ATT&amp;CK tactic name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Malicious scripts-Malicious script code execution</para>
@@ -721,7 +698,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string TacticDisplayName { get; set; }
 
                 /// <summary>
-                /// <para>The stage information about ATT\&amp;CK.</para>
+                /// <para>The ATT&amp;CK attack stage information.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>TA0001</para>
@@ -733,7 +710,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>The unique key of the alert.</para>
+            /// <para>The unique key of the security alert.</para>
             /// 
             /// <b>Example:</b>
             /// <para>e17e****</para>
@@ -743,7 +720,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UniqueInfo { get; set; }
 
             /// <summary>
-            /// <para>The unique ID of the associated instance.</para>
+            /// <para>The unique identifier of the associated instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bf6b30d3-eea8-4924-9f0a-****</para>
@@ -753,7 +730,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Uuid { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cluster.</para>
+            /// <para>The cluster ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>c2051775877374cccbf68af596e6****</para>
@@ -765,7 +742,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The total number of alert events.</para>
+        /// <para>The total number of security alerts.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

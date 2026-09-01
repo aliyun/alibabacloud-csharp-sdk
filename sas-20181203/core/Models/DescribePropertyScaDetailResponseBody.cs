@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribePropertyScaDetailResponseBodyPageInfo PageInfo { get; set; }
         public class DescribePropertyScaDetailResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page in a paged query.</para>
+            /// <para>The number of entries on the current page in the paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paged query.</para>
+            /// <para>The page number of the current page in the paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The number of Asset Fingerprints entries per page in a paged query. Default value: <b>10</b>, which indicates that 10 Asset Fingerprints entries are displayed per page.</para>
+            /// <para>The number of entries per page in the paged query for Asset Fingerprints information. Default value: <b>10</b>, which indicates that 10 entries of Asset Fingerprints information are displayed per page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description><b>database</b>: database</description></item>
             /// <item><description><b>web_container</b>: web container</description></item>
             /// <item><description><b>jar</b>: JAR package</description></item>
-            /// <item><description><b>web_framework</b>: web framework.</description></item>
+            /// <item><description><b>web_framework</b>: web framework</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -95,8 +95,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string BizType { get; set; }
 
             /// <summary>
-            /// <para>The display name of the middleware, database, or web service type. Valid values:
-            /// &lt;props=&quot;china&quot;&gt;</para>
+            /// <para>The display name of the middleware, database, or web service type. Valid values:</para>
+            /// <para>&lt;props=&quot;china&quot;&gt;</para>
             /// <list type="bullet">
             /// <item><description>系统服务</description></item>
             /// <item><description>软件库</description></item>
@@ -114,8 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <item><description>Database</description></item>
             /// <item><description>Web Container</description></item>
             /// <item><description>Jar</description></item>
-            /// <item><description>Web Framework
-            /// .</description></item>
+            /// <item><description>Web Framework</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -156,7 +155,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ContainerName { get; set; }
 
             /// <summary>
-            /// <para>The timestamp of the latest scan, which is the most recent time when Security Center collected middleware, database, or web service information. Unit: milliseconds.</para>
+            /// <para>The timestamp of the latest scan, which indicates the most recent time when Security Center collected middleware, database, or web service information. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1597987834000</para>
@@ -239,7 +238,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <para>The protocol on which the process listens. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>UDP</b></description></item>
-            /// <item><description><b>TCP</b>.</description></item>
+            /// <item><description><b>TCP</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -252,8 +251,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The listening status of the process. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>NONE</b>: Not listening.</description></item>
-            /// <item><description><b>LISTEN</b>: Listening.</description></item>
+            /// <item><description><b>NONE</b>: not listening</description></item>
+            /// <item><description><b>LISTEN</b>: listening</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -409,7 +408,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is a unique identifier generated by Alibaba Cloud for the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F9146867-16C8-4AAB-BB4FB8C2A4</para>

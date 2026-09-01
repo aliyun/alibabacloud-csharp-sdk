@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeCloudCenterInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>The search conditions for assets. This parameter is in JSON format. Pay attention to the case sensitivity when you specify this parameter.</para>
+        /// <para>The conditions for searching assets. This parameter is in JSON format. Note that the parameter values are case-sensitive.</para>
         /// <remarks>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Criteria { get; set; }
 
         /// <summary>
-        /// <para>The page number to return from the query results. Default value: <b>1</b>, which indicates that query results are returned starting from page 1.</para>
+        /// <para>The page number of the first page to return. Default value: <b>1</b>, which indicates that the query results are returned starting from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -33,16 +33,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The asset vendor. Separate multiple vendors with commas (,). Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>0</b>: Alibaba Cloud asset</description></item>
-        /// <item><description><b>1</b>: non-cloud asset</description></item>
-        /// <item><description><b>2</b>: IDC asset</description></item>
-        /// <item><description><b>3</b>, <b>4</b>, <b>5</b>, <b>7</b>, <b>14</b>, <b>16</b>: third-party cloud asset</description></item>
-        /// <item><description><b>8</b>: lightweight asset</description></item>
-        /// <item><description><b>9</b>: SAE</description></item>
-        /// <item><description><b>10</b>: PAI</description></item>
-        /// </list>
+        /// <para>The asset vendor. Separate multiple asset vendors with commas (,). Valid values:</para>
         /// 
         /// <b>Example:</b>
         /// <para>1,2,3</para>
@@ -54,9 +45,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The importance level of the asset. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>2</b>: important asset</description></item>
-        /// <item><description><b>1</b>: normal asset</description></item>
-        /// <item><description><b>0</b>: test asset</description></item>
+        /// <item><description><b>2</b>: Important asset.</description></item>
+        /// <item><description><b>1</b>: General asset.</description></item>
+        /// <item><description><b>0</b>: Test asset.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -67,7 +58,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Importance { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
         /// <item><description><b>en</b>: English</description></item>
@@ -83,8 +74,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The logical relationship between multiple search conditions. Default value: <b>OR</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>OR</b>: The search conditions are in the <b>OR</b> relationship.</description></item>
-        /// <item><description><b>AND</b>: The search conditions are in the <b>AND</b> relationship.</description></item>
+        /// <item><description><b>OR</b>: The search conditions have an <b>OR</b> relationship.</description></item>
+        /// <item><description><b>AND</b>: The search conditions have an <b>AND</b> relationship.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -95,13 +86,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string LogicalExp { get; set; }
 
         /// <summary>
-        /// <para>The type of the asset that you want to query. Valid values:</para>
+        /// <para>The type of asset to query. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ecs</b>: server</description></item>
-        /// <item><description><b>cloud_product</b>: cloud product</description></item>
-        /// <item><description><b>eci</b>: elastic container instance</description></item>
-        /// <item><description><b>rund</b>: RunD container instance</description></item>
-        /// <item><description><b>runc</b>: RunC container instance</description></item>
+        /// <item><description><b>ecs</b>: server.</description></item>
+        /// <item><description><b>cloud_product</b>: cloud product.</description></item>
+        /// <item><description><b>eci</b>: elastic container instance.</description></item>
+        /// <item><description><b>rund</b>: RunD container instance.</description></item>
+        /// <item><description><b>runc</b>: RunC container instance.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -122,10 +113,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to internationalize the default group name <b>Ungrouped</b>. Default value: <b>false</b>. Valid values:</para>
+        /// <para>Specifies whether to disable internationalization for the default group name <b>未分组</b>. Default value: <b>false</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: does not internationalize the group name. If the value of the GroupTrace response parameter is the default group <b>Ungrouped</b> in Security Center, the group name is still displayed as <b>Ungrouped</b> in Chinese.</description></item>
-        /// <item><description><b>false</b>: internationalizes the group name. If the value of the GroupTrace response parameter is the default group <b>Ungrouped</b> in Security Center, the group name is displayed as <b>default</b>.</description></item>
+        /// <item><description><b>true</b>: Internationalization is disabled. If the value of the GroupTrace response parameter is the default Security Center group <b>未分组</b>, the value is still displayed as <b>未分组</b>.</description></item>
+        /// <item><description><b>false</b>: Internationalization is enabled. If the value of the GroupTrace response parameter is the default Security Center group <b>未分组</b>, the value is displayed as <b>default</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -136,7 +127,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? NoGroupTrace { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paginated query. Default value: <b>20</b>, which indicates that 20 entries of asset information are displayed per page.</para>
+        /// <para>The number of assets to display on each page in a paged conditional query. Default value: <b>20</b>, which indicates that 20 asset records are displayed on each page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -148,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <term><b>Obsolete</b></term>
         /// 
         /// <summary>
-        /// <para>The ID of the region where the instance you want to query resides.</para>
+        /// <para>The region ID of the instance to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -159,9 +150,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the member account in the resource directory.</para>
+        /// <para>The ID of the Alibaba Cloud account that corresponds to the member account in the resource directory.</para>
         /// <remarks>
-        /// <para>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -172,10 +163,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? ResourceDirectoryAccountId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to use the NextToken method to retrieve asset list data. If this parameter is used, the TotalCount parameter is no longer returned. Valid values:</para>
+        /// <para>Specifies whether to use the NextToken method to retrieve asset list data. If this parameter is set to true, TotalCount is no longer returned. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: uses the NextToken method.</description></item>
-        /// <item><description><b>false</b>: does not use the NextToken method.</description></item>
+        /// <item><description><b>true</b>: Uses the NextToken method.</description></item>
+        /// <item><description><b>false</b>: Does not use the NextToken method.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

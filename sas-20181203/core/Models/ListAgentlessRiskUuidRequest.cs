@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineName { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page when using paging.</para>
+        /// <para>The maximum number of entries to return per page when using paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

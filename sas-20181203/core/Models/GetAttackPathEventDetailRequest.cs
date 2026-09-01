@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The data source. Default value: <b>default</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>caasm</b>: attack surface</description></item>
-        /// <item><description><b>default</b>: attack path.</description></item>
+        /// <item><description><b>default</b>: attack path</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><b>en</b>: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

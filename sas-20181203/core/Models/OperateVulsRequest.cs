@@ -20,6 +20,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public string OperateType { get; set; }
 
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
         /// <para>The type of vulnerability to fix. Set the value to <b>cve</b>, which indicates a Linux software vulnerability.</para>
         /// <para>This parameter is required.</para>

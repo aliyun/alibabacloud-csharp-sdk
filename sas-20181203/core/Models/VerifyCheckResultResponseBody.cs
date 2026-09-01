@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string TaskId { get; set; }
 
             /// <summary>
-            /// <para>The rate limit duration. Unit: seconds.</para>
+            /// <para>The throttling duration. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1800</para>

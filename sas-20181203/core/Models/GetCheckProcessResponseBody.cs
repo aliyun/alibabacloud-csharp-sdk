@@ -30,14 +30,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status code of the Cloud Security Posture Management (CSPM) check task. Valid values:</para>
+        /// <para>The status code of the CSPM check task. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>0: The task is being initialized and the total number of tasks is being calculated.</description></item>
         /// <item><description>1: The task is running. You can query the total number of tasks and the number of completed tasks.</description></item>
         /// <item><description>2: The task is completed.</description></item>
         /// <item><description>3: The task timed out.</description></item>
-        /// <item><description>4: The task is invalid. Check whether valid assets exist for detection.</description></item>
+        /// <item><description>4: The task is invalid. Check whether valid assets exist for the check.</description></item>
         /// <item><description>5: No task record exists. Check whether the TaskId is correct.</description></item>
+        /// <item><description>6: The task is running and data is being prepared. You cannot query the total number of tasks or the number of completed tasks.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -48,7 +49,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string StatusCode { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud service configuration check task to query.</para>
+        /// <para>The ID of the cloud service configuration check task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5347c7b6-c85c-4070-846a-3029e08e****</para>
@@ -58,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The total number of assets to check.</para>
+        /// <para>The total number of assets to be checked.</para>
         /// 
         /// <b>Example:</b>
         /// <para>113</para>

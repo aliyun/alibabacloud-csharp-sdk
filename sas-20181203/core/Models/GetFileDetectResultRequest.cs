@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class GetFileDetectResultRequest : TeaModel {
         /// <summary>
-        /// <para>An array of up to 100 unique file identifiers.</para>
+        /// <para>The list of file identifiers. A maximum of 100 elements can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("HashKeyList")]
@@ -30,10 +30,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The type of file to detect. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>0</b>: malicious file detection</para>
-        /// </description></item>
-        /// <item><description><para><b>6</b>: Skill compressed package detection</para>
-        /// </description></item>
+        /// <item><description><b>0</b>: malicious file detection</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

@@ -10,15 +10,26 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyStartVulScanRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
+        /// <summary>
         /// <para>Settings for the types of vulnerabilities to detect by using the one-click scan feature. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cve</b>: Linux software vulnerability.</description></item>
         /// <item><description><b>sys</b>: Windows system vulnerability.</description></item>
         /// <item><description><b>cms</b>: Web-CMS vulnerability.</description></item>
-        /// <item><description><b>app</b>: Application vulnerability detected by the web scanner.</description></item>
-        /// <item><description><b>emg</b>: Emergency vulnerability.</description></item>
-        /// <item><description><b>image</b>: Container image vulnerability.</description></item>
-        /// <item><description><b>sca</b>: Application vulnerability detected by software constituency parsing.<remarks>
+        /// <item><description><b>app</b>: application vulnerability detected by the web scanner.</description></item>
+        /// <item><description><b>emg</b>: urgent vulnerability.</description></item>
+        /// <item><description><b>image</b>: container image vulnerability.</description></item>
+        /// <item><description><b>sca</b>: application vulnerability detected by software constituency parsing.<remarks>
         /// <para>If this parameter is left empty, all vulnerability types are detected.</para>
         /// </remarks>
         /// </description></item>
@@ -32,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Types { get; set; }
 
         /// <summary>
-        /// <para>The list of server UUIDs. Separate multiple UUIDs with commas (,).</para>
+        /// <para>The UUIDs of the servers. Separate multiple UUIDs with commas (,).</para>
         /// <remarks>
         /// <para>You can call the <a href="https://help.aliyun.com/document_detail/421726.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</para>
         /// </remarks>

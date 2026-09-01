@@ -9,11 +9,15 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class SubmitCheckRequest : TeaModel {
+        [NameInMap("ResourceDirectoryAccountId")]
+        [Validation(Required=false)]
+        public long? ResourceDirectoryAccountId { get; set; }
+
         /// <summary>
-        /// <para>The check items that are scanned. Valid values:</para>
+        /// <para>The scan range. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>FULL</b>: All check items are scanned.</description></item>
-        /// <item><description><b>FULL</b>: Only the check items that are configured are scanned.</description></item>
+        /// <item><description><b>FULL</b>: scans all check items</description></item>
+        /// <item><description><b>POLICY</b>: scans custom-configured check items</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,7 +28,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ScanRange { get; set; }
 
         /// <summary>
-        /// <para>The source of task.</para>
+        /// <para>The task source. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>YAO_CHI</b>: Alibaba Cloud ApsaraDB console.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>YAO_CHI</para>

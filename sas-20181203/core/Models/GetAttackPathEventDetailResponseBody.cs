@@ -285,6 +285,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("PathInterpretationStatus")]
+            [Validation(Required=false)]
+            public string PathInterpretationStatus { get; set; }
+
+            [NameInMap("PathInterpretationUrl")]
+            [Validation(Required=false)]
+            public string PathInterpretationUrl { get; set; }
+
             /// <summary>
             /// <para>The path name.</para>
             /// 

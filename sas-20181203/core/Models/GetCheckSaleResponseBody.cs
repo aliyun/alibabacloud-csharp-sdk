@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? InstancePurchaseCount { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether the user is an existing user who used the cloud service configuration check feature before the sales feature was released on July 7, 2023. Valid values:</para>
+            /// <para>Indicates whether the user is an existing user who used the cloud service configuration check feature before the sales feature was released (July 7, 2023). Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: The user is an existing user.</description></item>
             /// <item><description><b>false</b>: The user is not an existing user.</description></item>
@@ -67,11 +67,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? PurchaseCount { get; set; }
 
             /// <summary>
-            /// <para>The type of the sales user. Valid values:</para>
+            /// <para>The sales user type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: full-feature user who can use all check items.</description></item>
-            /// <item><description><b>2</b>: user who needs to upgrade and can only use check items that were available before the sales feature was released on July 7, 2023.</description></item>
-            /// <item><description><b>3</b>: user who needs to purchase the feature and cannot use the cloud service configuration check feature.</description></item>
+            /// <item><description><b>1</b>: Full-feature user. The user can use all check items.</description></item>
+            /// <item><description><b>2</b>: Upgrade-required user. The user can use only the check items that were available before the sales feature was released (July 7, 2023).</description></item>
+            /// <item><description><b>3</b>: Purchase-required user. The user cannot use the cloud service configuration check feature.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
+        /// <para>The ID of the request. The China Cloud generates a unique identifier for the request, which can be used for troubleshooting and diagnostics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F5CF78A7-30AA-59DB-847F-13EE3AE7****</para>

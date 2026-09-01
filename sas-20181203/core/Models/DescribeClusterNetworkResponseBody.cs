@@ -10,21 +10,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeClusterNetworkResponseBody : TeaModel {
         /// <summary>
-        /// <para>Information about the network topology edge in the cluster.</para>
+        /// <para>The list of network topology edge information at the cluster level.</para>
         /// </summary>
         [NameInMap("ClusterNetwork")]
         [Validation(Required=false)]
         public DescribeClusterNetworkResponseBodyClusterNetwork ClusterNetwork { get; set; }
         public class DescribeClusterNetworkResponseBodyClusterNetwork : TeaModel {
             /// <summary>
-            /// <para>An array that consists of information about the topology edge.</para>
+            /// <para>The list of topology edge information.</para>
             /// </summary>
             [NameInMap("Edge")]
             [Validation(Required=false)]
             public List<DescribeClusterNetworkResponseBodyClusterNetworkEdge> Edge { get; set; }
             public class DescribeClusterNetworkResponseBodyClusterNetworkEdge : TeaModel {
                 /// <summary>
-                /// <para>The ID of the destination node.</para>
+                /// <para>The destination node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cfb41a869c71e4678a97021582dd8****</para>
@@ -34,9 +34,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string DstNodeId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the destination node. Valid values:</para>
+                /// <para>The destination node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description>Set the value to <b>cluster</b>.</description></item>
+                /// <item><description><b>cluster</b>: cluster.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Port { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the source node.</para>
+                /// <para>The source node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cfb41a869c71e4678a97021582dd8****</para>
@@ -77,12 +77,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string SrcNodeId { get; set; }
 
                 /// <summary>
-                /// <para>The type of the source node. Valid values:</para>
+                /// <para>The source node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>cluster</b>: a cluster.</para>
-                /// </description></item>
-                /// <item><description><para><b>internet</b>: a network node outside the cluster</para>
-                /// </description></item>
+                /// <item><description><b>cluster</b>: cluster.</description></item>
+                /// <item><description><b>internet</b>: external network node.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -95,19 +93,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>An array that consists of information about the node.</para>
+            /// <para>The list of node information.</para>
             /// </summary>
             [NameInMap("Node")]
             [Validation(Required=false)]
             public List<DescribeClusterNetworkResponseBodyClusterNetworkNode> Node { get; set; }
             public class DescribeClusterNetworkResponseBodyClusterNetworkNode : TeaModel {
                 /// <summary>
-                /// <para>The status of the microsegmentation switch. Valid values:</para>
+                /// <para>The container firewall switch status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>0</b>: off.</para>
-                /// </description></item>
-                /// <item><description><para><b>1</b>: on.</para>
-                /// </description></item>
+                /// <item><description><b>0</b>: disabled.</description></item>
+                /// <item><description><b>1</b>: enabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -118,7 +114,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? CnnfSwitch { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the node.</para>
+                /// <para>The node ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cfeb7a9f99ce740e98c5595d0fe37****</para>
@@ -130,10 +126,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The network type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>0</b>: classic network.</para>
-                /// </description></item>
-                /// <item><description><para><b>1</b>: virtual private cloud (VPC).</para>
-                /// </description></item>
+                /// <item><description><b>0</b>: classic network.</description></item>
+                /// <item><description><b>1</b>: virtual private cloud (VPC).</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -144,7 +138,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public int? InterceptionType { get; set; }
 
                 /// <summary>
-                /// <para>The name of the node.</para>
+                /// <para>The node name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testwww</para>
@@ -154,12 +148,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string Name { get; set; }
 
                 /// <summary>
-                /// <para>The status of the network topology switch. Valid values:</para>
+                /// <para>The network topology switch status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>ON</b></para>
-                /// </description></item>
-                /// <item><description><para><b>OFF</b></para>
-                /// </description></item>
+                /// <item><description><b>ON</b>: enabled.</description></item>
+                /// <item><description><b>OFF</b>: disabled.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -172,16 +164,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 /// <summary>
                 /// <para>The risk level. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>3</b>: high.</para>
-                /// </description></item>
-                /// <item><description><para><b>2</b>: medium.</para>
-                /// </description></item>
-                /// <item><description><para><b>1</b>: low.</para>
-                /// </description></item>
-                /// <item><description><para><b>0</b>: secure.</para>
-                /// </description></item>
-                /// <item><description><para><b>-1</b>: unknown.</para>
-                /// </description></item>
+                /// <item><description><b>3</b>: high.</description></item>
+                /// <item><description><b>2</b>: medium.</description></item>
+                /// <item><description><b>1</b>: low.</description></item>
+                /// <item><description><b>0</b>: safe.</description></item>
+                /// <item><description><b>-1</b>: unknown.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -192,12 +179,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string RiskLevel { get; set; }
 
                 /// <summary>
-                /// <para>The type of the node. Valid values:</para>
+                /// <para>The node type. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><b>cluster</b>: a cluster.</para>
-                /// </description></item>
-                /// <item><description><para><b>internet</b>: a network node outside the cluster.</para>
-                /// </description></item>
+                /// <item><description><b>cluster</b>: cluster.</description></item>
+                /// <item><description><b>internet</b>: external network node outside the cluster.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -212,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request, which is used to locate and troubleshoot issues.</para>
+        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for this request. You can use it to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C286491D-4A2F-589A-B63B-D2AD3DA9BD71</para>

@@ -35,8 +35,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic binding. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: Disabled.</description></item>
-        /// <item><description><b>1</b>: Enabled.</description></item>
+        /// <item><description><b>0</b>: Disable automatic binding.</description></item>
+        /// <item><description><b>1</b>: Enable automatic binding.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The list of application IDs to bind.</para>
         /// <remarks>
-        /// <para>Retrieve the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</para>
+        /// <para>Obtain the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("BindAppList")]
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The Asset Type for the operation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>INSTANCE</b>: instance.</description></item>
-        /// <item><description><b>APP</b>: application.</description></item>
+        /// <item><description><b>INSTANCE</b>: Instance.</description></item>
+        /// <item><description><b>APP</b>: Application.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -92,9 +92,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<string> BindUuidList { get; set; }
 
         /// <summary>
-        /// <para>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when specifying this parameter.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>The search conditions for assets. This parameter is in JSON format. Pay attention to letter case when you specify this parameter.</para>
         /// <remarks>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query supported search conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. Call the <a href="~~DescribeCriteria~~">DescribeCriteria</a> operation to query the supported search conditions.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -129,13 +136,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string NtmVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a pre-binding operation. Valid values:</para>
+        /// <para>Specifies whether to enable pre-binding. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: No.</description></item>
         /// <item><description><b>1</b>: Yes.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>After pre-binding is enabled, the corresponding edition authorization quota is automatically bound to the specified servers after the purchase is completed.</para>
+        /// <para>After pre-binding is enabled, the corresponding authorization quota is automatically bound to the specified servers after the purchase is completed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -168,7 +175,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The list of application IDs to unbind.</para>
         /// <remarks>
-        /// <para>Retrieve the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</para>
+        /// <para>Obtain the IDs by calling the <a href="~~ListMachineApps~~">ListMachineApps</a> operation.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("UnBindAppList")]

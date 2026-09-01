@@ -17,6 +17,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public List<long?> CheckIds { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to forcibly run the specified check items. Default value: false.</para>
+        /// <list type="bullet">
+        /// <item><description>true: Forcibly runs the specified check items. Forced execution bypasses frequency and quantity limits and initiates the check directly, which may cause duplicate checks to run multiple times within a short period.</description></item>
+        /// <item><description>false (default): Does not forcibly run the specified check items. This ensures that the same check item is executed only once within a short period.</description></item>
+        /// </list>
+        /// </summary>
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
+        /// <summary>
         /// <para>The list of instance IDs of the assets associated with the check items.</para>
         /// </summary>
         [NameInMap("InstanceIds")]

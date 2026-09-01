@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectStrategyResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of strategies.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string AssetSelectionType { get; set; }
 
             /// <summary>
-            /// <para>The duration, in days, of the learning phase after model creation.</para>
+            /// <para>The number of days after the model is initially created before learning ends.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? DurationDaysAfterInit { get; set; }
 
             /// <summary>
-            /// <para>The number of consecutive days without new process detections before the learning phase automatically ends.</para>
+            /// <para>The number of days after which the model ends when no new processes are added.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? DurationDaysAfterStop { get; set; }
 
             /// <summary>
-            /// <para>The strategy ID.</para>
+            /// <para>The policy ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MachineCount { get; set; }
 
             /// <summary>
-            /// <para>The strategy name.</para>
+            /// <para>The policy name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test****</para>
@@ -79,10 +79,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The whitelist mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>hash</b>: process hash</para>
-            /// </description></item>
-            /// <item><description><para><b>path</b>: process path</para>
-            /// </description></item>
+            /// <item><description><b>hash</b>: process hash</description></item>
+            /// <item><description><b>path</b>: process path</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -102,7 +100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListUnknownThreatDetectStrategyResponseBodyPageInfo PageInfo { get; set; }
         public class ListUnknownThreatDetectStrategyResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries returned on the current page.</para>
+            /// <para>The number of entries displayed on the current page.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -112,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The current page number.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -122,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries returned per page.</para>
+            /// <para>The maximum number of entries displayed on each page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -132,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of matching entries.</para>
+            /// <para>The total number of entries returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>69</para>
@@ -144,7 +142,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>898F7AA7-CECD-5EC7-AF4D-664C601B****</para>

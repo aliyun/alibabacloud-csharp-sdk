@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Select an operation for assets.</para>
+        /// <para>Adds assets to an asset selection operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -98,6 +98,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Criteria))
             {
                 query["Criteria"] = request.Criteria;
@@ -135,7 +139,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Select an operation for assets.</para>
+        /// <para>Adds assets to an asset selection operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -152,6 +156,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Criteria))
             {
                 query["Criteria"] = request.Criteria;
@@ -189,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Select an operation for assets.</para>
+        /// <para>Adds assets to an asset selection operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -207,7 +215,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Select an operation for assets.</para>
+        /// <para>Adds assets to an asset selection operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -377,7 +385,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances on which risks are detected based on check items of the configuration assessment feature to a whitelist.</para>
+        /// <para>Adds instances to the whitelist at the check item level for cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -401,6 +409,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckId))
             {
                 query["CheckId"] = request.CheckId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -439,7 +451,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances on which risks are detected based on check items of the configuration assessment feature to a whitelist.</para>
+        /// <para>Adds instances to the whitelist at the check item level for cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -463,6 +475,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckId))
             {
                 query["CheckId"] = request.CheckId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -501,7 +517,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances on which risks are detected based on check items of the configuration assessment feature to a whitelist.</para>
+        /// <para>Adds instances to the whitelist at the check item level for cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -519,7 +535,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds instances on which risks are detected based on check items of the configuration assessment feature to a whitelist.</para>
+        /// <para>Adds instances to the whitelist at the check item level for cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -537,7 +553,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the check items of the configuration assessment feature to the whitelist.</para>
+        /// <para>Adds check items to the whitelist for cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -557,6 +573,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckIds))
             {
                 query["CheckIds"] = request.CheckIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -591,7 +611,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the check items of the configuration assessment feature to the whitelist.</para>
+        /// <para>Adds check items to the whitelist for cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -611,6 +631,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckIds))
             {
                 query["CheckIds"] = request.CheckIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -645,7 +669,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the check items of the configuration assessment feature to the whitelist.</para>
+        /// <para>Adds check items to the whitelist for cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -663,7 +687,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds the check items of the configuration assessment feature to the whitelist.</para>
+        /// <para>Adds check items to the whitelist for cloud platform configuration checks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -681,7 +705,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom defense rule.</para>
+        /// <para>Creates a user-defined defense rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -791,7 +815,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom defense rule.</para>
+        /// <para>Creates a user-defined defense rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -901,7 +925,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom defense rule.</para>
+        /// <para>Creates a user-defined defense rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -919,7 +943,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom defense rule.</para>
+        /// <para>Creates a user-defined defense rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3525,7 +3549,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more processes for intelligent behavior analysis.</para>
+        /// <para>Adds processes for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3545,6 +3569,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventIdList))
             {
                 query["EventIdList"] = request.EventIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandleRemark))
+            {
+                query["HandleRemark"] = request.HandleRemark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessList))
             {
@@ -3575,7 +3603,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more processes for intelligent behavior analysis.</para>
+        /// <para>Adds processes for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3595,6 +3623,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventIdList))
             {
                 query["EventIdList"] = request.EventIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandleRemark))
+            {
+                query["HandleRemark"] = request.HandleRemark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProcessList))
             {
@@ -3625,7 +3657,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more processes for intelligent behavior analysis.</para>
+        /// <para>Adds processes for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3643,7 +3675,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds one or more processes for intelligent behavior analysis.</para>
+        /// <para>Adds processes for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3806,6 +3838,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["EventType"] = request.EventType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
@@ -3859,6 +3895,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventType))
             {
                 query["EventType"] = request.EventType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
@@ -4446,6 +4486,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["BindAll"] = request.BindAll;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Criteria))
             {
                 query["Criteria"] = request.Criteria;
@@ -4465,6 +4509,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreBindOrderId))
             {
                 query["PreBindOrderId"] = request.PreBindOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
             {
@@ -4528,6 +4576,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["BindAll"] = request.BindAll;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Criteria))
             {
                 query["Criteria"] = request.Criteria;
@@ -4547,6 +4599,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PreBindOrderId))
             {
                 query["PreBindOrderId"] = request.PreBindOrderId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
             {
@@ -4989,7 +5045,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration items of the configuration assessment feature.</para>
+        /// <para>Modifies the configuration of a cloud platform configuration check.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5019,6 +5075,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddedCheck))
             {
                 query["AddedCheck"] = request.AddedCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRequirementIdsShrink))
             {
@@ -5097,7 +5157,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration items of the configuration assessment feature.</para>
+        /// <para>Modifies the configuration of a cloud platform configuration check.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -5127,6 +5187,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddedCheck))
             {
                 query["AddedCheck"] = request.AddedCheck;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigRequirementIdsShrink))
             {
@@ -5205,7 +5269,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration items of the configuration assessment feature.</para>
+        /// <para>Modifies the configuration of a cloud platform configuration check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5223,7 +5287,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration items of the configuration assessment feature.</para>
+        /// <para>Modifies the configuration of a cloud platform configuration check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5385,6 +5449,142 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Modifies the configuration instance of a check scope.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeCheckScopeConfigInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeCheckScopeConfigInstanceResponse
+        /// </returns>
+        public ChangeCheckScopeConfigInstanceResponse ChangeCheckScopeConfigInstanceWithOptions(ChangeCheckScopeConfigInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddAssetUuids))
+            {
+                query["AddAssetUuids"] = request.AddAssetUuids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAssetUuids))
+            {
+                query["DeleteAssetUuids"] = request.DeleteAssetUuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeCheckScopeConfigInstance",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeCheckScopeConfigInstanceResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration instance of a check scope.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeCheckScopeConfigInstanceRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeCheckScopeConfigInstanceResponse
+        /// </returns>
+        public async Task<ChangeCheckScopeConfigInstanceResponse> ChangeCheckScopeConfigInstanceWithOptionsAsync(ChangeCheckScopeConfigInstanceRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AddAssetUuids))
+            {
+                query["AddAssetUuids"] = request.AddAssetUuids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DeleteAssetUuids))
+            {
+                query["DeleteAssetUuids"] = request.DeleteAssetUuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ChangeCheckScopeConfigInstance",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ChangeCheckScopeConfigInstanceResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration instance of a check scope.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeCheckScopeConfigInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeCheckScopeConfigInstanceResponse
+        /// </returns>
+        public ChangeCheckScopeConfigInstanceResponse ChangeCheckScopeConfigInstance(ChangeCheckScopeConfigInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ChangeCheckScopeConfigInstanceWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the configuration instance of a check scope.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ChangeCheckScopeConfigInstanceRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ChangeCheckScopeConfigInstanceResponse
+        /// </returns>
+        public async Task<ChangeCheckScopeConfigInstanceResponse> ChangeCheckScopeConfigInstanceAsync(ChangeCheckScopeConfigInstanceRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ChangeCheckScopeConfigInstanceWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the details of the deduction modules of the security score feature, including custom settings.</para>
         /// </summary>
         /// 
@@ -5409,6 +5609,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetSecurityScoreRule))
             {
                 query["ResetSecurityScoreRule"] = request.ResetSecurityScoreRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityScoreCategoryList))
             {
@@ -5463,6 +5667,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResetSecurityScoreRule))
             {
                 query["ResetSecurityScoreRule"] = request.ResetSecurityScoreRule;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityScoreCategoryList))
             {
@@ -6446,6 +6654,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["AutoDeleteDays"] = request.AutoDeleteDays;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseAfterScan))
             {
                 query["ReleaseAfterScan"] = request.ReleaseAfterScan;
@@ -6507,6 +6723,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoDeleteDays))
             {
                 query["AutoDeleteDays"] = request.AutoDeleteDays;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReleaseAfterScan))
             {
@@ -6777,7 +7001,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create asset selection configurations.</para>
+        /// <para>Creates an asset selection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6797,6 +7021,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 query["BusinessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
             {
@@ -6827,7 +7055,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create asset selection configurations.</para>
+        /// <para>Creates an asset selection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6847,6 +7075,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 query["BusinessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Platform))
             {
@@ -6877,7 +7109,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create asset selection configurations.</para>
+        /// <para>Creates an asset selection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6895,7 +7127,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create asset selection configurations.</para>
+        /// <para>Creates an asset selection configuration.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8769,7 +9001,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a periodic scan task. The task can be an image scan task, urgent vulnerability scan task, or virus scan task.</para>
+        /// <para>Creates a periodic scan task, including image scan, emergency vulnerability scanning, and virus scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8786,6 +9018,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
@@ -8847,7 +9083,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a periodic scan task. The task can be an image scan task, urgent vulnerability scan task, or virus scan task.</para>
+        /// <para>Creates a periodic scan task, including image scan, emergency vulnerability scanning, and virus scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8864,6 +9100,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Enable))
             {
                 query["Enable"] = request.Enable;
@@ -8925,7 +9165,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a periodic scan task. The task can be an image scan task, urgent vulnerability scan task, or virus scan task.</para>
+        /// <para>Creates a periodic scan task, including image scan, emergency vulnerability scanning, and virus scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8943,7 +9183,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a periodic scan task. The task can be an image scan task, urgent vulnerability scan task, or virus scan task.</para>
+        /// <para>Creates a periodic scan task, including image scan, emergency vulnerability scanning, and virus scan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9113,26 +9353,24 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a file to the cloud for detection.</para>
+        /// <para>Pushes a file to the cloud for detection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to submit a file to the cloud for detection. It supports two scenarios: malicious file detection and Skill archive detection.</para>
-        /// <h3>File submission methods</h3>
-        /// <para>Submit a file by either pre-uploading it or providing a download link.
-        /// If you use the pre-upload method, ensure the file is uploaded successfully before you call this operation. For details on how to upload a file, see the CreateFileDetectUploadUrl operation.
-        /// If you use a download link, specify a publicly accessible URL in the <c>DownloadUrl</c> parameter.
-        /// The malicious file detection scenario supports both methods. For the Skill archive detection scenario (when <c>Type</c> is <c>6</c>), the pre-upload method is not supported, and you must provide a download link.</para>
-        /// <h3>Unique identifier</h3>
-        /// <para>All API operations related to file detection include the <c>HashKey</c> parameter. This parameter specifies the file\&quot;s unique identifier for a detection task, which you use to query the results.
-        /// For Skill archive detection (when <c>Type</c> is <c>6</c>), you do not need to calculate the <c>HashKey</c> in advance. This operation returns a globally unique UUID as the file\&quot;s identifier, which you can use to query the results.
-        /// For malicious file detection (when <c>Type</c> is <c>0</c>), you must calculate the <c>HashKey</c> before you call this operation. The <c>HashKey</c> value must be the MD5 or SHA-256 hash of the entire file.
-        /// To calculate the MD5 or SHA-256 hash of a file, follow these steps:</para>
+        /// <para>Pushes a file to the cloud for detection.</para>
+        /// <h3>File upload methods</h3>
+        /// <para>Two file upload methods are supported: pre-upload and download URL.
+        /// If you use the pre-upload method, confirm that the file is uploaded before you invoke this operation. For information about how to upload a file, refer to the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.
+        /// If you use the download URL method, pass in a download URL that supports public network access by using the DownloadUrl parameter.</para>
+        /// <h3>File unique identifier</h3>
+        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results.
+        /// Calculate the HashKey before calling the operation. Only the MD5 or SHA-256 of the complete file content is supported.
+        /// To calculate the MD5 or SHA-256 value of the file content, follow these two steps:</para>
         /// <ol>
-        /// <item><description>Use the MD5 or SHA-256 algorithm to generate a 128-bit or 256-bit hash value. You can use common libraries such as <c>MessageDigest</c> in Java or the <c>hashlib</c> library in Python.</description></item>
-        /// <item><description>Encode the hash value into a hexadecimal string. You can use tools such as the <c>Codec</c> utility in Java or the <c>hex()</c> function in Python. Ensure that the final string consists of only digits and lowercase letters. An MD5 hash is 32 characters long, and a SHA-256 hash is 64 characters long.
-        /// Note: You must use the same <c>HashKey</c> value when you submit a file for detection and when you query the results. Otherwise, both the submission and the query will fail.</description></item>
+        /// <item><description>Use the MD5 or SHA-256 algorithm to encrypt the data and generate a 128-bit or 256-bit hash value. Available libraries include Java MessageDigest and Python hashlib.</description></item>
+        /// <item><description>Encode the generated hash value as a hexadecimal string. Available libraries include Java Codec and Python hex function. Make sure the final string is a combination of digits and lowercase letters. The MD5 string is 32 characters, and the SHA-256 string is 64 characters.
+        /// Note: The push and query operations for a single detection must use the same HashKey. Otherwise, the detection cannot be correctly pushed and the results cannot be queried.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9203,26 +9441,24 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a file to the cloud for detection.</para>
+        /// <para>Pushes a file to the cloud for detection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to submit a file to the cloud for detection. It supports two scenarios: malicious file detection and Skill archive detection.</para>
-        /// <h3>File submission methods</h3>
-        /// <para>Submit a file by either pre-uploading it or providing a download link.
-        /// If you use the pre-upload method, ensure the file is uploaded successfully before you call this operation. For details on how to upload a file, see the CreateFileDetectUploadUrl operation.
-        /// If you use a download link, specify a publicly accessible URL in the <c>DownloadUrl</c> parameter.
-        /// The malicious file detection scenario supports both methods. For the Skill archive detection scenario (when <c>Type</c> is <c>6</c>), the pre-upload method is not supported, and you must provide a download link.</para>
-        /// <h3>Unique identifier</h3>
-        /// <para>All API operations related to file detection include the <c>HashKey</c> parameter. This parameter specifies the file\&quot;s unique identifier for a detection task, which you use to query the results.
-        /// For Skill archive detection (when <c>Type</c> is <c>6</c>), you do not need to calculate the <c>HashKey</c> in advance. This operation returns a globally unique UUID as the file\&quot;s identifier, which you can use to query the results.
-        /// For malicious file detection (when <c>Type</c> is <c>0</c>), you must calculate the <c>HashKey</c> before you call this operation. The <c>HashKey</c> value must be the MD5 or SHA-256 hash of the entire file.
-        /// To calculate the MD5 or SHA-256 hash of a file, follow these steps:</para>
+        /// <para>Pushes a file to the cloud for detection.</para>
+        /// <h3>File upload methods</h3>
+        /// <para>Two file upload methods are supported: pre-upload and download URL.
+        /// If you use the pre-upload method, confirm that the file is uploaded before you invoke this operation. For information about how to upload a file, refer to the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.
+        /// If you use the download URL method, pass in a download URL that supports public network access by using the DownloadUrl parameter.</para>
+        /// <h3>File unique identifier</h3>
+        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results.
+        /// Calculate the HashKey before calling the operation. Only the MD5 or SHA-256 of the complete file content is supported.
+        /// To calculate the MD5 or SHA-256 value of the file content, follow these two steps:</para>
         /// <ol>
-        /// <item><description>Use the MD5 or SHA-256 algorithm to generate a 128-bit or 256-bit hash value. You can use common libraries such as <c>MessageDigest</c> in Java or the <c>hashlib</c> library in Python.</description></item>
-        /// <item><description>Encode the hash value into a hexadecimal string. You can use tools such as the <c>Codec</c> utility in Java or the <c>hex()</c> function in Python. Ensure that the final string consists of only digits and lowercase letters. An MD5 hash is 32 characters long, and a SHA-256 hash is 64 characters long.
-        /// Note: You must use the same <c>HashKey</c> value when you submit a file for detection and when you query the results. Otherwise, both the submission and the query will fail.</description></item>
+        /// <item><description>Use the MD5 or SHA-256 algorithm to encrypt the data and generate a 128-bit or 256-bit hash value. Available libraries include Java MessageDigest and Python hashlib.</description></item>
+        /// <item><description>Encode the generated hash value as a hexadecimal string. Available libraries include Java Codec and Python hex function. Make sure the final string is a combination of digits and lowercase letters. The MD5 string is 32 characters, and the SHA-256 string is 64 characters.
+        /// Note: The push and query operations for a single detection must use the same HashKey. Otherwise, the detection cannot be correctly pushed and the results cannot be queried.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9293,26 +9529,24 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a file to the cloud for detection.</para>
+        /// <para>Pushes a file to the cloud for detection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to submit a file to the cloud for detection. It supports two scenarios: malicious file detection and Skill archive detection.</para>
-        /// <h3>File submission methods</h3>
-        /// <para>Submit a file by either pre-uploading it or providing a download link.
-        /// If you use the pre-upload method, ensure the file is uploaded successfully before you call this operation. For details on how to upload a file, see the CreateFileDetectUploadUrl operation.
-        /// If you use a download link, specify a publicly accessible URL in the <c>DownloadUrl</c> parameter.
-        /// The malicious file detection scenario supports both methods. For the Skill archive detection scenario (when <c>Type</c> is <c>6</c>), the pre-upload method is not supported, and you must provide a download link.</para>
-        /// <h3>Unique identifier</h3>
-        /// <para>All API operations related to file detection include the <c>HashKey</c> parameter. This parameter specifies the file\&quot;s unique identifier for a detection task, which you use to query the results.
-        /// For Skill archive detection (when <c>Type</c> is <c>6</c>), you do not need to calculate the <c>HashKey</c> in advance. This operation returns a globally unique UUID as the file\&quot;s identifier, which you can use to query the results.
-        /// For malicious file detection (when <c>Type</c> is <c>0</c>), you must calculate the <c>HashKey</c> before you call this operation. The <c>HashKey</c> value must be the MD5 or SHA-256 hash of the entire file.
-        /// To calculate the MD5 or SHA-256 hash of a file, follow these steps:</para>
+        /// <para>Pushes a file to the cloud for detection.</para>
+        /// <h3>File upload methods</h3>
+        /// <para>Two file upload methods are supported: pre-upload and download URL.
+        /// If you use the pre-upload method, confirm that the file is uploaded before you invoke this operation. For information about how to upload a file, refer to the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.
+        /// If you use the download URL method, pass in a download URL that supports public network access by using the DownloadUrl parameter.</para>
+        /// <h3>File unique identifier</h3>
+        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results.
+        /// Calculate the HashKey before calling the operation. Only the MD5 or SHA-256 of the complete file content is supported.
+        /// To calculate the MD5 or SHA-256 value of the file content, follow these two steps:</para>
         /// <ol>
-        /// <item><description>Use the MD5 or SHA-256 algorithm to generate a 128-bit or 256-bit hash value. You can use common libraries such as <c>MessageDigest</c> in Java or the <c>hashlib</c> library in Python.</description></item>
-        /// <item><description>Encode the hash value into a hexadecimal string. You can use tools such as the <c>Codec</c> utility in Java or the <c>hex()</c> function in Python. Ensure that the final string consists of only digits and lowercase letters. An MD5 hash is 32 characters long, and a SHA-256 hash is 64 characters long.
-        /// Note: You must use the same <c>HashKey</c> value when you submit a file for detection and when you query the results. Otherwise, both the submission and the query will fail.</description></item>
+        /// <item><description>Use the MD5 or SHA-256 algorithm to encrypt the data and generate a 128-bit or 256-bit hash value. Available libraries include Java MessageDigest and Python hashlib.</description></item>
+        /// <item><description>Encode the generated hash value as a hexadecimal string. Available libraries include Java Codec and Python hex function. Make sure the final string is a combination of digits and lowercase letters. The MD5 string is 32 characters, and the SHA-256 string is 64 characters.
+        /// Note: The push and query operations for a single detection must use the same HashKey. Otherwise, the detection cannot be correctly pushed and the results cannot be queried.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -9331,26 +9565,24 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a file to the cloud for detection.</para>
+        /// <para>Pushes a file to the cloud for detection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Use this operation to submit a file to the cloud for detection. It supports two scenarios: malicious file detection and Skill archive detection.</para>
-        /// <h3>File submission methods</h3>
-        /// <para>Submit a file by either pre-uploading it or providing a download link.
-        /// If you use the pre-upload method, ensure the file is uploaded successfully before you call this operation. For details on how to upload a file, see the CreateFileDetectUploadUrl operation.
-        /// If you use a download link, specify a publicly accessible URL in the <c>DownloadUrl</c> parameter.
-        /// The malicious file detection scenario supports both methods. For the Skill archive detection scenario (when <c>Type</c> is <c>6</c>), the pre-upload method is not supported, and you must provide a download link.</para>
-        /// <h3>Unique identifier</h3>
-        /// <para>All API operations related to file detection include the <c>HashKey</c> parameter. This parameter specifies the file\&quot;s unique identifier for a detection task, which you use to query the results.
-        /// For Skill archive detection (when <c>Type</c> is <c>6</c>), you do not need to calculate the <c>HashKey</c> in advance. This operation returns a globally unique UUID as the file\&quot;s identifier, which you can use to query the results.
-        /// For malicious file detection (when <c>Type</c> is <c>0</c>), you must calculate the <c>HashKey</c> before you call this operation. The <c>HashKey</c> value must be the MD5 or SHA-256 hash of the entire file.
-        /// To calculate the MD5 or SHA-256 hash of a file, follow these steps:</para>
+        /// <para>Pushes a file to the cloud for detection.</para>
+        /// <h3>File upload methods</h3>
+        /// <para>Two file upload methods are supported: pre-upload and download URL.
+        /// If you use the pre-upload method, confirm that the file is uploaded before you invoke this operation. For information about how to upload a file, refer to the <a href="~~CreateFileDetectUploadUrl~~">CreateFileDetectUploadUrl</a> operation.
+        /// If you use the download URL method, pass in a download URL that supports public network access by using the DownloadUrl parameter.</para>
+        /// <h3>File unique identifier</h3>
+        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results.
+        /// Calculate the HashKey before calling the operation. Only the MD5 or SHA-256 of the complete file content is supported.
+        /// To calculate the MD5 or SHA-256 value of the file content, follow these two steps:</para>
         /// <ol>
-        /// <item><description>Use the MD5 or SHA-256 algorithm to generate a 128-bit or 256-bit hash value. You can use common libraries such as <c>MessageDigest</c> in Java or the <c>hashlib</c> library in Python.</description></item>
-        /// <item><description>Encode the hash value into a hexadecimal string. You can use tools such as the <c>Codec</c> utility in Java or the <c>hex()</c> function in Python. Ensure that the final string consists of only digits and lowercase letters. An MD5 hash is 32 characters long, and a SHA-256 hash is 64 characters long.
-        /// Note: You must use the same <c>HashKey</c> value when you submit a file for detection and when you query the results. Otherwise, both the submission and the query will fail.</description></item>
+        /// <item><description>Use the MD5 or SHA-256 algorithm to encrypt the data and generate a 128-bit or 256-bit hash value. Available libraries include Java MessageDigest and Python hashlib.</description></item>
+        /// <item><description>Encode the generated hash value as a hexadecimal string. Available libraries include Java Codec and Python hex function. Make sure the final string is a combination of digits and lowercase letters. The MD5 string is 32 characters, and the SHA-256 string is 64 characters.
+        /// Note: The push and query operations for a single detection must use the same HashKey. Otherwise, the detection cannot be correctly pushed and the results cannot be queried.</description></item>
         /// </ol>
         /// </description>
         /// 
@@ -13113,7 +13345,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a bucket check task.</para>
+        /// <para>Creates a bucket detection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13170,6 +13402,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ScanMode"] = request.ScanMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -13191,7 +13427,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a bucket check task.</para>
+        /// <para>Creates a bucket detection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13248,6 +13484,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ScanMode"] = request.ScanMode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -13269,7 +13509,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a bucket check task.</para>
+        /// <para>Creates a bucket detection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13287,7 +13527,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a bucket check task.</para>
+        /// <para>Creates a bucket detection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13305,8 +13545,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy for detecting malicious Object Storage Service (OSS) objects by using the SDK for malicious file detection feature.</para>
+        /// <para>Creates a scan policy for detecting malicious files in OSS under the malicious file detection feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOssScanConfigRequest
@@ -13326,9 +13571,17 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["AllKeyPrefix"] = request.AllKeyPrefix;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAdd))
+            {
+                query["AutoAdd"] = request.AutoAdd;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketNameList))
             {
                 query["BucketNameList"] = request.BucketNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecompressMaxFileCount))
             {
@@ -13373,6 +13626,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanDayList))
             {
                 query["ScanDayList"] = request.ScanDayList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -13399,8 +13656,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy for detecting malicious Object Storage Service (OSS) objects by using the SDK for malicious file detection feature.</para>
+        /// <para>Creates a scan policy for detecting malicious files in OSS under the malicious file detection feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOssScanConfigRequest
@@ -13420,9 +13682,17 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["AllKeyPrefix"] = request.AllKeyPrefix;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAdd))
+            {
+                query["AutoAdd"] = request.AutoAdd;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketNameList))
             {
                 query["BucketNameList"] = request.BucketNameList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DecompressMaxFileCount))
             {
@@ -13468,6 +13738,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ScanDayList"] = request.ScanDayList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -13493,8 +13767,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy for detecting malicious Object Storage Service (OSS) objects by using the SDK for malicious file detection feature.</para>
+        /// <para>Creates a scan policy for detecting malicious files in OSS under the malicious file detection feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOssScanConfigRequest
@@ -13511,8 +13790,13 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a policy for detecting malicious Object Storage Service (OSS) objects by using the SDK for malicious file detection feature.</para>
+        /// <para>Creates a scan policy for detecting malicious files in OSS under the malicious file detection feature.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, call the <a href="~~PublicPreCheckImageScanTask~~">PublicPreCheckImageScanTask</a> operation to query the number of container images covered by the image scan task and the number of authorizations consumed. Ensure that sufficient authorizations are available for the image scan task to prevent the task from being interrupted due to insufficient authorizations.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// CreateOssScanConfigRequest
@@ -13845,7 +14129,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a trial of Security Center.</para>
+        /// <para>Starts a trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13867,6 +14151,11 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 request.RequestFormShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestForm, "RequestForm", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromEcs))
             {
@@ -13890,6 +14179,7 @@ namespace AlibabaCloud.SDK.Sas20181203
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -13909,7 +14199,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a trial of Security Center.</para>
+        /// <para>Starts a trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13931,6 +14221,11 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 request.RequestFormShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.RequestForm, "RequestForm", "json");
             }
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FromEcs))
             {
@@ -13954,6 +14249,7 @@ namespace AlibabaCloud.SDK.Sas20181203
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -13973,7 +14269,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a trial of Security Center.</para>
+        /// <para>Starts a trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13991,7 +14287,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Applies for a trial of Security Center.</para>
+        /// <para>Starts a trial of Security Center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14031,6 +14327,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceLinkedRole))
             {
                 query["ServiceLinkedRole"] = request.ServiceLinkedRole;
@@ -14078,6 +14378,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServiceLinkedRole))
             {
                 query["ServiceLinkedRole"] = request.ServiceLinkedRole;
@@ -14301,7 +14605,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node to query alert events triggered by the same rule or Alarm Metric through alerting.</para>
+        /// <para>Creates a node to query alerting events triggered by the same rule hits or Alarm Metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14318,6 +14622,14 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
@@ -14355,7 +14667,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node to query alert events triggered by the same rule or Alarm Metric through alerting.</para>
+        /// <para>Creates a node to query alerting events triggered by the same rule hits or Alarm Metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14372,6 +14684,14 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
@@ -14409,7 +14729,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node to query alert events triggered by the same rule or Alarm Metric through alerting.</para>
+        /// <para>Creates a node to query alerting events triggered by the same rule hits or Alarm Metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14427,7 +14747,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a node to query alert events triggered by the same rule or Alarm Metric through alerting.</para>
+        /// <para>Creates a node to query alerting events triggered by the same rule hits or Alarm Metric.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14642,6 +14962,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Note"] = request.Note;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -14687,6 +15011,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Note))
             {
                 query["Note"] = request.Note;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -15141,7 +15469,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent behavior analysis strategy.</para>
+        /// <para>Creates an intelligent behavior analytics policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15199,7 +15527,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent behavior analysis strategy.</para>
+        /// <para>Creates an intelligent behavior analytics policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15257,7 +15585,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent behavior analysis strategy.</para>
+        /// <para>Creates an intelligent behavior analytics policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15275,7 +15603,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an intelligent behavior analysis strategy.</para>
+        /// <para>Creates an intelligent behavior analytics policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15429,7 +15757,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a one-time virus scan task that is immediately executed.</para>
+        /// <para>Creates a one-time virus scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15446,6 +15774,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
             {
                 query["Param"] = request.Param;
@@ -15483,7 +15815,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a one-time virus scan task that is immediately executed.</para>
+        /// <para>Creates a one-time virus scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15500,6 +15832,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Param))
             {
                 query["Param"] = request.Param;
@@ -15537,7 +15873,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a one-time virus scan task that is immediately executed.</para>
+        /// <para>Creates a one-time virus scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15555,7 +15891,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a one-time virus scan task that is immediately executed.</para>
+        /// <para>Creates a one-time virus scan task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21736,6 +22072,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Ids"] = request.Ids;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
@@ -21787,6 +22127,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Ids))
             {
                 query["Ids"] = request.Ids;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
@@ -22278,6 +22622,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["NoteId"] = request.NoteId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -22319,6 +22667,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NoteId))
             {
                 query["NoteId"] = request.NoteId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -23170,6 +23522,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Id"] = request.Id;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
             {
                 query["Whitelist"] = request.Whitelist;
@@ -23215,6 +23571,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Id))
             {
                 query["Id"] = request.Id;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Whitelist))
             {
@@ -24378,6 +24738,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -24431,6 +24795,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
@@ -25034,6 +25402,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Remark"] = request.Remark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -25087,6 +25459,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
@@ -28122,6 +28498,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["RepoRegionId"] = request.RepoRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanRange))
             {
                 query["ScanRange"] = request.ScanRange;
@@ -28267,6 +28647,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoRegionId))
             {
                 query["RepoRegionId"] = request.RepoRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanRange))
             {
@@ -28466,6 +28850,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ReportId"] = request.ReportId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeEnd))
             {
                 query["TimeEnd"] = request.TimeEnd;
@@ -28527,6 +28915,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
             {
                 query["ReportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TimeEnd))
             {
@@ -30385,12 +30777,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asset information that meets specified search conditions. For example, you can search for assets by instance name or region. Two pagination methods are supported: page-based pagination and NextToken-based pagination. We recommend that you use NextToken-based pagination.</para>
+        /// <para>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set the logical relationship between multiple search conditions to search for assets that meet multiple conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30480,12 +30872,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asset information that meets specified search conditions. For example, you can search for assets by instance name or region. Two pagination methods are supported: page-based pagination and NextToken-based pagination. We recommend that you use NextToken-based pagination.</para>
+        /// <para>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set the logical relationship between multiple search conditions to search for assets that meet multiple conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30575,12 +30967,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asset information that meets specified search conditions. For example, you can search for assets by instance name or region. Two pagination methods are supported: page-based pagination and NextToken-based pagination. We recommend that you use NextToken-based pagination.</para>
+        /// <para>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set the logical relationship between multiple search conditions to search for assets that meet multiple conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -30598,12 +30990,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries asset information that meets specified search conditions. For example, you can search for assets by instance name or region. Two pagination methods are supported: page-based pagination and NextToken-based pagination. We recommend that you use NextToken-based pagination.</para>
+        /// <para>Queries asset information by settings conditional query criteria, such as asset instance name or asset instance region. Both paging and NextToken methods are supported. The NextToken method is recommended.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set the logical relationship between multiple search conditions to search for assets that meet multiple conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple criteria.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -31765,7 +32157,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about the network topology edge by cluster.</para>
+        /// <para>Queries the network topology edge information at the cluster level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31811,7 +32203,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about the network topology edge by cluster.</para>
+        /// <para>Queries the network topology edge information at the cluster level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31857,7 +32249,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about the network topology edge by cluster.</para>
+        /// <para>Queries the network topology edge information at the cluster level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31875,7 +32267,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves information about the network topology edge by cluster.</para>
+        /// <para>Queries the network topology edge information at the cluster level.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31893,7 +32285,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the status of cluster scanning components.</para>
+        /// <para>Queries the scanner status information for a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31943,7 +32335,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the status of cluster scanning components.</para>
+        /// <para>Queries the scanner status information for a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31993,7 +32385,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the status of cluster scanning components.</para>
+        /// <para>Queries the scanner status information for a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32011,7 +32403,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the status of cluster scanning components.</para>
+        /// <para>Queries the scanner status information for a Kubernetes cluster.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34438,6 +34830,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["MachineTypes"] = request.MachineTypes;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportAutoTag))
             {
                 query["SupportAutoTag"] = request.SupportAutoTag;
@@ -34487,6 +34883,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MachineTypes))
             {
                 query["MachineTypes"] = request.MachineTypes;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SupportAutoTag))
             {
@@ -34890,6 +35290,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ReportId"] = request.ReportId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -34939,6 +35343,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
             {
                 query["ReportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
@@ -35038,6 +35446,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ReportVersion"] = request.ReportVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
                 query["Title"] = request.Title;
@@ -35099,6 +35511,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportVersion))
             {
                 query["ReportVersion"] = request.ReportVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Title))
             {
@@ -36854,6 +37270,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -36899,6 +37319,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
@@ -37954,6 +38378,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["MultiAccountActionType"] = request.MultiAccountActionType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
             {
                 query["TargetType"] = request.TargetType;
@@ -38019,6 +38447,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MultiAccountActionType))
             {
                 query["MultiAccountActionType"] = request.MultiAccountActionType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
             {
@@ -38102,6 +38534,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -38143,6 +38579,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -40206,6 +40646,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleVersionCheckCode))
             {
                 query["SaleVersionCheckCode"] = request.SaleVersionCheckCode;
@@ -40283,6 +40727,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleVersionCheckCode))
             {
@@ -44382,6 +44830,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["RepoRegionId"] = request.RepoRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleTag))
             {
                 query["RuleTag"] = request.RuleTag;
@@ -44511,6 +44963,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoRegionId))
             {
                 query["RepoRegionId"] = request.RepoRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleTag))
             {
@@ -47039,6 +47495,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["RepoRegionId"] = request.RepoRegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleTag))
             {
                 query["RuleTag"] = request.RuleTag;
@@ -47197,6 +47657,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RepoRegionId))
             {
                 query["RepoRegionId"] = request.RepoRegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RuleTag))
             {
@@ -50085,7 +50549,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of client tasks.</para>
+        /// <para>Queries a list of client tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50155,7 +50619,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of client tasks.</para>
+        /// <para>Queries a list of client tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50225,7 +50689,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of client tasks.</para>
+        /// <para>Queries a list of client tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50243,7 +50707,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of client tasks.</para>
+        /// <para>Queries a list of client tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50738,6 +51202,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Remark"] = request.Remark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -50811,6 +51279,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
@@ -51733,7 +52205,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about the middleware list on the Asset Fingerprints investigation page.</para>
+        /// <para>Queries the details of the middleware list on the Asset Fingerprints investigation page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51797,6 +52269,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaName))
             {
@@ -51863,7 +52339,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about the middleware list on the Asset Fingerprints investigation page.</para>
+        /// <para>Queries the details of the middleware list on the Asset Fingerprints investigation page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51927,6 +52403,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScaName))
             {
@@ -51993,7 +52473,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about the middleware list on the Asset Fingerprints investigation page.</para>
+        /// <para>Queries the details of the middleware list on the Asset Fingerprints investigation page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -52011,7 +52491,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries detailed information about the middleware list on the Asset Fingerprints investigation page.</para>
+        /// <para>Queries the details of the middleware list on the Asset Fingerprints investigation page.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53162,6 +53642,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Remark"] = request.Remark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNextToken))
             {
                 query["UseNextToken"] = request.UseNextToken;
@@ -53243,6 +53727,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UseNextToken))
             {
@@ -53610,6 +54098,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -53655,6 +54147,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -55874,6 +56370,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["EndTime"] = request.EndTime;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
                 query["Source"] = request.Source;
@@ -55923,6 +56423,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
             {
@@ -56281,12 +56785,12 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the day of a week when custom check tasks are performed and the time range during which the custom check tasks are performed.</para>
+        /// <para>Queries the custom check cycle and time period configured by the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out. You can use the GetCheckConfig operation.</para>
+        /// <para>This operation is deprecated. Use the GetCheckConfig operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56342,12 +56846,12 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the day of a week when custom check tasks are performed and the time range during which the custom check tasks are performed.</para>
+        /// <para>Queries the custom check cycle and time period configured by the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out. You can use the GetCheckConfig operation.</para>
+        /// <para>This operation is deprecated. Use the GetCheckConfig operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56403,12 +56907,12 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the day of a week when custom check tasks are performed and the time range during which the custom check tasks are performed.</para>
+        /// <para>Queries the custom check cycle and time period configured by the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out. You can use the GetCheckConfig operation.</para>
+        /// <para>This operation is deprecated. Use the GetCheckConfig operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56432,12 +56936,12 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the day of a week when custom check tasks are performed and the time range during which the custom check tasks are performed.</para>
+        /// <para>Queries the custom check cycle and time period configured by the user.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out. You can use the GetCheckConfig operation.</para>
+        /// <para>This operation is deprecated. Use the GetCheckConfig operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -60353,7 +60857,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alert events that are generated without aggregation.</para>
+        /// <para>Queries the list of security alert events that have not been aggregated.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -60547,7 +61051,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alert events that are generated without aggregation.</para>
+        /// <para>Queries the list of security alert events that have not been aggregated.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -60741,7 +61245,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alert events that are generated without aggregation.</para>
+        /// <para>Queries the list of security alert events that have not been aggregated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -60759,7 +61263,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a list of alert events that are generated without aggregation.</para>
+        /// <para>Queries the list of security alert events that have not been aggregated.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63282,6 +63786,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Remark"] = request.Remark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchTags))
             {
                 query["SearchTags"] = request.SearchTags;
@@ -63379,6 +63887,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SearchTags))
             {
@@ -64214,6 +64726,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
             {
                 query["TaskIds"] = request.TaskIds;
@@ -64264,6 +64780,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskIds))
             {
                 query["TaskIds"] = request.TaskIds;
@@ -65902,6 +66422,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["PageSize"] = request.PageSize;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -65951,6 +66475,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -70194,6 +70722,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ReportId"] = request.ReportId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -70239,6 +70771,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
             {
                 query["ReportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -70550,6 +71086,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Remark"] = request.Remark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -70680,6 +71220,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Remark"] = request.Remark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -70765,15 +71309,15 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export vulnerability list</para>
+        /// <para>Exports a vulnerability list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API exports vulnerabilities, including Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
-        /// Use this API to create a <c>vulnerability export task</c>. Then, call <c>DescribeVulExportInfo</c> with the task\&quot;s ID to check its progress.</para>
+        /// <para>Exports a vulnerability list. You can export vulnerability lists for Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
+        /// This operation is used together with the DescribeVulExportInfo operation. After you call this operation to create a vulnerability export task, call the <a href="~~DescribeVulExportInfo~~">DescribeVulExportInfo</a> operation with the export task ID to check the progress of the export task.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The QPS limit for a single user is 10. If you exceed this limit, API calls are throttled. This can affect your service. Plan your API calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -70793,6 +71337,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
             {
                 query["AliasName"] = request.AliasName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetType))
+            {
+                query["AssetType"] = request.AssetType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachTypes))
             {
@@ -70887,15 +71435,15 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export vulnerability list</para>
+        /// <para>Exports a vulnerability list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API exports vulnerabilities, including Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
-        /// Use this API to create a <c>vulnerability export task</c>. Then, call <c>DescribeVulExportInfo</c> with the task\&quot;s ID to check its progress.</para>
+        /// <para>Exports a vulnerability list. You can export vulnerability lists for Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
+        /// This operation is used together with the DescribeVulExportInfo operation. After you call this operation to create a vulnerability export task, call the <a href="~~DescribeVulExportInfo~~">DescribeVulExportInfo</a> operation with the export task ID to check the progress of the export task.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The QPS limit for a single user is 10. If you exceed this limit, API calls are throttled. This can affect your service. Plan your API calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -70915,6 +71463,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AliasName))
             {
                 query["AliasName"] = request.AliasName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AssetType))
+            {
+                query["AssetType"] = request.AssetType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AttachTypes))
             {
@@ -71009,15 +71561,15 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export vulnerability list</para>
+        /// <para>Exports a vulnerability list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API exports vulnerabilities, including Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
-        /// Use this API to create a <c>vulnerability export task</c>. Then, call <c>DescribeVulExportInfo</c> with the task\&quot;s ID to check its progress.</para>
+        /// <para>Exports a vulnerability list. You can export vulnerability lists for Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
+        /// This operation is used together with the DescribeVulExportInfo operation. After you call this operation to create a vulnerability export task, call the <a href="~~DescribeVulExportInfo~~">DescribeVulExportInfo</a> operation with the export task ID to check the progress of the export task.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The QPS limit for a single user is 10. If you exceed this limit, API calls are throttled. This can affect your service. Plan your API calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -71035,15 +71587,15 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Export vulnerability list</para>
+        /// <para>Exports a vulnerability list.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This API exports vulnerabilities, including Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
-        /// Use this API to create a <c>vulnerability export task</c>. Then, call <c>DescribeVulExportInfo</c> with the task\&quot;s ID to check its progress.</para>
+        /// <para>Exports a vulnerability list. You can export vulnerability lists for Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
+        /// This operation is used together with the DescribeVulExportInfo operation. After you call this operation to create a vulnerability export task, call the <a href="~~DescribeVulExportInfo~~">DescribeVulExportInfo</a> operation with the export task ID to check the progress of the export task.</para>
         /// <h3>QPS limit</h3>
-        /// <para>The QPS limit for a single user is 10. If you exceed this limit, API calls are throttled. This can affect your service. Plan your API calls accordingly.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -72417,7 +72969,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains account tags.</para>
+        /// <para>Retrieves account labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -72463,7 +73015,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains account tags.</para>
+        /// <para>Retrieves account labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -72509,7 +73061,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains account tags.</para>
+        /// <para>Retrieves account labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -72527,7 +73079,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains account tags.</para>
+        /// <para>Retrieves account labels.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -72957,7 +73509,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the estimated volume for agentless detection.</para>
+        /// <para>Retrieves the estimated scan volume for agentless detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -72999,7 +73551,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the estimated volume for agentless detection.</para>
+        /// <para>Retrieves the estimated scan volume for agentless detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -73041,7 +73593,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the estimated volume for agentless detection.</para>
+        /// <para>Retrieves the estimated scan volume for agentless detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -73059,7 +73611,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the estimated volume for agentless detection.</para>
+        /// <para>Retrieves the estimated scan volume for agentless detection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -73097,6 +73649,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -73139,6 +73695,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -75352,6 +75912,9 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Retrieves the check item configurations for cloud platform configuration checks.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetCheckConfigRequest
+        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -75359,9 +75922,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <returns>
         /// GetCheckConfigResponse
         /// </returns>
-        public GetCheckConfigResponse GetCheckConfigWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public GetCheckConfigResponse GetCheckConfigWithOptions(GetCheckConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetCheckConfig",
@@ -75382,6 +75954,9 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Retrieves the check item configurations for cloud platform configuration checks.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetCheckConfigRequest
+        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -75389,9 +75964,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <returns>
         /// GetCheckConfigResponse
         /// </returns>
-        public async Task<GetCheckConfigResponse> GetCheckConfigWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<GetCheckConfigResponse> GetCheckConfigWithOptionsAsync(GetCheckConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "GetCheckConfig",
@@ -75412,13 +75996,17 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Retrieves the check item configurations for cloud platform configuration checks.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetCheckConfigRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetCheckConfigResponse
         /// </returns>
-        public GetCheckConfigResponse GetCheckConfig()
+        public GetCheckConfigResponse GetCheckConfig(GetCheckConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return GetCheckConfigWithOptions(runtime);
+            return GetCheckConfigWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -75426,13 +76014,17 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Retrieves the check item configurations for cloud platform configuration checks.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// GetCheckConfigRequest
+        /// </param>
+        /// 
         /// <returns>
         /// GetCheckConfigResponse
         /// </returns>
-        public async Task<GetCheckConfigResponse> GetCheckConfigAsync()
+        public async Task<GetCheckConfigResponse> GetCheckConfigAsync(GetCheckConfigRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await GetCheckConfigWithOptionsAsync(runtime);
+            return await GetCheckConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -75734,6 +76326,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
@@ -75776,6 +76372,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TaskId))
             {
                 query["TaskId"] = request.TaskId;
@@ -76089,6 +76689,134 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetCheckSaleWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the check scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCheckScopeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCheckScopeConfigResponse
+        /// </returns>
+        public GetCheckScopeConfigResponse GetCheckScopeConfigWithOptions(GetCheckScopeConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCheckScopeConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCheckScopeConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the check scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCheckScopeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCheckScopeConfigResponse
+        /// </returns>
+        public async Task<GetCheckScopeConfigResponse> GetCheckScopeConfigWithOptionsAsync(GetCheckScopeConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetCheckScopeConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetCheckScopeConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the check scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCheckScopeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCheckScopeConfigResponse
+        /// </returns>
+        public GetCheckScopeConfigResponse GetCheckScopeConfig(GetCheckScopeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetCheckScopeConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the check scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetCheckScopeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetCheckScopeConfigResponse
+        /// </returns>
+        public async Task<GetCheckScopeConfigResponse> GetCheckScopeConfigAsync(GetCheckScopeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetCheckScopeConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -76438,6 +77166,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["EndTimeStamp"] = request.EndTimeStamp;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeStamp))
             {
                 query["StartTimeStamp"] = request.StartTimeStamp;
@@ -76491,6 +77223,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTimeStamp))
             {
                 query["EndTimeStamp"] = request.EndTimeStamp;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimeStamp))
             {
@@ -77097,7 +77833,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summary of cloud assets.</para>
+        /// <para>Retrieves the summary of cloud assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77121,6 +77857,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSaleData))
             {
                 query["IsSaleData"] = request.IsSaleData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendors))
             {
@@ -77147,7 +77887,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summary of cloud assets.</para>
+        /// <para>Retrieves the summary of cloud assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77171,6 +77911,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IsSaleData))
             {
                 query["IsSaleData"] = request.IsSaleData;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendors))
             {
@@ -77197,7 +77941,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summary of cloud assets.</para>
+        /// <para>Retrieves the summary of cloud assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -77215,7 +77959,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the summary of cloud assets.</para>
+        /// <para>Retrieves the summary of cloud assets.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -78313,7 +79057,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the publish details of the Security Center agent.</para>
+        /// <para>Retrieves the release information of the current client version.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -78343,7 +79087,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the publish details of the Security Center agent.</para>
+        /// <para>Retrieves the release information of the current client version.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -78373,7 +79117,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the publish details of the Security Center agent.</para>
+        /// <para>Retrieves the release information of the current client version.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -78387,7 +79131,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the publish details of the Security Center agent.</para>
+        /// <para>Retrieves the release information of the current client version.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -78429,6 +79173,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
                 query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
             {
@@ -78483,6 +79231,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Interval))
             {
                 query["Interval"] = request.Interval;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTimestamp))
             {
@@ -79113,19 +79865,16 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves file detection results in batches using <c>HashKey</c> values.</para>
+        /// <para>Retrieves file detection results in batches by HashKey.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve detection results only for submitted files. Results are retained for 5 hours and can be queried multiple times during this period. To submit a file for detection, call the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.</para>
-        /// <h3>Unique file identifier</h3>
-        /// <para>All file detection operations use the <c>HashKey</c> parameter. <c>HashKey</c> is a unique file identifier used to query the corresponding file detection result.
-        /// For Skill compressed package detection (when Type is 6), obtain the <c>HashKey</c> from the response of the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.
-        /// For malicious file detection (when Type is 0), the <c>HashKey</c> must be the MD5 or SHA-256 hash of the entire file.</para>
+        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
+        /// <h3>File unique identifier</h3>
+        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
         /// <h3>Query detection results</h3>
-        /// <para>In a malicious file detection scenario (when <c>Type</c> is <c>0</c>), you can filter files by their attributes using the <c>FileLabel</c> field in the <c>Ext</c> field. For example, you can combine the <c>encrypted</c> and <c>Zip</c> attributes to filter for encrypted compressed packages. Supported file tags for compressed packages include: <c>Zip</c>, <c>RAR</c>, <c>7-Zip</c>, <c>XAR</c>, <c>ZLib</c>, <c>GZip</c>, and <c>tar</c>. You can also use the <c>Highlight</c> field in the <c>Ext</c> field to locate malicious code segments in <c>WebShell</c> files. The <c>Highlight</c> field is a list in which each element represents a code range. The numbers indicate the character offset from the beginning of the file.
-        /// In a Skill compressed package detection scenario (when <c>Type</c> is <c>6</c>), you can retrieve the detection report from the <c>Ext</c> field. This report includes results from deep intent analysis, prompt injection detection, sensitive information recognition, and malicious script detection. To query the details of an individual file within the compressed package, call the <a href="~~ListCompressFileDetectResult~~">ListCompressFileDetectResult</a> operation.</para>
+        /// <para>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -79175,19 +79924,16 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves file detection results in batches using <c>HashKey</c> values.</para>
+        /// <para>Retrieves file detection results in batches by HashKey.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve detection results only for submitted files. Results are retained for 5 hours and can be queried multiple times during this period. To submit a file for detection, call the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.</para>
-        /// <h3>Unique file identifier</h3>
-        /// <para>All file detection operations use the <c>HashKey</c> parameter. <c>HashKey</c> is a unique file identifier used to query the corresponding file detection result.
-        /// For Skill compressed package detection (when Type is 6), obtain the <c>HashKey</c> from the response of the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.
-        /// For malicious file detection (when Type is 0), the <c>HashKey</c> must be the MD5 or SHA-256 hash of the entire file.</para>
+        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
+        /// <h3>File unique identifier</h3>
+        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
         /// <h3>Query detection results</h3>
-        /// <para>In a malicious file detection scenario (when <c>Type</c> is <c>0</c>), you can filter files by their attributes using the <c>FileLabel</c> field in the <c>Ext</c> field. For example, you can combine the <c>encrypted</c> and <c>Zip</c> attributes to filter for encrypted compressed packages. Supported file tags for compressed packages include: <c>Zip</c>, <c>RAR</c>, <c>7-Zip</c>, <c>XAR</c>, <c>ZLib</c>, <c>GZip</c>, and <c>tar</c>. You can also use the <c>Highlight</c> field in the <c>Ext</c> field to locate malicious code segments in <c>WebShell</c> files. The <c>Highlight</c> field is a list in which each element represents a code range. The numbers indicate the character offset from the beginning of the file.
-        /// In a Skill compressed package detection scenario (when <c>Type</c> is <c>6</c>), you can retrieve the detection report from the <c>Ext</c> field. This report includes results from deep intent analysis, prompt injection detection, sensitive information recognition, and malicious script detection. To query the details of an individual file within the compressed package, call the <a href="~~ListCompressFileDetectResult~~">ListCompressFileDetectResult</a> operation.</para>
+        /// <para>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -79237,19 +79983,16 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves file detection results in batches using <c>HashKey</c> values.</para>
+        /// <para>Retrieves file detection results in batches by HashKey.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve detection results only for submitted files. Results are retained for 5 hours and can be queried multiple times during this period. To submit a file for detection, call the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.</para>
-        /// <h3>Unique file identifier</h3>
-        /// <para>All file detection operations use the <c>HashKey</c> parameter. <c>HashKey</c> is a unique file identifier used to query the corresponding file detection result.
-        /// For Skill compressed package detection (when Type is 6), obtain the <c>HashKey</c> from the response of the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.
-        /// For malicious file detection (when Type is 0), the <c>HashKey</c> must be the MD5 or SHA-256 hash of the entire file.</para>
+        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
+        /// <h3>File unique identifier</h3>
+        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
         /// <h3>Query detection results</h3>
-        /// <para>In a malicious file detection scenario (when <c>Type</c> is <c>0</c>), you can filter files by their attributes using the <c>FileLabel</c> field in the <c>Ext</c> field. For example, you can combine the <c>encrypted</c> and <c>Zip</c> attributes to filter for encrypted compressed packages. Supported file tags for compressed packages include: <c>Zip</c>, <c>RAR</c>, <c>7-Zip</c>, <c>XAR</c>, <c>ZLib</c>, <c>GZip</c>, and <c>tar</c>. You can also use the <c>Highlight</c> field in the <c>Ext</c> field to locate malicious code segments in <c>WebShell</c> files. The <c>Highlight</c> field is a list in which each element represents a code range. The numbers indicate the character offset from the beginning of the file.
-        /// In a Skill compressed package detection scenario (when <c>Type</c> is <c>6</c>), you can retrieve the detection report from the <c>Ext</c> field. This report includes results from deep intent analysis, prompt injection detection, sensitive information recognition, and malicious script detection. To query the details of an individual file within the compressed package, call the <a href="~~ListCompressFileDetectResult~~">ListCompressFileDetectResult</a> operation.</para>
+        /// <para>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -79267,19 +80010,16 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves file detection results in batches using <c>HashKey</c> values.</para>
+        /// <para>Retrieves file detection results in batches by HashKey.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can retrieve detection results only for submitted files. Results are retained for 5 hours and can be queried multiple times during this period. To submit a file for detection, call the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.</para>
-        /// <h3>Unique file identifier</h3>
-        /// <para>All file detection operations use the <c>HashKey</c> parameter. <c>HashKey</c> is a unique file identifier used to query the corresponding file detection result.
-        /// For Skill compressed package detection (when Type is 6), obtain the <c>HashKey</c> from the response of the <a href="~~CreateFileDetect~~">CreateFileDetect</a> operation.
-        /// For malicious file detection (when Type is 0), the <c>HashKey</c> must be the MD5 or SHA-256 hash of the entire file.</para>
+        /// <para>You can retrieve detection results only for files that have been submitted for detection. Detection results are retained for 5 hours and can be queried repeatedly within this period. For the detection submission operation, refer to <a href="~~CreateFileDetect~~">CreateFileDetect</a>.</para>
+        /// <h3>File unique identifier</h3>
+        /// <para>All file detection operations include the HashKey parameter, which represents the unique identifier of the file being detected and is used to query detection results. Only the MD5 or SHA-256 hash of the complete file content is supported.</para>
         /// <h3>Query detection results</h3>
-        /// <para>In a malicious file detection scenario (when <c>Type</c> is <c>0</c>), you can filter files by their attributes using the <c>FileLabel</c> field in the <c>Ext</c> field. For example, you can combine the <c>encrypted</c> and <c>Zip</c> attributes to filter for encrypted compressed packages. Supported file tags for compressed packages include: <c>Zip</c>, <c>RAR</c>, <c>7-Zip</c>, <c>XAR</c>, <c>ZLib</c>, <c>GZip</c>, and <c>tar</c>. You can also use the <c>Highlight</c> field in the <c>Ext</c> field to locate malicious code segments in <c>WebShell</c> files. The <c>Highlight</c> field is a list in which each element represents a code range. The numbers indicate the character offset from the beginning of the file.
-        /// In a Skill compressed package detection scenario (when <c>Type</c> is <c>6</c>), you can retrieve the detection report from the <c>Ext</c> field. This report includes results from deep intent analysis, prompt injection detection, sensitive information recognition, and malicious script detection. To query the details of an individual file within the compressed package, call the <a href="~~ListCompressFileDetectResult~~">ListCompressFileDetectResult</a> operation.</para>
+        /// <para>You can filter file properties by using the FileLabel in the Ext extension field. For example, combine the encrypted and Zip properties to filter encrypted archives. Supported file labels for compressed file types: Zip, RAR, 7-Zip, XAR, ZLib, GZip, and tar. You can locate malicious code segments in web shell files by using the Highlight field in the Ext extension field. The Highlight field is a list type, where each element corresponds to a code range. The numbers represent the offset in characters relative to the file header.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -81950,6 +82690,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["From"] = request.From;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
             {
                 query["Uuid"] = request.Uuid;
@@ -81995,6 +82739,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuid))
             {
@@ -82057,7 +82805,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Instance Authorization Value Range</para>
+        /// <para>Retrieves the valid value ranges for instance authorization.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -82087,7 +82835,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Instance Authorization Value Range</para>
+        /// <para>Retrieves the valid value ranges for instance authorization.</para>
         /// </summary>
         /// 
         /// <param name="runtime">
@@ -82117,7 +82865,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Instance Authorization Value Range</para>
+        /// <para>Retrieves the valid value ranges for instance authorization.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -82131,7 +82879,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Instance Authorization Value Range</para>
+        /// <para>Retrieves the valid value ranges for instance authorization.</para>
         /// </summary>
         /// 
         /// <returns>
@@ -82273,7 +83021,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of the container firewall feature.</para>
+        /// <para>Queries the micro-segmentation defense overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82293,6 +83041,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeClusterTypes))
+            {
+                query["ExcludeClusterTypes"] = request.ExcludeClusterTypes;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -82315,7 +83067,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of the container firewall feature.</para>
+        /// <para>Queries the micro-segmentation defense overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82335,6 +83087,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClusterId))
             {
                 query["ClusterId"] = request.ClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeClusterTypes))
+            {
+                query["ExcludeClusterTypes"] = request.ExcludeClusterTypes;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -82357,7 +83113,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of the container firewall feature.</para>
+        /// <para>Queries the micro-segmentation defense overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -82375,7 +83131,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the statistics of the container firewall feature.</para>
+        /// <para>Queries the micro-segmentation defense overview.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85658,6 +86414,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -85703,6 +86463,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -86550,6 +87314,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["GroupIdList"] = request.GroupIdList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -86595,6 +87363,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GroupIdList))
             {
                 query["GroupIdList"] = request.GroupIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
@@ -87065,7 +87837,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Valid Resource Package Instances</para>
+        /// <para>Retrieves active resource plan instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87115,7 +87887,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Valid Resource Package Instances</para>
+        /// <para>Retrieves active resource plan instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87165,7 +87937,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Valid Resource Package Instances</para>
+        /// <para>Retrieves active resource plan instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -87183,7 +87955,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Valid Resource Package Instances</para>
+        /// <para>Retrieves active resource plan instances.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -88502,6 +89274,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Remark"] = request.Remark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
                 query["ResourceOwnerId"] = request.ResourceOwnerId;
@@ -88567,6 +89343,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceOwnerId))
             {
@@ -88658,6 +89438,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["EventIdList"] = request.EventIdList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandleRemark))
+            {
+                query["HandleRemark"] = request.HandleRemark;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
                 query["Status"] = request.Status;
@@ -88703,6 +89487,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventIdList))
             {
                 query["EventIdList"] = request.EventIdList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HandleRemark))
+            {
+                query["HandleRemark"] = request.HandleRemark;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -90237,12 +91025,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of managed accounts for multi-account governance.</para>
+        /// <para>Obtient la liste des comptes gérés pour la gouvernance multi-comptes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</para>
+        /// <para>Appelez cette opération à l\&quot;aide du compte de gestion du répertoire de ressources ou du compte administrateur délégué de Security Center.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -90272,12 +91060,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of managed accounts for multi-account governance.</para>
+        /// <para>Obtient la liste des comptes gérés pour la gouvernance multi-comptes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</para>
+        /// <para>Appelez cette opération à l\&quot;aide du compte de gestion du répertoire de ressources ou du compte administrateur délégué de Security Center.</para>
         /// </description>
         /// 
         /// <param name="runtime">
@@ -90307,12 +91095,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of managed accounts for multi-account governance.</para>
+        /// <para>Obtient la liste des comptes gérés pour la gouvernance multi-comptes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</para>
+        /// <para>Appelez cette opération à l\&quot;aide du compte de gestion du répertoire de ressources ou du compte administrateur délégué de Security Center.</para>
         /// </description>
         /// 
         /// <returns>
@@ -90326,12 +91114,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of managed accounts for multi-account governance.</para>
+        /// <para>Obtient la liste des comptes gérés pour la gouvernance multi-comptes.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Call this operation by using the management account of the resource directory or the delegated administrator account of Security Center.</para>
+        /// <para>Appelez cette opération à l\&quot;aide du compte de gestion du répertoire de ressources ou du compte administrateur délégué de Security Center.</para>
         /// </description>
         /// 
         /// <returns>
@@ -92301,7 +93089,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Attack Analysis Event List</para>
+        /// <para>Retrieves the list of attack analysis events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -92375,7 +93163,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Attack Analysis Event List</para>
+        /// <para>Retrieves the list of attack analysis events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -92449,7 +93237,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Attack Analysis Event List</para>
+        /// <para>Retrieves the list of attack analysis events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -92467,7 +93255,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get Attack Analysis Event List</para>
+        /// <para>Retrieves the list of attack analysis events.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93745,7 +94533,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the check items that can be customized.</para>
+        /// <para>Retrieves the list of check items that can be configured with custom settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93799,7 +94587,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the check items that can be customized.</para>
+        /// <para>Retrieves the list of check items that can be configured with custom settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93853,7 +94641,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the check items that can be customized.</para>
+        /// <para>Retrieves the list of check items that can be configured with custom settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -93871,7 +94659,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the check items that can be customized.</para>
+        /// <para>Retrieves the list of check items that can be configured with custom settings.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -95786,6 +96574,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["RegionId"] = request.RegionId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -95855,6 +96647,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -96670,6 +97466,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["CurrentPage"] = request.CurrentPage;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeClusterTypes))
+            {
+                query["ExcludeClusterTypes"] = request.ExcludeClusterTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
@@ -96727,6 +97527,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExcludeClusterTypes))
+            {
+                query["ExcludeClusterTypes"] = request.ExcludeClusterTypes;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -102437,12 +103241,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Multi-Account Authorization Allocation List</para>
+        /// <para>Queries the multi-account authorization assignment list under multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can also search for assets that meet multiple search conditions by setting the logical relationship between different search conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -102488,12 +103292,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Multi-Account Authorization Allocation List</para>
+        /// <para>Queries the multi-account authorization assignment list under multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can also search for assets that meet multiple search conditions by setting the logical relationship between different search conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -102539,12 +103343,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Multi-Account Authorization Allocation List</para>
+        /// <para>Queries the multi-account authorization assignment list under multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can also search for assets that meet multiple search conditions by setting the logical relationship between different search conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -102562,12 +103366,12 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query Multi-Account Authorization Allocation List</para>
+        /// <para>Queries the multi-account authorization assignment list under multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address of the asset. You can also search for assets that meet multiple search conditions by setting the logical relationship between different search conditions.</para>
+        /// <para>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -103622,6 +104426,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Lang"] = request.Lang;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -103667,6 +104475,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -103754,6 +104566,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["FuzzBucketName"] = request.FuzzBucketName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FuzzFileSystemName))
+            {
+                query["FuzzFileSystemName"] = request.FuzzFileSystemName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasRisk))
             {
                 query["HasRisk"] = request.HasRisk;
@@ -103765,6 +104581,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -103820,6 +104640,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["FuzzBucketName"] = request.FuzzBucketName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FuzzFileSystemName))
+            {
+                query["FuzzFileSystemName"] = request.FuzzFileSystemName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.HasRisk))
             {
                 query["HasRisk"] = request.HasRisk;
@@ -103831,6 +104655,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
                 query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
             {
@@ -103893,7 +104721,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of an Object Storage Service (OSS) file detection policy.</para>
+        /// <para>Queries the list of OSS file scan policy configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -103931,7 +104759,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of an Object Storage Service (OSS) file detection policy.</para>
+        /// <para>Queries the list of OSS file scan policy configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -103969,7 +104797,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of an Object Storage Service (OSS) file detection policy.</para>
+        /// <para>Queries the list of OSS file scan policy configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -103987,7 +104815,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration of an Object Storage Service (OSS) file detection policy.</para>
+        /// <para>Queries the list of OSS file scan policy configurations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -106661,7 +107489,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View instances identified by intelligent behavior analytics.</para>
+        /// <para>Queries the list of machines for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -106681,6 +107509,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStatus))
+            {
+                query["EventStatus"] = request.EventStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -106731,7 +107563,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View instances identified by intelligent behavior analytics.</para>
+        /// <para>Queries the list of machines for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -106751,6 +107583,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
             {
                 query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStatus))
+            {
+                query["EventStatus"] = request.EventStatus;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
             {
@@ -106801,7 +107637,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View instances identified by intelligent behavior analytics.</para>
+        /// <para>Queries the list of machines for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -106819,7 +107655,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>View instances identified by intelligent behavior analytics.</para>
+        /// <para>Queries the list of machines for intelligent behavior analytics.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -107037,7 +107873,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the strategies for intelligent behavior analytics.</para>
+        /// <para>Queries the list of intelligent behavior analysis policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -107095,7 +107931,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the strategies for intelligent behavior analytics.</para>
+        /// <para>Queries the list of intelligent behavior analysis policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -107153,7 +107989,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the strategies for intelligent behavior analytics.</para>
+        /// <para>Queries the list of intelligent behavior analysis policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -107171,7 +108007,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists the strategies for intelligent behavior analytics.</para>
+        /// <para>Queries the list of intelligent behavior analysis policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -107757,7 +108593,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries virus alerts detected by virus scanning on a specific server.</para>
+        /// <para>Queries virus alerts detected by a virus scan on a specific server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -107815,7 +108651,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries virus alerts detected by virus scanning on a specific server.</para>
+        /// <para>Queries virus alerts detected by a virus scan on a specific server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -107873,7 +108709,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries virus alerts detected by virus scanning on a specific server.</para>
+        /// <para>Queries virus alerts detected by a virus scan on a specific server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -107891,7 +108727,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries virus alerts detected by virus scanning on a specific server.</para>
+        /// <para>Queries virus alerts detected by a virus scan on a specific server.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -112265,7 +113101,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds vulnerabilities to the whitelist. After you add the vulnerabilities to the whitelist, Security Center no longer generates alerts for the vulnerabilities.</para>
+        /// <para>Adds a vulnerability whitelist. Vulnerabilities added to the whitelist are no longer displayed in the alert list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -112282,9 +113118,17 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
             {
                 query["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInfo))
             {
@@ -112315,7 +113159,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds vulnerabilities to the whitelist. After you add the vulnerabilities to the whitelist, Security Center no longer generates alerts for the vulnerabilities.</para>
+        /// <para>Adds a vulnerability whitelist. Vulnerabilities added to the whitelist are no longer displayed in the alert list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -112332,9 +113176,17 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
             {
                 query["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetInfo))
             {
@@ -112365,7 +113217,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds vulnerabilities to the whitelist. After you add the vulnerabilities to the whitelist, Security Center no longer generates alerts for the vulnerabilities.</para>
+        /// <para>Adds a vulnerability whitelist. Vulnerabilities added to the whitelist are no longer displayed in the alert list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -112383,7 +113235,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds vulnerabilities to the whitelist. After you add the vulnerabilities to the whitelist, Security Center no longer generates alerts for the vulnerabilities.</para>
+        /// <para>Adds a vulnerability whitelist. Vulnerabilities added to the whitelist are no longer displayed in the alert list.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -112910,6 +113762,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -112964,6 +113820,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Lang))
             {
                 query["Lang"] = request.Lang;
@@ -114994,6 +115854,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["BizType"] = request.BizType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FocusLevel))
             {
                 query["FocusLevel"] = request.FocusLevel;
@@ -115055,6 +115919,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BizType))
             {
                 query["BizType"] = request.BizType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FocusLevel))
             {
@@ -115301,7 +116169,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles detected vulnerabilities. You can fix, check, or ignore the vulnerabilities.</para>
+        /// <para>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -115318,6 +116186,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
@@ -115333,6 +116205,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
             {
                 query["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -115359,7 +116235,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles detected vulnerabilities. You can fix, check, or ignore the vulnerabilities.</para>
+        /// <para>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -115376,6 +116252,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 query["From"] = request.From;
@@ -115391,6 +116271,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Reason))
             {
                 query["Reason"] = request.Reason;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -115417,7 +116301,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles detected vulnerabilities. You can fix, check, or ignore the vulnerabilities.</para>
+        /// <para>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -115435,7 +116319,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Handles detected vulnerabilities. You can fix, check, or ignore the vulnerabilities.</para>
+        /// <para>Handles detected vulnerabilities. Supported operations include fix, verify, and ignore.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -115471,11 +116355,23 @@ namespace AlibabaCloud.SDK.Sas20181203
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyPostPayModuleSwitchShrinkRequest request = new ModifyPostPayModuleSwitchShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EdrModuleSwitch))
+            {
+                request.EdrModuleSwitchShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EdrModuleSwitch, "EdrModuleSwitch", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PostPayModuleSwitchObj))
             {
                 request.PostPayModuleSwitchObjShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PostPayModuleSwitchObj, "PostPayModuleSwitchObj", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EdrModuleSwitchShrink))
+            {
+                query["EdrModuleSwitch"] = request.EdrModuleSwitchShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostPaidHostAutoBind))
             {
                 query["PostPaidHostAutoBind"] = request.PostPaidHostAutoBind;
@@ -115535,11 +116431,23 @@ namespace AlibabaCloud.SDK.Sas20181203
             AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
             ModifyPostPayModuleSwitchShrinkRequest request = new ModifyPostPayModuleSwitchShrinkRequest();
             AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.EdrModuleSwitch))
+            {
+                request.EdrModuleSwitchShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.EdrModuleSwitch, "EdrModuleSwitch", "json");
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PostPayModuleSwitchObj))
             {
                 request.PostPayModuleSwitchObjShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.PostPayModuleSwitchObj, "PostPayModuleSwitchObj", "json");
             }
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EdrModuleSwitchShrink))
+            {
+                query["EdrModuleSwitch"] = request.EdrModuleSwitchShrink;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PostPaidHostAutoBind))
             {
                 query["PostPaidHostAutoBind"] = request.PostPaidHostAutoBind;
@@ -116457,12 +117365,12 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the time when an automatic configuration check on cloud services runs.</para>
+        /// <para>Sets the automatic detection time for cloud platform configuration check items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out. You can use the ChangeCheckConfig operation.</para>
+        /// <para>This operation is deprecated. Use the ChangeCheckConfig operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -116530,12 +117438,12 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the time when an automatic configuration check on cloud services runs.</para>
+        /// <para>Sets the automatic detection time for cloud platform configuration check items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out. You can use the ChangeCheckConfig operation.</para>
+        /// <para>This operation is deprecated. Use the ChangeCheckConfig operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -116603,12 +117511,12 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the time when an automatic configuration check on cloud services runs.</para>
+        /// <para>Sets the automatic detection time for cloud platform configuration check items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out. You can use the ChangeCheckConfig operation.</para>
+        /// <para>This operation is deprecated. Use the ChangeCheckConfig operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -116632,12 +117540,12 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Specifies the time when an automatic configuration check on cloud services runs.</para>
+        /// <para>Sets the automatic detection time for cloud platform configuration check items.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is phased out. You can use the ChangeCheckConfig operation.</para>
+        /// <para>This operation is deprecated. Use the ChangeCheckConfig operation instead.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -116674,6 +117582,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -116734,6 +117646,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -116858,6 +117774,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["BindUuidList"] = request.BindUuidList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Criteria))
             {
                 query["Criteria"] = request.Criteria;
@@ -116955,6 +117875,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BindUuidList))
             {
                 query["BindUuidList"] = request.BindUuidList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Criteria))
             {
@@ -117193,7 +118117,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the one-click scan feature on the vulnerability management page of the console.</para>
+        /// <para>Starts the one-click scan feature on the vulnerability management page of the console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -117210,6 +118134,14 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Types))
             {
                 query["Types"] = request.Types;
@@ -117239,7 +118171,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the one-click scan feature on the vulnerability management page of the console.</para>
+        /// <para>Starts the one-click scan feature on the vulnerability management page of the console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -117256,6 +118188,14 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Types))
             {
                 query["Types"] = request.Types;
@@ -117285,7 +118225,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the one-click scan feature on the vulnerability management page of the console.</para>
+        /// <para>Starts the one-click scan feature on the vulnerability management page of the console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -117303,7 +118243,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the one-click scan feature on the vulnerability management page of the console.</para>
+        /// <para>Starts the one-click scan feature on the vulnerability management page of the console.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -118190,6 +119130,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
                 query["Config"] = request.Config;
@@ -118236,6 +119180,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
                 query["Config"] = request.Config;
@@ -120821,7 +121769,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages an Object Storage Service (OSS) bucket check task.</para>
+        /// <para>Operates on a bucket detection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -120846,6 +121794,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["OperateCode"] = request.OperateCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -120867,7 +121819,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages an Object Storage Service (OSS) bucket check task.</para>
+        /// <para>Operates on a bucket detection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -120892,6 +121844,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["OperateCode"] = request.OperateCode;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -120913,7 +121869,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages an Object Storage Service (OSS) bucket check task.</para>
+        /// <para>Operates on a bucket detection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -120931,7 +121887,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Manages an Object Storage Service (OSS) bucket check task.</para>
+        /// <para>Operates on a bucket detection task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -120949,7 +121905,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a feature by type.</para>
+        /// <para>Sets a global switch by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -120966,6 +121922,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
                 query["Config"] = request.Config;
@@ -121003,7 +121963,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a feature by type.</para>
+        /// <para>Sets a global switch by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -121020,6 +121980,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Config))
             {
                 query["Config"] = request.Config;
@@ -121057,7 +122021,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a feature by type.</para>
+        /// <para>Sets a global switch by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -121075,7 +122039,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables a feature by type.</para>
+        /// <para>Sets a global switch by type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -122266,6 +123230,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["OperateType"] = request.OperateType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
                 query["Type"] = request.Type;
@@ -122319,6 +123287,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OperateType))
             {
                 query["OperateType"] = request.OperateType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
             {
@@ -122546,6 +123518,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Remark"] = request.Remark;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEventIds))
             {
                 query["SecurityEventIds"] = request.SecurityEventIds;
@@ -122591,6 +123567,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Remark))
             {
                 query["Remark"] = request.Remark;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SecurityEventIds))
             {
@@ -122806,6 +123786,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["Operation"] = request.Operation;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -122867,6 +123851,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Operation))
             {
                 query["Operation"] = request.Operation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
@@ -123938,6 +124926,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -123994,6 +124986,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -125146,6 +126142,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["CloudAssetType"] = request.CloudAssetType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendor))
             {
                 query["Vendor"] = request.Vendor;
@@ -125199,6 +126199,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CloudAssetType))
             {
                 query["CloudAssetType"] = request.CloudAssetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Vendor))
             {
@@ -125384,6 +126388,9 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Refreshes the bucket list.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// RefreshOssBucketScanInfoRequest
+        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -125391,9 +126398,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <returns>
         /// RefreshOssBucketScanInfoResponse
         /// </returns>
-        public RefreshOssBucketScanInfoResponse RefreshOssBucketScanInfoWithOptions(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public RefreshOssBucketScanInfoResponse RefreshOssBucketScanInfoWithOptions(RefreshOssBucketScanInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RefreshOssBucketScanInfo",
@@ -125414,6 +126430,9 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Refreshes the bucket list.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// RefreshOssBucketScanInfoRequest
+        /// </param>
         /// <param name="runtime">
         /// runtime options for this request RuntimeOptions
         /// </param>
@@ -125421,9 +126440,18 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <returns>
         /// RefreshOssBucketScanInfoResponse
         /// </returns>
-        public async Task<RefreshOssBucketScanInfoResponse> RefreshOssBucketScanInfoWithOptionsAsync(AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        public async Task<RefreshOssBucketScanInfoResponse> RefreshOssBucketScanInfoWithOptionsAsync(RefreshOssBucketScanInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
-            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest();
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
             {
                 Action = "RefreshOssBucketScanInfo",
@@ -125444,13 +126472,17 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Refreshes the bucket list.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// RefreshOssBucketScanInfoRequest
+        /// </param>
+        /// 
         /// <returns>
         /// RefreshOssBucketScanInfoResponse
         /// </returns>
-        public RefreshOssBucketScanInfoResponse RefreshOssBucketScanInfo()
+        public RefreshOssBucketScanInfoResponse RefreshOssBucketScanInfo(RefreshOssBucketScanInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return RefreshOssBucketScanInfoWithOptions(runtime);
+            return RefreshOssBucketScanInfoWithOptions(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -125458,13 +126490,17 @@ namespace AlibabaCloud.SDK.Sas20181203
         /// <para>Refreshes the bucket list.</para>
         /// </summary>
         /// 
+        /// <param name="request">
+        /// RefreshOssBucketScanInfoRequest
+        /// </param>
+        /// 
         /// <returns>
         /// RefreshOssBucketScanInfoResponse
         /// </returns>
-        public async Task<RefreshOssBucketScanInfoResponse> RefreshOssBucketScanInfoAsync()
+        public async Task<RefreshOssBucketScanInfoResponse> RefreshOssBucketScanInfoAsync(RefreshOssBucketScanInfoRequest request)
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
-            return await RefreshOssBucketScanInfoWithOptionsAsync(runtime);
+            return await RefreshOssBucketScanInfoWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -126526,6 +127562,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["QuaraFileId"] = request.QuaraFileId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
                 query["SourceIp"] = request.SourceIp;
@@ -126575,6 +127615,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QuaraFileId))
             {
                 query["QuaraFileId"] = request.QuaraFileId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceIp))
             {
@@ -126826,6 +127870,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ReportVersion"] = request.ReportVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendEndTime))
             {
                 query["SendEndTime"] = request.SendEndTime;
@@ -126943,6 +127991,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportVersion))
             {
                 query["ReportVersion"] = request.ReportVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SendEndTime))
             {
@@ -127214,6 +128266,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["LevelsOn"] = request.LevelsOn;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -127259,6 +128315,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LevelsOn))
             {
                 query["LevelsOn"] = request.LevelsOn;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -127662,6 +128722,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ReportId"] = request.ReportId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
@@ -127703,6 +128767,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ReportId))
             {
                 query["ReportId"] = request.ReportId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -129593,7 +130661,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a configuration assessment task.</para>
+        /// <para>Submits a cloud service configuration check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -129610,6 +130678,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanRange))
             {
                 query["ScanRange"] = request.ScanRange;
@@ -129639,7 +130711,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a configuration assessment task.</para>
+        /// <para>Submits a cloud service configuration check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -129656,6 +130728,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanRange))
             {
                 query["ScanRange"] = request.ScanRange;
@@ -129685,7 +130761,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a configuration assessment task.</para>
+        /// <para>Submits a cloud service configuration check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -129703,7 +130779,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Submits a configuration assessment task.</para>
+        /// <para>Submits a cloud service configuration check.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -130745,6 +131821,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         public UpdateAlarmEventResponse UpdateAlarmEventWithOptions(UpdateAlarmEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmEventIdList))
             {
@@ -130760,6 +131841,7 @@ namespace AlibabaCloud.SDK.Sas20181203
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -130795,6 +131877,11 @@ namespace AlibabaCloud.SDK.Sas20181203
         public async Task<UpdateAlarmEventResponse> UpdateAlarmEventWithOptionsAsync(UpdateAlarmEventRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
             Dictionary<string, object> body = new Dictionary<string, object>(){};
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AlarmEventIdList))
             {
@@ -130810,6 +131897,7 @@ namespace AlibabaCloud.SDK.Sas20181203
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
             };
             AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
@@ -131721,6 +132809,158 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UpdateCheckPolicyWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the check scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCheckScopeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCheckScopeConfigResponse
+        /// </returns>
+        public UpdateCheckScopeConfigResponse UpdateCheckScopeConfigWithOptions(UpdateCheckScopeConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoConfig))
+            {
+                query["AutoConfig"] = request.AutoConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoType))
+            {
+                query["AutoType"] = request.AutoType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCheckScopeConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCheckScopeConfigResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the check scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCheckScopeConfigRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCheckScopeConfigResponse
+        /// </returns>
+        public async Task<UpdateCheckScopeConfigResponse> UpdateCheckScopeConfigWithOptionsAsync(UpdateCheckScopeConfigRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoConfig))
+            {
+                query["AutoConfig"] = request.AutoConfig;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoType))
+            {
+                query["AutoType"] = request.AutoType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ConfigId))
+            {
+                query["ConfigId"] = request.ConfigId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceDirectoryAccountId))
+            {
+                query["ResourceDirectoryAccountId"] = request.ResourceDirectoryAccountId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UpdateCheckScopeConfig",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UpdateCheckScopeConfigResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the check scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCheckScopeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCheckScopeConfigResponse
+        /// </returns>
+        public UpdateCheckScopeConfigResponse UpdateCheckScopeConfig(UpdateCheckScopeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UpdateCheckScopeConfigWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Updates the check scope configuration.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UpdateCheckScopeConfigRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UpdateCheckScopeConfigResponse
+        /// </returns>
+        public async Task<UpdateCheckScopeConfigResponse> UpdateCheckScopeConfigAsync(UpdateCheckScopeConfigRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UpdateCheckScopeConfigWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -135173,7 +136413,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Multi-Account Instance Configuration</para>
+        /// <para>Manages authorization assignments for member accounts in multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135215,7 +136455,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Multi-Account Instance Configuration</para>
+        /// <para>Manages authorization assignments for member accounts in multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135257,7 +136497,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Multi-Account Instance Configuration</para>
+        /// <para>Manages authorization assignments for member accounts in multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135275,7 +136515,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify Multi-Account Instance Configuration</para>
+        /// <para>Manages authorization assignments for member accounts in multi-account authorization management.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135529,7 +136769,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the scan policy configuration for OSS file detection under the malicious file detection feature.</para>
+        /// <para>Updates the OSS file scan policy configuration for the malicious file detection feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135549,6 +136789,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllKeyPrefix))
             {
                 query["AllKeyPrefix"] = request.AllKeyPrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAdd))
+            {
+                query["AutoAdd"] = request.AutoAdd;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketNameList))
             {
@@ -135601,6 +136845,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScanDayList))
             {
                 query["ScanDayList"] = request.ScanDayList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
@@ -135627,7 +136875,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the scan policy configuration for OSS file detection under the malicious file detection feature.</para>
+        /// <para>Updates the OSS file scan policy configuration for the malicious file detection feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135647,6 +136895,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AllKeyPrefix))
             {
                 query["AllKeyPrefix"] = request.AllKeyPrefix;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoAdd))
+            {
+                query["AutoAdd"] = request.AutoAdd;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BucketNameList))
             {
@@ -135700,6 +136952,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["ScanDayList"] = request.ScanDayList;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Source))
+            {
+                query["Source"] = request.Source;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
             {
                 query["StartTime"] = request.StartTime;
@@ -135725,7 +136981,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the scan policy configuration for OSS file detection under the malicious file detection feature.</para>
+        /// <para>Updates the OSS file scan policy configuration for the malicious file detection feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135743,7 +136999,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the scan policy configuration for OSS file detection under the malicious file detection feature.</para>
+        /// <para>Updates the OSS file scan policy configuration for the malicious file detection feature.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135761,7 +137017,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change Postpaid Asset Authorization Version</para>
+        /// <para>Changes the protection edition bound to a server after you activate the pay-as-you-go billing method for host and container security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135790,6 +137046,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["BindAction"] = request.BindAction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateIfNecessary))
             {
                 query["UpdateIfNecessary"] = request.UpdateIfNecessary;
@@ -135815,7 +137079,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change Postpaid Asset Authorization Version</para>
+        /// <para>Changes the protection edition bound to a server after you activate the pay-as-you-go billing method for host and container security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135844,6 +137108,14 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["BindAction"] = request.BindAction;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProductCode))
+            {
+                query["ProductCode"] = request.ProductCode;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UpdateIfNecessary))
             {
                 query["UpdateIfNecessary"] = request.UpdateIfNecessary;
@@ -135869,7 +137141,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change Postpaid Asset Authorization Version</para>
+        /// <para>Changes the protection edition bound to a server after you activate the pay-as-you-go billing method for host and container security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -135887,7 +137159,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Change Postpaid Asset Authorization Version</para>
+        /// <para>Changes the protection edition bound to a server after you activate the pay-as-you-go billing method for host and container security.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -136445,7 +137717,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the key that corresponds to a specified type.</para>
+        /// <para>Modifies the key corresponding to a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -136465,6 +137737,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 query["BusinessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionKey))
             {
@@ -136491,7 +137767,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the key that corresponds to a specified type.</para>
+        /// <para>Modifies the key corresponding to a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -136511,6 +137787,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BusinessType))
             {
                 query["BusinessType"] = request.BusinessType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectionKey))
             {
@@ -136537,7 +137817,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the key that corresponds to a specified type.</para>
+        /// <para>Modifies the key corresponding to a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -136555,7 +137835,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the key that corresponds to a specified type.</para>
+        /// <para>Modifies the key corresponding to a specified type.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -136965,7 +138245,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the unknown threat detection strategy.</para>
+        /// <para>Updates an intelligent behavior analytics policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137023,7 +138303,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the unknown threat detection strategy.</para>
+        /// <para>Updates an intelligent behavior analytics policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137081,7 +138361,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the unknown threat detection strategy.</para>
+        /// <para>Updates an intelligent behavior analytics policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -137099,7 +138379,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the unknown threat detection strategy.</para>
+        /// <para>Updates an intelligent behavior analytics policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138269,7 +139549,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the instance dimensions under a check item.</para>
+        /// <para>Verifies instances under a check item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138293,6 +139573,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckIds))
             {
                 query["CheckIds"] = request.CheckIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -138323,7 +139607,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the instance dimensions under a check item.</para>
+        /// <para>Verifies instances under a check item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138347,6 +139631,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckIds))
             {
                 query["CheckIds"] = request.CheckIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -138377,7 +139665,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the instance dimensions under a check item.</para>
+        /// <para>Verifies instances under a check item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138395,7 +139683,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the instance dimensions under a check item.</para>
+        /// <para>Verifies instances under a check item.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138413,7 +139701,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs check item-level validation.</para>
+        /// <para>Validates check items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138433,6 +139721,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckIds))
             {
                 query["CheckIds"] = request.CheckIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -138463,7 +139755,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs check item-level validation.</para>
+        /// <para>Validates check items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138483,6 +139775,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CheckIds))
             {
                 query["CheckIds"] = request.CheckIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                query["Force"] = request.Force;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
             {
@@ -138513,7 +139809,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs check item-level validation.</para>
+        /// <para>Validates check items.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -138531,7 +139827,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Performs check item-level validation.</para>
+        /// <para>Validates check items.</para>
         /// </summary>
         /// 
         /// <param name="request">

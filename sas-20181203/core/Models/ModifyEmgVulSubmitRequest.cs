@@ -10,10 +10,19 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyEmgVulSubmitRequest : TeaModel {
         /// <summary>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
         /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English.</description></item>
+        /// <item><description><para><b>zh</b>: Chinese</para>
+        /// </description></item>
+        /// <item><description><para><b>en</b>: English</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,9 +44,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the member accounts in the resource folder (Alibaba Cloud account).</para>
+        /// <para>The ID of the member accounts in the resource directory (Alibaba Cloud account).</para>
         /// <remarks>
-        /// <para>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
+        /// <para>Call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -50,8 +59,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>Specifies whether to perform vulnerability detection. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>yes</b>: Perform vulnerability detection.</description></item>
-        /// <item><description><b>no</b>: Do not perform vulnerability detection.</description></item>
+        /// <item><description><para><b>yes</b>: Perform vulnerability detection.</para>
+        /// </description></item>
+        /// <item><description><para><b>no</b>: Do not perform vulnerability detection.</para>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

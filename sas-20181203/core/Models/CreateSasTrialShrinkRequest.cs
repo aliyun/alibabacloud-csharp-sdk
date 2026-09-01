@@ -10,10 +10,17 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateSasTrialShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether the request is redirected from the Elastic Compute Service (ECS) console. Valid values:</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether the request is from the ECS console. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b></description></item>
-        /// <item><description><b>false</b></description></item>
+        /// <item><description><b>true</b>: yes.</description></item>
+        /// <item><description><b>false</b>: no.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -24,10 +31,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? FromEcs { get; set; }
 
         /// <summary>
-        /// <para>The language of the content within the request and response. Valid values:</para>
+        /// <para>The language of the request and response. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
-        /// <item><description><b>en</b>: English</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
+        /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Lang { get; set; }
 
         /// <summary>
-        /// <para>The reason why you apply for the trial. You must specify the reason for the second trial.</para>
+        /// <para>The reason for applying for a trial. This parameter is required for a second trial.</para>
         /// </summary>
         [NameInMap("RequestForm")]
         [Validation(Required=false)]
@@ -47,12 +54,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The trial type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>0</b>: trial prohibited</description></item>
-        /// <item><description><b>1</b>: first trial</description></item>
-        /// <item><description><b>2</b>: second trial</description></item>
+        /// <item><description><b>0</b>: trial not allowed.</description></item>
+        /// <item><description><b>1</b>: first trial.</description></item>
+        /// <item><description><b>2</b>: second trial.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain the trial type. You can start a trial only if this parameter is not set to 0.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter. A trial can be started only when the value is not 0.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -63,13 +70,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? TryType { get; set; }
 
         /// <summary>
-        /// <para>The trial edition. Valid values:</para>
+        /// <para>The trial version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>3</b>: Enterprise</description></item>
-        /// <item><description><b>7</b>: Ultimate</description></item>
+        /// <item><description><b>3</b>: Enterprise Edition.</description></item>
+        /// <item><description><b>7</b>: Ultimate Edition.</description></item>
         /// </list>
         /// <remarks>
-        /// <para> You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain the trial edition.</para>
+        /// <para>Call the <a href="https://help.aliyun.com/document_detail/2623574.html">GetCanTrySas</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

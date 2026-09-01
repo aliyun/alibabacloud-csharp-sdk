@@ -10,7 +10,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ModifyPostPayModuleSwitchShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically bind newly added assets for host and container protection. Valid values:</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. Use a different token for each request. Only ASCII characters are supported. The token can be up to 64 characters in length.</para>
+        /// </summary>
+        [NameInMap("ClientToken")]
+        [Validation(Required=false)]
+        public string ClientToken { get; set; }
+
+        [NameInMap("EdrModuleSwitch")]
+        [Validation(Required=false)]
+        public string EdrModuleSwitchShrink { get; set; }
+
+        /// <summary>
+        /// <para>Specifies whether to automatically bind new assets for host and container protection. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>0</b>: Disabled.</description></item>
         /// <item><description><b>1</b>: Enabled.</description></item>
@@ -24,7 +35,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PostPaidHostAutoBind { get; set; }
 
         /// <summary>
-        /// <para>The version to which newly added assets are automatically bound for host and container protection. Valid values:</para>
+        /// <para>The edition to which new assets are automatically bound for host and container protection. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>1</b>: Free Edition. </description></item>
         /// <item><description><b>3</b>: Enterprise Edition.</description></item>
@@ -57,7 +68,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <para>The switch status of pay-as-you-go modules in JSON string format. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Key:<list type="bullet">
-        /// <item><description><b>VUL</b>: vulnerability fix module</description></item>
+        /// <item><description><b>VUL</b>: vulnerability management module</description></item>
         /// <item><description><b>CSPM</b>: Cloud Security Posture Management (CSPM) module</description></item>
         /// <item><description><b>AGENTLESS</b>: agentless detection module</description></item>
         /// <item><description><b>SERVERLESS</b>: serverless security module</description></item>
@@ -74,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <remarks>
         /// <para>Modules for which no value is specified remain unchanged.</para>
         /// </remarks>
-        /// <para><notice>This parameter has the same meaning as PostPayModuleSwitchObj. If both parameters are specified, the value of PostPayModuleSwitch takes precedence..</para>
+        /// <para><notice>This parameter has the same meaning as PostPayModuleSwitchObj. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;VUL&quot;:1,&quot;CSPM&quot;:0}</para>
@@ -86,7 +97,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The pay-as-you-go module switch.</para>
         /// <remarks>
-        /// <para>Notice: This parameter has the same meaning as PostPayModuleSwitch. If both parameters are specified, the value of PostPayModuleSwitch takes precedence..</para>
+        /// <para>Notice: This parameter has the same meaning as PostPayModuleSwitch. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></para>
         /// </remarks>
         /// </summary>
         [NameInMap("PostPayModuleSwitchObj")]

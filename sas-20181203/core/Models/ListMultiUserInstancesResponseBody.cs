@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListMultiUserInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the administrator account.</para>
+        /// <para>The details of the administrator account.</para>
         /// </summary>
         [NameInMap("DaInstance")]
         [Validation(Required=false)]
         public ListMultiUserInstancesResponseBodyDaInstance DaInstance { get; set; }
         public class ListMultiUserInstancesResponseBodyDaInstance : TeaModel {
             /// <summary>
-            /// <para>AliUid of the administrator account.</para>
+            /// <para>The aliuid of the administrator account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1766185894104675</para>
@@ -27,14 +27,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>Usage and allocation of administrator account anti-ransomware capacity.</para>
+            /// <para>The anti-ransomware capacity usage and allocation of the administrator account.</para>
             /// </summary>
             [NameInMap("AntiRansomwareCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceAntiRansomwareCapacity AntiRansomwareCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceAntiRansomwareCapacity : TeaModel {
                 /// <summary>
-                /// <para>Allocated anti-ransomware capacity, in GB.</para>
+                /// <para>The assigned anti-ransomware capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Assigned { get; set; }
 
                 /// <summary>
-                /// <para>Administrator account anti-ransomware capacity, in GB.</para>
+                /// <para>The anti-ransomware capacity of the administrator account. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>14</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used anti-ransomware capacity, in GB.</para>
+                /// <para>The used anti-ransomware capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -66,14 +66,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Usage and allocation of administrator account CSPM (Cloud Security Posture Management) scan count.</para>
+            /// <para>The cloud platform configuration check scan usage and allocation of the administrator account.</para>
             /// </summary>
             [NameInMap("CspmCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceCspmCapacity CspmCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceCspmCapacity : TeaModel {
                 /// <summary>
-                /// <para>Allocated CSPM scan count. Unit: per month.</para>
+                /// <para>The assigned number of cloud platform configuration check scans. Unit: scans/month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -83,7 +83,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Assigned { get; set; }
 
                 /// <summary>
-                /// <para>Purchased CSPM scan count. Unit: per month.</para>
+                /// <para>The purchased number of cloud platform configuration check scans. Unit: scans/month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>180000</para>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used CSPM scan count. Unit: per month.</para>
+                /// <para>The used number of cloud platform configuration check scans. Unit: scans/month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>31569</para>
@@ -104,15 +104,33 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("CspmInstanceCapacity")]
+            [Validation(Required=false)]
+            public ListMultiUserInstancesResponseBodyDaInstanceCspmInstanceCapacity CspmInstanceCapacity { get; set; }
+            public class ListMultiUserInstancesResponseBodyDaInstanceCspmInstanceCapacity : TeaModel {
+                [NameInMap("Assigned")]
+                [Validation(Required=false)]
+                public long? Assigned { get; set; }
+
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public long? Count { get; set; }
+
+                [NameInMap("Used")]
+                [Validation(Required=false)]
+                public long? Used { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>Usage and allocation of honeypot authorization count for the administrator account.</para>
+            /// <para>The usage and allocation of honeypot quotas for the administrator account.</para>
             /// </summary>
             [NameInMap("HoneypotCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceHoneypotCapacity HoneypotCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceHoneypotCapacity : TeaModel {
                 /// <summary>
-                /// <para>Assigned number of honeypot licenses.</para>
+                /// <para>The assigned honeypot quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -122,7 +140,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Assigned { get; set; }
 
                 /// <summary>
-                /// <para>Purchased honeypot authorization count.</para>
+                /// <para>The purchased honeypot quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>45</para>
@@ -132,7 +150,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used honeypot authorization count.</para>
+                /// <para>The used number of cloud honeypot authorizations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>9</para>
@@ -144,14 +162,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Usage and allocation of image scan authorization count for the administrator account.</para>
+            /// <para>The usage and allocation of image scan quotas for the administrator account.</para>
             /// </summary>
             [NameInMap("ImageScanCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceImageScanCapacity ImageScanCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceImageScanCapacity : TeaModel {
                 /// <summary>
-                /// <para>Assigned image scan authorization count.</para>
+                /// <para>The assigned image scan quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -161,7 +179,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Assigned { get; set; }
 
                 /// <summary>
-                /// <para>Purchased image scan authorization count.</para>
+                /// <para>The purchased image scan quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -171,7 +189,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used purchased image scan authorization count.</para>
+                /// <para>The used image scan quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -183,7 +201,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Cloud Security Center instance ID purchased by the administrator account.</para>
+            /// <para>The Security Center instance ID purchased by the administrator account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>i-bp1gmm4pnacse343nqal</para>
@@ -193,13 +211,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Instance purchase type. Values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>0</b>:Self-purchased.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>:Allocated.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The instance purchase type. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -209,14 +221,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? InstancePurchaseType { get; set; }
 
             /// <summary>
-            /// <para>Usage and allocation of administrator account RASP (Runtime Application Self-Protection) capacity.</para>
+            /// <para>The application protection usage and allocation of the administrator account.</para>
             /// </summary>
             [NameInMap("RaspCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceRaspCapacity RaspCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceRaspCapacity : TeaModel {
                 /// <summary>
-                /// <para>Allocated RASP capacity. Unit: per month.</para>
+                /// <para>The assigned number of application protection quotas. Unit: quotas/month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -226,7 +238,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Assigned { get; set; }
 
                 /// <summary>
-                /// <para>Purchased RASP capacity. Unit: per month.</para>
+                /// <para>The purchased number of application protection quotas. Unit: quotas/month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>7</para>
@@ -236,7 +248,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used RASP capacity. Unit: per month.</para>
+                /// <para>The used number of application protection quotas. Unit: quotas/month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6</para>
@@ -248,14 +260,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Usage and allocation details of the malicious file detection SDK licenses for the administrator account.</para>
+            /// <para>The usage and allocation of malicious file detection SDK quotas for the administrator account.</para>
             /// </summary>
             [NameInMap("SdkCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceSdkCapacity SdkCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceSdkCapacity : TeaModel {
                 /// <summary>
-                /// <para>Assigned number of malicious file detection SDK licenses.</para>
+                /// <para>The assigned malicious file detection SDK quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -265,7 +277,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Assigned { get; set; }
 
                 /// <summary>
-                /// <para>Purchased number of malicious file detection SDK licenses.</para>
+                /// <para>The purchased malicious file detection SDK quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50</para>
@@ -275,7 +287,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used number of malicious file detection SDK licenses.</para>
+                /// <para>The used number of malicious file detection SDK authorizations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -287,14 +299,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Usage and allocation of administrator account log storage capacity.</para>
+            /// <para>The log storage capacity usage and allocation of the administrator account.</para>
             /// </summary>
             [NameInMap("SlsCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceSlsCapacity SlsCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceSlsCapacity : TeaModel {
                 /// <summary>
-                /// <para>Allocated log storage capacity, in GB.</para>
+                /// <para>The assigned log storage capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -304,7 +316,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Assigned { get; set; }
 
                 /// <summary>
-                /// <para>Administrator account log storage capacity, in GB.</para>
+                /// <para>The log storage capacity of the administrator account. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>150</para>
@@ -314,7 +326,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used log storage capacity, in GB.</para>
+                /// <para>The used log storage capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -326,13 +338,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Administrator account instance status. Values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>1</b>: Active.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: Inactive.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The instance status of the administrator account. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -342,14 +348,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Usage and allocation of administrator account threat analysis capacity.</para>
+            /// <para>The threat analysis capacity usage and allocation of the administrator account.</para>
             /// </summary>
             [NameInMap("ThreatAnalysisCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceThreatAnalysisCapacity ThreatAnalysisCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceThreatAnalysisCapacity : TeaModel {
                 /// <summary>
-                /// <para>Assigned threat analysis capacity. Unit: GB.</para>
+                /// <para>The assigned threat analysis capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -359,7 +365,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Assigned { get; set; }
 
                 /// <summary>
-                /// <para>Purchased threat analysis capacity. Unit: GB.</para>
+                /// <para>The purchased threat analysis capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3000</para>
@@ -369,7 +375,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used threat analysis capacity. Unit: GB.</para>
+                /// <para>The used threat analysis capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1548</para>
@@ -381,14 +387,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Usage and allocation of threat analysis and response log inbound traffic for the administrator account.</para>
+            /// <para>The usage and allocation of threat detection and response log ingestion traffic for the administrator account.</para>
             /// </summary>
             [NameInMap("ThreatAnalysisFlow")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceThreatAnalysisFlow ThreatAnalysisFlow { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceThreatAnalysisFlow : TeaModel {
                 /// <summary>
-                /// <para>Assigned threat analysis and response log inbound traffic. Unit: GB/day.</para>
+                /// <para>The assigned threat detection and response log ingestion traffic. Unit: GB/day.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -398,7 +404,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Assigned { get; set; }
 
                 /// <summary>
-                /// <para>Purchased threat analysis and response log inbound traffic. Unit: GB/day.</para>
+                /// <para>The purchased threat detection and response log ingestion traffic. Unit: GB/day.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>300</para>
@@ -408,7 +414,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used threat analysis and response log inbound traffic. Unit: GB/day.</para>
+                /// <para>The used threat detection and response log ingestion traffic. Unit: GB/day.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -420,13 +426,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>User type. Values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>Administrator User</b>: 1</para>
-            /// </description></item>
-            /// <item><description><para><b>Regular User</b>: 2</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The user type. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -436,23 +436,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UserType { get; set; }
 
             /// <summary>
-            /// <para>Purchased version of Cloud Security Center. Values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>1</b>:Free Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>:Enterprise Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>:Advanced Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>6</b>:Anti-Virus Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>7</b>:Flagship Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>8</b>:Multiple Editions</para>
-            /// </description></item>
-            /// <item><description><para><b>10</b>:Value-Added Services Only</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The purchased Security Center edition. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -462,22 +446,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Version { get; set; }
 
             /// <summary>
-            /// <para>Authorization usage statistics for the administrator account.</para>
+            /// <para>The authorization usage statistics information for the administrator account.</para>
             /// </summary>
             [NameInMap("VersionSummary")]
             [Validation(Required=false)]
             public List<ListMultiUserInstancesResponseBodyDaInstanceVersionSummary> VersionSummary { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceVersionSummary : TeaModel {
                 /// <summary>
-                /// <para>The type of authorization consumed during binding. Values:</para>
-                /// <list type="bullet">
-                /// <item><description><para>ASSET: consumes the number of authorized instances</para>
-                /// </description></item>
-                /// <item><description><para>CORE: consumes the number of authorized cores</para>
-                /// </description></item>
-                /// <item><description><para>ASSET_AND_CORE: consumes both the number of authorized instances and cores</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The authorization type consumed during binding. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ASSET_AND_CORE</para>
@@ -487,14 +463,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string AuthBindType { get; set; }
 
                 /// <summary>
-                /// <para>Usage and allocation details of the core licenses for the administrator account.</para>
+                /// <para>The usage and allocation of authorized core quotas for the administrator account.</para>
                 /// </summary>
                 [NameInMap("CoreCount")]
                 [Validation(Required=false)]
                 public ListMultiUserInstancesResponseBodyDaInstanceVersionSummaryCoreCount CoreCount { get; set; }
                 public class ListMultiUserInstancesResponseBodyDaInstanceVersionSummaryCoreCount : TeaModel {
                     /// <summary>
-                    /// <para>Assigned number of core licenses.</para>
+                    /// <para>The assigned number of authorized cores.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>4</para>
@@ -504,7 +480,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public long? Assigned { get; set; }
 
                     /// <summary>
-                    /// <para>Purchased number of core licenses.</para>
+                    /// <para>The purchased authorized core quota.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>150</para>
@@ -514,7 +490,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public long? Count { get; set; }
 
                     /// <summary>
-                    /// <para>Used number of core licenses.</para>
+                    /// <para>The used number of authorized cores.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>68</para>
@@ -526,14 +502,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>Usage and allocation details of the ECS instance licenses for the administrator account.</para>
+                /// <para>The usage and allocation of authorized server quotas for the administrator account.</para>
                 /// </summary>
                 [NameInMap("EcsCount")]
                 [Validation(Required=false)]
                 public ListMultiUserInstancesResponseBodyDaInstanceVersionSummaryEcsCount EcsCount { get; set; }
                 public class ListMultiUserInstancesResponseBodyDaInstanceVersionSummaryEcsCount : TeaModel {
                     /// <summary>
-                    /// <para>Assigned number of purchased ECS instance licenses.</para>
+                    /// <para>The assigned number of purchased authorized servers.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>3</para>
@@ -543,7 +519,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public long? Assigned { get; set; }
 
                     /// <summary>
-                    /// <para>Purchased number of ECS instance licenses.</para>
+                    /// <para>The purchased authorized server quota.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>20</para>
@@ -553,7 +529,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public long? Count { get; set; }
 
                     /// <summary>
-                    /// <para>Used number of purchased ECS instance licenses.</para>
+                    /// <para>The used authorized server quota.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>14</para>
@@ -565,23 +541,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>Purchased version of Cloud Security Center. Values:</para>
-                /// <list type="bullet">
-                /// <item><description><para><b>1</b>: Free Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>3</b>: Enterprise Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>5</b>: Advanced Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>6</b>: Antivirus Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>7</b>: Flagship Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>8</b>: Multiple Editions</para>
-                /// </description></item>
-                /// <item><description><para><b>10</b>: Only Value-Added Services Purchased</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The purchased Security Center edition. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -593,14 +553,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Usage and allocation of web lock (anti-tampering) authorization count for the administrator account.</para>
+            /// <para>The usage and allocation of tamper-proofing quotas for the administrator account.</para>
             /// </summary>
             [NameInMap("WebLockCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodyDaInstanceWebLockCapacity WebLockCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodyDaInstanceWebLockCapacity : TeaModel {
                 /// <summary>
-                /// <para>Assigned web lock (anti-tampering) authorization count.</para>
+                /// <para>The assigned tamper-proofing quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -610,7 +570,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Assigned { get; set; }
 
                 /// <summary>
-                /// <para>Purchased web lock (anti-tampering) authorization count.</para>
+                /// <para>The purchased tamper-proofing quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -620,7 +580,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used web lock (anti-tampering) authorization count.</para>
+                /// <para>The used tamper-proofing quota.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -634,14 +594,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>Pagination information.</para>
+        /// <para>The pagination information.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListMultiUserInstancesResponseBodyPageInfo PageInfo { get; set; }
         public class ListMultiUserInstancesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The current page number in a paginated query.</para>
+            /// <para>The current page number in paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -651,7 +611,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of items to return in each batch query.</para>
+            /// <para>The number of entries per batch in a batched query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1000</para>
@@ -661,7 +621,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? MaxResults { get; set; }
 
             /// <summary>
-            /// <para>The NextToken value returned when using the NextToken method.</para>
+            /// <para>The NextToken value returned when the NextToken-based pagination method is used.</para>
             /// 
             /// <b>Example:</b>
             /// <para>B604532DEF982B875E8360A6EFA3B***</para>
@@ -671,7 +631,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string NextToken { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of items to return per page in a paginated query.</para>
+            /// <para>The maximum number of entries per page in paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -681,7 +641,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>Total number of items.</para>
+            /// <para>The total number of entries.</para>
             /// 
             /// <b>Example:</b>
             /// <para>55</para>
@@ -693,7 +653,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The ID of this call request, which is a unique identifier generated by Alibaba Cloud for the request and can be used to troubleshoot and locate issues.</para>
+        /// <para>The ID of this request, which is a unique identifier generated by Alibaba Cloud for this request. It can be used to troubleshoot and locate issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>88F2A6CD-E500-5038-B992-0107B99AA88C</para>
@@ -703,14 +663,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Details of member accounts.</para>
+        /// <para>The details of member accounts.</para>
         /// </summary>
         [NameInMap("SaleInstanceList")]
         [Validation(Required=false)]
         public List<ListMultiUserInstancesResponseBodySaleInstanceList> SaleInstanceList { get; set; }
         public class ListMultiUserInstancesResponseBodySaleInstanceList : TeaModel {
             /// <summary>
-            /// <para>UID of the member account.</para>
+            /// <para>The UID of the member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>103784262032</para>
@@ -720,14 +680,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>Anti-ransomware capacity usage of the member account.</para>
+            /// <para>The anti-ransomware capacity usage of the member account.</para>
             /// </summary>
             [NameInMap("AntiRansomwareCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListAntiRansomwareCapacity AntiRansomwareCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListAntiRansomwareCapacity : TeaModel {
                 /// <summary>
-                /// <para>Allocated anti-ransomware capacity, in GB.</para>
+                /// <para>The allocated anti-ransomware capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>10</para>
@@ -737,7 +697,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used anti-ransomware capacity, in GB.</para>
+                /// <para>The used anti-ransomware capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -749,14 +709,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Member account CSPM (Cloud Security Posture Management) scan usage.</para>
+            /// <para>The cloud platform configuration check scan usage of the member account.</para>
             /// </summary>
             [NameInMap("CspmCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListCspmCapacity CspmCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListCspmCapacity : TeaModel {
                 /// <summary>
-                /// <para>Allocated CSPM scan count. Unit: per month.</para>
+                /// <para>The allocated number of cloud platform configuration check scans. Unit: scans/month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -766,7 +726,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used CSPM scan count. Unit: per month.</para>
+                /// <para>The used number of cloud platform configuration check scans. Unit: scans/month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -777,15 +737,29 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
             }
 
+            [NameInMap("CspmInstanceCapacity")]
+            [Validation(Required=false)]
+            public ListMultiUserInstancesResponseBodySaleInstanceListCspmInstanceCapacity CspmInstanceCapacity { get; set; }
+            public class ListMultiUserInstancesResponseBodySaleInstanceListCspmInstanceCapacity : TeaModel {
+                [NameInMap("Count")]
+                [Validation(Required=false)]
+                public long? Count { get; set; }
+
+                [NameInMap("Used")]
+                [Validation(Required=false)]
+                public long? Used { get; set; }
+
+            }
+
             /// <summary>
-            /// <para>Usage details of honeypot authorizations for the member account.</para>
+            /// <para>The cloud honeypot authorization usage of the member account.</para>
             /// </summary>
             [NameInMap("HoneypotCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListHoneypotCapacity HoneypotCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListHoneypotCapacity : TeaModel {
                 /// <summary>
-                /// <para>Number of honeypot authorizations allocated.</para>
+                /// <para>The allocated number of cloud honeypot authorizations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -795,7 +769,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Number of honeypot authorizations used.</para>
+                /// <para>The used number of cloud honeypot authorizations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -807,14 +781,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Member account image scanning authorization usage.</para>
+            /// <para>The image scan authorization usage of the member account.</para>
             /// </summary>
             [NameInMap("ImageScanCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListImageScanCapacity ImageScanCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListImageScanCapacity : TeaModel {
                 /// <summary>
-                /// <para>Allocated image scanning authorizations.</para>
+                /// <para>The allocated number of image scan authorizations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -824,7 +798,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used image scanning authorizations.</para>
+                /// <para>The used number of image scan authorizations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -836,7 +810,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Cloud Security Center instance ID purchased by the member account.</para>
+            /// <para>The Security Center instance ID purchased by the member account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>api-service-spec</para>
@@ -846,13 +820,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Instance purchase type. Values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>0</b>: Self-purchased.</para>
-            /// </description></item>
-            /// <item><description><para><b>1</b>: Allocated.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The instance purchase type. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -862,14 +830,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? InstancePurchaseType { get; set; }
 
             /// <summary>
-            /// <para>Member account RASP (Runtime Application Self-Protection) usage.</para>
+            /// <para>The application protection usage of the member account.</para>
             /// </summary>
             [NameInMap("RaspCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListRaspCapacity RaspCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListRaspCapacity : TeaModel {
                 /// <summary>
-                /// <para>Allocated RASP capacity. Unit: per month.</para>
+                /// <para>The allocated number of application protection quotas. Unit: quotas/month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -879,7 +847,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used RASP capacity. Unit: per month.</para>
+                /// <para>The used number of application protection quotas. Unit: quotas/month.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -891,14 +859,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Usage details of malicious file detection SDK authorizations for the member account.</para>
+            /// <para>The malicious file detection SDK authorization usage of the member account.</para>
             /// </summary>
             [NameInMap("SdkCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListSdkCapacity SdkCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListSdkCapacity : TeaModel {
                 /// <summary>
-                /// <para>Number of malicious file detection SDK authorizations allocated.</para>
+                /// <para>The allocated number of malicious file detection SDK authorizations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -908,7 +876,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Number of malicious file detection SDK authorizations used.</para>
+                /// <para>The used number of malicious file detection SDK authorizations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -920,14 +888,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Log storage capacity usage of the member account.</para>
+            /// <para>The log storage capacity usage of the member account.</para>
             /// </summary>
             [NameInMap("SlsCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListSlsCapacity SlsCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListSlsCapacity : TeaModel {
                 /// <summary>
-                /// <para>Allocated log storage capacity, in GB.</para>
+                /// <para>The allocated log storage capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -937,7 +905,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used log storage capacity, in GB.</para>
+                /// <para>The used log storage capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -949,13 +917,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Status of the member account instance. Values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>1</b>: Active.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: Inactive.</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The instance status of the member account. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -965,14 +927,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Member account threat analysis capacity usage.</para>
+            /// <para>The threat analysis capacity usage of the member account.</para>
             /// </summary>
             [NameInMap("ThreatAnalysisCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListThreatAnalysisCapacity ThreatAnalysisCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListThreatAnalysisCapacity : TeaModel {
                 /// <summary>
-                /// <para>Allocated threat analysis capacity. Unit: GB.</para>
+                /// <para>The allocated threat analysis capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -982,7 +944,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used threat analysis capacity. Unit: GB.</para>
+                /// <para>The used threat analysis capacity. Unit: GB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -994,14 +956,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Member account threat analysis and response log ingestion traffic usage.</para>
+            /// <para>The threat detection and response log ingestion traffic usage of the member account.</para>
             /// </summary>
             [NameInMap("ThreatAnalysisFlow")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListThreatAnalysisFlow ThreatAnalysisFlow { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListThreatAnalysisFlow : TeaModel {
                 /// <summary>
-                /// <para>Allocated threat analysis and response log ingestion traffic. Unit: GB/day.</para>
+                /// <para>The allocated threat detection and response log ingestion traffic. Unit: GB/day.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -1011,7 +973,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Used threat analysis and response log ingestion traffic. Unit: GB/day.</para>
+                /// <para>The used threat detection and response log ingestion traffic. Unit: GB/day.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -1023,13 +985,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>User type. Values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>Administrator User</b>:1</para>
-            /// </description></item>
-            /// <item><description><para><b>Regular User</b>:2</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The user type. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -1039,23 +995,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? UserType { get; set; }
 
             /// <summary>
-            /// <para>Version of the Cloud Security Center for the member account. Values:</para>
-            /// <list type="bullet">
-            /// <item><description><para><b>1</b>: Free Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: Enterprise Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>: Advanced Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>6</b>: Anti-Virus Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>7</b>: Flagship Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>8</b>: Multiple Versions</para>
-            /// </description></item>
-            /// <item><description><para><b>10</b>: Only Purchased Value-Added Services</para>
-            /// </description></item>
-            /// </list>
+            /// <para>The Security Center edition of the member account. Valid values:</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -1065,22 +1005,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Version { get; set; }
 
             /// <summary>
-            /// <para>Authorization usage statistics for the member account.</para>
+            /// <para>The authorization usage statistics of the member account.</para>
             /// </summary>
             [NameInMap("VersionSummary")]
             [Validation(Required=false)]
             public List<ListMultiUserInstancesResponseBodySaleInstanceListVersionSummary> VersionSummary { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListVersionSummary : TeaModel {
                 /// <summary>
-                /// <para>Authorization type consumed during binding, with values:</para>
-                /// <list type="bullet">
-                /// <item><description><para><b>ASSET</b>:Consumes the number of authorized instances</para>
-                /// </description></item>
-                /// <item><description><para><b>CORE</b>:Consumes the number of authorized cores</para>
-                /// </description></item>
-                /// <item><description><para><b>ASSET_AND_CORE</b>:Consumes both the number of authorized instances and cores.</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The authorization type consumed during binding. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ASSET_AND_CORE</para>
@@ -1090,14 +1022,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public string AuthBindType { get; set; }
 
                 /// <summary>
-                /// <para>Usage of core authorization for the member account.</para>
+                /// <para>The authorization quota usage for cores of the member account.</para>
                 /// </summary>
                 [NameInMap("CoreCount")]
                 [Validation(Required=false)]
                 public ListMultiUserInstancesResponseBodySaleInstanceListVersionSummaryCoreCount CoreCount { get; set; }
                 public class ListMultiUserInstancesResponseBodySaleInstanceListVersionSummaryCoreCount : TeaModel {
                     /// <summary>
-                    /// <para>Assigned number of cores.</para>
+                    /// <para>The assigned number of authorized cores.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1107,7 +1039,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public long? Assigned { get; set; }
 
                     /// <summary>
-                    /// <para>Allocated number of cores.</para>
+                    /// <para>The allocated number of authorized cores.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>4</para>
@@ -1117,7 +1049,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public long? Count { get; set; }
 
                     /// <summary>
-                    /// <para>Number of cores used.</para>
+                    /// <para>The used number of authorized cores.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1129,14 +1061,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>Usage details of ECS authorizations for the member account.</para>
+                /// <para>The authorization quota usage for servers of the member account.</para>
                 /// </summary>
                 [NameInMap("EcsCount")]
                 [Validation(Required=false)]
                 public ListMultiUserInstancesResponseBodySaleInstanceListVersionSummaryEcsCount EcsCount { get; set; }
                 public class ListMultiUserInstancesResponseBodySaleInstanceListVersionSummaryEcsCount : TeaModel {
                     /// <summary>
-                    /// <para>Number of purchased licenses allocated.</para>
+                    /// <para>The assigned number of purchased authorized servers.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1146,7 +1078,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public long? Assigned { get; set; }
 
                     /// <summary>
-                    /// <para>Number of ECS authorizations allocated.</para>
+                    /// <para>The allocated number of authorized servers.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1156,7 +1088,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                     public long? Count { get; set; }
 
                     /// <summary>
-                    /// <para>Number of ECS authorizations used.</para>
+                    /// <para>The used number of authorized servers.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>0</para>
@@ -1168,23 +1100,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 }
 
                 /// <summary>
-                /// <para>Version of the Cloud Security Center for the member account. Values:</para>
-                /// <list type="bullet">
-                /// <item><description><para><b>1</b>: Free Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>3</b>: Enterprise Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>5</b>: Advanced Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>6</b>: Anti-Virus Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>7</b>: Flagship Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>8</b>: Multiple Versions</para>
-                /// </description></item>
-                /// <item><description><para><b>10</b>: Value-Added Services Only</para>
-                /// </description></item>
-                /// </list>
+                /// <para>The Security Center edition of the member account. Valid values:</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -1196,14 +1112,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Member account web lock (anti-tampering) authorization usage.</para>
+            /// <para>The web tamper-proofing authorization usage of the member account.</para>
             /// </summary>
             [NameInMap("WebLockCapacity")]
             [Validation(Required=false)]
             public ListMultiUserInstancesResponseBodySaleInstanceListWebLockCapacity WebLockCapacity { get; set; }
             public class ListMultiUserInstancesResponseBodySaleInstanceListWebLockCapacity : TeaModel {
                 /// <summary>
-                /// <para>Number of web tamper-proof authorizations allocated.</para>
+                /// <para>The allocated number of web tamper-proofing authorizations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -1213,7 +1129,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? Count { get; set; }
 
                 /// <summary>
-                /// <para>Number of web tamper-proof authorizations used.</para>
+                /// <para>The used number of web tamper-proofing authorizations.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class UpdateMultiUserInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Member instances.</para>
+        /// <para>The member instances.</para>
         /// </summary>
         [NameInMap("MemberInstances")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AliUid { get; set; }
 
             /// <summary>
-            /// <para>Anti-ransomware capacity allocated to the member, in GB.</para>
+            /// <para>The anti-ransomware capacity assigned to the member. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -37,12 +37,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? AntiRansomwareCapacity { get; set; }
 
             /// <summary>
-            /// <para>Charge type, values:</para>
+            /// <para>The billing type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>PREPAID</b>: Prepaid.</para>
-            /// </description></item>
-            /// <item><description><para><b>POSTPAID</b> (default): Postpaid.</para>
-            /// </description></item>
+            /// <item><description><b>PREPAID</b>: upfront.</description></item>
+            /// <item><description><b>POSTPAID</b> (default): pay-as-you-go.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -53,7 +51,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>Cloud platform configuration check scan count allocated to the member. Unit: times per month.</para>
+            /// <para>The number of cloud platform configuration check scans assigned to the member. Unit: scans per month.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -62,8 +60,12 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? CspmCapacity { get; set; }
 
+            [NameInMap("CspmInstanceCapacity")]
+            [Validation(Required=false)]
+            public long? CspmInstanceCapacity { get; set; }
+
             /// <summary>
-            /// <para>Honeypot authorization count allocated to the member.</para>
+            /// <para>The number of honeypot quotas assigned to the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -73,7 +75,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? HoneypotCapacity { get; set; }
 
             /// <summary>
-            /// <para>Image scan authorization count allocated to the member.</para>
+            /// <para>The number of image scan quotas assigned to the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -83,7 +85,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ImageScanCapacity { get; set; }
 
             /// <summary>
-            /// <para>The Cloud Security Center instance ID purchased by the member account.</para>
+            /// <para>The Security Center instance ID purchased by the member accounts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sas-p0anpb26my69</para>
@@ -93,14 +95,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Operation type. Values:</para>
+            /// <para>The operation type. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description><para><b>ADD</b>: Add</para>
-            /// </description></item>
-            /// <item><description><para><b>CHANGE</b>: Change</para>
-            /// </description></item>
-            /// <item><description><para><b>DEL</b>: Delete</para>
-            /// </description></item>
+            /// <item><description><b>ADD</b>: increase </description></item>
+            /// <item><description><b>CHANGE</b>: update</description></item>
+            /// <item><description><b>DEL</b>: delete</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -111,7 +110,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string OptType { get; set; }
 
             /// <summary>
-            /// <para>Application protection count allocated to the member. Unit: per month.</para>
+            /// <para>The number of application protection quotas assigned to the member. Unit: quotas per month.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -121,7 +120,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? RaspCapacity { get; set; }
 
             /// <summary>
-            /// <para>Malicious file detection SDK authorization count allocated to the member.</para>
+            /// <para>The number of malicious file detection SDK quotas assigned to the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -131,7 +130,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? SdkCapacity { get; set; }
 
             /// <summary>
-            /// <para>Log storage capacity allocated to the member, in GB.</para>
+            /// <para>The log storage capacity assigned to the member. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -141,12 +140,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? SlsCapacity { get; set; }
 
             /// <summary>
-            /// <para>Status of the member account instance. Values:</para>
+            /// <para>The instance status of the member accounts. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: Valid.</para>
-            /// </description></item>
-            /// <item><description><para><b>2</b>: Invalid.</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: active.</description></item>
+            /// <item><description><b>2</b>: expired.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -157,7 +154,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Status { get; set; }
 
             /// <summary>
-            /// <para>Threat analysis capacity allocated to the member. Unit: GB.</para>
+            /// <para>The threat analysis capacity assigned to the member. Unit: GB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -167,7 +164,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ThreatAnalysisCapacity { get; set; }
 
             /// <summary>
-            /// <para>Threat analysis and response log access traffic allocated to the member. Unit: GB/day.</para>
+            /// <para>The log ingestion traffic for threat detection and response assigned to the member. Unit: GB/day.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -177,18 +174,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? ThreatAnalysisFlow { get; set; }
 
             /// <summary>
-            /// <para>The version of Cloud Security Center protection to be bound. Values:</para>
+            /// <para>The Security Center edition to bind. Valid values:  </para>
             /// <list type="bullet">
-            /// <item><description><para><b>1</b>: Free Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>3</b>: Enterprise Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>5</b>: Advanced Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>6</b>: Antivirus Edition</para>
-            /// </description></item>
-            /// <item><description><para><b>7</b>: Flagship Edition</para>
-            /// </description></item>
+            /// <item><description><b>1</b>: Free Edition </description></item>
+            /// <item><description><b>3</b>: Enterprise Edition</description></item>
+            /// <item><description><b>5</b>: Advanced Edition</description></item>
+            /// <item><description><b>6</b>: Anti-virus Edition    </description></item>
+            /// <item><description><b>7</b>: Ultimate Edition</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -199,14 +191,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Version { get; set; }
 
             /// <summary>
-            /// <para>Member account authorization usage information.</para>
+            /// <para>The authorization usage information of the member accounts.</para>
             /// </summary>
             [NameInMap("VersionSummary")]
             [Validation(Required=false)]
             public List<UpdateMultiUserInstancesRequestMemberInstancesVersionSummary> VersionSummary { get; set; }
             public class UpdateMultiUserInstancesRequestMemberInstancesVersionSummary : TeaModel {
                 /// <summary>
-                /// <para>Number of cores authorized for the member.</para>
+                /// <para>The number of authorized cores assigned to the member.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>6</para>
@@ -216,7 +208,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? CoreCount { get; set; }
 
                 /// <summary>
-                /// <para>Number of authorizations allocated to the member.</para>
+                /// <para>The number of authorized instances assigned to the member.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>3</para>
@@ -226,22 +218,15 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
                 public long? EcsCount { get; set; }
 
                 /// <summary>
-                /// <para>Version of the Cloud Security Center for the member account. Values:</para>
+                /// <para>The Security Center edition of the member accounts. Valid values:  </para>
                 /// <list type="bullet">
-                /// <item><description><para><b>1</b>: Free Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>3</b>: Enterprise Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>5</b>: Advanced Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>6</b>: Antivirus Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>7</b>: Flagship Edition</para>
-                /// </description></item>
-                /// <item><description><para><b>8</b>: Multiple Versions</para>
-                /// </description></item>
-                /// <item><description><para><b>10</b>: Only Purchase Value-Added Services</para>
-                /// </description></item>
+                /// <item><description><b>1</b>: Free Edition </description></item>
+                /// <item><description><b>3</b>: Enterprise Edition</description></item>
+                /// <item><description><b>5</b>: Premium Edition</description></item>
+                /// <item><description><b>6</b>: Anti-virus Edition    </description></item>
+                /// <item><description><b>7</b>: Ultimate Edition   </description></item>
+                /// <item><description><b>8</b>: multi-edition   </description></item>
+                /// <item><description><b>10</b>: value-added services only</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -254,7 +239,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             }
 
             /// <summary>
-            /// <para>Web tamper-proof authorization count allocated to the member.</para>
+            /// <para>The number of web tamper-proofing authorization quotas assigned to the member.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

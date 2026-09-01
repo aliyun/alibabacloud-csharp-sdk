@@ -64,6 +64,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public long? FirstTime { get; set; }
 
+            [NameInMap("HandleRemark")]
+            [Validation(Required=false)]
+            public string HandleRemark { get; set; }
+
             [NameInMap("HandleType")]
             [Validation(Required=false)]
             public string HandleType { get; set; }
@@ -233,7 +237,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListUnknownThreatDetectEventResponseBodyPageInfo PageInfo { get; set; }
         public class ListUnknownThreatDetectEventResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of alerting events displayed on the current page in a paged query. This parameter is used for paging.</para>
+            /// <para>The number of alerting events displayed on the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -243,7 +247,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The page number of the current page in a paged query. This parameter is used for paging.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -253,7 +257,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries displayed on each page in a paged query. This parameter is used for paging.</para>
+            /// <para>The maximum number of entries displayed on each page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

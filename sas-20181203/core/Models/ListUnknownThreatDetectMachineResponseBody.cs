@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListUnknownThreatDetectMachineResponseBody : TeaModel {
         /// <summary>
-        /// <para>An array of instance details.</para>
+        /// <para>The returned data.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
@@ -50,12 +50,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public string IntranetIp { get; set; }
 
+            [NameInMap("MaliciousProcessCount")]
+            [Validation(Required=false)]
+            public long? MaliciousProcessCount { get; set; }
+
+            /// <term><b>Obsolete</b></term>
+            [NameInMap("NormalEventCount")]
+            [Validation(Required=false)]
+            [Obsolete]
+            public long? NormalEventCount { get; set; }
+
             [NameInMap("PluginStatus")]
             [Validation(Required=false)]
             public string PluginStatus { get; set; }
 
             /// <summary>
-            /// <para>The process count.</para>
+            /// <para>The number of processes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -64,15 +74,16 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             [Validation(Required=false)]
             public int? ProcessCount { get; set; }
 
+            [NameInMap("RecentDeviationBehaviorCount")]
+            [Validation(Required=false)]
+            public long? RecentDeviationBehaviorCount { get; set; }
+
             /// <summary>
-            /// <para>The instance status. Valid values:</para>
+            /// <para>The running status of the machine. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>monitoring</b>: The instance is being monitored for threats.</para>
-            /// </description></item>
-            /// <item><description><para><b>blocking</b>: The instance is blocking unauthorized processes.</para>
-            /// </description></item>
-            /// <item><description><para><b>studying</b>: The instance is in a learning phase.</para>
-            /// </description></item>
+            /// <item><description><b>monitoring</b>: Warning.</description></item>
+            /// <item><description><b>blocking</b>: Blocking.</description></item>
+            /// <item><description><b>studying</b>: Learning.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -85,10 +96,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The whitelist mode. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>hash</b>: process hash</para>
-            /// </description></item>
-            /// <item><description><para><b>path</b>: process path</para>
-            /// </description></item>
+            /// <item><description><b>hash</b>: process hash</description></item>
+            /// <item><description><b>path</b>: process path</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -103,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? StudyRemainDays { get; set; }
 
             /// <summary>
-            /// <para>The timestamp when the learning phase started. Unit: seconds.</para>
+            /// <para>The timestamp when learning started.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1766988192</para>
@@ -132,7 +141,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public ListUnknownThreatDetectMachineResponseBodyPageInfo PageInfo { get; set; }
         public class ListUnknownThreatDetectMachineResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries on the current page.</para>
+            /// <para>The number of entries on the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -142,7 +151,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? Count { get; set; }
 
             /// <summary>
-            /// <para>The current page number.</para>
+            /// <para>The page number of the current page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -152,7 +161,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The maximum number of entries per page when using paging.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -174,7 +183,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
         /// <para>A4EB8B1C-1DEC-5E18-BCD0-XXXXXXXXX</para>

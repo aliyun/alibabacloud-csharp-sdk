@@ -15,7 +15,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <item><description><b>-1</b>: unknown</description></item>
         /// <item><description><b>0</b>: abnormal</description></item>
         /// <item><description><b>1</b>: normal</description></item>
-        /// <item><description><b>2</b>: normal pending confirmation.</description></item>
+        /// <item><description><b>2</b>: normal pending confirmation</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paged query. Default value: 20.</para>
+        /// <para>The list of excluded cluster types.</para>
+        /// </summary>
+        [NameInMap("ExcludeClusterTypes")]
+        [Validation(Required=false)]
+        public List<string> ExcludeClusterTypes { get; set; }
+
+        /// <summary>
+        /// <para>The maximum number of entries per page in a paging query. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
