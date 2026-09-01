@@ -90,6 +90,14 @@ namespace AlibabaCloud.SDK.AIWorkSpace20210204.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>ExactMatchName</para>
+        /// </summary>
+        [NameInMap("Options")]
+        [Validation(Required=false)]
+        public string Options { get; set; }
+
+        /// <summary>
         /// <para>The order in which to sort the results of a paged query. This parameter is used with SortBy. The default value is ASC.</para>
         /// <list type="bullet">
         /// <item><description><para>ASC: ascending order.</para>
