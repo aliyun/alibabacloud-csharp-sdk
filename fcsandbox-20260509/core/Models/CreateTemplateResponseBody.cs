@@ -8,14 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
-    public class CreateApiKeyResponseBody : TeaModel {
-        /// <summary>
-        /// <para>API Key。</para>
-        /// </summary>
-        [NameInMap("apiKey")]
-        [Validation(Required=false)]
-        public ApiKey ApiKey { get; set; }
-
+    public class CreateTemplateResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -25,14 +18,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("code")]
         [Validation(Required=false)]
         public string Code { get; set; }
-
-        [NameInMap("ipBlacklist")]
-        [Validation(Required=false)]
-        public List<IPConfig> IpBlacklist { get; set; }
-
-        [NameInMap("ipWhitelist")]
-        [Validation(Required=false)]
-        public List<IPConfig> IpWhitelist { get; set; }
 
         /// <summary>
         /// <para>The response message.</para>
@@ -48,11 +33,21 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</para>
+        /// <para>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The unique identifier of the template.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>tpl-9f3a2b7c8d1e4f5a6b0c7d8e9f1a2b3c</para>
+        /// </summary>
+        [NameInMap("templateID")]
+        [Validation(Required=false)]
+        public string TemplateID { get; set; }
 
     }
 

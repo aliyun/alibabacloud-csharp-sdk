@@ -8,14 +8,7 @@ using Tea;
 
 namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
-    public class CreateApiKeyResponseBody : TeaModel {
-        /// <summary>
-        /// <para>API Key。</para>
-        /// </summary>
-        [NameInMap("apiKey")]
-        [Validation(Required=false)]
-        public ApiKey ApiKey { get; set; }
-
+    public class ListTemplatesResponseBody : TeaModel {
         /// <summary>
         /// <para>The error code.</para>
         /// 
@@ -26,13 +19,15 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
-        [NameInMap("ipBlacklist")]
+        /// <summary>
+        /// <para>The maximum number of entries to return.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10</para>
+        /// </summary>
+        [NameInMap("maxResults")]
         [Validation(Required=false)]
-        public List<IPConfig> IpBlacklist { get; set; }
-
-        [NameInMap("ipWhitelist")]
-        [Validation(Required=false)]
-        public List<IPConfig> IpWhitelist { get; set; }
+        public int? MaxResults { get; set; }
 
         /// <summary>
         /// <para>The response message.</para>
@@ -45,14 +40,31 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Message { get; set; }
 
         /// <summary>
+        /// <para>The pagination token for the next page.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eyJNYXhSZXN1bHRzIjoxMH0=</para>
+        /// </summary>
+        [NameInMap("nextToken")]
+        [Validation(Required=false)]
+        public string NextToken { get; set; }
+
+        /// <summary>
         /// <para>Id of the request</para>
         /// 
         /// <b>Example:</b>
-        /// <para>7ADFF8D8-D4BA-5F79-AD49-DDABFEA59B6C</para>
+        /// <para>B5AD8B54-4358-5F5B-ACAA-52F2016459C6</para>
         /// </summary>
         [NameInMap("requestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
+
+        /// <summary>
+        /// <para>The list of templates.</para>
+        /// </summary>
+        [NameInMap("templates")]
+        [Validation(Required=false)]
+        public List<PublicTemplate> Templates { get; set; }
 
     }
 
