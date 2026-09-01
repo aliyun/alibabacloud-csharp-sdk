@@ -175,6 +175,84 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public string WorkspaceDescription { get; set; }
 
+                [NameInMap("WorkspaceExportConfig")]
+                [Validation(Required=false)]
+                public QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig WorkspaceExportConfig { get; set; }
+                public class QueryOrganizationWorkspaceListResponseBodyResultDataWorkspaceExportConfig : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("AllowExcelImageFile")]
+                    [Validation(Required=false)]
+                    public bool? AllowExcelImageFile { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("DataExport")]
+                    [Validation(Required=false)]
+                    public bool? DataExport { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("DefaultExportType")]
+                    [Validation(Required=false)]
+                    public bool? DefaultExportType { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("ExportMainSwitch")]
+                    [Validation(Required=false)]
+                    public bool? ExportMainSwitch { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("ExportToLocal")]
+                    [Validation(Required=false)]
+                    public bool? ExportToLocal { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("ExportToPublicWork")]
+                    [Validation(Required=false)]
+                    public bool? ExportToPublicWork { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("ExportToServer")]
+                    [Validation(Required=false)]
+                    public bool? ExportToServer { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("ImageExport")]
+                    [Validation(Required=false)]
+                    public bool? ImageExport { get; set; }
+
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>true</para>
+                    /// </summary>
+                    [NameInMap("PdfExport")]
+                    [Validation(Required=false)]
+                    public bool? PdfExport { get; set; }
+
+                }
+
                 /// <summary>
                 /// <para>The workspace ID.</para>
                 /// 

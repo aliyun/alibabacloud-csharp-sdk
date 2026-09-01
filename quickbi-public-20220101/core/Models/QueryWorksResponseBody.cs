@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>Remarks on the work.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>备注</para>
+            /// <para>Description</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The name of the directory.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试目录</para>
+                /// <para>Test directory</para>
                 /// </summary>
                 [NameInMap("Name")]
                 [Validation(Required=false)]
@@ -91,11 +91,49 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <para>The hierarchical structure of the directory to which the directory belongs. Separate the hierarchical structure with a (/).</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>测试目录</para>
+                /// <para>Test directory</para>
                 /// </summary>
                 [NameInMap("PathName")]
                 [Validation(Required=false)]
                 public string PathName { get; set; }
+
+            }
+
+            [NameInMap("GlobalParamVoList")]
+            [Validation(Required=false)]
+            public List<QueryWorksResponseBodyResultGlobalParamVoList> GlobalParamVoList { get; set; }
+            public class QueryWorksResponseBodyResultGlobalParamVoList : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>string</para>
+                /// </summary>
+                [NameInMap("DataType")]
+                [Validation(Required=false)]
+                public string DataType { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>lastQueryAt</para>
+                /// </summary>
+                [NameInMap("ParamAlias")]
+                [Validation(Required=false)]
+                public string ParamAlias { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>lastQueryAt</para>
+                /// </summary>
+                [NameInMap("ParamName")]
+                [Validation(Required=false)]
+                public string ParamName { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>false</para>
+                /// </summary>
+                [NameInMap("Required")]
+                [Validation(Required=false)]
+                public bool? Required { get; set; }
 
             }
 
@@ -123,7 +161,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The Alibaba Cloud account name of the person who modified the work.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Tom</para>
             /// </summary>
             [NameInMap("ModifyName")]
             [Validation(Required=false)]
@@ -143,7 +181,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The Alibaba Cloud account name of the work owner.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>张三</para>
+            /// <para>Tom</para>
             /// </summary>
             [NameInMap("OwnerName")]
             [Validation(Required=false)]
@@ -212,7 +250,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the work.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试报表</para>
+            /// <para>Test report</para>
             /// </summary>
             [NameInMap("WorkName")]
             [Validation(Required=false)]
@@ -259,7 +297,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             /// <para>The name of the workspace to which the work belongs.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>测试空间</para>
+            /// <para>Test Space</para>
             /// </summary>
             [NameInMap("WorkspaceName")]
             [Validation(Required=false)]

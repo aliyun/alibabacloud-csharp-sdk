@@ -10,17 +10,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class UpdateUserRequest : TeaModel {
         /// <summary>
-        /// <para>Whether to assign the organization administrator role to the user. Valid values:</para>
+        /// <para>Specifies whether to assign the organization administrator role. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c></para>
-        /// </description></item>
-        /// <item><description><para><c>false</c></para>
-        /// </description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>This parameter is deprecated and is ignored if RoleIds is also specified.</para>
+        /// <para><notice>This parameter is deprecated. When RoleIds is specified, this parameter does not take effect.</notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -33,17 +28,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? AdminUser { get; set; }
 
         /// <summary>
-        /// <para>Whether to assign the permission administrator role to the user. Valid values:</para>
+        /// <para>Specifies whether to assign the organization permission management administrator role. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c></para>
-        /// </description></item>
-        /// <item><description><para><c>false</c></para>
-        /// </description></item>
+        /// <item><description>true: Yes.</description></item>
+        /// <item><description>false: No.</description></item>
         /// </list>
-        /// <remarks>
-        /// <para>Notice: </para>
-        /// </remarks>
-        /// <para>This parameter is deprecated and is ignored if RoleIds is also specified.</para>
+        /// <para><notice>This parameter has expired and is not recommended. When RoleIds is specified, this parameter does not take effect.</notice></para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -53,6 +43,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? AuthAdminUser { get; set; }
 
         /// <summary>
+        /// <para>The intelligent module quota modification information.</para>
+        /// <para>Pass the parameter as a JSON array. Each array element contains the following fields:</para>
+        /// <para>moduleType -- The intelligent module.</para>
+        /// <list type="bullet">
+        /// <item><description>smartQAskNum -- Smart Q questions.</description></item>
+        /// <item><description>smartQDevNum -- Smart Q building.</description></item>
+        /// <item><description>qreport -- Smart Q reports.</description></item>
+        /// <item><description>qExploreNum -- Smart Q exploration edition.</description></item>
+        /// </list>
+        /// <para>status -- Specifies whether to enable the module.</para>
+        /// <list type="bullet">
+        /// <item><description>0 -- Revoke authorization.</description></item>
+        /// <item><description>1 -- Grant authorization.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>[
         ///     {
@@ -70,12 +75,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CopilotModules { get; set; }
 
         /// <summary>
-        /// <para>The user status:</para>
+        /// <para>The user status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b><c>false</c></b>: active</para>
-        /// </description></item>
-        /// <item><description><para><b><c>true</c></b>: inactive</para>
-        /// </description></item>
+        /// <item><description><b>false</b>: Activated.</description></item>
+        /// <item><description><b>true</b>: Deactivated.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -86,12 +89,10 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public bool? IsDeleted { get; set; }
 
         /// <summary>
-        /// <para>The nickname of the user.</para>
+        /// <para>The nickname.</para>
         /// <list type="bullet">
-        /// <item><description><para>The nickname can be up to 50 characters in length.</para>
-        /// </description></item>
-        /// <item><description><para>The nickname can contain Chinese characters, letters, digits, and the following special characters: <c>_ \\ / | () ] [</c></para>
-        /// </description></item>
+        /// <item><description>Format check: The maximum length is 50 characters.</description></item>
+        /// <item><description>Special format check: Chinese characters, English characters, digits, _ \ / | () ] [</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -102,14 +103,11 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string NickName { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the built-in or custom organization roles to assign to the user. Specify up to three comma-separated role IDs.</para>
+        /// <para>The IDs of preset or custom organization roles to attach to the user, separated by commas (,). A maximum of three role IDs are supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>organization administrator (built-in role): 111111111</para>
-        /// </description></item>
-        /// <item><description><para>permission administrator (built-in role): 111111112</para>
-        /// </description></item>
-        /// <item><description><para>standard user (built-in role): 111111113</para>
-        /// </description></item>
+        /// <item><description>Organization administrator (preset role): 111111111</description></item>
+        /// <item><description>Permission management administrator (preset role): 111111112</description></item>
+        /// <item><description>Common user (preset role): 111111113</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -120,7 +118,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RoleIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Quick BI user to update. This is not an Alibaba Cloud UID.</para>
+        /// <para>The ID of the user to update. This user ID is the Quick BI UserID, not the Alibaba Cloud UID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -133,12 +131,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>The user type of the organization member. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>1</c>: developer</para>
-        /// </description></item>
-        /// <item><description><para><c>2</c>: viewer</para>
-        /// </description></item>
-        /// <item><description><para><c>3</c>: analyst</para>
-        /// </description></item>
+        /// <item><description>1: Developer.</description></item>
+        /// <item><description>2: Visitor.</description></item>
+        /// <item><description>3: Analyst.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

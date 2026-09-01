@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public QueryUserByMobileAccountResponseBodyResult Result { get; set; }
         public class QueryUserByMobileAccountResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The QuickBI user ID of the bound account.</para>
+            /// <para>The Quick BI user ID of the bound account.</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>

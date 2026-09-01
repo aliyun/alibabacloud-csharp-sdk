@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string CustomSql { get; set; }
 
         /// <summary>
-        /// <para>The data source ID.</para>
+        /// <para>The ID of the data source.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string Placeholders { get; set; }
 
         /// <summary>
-        /// <para>The Quick BI UserId of a user who has permissions to create datasets. This is not your Alibaba Cloud account ID. You can call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=api-workbench.api_explorer.0.0.672f50daGq9ooV&params=%7B%7D&tab=DOC&sdkStyle=old&RegionId=cn-hangzhou">QueryUserInfoByAccount</a> operation to obtain the UserId.</para>
+        /// <para>The UserId of a Quick BI user who has permissions to create datasets. This is not your Alibaba Cloud account ID. You can call the <a href="https://next.api.aliyun.com/api/quickbi-public/2022-01-01/QueryUserInfoByAccount?spm=api-workbench.api_explorer.0.0.672f50daGq9ooV&params=%7B%7D&tab=DOC&sdkStyle=old&RegionId=ap-southeast-1">QueryUserInfoByAccount</a> operation to obtain the UserId.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

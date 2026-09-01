@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
 {
     public class ListDynamicTagResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>D787E1A**********DF8D885</para>
         /// </summary>
@@ -17,11 +19,16 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The label list.</para>
+        /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public List<ListDynamicTagResponseBodyResult> Result { get; set; }
         public class ListDynamicTagResponseBodyResult : TeaModel {
             /// <summary>
+            /// <para>The column name of the associated data source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>site_id</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ColumnName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the individual configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cfg****14352318681088</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ConfigId { get; set; }
 
             /// <summary>
+            /// <para>The name of the label configuration.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>eip</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string ConfigName { get; set; }
 
             /// <summary>
+            /// <para>The ID of the associated data source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>a201c85c-******</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string DsId { get; set; }
 
             /// <summary>
+            /// <para>The organization ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2fe4fbd8-<b><b>-</b></b>-b3e1-e92c7af083ea</para>
             /// </summary>
@@ -62,6 +77,13 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string OrganizationId { get; set; }
 
             /// <summary>
+            /// <para>The associated user attribute. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: account ID</description></item>
+            /// <item><description>1: account name</description></item>
+            /// <item><description>2: nickname within the organization</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -70,6 +92,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? RelatedAttribute { get; set; }
 
             /// <summary>
+            /// <para>The table name of the associated data source.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testTable02\&quot;\&quot;</para>
             /// </summary>
@@ -80,6 +104,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         }
 
         /// <summary>
+        /// <para>Indicates whether the request was successful.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>

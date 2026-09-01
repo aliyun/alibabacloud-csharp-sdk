@@ -104,6 +104,14 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public string Email { get; set; }
 
             /// <summary>
+            /// <b>Example:</b>
+            /// <para>true</para>
+            /// </summary>
+            [NameInMap("IsDeleted")]
+            [Validation(Required=false)]
+            public bool? IsDeleted { get; set; }
+
+            /// <summary>
             /// <para>The nickname of the user.</para>
             /// 
             /// <b>Example:</b>

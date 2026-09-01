@@ -20,21 +20,21 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The paginated list of users. The <c>Data</c> parameter contains the details of each organization member.</para>
+        /// <para>The paginated result of the user list. The detailed information of organization members is stored in the Data response parameter.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
         public QueryUserListResponseBodyResult Result { get; set; }
         public class QueryUserListResponseBodyResult : TeaModel {
             /// <summary>
-            /// <para>The list of users.</para>
+            /// <para>The list of users returned by the request.</para>
             /// </summary>
             [NameInMap("Data")]
             [Validation(Required=false)]
             public List<QueryUserListResponseBodyResultData> Data { get; set; }
             public class QueryUserListResponseBodyResultData : TeaModel {
                 /// <summary>
-                /// <para>The Alibaba Cloud account ID. For users not added through RAM, this ID is available only after they log in.</para>
+                /// <para>The Alibaba Cloud account ID. For users who are not added through RAM self-service, the Alibaba Cloud ID can only be obtained after they log on.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1355********</para>
@@ -54,17 +54,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string AccountName { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the user is an organization administrator. Valid values:</para>
+                /// <para>Indicates whether the user is bound to the organization administrator role. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>true</c>: Yes</para>
-                /// </description></item>
-                /// <item><description><para><c>false</c>: No</para>
-                /// </description></item>
+                /// <item><description>true: Yes.</description></item>
+                /// <item><description>false: No.</description></item>
                 /// </list>
-                /// <remarks>
-                /// <para>Notice: </para>
-                /// </remarks>
-                /// <para>This parameter is deprecated. Use the <c>RoleIdList</c> parameter instead.</para>
+                /// <para><notice>This parameter is deprecated. Use the RoleIdList parameter instead.</notice></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -74,17 +69,12 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? AdminUser { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the user is a permission administrator. Valid values:</para>
+                /// <para>Indicates whether the user is attached to the permission management administrator role. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>true</c>: Yes</para>
-                /// </description></item>
-                /// <item><description><para><c>false</c>: No</para>
-                /// </description></item>
+                /// <item><description>true: Yes.</description></item>
+                /// <item><description>false: No.</description></item>
                 /// </list>
-                /// <remarks>
-                /// <para>Notice: </para>
-                /// </remarks>
-                /// <para>This parameter is deprecated. Use the <c>RoleIdList</c> parameter instead.</para>
+                /// <para><notice>This parameter has expired and is no longer recommended. Use the RoleIdList parameter instead.</notice></para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -93,17 +83,24 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 [Validation(Required=false)]
                 public bool? AuthAdminUser { get; set; }
 
+                /// <summary>
+                /// <para>The intelligent module quota of the user.</para>
+                /// <list type="bullet">
+                /// <item><description>qreport: Q report</description></item>
+                /// <item><description>qExploreNum: Q exploration edition</description></item>
+                /// <item><description>smartQAskNum: Q data inquiry</description></item>
+                /// <item><description>smartQDevNum: Q builder</description></item>
+                /// </list>
+                /// </summary>
                 [NameInMap("CopilotModules")]
                 [Validation(Required=false)]
                 public List<string> CopilotModules { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether the user is inactive.</para>
+                /// <para>The user status. Valid values: </para>
                 /// <list type="bullet">
-                /// <item><description><para><c>false</c>: Active</para>
-                /// </description></item>
-                /// <item><description><para><c>true</c>: Inactive</para>
-                /// </description></item>
+                /// <item><description>false: active</description></item>
+                /// <item><description>true: inactive</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -114,7 +111,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public bool? IsDeleted { get; set; }
 
                 /// <summary>
-                /// <para>The Unix timestamp (in milliseconds) that indicates when the user joined the organization.</para>
+                /// <para>The date when the member joined the organization.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1718691704000</para>
@@ -124,7 +121,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public long? JoinedDate { get; set; }
 
                 /// <summary>
-                /// <para>The Unix timestamp (in milliseconds) of the user\&quot;s last login.</para>
+                /// <para>The last logon time.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1718761320681</para>
@@ -134,7 +131,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public long? LastLoginTime { get; set; }
 
                 /// <summary>
-                /// <para>The nickname of the user.</para>
+                /// <para>The nickname of the organization member.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>test</para>
@@ -144,7 +141,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 public string NickName { get; set; }
 
                 /// <summary>
-                /// <para>The IDs of the organization roles assigned to the user.</para>
+                /// <para>The list of organization role IDs bound to the user.</para>
                 /// </summary>
                 [NameInMap("RoleIdList")]
                 [Validation(Required=false)]
@@ -163,12 +160,9 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
                 /// <summary>
                 /// <para>The user type of the organization member. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><para><c>1</c>: developer</para>
-                /// </description></item>
-                /// <item><description><para><c>2</c>: viewer</para>
-                /// </description></item>
-                /// <item><description><para><c>3</c>: analyst</para>
-                /// </description></item>
+                /// <item><description>1: developer</description></item>
+                /// <item><description>2: visitor</description></item>
+                /// <item><description>3: analyst</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>
@@ -191,7 +185,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageNum { get; set; }
 
             /// <summary>
-            /// <para>The number of entries per page.</para>
+            /// <para>The number of rows per page specified in the request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -201,7 +195,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
             public int? PageSize { get; set; }
 
             /// <summary>
-            /// <para>The total number of matching users.</para>
+            /// <para>The total number of rows.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -225,10 +219,8 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <summary>
         /// <para>Indicates whether the request was successful. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>true</c>: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para><c>false</c>: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

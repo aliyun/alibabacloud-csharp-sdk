@@ -14,7 +14,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <list type="bullet">
         /// <item><description>DingTalk: ding</description></item>
         /// <item><description>WeCom: corp_weixin</description></item>
-        /// <item><description>Lark: feishu.</description></item>
+        /// <item><description>Lark: feishu</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Quickbi_public20220101.Models
         /// <item><description>DingTalk: The unionId of the DingTalk account.</description></item>
         /// <item><description>WeCom: The userId of the WeCom account.</description></item>
         /// <item><description>Lark: The userId of the Lark account.<remarks>
-        /// <para>Notice: The mobileUserId must be obtained by calling the relevant DingTalk, WeCom, or Lark API operations..</para>
+        /// <para>Notice: The mobileUserId must be obtained by calling the relevant API operations of DingTalk, WeCom, or Lark.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
