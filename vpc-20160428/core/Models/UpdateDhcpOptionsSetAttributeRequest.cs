@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The hostname suffix, such as example.com.</para>
-        /// <para>After you attach the DHCP options set to an associate VPC, the hostname suffix is automatically synchronized to ECS instances in the VPC.</para>
+        /// <para>After you attach the DHCP options set to associate VPC, the hostname suffix is automatically subject to synchronization to ECS instances in the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -81,9 +81,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string DomainNameServers { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform a dry run. Valid values:</para>
-        /// <para><b>true</b>: performs a dry run without modifying the DHCP options set configuration. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// <para><b>false</b> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set configuration is modified.</para>
+        /// <para>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</para>
+        /// <para><b>true</b>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <para><b>false</b> (default): performs a dry run and performs the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set configuration is modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -95,9 +95,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The lease time of the IPv6 DHCP options set.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the lease time is set in hours, the unit is h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>24h</b>.</para>
+        /// <item><description><para>When the lease time is set in hours: Unit: h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>24h</b>.</para>
         /// </description></item>
-        /// <item><description><para>If the lease time is set in days, the unit is d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>1d</b>.</para>
+        /// <item><description><para>When the lease time is set in days: Unit: d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>1d</b>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -114,9 +114,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The lease time of the IPv4 DHCP options set.</para>
         /// <list type="bullet">
-        /// <item><description><para>If the lease time is set in hours, the unit is h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</para>
+        /// <item><description><para>When the lease time is set in hours: Unit: h. Valid values: <b>24h to 1176h</b> and <b>87600h to 175200h</b>. Default value: <b>87600h</b>.</para>
         /// </description></item>
-        /// <item><description><para>If the lease time is set in days, the unit is d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</para>
+        /// <item><description><para>When the lease time is set in days: Unit: d. Valid values: <b>1d to 49d</b> and <b>3650d to 7300d</b>. Default value: <b>3650d</b>.</para>
         /// </description></item>
         /// </list>
         /// <remarks>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The IP address type of the secondary CIDR block.</para>
+        /// <para>The IP address version of the secondary CIDR block.</para>
         /// 
         /// <b>Example:</b>
         /// <para>IPV4</para>

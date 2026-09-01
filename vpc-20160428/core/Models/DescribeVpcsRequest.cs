@@ -22,9 +22,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized RAM users, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <item><description><para><b>true</b>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
         /// </description></item>
-        /// <item><description><para><b>false</b> (default): sends a normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</para>
+        /// <item><description><para><b>false</b> (default): sends a Normal request, and the resource status is directly queried after the request passes the authorization check. An HTTP 2xx status code is returned.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? DryRun { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query VPCs that have IPv6 CIDR blocks enabled in the specified region. The default value is empty, which means no filtering is applied based on IPv6 enablement. Valid values:</para>
+        /// <para>Specifies whether to query VPCs that have IPv6 CIDR blocks enabled in the specified region. The default value is empty, which means no filtering is performed based on IPv6 enablement. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>false</b>: IPv6 is not enabled.</description></item>
         /// <item><description><b>true</b>: IPv6 is enabled.</description></item>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in paging queries. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -159,7 +159,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the VPC. </para>
-        /// <para>You can specify up to 20 VPC IDs. Separate multiple IDs with commas (,).</para>
+        /// <para>You can specify up to 20 VPC IDs. Separate multiple VPC IDs with commas (,).</para>
         /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1b1xjllp3ve5yze****</para>
@@ -179,7 +179,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string VpcName { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the VPC owner.</para>
+        /// <para>The Alibaba Cloud account ID that owns the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>253460731706911258</para>

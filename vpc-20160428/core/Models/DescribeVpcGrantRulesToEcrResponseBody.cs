@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The Express Connect Router (ECR) instance ID.</para>
+            /// <para>The instance ID of the Express Connect Router (ECR).</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecr-tz7w3chlaptxr2****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Alibaba Cloud account that owns the instance in the authorization relationship.</para>
+            /// <para>The ID of the Alibaba Cloud account that owns the instance in the queried authorization relationship.</para>
             /// 
             /// <b>Example:</b>
             /// <para>192745367151****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public long? InstanceUid { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the instance in the authorization relationship.</para>
+            /// <para>The region ID of the instance in the queried authorization relationship.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou</para>
@@ -77,10 +77,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string RegionNo { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the authorization relationship. Valid values:</para>
+            /// <para>The type of the instance in the authorization relationship. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>VBR</b>: Virtual Border Router (VBR) instance. Indicates the VPC instances that the VBR instance is authorized to access through the vRouter.</description></item>
-            /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance. Indicates the VBR instances that the VPC instance has authorized through the vRouter.</description></item>
+            /// <item><description><b>VBR</b>: Virtual Border Router (VBR) instance. Indicates the VPC instances for which the VBR instance has been granted authorization.</description></item>
+            /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance. Indicates the VBR instances to which the VPC instance has granted authorization.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The pagination token for the next query. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>If <b>NextToken</b> is empty, no more results exist.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> has a value, the value indicates the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of instances returned. Note: The TotalCount parameter is not meaningful when you use the MaxResults and NextToken parameters for a paged query with paging.</para>
+        /// <para>The total number of instances returned. Note: The TotalCount parameter is meaningless when you use MaxResults and NextToken for paginated queries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

@@ -10,13 +10,13 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateCustomerGatewayRequest : TeaModel {
         /// <summary>
-        /// <para>The autonomous system number (ASN) of the gateway device in the on-premises data center. This parameter is required if you plan to enable the BGP dynamic routing protocol for the IPsec-VPN connection. Valid values: 1 to 4294967295. The value 45104 is not supported.</para>
-        /// <para><b>Asn</b> is a 4-byte number. You can enter the value in two-segment format: the first 16 bits.the last 16 bits. Each segment is entered in decimal format.</para>
+        /// <para>If you plan to enable the BGP dynamic routing protocol for the IPsec-VPN connection, you need to allocate the Autonomous System Number (ASN) of the gateway device in the on-premises data center. Valid values: 1 to 4294967295. The value 45104 is not supported.</para>
+        /// <para><b>Asn</b> is a 4-byte number. You can enter the number in two-segment format: the first 16 bits.the last 16 bits. Each segment is entered in decimal format.</para>
         /// <para>For example, if you enter 123.456, the ASN is 123 × 65536 + 456 = 8061384.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>Use a private ASN to establish a BGP connection with Alibaba Cloud. For more information about the range of private ASNs, refer to the relevant documentation.</description></item>
-        /// <item><description>45104 is a unique identity allocated to Alibaba Cloud Computing Co., Ltd. by the Internet Assigned Numbers Authority (IANA). It is used to identify Alibaba Cloud in global Internet routing and data transmission.</description></item>
+        /// <item><description>45104 is a unique identity allocated to Alibaba Cloud Computing Co., Ltd. by the Internet Assigned Numbers Authority (IANA). It is used as an identity for Alibaba Cloud in global Internet routing and data transmission.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The tags to add to the customer gateway.</para>
+        /// <para>The list of tags to add to the customer gateway.</para>
         /// <para>You can add up to 20 tags to a customer gateway at a time.</para>
         /// </summary>
         [NameInMap("Tags")]

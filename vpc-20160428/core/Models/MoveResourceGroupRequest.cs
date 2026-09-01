@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>PrefixList</b>: prefix list</description></item>
         /// <item><description><b>PublicIpAddressPool</b>: IPAM pool</description></item>
         /// <item><description><b>FlowLog</b>: flow log</description></item>
-        /// <item><description><b>HaVip</b>: high-availability (HA) virtual IP address</description></item>
+        /// <item><description><b>HaVip</b>: high-availability virtual IP address</description></item>
         /// <item><description><b>TrafficMirrorFilter</b>: traffic mirror filter</description></item>
         /// <item><description><b>TrafficMirrorSession</b>: traffic mirror session</description></item>
         /// <item><description><b>IPv4Gateway</b>: IPv4 gateway</description></item>

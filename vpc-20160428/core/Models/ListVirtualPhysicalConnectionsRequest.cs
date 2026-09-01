@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class ListVirtualPhysicalConnectionsRequest : TeaModel {
         /// <summary>
-        /// <para>Indicates whether the shared Express Connect circuits have been confirmed and accepted by the tenant. Valid values:</para>
+        /// <para>Specifies whether the shared Express Connect circuits have been confirmed and accepted by the tenant. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: Yes.</description></item>
         /// <item><description><b>false</b>: No.</description></item>
@@ -34,10 +34,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether a next query token is available. Valid values:</para>
+        /// <para>Specifies whether a next query token exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>You do not need to specify this parameter for the first query or if no next query is available.</description></item>
-        /// <item><description>If a next query is available, set this parameter to the NextToken value returned in the previous API call.</description></item>
+        /// <item><description>You do not need to specify this parameter for the first query or if no next query exists.</description></item>
+        /// <item><description>If a next query exists, set this parameter to the NextToken value returned by the previous API call.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class ListVirtualPhysicalConnectionsRequestTags : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag key cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag value cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>
@@ -125,7 +125,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The business status of the shared Express Connect circuits. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Normal</b>: Normal.</description></item>
-        /// <item><description><b>FinancialLocked</b>: financial lock.</description></item>
+        /// <item><description><b>FinancialLocked</b>: Locked due to overdue payment.</description></item>
         /// <item><description><b>SecurityLocked</b>: Locked for security reasons.</description></item>
         /// </list>
         /// 

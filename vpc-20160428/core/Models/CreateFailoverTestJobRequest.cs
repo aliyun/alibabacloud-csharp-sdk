@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CreateFailoverTestJobRequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</para>
+        /// <para>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system automatically uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may be different for each API request.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -37,8 +37,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without creating the failover test node. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</description></item>
-        /// <item><description><b>false</b> (default): sends a Normal request. If the check passes, a 2xx HTTP status code is returned and the failover test node is created.</description></item>
+        /// <item><description><b>true</b>: sends the request without creating the failover test node. The system checks the AccessKey validity, Resource Access Management (RAM) user authorization, and required parameters. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.</description></item>
+        /// <item><description><b>false</b> (default): sends a Normal request. After the check passes, a 2xx HTTP status code is returned and the failover test job is created.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -60,11 +60,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? JobDuration { get; set; }
 
         /// <summary>
-        /// <para>The type of the failover test job. Valid values:</para>
+        /// <para>The failover test job type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>StartNow</b>: starts immediately. The failover test job starts immediately after it is created.</para>
+        /// <item><description><para><b>StartNow</b>: starts immediately. The test job starts executing immediately after it is created.</para>
         /// </description></item>
-        /// <item><description><para><b>StartLater</b>: does not start. Only the failover test job is created without starting the test.</para>
+        /// <item><description><para><b>StartLater</b>: does not start. Only creates the test job without executing it.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the failover test job.</para>
-        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of resource IDs to test. You can add up to 16 resources.</para>
+        /// <para>The list of test resource IDs. You can add up to 16 test resources.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("ResourceId")]
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ResourceOwnerAccount { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource to test. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
+        /// <para>The type of the test resource. Valid values: <b>PHYSICALCONNECTION</b>: Express Connect circuit.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

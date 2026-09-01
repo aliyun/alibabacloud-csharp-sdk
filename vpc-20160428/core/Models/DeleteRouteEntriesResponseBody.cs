@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string DstCidrBlock { get; set; }
 
             /// <summary>
-            /// <para>The error code returned for the failure.</para>
+            /// <para>The error code of the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>VPC_ROUTER_ENTRY_NOT_EXIST</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string FailedCode { get; set; }
 
             /// <summary>
-            /// <para>The error message returned for the failure.</para>
+            /// <para>The error message of the failure.</para>
             /// 
             /// <b>Example:</b>
             /// <para>vRouterEntry not exists</para>

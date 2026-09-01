@@ -25,7 +25,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </description></item>
             /// <item><description><para><b>RouterType</b>: the router type. Valid values: <b>VRouter</b> and <b>VBR</b>.</para>
             /// </description></item>
-            /// <item><description><para><b>RouterInterfaceOwnerId</b>: the ID of the account that owns the router interface.</para>
+            /// <item><description><para><b>RouterInterfaceOwnerId</b>: the ID of the account to which the router interface belongs.</para>
             /// </description></item>
             /// <item><description><para><b>OppositeInterfaceId</b>: the peer router interface ID.</para>
             /// </description></item>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </description></item>
             /// <item><description><para><b>OppositeRouterId</b>: the peer router interface ID.</para>
             /// </description></item>
-            /// <item><description><para><b>OppositeInterfaceOwnerId</b>: the ID of the account that owns the peer router interface.</para>
+            /// <item><description><para><b>OppositeInterfaceOwnerId</b>: the ID of the account to which the peer router interface belongs.</para>
             /// </description></item>
             /// <item><description><para><b>Status</b>: the router interface status.</para>
             /// </description></item>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>Multiple values for a filter condition are evaluated by using the OR operator. A result is returned if any of the values match. Filter conditions are evaluated by using the AND operator. A result is returned only if all filter conditions are matched.</para>
+            /// <para>The multiple values of each filter condition have an OR relationship. A router interface is returned as long as it matches one of the values. The filter conditions have an AND relationship. A router interface is returned only when it matches all specified filter conditions.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value based on the specified Key. You can specify multiple filter values for a Key. Multiple filter values are evaluated by using the OR operator. A result is returned if any of the filter values match.</para>
+            /// <para>The filter value based on the specified Key. You can specify multiple filter values for a Key. The filter values have an OR relationship. A router interface is returned as long as it matches one of the filter values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Filter.1.Active 1</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paging queries. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page when paging is performed. Maximum value: <b>50</b>. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public class DescribeRouterInterfacesRequestTags : TeaModel {
             /// <summary>
             /// <para>The tag key of the resource. You must specify at least 1 tag key and can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -154,7 +154,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

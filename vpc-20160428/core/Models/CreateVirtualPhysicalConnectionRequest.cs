@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: performs a dry run without creating the shared Express Connect circuits. The system checks the required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check passes, <c>DRYRUN.SUCCESS</c> is returned.</description></item>
+        /// <item><description><b>true</b>: performs a dry run without creating the shared Express Connect circuits. The system checks required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check passes, <c>DRYRUN.SUCCESS</c> is returned.</description></item>
         /// <item><description><b>false</b> (default): sends a Normal request. After the check passes, the shared Express Connect circuits are created.</description></item>
         /// </list>
         /// 
@@ -49,7 +49,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The payer of the shared Express Connect circuits. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>PayByPhysicalConnectionOwner</b>: The partner pays.</description></item>
-        /// <item><description><b>PayByVirtualPhysicalConnectionOwner</b>: The tenant pays.</description></item>
+        /// <item><description><b>PayByVirtualPhysicalConnectionOwner</b>: The tenant pays.<remarks>
+        /// <para>Default value: PayByVirtualPhysicalConnectionOwner (tenant pays).</para>
+        /// </remarks>
+        /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -62,6 +65,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The ID of the Express Connect circuit associated with the shared Express Connect circuits.</para>
+        /// <remarks>
+        /// <para>The Express Connect circuit must be in the Enabled state and must be an Express Connect circuit (shared Express Connect circuits IDs are not supported). Otherwise, ResourceNotFound.PhysicalConnectionId or IncorrectStatus.PhysicalConnection is returned. You can invoke DescribePhysicalConnections to query the status of the Express Connect circuit. The caller must be the account (partner) that owns the Express Connect circuit.</para>
+        /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -73,7 +79,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The region ID of the shared Express Connect circuits.</para>
-        /// <para>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -104,7 +110,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <remarks>
         /// <para>The bandwidth values <b>2G</b>, <b>5G</b>, <b>8G</b>, and <b>10G</b> are not available by default. To use these values, contact your account manager.</para>
         /// </remarks>
-        /// <para>Unit: <b>M</b> indicates Mbit/s, and <b>G</b> indicates Gbit/s.</para>
+        /// <para>Unit: <b>M</b> indicates Mbit/s and <b>G</b> indicates Gbit/s.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -115,7 +121,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string Spec { get; set; }
 
         /// <summary>
-        /// <para>The tags.</para>
+        /// <para>The list of tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
@@ -162,8 +168,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The VLAN ID of the shared Express Connect circuits. Valid values: <b>0</b> to <b>2999</b>.</para>
         /// <list type="bullet">
-        /// <item><description>If the VLAN ID is set to <b>0</b>, the physical vSwitch port of the Virtual Border Router (VBR) uses Layer 3 routing interface mode instead of VLAN mode. In Layer 3 routing interface mode, each Express Connect circuit corresponds to one VBR.</description></item>
-        /// <item><description>If the VLAN ID is set to a value from <b>1</b> to <b>2999</b>, the physical vSwitch port of the VBR uses VLAN-based Layer 3 sub-interfaces. In Layer 3 sub-interface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can connect to VPCs under multiple accounts. VBRs in different VLANs have network isolation at Layer 2 and cannot communicate with each other.</description></item>
+        /// <item><description>If the VLAN ID is <b>0</b>, the physical switch port of the Virtual Border Router (VBR) does not use VLAN mode but uses Layer 3 routing interface mode. In Layer 3 routing interface mode, each Express Connect circuit corresponds to one VBR.</description></item>
+        /// <item><description>If the VLAN ID is <b>1</b> to <b>2999</b>, the physical switch port of the VBR uses VLAN-based Layer 3 sub-interfaces. In Layer 3 sub-interface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can connect to VPCs under multiple accounts. VBRs in different VLANs have network isolation at Layer 2 and cannot communicate with each other.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -175,7 +181,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? VlanId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account ID of the tenant.</para>
+        /// <para>The ID of the tenant\&quot;s Alibaba Cloud account.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -45,8 +45,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The type of the instance for which to query the authorization relationship. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>VBR</b>: Virtual Border Router (VBR) instance. Queries the VPC instances that the VBR instance is authorized to access through the vRouter.</description></item>
-        /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance. Queries the VBR instances that the VPC instance has authorized through the vRouter.</description></item>
+        /// <item><description><b>VBR</b>: Virtual Border Router (VBR) instance. Queries the VPC instances for which the VBR instance has been granted authorization.</description></item>
+        /// <item><description><b>VPC</b>: virtual private cloud (VPC) instance. Queries the VBR instances to which the VPC instance has granted authorization.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The region in which the network instance to query resides.</para>
+        /// <para>The region where the network instance to query resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -127,8 +127,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeVpcGrantRulesToEcrRequestTags> Tags { get; set; }
         public class DescribeVpcGrantRulesToEcrRequestTags : TeaModel {
             /// <summary>
-            /// <para>The tag key of the resource. You must specify at least 1 and can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-            /// <para>A tag key can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag key of the resource. You must specify at least 1 tag key and can specify at most 20 tag keys. The tag key cannot be an empty string.</para>
+            /// <para>A tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceDept</para>
@@ -138,8 +138,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-            /// <para>The tag value can be up to 128 characters in length. It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value of the resource. You can specify at most 20 tag values. The tag value can be an empty string.</para>
+            /// <para>The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. It cannot contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>FinanceJoshua</para>

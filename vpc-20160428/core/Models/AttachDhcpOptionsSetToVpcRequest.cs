@@ -36,8 +36,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>Specifies whether to perform a dry run. Valid values:</para>
-        /// <para><b>true</b>: performs a dry run without associating the DHCP options set with the VPC. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <c>DryRunOperation</c> error code is returned.</para>
-        /// <para><b>false</b> (default): sends a normal request. If the request passes the dry run, a 2XX HTTP status code is returned and the DHCP options set is associated with the VPC.</para>
+        /// <para><b>true</b>: performs a dry run without associating the DHCP options set with the associate VPC. The system checks the request for potential issues, including whether the AccessKey is valid, the authorization of the Resource Access Management (RAM) user, and whether required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the <c>DryRunOperation</c> error code is returned.</para>
+        /// <para><b>false</b> (default): sends a normal request. If the check succeeds, a 2XX HTTP status code is returned and the DHCP options set is associated with the VPC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

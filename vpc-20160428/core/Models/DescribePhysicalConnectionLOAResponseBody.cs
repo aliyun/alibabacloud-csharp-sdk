@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CompanyName { get; set; }
 
             /// <summary>
-            /// <para>The time when the construction crew enters the site. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
+            /// <para>The time when the construction starts. The time is in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2019-02-26T08:00:00Z</para>
@@ -48,6 +48,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The LOA error code.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>IllegalParam.CardId</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -94,12 +97,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string LineSPContactInfo { get; set; }
 
             /// <summary>
-            /// <para>The carrier. Valid values:</para>
+            /// <para>The telecommunications service provider. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>China Telecom</b></description></item>
-            /// <item><description><b>China Unicom</b></description></item>
-            /// <item><description><b>China Mobile</b></description></item>
-            /// <item><description><b>China Other</b></description></item>
+            /// <item><description><b>中国电信</b></description></item>
+            /// <item><description><b>中国联通</b></description></item>
+            /// <item><description><b>中国移动</b></description></item>
+            /// <item><description><b>中国其他</b></description></item>
             /// </list>
             /// 
             /// <b>Example:</b>

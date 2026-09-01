@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public List<DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter> Filter { get; set; }
         public class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter : TeaModel {
             /// <summary>
-            /// <para>The filter condition. You can specify up to five filter conditions. The following filter conditions are supported:</para>
+            /// <para>The filter condition. You can specify up to 5 filter conditions. The following filter conditions are supported:</para>
             /// <list type="bullet">
             /// <item><description><para><b>PhysicalConnectionId</b>: instance ID of the Express Connect circuit instance.</para>
             /// </description></item>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The filter value based on the specified Key. You can specify multiple filter values for a Key. The relationship between filter values is OR, which means that a match with any filter value is considered a match for the filter condition.</para>
+            /// <para>The filter values based on the specified Key. You can specify multiple filter values for a single Key. The relationship between multiple filter values is OR, which means that a match with any one of the filter values is considered a match for the filter condition.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string PhysicalConnectionId { get; set; }
 
         /// <summary>
-        /// <para>The region where the Express Connect circuit is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</para>
+        /// <para>The region where the Express Connect circuit resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

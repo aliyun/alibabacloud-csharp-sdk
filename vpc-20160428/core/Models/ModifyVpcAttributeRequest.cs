@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
         /// <summary>
         /// <para>The IPv6 CIDR block of the VPC.
-        /// When you enable IPv6 for a VPC, the system will assign an IPv6 CIDR block. To specify an IPv6 CIDR block, invoke the <a href="https://help.aliyun.com/document_detail/448916.html">AllocateVpcIpv6Cidr</a> operation to reserve a specific IPv6 CIDR block first, and then pass it in.</para>
+        /// When you enable IPv6 for a VPC, the system will assign an IPv6 CIDR block. To specify an IPv6 CIDR block, you need to first invoke the <a href="https://help.aliyun.com/document_detail/448916.html">AllocateVpcIpv6Cidr</a> operation to reserve the specified IPv6 CIDR block, and then pass it in.</para>
         /// <remarks>
         /// <para>For a VPC that already has IPv6 enabled, you cannot modify the IPv6 CIDR block by passing in this parameter.</para>
         /// </remarks>
@@ -80,9 +80,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The type of the IPv6 CIDR block of the VPC. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>BGP</b> (default): Alibaba Cloud BGP IPv6.</description></item>
-        /// <item><description><b>ChinaMobile</b>: China Mobile (single ISP).</description></item>
-        /// <item><description><b>ChinaUnicom</b>: China Unicom (single ISP).</description></item>
-        /// <item><description><b>ChinaTelecom</b>: China Telecom (single ISP).</description></item>
+        /// <item><description><b>ChinaMobile</b>: China Mobile (single-ISP).</description></item>
+        /// <item><description><b>ChinaUnicom</b>: China Unicom (single-ISP).</description></item>
+        /// <item><description><b>ChinaTelecom</b>: China Telecom (single-ISP).</description></item>
         /// </list>
         /// <remarks>
         /// <para>If you are a user who has the single-ISP bandwidth whitelist enabled, you can set this parameter to <b>ChinaTelecom</b> (China Telecom), <b>ChinaUnicom</b> (China Unicom), or <b>ChinaMobile</b> (China Mobile).</para>

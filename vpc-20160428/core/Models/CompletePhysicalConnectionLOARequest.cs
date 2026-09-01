@@ -11,9 +11,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
     public class CompletePhysicalConnectionLOARequest : TeaModel {
         /// <summary>
         /// <para>The client token that is used to ensure the idempotence of the request.</para>
-        /// <para>The client generates the value of this parameter. Ensure that the value is unique among different requests.</para>
+        /// <para>The client generates the value. Ensure that the value is unique among different requests.</para>
         /// <remarks>
-        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> may differ for each API request.</para>
+        /// <para>If you do not specify this parameter, the system uses the <b>RequestId</b> of the API request as the <b>ClientToken</b>. The <b>RequestId</b> of each API request may be different.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,9 +24,9 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the construction acceptance is completed. Valid values:</para>
+        /// <para>Specifies whether the construction is completed. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: The construction is completed and reported.</description></item>
+        /// <item><description><b>true</b>: Construction is completed.</description></item>
         /// <item><description><b>false</b>: Line O&amp;M.</description></item>
         /// </list>
         /// 
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The line code of the telecommunications service provider.</para>
+        /// <para>The line code of the carrier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aaa111****</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LineLabel { get; set; }
 
         /// <summary>
-        /// <para>The O&amp;M contact information of the line.</para>
+        /// <para>The O&amp;M contact information of the line carrier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1388888****</para>
@@ -79,12 +79,12 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string LineSPContactInfo { get; set; }
 
         /// <summary>
-        /// <para>The telecommunications service provider. Valid values:</para>
+        /// <para>The carrier. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>中国电信</b></description></item>
-        /// <item><description><b>中国联通</b></description></item>
-        /// <item><description><b>中国移动</b></description></item>
-        /// <item><description><b>中国其他</b></description></item>
+        /// <item><description><b>中国电信</b>.</description></item>
+        /// <item><description><b>中国联通</b>.</description></item>
+        /// <item><description><b>中国移动</b>.</description></item>
+        /// <item><description><b>中国其他</b>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

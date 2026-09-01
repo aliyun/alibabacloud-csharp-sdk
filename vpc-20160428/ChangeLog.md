@@ -1,3 +1,7 @@
+2026-09-01 Version: 7.3.0
+- Support API ModifyVpcCidrBlock.
+
+
 2026-08-14 Version: 7.2.6
 - Update API CreateVSwitchCidrReservation: add request parameters IpPrefixNumber.
 

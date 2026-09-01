@@ -44,12 +44,18 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         [Validation(Required=false)]
         public string Description { get; set; }
 
+        /// <summary>
+        /// <para>The port down delay time of the Express Connect circuit, in milliseconds. When a physical link Down event is detected, the access device waits for this duration before setting the port to the down state. This prevents transient disconnections from affecting your services. Valid values: 0 to 10000. The step size is 100. A value of 0 indicates that the port goes down immediately after the link goes down (default).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>100</para>
+        /// </summary>
         [NameInMap("DownDelayTime")]
         [Validation(Required=false)]
         public int? DownDelayTime { get; set; }
 
         /// <summary>
-        /// <para>The carrier that provides the access to the physical connection. Valid values:</para>
+        /// <para>The carrier that provides the access to the physical line. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>CT</b>: China Telecom</description></item>
         /// <item><description><b>CU</b>: China Unicom</description></item>
@@ -86,7 +92,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The geographical location of the on-premises data center.</para>
+        /// <para>The geographic location of the on-premises data center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>No. XX, XX Road, XX District, Hangzhou City, Zhejiang Province</para>
@@ -118,7 +124,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <item><description><b>100GBase-LR</b>: 100 GE single-mode optical port.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>To create 40GBase-LR or 100GBase-LR ports, check the actual port availability on the backend. Contact your account manager for details.</para>
+        /// <para>40GBase-LR and 100GBase-LR are subject to the availability of backend port resources. Contact your account manager for more information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

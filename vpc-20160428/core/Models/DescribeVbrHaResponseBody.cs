@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class DescribeVbrHaResponseBody : TeaModel {
         /// <summary>
-        /// <para>The time when the VBR was created. The time is displayed in the ISO 8601 standard in the UTC time zone. The format is YYYY-MM-DDThh:mm:ss.</para>
+        /// <para>The time when the VBR was created. The time is displayed in the ISO 8601 standard in UTC. The format is YYYY-MM-DDThh:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-06-08T12:20:55</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>The region ID of the VBR.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("RegionId")]
         [Validation(Required=false)]
@@ -71,7 +71,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The status of the VBR failover group.</para>
+        /// <para>The status of the VBR failover group. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para><b>Creating</b>: being created.</para>
         /// </description></item>

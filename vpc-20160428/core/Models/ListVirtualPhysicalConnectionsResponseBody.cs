@@ -20,10 +20,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether a next query token is available. Valid values:</para>
+        /// <para>Indicates whether a next query token exists. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>If <b>NextToken</b> is empty, no next query is available.</description></item>
-        /// <item><description>If <b>NextToken</b> is returned, the value indicates the token for the next query.</description></item>
+        /// <item><description>If <b>NextToken</b> is empty, no next query exists.</description></item>
+        /// <item><description>If <b>NextToken</b> has a return value, the value is the token for the next query.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The physical location of the access device for the Express Connect circuit.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>余杭经济开发区XXX交叉口, 余杭XX机房, E***包间</para>
+            /// <para>Yuhang Economic Development Zone, XX Intersection, Yuhang XX Data Center, Room E***</para>
             /// </summary>
             [NameInMap("AdLocation")]
             [Validation(Required=false)]
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The business status of the Express Connect circuit. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>Normal</b>: Enabled.</description></item>
-            /// <item><description><b>FinancialLocked</b>: Financial lock.</description></item>
+            /// <item><description><b>FinancialLocked</b>: Locked due to overdue payment.</description></item>
             /// <item><description><b>SecurityLocked</b>: Locked for security reasons.</description></item>
             /// </list>
             /// 
@@ -137,10 +137,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string CircuitCode { get; set; }
 
             /// <summary>
-            /// <para>The time when the Express Connect circuit was created.</para>
+            /// <para>The time when the Express Connect circuit was created. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2021-06-08T12:20:55</para>
+            /// <para>2021-06-08T12:20:55Z</para>
             /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
@@ -157,10 +157,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The time when the Express Connect circuit was enabled.</para>
+            /// <para>The time when the Express Connect circuit was enabled. The time is displayed in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2021-10-08T10:44Z</para>
+            /// <para>2021-10-08T10:44:00Z</para>
             /// </summary>
             [NameInMap("EnabledTime")]
             [Validation(Required=false)]
@@ -168,7 +168,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The expiration time of the shared Express Connect circuits.</para>
-            /// <para>The time is displayed in the ISO 8601 standard in UTC. Format: YYYY-MM-DDThh:mm:ssZ.</para>
+            /// <para>The time is displayed in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-11-08T16:00:00Z</para>
@@ -178,7 +178,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The expected bandwidth of the shared Express Connect circuits. The expected bandwidth takes effect only after payment is complete.</para>
+            /// <para>The expected bandwidth value of the shared Express Connect circuits. The expected bandwidth value takes effect only after payment is completed.</para>
             /// <para>Unit: <b>M</b> indicates Mbit/s, and <b>G</b> indicates Gbit/s.</para>
             /// 
             /// <b>Example:</b>
@@ -189,7 +189,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ExpectSpec { get; set; }
 
             /// <summary>
-            /// <para>The carrier that provides the physical connection. Valid values:</para>
+            /// <para>The carrier that provides the physical line for access. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>CT</b>: China Telecom.</description></item>
             /// <item><description><b>CU</b>: China Unicom.</description></item>
@@ -250,7 +250,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string OrderMode { get; set; }
 
             /// <summary>
-            /// <para>The Alibaba Cloud account ID to which the Express Connect circuit belongs.</para>
+            /// <para>The Alibaba Cloud account ID that owns the Express Connect circuit.</para>
             /// 
             /// <b>Example:</b>
             /// <para>18311773240248****</para>
@@ -273,7 +273,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>The geographic location of the on-premises data center.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>浙江省杭州市XX区XX街道XX号</para>
+            /// <para>No. XX, XX Street, XX District, Hangzhou, Zhejiang Province</para>
             /// </summary>
             [NameInMap("PeerLocation")]
             [Validation(Required=false)]
@@ -300,10 +300,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string PortNumber { get; set; }
 
             /// <summary>
-            /// <para>The port type of the Express Connect circuit. Valid values:</para>
+            /// <para>The port type of the access device for the Express Connect circuit. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>100Base-T</b>: 100M Ethernet port.</description></item>
-            /// <item><description><b>1000Base-T</b>: 1 GE electrical port.</description></item>
+            /// <item><description><b>1000Base-T</b>: GE electrical port.</description></item>
             /// <item><description><b>1000Base-LX</b>: GE single-mode optical port (10 km).</description></item>
             /// <item><description><b>10GBase-T</b>: 10 GE electrical port.</description></item>
             /// <item><description><b>10GBase-LR</b>: 10 GE single-mode optical port (10 km).</description></item>
@@ -353,7 +353,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The bandwidth of the shared Express Connect circuits.</para>
+            /// <para>The bandwidth value of the shared Express Connect circuits.</para>
             /// <para>Unit: <b>M</b> indicates Mbit/s, and <b>G</b> indicates Gbit/s.</para>
             /// 
             /// <b>Example:</b>
@@ -370,7 +370,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <item><description><b>Approved</b>: The application is approved.</description></item>
             /// <item><description><b>Allocating</b>: Resources are being allocated.</description></item>
             /// <item><description><b>Allocated</b>: Under construction.</description></item>
-            /// <item><description><b>Confirmed</b>: Pending confirmation.</description></item>
+            /// <item><description><b>Confirmed</b>: Waiting for user confirmation.</description></item>
             /// <item><description><b>Enabled</b>: Enabled.</description></item>
             /// <item><description><b>Rejected</b>: The application is rejected.</description></item>
             /// <item><description><b>Canceled</b>: Canceled.</description></item>
@@ -394,7 +394,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             public class ListVirtualPhysicalConnectionsResponseBodyVirtualPhysicalConnectionsTags : TeaModel {
                 /// <summary>
                 /// <para>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</para>
-                /// <para>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag key cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceDept</para>
@@ -405,7 +405,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
                 /// <summary>
                 /// <para>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</para>
-                /// <para>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). The tag value cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// <para>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FinanceJoshua</para>

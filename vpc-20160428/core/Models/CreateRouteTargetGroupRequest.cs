@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 {
     public class CreateRouteTargetGroupRequest : TeaModel {
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters. If you do not specify this parameter, the system automatically uses the RequestId value as the ClientToken value. The RequestId value is different for each API request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0c593ea1-3bea-11e9-b96b-88e9fe6****</para>
@@ -120,8 +120,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The weight of the route target group member. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>100</b>: The member is the active instance.</description></item>
-            /// <item><description><b>0</b>: The member is the standby instance.</description></item>
+            /// <item><description><b>100</b>: The member is the primary instance.</description></item>
+            /// <item><description><b>0</b>: The member is the secondary instance.</description></item>
             /// </list>
             /// <para>The weight can only be set during creation and cannot be modified.</para>
             /// <para>This parameter is required.</para>

@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state and then enters the <b>Active</b> state after activation succeeds.
+        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state. After the activation succeeds, the router interface enters the <b>Active</b> state.
         /// Before you call this operation, the router interface must be in the <b>Inactive</b> state. The initial state of a newly created router interface is <b>Idle</b>. In non-express connect mode, you can call CreateRouterInterface to create both ends of the connection, call ModifyRouterInterfaceAttribute to configure peer information for each end, and then call ConnectRouterInterface to establish the connection. When the interface is in the <b>Active</b> state, you can call DeactivateRouterInterface to change it to the <b>Inactive</b> state, and then call this operation to reactivate it. You can call DescribeRouterInterfaceAttribute to query the current state.</para>
         /// <remarks>
         /// <para>You cannot activate a router interface that has an overdue payment.</para>
@@ -186,7 +186,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state and then enters the <b>Active</b> state after activation succeeds.
+        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state. After the activation succeeds, the router interface enters the <b>Active</b> state.
         /// Before you call this operation, the router interface must be in the <b>Inactive</b> state. The initial state of a newly created router interface is <b>Idle</b>. In non-express connect mode, you can call CreateRouterInterface to create both ends of the connection, call ModifyRouterInterfaceAttribute to configure peer information for each end, and then call ConnectRouterInterface to establish the connection. When the interface is in the <b>Active</b> state, you can call DeactivateRouterInterface to change it to the <b>Inactive</b> state, and then call this operation to reactivate it. You can call DescribeRouterInterfaceAttribute to query the current state.</para>
         /// <remarks>
         /// <para>You cannot activate a router interface that has an overdue payment.</para>
@@ -253,7 +253,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state and then enters the <b>Active</b> state after activation succeeds.
+        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state. After the activation succeeds, the router interface enters the <b>Active</b> state.
         /// Before you call this operation, the router interface must be in the <b>Inactive</b> state. The initial state of a newly created router interface is <b>Idle</b>. In non-express connect mode, you can call CreateRouterInterface to create both ends of the connection, call ModifyRouterInterfaceAttribute to configure peer information for each end, and then call ConnectRouterInterface to establish the connection. When the interface is in the <b>Active</b> state, you can call DeactivateRouterInterface to change it to the <b>Inactive</b> state, and then call this operation to reactivate it. You can call DescribeRouterInterfaceAttribute to query the current state.</para>
         /// <remarks>
         /// <para>You cannot activate a router interface that has an overdue payment.</para>
@@ -280,7 +280,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state and then enters the <b>Active</b> state after activation succeeds.
+        /// <para>After you call the ActivateRouterInterface operation, the router interface enters the <b>Activating</b> state. After the activation succeeds, the router interface enters the <b>Active</b> state.
         /// Before you call this operation, the router interface must be in the <b>Inactive</b> state. The initial state of a newly created router interface is <b>Idle</b>. In non-express connect mode, you can call CreateRouterInterface to create both ends of the connection, call ModifyRouterInterfaceAttribute to configure peer information for each end, and then call ConnectRouterInterface to establish the connection. When the interface is in the <b>Active</b> state, you can call DeactivateRouterInterface to change it to the <b>Inactive</b> state, and then call this operation to reactivate it. You can call DescribeRouterInterfaceAttribute to query the current state.</para>
         /// <remarks>
         /// <para>You cannot activate a router interface that has an overdue payment.</para>
@@ -2063,8 +2063,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of EIPs. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
-        /// After you call this operation, an EIP in the <b>Available</b> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. EIPs do not support IGMP or SCTP.</para>
+        /// <para>Make sure that you are familiar with the billing methods and pricing of EIPs before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
+        /// After you call this operation, an EIP in the <b>Available</b> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. IGMP and SCTP are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2203,8 +2203,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of EIPs. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
-        /// After you call this operation, an EIP in the <b>Available</b> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. EIPs do not support IGMP or SCTP.</para>
+        /// <para>Make sure that you are familiar with the billing methods and pricing of EIPs before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
+        /// After you call this operation, an EIP in the <b>Available</b> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. IGMP and SCTP are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2343,8 +2343,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of EIPs. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
-        /// After you call this operation, an EIP in the <b>Available</b> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. EIPs do not support IGMP or SCTP.</para>
+        /// <para>Make sure that you are familiar with the billing methods and pricing of EIPs before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
+        /// After you call this operation, an EIP in the <b>Available</b> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. IGMP and SCTP are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2367,8 +2367,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of EIPs. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
-        /// After you call this operation, an EIP in the <b>Available</b> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. EIPs do not support IGMP or SCTP.</para>
+        /// <para>Make sure that you are familiar with the billing methods and pricing of EIPs before you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/122035.html">Billing overview</a>.
+        /// After you call this operation, an EIP in the <b>Available</b> state is randomly allocated in the specified region. EIPs support only ICMP, TCP, and UDP at the transport layer. IGMP and SCTP are not supported.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6846,7 +6846,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits.</para>
+        /// <para>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits. This API is used to migrate an existing VBR that was pushed cross-account to shared Express Connect circuits (shared port), completing the shared Express Connect circuits form transformation. Only the partner (Express Connect circuit owner) can call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6904,7 +6904,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits.</para>
+        /// <para>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits. This API is used to migrate an existing VBR that was pushed cross-account to shared Express Connect circuits (shared port), completing the shared Express Connect circuits form transformation. Only the partner (Express Connect circuit owner) can call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6962,7 +6962,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits.</para>
+        /// <para>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits. This API is used to migrate an existing VBR that was pushed cross-account to shared Express Connect circuits (shared port), completing the shared Express Connect circuits form transformation. Only the partner (Express Connect circuit owner) can call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6980,7 +6980,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits.</para>
+        /// <para>Associates a Virtual Border Router (VBR) instance with shared Express Connect circuits. This API is used to migrate an existing VBR that was pushed cross-account to shared Express Connect circuits (shared port), completing the shared Express Connect circuits form transformation. Only the partner (Express Connect circuit owner) can call this operation.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7910,12 +7910,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Completes the construction acceptance for an Express Connect circuit.</para>
+        /// <para>Calls CompletePhysicalConnectionLOA to complete the construction and backfill the completion information after the LOA is approved and the line construction is finished.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Completes the construction acceptance by calling the CompletePhysicalConnectionLOA operation. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. This operation can be called only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to resubmit the application. After the construction acceptance is completed, the LOA status changes to <b>Complete</b>.</para>
+        /// <para>Calls the CompletePhysicalConnectionLOA operation to complete the construction. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. You can call this operation only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to reapply. After the construction is completed, the LOA status changes to <b>Complete</b>.
+        /// Complete call chain:
+        /// CreatePhysicalConnection → ApplyPhysicalConnectionLOA (LOA enters the Applying state) → Wait for approval (Available after approval; Rejected if denied, in which case call SecondApplyPhysicalConnectionLOA or ApplyPhysicalConnectionLOA again to reapply) → CompletePhysicalConnectionLOA (backfill completion information, LOA enters the Completing state) → ConfirmPhysicalConnection (confirm the Express Connect circuit, LOA enters the Complete state).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8005,12 +8007,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Completes the construction acceptance for an Express Connect circuit.</para>
+        /// <para>Calls CompletePhysicalConnectionLOA to complete the construction and backfill the completion information after the LOA is approved and the line construction is finished.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Completes the construction acceptance by calling the CompletePhysicalConnectionLOA operation. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. This operation can be called only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to resubmit the application. After the construction acceptance is completed, the LOA status changes to <b>Complete</b>.</para>
+        /// <para>Calls the CompletePhysicalConnectionLOA operation to complete the construction. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. You can call this operation only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to reapply. After the construction is completed, the LOA status changes to <b>Complete</b>.
+        /// Complete call chain:
+        /// CreatePhysicalConnection → ApplyPhysicalConnectionLOA (LOA enters the Applying state) → Wait for approval (Available after approval; Rejected if denied, in which case call SecondApplyPhysicalConnectionLOA or ApplyPhysicalConnectionLOA again to reapply) → CompletePhysicalConnectionLOA (backfill completion information, LOA enters the Completing state) → ConfirmPhysicalConnection (confirm the Express Connect circuit, LOA enters the Complete state).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8100,12 +8104,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Completes the construction acceptance for an Express Connect circuit.</para>
+        /// <para>Calls CompletePhysicalConnectionLOA to complete the construction and backfill the completion information after the LOA is approved and the line construction is finished.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Completes the construction acceptance by calling the CompletePhysicalConnectionLOA operation. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. This operation can be called only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to resubmit the application. After the construction acceptance is completed, the LOA status changes to <b>Complete</b>.</para>
+        /// <para>Calls the CompletePhysicalConnectionLOA operation to complete the construction. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. You can call this operation only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to reapply. After the construction is completed, the LOA status changes to <b>Complete</b>.
+        /// Complete call chain:
+        /// CreatePhysicalConnection → ApplyPhysicalConnectionLOA (LOA enters the Applying state) → Wait for approval (Available after approval; Rejected if denied, in which case call SecondApplyPhysicalConnectionLOA or ApplyPhysicalConnectionLOA again to reapply) → CompletePhysicalConnectionLOA (backfill completion information, LOA enters the Completing state) → ConfirmPhysicalConnection (confirm the Express Connect circuit, LOA enters the Complete state).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8123,12 +8129,14 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Completes the construction acceptance for an Express Connect circuit.</para>
+        /// <para>Calls CompletePhysicalConnectionLOA to complete the construction and backfill the completion information after the LOA is approved and the line construction is finished.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Completes the construction acceptance by calling the CompletePhysicalConnectionLOA operation. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. This operation can be called only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to resubmit the application. After the construction acceptance is completed, the LOA status changes to <b>Complete</b>.</para>
+        /// <para>Calls the CompletePhysicalConnectionLOA operation to complete the construction. Before calling this operation, call DescribePhysicalConnectionLOA to query the LOA status. You can call this operation only when the status is <b>Available</b> or <b>Complete</b>. After an LOA application is submitted, the status changes to <b>Applying</b>. After the application is approved, the status changes to <b>Available</b>. If the application is rejected, the status changes to <b>Rejected</b>. For a rejected application, call SecondApplyPhysicalConnectionLOA to reapply. After the construction is completed, the LOA status changes to <b>Complete</b>.
+        /// Complete call chain:
+        /// CreatePhysicalConnection → ApplyPhysicalConnectionLOA (LOA enters the Applying state) → Wait for approval (Available after approval; Rejected if denied, in which case call SecondApplyPhysicalConnectionLOA or ApplyPhysicalConnectionLOA again to reapply) → CompletePhysicalConnectionLOA (backfill completion information, LOA enters the Completing state) → ConfirmPhysicalConnection (confirm the Express Connect circuit, LOA enters the Complete state).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8314,13 +8322,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a connection from the requester VPC router interface to the accepter.</para>
+        /// <para>Calls the ConnectRouterInterface operation to initiate a connection from the requester VPC router interface to the accepter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the router interface enters the <b>Connecting</b> state. After the connection is established, the router interface enters the <b>Active</b> state.
-        /// When you call this operation to create a VPC, note the following items: </para>
+        /// <para>After you invoke this operation, the router interface enters the <b>Connecting</b> state and transitions to the <b>Active</b> state after the connection is established.
+        /// When you invoke this operation to create a VPC, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>Only a requester VPC router interface in the <b>Idle</b> state can initiate a connection to the accepter VPC. </description></item>
         /// <item><description>A maximum of one pair of interconnected router interfaces can exist between any two routers. </description></item>
@@ -8383,13 +8391,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a connection from the requester VPC router interface to the accepter.</para>
+        /// <para>Calls the ConnectRouterInterface operation to initiate a connection from the requester VPC router interface to the accepter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the router interface enters the <b>Connecting</b> state. After the connection is established, the router interface enters the <b>Active</b> state.
-        /// When you call this operation to create a VPC, note the following items: </para>
+        /// <para>After you invoke this operation, the router interface enters the <b>Connecting</b> state and transitions to the <b>Active</b> state after the connection is established.
+        /// When you invoke this operation to create a VPC, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>Only a requester VPC router interface in the <b>Idle</b> state can initiate a connection to the accepter VPC. </description></item>
         /// <item><description>A maximum of one pair of interconnected router interfaces can exist between any two routers. </description></item>
@@ -8452,13 +8460,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a connection from the requester VPC router interface to the accepter.</para>
+        /// <para>Calls the ConnectRouterInterface operation to initiate a connection from the requester VPC router interface to the accepter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the router interface enters the <b>Connecting</b> state. After the connection is established, the router interface enters the <b>Active</b> state.
-        /// When you call this operation to create a VPC, note the following items: </para>
+        /// <para>After you invoke this operation, the router interface enters the <b>Connecting</b> state and transitions to the <b>Active</b> state after the connection is established.
+        /// When you invoke this operation to create a VPC, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>Only a requester VPC router interface in the <b>Idle</b> state can initiate a connection to the accepter VPC. </description></item>
         /// <item><description>A maximum of one pair of interconnected router interfaces can exist between any two routers. </description></item>
@@ -8481,13 +8489,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Initiates a connection from the requester VPC router interface to the accepter.</para>
+        /// <para>Calls the ConnectRouterInterface operation to initiate a connection from the requester VPC router interface to the accepter.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you call this operation, the router interface enters the <b>Connecting</b> state. After the connection is established, the router interface enters the <b>Active</b> state.
-        /// When you call this operation to create a VPC, note the following items: </para>
+        /// <para>After you invoke this operation, the router interface enters the <b>Connecting</b> state and transitions to the <b>Active</b> state after the connection is established.
+        /// When you invoke this operation to create a VPC, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>Only a requester VPC router interface in the <b>Idle</b> state can initiate a connection to the accepter VPC. </description></item>
         /// <item><description>A maximum of one pair of interconnected router interfaces can exist between any two routers. </description></item>
@@ -11806,14 +11814,32 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a failover test job for Express Connect.</para>
+        /// <para>Calls the CreateFailoverTestJob operation to create a failover test job for Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot create a failover test job in the following scenarios:</para>
+        /// <para>Resource status requirements (prerequisites)</para>
         /// <list type="bullet">
-        /// <item><description><para>A failover test job is already running in the current region and the job type of the new failover test job is set to StartNow.</para>
+        /// <item><description><para>Before creating a failover test job, ensure that the test resources and their associated resources are in the following states. Otherwise, the creation fails:</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to PHYSICALCONNECTION: The Express Connect circuit (including shared Express Connect circuits) must be in the Enabled state with normal billing status (no overdue payment). Otherwise, IncorrectStatus.ResourceId or IncorrectBusinessStatus.ResourceId is returned.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to VIRTUALBORDERROUTER: The VBR must be in the active state with no overdue payment, and the Express Connect circuit to which the VBR belongs must also be in the Enabled state with no overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to BGPPEER: The BGP peer must be in the Available state, the VBR to which it belongs must be in the active state, and the Express Connect circuit to which the VBR belongs must be in the Enabled state, all with no overdue payment.
+        /// How to check and advance the Express Connect circuit status</para>
+        /// </description></item>
+        /// <item><description><para>Call DescribePhysicalConnections to query the Status field of the Express Connect circuit. If the circuit is not in the Enabled state (for example, it is in the Allocated or Confirmed state), advance it along the following state transition path:</para>
+        /// <list type="bullet">
+        /// <item><description>Allocated (port reserved, pending confirmation) → Call ConfirmPhysicalConnection to confirm → Confirmed → Call EnablePhysicalConnection to activate (asynchronous; poll DescribePhysicalConnections after activation to confirm) → Enabled.</description></item>
+        /// <item><description>Note: EnablePhysicalConnection only supports activating Express Connect circuits in the Confirmed state. If the circuit is in the Allocated state, call ConfirmPhysicalConnection first.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>When JobType is set to StartLater, the status check described above is performed during the job creation phase. When you subsequently call StartFailoverTestJob to start the job, the resource status is checked again. If the resource status does not meet the requirements at that time (for example, the circuit is no longer in the Enabled state), the start operation fails.
+        /// The following scenarios do not support creating failover test jobs:</para>
+        /// </description></item>
+        /// <item><description><para>A failover test job is already running in the current region, and the job type of the new failover test job is set to start immediately.</para>
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance or shared Express Connect circuit instance has not been paid for or has an overdue payment.</para>
         /// </description></item>
@@ -11821,11 +11847,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance has more than one shared Express Connect circuit.</para>
         /// </description></item>
-        /// <item><description><para>The Express Connect circuit instance has more than one cross-account Virtual Border Router (VBR).</para>
+        /// <item><description><para>The Express Connect circuit instance has more than one cross-account VBR.</para>
         /// </description></item>
         /// <item><description><para>The shared Express Connect circuit instance is not associated with a VBR.</para>
         /// </description></item>
-        /// <item><description><para>The VLAN of the shared Express Connect circuit instance is set to 0.</para>
+        /// <item><description><para>The VLAN configuration of the shared Express Connect circuit instance is 0.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -11917,14 +11943,32 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a failover test job for Express Connect.</para>
+        /// <para>Calls the CreateFailoverTestJob operation to create a failover test job for Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot create a failover test job in the following scenarios:</para>
+        /// <para>Resource status requirements (prerequisites)</para>
         /// <list type="bullet">
-        /// <item><description><para>A failover test job is already running in the current region and the job type of the new failover test job is set to StartNow.</para>
+        /// <item><description><para>Before creating a failover test job, ensure that the test resources and their associated resources are in the following states. Otherwise, the creation fails:</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to PHYSICALCONNECTION: The Express Connect circuit (including shared Express Connect circuits) must be in the Enabled state with normal billing status (no overdue payment). Otherwise, IncorrectStatus.ResourceId or IncorrectBusinessStatus.ResourceId is returned.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to VIRTUALBORDERROUTER: The VBR must be in the active state with no overdue payment, and the Express Connect circuit to which the VBR belongs must also be in the Enabled state with no overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to BGPPEER: The BGP peer must be in the Available state, the VBR to which it belongs must be in the active state, and the Express Connect circuit to which the VBR belongs must be in the Enabled state, all with no overdue payment.
+        /// How to check and advance the Express Connect circuit status</para>
+        /// </description></item>
+        /// <item><description><para>Call DescribePhysicalConnections to query the Status field of the Express Connect circuit. If the circuit is not in the Enabled state (for example, it is in the Allocated or Confirmed state), advance it along the following state transition path:</para>
+        /// <list type="bullet">
+        /// <item><description>Allocated (port reserved, pending confirmation) → Call ConfirmPhysicalConnection to confirm → Confirmed → Call EnablePhysicalConnection to activate (asynchronous; poll DescribePhysicalConnections after activation to confirm) → Enabled.</description></item>
+        /// <item><description>Note: EnablePhysicalConnection only supports activating Express Connect circuits in the Confirmed state. If the circuit is in the Allocated state, call ConfirmPhysicalConnection first.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>When JobType is set to StartLater, the status check described above is performed during the job creation phase. When you subsequently call StartFailoverTestJob to start the job, the resource status is checked again. If the resource status does not meet the requirements at that time (for example, the circuit is no longer in the Enabled state), the start operation fails.
+        /// The following scenarios do not support creating failover test jobs:</para>
+        /// </description></item>
+        /// <item><description><para>A failover test job is already running in the current region, and the job type of the new failover test job is set to start immediately.</para>
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance or shared Express Connect circuit instance has not been paid for or has an overdue payment.</para>
         /// </description></item>
@@ -11932,11 +11976,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance has more than one shared Express Connect circuit.</para>
         /// </description></item>
-        /// <item><description><para>The Express Connect circuit instance has more than one cross-account Virtual Border Router (VBR).</para>
+        /// <item><description><para>The Express Connect circuit instance has more than one cross-account VBR.</para>
         /// </description></item>
         /// <item><description><para>The shared Express Connect circuit instance is not associated with a VBR.</para>
         /// </description></item>
-        /// <item><description><para>The VLAN of the shared Express Connect circuit instance is set to 0.</para>
+        /// <item><description><para>The VLAN configuration of the shared Express Connect circuit instance is 0.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -12028,14 +12072,32 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a failover test job for Express Connect.</para>
+        /// <para>Calls the CreateFailoverTestJob operation to create a failover test job for Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot create a failover test job in the following scenarios:</para>
+        /// <para>Resource status requirements (prerequisites)</para>
         /// <list type="bullet">
-        /// <item><description><para>A failover test job is already running in the current region and the job type of the new failover test job is set to StartNow.</para>
+        /// <item><description><para>Before creating a failover test job, ensure that the test resources and their associated resources are in the following states. Otherwise, the creation fails:</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to PHYSICALCONNECTION: The Express Connect circuit (including shared Express Connect circuits) must be in the Enabled state with normal billing status (no overdue payment). Otherwise, IncorrectStatus.ResourceId or IncorrectBusinessStatus.ResourceId is returned.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to VIRTUALBORDERROUTER: The VBR must be in the active state with no overdue payment, and the Express Connect circuit to which the VBR belongs must also be in the Enabled state with no overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to BGPPEER: The BGP peer must be in the Available state, the VBR to which it belongs must be in the active state, and the Express Connect circuit to which the VBR belongs must be in the Enabled state, all with no overdue payment.
+        /// How to check and advance the Express Connect circuit status</para>
+        /// </description></item>
+        /// <item><description><para>Call DescribePhysicalConnections to query the Status field of the Express Connect circuit. If the circuit is not in the Enabled state (for example, it is in the Allocated or Confirmed state), advance it along the following state transition path:</para>
+        /// <list type="bullet">
+        /// <item><description>Allocated (port reserved, pending confirmation) → Call ConfirmPhysicalConnection to confirm → Confirmed → Call EnablePhysicalConnection to activate (asynchronous; poll DescribePhysicalConnections after activation to confirm) → Enabled.</description></item>
+        /// <item><description>Note: EnablePhysicalConnection only supports activating Express Connect circuits in the Confirmed state. If the circuit is in the Allocated state, call ConfirmPhysicalConnection first.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>When JobType is set to StartLater, the status check described above is performed during the job creation phase. When you subsequently call StartFailoverTestJob to start the job, the resource status is checked again. If the resource status does not meet the requirements at that time (for example, the circuit is no longer in the Enabled state), the start operation fails.
+        /// The following scenarios do not support creating failover test jobs:</para>
+        /// </description></item>
+        /// <item><description><para>A failover test job is already running in the current region, and the job type of the new failover test job is set to start immediately.</para>
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance or shared Express Connect circuit instance has not been paid for or has an overdue payment.</para>
         /// </description></item>
@@ -12043,11 +12105,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance has more than one shared Express Connect circuit.</para>
         /// </description></item>
-        /// <item><description><para>The Express Connect circuit instance has more than one cross-account Virtual Border Router (VBR).</para>
+        /// <item><description><para>The Express Connect circuit instance has more than one cross-account VBR.</para>
         /// </description></item>
         /// <item><description><para>The shared Express Connect circuit instance is not associated with a VBR.</para>
         /// </description></item>
-        /// <item><description><para>The VLAN of the shared Express Connect circuit instance is set to 0.</para>
+        /// <item><description><para>The VLAN configuration of the shared Express Connect circuit instance is 0.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -12067,14 +12129,32 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a failover test job for Express Connect.</para>
+        /// <para>Calls the CreateFailoverTestJob operation to create a failover test job for Express Connect.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You cannot create a failover test job in the following scenarios:</para>
+        /// <para>Resource status requirements (prerequisites)</para>
         /// <list type="bullet">
-        /// <item><description><para>A failover test job is already running in the current region and the job type of the new failover test job is set to StartNow.</para>
+        /// <item><description><para>Before creating a failover test job, ensure that the test resources and their associated resources are in the following states. Otherwise, the creation fails:</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to PHYSICALCONNECTION: The Express Connect circuit (including shared Express Connect circuits) must be in the Enabled state with normal billing status (no overdue payment). Otherwise, IncorrectStatus.ResourceId or IncorrectBusinessStatus.ResourceId is returned.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to VIRTUALBORDERROUTER: The VBR must be in the active state with no overdue payment, and the Express Connect circuit to which the VBR belongs must also be in the Enabled state with no overdue payment.</para>
+        /// </description></item>
+        /// <item><description><para>ResourceType set to BGPPEER: The BGP peer must be in the Available state, the VBR to which it belongs must be in the active state, and the Express Connect circuit to which the VBR belongs must be in the Enabled state, all with no overdue payment.
+        /// How to check and advance the Express Connect circuit status</para>
+        /// </description></item>
+        /// <item><description><para>Call DescribePhysicalConnections to query the Status field of the Express Connect circuit. If the circuit is not in the Enabled state (for example, it is in the Allocated or Confirmed state), advance it along the following state transition path:</para>
+        /// <list type="bullet">
+        /// <item><description>Allocated (port reserved, pending confirmation) → Call ConfirmPhysicalConnection to confirm → Confirmed → Call EnablePhysicalConnection to activate (asynchronous; poll DescribePhysicalConnections after activation to confirm) → Enabled.</description></item>
+        /// <item><description>Note: EnablePhysicalConnection only supports activating Express Connect circuits in the Confirmed state. If the circuit is in the Allocated state, call ConfirmPhysicalConnection first.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description><para>When JobType is set to StartLater, the status check described above is performed during the job creation phase. When you subsequently call StartFailoverTestJob to start the job, the resource status is checked again. If the resource status does not meet the requirements at that time (for example, the circuit is no longer in the Enabled state), the start operation fails.
+        /// The following scenarios do not support creating failover test jobs:</para>
+        /// </description></item>
+        /// <item><description><para>A failover test job is already running in the current region, and the job type of the new failover test job is set to start immediately.</para>
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance or shared Express Connect circuit instance has not been paid for or has an overdue payment.</para>
         /// </description></item>
@@ -12082,11 +12162,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </description></item>
         /// <item><description><para>The Express Connect circuit instance has more than one shared Express Connect circuit.</para>
         /// </description></item>
-        /// <item><description><para>The Express Connect circuit instance has more than one cross-account Virtual Border Router (VBR).</para>
+        /// <item><description><para>The Express Connect circuit instance has more than one cross-account VBR.</para>
         /// </description></item>
         /// <item><description><para>The shared Express Connect circuit instance is not associated with a VBR.</para>
         /// </description></item>
-        /// <item><description><para>The VLAN of the shared Express Connect circuit instance is set to 0.</para>
+        /// <item><description><para>The VLAN configuration of the shared Express Connect circuit instance is 0.</para>
         /// </description></item>
         /// </list>
         /// </description>
@@ -18622,8 +18702,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks pass.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance carries all traffic under normal conditions and takes effect when health checks are successful.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18710,8 +18790,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks pass.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance carries all traffic under normal conditions and takes effect when health checks are successful.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18798,8 +18878,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks pass.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance carries all traffic under normal conditions and takes effect when health checks are successful.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -18830,8 +18910,8 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// </list>
         /// </description></item>
         /// <item><description><b>Active/standby pattern</b>: When you create a routing target group, you must configure primary and secondary instances that are in different zones and of the same type.</description></item>
-        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance handles all traffic under normal conditions and takes effect when health checks pass.</description></item>
-        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic when the primary instance fails, serving as disaster recovery and backup.</description></item>
+        /// <item><description><b>Primary instance</b>: The weight is 100. The primary instance carries all traffic under normal conditions and takes effect when health checks are successful.</description></item>
+        /// <item><description><b>Secondary instance</b>: The weight is 0. The secondary instance takes over traffic after the primary instance fails and serves as disaster recovery and backup.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -22307,7 +22387,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, understand the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.</para>
+        /// <para>Before you call this operation, familiarize yourself with the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.
+        /// Before you call this operation, make sure the following conditions are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The Express Connect circuit specified by PhysicalConnectionId is in the Enabled state. The complete process for an Express Connect circuit to reach the Enabled state includes payment and manual steps that cannot be fully automated through OpenAPI:<list type="bullet">
+        /// <item><description>CreatePhysicalConnection: Creates an Express Connect circuit.</description></item>
+        /// <item><description>LOA construction authorization: If you need to enter the data center for construction, call ApplyPhysicalConnectionLOA → wait for manual LOA approval → CompletePhysicalConnectionLOA (FinishWork=true). LOA approval and construction are manual/offline steps.</description></item>
+        /// <item><description>ConfirmPhysicalConnection: Reports construction completion. The circuit must be in the Allocated state. After success, it enters the Confirmed state.</description></item>
+        /// <item><description>After the Confirmed state, port usage fees must be paid before the circuit enters the Enabled state. For automation scenarios, call DescribePhysicalConnections first to confirm the target circuit is in the Enabled state before calling this operation.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The VlanId is not already used by an existing VBR or shared Express Connect circuit on the Express Connect circuit (valid values: 0 to 2999).</description></item>
+        /// <item><description>The Spec value does not exceed the remaining allocatable bandwidth of the Express Connect circuit or the shared circuit bandwidth limit configured for the account that owns the Express Connect circuit.</description></item>
+        /// <item><description>VpconnAliUid is the tenant\&quot;s Alibaba Cloud account (RAM users or partner accounts are not supported). Cross-site pushing is not allowed by default.</description></item>
+        /// <item><description>The number of shared Express Connect circuits on a single Express Connect circuit has not exceeded the quota.</description></item>
+        /// <item><description>The Express Connect circuit is not bound to a QoS policy, the access device supports MPBGP, and the access point allows the creation of shared Express Connect circuits.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22398,7 +22493,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, understand the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.</para>
+        /// <para>Before you call this operation, familiarize yourself with the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.
+        /// Before you call this operation, make sure the following conditions are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The Express Connect circuit specified by PhysicalConnectionId is in the Enabled state. The complete process for an Express Connect circuit to reach the Enabled state includes payment and manual steps that cannot be fully automated through OpenAPI:<list type="bullet">
+        /// <item><description>CreatePhysicalConnection: Creates an Express Connect circuit.</description></item>
+        /// <item><description>LOA construction authorization: If you need to enter the data center for construction, call ApplyPhysicalConnectionLOA → wait for manual LOA approval → CompletePhysicalConnectionLOA (FinishWork=true). LOA approval and construction are manual/offline steps.</description></item>
+        /// <item><description>ConfirmPhysicalConnection: Reports construction completion. The circuit must be in the Allocated state. After success, it enters the Confirmed state.</description></item>
+        /// <item><description>After the Confirmed state, port usage fees must be paid before the circuit enters the Enabled state. For automation scenarios, call DescribePhysicalConnections first to confirm the target circuit is in the Enabled state before calling this operation.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The VlanId is not already used by an existing VBR or shared Express Connect circuit on the Express Connect circuit (valid values: 0 to 2999).</description></item>
+        /// <item><description>The Spec value does not exceed the remaining allocatable bandwidth of the Express Connect circuit or the shared circuit bandwidth limit configured for the account that owns the Express Connect circuit.</description></item>
+        /// <item><description>VpconnAliUid is the tenant\&quot;s Alibaba Cloud account (RAM users or partner accounts are not supported). Cross-site pushing is not allowed by default.</description></item>
+        /// <item><description>The number of shared Express Connect circuits on a single Express Connect circuit has not exceeded the quota.</description></item>
+        /// <item><description>The Express Connect circuit is not bound to a QoS policy, the access device supports MPBGP, and the access point allows the creation of shared Express Connect circuits.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22489,7 +22599,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, understand the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.</para>
+        /// <para>Before you call this operation, familiarize yourself with the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.
+        /// Before you call this operation, make sure the following conditions are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The Express Connect circuit specified by PhysicalConnectionId is in the Enabled state. The complete process for an Express Connect circuit to reach the Enabled state includes payment and manual steps that cannot be fully automated through OpenAPI:<list type="bullet">
+        /// <item><description>CreatePhysicalConnection: Creates an Express Connect circuit.</description></item>
+        /// <item><description>LOA construction authorization: If you need to enter the data center for construction, call ApplyPhysicalConnectionLOA → wait for manual LOA approval → CompletePhysicalConnectionLOA (FinishWork=true). LOA approval and construction are manual/offline steps.</description></item>
+        /// <item><description>ConfirmPhysicalConnection: Reports construction completion. The circuit must be in the Allocated state. After success, it enters the Confirmed state.</description></item>
+        /// <item><description>After the Confirmed state, port usage fees must be paid before the circuit enters the Enabled state. For automation scenarios, call DescribePhysicalConnections first to confirm the target circuit is in the Enabled state before calling this operation.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The VlanId is not already used by an existing VBR or shared Express Connect circuit on the Express Connect circuit (valid values: 0 to 2999).</description></item>
+        /// <item><description>The Spec value does not exceed the remaining allocatable bandwidth of the Express Connect circuit or the shared circuit bandwidth limit configured for the account that owns the Express Connect circuit.</description></item>
+        /// <item><description>VpconnAliUid is the tenant\&quot;s Alibaba Cloud account (RAM users or partner accounts are not supported). Cross-site pushing is not allowed by default.</description></item>
+        /// <item><description>The number of shared Express Connect circuits on a single Express Connect circuit has not exceeded the quota.</description></item>
+        /// <item><description>The Express Connect circuit is not bound to a QoS policy, the access device supports MPBGP, and the access point allows the creation of shared Express Connect circuits.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -22512,7 +22637,22 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before calling this operation, understand the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.</para>
+        /// <para>Before you call this operation, familiarize yourself with the creation process and environment requirements for shared Express Connect circuits. For more information, see <a href="https://help.aliyun.com/document_detail/146571.html">Overview of shared Express Connect circuits</a> and <a href="https://help.aliyun.com/document_detail/155987.html">Partner operation guide</a>.
+        /// Before you call this operation, make sure the following conditions are met:</para>
+        /// <list type="bullet">
+        /// <item><description>The Express Connect circuit specified by PhysicalConnectionId is in the Enabled state. The complete process for an Express Connect circuit to reach the Enabled state includes payment and manual steps that cannot be fully automated through OpenAPI:<list type="bullet">
+        /// <item><description>CreatePhysicalConnection: Creates an Express Connect circuit.</description></item>
+        /// <item><description>LOA construction authorization: If you need to enter the data center for construction, call ApplyPhysicalConnectionLOA → wait for manual LOA approval → CompletePhysicalConnectionLOA (FinishWork=true). LOA approval and construction are manual/offline steps.</description></item>
+        /// <item><description>ConfirmPhysicalConnection: Reports construction completion. The circuit must be in the Allocated state. After success, it enters the Confirmed state.</description></item>
+        /// <item><description>After the Confirmed state, port usage fees must be paid before the circuit enters the Enabled state. For automation scenarios, call DescribePhysicalConnections first to confirm the target circuit is in the Enabled state before calling this operation.</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>The VlanId is not already used by an existing VBR or shared Express Connect circuit on the Express Connect circuit (valid values: 0 to 2999).</description></item>
+        /// <item><description>The Spec value does not exceed the remaining allocatable bandwidth of the Express Connect circuit or the shared circuit bandwidth limit configured for the account that owns the Express Connect circuit.</description></item>
+        /// <item><description>VpconnAliUid is the tenant\&quot;s Alibaba Cloud account (RAM users or partner accounts are not supported). Cross-site pushing is not allowed by default.</description></item>
+        /// <item><description>The number of shared Express Connect circuits on a single Express Connect circuit has not exceeded the quota.</description></item>
+        /// <item><description>The Express Connect circuit is not bound to a QoS policy, the access device supports MPBGP, and the access point allows the creation of shared Express Connect circuits.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -25845,6 +25985,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Deletes an advertised Border Gateway Protocol (BGP) network.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that the BgpNetwork is in the Available state. You can query the Status field by calling DescribeBgpNetworks. After a resource is created by AddBgpNetwork, it enters the Pending state. Wait until the state changes to Available before calling this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteBgpNetworkRequest
         /// </param>
@@ -25914,6 +26059,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Deletes an advertised Border Gateway Protocol (BGP) network.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that the BgpNetwork is in the Available state. You can query the Status field by calling DescribeBgpNetworks. After a resource is created by AddBgpNetwork, it enters the Pending state. Wait until the state changes to Available before calling this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteBgpNetworkRequest
@@ -25985,6 +26135,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Deletes an advertised Border Gateway Protocol (BGP) network.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that the BgpNetwork is in the Available state. You can query the Status field by calling DescribeBgpNetworks. After a resource is created by AddBgpNetwork, it enters the Pending state. Wait until the state changes to Available before calling this operation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// DeleteBgpNetworkRequest
         /// </param>
@@ -26002,6 +26157,11 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <summary>
         /// <para>Deletes an advertised Border Gateway Protocol (BGP) network.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Before calling this operation, ensure that the BgpNetwork is in the Available state. You can query the Status field by calling DescribeBgpNetworks. After a resource is created by AddBgpNetwork, it enters the Pending state. Wait until the state changes to Available before calling this operation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// DeleteBgpNetworkRequest
@@ -31697,13 +31857,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>Before you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Before deleting an IP address pool, make sure that the IP addresses in the pool are not in use.</description></item>
+        /// <item><description>Before you delete an IP address pool, make sure that the IP addresses in the pool are not in use.</description></item>
         /// <item><description><b>DeletePublicIpAddressPool</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a> to query the status of the IP address pool. <list type="bullet">
         /// <item><description>If the IP address pool is in the <b>Deleting</b> state, the IP address pool is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the IP address pool cannot be found, the IP address pool is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DeletePublicIpAddressPool</b> does not support concurrent deletion of the same IP address pool.</description></item>
+        /// <item><description>You cannot call <b>DeletePublicIpAddressPool</b> to concurrently delete the same IP address pool.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31781,13 +31941,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>Before you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Before deleting an IP address pool, make sure that the IP addresses in the pool are not in use.</description></item>
+        /// <item><description>Before you delete an IP address pool, make sure that the IP addresses in the pool are not in use.</description></item>
         /// <item><description><b>DeletePublicIpAddressPool</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a> to query the status of the IP address pool. <list type="bullet">
         /// <item><description>If the IP address pool is in the <b>Deleting</b> state, the IP address pool is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the IP address pool cannot be found, the IP address pool is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DeletePublicIpAddressPool</b> does not support concurrent deletion of the same IP address pool.</description></item>
+        /// <item><description>You cannot call <b>DeletePublicIpAddressPool</b> to concurrently delete the same IP address pool.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31865,13 +32025,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>Before you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Before deleting an IP address pool, make sure that the IP addresses in the pool are not in use.</description></item>
+        /// <item><description>Before you delete an IP address pool, make sure that the IP addresses in the pool are not in use.</description></item>
         /// <item><description><b>DeletePublicIpAddressPool</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a> to query the status of the IP address pool. <list type="bullet">
         /// <item><description>If the IP address pool is in the <b>Deleting</b> state, the IP address pool is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the IP address pool cannot be found, the IP address pool is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DeletePublicIpAddressPool</b> does not support concurrent deletion of the same IP address pool.</description></item>
+        /// <item><description>You cannot call <b>DeletePublicIpAddressPool</b> to concurrently delete the same IP address pool.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31897,13 +32057,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <description>
         /// <para>Before you call this operation, take note of the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Before deleting an IP address pool, make sure that the IP addresses in the pool are not in use.</description></item>
+        /// <item><description>Before you delete an IP address pool, make sure that the IP addresses in the pool are not in use.</description></item>
         /// <item><description><b>DeletePublicIpAddressPool</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call <a href="https://help.aliyun.com/document_detail/429433.html">ListPublicIpAddressPools</a> to query the status of the IP address pool. <list type="bullet">
         /// <item><description>If the IP address pool is in the <b>Deleting</b> state, the IP address pool is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the IP address pool cannot be found, the IP address pool is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>DeletePublicIpAddressPool</b> does not support concurrent deletion of the same IP address pool.</description></item>
+        /// <item><description>You cannot call <b>DeletePublicIpAddressPool</b> to concurrently delete the same IP address pool.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -31930,7 +32090,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Before you call this operation, take note of the following information:</para>
         /// <list type="bullet">
         /// <item><description>Before deleting a CIDR block, make sure that the CIDR block is not in use.</description></item>
-        /// <item><description><b>DeletePublicIpAddressPoolCidrBlock</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the CIDR block is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <list type="bullet">
+        /// <item><description><b>DeletePublicIpAddressPoolCidrBlock</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the deletion task in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <list type="bullet">
         /// <item><description>If the CIDR block is in the <b>Deleting</b> state, the CIDR block is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the CIDR block cannot be found, the CIDR block is deleted.</description></item>
         /// </list>
@@ -32018,7 +32178,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Before you call this operation, take note of the following information:</para>
         /// <list type="bullet">
         /// <item><description>Before deleting a CIDR block, make sure that the CIDR block is not in use.</description></item>
-        /// <item><description><b>DeletePublicIpAddressPoolCidrBlock</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the CIDR block is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <list type="bullet">
+        /// <item><description><b>DeletePublicIpAddressPoolCidrBlock</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the deletion task in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <list type="bullet">
         /// <item><description>If the CIDR block is in the <b>Deleting</b> state, the CIDR block is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the CIDR block cannot be found, the CIDR block is deleted.</description></item>
         /// </list>
@@ -32106,7 +32266,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Before you call this operation, take note of the following information:</para>
         /// <list type="bullet">
         /// <item><description>Before deleting a CIDR block, make sure that the CIDR block is not in use.</description></item>
-        /// <item><description><b>DeletePublicIpAddressPoolCidrBlock</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the CIDR block is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <list type="bullet">
+        /// <item><description><b>DeletePublicIpAddressPoolCidrBlock</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the deletion task in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <list type="bullet">
         /// <item><description>If the CIDR block is in the <b>Deleting</b> state, the CIDR block is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the CIDR block cannot be found, the CIDR block is deleted.</description></item>
         /// </list>
@@ -32138,7 +32298,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>Before you call this operation, take note of the following information:</para>
         /// <list type="bullet">
         /// <item><description>Before deleting a CIDR block, make sure that the CIDR block is not in use.</description></item>
-        /// <item><description><b>DeletePublicIpAddressPoolCidrBlock</b> is an asynchronous operation. After a request is sent, the system returns a request ID, but the CIDR block is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <list type="bullet">
+        /// <item><description><b>DeletePublicIpAddressPoolCidrBlock</b> is an asynchronous operation. After a request is sent, the system returns a request ID and runs the deletion task in the background. You can call <a href="https://help.aliyun.com/document_detail/429436.html">ListPublicIpAddressPoolCidrBlocks</a> to query the status of the CIDR block in the IP address pool. <list type="bullet">
         /// <item><description>If the CIDR block is in the <b>Deleting</b> state, the CIDR block is being deleted. In this state, you can only perform query operations.</description></item>
         /// <item><description>If the CIDR block cannot be found, the CIDR block is deleted.</description></item>
         /// </list>
@@ -32162,7 +32322,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes custom route entries.</para>
+        /// <para>Calls DeleteRouteEntries to batch delete custom route entries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32170,13 +32330,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation to delete routing entries, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>Only routing entries in the <b>Available</b> state can be deleted.  </description></item>
-        /// <item><description>Routing entries cannot be deleted if the VPC to which the route table belongs is creating or deleting a vSwitch or routing entries. </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the custom route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the custom route entry:<list type="bullet">
-        /// <item><description>If the custom route entry is in the <b>Deleting</b> state, the custom route entry is being deleted.</description></item>
-        /// <item><description>If the specified custom route entry cannot be found, the custom route entry is deleted.</description></item>
+        /// <item><description>Routing entries cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or routing entry. </description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the routing entry is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the routing entry:<list type="bullet">
+        /// <item><description>If the routing entry is in the <b>Deleting</b> state, the routing entry is being deleted.</description></item>
+        /// <item><description>If the specified routing entry cannot be found, the routing entry is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries from route tables in the same VPC.</description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries in route tables within the same VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32247,7 +32407,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes custom route entries.</para>
+        /// <para>Calls DeleteRouteEntries to batch delete custom route entries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32255,13 +32415,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation to delete routing entries, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>Only routing entries in the <b>Available</b> state can be deleted.  </description></item>
-        /// <item><description>Routing entries cannot be deleted if the VPC to which the route table belongs is creating or deleting a vSwitch or routing entries. </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the custom route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the custom route entry:<list type="bullet">
-        /// <item><description>If the custom route entry is in the <b>Deleting</b> state, the custom route entry is being deleted.</description></item>
-        /// <item><description>If the specified custom route entry cannot be found, the custom route entry is deleted.</description></item>
+        /// <item><description>Routing entries cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or routing entry. </description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the routing entry is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the routing entry:<list type="bullet">
+        /// <item><description>If the routing entry is in the <b>Deleting</b> state, the routing entry is being deleted.</description></item>
+        /// <item><description>If the specified routing entry cannot be found, the routing entry is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries from route tables in the same VPC.</description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries in route tables within the same VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32332,7 +32492,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes custom route entries.</para>
+        /// <para>Calls DeleteRouteEntries to batch delete custom route entries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32340,13 +32500,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation to delete routing entries, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>Only routing entries in the <b>Available</b> state can be deleted.  </description></item>
-        /// <item><description>Routing entries cannot be deleted if the VPC to which the route table belongs is creating or deleting a vSwitch or routing entries. </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the custom route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the custom route entry:<list type="bullet">
-        /// <item><description>If the custom route entry is in the <b>Deleting</b> state, the custom route entry is being deleted.</description></item>
-        /// <item><description>If the specified custom route entry cannot be found, the custom route entry is deleted.</description></item>
+        /// <item><description>Routing entries cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or routing entry. </description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the routing entry is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the routing entry:<list type="bullet">
+        /// <item><description>If the routing entry is in the <b>Deleting</b> state, the routing entry is being deleted.</description></item>
+        /// <item><description>If the specified routing entry cannot be found, the routing entry is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries from route tables in the same VPC.</description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries in route tables within the same VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -32365,7 +32525,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Batch deletes custom route entries.</para>
+        /// <para>Calls DeleteRouteEntries to batch delete custom route entries.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -32373,13 +32533,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <para>When you call this operation to delete routing entries, note the following items: </para>
         /// <list type="bullet">
         /// <item><description>Only routing entries in the <b>Available</b> state can be deleted.  </description></item>
-        /// <item><description>Routing entries cannot be deleted if the VPC to which the route table belongs is creating or deleting a vSwitch or routing entries. </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the custom route entry is not yet deleted. The deletion task continues to run in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the custom route entry:<list type="bullet">
-        /// <item><description>If the custom route entry is in the <b>Deleting</b> state, the custom route entry is being deleted.</description></item>
-        /// <item><description>If the specified custom route entry cannot be found, the custom route entry is deleted.</description></item>
+        /// <item><description>Routing entries cannot be deleted if the VPC that contains the route table is creating or deleting a vSwitch or routing entry. </description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation is asynchronous. After you send a request, the system returns a request ID, but the routing entry is not yet deleted. The deletion task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/138148.html">DescribeRouteEntryList</a> to query the deletion status of the routing entry:<list type="bullet">
+        /// <item><description>If the routing entry is in the <b>Deleting</b> state, the routing entry is being deleted.</description></item>
+        /// <item><description>If the specified routing entry cannot be found, the routing entry is deleted.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries from route tables in the same VPC.</description></item>
+        /// <item><description>The <b>DeleteRouteEntries</b> operation does not support concurrent batch deletion of routing entries in route tables within the same VPC.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -45535,7 +45695,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the supported filter options, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, see the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45626,7 +45786,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the supported filter options, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, see the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45717,7 +45877,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the supported filter options, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, see the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -45740,7 +45900,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the supported filter options, refer to the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
+        /// <para>By default, the system queries information about all Express Connect circuits in the specified region. You can use the filter options provided by the <b>DescribePhysicalConnections</b> operation to query information about specific Express Connect circuits. For the filter options supported by the system, see the description of <b>Key</b> in the <b>request parameters</b> section of this topic.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -47030,7 +47190,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries router interfaces in a specified region by calling the DescribeRouterInterfaces operation.</para>
+        /// <para>Queries router interfaces in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47108,7 +47268,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries router interfaces in a specified region by calling the DescribeRouterInterfaces operation.</para>
+        /// <para>Queries router interfaces in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47186,7 +47346,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries router interfaces in a specified region by calling the DescribeRouterInterfaces operation.</para>
+        /// <para>Queries router interfaces in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -47204,7 +47364,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries router interfaces in a specified region by calling the DescribeRouterInterfaces operation.</para>
+        /// <para>Queries router interfaces in a specified region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50779,7 +50939,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging operations. Reduce the query frequency or use sequential paging.</para>
+        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50886,7 +51046,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging operations. Reduce the query frequency or use sequential paging.</para>
+        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50993,7 +51153,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging operations. Reduce the query frequency or use sequential paging.</para>
+        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51016,7 +51176,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging operations. Reduce the query frequency or use sequential paging.</para>
+        /// <para>The <b>DescribeVpcs</b> operation may return the <b>Throttling.DeepPageSkip</b> error code during frequent deep paging or page skipping. Reduce the query frequency or use sequential paging.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -54951,12 +55111,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>When you invoke this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can enable only an Express Connect circuit that is in the <b>Confirmed</b> state.</description></item>
-        /// <item><description>After the circuit is enabled, it enters the <b>Enabled</b> state.</description></item>
-        /// <item><description><b>EnablePhysicalConnection</b> is an asynchronous operation. After you send a request, the system returns an instance ID, but the Express Connect circuit is not yet enabled. The enabling task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2982519.html">DescribePhysicalConnections</a> to query the status of the Express Connect circuit.</description></item>
-        /// <item><description><b>EnablePhysicalConnection</b> does not support concurrent enabling of the same Express Connect circuit that is in the <b>Confirmed</b> state.</description></item>
+        /// <item><description>You can enable only an Express Connect circuit that is in the Confirmed state. After the circuit is enabled, it enters the Enabled state. To reach the Confirmed state, complete the following steps in sequence: call CreatePhysicalConnection to create a circuit (Initial → Allocating), wait for resource allocation to complete (Allocating → Allocated), and then call ConfirmPhysicalConnection after construction is complete (Allocated → Confirmed).</description></item>
+        /// <item><description>A billing activation step occurs between the Confirmed and Enabled states. By default (if ByPassSp is not specified or ByPassSp is set to false), the system automatically creates a billing order in the sales and billing system when you invoke this operation. The circuit is enabled only after the order is created. To skip the billing order flow and directly enable the circuit, set ByPassSp to true. This capability is available only to whitelist accounts. For more information, see the ByPassSp parameter description.</description></item>
+        /// <item><description>The EnablePhysicalConnection operation is asynchronous. The system returns a success response, but the Express Connect circuit is not yet fully enabled because the backend enablement task is still in progress. You can invoke DescribePhysicalConnections to query the enablement status of the Express Connect circuit.</description></item>
+        /// <item><description>The EnablePhysicalConnection operation does not support concurrent enablement of the same Express Connect circuit that is in the Confirmed state. Concurrent invocations return an error.
+        /// If the Express Connect circuit is already in the Enabled state, invoking this operation again returns a success response (idempotent).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -55032,12 +55193,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>When you invoke this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can enable only an Express Connect circuit that is in the <b>Confirmed</b> state.</description></item>
-        /// <item><description>After the circuit is enabled, it enters the <b>Enabled</b> state.</description></item>
-        /// <item><description><b>EnablePhysicalConnection</b> is an asynchronous operation. After you send a request, the system returns an instance ID, but the Express Connect circuit is not yet enabled. The enabling task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2982519.html">DescribePhysicalConnections</a> to query the status of the Express Connect circuit.</description></item>
-        /// <item><description><b>EnablePhysicalConnection</b> does not support concurrent enabling of the same Express Connect circuit that is in the <b>Confirmed</b> state.</description></item>
+        /// <item><description>You can enable only an Express Connect circuit that is in the Confirmed state. After the circuit is enabled, it enters the Enabled state. To reach the Confirmed state, complete the following steps in sequence: call CreatePhysicalConnection to create a circuit (Initial → Allocating), wait for resource allocation to complete (Allocating → Allocated), and then call ConfirmPhysicalConnection after construction is complete (Allocated → Confirmed).</description></item>
+        /// <item><description>A billing activation step occurs between the Confirmed and Enabled states. By default (if ByPassSp is not specified or ByPassSp is set to false), the system automatically creates a billing order in the sales and billing system when you invoke this operation. The circuit is enabled only after the order is created. To skip the billing order flow and directly enable the circuit, set ByPassSp to true. This capability is available only to whitelist accounts. For more information, see the ByPassSp parameter description.</description></item>
+        /// <item><description>The EnablePhysicalConnection operation is asynchronous. The system returns a success response, but the Express Connect circuit is not yet fully enabled because the backend enablement task is still in progress. You can invoke DescribePhysicalConnections to query the enablement status of the Express Connect circuit.</description></item>
+        /// <item><description>The EnablePhysicalConnection operation does not support concurrent enablement of the same Express Connect circuit that is in the Confirmed state. Concurrent invocations return an error.
+        /// If the Express Connect circuit is already in the Enabled state, invoking this operation again returns a success response (idempotent).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -55113,12 +55275,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>When you invoke this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can enable only an Express Connect circuit that is in the <b>Confirmed</b> state.</description></item>
-        /// <item><description>After the circuit is enabled, it enters the <b>Enabled</b> state.</description></item>
-        /// <item><description><b>EnablePhysicalConnection</b> is an asynchronous operation. After you send a request, the system returns an instance ID, but the Express Connect circuit is not yet enabled. The enabling task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2982519.html">DescribePhysicalConnections</a> to query the status of the Express Connect circuit.</description></item>
-        /// <item><description><b>EnablePhysicalConnection</b> does not support concurrent enabling of the same Express Connect circuit that is in the <b>Confirmed</b> state.</description></item>
+        /// <item><description>You can enable only an Express Connect circuit that is in the Confirmed state. After the circuit is enabled, it enters the Enabled state. To reach the Confirmed state, complete the following steps in sequence: call CreatePhysicalConnection to create a circuit (Initial → Allocating), wait for resource allocation to complete (Allocating → Allocated), and then call ConfirmPhysicalConnection after construction is complete (Allocated → Confirmed).</description></item>
+        /// <item><description>A billing activation step occurs between the Confirmed and Enabled states. By default (if ByPassSp is not specified or ByPassSp is set to false), the system automatically creates a billing order in the sales and billing system when you invoke this operation. The circuit is enabled only after the order is created. To skip the billing order flow and directly enable the circuit, set ByPassSp to true. This capability is available only to whitelist accounts. For more information, see the ByPassSp parameter description.</description></item>
+        /// <item><description>The EnablePhysicalConnection operation is asynchronous. The system returns a success response, but the Express Connect circuit is not yet fully enabled because the backend enablement task is still in progress. You can invoke DescribePhysicalConnections to query the enablement status of the Express Connect circuit.</description></item>
+        /// <item><description>The EnablePhysicalConnection operation does not support concurrent enablement of the same Express Connect circuit that is in the Confirmed state. Concurrent invocations return an error.
+        /// If the Express Connect circuit is already in the Enabled state, invoking this operation again returns a success response (idempotent).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -55142,12 +55305,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you call this operation, take note of the following items:</para>
+        /// <para>When you invoke this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>You can enable only an Express Connect circuit that is in the <b>Confirmed</b> state.</description></item>
-        /// <item><description>After the circuit is enabled, it enters the <b>Enabled</b> state.</description></item>
-        /// <item><description><b>EnablePhysicalConnection</b> is an asynchronous operation. After you send a request, the system returns an instance ID, but the Express Connect circuit is not yet enabled. The enabling task is still running in the background. You can call <a href="https://help.aliyun.com/document_detail/2982519.html">DescribePhysicalConnections</a> to query the status of the Express Connect circuit.</description></item>
-        /// <item><description><b>EnablePhysicalConnection</b> does not support concurrent enabling of the same Express Connect circuit that is in the <b>Confirmed</b> state.</description></item>
+        /// <item><description>You can enable only an Express Connect circuit that is in the Confirmed state. After the circuit is enabled, it enters the Enabled state. To reach the Confirmed state, complete the following steps in sequence: call CreatePhysicalConnection to create a circuit (Initial → Allocating), wait for resource allocation to complete (Allocating → Allocated), and then call ConfirmPhysicalConnection after construction is complete (Allocated → Confirmed).</description></item>
+        /// <item><description>A billing activation step occurs between the Confirmed and Enabled states. By default (if ByPassSp is not specified or ByPassSp is set to false), the system automatically creates a billing order in the sales and billing system when you invoke this operation. The circuit is enabled only after the order is created. To skip the billing order flow and directly enable the circuit, set ByPassSp to true. This capability is available only to whitelist accounts. For more information, see the ByPassSp parameter description.</description></item>
+        /// <item><description>The EnablePhysicalConnection operation is asynchronous. The system returns a success response, but the Express Connect circuit is not yet fully enabled because the backend enablement task is still in progress. You can invoke DescribePhysicalConnections to query the enablement status of the Express Connect circuit.</description></item>
+        /// <item><description>The EnablePhysicalConnection operation does not support concurrent enablement of the same Express Connect circuit that is in the Confirmed state. Concurrent invocations return an error.
+        /// If the Express Connect circuit is already in the Enabled state, invoking this operation again returns a success response (idempotent).</description></item>
         /// </list>
         /// </description>
         /// 
@@ -56099,7 +56263,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic refers to both types without distinction.</para>
+        /// <para>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic does not distinguish between the two types.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56170,7 +56334,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic refers to both types without distinction.</para>
+        /// <para>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic does not distinguish between the two types.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56241,7 +56405,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic refers to both types without distinction.</para>
+        /// <para>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic does not distinguish between the two types.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -56264,7 +56428,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic refers to both types without distinction.</para>
+        /// <para>This operation queries the information about a single Internet NAT gateway or VPC NAT gateway. The term &quot;NAT gateway&quot; in this topic does not distinguish between the two types.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -58227,7 +58391,24 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When creating a cross-account VBR uplink connection, you must grant authorization of the VPC-connected instance to the VBR instance.</para>
+        /// <para>This operation is used for cross-account scenarios. Before calling this operation, ensure that the following resources are ready:
+        /// <b>Account A (VPC owner, the caller of this operation):</b></para>
+        /// <list type="bullet">
+        /// <item><description>A VPC has been created and is in the Available state (CreateVpc).
+        /// <b>Account B (VBR owner, the account specified by VbrOwnerUid):</b> When GrantType=Specify, the VBRs specified in VbrInstanceIds must already be created. Creating a VBR depends on the complete Express Connect circuit lifecycle:</description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Call CreatePhysicalConnection to create an Express Connect circuit.</description></item>
+        /// <item><description>Apply for a Letter of Authorization (LOA) and complete the construction (ApplyPhysicalConnectionLOA → CompletePhysicalConnectionLOA). The Express Connect circuit enters the Confirmed state.</description></item>
+        /// <item><description>Call EnablePhysicalConnection to enable the Express Connect circuit (the circuit must be in the Confirmed state).</description></item>
+        /// <item><description>Call CreateVirtualBorderRouter to create a VBR (the Express Connect circuit must be in the Enabled state. Otherwise, the error InvalidPhysicalConnectionId.NotEnabled is returned).
+        /// After the preceding preparations are complete, Account A calls this operation to grant the VPC to the VBR of Account B:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>GrantType=All: Grants authorization to all VBRs under Account B (only the validity of VbrOwnerUid is verified. The VBRs do not need to be created yet).</description></item>
+        /// <item><description>GrantType=Specify: Grants authorization to specified VBRs. The instances in VbrInstanceIds must already exist in the region specified by VbrRegionNo under the account specified by VbrOwnerUid. Otherwise, the error Instance.NotExist is returned.
+        /// Note: VbrOwnerUid cannot be the same as the caller\&quot;s account. Otherwise, the error Parameter.Illegal is returned.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58300,7 +58481,24 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When creating a cross-account VBR uplink connection, you must grant authorization of the VPC-connected instance to the VBR instance.</para>
+        /// <para>This operation is used for cross-account scenarios. Before calling this operation, ensure that the following resources are ready:
+        /// <b>Account A (VPC owner, the caller of this operation):</b></para>
+        /// <list type="bullet">
+        /// <item><description>A VPC has been created and is in the Available state (CreateVpc).
+        /// <b>Account B (VBR owner, the account specified by VbrOwnerUid):</b> When GrantType=Specify, the VBRs specified in VbrInstanceIds must already be created. Creating a VBR depends on the complete Express Connect circuit lifecycle:</description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Call CreatePhysicalConnection to create an Express Connect circuit.</description></item>
+        /// <item><description>Apply for a Letter of Authorization (LOA) and complete the construction (ApplyPhysicalConnectionLOA → CompletePhysicalConnectionLOA). The Express Connect circuit enters the Confirmed state.</description></item>
+        /// <item><description>Call EnablePhysicalConnection to enable the Express Connect circuit (the circuit must be in the Confirmed state).</description></item>
+        /// <item><description>Call CreateVirtualBorderRouter to create a VBR (the Express Connect circuit must be in the Enabled state. Otherwise, the error InvalidPhysicalConnectionId.NotEnabled is returned).
+        /// After the preceding preparations are complete, Account A calls this operation to grant the VPC to the VBR of Account B:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>GrantType=All: Grants authorization to all VBRs under Account B (only the validity of VbrOwnerUid is verified. The VBRs do not need to be created yet).</description></item>
+        /// <item><description>GrantType=Specify: Grants authorization to specified VBRs. The instances in VbrInstanceIds must already exist in the region specified by VbrRegionNo under the account specified by VbrOwnerUid. Otherwise, the error Instance.NotExist is returned.
+        /// Note: VbrOwnerUid cannot be the same as the caller\&quot;s account. Otherwise, the error Parameter.Illegal is returned.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -58373,7 +58571,24 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When creating a cross-account VBR uplink connection, you must grant authorization of the VPC-connected instance to the VBR instance.</para>
+        /// <para>This operation is used for cross-account scenarios. Before calling this operation, ensure that the following resources are ready:
+        /// <b>Account A (VPC owner, the caller of this operation):</b></para>
+        /// <list type="bullet">
+        /// <item><description>A VPC has been created and is in the Available state (CreateVpc).
+        /// <b>Account B (VBR owner, the account specified by VbrOwnerUid):</b> When GrantType=Specify, the VBRs specified in VbrInstanceIds must already be created. Creating a VBR depends on the complete Express Connect circuit lifecycle:</description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Call CreatePhysicalConnection to create an Express Connect circuit.</description></item>
+        /// <item><description>Apply for a Letter of Authorization (LOA) and complete the construction (ApplyPhysicalConnectionLOA → CompletePhysicalConnectionLOA). The Express Connect circuit enters the Confirmed state.</description></item>
+        /// <item><description>Call EnablePhysicalConnection to enable the Express Connect circuit (the circuit must be in the Confirmed state).</description></item>
+        /// <item><description>Call CreateVirtualBorderRouter to create a VBR (the Express Connect circuit must be in the Enabled state. Otherwise, the error InvalidPhysicalConnectionId.NotEnabled is returned).
+        /// After the preceding preparations are complete, Account A calls this operation to grant the VPC to the VBR of Account B:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>GrantType=All: Grants authorization to all VBRs under Account B (only the validity of VbrOwnerUid is verified. The VBRs do not need to be created yet).</description></item>
+        /// <item><description>GrantType=Specify: Grants authorization to specified VBRs. The instances in VbrInstanceIds must already exist in the region specified by VbrRegionNo under the account specified by VbrOwnerUid. Otherwise, the error Instance.NotExist is returned.
+        /// Note: VbrOwnerUid cannot be the same as the caller\&quot;s account. Otherwise, the error Parameter.Illegal is returned.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -58396,7 +58611,24 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When creating a cross-account VBR uplink connection, you must grant authorization of the VPC-connected instance to the VBR instance.</para>
+        /// <para>This operation is used for cross-account scenarios. Before calling this operation, ensure that the following resources are ready:
+        /// <b>Account A (VPC owner, the caller of this operation):</b></para>
+        /// <list type="bullet">
+        /// <item><description>A VPC has been created and is in the Available state (CreateVpc).
+        /// <b>Account B (VBR owner, the account specified by VbrOwnerUid):</b> When GrantType=Specify, the VBRs specified in VbrInstanceIds must already be created. Creating a VBR depends on the complete Express Connect circuit lifecycle:</description></item>
+        /// </list>
+        /// <ol>
+        /// <item><description>Call CreatePhysicalConnection to create an Express Connect circuit.</description></item>
+        /// <item><description>Apply for a Letter of Authorization (LOA) and complete the construction (ApplyPhysicalConnectionLOA → CompletePhysicalConnectionLOA). The Express Connect circuit enters the Confirmed state.</description></item>
+        /// <item><description>Call EnablePhysicalConnection to enable the Express Connect circuit (the circuit must be in the Confirmed state).</description></item>
+        /// <item><description>Call CreateVirtualBorderRouter to create a VBR (the Express Connect circuit must be in the Enabled state. Otherwise, the error InvalidPhysicalConnectionId.NotEnabled is returned).
+        /// After the preceding preparations are complete, Account A calls this operation to grant the VPC to the VBR of Account B:</description></item>
+        /// </ol>
+        /// <list type="bullet">
+        /// <item><description>GrantType=All: Grants authorization to all VBRs under Account B (only the validity of VbrOwnerUid is verified. The VBRs do not need to be created yet).</description></item>
+        /// <item><description>GrantType=Specify: Grants authorization to specified VBRs. The instances in VbrInstanceIds must already exist in the region specified by VbrRegionNo under the account specified by VbrOwnerUid. Otherwise, the error Instance.NotExist is returned.
+        /// Note: VbrOwnerUid cannot be the same as the caller\&quot;s account. Otherwise, the error Parameter.Illegal is returned.</description></item>
+        /// </list>
         /// </description>
         /// 
         /// <param name="request">
@@ -62734,7 +62966,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about shared Express Connect circuits by calling the ListVirtualPhysicalConnections operation.</para>
+        /// <para>Queries information about shared Express Connect circuits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62820,7 +63052,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about shared Express Connect circuits by calling the ListVirtualPhysicalConnections operation.</para>
+        /// <para>Queries information about shared Express Connect circuits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62906,7 +63138,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about shared Express Connect circuits by calling the ListVirtualPhysicalConnections operation.</para>
+        /// <para>Queries information about shared Express Connect circuits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -62924,7 +63156,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about shared Express Connect circuits by calling the ListVirtualPhysicalConnections operation.</para>
+        /// <para>Queries information about shared Express Connect circuits.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -70750,7 +70982,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an Express Connect circuit.</para>
+        /// <para>Modifies the configurations of an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -70759,7 +70991,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <b>Initial</b>, <b>Enabled</b>, or <b>Rejected</b> state.  </description></item>
         /// <item><description>You cannot modify Express Connect circuits in the <b>Canceled</b>, <b>Allocating</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.  </description></item>
-        /// <item><description>An Express Connect circuit in the <b>Rejected</b> state enters the <b>Initial</b> state after it is modified.</description></item>
+        /// <item><description>After an Express Connect circuit in the <b>Rejected</b> state is modified, it enters the <b>Initial</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -70866,7 +71098,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an Express Connect circuit.</para>
+        /// <para>Modifies the configurations of an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -70875,7 +71107,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <b>Initial</b>, <b>Enabled</b>, or <b>Rejected</b> state.  </description></item>
         /// <item><description>You cannot modify Express Connect circuits in the <b>Canceled</b>, <b>Allocating</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.  </description></item>
-        /// <item><description>An Express Connect circuit in the <b>Rejected</b> state enters the <b>Initial</b> state after it is modified.</description></item>
+        /// <item><description>After an Express Connect circuit in the <b>Rejected</b> state is modified, it enters the <b>Initial</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -70982,7 +71214,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an Express Connect circuit.</para>
+        /// <para>Modifies the configurations of an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -70991,7 +71223,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <b>Initial</b>, <b>Enabled</b>, or <b>Rejected</b> state.  </description></item>
         /// <item><description>You cannot modify Express Connect circuits in the <b>Canceled</b>, <b>Allocating</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.  </description></item>
-        /// <item><description>An Express Connect circuit in the <b>Rejected</b> state enters the <b>Initial</b> state after it is modified.</description></item>
+        /// <item><description>After an Express Connect circuit in the <b>Rejected</b> state is modified, it enters the <b>Initial</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -71010,7 +71242,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of an Express Connect circuit.</para>
+        /// <para>Modifies the configurations of an Express Connect circuit.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -71019,7 +71251,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// <list type="bullet">
         /// <item><description>You can modify the specifications and redundant circuit ID only for Express Connect circuits in the <b>Initial</b>, <b>Enabled</b>, or <b>Rejected</b> state.  </description></item>
         /// <item><description>You cannot modify Express Connect circuits in the <b>Canceled</b>, <b>Allocating</b>, <b>AllocationFailed</b>, or <b>Terminated</b> state.  </description></item>
-        /// <item><description>An Express Connect circuit in the <b>Rejected</b> state enters the <b>Initial</b> state after it is modified.</description></item>
+        /// <item><description>After an Express Connect circuit in the <b>Rejected</b> state is modified, it enters the <b>Initial</b> state.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -74426,6 +74658,166 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Modifies the primary or secondary CIDR block of a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcCidrBlockRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcCidrBlockResponse
+        /// </returns>
+        public ModifyVpcCidrBlockResponse ModifyVpcCidrBlockWithOptions(ModifyVpcCidrBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalCidrBlock))
+            {
+                query["OriginalCidrBlock"] = request.OriginalCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetCidrBlock))
+            {
+                query["TargetCidrBlock"] = request.TargetCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyVpcCidrBlock",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyVpcCidrBlockResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the primary or secondary CIDR block of a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcCidrBlockRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcCidrBlockResponse
+        /// </returns>
+        public async Task<ModifyVpcCidrBlockResponse> ModifyVpcCidrBlockWithOptionsAsync(ModifyVpcCidrBlockRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ClientToken))
+            {
+                query["ClientToken"] = request.ClientToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
+            {
+                query["DryRun"] = request.DryRun;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.OriginalCidrBlock))
+            {
+                query["OriginalCidrBlock"] = request.OriginalCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetCidrBlock))
+            {
+                query["TargetCidrBlock"] = request.TargetCidrBlock;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModifyVpcCidrBlock",
+                Version = "2016-04-28",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModifyVpcCidrBlockResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the primary or secondary CIDR block of a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcCidrBlockRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcCidrBlockResponse
+        /// </returns>
+        public ModifyVpcCidrBlockResponse ModifyVpcCidrBlock(ModifyVpcCidrBlockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ModifyVpcCidrBlockWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the primary or secondary CIDR block of a VPC.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModifyVpcCidrBlockRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModifyVpcCidrBlockResponse
+        /// </returns>
+        public async Task<ModifyVpcCidrBlockResponse> ModifyVpcCidrBlockAsync(ModifyVpcCidrBlockRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ModifyVpcCidrBlockWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Modifies the configuration of a prefix list.</para>
         /// </summary>
         /// 
@@ -76775,7 +77167,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>ChangeResourceGroup</b> operation does not support concurrent modifications to the resource group of Express Connect circuit resources within the same Express Connect circuit instance.</para>
+        /// <para>The <b>ChangeResourceGroup</b> operation does not support concurrent modifications of the resource group for Express Connect circuit resources within the same Express Connect circuit instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -76850,7 +77242,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>ChangeResourceGroup</b> operation does not support concurrent modifications to the resource group of Express Connect circuit resources within the same Express Connect circuit instance.</para>
+        /// <para>The <b>ChangeResourceGroup</b> operation does not support concurrent modifications of the resource group for Express Connect circuit resources within the same Express Connect circuit instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -76925,7 +77317,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>ChangeResourceGroup</b> operation does not support concurrent modifications to the resource group of Express Connect circuit resources within the same Express Connect circuit instance.</para>
+        /// <para>The <b>ChangeResourceGroup</b> operation does not support concurrent modifications of the resource group for Express Connect circuit resources within the same Express Connect circuit instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -76948,7 +77340,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The <b>ChangeResourceGroup</b> operation does not support concurrent modifications to the resource group of Express Connect circuit resources within the same Express Connect circuit instance.</para>
+        /// <para>The <b>ChangeResourceGroup</b> operation does not support concurrent modifications of the resource group for Express Connect circuit resources within the same Express Connect circuit instance.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -78650,21 +79042,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a specified Elastic IP Address (EIP).</para>
+        /// <para>Releases a specified elastic IP address (EIP).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, take note of the following items:</para>
+        /// <para>Before you invoke this operation, take note of the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Before releasing an EIP, make sure the following conditions are met:<list type="bullet">
+        /// <item><description>Before you release an EIP, make sure that the following conditions are met:<list type="bullet">
         /// <item><description>Only EIPs in the <b>Available</b> state can be released.</description></item>
         /// <item><description>Only EIPs that use the pay-as-you-go billing method can be released. Subscription EIPs cannot be released.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ReleaseEipAddress</b> operation is asynchronous. After you send a request, the system returns a request ID, but the EIP instance has not been released yet. The release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<list type="bullet">
-        /// <item><description>If the EIP instance is in the <b>Releasing</b> state, the EIP instance is being released. In this state, you can only execute query operations.</description></item>
-        /// <item><description>If the EIP instance cannot be found, the EIP instance has been released.</description></item>
+        /// <item><description>The <b>ReleaseEipAddress</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIP instance is not immediately released because the release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<list type="bullet">
+        /// <item><description>If the EIP instance is in the <b>Releasing</b> state, the EIP instance is being released. In this state, you can only execute query operations and cannot execute other operations.</description></item>
+        /// <item><description>If the EIP instance cannot be found, the EIP instance is released.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>ReleaseEipAddress</b> operation does not support concurrent release of the same EIP instance.</description></item>
@@ -78730,21 +79122,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a specified Elastic IP Address (EIP).</para>
+        /// <para>Releases a specified elastic IP address (EIP).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, take note of the following items:</para>
+        /// <para>Before you invoke this operation, take note of the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Before releasing an EIP, make sure the following conditions are met:<list type="bullet">
+        /// <item><description>Before you release an EIP, make sure that the following conditions are met:<list type="bullet">
         /// <item><description>Only EIPs in the <b>Available</b> state can be released.</description></item>
         /// <item><description>Only EIPs that use the pay-as-you-go billing method can be released. Subscription EIPs cannot be released.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ReleaseEipAddress</b> operation is asynchronous. After you send a request, the system returns a request ID, but the EIP instance has not been released yet. The release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<list type="bullet">
-        /// <item><description>If the EIP instance is in the <b>Releasing</b> state, the EIP instance is being released. In this state, you can only execute query operations.</description></item>
-        /// <item><description>If the EIP instance cannot be found, the EIP instance has been released.</description></item>
+        /// <item><description>The <b>ReleaseEipAddress</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIP instance is not immediately released because the release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<list type="bullet">
+        /// <item><description>If the EIP instance is in the <b>Releasing</b> state, the EIP instance is being released. In this state, you can only execute query operations and cannot execute other operations.</description></item>
+        /// <item><description>If the EIP instance cannot be found, the EIP instance is released.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>ReleaseEipAddress</b> operation does not support concurrent release of the same EIP instance.</description></item>
@@ -78810,21 +79202,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a specified Elastic IP Address (EIP).</para>
+        /// <para>Releases a specified elastic IP address (EIP).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, take note of the following items:</para>
+        /// <para>Before you invoke this operation, take note of the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Before releasing an EIP, make sure the following conditions are met:<list type="bullet">
+        /// <item><description>Before you release an EIP, make sure that the following conditions are met:<list type="bullet">
         /// <item><description>Only EIPs in the <b>Available</b> state can be released.</description></item>
         /// <item><description>Only EIPs that use the pay-as-you-go billing method can be released. Subscription EIPs cannot be released.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ReleaseEipAddress</b> operation is asynchronous. After you send a request, the system returns a request ID, but the EIP instance has not been released yet. The release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<list type="bullet">
-        /// <item><description>If the EIP instance is in the <b>Releasing</b> state, the EIP instance is being released. In this state, you can only execute query operations.</description></item>
-        /// <item><description>If the EIP instance cannot be found, the EIP instance has been released.</description></item>
+        /// <item><description>The <b>ReleaseEipAddress</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIP instance is not immediately released because the release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<list type="bullet">
+        /// <item><description>If the EIP instance is in the <b>Releasing</b> state, the EIP instance is being released. In this state, you can only execute query operations and cannot execute other operations.</description></item>
+        /// <item><description>If the EIP instance cannot be found, the EIP instance is released.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>ReleaseEipAddress</b> operation does not support concurrent release of the same EIP instance.</description></item>
@@ -78846,21 +79238,21 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases a specified Elastic IP Address (EIP).</para>
+        /// <para>Releases a specified elastic IP address (EIP).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you invoke this operation, take note of the following items:</para>
+        /// <para>Before you invoke this operation, take note of the following information:</para>
         /// <list type="bullet">
-        /// <item><description>Before releasing an EIP, make sure the following conditions are met:<list type="bullet">
+        /// <item><description>Before you release an EIP, make sure that the following conditions are met:<list type="bullet">
         /// <item><description>Only EIPs in the <b>Available</b> state can be released.</description></item>
         /// <item><description>Only EIPs that use the pay-as-you-go billing method can be released. Subscription EIPs cannot be released.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>The <b>ReleaseEipAddress</b> operation is asynchronous. After you send a request, the system returns a request ID, but the EIP instance has not been released yet. The release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<list type="bullet">
-        /// <item><description>If the EIP instance is in the <b>Releasing</b> state, the EIP instance is being released. In this state, you can only execute query operations.</description></item>
-        /// <item><description>If the EIP instance cannot be found, the EIP instance has been released.</description></item>
+        /// <item><description>The <b>ReleaseEipAddress</b> operation is asynchronous. After you send a request, the system returns a request ID. However, the EIP instance is not immediately released because the release node is still running in the background. You can invoke <a href="https://help.aliyun.com/document_detail/120193.html">DescribeEipAddresses</a> to query the status of the EIP instance:<list type="bullet">
+        /// <item><description>If the EIP instance is in the <b>Releasing</b> state, the EIP instance is being released. In this state, you can only execute query operations and cannot execute other operations.</description></item>
+        /// <item><description>If the EIP instance cannot be found, the EIP instance is released.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description>The <b>ReleaseEipAddress</b> operation does not support concurrent release of the same EIP instance.</description></item>
@@ -84450,13 +84842,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UnassociateVpcCidrBlock operation to delete a secondary CIDR block from a VPC.</para>
+        /// <para>Invokes UnassociateVpcCidrBlock to delete a secondary CIDR block from a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you delete a secondary CIDR block from a VPC, delete the vSwitches created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</description></item>
+        /// <item><description>Before deleting a secondary CIDR block from a VPC, delete the vSwitches that are created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</description></item>
         /// <item><description>The <b>UnassociateVpcCidrBlock</b> operation does not support concurrently deleting secondary CIDR blocks from the same VPC.</description></item>
         /// </list>
         /// </description>
@@ -84532,13 +84924,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UnassociateVpcCidrBlock operation to delete a secondary CIDR block from a VPC.</para>
+        /// <para>Invokes UnassociateVpcCidrBlock to delete a secondary CIDR block from a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you delete a secondary CIDR block from a VPC, delete the vSwitches created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</description></item>
+        /// <item><description>Before deleting a secondary CIDR block from a VPC, delete the vSwitches that are created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</description></item>
         /// <item><description>The <b>UnassociateVpcCidrBlock</b> operation does not support concurrently deleting secondary CIDR blocks from the same VPC.</description></item>
         /// </list>
         /// </description>
@@ -84614,13 +85006,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UnassociateVpcCidrBlock operation to delete a secondary CIDR block from a VPC.</para>
+        /// <para>Invokes UnassociateVpcCidrBlock to delete a secondary CIDR block from a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you delete a secondary CIDR block from a VPC, delete the vSwitches created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</description></item>
+        /// <item><description>Before deleting a secondary CIDR block from a VPC, delete the vSwitches that are created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</description></item>
         /// <item><description>The <b>UnassociateVpcCidrBlock</b> operation does not support concurrently deleting secondary CIDR blocks from the same VPC.</description></item>
         /// </list>
         /// </description>
@@ -84640,13 +85032,13 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Calls the UnassociateVpcCidrBlock operation to delete a secondary CIDR block from a VPC.</para>
+        /// <para>Invokes UnassociateVpcCidrBlock to delete a secondary CIDR block from a VPC.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you delete a secondary CIDR block from a VPC, delete the vSwitches created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</description></item>
+        /// <item><description>Before deleting a secondary CIDR block from a VPC, delete the vSwitches that are created with the secondary CIDR block. For more information, see <a href="https://help.aliyun.com/document_detail/35746.html">DeleteVSwitch</a>.</description></item>
         /// <item><description>The <b>UnassociateVpcCidrBlock</b> operation does not support concurrently deleting secondary CIDR blocks from the same VPC.</description></item>
         /// </list>
         /// </description>
@@ -84850,7 +85242,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a DHCP options set by calling the UpdateDhcpOptionsSetAttribute operation.</para>
+        /// <para>Modifies the configuration of a DHCP options set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -84944,7 +85336,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a DHCP options set by calling the UpdateDhcpOptionsSetAttribute operation.</para>
+        /// <para>Modifies the configuration of a DHCP options set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85038,7 +85430,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a DHCP options set by calling the UpdateDhcpOptionsSetAttribute operation.</para>
+        /// <para>Modifies the configuration of a DHCP options set.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -85056,7 +85448,7 @@ namespace AlibabaCloud.SDK.Vpc20160428
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the configuration of a DHCP options set by calling the UpdateDhcpOptionsSetAttribute operation.</para>
+        /// <para>Modifies the configuration of a DHCP options set.</para>
         /// </summary>
         /// 
         /// <param name="request">

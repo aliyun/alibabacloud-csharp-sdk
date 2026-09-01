@@ -17,11 +17,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public GetNatGatewayAttributeResponseBodyAccessMode AccessMode { get; set; }
         public class GetNatGatewayAttributeResponseBodyAccessMode : TeaModel {
             /// <summary>
-            /// <para>The access mode. Valid values:</para>
+            /// <para>The access mode value. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>route</b>: route mode.</para>
+            /// <item><description><para><b>route</b>: Route mode.</para>
             /// </description></item>
-            /// <item><description><para><b>tunnel</b>: tunnel mode.</para>
+            /// <item><description><para><b>tunnel</b>: Tunnel mode.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>Indicates whether automatic payment is enabled. When the value of <b>InstanceChargeType</b> is <b>PrePaid</b>, the following values are returned:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>false</b>: Automatic payment is not enabled. After an order is generated, go to the Order Center to complete the payment.</para>
+            /// <item><description><para><b>false</b>: Automatic payment is disabled. After an order is generated, go to the Order Center to complete the payment.</para>
             /// </description></item>
             /// <item><description><para><b>true</b>: Automatic payment is enabled. The order is automatically paid.</para>
             /// </description></item>
@@ -91,8 +91,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The billing type of the NAT gateway instance. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>PayBySpec</b>: billed by defined specifications.</description></item>
-            /// <item><description><b>PayByLcu</b>: billed by usage.</description></item>
+            /// <item><description><b>PayBySpec</b>: Billed by defined specifications.</description></item>
+            /// <item><description><b>PayByLcu</b>: Billed by usage.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -135,7 +135,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public string BusinessStatus { get; set; }
 
         /// <summary>
-        /// <para>The time when the NAT gateway was created. The time is displayed in the YYYY-MM-DDThh:mm:ssZ format.</para>
+        /// <para>The time when the NAT gateway was created. The time is displayed in the format of YYYY-MM-DDThh:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2021-12-08T12:20:20Z</para>
@@ -155,7 +155,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <para>Indicates whether deletion protection is enabled.</para>
             /// <list type="bullet">
             /// <item><description><b>true</b>: Deletion protection is enabled.</description></item>
-            /// <item><description><b>false</b>: Deletion protection is not enabled.</description></item>
+            /// <item><description><b>false</b>: Deletion protection is disabled.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <para>Indicates whether the gateway traffic monitoring feature is enabled. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>true</b>: The gateway traffic monitoring feature is enabled.</description></item>
-        /// <item><description><b>false</b>: The gateway traffic monitoring feature is not enabled.</description></item>
+        /// <item><description><b>false</b>: The gateway traffic monitoring feature is disabled.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -305,8 +305,8 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
             /// <summary>
             /// <para>The association status of the EIP bound to the Internet NAT gateway instance.</para>
             /// <list type="bullet">
-            /// <item><description><b>idle</b>: The EIP is not associated with any SNAT entry or DNAT entry.</description></item>
-            /// <item><description><b>UsedBySnatTable</b>: The EIP is associated with an SNAT entry.</description></item>
+            /// <item><description><b>idle</b>: The EIP is not associated with a SNAT entry or DNAT entry.</description></item>
+            /// <item><description><b>UsedBySnatTable</b>: The EIP is associated with a SNAT entry.</description></item>
             /// <item><description><b>UsedByForwardTable</b>: The EIP is associated with a DNAT entry.</description></item>
             /// </list>
             /// 
@@ -352,7 +352,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
 
             /// <summary>
             /// <para>The destination type for session log delivery. Valid values:
-            /// <b>sls</b>: Simple Log Service (SLS).</para>
+            /// <b>sls</b>: Alibaba Cloud Simple Log Service (SLS).</para>
             /// 
             /// <b>Example:</b>
             /// <para>sls</para>
@@ -477,10 +477,10 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         }
 
         /// <summary>
-        /// <para>Indicates whether PrivateLink is supported. Valid values:</para>
+        /// <para>Indicates whether private connectivity is supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>true</b>: PrivateLink is supported.</description></item>
-        /// <item><description><b>false</b>: PrivateLink is not supported.</description></item>
+        /// <item><description><b>true</b>: Private connectivity is supported.</description></item>
+        /// <item><description><b>false</b>: Private connectivity is not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -491,7 +491,7 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         public bool? PrivateLinkEnabled { get; set; }
 
         /// <summary>
-        /// <para>The PrivateLink service conversion mode. Valid values:</para>
+        /// <para>The conversion mode of the private connectivity service. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>FullNat</b>: FULLNAT mode.</description></item>
         /// <item><description><b>Geneve</b>: Geneve mode.</description></item>
@@ -566,11 +566,11 @@ namespace AlibabaCloud.SDK.Vpc20160428.Models
         /// <summary>
         /// <para>The status of the NAT gateway. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Creating</b>: The NAT gateway is being created. The creation of a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Creating</b> state until the creation is complete.</description></item>
+        /// <item><description><b>Creating</b>: The NAT gateway is being created. Creating a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Creating</b> state until the operation is complete.</description></item>
         /// <item><description><b>Available</b>: The NAT gateway is available. This is a stable state after the NAT gateway is created.</description></item>
-        /// <item><description><b>Modifying</b>: The NAT gateway is being modified. The modification of a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Modifying</b> state during the modification.</description></item>
-        /// <item><description><b>Deleting</b>: The NAT gateway is being deleted. The deletion of a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Deleting</b> state during the deletion.</description></item>
-        /// <item><description><b>Converting</b>: The NAT gateway is being converted. The conversion from a standard NAT gateway to an enhanced NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Converting</b> state during the conversion.</description></item>
+        /// <item><description><b>Modifying</b>: The NAT gateway is being modified. Modifying a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Modifying</b> state until the operation is complete.</description></item>
+        /// <item><description><b>Deleting</b>: The NAT gateway is being deleted. Deleting a NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Deleting</b> state until the operation is complete.</description></item>
+        /// <item><description><b>Converting</b>: The NAT gateway is being converted. Converting a standard NAT gateway to an enhanced NAT gateway is an asynchronous operation. The NAT gateway remains in the <b>Converting</b> state until the operation is complete.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
