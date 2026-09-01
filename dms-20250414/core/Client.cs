@@ -2262,6 +2262,182 @@ namespace AlibabaCloud.SDK.Dms20250414
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Data Agent点赞点踩功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentFeedbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentFeedbackResponse
+        /// </returns>
+        public CreateDataAgentFeedbackResponse CreateDataAgentFeedbackWithOptions(CreateDataAgentFeedbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeedbackContent))
+            {
+                query["FeedbackContent"] = request.FeedbackContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeedbackType))
+            {
+                query["FeedbackType"] = request.FeedbackType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LikeValue))
+            {
+                query["LikeValue"] = request.LikeValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["TargetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataAgentFeedback",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataAgentFeedbackResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Data Agent点赞点踩功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentFeedbackRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentFeedbackResponse
+        /// </returns>
+        public async Task<CreateDataAgentFeedbackResponse> CreateDataAgentFeedbackWithOptionsAsync(CreateDataAgentFeedbackRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DMSUnit))
+            {
+                query["DMSUnit"] = request.DMSUnit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeedbackContent))
+            {
+                query["FeedbackContent"] = request.FeedbackContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeedbackType))
+            {
+                query["FeedbackType"] = request.FeedbackType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LikeValue))
+            {
+                query["LikeValue"] = request.LikeValue;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SessionId))
+            {
+                query["SessionId"] = request.SessionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetId))
+            {
+                query["TargetId"] = request.TargetId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetType))
+            {
+                query["TargetType"] = request.TargetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.WorkspaceId))
+            {
+                query["WorkspaceId"] = request.WorkspaceId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateDataAgentFeedback",
+                Version = "2025-04-14",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateDataAgentFeedbackResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Data Agent点赞点踩功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentFeedbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentFeedbackResponse
+        /// </returns>
+        public CreateDataAgentFeedbackResponse CreateDataAgentFeedback(CreateDataAgentFeedbackRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateDataAgentFeedbackWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Data Agent点赞点踩功能</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateDataAgentFeedbackRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateDataAgentFeedbackResponse
+        /// </returns>
+        public async Task<CreateDataAgentFeedbackResponse> CreateDataAgentFeedbackAsync(CreateDataAgentFeedbackRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateDataAgentFeedbackWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Creates a DataAgent knowledge base. The knowledge base creator has read and write permissions. Other workspace members have permission to use it.</para>
         /// </summary>
         /// 
@@ -18662,7 +18838,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is a response to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// </list>
@@ -18789,7 +18965,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is a response to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// </list>
@@ -18916,7 +19092,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is a response to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// </list>
@@ -18945,7 +19121,7 @@ namespace AlibabaCloud.SDK.Dms20250414
         /// <h2>Request description</h2>
         /// <list type="bullet">
         /// <item><description><c>message_type</c> defaults to <c>primary</c>. Set it to <c>additional</c> or <c>cancel</c> when you need to append information or cancel a session.</description></item>
-        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is responding to. The default value is <c>0</c>.</description></item>
+        /// <item><description>The <c>reply_to</c> field indicates which Agent message this message is a response to. The default value is <c>0</c>.</description></item>
         /// <item><description>When <c>message_type</c> is <c>additional</c>, the <c>question</c> field is required.</description></item>
         /// <item><description><c>quoted_message</c> can be used to quote the content of a previous user message.</description></item>
         /// </list>
