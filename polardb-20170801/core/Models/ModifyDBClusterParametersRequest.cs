@@ -9,6 +9,9 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterParametersRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to clear binlogs. This parameter takes effect only when binlog is disabled.</para>
+        /// </summary>
         [NameInMap("ClearBinlog")]
         [Validation(Required=false)]
         public bool? ClearBinlog { get; set; }
@@ -16,7 +19,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The cluster ID.</para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view information about all clusters in the destination region, including cluster IDs.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query information about all clusters in the specified region, including cluster IDs.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -28,11 +31,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to immediately modify the parameters and restart the cluster. Valid values:</para>
+        /// <para>Specifies whether to immediately or schedule the parameter modification and cluster restart. Valid values:  </para>
         /// <list type="bullet">
-        /// <item><description><para>false (default): The modification is scheduled.</para>
+        /// <item><description><para>false (default): Scheduled execution.</para>
         /// </description></item>
-        /// <item><description><para>true: The modification is performed immediately.</para>
+        /// <item><description><para>true: Immediate execution.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -52,15 +55,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parameter template.</para>
+        /// <para>The parameter template ID.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to view the ID of the parameter template.</para>
-        /// </description></item>
-        /// <item><description><para>You must specify this parameter or the <c>Parameters</c> parameter.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is supported only by PolarDB for MySQL.</para>
-        /// </description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/207178.html">DescribeParameterGroups</a> operation to query the parameter template ID.</description></item>
+        /// <item><description>You must specify either this parameter or the <c>Parameters</c> parameter.</description></item>
+        /// <item><description>Only PolarDB for MySQL supports this parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -72,15 +72,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ParameterGroupId { get; set; }
 
         /// <summary>
-        /// <para>A JSON string that consists of parameters and their values. The parameter values must be strings. For example: <c>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</c>.</para>
+        /// <para>A JSON string that consists of parameters and their values. Parameter values are of the STRING type. Example: <c>{&quot;wait_timeout&quot;:&quot;86&quot;,&quot;innodb_old_blocks_time&quot;:&quot;10&quot;}</c>.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>Call the <a href="https://help.aliyun.com/document_detail/98122.html">DescribeDBClusterParameters</a> operation to view the parameters of a PolarDB cluster.</para>
-        /// </description></item>
-        /// <item><description><para>This parameter is required if the destination cluster is a PolarDB for PostgreSQL or PolarDB for PostgreSQL (Oracle compatible) cluster.</para>
-        /// </description></item>
-        /// <item><description><para>If the destination cluster is a PolarDB for MySQL cluster, you must specify this parameter or the <c>ParameterGroupId</c> parameter.</para>
-        /// </description></item>
+        /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/98122.html">DescribeDBClusterParameters</a> operation to query the parameters of a PolarDB cluster.</description></item>
+        /// <item><description>If the cluster runs PolarDB for PostgreSQL or PolarDB for PostgreSQL (Compatible with Oracle), this parameter is required.</description></item>
+        /// <item><description>If the cluster runs PolarDB for MySQL, you must specify either this parameter or the <c>ParameterGroupId</c> parameter.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -92,13 +89,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Parameters { get; set; }
 
         /// <summary>
-        /// <para>The latest time to start the scheduled task. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The latest time to start running the scheduled task. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format (UTC).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>The latest start time must be at least 30 minutes later than the earliest start time.</para>
-        /// </description></item>
-        /// <item><description><para>If you specify <c>PlannedStartTime</c> but not this parameter, the latest time to start the task is <c>PlannedStartTime + 30 minutes</c> by default. For example, if you set <c>PlannedStartTime</c> to <c>2021-01-14T09:00:00Z</c> and leave this parameter empty, the task starts no later than <c>2021-01-14T09:30:00Z</c>.</para>
-        /// </description></item>
+        /// <item><description>The latest time must be at least 30 minutes later than the start time.</description></item>
+        /// <item><description>If you specify <c>PlannedStartTime</c> but do not specify this parameter, the latest time defaults to <c>start time + 30 minutes</c>. For example, if <c>PlannedStartTime</c> is set to <c>2021-01-14T09:00:00Z</c> and this parameter is left empty, the task starts no later than <c>2021-01-14T09:30:00Z</c>.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -110,13 +105,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedEndTime { get; set; }
 
         /// <summary>
-        /// <para>The earliest time to start the scheduled task. Specify the time in the <c>YYYY-MM-DDThh:mm:ssZ</c> format. The time must be in UTC.</para>
+        /// <para>The earliest time to start running the scheduled task within the specified time range. The time is in the <c>YYYY-MM-DDThh:mm:ssZ</c> format (UTC).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description><para>The start time can be any point in time within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, you can set the start time to a value in the range of <c>2021-01-14T09:00:00Z</c> to <c>2021-01-15T09:00:00Z</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If you leave this parameter empty, the task is executed immediately.</para>
-        /// </description></item>
+        /// <item><description>The start time must be within the next 24 hours. For example, if the current time is <c>2021-01-14T09:00:00Z</c>, the start time can range from <c>2021-01-14T09:00:00Z</c> to <c>2021-01-15T09:00:00Z</c>.</description></item>
+        /// <item><description>If this parameter is left empty, the task is immediately executed.</description></item>
         /// </list>
         /// </remarks>
         /// 

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdateKnowledgeBaseRequest : TeaModel {
         /// <summary>
+        /// <para>The description of the knowledge base.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>test desc</para>
         /// </summary>
@@ -18,6 +20,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +31,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
+        /// <para>The name of the knowledge base.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testName</para>
         /// </summary>
@@ -36,6 +41,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Name { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -46,6 +52,15 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The search mode. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>balanced (default): balanced mode.</description></item>
+        /// <item><description>precise: precise mode.</description></item>
+        /// <item><description>semantic: semantic mode.</description></item>
+        /// <item><description>knn: KNN mode.</description></item>
+        /// <item><description>rrf: reciprocal rank fusion (RRF) mode.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>balanced</para>
         /// </summary>

@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>This parameter is supported only when the database engine is PostgreSQL-compatible or Oracle-syntax-compatible.</para>
+            /// <para>This parameter is supported only when the database engine is PostgreSQL-compatible or Oracle syntax-compatible.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdateKBSyncLinkRequest : TeaModel {
+        [NameInMap("ClientId")]
+        [Validation(Required=false)]
+        public string ClientId { get; set; }
+
+        [NameInMap("ClientSecret")]
+        [Validation(Required=false)]
+        public string ClientSecret { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -29,6 +37,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string LinkId { get; set; }
 
+        [NameInMap("McpEndpoint")]
+        [Validation(Required=false)]
+        public string McpEndpoint { get; set; }
+
         /// <summary>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,6 +51,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        [NameInMap("SheetMcpEndpoint")]
+        [Validation(Required=false)]
+        public string SheetMcpEndpoint { get; set; }
+
+        [NameInMap("SyncEnabled")]
+        [Validation(Required=false)]
+        public bool? SyncEnabled { get; set; }
+
         /// <summary>
         /// <b>Example:</b>
         /// <para>20</para>
@@ -46,6 +66,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("SyncIntervalMinutes")]
         [Validation(Required=false)]
         public int? SyncIntervalMinutes { get; set; }
+
+        [NameInMap("UserId")]
+        [Validation(Required=false)]
+        public string UserId { get; set; }
 
     }
 

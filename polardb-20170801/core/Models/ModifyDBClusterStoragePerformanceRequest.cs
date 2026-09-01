@@ -9,20 +9,25 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterStoragePerformanceRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to automatically use coupons. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true (default): uses coupons.</description></item>
+        /// <item><description>false: does not use coupons.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
 
         /// <summary>
-        /// <para>Specifies if the I/O performance burst feature is enabled for an ESSD AutoPL disk. Valid values:</para>
+        /// <para>Specifies whether to enable I/O performance burst for the ESSD AutoPL cloud disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b>: Enabled</para>
-        /// </description></item>
-        /// <item><description><para><b>false</b>: Disabled (Default)</para>
-        /// </description></item>
+        /// <item><description><b>true</b>: enabled.</description></item>
+        /// <item><description><b>false</b>: disabled (default).</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter applies only when StorageType is set to ESSDAUTOPL.</para>
+        /// <para>This parameter is supported only when StorageType is set to ESSDAUTOPL.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +38,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string BurstingEnabled { get; set; }
 
         /// <summary>
-        /// <para>A client-generated token that ensures request idempotence. The token must be unique for each request. It is case-sensitive and can be up to 64 ASCII characters long.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token is case-sensitive and can contain only ASCII characters. The token can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6000170000591aed949d0f******************</para>
@@ -54,12 +59,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The modification type. Valid values:</para>
+        /// <para>The type of the specification change. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para><b>Upgrade</b>: Upgrades the storage performance.</para>
-        /// </description></item>
-        /// <item><description><para><b>Downgrade</b>: Downgrades the storage performance.</para>
-        /// </description></item>
+        /// <item><description><b>Upgrade</b>: upgrades the specifications.</description></item>
+        /// <item><description><b>Downgrade</b>: downgrades the specifications.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -70,6 +73,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ModifyType { get; set; }
 
         /// <summary>
+        /// <para>The coupon code. If this parameter is not specified, the default coupon is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>727xxxxxx934</para>
         /// </summary>
@@ -78,14 +83,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PromotionCode { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>Valid values: 0 to min{50,000, 1000 \* capacity - baseline performance}.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>Baseline performance = min{1,800 + 50 \* capacity, 50,000}.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <remarks>
-        /// <para>This parameter applies only when StorageType is set to ESSDAUTOPL.</para>
-        /// </remarks>
+        /// <p id="p_wyg_t4a_glm" props="china" icmsditafragmentmagic=1>The provisioned read/write IOPS of the ESSD AutoPL cloud disk. Valid values: 0 to min{50,000, 1000 × Capacity - Baseline performance}.</para>
+        /// <p id="p_6de_jxy_k2g" props="china" icmsditafragmentmagic=1>Baseline performance = min{1,800 + 50 × Capacity, 50000}.</para>
+        /// <note id="note_7kj_j0o_rgs" props="china" icmsditafragmentmagic=1>This parameter is supported only when StorageType is set to ESSDAUTOPL.</note>
         /// 
         /// <b>Example:</b>
         /// <para>2500</para>
@@ -99,25 +99,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The target storage type. Valid values for Enterprise Edition:</para>
+        /// <para>The target storage type. Valid values for PolarDB Enterprise Edition:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>PSL5</b></para>
-        /// </description></item>
-        /// <item><description><para><b>PSL4</b></para>
-        /// </description></item>
+        /// <item><description><b>PSL5</b></description></item>
+        /// <item><description><b>PSL4</b></description></item>
         /// </list>
-        /// <para>Valid values for Standard Edition:</para>
+        /// <para>Valid values for PolarDB for MySQL Standard Edition:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>ESSDPL0</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ESSDPL1</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ESSDPL2</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ESSDPL3</b></para>
-        /// </description></item>
-        /// <item><description><para><b>ESSDAUTOPL</b></para>
-        /// </description></item>
+        /// <item><description><b>ESSDPL0</b></description></item>
+        /// <item><description><b>ESSDPL1</b></description></item>
+        /// <item><description><b>ESSDPL2</b></description></item>
+        /// <item><description><b>ESSDPL3</b></description></item>
+        /// <item><description><b>ESSDAUTOPL</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

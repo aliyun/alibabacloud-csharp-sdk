@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to immediately execute or schedule the parameter modification and restart. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false (default): Schedule the execution.</description></item>
+        /// <item><description>true: Immediately execute.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -37,6 +43,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The latest time to start executing the target scheduled task. Specify the time in the YYYY-MM-DDThh:mm:ssZ format (UTC).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T14:30:00Z</para>
         /// </summary>
@@ -45,6 +53,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedEndTime { get; set; }
 
         /// <summary>
+        /// <para>The earliest time to start executing the scheduled task (that is, the task is executed within the target time period). Specify the time in the YYYY-MM-DDThh:mm:ssZ format (UTC).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T14:00:00Z</para>
         /// </summary>

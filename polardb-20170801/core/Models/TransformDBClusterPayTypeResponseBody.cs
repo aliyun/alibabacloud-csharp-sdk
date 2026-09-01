@@ -26,7 +26,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the PolarDB cluster.</para>
+        /// <para>The PolarDB cluster ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pc-bp10gr51qasnl****</para>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The expiration time of the instance.</para>
         /// <remarks>
-        /// <para>This parameter is returned only when <b>PayType</b> is set to <b>Prepaid</b>.</para>
+        /// <para>This response parameter is returned only when <b>PayType</b> is set to <b>Prepaid</b>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

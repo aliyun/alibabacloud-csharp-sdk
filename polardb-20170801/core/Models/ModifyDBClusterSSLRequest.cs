@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterSSLRequest : TeaModel {
         /// <summary>
+        /// <para>The validity period of the SSL certificate. Unit: days. Valid values: 365 and 1095.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1095</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string CertValidDays { get; set; }
 
         /// <summary>
+        /// <para>The connection string.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>xxx</para>
         /// </summary>
@@ -41,7 +45,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>If the cluster is a PolarDB for MySQL cluster, this parameter is required.</description></item>
-        /// <item><description>If the cluster is a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster, you do not need to specify this parameter. Secure Sockets Layer (SSL) encryption is enabled for all endpoints by default.</description></item>
+        /// <item><description>If the cluster is a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster, you do not need to specify this parameter. SSL encryption is enabled for all endpoints by default.</description></item>
         /// <item><description>You can call the <a href="https://help.aliyun.com/document_detail/2319159.html">DescribeDBClusterSSL</a> operation to query endpoint details.</description></item>
         /// </list>
         /// </remarks>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBEndpointId { get; set; }
 
         /// <summary>
-        /// <para>The network type of the endpoint. The value must be consistent with the network type of the endpoint specified by the <b>DBEndpointId</b> parameter. Valid values:</para>
+        /// <para>The network type of the endpoint. The value must be the same as the network type of the endpoint specified by <b>DBEndpointId</b>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>Public</b>: public network</description></item>
         /// <item><description><b>Private</b>: private network</description></item>
@@ -63,7 +67,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>If the cluster is a PolarDB for MySQL cluster, this parameter is required.</description></item>
-        /// <item><description>If the cluster is a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster, you do not need to specify this parameter. Secure Sockets Layer (SSL) encryption is enabled for all endpoints by default.</description></item>
+        /// <item><description>If the cluster is a PolarDB for PostgreSQL cluster or a PolarDB for PostgreSQL (Compatible with Oracle) cluster, you do not need to specify this parameter. SSL encryption is enabled for all endpoints by default.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -83,6 +87,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The PFS instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pfs-xxx</para>
         /// </summary>
@@ -101,9 +107,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>Specifies whether to enable automatic SSL certificate rotation. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Enable</b>: Enables automatic rotation.</para>
+        /// <item><description><para><b>Enable</b>: Enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>Disable</b>: Disables automatic rotation.</para>
+        /// <item><description><para><b>Disable</b>: Disabled.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -115,14 +121,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SSLAutoRotate { get; set; }
 
         /// <summary>
-        /// <para>The SSL status. Valid values:</para>
+        /// <para>The SSL status to set. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Disable</b>: Shutdown of Secure Sockets Layer (SSL) encryption.</description></item>
-        /// <item><description><b>Enable</b>: Enables Secure Sockets Layer (SSL) encryption.</description></item>
+        /// <item><description><b>Disable</b>: Shutdown SSL encryption.</description></item>
+        /// <item><description><b>Enable</b>: Enables SSL encryption.</description></item>
         /// <item><description><b>Update</b>: Updates the CA certificate.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>After you enable Secure Sockets Layer (SSL) encryption or update the CA certificate, you must download and configure the certificate. For details, see <a href="https://help.aliyun.com/document_detail/153182.html">Settings for SSL encryption</a>.</para>
+        /// <para>After you enable SSL encryption or update the CA certificate, you must download and configure the certificate. For details, see <a href="https://help.aliyun.com/document_detail/153182.html">Settings for SSL encryption</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

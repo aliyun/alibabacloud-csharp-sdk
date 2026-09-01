@@ -21,6 +21,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to immediately run the task or run it during a scheduled time window. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>false (default): The task is run during a scheduled time window.</description></item>
+        /// <item><description>true: The task is immediately run.</description></item>
+        /// </list>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -37,6 +43,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The latest time to start running the scheduled task. Specify the time in the YYYY-MM-DDThh:mm:ssZ format (UTC).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T14:30:00Z</para>
         /// </summary>
@@ -45,6 +53,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string PlannedEndTime { get; set; }
 
         /// <summary>
+        /// <para>The earliest time to start running the scheduled task (that is, the task is run within the specified time range). Specify the time in the YYYY-MM-DDThh:mm:ssZ format (UTC).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2022-04-28T14:00:00Z</para>
         /// </summary>

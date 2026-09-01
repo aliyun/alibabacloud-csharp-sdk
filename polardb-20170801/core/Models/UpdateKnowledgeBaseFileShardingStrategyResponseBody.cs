@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdateKnowledgeBaseFileShardingStrategyResponseBody : TeaModel {
         /// <summary>
+        /// <para>The request ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>019F7F29-BF69-1734-AE5A-02D391385BAC</para>
         /// </summary>

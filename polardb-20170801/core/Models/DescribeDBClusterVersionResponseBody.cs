@@ -20,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
+        /// <para>The latest stable version of PolarDB for PostgreSQL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2.0.16.13.14.0</para>
         /// </summary>
@@ -28,7 +30,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBLatestStableVersion { get; set; }
 
         /// <summary>
-        /// <para>The latest version of the database kernel.</para>
+        /// <para>The latest version of the database kernel engine.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8.0.1.1.16</para>
@@ -38,14 +40,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBLatestVersion { get; set; }
 
         /// <summary>
-        /// <para>The minor version of the database engine.</para>
+        /// <para>The minor version number of the database engine.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>DBVersion</c> is <b>8.0</b>, valid values are:</para>
+        /// <item><description><para>If <c>DBVersion</c> is <b>8.0</b>, valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>8.0.2</b></para>
-        /// </description></item>
-        /// <item><description><para><b>8.0.1</b></para>
-        /// </description></item>
+        /// <item><description><b>8.0.2</b></description></item>
+        /// <item><description><b>8.0.1</b></description></item>
         /// </list>
         /// </description></item>
         /// <item><description><para>If <c>DBVersion</c> is <b>5.7</b>, the value is <b>5.7.28</b>.</para>
@@ -62,9 +62,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBMinorVersion { get; set; }
 
         /// <summary>
-        /// <para>The revision version of the database engine.</para>
+        /// <para>The Milvus version number of the database engine.</para>
         /// <remarks>
-        /// <para>For a PolarDB for MySQL 5.6 cluster, this parameter is returned only when the release date of the revision version is later than 20200831. Otherwise, this parameter is empty. For more information about the kernel version of a PolarDB for MySQL cluster, see <a href="https://help.aliyun.com/document_detail/423884.html">Kernel release notes</a>.</para>
+        /// <para>For PolarDB for MySQL 5.6 clusters, only the <c>Milvus version</c> information with a release date later than August 31, 2020 is returned. Otherwise, this parameter is empty. For more information about the minor engine versions of PolarDB for MySQL clusters, see <a href="https://help.aliyun.com/document_detail/423884.html">Release notes</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,14 +75,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBRevisionVersion { get; set; }
 
         /// <summary>
-        /// <para>A list of upgradable versions.</para>
+        /// <para>The list of available upgrade version information.</para>
         /// </summary>
         [NameInMap("DBRevisionVersionList")]
         [Validation(Required=false)]
         public List<DescribeDBClusterVersionResponseBodyDBRevisionVersionList> DBRevisionVersionList { get; set; }
         public class DescribeDBClusterVersionResponseBodyDBRevisionVersionList : TeaModel {
             /// <summary>
-            /// <para>The release notes of the version.</para>
+            /// <para>The release notes for the version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ReleaseNote</para>
@@ -94,14 +94,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The release status of the database version. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>Stable</b>: The current version is stable.</para>
-            /// </description></item>
-            /// <item><description><para><b>Old</b>: The current version is outdated. Do not upgrade to this version.</para>
-            /// </description></item>
-            /// <item><description><para><b>HighRisk</b>: The current version has critical bugs. Do not upgrade to this version.</para>
-            /// </description></item>
-            /// <item><description><para><b>Beta</b>: The current version is a beta version.</para>
-            /// </description></item>
+            /// <item><description><b>Stable</b>: The current version is stable.</description></item>
+            /// <item><description><b>Old</b>: The current version is outdated. Upgrading to this version is not recommended.</description></item>
+            /// <item><description><b>HighRisk</b>: The current version has critical bugs. Upgrading to this version is not recommended.</description></item>
+            /// <item><description><b>Beta</b>: The current version is a beta version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +108,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ReleaseType { get; set; }
 
             /// <summary>
-            /// <para>The revision version code of the database engine. You can use this code to specify the target version for an upgrade.</para>
+            /// <para>The revision version code of the database engine, which is used to specify the target version for the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20230707</para>
@@ -122,7 +118,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RevisionVersionCode { get; set; }
 
             /// <summary>
-            /// <para>The revision version of the database engine.</para>
+            /// <para>The revision version number of the database engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8.0.1.1.35.1</para>
@@ -134,14 +130,11 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The major version of the database engine. Valid values:</para>
+        /// <para>The major version number of the database engine. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>8.0</b></para>
-        /// </description></item>
-        /// <item><description><para><b>5.7</b></para>
-        /// </description></item>
-        /// <item><description><para><b>5.6</b></para>
-        /// </description></item>
+        /// <item><description><b>8.0</b></description></item>
+        /// <item><description><b>5.7</b></description></item>
+        /// <item><description><b>5.6</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -152,20 +145,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersion { get; set; }
 
         /// <summary>
-        /// <para>The status of the current minor version of the database. Valid values:</para>
+        /// <para>The status of the current database minor version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Stable</b>: The current version is stable.</para>
-        /// </description></item>
-        /// <item><description><para><b>Old</b>: The current version is outdated. Upgrade to the latest version.</para>
-        /// </description></item>
-        /// <item><description><para><b>HighRisk</b>: The current version has critical bugs. Upgrade to the latest version immediately.</para>
-        /// </description></item>
-        /// <item><description><para><b>Beta</b>: The current version is a beta version.</para>
+        /// <item><description><b>Stable</b>: The current version is stable.</description></item>
+        /// <item><description><b>Old</b>: The current version is outdated. Upgrade to the latest version.</description></item>
+        /// <item><description><b>HighRisk</b>: The current version has critical bugs. Upgrade to the latest version immediately.</description></item>
+        /// <item><description><b>Beta</b>: The current version is a beta version.<remarks>
+        /// <para>For more information about how to upgrade the database minor version, see <a href="https://help.aliyun.com/document_detail/158572.html">Version upgrade</a>.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>For more information about how to upgrade the minor version of a database, see <a href="https://help.aliyun.com/document_detail/158572.html">Upgrade versions</a>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Stable</para>
@@ -175,6 +164,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBVersionStatus { get; set; }
 
         /// <summary>
+        /// <para>Indicates whether the current version is the latest stable version of PolarDB for PostgreSQL.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -183,12 +174,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string IsLatestStableVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current database kernel version is the latest version. Valid values:</para>
+        /// <para>Indicates whether the current database kernel DPI engine version is the latest database engine version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -199,12 +188,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string IsLatestVersion { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the current database proxy version is the latest version. Valid values:</para>
+        /// <para>Indicates whether the current PolarProxy version is the latest version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>true</b></para>
-        /// </description></item>
-        /// <item><description><para><b>false</b></para>
-        /// </description></item>
+        /// <item><description><b>true</b></description></item>
+        /// <item><description><b>false</b></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -215,7 +202,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string IsProxyLatestVersion { get; set; }
 
         /// <summary>
-        /// <para>The latest version of the database proxy.</para>
+        /// <para>The latest version of PolarProxy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.4.17</para>
@@ -225,7 +212,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProxyLatestVersion { get; set; }
 
         /// <summary>
-        /// <para>The version of the database proxy.</para>
+        /// <para>The version of PolarProxy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2.4.15</para>
@@ -235,16 +222,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ProxyRevisionVersion { get; set; }
 
         /// <summary>
-        /// <para>A list of upgradable proxy versions.</para>
+        /// <para>The release status of the PolarProxy version. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Stable</b>: The current version is stable.</para>
-        /// </description></item>
-        /// <item><description><para><b>Old</b>: This version is outdated and not recommended for upgrades.</para>
-        /// </description></item>
-        /// <item><description><para><b>HighRisk</b>: This version has critical bugs and is not recommended for upgrades.</para>
-        /// </description></item>
-        /// <item><description><para><b>Beta</b>: This is a beta version.</para>
-        /// </description></item>
+        /// <item><description><b>Stable</b>: The current version is stable.</description></item>
+        /// <item><description><b>Old</b>: The current version is outdated. Upgrading to this version is not recommended.</description></item>
+        /// <item><description><b>HighRisk</b>: The current version has critical bugs. Upgrading to this version is not recommended.</description></item>
+        /// <item><description><b>Beta</b>: The current version is a beta version.</description></item>
         /// </list>
         /// </summary>
         [NameInMap("ProxyRevisionVersionList")]
@@ -252,7 +235,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public List<DescribeDBClusterVersionResponseBodyProxyRevisionVersionList> ProxyRevisionVersionList { get; set; }
         public class DescribeDBClusterVersionResponseBodyProxyRevisionVersionList : TeaModel {
             /// <summary>
-            /// <para>The release notes of the version.</para>
+            /// <para>The release notes for the version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ReleaseNote</para>
@@ -264,10 +247,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <summary>
             /// <para>The release type. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>LTS</b>: long-term support version.</para>
-            /// </description></item>
-            /// <item><description><para><b>BETA</b>: preview version.</para>
-            /// </description></item>
+            /// <item><description><b>LTS</b>: Long-term support version.</description></item>
+            /// <item><description><b>BETA</b>: Preview version.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -278,7 +259,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ReleaseType { get; set; }
 
             /// <summary>
-            /// <para>The revision version code of the database proxy engine. You can use this code to specify the target version for an upgrade.</para>
+            /// <para>The revision version code of the PolarProxy engine, which is used to specify the target version for the upgrade.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20230707</para>
@@ -288,7 +269,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string RevisionVersionCode { get; set; }
 
             /// <summary>
-            /// <para>The revision version of the database proxy engine.</para>
+            /// <para>The revision version number of the PolarProxy engine.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2.8.24</para>
@@ -300,20 +281,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The status of the database proxy version. Valid values:</para>
+        /// <para>The version status of PolarProxy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>Stable</b>: The current version is stable.</para>
-        /// </description></item>
-        /// <item><description><para><b>Old</b>: The current version is outdated. Upgrade to the latest version.</para>
-        /// </description></item>
-        /// <item><description><para><b>HighRisk</b>: The current version has critical bugs. Upgrade to the latest version immediately.</para>
-        /// </description></item>
-        /// <item><description><para><b>Beta</b>: The current version is a beta version.</para>
+        /// <item><description><b>Stable</b>: The current version is stable.</description></item>
+        /// <item><description><b>Old</b>: The current version is outdated. Upgrade to the latest version.</description></item>
+        /// <item><description><b>HighRisk</b>: The current version has critical bugs. Upgrade to the latest version immediately.</description></item>
+        /// <item><description><b>Beta</b>: The current version is a beta version.<remarks>
+        /// <para>For more information about how to upgrade the PolarProxy version, see <a href="https://help.aliyun.com/document_detail/158572.html">Version upgrade</a>.</para>
+        /// </remarks>
         /// </description></item>
         /// </list>
-        /// <remarks>
-        /// <para>For more information about how to upgrade the database proxy version, see <a href="https://help.aliyun.com/document_detail/158572.html">Upgrade versions</a>.</para>
-        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>Stable</para>

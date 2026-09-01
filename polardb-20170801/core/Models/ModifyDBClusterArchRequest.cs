@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterArchRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to automatically use coupons. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true (default): Uses coupons.</description></item>
+        /// <item><description>false: Does not use coupons.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("AutoUseCoupon")]
         [Validation(Required=false)]
         public bool? AutoUseCoupon { get; set; }
@@ -24,12 +31,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable a hot standby cluster. Valid values:</para>
+        /// <para>Specifies whether to enable the hot standby cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>on</b>: Enables a hot standby cluster.</para>
-        /// </description></item>
-        /// <item><description><para><b>equal</b>: Enables a peer cluster.</para>
-        /// </description></item>
+        /// <item><description><b>on</b>: Enables the hot standby cluster.</description></item>
+        /// <item><description><b>equal</b>: Enables the peer cluster.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,6 +45,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string HotStandbyCluster { get; set; }
 
         /// <summary>
+        /// <para>The coupon code. If this parameter is not specified, the default coupon is used.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>727xxxxxx934</para>
         /// </summary>
@@ -50,7 +57,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The region ID.</para>
         /// <remarks>
-        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a>.</para>
+        /// <para>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region information.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -61,13 +68,13 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The zone for the hot standby storage cluster. Valid values:</para>
+        /// <para>The zone of the hot standby storage cluster. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>auto</b> (default): The system automatically selects a zone.</description></item>
-        /// </list>
-        /// <remarks>
-        /// <para>The default value is valid only when \<c>HotStandbyCluster\\</c> is set to \<c>on\\</c>. A specific zone is required when \<c>HotStandbyCluster\\</c> is set to \<c>equal\\</c>. For more information about zones, see <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a>.</para>
+        /// <item><description><b>auto</b> (default): Automatically selected.<remarks>
+        /// <para>When the HotStandbyCluster parameter is set to on, you can use the default value. When the HotStandbyCluster parameter is set to equal, you must specify a specific zone. You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeZones</a> operation to query zone details.</para>
         /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>cn-beijing-i</para>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeKnowledgeBaseFilesRequest : TeaModel {
         /// <summary>
+        /// <para>The list of file IDs, separated by commas (,).</para>
+        /// 
         /// <b>Example:</b>
         /// <para>doc_a,doc_b</para>
         /// </summary>
@@ -18,14 +20,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FileIds { get; set; }
 
         /// <summary>
+        /// <para>The keyword used to filter file names.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>财报</para>
+        /// <para>Financial report</para>
         /// </summary>
         [NameInMap("Keyword")]
         [Validation(Required=false)]
         public string Keyword { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,6 +41,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the synchronization link.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pkbl-2ze123456789abc</para>
         /// </summary>
@@ -44,6 +51,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LinkId { get; set; }
 
         /// <summary>
+        /// <para>The page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -52,6 +61,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records per page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>20</para>
         /// </summary>
@@ -60,6 +71,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +82,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>The source type.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>OSS</para>
         /// </summary>

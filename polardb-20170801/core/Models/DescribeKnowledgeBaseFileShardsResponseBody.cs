@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeKnowledgeBaseFileShardsResponseBody : TeaModel {
         /// <summary>
+        /// <para>The current page number.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
+        /// <para>The number of records on the current page.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageRecordCount { get; set; }
 
         /// <summary>
+        /// <para>The number of entries per page in a paged query.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? PageSize { get; set; }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>3E5CD764-xxxx-xxxx-xxxx-20E0DE84B2AF</para>
         /// </summary>
@@ -41,19 +49,30 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The shard information.</para>
+        /// </summary>
         [NameInMap("Shards")]
         [Validation(Required=false)]
         public List<DescribeKnowledgeBaseFileShardsResponseBodyShards> Shards { get; set; }
         public class DescribeKnowledgeBaseFileShardsResponseBodyShards : TeaModel {
+            /// <summary>
+            /// <para>The chain of section headings to which the shard belongs.</para>
+            /// </summary>
             [NameInMap("Headings")]
             [Validation(Required=false)]
             public List<string> Headings { get; set; }
 
+            /// <summary>
+            /// <para>The list of page numbers to which the shard belongs.</para>
+            /// </summary>
             [NameInMap("PageNumbers")]
             [Validation(Required=false)]
             public List<string> PageNumbers { get; set; }
 
             /// <summary>
+            /// <para>The text content of the shard.</para>
+            /// 
             /// <b>Example:</b>
             /// <hr>
             /// </summary>
@@ -62,6 +81,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ShardContent { get; set; }
 
             /// <summary>
+            /// <para>The shard index.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>1</para>
             /// </summary>
@@ -72,6 +93,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>The total number of records.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

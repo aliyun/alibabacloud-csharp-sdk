@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class ModifyDBClusterAccessWhitelistRequest : TeaModel {
         /// <summary>
-        /// <para>The attribute of the IP whitelist group. If this parameter is set to <b>hidden</b>, the group is not displayed in the console.</para>
+        /// <para>The attribute of the IP whitelist group. If you set this parameter to <b>hidden</b>, the group is not displayed in the console.</para>
         /// <remarks>
         /// <list type="bullet">
         /// <item><description>IP whitelist groups that are already displayed in the console cannot be hidden.</description></item>
@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// </list>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>A maximum of 50 IP whitelist groups are supported for a cluster.</description></item>
+        /// <item><description>A cluster supports up to 50 IP whitelist groups.</description></item>
         /// <item><description>This parameter takes effect only when <b>WhiteListType</b> is set to <b>IP</b>.</description></item>
         /// </list>
         /// </remarks>
@@ -60,9 +60,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <summary>
         /// <para>The method used to modify the IP whitelist. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Cover</b>: overwrites the original IP whitelist (default value).</description></item>
-        /// <item><description><b>Append</b>: appends IP addresses to the whitelist.</description></item>
-        /// <item><description><b>Delete</b>: removes IP addresses from the whitelist.</description></item>
+        /// <item><description><b>Cover</b>: overwrites the original IP whitelist. This is the default value.</description></item>
+        /// <item><description><b>Append</b>: appends IP addresses to the IP whitelist.</description></item>
+        /// <item><description><b>Delete</b>: removes IP addresses from the IP whitelist.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when <b>WhiteListType</b> is set to <b>IP</b>.</para>
@@ -84,6 +84,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The file system instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pfs-xxx</para>
         /// </summary>
@@ -103,7 +105,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         /// <para>The security group IDs. Separate multiple security group IDs with commas (,).</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>A maximum of 3 security groups are supported for a cluster.</description></item>
+        /// <item><description>A cluster supports up to 3 security groups.</description></item>
         /// <item><description>This parameter takes effect only when <b>WhiteListType</b> is set to <b>SecurityGroup</b>.</description></item>
         /// </list>
         /// </remarks>
@@ -116,10 +118,10 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SecurityGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses or CIDR blocks in the IP whitelist group. A maximum of 1,000 IP addresses or CIDR blocks can be added to all IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported: </para>
+        /// <para>The IP addresses or CIDR blocks in the IP whitelist group. You can add up to 1,000 IP addresses or CIDR blocks across all IP whitelist groups. Separate multiple IP addresses with commas (,). The following two formats are supported: </para>
         /// <list type="bullet">
         /// <item><description>IP address format, such as 10.23.12.24.</description></item>
-        /// <item><description>CIDR format, such as 10.23.12.24/24, where 24 indicates the prefix length of the CIDR block. The prefix length ranges from 1 to 32.</description></item>
+        /// <item><description>CIDR format, such as 10.23.12.24/24, where 24 indicates the length of the prefix in the IP address. The prefix length ranges from 1 to 32.</description></item>
         /// </list>
         /// <remarks>
         /// <para>This parameter takes effect only when <b>WhiteListType</b> is set to <b>IP</b>.</para>

@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class UpdateKnowledgeBaseFileShardingStrategyShrinkRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the knowledge base file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string FileId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to restore inheritance of the chunking strategy from the knowledge space. When this parameter is set to true, ShardingStrategyConfig cannot be specified at the same time.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -28,6 +31,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? InheritSpaceStrategy { get; set; }
 
         /// <summary>
+        /// <para>The unique ID of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
+        /// <para>The ID of the region where the knowledge base resides.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,6 +52,9 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The file-level chunking strategy configuration. This parameter is required when InheritSpaceStrategy is not set to true.</para>
+        /// </summary>
         [NameInMap("ShardingStrategyConfig")]
         [Validation(Required=false)]
         public string ShardingStrategyConfigShrink { get; set; }

@@ -29,6 +29,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public long? OwnerId { get; set; }
 
         /// <summary>
+        /// <para>The PFS instance ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>pfs-xxx</para>
         /// </summary>

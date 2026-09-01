@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class RetrievalKnowledgeBaseRequest : TeaModel {
         /// <summary>
+        /// <para>The unique ID of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,16 +21,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
+        /// <para>The query text.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>财报</para>
+        /// <para>Financial report</para>
         /// </summary>
         [NameInMap("QueryText")]
         [Validation(Required=false)]
         public string QueryText { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,6 +43,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RegionId { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to enable reranking. Default value: true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -48,6 +53,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? RerankEnabled { get; set; }
 
         /// <summary>
+        /// <para>The similarity score threshold.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0.7</para>
         /// </summary>
@@ -56,6 +63,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public double? ScoreThreshold { get; set; }
 
         /// <summary>
+        /// <para>The number of results to return.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>5</para>
         /// </summary>
