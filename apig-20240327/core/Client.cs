@@ -72,32 +72,26 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation applies only to AI gateways running version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based or consumer group-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.21 or later.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm overwrite: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -200,32 +194,26 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation applies only to AI gateways running version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based or consumer group-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.21 or later.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm overwrite: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -328,32 +316,26 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation applies only to AI gateways running version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based or consumer group-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.21 or later.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm overwrite: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -381,32 +363,26 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a consumer-based quota rule for an AI gateway. This operation applies only to AI gateways running version 2.1.19 or later.</para>
+        /// <para>Creates a consumer-based or consumer group-based quota rule for an AI gateway. This operation takes effect only on AI gateways of version 2.1.21 or later.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains the conflictHash value.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Submit the request after confirmation.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflicts: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflicts exist and you confirm overwrite: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -7190,7 +7166,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation takes effect only for AI gateways of version 2.1.19 or later.</para>
+        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7235,7 +7211,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation takes effect only for AI gateways of version 2.1.19 or later.</para>
+        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7280,7 +7256,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation takes effect only for AI gateways of version 2.1.19 or later.</para>
+        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7304,7 +7280,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Deletes a consumer-based quota rule from an AI gateway. This operation takes effect only for AI gateways of version 2.1.19 or later.</para>
+        /// <para>This operation deletes a consumer-based or consumer group-based quota rule from an AI gateway. This operation takes effect only on AI gateways of version 2.1.19 or later.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11045,12 +11021,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a gateway quota rate limiting rule.</para>
+        /// <para>Queries the details of a gateway quota throttling rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a consumer quota rule on an AI gateway.</para>
+        /// <para>Queries a specific API consumer quota rule on an AI gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11108,12 +11084,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a gateway quota rate limiting rule.</para>
+        /// <para>Queries the details of a gateway quota throttling rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a consumer quota rule on an AI gateway.</para>
+        /// <para>Queries a specific API consumer quota rule on an AI gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11171,12 +11147,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a gateway quota rate limiting rule.</para>
+        /// <para>Queries the details of a gateway quota throttling rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a consumer quota rule on an AI gateway.</para>
+        /// <para>Queries a specific API consumer quota rule on an AI gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11195,12 +11171,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a gateway quota rate limiting rule.</para>
+        /// <para>Queries the details of a gateway quota throttling rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the details of a consumer quota rule on an AI gateway.</para>
+        /// <para>Queries a specific API consumer quota rule on an AI gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11224,7 +11200,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11283,7 +11259,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11342,7 +11318,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11366,7 +11342,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Retrieves the usage details of a specific consumer under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
+        /// <para>Queries the usage details of a specific subject under a quota rule. This operation applies only to AI gateways with a version later than 2.1.19.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -14777,6 +14753,180 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询消费者组配额限流规则列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConsumerGroupQuotaRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupQuotaRulesResponse
+        /// </returns>
+        public ListConsumerGroupQuotaRulesResponse ListConsumerGroupQuotaRulesWithOptions(string consumerGroupId, ListConsumerGroupQuotaRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConsumerGroupQuotaRules",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/consumer-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId) + "/quota-rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConsumerGroupQuotaRulesResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者组配额限流规则列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConsumerGroupQuotaRulesRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupQuotaRulesResponse
+        /// </returns>
+        public async Task<ListConsumerGroupQuotaRulesResponse> ListConsumerGroupQuotaRulesWithOptionsAsync(string consumerGroupId, ListConsumerGroupQuotaRulesRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.GatewayId))
+            {
+                query["gatewayId"] = request.GatewayId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["pageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["pageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListConsumerGroupQuotaRules",
+                Version = "2024-03-27",
+                Protocol = "HTTPS",
+                Pathname = "/v1/consumer-groups/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(consumerGroupId) + "/quota-rules",
+                Method = "GET",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListConsumerGroupQuotaRulesResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者组配额限流规则列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConsumerGroupQuotaRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupQuotaRulesResponse
+        /// </returns>
+        public ListConsumerGroupQuotaRulesResponse ListConsumerGroupQuotaRules(string consumerGroupId, ListConsumerGroupQuotaRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ListConsumerGroupQuotaRulesWithOptions(consumerGroupId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询消费者组配额限流规则列表</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>查询指定消费者组直接绑定的配额规则，不展开组内消费者个人绑定的规则；无直接绑定关系时返回空列表。</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListConsumerGroupQuotaRulesRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListConsumerGroupQuotaRulesResponse
+        /// </returns>
+        public async Task<ListConsumerGroupQuotaRulesResponse> ListConsumerGroupQuotaRulesAsync(string consumerGroupId, ListConsumerGroupQuotaRulesRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ListConsumerGroupQuotaRulesWithOptionsAsync(consumerGroupId, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the list of consumer groups.</para>
         /// </summary>
         /// 
@@ -16507,12 +16657,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of FinOps quota rules bound to a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of FinOps quota rules bound to a gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16574,12 +16724,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of FinOps quota rules bound to a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of FinOps quota rules bound to a gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16641,12 +16791,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of FinOps quota rules bound to a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of FinOps quota rules bound to a gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -16665,12 +16815,12 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of FinOps quota rules bound to a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of consumer quota rules bound to a gateway.</para>
+        /// <para>Queries the list of FinOps quota rules bound to a gateway.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21700,7 +21850,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota throttling rule on a gateway. This operation only takes effect for AI gateways with versions later than 2.1.19. Resetting clears the historical usage of consumers on the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways of version 2.1.21 or later. Resetting clears the historical usage of consumption subjects on the rule.</para>
         /// <remarks>
         /// <para> Recommended call logic:</para>
         /// <list type="bullet">
@@ -21709,23 +21859,23 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
+        /// <item><description>Confirm and submit the request.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -21808,7 +21958,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota throttling rule on a gateway. This operation only takes effect for AI gateways with versions later than 2.1.19. Resetting clears the historical usage of consumers on the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways of version 2.1.21 or later. Resetting clears the historical usage of consumption subjects on the rule.</para>
         /// <remarks>
         /// <para> Recommended call logic:</para>
         /// <list type="bullet">
@@ -21817,23 +21967,23 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
+        /// <item><description>Confirm and submit the request.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -21916,7 +22066,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota throttling rule on a gateway. This operation only takes effect for AI gateways with versions later than 2.1.19. Resetting clears the historical usage of consumers on the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways of version 2.1.21 or later. Resetting clears the historical usage of consumption subjects on the rule.</para>
         /// <remarks>
         /// <para> Recommended call logic:</para>
         /// <list type="bullet">
@@ -21925,23 +22075,23 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
+        /// <item><description>Confirm and submit the request.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -21969,7 +22119,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Resets a quota throttling rule on a gateway. This operation only takes effect for AI gateways with versions later than 2.1.19. Resetting clears the historical usage of consumers on the rule.</para>
+        /// <para>Resets a quota throttling rule on a gateway. This operation takes effect only on AI gateways of version 2.1.21 or later. Resetting clears the historical usage of consumption subjects on the rule.</para>
         /// <remarks>
         /// <para> Recommended call logic:</para>
         /// <list type="bullet">
@@ -21978,23 +22128,23 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Set dryRun=true.</description></item>
+        /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response contains a conflict preview with a conflictHash value.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
+        /// <item><description>Confirm and submit the request.</description></item>
         /// </ol>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: dryRun=false, overwrite=false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: dryRun=false, overwrite=true, conflictHash=<value returned in the previous step></description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25241,37 +25391,31 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a quota rate-limiting rule on a gateway.</para>
+        /// <para>Edits a quota throttling rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. Editing preserves the historical usage of consumers on the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Confirm and submit the request.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25349,37 +25493,31 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a quota rate-limiting rule on a gateway.</para>
+        /// <para>Edits a quota throttling rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. Editing preserves the historical usage of consumers on the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Confirm and submit the request.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25457,37 +25595,31 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a quota rate-limiting rule on a gateway.</para>
+        /// <para>Edits a quota throttling rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. Editing preserves the historical usage of consumers on the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Confirm and submit the request.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25510,37 +25642,31 @@ namespace AlibabaCloud.SDK.APIG20240327
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Edits a quota rate-limiting rule on a gateway.</para>
+        /// <para>Edits a quota throttling rule on a gateway.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Edits a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19. Editing preserves the historical usage of consumers on the rule.</para>
+        /// <para>Edits a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21. Editing a rule preserves the historical usage of consumer principals bound to the rule.</para>
         /// <remarks>
-        /// <para> Recommended call logic:</para>
+        /// <para> Recommended call sequence:</para>
         /// <list type="bullet">
-        /// <item><description><ol>
-        /// <item><description>Perform a dry run to check for rule conflicts.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 1: Perform a dry run to check for rule conflicts.</description></item>
         /// <item><description><list type="bullet">
         /// <item><description>Set dryRun to true.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>The response contains a conflict preview with conflictHash.</description></item>
+        /// <item><description>The response returns a conflict preview that contains conflictHash.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><ol start="2">
-        /// <item><description>Submit the request after confirmation.</description></item>
-        /// </ol>
-        /// </description></item>
+        /// <item><description>Step 2: Confirm and submit the request.</description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>No conflict: Set dryRun to false and overwrite to false.</description></item>
+        /// <item><description>No conflicts: Set dryRun to false and overwrite to false.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><list type="bullet">
-        /// <item><description>Conflict exists and overwrite confirmed: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
+        /// <item><description>Conflicts exist and you confirm the overwrite: Set dryRun to false, overwrite to true, and conflictHash to the value returned in the previous step.</description></item>
         /// </list>
         /// </description></item>
         /// </list>
@@ -25568,7 +25694,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enables or disables a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>Enables or disables a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25623,7 +25749,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enables or disables a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>Enables or disables a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25678,7 +25804,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enables or disables a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>Enables or disables a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -25702,7 +25828,7 @@ namespace AlibabaCloud.SDK.APIG20240327
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Enables or disables a quota rule on a gateway. This operation takes effect only for AI gateways with a version later than 2.1.19.</para>
+        /// <para>Enables or disables a quota rule on a gateway. This operation takes effect only on AI gateways with a version later than 2.1.21.</para>
         /// </description>
         /// 
         /// <param name="request">

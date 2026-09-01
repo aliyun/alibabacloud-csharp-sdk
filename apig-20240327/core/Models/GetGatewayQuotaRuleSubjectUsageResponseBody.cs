@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? TotalQuota { get; set; }
 
             /// <summary>
-            /// <para>The total used quota of the subject.</para>
+            /// <para>The total used amount of the subject.</para>
             /// 
             /// <b>Example:</b>
             /// <para>500</para>

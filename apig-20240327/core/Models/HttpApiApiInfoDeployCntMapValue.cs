@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
 {
     public class HttpApiApiInfoDeployCntMapValue : TeaModel {
         /// <summary>
-        /// <para>The number of published API operations.</para>
+        /// <para>The number of deployed API operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3</para>

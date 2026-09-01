@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The backend error code.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Ok</para>
+        /// <para>CloudProductInactive.LogDeliveryNotEnabled</para>
         /// </summary>
         [NameInMap("errorCode")]
         [Validation(Required=false)]
@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <para>The error message.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>SLS log delivery configuration is not enabled.</para>
         /// </summary>
         [NameInMap("message")]
         [Validation(Required=false)]

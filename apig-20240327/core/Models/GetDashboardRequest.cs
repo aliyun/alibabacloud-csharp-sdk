@@ -12,8 +12,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The language. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>zh: Chinese.</description></item>
-        /// <item><description>en: English.</description></item>
+        /// <item><description>zh: Chinese</description></item>
+        /// <item><description>en: English</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -55,8 +55,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The dashboard name. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>LOG: access log.</description></item>
-        /// <item><description>PLUGIN: plugin log.</description></item>
+        /// <item><description>LOG: access log</description></item>
+        /// <item><description>PLUGIN: plugin log</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         /// <summary>
         /// <para>The dashboard source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>SLS: log dashboard.</description></item>
+        /// <item><description>SLS: log dashboard</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

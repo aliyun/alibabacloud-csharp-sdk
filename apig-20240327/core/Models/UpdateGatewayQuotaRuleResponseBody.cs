@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response data.</para>
+        /// <para>The response data content.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{\&quot;key\&quot;: \&quot;value\&quot;}</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public UpdateGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class UpdateGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the write request semantics are accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</para>
+            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public UpdateGatewayQuotaRuleResponseBodyDataConflictPreview ConflictPreview { get; set; }
             public class UpdateGatewayQuotaRuleResponseBodyDataConflictPreview : TeaModel {
                 /// <summary>
-                /// <para>The conflict hash.</para>
+                /// <para>The hash of the conflict snapshot.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541f50xxxxxx</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConflictHash { get; set; }
 
                 /// <summary>
-                /// <para>The list of conflicting subjects (consumers).</para>
+                /// <para>The list of conflicting principals (consumers or consumer groups).</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
                 public List<UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class UpdateGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the consumer. Valid values: day (daily period), week (weekly period), and month (monthly period).</para>
+                    /// <para>The period type of the existing conflicting rule on the consumer principal. Valid values: day, week, and month, which indicate that the period of the conflicting rule is daily, weekly, or monthly.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>week</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the consumer. Valid values: calendar (the conflicting rule uses a calendar period) and epoch (the conflicting rule uses a custom period).</para>
+                    /// <para>The type of the existing conflicting rule on the consumer principal. Valid values: calendar (the conflicting rule uses a calendar period) and epoch (the conflicting rule uses a custom period).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>calendar</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictType { get; set; }
 
                     /// <summary>
-                    /// <para>The consumer ID.</para>
+                    /// <para>The consumer ID. You can use subjectId instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-d82n1g6m1hkm375xxxxx</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerId { get; set; }
 
                     /// <summary>
-                    /// <para>The consumer name.</para>
+                    /// <para>The consumer name. You can use subjectName instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer-a</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerName { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the conflicting subject.</para>
+                    /// <para>The ID of the conflicting principal.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-xxx</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string SubjectId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the conflicting subject.</para>
+                    /// <para>The name of the conflicting principal.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer-a</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string SubjectName { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the conflicting subject. Valid values: consumer and consumer_group.</para>
+                    /// <para>The type of the conflicting principal. Valid values: consumer and consumer_group.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer</para>
@@ -148,7 +148,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             }
 
             /// <summary>
-            /// <para>Indicates whether this is a dry run.</para>
+            /// <para>Indicates whether the request is a dry run.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public Backend Backend { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the route is a built-in system route.</para>
+        /// <para>Indicates whether the route is a system built-in route.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -130,6 +130,8 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public HttpRouteEnvironmentInfoGatewayInfo GatewayInfo { get; set; }
             public class HttpRouteEnvironmentInfoGatewayInfo : TeaModel {
                 /// <summary>
+                /// <para>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>MultiTenantServerless</para>
                 /// </summary>

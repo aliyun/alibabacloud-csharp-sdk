@@ -8,20 +8,24 @@ using Tea;
 
 namespace AlibabaCloud.SDK.APIG20240327.Models
 {
-    public class GetGatewayQuotaRuleSubjectUsageRequest : TeaModel {
+    public class ListConsumerGroupQuotaRulesRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to filter out zero values.</para>
-        /// 
         /// <b>Example:</b>
-        /// <para>true</para>
+        /// <para>gw-123456</para>
         /// </summary>
-        [NameInMap("filterFailedRequests")]
+        [NameInMap("gatewayId")]
         [Validation(Required=false)]
-        public bool? FilterFailedRequests { get; set; }
+        public string GatewayId { get; set; }
 
         /// <summary>
-        /// <para>The page number of the detailed consumption (request) records of the subject within the cycle.</para>
-        /// 
+        /// <b>Example:</b>
+        /// <para>daily</para>
+        /// </summary>
+        [NameInMap("keyword")]
+        [Validation(Required=false)]
+        public string Keyword { get; set; }
+
+        /// <summary>
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -30,8 +34,6 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of detailed consumption (request) records per page for the subject within the cycle. Maximum value: 10.</para>
-        /// 
         /// <b>Example:</b>
         /// <para>10</para>
         /// </summary>

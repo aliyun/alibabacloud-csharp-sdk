@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public ResetGatewayQuotaRuleResponseBodyData Data { get; set; }
         public class ResetGatewayQuotaRuleResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario such as an unconfirmed conflict overwrite.</para>
+            /// <para>Indicates whether the write request is accepted by the system. A value of false typically indicates a retryable scenario, such as an unconfirmed conflict overwrite.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -57,18 +57,18 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string ConflictHash { get; set; }
 
                 /// <summary>
-                /// <para>The list of conflicting subjects (consumers).</para>
+                /// <para>The list of conflicting subjects.</para>
                 /// </summary>
                 [NameInMap("items")]
                 [Validation(Required=false)]
                 public List<ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems> Items { get; set; }
                 public class ResetGatewayQuotaRuleResponseBodyDataConflictPreviewItems : TeaModel {
                     /// <summary>
-                    /// <para>The period type of the existing conflicting rule on the consumer. Valid values:</para>
+                    /// <para>The period type of the existing conflicting rule on the subject. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>day: daily.</description></item>
-                    /// <item><description>week: weekly.</description></item>
-                    /// <item><description>month: monthly.</description></item>
+                    /// <item><description>day: The period of the existing conflicting rule is daily.</description></item>
+                    /// <item><description>week: The period of the existing conflicting rule is weekly.</description></item>
+                    /// <item><description>month: The period of the existing conflicting rule is monthly.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -79,10 +79,10 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictPeriodType { get; set; }
 
                     /// <summary>
-                    /// <para>The type of the existing conflicting rule on the consumer. Valid values:</para>
+                    /// <para>The type of the existing conflicting rule on the subject. Valid values:</para>
                     /// <list type="bullet">
-                    /// <item><description>calendar: the existing conflicting rule uses a calendar period.</description></item>
-                    /// <item><description>epoch: the existing conflicting rule uses a custom period.</description></item>
+                    /// <item><description>calendar: The existing conflicting rule uses a calendar period.</description></item>
+                    /// <item><description>epoch: The existing conflicting rule uses a custom period.</description></item>
                     /// </list>
                     /// 
                     /// <b>Example:</b>
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConflictType { get; set; }
 
                     /// <summary>
-                    /// <para>The consumer ID.</para>
+                    /// <para>The consumer ID. You can use subjectId instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cs-d82n1g6m1hkm3xxxxxxx</para>
@@ -103,7 +103,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string ConsumerId { get; set; }
 
                     /// <summary>
-                    /// <para>The consumer name.</para>
+                    /// <para>The consumer name. You can use subjectName instead.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer-a</para>
@@ -133,7 +133,11 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                     public string SubjectName { get; set; }
 
                     /// <summary>
-                    /// <para>The conflict subject type. Valid values: consumer and consumer_group.</para>
+                    /// <para>The type of the conflicting subject. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>consumer</description></item>
+                    /// <item><description>consumer_group</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>consumer</para>
@@ -179,7 +183,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         }
 
         /// <summary>
-        /// <para>The message content.</para>
+        /// <para>The message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Hello, World!</para>
@@ -189,7 +193,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890</para>

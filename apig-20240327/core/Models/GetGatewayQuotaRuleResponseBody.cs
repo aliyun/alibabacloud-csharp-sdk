@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? BaseTimestamp { get; set; }
 
             /// <summary>
-            /// <para>The number of consumers associated with the rule.</para>
+            /// <para>The number of API consumers associated with the rule.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -50,14 +50,14 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
             public long? ConsumerCount { get; set; }
 
             /// <summary>
-            /// <para>The list of subjects (consumers) bound to this rule.</para>
+            /// <para>The list of subjects (API consumers) bound to this rule.</para>
             /// </summary>
             [NameInMap("consumers")]
             [Validation(Required=false)]
             public List<GetGatewayQuotaRuleResponseBodyDataConsumers> Consumers { get; set; }
             public class GetGatewayQuotaRuleResponseBodyDataConsumers : TeaModel {
                 /// <summary>
-                /// <para>The subject (consumer) ID.</para>
+                /// <para>The subject (API consumer) ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>c-aaa</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The subject (consumer) name.</para>
+                /// <para>The subject (API consumer) name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>consumer-a</para>

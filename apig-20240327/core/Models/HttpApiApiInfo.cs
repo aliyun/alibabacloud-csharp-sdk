@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.APIG20240327.Models
         public string BasePath { get; set; }
 
         /// <summary>
-        /// <para>The API operation publish status.</para>
+        /// <para>The API operation deployment status.</para>
         /// </summary>
         [NameInMap("deployCntMap")]
         [Validation(Required=false)]
