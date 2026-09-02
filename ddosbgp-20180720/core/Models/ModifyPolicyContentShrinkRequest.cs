@@ -39,6 +39,13 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// <para>The version of the port-specific mitigation policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Not specified</b>: Modifies the default surf mitigation engine policy.</description></item>
+        /// <item><description><b>2</b>: Modifies the new stream mitigation engine policy.<remarks>
+        /// <para>Only port-specific mitigation policies are supported.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

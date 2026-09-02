@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public bool? AutoRenewal { get; set; }
 
             /// <summary>
-            /// <para>The number of assets that are assigned public IP addresses protected by the instance that are in blackhole filtering status.</para>
+            /// <para>The number of IP addresses that are in blackhole filtering status among the assets that are assigned public IP addresses protected by the instance.</para>
             /// <remarks>
             /// <para>You can invoke <a href="https://help.aliyun.com/document_detail/118692.html">DeleteBlackhole</a> to deactivate blackhole filtering for a single protected IP address.</para>
             /// </remarks>
@@ -76,10 +76,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             /// <summary>
             /// <para>The asset overwrite type of the instance.</para>
             /// <list type="bullet">
-            /// <item><description><b>1</b>: Supports assets that are assigned public IP addresses in multiple regions worldwide.</description></item>
+            /// <item><description><b>1</b>: Supports assets that are assigned public IP addresses in multiple regions globally.</description></item>
             /// <item><description><b>2</b>: Supports assets that are assigned public IP addresses in multiple regions in the Chinese mainland.</description></item>
             /// <item><description><b>3</b>: Supports assets that are assigned public IP addresses in multiple regions outside the Chinese mainland.</description></item>
-            /// <item><description><b>4</b>: Supports assets that are assigned public IP addresses in a single region worldwide.</description></item>
+            /// <item><description><b>4</b>: Supports assets that are assigned public IP addresses in a single region globally.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? DebtStatus { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the instance. The value is a timestamp. Unit: milliseconds.</para>
+            /// <para>The expiration time of the instance. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1640275200000</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>The purchase time of the instance. The value is a timestamp. Unit: milliseconds.</para>
+            /// <para>The purchase time of the instance. The value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1592886047000</para>
@@ -161,6 +161,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             [Validation(Required=false)]
             public string IpType { get; set; }
 
+            /// <summary>
+            /// <para>The full logs property.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>{\&quot;mitigationAnalysis\&quot;:\&quot;on\&quot;,\&quot;mitigationAnalysisCapacity\&quot;:1,\&quot;ttl\&quot;:180}</para>
+            /// </summary>
             [NameInMap("LogExt")]
             [Validation(Required=false)]
             public string LogExt { get; set; }
@@ -218,7 +224,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The ID of the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>381D5D33-BB8F-395F-8EE4-AE3BB4B523C4</para>

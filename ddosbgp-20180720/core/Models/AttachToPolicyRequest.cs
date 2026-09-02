@@ -19,6 +19,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public class AttachToPolicyRequestIpPortProtocolList : TeaModel {
             /// <summary>
             /// <para>The IP address of the protection object.</para>
+            /// <remarks>
+            /// <para>Prerequisite: The IP address must be added to the Anti-DDoS Origin instance by calling the AddIp operation in advance, and you must call the DescribeInstanceList operation to verify that the IP address has been added to the Anti-DDoS Origin instance.</para>
+            /// </remarks>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -87,8 +90,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The version of the port-specific mitigation policy. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>Not specified</b>: Associates the default surf anti-DDoS engine policy.</description></item>
-        /// <item><description><b>2</b>: Associates the new stream anti-DDoS engine policy.<remarks>
+        /// <item><description><b>Not specified</b>: Associates the default surf mitigation engine policy.</description></item>
+        /// <item><description><b>2</b>: Associates the new stream mitigation engine policy.<remarks>
         /// <para>Only port-specific mitigation policies support this parameter.</para>
         /// </remarks>
         /// </description></item>

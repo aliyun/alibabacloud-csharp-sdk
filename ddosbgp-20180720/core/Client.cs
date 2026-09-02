@@ -41,10 +41,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
                 {"cn-shenzhen-finance-1", "ddosbgp.aliyuncs.com"},
                 {"cn-shanghai-finance-1", "ddosbgp.aliyuncs.com"},
                 {"cn-north-2-gov-1", "ddosbgp.aliyuncs.com"},
-                {"cn-hongkong", "ddosbgp.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-1", "ddosbgp.ap-southeast-1.aliyuncs.com"},
-                {"us-west-1", "ddosbgp.us-west-1.aliyuncs.com"},
-                {"us-east-1", "ddosbgp.us-east-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ddosbgp", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -510,12 +506,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates protection objects with a mitigation policy.</para>
+        /// <para>Associates protection objects with mitigation policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A mitigation policy that is associated with protection objects cannot be deleted.</para>
+        /// <para>Mitigation policies that are associated with protection objects cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -571,12 +567,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates protection objects with a mitigation policy.</para>
+        /// <para>Associates protection objects with mitigation policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A mitigation policy that is associated with protection objects cannot be deleted.</para>
+        /// <para>Mitigation policies that are associated with protection objects cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -632,12 +628,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates protection objects with a mitigation policy.</para>
+        /// <para>Associates protection objects with mitigation policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A mitigation policy that is associated with protection objects cannot be deleted.</para>
+        /// <para>Mitigation policies that are associated with protection objects cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -655,12 +651,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates protection objects with a mitigation policy.</para>
+        /// <para>Associates protection objects with mitigation policies.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A mitigation policy that is associated with protection objects cannot be deleted.</para>
+        /// <para>Mitigation policies that are associated with protection objects cannot be deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2545,7 +2541,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// <description>
         /// <para>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</para>
         /// <h3>QPS limit</h3>
-        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2642,7 +2638,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// <description>
         /// <para>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</para>
         /// <h3>QPS limit</h3>
-        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2739,7 +2735,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// <description>
         /// <para>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</para>
         /// <h3>QPS limit</h3>
-        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -2764,7 +2760,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// <description>
         /// <para>This operation is used to query the details of all Anti-DDoS Origin instances owned by the current Alibaba Cloud account by paging, such as instance IDs, validity periods, and statuses.</para>
         /// <h3>QPS limit</h3>
-        /// <para>You can invoke this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Invoke this operation within the limit.</para>
+        /// <para>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5559,7 +5555,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that you pass all parameters when you call this operation. If a parameter is left empty, the corresponding configuration is deleted.</para>
+        /// <para>Ensure that all parameters are specified when you call this operation. If a parameter is not specified, the corresponding configuration is deleted.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5624,7 +5620,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that you pass all parameters when you call this operation. If a parameter is left empty, the corresponding configuration is deleted.</para>
+        /// <para>Ensure that all parameters are specified when you call this operation. If a parameter is not specified, the corresponding configuration is deleted.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -5689,7 +5685,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that you pass all parameters when you call this operation. If a parameter is left empty, the corresponding configuration is deleted.</para>
+        /// <para>Ensure that all parameters are specified when you call this operation. If a parameter is not specified, the corresponding configuration is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5712,7 +5708,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Make sure that you pass all parameters when you call this operation. If a parameter is left empty, the corresponding configuration is deleted.</para>
+        /// <para>Ensure that all parameters are specified when you call this operation. If a parameter is not specified, the corresponding configuration is deleted.</para>
         /// </description>
         /// 
         /// <param name="request">

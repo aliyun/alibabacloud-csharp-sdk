@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public List<string> InstanceTypeList { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the protected object for the Anti-DDoS Origin instance to query.</para>
+        /// <para>The protected IP address of the Anti-DDoS Origin instance to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>47.89.XX.XX</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string IpVersion { get; set; }
 
         /// <summary>
-        /// <para>The field used to sort the Anti-DDoS Origin instance list. The value is fixed as <b>expireTime</b>, which indicates that instances are sorted by expiration time.</para>
+        /// <para>The sort field for the Anti-DDoS Origin instance list. The value is fixed as <b>expireTime</b>, which indicates sorting by instance expiration time.</para>
         /// <para>You can use the <b>Orderdire</b> parameter to specify the sort order.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Orderdire { get; set; }
 
         /// <summary>
-        /// <para>The number of the page to return when paging is used.</para>
+        /// <para>The page number of the current page in a paging query. Settings the current page number.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public int? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of instances on each page when paging is used.</para>
+        /// <para>The number of instances on each page in a paging query. Settings the number of instances per page.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -114,7 +114,8 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         /// <summary>
         /// <para>The region ID of the Anti-DDoS Origin instance to query.</para>
         /// <remarks>
-        /// <para>You can call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all region IDs supported by Anti-DDoS Origin.</para>
+        /// <h2>You can call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query all region IDs supported by Anti-DDoS Origin.</h2>
+        /// <para>Notice: This parameter is required. If it is not specified, the API returns DDosBgp.CheckError.InvalidRegion(400).</notice></para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -136,7 +137,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// <para>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</para>
-        /// <para>If you do not specify this parameter, the instance belongs to the default resource group.</para>
+        /// <para>If you do not specify this parameter, the default resource group is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-acfm2pz25js****</para>
@@ -146,7 +147,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags bound to the Anti-DDoS Origin instance to query.</para>
+        /// <para>The tags bound to the Anti-DDoS Origin instances to query.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

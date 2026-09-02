@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public ModifyPolicyContentRequestContent Content { get; set; }
         public class ModifyPolicyContentRequestContent : TeaModel {
             /// <summary>
-            /// <para>The expiration time of the IP blacklist (UNIX timestamp).</para>
+            /// <para>The expiration time of the IP blacklist, in UNIX timestamp format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1716878000</para>
@@ -57,15 +57,24 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public bool? EnableL4Defense { get; set; }
 
             /// <summary>
-            /// <para>The list of byte-match filter rules.</para>
+            /// <para>The list of Byte-Match Filter rules.</para>
             /// </summary>
             [NameInMap("FingerPrintRuleList")]
             [Validation(Required=false)]
             public List<ModifyPolicyContentRequestContentFingerPrintRuleList> FingerPrintRuleList { get; set; }
             public class ModifyPolicyContentRequestContentFingerPrintRuleList : TeaModel {
                 /// <summary>
+                /// <para>The rule comment.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>comment</para>
+                /// </summary>
+                [NameInMap("Comment")]
+                [Validation(Required=false)]
+                public string Comment { get; set; }
+
+                /// <summary>
                 /// <para>The end value of the destination port range. Valid values: <b>0</b> to <b>65535</b>.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>65535</para>
@@ -76,7 +85,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The start value of the destination port range. Valid values: <b>0</b> to <b>65535</b>.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -96,7 +104,13 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public string Id { get; set; }
 
                 /// <summary>
-                /// <para>The action to take when a fingerprint match is found. Valid values:</para>
+                /// <para>The action to take after a fingerprint match. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>permit</b>: Permits traffic that matches the fingerprint.</description></item>
+                /// <item><description><b>drop</b>: Drops traffic that matches the fingerprint.</description></item>
+                /// <item><description><b>ip_rate</b>: Rate-limits the source IP address of traffic that matches the fingerprint. Set the rate limit by using the <b>RateValue</b> parameter.</description></item>
+                /// <item><description><b>session_rate</b>: Rate-limits the source session of traffic that matches the fingerprint. Set the rate limit by using the <b>RateValue</b> parameter.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -108,7 +122,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The maximum packet length. Valid values: <b>1</b> to <b>1500</b>.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1500</para>
@@ -119,7 +132,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The minimum packet length. Valid values: <b>1</b> to <b>1500</b>.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -127,6 +139,16 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 [NameInMap("MinPktLen")]
                 [Validation(Required=false)]
                 public int? MinPktLen { get; set; }
+
+                /// <summary>
+                /// <para>The rule mode.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("Mode")]
+                [Validation(Required=false)]
+                public int? Mode { get; set; }
 
                 /// <summary>
                 /// <para>The offset. Valid values: <b>0</b> to <b>1500</b>.</para>
@@ -139,7 +161,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? Offset { get; set; }
 
                 /// <summary>
-                /// <para>The detection payload, expressed in hexadecimal string format.</para>
+                /// <para>The detection payload, represented in hexadecimal string format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>abcd</para>
@@ -150,7 +172,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The protocol type. Valid values:</para>
-                /// <para>This parameter is required.</para>
+                /// <list type="bullet">
+                /// <item><description><b>tcp</b>: Transmission Control Protocol.</description></item>
+                /// <item><description><b>udp</b>: User Datagram Protocol.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>tcp</para>
@@ -161,6 +186,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The rate limit value. Valid values: <b>1</b> to <b>100000</b>.</para>
+                /// <remarks>
+                /// <para>This parameter is required when the match action is source IP rate limiting or source session rate limiting (<b>MatchAction</b> is <b>ip_rate</b> or <b>session_rate</b>).</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>100</para>
@@ -170,7 +198,20 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? RateValue { get; set; }
 
                 /// <summary>
+                /// <para>The rule.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>(ip.version == 4)</para>
+                /// </summary>
+                [NameInMap("Rule")]
+                [Validation(Required=false)]
+                public string Rule { get; set; }
+
+                /// <summary>
                 /// <para>The priority number, expressed as an integer.</para>
+                /// <remarks>
+                /// <para>A smaller number indicates a higher priority.</para>
+                /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -182,7 +223,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The end value of the source port range. Valid values: <b>0</b> to <b>65535</b>.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>65535</para>
@@ -193,7 +233,6 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The start value of the source port range. Valid values: <b>0</b> to <b>65535</b>.</para>
-                /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -202,10 +241,25 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 [Validation(Required=false)]
                 public int? SrcPortStart { get; set; }
 
+                /// <summary>
+                /// <para>The type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1</para>
+                /// </summary>
+                [NameInMap("Type")]
+                [Validation(Required=false)]
+                public int? Type { get; set; }
+
             }
 
             /// <summary>
             /// <para>The protection level of AI-based intelligent protection. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>default</b>: Normal.</description></item>
+            /// <item><description><b>hard</b>: Strict.</description></item>
+            /// <item><description><b>weak</b>: Loose.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -225,7 +279,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 /// <para>The action.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>2</para>
+                /// <para>block</para>
                 /// </summary>
                 [NameInMap("Action")]
                 [Validation(Required=false)]
@@ -240,6 +294,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public class ModifyPolicyContentRequestContentL4RuleListConditionList : TeaModel {
                     /// <summary>
                     /// <para>The detection content.</para>
+                    /// <remarks>
+                    /// <para>If the rule type is <b>char</b>, the value must be an ASCII string. If the rule type is <b>hex</b>, the value must be a hexadecimal string. Maximum length: 2048.</para>
+                    /// </remarks>
                     /// 
                     /// <b>Example:</b>
                     /// <para>abcd</para>
@@ -249,7 +306,29 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     public string Arg { get; set; }
 
                     /// <summary>
-                    /// <para>The matching content.</para>
+                    /// <para>The match content.</para>
+                    /// <ol>
+                    /// <item><description>When <b>Encode</b> is set to <b>str</b>, the following requirements must be met:</description></item>
+                    /// </ol>
+                    /// <list type="bullet">
+                    /// <item><description><para>The length of <b>Content</b> must not exceed 1500.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>End</b> - <b>Start</b> &gt;= the length of <b>Content</b>.</para>
+                    /// </description></item>
+                    /// </list>
+                    /// <ol start="2">
+                    /// <item><description>When <b>Encode</b> is set to <b>hex</b>, the following requirements must be met:</description></item>
+                    /// </ol>
+                    /// <list type="bullet">
+                    /// <item><description><para><b>Content</b> must be hexadecimal characters.</para>
+                    /// </description></item>
+                    /// <item><description><para>The length of <b>Content</b> must be an even number.</para>
+                    /// </description></item>
+                    /// <item><description><para>The length of <b>Content</b> must not exceed 3000.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>End</b> - <b>Start</b> + 1 &gt;= the length of <b>Content</b> / 2.</para>
+                    /// </description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test**</para>
@@ -270,6 +349,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                     /// <summary>
                     /// <para>The character type. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><para><b>str</b>: string.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>hex</b>: hexadecimal.</para>
+                    /// </description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>str</para>
@@ -279,7 +364,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     public string Encode { get; set; }
 
                     /// <summary>
-                    /// <para>The matching range.</para>
+                    /// <para>The match range.</para>
                     /// </summary>
                     [NameInMap("Offset")]
                     [Validation(Required=false)]
@@ -287,6 +372,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     public class ModifyPolicyContentRequestContentL4RuleListConditionListOffset : TeaModel {
                         /// <summary>
                         /// <para>The end position. Valid values: <b>0</b> to <b>1499</b>.</para>
+                        /// <remarks>
+                        /// <para>The end position must be greater than or equal to the start position.</para>
+                        /// </remarks>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1499</para>
@@ -308,7 +396,13 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                     }
 
                     /// <summary>
-                    /// <para>The matching pattern. Valid values:</para>
+                    /// <para>The match mode. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description><para><b>contain</b>: contains.</para>
+                    /// </description></item>
+                    /// <item><description><para><b>not_contain</b>: does not contain.</para>
+                    /// </description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>contain</para>
@@ -341,6 +435,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The logical operator. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>0</b>: The action is executed on a match.</para>
+                /// </description></item>
+                /// <item><description><para><b>1</b>: The action is executed on a non-match.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -351,6 +451,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The rule type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><para><b>char</b>: string match.</para>
+                /// </description></item>
+                /// <item><description><para><b>hex</b>: hexadecimal match.</para>
+                /// </description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>char</para>
@@ -372,6 +478,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The rule priority. Valid values: 1 to 100.</para>
+                /// <remarks>
+                /// <para>A smaller value indicates a higher priority.</para>
+                /// </remarks>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1</para>
@@ -423,6 +532,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The match action. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>drop</b>: Drop.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -434,6 +546,10 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The protocol type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>tcp</b>: Transmission Control Protocol.</description></item>
+                /// <item><description><b>udp</b>: User Datagram Protocol.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -445,6 +561,9 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The priority number, expressed as an integer.</para>
+                /// <remarks>
+                /// <para>A smaller number indicates a higher priority.</para>
+                /// </remarks>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -507,7 +626,11 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public ModifyPolicyContentRequestContentSipDefense SipDefense { get; set; }
             public class ModifyPolicyContentRequestContentSipDefense : TeaModel {
                 /// <summary>
-                /// <para>Specifies whether to enable SIP protection. Valid values:</para>
+                /// <para>Specifies whether SIP protection is enabled. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>true</b>: Enabled.</description></item>
+                /// <item><description><b>false</b>: Disabled.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -631,6 +754,12 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
                 /// <summary>
                 /// <para>The source rate limiting type. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description><b>3</b>: source PPS rate limiting.</description></item>
+                /// <item><description><b>4</b>: source bandwidth throttling.</description></item>
+                /// <item><description><b>5</b>: source SYN PPS rate limiting.</description></item>
+                /// <item><description><b>6</b>: source SYN bandwidth throttling.</description></item>
+                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -650,7 +779,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
             public ModifyPolicyContentRequestContentSourceLimit SourceLimit { get; set; }
             public class ModifyPolicyContentRequestContentSourceLimit : TeaModel {
                 /// <summary>
-                /// <para>The source bandwidth throttling value, in bytes per second.</para>
+                /// <para>The source bandwidth throttling value, in bytes per second (Byte/s).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2048</para>
@@ -660,7 +789,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? Bps { get; set; }
 
                 /// <summary>
-                /// <para>The source PPS rate limit, in packets per second.</para>
+                /// <para>The source PPS rate limit, in packets per second (Packet/s).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>64</para>
@@ -670,7 +799,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? Pps { get; set; }
 
                 /// <summary>
-                /// <para>The source SYN bandwidth throttling value, in bytes per second.</para>
+                /// <para>The source SYN bandwidth throttling value, in bytes per second (Byte/s).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2048</para>
@@ -680,7 +809,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
                 public int? SynBps { get; set; }
 
                 /// <summary>
-                /// <para>The source SYN PPS rate limit, in packets per second.</para>
+                /// <para>The source SYN PPS rate limit, in packets per second (Packet/s).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>64</para>
@@ -726,6 +855,13 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// <para>The version of the port-specific mitigation policy. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>Not specified</b>: Modifies the default surf mitigation engine policy.</description></item>
+        /// <item><description><b>2</b>: Modifies the new stream mitigation engine policy.<remarks>
+        /// <para>Only port-specific mitigation policies are supported.</para>
+        /// </remarks>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

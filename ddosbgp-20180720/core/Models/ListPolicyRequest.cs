@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>Settings the page number of the current page in a paged query.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
         public long? PageNo { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page in a paged query. Default value: <b>10</b>.</para>
+        /// <para>The number of entries per page in a paging query. Default value: <b>10</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -41,6 +41,19 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// <para>The applicable product type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>ecs</b>: queries the default policy applicable to ECS.</para>
+        /// </description></item>
+        /// <item><description><para><b>slb</b>: queries the default policy applicable to SLB.</para>
+        /// </description></item>
+        /// <item><description><para><b>eip</b>: queries the default policy applicable to EIP.</para>
+        /// </description></item>
+        /// <item><description><para><b>gf-eip</b>: queries the default policy applicable to elastic IP addresses (EIPs) with Anti-DDoS Proxy Enabled.</para>
+        /// </description></item>
+        /// </list>
+        /// <remarks>
+        /// <para>This parameter takes effect only when the policy type is <c>default</c>.</para>
+        /// </remarks>
         /// 
         /// <b>Example:</b>
         /// <para>ecs</para>
@@ -51,6 +64,14 @@ namespace AlibabaCloud.SDK.Ddosbgp20180720.Models
 
         /// <summary>
         /// <para>The policy type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><para><b>default</b>: the default mitigation policy.</para>
+        /// </description></item>
+        /// <item><description><para><b>l3</b>: the IP-specific mitigation policy.</para>
+        /// </description></item>
+        /// <item><description><para><b>l4</b>: the port-specific mitigation policy.</para>
+        /// </description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>l3</para>

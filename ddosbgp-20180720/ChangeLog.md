@@ -1,3 +1,18 @@
+2026-09-02 Version: 3.1.2
+- Update API ListPolicy: add response parameters Body.PolicyList.$.Content.FingerPrintRuleList.$.Comment.
+- Update API ListPolicy: add response parameters Body.PolicyList.$.Content.FingerPrintRuleList.$.Mode.
+- Update API ListPolicy: add response parameters Body.PolicyList.$.Content.FingerPrintRuleList.$.Rule.
+- Update API ListPolicy: add response parameters Body.PolicyList.$.Content.FingerPrintRuleList.$.Type.
+- Update API ModifyPolicy: add request parameters Content.FingerPrintRuleList.$.Comment.
+- Update API ModifyPolicy: add request parameters Content.FingerPrintRuleList.$.Mode.
+- Update API ModifyPolicy: add request parameters Content.FingerPrintRuleList.$.Rule.
+- Update API ModifyPolicy: add request parameters Content.FingerPrintRuleList.$.Type.
+- Update API ModifyPolicyContent: add request parameters Content.FingerPrintRuleList.$.Comment.
+- Update API ModifyPolicyContent: add request parameters Content.FingerPrintRuleList.$.Mode.
+- Update API ModifyPolicyContent: add request parameters Content.FingerPrintRuleList.$.Rule.
+- Update API ModifyPolicyContent: add request parameters Content.FingerPrintRuleList.$.Type.
+
+
 2026-08-10 Version: 3.1.1
 - Update API DescribeInstanceList: add response parameters Body.InstanceList.$.LogExt.
 
