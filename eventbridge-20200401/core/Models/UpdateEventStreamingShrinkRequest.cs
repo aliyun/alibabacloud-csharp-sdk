@@ -56,33 +56,36 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string FilterPattern { get; set; }
 
+        /// <summary>
+        /// <para>The generic JSON configurations for the event provider. This parameter is mutually exclusive with Source.</para>
+        /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public string Metadata { get; set; }
 
         /// <summary>
-        /// <para>The runtime parameters.</para>
+        /// <para>The runtime environment parameters.</para>
         /// </summary>
         [NameInMap("RunOptions")]
         [Validation(Required=false)]
         public string RunOptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The event target. You must select one and only one Sink type.</para>
+        /// <para>The event target. You must select exactly one Sink type.</para>
         /// </summary>
         [NameInMap("Sink")]
         [Validation(Required=false)]
         public string SinkShrink { get; set; }
 
         /// <summary>
-        /// <para>The event provider. You must select one and only one Source type.</para>
+        /// <para>The event provider. You must select one and only one type of Source.</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string SourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The Transform-related configurations.</para>
+        /// <para>The event transformer configurations.</para>
         /// </summary>
         [NameInMap("Transforms")]
         [Validation(Required=false)]

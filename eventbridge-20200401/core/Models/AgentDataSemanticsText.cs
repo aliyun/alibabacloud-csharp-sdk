@@ -8,17 +8,17 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
-    public class GetEventStreamingRequest : TeaModel {
+    public class AgentDataSemanticsText : TeaModel {
         /// <summary>
-        /// <para>The name of the event stream to retrieve.</para>
+        /// <para>The content of the Markdown-formatted text knowledge.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>myeventstreaming</para>
+        /// <h2>Data description</h2>
         /// </summary>
-        [NameInMap("EventStreamingName")]
+        [NameInMap("Content")]
         [Validation(Required=false)]
-        public string EventStreamingName { get; set; }
+        public string Content { get; set; }
 
     }
 

@@ -8,27 +8,28 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
-    public class GetCatalogRequest : TeaModel {
+    public class AgentDataSemanticsStageProgress : TeaModel {
         /// <summary>
-        /// <para>The idempotency token.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>1e9b8f60-3a2c-4d7e-9f1b-8c3d5e7a2b4f</para>
-        /// </summary>
-        [NameInMap("ClientToken")]
-        [Validation(Required=false)]
-        public string ClientToken { get; set; }
-
-        /// <summary>
-        /// <para>The name of the data catalog.</para>
+        /// <para>The stage name.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>my_catalog</para>
+        /// <para>PROFILE</para>
         /// </summary>
-        [NameInMap("Name")]
+        [NameInMap("Stage")]
         [Validation(Required=false)]
-        public string Name { get; set; }
+        public string Stage { get; set; }
+
+        /// <summary>
+        /// <para>The stage status.</para>
+        /// <para>This parameter is required.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SUCCEEDED</para>
+        /// </summary>
+        [NameInMap("Status")]
+        [Validation(Required=false)]
+        public string Status { get; set; }
 
     }
 

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateConnectionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The data structure of the authentication parameters.</para>
+        /// <para>The authentication data structure.</para>
         /// </summary>
         [NameInMap("AuthParameters")]
         [Validation(Required=false)]
         public string AuthParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The name of the connection to be updated. The maximum length is 127 characters. The minimum length is 2 characters.</para>
+        /// <para>The name of the connection to update. Maximum length: 127 characters. Minimum length: 2 characters.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ConnectionName { get; set; }
 
         /// <summary>
-        /// <para>The description. The maximum length is 255 characters.</para>
+        /// <para>The description. Maximum length: 255 characters.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Description of the connection configuration</para>
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NetworkParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The data source connection parameters (JSON object). For specific field definitions, call the GetConnectionType API and refer to the ParamsSchema in the response.</para>
+        /// <para>The data source connection parameters (JSON object). For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, and Http.</para>
+        /// <para>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, lakehouse, Http.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Http</para>

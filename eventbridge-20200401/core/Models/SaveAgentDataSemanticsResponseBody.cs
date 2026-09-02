@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
-    public class CreateEventStreamingResponseBody : TeaModel {
+    public class SaveAgentDataSemanticsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code:</para>
+        /// <para>The response code of the operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -20,46 +20,37 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned data.</para>
+        /// <para>The update result. If the save is successful, an empty object is returned with no additional business fields. If none of the four knowledge categories are specified, the target state is all four categories empty: if a non-empty current version exists, an all-empty version is published. If the current version is already all empty or no current version exists, the operation succeeds idempotently and the current round of pending generation results is finalized.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{}</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public CreateEventStreamingResponseBodyData Data { get; set; }
-        public class CreateEventStreamingResponseBodyData : TeaModel {
-            /// <summary>
-            /// <para>The Alibaba Cloud Resource Name (ARN) of the event stream.</para>
-            /// 
-            /// <b>Example:</b>
-            /// <para>acs:eventbridge:cn-hangzhou:164901546557****:eventstreaming/myeventstreaming</para>
-            /// </summary>
-            [NameInMap("EventStreamingARN")]
-            [Validation(Required=false)]
-            public string EventStreamingARN { get; set; }
-
-        }
+        public Dictionary<string, object> Data { get; set; }
 
         /// <summary>
-        /// <para>The error message.</para>
+        /// <para>The response message. If the call fails, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The name [xxxx] of event streaming in request is already exist!</para>
+        /// <para>Invalid data semantics request.</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID.</para>
+        /// <para>The unique identifier that Alibaba Cloud generates for the request.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>B896B484-F16D-59DE-9E23-DD0E5C36****</para>
+        /// <para>5DAF96FB-A4DF-548C-B8A1-F2A8D2F4****</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns true if the operation is successful.</para>
+        /// <para>Indicates whether the call is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

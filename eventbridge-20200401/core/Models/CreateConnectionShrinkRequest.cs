@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateConnectionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The authentication configuration.</para>
+        /// <para>The authentication data structure.</para>
         /// </summary>
         [NameInMap("AuthParameters")]
         [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The network configuration.</para>
+        /// <para>The network configuration data structure.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NetworkParameters")]
@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string NetworkParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The data source connection parameters (JSON object). This parameter is required when Type is set to a data source type. This parameter is not required for the Http type. For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</para>
+        /// <para>The data source connection parameters (JSON object). This parameter is required when Type is a data source type. It is not required for the Http type. For specific field definitions, call the GetConnectionType operation and refer to ParamsSchema in the response.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;HostName&quot;:&quot;xxx.mysql.rds.aliyuncs.com&quot;,&quot;Port&quot;:&quot;3306&quot;,&quot;User&quot;:&quot;root&quot;,&quot;Password&quot;:&quot;xxx&quot;,&quot;DatabaseName&quot;:&quot;demo_db&quot;}</para>
@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ParametersShrink { get; set; }
 
         /// <summary>
-        /// <para>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, and Http. This parameter is required for data source connections. If this parameter is not specified, the default value Http is used. The Http type is used for HTTP protocol targets such as API Destination. Data source types are used for data connections in the integration marketplace.</para>
+        /// <para>The connection type. Valid values: MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, Iceberg, lakehouse, and Http. This parameter is required for data source type connections. If this parameter is not specified, the default value Http is used. The Http type is used for API Destination and other HTTP protocol targets. Hive and Iceberg are used for the corresponding data lakehouse sources. lakehouse is used only for compatibility with existing connections. Other data source types are used for data connections in the integration marketplace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Http</para>

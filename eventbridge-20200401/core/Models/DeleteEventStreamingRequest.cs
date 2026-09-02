@@ -20,6 +20,13 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string EventStreamingName { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to force delete the event stream. If set to true, system label-based deletion protection is bypassed. Default value: false.</para>
+        /// </summary>
+        [NameInMap("Force")]
+        [Validation(Required=false)]
+        public bool? Force { get; set; }
+
     }
 
 }

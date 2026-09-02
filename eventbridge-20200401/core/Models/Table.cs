@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>The column definition list of the table. Each column contains Name (column name), Type (data type), and Comment (remarks)</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</para>
+        /// <para>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}]</para>
         /// </summary>
         [NameInMap("Columns")]
         [Validation(Required=false)]

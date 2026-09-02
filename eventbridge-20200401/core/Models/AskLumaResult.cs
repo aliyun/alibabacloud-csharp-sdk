@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class AskLumaResult : TeaModel {
         /// <summary>
-        /// <para>Whether clarification is needed</para>
+        /// <para>Indicates whether clarification is needed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,31 +20,31 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public bool? ClarificationNeeded { get; set; }
 
         /// <summary>
-        /// <para>Clarification question text</para>
+        /// <para>The clarification question text.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>您指的是哪个数据库中的员工表？</para>
+        /// <para>Which database does the employee table you are referring to belong to?</para>
         /// </summary>
         [NameInMap("ClarificationQuestion")]
         [Validation(Required=false)]
         public string ClarificationQuestion { get; set; }
 
         /// <summary>
-        /// <para>Query constraints</para>
+        /// <para>The query constraints.</para>
         /// </summary>
         [NameInMap("Constraints")]
         [Validation(Required=false)]
         public Constraints Constraints { get; set; }
 
         /// <summary>
-        /// <para>Structured result body</para>
+        /// <para>The structured result body.</para>
         /// </summary>
         [NameInMap("Content")]
         [Validation(Required=false)]
         public Content Content { get; set; }
 
         /// <summary>
-        /// <para>Conversation identifier, used for multi-turn follow-up questions</para>
+        /// <para>The conversation ID, used for multi-turn follow-up questions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>conv_xxx</para>
@@ -54,7 +54,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ConversationId { get; set; }
 
         /// <summary>
-        /// <para>Error code</para>
+        /// <para>The error code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ExecutionFailed, Timeout, RateLimited, InternalError, ConversationExpired</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>Error details</para>
+        /// <para>The error details.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Agent with name \&quot;xxx\&quot; not found for account 1186xxx</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string ErrorMessage { get; set; }
 
         /// <summary>
-        /// <para>Whether it is an error. false = query succeeded or clarification (including empty result set); true = execution failed / timeout / rate limited / internal error</para>
+        /// <para>Indicates whether an error occurred. A value of false indicates that the query succeeded or a clarification is needed (including empty result sets). A value of true indicates that the execution failed due to a timeout, throttling, or internal error.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public bool? IsError { get; set; }
 
         /// <summary>
-        /// <para>Message identifier, used for PollAskResult polling</para>
+        /// <para>The message ID, used for polling with PollAskResult.</para>
         /// 
         /// <b>Example:</b>
         /// <para>msg_xxx</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string MessageId { get; set; }
 
         /// <summary>
-        /// <para>Execution status</para>
+        /// <para>The submit status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>RUNNING, SUCCEEDED, FAILED, TIMEOUT</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>Whether the result was truncated due to exceeding the storage limit. Only appears in large result set scenarios</para>
+        /// <para>Indicates whether the result was truncated because it exceeded the storage limit. This field is returned only for large result sets.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -112,6 +112,16 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [NameInMap("StorageTruncated")]
         [Validation(Required=false)]
         public bool? StorageTruncated { get; set; }
+
+        /// <summary>
+        /// <para>The business Wiki version that was actually used for this response. This field is not returned if the agent does not have a Wiki configured.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>eventhouse-multisource-demo-v1</para>
+        /// </summary>
+        [NameInMap("WikiVersion")]
+        [Validation(Required=false)]
+        public string WikiVersion { get; set; }
 
     }
 

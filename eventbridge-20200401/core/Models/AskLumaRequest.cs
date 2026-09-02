@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>帮我统计一下最近的订单数据。</para>
+        /// <para>Help me collect statistics on recent order data</para>
         /// </summary>
         [NameInMap("Question")]
         [Validation(Required=false)]

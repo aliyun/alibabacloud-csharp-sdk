@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class CreateConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API status or POP error code. Valid values: Success.</para>
+        /// <para>The API status or POP error code. A value of Success indicates that the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>

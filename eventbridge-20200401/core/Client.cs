@@ -21,32 +21,32 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"us-west-1", "eventbridge-console.us-west-1.aliyuncs.com"},
-                {"us-east-1", "eventbridge-console.us-east-1.aliyuncs.com"},
-                {"eu-west-1", "eventbridge-console.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "eventbridge-console.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "eventbridge-console.cn-zhangjiakou.aliyuncs.com"},
                 {"cn-wulanchabu", "eventbridge-console.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "eventbridge-console.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-shenzhen", "eventbridge-console.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "eventbridge-console.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "eventbridge-console.cn-shanghai.aliyuncs.com"},
+                {"cn-beijing", "eventbridge-console.cn-beijing.aliyuncs.com"},
                 {"cn-qingdao", "eventbridge-console.cn-qingdao.aliyuncs.com"},
-                {"cn-huhehaote", "eventbridge-console.cn-huhehaote.aliyuncs.com"},
+                {"cn-shanghai", "eventbridge-console.cn-shanghai.aliyuncs.com"},
                 {"cn-hongkong", "eventbridge-console.cn-hongkong.aliyuncs.com"},
                 {"cn-heyuan", "eventbridge-console.cn-heyuan.aliyuncs.com"},
-                {"cn-hangzhou", "eventbridge-console.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "eventbridge-console.cn-guangzhou.aliyuncs.com"},
-                {"cn-chengdu", "eventbridge-console.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing-finance-1", "eventbridge-console.cn-beijing-finance-1.aliyuncs.com"},
-                {"cn-beijing", "eventbridge-console.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-7", "eventbridge-console.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "eventbridge-console.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "eventbridge-console.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-3", "eventbridge-console.ap-southeast-3.aliyuncs.com"},
-                {"ap-southeast-1", "eventbridge-console.ap-southeast-1.aliyuncs.com"},
+                {"cn-zhangjiakou", "eventbridge-console.cn-zhangjiakou.aliyuncs.com"},
+                {"cn-shenzhen", "eventbridge-console.cn-shenzhen.aliyuncs.com"},
                 {"ap-northeast-2", "eventbridge-console.ap-northeast-2.aliyuncs.com"},
                 {"ap-northeast-1", "eventbridge-console.ap-northeast-1.aliyuncs.com"},
+                {"cn-chengdu", "eventbridge-console.cn-chengdu.aliyuncs.com"},
+                {"cn-guangzhou", "eventbridge-console.cn-guangzhou.aliyuncs.com"},
+                {"ap-southeast-1", "eventbridge-console.ap-southeast-1.aliyuncs.com"},
+                {"ap-southeast-3", "eventbridge-console.ap-southeast-3.aliyuncs.com"},
+                {"cn-huhehaote", "eventbridge-console.cn-huhehaote.aliyuncs.com"},
+                {"ap-southeast-5", "eventbridge-console.ap-southeast-5.aliyuncs.com"},
+                {"ap-southeast-6", "eventbridge-console.ap-southeast-6.aliyuncs.com"},
+                {"ap-southeast-7", "eventbridge-console.ap-southeast-7.aliyuncs.com"},
+                {"cn-hangzhou", "eventbridge-console.cn-hangzhou.aliyuncs.com"},
+                {"us-east-1", "eventbridge-console.us-east-1.aliyuncs.com"},
+                {"eu-west-1", "eventbridge-console.eu-west-1.aliyuncs.com"},
+                {"us-west-1", "eventbridge-console.us-west-1.aliyuncs.com"},
+                {"eu-central-1", "eventbridge-console.eu-central-1.aliyuncs.com"},
+                {"cn-shenzhen-finance-1", "eventbridge-console.cn-shenzhen-finance-1.aliyuncs.com"},
+                {"cn-beijing-finance-1", "eventbridge-console.cn-beijing-finance-1.aliyuncs.com"},
+                {"cn-shanghai-finance-1", "eventbridge-console.cn-shanghai-finance-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eventbridge", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data using natural language.</para>
+        /// <para>Queries data by using natural language.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -122,7 +122,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data using natural language.</para>
+        /// <para>Queries data by using natural language.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -176,7 +176,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data using natural language.</para>
+        /// <para>Queries data by using natural language.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -194,7 +194,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries data using natural language.</para>
+        /// <para>Queries data by using natural language.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3254,6 +3254,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             {
                 body["EventStreamingName"] = request.EventStreamingName;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                body["Force"] = request.Force;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
@@ -3300,6 +3304,10 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EventStreamingName))
             {
                 body["EventStreamingName"] = request.EventStreamingName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Force))
+            {
+                body["Force"] = request.Force;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -4580,6 +4588,126 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Initiates an agent data semantics generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAgentDataSemanticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAgentDataSemanticsResponse
+        /// </returns>
+        public GenerateAgentDataSemanticsResponse GenerateAgentDataSemanticsWithOptions(GenerateAgentDataSemanticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["AgentName"] = request.AgentName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateAgentDataSemantics",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateAgentDataSemanticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates an agent data semantics generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAgentDataSemanticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAgentDataSemanticsResponse
+        /// </returns>
+        public async Task<GenerateAgentDataSemanticsResponse> GenerateAgentDataSemanticsWithOptionsAsync(GenerateAgentDataSemanticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["AgentName"] = request.AgentName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GenerateAgentDataSemantics",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GenerateAgentDataSemanticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates an agent data semantics generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAgentDataSemanticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAgentDataSemanticsResponse
+        /// </returns>
+        public GenerateAgentDataSemanticsResponse GenerateAgentDataSemantics(GenerateAgentDataSemanticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GenerateAgentDataSemanticsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Initiates an agent data semantics generation task.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GenerateAgentDataSemanticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GenerateAgentDataSemanticsResponse
+        /// </returns>
+        public async Task<GenerateAgentDataSemanticsResponse> GenerateAgentDataSemanticsAsync(GenerateAgentDataSemanticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GenerateAgentDataSemanticsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves agent metadata.</para>
         /// </summary>
         /// 
@@ -4696,6 +4824,126 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the currently effective data semantics of an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentDataSemanticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentDataSemanticsResponse
+        /// </returns>
+        public GetAgentDataSemanticsResponse GetAgentDataSemanticsWithOptions(GetAgentDataSemanticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["AgentName"] = request.AgentName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentDataSemantics",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentDataSemanticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the currently effective data semantics of an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentDataSemanticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentDataSemanticsResponse
+        /// </returns>
+        public async Task<GetAgentDataSemanticsResponse> GetAgentDataSemanticsWithOptionsAsync(GetAgentDataSemanticsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["AgentName"] = request.AgentName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetAgentDataSemantics",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetAgentDataSemanticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the currently effective data semantics of an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentDataSemanticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentDataSemanticsResponse
+        /// </returns>
+        public GetAgentDataSemanticsResponse GetAgentDataSemantics(GetAgentDataSemanticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetAgentDataSemanticsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the currently effective data semantics of an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetAgentDataSemanticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetAgentDataSemanticsResponse
+        /// </returns>
+        public async Task<GetAgentDataSemanticsResponse> GetAgentDataSemanticsAsync(GetAgentDataSemanticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetAgentDataSemanticsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4840,7 +5088,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get data catalog</para>
+        /// <para>Retrieves a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4888,7 +5136,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get data catalog</para>
+        /// <para>Retrieves a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4936,7 +5184,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get data catalog</para>
+        /// <para>Retrieves a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4954,7 +5202,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get data catalog</para>
+        /// <para>Retrieves a data catalog.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4972,12 +5220,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information of a single connection.</para>
+        /// <para>Queries the configuration of a single connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the configuration information of a single connection.</para>
+        /// <para>Queries the configuration of a single connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5019,12 +5267,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information of a single connection.</para>
+        /// <para>Queries the configuration of a single connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the configuration information of a single connection.</para>
+        /// <para>Queries the configuration of a single connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5066,12 +5314,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information of a single connection.</para>
+        /// <para>Queries the configuration of a single connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the configuration information of a single connection.</para>
+        /// <para>Queries the configuration of a single connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5089,12 +5337,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the configuration information of a single connection.</para>
+        /// <para>Queries the configuration of a single connection.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the configuration information of a single connection.</para>
+        /// <para>Queries the configuration of a single connection.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5508,6 +5756,126 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await GetEventStreamingWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the generation progress of data semantics for an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGenerateAgentDataSemanticsProgressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGenerateAgentDataSemanticsProgressResponse
+        /// </returns>
+        public GetGenerateAgentDataSemanticsProgressResponse GetGenerateAgentDataSemanticsProgressWithOptions(GetGenerateAgentDataSemanticsProgressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["AgentName"] = request.AgentName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGenerateAgentDataSemanticsProgress",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGenerateAgentDataSemanticsProgressResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the generation progress of data semantics for an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGenerateAgentDataSemanticsProgressRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGenerateAgentDataSemanticsProgressResponse
+        /// </returns>
+        public async Task<GetGenerateAgentDataSemanticsProgressResponse> GetGenerateAgentDataSemanticsProgressWithOptionsAsync(GetGenerateAgentDataSemanticsProgressRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["AgentName"] = request.AgentName;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetGenerateAgentDataSemanticsProgress",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetGenerateAgentDataSemanticsProgressResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the generation progress of data semantics for an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGenerateAgentDataSemanticsProgressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGenerateAgentDataSemanticsProgressResponse
+        /// </returns>
+        public GetGenerateAgentDataSemanticsProgressResponse GetGenerateAgentDataSemanticsProgress(GetGenerateAgentDataSemanticsProgressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetGenerateAgentDataSemanticsProgressWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Retrieves the generation progress of data semantics for an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetGenerateAgentDataSemanticsProgressRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetGenerateAgentDataSemanticsProgressResponse
+        /// </returns>
+        public async Task<GetGenerateAgentDataSemanticsProgressResponse> GetGenerateAgentDataSemanticsProgressAsync(GetGenerateAgentDataSemanticsProgressRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetGenerateAgentDataSemanticsProgressWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -6356,7 +6724,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data catalog list</para>
+        /// <para>Queries the list of data catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6402,7 +6770,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data catalog list</para>
+        /// <para>Queries the list of data catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6448,7 +6816,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data catalog list</para>
+        /// <para>Queries the list of data catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6466,7 +6834,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query data catalog list</para>
+        /// <para>Queries the list of data catalogs.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -6484,12 +6852,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connection configurations.</para>
+        /// <para>Retrieves a list of connection configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of connection configurations.</para>
+        /// <para>Retrieves a list of connection configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6543,12 +6911,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connection configurations.</para>
+        /// <para>Retrieves a list of connection configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of connection configurations.</para>
+        /// <para>Retrieves a list of connection configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6602,12 +6970,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connection configurations.</para>
+        /// <para>Retrieves a list of connection configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of connection configurations.</para>
+        /// <para>Retrieves a list of connection configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6625,12 +6993,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of connection configurations.</para>
+        /// <para>Retrieves a list of connection configurations.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Queries the list of connection configurations.</para>
+        /// <para>Retrieves a list of connection configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8728,6 +9096,170 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Executes a read-only SQL statement to query internal EventHouse data within a specified time range. The time range only constrains the internal EventHouse data referenced in the SQL statement and does not affect mounted external data sources. Returns a structured result set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Executes a single read-only SQL statement and returns a structured result set. BeginTime and EndTime only constrain the internal EventHouse data referenced in the SQL statement and do not affect mounted external data sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventHouseWithTimeRangeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventHouseWithTimeRangeResponse
+        /// </returns>
+        public QueryEventHouseWithTimeRangeResponse QueryEventHouseWithTimeRangeWithOptions(QueryEventHouseWithTimeRangeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryEventHouseWithTimeRange",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryEventHouseWithTimeRangeResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a read-only SQL statement to query internal EventHouse data within a specified time range. The time range only constrains the internal EventHouse data referenced in the SQL statement and does not affect mounted external data sources. Returns a structured result set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Executes a single read-only SQL statement and returns a structured result set. BeginTime and EndTime only constrain the internal EventHouse data referenced in the SQL statement and do not affect mounted external data sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventHouseWithTimeRangeRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventHouseWithTimeRangeResponse
+        /// </returns>
+        public async Task<QueryEventHouseWithTimeRangeResponse> QueryEventHouseWithTimeRangeWithOptionsAsync(QueryEventHouseWithTimeRangeRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BeginTime))
+            {
+                query["BeginTime"] = request.BeginTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Limit))
+            {
+                query["Limit"] = request.Limit;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Query))
+            {
+                query["Query"] = request.Query;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "QueryEventHouseWithTimeRange",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<QueryEventHouseWithTimeRangeResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a read-only SQL statement to query internal EventHouse data within a specified time range. The time range only constrains the internal EventHouse data referenced in the SQL statement and does not affect mounted external data sources. Returns a structured result set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Executes a single read-only SQL statement and returns a structured result set. BeginTime and EndTime only constrain the internal EventHouse data referenced in the SQL statement and do not affect mounted external data sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventHouseWithTimeRangeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventHouseWithTimeRangeResponse
+        /// </returns>
+        public QueryEventHouseWithTimeRangeResponse QueryEventHouseWithTimeRange(QueryEventHouseWithTimeRangeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return QueryEventHouseWithTimeRangeWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Executes a read-only SQL statement to query internal EventHouse data within a specified time range. The time range only constrains the internal EventHouse data referenced in the SQL statement and does not affect mounted external data sources. Returns a structured result set.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Executes a single read-only SQL statement and returns a structured result set. BeginTime and EndTime only constrain the internal EventHouse data referenced in the SQL statement and do not affect mounted external data sources.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// QueryEventHouseWithTimeRangeRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// QueryEventHouseWithTimeRangeResponse
+        /// </returns>
+        public async Task<QueryEventHouseWithTimeRangeResponse> QueryEventHouseWithTimeRangeAsync(QueryEventHouseWithTimeRangeRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await QueryEventHouseWithTimeRangeWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries event traces.</para>
         /// </summary>
         /// 
@@ -9232,6 +9764,194 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await QueryTracedEventsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves data semantics for an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SaveAgentDataSemanticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveAgentDataSemanticsResponse
+        /// </returns>
+        public SaveAgentDataSemanticsResponse SaveAgentDataSemanticsWithOptions(SaveAgentDataSemanticsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SaveAgentDataSemanticsShrinkRequest request = new SaveAgentDataSemanticsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Examples))
+            {
+                request.ExamplesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Examples, "Examples", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Joins))
+            {
+                request.JoinsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Joins, "Joins", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Metrics))
+            {
+                request.MetricsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Metrics, "Metrics", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Text))
+            {
+                request.TextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Text, "Text", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExamplesShrink))
+            {
+                body["Examples"] = request.ExamplesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JoinsShrink))
+            {
+                body["Joins"] = request.JoinsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricsShrink))
+            {
+                body["Metrics"] = request.MetricsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextShrink))
+            {
+                body["Text"] = request.TextShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveAgentDataSemantics",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveAgentDataSemanticsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves data semantics for an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SaveAgentDataSemanticsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveAgentDataSemanticsResponse
+        /// </returns>
+        public async Task<SaveAgentDataSemanticsResponse> SaveAgentDataSemanticsWithOptionsAsync(SaveAgentDataSemanticsRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SaveAgentDataSemanticsShrinkRequest request = new SaveAgentDataSemanticsShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Examples))
+            {
+                request.ExamplesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Examples, "Examples", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Joins))
+            {
+                request.JoinsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Joins, "Joins", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Metrics))
+            {
+                request.MetricsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Metrics, "Metrics", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Text))
+            {
+                request.TextShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Text, "Text", "json");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentName))
+            {
+                body["AgentName"] = request.AgentName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ExamplesShrink))
+            {
+                body["Examples"] = request.ExamplesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.JoinsShrink))
+            {
+                body["Joins"] = request.JoinsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MetricsShrink))
+            {
+                body["Metrics"] = request.MetricsShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TextShrink))
+            {
+                body["Text"] = request.TextShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SaveAgentDataSemantics",
+                Version = "2020-04-01",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SaveAgentDataSemanticsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves data semantics for an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveAgentDataSemanticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveAgentDataSemanticsResponse
+        /// </returns>
+        public SaveAgentDataSemanticsResponse SaveAgentDataSemantics(SaveAgentDataSemanticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SaveAgentDataSemanticsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Saves data semantics for an agent.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SaveAgentDataSemanticsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SaveAgentDataSemanticsResponse
+        /// </returns>
+        public async Task<SaveAgentDataSemanticsResponse> SaveAgentDataSemanticsAsync(SaveAgentDataSemanticsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SaveAgentDataSemanticsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -10016,12 +10736,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the connection configuration.</para>
+        /// <para>Updates connection configuration information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the connection configuration.</para>
+        /// <para>Updates connection configurations.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10097,12 +10817,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the connection configuration.</para>
+        /// <para>Updates connection configuration information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the connection configuration.</para>
+        /// <para>Updates connection configurations.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10178,12 +10898,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the connection configuration.</para>
+        /// <para>Updates connection configuration information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the connection configuration.</para>
+        /// <para>Updates connection configurations.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10201,12 +10921,12 @@ namespace AlibabaCloud.SDK.Eventbridge20200401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Updates the connection configuration.</para>
+        /// <para>Updates connection configuration information.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Updates the connection configuration.</para>
+        /// <para>Updates connection configurations.</para>
         /// </description>
         /// 
         /// <param name="request">

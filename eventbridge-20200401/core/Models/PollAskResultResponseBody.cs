@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class PollAskResultResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Valid values:</para>
+        /// <para>The API return code. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Success: The operation was successful.</description></item>
         /// <item><description>Other values: An error code was returned. For more information, see error codes.</description></item>

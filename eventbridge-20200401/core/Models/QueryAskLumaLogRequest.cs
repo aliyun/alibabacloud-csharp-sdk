@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string After { get; set; }
 
         /// <summary>
-        /// <para>The agent name. If this parameter is not specified, logs of all agents are queried.</para>
+        /// <para>The agent name. If this parameter is left empty, all agents are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>demo-luma-agent</para>

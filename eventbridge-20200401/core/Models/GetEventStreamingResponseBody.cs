@@ -10,7 +10,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class GetEventStreamingResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code. Success indicates success. Other values indicate fault codes. For details, see Error codes.</para>
+        /// <para>The response code. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Success: The request was successful.</description></item>
+        /// <item><description>Other values: An error occurred. For more information, see error codes.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -54,7 +58,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public long? DelayTime { get; set; }
 
                 /// <summary>
-                /// <para>The difference offset.</para>
+                /// <para>The differential offset.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>0</para>
@@ -64,7 +68,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public long? DiffOffset { get; set; }
 
                 /// <summary>
-                /// <para>The extension property.</para>
+                /// <para>The extension properties.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>{
@@ -77,7 +81,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public Dictionary<string, object> Extensions { get; set; }
 
                 /// <summary>
-                /// <para>The transactions per second.</para>
+                /// <para>The number of transactions processed per second.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>5</para>
@@ -110,7 +114,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Metadata { get; set; }
 
             /// <summary>
-            /// <para>The runtime environment parameters.</para>
+            /// <para>The runtime parameters.</para>
             /// </summary>
             [NameInMap("RunOptions")]
             [Validation(Required=false)]
@@ -124,7 +128,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public GetEventStreamingResponseBodyDataRunOptionsBatchWindow BatchWindow { get; set; }
                 public class GetEventStreamingResponseBodyDataRunOptionsBatchWindow : TeaModel {
                     /// <summary>
-                    /// <para>The maximum number of events that the window can contain. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, data is pushed when any one window meets the threshold.</para>
+                    /// <para>The maximum number of events that the window can contain. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, a push is triggered when any one window is satisfied.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>100</para>
@@ -134,7 +138,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public int? CountBasedWindow { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum time range (in seconds) of events that the window can contain. When this threshold is reached, the data in the window is pushed downstream. If multiple windows exist, data is pushed when any one window meets the threshold.</para>
+                    /// <para>The maximum time range (in seconds) of events that the window can contain. When this threshold is reached, data in the window is pushed downstream. If multiple windows exist, a push is triggered when any one window is satisfied.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>10</para>
@@ -164,7 +168,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>Specifies whether to enable the dead-letter queue. By default, the dead-letter queue is disabled, and messages that exceed the retry policy are discarded.</para>
+                /// <para>Specifies whether to enable the dead-letter queue. By default, the dead-letter queue is not enabled. Messages that exceed the retry policy are discarded.</para>
                 /// </summary>
                 [NameInMap("DeadLetterQueue")]
                 [Validation(Required=false)]
@@ -201,7 +205,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string SecurityGroupId { get; set; }
 
                     /// <summary>
-                    /// <para>The vSwitch ID where the dead-letter queue resides.</para>
+                    /// <para>The vSwitch ID of the dead-letter queue.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-m5ev8asdc6h12345****</para>
@@ -211,7 +215,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The VPC ID where the dead-letter queue resides.</para>
+                    /// <para>The VPC ID of the dead-letter queue.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-2zehizpoendb3****</para>
@@ -223,7 +227,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The fault tolerance policy. Valid values: NONE (no fault tolerance) and ALL (tolerate all faults).</para>
+                /// <para>The fault tolerance policy. Valid values:</para>
+                /// <list type="bullet">
+                /// <item><description>NONE: no fault tolerance.</description></item>
+                /// <item><description>ALL: tolerates all exceptions.</description></item>
+                /// </list>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ALL</para>
@@ -233,7 +241,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public string ErrorsTolerance { get; set; }
 
                 /// <summary>
-                /// <para>The concurrent tasks.</para>
+                /// <para>The concurrency.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2</para>
@@ -243,7 +251,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public int? MaximumTasks { get; set; }
 
                 /// <summary>
-                /// <para>The retry policy when event push failed.</para>
+                /// <para>The retry strategy when event delivery fails.</para>
                 /// </summary>
                 [NameInMap("RetryStrategy")]
                 [Validation(Required=false)]
@@ -260,7 +268,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public float? MaximumEventAgeInSeconds { get; set; }
 
                     /// <summary>
-                    /// <para>The maximum number of retry attempts.</para>
+                    /// <para>The maximum number of retries.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>2</para>
@@ -270,7 +278,11 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public float? MaximumRetryAttempts { get; set; }
 
                     /// <summary>
-                    /// <para>The retry policy. Valid values: BACKOFF_RETRY (backoff retry) and EXPONENTIALDECAY_RETRY (exponential attenuation retry).</para>
+                    /// <para>The retry strategy. Valid values:</para>
+                    /// <list type="bullet">
+                    /// <item><description>BACKOFF_RETRY: backoff retry.</description></item>
+                    /// <item><description>EXPONENTIALDECAY_RETRY: exponential decay retry.</description></item>
+                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>BACKOFF_RETRY</para>
@@ -299,7 +311,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public SinkAgentRunParameters SinkAgentRunParameters { get; set; }
 
                 /// <summary>
-                /// <para>The description.</para>
+                /// <para>The description information.</para>
                 /// </summary>
                 [NameInMap("SinkApacheKafkaParameters")]
                 [Validation(Required=false)]
@@ -318,25 +330,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string CompressionType { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies the target topic routing strategy for messages. If both the topic parameter and the DynamicTopic parameter are specified, the DynamicTopic parameter takes precedence. Two configuration modes are supported:
-                    ///     1. <b>Static constant mode</b>: Specify a fixed topic name string (for example, &quot;order_created&quot;). All messages are sent to this topic.
-                    ///     2. <b>Dynamic extraction mode</b>: Specify a standard JSONPath expression (for example, &quot;$.user.id&quot; or &quot;$.metadata.category&quot;). The system parses the upstream message body and extracts the matching field value as the target topic name.</para>
+                    /// <para>The target topic policy for message routing. If both the topic parameter and the DynamicTopic parameter are specified, the value of the DynamicTopic parameter takes precedence. The following two configuration modes are supported:</para>
                     /// </summary>
                     [NameInMap("DynamicTopic")]
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic DynamicTopic { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersDynamicTopic : TeaModel {
                         /// <summary>
-                        /// <para>The transformation type. Valid values:
-                        /// CONSTANT: fixed value.
-                        /// JSONPATH: extracted from upstream based on the path.</para>
+                        /// <para>The transformation type.</para>
                         /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The.</para>
+                        /// <para>The template.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -440,35 +448,35 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string SecurityProtocol { get; set; }
 
                     /// <summary>
-                    /// <para>[Required for encrypted private key] The Kafka client private key password. Required when the client private key is encrypted (the PEM file contains \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; markers). Provide the decryption password. Leave empty if the private key is not encrypted. Note: This password is only used to decrypt the private key and is unrelated to Kafka authentication.</para>
+                    /// <para>[Required for encrypted private key] The Kafka client private key password. Required when the client private key is encrypted with a password (the PEM file contains \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; markers). Provide the decryption password. Leave this parameter empty if the private key is not encrypted. Note: This password is used only to decrypt the private key and is not related to Kafka authentication.</para>
                     /// </summary>
                     [NameInMap("SslKeyPassword")]
                     [Validation(Required=false)]
                     public string SslKeyPassword { get; set; }
 
                     /// <summary>
-                    /// <para>[Required for mutual authentication] The Kafka client certificate chain. Required when the Kafka server enables mutual SSL authentication (ssl.client.auth=required). Format: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, intermediate CA certificate next, root CA certificate optional). Note: Ensure each PEM file content begins with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, then Base64-encode the concatenated content.</para>
+                    /// <para>[Required for mutual authentication] The Kafka client certificate chain. Required when the Kafka server enables mutual SSL authentication (ssl.client.auth=required). Format: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, with the root CA certificate being optional). Note: Ensure each PEM file content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, then Base64-encode the concatenated content.</para>
                     /// </summary>
                     [NameInMap("SslKeystoreCertificateChain")]
                     [Validation(Required=false)]
                     public string SslKeystoreCertificateChain { get; set; }
 
                     /// <summary>
-                    /// <para><b>Required for bidirectional authentication</b> The SSL private key configuration object. When the Kafka server enables bidirectional SSL authentication, the client private key must be provided. Only KMS pattern is supported for the key: specify the Key Management Service EPS resource that stores the private key through KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:ap-southeast-1:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}</para>
+                    /// <para>[Required for bidirectional authentication] The SSL private key configuration object. When the Kafka server enables bidirectional SSL authentication, provide the client private key. Only KMS pattern is supported: specify the Key Management Service EPS resource that stores the private key through KmsArn. The system retrieves the private key content from KMS only in memory, providing higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:ap-southeast-1:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}</para>
                     /// </summary>
                     [NameInMap("SslKeystoreKey")]
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey SslKeystoreKey { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkApacheKafkaParametersSslKeystoreKey : TeaModel {
                         /// <summary>
-                        /// <para>[Required] The KMS resource ARN that stores the SSL private key. Used to locate the Key Management Service instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. Obtain this value from the ARN information of the corresponding key in the KMS console.</para>
+                        /// <para>[Required] The KMS resource ARN that stores the SSL private key. Used to locate the Key Management Service instance that stores the client private key. Format example: \&quot;acs:kms:ap-southeast-1:123456789:secret/ssl-keystore-key-xxxx\&quot;. To obtain the ARN, view the ARN information of the corresponding key in the KMS console.</para>
                         /// </summary>
                         [NameInMap("KmsArn")]
                         [Validation(Required=false)]
                         public string KmsArn { get; set; }
 
                         /// <summary>
-                        /// <para>[KMS KV mode] The key name in the KMS credential. When the KMS credential is stored as a key-value (KV) structure, specify this parameter to indicate the key corresponding to the SSL private key. Example: if the KMS credential is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, specify \&quot;ssl_keystore_key\&quot;. Leave this parameter empty if the KMS credential is in plain text mode (directly storing the PEM content of the private key).</para>
+                        /// <para>[KMS KV mode] The key name in the KMS credential. When the KMS credential is stored as a key-value (KV) structure, specify this parameter to indicate the key corresponding to the SSL private key. Example: If the KMS credential is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, enter \&quot;ssl_keystore_key\&quot;. If the KMS credential is in plain text mode (directly storing the PEM content of the private key), leave this parameter empty.</para>
                         /// </summary>
                         [NameInMap("KmsSecretValueKey")]
                         [Validation(Required=false)]
@@ -477,7 +485,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>[Required for SSL] The Kafka server trust certificate. Used to verify the legitimacy of the Kafka Broker SSL certificate and prevent man-in-the-middle attacks. Format: Base64-encoded PEM format, typically containing the CA certificate or the server certificate of the Kafka server. Example: Base64-encode the PEM file content of the CA certificate (ensure it begins with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued it.</para>
+                    /// <para>[Required for SSL] The Kafka server trust certificate. Used to authenticate the validity of the Kafka Broker SSL certificate and prevent man-in-the-middle attacks. Format: Base64 encoding of PEM format, typically containing the CA certificate or the server certificate of the Kafka server. Example: Base64-encode the PEM file content of the CA certificate (ensure it starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</para>
                     /// </summary>
                     [NameInMap("SslTruststoreCertificates")]
                     [Validation(Required=false)]
@@ -551,7 +559,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParameters SinkApacheRocketMQCheckpointParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkApacheRocketMQCheckpointParameters : TeaModel {
                     /// <summary>
-                    /// <para>The UNIX timestamp of message consumption.</para>
+                    /// <para>The timestamp of message consumption.</para>
                     /// </summary>
                     [NameInMap("ConsumeTimestamp")]
                     [Validation(Required=false)]
@@ -568,14 +576,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The UNIX timestamp.</para>
+                        /// <para>The timestamp.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1570761026400</para>
@@ -604,7 +612,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -633,7 +641,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceEndpoint { get; set; }
 
                     /// <summary>
-                    /// <para>The password for the username.</para>
+                    /// <para>The password of the username.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <hr>
@@ -690,7 +698,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -719,7 +727,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string VSwitchId { get; set; }
 
                     /// <summary>
-                    /// <para>The ID of the virtual private cloud (VPC).</para>
+                    /// <para>The ID of the VPC.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-2zeccak5pb0j3ay******</para>
@@ -731,7 +739,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The API destination target parameters.</para>
+                /// <para>The ApiDestination event target parameters.</para>
                 /// </summary>
                 [NameInMap("SinkApiDestinationParameters")]
                 [Validation(Required=false)]
@@ -821,7 +829,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaParameters SinkCustomizedKafkaParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkCustomizedKafkaParameters : TeaModel {
                     /// <summary>
-                    /// <para>The instance ID of the MSMQ for Apache Kafka instance.</para>
+                    /// <para>The instance ID of ApsaraMQ for Kafka.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>90be1f96-4229-4535-bb76-34b4f6fb****</para>
@@ -860,7 +868,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Collection { get; set; }
 
                     /// <summary>
-                    /// <para>The schema field definition of the table entry when inserting into DashVector. The result after event content transformation must be in JSON format.</para>
+                    /// <para>The schema field definition of the table entry when inserting data into DashVector. The result after event content transformation must be in JSON format.</para>
                     /// </summary>
                     [NameInMap("DashVectorSchemaParameters")]
                     [Validation(Required=false)]
@@ -978,10 +986,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <list type="bullet">
-                        /// <item><description>If Form is CONSTANT: the constant value.</description></item>
-                        /// <item><description>If Form is JSONPATH: the content to fetch by JSONPath.</description></item>
+                        /// <item><description>If Form is set to CONSTANT: the constant value.</description></item>
                         /// </list>
-                        /// <para>Note: The Value field cannot exceed 10240 characters.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>default</para>
@@ -1021,10 +1027,8 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <list type="bullet">
-                        /// <item><description>If Form is JSONPATH: the content to fetch by JSONPath.</description></item>
-                        /// <item><description>If Form is TEMPLATE: the template variable.</description></item>
+                        /// <item><description>If Form is set to JSONPATH: the content extracted by JSONPath.</description></item>
                         /// </list>
-                        /// <para>Note: The Value field cannot exceed 10240 characters.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$.data.requestId</para>
@@ -1060,8 +1064,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The content to fetch by JSONPath.</para>
-                        /// <para>Note: The Value field cannot exceed 10240 characters.</para>
+                        /// <para>The content extracted by JSONPath.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$.data.messageBody</para>
@@ -1151,7 +1154,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The node role name.</para>
+                    /// <para>The task role name.</para>
                     /// </summary>
                     [NameInMap("RoleName")]
                     [Validation(Required=false)]
@@ -1223,7 +1226,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The TUPLE type topic content pattern.</para>
+                    /// <para>The topic content schema for the TUPLE type.</para>
                     /// </summary>
                     [NameInMap("TopicSchema")]
                     [Validation(Required=false)]
@@ -1240,7 +1243,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{&quot;k1&quot;:&quot;${k1}&quot;,&quot;k2&quot;:&quot;${k2}&quot;}</para>
@@ -1250,7 +1253,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The TUPLE type topic content pattern.</para>
+                        /// <para>The topic content schema for the TUPLE type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>{&quot;k1&quot;:&quot;value1&quot;,&quot;k2&quot;:&quot;value2&quot;}</para>
@@ -1262,11 +1265,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The topic type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>TUPLE</description></item>
-                    /// <item><description>BLOB</description></item>
-                    /// </list>
+                    /// <para>The topic type.</para>
                     /// </summary>
                     [NameInMap("TopicType")]
                     [Validation(Required=false)]
@@ -1290,11 +1289,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The topic type. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>TUPLE</description></item>
-                        /// <item><description>BLOB</description></item>
-                        /// </list>
+                        /// <para>The topic type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TUPLE</para>
@@ -1548,14 +1543,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public GetEventStreamingResponseBodyDataSinkSinkFcParametersBody Body { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkFcParametersBody : TeaModel {
                         /// <summary>
-                        /// <para>The transformation format. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>ORIGINAL: complete event </description></item>
-                        /// <item><description>JSONPATH: partial event </description></item>
-                        /// <item><description>CONSTANT: constant </description></item>
-                        /// <item><description>TEMPLATE: template</description></item>
-                        /// </list>
-                        /// <para>For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-transformation">Event transformation</a>.</para>
+                        /// <para>The transformation format:</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>TEMPLATE</para>
@@ -1565,7 +1553,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -1589,7 +1577,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The delivery concurrency. Minimum value: 1.</para>
+                    /// <para>The delivery concurrency. The minimum value is 1.</para>
                     /// </summary>
                     [NameInMap("Concurrency")]
                     [Validation(Required=false)]
@@ -1606,7 +1594,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -1616,7 +1604,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The delivery concurrency. Minimum value: 1.</para>
+                        /// <para>The delivery concurrency. The minimum value is 1.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -1635,13 +1623,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public GetEventStreamingResponseBodyDataSinkSinkFcParametersDataFormat DataFormat { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkFcParametersDataFormat : TeaModel {
                         /// <summary>
-                        /// <para>The transformation format. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>ORIGINAL: complete event</description></item>
-                        /// <item><description>JSONPATH: partial event</description></item>
-                        /// <item><description>CONSTANT: constant</description></item>
-                        /// <item><description>TEMPLATE: template</description></item>
-                        /// </list>
+                        /// <para>The transformation format:</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>JSONPATH</para>
@@ -1651,7 +1633,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>$.data.key</para>
@@ -1692,7 +1674,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -1714,11 +1696,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The invocation type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>Sync: synchronous.</description></item>
-                    /// <item><description>Async: asynchronous.</description></item>
-                    /// </list>
+                    /// <para>Specifies whether the invocation is synchronous or asynchronous.</para>
                     /// </summary>
                     [NameInMap("InvocationType")]
                     [Validation(Required=false)]
@@ -1735,7 +1713,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -1745,11 +1723,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The invocation type. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>Sync: synchronous.</description></item>
-                        /// <item><description>Async: asynchronous.</description></item>
-                        /// </list>
+                        /// <para>Specifies whether the invocation is synchronous or asynchronous.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Async</para>
@@ -1778,7 +1752,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -1800,7 +1774,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The service name.</para>
+                    /// <para>The name of the service.</para>
                     /// </summary>
                     [NameInMap("ServiceName")]
                     [Validation(Required=false)]
@@ -1817,7 +1791,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -1827,7 +1801,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The service name.</para>
+                        /// <para>The name of the service.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>myService</para>
@@ -1841,27 +1815,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The Sink CloudFlow (Chinese: Fnf) parameters.</para>
+                /// <para>The Sink Fnf parameters.</para>
                 /// </summary>
                 [NameInMap("SinkFnfParameters")]
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSinkSinkFnfParameters SinkFnfParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkFnfParameters : TeaModel {
                     /// <summary>
-                    /// <para>The execute name.</para>
+                    /// <para>The execution name.</para>
                     /// </summary>
                     [NameInMap("ExecutionName")]
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkFnfParametersExecutionName ExecutionName { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkFnfParametersExecutionName : TeaModel {
                         /// <summary>
-                        /// <para>The transformation format. Default value: CONSTANT. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>JSONPATH: partial event.</description></item>
-                        /// <item><description>CONSTANT: constant.</description></item>
-                        /// <item><description>TEMPLATE: template.</description></item>
-                        /// </list>
-                        /// <para>For more information, see <a href="https://www.alibabacloud.com/help/en/eventbridge/user-guide/event-transformation">Event transformation</a>.</para>
+                        /// <para>The format of the transformation. Default value: CONSTANT.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>CONSTANT</para>
@@ -1871,14 +1839,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The execute name.</para>
+                        /// <para>The execution name.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123</para>
@@ -1907,7 +1875,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -1926,7 +1894,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The execute input information.</para>
+                    /// <para>The execution input information.</para>
                     /// </summary>
                     [NameInMap("Input")]
                     [Validation(Required=false)]
@@ -1943,14 +1911,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The execute input information.</para>
+                        /// <para>The execution input information.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>123</para>
@@ -1979,7 +1947,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -2000,26 +1968,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The HTTPS target parameters.</para>
+                /// <para>The HTTPS event target parameters.</para>
                 /// </summary>
                 [NameInMap("SinkHttpsParameters")]
                 [Validation(Required=false)]
                 public SinkHttpsParameters SinkHttpsParameters { get; set; }
 
                 /// <summary>
-                /// <para>The parameters for the ApsaraMQ for Kafka sink.</para>
+                /// <para>The Sink Kafka parameters.</para>
                 /// </summary>
                 [NameInMap("SinkKafkaParameters")]
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSinkSinkKafkaParameters SinkKafkaParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkKafkaParameters : TeaModel {
                     /// <summary>
-                    /// <para>The Kafka write confirm pattern:</para>
-                    /// <list type="bullet">
-                    /// <item><description>acks=0: No response is required from the server. Performance is high, but the risk of data loss is high.</description></item>
-                    /// <item><description>acks=1: A response is returned after the primary node writes successfully. Performance is moderate, and the risk of data loss is moderate. Data may be lost if the primary node has a breakdown.</description></item>
-                    /// <item><description>acks=all: A response is returned after the primary node writes successfully and the secondary nodes complete synchronization. Performance is low, but data is more secure. Data is lost only if both the primary and secondary nodes have a breakdown.</description></item>
-                    /// </list>
+                    /// <para>The Kafka write acknowledgment mode.</para>
                     /// </summary>
                     [NameInMap("Acks")]
                     [Validation(Required=false)]
@@ -2036,7 +1999,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2046,12 +2009,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The Kafka write confirm pattern:</para>
-                        /// <list type="bullet">
-                        /// <item><description>acks=0: No response is required from the server. Performance is high, but the risk of data loss is high.</description></item>
-                        /// <item><description>acks=1: A response is returned after the primary node writes successfully. Performance is moderate, and the risk of data loss is moderate. Data may be lost if the primary node has a breakdown.</description></item>
-                        /// <item><description>acks=all: A response is returned after the primary node writes successfully and the secondary nodes complete synchronization. Performance is low, but data is more secure. Data is lost only if both the primary and secondary nodes have a breakdown.</description></item>
-                        /// </list>
+                        /// <para>The Kafka write acknowledgment mode.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1</para>
@@ -2067,25 +2025,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string CompressionType { get; set; }
 
                     /// <summary>
-                    /// <para>Specifies the target topic routing strategy for messages. If both the topic parameter and the DynamicTopic parameter are specified, the DynamicTopic parameter takes precedence. Two configuration modes are supported:
-                    ///     1. <b>Static constant mode</b>: Specify a fixed topic name string (for example, &quot;order_created&quot;). All messages are sent to this topic.
-                    ///     2. <b>Dynamic extraction mode</b>: Specify a standard JSONPath expression (for example, &quot;$.user.id&quot; or &quot;$.metadata.category&quot;). The system parses the upstream message body and extracts the matching field value as the target topic name.</para>
+                    /// <para>The target topic policy for message routing. If both the topic parameter and the DynamicTopic parameter are specified, the value of the DynamicTopic parameter takes precedence. The following two configuration modes are supported:</para>
                     /// </summary>
                     [NameInMap("DynamicTopic")]
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic DynamicTopic { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkKafkaParametersDynamicTopic : TeaModel {
                         /// <summary>
-                        /// <para>The transformation type. Valid values:
-                        /// CONSTANT: fixed value.
-                        /// JSONPATH: extracted from upstream based on the path.</para>
+                        /// <para>The transformation type.</para>
                         /// </summary>
                         [NameInMap("Form")]
                         [Validation(Required=false)]
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The.</para>
+                        /// <para>The template.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -2108,13 +2062,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders Headers { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkKafkaParametersHeaders : TeaModel {
                         /// <summary>
-                        /// <para>The transformation format. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>ORIGINAL: complete event</description></item>
-                        /// <item><description>JSONPATH: partial event</description></item>
-                        /// <item><description>CONSTANT: constant</description></item>
-                        /// <item><description>TEMPLATE: template</description></item>
-                        /// </list>
+                        /// <para>The transformation format:</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>CONSTANT</para>
@@ -2124,7 +2072,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2148,7 +2096,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The target service type is MSMQ for Apache Kafka.</para>
+                    /// <para>The event target type is Message Queue for Apache Kafka. The message queue is MSMQ for Kafka.</para>
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -2165,7 +2113,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2204,7 +2152,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2243,7 +2191,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2282,7 +2230,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2308,7 +2256,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters for the Simple MSMQ (formerly MNS) event target.</para>
+                /// <para>The Simple Message Queue (formerly MNS) event target.</para>
                 /// </summary>
                 [NameInMap("SinkMNSParameters")]
                 [Validation(Required=false)]
@@ -2332,7 +2280,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2373,7 +2321,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -2392,7 +2340,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The target service type is Simple MSMQ (formerly MNS).</para>
+                    /// <para>The target service type is Simple Message Queue (formerly MNS).</para>
                     /// </summary>
                     [NameInMap("QueueName")]
                     [Validation(Required=false)]
@@ -2409,14 +2357,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the Simple MSMQ (formerly MNS) queue.</para>
+                        /// <para>The name of the Simple Message Queue (formerly MNS) queue.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>MyQueue</para>
@@ -2472,7 +2420,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2514,7 +2462,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Exchange { get; set; }
 
                     /// <summary>
-                    /// <para>The unique identity of the message.</para>
+                    /// <para>The unique identifier of the message.</para>
                     /// </summary>
                     [NameInMap("MessageId")]
                     [Validation(Required=false)]
@@ -2531,7 +2479,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -2570,7 +2518,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Password { get; set; }
 
                     /// <summary>
-                    /// <para>The additional property of the message.</para>
+                    /// <para>The additional properties of the message.</para>
                     /// </summary>
                     [NameInMap("Properties")]
                     [Validation(Required=false)]
@@ -2587,7 +2535,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2636,7 +2584,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2698,7 +2646,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The virtual hostname of the RabbitMQ instance.</para>
+                    /// <para>The virtual host name of RabbitMQ.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vhost1</para>
@@ -2728,7 +2676,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public SinkRabbitMQMsgSyncParameters SinkRabbitMQMsgSyncParameters { get; set; }
 
                 /// <summary>
-                /// <para>The parameters for the ApsaraMQ for RabbitMQ sink.</para>
+                /// <para>The parameters of the Sink RabbitMQ event target.</para>
                 /// </summary>
                 [NameInMap("SinkRabbitMQParameters")]
                 [Validation(Required=false)]
@@ -2752,7 +2700,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2776,7 +2724,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The Exchange mode. This parameter is required only when TargetType is set to Exchange.</para>
+                    /// <para>The Exchange mode.</para>
                     /// </summary>
                     [NameInMap("Exchange")]
                     [Validation(Required=false)]
@@ -2793,7 +2741,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2803,7 +2751,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the Exchange on the MSMQ for RabbitMQ message instance.</para>
+                        /// <para>The name of the Exchange on the MSMQ for RabbitMQ message queue instance.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>a_exchange</para>
@@ -2815,7 +2763,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The target service type is MSMQ for RabbitMQ message.</para>
+                    /// <para>The event target type is MSMQ for RabbitMQ. The message queue is RabbitMQ.</para>
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -2832,7 +2780,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2842,7 +2790,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The instance ID of the MSMQ for RabbitMQ message instance.</para>
+                        /// <para>The instance ID of the MSMQ for RabbitMQ message queue.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>e5c9b727-e06c-4d7e-84d5-f8ce644e****</para>
@@ -2871,7 +2819,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2895,7 +2843,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The filter properties.</para>
+                    /// <para>The filtering properties.</para>
                     /// </summary>
                     [NameInMap("Properties")]
                     [Validation(Required=false)]
@@ -2912,7 +2860,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2936,7 +2884,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The Queue mode. This parameter is required only when TargetType is set to Queue.</para>
+                    /// <para>The Queue mode.</para>
                     /// </summary>
                     [NameInMap("QueueName")]
                     [Validation(Required=false)]
@@ -2953,7 +2901,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -2963,7 +2911,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the queue on the instance.</para>
+                        /// <para>The name of the Queue on the instance.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>MyQueue</para>
@@ -2975,7 +2923,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The routing rule of the message. This parameter is required only when TargetType is set to Exchange.</para>
+                    /// <para>The routing rule of the message.</para>
                     /// </summary>
                     [NameInMap("RoutingKey")]
                     [Validation(Required=false)]
@@ -2992,7 +2940,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -3031,7 +2979,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -3042,10 +2990,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The target type. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>Exchange: Exchange mode.</description></item>
-                        /// <item><description>Queue: Queue mode.</description></item>
-                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Exchange/Queue</para>
@@ -3057,7 +3001,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The name of the vhost on the MSMQ for RabbitMQ message instance.</para>
+                    /// <para>The vhost name of the MSMQ for RabbitMQ message queue instance.</para>
                     /// </summary>
                     [NameInMap("VirtualHostName")]
                     [Validation(Required=false)]
@@ -3074,14 +3018,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The name of the vhost on the MSMQ for RabbitMQ message instance.</para>
+                        /// <para>The vhost name of the MSMQ for RabbitMQ message queue instance.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>rabbit-host</para>
@@ -3102,7 +3046,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParameters SinkRocketMQCheckpointParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkRocketMQCheckpointParameters : TeaModel {
                     /// <summary>
-                    /// <para>The UNIX timestamp of message consumption.</para>
+                    /// <para>The timestamp of message consumption.</para>
                     /// </summary>
                     [NameInMap("ConsumeTimestamp")]
                     [Validation(Required=false)]
@@ -3119,14 +3063,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The UNIX timestamp.</para>
+                        /// <para>The timestamp.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>1570761026400</para>
@@ -3155,7 +3099,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -3185,10 +3129,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     /// <summary>
                     /// <para>The instance type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance.</description></item>
-                    /// <item><description>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance.</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Cloud_4</para>
@@ -3198,7 +3138,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceType { get; set; }
 
                     /// <summary>
-                    /// <para>The topic of the MSMQ for RocketMQ message instance.</para>
+                    /// <para>The topic of the ApsaraMQ for RocketMQ instance.</para>
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
@@ -3215,14 +3155,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The topic name of the MSMQ for RocketMQ message instance.</para>
+                        /// <para>The name of the topic of the ApsaraMQ for RocketMQ instance.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Mytopic</para>
@@ -3260,7 +3200,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -3284,7 +3224,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The delivery order type of messages. Optional. The default value is concurrent delivery.</para>
+                    /// <para>The delivery order type of messages. This parameter is optional. Default value: concurrent delivery.</para>
                     /// </summary>
                     [NameInMap("DeliveryOrderType")]
                     [Validation(Required=false)]
@@ -3301,20 +3241,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The delivery order type. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description><para><b>Orderly:</b> Ordered delivery.</para>
-                        /// </description></item>
-                        /// <item><description><para><b>Concurrently:</b> Concurrent delivery.</para>
-                        /// </description></item>
-                        /// </list>
+                        /// <para>The delivery order type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Concurrently</para>
@@ -3362,7 +3296,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The target service type is MSMQ for RocketMQ message.</para>
+                    /// <para>The event target type is ApsaraMQ for RocketMQ.</para>
                     /// </summary>
                     [NameInMap("InstanceId")]
                     [Validation(Required=false)]
@@ -3379,7 +3313,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -3389,7 +3323,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The instance ID of the MSMQ for RocketMQ message instance.</para>
+                        /// <para>The instance ID of ApsaraMQ for RocketMQ.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>MQ_INST_164901546557****_BAAN****</para>
@@ -3438,11 +3372,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     /// <summary>
                     /// <para>The instance type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default)</description></item>
-                    /// <item><description>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</description></item>
-                    /// <item><description>SelfBuilt: self-managed Apache RocketMQ cluster</description></item>
-                    /// </list>
                     /// </summary>
                     [NameInMap("InstanceType")]
                     [Validation(Required=false)]
@@ -3467,11 +3396,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                         /// <summary>
                         /// <para>The instance type. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default)</description></item>
-                        /// <item><description>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</description></item>
-                        /// <item><description>SelfBuilt: self-managed Apache RocketMQ cluster</description></item>
-                        /// </list>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Cloud_4</para>
@@ -3519,7 +3443,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The filter properties.</para>
+                    /// <para>The filtering properties.</para>
                     /// </summary>
                     [NameInMap("Keys")]
                     [Validation(Required=false)]
@@ -3536,7 +3460,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -3560,11 +3484,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The network type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>PublicNetwork</description></item>
-                    /// <item><description>PrivateNetwork</description></item>
-                    /// </list>
+                    /// <para>The network type.</para>
                     /// </summary>
                     [NameInMap("Network")]
                     [Validation(Required=false)]
@@ -3588,11 +3508,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The network type. Valid values:</para>
-                        /// <list type="bullet">
-                        /// <item><description>PublicNetwork</description></item>
-                        /// <item><description>PrivateNetwork</description></item>
-                        /// </list>
+                        /// <para>The network type.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>PublicNetwork</para>
@@ -3604,7 +3520,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The filter properties.</para>
+                    /// <para>The filtering properties.</para>
                     /// </summary>
                     [NameInMap("Properties")]
                     [Validation(Required=false)]
@@ -3621,7 +3537,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -3681,13 +3597,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The sharding key parameter of the message.</para>
-                    /// <remarks>
-                    /// <list type="bullet">
-                    /// <item><description>ShardingKey is required when DeliveryOrderType is set to Orderly.</description></item>
-                    /// <item><description>When Source is RocketMQ, ShardingKey can be empty. In this case, the upstream BrokerName and QueueId are concatenated to form the message ShardingKey.</description></item>
-                    /// </list>
-                    /// </remarks>
+                    /// <para>The sharding key of the message.</para>
                     /// </summary>
                     [NameInMap("ShardingKey")]
                     [Validation(Required=false)]
@@ -3704,7 +3614,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -3723,7 +3633,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The filter properties.</para>
+                    /// <para>The filtering properties.</para>
                     /// </summary>
                     [NameInMap("Tags")]
                     [Validation(Required=false)]
@@ -3740,7 +3650,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -3764,7 +3674,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The topic of the MSMQ for RocketMQ message instance.</para>
+                    /// <para>The topic of the ApsaraMQ for RocketMQ instance.</para>
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
@@ -3781,7 +3691,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -3791,7 +3701,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The topic name of the MSMQ for RocketMQ message instance.</para>
+                        /// <para>The topic name of the ApsaraMQ for RocketMQ instance.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>Mytopic</para>
@@ -3884,7 +3794,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public GetEventStreamingResponseBodyDataSinkSinkSLSParameters SinkSLSParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSinkSinkSLSParameters : TeaModel {
                     /// <summary>
-                    /// <para>The content to send to SLS.</para>
+                    /// <para>The content sent to Simple Log Service.</para>
                     /// </summary>
                     [NameInMap("Body")]
                     [Validation(Required=false)]
@@ -3901,7 +3811,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>The value of ${key} is ${value}!</para>
@@ -3925,14 +3835,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The key-value pairs of custom logs. This parameter takes effect only when ContentType is set to KeyValue. Each key-value pair is represented by Key_n and Value_n.</para>
+                    /// <para>The key-value pairs of the custom log. This parameter takes effect only when ContentType is set to KeyValue. Each key-value pair is represented by Key_n and Value_n.</para>
                     /// </summary>
                     [NameInMap("ContentSchema")]
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSinkSinkSLSParametersContentSchema ContentSchema { get; set; }
                     public class GetEventStreamingResponseBodyDataSinkSinkSLSParametersContentSchema : TeaModel {
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>CONSTANT</para>
@@ -3942,7 +3852,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -3961,11 +3871,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The data format of Simple Log Service. You can select the default format or configure a specified key-value pair. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>JSON</description></item>
-                    /// <item><description>KeyValue</description></item>
-                    /// </list>
+                    /// <para>The data format of Simple Log Service. You can select the default format or configure a specified key-value pair.</para>
                     /// </summary>
                     [NameInMap("ContentType")]
                     [Validation(Required=false)]
@@ -3982,7 +3888,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -4018,7 +3924,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -4054,7 +3960,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
@@ -4073,7 +3979,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The role name for authorization of the event bus EventBridge to read Simple Log Service log content. The following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot; and set &quot;Trusted Service&quot; to &quot;event bus&quot;.</para>
+                    /// <para>The role that provides authorization for the event bus EventBridge to read Simple Log Service log content. To use this role, the following conditions must be met: when creating the role used by the service in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot; and set &quot;Trusted Service&quot; to &quot;event bus&quot;.</para>
                     /// </summary>
                     [NameInMap("RoleName")]
                     [Validation(Required=false)]
@@ -4090,14 +3996,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The role name for authorization of the event bus EventBridge to read Simple Log Service log content. The following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot; and set &quot;Trusted Service&quot; to &quot;event bus&quot;.</para>
+                        /// <para>The role that provides authorization for the event bus EventBridge to read Simple Log Service log content. To use this role, the following conditions must be met: when creating the role used by the service in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot; and set &quot;Trusted Service&quot; to &quot;event bus&quot;.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>testRole</para>
@@ -4109,7 +4015,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>The topic where the log resides, corresponding to the SLS reserved word &quot;topic&quot;.</para>
+                    /// <para>The topic where the log resides, corresponding to the Simple Log Service reserved field &quot;topic&quot;.</para>
                     /// </summary>
                     [NameInMap("Topic")]
                     [Validation(Required=false)]
@@ -4126,14 +4032,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                         public string Form { get; set; }
 
                         /// <summary>
-                        /// <para>The template.</para>
+                        /// <para>The template style.</para>
                         /// </summary>
                         [NameInMap("Template")]
                         [Validation(Required=false)]
                         public string Template { get; set; }
 
                         /// <summary>
-                        /// <para>The topic where the log resides, corresponding to the SLS reserved word &quot;topic&quot;.</para>
+                        /// <para>The topic where the log resides, corresponding to the Simple Log Service reserved field &quot;topic&quot;.</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>testTopic</para>
@@ -4196,35 +4102,35 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string SecurityProtocol { get; set; }
 
                     /// <summary>
-                    /// <para>[Required for encrypted private key] The Kafka client private key password. Required when the client private key is encrypted (the PEM file contains \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; markers). Provide the decryption password. Leave empty if the private key is not encrypted. Note: This password is only used to decrypt the private key and is unrelated to Kafka authentication.</para>
+                    /// <para>[Required for encrypted private key] The Kafka client private key password. Required when the client private key is encrypted with a password (the PEM file contains \&quot;Proc-Type: 4,ENCRYPTED\&quot; or \&quot;ENCRYPTED\&quot; markers). Provide the decryption password. Leave this parameter empty if the private key is not encrypted. Note: This password is used only to decrypt the private key and is not related to Kafka authentication.</para>
                     /// </summary>
                     [NameInMap("SslKeyPassword")]
                     [Validation(Required=false)]
                     public string SslKeyPassword { get; set; }
 
                     /// <summary>
-                    /// <para>[Required for mutual authentication] The Kafka client certificate chain. Required when the Kafka server enables mutual SSL authentication (ssl.client.auth=required). Format: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, intermediate CA certificate next, root CA certificate optional). Note: Ensure each PEM file content begins with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, then Base64-encode the concatenated content.</para>
+                    /// <para>[Required for mutual authentication] The Kafka client certificate chain. Required when the Kafka server enables mutual SSL authentication (ssl.client.auth=required). Format: Base64-encoded PEM format, containing the client certificate and the complete certificate chain (client certificate first, followed by intermediate CA certificates, with the root CA certificate being optional). Note: Ensure each PEM file content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;, then Base64-encode the concatenated content.</para>
                     /// </summary>
                     [NameInMap("SslKeystoreCertificateChain")]
                     [Validation(Required=false)]
                     public string SslKeystoreCertificateChain { get; set; }
 
                     /// <summary>
-                    /// <para><b>Required for bidirectional authentication</b> The SSL private key configuration object. When the Kafka server enables bidirectional SSL authentication, the client private key must be provided. Only KMS pattern is supported for the key: specify the Key Management Service EPS resource that stores the private key through KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:ap-southeast-1:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}</para>
+                    /// <para>[Required for bidirectional authentication] The SSL private key configuration object. Required when the Kafka server enables bidirectional SSL authentication. The client private key must be provided. Only KMS pattern is supported: specify the Key Management Service EPS resource that stores the private key by using KmsArn. The system retrieves the private key content from KMS only in memory, which provides higher security. Configuration example: {\&quot;KmsArn\&quot;: \&quot;acs:kms:ap-southeast-1:123456789:secret/ssl-key-xxxx\&quot;, \&quot;KmsSecretValueKey\&quot;: \&quot;keystore_private_key\&quot;}\n&quot;</para>
                     /// </summary>
                     [NameInMap("SslKeystoreKey")]
                     [Validation(Required=false)]
                     public GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey SslKeystoreKey { get; set; }
                     public class GetEventStreamingResponseBodyDataSourceSourceApacheKafkaParametersSslKeystoreKey : TeaModel {
                         /// <summary>
-                        /// <para>[Required] The KMS resource ARN that stores the SSL private key. Used to locate the Key Management Service instance that stores the client private key. Format example: \&quot;acs:kms:cn-hangzhou:123456789:secret/ssl-keystore-key-xxxx\&quot;. Obtain this value from the ARN information of the corresponding key in the KMS console.</para>
+                        /// <para>[Required] The KMS resource ARN that stores the SSL private key. Used to locate the Key Management Service instance that stores the client private key. Format example: \&quot;acs:kms:ap-southeast-1:123456789:secret/ssl-keystore-key-xxxx\&quot;. To obtain the ARN, view the ARN information of the corresponding key in the KMS console.</para>
                         /// </summary>
                         [NameInMap("KmsArn")]
                         [Validation(Required=false)]
                         public string KmsArn { get; set; }
 
                         /// <summary>
-                        /// <para>[KMS KV mode] The key name in the KMS credential. When the KMS credential is stored as a key-value (KV) structure, specify this parameter to indicate the key corresponding to the SSL private key. Example: if the KMS credential is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, specify \&quot;ssl_keystore_key\&quot;. Leave this parameter empty if the KMS credential is in plain text mode (directly storing the PEM content of the private key).</para>
+                        /// <para>[KMS KV mode] The key name in the KMS credential. When the KMS credential is stored as a key-value (KV) structure, specify this parameter to indicate the key corresponding to the SSL private key. Example: If the KMS credential is \&quot;{&quot;ssl_keystore_key&quot;:&quot;-----BEGIN PRIVATE KEY-----...&quot;,&quot;ssl_truststore_key&quot;:&quot;...&quot;}\&quot;, enter \&quot;ssl_keystore_key\&quot;. If the KMS credential is in plain text mode (directly storing the PEM content of the private key), leave this parameter empty.</para>
                         /// </summary>
                         [NameInMap("KmsSecretValueKey")]
                         [Validation(Required=false)]
@@ -4233,7 +4139,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     }
 
                     /// <summary>
-                    /// <para>[Required for SSL] The Kafka server trust certificate. Used to verify the legitimacy of the Kafka Broker SSL certificate and prevent man-in-the-middle attacks. Format: Base64-encoded PEM format, typically containing the CA certificate or the server certificate of the Kafka server. Example: Base64-encode the PEM file content of the CA certificate (ensure it begins with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued it.</para>
+                    /// <para>[Required for SSL] The Kafka server trusted certificate. Used to authenticate the legitimacy of the Kafka Broker SSL certificate and prevent man-in-the-middle attacks. Format: Base64 encoding of PEM format, typically containing the CA certificate or the server certificate of the Kafka server. Example: Base64-encode the PEM file content of the CA certificate (ensure the content starts with \&quot;-----BEGIN CERTIFICATE-----\&quot; and ends with \&quot;-----END CERTIFICATE-----\&quot;). If Kafka uses a self-signed certificate, provide the CA certificate that issued the certificate.</para>
                     /// </summary>
                     [NameInMap("SslTruststoreCertificates")]
                     [Validation(Required=false)]
@@ -4364,7 +4270,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters for the custom connector Apache Kafka event source.</para>
+                /// <para>The custom connector Apache Kafka event source.</para>
                 /// </summary>
                 [NameInMap("SourceCustomizedKafkaConnectorParameters")]
                 [Validation(Required=false)]
@@ -4433,14 +4339,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters for the custom Kafka event source.</para>
+                /// <para>The custom Kafka event source.</para>
                 /// </summary>
                 [NameInMap("SourceCustomizedKafkaParameters")]
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaParameters SourceCustomizedKafkaParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceCustomizedKafkaParameters : TeaModel {
                     /// <summary>
-                    /// <para>The instance ID of the MSMQ for Apache Kafka instance.</para>
+                    /// <para>The instance ID of ApsaraMQ for Kafka.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>r-8vb64581862c****</para>
@@ -4452,7 +4358,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters for the Data Transmission Service (DTS) source.</para>
+                /// <para>The parameters for the DTS source.</para>
                 /// </summary>
                 [NameInMap("SourceDTSParameters")]
                 [Validation(Required=false)]
@@ -4466,7 +4372,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string BrokerUrl { get; set; }
 
                     /// <summary>
-                    /// <para>The consumption checkpoint, which is the timestamp when the SDK client consumes the first data record. The value is a UNIX timestamp.</para>
+                    /// <para>The consumer offset, which is the timestamp from which the SDK client starts consuming the first data record. The value is a UNIX timestamp.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1620962769</para>
@@ -4528,7 +4434,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters for the event bus source.</para>
+                /// <para>The Source event bus event source.</para>
                 /// </summary>
                 [NameInMap("SourceEventBusParameters")]
                 [Validation(Required=false)]
@@ -4592,7 +4498,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The network configuration. Default value: Default. Set to PublicNetwork for VPC networks.</para>
+                    /// <para>The network configuration. Default value: Default. Set the value to PublicNetwork for VPC networks.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Default</para>
@@ -4652,12 +4558,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The encoding and decoding parameter enumeration value. Three valid values are available:</para>
-                    /// <ol>
-                    /// <item><description>JSON: The existing logic. Bytes are decoded into a character string by using UTF-8 and then parsed as JSON.</description></item>
-                    /// <item><description>Text: Bytes are decoded into a character string by using UTF-8 and directly placed into the payload.</description></item>
-                    /// <item><description>Binary: Bytes are encoded into a character string by using Base64 encoding and placed into the payload.</description></item>
-                    /// </ol>
+                    /// <para>The encoding and decoding parameter. Valid values:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Text</para>
@@ -4679,7 +4580,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters for the Simple MSMQ (formerly MNS) source.</para>
+                /// <para>The parameters for the Simple Message Queue (formerly MNS) source.</para>
                 /// </summary>
                 [NameInMap("SourceMNSParameters")]
                 [Validation(Required=false)]
@@ -4696,7 +4597,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public bool? IsBase64Decode { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the Simple MSMQ (formerly MNS) queue.</para>
+                    /// <para>The name of the Simple Message Queue (formerly MNS) queue.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>demo</para>
@@ -4725,12 +4626,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public GetEventStreamingResponseBodyDataSourceSourceMQTTParameters SourceMQTTParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceMQTTParameters : TeaModel {
                     /// <summary>
-                    /// <para>The message encoding format. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>JSON</description></item>
-                    /// <item><description>Text</description></item>
-                    /// <item><description>Binary</description></item>
-                    /// </list>
+                    /// <para>The encoding format of the message body:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>JSON</para>
@@ -4800,14 +4696,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters for the MySQL source.</para>
+                /// <para>The Source MySQL event source.</para>
                 /// </summary>
                 [NameInMap("SourceMySQLParameters")]
                 [Validation(Required=false)]
                 public SourceMySQLParameters SourceMySQLParameters { get; set; }
 
                 /// <summary>
-                /// <para>The parameters for the OSS event source.</para>
+                /// <para>The Source OSS event source.</para>
                 /// </summary>
                 [NameInMap("SourceOSSParameters")]
                 [Validation(Required=false)]
@@ -4845,7 +4741,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string LoadFormat { get; set; }
 
                     /// <summary>
-                    /// <para>The data loading mode. &quot;single&quot; indicates single-document loading, and &quot;element&quot; indicates chunked loading. Valid values: single/element. Default value: single.</para>
+                    /// <para>The data loading mode. A value of single indicates single-document loading, and a value of element indicates chunked loading. Valid values: single and element. Default value: single.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>single</para>
@@ -4865,7 +4761,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Prefix { get; set; }
 
                     /// <summary>
-                    /// <para>The role name for authorization of the event bus EventBridge to read OSS files. The role must have at least read-only permissions on OSS.</para>
+                    /// <para>The role name that provides authorization for the event bus EventBridge to read OSS files. The role must have at least read-only permissions on OSS.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>eventbridge_oss_role</para>
@@ -4877,7 +4773,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters for the open-source RabbitMQ source.</para>
+                /// <para>The Source open source RabbitMQ event source.</para>
                 /// </summary>
                 [NameInMap("SourceOpenSourceRabbitMQParameters")]
                 [Validation(Required=false)]
@@ -4894,12 +4790,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string AuthType { get; set; }
 
                     /// <summary>
-                    /// <para>The message encoding format. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>JSON</description></item>
-                    /// <item><description>Text</description></item>
-                    /// <item><description>Binary</description></item>
-                    /// </list>
+                    /// <para>The encoding format of the message body:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Json</para>
@@ -4909,7 +4800,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string BodyDataType { get; set; }
 
                     /// <summary>
-                    /// <para>The endpoint of the open-source RabbitMQ instance.</para>
+                    /// <para>The endpoint of the open source RabbitMQ instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>192.168.1.100:5672</para>
@@ -4919,11 +4810,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Endpoint { get; set; }
 
                     /// <summary>
-                    /// <para>The network type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>PublicNetwork</description></item>
-                    /// <item><description>PrivateNetwork</description></item>
-                    /// </list>
+                    /// <para>The network type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PrivateNetwork</para>
@@ -4943,7 +4830,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Password { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the queue on the open-source RabbitMQ instance.</para>
+                    /// <para>The queue name of the open source RabbitMQ instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>demo</para>
@@ -4983,7 +4870,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string VSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the vhost on the open-source RabbitMQ instance.</para>
+                    /// <para>The vhost name of the open source RabbitMQ instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>eb-connect</para>
@@ -5009,7 +4896,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public SourcePostgreSQLParameters SourcePostgreSQLParameters { get; set; }
 
                 /// <summary>
-                /// <para>The parameters for the Prometheus event source.</para>
+                /// <para>The Source Prometheus event source.</para>
                 /// </summary>
                 [NameInMap("SourcePrometheusParameters")]
                 [Validation(Required=false)]
@@ -5093,7 +4980,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 public GetEventStreamingResponseBodyDataSourceSourceRabbitMQParameters SourceRabbitMQParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceRabbitMQParameters : TeaModel {
                     /// <summary>
-                    /// <para>The instance ID of the MSMQ for RabbitMQ message instance.</para>
+                    /// <para>The ID of the ApsaraMQ for RabbitMQ instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>i-f8z9a9mcgwri1c1i****</para>
@@ -5103,7 +4990,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the queue on the MSMQ for RabbitMQ message instance.</para>
+                    /// <para>The name of the queue of the ApsaraMQ for RabbitMQ instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>comp</para>
@@ -5123,7 +5010,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// <para>The name of the vhost on the MSMQ for RabbitMQ message instance.</para>
+                    /// <para>The name of the vhost of the ApsaraMQ for RabbitMQ instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>eb-connect</para>
@@ -5153,11 +5040,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     /// <summary>
                     /// <para>The instance type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default)</description></item>
-                    /// <item><description>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</description></item>
-                    /// <item><description>SelfBuilt: self-managed Apache RocketMQ cluster</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Cloud_4</para>
@@ -5177,7 +5059,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string RegionId { get; set; }
 
                     /// <summary>
-                    /// <para>The message topic.</para>
+                    /// <para>The message topics.</para>
                     /// </summary>
                     [NameInMap("Topics")]
                     [Validation(Required=false)]
@@ -5203,12 +5085,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string AuthType { get; set; }
 
                     /// <summary>
-                    /// <para>The message encoding format. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>Json</description></item>
-                    /// <item><description>Text</description></item>
-                    /// <item><description>Binary</description></item>
-                    /// </list>
+                    /// <para>The encoding format of the message body:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Json</para>
@@ -5238,7 +5115,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string FilterType { get; set; }
 
                     /// <summary>
-                    /// <para>The Group ID of the MSMQ for RocketMQ message instance.</para>
+                    /// <para>The group ID of the ApsaraMQ for RocketMQ instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>GID_group1</para>
@@ -5258,7 +5135,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceEndpoint { get; set; }
 
                     /// <summary>
-                    /// <para>The instance ID of the MSMQ for RocketMQ message instance.</para>
+                    /// <para>The instance ID of the ApsaraMQ for RocketMQ instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>i-f8zbher64dlm58pl****</para>
@@ -5268,11 +5145,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceId { get; set; }
 
                     /// <summary>
-                    /// <para>The network type of the instance. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>PublicNetwork</description></item>
-                    /// <item><description>PrivateNetwork</description></item>
-                    /// </list>
+                    /// <para>The network information of the instance:</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PublicNetwork</para>
@@ -5292,7 +5165,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstancePassword { get; set; }
 
                     /// <summary>
-                    /// <para>The security group ID of the instance.</para>
+                    /// <para>The security group information of the instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>sg-m5edtu24f12345****</para>
@@ -5303,11 +5176,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     /// <summary>
                     /// <para>The instance type. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>Cloud_4: ApsaraMQ for RocketMQ 4.0 instance (default)</description></item>
-                    /// <item><description>Cloud_5: ApsaraMQ for RocketMQ 5.0 instance</description></item>
-                    /// <item><description>SelfBuilt: self-managed Apache RocketMQ cluster</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>Cloud_4</para>
@@ -5327,7 +5195,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceUsername { get; set; }
 
                     /// <summary>
-                    /// <para>The vSwitch IDs of the instance.</para>
+                    /// <para>The vSwitch information of the instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vsw-m5ev8asdc6h12****</para>
@@ -5337,7 +5205,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceVSwitchIds { get; set; }
 
                     /// <summary>
-                    /// <para>The VPC ID of the instance.</para>
+                    /// <para>The VPC information of the instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>vpc-m5e3sv4b12345****</para>
@@ -5347,11 +5215,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string InstanceVpcId { get; set; }
 
                     /// <summary>
-                    /// <para>The network type. Valid values:           </para>
-                    /// <list type="bullet">
-                    /// <item><description>PublicNetwork</description></item>
-                    /// <item><description>PrivateNetwork</description></item>
-                    /// </list>
+                    /// <para>The network type.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>PublicNetwork</para>
@@ -5362,11 +5226,6 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 
                     /// <summary>
                     /// <para>The consumption offset of the message. Valid values:</para>
-                    /// <list type="bullet">
-                    /// <item><description>CONSUME_FROM_LAST_OFFSET: consumption starts from the latest offset.</description></item>
-                    /// <item><description>CONSUME_FROM_FIRST_OFFSET: consumption starts from the earliest offset.</description></item>
-                    /// <item><description>CONSUME_FROM_TIMESTAMP: consumption starts from the offset at a specified point in time.</description></item>
-                    /// </list>
                     /// 
                     /// <b>Example:</b>
                     /// <para>CONSUMEFROMLASTOFFSET</para>
@@ -5376,7 +5235,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Offset { get; set; }
 
                     /// <summary>
-                    /// <para>The region ID of the MSMQ for RocketMQ message instance.</para>
+                    /// <para>The region ID of the ApsaraMQ for RocketMQ instance.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>cn-hangzhou</para>
@@ -5448,14 +5307,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                 }
 
                 /// <summary>
-                /// <para>The parameters for the Simple Log Service (SLS) source.</para>
+                /// <para>The Source Simple Log Service (SLS) event source.</para>
                 /// </summary>
                 [NameInMap("SourceSLSParameters")]
                 [Validation(Required=false)]
                 public GetEventStreamingResponseBodyDataSourceSourceSLSParameters SourceSLSParameters { get; set; }
                 public class GetEventStreamingResponseBodyDataSourceSourceSLSParameters : TeaModel {
                     /// <summary>
-                    /// <para>The starting consumption position. You can select the earliest or latest position, which corresponds to &quot;begin&quot; or &quot;end&quot; respectively. You can also start consumption from a specified time in seconds.</para>
+                    /// <para>The starting consumer offset. You can select the earliest or latest offset, which corresponds to &quot;begin&quot; or &quot;end&quot; respectively. You can also start consuming from a specified time in seconds.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>begin</para>
@@ -5492,7 +5351,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
                     public string Project { get; set; }
 
                     /// <summary>
-                    /// <para>The role name for authorization of the event bus EventBridge to read Simple Log Service log content. The following conditions must be met: when you create the role used by the service in the Resource Access Management (RAM) console, select &quot;Alibaba Cloud Service&quot; and set &quot;Trusted Service&quot; to &quot;event bus&quot;.</para>
+                    /// <para>The role that provides authorization for the event bus EventBridge to read SLS log content. To meet the requirements, when you create the role used by the service in the Resource Access Management (RAM) console, set Trusted Entity Type to Alibaba Cloud Service and set Trusted Service to event bus.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>testRole</para>
@@ -5516,14 +5375,14 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The event transformer configuration.</para>
+            /// <para>The Transform-related configurations.</para>
             /// </summary>
             [NameInMap("Transforms")]
             [Validation(Required=false)]
             public List<GetEventStreamingResponseBodyDataTransforms> Transforms { get; set; }
             public class GetEventStreamingResponseBodyDataTransforms : TeaModel {
                 /// <summary>
-                /// <para>The ARN of the cloud resource, such as the ARN of a function in Function Compute.</para>
+                /// <para>The ARN of the Alibaba Cloud service, such as the ARN of a function in Function Compute.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>acs:fc:cn-hangzhou:*****:services/demo-service.LATEST/functions/demo-func</para>
@@ -5565,7 +5424,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Returns true if the operation is successful.</para>
+        /// <para>Indicates whether the operation was successful. The value true indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

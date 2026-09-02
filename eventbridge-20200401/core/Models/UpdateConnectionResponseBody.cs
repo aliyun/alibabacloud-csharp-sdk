@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
 {
     public class UpdateConnectionResponseBody : TeaModel {
         /// <summary>
-        /// <para>The API status code or POP error code. Description: 200 indicates success.</para>
+        /// <para>The API status or POP error code. Valid values: 200: Success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>8346BE8F-40F3-533D-A0B8-1359C31BD5BA</para>

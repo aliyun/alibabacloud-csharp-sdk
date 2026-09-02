@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string EventStreamingName { get; set; }
 
         /// <summary>
-        /// <para>The event filtering rule. If not specified, all events are matched.</para>
+        /// <para>The event filtering rule. If you do not specify this parameter, all events are matched.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{
@@ -56,6 +56,9 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         [Validation(Required=false)]
         public string FilterPattern { get; set; }
 
+        /// <summary>
+        /// <para>The generic JSON Configurations for the event source. This parameter is mutually exclusive with Source.</para>
+        /// </summary>
         [NameInMap("Metadata")]
         [Validation(Required=false)]
         public string Metadata { get; set; }
@@ -68,21 +71,21 @@ namespace AlibabaCloud.SDK.Eventbridge20200401.Models
         public string RunOptionsShrink { get; set; }
 
         /// <summary>
-        /// <para>The event target. You must select exactly one Sink type.</para>
+        /// <para>The event target. You must select one Sink type, and you can select only one Sink type.</para>
         /// </summary>
         [NameInMap("Sink")]
         [Validation(Required=false)]
         public string SinkShrink { get; set; }
 
         /// <summary>
-        /// <para>The event provider. You must select exactly one Source type.</para>
+        /// <para>The event provider. You must specify one source type, and you can specify only one source type.</para>
         /// </summary>
         [NameInMap("Source")]
         [Validation(Required=false)]
         public string SourceShrink { get; set; }
 
         /// <summary>
-        /// <para>The tag list. A maximum of 20 items are supported.</para>
+        /// <para>The tag list, containing up to 20 items.</para>
         /// </summary>
         [NameInMap("Tags")]
         [Validation(Required=false)]
