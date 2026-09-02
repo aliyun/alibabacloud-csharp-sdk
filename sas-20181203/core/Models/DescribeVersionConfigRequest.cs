@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The Alibaba Cloud account ID that uses the Security Center service.  </para>
         /// <remarks>
-        /// <para>Call the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> operation to obtain this parameter.</para>
+        /// <para>Invoke the <a href="https://help.aliyun.com/document_detail/28681.html">GetUser</a> operation to obtain this parameter.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string AssetSelectionType { get; set; }
 
         /// <summary>
-        /// <para>The image retention period, in days. This parameter takes effect only for host detection and does not take effect for user snapshot detection or user custom image detection.</para>
+        /// <para>The image retention period, in days. This parameter takes effect only for host detection. It does not take effect for user snapshot detection or user custom image detection.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string ClientToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID of the instance to query. Valid values:</para>
+        /// <para>The ID of the region in which the instance resides. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>cn-hangzhou</b> (default): China.</description></item>
         /// <item><description><b>ap-southeast-1</b>: outside China.</description></item>

@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public DescribeBackupPoliciesResponseBodyPageInfo PageInfo { get; set; }
         public class DescribeBackupPoliciesResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The number of entries displayed on the current page during paginated queries.</para>
+            /// <para>The number of entries on the current page in a paged query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The number of backup policies on each page during paginated queries. Default value: 10, which indicates that each page contains 10 backup policies.</para>
+            /// <para>The number of backup policies per page in a paged query. Default value: 10, which indicates that each page contains 10 backup policies.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The details of protection policies.</para>
+        /// <para>The details of the mitigation policies.</para>
         /// </summary>
         [NameInMap("Policies")]
         [Validation(Required=false)]
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ClientErrorCount { get; set; }
 
             /// <summary>
-            /// <para>The UUID list of clients in the <b>abnormal</b> state.</para>
+            /// <para>The list of UUIDs of clients in the <b>abnormal</b> state.</para>
             /// </summary>
             [NameInMap("ClientErrorUuidList")]
             [Validation(Required=false)]
@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string ClientStatus { get; set; }
 
             /// <summary>
-            /// <para>The number of clients in the normal state.</para>
+            /// <para>The number of clients in the Normal state.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -109,14 +109,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? HealthClientCount { get; set; }
 
             /// <summary>
-            /// <para>The UUID list of clients in the <b>healthy</b> state.</para>
+            /// <para>The list of UUIDs of clients in the <b>healthy</b> state.</para>
             /// </summary>
             [NameInMap("HealthClientUuidList")]
             [Validation(Required=false)]
             public List<string> HealthClientUuidList { get; set; }
 
             /// <summary>
-            /// <para>The ID of the anti-ransomware protection policy.</para>
+            /// <para>The ID of the anti-ransomware mitigation policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>11</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? Id { get; set; }
 
             /// <summary>
-            /// <para>The latest update time of the anti-ransomware protection policy status, in milliseconds.</para>
+            /// <para>The most recent time when the anti-ransomware mitigation policy status was updated, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1719488535027</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public long? LastStatusSyncTime { get; set; }
 
             /// <summary>
-            /// <para>The name of the anti-ransomware protection policy.</para>
+            /// <para>The name of the anti-ransomware mitigation policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SecurityStrategy-20200303</para>
@@ -146,32 +146,32 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The content of the anti-ransomware protection policy. This parameter is in JSON format. The following section describes the fields:</para>
+            /// <para>The content of the anti-ransomware mitigation policy. This parameter is in JSON format. The following fields are included:</para>
             /// <list type="bullet">
-            /// <item><description><b>IsDefault</b>: The type of the protection policy. Valid values:<list type="bullet">
-            /// <item><description><b>1</b>: Recommended policy.</description></item>
-            /// <item><description><b>0</b>: Custom policy.</description></item>
+            /// <item><description><b>IsDefault</b>: The type of the mitigation policy. Valid values:<list type="bullet">
+            /// <item><description><b>1</b>: recommended policy</description></item>
+            /// <item><description><b>0</b>: custom policy</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>Include</b>: The file types to protect. To protect all file types, set this parameter to [].</description></item>
-            /// <item><description><b>Source</b>: The server directories to protect. To protect all directories, set this parameter to [].</description></item>
-            /// <item><description><b>ExcludeSystemPath</b>: Specifies whether to exclude specified directories. Set this parameter to <b>true</b> to exclude directories. If you do not want to exclude directories, you do not need to set this parameter.</description></item>
-            /// <item><description><b>Exclude</b>: The specified protection directory addresses. If no specific protection directory address is set, set this parameter to [].</description></item>
-            /// <item><description><b>Schedule</b>: The execution time and interval of the data backup task. We recommend that you specify a non-peak hour at a non-round time. The following provides setting examples:<list type="bullet">
-            /// <item><description>Example 1: I|1583216092|P21D indicates that the data backup starts at 2020-03-03 14:14:52 and the backup policy is executed at an interval of 3 weeks.</description></item>
-            /// <item><description>Example 2: I|1583216092|PT24H indicates that the data backup starts at 2020-03-03 14:14:52 and the backup policy is executed at an interval of 24 hours.</description></item>
+            /// <item><description><b>Include</b>: The file types to protect. If all file types are protected, this parameter is set to [].</description></item>
+            /// <item><description><b>Source</b>: The server folders to protect. If all folders need to be protected, this parameter is set to [].</description></item>
+            /// <item><description><b>ExcludeSystemPath</b>: Specifies whether to exclude specified folders. To exclude folders, set this parameter to <b>true</b>. If you do not want to exclude folders, you do not need to set this parameter.</description></item>
+            /// <item><description><b>Exclude</b>: The specified protection folder addresses. If no specific protection folder address is set, this parameter is set to [].</description></item>
+            /// <item><description><b>Schedule</b>: The execution time and interval of the data backup node. Specify a non-peak hour that is not on the hour. Examples:<list type="bullet">
+            /// <item><description>Example 1: I|1583216092|P21D indicates that data backup starts at 2020-03-03 14:14:52, and the backup policy executes at an interval of 3 weeks.</description></item>
+            /// <item><description>Example 2: I|1583216092|PT24H indicates that data backup starts at 2020-03-03 14:14:52, and the backup policy executes at an interval of 24 hours.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description><b>Retention</b>: The retention period of the backup data, in days. 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</description></item>
-            /// <item><description><b>SpeedLimiter</b>: The backup network bandwidth limit. For example, 0:24:30720 indicates that the backup network bandwidth limit from 0:00 to 24:00 is 30 MByte/s.</description></item>
+            /// <item><description><b>Retention</b>: The retention period of backup data, in days. 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</description></item>
+            /// <item><description><b>SpeedLimiter</b>: The backup network bandwidth throttling. For example, 0:24:30720 indicates that the backup network bandwidth throttling is 30 MB/s from 00:00 to 24:00.</description></item>
             /// <item><description><b>UseVss</b>: Specifies whether to enable the VSS (Windows) feature. Valid values:<list type="bullet">
-            /// <item><description><b>true</b>: Enable.</description></item>
-            /// <item><description><b>false</b>: Disable.</description></item>
+            /// <item><description><b>true</b>: enabled</description></item>
+            /// <item><description><b>false</b>: not enabled</description></item>
             /// </list>
             /// </description></item>
             /// </list>
             /// <remarks>
-            /// <para>The VSS (Windows) feature is only available for Windows systems. After it is enabled, it can effectively reduce the issue of individual file backup failures caused by process occupation. We recommend that you enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats will not be supported.</para>
+            /// <para>The VSS (Windows) feature is available only for Windows systems. After this feature is enabled, it effectively reduces the issue of individual file backup failures caused by process occupation. Enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats is not supported.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -182,7 +182,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Policy { get; set; }
 
             /// <summary>
-            /// <para>The region ID of the backup service selected when installing the anti-ransomware client on non-Alibaba Cloud servers.</para>
+            /// <para>The region ID of the backup service selected when the anti-ransomware client is installed on a non-Alibaba Cloud server.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ch-hangzhou</para>
@@ -192,7 +192,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PolicyRegionId { get; set; }
 
             /// <summary>
-            /// <para>The version of the protection policy. Valid values:</para>
+            /// <para>The version of the mitigation policy. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>1.0.0.</description></item>
             /// <item><description>2.0.0.</description></item>
@@ -206,13 +206,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PolicyVersion { get; set; }
 
             /// <summary>
-            /// <para>The previous status of the anti-ransomware protection policy.</para>
+            /// <para>The previous status of the anti-ransomware mitigation policy.</para>
             /// <list type="bullet">
-            /// <item><description><para><b>enabled</b>: The policy is manually enabled.</para>
+            /// <item><description><para><b>enabled</b>: The policy was manually enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>disabled</b>: The policy is manually disabled. After the policy is disabled, running backup tasks will stop.</para>
+            /// <item><description><para><b>disabled</b>: The policy was manually disabled. After the policy is disabled, running backup nodes are stopped.</para>
             /// </description></item>
-            /// <item><description><para><b>closed</b>: The anti-ransomware capacity is exceeded, and the system disables the policy.</para>
+            /// <item><description><para><b>closed</b>: The anti-ransomware capacity was exceeded, and the system disabled the policy.</para>
             /// </description></item>
             /// </list>
             /// 
@@ -224,18 +224,34 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string PreStatus { get; set; }
 
             /// <summary>
-            /// <para>The UUID list of servers returned after retrieval by the MachineRemark request parameter.</para>
+            /// <para>The list of UUIDs of servers returned after the search by the MachineRemark request parameter.</para>
             /// </summary>
             [NameInMap("RemarkedUuidList")]
             [Validation(Required=false)]
             public List<string> RemarkedUuidList { get; set; }
 
             /// <summary>
+            /// <para>The method used to select covered assets. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description><b>ALL_MACHINE</b>: All assets.</description></item>
+            /// </list>
+            /// <remarks>
+            /// <para>If the policy covers <b>all assets</b>, this property value is <b>ALL_MACHINE</b>.</para>
+            /// </remarks>
+            /// 
+            /// <b>Example:</b>
+            /// <para>ALL_MACHINE</para>
+            /// </summary>
+            [NameInMap("SelectType")]
+            [Validation(Required=false)]
+            public string SelectType { get; set; }
+
+            /// <summary>
             /// <para>The server type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description><b>OUT_CLOUD</b>: Non-Alibaba Cloud server.</description></item>
             /// <item><description><b>ALIYUN</b>: Alibaba Cloud server.</description></item>
-            /// <item><description><b>TRIPARTITE</b>: Simple Application Server.</description></item>
+            /// <item><description><b>TRIPARTITE</b>: Lightweight application server.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -256,18 +272,18 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? ServiceErrorCount { get; set; }
 
             /// <summary>
-            /// <para>The UUID list of servers with data backup exceptions.</para>
+            /// <para>The list of UUIDs of servers with data backup exceptions.</para>
             /// </summary>
             [NameInMap("ServiceErrorUuidList")]
             [Validation(Required=false)]
             public List<string> ServiceErrorUuidList { get; set; }
 
             /// <summary>
-            /// <para>The status of the anti-ransomware protection policy.</para>
+            /// <para>The status of the anti-ransomware mitigation policy.</para>
             /// <list type="bullet">
             /// <item><description><para><b>enabled</b>: The policy is manually enabled.</para>
             /// </description></item>
-            /// <item><description><para><b>disabled</b>: The policy is manually disabled. After the policy is disabled, running backup tasks will stop.</para>
+            /// <item><description><para><b>disabled</b>: The policy is manually disabled. After the policy is disabled, running backup nodes are stopped.</para>
             /// </description></item>
             /// <item><description><para><b>closed</b>: The anti-ransomware capacity is exceeded, and the system disables the policy.</para>
             /// </description></item>
@@ -297,7 +313,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string UpgradeStatus { get; set; }
 
             /// <summary>
-            /// <para>The UUID list of servers protected by the anti-ransomware protection policy.</para>
+            /// <para>The list of UUIDs of servers protected by the anti-ransomware mitigation policy.</para>
             /// </summary>
             [NameInMap("UuidList")]
             [Validation(Required=false)]
@@ -306,7 +322,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The request ID, which is a unique identifier generated by Alibaba Cloud for the request. It can be used to troubleshoot and locate issues.</para>
+        /// <para>The ID of the request. The ID is a unique identifier that Alibaba Cloud generates for the request and can be used to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE120DAB-F4E7-4C53-ADC3-A97578ABF384</para>

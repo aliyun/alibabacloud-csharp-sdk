@@ -16,6 +16,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListObjectScanEventResponseBodyData> Data { get; set; }
         public class ListObjectScanEventResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Specifies whether the alert was detected by AI. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>true: The alert was detected by AI.</description></item>
+            /// <item><description>false: The alert was not detected by AI.</description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("AiDetect")]
             [Validation(Required=false)]
             public bool? AiDetect { get; set; }
@@ -228,11 +235,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public string Remark { get; set; }
 
             /// <summary>
-            /// <para>The risk level of the scanned alert. Valid values:</para>
+            /// <para>The risk level of the detected alert. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>high</b>: high risk.</description></item>
-            /// <item><description><b>medium</b>: medium risk.</description></item>
-            /// <item><description><b>low</b>: low risk.</description></item>
+            /// <item><description><b>high</b>: High risk.</description></item>
+            /// <item><description><b>medium</b>: Medium risk.</description></item>
+            /// <item><description><b>low</b>: Low risk.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -265,8 +272,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The data source. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><b>API</b>: API detection</description></item>
-            /// <item><description><b>OSS</b>: OSS detection.</description></item>
+            /// <item><description><b>API</b>: API-based detection.</description></item>
+            /// <item><description><b>OSS</b>: OSS-based detection.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -279,11 +286,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             /// <summary>
             /// <para>The event status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>0: unhandled </description></item>
-            /// <item><description>1: manually handled</description></item>
-            /// <item><description>2: whitelisted</description></item>
-            /// <item><description>3: ignored</description></item>
-            /// <item><description>4: access denied.</description></item>
+            /// <item><description>0: Unhandled. </description></item>
+            /// <item><description>1: Manually handled.</description></item>
+            /// <item><description>2: Whitelisted.</description></item>
+            /// <item><description>3: Ignored.</description></item>
+            /// <item><description>4: Access blocked.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -296,14 +303,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         }
 
         /// <summary>
-        /// <para>The pagination information for the paged query.</para>
+        /// <para>The paging information for the paging query.</para>
         /// </summary>
         [NameInMap("PageInfo")]
         [Validation(Required=false)]
         public ListObjectScanEventResponseBodyPageInfo PageInfo { get; set; }
         public class ListObjectScanEventResponseBodyPageInfo : TeaModel {
             /// <summary>
-            /// <para>The page number of the current page in the paged query.</para>
+            /// <para>The page number of the current page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -313,7 +320,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
             public int? CurrentPage { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of entries displayed on each page in the paged query.</para>
+            /// <para>The maximum number of entries returned per page in a paging query.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

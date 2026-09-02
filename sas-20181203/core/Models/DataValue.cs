@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DataValue : TeaModel {
         /// <summary>
+        /// <para>The number of Linux software vulnerabilities.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CveNum { get; set; }
 
         /// <summary>
+        /// <para>The number of emergency vulnerabilities. This field is 0 when ImageVul is set to true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -26,6 +30,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? EmgNum { get; set; }
 
         /// <summary>
+        /// <para>The number of Windows system vulnerabilities. This field is 0 when ImageVul is set to true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -34,6 +40,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SysNum { get; set; }
 
         /// <summary>
+        /// <para>The number of Web-CMS vulnerabilities. This field is 0 when ImageVul is set to true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -42,6 +50,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CmsNum { get; set; }
 
         /// <summary>
+        /// <para>The number of application vulnerabilities. This field is 0 when ImageVul is set to true.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -50,6 +60,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? AppNum { get; set; }
 
         /// <summary>
+        /// <para>The number of software composition analysis (SCA) vulnerabilities.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>2</para>
         /// </summary>
@@ -58,6 +70,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? ScaNum { get; set; }
 
         /// <summary>
+        /// <para>The number of high-priority vulnerabilities.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -66,6 +80,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? VulAsapSum { get; set; }
 
         /// <summary>
+        /// <para>The number of medium-priority vulnerabilities.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -74,6 +90,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? VulLaterSum { get; set; }
 
         /// <summary>
+        /// <para>The number of low-priority vulnerabilities.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>
@@ -82,6 +100,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? VulNntfSum { get; set; }
 
         /// <summary>
+        /// <para>The number of high-priority system vulnerabilities among Linux software vulnerabilities and Windows system vulnerabilities.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>1</para>
         /// </summary>

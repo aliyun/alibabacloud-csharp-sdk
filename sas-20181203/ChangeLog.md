@@ -1,3 +1,9 @@
+2026-09-02 Version: 10.1.1
+- Update API CreateBackupPolicy: add request parameters SelectType.
+- Update API DescribeBackupPolicies: add response parameters Body.Policies.$.SelectType.
+- Update API ModifyBackupPolicy: add request parameters SelectType.
+
+
 2026-09-02 Version: 10.1.0
 - Support API DescribeUuidVulNumClassifyStatistic.
 - Update API DescribeVersionConfig: add response parameters Body.SdkAiPostPaidGray.

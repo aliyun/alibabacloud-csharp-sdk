@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeBackupPoliciesRequest : TeaModel {
         /// <summary>
-        /// <para>The page number from which to start displaying the returned results. Default value: 1, which indicates that the display starts from page 1.</para>
+        /// <para>The page number of the first page to return. Default value: 1, which indicates that results are returned starting from page 1.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The identification information of the server protected by the anti-ransomware policy to query. You can enter the IP address or instance ID of the server.</para>
+        /// <para>The identification information of the server that is protected by the anti-ransomware policy you want to query. You can enter the IP address or instance ID of the server.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1.1.XX.XX</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string MachineRemark { get; set; }
 
         /// <summary>
-        /// <para>The name of the anti-ransomware protection policy to query.</para>
+        /// <para>The name of the anti-ransomware mitigation policy that you want to query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SecurityStrategy-20200303</para>
@@ -41,7 +41,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The number of backup policies on each page during paginated queries. Default value: 10, which indicates that each page contains 10 protection policies.</para>
+        /// <para>The number of backup policies per page in a paged query. Default value: 10, which indicates that each page contains 10 mitigation policies.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -52,11 +52,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The status of the anti-ransomware protection policy.</para>
+        /// <para>The status of the anti-ransomware mitigation policy.</para>
         /// <list type="bullet">
         /// <item><description><para><b>enabled</b>: The policy is manually enabled.</para>
         /// </description></item>
-        /// <item><description><para><b>disabled</b>: The policy is manually disabled. After the policy is disabled, running backup tasks will stop.</para>
+        /// <item><description><para><b>disabled</b>: The policy is manually disabled. After the policy is disabled, running backup nodes are stopped.</para>
         /// </description></item>
         /// <item><description><para><b>closed</b>: The anti-ransomware capacity is exceeded, and the system disables the policy.</para>
         /// </description></item>

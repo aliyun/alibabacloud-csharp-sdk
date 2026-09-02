@@ -9,6 +9,13 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListObjectScanEventRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether the alert was detected by AI. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The alert was detected by AI.</description></item>
+        /// <item><description>false: The alert was not detected by AI.</description></item>
+        /// </list>
+        /// </summary>
         [NameInMap("AiDetect")]
         [Validation(Required=false)]
         public bool? AiDetect { get; set; }
@@ -16,7 +23,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The batch operation type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>sha256</b>: same file content</para>
+        /// <item><description><para><b>sha256</b>: same file content.</para>
         /// </description></item>
         /// <item><description><para><b>eventName</b>: same alerting type.</para>
         /// </description></item>
@@ -40,7 +47,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string BucketName { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page when you perform a paged query.</para>
+        /// <para>The page number of the current page in a paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,9 +78,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string EventName { get; set; }
 
         /// <summary>
-        /// <para>The language type for the request and response messages. Default value: <b>zh</b>. Valid values:</para>
+        /// <para>The language of the request and response. Default value: <b>zh</b>. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>zh</b>: Chinese</description></item>
+        /// <item><description><b>zh</b>: Chinese.</description></item>
         /// <item><description><b>en</b>: English.</description></item>
         /// </list>
         /// 
@@ -105,7 +112,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string OssKey { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page when you perform a paged query.</para>
+        /// <para>The maximum number of entries to return on each page in a paging query.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -133,11 +140,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The risk level. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>high</b>: high risk</para>
+        /// <item><description><para><b>high</b>: High risk.</para>
         /// </description></item>
-        /// <item><description><para><b>medium</b>: medium risk</para>
+        /// <item><description><para><b>medium</b>: Medium risk.</para>
         /// </description></item>
-        /// <item><description><para><b>low</b>: low risk.</para>
+        /// <item><description><para><b>low</b>: Low risk.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -151,8 +158,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The data source. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>API</b>: API detection</description></item>
-        /// <item><description><b>OSS</b>: OSS detection.</description></item>
+        /// <item><description><b>API</b>: API-based detection.</description></item>
+        /// <item><description><b>OSS</b>: OSS-based detection.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -165,11 +172,11 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// <summary>
         /// <para>The event status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>0: unhandled </description></item>
-        /// <item><description>1: manually handled</description></item>
-        /// <item><description>2: whitelisted</description></item>
-        /// <item><description>3: ignored</description></item>
-        /// <item><description>4: access denied.</description></item>
+        /// <item><description>0: Unhandled. </description></item>
+        /// <item><description>1: Manually handled.</description></item>
+        /// <item><description>2: Whitelisted.</description></item>
+        /// <item><description>3: Ignored.</description></item>
+        /// <item><description>4: Access blocked.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -180,7 +187,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>The end time of the time range during which the exception event occurred.</para>
+        /// <para>The end time of the time range during which the anomalous event occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683862286000</para>
@@ -190,7 +197,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public long? TimeEnd { get; set; }
 
         /// <summary>
-        /// <para>The start time of the time range during which the exception event occurred.</para>
+        /// <para>The start time of the time range during which the anomalous event occurred.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1683603086000</para>

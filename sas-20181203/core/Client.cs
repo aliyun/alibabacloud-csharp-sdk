@@ -7640,6 +7640,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["PolicyVersion"] = request.PolicyVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectType))
+            {
+                query["SelectType"] = request.SelectType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
             {
                 query["UuidList"] = request.UuidList;
@@ -7703,6 +7707,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PolicyVersion))
             {
                 query["PolicyVersion"] = request.PolicyVersion;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectType))
+            {
+                query["SelectType"] = request.SelectType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
             {
@@ -27469,7 +27477,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query anti-ransomware protection policies.</para>
+        /// <para>Queries anti-ransomware mitigation policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27527,7 +27535,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query anti-ransomware protection policies.</para>
+        /// <para>Queries anti-ransomware mitigation policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27585,7 +27593,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query anti-ransomware protection policies.</para>
+        /// <para>Queries anti-ransomware mitigation policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27603,7 +27611,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query anti-ransomware protection policies.</para>
+        /// <para>Queries anti-ransomware mitigation policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63737,7 +63745,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 UUID 维度的漏洞数量统计</para>
+        /// <para>Queries vulnerability count statistics by UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63783,7 +63791,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 UUID 维度的漏洞数量统计</para>
+        /// <para>Queries vulnerability count statistics by UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63829,7 +63837,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 UUID 维度的漏洞数量统计</para>
+        /// <para>Queries vulnerability count statistics by UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -63847,7 +63855,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>查询 UUID 维度的漏洞数量统计</para>
+        /// <para>Queries vulnerability count statistics by UUID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -110665,7 +110673,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an anti-ransomware mitigation policy.</para>
+        /// <para>Modifies an anti-ransomware policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -110708,6 +110716,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["PolicyVersion"] = request.PolicyVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectType))
+            {
+                query["SelectType"] = request.SelectType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
             {
                 query["UuidList"] = request.UuidList;
@@ -110733,7 +110745,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an anti-ransomware mitigation policy.</para>
+        /// <para>Modifies an anti-ransomware policy.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -110776,6 +110788,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["PolicyVersion"] = request.PolicyVersion;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectType))
+            {
+                query["SelectType"] = request.SelectType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
             {
                 query["UuidList"] = request.UuidList;
@@ -110801,7 +110817,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an anti-ransomware mitigation policy.</para>
+        /// <para>Modifies an anti-ransomware policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -110819,7 +110835,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies an anti-ransomware mitigation policy.</para>
+        /// <para>Modifies an anti-ransomware policy.</para>
         /// </summary>
         /// 
         /// <param name="request">

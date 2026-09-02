@@ -10,6 +10,13 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class DescribeUuidVulNumClassifyStatisticRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to query image vulnerability statistics. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: The Uuids parameter specifies image IDs.</description></item>
+        /// <item><description>false: The Uuids parameter specifies host UUIDs.</description></item>
+        /// </list>
+        /// <para>Default value: false.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>true</para>
         /// </summary>
@@ -18,6 +25,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public bool? ImageVul { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the asset. If ImageVul is set to false, specify the host UUID. If ImageVul is set to true, specify the image ID. Separate multiple values with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
