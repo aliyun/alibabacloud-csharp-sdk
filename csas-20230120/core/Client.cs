@@ -19076,6 +19076,170 @@ namespace AlibabaCloud.SDK.Csas20230120
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<c>NetType</c>) and instance ID list (<c>InstanceIds</c>), and use <c>CurrentPage</c> and <c>PageSize</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNetBandwidthRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetBandwidthResponse
+        /// </returns>
+        public ListNetBandwidthResponse ListNetBandwidthWithOptions(ListNetBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetType))
+            {
+                query["NetType"] = request.NetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNetBandwidth",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNetBandwidthResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<c>NetType</c>) and instance ID list (<c>InstanceIds</c>), and use <c>CurrentPage</c> and <c>PageSize</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNetBandwidthRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetBandwidthResponse
+        /// </returns>
+        public async Task<ListNetBandwidthResponse> ListNetBandwidthWithOptionsAsync(ListNetBandwidthRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CurrentPage))
+            {
+                query["CurrentPage"] = request.CurrentPage;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetType))
+            {
+                query["NetType"] = request.NetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListNetBandwidth",
+                Version = "2023-01-20",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListNetBandwidthResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<c>NetType</c>) and instance ID list (<c>InstanceIds</c>), and use <c>CurrentPage</c> and <c>PageSize</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNetBandwidthRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetBandwidthResponse
+        /// </returns>
+        public ListNetBandwidthResponse ListNetBandwidth(ListNetBandwidthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListNetBandwidthWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the VPC and Connector network instances connected to the current tenant and their bandwidth configurations by paging.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Queries the bandwidth configuration list of available network instances under the current account. You can filter results by network type (<c>NetType</c>) and instance ID list (<c>InstanceIds</c>), and use <c>CurrentPage</c> and <c>PageSize</c> for pagination.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// ListNetBandwidthRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListNetBandwidthResponse
+        /// </returns>
+        public async Task<ListNetBandwidthResponse> ListNetBandwidthAsync(ListNetBandwidthRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListNetBandwidthWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries administrator operation audit logs in batches.</para>
         /// </summary>
         /// 

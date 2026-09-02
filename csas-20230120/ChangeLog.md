@@ -1,3 +1,7 @@
+2026-09-02 Version: 1.28.0
+- Support API ListNetBandwidth.
+
+
 2026-08-30 Version: 1.27.0
 - Support API BindSaseUserTag.
 - Support API CreateSaseUserTag.
