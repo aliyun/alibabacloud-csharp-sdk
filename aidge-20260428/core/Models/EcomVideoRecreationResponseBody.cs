@@ -8,9 +8,9 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class VideoGenerationResponseBody : TeaModel {
+    public class EcomVideoRecreationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of success indicates a successful call, and a value of failed indicates a failed call.</para>
+        /// <para>The result code. <c>success</c> indicates success. An error code is returned upon failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,43 +20,36 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The response struct.</para>
+        /// <para>The asynchronous task submit status.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public VideoGenerationResponseBodyData Data { get; set; }
-        public class VideoGenerationResponseBodyData : TeaModel {
+        public EcomVideoRecreationResponseBodyData Data { get; set; }
+        public class EcomVideoRecreationResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The downstream task ID.</para>
+            /// <para>The asynchronous task ID for QueryAsyncTaskResult queries.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>778fa8bd21804828a5d147050e30edac</para>
+            /// <para>task_778fa8bd21804828a5d147050e30edac</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
-            /// <summary>
-            /// <para>The metering usage information.</para>
-            /// </summary>
-            [NameInMap("UsageMap")]
-            [Validation(Required=false)]
-            public Dictionary<string, long?> UsageMap { get; set; }
-
         }
 
         /// <summary>
-        /// <para>The response message. An error message is returned if the call fails.</para>
+        /// <para>The response message. An error description is returned upon failure.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Success</para>
+        /// <para>Task submitted</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies a single API call.</para>
+        /// <para>The request ID, used to identify a unique call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>70CBEFDF-BB17-1EB3-8A21-569F3124738F</para>
@@ -66,7 +59,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
+        /// <para>Indicates whether the submission is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
