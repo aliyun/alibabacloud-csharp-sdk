@@ -33,6 +33,10 @@ namespace AlibabaCloud.SDK.IntelligentCreation20240313.Models
             [Validation(Required=false)]
             public string CharacterAgeStage { get; set; }
 
+            [NameInMap("characterGender")]
+            [Validation(Required=false)]
+            public string CharacterGender { get; set; }
+
             [NameInMap("characterName")]
             [Validation(Required=false)]
             public string CharacterName { get; set; }
