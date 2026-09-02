@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
 {
     public class CreateTemplateVPCConfig : TeaModel {
         /// <summary>
+        /// <para>The VPC authorization role name.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>AliyunFCSandboxDefaultRole</para>
         /// </summary>
@@ -18,6 +20,8 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string Role { get; set; }
 
         /// <summary>
+        /// <para>The security group ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>sg-bp1gx7yj8ud5mabcde</para>
         /// </summary>
@@ -25,11 +29,16 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string SecurityGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The list of vSwitch IDs.</para>
+        /// </summary>
         [NameInMap("vSwitchIds")]
         [Validation(Required=false)]
         public List<string> VSwitchIds { get; set; }
 
         /// <summary>
+        /// <para>VPC ID</para>
+        /// 
         /// <b>Example:</b>
         /// <para>vpc-bp1mwrqm3wkq7abcde</para>
         /// </summary>

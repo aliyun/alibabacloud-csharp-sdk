@@ -19,17 +19,6 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shenzhen", "fcsandbox.cn-shenzhen.aliyuncs.com"},
-                {"cn-beijing", "fcsandbox.cn-beijing.aliyuncs.com"},
-                {"cn-shanghai", "fcsandbox.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "fcsandbox.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-1", "fcsandbox.ap-southeast-1.aliyuncs.com"},
-                {"cn-hangzhou", "fcsandbox.cn-hangzhou.aliyuncs.com"},
-                {"us-west-1", "fcsandbox.us-west-1.aliyuncs.com"},
-                {"us-east-1", "fcsandbox.us-east-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("fcsandbox", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1652,7 +1641,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Volume.</para>
+        /// <para>Queries a volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1698,7 +1687,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Volume.</para>
+        /// <para>Queries a volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1744,7 +1733,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Volume.</para>
+        /// <para>Queries a volume.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1763,7 +1752,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a Volume.</para>
+        /// <para>Queries a volume.</para>
         /// </summary>
         /// 
         /// <param name="request">

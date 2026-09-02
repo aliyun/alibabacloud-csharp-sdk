@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         public string UserID { get; set; }
 
         /// <summary>
-        /// <para>The name of the volume. The name must be unique within the team.</para>
+        /// <para>The name of the volume. The name must be unique within a team.</para>
         /// 
         /// <b>Example:</b>
         /// <para>workspace</para>
