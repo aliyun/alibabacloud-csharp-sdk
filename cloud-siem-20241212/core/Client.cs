@@ -19,11 +19,6 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shanghai", "cloud-siem.cn-shanghai.aliyuncs.com"},
-                {"ap-southeast-1", "cloud-siem.ap-southeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cloud-siem", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -7916,12 +7911,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警分组列表</para>
+        /// <para>Retrieves the list of alert groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>入参JsonConfig是一个非常复杂的JSON配置，为此我们提供了辅助工具类帮助具体配置示例，请参考<a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>。</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class and configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8011,12 +8006,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警分组列表</para>
+        /// <para>Retrieves the list of alert groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>入参JsonConfig是一个非常复杂的JSON配置，为此我们提供了辅助工具类帮助具体配置示例，请参考<a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>。</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class and configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8106,12 +8101,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警分组列表</para>
+        /// <para>Retrieves the list of alert groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>入参JsonConfig是一个非常复杂的JSON配置，为此我们提供了辅助工具类帮助具体配置示例，请参考<a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>。</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class and configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -8129,12 +8124,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>获取告警分组列表</para>
+        /// <para>Retrieves the list of alert groups.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>入参JsonConfig是一个非常复杂的JSON配置，为此我们提供了辅助工具类帮助具体配置示例，请参考<a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>。</para>
+        /// <para>The input parameter JsonConfig is a complex JSON configuration. We provide a utility class and configuration examples. For more information, refer to <a href="https://github.com/aliyun/cloud-siem-client/blob/master/src/main/java/com/aliyun/security/cloudsiem/client/sample/JobBuilderSample.java">Demo</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10566,7 +10561,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10710,7 +10705,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -10854,7 +10849,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -10878,7 +10873,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212
         /// <term><b>Description:</b></term>
         /// <description>
         /// <para>Notifications are subject to frequency and time restrictions.
-        /// Each user can receive a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time range.</para>
+        /// Each user receives a maximum of two notifications per day between 08:00 and 20:00. No notifications are sent outside this time window.</para>
         /// </description>
         /// 
         /// <param name="request">

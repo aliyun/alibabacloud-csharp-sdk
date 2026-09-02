@@ -16,10 +16,23 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
         [Validation(Required=false)]
         public List<ListIncidentsResponseBodyIncidents> Incidents { get; set; }
         public class ListIncidentsResponseBodyIncidents : TeaModel {
+            /// <summary>
+            /// <para>The alert information of the incident.</para>
+            /// </summary>
             [NameInMap("AlertInfos")]
             [Validation(Required=false)]
             public string AlertInfos { get; set; }
 
+            /// <summary>
+            /// <para>The list of alert source codes or modules.</para>
+            /// </summary>
+            [NameInMap("AlertSources")]
+            [Validation(Required=false)]
+            public List<string> AlertSources { get; set; }
+
+            /// <summary>
+            /// <para>The attacker tactics.</para>
+            /// </summary>
             [NameInMap("AttckTactics")]
             [Validation(Required=false)]
             public string AttckTactics { get; set; }
@@ -44,14 +57,23 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [Validation(Required=false)]
             public string DetectionRuleId { get; set; }
 
+            /// <summary>
+            /// <para>The name of the detection rule.</para>
+            /// </summary>
             [NameInMap("DetectionRuleName")]
             [Validation(Required=false)]
             public string DetectionRuleName { get; set; }
 
+            /// <summary>
+            /// <para>The entity information associated with the incident.</para>
+            /// </summary>
             [NameInMap("EntityInfos")]
             [Validation(Required=false)]
             public string EntityInfos { get; set; }
 
+            /// <summary>
+            /// <para>The description of the incident.</para>
+            /// </summary>
             [NameInMap("IncidentDescription")]
             [Validation(Required=false)]
             public string IncidentDescription { get; set; }
@@ -78,6 +100,12 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
 
             /// <summary>
             /// <para>The event status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>0: unhandled.</description></item>
+            /// <item><description>1: handling.</description></item>
+            /// <item><description>5: handling failed.</description></item>
+            /// <item><description>10: handled.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -107,7 +135,7 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public string IncidentUuid { get; set; }
 
             /// <summary>
-            /// <para>The UID of the account responsible for the event.</para>
+            /// <para>The UID of the account that owns the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234567890xxxxxx</para>
@@ -115,6 +143,16 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             [NameInMap("Owner")]
             [Validation(Required=false)]
             public string Owner { get; set; }
+
+            /// <summary>
+            /// <para>The display name of the incident owner.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>alice</para>
+            /// </summary>
+            [NameInMap("OwnerName")]
+            [Validation(Required=false)]
+            public string OwnerName { get; set; }
 
             /// <summary>
             /// <para>The number of alerts associated with the incident.</para>
@@ -147,7 +185,21 @@ namespace AlibabaCloud.SDK.Cloud_siem20241212.Models
             public long? ResponseTime { get; set; }
 
             /// <summary>
+            /// <para>The list of response types. Valid values: auto, manual, ai.</para>
+            /// </summary>
+            [NameInMap("ResponseTypes")]
+            [Validation(Required=false)]
+            public List<string> ResponseTypes { get; set; }
+
+            /// <summary>
             /// <para>The threat level. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>5: critical.</description></item>
+            /// <item><description>4: high.</description></item>
+            /// <item><description>3: medium.</description></item>
+            /// <item><description>2: low.</description></item>
+            /// <item><description>1: informational.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>

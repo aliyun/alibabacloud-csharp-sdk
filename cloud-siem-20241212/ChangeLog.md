@@ -1,3 +1,9 @@
+2026-09-02 Version: 2.6.1
+- Update API ListIncidents: add response parameters Body.Incidents.$.AlertSources.
+- Update API ListIncidents: add response parameters Body.Incidents.$.OwnerName.
+- Update API ListIncidents: add response parameters Body.Incidents.$.ResponseTypes.
+
+
 2026-08-11 Version: 2.6.0
 - Support API ListAlertAggregations.
 
