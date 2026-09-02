@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
         public List<string> Columns { get; set; }
 
         /// <summary>
-        /// <para>The metadata of the returned data.</para>
+        /// <para>The metadata of the response.</para>
         /// </summary>
         [NameInMap("meta")]
         [Validation(Required=false)]
@@ -70,14 +70,23 @@ namespace AlibabaCloud.SDK.AgentLoop20260520.Models
             [Validation(Required=false)]
             public string Progress { get; set; }
 
+            /// <summary>
+            /// <para>The result truncation details.</para>
+            /// </summary>
             [NameInMap("truncation")]
             [Validation(Required=false)]
             public ExecuteQueryResponseBodyMetaTruncation Truncation { get; set; }
             public class ExecuteQueryResponseBodyMetaTruncation : TeaModel {
+                /// <summary>
+                /// <para>Indicates whether the result is truncated.</para>
+                /// </summary>
                 [NameInMap("truncated")]
                 [Validation(Required=false)]
                 public bool? Truncated { get; set; }
 
+                /// <summary>
+                /// <para>The truncation details of result rows.</para>
+                /// </summary>
                 [NameInMap("truncatedColumnIndexes")]
                 [Validation(Required=false)]
                 public List<List<int?>> TruncatedColumnIndexes { get; set; }

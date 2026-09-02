@@ -19,18 +19,6 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-shenzhen", "agentloop.cn-shenzhen.aliyuncs.com"},
-                {"cn-beijing", "agentloop.cn-beijing.aliyuncs.com"},
-                {"cn-shanghai", "agentloop.cn-shanghai.aliyuncs.com"},
-                {"cn-guangzhou", "agentloop.cn-guangzhou.aliyuncs.com"},
-                {"cn-hongkong", "agentloop.cn-hongkong.aliyuncs.com"},
-                {"ap-southeast-1", "agentloop.ap-southeast-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "agentloop.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-hangzhou", "agentloop.cn-hangzhou.aliyuncs.com"},
-                {"cn-chengdu", "agentloop.cn-chengdu.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("agentloop", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -3754,6 +3742,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <para>Executes a query statement.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateEvaluationTask to create an evaluation task in a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
+        /// This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExecuteQueryRequest
         /// </param>
@@ -3771,6 +3765,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnnotationFilter))
+            {
+                body["annotationFilter"] = request.AnnotationFilter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 body["from"] = request.From;
@@ -3828,6 +3826,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <para>Executes a query statement.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateEvaluationTask to create an evaluation task in a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
+        /// This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExecuteQueryRequest
         /// </param>
@@ -3845,6 +3849,10 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AnnotationFilter))
+            {
+                body["annotationFilter"] = request.AnnotationFilter;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.From))
             {
                 body["from"] = request.From;
@@ -3902,6 +3910,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <para>Executes a query statement.</para>
         /// </summary>
         /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateEvaluationTask to create an evaluation task in a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
+        /// This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</para>
+        /// </description>
+        /// 
         /// <param name="request">
         /// ExecuteQueryRequest
         /// </param>
@@ -3920,6 +3934,12 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
         /// <summary>
         /// <para>Executes a query statement.</para>
         /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Calls CreateEvaluationTask to create an evaluation task in a specified AgentSpace. The server validates AgentSpace permissions, initializes evaluation result storage, checks task name uniqueness, and asynchronously creates and executes an EvaluationRun based on <c>taskMode</c> and <c>runStrategies</c>.
+        /// This operation is applicable to running built-in or custom evaluators on Trace, Dataset, or SLS Log data. It supports two execution strategies: historical backfill and continuous evaluation.</para>
+        /// </description>
         /// 
         /// <param name="request">
         /// ExecuteQueryRequest
@@ -5189,7 +5209,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a CI/CD pipeline.</para>
+        /// <para>Queries a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5229,7 +5249,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a CI/CD pipeline.</para>
+        /// <para>Queries a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5269,7 +5289,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a CI/CD pipeline.</para>
+        /// <para>Queries a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5288,7 +5308,7 @@ namespace AlibabaCloud.SDK.AgentLoop20260520
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries a CI/CD pipeline.</para>
+        /// <para>Queries a pipeline.</para>
         /// </summary>
         /// 
         /// <param name="request">
