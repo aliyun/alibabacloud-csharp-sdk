@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             }
 
             /// <summary>
-            /// <para>The query dimension.</para>
+            /// <para>The query dimensions.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The end of the time range for the returned data.</para>
-        /// <para>The time is in ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is in UTC+0.</para>
+        /// <para>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC+0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-09T16:00:00Z</para>
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-08T16:00:00Z</para>

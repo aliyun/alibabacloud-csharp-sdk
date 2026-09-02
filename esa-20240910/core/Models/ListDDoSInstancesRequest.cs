@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListDDoSInstancesRequest : TeaModel {
         /// <summary>
-        /// <para>Instance ID.</para>
+        /// <para>The instance ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esa-ddos-b1e0l80ugfeo</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>Page number. Default: <b>1</b>.</para>
+        /// <para>The page number for a paged query. The value must be greater than or equal to 1. Default value: <b>1</b>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page. Default: 20. Maximum: 500. Valid values: integers from 1 to 500.</para>
+        /// <para>The number of entries per page for a paged query. Default value: 20. Maximum value: 500. Valid values: any integer from 1 to 500.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Associated site package instance ID.</para>
+        /// <para>The instance ID of the associated site plan.</para>
         /// 
         /// <b>Example:</b>
         /// <para>esa-site-a71k7bw1adf</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteInstanceId { get; set; }
 
         /// <summary>
-        /// <para>Sort field. Default: CreateTime.</para>
+        /// <para>The sort field. By default, results are sorted by purchase time. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>CreateTime</b>: Time when the instance was purchased.</description></item>
+        /// <item><description><b>CreateTime</b>: purchase time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,12 +63,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortBy { get; set; }
 
         /// <summary>
-        /// <para>Sort order:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>asc: ascending.</para>
-        /// </description></item>
-        /// <item><description><para>desc: descending.</para>
-        /// </description></item>
+        /// <item><description>asc: ascending order.</description></item>
+        /// <item><description>desc: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -79,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SortOrder { get; set; }
 
         /// <summary>
-        /// <para>Instance status.</para>
+        /// <para>The instance status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>online</para>

@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string Certificate { get; set; }
 
         /// <summary>
-        /// <para>The certificate ID. Certificates of the free type (created by calling the ApplyCertificate operation) are not supported. Certificates of the cas and upload types are supported.</para>
+        /// <para>The certificate ID. Free certificates created by calling the ApplyCertificate operation are not supported. Certificate IDs of the cas and upload types are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>babae7c40fef412d887688b91c9e****</para>
@@ -72,9 +72,9 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The region. This parameter is required when Type is set to cas. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>China site accounts: cn-hangzhou.</para>
+        /// <item><description><para>Alibaba Cloud China Website accounts: cn-hangzhou.</para>
         /// </description></item>
-        /// <item><description><para>International site accounts: ap-southeast-1.</para>
+        /// <item><description><para>Alibaba Cloud International Website accounts: ap-southeast-1.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -103,11 +103,11 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         /// <summary>
         /// <para>The certificate type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><b>cas</b>: certificate from SSL Certificates Service.</para>
+        /// <item><description><para><b>cas</b>: a certificate from SSL Certificates Service.</para>
         /// </description></item>
-        /// <item><description><para><b>upload</b>: custom uploaded certificate.</para>
+        /// <item><description><para><b>upload</b>: a custom uploaded certificate.</para>
         /// </description></item>
-        /// <item><description><para><b>keyless</b>: keyless certificate.</para>
+        /// <item><description><para><b>keyless</b>: a keyless certificate.</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>

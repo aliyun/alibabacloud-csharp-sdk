@@ -50,6 +50,10 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         [Validation(Required=false)]
         public long? SiteId { get; set; }
 
+        [NameInMap("Type")]
+        [Validation(Required=false)]
+        public string Type { get; set; }
+
         /// <summary>
         /// <para>Specifies whether to return only valid certificates.</para>
         /// 

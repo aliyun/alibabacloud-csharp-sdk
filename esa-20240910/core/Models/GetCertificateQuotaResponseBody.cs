@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? Quota { get; set; }
 
         /// <summary>
-        /// <para>The number of used free certificates.</para>
+        /// <para>The free certificate quota usage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The site count.</para>
+        /// <para>The number of sites.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public long? SiteCount { get; set; }
 
         /// <summary>
-        /// <para>Details about the certificate usage for each site.</para>
+        /// <para>The list of site usage details.</para>
         /// </summary>
         [NameInMap("SiteUsage")]
         [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteName { get; set; }
 
             /// <summary>
-            /// <para>The number of certificates used by the site.</para>
+            /// <para>The site usage.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

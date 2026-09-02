@@ -1,3 +1,8 @@
+2026-09-02 Version: 3.13.1
+- Update API ApplyCertificate: add request parameters AlgType.
+- Update API ListCertificates: add request parameters Type.
+
+
 2026-08-18 Version: 3.13.0
 - Support API DeleteRoutineEnvironmentVariables.
 - Support API ListRoutineEnvironmentVariables.

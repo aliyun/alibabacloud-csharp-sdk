@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>A list of application details for each free certificate.</para>
+        /// <para>The list of free certificate application details.</para>
         /// </summary>
         [NameInMap("Result")]
         [Validation(Required=false)]
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string SiteName { get; set; }
 
         /// <summary>
-        /// <para>The total number of certificates requested, which matches the number of domain names provided in the request.</para>
+        /// <para>The number of certificates applied for, which is the same as the number of input domain names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class SetKeylessServerResponseBody : TeaModel {
         /// <summary>
-        /// <para>The keyless server ID.</para>
+        /// <para>Keyless server ID。</para>
         /// 
         /// <b>Example:</b>
         /// <para>babaabcd****</para>

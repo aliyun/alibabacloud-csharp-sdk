@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string PrivateKey { get; set; }
 
         /// <summary>
-        /// <para>Site ID.</para>
+        /// <para>The site ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class GetClientCaCertificateHostnamesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of domain names.</para>
+        /// <para>The domain names.</para>
         /// </summary>
         [NameInMap("Hostnames")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The site ID.</para>
+        /// <para>The site ID, which can be obtained by calling the <a href="~~ListSites~~">ListSites</a> operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1234567890123</para>

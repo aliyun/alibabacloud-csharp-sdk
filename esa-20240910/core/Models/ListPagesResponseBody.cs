@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The ID of the custom response page. You can obtain this value by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
+            /// <para>The ID of the custom response page. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2850223.html">ListPages</a> operation.</para>
             /// 
             /// <b>Example:</b>
             /// <para>50000001</para>
@@ -89,6 +89,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string Kind { get; set; }
 
             /// <summary>
+            /// <para>The content moderation result.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>{}</para>
             /// </summary>
@@ -97,6 +99,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public ListPagesResponseBodyPagesModeration Moderation { get; set; }
             public class ListPagesResponseBodyPagesModeration : TeaModel {
                 /// <summary>
+                /// <para>The list of rejection reasons.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>[]</para>
                 /// </summary>
@@ -105,6 +109,8 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
                 public List<string> Reasons { get; set; }
 
                 /// <summary>
+                /// <para>The moderation status.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>pending</para>
                 /// </summary>

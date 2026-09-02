@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
     public class DescribeSiteWafTopDataShrinkRequest : TeaModel {
         /// <summary>
         /// <para>The end of the time range to query.</para>
-        /// <para>Specify the time in ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// <remarks>
         /// <para>The end time must be later than the start time.</para>
         /// </remarks>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 
         /// <summary>
         /// <para>The beginning of the time range to query.</para>
-        /// <para>Specify the time in ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
+        /// <para>Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC+0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-04-08T16:00:00Z</para>

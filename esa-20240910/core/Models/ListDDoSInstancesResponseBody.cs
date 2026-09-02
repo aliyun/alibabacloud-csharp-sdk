@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
 {
     public class ListDDoSInstancesResponseBody : TeaModel {
         /// <summary>
-        /// <para>Instance details</para>
+        /// <para>The instance details.</para>
         /// </summary>
         [NameInMap("InstanceInfo")]
         [Validation(Required=false)]
         public List<ListDDoSInstancesResponseBodyInstanceInfo> InstanceInfo { get; set; }
         public class ListDDoSInstancesResponseBodyInstanceInfo : TeaModel {
             /// <summary>
-            /// <para>Time when the instance was purchased</para>
+            /// <para>The purchase time of the instance. The time is in ISO 8601 format and displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-01T07:59:07Z</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>DDoS protection specification for the Chinese mainland</para>
+            /// <para>The specifications of the DDoS instance in the Chinese mainland.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn_300</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DDoSBurstableDomesticProtection { get; set; }
 
             /// <summary>
-            /// <para>DDoS protection specification for regions outside the Chinese mainland</para>
+            /// <para>The specifications of the DDoS instance outside the Chinese mainland.</para>
             /// 
             /// <b>Example:</b>
             /// <para>overseas_300</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string DDoSBurstableOverseasProtection { get; set; }
 
             /// <summary>
-            /// <para>Instance ID</para>
+            /// <para>The instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>sp-ddddxxxxx</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string InstanceId { get; set; }
 
             /// <summary>
-            /// <para>Scheduled release time</para>
+            /// <para>The scheduled release time. The time is in ISO 8601 format and displayed in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-25T16:00:00Z</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string ReserveReleaseTime { get; set; }
 
             /// <summary>
-            /// <para>Associated site package instance ID</para>
+            /// <para>The ID of the associated site plan instance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>esa-site-b0s6kmx0r0n4</para>
@@ -77,16 +77,12 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
             public string SiteInstanceId { get; set; }
 
             /// <summary>
-            /// <para>Instance status. Valid values:</para>
+            /// <para>The instance status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><b>online</b>: Normal service status.</para>
-            /// </description></item>
-            /// <item><description><para><b>offline</b>: Expired but not overdue. Instance is unavailable.</para>
-            /// </description></item>
-            /// <item><description><para><b>disable</b>: Released.</para>
-            /// </description></item>
-            /// <item><description><para><b>overdue</b>: Service suspended due to overdue payment.</para>
-            /// </description></item>
+            /// <item><description><b>online</b>: The instance is running normally.</description></item>
+            /// <item><description><b>offline</b>: The instance has expired but is not overdue, and is unavailable.</description></item>
+            /// <item><description><b>disable</b>: The instance has been released.</description></item>
+            /// <item><description><b>overdue</b>: The instance is suspended due to overdue payment.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -99,7 +95,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         }
 
         /// <summary>
-        /// <para>Page number. Default: <b>1</b>.</para>
+        /// <para>The current page number, which is the same as the PageNumber request parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -109,7 +105,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>Number of entries per page</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -119,7 +115,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>Request ID</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9F1DC265-BF10-5C9C-B607-760265C5F365</para>
@@ -129,7 +125,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Total number of entries</para>
+        /// <para>The total number of records.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -139,7 +135,7 @@ namespace AlibabaCloud.SDK.ESA20240910.Models
         public int? TotalCount { get; set; }
 
         /// <summary>
-        /// <para>Total number of pages</para>
+        /// <para>The total number of pages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
