@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>Flash: local snapshot.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>This parameter will be deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required. The snapshot is active immediately after creation.</para>
+        /// <para>This parameter will be deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or costs are required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
-        /// <para>Default value: null.</para>
+        /// <para>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDescription</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required. The snapshot is active immediately after creation.</para>
+        /// <para>This parameter is deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or costs are required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Settings for the retention period of the snapshot instant access feature. After the retention period expires, the snapshot is subject to automatic release. This parameter takes effect only when <c>InstantAccess=true</c>. Unit: days. Valid values: 1 to 65535.</para>
         /// <para>The default value is the same as the value of the <c>RetentionDays</c> parameter.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or fees are required. The snapshot is active immediately after creation.</para>
+        /// <para>This parameter is deprecated. Standard snapshots for enterprise SSDs have been upgraded to <a href="https://help.aliyun.com/document_detail/193667.html">instant access by default</a>. No additional configuration or costs are required.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <para>Settings for the retention period of the snapshot. Unit: days. Valid values: 1 to 65536. The snapshot is subject to automatic release when the retention period expires.</para>
-        /// <para>Default value: null, which indicates that the snapshot is not subject to automatic release.</para>
+        /// <para>Default value: empty, which indicates that the snapshot is not subject to automatic release.</para>
         /// 
         /// <b>Example:</b>
         /// <para>30</para>
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>. The name can contain Unicode characters under the letter category (including letters in English and Chinese), ASCII digits (0-9), colons (:), underscores (_), periods (.), and hyphens (-).</para>
         /// <remarks>
-        /// <para>The name cannot start with <c>auto</c> to avoid conflicts with the names of automatic snapshots.</para>
+        /// <para>To prevent naming conflicts with automatic snapshots, the name cannot start with <c>auto</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to enable automatic payment. Valid values: </para>
         /// <list type="bullet">
         /// <item><description>true (default): Automatic payment is enabled. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated, and you can only void the order. </description></item>
-        /// <item><description>false: Only an order is generated without payment. If your account balance is insufficient, a normal unpaid order is generated. You can log on to the Alibaba Cloud <b>Expenses and Costs</b> console and pay for the order on the &lt;props=&quot;china&quot;&gt;<ph><a href="https://usercenter2.aliyun.com/order/list">My Orders</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://usercenter2-intl.aliyun.com/order/list">Orders</a></ph> page.</description></item>
+        /// <item><description>false: An order is generated but payment is not automatically completed. If your account balance is insufficient, an unpaid order is generated. You can log on to the Alibaba Cloud <b>Expenses and Costs</b> console and go to the &lt;props=&quot;china&quot;&gt;<ph><a href="https://usercenter2.aliyun.com/order/list">Orders</a></ph>&lt;props=&quot;intl&quot;&gt;<ph><a href="https://usercenter2-intl.aliyun.com/order/list">Orders</a></ph> page to complete the payment.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>PostPaid: Converts subscription data disks to pay-as-you-go data disks.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>When you convert a pay-as-you-go disk to subscription, the billing cycle of the disk capacity fee is automatically synchronized with the associated ECS instance.</para>
+        /// <para>When you convert pay-as-you-go disks to subscription, the billing cycle of the capacity fee is automatically synchronized with the associated ECS instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskChargeType { get; set; }
 
         /// <summary>
-        /// <para>The list of disk IDs. The value is a JSON array that contains up to 16 IDs separated by commas (,).</para>
+        /// <para>The list of disk IDs. The value is a JSON array that contains up to 16 disk IDs. Separate multiple IDs with commas (,).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskIds { get; set; }
 
         /// <summary>
-        /// <para>The instance ID of the instance to which the disk is attached.</para>
+        /// <para>The instance ID of the instance to which the disks are attached.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

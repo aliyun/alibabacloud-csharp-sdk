@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <list type="bullet">
             /// <item><description>cloud_efficiency: ultra disk.</description></item>
             /// <item><description>cloud_ssd: standard SSD.<remarks>
-            /// <para>This parameter is valid only when you upgrade from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to a <a href="https://help.aliyun.com/document_detail/25378.html">currently available instance family</a> and change a non-I/O optimized instance to an I/O optimized instance.</para>
+            /// <para>This parameter is valid only when you Increase Quota from a <a href="https://help.aliyun.com/document_detail/55263.html">retired instance type</a> to a <a href="https://help.aliyun.com/document_detail/25378.html">normal instance family</a> and upgrade a non-I/O optimized instance to an I/O optimized instance.</para>
             /// </remarks>
             /// </description></item>
             /// </list>
@@ -33,17 +33,17 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>Specifies whether to automatically complete automatic payment when you upgrade the instance type. Valid values:</para>
+        /// <para>Specifies whether to automatically complete the payment when you upgrade the instance type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Automatic payment is automatically completed.</description></item>
-        /// <item><description>false: An order is created but automatic payment is not completed.</description></item>
+        /// <item><description>true: The payment is automatically completed.</description></item>
+        /// <item><description>false: An order is created but the payment is not completed.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>If you set AutoPay to true, make sure that your account has a sufficient payment method balance. Otherwise, an abnormal order is generated, and you can only cancel the order.</description></item>
-        /// <item><description>If your payment method balance is insufficient, you can set <c>AutoPay</c> to <c>false</c> to generate an unpaid order. Then, you can logon to the ECS console to pay for the order.</description></item>
-        /// <item><description>When <c>OperatorType</c> is set to <c>downgrade</c>, the <c>AutoPay</c> parameter is ignored.</description></item>
+        /// <item><description>If automatic payment is enabled, make sure that the balance of your payment method is sufficient. Otherwise, an abnormal order is generated and can only be voided.</description></item>
+        /// <item><description>If the balance of your payment method is insufficient, set <c>AutoPay</c> to <c>false</c>. An unpaid order is generated. You can log on to the ECS console to complete the payment.</description></item>
+        /// <item><description>If <c>OperatorType</c> is set to <c>downgrade</c>, the <c>AutoPay</c> parameter is ignored.</description></item>
         /// </list>
         /// </remarks>
         /// 
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
+        /// <para>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters and cannot exceed 64 characters in length. For more information, see <a href="https://help.aliyun.com/document_detail/25693.html">How to ensure idempotence</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123e4567-e89b-12d3-a456-426655440000</para>
@@ -133,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The target instance type for the Upgrade/Downgrade. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a>.</para>
+        /// <para>The target instance type to which you want to perform the Upgrade/Downgrade. For valid values, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance family</a> or invoke <a href="https://help.aliyun.com/document_detail/25620.html">DescribeInstanceTypes</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -150,8 +150,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>false: Cross-cluster instance type changes are not supported.</description></item>
         /// </list>
         /// <para>Default value: false.</para>
-        /// <para>When <c>MigrateAcrossZone</c> is set to <c>true</c>, take note of the following items after you upgrade the Elastic Compute Service instance based on the response:</para>
-        /// <para>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server change. For Linux instances, basic disks (cloud) are identified as xvda or xvdb. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb. This parameter is used for optimization of cross-cluster migration.</para>
+        /// <para>If you set the <c>MigrateAcrossZone</c> parameter to <c>true</c> and upgrade the Elastic Compute Service instance based on the response, note the following:</para>
+        /// <para>VPC-type instances: For <a href="https://help.aliyun.com/document_detail/55263.html">retired instance types</a>, when a non-I/O optimized instance is changed to an I/O optimized instance, the disk device names and software authorization codes of the server change. For Linux instances, basic disks (cloud) are identified as xvda or xvdb. Ultra disks (cloud_efficiency) and standard SSDs (cloud_ssd) are identified as vda or vdb.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -175,12 +175,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The type of the operation. Valid values:</para>
         /// <remarks>
-        /// <para>This parameter is optional. The system can automatically determine whether the operation is an upgrade or a downgrade. If you upload this parameter, follow the rules below.</para>
+        /// <para>This parameter is optional. The system can automatically determine whether the operation is an upgrade or a downgrade. If you specify this parameter, follow the rules below.</para>
         /// </remarks>
         /// <list type="bullet">
-        /// <item><description><para>upgrade: upgrades the instance type. Make sure that your account has a sufficient payment method balance.</para>
+        /// <item><description><para>upgrade: upgrades the instance type. Make sure that the balance of your payment method is sufficient.</para>
         /// </description></item>
-        /// <item><description><para>downgrade: downgrades the instance type. When the instance type specified by <c>InstanceType</c> is lower than the current instance type, set <c>OperatorType</c> to <c>downgrade</c>.</para>
+        /// <item><description><para>downgrade: downgrades the instance type. Set <c>OperatorType</c> to <c>downgrade</c> when the instance type specified by <c>InstanceType</c> is lower than the current instance type.</para>
         /// </description></item>
         /// </list>
         /// <remarks>
@@ -213,7 +213,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RebootTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to immediately restart the instance after the instance type is changed. Valid values:</para>
+        /// <para>Specifies whether to immediately restart the instance after the instance type change is complete. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>true: The instance is immediately restarted.</description></item>
         /// <item><description>false: The instance is not immediately restarted.</description></item>

@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
     public class ModifyDiskSpecRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is in invitational preview and is not available for general use.</para>
+        /// <para>This parameter is in invitational preview and is not available for use.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -24,7 +24,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The new type of the disk. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>cloud_essd: enterprise SSD.</para>
+        /// <item><description><para>cloud_essd: enterprise SSD (ESSD).</para>
         /// </description></item>
         /// <item><description><para>cloud_auto: ESSD AutoPL disk.</para>
         /// </description></item>
@@ -39,12 +39,12 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Default value: empty, which indicates that the disk type is not changed.</para>
         /// <remarks>
         /// <list type="bullet">
-        /// <item><description>The valid values above are listed in descending order of disk performance. If the disk is a subscription disk, downgrading is not allowed.</description></item>
+        /// <item><description>The valid values above are listed in descending order of disk performance. If the specified disk is a subscription disk, you cannot downgrade the disk type.</description></item>
         /// </list>
         /// </remarks>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>ESSD Entry disks can be changed only to enterprise SSDs or ESSD AutoPL disks. For more information, see <a href="https://help.aliyun.com/document_detail/161980.html">Change the disk type</a>.</description></item>
+        /// <item><description>ESSD Entry disks can be changed only to enterprise SSDs (ESSDs) or ESSD AutoPL disks. For more information, see <a href="https://help.aliyun.com/document_detail/161980.html">Change the disk type</a>.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to perform only a dry run without performing the actual request. Valid values:</para>
+        /// <para>Specifies whether to perform only a dry run. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>true: performs only a dry run. The system checks whether your AccessKey pair is valid, whether RAM users are granted permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</para>
         /// </description></item>
@@ -111,8 +111,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
             /// <summary>
             /// <para>Resets the disk performance. Only disks in a dedicated storage cluster are supported.</para>
-            /// <para>If this parameter is specified, the PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput parameters do not take effect.</para>
-            /// <para>The only valid value is All, which resets the disk IOPS and throughput to their initial values.</para>
+            /// <para>If this parameter is set, the PerformanceControlOptions.IOPS and PerformanceControlOptions.Throughput parameters do not take effect.</para>
+            /// <para>Currently, only the value All is supported, which resets the disk IOPS and throughput to their initial values.</para>
             /// 
             /// <b>Example:</b>
             /// <para>All</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The new performance level (PL) of the ESSD. Valid values:</para>
+        /// <para>The new performance level (PL) of an ESSD. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PL0: A single disk can deliver up to 10,000 random read/write IOPS.</description></item>
         /// <item><description>PL1: A single disk can deliver up to 50,000 random read/write IOPS.</description></item>

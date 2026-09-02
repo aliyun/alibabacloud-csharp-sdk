@@ -189,6 +189,10 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
                     [Validation(Required=false)]
                     public string SerialNumber { get; set; }
 
+                    [NameInMap("VgpuVersion")]
+                    [Validation(Required=false)]
+                    public string VgpuVersion { get; set; }
+
                 }
 
                 [NameInMap("Instances")]
@@ -336,7 +340,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         }
 
         /// <summary>
-        /// <para>The paging token returned in this call. When you use MaxResults and NextToken for paging query, an empty value indicates that no more data is available.</para>
+        /// <para>The query token returned by this call. If this value is empty when you use MaxResults and NextToken for paging, no more data is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>e71d8a535bd9cc11</para>

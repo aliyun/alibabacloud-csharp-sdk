@@ -33,9 +33,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task ID for the disk type change.</para>
+        /// <para>The task ID for the disk specification change.</para>
         /// <remarks>
-        /// <para>This parameter is not returned if you only modified the performance level (PL) of an ESSD.</para>
+        /// <para>This parameter is not returned if you only modify the performance level (PL) of an ESSD.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

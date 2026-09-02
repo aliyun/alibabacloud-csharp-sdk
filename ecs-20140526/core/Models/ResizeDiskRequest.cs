@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string DiskId { get; set; }
 
         /// <summary>
-        /// <para>The new disk capacity that you want to expand to. Unit: GiB. Valid values:</para>
+        /// <para>The new disk capacity that you want after expansion. Unit: GiB. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><para>System disk:</para>
         /// <list type="bullet">
@@ -53,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// <item><description><para>Standard SSD (cloud_ssd): 20 to 32768.</para>
         /// </description></item>
-        /// <item><description><para>Enterprise SSD (cloud_essd): The valid values depend on the value of <c>PerformanceLevel</c>. You can call <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> to query disk information and then check the valid values based on the <c>PerformanceLevel</c> parameter in the response.</para>
+        /// <item><description><para>Enterprise SSD (cloud_essd): The valid values depend on the value of <c>PerformanceLevel</c>. You can call <a href="https://help.aliyun.com/document_detail/25514.html">DescribeDisks</a> to query disk information and check the <c>PerformanceLevel</c> parameter in the response.</para>
         /// <list type="bullet">
         /// <item><description>PL0: 1 to 65536.</description></item>
         /// <item><description>PL1: 20 to 65536.</description></item>
@@ -76,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The specified new disk capacity must be greater than the original disk capacity. Otherwise, an error is returned.</para>
+        /// <para>The new disk capacity must be greater than the original disk capacity. Otherwise, an error is returned.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <list type="bullet">
         /// <item><description><para>offline (default): offline expansion. After the expansion, you must restart the instance in the console by following the instructions in <a href="https://help.aliyun.com/document_detail/25440.html">Restart an instance</a> or by calling the <a href="https://help.aliyun.com/document_detail/25502.html">RebootInstance</a> operation for the changes to take effect.</para>
         /// </description></item>
-        /// <item><description><para>online: online expansion. The expansion takes effect without restarting the instance. Supported disk types include ultra disks, standard SSDs, enterprise SSDs, and elastic ephemeral disks.</para>
+        /// <item><description><para>online: online expansion. The expansion takes effect without the need to restart the instance. Supported disk types include ultra disks, standard SSDs, enterprise SSDs, and elastic ephemeral disks.</para>
         /// </description></item>
         /// </list>
         /// 

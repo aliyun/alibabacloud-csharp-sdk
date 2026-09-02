@@ -13,7 +13,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The retention period of cross-region snapshot replicas. Unit: days. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>-1: Snapshot replicas are permanently retained.</description></item>
-        /// <item><description>1 to 65535: specifies the number of days for which snapshot replicas are retained.</description></item>
+        /// <item><description>1 to 65535: the number of days for which snapshot replicas are retained.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -73,8 +73,8 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>Specifies whether to enable encryption for cross-region snapshot replication. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>true: enables encryption. </description></item>
-            /// <item><description>false: does not enable encryption.</description></item>
+            /// <item><description>true: Encryption is enabled. </description></item>
+            /// <item><description>false: Encryption is not enabled.</description></item>
             /// </list>
             /// <para>Default value: false.</para>
             /// 
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             public bool? Encrypted { get; set; }
 
             /// <summary>
-            /// <para>The key ID of the Key Management Service (KMS) key used for encrypted cross-region snapshot replication.</para>
+            /// <para>The key ID of the KMS key used for encrypted cross-region snapshot replication.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0e478b7a-4262-4802-b8cb-00d3fb40826X</para>
@@ -194,11 +194,11 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7, where 1 indicates Monday.</para>
+        /// <para>The days of the week on which automatic snapshots are created. Unit: days. The cycle is weekly. Valid values: 1 to 7. For example, 1 indicates Monday.</para>
         /// <para>To create multiple automatic snapshots within a week, specify multiple days:</para>
         /// <list type="bullet">
         /// <item><description>You can specify up to 7 days.</description></item>
-        /// <item><description>Specify multiple days in a JSON array in the format of <c>&quot;1&quot;, &quot;2&quot;, … &quot;7&quot;</c>. Separate the days with commas (,).</description></item>
+        /// <item><description>Specify multiple days in a JSON array, such as <c>&quot;1&quot;, &quot;2&quot;, … &quot;7&quot;</c>. Separate the days with commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -212,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>The retention period of automatic snapshots. Unit: days. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>-1: Automatic snapshots are permanently retained.</description></item>
-        /// <item><description>1 to 65536: specifies the number of days for which automatic snapshots are retained.</description></item>
+        /// <item><description>1 to 65536: the number of days for which automatic snapshots are retained.</description></item>
         /// </list>
         /// <para>Default value: -1.</para>
         /// 
@@ -228,7 +228,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>To create multiple automatic snapshots within a day, specify multiple points in time:</para>
         /// <list type="bullet">
         /// <item><description>You can specify up to 24 points in time.</description></item>
-        /// <item><description>Specify multiple points in time in a JSON array in the format of <c>&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;</c>. Separate the points in time with commas (,).</description></item>
+        /// <item><description>Specify multiple points in time in a JSON array, such as <c>&quot;0&quot;, &quot;1&quot;, … &quot;23&quot;</c>. Separate the points in time with commas (,).</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

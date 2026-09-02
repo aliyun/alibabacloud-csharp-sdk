@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string LockReason { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paging query. If you set this parameter, it indicates that you are using the MaxResults and NextToken paging method.</para>
+        /// <para>The maximum number of entries per page for a paged query. If you set this parameter, the MaxResults and NextToken parameters are used together for paging.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -95,7 +95,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to perform paging query operations.</para>
+        /// <para>This parameter will be offline soon. Use NextToken and MaxResults to perform paged query operations for paging.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is about to go offline. Use NextToken and MaxResults to perform paging query operations.</para>
+        /// <para>This parameter will be offline soon. Use NextToken and MaxResults to perform paged query operations for paging.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -154,18 +154,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public long? ResourceOwnerId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to display socket-level capacity information. You can use socket-level capacity information to view remaining resources (vCPU, memory usage, remaining capacity, and total capacity) to determine whether an ECS instance of a specific instance type can be created. Valid values:</para>
+        /// <para>Specifies whether to display socket-level capacity information. You can use socket-level capacity information to view remaining resources (vCPUs, memory usage, remaining capacity, and total capacity) to determine whether an ECS instance of a specific instance type can be created. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>true: Display socket-level capacity information. Only specific dedicated host types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export DDH information</a>.</description></item>
-        /// <item><description>false: Do not display socket-level capacity information.</description></item>
+        /// <item><description>true: Displays socket-level capacity information. Only specific dedicated host types support displaying socket-level resource information. For more information, see <a href="https://help.aliyun.com/document_detail/68989.html">View and export DDH information</a>.</description></item>
+        /// <item><description>false: Does not display socket-level capacity information.</description></item>
         /// </list>
         /// <remarks>
         /// <para>Notice: </para>
         /// </remarks>
         /// <para>Each dedicated host typically has two CPUs, numbered Socket 0 and Socket 1. On a dedicated host, ECS instances are not created across sockets to ensure maximum performance. An ECS instance is created based on a single socket only.</para>
         /// <list type="bullet">
-        /// <item><description>If the remaining computing resources of one socket are greater than or equal to the instance type to be created, the ECS instance is created.</description></item>
-        /// <item><description>If the remaining computing resources of each socket are less than the instance type to be created, the ECS instance fails to be created, even if the combined remaining resources of both sockets exceed the instance type requirements.</notice></description></item>
+        /// <item><description>If the remaining computing resources of one socket are greater than or equal to the ECS instance type to be created, the ECS instance is created.</description></item>
+        /// <item><description>If the remaining computing resources of each socket are less than the ECS instance type to be created, the ECS instance fails to be created, even if the combined remaining resources of both sockets exceed the ECS instance type requirements.</notice></description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -178,9 +178,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The usage status of the dedicated host. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Available: The dedicated host is running normally.</para>
+        /// <item><description><para>Available: The dedicated host is running as expected.</para>
         /// </description></item>
-        /// <item><description><para>UnderAssessment: The physical machine is at risk. The physical machine is available but may cause issues for ECS instances on the dedicated host.</para>
+        /// <item><description><para>UnderAssessment: The physical machine has potential risks. The physical machine is available but may cause issues for ECS instances on the dedicated host.</para>
         /// </description></item>
         /// <item><description><para>PermanentFailure: The dedicated host has a permanent failure and is unavailable.</para>
         /// </description></item>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string Status { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. Valid values of N: 0 to 20.</para>
+        /// <para>The tags. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

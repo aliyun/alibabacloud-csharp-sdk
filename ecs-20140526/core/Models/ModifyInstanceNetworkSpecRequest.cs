@@ -27,15 +27,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to automatically complete the payment. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description>true: The payment is automatically completed after the bandwidth configuration is changed. Make sure that your account balance is sufficient. If your account balance is insufficient, an abnormal order is generated. You cannot pay for this order through the ECS console. You can only void the order.</description></item>
+        /// <item><description>true: The payment is automatically completed after the bandwidth configuration is changed. Make sure that your account balance is sufficient. If the balance is insufficient, an abnormal order is generated. You cannot pay for this order in the ECS console. You can only void the order.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>false: An order is generated but the payment is not completed after the bandwidth configuration is changed. If your payment method has an insufficient balance, you can set the Autopay parameter to false to cancel automatic payment. In this case, an unpaid order is generated. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to complete the payment.</description></item>
+        /// <item><description>false: An order is generated but the payment is not completed after the bandwidth configuration is changed. If your payment method has an insufficient balance, set the Autopay parameter to false to cancel automatic payment. In this case, a normal unpaid order is generated. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to complete the payment.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>false: An order is generated but the payment is not completed after the bandwidth configuration is changed. If your payment method has an insufficient balance, you can set the Autopay parameter to false to cancel automatic payment. In this case, an unpaid order is generated. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to complete the payment.</description></item>
+        /// <item><description>false: An order is generated but the payment is not completed after the bandwidth configuration is changed. If your payment method has an insufficient balance, set the Autopay parameter to false to cancel automatic payment. In this case, a normal unpaid order is generated. You can log on to the <a href="https://ecs.console.aliyun.com">ECS console</a> to complete the payment.</description></item>
         /// </list>
         /// <para>Default value: true.</para>
         /// 
@@ -109,9 +109,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The maximum outbound public bandwidth. Unit: Mbit/s (Megabit per second). Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>Pay-by-traffic billing: 0 to 100.</para>
+        /// <item><description><para>Pay-by-traffic: 0 to 100.</para>
         /// </description></item>
-        /// <item><description><para>Pay-by-bandwidth billing:</para>
+        /// <item><description><para>Pay-by-bandwidth:</para>
         /// <list type="bullet">
         /// <item><description>Subscription instances: 0 to 200.</description></item>
         /// <item><description>Pay-as-you-go instances: 0 to 100.</description></item>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The maximum outbound bandwidth per instance is also limited by the <b>Network bandwidth baseline/burst (Gbit/s)</b> metric of the ECS instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
+        /// <para>The maximum outbound bandwidth of a single instance is also limited by the <b>Network bandwidth baseline/burst (Gbit/s)</b> metric of the ECS instance type. For more information, see <a href="https://help.aliyun.com/document_detail/25378.html">Instance families</a>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -130,13 +130,13 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public int? InternetMaxBandwidthOut { get; set; }
 
         /// <summary>
-        /// <para>Transforms the network billing method. Valid values:</para>
+        /// <para>Converts the network billing method. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>PayByBandwidth: pay-by-bandwidth.</description></item>
         /// <item><description>PayByTraffic: pay-by-traffic.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>In the <b>pay-by-traffic</b> mode, the peak inbound and outbound bandwidths are used as upper limits of bandwidths instead of guaranteed performance metrics. When resource contention occurs, the peak bandwidths may be limited. If you require guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
+        /// <para>In the <b>pay-by-traffic</b> mode, the inbound and outbound bandwidth peaks are both upper limits and are not guaranteed. When resource contention occurs, the bandwidth peaks may be throttled. If your workloads require guaranteed bandwidth, use the <b>pay-by-bandwidth</b> mode.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

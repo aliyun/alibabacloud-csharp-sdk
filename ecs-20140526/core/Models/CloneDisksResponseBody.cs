@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The task group ID of the disk cloning operation. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describetasks">DescribeTasks</a> to query the task execution result.</para>
+        /// <para>The task group ID of the disk cloning task. You can call <a href="https://www.alibabacloud.com/help/en/ecs/developer-reference/api-ecs-2014-05-26-describetasks">DescribeTasks</a> to query the task execution result.</para>
         /// 
         /// <b>Example:</b>
         /// <para>g-2ze2op2grqpclwu7****</para>

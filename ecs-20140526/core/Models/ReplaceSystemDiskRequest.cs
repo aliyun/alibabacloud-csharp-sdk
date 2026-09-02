@@ -16,19 +16,18 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
             /// <summary>
             /// <para>The capacity of the new system disk. Unit: GiB. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Basic disk: Max{20, size of the image specified by the parameter ImageId} to 500.</description></item>
-            /// <item><description>Enterprise SSD:<list type="bullet">
-            /// <item><description>PL0: Max{1, size of the image specified by the parameter ImageId} to 2048.</description></item>
-            /// <item><description>PL1: Max{20, size of the image specified by the parameter ImageId} to 2048.</description></item>
-            /// <item><description>PL2: Max{461, size of the image specified by the parameter ImageId} to 2048.</description></item>
-            /// <item><description>PL3: Max{1261, size of the image specified by the parameter ImageId} to 2048.</description></item>
+            /// <item><description>Basic disk: Max{20, size of the image specified by the ImageId parameter} to 500.</description></item>
+            /// <item><description>Enterprise SSD (ESSD):<list type="bullet">
+            /// <item><description>PL0: Max{1, size of the image specified by the ImageId parameter} to 2048.</description></item>
+            /// <item><description>PL1: Max{20, size of the image specified by the ImageId parameter} to 2048.</description></item>
+            /// <item><description>PL2: Max{461, size of the image specified by the ImageId parameter} to 2048.</description></item>
+            /// <item><description>PL3: Max{1261, size of the image specified by the ImageId parameter} to 2048.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>ESSD AutoPL disk: Max{1, size of the image specified by the parameter ImageId} to 2048.</description></item>
-            /// <item><description>Standard SSD: Max{20, size of the image specified by the parameter ImageId} to 2048.</description></item>
-            /// <item><description>Other disk types: Max{20, size of the image specified by the parameter ImageId} to 2048.</description></item>
+            /// <item><description>ESSD AutoPL disk: Max{1, size of the image specified by the ImageId parameter} to 2048.</description></item>
+            /// <item><description>Standard SSD and other disk types: Max{20, size of the image specified by the ImageId parameter} to 2048.</description></item>
             /// </list>
-            /// <para>Default value: Max{40, size of the image specified by the parameter ImageId}.</para>
+            /// <para>Default value: Max{40, size of the image specified by the ImageId parameter}.</para>
             /// <remarks>
             /// <para>You are charged additional fees for the disk capacity that exceeds <c>Max{20, capacity of the original system disk}</c>.</para>
             /// </remarks>
@@ -143,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>Notice: When you use a shared encrypted image to create a disk from an encrypted snapshot, you must set the request parameter Encrypted to true to ensure that the created disk uses the key of the image recipient.</para>
+        /// <para>Notice: When you use a shared encrypted image to create a disk from an encrypted snapshot, you must set the request parameter Encrypted to true to ensure that the disk uses the key of the image recipient.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -154,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? Encrypted { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image to use to reset the system. This parameter is required.</para>
+        /// <para>The ID of the image to use when you reset the system. This parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-bp67acfmxazb4ph****</para>
@@ -229,7 +228,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <para>Specifies whether to use the preset password of the image.</para>
         /// <para>Default value: false.</para>
         /// <remarks>
-        /// <para>When you use this parameter, the Password parameter must be empty. Make sure that the image you use has a preset password.</para>
+        /// <para>If you use this parameter, the Password parameter must be empty. Make sure that the image has a preset password.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -262,9 +261,9 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>Specifies whether to use the free Security Center service after the system disk is replaced. Valid values: </para>
         /// <list type="bullet">
-        /// <item><description><para>Active: Security Center is enabled. This value is valid only for public images.</para>
+        /// <item><description><para>Active: The Security Center service is used. This value is supported only for public images.</para>
         /// </description></item>
-        /// <item><description><para>Deactive: Security Center is not enabled. This value is valid for all images.</para>
+        /// <item><description><para>Deactive: The Security Center service is not used. This value is supported for all images.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: Deactive.</para>

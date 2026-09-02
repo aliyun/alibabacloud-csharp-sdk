@@ -16,7 +16,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <item><description>false: Disabled.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you specify this parameter for a disk that does not support the burst feature, an error is returned.</para>
+        /// <para>An error is returned if you specify any value for a disk that does not support the burst feature.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -44,15 +44,15 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         public bool? DeleteAutoSnapshot { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to release the disk along with the instance. Default value: null, which indicates that the current value remains unchanged.</para>
+        /// <para>Specifies whether to release the disk when the associated instance is released. Default value: null, which indicates that the current value remains unchanged.</para>
         /// <para>&lt;props=&quot;china&quot;&gt;Disks that have the multi-attach feature enabled do not support this parameter.</para>
-        /// <para>Setting <c>DeleteWithInstance</c> to <c>false</c> returns an error in the following cases: </para>
+        /// <para>An error is returned if you set <c>DeleteWithInstance</c> to <c>false</c> in the following cases: </para>
         /// <list type="bullet">
-        /// <item><description>The disk category is local disk (ephemeral).  </description></item>
-        /// <item><description>The disk category is basic disk (cloud) and the disk is not detachable (Portable=false).</description></item>
+        /// <item><description>The category of the disk is local disk (ephemeral).  </description></item>
+        /// <item><description>The category of the disk is basic disk (cloud) and the disk is not detachable (Portable=false).</description></item>
         /// </list>
         /// <remarks>
-        /// <para>Warning: If you set DeleteWithInstance to false, when the ECS instance to which the disk is attached is security-locked and the OperationLocks parameter contains &quot;LockReason&quot; : &quot;security&quot;, the DeleteWithInstance attribute is ignored and the disk is released along with the instance.</para>
+        /// <para>Warning: If you set DeleteWithInstance to false and the ECS instance to which the disk is attached is security-locked with &quot;LockReason&quot; : &quot;security&quot; in OperationLocks, the DeleteWithInstance setting is ignored and the disk is released together with the instance.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -75,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The ID of the disk whose attributes you want to modify.</para>
         /// <remarks>
-        /// <para>The <c>DiskId</c> and <c>DiskIds.N</c> parameters cannot be specified at the same time. Specify one of them as needed.</para>
+        /// <para>The DiskId and DiskIds.N parameters cannot be specified at the same time. Specify one of them as needed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// <summary>
         /// <para>The IDs of the disks whose attributes you want to modify. Valid values of N: 0 to 100.</para>
         /// <remarks>
-        /// <para>The <c>DiskId</c> and <c>DiskIds.N</c> parameters cannot be specified at the same time. Specify one of them as needed.</para>
+        /// <para>The DiskId and DiskIds.N parameters cannot be specified at the same time. Specify one of them as needed.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecs20140526.Models
         /// </list>
         /// <para>Default value: null, which indicates that the current value remains unchanged.</para>
         /// <remarks>
-        /// <para>This parameter is deprecated. The automatic snapshot policy is enabled by default for disks after creation. You only need to associate an automatic snapshot policy with the disk.</para>
+        /// <para><b>[Deprecated]</b> This parameter is deprecated. The automatic snapshot policy feature is enabled by default for disks after they are created. You only need to associate an automatic snapshot policy with the disk.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
