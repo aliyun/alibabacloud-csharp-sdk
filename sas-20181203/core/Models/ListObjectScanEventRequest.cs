@@ -9,6 +9,10 @@ using Tea;
 namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class ListObjectScanEventRequest : TeaModel {
+        [NameInMap("AiDetect")]
+        [Validation(Required=false)]
+        public bool? AiDetect { get; set; }
+
         /// <summary>
         /// <para>The batch operation type. Valid values:</para>
         /// <list type="bullet">

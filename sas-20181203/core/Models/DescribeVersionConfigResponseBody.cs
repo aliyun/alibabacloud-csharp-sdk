@@ -621,6 +621,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public int? SasScreen { get; set; }
 
         /// <summary>
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
+        [NameInMap("SdkAiPostPaidGray")]
+        [Validation(Required=false)]
+        public int? SdkAiPostPaidGray { get; set; }
+
+        /// <summary>
         /// <para>The number of malicious file detection SDK authorizations.</para>
         /// 
         /// <b>Example:</b>

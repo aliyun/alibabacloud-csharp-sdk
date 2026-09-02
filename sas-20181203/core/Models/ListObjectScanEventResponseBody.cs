@@ -16,6 +16,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [Validation(Required=false)]
         public List<ListObjectScanEventResponseBodyData> Data { get; set; }
         public class ListObjectScanEventResponseBodyData : TeaModel {
+            [NameInMap("AiDetect")]
+            [Validation(Required=false)]
+            public bool? AiDetect { get; set; }
+
             /// <summary>
             /// <para>The bucket name.</para>
             /// 

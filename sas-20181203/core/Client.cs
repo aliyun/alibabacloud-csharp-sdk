@@ -63737,6 +63737,134 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询 UUID 维度的漏洞数量统计</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUuidVulNumClassifyStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUuidVulNumClassifyStatisticResponse
+        /// </returns>
+        public DescribeUuidVulNumClassifyStatisticResponse DescribeUuidVulNumClassifyStatisticWithOptions(DescribeUuidVulNumClassifyStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageVul))
+            {
+                query["ImageVul"] = request.ImageVul;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUuidVulNumClassifyStatistic",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUuidVulNumClassifyStatisticResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 UUID 维度的漏洞数量统计</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUuidVulNumClassifyStatisticRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUuidVulNumClassifyStatisticResponse
+        /// </returns>
+        public async Task<DescribeUuidVulNumClassifyStatisticResponse> DescribeUuidVulNumClassifyStatisticWithOptionsAsync(DescribeUuidVulNumClassifyStatisticRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ImageVul))
+            {
+                query["ImageVul"] = request.ImageVul;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Uuids))
+            {
+                query["Uuids"] = request.Uuids;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeUuidVulNumClassifyStatistic",
+                Version = "2018-12-03",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeUuidVulNumClassifyStatisticResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 UUID 维度的漏洞数量统计</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUuidVulNumClassifyStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUuidVulNumClassifyStatisticResponse
+        /// </returns>
+        public DescribeUuidVulNumClassifyStatisticResponse DescribeUuidVulNumClassifyStatistic(DescribeUuidVulNumClassifyStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeUuidVulNumClassifyStatisticWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询 UUID 维度的漏洞数量统计</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeUuidVulNumClassifyStatisticRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeUuidVulNumClassifyStatisticResponse
+        /// </returns>
+        public async Task<DescribeUuidVulNumClassifyStatisticResponse> DescribeUuidVulNumClassifyStatisticAsync(DescribeUuidVulNumClassifyStatisticRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeUuidVulNumClassifyStatisticWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Retrieves the list of servers that support vulnerability fixing based on vulnerability names.</para>
         /// </summary>
         /// 
@@ -103406,6 +103534,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiDetect))
+            {
+                query["AiDetect"] = request.AiDetect;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchType))
             {
                 query["BatchType"] = request.BatchType;
@@ -103504,6 +103636,10 @@ namespace AlibabaCloud.SDK.Sas20181203
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AiDetect))
+            {
+                query["AiDetect"] = request.AiDetect;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchType))
             {
                 query["BatchType"] = request.BatchType;
