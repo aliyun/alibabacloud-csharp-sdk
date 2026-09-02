@@ -39,11 +39,11 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <para>Registers files that have been uploaded to knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
         /// <list type="bullet">
-        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
+        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file has actually been uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
         /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
-        /// A maximum of 100 files can be registered in a single request.</description></item>
+        /// A maximum of 100 files can be imported in a single request.</description></item>
         /// </list>
         /// </summary>
         /// 
@@ -118,11 +118,11 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <para>Registers files that have been uploaded to knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
         /// <list type="bullet">
-        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
+        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file has actually been uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
         /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
-        /// A maximum of 100 files can be registered in a single request.</description></item>
+        /// A maximum of 100 files can be imported in a single request.</description></item>
         /// </list>
         /// </summary>
         /// 
@@ -197,11 +197,11 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <para>Registers files that have been uploaded to knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
         /// <list type="bullet">
-        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
+        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file has actually been uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
         /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
-        /// A maximum of 100 files can be registered in a single request.</description></item>
+        /// A maximum of 100 files can be imported in a single request.</description></item>
         /// </list>
         /// </summary>
         /// 
@@ -221,11 +221,11 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Registers files that are uploaded to the knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
+        /// <para>Registers files that have been uploaded to knowledge base storage as knowledge base documents and <b>automatically triggers parsing</b> (chunking and embedding). Two import types are supported:</para>
         /// <list type="bullet">
-        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file is actually uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
+        /// <item><description><c>LOCAL_UPLOAD</c>: Works with the <c>GetKnowledgeBasePreSignedUrl</c> direct upload flow. This operation only registers the file and does not verify whether the file has actually been uploaded. Therefore, you must complete the PUT upload before calling this operation.</description></item>
         /// <item><description><c>OSS_IMPORT</c>: Imports files from an external OSS bucket. The operation creates an asynchronous import task and returns a <c>knowledge_import_task_id</c>. The system downloads and registers the files in the background.
-        /// A maximum of 100 files can be registered in a single request.</description></item>
+        /// A maximum of 100 files can be imported in a single request.</description></item>
         /// </list>
         /// </summary>
         /// 

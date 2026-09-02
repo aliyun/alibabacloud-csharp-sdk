@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
                 public string ChunkMethod { get; set; }
 
                 /// <summary>
-                /// <para>The ID of the knowledge base.</para>
+                /// <para>The knowledge base ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>kb-123</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
                 public string Location { get; set; }
 
                 /// <summary>
-                /// <para>The name of the document.</para>
+                /// <para>The document name.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>example.pdf</para>
@@ -124,7 +124,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
                 public string Run { get; set; }
 
                 /// <summary>
-                /// <para>The size of the file.</para>
+                /// <para>The file size.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>1024</para>

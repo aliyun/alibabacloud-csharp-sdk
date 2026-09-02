@@ -242,6 +242,59 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             }
 
             /// <summary>
+            /// <para>音频或视频切片在原始媒体中的结束时间，单位为毫秒；非媒体切片不返回。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8400</para>
+            /// </summary>
+            [NameInMap("mediaEndMs")]
+            [Validation(Required=false)]
+            public long? MediaEndMs { get; set; }
+
+            /// <summary>
+            /// <para>音频或视频切片在原始媒体中的开始时间，单位为毫秒；非媒体切片不返回。</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1250</para>
+            /// </summary>
+            [NameInMap("mediaStartMs")]
+            [Validation(Required=false)]
+            public long? MediaStartMs { get; set; }
+
+            /// <summary>
+            /// <para>切片内逐句或逐段内容在原始媒体中的时间范围；非音频切片不返回。</para>
+            /// </summary>
+            [NameInMap("mediaTimeline")]
+            [Validation(Required=false)]
+            public List<SearchKnowledgeBaseResponseBodyResultsMediaTimeline> MediaTimeline { get; set; }
+            public class SearchKnowledgeBaseResponseBodyResultsMediaTimeline : TeaModel {
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>4200</para>
+                /// </summary>
+                [NameInMap("endMs")]
+                [Validation(Required=false)]
+                public long? EndMs { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>1250</para>
+                /// </summary>
+                [NameInMap("startMs")]
+                [Validation(Required=false)]
+                public long? StartMs { get; set; }
+
+                /// <summary>
+                /// <b>Example:</b>
+                /// <para>第一句话。</para>
+                /// </summary>
+                [NameInMap("text")]
+                [Validation(Required=false)]
+                public string Text { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The parent chunk ID.</para>
             /// 
             /// <b>Example:</b>

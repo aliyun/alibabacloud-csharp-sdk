@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public List<AddDocumentsRequestDocuments> Documents { get; set; }
         public class AddDocumentsRequestDocuments : TeaModel {
             /// <summary>
-            /// <para>The name of the document.</para>
+            /// <para>The document name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>CHANGELOG.md</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string Path { get; set; }
 
             /// <summary>
-            /// <para>The size of the file.</para>
+            /// <para>The file size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string ImportType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the knowledge base.</para>
+        /// <para>The knowledge base ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kb-3bd02617e9be335f</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
-        /// <para>The batch label configuration. The key must be a label field defined in the knowledge base. The value supports string, int64, float32, bool, and list types.</para>
+        /// <para>The batch label configuration. The key must be a label field that is already defined in the knowledge base. The value supports string, int64, float32, bool, and list types.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;department&quot;:&quot;legal&quot;,&quot;topics&quot;:[&quot;policy&quot;,&quot;contract&quot;],&quot;reviewed&quot;:true}</para>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public object MetaFields { get; set; }
 
         /// <summary>
-        /// <para>The ID of the processing strategy.</para>
+        /// <para>The processing strategy ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>kb-strategy-7043984ca395eabd</para>
