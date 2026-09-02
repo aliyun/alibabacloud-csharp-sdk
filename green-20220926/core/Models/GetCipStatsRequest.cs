@@ -104,14 +104,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string SubUid { get; set; }
 
         /// <summary>
-        /// <para>The type. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><b>cip</b>: Content Moderation invocation usage statistics.</description></item>
-        /// <item><description><b>risk_level</b>: Content Moderation risk level statistics.</description></item>
-        /// <item><description><b>content_moderation</b>: AI safety guardrail content compliance risk level and tag statistics.</description></item>
-        /// <item><description><b>sensitive_data</b>: AI safety guardrail sensitive data risk level and tag statistics.</description></item>
-        /// <item><description><b>prompt_attack</b>: AI safety guardrail prompt risk level and tag statistics.</description></item>
-        /// </list>
+        /// <para>The type. Valid values: <b>cip</b>: Content Moderation invoke volume statistics. <b>risk_level</b>: Content Moderation risk level statistics. <b>content_moderation</b>: AI security guardrail content compliance risk level and tag statistics. <b>sensitive_data</b>: AI security guardrail sensitive data risk level and tag statistics. <b>prompt_attack</b>: AI security guardrail prompt risk level and tag statistics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>risk_level</para>

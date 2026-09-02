@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The last active time.</para>
+            /// <para>The last active time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01 00:00:00</para>
@@ -130,8 +130,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 /// <summary>
                 /// <para>The event status. Valid values:</para>
                 /// <list type="bullet">
-                /// <item><description><b>unhandled</b>: Not handled.</description></item>
-                /// <item><description><b>resolved</b>: Handled.</description></item>
+                /// <item><description><b>unhandled</b>: Unhandled.</description></item>
+                /// <item><description><b>resolved</b>: Resolved.</description></item>
                 /// </list>
                 /// 
                 /// <b>Example:</b>

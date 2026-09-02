@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The creation time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2024-06-03 15:20:14</para>
+            /// <para>2025-06-03 15:20:14</para>
             /// </summary>
             [NameInMap("GmtCreate")]
             [Validation(Required=false)]
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The modification time.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>2024-06-03 15:20:14</para>
+            /// <para>2025-06-03 15:20:14</para>
             /// </summary>
             [NameInMap("GmtModified")]
             [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The primary key ID.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>1697</para>
+            /// <para>1545</para>
             /// </summary>
             [NameInMap("Id")]
             [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>The name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>消息通知</para>
+            /// <para>callback_name</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>Seed。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cb6gYS8GXj4Vn4Y4FN0Y8R5M-1x46Mq</para>
+            /// <para>cb6gYS*******x46Mq</para>
             /// </summary>
             [NameInMap("Seed")]
             [Validation(Required=false)]
@@ -100,7 +100,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             /// <para>UID。</para>
             /// 
             /// <b>Example:</b>
-            /// <para>12161*****398900</para>
+            /// <para>12*****00</para>
             /// </summary>
             [NameInMap("Uid")]
             [Validation(Required=false)]
@@ -122,14 +122,14 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <para>The page size.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>10</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. This ID can be used to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

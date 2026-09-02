@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string NodeCategory { get; set; }
 
             /// <summary>
-            /// <para>The ID of the node.</para>
+            /// <para>The node ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>idxxx</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string NodeId { get; set; }
 
             /// <summary>
-            /// <para>The name of the node.</para>
+            /// <para>The node name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>namexxx</para>
@@ -92,7 +92,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string RiskLevel { get; set; }
 
             /// <summary>
-            /// <para>The number of alerts.</para>
+            /// <para>The alert count.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>

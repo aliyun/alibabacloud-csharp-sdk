@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetAiAppStatsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to aggregate by month. Default value: false.</para>
+        /// <para>Specifies whether to aggregate statistics by month. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public bool? ByMonth { get; set; }
 
         /// <summary>
-        /// <para>The query end date.</para>
+        /// <para>The end date of the query. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-02 00:00:00</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The query start date.</para>
+        /// <para>The start date of the query. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-01 00:00:00</para>

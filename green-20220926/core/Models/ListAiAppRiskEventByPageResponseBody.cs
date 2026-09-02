@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Channel { get; set; }
 
             /// <summary>
-            /// <para>The end time that indicates when the event was resolved.</para>
+            /// <para>The time when the event was resolved. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-10 11:42:31</para>
@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The brief name that describes the risk event.</para>
+            /// <para>The name that briefly describes the risk event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ALL</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string EventName { get; set; }
 
             /// <summary>
-            /// <para>The time when the event was handled.</para>
+            /// <para>The time when the event was handled. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-10 11:42:31</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string HandleTime { get; set; }
 
             /// <summary>
-            /// <para>The label used to mark or categorize the event.</para>
+            /// <para>The label used to tag or categorize the event.</para>
             /// 
             /// <b>Example:</b>
             /// <para>label-03</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Level { get; set; }
 
             /// <summary>
-            /// <para>The start time that indicates when the event occurred.</para>
+            /// <para>The time when the event occurred. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-21 15:30:19</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string StartTime { get; set; }
 
             /// <summary>
-            /// <para>The event status that indicates the current processing state of the event, such as pending or resolved.</para>
+            /// <para>The event status that indicates the current processing state, such as pending or resolved.</para>
             /// 
             /// <b>Example:</b>
             /// <para>resolved</para>
@@ -199,7 +199,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next page. An empty value indicates that no more pages exist.</para>
+        /// <para>The token for the next page. An empty value indicates that no more pages exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1a320d468c75e987f297484532c16e34d0ab6e7e43f8b73d</para>
@@ -219,7 +219,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

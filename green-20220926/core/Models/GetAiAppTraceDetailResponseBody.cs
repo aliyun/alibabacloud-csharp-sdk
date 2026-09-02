@@ -99,7 +99,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The backend-assigned ID that uniquely identifies a request. You can use this ID for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The trace ID used to correlate and track alert events.</para>
+        /// <para>The trace ID, which is used to correlate and track alert events.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0abb7ee117615311812886711e0a15</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string TraceId { get; set; }
 
         /// <summary>
-        /// <para>The alert time.</para>
+        /// <para>The alert time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-01 16:08:38</para>

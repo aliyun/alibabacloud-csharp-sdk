@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class UpdateAiAppScanStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The application IDs.</para>
+        /// <para>The application ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         /// <summary>
         /// <para>The status. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>enable: enabled.</description></item>
-        /// <item><description>disable: disabled.</description></item>
+        /// <item><description>enable: enabled</description></item>
+        /// <item><description>disable: disabled</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

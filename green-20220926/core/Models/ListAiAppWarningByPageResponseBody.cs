@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public long? WarningCount { get; set; }
 
             /// <summary>
-            /// <para>The time when the alert was triggered.</para>
+            /// <para>The alert time in the format of YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-01-01 00:00:00</para>

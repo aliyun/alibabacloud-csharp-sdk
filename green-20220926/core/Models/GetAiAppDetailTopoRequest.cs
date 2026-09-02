@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string Dimension { get; set; }
 
             /// <summary>
-            /// <para>The end time.</para>
+            /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-28 17:04:08</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time.</para>
+            /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-07-22 17:04:08</para>

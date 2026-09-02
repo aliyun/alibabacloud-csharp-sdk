@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. This ID can be used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend that uniquely identifies a request. This ID can be used for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

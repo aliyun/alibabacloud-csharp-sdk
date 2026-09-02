@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
 {
     public class GetCipStatsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The error code, which is the same as the HTTP status code.</para>
+        /// <para>The error code, which is consistent with the HTTP status code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>未检测出风险</para>
+                    /// <para>No risk detected</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -93,7 +93,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     /// <para>The description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>未检测出风险</para>
+                    /// <para>No risk detected</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -132,7 +132,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 public long? TotalCount { get; set; }
 
                 /// <summary>
-                /// <para>The tree view.</para>
+                /// <para>The tree chart.</para>
                 /// </summary>
                 [NameInMap("TreeChart")]
                 [Validation(Required=false)]
@@ -142,7 +142,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     /// <para>The label description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>疑似政治人物</para>
+                    /// <para>Suspected political figure</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -171,7 +171,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                 }
 
                 /// <summary>
-                /// <para>The audio tree view.</para>
+                /// <para>The audio tree chart.</para>
                 /// </summary>
                 [NameInMap("VoiceTreeChart")]
                 [Validation(Required=false)]
@@ -181,7 +181,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
                     /// <para>The label description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>疑似特定歌曲</para>
+                    /// <para>Suspected specific song</para>
                     /// </summary>
                     [NameInMap("Description")]
                     [Validation(Required=false)]
@@ -340,7 +340,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Msg { get; set; }
 
         /// <summary>
-        /// <para>The request ID assigned by the backend. You can use this ID to troubleshoot issues.</para>
+        /// <para>The ID assigned by the backend to uniquely identify the request. You can use this ID to troubleshoot issues.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>

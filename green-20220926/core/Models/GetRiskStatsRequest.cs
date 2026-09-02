@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string Classify { get; set; }
 
         /// <summary>
-        /// <para>The end time.</para>
+        /// <para>The end time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-02 00:00:00</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time.</para>
+        /// <para>The start time. Format: YYYY-MM-DD HH:mm:ss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-01-01 00:00:00</para>

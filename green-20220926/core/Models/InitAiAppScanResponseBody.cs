@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Green20220926.Models
         public string ReadyStatus { get; set; }
 
         /// <summary>
-        /// <para>The ID assigned by the backend to uniquely identify a request. Used for troubleshooting.</para>
+        /// <para>The ID assigned by the backend to uniquely identify a request. You can use this ID for troubleshooting.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAA-BBBB-CCCCC-DDDD-EEEEEEEE****</para>
