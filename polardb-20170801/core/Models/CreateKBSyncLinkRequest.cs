@@ -10,6 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateKBSyncLinkRequest : TeaModel {
         /// <summary>
+        /// <para>The client ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,6 +21,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientId { get; set; }
 
         /// <summary>
+        /// <para>The client secret.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -30,6 +32,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ClientSecret { get; set; }
 
         /// <summary>
+        /// <para>The description of the synchronization link.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>testDesc</para>
         /// </summary>
@@ -38,6 +42,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
+        /// <para>The unique identifier of the knowledge base.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -48,6 +53,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string KnowledgeBaseId { get; set; }
 
         /// <summary>
+        /// <para>The name of the synchronization link.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,11 +63,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string LinkName { get; set; }
 
+        /// <summary>
+        /// <para>The DingTalk document MCP Server endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx789?key=d5e6fxxxxxx876</a></para>
+        /// </summary>
         [NameInMap("McpEndpoint")]
         [Validation(Required=false)]
         public string McpEndpoint { get; set; }
 
         /// <summary>
+        /// <para>The region ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,11 +84,18 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The DingTalk spreadsheet MCP Server endpoint.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543">https://mcp-gw.dingtalk.com/server/1a2b3cxxxxxx567?key=d5e6fxxxxxx543</a></para>
+        /// </summary>
         [NameInMap("SheetMcpEndpoint")]
         [Validation(Required=false)]
         public string SheetMcpEndpoint { get; set; }
 
         /// <summary>
+        /// <para>The source directory address for synchronization.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,6 +106,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceDir { get; set; }
 
         /// <summary>
+        /// <para>The data source type. Valid values: FEISHU and SHAREPOINT.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -96,6 +117,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string SourceType { get; set; }
 
         /// <summary>
+        /// <para>The synchronization interval. Unit: minutes.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30</para>
         /// </summary>
@@ -104,6 +127,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public int? SyncIntervalMinutes { get; set; }
 
         /// <summary>
+        /// <para>The tenant ID. This parameter is required when SourceType is set to SHAREPOINT.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>63eexxxx-xxxx-xxxx-xxxx-xxxxxx090f82</para>
         /// </summary>
@@ -111,6 +136,12 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
+        /// <summary>
+        /// <para>The DingTalk operator user ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>123***56</para>
+        /// </summary>
         [NameInMap("UserId")]
         [Validation(Required=false)]
         public string UserId { get; set; }

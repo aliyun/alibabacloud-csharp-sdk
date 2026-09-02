@@ -9,11 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class DescribeKBSyncLinksResponseBody : TeaModel {
+        /// <summary>
+        /// <para>The list of synchronization links.</para>
+        /// </summary>
         [NameInMap("Items")]
         [Validation(Required=false)]
         public List<DescribeKBSyncLinksResponseBodyItems> Items { get; set; }
         public class DescribeKBSyncLinksResponseBodyItems : TeaModel {
             /// <summary>
+            /// <para>The client identifier.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>cli_xxxxxxbe8</para>
             /// </summary>
@@ -22,6 +27,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ClientId { get; set; }
 
             /// <summary>
+            /// <para>The creation time.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>2026-08-11T09:55:19Z</para>
             /// </summary>
@@ -30,6 +37,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string CreationTime { get; set; }
 
             /// <summary>
+            /// <para>The description of the synchronization link.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testDesc</para>
             /// </summary>
@@ -38,6 +47,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string Description { get; set; }
 
             /// <summary>
+            /// <para>The source channel of the synchronization link.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>FEISHU</para>
             /// </summary>
@@ -46,6 +57,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ImPlatform { get; set; }
 
             /// <summary>
+            /// <para>The synchronization link ID.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>pkbl-xxxxx</para>
             /// </summary>
@@ -54,6 +67,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string LinkId { get; set; }
 
             /// <summary>
+            /// <para>The link name.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>testName</para>
             /// </summary>
@@ -62,6 +77,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string LinkName { get; set; }
 
             /// <summary>
+            /// <para>The source directory address for synchronization.</para>
+            /// 
             /// <b>Example:</b>
             /// <para><a href="https://example.feishu.cn/wiki/space/xxxxxx">https://example.feishu.cn/wiki/space/xxxxxx</a></para>
             /// </summary>
@@ -70,6 +87,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string SourceDir { get; set; }
 
             /// <summary>
+            /// <para>The synchronization interval. Unit: minutes.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>30</para>
             /// </summary>
@@ -78,6 +97,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public int? SyncIntervalMinutes { get; set; }
 
             /// <summary>
+            /// <para>The synchronization status. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>CREATING</description></item>
+            /// <item><description>RUNNING</description></item>
+            /// <item><description>PAUSED</description></item>
+            /// <item><description>DELETING</description></item>
+            /// </list>
+            /// 
             /// <b>Example:</b>
             /// <para>RUNNING</para>
             /// </summary>
@@ -88,6 +115,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
+        /// <para>Id of the request</para>
+        /// 
         /// <b>Example:</b>
         /// <para>EB07CFF0-D8A4-5C76-AED7-D00E26FC2***</para>
         /// </summary>
