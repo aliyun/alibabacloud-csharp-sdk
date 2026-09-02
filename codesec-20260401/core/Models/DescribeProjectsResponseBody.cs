@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public long? ConfigRevision { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the project was created.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-07-28T03:36:31.573Z</para>
@@ -57,14 +57,14 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The engine switches for the project or scan snapshot (SAST and SCA only).</para>
+            /// <para>The engine switches for the project or scan snapshot. Only SAST and SCA are supported.</para>
             /// </summary>
             [NameInMap("engines")]
             [Validation(Required=false)]
             public DescribeProjectsResponseBodyItemsEngines Engines { get; set; }
             public class DescribeProjectsResponseBodyItemsEngines : TeaModel {
                 /// <summary>
-                /// <para>Indicates whether SAST is supported.</para>
+                /// <para>Indicates whether SAST is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
                 public bool? Sast { get; set; }
 
                 /// <summary>
-                /// <para>Indicates whether SCA is supported.</para>
+                /// <para>Indicates whether SCA is enabled.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>true</para>
@@ -106,6 +106,16 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             public string InstructionPrompt { get; set; }
 
             /// <summary>
+            /// <para>The time when a task was last created.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2026-07-28T03:36:31.573Z</para>
+            /// </summary>
+            [NameInMap("lastScanTime")]
+            [Validation(Required=false)]
+            public string LastScanTime { get; set; }
+
+            /// <summary>
             /// <para>The project name.</para>
             /// 
             /// <b>Example:</b>
@@ -135,7 +145,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
             }
 
             /// <summary>
-            /// <para>The update time.</para>
+            /// <para>The time when the project was last updated.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-07-28T03:36:31.573Z</para>
@@ -149,7 +159,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         /// <summary>
         /// <para>The page size.</para>
         /// <remarks>
-        /// <para>If not specified, all projects are displayed.</para>
+        /// <para>If this parameter is not specified, all projects are returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

@@ -19,11 +19,6 @@ namespace AlibabaCloud.SDK.CodeSec20260401
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"ap-southeast-1", "codesec.ap-southeast-1.aliyuncs.com"},
-                {"cn-hangzhou", "codesec.cn-hangzhou.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("codesec", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -44,7 +39,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects under the tenant with pagination, supporting fuzzy search by name or prompt.</para>
+        /// <para>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -76,6 +71,14 @@ namespace AlibabaCloud.SDK.CodeSec20260401
             {
                 query["query"] = request.Query;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["sortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["sortOrder"] = request.SortOrder;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -98,7 +101,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects under the tenant with pagination, supporting fuzzy search by name or prompt.</para>
+        /// <para>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -130,6 +133,14 @@ namespace AlibabaCloud.SDK.CodeSec20260401
             {
                 query["query"] = request.Query;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortBy))
+            {
+                query["sortBy"] = request.SortBy;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SortOrder))
+            {
+                query["sortOrder"] = request.SortOrder;
+            }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
                 Headers = headers,
@@ -152,7 +163,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects under the tenant with pagination, supporting fuzzy search by name or prompt.</para>
+        /// <para>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -171,7 +182,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists projects under the tenant with pagination, supporting fuzzy search by name or prompt.</para>
+        /// <para>Lists projects under a tenant by page, with support for fuzzy search by name or prompt.</para>
         /// </summary>
         /// 
         /// <param name="request">
