@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string StandardHotelId { get; set; }
 
                 /// <summary>
-                /// <para>The hotel status (ONLINE/OFFLINE).</para>
+                /// <para>The hotel status. Valid values: ONLINE and OFFLINE.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>ONLINE</para>
@@ -118,7 +118,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful.</para>
+        /// <para>Indicates whether the request is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

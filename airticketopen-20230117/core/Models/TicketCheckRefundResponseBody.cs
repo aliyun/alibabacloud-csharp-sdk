@@ -51,6 +51,10 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 [Validation(Required=false)]
                 public List<TicketCheckRefundResponseBodyDataRefundRuleRefundStageRules> RefundStageRules { get; set; }
                 public class TicketCheckRefundResponseBodyDataRefundRuleRefundStageRules : TeaModel {
+                    /// <summary>
+                    /// <b>Example:</b>
+                    /// <para>10000</para>
+                    /// </summary>
                     [NameInMap("Fee")]
                     [Validation(Required=false)]
                     public double? Fee { get; set; }

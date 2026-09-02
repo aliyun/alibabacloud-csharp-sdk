@@ -187,7 +187,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string PenaltyType { get; set; }
 
                         /// <summary>
-                        /// <para>The penalty value (percentage/amount/nights).</para>
+                        /// <para>The penalty value (percentage/amount/number of nights).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>50</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                         public string PenaltyValue { get; set; }
 
                         /// <summary>
-                        /// <para>The currency code (present only when the penalty type is AMOUNT).</para>
+                        /// <para>The currency code (present only when the type is AMOUNT).</para>
                         /// 
                         /// <b>Example:</b>
                         /// <para>USD</para>
@@ -389,7 +389,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public List<DataHotelsValueOffers> Offers { get; set; }
         public class DataHotelsValueOffers : TeaModel {
             /// <summary>
-            /// <para>The item offer key used for price verification. Pass through this value as-is.</para>
+            /// <para>The item offer key, which is a price verification key. Pass this value through as-is.</para>
             /// 
             /// <b>Example:</b>
             /// <para>itemOffer_123</para>
@@ -453,7 +453,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public List<DataHotelsValueOffersCancelPolicyPenalties> Penalties { get; set; }
                 public class DataHotelsValueOffersCancelPolicyPenalties : TeaModel {
                     /// <summary>
-                    /// <para>The effective start time as a UTC millisecond timestamp.</para>
+                    /// <para>The effective start time, in UTC millisecond timestamp format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1672531200000</para>
@@ -463,7 +463,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string Start { get; set; }
 
                     /// <summary>
-                    /// <para>The effective end time as a UTC millisecond timestamp.</para>
+                    /// <para>The effective end time, in UTC millisecond timestamp format.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>1672617600000</para>
@@ -483,7 +483,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string PenaltyType { get; set; }
 
                     /// <summary>
-                    /// <para>The penalty value (percentage/amount/nights).</para>
+                    /// <para>The penalty value (percentage, amount, or number of nights).</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>50</para>
@@ -493,7 +493,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                     public string PenaltyValue { get; set; }
 
                     /// <summary>
-                    /// <para>The currency code. This field is present only when the penalty type is AMOUNT.</para>
+                    /// <para>The currency code. This field has a value only when the penalty type is AMOUNT.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>USD</para>

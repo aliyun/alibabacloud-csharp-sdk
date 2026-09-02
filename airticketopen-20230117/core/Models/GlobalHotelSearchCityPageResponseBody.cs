@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
             public List<GlobalHotelSearchCityPageResponseBodyDataCities> Cities { get; set; }
             public class GlobalHotelSearchCityPageResponseBodyDataCities : TeaModel {
                 /// <summary>
-                /// <para>The Chinese name.</para>
+                /// <para>The Chinese name of the city.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>北京市</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public int? Country { get; set; }
 
                 /// <summary>
-                /// <para>The country code (ISO 3166-1 alpha-2).</para>
+                /// <para>The country code in ISO 3166-1 alpha-2 format.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CN</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
                 public string CountryCode { get; set; }
 
                 /// <summary>
-                /// <para>The English name.</para>
+                /// <para>The English name of the city.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>Beijing</para>

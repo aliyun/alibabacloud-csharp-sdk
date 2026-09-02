@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
 {
     public class GlobalHotelQueryCalendarAvailabilityRequest : TeaModel {
         /// <summary>
-        /// <para>The account ID of the distributor.</para>
+        /// <para>The distributor account ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? AdultCount { get; set; }
 
         /// <summary>
-        /// <para>The end date of the check-in period to query, in the format of yyyy-MM-dd. The date cannot be earlier than the start date. The date range includes both the start and end dates, with a maximum span of 30 days.</para>
+        /// <para>The end date of the check-in date range to query, in the yyyy-MM-dd format. The date cannot be earlier than the start date. The date range is inclusive and supports a maximum of 30 days.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public string CheckInDateEnd { get; set; }
 
         /// <summary>
-        /// <para>The start date of the check-in period to query, in the format of yyyy-MM-dd. The date cannot be earlier than the current day.</para>
+        /// <para>The start date of the check-in date range to query, in the yyyy-MM-dd format. The date cannot be earlier than the current day.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.AirticketOpen20230117.Models
         public int? ChildCount { get; set; }
 
         /// <summary>
-        /// <para>The list of children\&quot;s ages.</para>
+        /// <para>The list of children ages.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[]</para>
