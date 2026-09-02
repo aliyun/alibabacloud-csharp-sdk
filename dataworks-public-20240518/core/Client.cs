@@ -23564,6 +23564,126 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>查询批量转交表Owner状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchChangeTableOwnerStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchChangeTableOwnerStatusResponse
+        /// </returns>
+        public GetBatchChangeTableOwnerStatusResponse GetBatchChangeTableOwnerStatusWithOptions(GetBatchChangeTableOwnerStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchId))
+            {
+                query["BatchId"] = request.BatchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBatchChangeTableOwnerStatus",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBatchChangeTableOwnerStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量转交表Owner状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchChangeTableOwnerStatusRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchChangeTableOwnerStatusResponse
+        /// </returns>
+        public async Task<GetBatchChangeTableOwnerStatusResponse> GetBatchChangeTableOwnerStatusWithOptionsAsync(GetBatchChangeTableOwnerStatusRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.BatchId))
+            {
+                query["BatchId"] = request.BatchId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetBatchChangeTableOwnerStatus",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetBatchChangeTableOwnerStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量转交表Owner状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchChangeTableOwnerStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchChangeTableOwnerStatusResponse
+        /// </returns>
+        public GetBatchChangeTableOwnerStatusResponse GetBatchChangeTableOwnerStatus(GetBatchChangeTableOwnerStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetBatchChangeTableOwnerStatusWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>查询批量转交表Owner状态</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetBatchChangeTableOwnerStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetBatchChangeTableOwnerStatusResponse
+        /// </returns>
+        public async Task<GetBatchChangeTableOwnerStatusResponse> GetBatchChangeTableOwnerStatusAsync(GetBatchChangeTableOwnerStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetBatchChangeTableOwnerStatusWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries the details of a business process by calling GetBusiness.</para>
         /// </summary>
         /// 
@@ -55408,6 +55528,154 @@ namespace AlibabaCloud.SDK.Dataworks_public20240518
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await StopWorkflowInstancesWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批量转交表Owner</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitBatchChangeTableOwnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitBatchChangeTableOwnerResponse
+        /// </returns>
+        public SubmitBatchChangeTableOwnerResponse SubmitBatchChangeTableOwnerWithOptions(SubmitBatchChangeTableOwnerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitBatchChangeTableOwnerShrinkRequest request = new SubmitBatchChangeTableOwnerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableMetaEntityIds))
+            {
+                request.TableMetaEntityIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableMetaEntityIds, "TableMetaEntityIds", "simple");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCrossTenant))
+            {
+                body["EnableCrossTenant"] = request.EnableCrossTenant;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMetaEntityIdsShrink))
+            {
+                body["TableMetaEntityIds"] = request.TableMetaEntityIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitBatchChangeTableOwner",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitBatchChangeTableOwnerResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批量转交表Owner</para>
+        /// </summary>
+        /// 
+        /// <param name="tmpReq">
+        /// SubmitBatchChangeTableOwnerRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitBatchChangeTableOwnerResponse
+        /// </returns>
+        public async Task<SubmitBatchChangeTableOwnerResponse> SubmitBatchChangeTableOwnerWithOptionsAsync(SubmitBatchChangeTableOwnerRequest tmpReq, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(tmpReq);
+            SubmitBatchChangeTableOwnerShrinkRequest request = new SubmitBatchChangeTableOwnerShrinkRequest();
+            AlibabaCloud.OpenApiUtil.Client.Convert(tmpReq, request);
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.TableMetaEntityIds))
+            {
+                request.TableMetaEntityIdsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.TableMetaEntityIds, "TableMetaEntityIds", "simple");
+            }
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EnableCrossTenant))
+            {
+                body["EnableCrossTenant"] = request.EnableCrossTenant;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Owner))
+            {
+                body["Owner"] = request.Owner;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TableMetaEntityIdsShrink))
+            {
+                body["TableMetaEntityIds"] = request.TableMetaEntityIdsShrink;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "SubmitBatchChangeTableOwner",
+                Version = "2024-05-18",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<SubmitBatchChangeTableOwnerResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批量转交表Owner</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitBatchChangeTableOwnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitBatchChangeTableOwnerResponse
+        /// </returns>
+        public SubmitBatchChangeTableOwnerResponse SubmitBatchChangeTableOwner(SubmitBatchChangeTableOwnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return SubmitBatchChangeTableOwnerWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>提交批量转交表Owner</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// SubmitBatchChangeTableOwnerRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// SubmitBatchChangeTableOwnerResponse
+        /// </returns>
+        public async Task<SubmitBatchChangeTableOwnerResponse> SubmitBatchChangeTableOwnerAsync(SubmitBatchChangeTableOwnerRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await SubmitBatchChangeTableOwnerWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
