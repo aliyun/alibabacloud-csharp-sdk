@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public GetKnowledgeRecallResponseBodyData Data { get; set; }
         public class GetKnowledgeRecallResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The total number of entries.</para>
+            /// <para>The total number of records.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

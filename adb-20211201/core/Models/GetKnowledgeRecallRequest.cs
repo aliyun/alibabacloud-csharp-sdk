@@ -43,6 +43,9 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
 
         /// <summary>
         /// <para>The username. Only files that this user has permission to access are recalled.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>user_name1</para>
         /// </summary>
         [NameInMap("User")]
         [Validation(Required=false)]

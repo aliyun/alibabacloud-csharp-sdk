@@ -65,21 +65,6 @@ namespace AlibabaCloud.SDK.Adb20211201
                 {"eu-west-1-oxs", "adb.ap-northeast-1.aliyuncs.com"},
                 {"me-east-1", "adb.ap-northeast-1.aliyuncs.com"},
                 {"rus-west-1-pop", "adb.ap-northeast-1.aliyuncs.com"},
-                {"cn-chengdu", "adb.cn-chengdu.aliyuncs.com"},
-                {"cn-wulanchabu", "adb.cn-wulanchabu.aliyuncs.com"},
-                {"cn-zhangjiakou", "adb.cn-zhangjiakou.aliyuncs.com"},
-                {"ap-northeast-2", "adb.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "adb.ap-northeast-1.aliyuncs.com"},
-                {"cn-guangzhou", "adb.cn-guangzhou.aliyuncs.com"},
-                {"ap-southeast-3", "adb.ap-southeast-3.aliyuncs.com"},
-                {"cn-huhehaote", "adb.cn-huhehaote.aliyuncs.com"},
-                {"ap-southeast-5", "adb.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-6", "adb.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-7", "adb.ap-southeast-7.aliyuncs.com"},
-                {"eu-west-1", "adb.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "adb.eu-central-1.aliyuncs.com"},
-                {"na-south-1", "adb.na-south-1.aliyuncs.com"},
-                {"me-central-1", "adb.me-central-1.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("adb", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -101,7 +86,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base document.</para>
+        /// <para>Adds a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -134,6 +119,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["IsDir"] = request.IsDir;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["Tags"] = request.Tags;
@@ -163,7 +152,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base document.</para>
+        /// <para>Adds a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -196,6 +185,10 @@ namespace AlibabaCloud.SDK.Adb20211201
             {
                 query["IsDir"] = request.IsDir;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Priority))
+            {
+                query["Priority"] = request.Priority;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Tags))
             {
                 query["Tags"] = request.Tags;
@@ -225,7 +218,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base document.</para>
+        /// <para>Adds a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -243,7 +236,7 @@ namespace AlibabaCloud.SDK.Adb20211201
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds a knowledge base document.</para>
+        /// <para>Adds a document to a knowledge base.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4378,7 +4371,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a> of AnalyticDB for MySQL.</em>* Temporary backups and regular backups have the same pricing and backup set retention period.</para>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/zh/pricing-calculator?_p_lc=1#/">pricing</a> of AnalyticDB for MySQL.</em>* 
+        /// Temporary backups and regular backups have the same pricing and backup set retention period.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4445,7 +4440,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a> of AnalyticDB for MySQL.</em>* Temporary backups and regular backups have the same pricing and backup set retention period.</para>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/zh/pricing-calculator?_p_lc=1#/">pricing</a> of AnalyticDB for MySQL.</em>* 
+        /// Temporary backups and regular backups have the same pricing and backup set retention period.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4512,7 +4509,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a> of AnalyticDB for MySQL.</em>* Temporary backups and regular backups have the same pricing and backup set retention period.</para>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/zh/pricing-calculator?_p_lc=1#/">pricing</a> of AnalyticDB for MySQL.</em>* 
+        /// Temporary backups and regular backups have the same pricing and backup set retention period.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4535,7 +4534,9 @@ namespace AlibabaCloud.SDK.Adb20211201
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para><em>Before you use this operation, make sure that you fully understand the billing methods and <a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a> of AnalyticDB for MySQL.</em>* Temporary backups and regular backups have the same pricing and backup set retention period.</para>
+        /// <para><em>Before using this operation, make sure that you fully understand the billing methods and &lt;props=&quot;china&quot;&gt;<a href="https://www.aliyun.com/price/product#/ads/detail/ads_pre">pricing</a>
+        /// &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/zh/zh/pricing-calculator?_p_lc=1#/">pricing</a> of AnalyticDB for MySQL.</em>* 
+        /// Temporary backups and regular backups have the same pricing and backup set retention period.</para>
         /// </description>
         /// 
         /// <param name="request">

@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string DBClusterId { get; set; }
 
         /// <summary>
-        /// <para>The file address. Currently, only OSS paths are supported.</para>
+        /// <para>The file location. Currently, only OSS paths are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         public string FileType { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the file is a folder.</para>
+        /// <para>Specifies whether the path is a directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -50,6 +50,13 @@ namespace AlibabaCloud.SDK.Adb20211201.Models
         [NameInMap("IsDir")]
         [Validation(Required=false)]
         public bool? IsDir { get; set; }
+
+        /// <summary>
+        /// <para>The confidence level or weight of the file.</para>
+        /// </summary>
+        [NameInMap("Priority")]
+        [Validation(Required=false)]
+        public string Priority { get; set; }
 
         /// <summary>
         /// <para>The file tags in JSON format.</para>
