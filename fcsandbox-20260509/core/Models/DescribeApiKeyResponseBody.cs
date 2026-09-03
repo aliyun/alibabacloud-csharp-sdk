@@ -29,6 +29,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [Validation(Required=false)]
         public string Code { get; set; }
 
+        [NameInMap("effectivePermissions")]
+        [Validation(Required=false)]
+        public EffectivePermissions EffectivePermissions { get; set; }
+
         [NameInMap("ipBlacklist")]
         [Validation(Required=false)]
         public List<IPConfig> IpBlacklist { get; set; }
@@ -49,6 +53,10 @@ namespace AlibabaCloud.SDK.FCSandbox20260509.Models
         [NameInMap("message")]
         [Validation(Required=false)]
         public string Message { get; set; }
+
+        [NameInMap("permissionPolicy")]
+        [Validation(Required=false)]
+        public PermissionPolicy PermissionPolicy { get; set; }
 
         /// <summary>
         /// <para>The request ID.</para>
