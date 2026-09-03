@@ -56,7 +56,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The document path. This is the file name or relative path used during upload, which must be consistent with the pre-signed request.</para>
+            /// <para>The document path. This is the file name or relative path used during upload, which must be consistent with the pre-signed URL request.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026_06_23_17_49_52WwGSUezpG2u2iHWxyYGzkf9KtormhkxN/CHANGELOG.md</para>
@@ -74,6 +74,16 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             [NameInMap("Size")]
             [Validation(Required=false)]
             public long? Size { get; set; }
+
+            /// <summary>
+            /// <para>The processing strategy ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>kb-strategy-7043984ca395eabd</para>
+            /// </summary>
+            [NameInMap("StrategyId")]
+            [Validation(Required=false)]
+            public string StrategyId { get; set; }
 
         }
 

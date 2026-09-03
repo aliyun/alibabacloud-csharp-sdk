@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The query for retrieval.</para>
+        /// <para>The retrieval query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>What is the tax amount on the invoice?</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string Query { get; set; }
 
         /// <summary>
-        /// <para>The rerank model ID.</para>
+        /// <para>The reranking model ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public long? RerankModelId { get; set; }
 
         /// <summary>
-        /// <para>The name of the rerank model that the tenant has activated. If both rerankModelName and rerankModelId are specified, this parameter takes precedence.</para>
+        /// <para>The name of a reranking model that the tenant has activated. If both rerankModelName and rerankModelId are specified, this parameter takes precedence.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen3-rerank</para>
@@ -123,7 +123,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public SearchKnowledgeBaseRequestRetrievalConfig RetrievalConfig { get; set; }
         public class SearchKnowledgeBaseRequestRetrievalConfig : TeaModel {
             /// <summary>
-            /// <para>The number of candidate results to recall.</para>
+            /// <para>The number of candidate recall results.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

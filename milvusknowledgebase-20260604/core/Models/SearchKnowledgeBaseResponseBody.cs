@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
 {
     public class SearchKnowledgeBaseResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the permission verification failure.</para>
+        /// <para>The details of the access denial due to a permission verification failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>{&quot;PolicyType&quot;:&quot;AccountLevelIdentityBasedPolicy&quot;,&quot;NoPermissionType&quot;:&quot;ImplicitDeny&quot;,&quot;AuthAction&quot;:&quot;milvusknowledgebase:SearchKnowledgeBase&quot;}</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public string AccessDeniedDetail { get; set; }
 
         /// <summary>
-        /// <para>The status code.</para>
+        /// <para>The return code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The returned message.</para>
+        /// <para>The return message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -242,7 +242,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             }
 
             /// <summary>
-            /// <para>音频或视频切片在原始媒体中的结束时间，单位为毫秒；非媒体切片不返回。</para>
+            /// <para>The end time of the audio or video chunk in the original media, in milliseconds. This field is not returned for non-media chunks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>8400</para>
@@ -252,7 +252,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public long? MediaEndMs { get; set; }
 
             /// <summary>
-            /// <para>音频或视频切片在原始媒体中的开始时间，单位为毫秒；非媒体切片不返回。</para>
+            /// <para>The start time of the audio or video chunk in the original media, in milliseconds. This field is not returned for non-media chunks.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1250</para>
@@ -262,13 +262,15 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             public long? MediaStartMs { get; set; }
 
             /// <summary>
-            /// <para>切片内逐句或逐段内容在原始媒体中的时间范围；非音频切片不返回。</para>
+            /// <para>The time ranges of sentence-level or paragraph-level content within the chunk in the original media. This field is not returned for non-audio chunks.</para>
             /// </summary>
             [NameInMap("mediaTimeline")]
             [Validation(Required=false)]
             public List<SearchKnowledgeBaseResponseBodyResultsMediaTimeline> MediaTimeline { get; set; }
             public class SearchKnowledgeBaseResponseBodyResultsMediaTimeline : TeaModel {
                 /// <summary>
+                /// <para>The end time of the segment.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>4200</para>
                 /// </summary>
@@ -277,6 +279,8 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
                 public long? EndMs { get; set; }
 
                 /// <summary>
+                /// <para>The start time of the segment.</para>
+                /// 
                 /// <b>Example:</b>
                 /// <para>1250</para>
                 /// </summary>
@@ -285,8 +289,10 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
                 public long? StartMs { get; set; }
 
                 /// <summary>
+                /// <para>The segment text.</para>
+                /// 
                 /// <b>Example:</b>
-                /// <para>第一句话。</para>
+                /// <para>The first sentence</para>
                 /// </summary>
                 [NameInMap("text")]
                 [Validation(Required=false)]
@@ -354,7 +360,7 @@ namespace AlibabaCloud.SDK.MilvusKnowledgeBase20260604.Models
             }
 
             /// <summary>
-            /// <para>The list of tags.</para>
+            /// <para>The list of labels.</para>
             /// </summary>
             [NameInMap("tags")]
             [Validation(Required=false)]
