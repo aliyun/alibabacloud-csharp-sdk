@@ -23,7 +23,12 @@ namespace AlibabaCloud.SDK.Clickhouse20230522.Models
         /// <para>The cluster status.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>active</para>
+        /// <para>ACTIVATION
+        /// STOPPED
+        /// RESOURCE_PREPARING
+        /// CREATING
+        /// MINOR_VERSION_TRANSING
+        /// CLASS_CHANGING</para>
         /// </summary>
         [NameInMap("DBInstanceStatus")]
         [Validation(Required=false)]
