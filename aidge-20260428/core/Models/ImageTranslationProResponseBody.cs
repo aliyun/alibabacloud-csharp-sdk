@@ -151,7 +151,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                         /// <para>The original text before translation.</para>
                         /// 
                         /// <b>Example:</b>
-                        /// <para>萌趣造型·清脆响铃</para>
+                        /// <para>Cute Design · Crisp Bell</para>
                         /// </summary>
                         [NameInMap("Content")]
                         [Validation(Required=false)]
@@ -363,7 +363,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
                             }
 
                             /// <summary>
-                            /// <para>Indicates whether the TextItem is valid. The item is invalid if this value does not exist or is false.</para>
+                            /// <para>Indicates whether the TextItem is valid. The item is invalid if this value does not exist or is set to false.</para>
                             /// 
                             /// <b>Example:</b>
                             /// <para>true</para>
@@ -457,7 +457,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             public List<ImageTranslationProResponseBodyDataResultList> ResultList { get; set; }
             public class ImageTranslationProResponseBodyDataResultList : TeaModel {
                 /// <summary>
-                /// <para>The URL of the translated result image.</para>
+                /// <para>The URL of the image translation result image.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para><a href="http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg">http://dashscope-a717.oss-cn-beijing.aliyuncs.com/xxx.jpg</a></para>
@@ -498,7 +498,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call, such as &quot;The content contains sensitive data. Try other input.&quot;</para>
+        /// <para>The error message. Returns &quot;Success&quot; for a successful call. Returns a specific error message for an exception, such as &quot;The content contains sensitive data. Try other input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -508,7 +508,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, which uniquely identifies the request.</para>
+        /// <para>The request ID. Used to uniquely identify a request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>61785C32-80C2-19A3-9E55-2C3702C84B40</para>

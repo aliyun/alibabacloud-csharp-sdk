@@ -8,59 +8,65 @@ using Tea;
 
 namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
-    public class DocumentTranslateResponseBody : TeaModel {
+    public class VirtualTryOnResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code.</para>
+        /// <para>The error code. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>success</para>
+        /// <para>200</para>
         /// </summary>
         [NameInMap("Code")]
         [Validation(Required=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The asynchronous task information.</para>
+        /// <para>The returned result struct.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
-        public DocumentTranslateResponseBodyData Data { get; set; }
-        public class DocumentTranslateResponseBodyData : TeaModel {
+        public VirtualTryOnResponseBodyData Data { get; set; }
+        public class VirtualTryOnResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The unique identifier of the asynchronous task, used to query the task status and result.</para>
+            /// <para>The asynchronous task ID. Used to query the task result later.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>6071a030-5c92-9df1-96d0-44952343439a</para>
+            /// <para>task-xxxx-xxxx-xxxx</para>
             /// </summary>
             [NameInMap("TaskId")]
             [Validation(Required=false)]
             public string TaskId { get; set; }
 
+            /// <summary>
+            /// <para>The usage details.</para>
+            /// </summary>
+            [NameInMap("UsageMap")]
+            [Validation(Required=false)]
+            public Dictionary<string, object> UsageMap { get; set; }
+
         }
 
         /// <summary>
-        /// <para>The error message, such as &quot;The parameters contain sensitive information. Try other input.&quot;
-        /// This parameter is not returned for successful calls.</para>
+        /// <para>The error message. This parameter is not returned if the call is successful.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Success</para>
+        /// <para>OK</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The unique identity of this request, used for troubleshooting and Tracing Analysis.</para>
+        /// <para>The request ID. Used to uniquely identify a single API call.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>39E8A74B-F99E-1195-A5FF-3ECC5F94F304</para>
+        /// <para>E1AD60F1-BAC7-546B-9533-E7AD02B16E3F</para>
         /// </summary>
         [NameInMap("RequestId")]
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. Valid values: true: The call is successful. false: The call failed.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

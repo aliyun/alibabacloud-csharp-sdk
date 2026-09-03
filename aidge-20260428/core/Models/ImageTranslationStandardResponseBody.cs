@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationStandardResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. A value of 200 indicates a successful call. For other response codes, refer to the error code information.</para>
+        /// <para>The response code. 200 indicates success. For other response codes, refer to the error code information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -428,7 +428,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. &quot;Success&quot; is returned for successful calls, and a specific error message is returned for failed calls.</para>
+        /// <para>The error message. &quot;Success&quot; is returned for a successful call. A specific error message is returned for a failed call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -448,7 +448,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. A value of true indicates success, and a value of false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. true indicates success. false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

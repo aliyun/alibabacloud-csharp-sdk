@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class ImageTranslationStandardRequest : TeaModel {
         /// <summary>
-        /// <para>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, translation results are not modified.</para>
+        /// <para>The intervention glossary ID. Optional. Create the glossary separately in the console and provide its ID. If the glossary ID is empty, the translation results are not modified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>glossary_1</para>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         /// <list type="bullet">
         /// <item><description>Image URL: Must be publicly accessible.</description></item>
         /// <item><description>Format: png, jpeg, jpg, bmp, webp</description></item>
-        /// <item><description>Pixels: Width and height must not exceed 4000</description></item>
+        /// <item><description>Pixels: Both width and height must not exceed 4000</description></item>
         /// <item><description>File size: Original file ≤ 10 MB</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -36,7 +36,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string ImageUrl { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to translate text on the product area. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</para>
+        /// <para>Specifies whether to translate text on the image subject. Optional. Default value: false. This helps protect information by avoiding translation of embedded information such as product names.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public bool? TranslatingBrandInTheProduct { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return layer information such as text position, font, and color. If set to true, layer information is returned for secondary editing through an image editor. Default value: false.</para>
+        /// <para>Specifies whether to return layer information such as text position, font, and color. If you set this parameter to true, layer information is returned, which can be used to integrate with image editors for secondary editing. Default value: false.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>

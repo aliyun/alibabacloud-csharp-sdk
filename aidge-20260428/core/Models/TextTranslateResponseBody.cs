@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
 {
     public class TextTranslateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The response code. Returns &quot;success&quot; for successful calls.</para>
+        /// <para>The response code. The value &quot;success&quot; is returned for successful calls.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -66,7 +66,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
             }
 
             /// <summary>
-            /// <para>The usage information, including the input character count.</para>
+            /// <para>The usage information, including the number of input characters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>{&quot;InputCharacterCount&quot;:5}</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         }
 
         /// <summary>
-        /// <para>The error message. Returns &quot;Success&quot; for successful calls. Returns specific error information for exceptions, such as &quot;The parameters contain sensitive information. Try other input.&quot;</para>
+        /// <para>The error message. The value &quot;Success&quot; is returned for successful calls. For exceptions, a specific error message is returned, such as &quot;The parameters contain sensitive information. Try other input.&quot;</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success</para>
@@ -88,7 +88,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The request ID, used to identify a unique request call.</para>
+        /// <para>The request ID, which uniquely identifies a single API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>922E43BB-EE0E-1A29-B143-BB91BB3EA6AB</para>
@@ -98,7 +98,7 @@ namespace AlibabaCloud.SDK.Aidge20260428.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the call is successful. true indicates success. false indicates failure.</para>
+        /// <para>Indicates whether the call is successful. A value of true indicates success. A value of false indicates failure.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
