@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 {
     public class CreateApplicationResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the application.</para>
+        /// <para>The application ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>pa-********************</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string ApplicationId { get; set; }
 
         /// <summary>
-        /// <para>A list of child components.</para>
+        /// <para>The list of child components.</para>
         /// </summary>
         [NameInMap("Components")]
         [Validation(Required=false)]
         public List<CreateApplicationResponseBodyComponents> Components { get; set; }
         public class CreateApplicationResponseBodyComponents : TeaModel {
             /// <summary>
-            /// <para>The ID of the child component.</para>
+            /// <para>The child component ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pac-********************</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the generated order.</para>
+        /// <para>The generated order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2148126708*****</para>
@@ -59,7 +59,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3E5CD764-FCCA-5C9C-838E-20E0DE84B2AF</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the resources are sufficient. This parameter is returned only when <c>DryRun</c> is set to <c>true</c>.</para>
+        /// <para>Indicates whether resources are sufficient. This parameter is returned only when DryRun is set to true.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public bool? ResourceAvailable { get; set; }
 
         /// <summary>
-        /// <para>The ID of the resource group.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-********************</para>

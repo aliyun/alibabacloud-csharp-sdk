@@ -107,7 +107,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public long? ComponentReplica { get; set; }
 
             /// <summary>
-            /// <para>The group name of the application subcomponent replicas.</para>
+            /// <para>The group name of the replicas of the application subcomponent.</para>
             /// 
             /// <b>Example:</b>
             /// <para>default</para>
@@ -127,8 +127,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             public string ComponentType { get; set; }
 
             /// <summary>
-            /// <para>The list of subcomponent-level security groups.</para>
-            /// <para>If the subcomponent-level security groups are the same as the application-level security groups, this response element is omitted.</para>
+            /// <para>The list of security groups at the subcomponent level.</para>
+            /// <para>If the security groups at the subcomponent level are the same as those at the application level, this response element is omitted.</para>
             /// </summary>
             [NameInMap("SecurityGroups")]
             [Validation(Required=false)]
@@ -180,8 +180,8 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The list of subcomponent-level whitelist addresses.</para>
-            /// <para>If the subcomponent-level whitelists are the same as the application-level whitelists, this response element is omitted.</para>
+            /// <para>The list of whitelist addresses at the subcomponent level.</para>
+            /// <para>If the whitelists at the subcomponent level are the same as those at the application level, this response element is omitted.</para>
             /// </summary>
             [NameInMap("SecurityIPArrays")]
             [Validation(Required=false)]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             }
 
             /// <summary>
-            /// <para>The component status. Valid values are the same as the application status.</para>
+            /// <para>The component status. Valid values are the same as those of the application status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Activated</para>
@@ -315,7 +315,76 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of endpoints for the application.</para>
+        /// <para>The list of DNAT mapping entries for NAT mapping.</para>
+        /// </summary>
+        [NameInMap("DnatMappings")]
+        [Validation(Required=false)]
+        public List<DescribeApplicationAttributeResponseBodyDnatMappings> DnatMappings { get; set; }
+        public class DescribeApplicationAttributeResponseBodyDnatMappings : TeaModel {
+            /// <summary>
+            /// <para>The access address in the format of NatIp:FrontPort. This address can be used directly from the office network.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10.64.0.10:10001</para>
+            /// </summary>
+            [NameInMap("AccessAddress")]
+            [Validation(Required=false)]
+            public string AccessAddress { get; set; }
+
+            /// <summary>
+            /// <para>The backend service port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>8787</para>
+            /// </summary>
+            [NameInMap("BackendPort")]
+            [Validation(Required=false)]
+            public int? BackendPort { get; set; }
+
+            /// <summary>
+            /// <para>The DNAT entry ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>fwd-xxx</para>
+            /// </summary>
+            [NameInMap("EntryId")]
+            [Validation(Required=false)]
+            public string EntryId { get; set; }
+
+            /// <summary>
+            /// <para>The frontend port.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>10001</para>
+            /// </summary>
+            [NameInMap("FrontPort")]
+            [Validation(Required=false)]
+            public int? FrontPort { get; set; }
+
+            /// <summary>
+            /// <para>The port name. Valid values: webui, hermesagent, dashboard, and ssh.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>webui</para>
+            /// </summary>
+            [NameInMap("PortName")]
+            [Validation(Required=false)]
+            public string PortName { get; set; }
+
+            /// <summary>
+            /// <para>The entry status.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Available</para>
+            /// </summary>
+            [NameInMap("Status")]
+            [Validation(Required=false)]
+            public string Status { get; set; }
+
+        }
+
+        /// <summary>
+        /// <para>The list of endpoints of the application.</para>
         /// </summary>
         [NameInMap("Endpoints")]
         [Validation(Required=false)]
@@ -359,7 +428,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
             /// <para>The endpoint type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>Private: VPC endpoint.</description></item>
-            /// <item><description>Public: public endpoint.</description></item>
+            /// <item><description>Public: Public endpoint.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -393,7 +462,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
 
         /// <summary>
         /// <para>The expiration time.</para>
-        /// <para>This value is empty when the billing type is Postpaid.</para>
+        /// <para>This value is empty if the billing method is Postpaid.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-06-25T09:37:10Z</para>
@@ -447,7 +516,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string LockMode { get; set; }
 
         /// <summary>
-        /// <para>The maintenance end time.</para>
+        /// <para>The end time of the maintenance window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>19:00Z</para>
@@ -457,7 +526,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string MaintainEndTime { get; set; }
 
         /// <summary>
-        /// <para>The maintenance start time.</para>
+        /// <para>The start time of the maintenance window.</para>
         /// 
         /// <b>Example:</b>
         /// <para>18:00Z</para>
@@ -615,7 +684,17 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string NatGatewayId { get; set; }
 
         /// <summary>
-        /// <para>The billing type.</para>
+        /// <para>The SNAT IP address bound to the vSwitch where the application resides for NAT mapping. This is a customer-managed SNAT entry that is discovered and returned by the control plane in real time. It is not related to the Internet NAT gateway SNAT.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>10.64.0.20</para>
+        /// </summary>
+        [NameInMap("NatMappingSnatIpAddress")]
+        [Validation(Required=false)]
+        public string NatMappingSnatIpAddress { get; set; }
+
+        /// <summary>
+        /// <para>The billing method.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Postpaid</para>
@@ -688,7 +767,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of application-level security groups.</para>
+        /// <para>The list of security groups at the application level.</para>
         /// </summary>
         [NameInMap("SecurityGroups")]
         [Validation(Required=false)]
@@ -740,7 +819,7 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         }
 
         /// <summary>
-        /// <para>The list of application-level whitelists.</para>
+        /// <para>The list of whitelists at the application level.</para>
         /// </summary>
         [NameInMap("SecurityIPArrays")]
         [Validation(Required=false)]
@@ -936,6 +1015,16 @@ namespace AlibabaCloud.SDK.Polardb20170801.Models
         [NameInMap("Version")]
         [Validation(Required=false)]
         public string Version { get; set; }
+
+        /// <summary>
+        /// <para>The customer-created VPC NAT gateway ID for NAT mapping.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ngw-xxx</para>
+        /// </summary>
+        [NameInMap("VpcNatGatewayId")]
+        [Validation(Required=false)]
+        public string VpcNatGatewayId { get; set; }
 
         /// <summary>
         /// <para>The zone ID.</para>

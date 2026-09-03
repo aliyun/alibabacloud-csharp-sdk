@@ -7457,7 +7457,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application attached to a PolarDB instance.</para>
+        /// <para>Creates an application that is attached to a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7478,6 +7478,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Components))
             {
                 request.ComponentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Components, "Components", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DnatEntries))
+            {
+                request.DnatEntriesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DnatEntries, "DnatEntries", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Endpoints))
             {
@@ -7543,6 +7547,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnatEntriesShrink))
+            {
+                query["DnatEntries"] = request.DnatEntriesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnatIpAddress))
+            {
+                query["DnatIpAddress"] = request.DnatIpAddress;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
@@ -7647,6 +7659,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
             {
                 query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcNatGatewayId))
+            {
+                query["VpcNatGatewayId"] = request.VpcNatGatewayId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
@@ -7673,7 +7689,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application attached to a PolarDB instance.</para>
+        /// <para>Creates an application that is attached to a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7694,6 +7710,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Components))
             {
                 request.ComponentsShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.Components, "Components", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DnatEntries))
+            {
+                request.DnatEntriesShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DnatEntries, "DnatEntries", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.Endpoints))
             {
@@ -7759,6 +7779,14 @@ namespace AlibabaCloud.SDK.Polardb20170801
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Description))
             {
                 query["Description"] = request.Description;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnatEntriesShrink))
+            {
+                query["DnatEntries"] = request.DnatEntriesShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DnatIpAddress))
+            {
+                query["DnatIpAddress"] = request.DnatIpAddress;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DryRun))
             {
@@ -7864,6 +7892,10 @@ namespace AlibabaCloud.SDK.Polardb20170801
             {
                 query["VpcId"] = request.VpcId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcNatGatewayId))
+            {
+                query["VpcNatGatewayId"] = request.VpcNatGatewayId;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
             {
                 query["ZoneId"] = request.ZoneId;
@@ -7889,7 +7921,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application attached to a PolarDB instance.</para>
+        /// <para>Creates an application that is attached to a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7907,7 +7939,7 @@ namespace AlibabaCloud.SDK.Polardb20170801
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an application attached to a PolarDB instance.</para>
+        /// <para>Creates an application that is attached to a PolarDB instance.</para>
         /// </summary>
         /// 
         /// <param name="request">

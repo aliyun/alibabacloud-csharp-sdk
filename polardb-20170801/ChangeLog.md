@@ -1,3 +1,12 @@
+2026-09-03 Version: 8.2.3
+- Update API CreateApplication: add request parameters DnatEntries.
+- Update API CreateApplication: add request parameters DnatIpAddress.
+- Update API CreateApplication: add request parameters VpcNatGatewayId.
+- Update API DescribeApplicationAttribute: add response parameters Body.DnatMappings.
+- Update API DescribeApplicationAttribute: add response parameters Body.NatMappingSnatIpAddress.
+- Update API DescribeApplicationAttribute: add response parameters Body.VpcNatGatewayId.
+
+
 2026-09-02 Version: 8.2.2
 - Generated csharp 2017-08-01 for polardb.
 
