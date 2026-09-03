@@ -102,11 +102,21 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <para>The TTS error correction dictionary.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>[{\&quot;pronunciation\&quot;:\&quot;huanqian\&quot;,\&quot;word\&quot;:\&quot;huanqian\&quot;}]</para>
+        /// <para>[{\&quot;pronunciation\&quot;:\&quot;huanqian\&quot;,\&quot;word\&quot;:\&quot;huaiqian\&quot;}]</para>
         /// </summary>
         [NameInMap("TtsOverrides")]
         [Validation(Required=false)]
         public string TtsOverrides { get; set; }
+
+        /// <summary>
+        /// <para>The TTS error correction dictionary ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>94001ae8-72fd-4f93-84dc-e58e2b20363b</para>
+        /// </summary>
+        [NameInMap("TtsOverridesUuid")]
+        [Validation(Required=false)]
+        public string TtsOverridesUuid { get; set; }
 
         /// <summary>
         /// <para>The voice.</para>

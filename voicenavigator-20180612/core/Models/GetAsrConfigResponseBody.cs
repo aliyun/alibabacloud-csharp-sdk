@@ -71,6 +71,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
             public string AsrOverrides { get; set; }
 
             /// <summary>
+            /// <para>The ASR correction dictionary ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>94001ae8-72fd-4f93-84dc-e58e2b20363b</para>
+            /// </summary>
+            [NameInMap("AsrOverridesUuid")]
+            [Validation(Required=false)]
+            public string AsrOverridesUuid { get; set; }
+
+            /// <summary>
             /// <para>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</para>
             /// 
             /// <b>Example:</b>

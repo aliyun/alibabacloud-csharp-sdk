@@ -108,6 +108,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string TtsOverrides { get; set; }
 
         /// <summary>
+        /// <para>The TTS correction dictionary ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>94001ae8-72fd-4f93-84dc-e58e2b20363b</para>
+        /// </summary>
+        [NameInMap("TtsOverridesUuid")]
+        [Validation(Required=false)]
+        public string TtsOverridesUuid { get; set; }
+
+        /// <summary>
         /// <para>The voice.</para>
         /// 
         /// <b>Example:</b>

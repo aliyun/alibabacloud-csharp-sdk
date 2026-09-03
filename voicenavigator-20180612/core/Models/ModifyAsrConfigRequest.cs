@@ -54,7 +54,17 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string AsrOverrides { get; set; }
 
         /// <summary>
-        /// <para>The hotword ID. View the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</para>
+        /// <para>The ASR error correction dictionary ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>94001ae8-72fd-4f93-84dc-e58e2b20363b</para>
+        /// </summary>
+        [NameInMap("AsrOverridesUuid")]
+        [Validation(Required=false)]
+        public string AsrOverridesUuid { get; set; }
+
+        /// <summary>
+        /// <para>The hotword ID. You can view the ASR hotword ID on the <a href="https://aiccs.console.aliyun.com/sentence/vocab?spm=a2c4g.11186623.0.0.7f9bf965IKBpsi">ASR Hotword Management page</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>6cc9f5ca-2cb6-4cc7-a46b-2bbfd3e61b22</para>
@@ -89,6 +99,16 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         public string Engine { get; set; }
 
         /// <summary>
+        /// <para>The iFLYTEK ASR configuration parameters.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>{&quot;Uuid&quot;:&quot;b06c4ed3-a5e3-4c55-92b7-c2d2a88ca37f&quot;}</para>
+        /// </summary>
+        [NameInMap("EngineXunfei")]
+        [Validation(Required=false)]
+        public string EngineXunfei { get; set; }
+
+        /// <summary>
         /// <para>The entity ID corresponding to config_level.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +122,7 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612.Models
         /// <para>NluServiceType</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Speech recognition.</para>
+        /// <para>Speech Recognition</para>
         /// </summary>
         [NameInMap("NlsServiceType")]
         [Validation(Required=false)]

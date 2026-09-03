@@ -19,11 +19,6 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"cn-hangzhou", "voicenavigator.cn-hangzhou.aliyuncs.com"},
-                {"cn-shanghai", "voicenavigator.cn-shanghai.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("voicenavigator", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -4225,6 +4220,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["AsrOverrides"] = request.AsrOverrides;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrOverridesUuid))
+            {
+                query["AsrOverridesUuid"] = request.AsrOverridesUuid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrVocabularyId))
             {
                 query["AsrVocabularyId"] = request.AsrVocabularyId;
@@ -4236,6 +4235,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineXunfei))
+            {
+                query["EngineXunfei"] = request.EngineXunfei;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryId))
             {
@@ -4303,6 +4306,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["AsrOverrides"] = request.AsrOverrides;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrOverridesUuid))
+            {
+                query["AsrOverridesUuid"] = request.AsrOverridesUuid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AsrVocabularyId))
             {
                 query["AsrVocabularyId"] = request.AsrVocabularyId;
@@ -4314,6 +4321,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Engine))
             {
                 query["Engine"] = request.Engine;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EngineXunfei))
+            {
+                query["EngineXunfei"] = request.EngineXunfei;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EntryId))
             {
@@ -4913,6 +4924,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             {
                 query["TtsOverrides"] = request.TtsOverrides;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsOverridesUuid))
+            {
+                query["TtsOverridesUuid"] = request.TtsOverridesUuid;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
             {
                 query["Voice"] = request.Voice;
@@ -5002,6 +5017,10 @@ namespace AlibabaCloud.SDK.VoiceNavigator20180612
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsOverrides))
             {
                 query["TtsOverrides"] = request.TtsOverrides;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TtsOverridesUuid))
+            {
+                query["TtsOverridesUuid"] = request.TtsOverridesUuid;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Voice))
             {
