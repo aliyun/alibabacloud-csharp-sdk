@@ -21,8 +21,6 @@ namespace AlibabaCloud.SDK.AiContent20240611
             this._endpointRule = "regional";
             this._endpointMap = new Dictionary<string, string>
             {
-                {"cn-beijing", "aicontent.cn-beijing.aliyuncs.com"},
-                {"cn-hangzhou", "aicontent.cn-hangzhou.aliyuncs.com"},
                 {"cn-shanghai", "aicontent.aliyuncs.com"},
                 {"public", "aicontent.aliyuncs.com"},
             };
@@ -18852,6 +18850,136 @@ namespace AlibabaCloud.SDK.AiContent20240611
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             Dictionary<string, string> headers = new Dictionary<string, string>(){};
             return await ModelRouterTransferToMemberWithOptionsAsync(clientId, id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of an API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterUpdateApiKeyStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterUpdateApiKeyStatusResponse
+        /// </returns>
+        public ModelRouterUpdateApiKeyStatusResponse ModelRouterUpdateApiKeyStatusWithOptions(string id, ModelRouterUpdateApiKeyStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterUpdateApiKeyStatus",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/apikeys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/status",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterUpdateApiKeyStatusResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of an API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterUpdateApiKeyStatusRequest
+        /// </param>
+        /// <param name="headers">
+        /// map
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterUpdateApiKeyStatusResponse
+        /// </returns>
+        public async Task<ModelRouterUpdateApiKeyStatusResponse> ModelRouterUpdateApiKeyStatusWithOptionsAsync(string id, ModelRouterUpdateApiKeyStatusRequest request, Dictionary<string, string> headers, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> body = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Status))
+            {
+                body["status"] = request.Status;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Headers = headers,
+                Body = AlibabaCloud.OpenApiUtil.Client.ParseToMap(body),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ModelRouterUpdateApiKeyStatus",
+                Version = "20240611",
+                Protocol = "HTTPS",
+                Pathname = "/api/v1/modelRouter/open/apikeys/" + AlibabaCloud.OpenApiUtil.Client.GetEncodeParam(id) + "/status",
+                Method = "PUT",
+                AuthType = "AK",
+                Style = "ROA",
+                ReqBodyType = "json",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ModelRouterUpdateApiKeyStatusResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of an API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterUpdateApiKeyStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterUpdateApiKeyStatusResponse
+        /// </returns>
+        public ModelRouterUpdateApiKeyStatusResponse ModelRouterUpdateApiKeyStatus(string id, ModelRouterUpdateApiKeyStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return ModelRouterUpdateApiKeyStatusWithOptions(id, request, headers, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Modifies the status of an API key.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ModelRouterUpdateApiKeyStatusRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ModelRouterUpdateApiKeyStatusResponse
+        /// </returns>
+        public async Task<ModelRouterUpdateApiKeyStatusResponse> ModelRouterUpdateApiKeyStatusAsync(string id, ModelRouterUpdateApiKeyStatusRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            Dictionary<string, string> headers = new Dictionary<string, string>(){};
+            return await ModelRouterUpdateApiKeyStatusWithOptionsAsync(id, request, headers, runtime);
         }
 
         /// <term><b>Summary:</b></term>

@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
 {
     public class UsageBreakdownRowDTO : TeaModel {
         /// <summary>
+        /// <para>The API key ID. A value of 0 indicates that historical data is not broken down by API key.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>0</para>
         /// </summary>
@@ -18,15 +20,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ApiKeyId { get; set; }
 
         /// <summary>
+        /// <para>The API key name, corresponding to api_key_id.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>默认密钥</para>
+        /// <para>Default key</para>
         /// </summary>
         [NameInMap("apiKeyName")]
         [Validation(Required=false)]
         public string ApiKeyName { get; set; }
 
         /// <summary>
-        /// <para>Department ID; 0 indicates no associated department</para>
+        /// <para>The department ID. A value of 0 indicates no affiliated department.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -36,16 +40,18 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ClientId { get; set; }
 
         /// <summary>
-        /// <para>Department name</para>
+        /// <para>The department name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>研发部</para>
+        /// <para>R&amp;D Department</para>
         /// </summary>
         [NameInMap("clientName")]
         [Validation(Required=false)]
         public string ClientName { get; set; }
 
         /// <summary>
+        /// <para>The member ID for a member row. The value is 0 for a department row.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>30001</para>
         /// </summary>
@@ -54,15 +60,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? MemberUserId { get; set; }
 
         /// <summary>
+        /// <para>The member name for a member row. The value is empty for a department row.</para>
+        /// 
         /// <b>Example:</b>
-        /// <para>张三</para>
+        /// <para>John Smith</para>
         /// </summary>
         [NameInMap("memberUserName")]
         [Validation(Required=false)]
         public string MemberUserName { get; set; }
 
         /// <summary>
-        /// <para>Array of usage metrics, containing only entries with non-zero values</para>
+        /// <para>The usage metric array. Only entries with non-zero values are included.</para>
         /// 
         /// <b>Example:</b>
         /// <para>[{&quot;key&quot;: &quot;total_calls&quot;, &quot;value&quot;: 100}]</para>
@@ -72,7 +80,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public List<MetricKVPairDTO> Metrics { get; set; }
 
         /// <summary>
-        /// <para>Model identifier</para>
+        /// <para>The model identifier.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qwen-plus</para>
@@ -82,7 +90,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelCode { get; set; }
 
         /// <summary>
-        /// <para>Model ID</para>
+        /// <para>The model ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -92,17 +100,17 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public long? ModelId { get; set; }
 
         /// <summary>
-        /// <para>Model name</para>
+        /// <para>The model name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>通义千问-Plus</para>
+        /// <para>Qwen-Plus</para>
         /// </summary>
         [NameInMap("modelName")]
         [Validation(Required=false)]
         public string ModelName { get; set; }
 
         /// <summary>
-        /// <para>Statistics scope</para>
+        /// <para>The statistical dimension.</para>
         /// 
         /// <b>Example:</b>
         /// <para>llm</para>
@@ -112,7 +120,7 @@ namespace AlibabaCloud.SDK.AiContent20240611.Models
         public string ModelType { get; set; }
 
         /// <summary>
-        /// <para>Statistics time point, Unix timestamp (seconds)</para>
+        /// <para>The statistical time point, in UNIX timestamp (seconds).</para>
         /// 
         /// <b>Example:</b>
         /// <para>1700000000</para>
