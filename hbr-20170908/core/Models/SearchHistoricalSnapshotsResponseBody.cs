@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
 {
     public class SearchHistoricalSnapshotsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The return code. A value of 200 indicates that the request was successful.</para>
+        /// <para>The response code. A value of 200 indicates success.</para>
         /// 
         /// <b>Example:</b>
         /// <para>200</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public int? Limit { get; set; }
 
         /// <summary>
-        /// <para>The returned message. If the request is successful, \<c>successful\\</c> is returned. If the request fails, an error message is returned.</para>
+        /// <para>The returned message. The value &quot;successful&quot; is returned for successful requests. An error message is returned for failed requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>successful</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The token that is required to obtain the next page of snapshots.</para>
+        /// <para>The token required to retrieve the next page of snapshots.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BE</para>
@@ -248,10 +248,8 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         /// <summary>
         /// <para>Indicates whether the request was successful.</para>
         /// <list type="bullet">
-        /// <item><description><para>true: The request was successful.</para>
-        /// </description></item>
-        /// <item><description><para>false: The request failed.</para>
-        /// </description></item>
+        /// <item><description>true: The request was successful.</description></item>
+        /// <item><description>false: The request failed.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -262,7 +260,7 @@ namespace AlibabaCloud.SDK.Hbr20170908.Models
         public bool? Success { get; set; }
 
         /// <summary>
-        /// <para>The total number of snapshots that meet the specified criteria.</para>
+        /// <para>The total number of snapshots that meet the specified conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

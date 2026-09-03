@@ -52,39 +52,6 @@ namespace AlibabaCloud.SDK.Hbr20170908
                 {"cn-zhengzhou-nebula-1", "hbr.aliyuncs.com"},
                 {"eu-west-1-oxs", "hbr.aliyuncs.com"},
                 {"rus-west-1-pop", "hbr.aliyuncs.com"},
-                {"cn-wulanchabu", "hbr.cn-wulanchabu.aliyuncs.com"},
-                {"cn-beijing", "hbr.cn-beijing.aliyuncs.com"},
-                {"cn-qingdao", "hbr.cn-qingdao.aliyuncs.com"},
-                {"cn-shanghai", "hbr.cn-shanghai.aliyuncs.com"},
-                {"cn-hongkong", "hbr.cn-hongkong.aliyuncs.com"},
-                {"cn-heyuan", "hbr.cn-heyuan.aliyuncs.com"},
-                {"cn-zhangjiakou", "hbr.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-shenzhen", "hbr.cn-shenzhen.aliyuncs.com"},
-                {"ap-northeast-2", "hbr.ap-northeast-2.aliyuncs.com"},
-                {"ap-northeast-1", "hbr.ap-northeast-1.aliyuncs.com"},
-                {"cn-chengdu", "hbr.cn-chengdu.aliyuncs.com"},
-                {"cn-guangzhou", "hbr.cn-guangzhou.aliyuncs.com"},
-                {"ap-southeast-1", "hbr.ap-southeast-1.aliyuncs.com"},
-                {"ap-southeast-3", "hbr.ap-southeast-3.aliyuncs.com"},
-                {"cn-huhehaote", "hbr.cn-huhehaote.aliyuncs.com"},
-                {"ap-southeast-5", "hbr.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-6", "hbr.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-7", "hbr.ap-southeast-7.aliyuncs.com"},
-                {"cn-hangzhou", "hbr.cn-hangzhou.aliyuncs.com"},
-                {"ap-southeast-8", "hbr.ap-southeast-8.aliyuncs.com"},
-                {"cn-zhongwei", "hbr.cn-zhongwei.aliyuncs.com"},
-                {"us-southeast-1", "hbr.us-southeast-1.aliyuncs.com"},
-                {"na-south-1", "hbr.na-south-1.aliyuncs.com"},
-                {"eu-central-1", "hbr.eu-central-1.aliyuncs.com"},
-                {"us-west-1", "hbr.us-west-1.aliyuncs.com"},
-                {"eu-west-1", "hbr.eu-west-1.aliyuncs.com"},
-                {"us-east-1", "hbr.us-east-1.aliyuncs.com"},
-                {"me-central-1", "hbr.me-central-1.aliyuncs.com"},
-                {"me-east-1", "hbr.me-east-1.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "hbr.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-beijing-finance-1", "hbr.cn-beijing-finance-1.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "hbr.cn-shenzhen-finance-1.aliyuncs.com"},
-                {"cn-hangzhou-finance", "hbr.cn-hangzhou-finance.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("hbr", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -8394,6 +8361,126 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the free trial activation status and expiration time of a specified feature. Currently, only the free trial information of Tablestore backup can be queried.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFeatureTrialInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFeatureTrialInfoResponse
+        /// </returns>
+        public DescribeFeatureTrialInfoResponse DescribeFeatureTrialInfoWithOptions(DescribeFeatureTrialInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureType))
+            {
+                query["FeatureType"] = request.FeatureType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFeatureTrialInfo",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFeatureTrialInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the free trial activation status and expiration time of a specified feature. Currently, only the free trial information of Tablestore backup can be queried.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFeatureTrialInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFeatureTrialInfoResponse
+        /// </returns>
+        public async Task<DescribeFeatureTrialInfoResponse> DescribeFeatureTrialInfoWithOptionsAsync(DescribeFeatureTrialInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FeatureType))
+            {
+                query["FeatureType"] = request.FeatureType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeFeatureTrialInfo",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeFeatureTrialInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the free trial activation status and expiration time of a specified feature. Currently, only the free trial information of Tablestore backup can be queried.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFeatureTrialInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFeatureTrialInfoResponse
+        /// </returns>
+        public DescribeFeatureTrialInfoResponse DescribeFeatureTrialInfo(DescribeFeatureTrialInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeFeatureTrialInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the free trial activation status and expiration time of a specified feature. Currently, only the free trial information of Tablestore backup can be queried.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeFeatureTrialInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeFeatureTrialInfoResponse
+        /// </returns>
+        public async Task<DescribeFeatureTrialInfoResponse> DescribeFeatureTrialInfoAsync(DescribeFeatureTrialInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeFeatureTrialInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries for one or more SAP HANA backup plans that match specified criteria.</para>
         /// </summary>
         /// 
@@ -12774,6 +12861,150 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries the free trial information of a specified OSS bucket or NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrialInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialInfoResponse
+        /// </returns>
+        public GetTrialInfoResponse GetTrialInfoWithOptions(GetTrialInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
+            {
+                query["Bucket"] = request.Bucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTime))
+            {
+                query["CreateTime"] = request.CreateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTrialInfo",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTrialInfoResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the free trial information of a specified OSS bucket or NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrialInfoRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialInfoResponse
+        /// </returns>
+        public async Task<GetTrialInfoResponse> GetTrialInfoWithOptionsAsync(GetTrialInfoRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Bucket))
+            {
+                query["Bucket"] = request.Bucket;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CreateTime))
+            {
+                query["CreateTime"] = request.CreateTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileSystemId))
+            {
+                query["FileSystemId"] = request.FileSystemId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "GetTrialInfo",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<GetTrialInfoResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the free trial information of a specified OSS bucket or NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrialInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialInfoResponse
+        /// </returns>
+        public GetTrialInfoResponse GetTrialInfo(GetTrialInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return GetTrialInfoWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries the free trial information of a specified OSS bucket or NAS file system.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// GetTrialInfoRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// GetTrialInfoResponse
+        /// </returns>
+        public async Task<GetTrialInfoResponse> GetTrialInfoAsync(GetTrialInfoRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await GetTrialInfoWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Installs backup clients on one or more ECS instances.</para>
         /// </summary>
         /// 
@@ -13134,6 +13365,190 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries a list of backup points.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSnapshotsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSnapshotsResponse
+        /// </returns>
+        public ListSnapshotsResponse ListSnapshotsWithOptions(ListSnapshotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompleteTimeEnd))
+            {
+                query["CompleteTimeEnd"] = request.CompleteTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompleteTimeStart))
+            {
+                query["CompleteTimeStart"] = request.CompleteTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanId))
+            {
+                query["PlanId"] = request.PlanId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtectedResourceId))
+            {
+                query["ProtectedResourceId"] = request.ProtectedResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                query["Skip"] = request.Skip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultId))
+            {
+                query["VaultId"] = request.VaultId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSnapshots",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSnapshotsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of backup points.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSnapshotsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSnapshotsResponse
+        /// </returns>
+        public async Task<ListSnapshotsResponse> ListSnapshotsWithOptionsAsync(ListSnapshotsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompleteTimeEnd))
+            {
+                query["CompleteTimeEnd"] = request.CompleteTimeEnd;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.CompleteTimeStart))
+            {
+                query["CompleteTimeStart"] = request.CompleteTimeStart;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PlanId))
+            {
+                query["PlanId"] = request.PlanId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtectedResourceId))
+            {
+                query["ProtectedResourceId"] = request.ProtectedResourceId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Skip))
+            {
+                query["Skip"] = request.Skip;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SourceType))
+            {
+                query["SourceType"] = request.SourceType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VaultId))
+            {
+                query["VaultId"] = request.VaultId;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "ListSnapshots",
+                Version = "2017-09-08",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<ListSnapshotsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of backup points.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSnapshotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSnapshotsResponse
+        /// </returns>
+        public ListSnapshotsResponse ListSnapshots(ListSnapshotsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return ListSnapshotsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries a list of backup points.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// ListSnapshotsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// ListSnapshotsResponse
+        /// </returns>
+        public async Task<ListSnapshotsResponse> ListSnapshotsAsync(ListSnapshotsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await ListSnapshotsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Activates Cloud Backup.</para>
         /// </summary>
         /// 
@@ -13374,7 +13789,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves one or more historical backup snapshots that meet the specified criteria.</para>
+        /// <para>Retrieves one or more historical backup snapshots that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13446,7 +13861,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves one or more historical backup snapshots that meet the specified criteria.</para>
+        /// <para>Retrieves one or more historical backup snapshots that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -13518,7 +13933,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves one or more historical backup snapshots that meet the specified criteria.</para>
+        /// <para>Retrieves one or more historical backup snapshots that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13536,7 +13951,7 @@ namespace AlibabaCloud.SDK.Hbr20170908
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves one or more historical backup snapshots that meet the specified criteria.</para>
+        /// <para>Retrieves one or more historical backup snapshots that meet the specified conditions.</para>
         /// </summary>
         /// 
         /// <param name="request">
