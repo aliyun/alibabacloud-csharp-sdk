@@ -19,18 +19,6 @@ namespace AlibabaCloud.SDK.ADBAI20250812
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"ap-northeast-1", "adbai.ap-northeast-1.aliyuncs.com"},
-                {"ap-southeast-1", "adbai.ap-southeast-1.aliyuncs.com"},
-                {"cn-beijing", "adbai.cn-beijing.aliyuncs.com"},
-                {"cn-hangzhou", "adbai.cn-hangzhou.aliyuncs.com"},
-                {"cn-shanghai", "adbai.cn-shanghai.aliyuncs.com"},
-                {"cn-shenzhen", "adbai.cn-shenzhen.aliyuncs.com"},
-                {"cn-guangzhou", "adbai.cn-guangzhou.aliyuncs.com"},
-                {"cn-wulanchabu", "adbai.cn-wulanchabu.aliyuncs.com"},
-                {"us-west-1", "adbai.us-west-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("adbai", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -437,13 +425,45 @@ namespace AlibabaCloud.SDK.ADBAI20250812
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbInstanceName))
+            {
+                query["AdbInstanceName"] = request.AdbInstanceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbClusterAcu))
+            {
+                query["DbClusterAcu"] = request.DbClusterAcu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LakeStorageBucketName))
+            {
+                query["LakeStorageBucketName"] = request.LakeStorageBucketName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAcuMax))
+            {
+                query["ResourceAcuMax"] = request.ResourceAcuMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAcuMin))
+            {
+                query["ResourceAcuMin"] = request.ResourceAcuMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -488,13 +508,45 @@ namespace AlibabaCloud.SDK.ADBAI20250812
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AdbInstanceName))
+            {
+                query["AdbInstanceName"] = request.AdbInstanceName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DbClusterAcu))
+            {
+                query["DbClusterAcu"] = request.DbClusterAcu;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.LakeStorageBucketName))
+            {
+                query["LakeStorageBucketName"] = request.LakeStorageBucketName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAcuMax))
+            {
+                query["ResourceAcuMax"] = request.ResourceAcuMax;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ResourceAcuMin))
+            {
+                query["ResourceAcuMin"] = request.ResourceAcuMin;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VSwitchId))
+            {
+                query["VSwitchId"] = request.VSwitchId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.VpcId))
+            {
+                query["VpcId"] = request.VpcId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ZoneId))
+            {
+                query["ZoneId"] = request.ZoneId;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -861,6 +913,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             {
                 query["DBClusterId"] = request.DBClusterId;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MmkbName))
+            {
+                query["MmkbName"] = request.MmkbName;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
                 query["RegionId"] = request.RegionId;
@@ -911,6 +967,10 @@ namespace AlibabaCloud.SDK.ADBAI20250812
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DBClusterId))
             {
                 query["DBClusterId"] = request.DBClusterId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MmkbName))
+            {
+                query["MmkbName"] = request.MmkbName;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
             {
