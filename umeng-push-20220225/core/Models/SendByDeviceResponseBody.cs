@@ -31,10 +31,6 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
 
         }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>200</para>
-        /// </summary>
         [NameInMap("HttpStatusCode")]
         [Validation(Required=false)]
         public int? HttpStatusCode { get; set; }
@@ -55,10 +51,6 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("Success")]
         [Validation(Required=false)]
         public bool? Success { get; set; }

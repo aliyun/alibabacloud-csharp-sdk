@@ -27,9 +27,6 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>ArdNyIzFCH2K3szXA8arpu0Y7ywOdA67mCSumtpnMnmf</para>
         /// </summary>
         [NameInMap("DeviceTokens")]
         [Validation(Required=false)]
@@ -47,10 +44,6 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public Policy Policy { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("ProductionMode")]
         [Validation(Required=false)]
         public bool? ProductionMode { get; set; }

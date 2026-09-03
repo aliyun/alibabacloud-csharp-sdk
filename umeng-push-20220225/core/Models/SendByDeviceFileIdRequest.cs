@@ -27,9 +27,6 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
 
         /// <summary>
         /// <para>This parameter is required.</para>
-        /// 
-        /// <b>Example:</b>
-        /// <para>PF835431668603208261</para>
         /// </summary>
         [NameInMap("FileId")]
         [Validation(Required=false)]
@@ -47,10 +44,6 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public Policy Policy { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para>true</para>
-        /// </summary>
         [NameInMap("ProductionMode")]
         [Validation(Required=false)]
         public bool? ProductionMode { get; set; }
@@ -59,10 +52,6 @@ namespace AlibabaCloud.SDK.Umeng_push20220225.Models
         [Validation(Required=false)]
         public int? ReceiptType { get; set; }
 
-        /// <summary>
-        /// <b>Example:</b>
-        /// <para><a href="https://msg.umeng.com/upush/receipt">https://msg.umeng.com/upush/receipt</a></para>
-        /// </summary>
         [NameInMap("ReceiptUrl")]
         [Validation(Required=false)]
         public string ReceiptUrl { get; set; }
