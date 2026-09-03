@@ -7601,7 +7601,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an anti-ransomware policy for servers.</para>
+        /// <para>Creates an anti-ransomware policy for server protection.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7644,6 +7644,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["SelectType"] = request.SelectType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerType))
+            {
+                query["ServerType"] = request.ServerType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
             {
                 query["UuidList"] = request.UuidList;
@@ -7669,7 +7673,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an anti-ransomware policy for servers.</para>
+        /// <para>Creates an anti-ransomware policy for server protection.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -7712,6 +7716,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["SelectType"] = request.SelectType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerType))
+            {
+                query["ServerType"] = request.ServerType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
             {
                 query["UuidList"] = request.UuidList;
@@ -7737,7 +7745,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an anti-ransomware policy for servers.</para>
+        /// <para>Creates an anti-ransomware policy for server protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7755,7 +7763,7 @@ namespace AlibabaCloud.SDK.Sas20181203
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an anti-ransomware policy for servers.</para>
+        /// <para>Creates an anti-ransomware policy for server protection.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -110720,6 +110728,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             {
                 query["SelectType"] = request.SelectType;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerType))
+            {
+                query["ServerType"] = request.ServerType;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
             {
                 query["UuidList"] = request.UuidList;
@@ -110791,6 +110803,10 @@ namespace AlibabaCloud.SDK.Sas20181203
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SelectType))
             {
                 query["SelectType"] = request.SelectType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ServerType))
+            {
+                query["ServerType"] = request.ServerType;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UuidList))
             {

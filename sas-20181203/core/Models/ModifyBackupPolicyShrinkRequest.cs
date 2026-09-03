@@ -38,9 +38,9 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// <item><description><para><b>Include</b>: The file types to protect. Examples: &quot;\<em>.jpg&quot; and &quot;\</em>.doc&quot;.</para>
         /// </description></item>
-        /// <item><description><para><b>Exclude</b>: The custom folders to exclude. Invoke the DescribeExcludeSystemPath operation to obtain all folders, and then add the folders that you want to exclude. Example: exclude the folder &quot;/home/user&quot;.</para>
+        /// <item><description><para><b>Exclude</b>: The custom folders to exclude. For example, &quot;/home/user&quot; excludes the /home/user folder. Invoke the DescribeExcludeSystemPath operation to obtain all folders, and then add the folders that you want to exclude.</para>
         /// </description></item>
-        /// <item><description><para><b>Schedule</b>: The start time and interval of the data backup node. Specify a non-peak hour that is not on the hour.</para>
+        /// <item><description><para><b>Schedule</b>: The start time and interval of the data backup node. Specify a non-hourly time during off-peak hours.</para>
         /// <list type="bullet">
         /// <item><description><para>Example 1: I|1583216092|P21D indicates that the execute start time is 2020-03-03 14:14:52 and the interval is 3 weeks.</para>
         /// </description></item>
@@ -50,8 +50,8 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// <item><description><para><b>Retention</b>: The retention period of backup data. Unit: days. 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</para>
         /// </description></item>
-        /// <item><description><para><b>SpeedLimiter</b>: The backup network bandwidth throttling. Example: 12:15:15360|6:12:5120 indicates 15 MB from 12:00 to 15:00 and 5 MB from 6:00 to 12:00.
-        /// For cloud-hosted servers connected to the internal network, do not limit the backup network bandwidth. To remove the network bandwidth throttling, set this parameter to an empty character string (&quot;&quot;).</para>
+        /// <item><description><para><b>SpeedLimiter</b>: The network bandwidth throttling for backup. For example, 12:15:15360|6:12:5120 indicates 15 MB from 12:00 to 15:00 and 5 MB from 6:00 to 12:00.
+        /// For cloud-based servers connected to the internal network, do not limit the backup network bandwidth. To remove the network bandwidth throttling, set this parameter to an empty character string (&quot;&quot;).</para>
         /// </description></item>
         /// </list>
         /// <para>This parameter is required.</para>
@@ -89,10 +89,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyVersion { get; set; }
 
         /// <summary>
-        /// <para>The method used to cover assets. Valid values:</para>
+        /// <para>The method used to select assets. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><b>ALL_MACHINE</b>: All assets.<remarks>
-        /// <para>To cover all assets of this type, set this parameter to <b>ALL_MACHINE</b>. In this case, <b>UuidList</b> is invalid. Only one policy that covers all assets can exist for each server type.</para>
+        /// <item><description><b>ALL_MACHINE</b>: all assets<remarks>
+        /// <para>To cover all assets of the specified type, set this parameter to <b>ALL_MACHINE</b>. In this case, <b>UuidList</b> is invalid. Only one policy that covers all assets can exist for each server type.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -103,6 +103,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("SelectType")]
         [Validation(Required=false)]
         public string SelectType { get; set; }
+
+        /// <summary>
+        /// <para>The server type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ALIYUN</b>: Alibaba Cloud server</description></item>
+        /// <item><description><b>OUT_CLOUD</b>: non-Alibaba Cloud server</description></item>
+        /// <item><description><b>TRIPARTITE</b>: simple application server</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALIYUN</para>
+        /// </summary>
+        [NameInMap("ServerType")]
+        [Validation(Required=false)]
+        public string ServerType { get; set; }
 
         /// <summary>
         /// <para>The list of UUIDs of the servers protected by the policy.</para>

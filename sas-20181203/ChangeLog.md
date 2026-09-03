@@ -1,3 +1,8 @@
+2026-09-03 Version: 10.1.2
+- Update API CreateBackupPolicy: add request parameters ServerType.
+- Update API ModifyBackupPolicy: add request parameters ServerType.
+
+
 2026-09-02 Version: 10.1.1
 - Update API CreateBackupPolicy: add request parameters SelectType.
 - Update API DescribeBackupPolicies: add response parameters Body.Policies.$.SelectType.

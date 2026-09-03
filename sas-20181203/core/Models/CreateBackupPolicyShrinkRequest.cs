@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateBackupPolicyShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the policy to create.</para>
+        /// <para>The name of the protection policy to create.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -22,22 +22,22 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 
         /// <summary>
         /// <list type="bullet">
-        /// <item><description><b>IsDefault</b>: The type of the policy to create. Valid values:<list type="bullet">
+        /// <item><description><b>IsDefault</b>: The type of the protection policy to create. Valid values:<list type="bullet">
         /// <item><description><b>1</b>: Recommended policy.</description></item>
         /// <item><description><b>0</b>: Custom policy.</description></item>
         /// </list>
         /// </description></item>
         /// <item><description><b>Include</b>: The file types to protect. To protect all file types, set this parameter to [].</description></item>
         /// <item><description><b>Source</b>: The server folders to protect. To protect all folders, set this parameter to [].</description></item>
-        /// <item><description><b>ExcludeSystemPath</b>: Specifies whether to exclude specified folders. Set this parameter to <b>true</b> to exclude folders. If you do not want to exclude folders, you do not need to set this parameter.</description></item>
-        /// <item><description><b>Exclude</b>: The folders to exclude from protection. If you do not want to exclude any folders, set this parameter to [].</description></item>
-        /// <item><description><b>Schedule</b>: The start time and interval for the data backup task. Specify an off-peak hour that is not on the hour. Examples:<list type="bullet">
+        /// <item><description><b>ExcludeSystemPath</b>: Specifies whether to exclude specified folders. To exclude folders, set this parameter to <b>true</b>. If you do not want to exclude folders, you do not need to configure this parameter.</description></item>
+        /// <item><description><b>Exclude</b>: The specified protection folder addresses. If you do not want to specify any protection folder addresses, set this parameter to [].</description></item>
+        /// <item><description><b>Schedule</b>: The execution time and interval of the data backup task. Specify an off-peak hour that is not on the hour. Examples:<list type="bullet">
         /// <item><description>Example 1: I|1583216092|P21D indicates that the data backup starts at 2020-03-03 14:14:52 and the backup policy execution interval is 3 weeks.</description></item>
         /// <item><description>Example 2: I|1583216092|PT24H indicates that the data backup starts at 2020-03-03 14:14:52 and the backup policy execution interval is 24 hours.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><b>Retention</b>: The retention period of backup data, in days. A value of 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</description></item>
-        /// <item><description><b>SpeedLimiter</b>: The network bandwidth throttling for backup. For example, 0:24:30720 indicates that the backup network bandwidth limit is 30 MB/s from 00:00 to 24:00.</description></item>
+        /// <item><description><b>Retention</b>: The retention period of backup data, in days. The value 7 indicates 1 week, 365 indicates 1 year, and -1 indicates permanent retention.</description></item>
+        /// <item><description><b>SpeedLimiter</b>: The backup network bandwidth limit. For example, 0:24:30720 indicates that the backup network bandwidth limit from 00:00 to 24:00 is 30 MB/s.</description></item>
         /// <item><description><b>UseVss</b>: Specifies whether to enable the Volume Shadow Copy Service (VSS) feature for Windows. Valid values:<list type="bullet">
         /// <item><description><b>true</b>: Enabled.</description></item>
         /// <item><description><b>false</b>: Not enabled.</description></item>
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         /// </description></item>
         /// </list>
         /// <remarks>
-        /// <para>The VSS feature applies only to Windows systems. After this feature is enabled, the issue of individual file backup failures caused by process occupation is effectively reduced. Enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats is not supported.</para>
+        /// <para>The VSS feature applies only to Windows systems. After this feature is enabled, the issue of individual file backup failures caused by process occupation is effectively reduced. We recommend that you enable this feature. After this feature is enabled, file backup for exFAT and FAT32 disk formats is not supported.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyRegionId { get; set; }
 
         /// <summary>
-        /// <para>The version of the policy. Set the value to <b>2.0.0</b>.</para>
+        /// <para>The version of the protection policy. Set the value to <b>2.0.0</b>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,10 +81,10 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         public string PolicyVersion { get; set; }
 
         /// <summary>
-        /// <para>The method used to cover assets. Valid values:</para>
+        /// <para>The method used to select assets. Valid values:</para>
         /// <list type="bullet">
         /// <item><description><b>ALL_MACHINE</b>: All assets.<remarks>
-        /// <para>To cover all assets of this type, set this parameter to <b>ALL_MACHINE</b>. In this case, <b>UuidList</b> is invalid. Only one policy that covers all assets can exist for each server type.</para>
+        /// <para>To cover all assets of the specified server type, set this parameter to <b>ALL_MACHINE</b>. In this case, <b>UuidList</b> is invalid. Only one policy that covers all assets can exist for each server type.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -95,6 +95,21 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
         [NameInMap("SelectType")]
         [Validation(Required=false)]
         public string SelectType { get; set; }
+
+        /// <summary>
+        /// <para>The server type. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description><b>ALIYUN</b>: Alibaba Cloud server.</description></item>
+        /// <item><description><b>OUT_CLOUD</b>: Non-Alibaba Cloud server.</description></item>
+        /// <item><description><b>TRIPARTITE</b>: Simple application server.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ALIYUN</para>
+        /// </summary>
+        [NameInMap("ServerType")]
+        [Validation(Required=false)]
+        public string ServerType { get; set; }
 
         /// <summary>
         /// <para>The UUIDs of the servers to protect.</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Sas20181203.Models
 {
     public class CreateBackupPolicyResponseBody : TeaModel {
         /// <summary>
-        /// <para>The policy information.</para>
+        /// <para>The protection policy information.</para>
         /// </summary>
         [NameInMap("BackupPolicy")]
         [Validation(Required=false)]
         public CreateBackupPolicyResponseBodyBackupPolicy BackupPolicy { get; set; }
         public class CreateBackupPolicyResponseBodyBackupPolicy : TeaModel {
             /// <summary>
-            /// <para>The ID of the anti-ransomware policy.</para>
+            /// <para>The ID of the anti-ransomware protection policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1301575</para>
