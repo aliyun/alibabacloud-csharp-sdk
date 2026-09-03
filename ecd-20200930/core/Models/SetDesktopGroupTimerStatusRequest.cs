@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetDesktopGroupTimerStatusRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud computer share.</para>
+        /// <para>The ID of the shared cloud computer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -33,13 +33,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The status of the scheduled task.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: enabled</description></item>
-        /// <item><description>2: disabled</description></item>
-        /// <item><description>3: deleted</description></item>
-        /// <item><description>100: unknown</description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -50,13 +43,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The type of the scheduled task.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: scheduled reset</description></item>
-        /// <item><description>2: scheduled startup</description></item>
-        /// <item><description>3: scheduled stop</description></item>
-        /// <item><description>4: scheduled restart</description></item>
-        /// </list>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

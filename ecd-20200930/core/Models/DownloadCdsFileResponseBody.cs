@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>Deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>None.</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("DownloadType")]
             [Validation(Required=false)]
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>Deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>None.</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("ExpirationSecond")]
             [Validation(Required=false)]
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>Deprecated.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>None.</para>
+            /// <para>None</para>
             /// </summary>
             [NameInMap("StreamUrl")]
             [Validation(Required=false)]

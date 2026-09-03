@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopChargeTypeRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable automatic payment.</para>
+        /// <para>Specifies whether to automatically pay for the order when you convert the billing method to subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The new billing method.</para>
+        /// <para>The target billing method to which you want to convert.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PrePaid</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud desktops. You can specify 1 to 20 IDs.</para>
+        /// <para>The cloud desktop IDs. You can specify 1 to 20 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,14 +41,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. This parameter is required only when you set the <c>ChargeType</c> parameter to <c>PrePaid</c>. The unit of the duration is specified by the <c>PeriodUnit</c> parameter.</para>
+        /// <para>The subscription duration of the cloud desktop when you convert the billing method to subscription. The unit is specified by PeriodUnit. This parameter takes effect and is required only when ChargeType is set to PrePaid.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set the <c>PeriodUnit</c> parameter to <c>Week</c>, you can set this parameter only to 1.</para>
-        /// </description></item>
-        /// <item><description><para>If you set the <c>PeriodUnit</c> parameter to <c>Month</c>, you can set this parameter to 1, 2, 3, or 6.</para>
-        /// </description></item>
-        /// <item><description><para>If you set the <c>PeriodUnit</c> parameter to <c>Year</c>, you can set this parameter to 1, 2, 3, 4, or 5.</para>
-        /// </description></item>
+        /// <item><description>If PeriodUnit is set to Week, the valid value of this parameter is 1.</description></item>
+        /// <item><description>If PeriodUnit is set to Month, valid values of this parameter are 1, 2, 3, and 6.</description></item>
+        /// <item><description>If PeriodUnit is set to Year, valid values of this parameter are 1, 2, 3, 4, and 5.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -59,7 +56,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration.</para>
+        /// <para>The unit of the subscription duration when you convert the billing method to subscription.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -79,7 +76,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -89,6 +86,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the resource ownership user in reseller pattern. You do not need to specify this parameter if you are not using reseller pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1422724566551XXX</para>
+        /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }
@@ -99,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>sample</para>
+        /// <para>120</para>
         /// </summary>
         [NameInMap("UseDuration")]
         [Validation(Required=false)]

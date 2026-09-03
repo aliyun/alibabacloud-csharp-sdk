@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRecordFileRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud desktop.</para>
+        /// <para>The Cloud Desktop ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-7w78ozhjcwa3u****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time of the query. Format: yyyyMMddHHmmss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20251218205715</para>
@@ -50,9 +50,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileName { get; set; }
 
         /// <summary>
-        /// <para>The sorting basis. If you do not specify this parameter, the results are sorted by screen recording start time in descending order. Valid value:</para>
+        /// <para>The field used for sorting. If this parameter is not specified, the results are sorted by recording start time in descending order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><c>startTime</c>: the start time of a screen recording.</description></item>
+        /// <item><description>startTime: recording start time.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -63,12 +63,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The sorting order. Valid values:</para>
+        /// <para>The sort order. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>asc</c>: ascending</para>
-        /// </description></item>
-        /// <item><description><para><c>desc</c>: descending</para>
-        /// </description></item>
+        /// <item><description>asc: ascending order.</description></item>
+        /// <item><description>desc: descending order.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -89,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of rows per page in a paging query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -99,16 +97,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The type of the screen recording. Valid values:</para>
+        /// <para>The type of the screen recording file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>alltime</c>: full-time recording</para>
-        /// </description></item>
-        /// <item><description><para><c>period</c>: recording at intervals</para>
-        /// </description></item>
-        /// <item><description><para><c>event</c>: event-triggered recording</para>
-        /// </description></item>
-        /// <item><description><para><c>session</c>: session-based recording</para>
-        /// </description></item>
+        /// <item><description>alltime: full-time recording.</description></item>
+        /// <item><description>period: interval recording.</description></item>
+        /// <item><description>event: event-based recording.</description></item>
+        /// <item><description>session: session recording.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -119,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RecordType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions that are supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -129,12 +123,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The resource type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>CLOUD_DESKTOP</para>
+        /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start time of the query. Format: yyyyMMddHHmmss.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20251218175715</para>
@@ -146,10 +146,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The status of the screen recording file. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>0</c>: The file is uploaded.</para>
-        /// </description></item>
-        /// <item><description><para><c>1</c>: The file is being uploaded.</para>
-        /// </description></item>
+        /// <item><description>0: uploaded.</description></item>
+        /// <item><description>1: uploading.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>

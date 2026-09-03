@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribePolicyGroupsRequest : TeaModel {
+        /// <summary>
+        /// <para>The business channel. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enterprise: Enterprise Edition.</description></item>
+        /// <item><description>Business: Business Edition.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enterprise</para>
+        /// </summary>
         [NameInMap("BusinessChannel")]
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
@@ -21,12 +31,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> ExternalPolicyGroupIds { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <list type="bullet">
-        /// <item><description><para>Maximum value: 100</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 10</para>
-        /// </description></item>
+        /// <item><description>Maximum value: 100.</description></item>
+        /// <item><description>Default value: 10.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -37,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous response. Do not set this parameter for the first request.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned from the last call to this operation. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -46,10 +54,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string NextToken { get; set; }
 
+        /// <summary>
+        /// <para>The page number of the current page for a paged query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("PageNumber")]
         [Validation(Required=false)]
         public int? PageNumber { get; set; }
 
+        /// <summary>
+        /// <para>The maximum number of entries per page for a paged query.<br>Default value: 20.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>20</para>
+        /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]
         public int? PageSize { get; set; }
@@ -65,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

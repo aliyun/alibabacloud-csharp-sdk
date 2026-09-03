@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public DescribePriceResponseBodyPriceInfo PriceInfo { get; set; }
         public class DescribePriceResponseBodyPriceInfo : TeaModel {
             /// <summary>
-            /// <para>Indicates whether a free enterprise drive is available.</para>
+            /// <para>Indicates whether a free enterprise cloud disk is available.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? FreeCdsQuota { get; set; }
 
             /// <summary>
-            /// <para>The free capacity provided by the enterprise drive. Unit: GiB.</para>
+            /// <para>The free capacity of the enterprise cloud disk. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -37,14 +37,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? FreeCdsSize { get; set; }
 
             /// <summary>
-            /// <para>The price.</para>
+            /// <para>The price information.</para>
             /// </summary>
             [NameInMap("Price")]
             [Validation(Required=false)]
             public DescribePriceResponseBodyPriceInfoPrice Price { get; set; }
             public class DescribePriceResponseBodyPriceInfoPrice : TeaModel {
                 /// <summary>
-                /// <para>The unit of currency (USD).</para>
+                /// <para>&lt;props=&quot;china&quot;&gt;The currency unit (CNY).
+                /// &lt;props=&quot;intl&quot;&gt;The currency unit (USD).</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>CNY/USD</para>
@@ -54,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Currency { get; set; }
 
                 /// <summary>
-                /// <para>The discounted amount.</para>
+                /// <para>The discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>15.8</para>
@@ -64,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public float? DiscountPrice { get; set; }
 
                 /// <summary>
-                /// <para>The orders.</para>
+                /// <para>The order information.</para>
                 /// </summary>
                 [NameInMap("OrderLines")]
                 [Validation(Required=false)]
@@ -81,14 +82,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public float? OriginalPrice { get; set; }
 
                 /// <summary>
-                /// <para>The promotions.</para>
+                /// <para>The promotion information.</para>
                 /// </summary>
                 [NameInMap("Promotions")]
                 [Validation(Required=false)]
                 public List<DescribePriceResponseBodyPriceInfoPricePromotions> Promotions { get; set; }
                 public class DescribePriceResponseBodyPriceInfoPricePromotions : TeaModel {
                     /// <summary>
-                    /// <para>The description of the promotion rule.</para>
+                    /// <para>The promotion rule description.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>test</para>
@@ -98,10 +99,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string OptionCode { get; set; }
 
                     /// <summary>
-                    /// <para>The description of the promotion.</para>
+                    /// <para>The promotion description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>新品上市，立享优惠</para>
+                    /// <para>New product launch with special discount</para>
                     /// </summary>
                     [NameInMap("PromotionDesc")]
                     [Validation(Required=false)]
@@ -128,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     public string PromotionName { get; set; }
 
                     /// <summary>
-                    /// <para>Indicates whether an item is selected.</para>
+                    /// <para>Indicates whether the promotion is selected.</para>
                     /// 
                     /// <b>Example:</b>
                     /// <para>false</para>
@@ -140,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 }
 
                 /// <summary>
-                /// <para>The price under an effective savings plan.</para>
+                /// <para>The price under the savings plan.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>50.00</para>
@@ -150,7 +151,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public long? SpPrice { get; set; }
 
                 /// <summary>
-                /// <para>The actual price. The original price minus the discounted amount equals the actual price.</para>
+                /// <para>The actual payment price. The value is the original price minus the discount amount.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>63.2</para>
@@ -162,17 +163,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The details of the promotion rules.</para>
+            /// <para>The promotion rule information.</para>
             /// </summary>
             [NameInMap("Rules")]
             [Validation(Required=false)]
             public List<DescribePriceResponseBodyPriceInfoRules> Rules { get; set; }
             public class DescribePriceResponseBodyPriceInfoRules : TeaModel {
                 /// <summary>
-                /// <para>The description of the rule.</para>
+                /// <para>The rule description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>买满1年，立享官网价格8.5折优惠。</para>
+                /// <para>Get 15% off the list price when you purchase for one year or longer</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

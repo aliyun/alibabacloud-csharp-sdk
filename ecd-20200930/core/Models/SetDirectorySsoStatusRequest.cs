@@ -21,11 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable or disable single sign-on (SSO). Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true: enables SSO</description></item>
-        /// <item><description>false: disables SSO.</description></item>
-        /// </list>
+        /// <para>Specifies whether to enable or shutdown SSO logon.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

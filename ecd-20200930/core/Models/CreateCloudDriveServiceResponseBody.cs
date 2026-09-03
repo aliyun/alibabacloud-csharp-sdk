@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateCloudDriveServiceResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the enterprise network disk.</para>
+        /// <para>The ID of the enterprise NAS drive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+cds-778205****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud storage service.</para>
+        /// <para>The service name of the cloud storage.</para>
         /// 
         /// <b>Example:</b>
         /// <para>CDS_Windows_1126</para>
@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsName { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The instance ID of the Cloud Enterprise Network (CEN).</para>
         /// <remarks>
-        /// <para>If you want to connect to a cloud desktop through a VPC, you can add the office network to a CEN instance. This CEN instance connects to your on-premises network through a VPN or a dedicated line.</para>
+        /// <para>To connect to cloud desktops over a VPC, you can add the office network to a CEN instance. This CEN instance is the one to which the on-premises network is connected by using a VPN or Express Connect circuit.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -43,21 +43,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The existing enterprise network disks or orders for enterprise network disks that conflict with the enterprise network disk that you want to create.</para>
+        /// <para>The existing NAS drive or NAS drive order that conflicts with the NAS drive to be created.</para>
         /// </summary>
         [NameInMap("ConflictCdsAndOrder")]
         [Validation(Required=false)]
         public CreateCloudDriveServiceResponseBodyConflictCdsAndOrder ConflictCdsAndOrder { get; set; }
         public class CreateCloudDriveServiceResponseBodyConflictCdsAndOrder : TeaModel {
             /// <summary>
-            /// <para>The information of conflicting enterprise network disks.</para>
+            /// <para>The information about the conflicting NAS drive.</para>
             /// </summary>
             [NameInMap("ConflictCds")]
             [Validation(Required=false)]
             public List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds> ConflictCds { get; set; }
             public class CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictCds : TeaModel {
                 /// <summary>
-                /// <para>The ID of the enterprise network disk.</para>
+                /// <para>The ID of the enterprise NAS drive.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou+cds-778205****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string CdsId { get; set; }
 
                 /// <summary>
-                /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions that are supported by Elastic Desktop Service.</para>
+                /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou</para>
@@ -79,14 +79,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The information of conflicting unpaid orders for enterprise network disks (orders for subscription enterprise network disks).</para>
+            /// <para>The information about the conflicting unpaid NAS drive order (subscription NAS drive order).</para>
             /// </summary>
             [NameInMap("ConflictOrder")]
             [Validation(Required=false)]
             public List<CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder> ConflictOrder { get; set; }
             public class CreateCloudDriveServiceResponseBodyConflictCdsAndOrderConflictOrder : TeaModel {
                 /// <summary>
-                /// <para>The ID of the enterprise network disk (The order is not paid, and the enterprise network disk cannot be used).</para>
+                /// <para>The ID of the enterprise NAS drive. The order is not paid, and the NAS drive is unavailable.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cn-hangzhou+cds-778205****</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string CdsId { get; set; }
 
                 /// <summary>
-                /// <para>The order ID. You can obtain the order ID on the <b>Order Management</b> page in the Alibaba Cloud User Center.</para>
+                /// <para>The order ID. You can obtain the order ID on the <b>Orders</b> page in the Alibaba Cloud User Center.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>22442411898****</para>
@@ -120,7 +120,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The name of the Active Directory (AD) domain corresponding to the AD office network.</para>
+        /// <para>The AD domain name of the AD office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test1.local</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ErrorCode { get; set; }
 
         /// <summary>
-        /// <para>The maximum storage usage of the enterprise network disk. Unit: bytes.</para>
+        /// <para>The maximum storage capacity of the enterprise NAS drive. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5368709120</para>
@@ -150,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MaxSize { get; set; }
 
         /// <summary>
-        /// <para>The office network type.</para>
+        /// <para>The network type of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AD_CONNECTOR</para>
@@ -160,7 +160,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteType { get; set; }
 
         /// <summary>
-        /// <para>The order ID. You can obtain the order ID on the Order Management page in the Alibaba Cloud User Center.</para>
+        /// <para>The order ID. You can obtain the order ID on the Orders page in the Alibaba Cloud User Center.</para>
         /// 
         /// <b>Example:</b>
         /// <para>214552063030752</para>

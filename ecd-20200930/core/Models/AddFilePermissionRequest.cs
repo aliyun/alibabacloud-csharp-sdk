@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</para>
+        /// <para>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the file ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? DisinheritSubGroup { get; set; }
 
             /// <summary>
-            /// <para>The time when the authorization expires. The value is the number of milliseconds from January 1, 1970, 00:00:00 to the target time. To set permanent validity, specify a predefined system value, such as 4775500800000.</para>
+            /// <para>The time when the authorization expires. The value is the number of milliseconds from January 1, 1970, 00:00:00 to the target time. To set the authorization to never expire, specify a predefined value such as 4775500800000.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4775500800000</para>
@@ -112,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? ExpireTime { get; set; }
 
             /// <summary>
-            /// <para>Two methods are supported for setting permissions: specifying a role or customizing operation permissions. This parameter specifies a role for permission settings and is mutually exclusive with ActionList. If both parameters are specified, this parameter takes precedence.</para>
+            /// <para>Two methods are supported for setting permissions: specifying a role or customizing operation permissions. This parameter specifies a role for permission settings and is mutually exclusive with ActionList. If both parameters are set, this parameter takes precedence.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>

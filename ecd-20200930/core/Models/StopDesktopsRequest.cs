@@ -10,6 +10,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class StopDesktopsRequest : TeaModel {
         /// <summary>
+        /// <para>Specifies whether to create a snapshot.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>false</para>
         /// </summary>
@@ -18,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CreateSnapshot { get; set; }
 
         /// <summary>
-        /// <para>An array of 1 to 100 cloud desktop IDs.</para>
+        /// <para>The cloud computer IDs. You can specify 1 to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to apply pending patch updates.</para>
+        /// <para>Specifies whether to perform a patch update when an update is ready. A value of true indicates that the patch update is performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -39,6 +41,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? OsUpdate { get; set; }
 
         /// <summary>
+        /// <para>The patch ID.</para>
+        /// 
         /// <b>Example:</b>
         /// <para>KB5082063</para>
         /// </summary>
@@ -47,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PatchId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to get a list of regions that Elastic Desktop Service supports.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -58,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Specifies the billing mode for the cloud desktops after they are stopped.</para>
+        /// <para>The billing mode after the cloud computers are stopped.</para>
         /// 
         /// <b>Example:</b>
         /// <para>StopCharging</para>

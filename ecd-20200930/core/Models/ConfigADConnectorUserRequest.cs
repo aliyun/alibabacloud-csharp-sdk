@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainPassword { get; set; }
 
         /// <summary>
-        /// <para>The username of the AD user that has the permission to join computers to the domain. After the configuration is complete, cloud computers created in the corresponding AD office network are added to the specified OU.</para>
+        /// <para>The username of the AD user that has the permission to join computers to the domain. The AD user specified here must have the permission to join computers to the domain. After the configuration is complete, cloud computers created in the corresponding AD office network are added to the specified OU.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

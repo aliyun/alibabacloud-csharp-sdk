@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable auto-renewal. This parameter applies only when <c>CdsChargeType</c> is set to <c>PrePaid</c>.</para>
+        /// <para>Specifies whether to enable auto-renewal. This parameter takes effect and is optional only when CdsChargeType is set to <c>PrePaid</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -35,14 +35,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>1</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public int? BizType { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the cloud drive.</para>
+        /// <para>The billing method of the NAS drive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PostPaid</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsChargeType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Cloud Enterprise Network (CEN) instance. This parameter is required when <c>OfficeSiteType</c> is set to <c>AD_CONNECTOR</c> and you do not specify <c>OfficeSiteId</c>.</para>
+        /// <para>The instance ID of the Cloud Enterprise Network (CEN) associated with the AD office network. This parameter takes effect only when <c>OfficeSiteType</c> is set to <c>AD_CONNECTOR</c>. If <c>OfficeSiteId</c> is specified, you do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-g4ba1mkji8nj6****</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The name of the domain controller. This parameter is required when <c>OfficeSiteType</c> is set to <c>AD_CONNECTOR</c> and you do not specify <c>OfficeSiteId</c>.</para>
+        /// <para>The domain controller name of the AD office network. This parameter takes effect only when <c>OfficeSiteType</c> is set to <c>AD_CONNECTOR</c>. If <c>OfficeSiteId</c> is specified, you do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>test.local</para>
@@ -72,19 +72,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>A list of user IDs.</para>
+        /// <para>The list of user IDs.</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The total capacity of the cloud drive.</para>
+        /// <para>The Peak Volume of the NAS drive storage space.</para>
         /// <list type="bullet">
-        /// <item><description><para>For pay-as-you-go cloud drives, the unit is bytes.</para>
-        /// </description></item>
-        /// <item><description><para>For subscription cloud drives, the unit is GiB. For example, set the value to 500 for 500 GiB, or to 2048 for 2 TiB.</para>
-        /// </description></item>
+        /// <item><description>When you create a pay-as-you-go NAS drive, the unit is bytes.</description></item>
+        /// <item><description>When you create an upfront NAS drive, the unit is GiB. For example, to create a 500 GiB upfront NAS drive, set this parameter to 500. To create a 2 TiB upfront NAS drive, set this parameter to 2048.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -96,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? MaxSize { get; set; }
 
         /// <summary>
-        /// <para>The name of the cloud drive.</para>
+        /// <para>The name of the enterprise NAS drive.</para>
         /// 
         /// <b>Example:</b>
         /// <para>wuying-cds</para>
@@ -106,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office site. This parameter applies only when <c>OfficeSiteType</c> is set to <c>AD_CONNECTOR</c>.</para>
+        /// <para>The ID of the office network. This parameter takes effect only when the network type is set to <c>AD_CONNECTOR</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-400695****</para>
@@ -116,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The type of the office site.</para>
+        /// <para>The network type of the office network.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SIMPLE</para>
@@ -126,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. The unit is specified by <c>PeriodUnit</c>. This parameter is required only when <c>CdsChargeType</c> is set to <c>PrePaid</c>.</para>
+        /// <para>The subscription duration. The unit is specified by <c>PeriodUnit</c>. This parameter takes effect and is required only when <c>CdsChargeType</c> is set to <c>PrePaid</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -136,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the subscription duration. This parameter is required only when <c>CdsChargeType</c> is set to <c>PrePaid</c>.</para>
+        /// <para>The unit of the subscription duration for the subscription NAS drive. This parameter takes effect and is required only when <c>CdsChargeType</c> is set to <c>PrePaid</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Year</para>
@@ -146,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -156,6 +154,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The user ID for resource ownership in reseller pattern. You do not need to specify this parameter if you are not in reseller pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1422724566551XXX</para>
+        /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }
@@ -166,14 +170,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>sol-2i8qxpv6t1a03****</para>
         /// </summary>
         [NameInMap("SolutionId")]
         [Validation(Required=false)]
         public string SolutionId { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of users for a subscription cloud drive. This parameter is required only when <c>CdsChargeType</c> is set to <c>PrePaid</c>.</para>
+        /// <para>The maximum number of users for the subscription NAS drive. This parameter takes effect and is required only when <c>CdsChargeType</c> is set to <c>PrePaid</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -183,7 +187,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? UserCount { get; set; }
 
         /// <summary>
-        /// <para>The maximum size of the personal disk for each user, in bytes.</para>
+        /// <para>The maximum storage capacity of a personal drive when you assign a personal drive to a user. Unit: bytes.</para>
         /// 
         /// <b>Example:</b>
         /// <para>104857600</para>

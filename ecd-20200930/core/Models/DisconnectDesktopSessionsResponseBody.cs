@@ -17,7 +17,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DisconnectDesktopSessionsResponseBodyInvalidSessions> InvalidSessions { get; set; }
         public class DisconnectDesktopSessionsResponseBodyInvalidSessions : TeaModel {
             /// <summary>
-            /// <para>The cloud desktop ID.</para>
+            /// <para>The cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-2jv6wugbkp65p****</para>

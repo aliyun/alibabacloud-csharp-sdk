@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. An empty value indicates that there are no more results.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>E54EB497-D7B7-5F04-B744-D8DFA7B******</para>
@@ -57,7 +57,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BatchId { get; set; }
 
             /// <summary>
-            /// <para>The time when the record was created.</para>
+            /// <para>The time when the record was created.
+            /// The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-03T08:27:29Z</para>
@@ -67,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The number of tasks that failed to execute.</para>
+            /// <para>The number of tasks that failed to be executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -77,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? FailedCount { get; set; }
 
             /// <summary>
-            /// <para>The number of tasks that are currently running.</para>
+            /// <para>The number of tasks that are being executed.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>

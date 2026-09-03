@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RenewDesktopGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The order IDs.</para>
+        /// <para>The list of order IDs.</para>
         /// </summary>
         [NameInMap("OrderId")]
         [Validation(Required=false)]

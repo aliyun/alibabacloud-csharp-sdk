@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCenterPolicyListRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether to enable the academic proxy feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
         [NameInMap("AcademicProxy")]
         [Validation(Required=false)]
         public string AcademicProxy { get; set; }
@@ -24,12 +34,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? BusinessType { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable the model library feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
         [NameInMap("ModelLibrary")]
         [Validation(Required=false)]
         public string ModelLibrary { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paging query.<br>Default value: 1.</para>
+        /// <para>The page number of the current page in a paged query. This parameter implements paging.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -39,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page in a paging query.</para>
+        /// <para>The maximum number of rows per page in a paged query. This parameter implements paging.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -49,12 +69,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud desktop policy IDs.</para>
+        /// <para>The list of Cloud Desktop policy IDs.</para>
         /// </summary>
         [NameInMap("PolicyGroupId")]
         [Validation(Required=false)]
         public List<string> PolicyGroupId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable the port proxy feature. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>on: Enabled.</description></item>
+        /// <item><description>off: Disabled.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>off</para>
+        /// </summary>
         [NameInMap("PortProxy")]
         [Validation(Required=false)]
         public string PortProxy { get; set; }
@@ -71,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The effective scope of the cloud desktop policy.</para>
+        /// <para>The effective scope of the Cloud Desktop policy.</para>
         /// 
         /// <b>Example:</b>
         /// <para>GLOBAL</para>

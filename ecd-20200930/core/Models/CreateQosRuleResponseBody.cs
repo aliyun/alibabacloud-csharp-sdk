@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateQosRuleResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the created QoS rule.</para>
+        /// <para>The rate limiting rule ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>qos-5605u0gelk200****</para>

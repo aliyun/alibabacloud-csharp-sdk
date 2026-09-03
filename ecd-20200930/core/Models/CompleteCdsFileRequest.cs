@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CompleteCdsFileRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the enterprise drive.</para>
+        /// <para>The enterprise network disk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team space. You must specify at least one of <c>EndUserId</c> and <c>GroupId</c>.</para>
+        /// <para>The team workspace ID. You must specify at least one of <c>EndUserId</c> and <c>GroupId</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-i1ruuudp92qpj****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -63,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the file upload task. Callable interface <a href="https://help.aliyun.com/document_detail/2247619.html">CreateCdsFile</a>.</para>
+        /// <para>The ID of the file upload task. You can call <a href="https://help.aliyun.com/document_detail/2247619.html">CreateCdsFile</a> to obtain the ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

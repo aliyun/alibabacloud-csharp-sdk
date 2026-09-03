@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribePriceRequest : TeaModel {
         /// <summary>
-        /// <para>The number of resources. Default value: 1.</para>
+        /// <para>The resource count. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -20,12 +20,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Amount { get; set; }
 
         /// <summary>
-        /// <para>The maximum public bandwidth. Unit: Mbit/s.</para>
+        /// <para>The peak Internet bandwidth. Unit: Mbit/s.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values if you set InternetChargeType to PayByBandwidth: 10 to 1000.</para>
-        /// </description></item>
-        /// <item><description><para>Valid values if you set InternetChargeType to InternetChargeType: 10 to 200.</para>
-        /// </description></item>
+        /// <item><description>For pay-by-bandwidth, valid values are 10 to 1000.</description></item>
+        /// <item><description>For pay-by-traffic, valid values are 10 to 200.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -36,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The type of hourly plan if you use the Monthly Subscription billing method. If you set <c>ResourceType</c> to <c>DesktopMonthPackage</c>, you must specify this parameter.</para>
+        /// <para>The duration package type for monthly cloud desktop purchases. If ResourceType is set to DesktopMonthPackage, this parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>120</para>
@@ -46,9 +44,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Duration { get; set; }
 
         /// <summary>
-        /// <para>The number of cloud computer shares. Default value: 1.</para>
+        /// <para>The number of shared cloud desktops. Default value: 1.</para>
         /// <remarks>
-        /// <para>This parameter takes effect only if you set <c>ResourceType</c> to <c>DesktopGroup</c>.</para>
+        /// <para>This parameter takes effect only when ResourceType is set to DesktopGroup.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -59,13 +57,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? GroupDesktopCount { get; set; }
 
         /// <summary>
-        /// <para>The specifications of the resource.</para>
+        /// <para>The resource specification.</para>
         /// <list type="bullet">
-        /// <item><description><para>This parameter is required if you set <c>ResourceType</c> to <c>Desktop</c>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query the available cloud computer types that correspond to the value of <c>DesktopTypeId</c>.</para>
+        /// <item><description><para>If ResourceType is set to Desktop, this parameter is required. You can call <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query available values (corresponding to the DesktopTypeId value).</para>
         /// </description></item>
-        /// <item><description><para>If you set <c>ResourceType</c> to <c>DesktopGroup</c>, set the value of this parameter to <c>large</c>.</para>
+        /// <item><description><para>If ResourceType is set to DesktopGroup, set this parameter to <c>large</c>.</para>
         /// </description></item>
-        /// <item><description><para>If you set <c>ResourceType</c> to <c>Bandwidth</c>, you can leave this parameter empty.</para>
+        /// <item><description><para>If ResourceType is set to Bandwidth, you do not need to specify this parameter.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -77,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The metering method for network traffic.</para>
+        /// <para>The billing method of the Internet access package.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PayByTraffic</para>
@@ -87,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InternetChargeType { get; set; }
 
         /// <summary>
-        /// <para>The OS type.</para>
+        /// <para>The operating system type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Windows</para>
@@ -97,14 +95,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OsType { get; set; }
 
         /// <summary>
-        /// <para>The subscription duration. The valid values of this parameter vary based on the value of <c>PeriodUnit</c>.</para>
+        /// <para>The subscription duration. Valid values are determined by the PeriodUnit parameter.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>PeriodUnit</c> to <c>Hour</c>, set the value of this parameter to 1.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <c>PeriodUnit</c> to <c>Month</c>, set the value of this parameter to 1, 2, 3, or 6.</para>
-        /// </description></item>
-        /// <item><description><para>If you set <c>PeriodUnit</c> to <c>Year</c>, set the value of this parameter to 1, 2, or 3.</para>
-        /// </description></item>
+        /// <item><description>If PeriodUnit is set to Hour, the valid value is 1.</description></item>
+        /// <item><description>If PeriodUnit is set to Month, valid values are 1, 2, 3, and 6.</description></item>
+        /// <item><description>If PeriodUnit is set to Year, valid values are 1, 2, and 3.</description></item>
         /// </list>
         /// <para>Default value: 1.</para>
         /// 
@@ -136,7 +131,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the regions supported by EDS.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -147,7 +142,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>User ID of the resource owner in resale mode. This parameter is not required in non-resale mode.</para>
+        /// <para>The user ID for resource ownership in reseller mode. You do not need to specify this parameter in non-reseller mode.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1422724566551XXX</para>
@@ -157,7 +152,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ResellerOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>The type of the resource.</para>
+        /// <para>The resource type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Desktop</para>
@@ -167,7 +162,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The category of the system disk.</para>
+        /// <para>The system cloud disk type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>40</para>
@@ -177,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RootDiskCategory { get; set; }
 
         /// <summary>
-        /// <para>Performance level of the system disk. You can configure the disk performance level when the cloud desktop instance type is graphics-optimized or high clock speed. For differences among performance levels of disks, see <a href="t583241.xdita#"></a>.</para>
+        /// <para>The performance level (PL) of the system cloud disk. You can set the disk performance level when the cloud desktop specification is set to Graphics or High Frequency. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL0</para>
@@ -187,7 +182,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RootDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The size of the system disk. Unit: GiB. If you set <c>ResourceType</c> to <c>Desktop</c>, you must specify this parameter.</para>
+        /// <para>The system cloud disk size. Unit: GiB. If ResourceType is set to Desktop, this parameter is required.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -197,7 +192,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? RootDiskSizeGib { get; set; }
 
         /// <summary>
-        /// <para>The category of the data disk.</para>
+        /// <para>The data cloud disk type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -207,7 +202,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string UserDiskCategory { get; set; }
 
         /// <summary>
-        /// <para>Performance level of the data disk. You can specify the disk performance level when the WUYING Workspace instance type is set to graphics-optimized or high clock speed. For differences between performance levels of disks, see <a href="t583241.xdita#"></a>.</para>
+        /// <para>The performance level (PL) of the data cloud disk. You can set the disk performance level when the cloud desktop specification is set to Graphics or High Frequency. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL0</para>
@@ -217,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string UserDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The size of the data disk. Unit: GiB.</para>
+        /// <para>The data cloud disk size. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>

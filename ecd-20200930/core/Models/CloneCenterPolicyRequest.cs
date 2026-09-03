@@ -32,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The ID of the target cloud computer policy to clone.</para>
+        /// <para>The ID of the cloud computer policy to clone.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

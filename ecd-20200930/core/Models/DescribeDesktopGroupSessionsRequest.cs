@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopGroupSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of shared desktop groups.</para>
+        /// <para>The list of shared desktop group IDs.</para>
         /// </summary>
         [NameInMap("DesktopGroupIds")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupName { get; set; }
 
         /// <summary>
-        /// <para>The end of the time range to query.</para>
+        /// <para>The end time of the query. The time is in the ISO 8601 standard (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;2022-08-31T06:56:45Z&quot;</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The user ID of the terminal that connects to the session.</para>
+        /// <para>The ID of the end user connected to the session.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -47,14 +47,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>Whether to supplement terminal information.</para>
+        /// <para>Specifies whether to include terminal information.</para>
         /// </summary>
         [NameInMap("FillTerminalInfo")]
         [Validation(Required=false)]
         public bool? FillTerminalInfo { get; set; }
 
         /// <summary>
-        /// <para>The language of the response.</para>
+        /// <para>The language type of the returned information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page.</para>
+        /// <para>The maximum number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -74,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6ljnKKgSRjo8yXAIT5QSvkU</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the session.</para>
+        /// <para>The session type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? OwnType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The status of the session.</para>
+        /// <para>The connection status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Connected</para>
@@ -114,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SessionStatus { get; set; }
 
         /// <summary>
-        /// <para>The beginning of the time range to query.</para>
+        /// <para>The start time of the query. The time is in the ISO 8601 standard (UTC).</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;2022-08-31T06:56:45Z&quot;</para>

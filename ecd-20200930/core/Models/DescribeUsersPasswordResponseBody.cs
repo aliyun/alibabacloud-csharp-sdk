@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUsersPasswordResponseBody : TeaModel {
         /// <summary>
-        /// <para>The authorized users of the cloud computer.</para>
+        /// <para>The list of accounts in the cloud computer image.</para>
         /// </summary>
         [NameInMap("DesktopUsers")]
         [Validation(Required=false)]
         public List<DescribeUsersPasswordResponseBodyDesktopUsers> DesktopUsers { get; set; }
         public class DescribeUsersPasswordResponseBodyDesktopUsers : TeaModel {
             /// <summary>
-            /// <para>The display name of the end user.</para>
+            /// <para>The display name of the account in the cloud computer image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo_user01_1488****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DisplayName { get; set; }
 
             /// <summary>
-            /// <para>The ID of the end user.</para>
+            /// <para>The end user ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demo_user01</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The password of the end user.</para>
+            /// <para>The password of the account in the cloud computer image.</para>
             /// 
             /// <b>Example:</b>
             /// <para>3q8p-NDey-2Nac-TWcQ-****</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>F7B4B17B-5C8A-514C-AA4D-F8090E3A63E9</para>

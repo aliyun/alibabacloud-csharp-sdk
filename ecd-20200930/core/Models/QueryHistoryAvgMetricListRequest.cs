@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class QueryHistoryAvgMetricListRequest : TeaModel {
         /// <summary>
-        /// <para>The start date of the statistics. The format is <c>YYYY-MM-DD</c>. The default value is T-1.</para>
+        /// <para>The start date for statistics. Format: &quot;YYYY-MM-DD&quot;. Default value: T-1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-04-01</para>
@@ -20,14 +20,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DataDate { get; set; }
 
         /// <summary>
-        /// <para>The desktop ID list. A maximum of 100 IDs are supported.</para>
+        /// <para>The list of desktop IDs. A maximum of 100 IDs are supported.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The metric to query.</para>
+        /// <para>The type of monitoring metrics.</para>
         /// 
         /// <b>Example:</b>
         /// <para>LOAD_SCORE</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MetricName { get; set; }
 
         /// <summary>
-        /// <para>The page number, which must be greater than 0. Default value: 1.</para>
+        /// <para>The page number. Default value: 1. The value must be greater than 0.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNum { get; set; }
 
         /// <summary>
-        /// <para>The page size. Valid values: 1 to 200. Default value: 20.</para>
+        /// <para>The number of entries per page. Default value: 20. Valid values: 1 to 200.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? IncludeMin { get; set; }
 
             /// <summary>
-            /// <para>The range label, which is used for the return value.</para>
+            /// <para>The range label, which is used in the response.</para>
             /// 
             /// <b>Example:</b>
             /// <para>label-02\&quot;</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The desktop region.</para>
+        /// <para>The region of the desktop.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceRegionId { get; set; }
 
         /// <summary>
-        /// <para>The sorting method.</para>
+        /// <para>The sort order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ASC</para>

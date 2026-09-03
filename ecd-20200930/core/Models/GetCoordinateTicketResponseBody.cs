@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetCoordinateTicketResponseBody : TeaModel {
         /// <summary>
-        /// <para>The ID of the stream collaboration.</para>
+        /// <para>The coordination flow ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>co-0sot77uale3****</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer connection task.</para>
+        /// <para>The cloud computer connection task ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39cc15e5-6998-4b9f-9b2c-7a4cc3e2****</para>
@@ -41,29 +41,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The task status.</para>
-        /// <para>Possible values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Finished</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Failed</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Running</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>Finished</para>
@@ -73,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TaskStatus { get; set; }
 
         /// <summary>
-        /// <para>The credentials of the stream collaboration.</para>
+        /// <para>The coordination flow ticket.</para>
         /// 
         /// <b>Example:</b>
         /// <para>W0VuY29kaW5nXQ0KSW5wdXRFbmNvZGluZz1V********</para>

@@ -19,33 +19,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"us-west-1", "ecd.us-west-1.aliyuncs.com"},
-                {"us-east-1", "ecd.us-east-1.aliyuncs.com"},
-                {"me-east-1", "ecd.me-east-1.aliyuncs.com"},
-                {"me-central-1", "ecd.me-central-1.aliyuncs.com"},
-                {"eu-west-1", "ecd.eu-west-1.aliyuncs.com"},
-                {"eu-central-1", "ecd.eu-central-1.aliyuncs.com"},
-                {"cn-zhangjiakou", "ecd.cn-zhangjiakou.aliyuncs.com"},
-                {"cn-wulanchabu", "ecd.cn-wulanchabu.aliyuncs.com"},
-                {"cn-shenzhen", "ecd.cn-shenzhen.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "ecd.cn-shanghai-finance-1.aliyuncs.com"},
-                {"cn-shanghai", "ecd.cn-shanghai.aliyuncs.com"},
-                {"cn-qingdao", "ecd.cn-qingdao.aliyuncs.com"},
-                {"cn-nanjing", "ecd.cn-nanjing.aliyuncs.com"},
-                {"cn-hongkong", "ecd.cn-hongkong.aliyuncs.com"},
-                {"cn-hangzhou-finance", "ecd.cn-hangzhou-finance.aliyuncs.com"},
-                {"cn-hangzhou", "ecd.cn-hangzhou.aliyuncs.com"},
-                {"cn-guangzhou", "ecd.cn-guangzhou.aliyuncs.com"},
-                {"cn-chengdu", "ecd.cn-chengdu.aliyuncs.com"},
-                {"cn-beijing", "ecd.cn-beijing.aliyuncs.com"},
-                {"ap-southeast-7", "ecd.ap-southeast-7.aliyuncs.com"},
-                {"ap-southeast-6", "ecd.ap-southeast-6.aliyuncs.com"},
-                {"ap-southeast-5", "ecd.ap-southeast-5.aliyuncs.com"},
-                {"ap-southeast-1", "ecd.ap-southeast-1.aliyuncs.com"},
-                {"ap-northeast-1", "ecd.ap-northeast-1.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("ecd", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -66,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks an office network that was automatically locked after being idle for a period of time.</para>
+        /// <para>Unlocks an office network based on a convenience account that has been automatically locked after being idle for a certain period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -117,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks an office network that was automatically locked after being idle for a period of time.</para>
+        /// <para>Unlocks an office network based on a convenience account that has been automatically locked after being idle for a certain period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -168,7 +141,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks an office network that was automatically locked after being idle for a period of time.</para>
+        /// <para>Unlocks an office network based on a convenience account that has been automatically locked after being idle for a certain period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -191,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unlocks an office network that was automatically locked after being idle for a period of time.</para>
+        /// <para>Unlocks an office network based on a convenience account that has been automatically locked after being idle for a certain period.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -371,7 +344,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.</para>
+        /// <para>Each device can only be registered under one Alibaba Cloud account. If the device you attempt to register is already registered under another Alibaba Cloud account, an error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -426,7 +399,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.</para>
+        /// <para>Each device can only be registered under one Alibaba Cloud account. If the device you attempt to register is already registered under another Alibaba Cloud account, an error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -481,7 +454,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.</para>
+        /// <para>Each device can only be registered under one Alibaba Cloud account. If the device you attempt to register is already registered under another Alibaba Cloud account, an error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -504,7 +477,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Each device can be registered in only one Alibaba Cloud account. If you register a device that has been registered in another Alibaba Cloud account, an error is reported.</para>
+        /// <para>Each device can only be registered under one Alibaba Cloud account. If the device you attempt to register is already registered under another Alibaba Cloud account, an error is returned.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -714,7 +687,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds authorized users to a shared cloud desktop group, automatically assigning cloud desktops within the group to these users based on rules defined by an administrator.</para>
+        /// <para>Adds authorized users to a shared cloud computer. Cloud computers within the shared cloud computer are automatically assigned to authorized users based on rules set by the administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -788,7 +761,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds authorized users to a shared cloud desktop group, automatically assigning cloud desktops within the group to these users based on rules defined by an administrator.</para>
+        /// <para>Adds authorized users to a shared cloud computer. Cloud computers within the shared cloud computer are automatically assigned to authorized users based on rules set by the administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -862,7 +835,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds authorized users to a shared cloud desktop group, automatically assigning cloud desktops within the group to these users based on rules defined by an administrator.</para>
+        /// <para>Adds authorized users to a shared cloud computer. Cloud computers within the shared cloud computer are automatically assigned to authorized users based on rules set by the administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -880,7 +853,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Adds authorized users to a shared cloud desktop group, automatically assigning cloud desktops within the group to these users based on rules defined by an administrator.</para>
+        /// <para>Adds authorized users to a shared cloud computer. Cloud computers within the shared cloud computer are automatically assigned to authorized users based on rules set by the administrator.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -1202,14 +1175,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply an automatic snapshot policy to cloud computers. After the automatic snapshot policy is applied to the cloud computers, Elastic Desktop Service automatically creates snapshots for the cloud computers based on the time specified in the automatic snapshot policy.</para>
+        /// <para>Attaches an automatic snapshot policy to cloud computers. After the policy is attached, cloud computers perform automatic creation of snapshots at the times specified in the automatic snapshot policy.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups &gt; Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More &gt; Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
-        /// After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ApplyAutoSnapshotPolicyRequest
@@ -1258,14 +1225,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply an automatic snapshot policy to cloud computers. After the automatic snapshot policy is applied to the cloud computers, Elastic Desktop Service automatically creates snapshots for the cloud computers based on the time specified in the automatic snapshot policy.</para>
+        /// <para>Attaches an automatic snapshot policy to cloud computers. After the policy is attached, cloud computers perform automatic creation of snapshots at the times specified in the automatic snapshot policy.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups &gt; Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More &gt; Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
-        /// After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ApplyAutoSnapshotPolicyRequest
@@ -1314,14 +1275,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply an automatic snapshot policy to cloud computers. After the automatic snapshot policy is applied to the cloud computers, Elastic Desktop Service automatically creates snapshots for the cloud computers based on the time specified in the automatic snapshot policy.</para>
+        /// <para>Attaches an automatic snapshot policy to cloud computers. After the policy is attached, cloud computers perform automatic creation of snapshots at the times specified in the automatic snapshot policy.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups &gt; Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More &gt; Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
-        /// After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ApplyAutoSnapshotPolicyRequest
@@ -1338,14 +1293,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Apply an automatic snapshot policy to cloud computers. After the automatic snapshot policy is applied to the cloud computers, Elastic Desktop Service automatically creates snapshots for the cloud computers based on the time specified in the automatic snapshot policy.</para>
+        /// <para>Attaches an automatic snapshot policy to cloud computers. After the policy is attached, cloud computers perform automatic creation of snapshots at the times specified in the automatic snapshot policy.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can also associate an automatic snapshot policy with a cloud desktop in the Elastic Desktop Service (EDS) console. To do so, perform the following steps: 1. Log on to the EDS console. 2. Choose Desktops and Groups &gt; Desktops in the left-side navigation pane. 3. Find the cloud desktop that you want to manage on the Cloud Desktops page and choose More &gt; Change Automatic Snapshot Policy in the Actions column. 4. Configure a policy for the cloud desktop as prompted in the Change Automatic Snapshot Policy panel.
-        /// After you associate an automatic snapshot policy with the cloud desktop, the system creates snapshots for the cloud desktop based on the policy.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ApplyAutoSnapshotPolicyRequest
@@ -1982,7 +1931,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one bindingrelationship with an office network.</para>
+        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one relationship with an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2032,7 +1981,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one bindingrelationship with an office network.</para>
+        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one relationship with an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2082,7 +2031,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one bindingrelationship with an office network.</para>
+        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one relationship with an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2100,7 +2049,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one bindingrelationship with an office network.</para>
+        /// <para>Associates a premium Internet bandwidth plan with an office network. A premium Internet bandwidth plan has a one-to-one relationship with an office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2254,16 +2203,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an advanced office network to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates an advanced office network with a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites</para>
+        /// <para>Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>A CEN instance is created.</description></item>
-        /// <item><description>The office network is an advanced office network, and the account system type is convenient account.<remarks>
-        /// <para> The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.</para>
+        /// <item><description>A CEN instance is available.</description></item>
+        /// <item><description>The office network is an advanced office network, and the account system type is convenience account.<remarks>
+        /// <para>An AD office network is already added to a CEN instance during creation. An office network can be added to only one CEN instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -2324,16 +2273,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an advanced office network to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates an advanced office network with a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites</para>
+        /// <para>Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>A CEN instance is created.</description></item>
-        /// <item><description>The office network is an advanced office network, and the account system type is convenient account.<remarks>
-        /// <para> The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.</para>
+        /// <item><description>A CEN instance is available.</description></item>
+        /// <item><description>The office network is an advanced office network, and the account system type is convenience account.<remarks>
+        /// <para>An AD office network is already added to a CEN instance during creation. An office network can be added to only one CEN instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -2394,16 +2343,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an advanced office network to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates an advanced office network with a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites</para>
+        /// <para>Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>A CEN instance is created.</description></item>
-        /// <item><description>The office network is an advanced office network, and the account system type is convenient account.<remarks>
-        /// <para> The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.</para>
+        /// <item><description>A CEN instance is available.</description></item>
+        /// <item><description>The office network is an advanced office network, and the account system type is convenience account.<remarks>
+        /// <para>An AD office network is already added to a CEN instance during creation. An office network can be added to only one CEN instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -2424,16 +2373,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds an advanced office network to a Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>Associates an advanced office network with a Cloud Enterprise Network (CEN) instance.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Prerequisites</para>
+        /// <para>Before you begin:</para>
         /// <list type="bullet">
-        /// <item><description>A CEN instance is created.</description></item>
-        /// <item><description>The office network is an advanced office network, and the account system type is convenient account.<remarks>
-        /// <para> The office network is added to the CEN instance when you create the instance. An office network can be added to only one CEN instance.</para>
+        /// <item><description>A CEN instance is available.</description></item>
+        /// <item><description>The office network is an advanced office network, and the account system type is convenience account.<remarks>
+        /// <para>An AD office network is already added to a CEN instance during creation. An office network can be added to only one CEN instance.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -2454,7 +2403,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a hardware client to a user.</para>
+        /// <para>If you want a hardware terminal to be accessible only to specified end users, you need to enable the trusted device authentication feature and add bound users to the hardware terminal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2520,7 +2469,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a hardware client to a user.</para>
+        /// <para>If you want a hardware terminal to be accessible only to specified end users, you need to enable the trusted device authentication feature and add bound users to the hardware terminal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2586,7 +2535,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a hardware client to a user.</para>
+        /// <para>If you want a hardware terminal to be accessible only to specified end users, you need to enable the trusted device authentication feature and add bound users to the hardware terminal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -2604,7 +2553,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Binds a hardware client to a user.</para>
+        /// <para>If you want a hardware terminal to be accessible only to specified end users, you need to enable the trusted device authentication feature and add bound users to the hardware terminal.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3786,7 +3735,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create an object upload task, call this operation to upload the object.</para>
+        /// <para>Completes the file upload action after a file upload task is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3848,7 +3797,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create an object upload task, call this operation to upload the object.</para>
+        /// <para>Completes the file upload action after a file upload task is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3910,7 +3859,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create an object upload task, call this operation to upload the object.</para>
+        /// <para>Completes the file upload action after a file upload task is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -3928,7 +3877,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>After you create an object upload task, call this operation to upload the object.</para>
+        /// <para>Completes the file upload action after a file upload task is created.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -4578,12 +4527,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a directory of the Active Directory (AD) type.</para>
+        /// <para>Creates an AD directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An AD directory is used to connect to an enterprise\&quot;s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</para>
+        /// <para>AD directories are used to connect to your enterprise Active Directory (AD) and are suitable for large-scale cloud computer deployments. Connecting to an enterprise AD incurs directory fees. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4673,12 +4622,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a directory of the Active Directory (AD) type.</para>
+        /// <para>Creates an AD directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An AD directory is used to connect to an enterprise\&quot;s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</para>
+        /// <para>AD directories are used to connect to your enterprise Active Directory (AD) and are suitable for large-scale cloud computer deployments. Connecting to an enterprise AD incurs directory fees. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4768,12 +4717,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a directory of the Active Directory (AD) type.</para>
+        /// <para>Creates an AD directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An AD directory is used to connect to an enterprise\&quot;s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</para>
+        /// <para>AD directories are used to connect to your enterprise Active Directory (AD) and are suitable for large-scale cloud computer deployments. Connecting to an enterprise AD incurs directory fees. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4791,12 +4740,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a directory of the Active Directory (AD) type.</para>
+        /// <para>Creates an AD directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>An AD directory is used to connect to an enterprise\&quot;s existing Active Directory and is suitable for large-scale cloud computer deployment. You are charged directory fees when you connect your AD to cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</para>
+        /// <para>AD directories are used to connect to your enterprise Active Directory (AD) and are suitable for large-scale cloud computer deployments. Connecting to an enterprise AD incurs directory fees. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4814,22 +4763,25 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>WUYING Workspace supports two account types: convenience accounts and Enterprise AD accounts. This operation creates an office network (formerly known as a workspace) for Enterprise AD accounts.</para>
+        /// <para>Creates an office network (formerly workspace) based on an enterprise Active Directory (AD) account system. Elastic Desktop Service supports convenient accounts and enterprise AD accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create an AD office network, an AD Connector is automatically created to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.
-        /// After creating an AD office network, you must also configure the AD domain. Follow these steps:</para>
+        /// <para>When you create an AD office network, the system performs automatic creation of an AD Connector to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.
+        /// After you call this operation to create an AD office network, you must complete the AD domain configurations. The procedure is as follows:</para>
         /// <ol>
-        /// <item><description>Configure a conditional forwarder on your DNS server.</description></item>
-        /// <item><description>Establish a trust relationship on your domain controller, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure this trust for the AD office network.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to list the organizational units (OUs) in your AD domain. Then, call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OUs and an administrator for the AD office network.<remarks>
-        /// <para>If you provide domain administrator credentials (DomainUserName and DomainPassword) when you create the AD office network, you only need to configure a conditional forwarder. If you do not provide these credentials, you must configure a conditional forwarder, establish a trust relationship, and specify the organizational units (OUs).
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage office networks for enterprise AD accounts</a>.</para>
+        /// <item><description><para>Configure a conditional forwarder on the DNS server.</para>
+        /// </description></item>
+        /// <item><description><para>Configure a trust relationship on the AD domain server, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure the trust relationship for the AD office network.</para>
+        /// </description></item>
+        /// <item><description><para>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the organizational unit (OU) information of the AD domain, and then call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OU and administrator for the AD office network.</para>
+        /// <remarks>
+        /// <para>When you create an AD office network, if you specify the domain administrator and password (DomainUserName and DomainPassword), you only need to configure the conditional forwarder afterward. If you do not specify the domain administrator and password, you must complete the configurations of the conditional forwarder, trust relationship, and OU as described above.</para>
         /// </remarks>
         /// </description></item>
         /// </ol>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage an AD-based office network</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -4963,22 +4915,25 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>WUYING Workspace supports two account types: convenience accounts and Enterprise AD accounts. This operation creates an office network (formerly known as a workspace) for Enterprise AD accounts.</para>
+        /// <para>Creates an office network (formerly workspace) based on an enterprise Active Directory (AD) account system. Elastic Desktop Service supports convenient accounts and enterprise AD accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create an AD office network, an AD Connector is automatically created to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.
-        /// After creating an AD office network, you must also configure the AD domain. Follow these steps:</para>
+        /// <para>When you create an AD office network, the system performs automatic creation of an AD Connector to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.
+        /// After you call this operation to create an AD office network, you must complete the AD domain configurations. The procedure is as follows:</para>
         /// <ol>
-        /// <item><description>Configure a conditional forwarder on your DNS server.</description></item>
-        /// <item><description>Establish a trust relationship on your domain controller, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure this trust for the AD office network.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to list the organizational units (OUs) in your AD domain. Then, call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OUs and an administrator for the AD office network.<remarks>
-        /// <para>If you provide domain administrator credentials (DomainUserName and DomainPassword) when you create the AD office network, you only need to configure a conditional forwarder. If you do not provide these credentials, you must configure a conditional forwarder, establish a trust relationship, and specify the organizational units (OUs).
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage office networks for enterprise AD accounts</a>.</para>
+        /// <item><description><para>Configure a conditional forwarder on the DNS server.</para>
+        /// </description></item>
+        /// <item><description><para>Configure a trust relationship on the AD domain server, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure the trust relationship for the AD office network.</para>
+        /// </description></item>
+        /// <item><description><para>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the organizational unit (OU) information of the AD domain, and then call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OU and administrator for the AD office network.</para>
+        /// <remarks>
+        /// <para>When you create an AD office network, if you specify the domain administrator and password (DomainUserName and DomainPassword), you only need to configure the conditional forwarder afterward. If you do not specify the domain administrator and password, you must complete the configurations of the conditional forwarder, trust relationship, and OU as described above.</para>
         /// </remarks>
         /// </description></item>
         /// </ol>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage an AD-based office network</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5112,22 +5067,25 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>WUYING Workspace supports two account types: convenience accounts and Enterprise AD accounts. This operation creates an office network (formerly known as a workspace) for Enterprise AD accounts.</para>
+        /// <para>Creates an office network (formerly workspace) based on an enterprise Active Directory (AD) account system. Elastic Desktop Service supports convenient accounts and enterprise AD accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create an AD office network, an AD Connector is automatically created to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.
-        /// After creating an AD office network, you must also configure the AD domain. Follow these steps:</para>
+        /// <para>When you create an AD office network, the system performs automatic creation of an AD Connector to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.
+        /// After you call this operation to create an AD office network, you must complete the AD domain configurations. The procedure is as follows:</para>
         /// <ol>
-        /// <item><description>Configure a conditional forwarder on your DNS server.</description></item>
-        /// <item><description>Establish a trust relationship on your domain controller, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure this trust for the AD office network.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to list the organizational units (OUs) in your AD domain. Then, call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OUs and an administrator for the AD office network.<remarks>
-        /// <para>If you provide domain administrator credentials (DomainUserName and DomainPassword) when you create the AD office network, you only need to configure a conditional forwarder. If you do not provide these credentials, you must configure a conditional forwarder, establish a trust relationship, and specify the organizational units (OUs).
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage office networks for enterprise AD accounts</a>.</para>
+        /// <item><description><para>Configure a conditional forwarder on the DNS server.</para>
+        /// </description></item>
+        /// <item><description><para>Configure a trust relationship on the AD domain server, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure the trust relationship for the AD office network.</para>
+        /// </description></item>
+        /// <item><description><para>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the organizational unit (OU) information of the AD domain, and then call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OU and administrator for the AD office network.</para>
+        /// <remarks>
+        /// <para>When you create an AD office network, if you specify the domain administrator and password (DomainUserName and DomainPassword), you only need to configure the conditional forwarder afterward. If you do not specify the domain administrator and password, you must complete the configurations of the conditional forwarder, trust relationship, and OU as described above.</para>
         /// </remarks>
         /// </description></item>
         /// </ol>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage an AD-based office network</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5145,22 +5103,25 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>WUYING Workspace supports two account types: convenience accounts and Enterprise AD accounts. This operation creates an office network (formerly known as a workspace) for Enterprise AD accounts.</para>
+        /// <para>Creates an office network (formerly workspace) based on an enterprise Active Directory (AD) account system. Elastic Desktop Service supports convenient accounts and enterprise AD accounts.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create an AD office network, an AD Connector is automatically created to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.
-        /// After creating an AD office network, you must also configure the AD domain. Follow these steps:</para>
+        /// <para>When you create an AD office network, the system performs automatic creation of an AD Connector to connect to your enterprise AD. You are charged for the AD Connector. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.
+        /// After you call this operation to create an AD office network, you must complete the AD domain configurations. The procedure is as follows:</para>
         /// <ol>
-        /// <item><description>Configure a conditional forwarder on your DNS server.</description></item>
-        /// <item><description>Establish a trust relationship on your domain controller, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure this trust for the AD office network.</description></item>
-        /// <item><description>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to list the organizational units (OUs) in your AD domain. Then, call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OUs and an administrator for the AD office network.<remarks>
-        /// <para>If you provide domain administrator credentials (DomainUserName and DomainPassword) when you create the AD office network, you only need to configure a conditional forwarder. If you do not provide these credentials, you must configure a conditional forwarder, establish a trust relationship, and specify the organizational units (OUs).
-        /// For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage office networks for enterprise AD accounts</a>.</para>
+        /// <item><description><para>Configure a conditional forwarder on the DNS server.</para>
+        /// </description></item>
+        /// <item><description><para>Configure a trust relationship on the AD domain server, and then call <a href="https://help.aliyun.com/document_detail/311258.html">ConfigADConnectorTrust</a> to configure the trust relationship for the AD office network.</para>
+        /// </description></item>
+        /// <item><description><para>Call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the organizational unit (OU) information of the AD domain, and then call <a href="https://help.aliyun.com/document_detail/311262.html">ConfigADConnectorUser</a> to specify the OU and administrator for the AD office network.</para>
+        /// <remarks>
+        /// <para>When you create an AD office network, if you specify the domain administrator and password (DomainUserName and DomainPassword), you only need to configure the conditional forwarder afterward. If you do not specify the domain administrator and password, you must complete the configurations of the conditional forwarder, trust relationship, and OU as described above.</para>
         /// </remarks>
         /// </description></item>
         /// </ol>
+        /// <para>For more information, see <a href="https://help.aliyun.com/document_detail/214469.html">Create and manage an AD-based office network</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5354,7 +5315,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an automatic snapshot policy that schedules snapshots for WUYING Workspace based on a cron expression.</para>
+        /// <para>Creates an automatic snapshot policy that enables cloud computers to perform automatic creation of snapshots based on the schedule specified by a Cron expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5412,7 +5373,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an automatic snapshot policy that schedules snapshots for WUYING Workspace based on a cron expression.</para>
+        /// <para>Creates an automatic snapshot policy that enables cloud computers to perform automatic creation of snapshots based on the schedule specified by a Cron expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5470,7 +5431,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an automatic snapshot policy that schedules snapshots for WUYING Workspace based on a cron expression.</para>
+        /// <para>Creates an automatic snapshot policy that enables cloud computers to perform automatic creation of snapshots based on the schedule specified by a Cron expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5488,7 +5449,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates an automatic snapshot policy that schedules snapshots for WUYING Workspace based on a cron expression.</para>
+        /// <para>Creates an automatic snapshot policy that enables cloud computers to perform automatic creation of snapshots based on the schedule specified by a Cron expression.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -5679,7 +5640,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.</para>
+        /// <para>Cloud computer templates are classified into system templates and custom templates. System templates are default templates provided by Alibaba Cloud. You can call this operation to create a custom template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5762,7 +5723,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.</para>
+        /// <para>Cloud computer templates are classified into system templates and custom templates. System templates are default templates provided by Alibaba Cloud. You can call this operation to create a custom template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5845,7 +5806,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.</para>
+        /// <para>Cloud computer templates are classified into system templates and custom templates. System templates are default templates provided by Alibaba Cloud. You can call this operation to create a custom template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -5868,7 +5829,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud computer templates include system templates and custom templates. A system template is the default template provided by Alibaba Cloud. You can call this operation to create a custom template.</para>
+        /// <para>Cloud computer templates are classified into system templates and custom templates. System templates are default templates provided by Alibaba Cloud. You can call this operation to create a custom template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -6647,6 +6608,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["PortProxy"] = request.PortProxy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlert))
+            {
+                query["PrinterAlert"] = request.PrinterAlert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlertContent))
+            {
+                query["PrinterAlertContent"] = request.PrinterAlertContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlertTitle))
+            {
+                query["PrinterAlertTitle"] = request.PrinterAlertTitle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterRedirect))
             {
                 query["PrinterRedirect"] = request.PrinterRedirect;
@@ -6786,6 +6759,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Taskbar))
             {
                 query["Taskbar"] = request.Taskbar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreeScreen))
+            {
+                query["ThreeScreen"] = request.ThreeScreen;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsbRedirect))
             {
@@ -7237,6 +7214,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["PortProxy"] = request.PortProxy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlert))
+            {
+                query["PrinterAlert"] = request.PrinterAlert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlertContent))
+            {
+                query["PrinterAlertContent"] = request.PrinterAlertContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlertTitle))
+            {
+                query["PrinterAlertTitle"] = request.PrinterAlertTitle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterRedirect))
             {
                 query["PrinterRedirect"] = request.PrinterRedirect;
@@ -7376,6 +7365,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Taskbar))
             {
                 query["Taskbar"] = request.Taskbar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreeScreen))
+            {
+                query["ThreeScreen"] = request.ThreeScreen;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsbRedirect))
             {
@@ -7710,12 +7703,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a PDS (formerly Wuying Cloud Disk)</para>
+        /// <para>Creates an enterprise network-attached storage (NAS) drive (formerly Wuying CloudDisk).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, make sure you understand the billing methods and pricing of Drive and Photo Service. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview of Drive and Photo Service</a>.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of enterprise NAS drives. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Enterprise NAS drive overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7825,12 +7818,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a PDS (formerly Wuying Cloud Disk)</para>
+        /// <para>Creates an enterprise network-attached storage (NAS) drive (formerly Wuying CloudDisk).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, make sure you understand the billing methods and pricing of Drive and Photo Service. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview of Drive and Photo Service</a>.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of enterprise NAS drives. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Enterprise NAS drive overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7940,12 +7933,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a PDS (formerly Wuying Cloud Disk)</para>
+        /// <para>Creates an enterprise network-attached storage (NAS) drive (formerly Wuying CloudDisk).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, make sure you understand the billing methods and pricing of Drive and Photo Service. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview of Drive and Photo Service</a>.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of enterprise NAS drives. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Enterprise NAS drive overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7963,12 +7956,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a PDS (formerly Wuying Cloud Disk)</para>
+        /// <para>Creates an enterprise network-attached storage (NAS) drive (formerly Wuying CloudDisk).</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before using this interface, make sure you understand the billing methods and pricing of Drive and Photo Service. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Overview of Drive and Photo Service</a>.</para>
+        /// <para>Before you call this operation, make sure that you fully understand the billing methods and pricing of enterprise NAS drives. For more information, see <a href="https://help.aliyun.com/document_detail/386301.html">Enterprise NAS drive overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -7986,7 +7979,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates personal cloud drives for users within your enterprise cloud drive.</para>
+        /// <para>Adds a personal drive for a user in an enterprise network drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8040,7 +8033,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates personal cloud drives for users within your enterprise cloud drive.</para>
+        /// <para>Adds a personal drive for a user in an enterprise network drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8094,7 +8087,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates personal cloud drives for users within your enterprise cloud drive.</para>
+        /// <para>Adds a personal drive for a user in an enterprise network drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8112,7 +8105,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates personal cloud drives for users within your enterprise cloud drive.</para>
+        /// <para>Adds a personal drive for a user in an enterprise network drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8130,7 +8123,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a cloud computer center.</para>
+        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a Cloud Desktop center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8192,7 +8185,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a cloud computer center.</para>
+        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a Cloud Desktop center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8254,7 +8247,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a cloud computer center.</para>
+        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a Cloud Desktop center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8272,7 +8265,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a cloud computer center.</para>
+        /// <para>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a Cloud Desktop center.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -8290,14 +8283,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creating a shared EDS.</para>
+        /// <para>Creates a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To learn more about shared desktops, including their features, use cases, limitations, and scaling policies, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared desktop (formerly desktop pool) overview</a>.</description></item>
-        /// <item><description>Before calling this API, ensure you have created the necessary resources, such as an office network, a desktop template, and a policy.</description></item>
+        /// <item><description>For information about the features, common scenarios, limits, and scaling policies of shared cloud computers, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared cloud computers (formerly cloud computer pools) overview</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8580,14 +8572,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creating a shared EDS.</para>
+        /// <para>Creates a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To learn more about shared desktops, including their features, use cases, limitations, and scaling policies, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared desktop (formerly desktop pool) overview</a>.</description></item>
-        /// <item><description>Before calling this API, ensure you have created the necessary resources, such as an office network, a desktop template, and a policy.</description></item>
+        /// <item><description>For information about the features, common scenarios, limits, and scaling policies of shared cloud computers, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared cloud computers (formerly cloud computer pools) overview</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8870,14 +8861,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creating a shared EDS.</para>
+        /// <para>Creates a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To learn more about shared desktops, including their features, use cases, limitations, and scaling policies, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared desktop (formerly desktop pool) overview</a>.</description></item>
-        /// <item><description>Before calling this API, ensure you have created the necessary resources, such as an office network, a desktop template, and a policy.</description></item>
+        /// <item><description>For information about the features, common scenarios, limits, and scaling policies of shared cloud computers, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared cloud computers (formerly cloud computer pools) overview</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -8896,14 +8886,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creating a shared EDS.</para>
+        /// <para>Creates a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>To learn more about shared desktops, including their features, use cases, limitations, and scaling policies, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared desktop (formerly desktop pool) overview</a>.</description></item>
-        /// <item><description>Before calling this API, ensure you have created the necessary resources, such as an office network, a desktop template, and a policy.</description></item>
+        /// <item><description>For information about the features, common scenarios, limits, and scaling policies of shared cloud computers, see <a href="https://help.aliyun.com/document_detail/290959.html">Shared cloud computers (formerly cloud computer pools) overview</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -9179,10 +9168,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating with a template</summary></description></item>
         /// </list>
         /// <pre><c>{
-        ///   &quot;RegionId&quot;: &quot;ap-southeast-1&quot;,
+        ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
         ///   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
         ///   &quot;Amount&quot;: &quot;1&quot;,
-        ///   &quot;OfficeSiteId&quot;: &quot;ap-southeast-1+dir-xxx&quot;,// Create an office network in advance
+        ///   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// Create an office network in advance
         ///   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
         ///   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
         ///   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -9193,10 +9182,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating without a template</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9213,10 +9202,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating a monthly hourly package</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9238,11 +9227,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating an Agent resource</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "BundleId": "b-openclaw-linux",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
         ///     "DesktopType": "cloud.space.4c.8g"
@@ -9255,7 +9244,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud desktops automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have cloud desktops automatically execute custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9276,6 +9265,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DesktopAttachment))
             {
                 request.DesktopAttachmentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DesktopAttachment, "DesktopAttachment", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DesktopNameModel))
+            {
+                request.DesktopNameModelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DesktopNameModel, "DesktopNameModel", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PurchaseOptions))
             {
@@ -9325,6 +9318,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopName))
             {
                 query["DesktopName"] = request.DesktopName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopNameModelShrink))
+            {
+                query["DesktopNameModel"] = request.DesktopNameModelShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopNameSuffix))
             {
@@ -9488,10 +9485,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating with a template</summary></description></item>
         /// </list>
         /// <pre><c>{
-        ///   &quot;RegionId&quot;: &quot;ap-southeast-1&quot;,
+        ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
         ///   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
         ///   &quot;Amount&quot;: &quot;1&quot;,
-        ///   &quot;OfficeSiteId&quot;: &quot;ap-southeast-1+dir-xxx&quot;,// Create an office network in advance
+        ///   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// Create an office network in advance
         ///   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
         ///   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
         ///   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -9502,10 +9499,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating without a template</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9522,10 +9519,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating a monthly hourly package</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9547,11 +9544,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating an Agent resource</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "BundleId": "b-openclaw-linux",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
         ///     "DesktopType": "cloud.space.4c.8g"
@@ -9564,7 +9561,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud desktops automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have cloud desktops automatically execute custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="tmpReq">
@@ -9585,6 +9582,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DesktopAttachment))
             {
                 request.DesktopAttachmentShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DesktopAttachment, "DesktopAttachment", "json");
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.DesktopNameModel))
+            {
+                request.DesktopNameModelShrink = AlibabaCloud.OpenApiUtil.Client.ArrayToStringWithSpecifiedStyle(tmpReq.DesktopNameModel, "DesktopNameModel", "json");
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(tmpReq.PurchaseOptions))
             {
@@ -9634,6 +9635,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopName))
             {
                 query["DesktopName"] = request.DesktopName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopNameModelShrink))
+            {
+                query["DesktopNameModel"] = request.DesktopNameModelShrink;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopNameSuffix))
             {
@@ -9797,10 +9802,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating with a template</summary></description></item>
         /// </list>
         /// <pre><c>{
-        ///   &quot;RegionId&quot;: &quot;ap-southeast-1&quot;,
+        ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
         ///   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
         ///   &quot;Amount&quot;: &quot;1&quot;,
-        ///   &quot;OfficeSiteId&quot;: &quot;ap-southeast-1+dir-xxx&quot;,// Create an office network in advance
+        ///   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// Create an office network in advance
         ///   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
         ///   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
         ///   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -9811,10 +9816,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating without a template</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9831,10 +9836,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating a monthly hourly package</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9856,11 +9861,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating an Agent resource</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "BundleId": "b-openclaw-linux",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
         ///     "DesktopType": "cloud.space.4c.8g"
@@ -9873,7 +9878,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud desktops automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have cloud desktops automatically execute custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="request">
@@ -9908,10 +9913,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating with a template</summary></description></item>
         /// </list>
         /// <pre><c>{
-        ///   &quot;RegionId&quot;: &quot;ap-southeast-1&quot;,
+        ///   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
         ///   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
         ///   &quot;Amount&quot;: &quot;1&quot;,
-        ///   &quot;OfficeSiteId&quot;: &quot;ap-southeast-1+dir-xxx&quot;,// Create an office network in advance
+        ///   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// Create an office network in advance
         ///   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
         ///   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
         ///   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -9922,10 +9927,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating without a template</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9942,10 +9947,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating a monthly hourly package</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "PolicyGroupId": "system-all-enabled-policy",
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
@@ -9967,11 +9972,11 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>Example of creating an Agent resource</summary>
         /// ```
         /// {
-        ///   "RegionId": "ap-southeast-1",
+        ///   "RegionId": "cn-hangzhou",
         ///   "BundleId": "b-openclaw-linux",
         ///   "DesktopName": "test-desktop-name",
         ///   "Amount": "1",
-        ///   "OfficeSiteId": "ap-southeast-1+dir-xxx",// Create an office network in advance
+        ///   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
         ///   "ChargeType": "PostPaid",
         ///   "DesktopAttachment": {
         ///     "DesktopType": "cloud.space.4c.8g"
@@ -9984,7 +9989,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// }
         /// ```
         /// </details>
-        /// To have cloud desktops automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+        /// To have cloud desktops automatically execute custom command scripts, use the `UserCommands` field to configure custom commands.
         /// </description>
         /// 
         /// <param name="request">
@@ -10002,7 +10007,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud drive encryption under the RAM user.</para>
+        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud disk encryption under the RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10044,7 +10049,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud drive encryption under the RAM user.</para>
+        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud disk encryption under the RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10086,7 +10091,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud drive encryption under the RAM user.</para>
+        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud disk encryption under the RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10104,7 +10109,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud drive encryption under the RAM user.</para>
+        /// <para>Enables the disk encryption feature and adds the service-linked role (SLR) for enterprise cloud disk encryption under the RAM user.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10650,7 +10655,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom image from an existing WUYING Workspace. Use this image to quickly deploy more workspaces with identical configurations. Avoid repeating configuration steps each time you create a new workspace.</para>
+        /// <para>Creates a custom image from a deployed cloud computer to quickly create more cloud computers with the same configuration, avoiding repeated configuration each time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10728,7 +10733,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom image from an existing WUYING Workspace. Use this image to quickly deploy more workspaces with identical configurations. Avoid repeating configuration steps each time you create a new workspace.</para>
+        /// <para>Creates a custom image from a deployed cloud computer to quickly create more cloud computers with the same configuration, avoiding repeated configuration each time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10806,7 +10811,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom image from an existing WUYING Workspace. Use this image to quickly deploy more workspaces with identical configurations. Avoid repeating configuration steps each time you create a new workspace.</para>
+        /// <para>Creates a custom image from a deployed cloud computer to quickly create more cloud computers with the same configuration, avoiding repeated configuration each time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10824,7 +10829,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Create a custom image from an existing WUYING Workspace. Use this image to quickly deploy more workspaces with identical configurations. Avoid repeating configuration steps each time you create a new workspace.</para>
+        /// <para>Creates a custom image from a deployed cloud computer to quickly create more cloud computers with the same configuration, avoiding repeated configuration each time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -10848,9 +10853,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create one NAS file system for each standard office network to enable file sharing among cloud computers within the office network.</description></item>
+        /// <item><description>You can create one NAS file system for each standard office network to share files among cloud computers within the office network.</description></item>
         /// <item><description>The system performs automatic creation of a general-purpose NAS file system (with storage-optimized and compute-optimized instance storage types, offering capacities of 10 PiB and 1 PiB respectively) and generates a default mount target.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go billing by default. You are charged based on the actual storage usage. You can also purchase resource plans to offset the storage usage.
+        /// <item><description>The NAS file system uses the pay-as-you-go billing method by default. You are charged for the actual storage usage. You can also purchase resource plans to offset the storage usage.
         /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Create shared storage NAS</a>.</description></item>
         /// </list>
         /// </description>
@@ -10924,9 +10929,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create one NAS file system for each standard office network to enable file sharing among cloud computers within the office network.</description></item>
+        /// <item><description>You can create one NAS file system for each standard office network to share files among cloud computers within the office network.</description></item>
         /// <item><description>The system performs automatic creation of a general-purpose NAS file system (with storage-optimized and compute-optimized instance storage types, offering capacities of 10 PiB and 1 PiB respectively) and generates a default mount target.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go billing by default. You are charged based on the actual storage usage. You can also purchase resource plans to offset the storage usage.
+        /// <item><description>The NAS file system uses the pay-as-you-go billing method by default. You are charged for the actual storage usage. You can also purchase resource plans to offset the storage usage.
         /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Create shared storage NAS</a>.</description></item>
         /// </list>
         /// </description>
@@ -11000,9 +11005,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create one NAS file system for each standard office network to enable file sharing among cloud computers within the office network.</description></item>
+        /// <item><description>You can create one NAS file system for each standard office network to share files among cloud computers within the office network.</description></item>
         /// <item><description>The system performs automatic creation of a general-purpose NAS file system (with storage-optimized and compute-optimized instance storage types, offering capacities of 10 PiB and 1 PiB respectively) and generates a default mount target.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go billing by default. You are charged based on the actual storage usage. You can also purchase resource plans to offset the storage usage.
+        /// <item><description>The NAS file system uses the pay-as-you-go billing method by default. You are charged for the actual storage usage. You can also purchase resource plans to offset the storage usage.
         /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Create shared storage NAS</a>.</description></item>
         /// </list>
         /// </description>
@@ -11028,9 +11033,9 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>You can create one NAS file system for each standard office network to enable file sharing among cloud computers within the office network.</description></item>
+        /// <item><description>You can create one NAS file system for each standard office network to share files among cloud computers within the office network.</description></item>
         /// <item><description>The system performs automatic creation of a general-purpose NAS file system (with storage-optimized and compute-optimized instance storage types, offering capacities of 10 PiB and 1 PiB respectively) and generates a default mount target.</description></item>
-        /// <item><description>The NAS file system uses pay-as-you-go billing by default. You are charged based on the actual storage usage. You can also purchase resource plans to offset the storage usage.
+        /// <item><description>The NAS file system uses the pay-as-you-go billing method by default. You are charged for the actual storage usage. You can also purchase resource plans to offset the storage usage.
         /// For more information, see <a href="https://help.aliyun.com/document_detail/214481.html">Create shared storage NAS</a>.</description></item>
         /// </list>
         /// </description>
@@ -11579,7 +11584,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A cloud computer policy is a set of rules for performance and security. These rules configure features such as local disk mapping, USB redirection, watermarks, and DNS control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
+        /// <para>A cloud computer policy is a collection of rules that primarily includes configurations for cloud computer performance and security, such as basic policies like disk mapping, USB redirection, and watermarks, as well as rules like DNS management. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -11850,7 +11855,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A cloud computer policy is a set of rules for performance and security. These rules configure features such as local disk mapping, USB redirection, watermarks, and DNS control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
+        /// <para>A cloud computer policy is a collection of rules that primarily includes configurations for cloud computer performance and security, such as basic policies like disk mapping, USB redirection, and watermarks, as well as rules like DNS management. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12121,7 +12126,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A cloud computer policy is a set of rules for performance and security. These rules configure features such as local disk mapping, USB redirection, watermarks, and DNS control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
+        /// <para>A cloud computer policy is a collection of rules that primarily includes configurations for cloud computer performance and security, such as basic policies like disk mapping, USB redirection, and watermarks, as well as rules like DNS management. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12144,7 +12149,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>A cloud computer policy is a set of rules for performance and security. These rules configure features such as local disk mapping, USB redirection, watermarks, and DNS control. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
+        /// <para>A cloud computer policy is a collection of rules that primarily includes configurations for cloud computer performance and security, such as basic policies like disk mapping, USB redirection, and watermarks, as well as rules like DNS management. For more information, see <a href="https://help.aliyun.com/document_detail/189345.html">Policy overview</a>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12162,12 +12167,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a QoS rule.</para>
+        /// <para>Creates a rate limiting rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a QoS rule to manage network bandwidth for resources such as cloud desktops and cloud phones.</para>
+        /// <para>Cloud computer templates include system templates and custom templates. System templates are default templates provided by Alibaba Cloud. Call this operation to create a custom template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12233,12 +12238,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a QoS rule.</para>
+        /// <para>Creates a rate limiting rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a QoS rule to manage network bandwidth for resources such as cloud desktops and cloud phones.</para>
+        /// <para>Cloud computer templates include system templates and custom templates. System templates are default templates provided by Alibaba Cloud. Call this operation to create a custom template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12304,12 +12309,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a QoS rule.</para>
+        /// <para>Creates a rate limiting rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a QoS rule to manage network bandwidth for resources such as cloud desktops and cloud phones.</para>
+        /// <para>Cloud computer templates include system templates and custom templates. System templates are default templates provided by Alibaba Cloud. Call this operation to create a custom template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12327,12 +12332,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a QoS rule.</para>
+        /// <para>Creates a rate limiting rule.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Creates a QoS rule to manage network bandwidth for resources such as cloud desktops and cloud phones.</para>
+        /// <para>Cloud computer templates include system templates and custom templates. System templates are default templates provided by Alibaba Cloud. Call this operation to create a custom template.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -12350,15 +12355,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Resource Access Management (RAM) directory.</para>
+        /// <para>Creates a RAM-type directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a RAM directory, complete the following preparations:</para>
+        /// <para>Before creating a RAM-type directory, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <c>CreateVpc</c> operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.</description></item>
-        /// <item><description>Call the <c>CreateVSwitch</c> operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> operation to obtain the most recent zone list for a region supported by Elastic Desktop Service</description></item>
+        /// <item><description>Call <c>CreateVpc</c> to create a virtual private cloud (VPC) in a region supported by cloud computers.</description></item>
+        /// <item><description>Call <c>CreateVSwitch</c> to create a vSwitch in the same VPC. The zone of the vSwitch must be a zone supported by cloud computers in that region. Call <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> to query the zones supported by Elastic Desktop Service in a specific region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12421,15 +12426,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Resource Access Management (RAM) directory.</para>
+        /// <para>Creates a RAM-type directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a RAM directory, complete the following preparations:</para>
+        /// <para>Before creating a RAM-type directory, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <c>CreateVpc</c> operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.</description></item>
-        /// <item><description>Call the <c>CreateVSwitch</c> operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> operation to obtain the most recent zone list for a region supported by Elastic Desktop Service</description></item>
+        /// <item><description>Call <c>CreateVpc</c> to create a virtual private cloud (VPC) in a region supported by cloud computers.</description></item>
+        /// <item><description>Call <c>CreateVSwitch</c> to create a vSwitch in the same VPC. The zone of the vSwitch must be a zone supported by cloud computers in that region. Call <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> to query the zones supported by Elastic Desktop Service in a specific region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12492,15 +12497,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Resource Access Management (RAM) directory.</para>
+        /// <para>Creates a RAM-type directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a RAM directory, complete the following preparations:</para>
+        /// <para>Before creating a RAM-type directory, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <c>CreateVpc</c> operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.</description></item>
-        /// <item><description>Call the <c>CreateVSwitch</c> operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> operation to obtain the most recent zone list for a region supported by Elastic Desktop Service</description></item>
+        /// <item><description>Call <c>CreateVpc</c> to create a virtual private cloud (VPC) in a region supported by cloud computers.</description></item>
+        /// <item><description>Call <c>CreateVSwitch</c> to create a vSwitch in the same VPC. The zone of the vSwitch must be a zone supported by cloud computers in that region. Call <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> to query the zones supported by Elastic Desktop Service in a specific region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12519,15 +12524,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Creates a Resource Access Management (RAM) directory.</para>
+        /// <para>Creates a RAM-type directory.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Before you create a RAM directory, complete the following preparations:</para>
+        /// <para>Before creating a RAM-type directory, complete the following preparations:</para>
         /// <list type="bullet">
-        /// <item><description>Call the <c>CreateVpc</c> operation to create a virtual private cloud (VPC) in a region supported by Elastic Desktop Service.</description></item>
-        /// <item><description>Call the <c>CreateVSwitch</c> operation to create a vSwitch in the VPC. The vSwitch is in a zone that is supported by Elastic Desktop Service. You can call the <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> operation to obtain the most recent zone list for a region supported by Elastic Desktop Service</description></item>
+        /// <item><description>Call <c>CreateVpc</c> to create a virtual private cloud (VPC) in a region supported by cloud computers.</description></item>
+        /// <item><description>Call <c>CreateVSwitch</c> to create a vSwitch in the same VPC. The zone of the vSwitch must be a zone supported by cloud computers in that region. Call <a href="https://help.aliyun.com/document_detail/196648.html">DescribeZones</a> to query the zones supported by Elastic Desktop Service in a specific region.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -12866,7 +12871,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Elastic Desktop Service (EDS) supports two types of accounts: convenience accounts and enterprise AD accounts. Use this API to create an office network (formerly a workspace) that uses convenience accounts.</para>
+        /// <para>Elastic Desktop Service supports two account systems: convenience accounts and enterprise AD accounts. Creates an office network (formerly workspace) based on convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -12992,7 +12997,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Elastic Desktop Service (EDS) supports two types of accounts: convenience accounts and enterprise AD accounts. Use this API to create an office network (formerly a workspace) that uses convenience accounts.</para>
+        /// <para>Elastic Desktop Service supports two account systems: convenience accounts and enterprise AD accounts. Creates an office network (formerly workspace) based on convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13118,7 +13123,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Elastic Desktop Service (EDS) supports two types of accounts: convenience accounts and enterprise AD accounts. Use this API to create an office network (formerly a workspace) that uses convenience accounts.</para>
+        /// <para>Elastic Desktop Service supports two account systems: convenience accounts and enterprise AD accounts. Creates an office network (formerly workspace) based on convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13136,7 +13141,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Elastic Desktop Service (EDS) supports two types of accounts: convenience accounts and enterprise AD accounts. Use this API to create an office network (formerly a workspace) that uses convenience accounts.</para>
+        /// <para>Elastic Desktop Service supports two account systems: convenience accounts and enterprise AD accounts. Creates an office network (formerly workspace) based on convenience accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -13645,8 +13650,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <description>
         /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Most parameters in an instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. The validity of parameter values is verified only when you create an instance.</description></item>
-        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you use the template to create a cloud computer, these parameters do not take effect.</description></item>
+        /// <item><description>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</description></item>
+        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13786,8 +13791,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <description>
         /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Most parameters in an instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. The validity of parameter values is verified only when you create an instance.</description></item>
-        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you use the template to create a cloud computer, these parameters do not take effect.</description></item>
+        /// <item><description>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</description></item>
+        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13927,8 +13932,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <description>
         /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Most parameters in an instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. The validity of parameter values is verified only when you create an instance.</description></item>
-        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you use the template to create a cloud computer, these parameters do not take effect.</description></item>
+        /// <item><description>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</description></item>
+        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -13954,8 +13959,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <description>
         /// <para>When you call this operation, note the following items:</para>
         /// <list type="bullet">
-        /// <item><description>Most parameters in an instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. The validity of parameter values is verified only when you create an instance.</description></item>
-        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you use the template to create a cloud computer, these parameters do not take effect.</description></item>
+        /// <item><description>Most parameters in the instance launch template are optional. When you create a template, Alibaba Cloud does not strictly verify the existence or validity of parameter values. Parameter values are validated only when you create an instance by using the template.</description></item>
+        /// <item><description>For parameters that have region attributes in the template, if the region does not match when you create a cloud computer by using the template, these parameters do not take effect.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -14730,7 +14735,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes team spaces.</para>
+        /// <para>Deletes a team shared drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14780,7 +14785,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes team spaces.</para>
+        /// <para>Deletes a team shared drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14830,7 +14835,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes team spaces.</para>
+        /// <para>Deletes a team shared drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -14848,7 +14853,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Deletes team spaces.</para>
+        /// <para>Deletes a team shared drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15130,15 +15135,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release a shared cloud computer.</para>
+        /// <para>Releases a shared Cloud Desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that the shared desktop group contains no connected desktops or authorized users.</description></item>
-        /// <item><description>You cannot delete a subscription desktop group if the subscription desktops in the group have not expired.</description></item>
-        /// <item><description>If you delete a pay-as-you-go desktop group, the pay-as-you-go desktops in the group are also released.</description></item>
+        /// <item><description>Before calling this operation, make sure that the shared Cloud Desktop does not contain any connected Cloud Desktops or authorized users.</description></item>
+        /// <item><description>For subscription shared Cloud Desktops, if the subscription Cloud Desktops within the pool have not expired, the shared Cloud Desktop cannot be deleted.</description></item>
+        /// <item><description>For pay-as-you-go shared Cloud Desktops, deleting the shared Cloud Desktop also releases the pay-as-you-go Cloud Desktops within it.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15189,15 +15194,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release a shared cloud computer.</para>
+        /// <para>Releases a shared Cloud Desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that the shared desktop group contains no connected desktops or authorized users.</description></item>
-        /// <item><description>You cannot delete a subscription desktop group if the subscription desktops in the group have not expired.</description></item>
-        /// <item><description>If you delete a pay-as-you-go desktop group, the pay-as-you-go desktops in the group are also released.</description></item>
+        /// <item><description>Before calling this operation, make sure that the shared Cloud Desktop does not contain any connected Cloud Desktops or authorized users.</description></item>
+        /// <item><description>For subscription shared Cloud Desktops, if the subscription Cloud Desktops within the pool have not expired, the shared Cloud Desktop cannot be deleted.</description></item>
+        /// <item><description>For pay-as-you-go shared Cloud Desktops, deleting the shared Cloud Desktop also releases the pay-as-you-go Cloud Desktops within it.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15248,15 +15253,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release a shared cloud computer.</para>
+        /// <para>Releases a shared Cloud Desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that the shared desktop group contains no connected desktops or authorized users.</description></item>
-        /// <item><description>You cannot delete a subscription desktop group if the subscription desktops in the group have not expired.</description></item>
-        /// <item><description>If you delete a pay-as-you-go desktop group, the pay-as-you-go desktops in the group are also released.</description></item>
+        /// <item><description>Before calling this operation, make sure that the shared Cloud Desktop does not contain any connected Cloud Desktops or authorized users.</description></item>
+        /// <item><description>For subscription shared Cloud Desktops, if the subscription Cloud Desktops within the pool have not expired, the shared Cloud Desktop cannot be deleted.</description></item>
+        /// <item><description>For pay-as-you-go shared Cloud Desktops, deleting the shared Cloud Desktop also releases the pay-as-you-go Cloud Desktops within it.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15275,15 +15280,15 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Release a shared cloud computer.</para>
+        /// <para>Releases a shared Cloud Desktop.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before you call this operation, make sure that the shared desktop group contains no connected desktops or authorized users.</description></item>
-        /// <item><description>You cannot delete a subscription desktop group if the subscription desktops in the group have not expired.</description></item>
-        /// <item><description>If you delete a pay-as-you-go desktop group, the pay-as-you-go desktops in the group are also released.</description></item>
+        /// <item><description>Before calling this operation, make sure that the shared Cloud Desktop does not contain any connected Cloud Desktops or authorized users.</description></item>
+        /// <item><description>For subscription shared Cloud Desktops, if the subscription Cloud Desktops within the pool have not expired, the shared Cloud Desktop cannot be deleted.</description></item>
+        /// <item><description>For pay-as-you-go shared Cloud Desktops, deleting the shared Cloud Desktop also releases the pay-as-you-go Cloud Desktops within it.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -15302,7 +15307,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases one or more pay-as-you-go or expired subscription cloud computers.</para>
+        /// <para>Releases one or more pay-as-you-go cloud computers or expired subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15352,7 +15357,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases one or more pay-as-you-go or expired subscription cloud computers.</para>
+        /// <para>Releases one or more pay-as-you-go cloud computers or expired subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15402,7 +15407,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases one or more pay-as-you-go or expired subscription cloud computers.</para>
+        /// <para>Releases one or more pay-as-you-go cloud computers or expired subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -15420,7 +15425,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Releases one or more pay-as-you-go or expired subscription cloud computers.</para>
+        /// <para>Releases one or more pay-as-you-go cloud computers or expired subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16582,7 +16587,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can delete one or more public network premium bandwidth allocations.</para>
+        /// <para>Deletes one or more premium Internet bandwidth plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16632,7 +16637,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can delete one or more public network premium bandwidth allocations.</para>
+        /// <para>Deletes one or more premium Internet bandwidth plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16682,7 +16687,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can delete one or more public network premium bandwidth allocations.</para>
+        /// <para>Deletes one or more premium Internet bandwidth plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -16700,7 +16705,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>You can delete one or more public network premium bandwidth allocations.</para>
+        /// <para>Deletes one or more premium Internet bandwidth plans.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18598,7 +18603,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of automatic snapshot policies.</para>
+        /// <para>Queries automatic snapshot policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18656,7 +18661,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of automatic snapshot policies.</para>
+        /// <para>Queries automatic snapshot policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18714,7 +18719,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of automatic snapshot policies.</para>
+        /// <para>Queries automatic snapshot policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -18732,7 +18737,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of automatic snapshot policies.</para>
+        /// <para>Queries automatic snapshot policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19198,7 +19203,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all Cloud Enterprise Network (CEN) instances within an Alibaba Cloud account.</para>
+        /// <para>Queries information about all Cloud Enterprise Network (CEN) instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19248,7 +19253,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all Cloud Enterprise Network (CEN) instances within an Alibaba Cloud account.</para>
+        /// <para>Queries information about all Cloud Enterprise Network (CEN) instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19298,7 +19303,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all Cloud Enterprise Network (CEN) instances within an Alibaba Cloud account.</para>
+        /// <para>Queries information about all Cloud Enterprise Network (CEN) instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19316,7 +19321,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of all Cloud Enterprise Network (CEN) instances within an Alibaba Cloud account.</para>
+        /// <para>Queries information about all Cloud Enterprise Network (CEN) instances under the current account.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -19766,12 +19771,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud disk group drives.</para>
+        /// <para>Queries the list of cloud disk team spaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud disk team drives are synced from the Alibaba Cloud Workspace client to User Management &gt; organization chart. To use a team drive, you can move users to the target organization in the User Management interface. Users then see the team drive menu bar in the cloud disk client.</para>
+        /// <para>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19829,12 +19834,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud disk group drives.</para>
+        /// <para>Queries the list of cloud disk team spaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud disk team drives are synced from the Alibaba Cloud Workspace client to User Management &gt; organization chart. To use a team drive, you can move users to the target organization in the User Management interface. Users then see the team drive menu bar in the cloud disk client.</para>
+        /// <para>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19892,12 +19897,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud disk group drives.</para>
+        /// <para>Queries the list of cloud disk team spaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud disk team drives are synced from the Alibaba Cloud Workspace client to User Management &gt; organization chart. To use a team drive, you can move users to the target organization in the User Management interface. Users then see the team drive menu bar in the cloud disk client.</para>
+        /// <para>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19915,12 +19920,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud disk group drives.</para>
+        /// <para>Queries the list of cloud disk team spaces.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Cloud disk team drives are synced from the Alibaba Cloud Workspace client to User Management &gt; organization chart. To use a team drive, you can move users to the target organization in the User Management interface. Users then see the team drive menu bar in the cloud disk client.</para>
+        /// <para>The cloud disk team list is synchronized from the Wuying client &gt; User Management &gt; Organization Structure. To use team spaces, shift users to a specified organization in the User Management interface. Users can then see the team space menu bar in the cloud disk client.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -19938,12 +19943,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud disk groups.</para>
+        /// <para>Queries the list of cloud disk teams.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you enable security protection, the system automatically scans Cloud Desktop for system vulnerabilities once a day.</para>
+        /// <para>After security protection is enabled, the system automatically scans Cloud Desktop instances for system vulnerabilities on a periodic basis (once a day).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20001,12 +20006,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud disk groups.</para>
+        /// <para>Queries the list of cloud disk teams.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you enable security protection, the system automatically scans Cloud Desktop for system vulnerabilities once a day.</para>
+        /// <para>After security protection is enabled, the system automatically scans Cloud Desktop instances for system vulnerabilities on a periodic basis (once a day).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20064,12 +20069,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud disk groups.</para>
+        /// <para>Queries the list of cloud disk teams.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you enable security protection, the system automatically scans Cloud Desktop for system vulnerabilities once a day.</para>
+        /// <para>After security protection is enabled, the system automatically scans Cloud Desktop instances for system vulnerabilities on a periodic basis (once a day).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20087,12 +20092,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Lists cloud disk groups.</para>
+        /// <para>Queries the list of cloud disk teams.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you enable security protection, the system automatically scans Cloud Desktop for system vulnerabilities once a day.</para>
+        /// <para>After security protection is enabled, the system automatically scans Cloud Desktop instances for system vulnerabilities on a periodic basis (once a day).</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -20110,7 +20115,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list and basic information of all team shared drives in the enterprise cloud drive.</para>
+        /// <para>Queries the list and basic information of all team shared drives in an enterprise cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20196,7 +20201,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list and basic information of all team shared drives in the enterprise cloud drive.</para>
+        /// <para>Queries the list and basic information of all team shared drives in an enterprise cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20282,7 +20287,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list and basic information of all team shared drives in the enterprise cloud drive.</para>
+        /// <para>Queries the list and basic information of all team shared drives in an enterprise cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20300,7 +20305,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the list and basic information of all team shared drives in the enterprise cloud drive.</para>
+        /// <para>Queries the list and basic information of all team shared drives in an enterprise cloud drive.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -20918,7 +20923,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cloud computer shares.</para>
+        /// <para>Queries the session monitoring details of shared cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21004,7 +21009,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cloud computer shares.</para>
+        /// <para>Queries the session monitoring details of shared cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21090,7 +21095,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cloud computer shares.</para>
+        /// <para>Queries the session monitoring details of shared cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21108,7 +21113,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries cloud computer shares.</para>
+        /// <para>Queries the session monitoring details of shared cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21126,7 +21131,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a detailed list of shared cloud desktops.</para>
+        /// <para>Queries the list and details of shared cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21248,7 +21253,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a detailed list of shared cloud desktops.</para>
+        /// <para>Queries the list and details of shared cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21370,7 +21375,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a detailed list of shared cloud desktops.</para>
+        /// <para>Queries the list and details of shared cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21388,7 +21393,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Returns a detailed list of shared cloud desktops.</para>
+        /// <para>Queries the list and details of shared cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21406,7 +21411,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes basic information about cloud desktops.</para>
+        /// <para>Queries the basic information of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21460,7 +21465,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes basic information about cloud desktops.</para>
+        /// <para>Queries the basic information of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21514,7 +21519,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes basic information about cloud desktops.</para>
+        /// <para>Queries the basic information of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21532,7 +21537,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Describes basic information about cloud desktops.</para>
+        /// <para>Queries the basic information of cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -21555,7 +21560,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a centralized API operation that supports queries only from the Shanghai and Singapore sites.</para>
+        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21658,7 +21663,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a centralized API operation that supports queries only from the Shanghai and Singapore sites.</para>
+        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21761,7 +21766,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a centralized API operation that supports queries only from the Shanghai and Singapore sites.</para>
+        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -21784,7 +21789,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This is a centralized API operation that supports queries only from the Shanghai and Singapore sites.</para>
+        /// <para>This is a centralized API that only supports queries from the Shanghai and Singapore sites.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -22250,7 +22255,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed session information of a cloud computer.</para>
+        /// <para>Queries the detailed session information of cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22361,7 +22366,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed session information of a cloud computer.</para>
+        /// <para>Queries the detailed session information of cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22472,7 +22477,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed session information of a cloud computer.</para>
+        /// <para>Queries the detailed session information of cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22495,7 +22500,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the detailed session information of a cloud computer.</para>
+        /// <para>Queries the detailed session information of cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
@@ -22518,7 +22523,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud computer specifications.</para>
+        /// <para>Queries the details of cloud computer specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22644,7 +22649,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud computer specifications.</para>
+        /// <para>Queries the details of cloud computer specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22770,7 +22775,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud computer specifications.</para>
+        /// <para>Queries the details of cloud computer specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22788,7 +22793,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves cloud computer specifications.</para>
+        /// <para>Queries the details of cloud computer specifications.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -22907,6 +22912,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["MultiResource"] = request.MultiResource;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceIp))
+            {
+                query["NetworkInterfaceIp"] = request.NetworkInterfaceIp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
@@ -22942,6 +22951,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
             {
                 query["ProtocolType"] = request.ProtocolType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicIp))
+            {
+                query["PublicIp"] = request.PublicIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
             {
@@ -23097,6 +23110,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["MultiResource"] = request.MultiResource;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NetworkInterfaceIp))
+            {
+                query["NetworkInterfaceIp"] = request.NetworkInterfaceIp;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
             {
                 query["NextToken"] = request.NextToken;
@@ -23132,6 +23149,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ProtocolType))
             {
                 query["ProtocolType"] = request.ProtocolType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PublicIp))
+            {
+                query["PublicIp"] = request.PublicIp;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.QosRuleId))
             {
@@ -23222,7 +23243,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find cloud computers in a shared cloud computer by billing method.</para>
+        /// <para>Queries the list of cloud desktops in a shared cloud desktop by billing method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23292,7 +23313,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find cloud computers in a shared cloud computer by billing method.</para>
+        /// <para>Queries the list of cloud desktops in a shared cloud desktop by billing method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23362,7 +23383,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find cloud computers in a shared cloud computer by billing method.</para>
+        /// <para>Queries the list of cloud desktops in a shared cloud desktop by billing method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23380,7 +23401,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Find cloud computers in a shared cloud computer by billing method.</para>
+        /// <para>Queries the list of cloud desktops in a shared cloud desktop by billing method.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23582,7 +23603,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of directories.</para>
+        /// <para>Queries the details of a directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23648,7 +23669,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of directories.</para>
+        /// <para>Queries the details of a directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23714,7 +23735,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of directories.</para>
+        /// <para>Queries the details of a directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -23732,7 +23753,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of directories.</para>
+        /// <para>Queries the details of a directory.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24078,7 +24099,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the inbound bandwidth and outbound bandwidth of a cloud computer, or the inbound bandwidth and outbound bandwidth for public network access of premium public bandwidth, along with their monitoring data.</para>
+        /// <para>Queries the inbound bandwidth and outbound bandwidth monitoring data of a cloud computer, or the public network access inbound bandwidth and outbound bandwidth monitoring data of a premium public bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24144,7 +24165,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the inbound bandwidth and outbound bandwidth of a cloud computer, or the inbound bandwidth and outbound bandwidth for public network access of premium public bandwidth, along with their monitoring data.</para>
+        /// <para>Queries the inbound bandwidth and outbound bandwidth monitoring data of a cloud computer, or the public network access inbound bandwidth and outbound bandwidth monitoring data of a premium public bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24210,7 +24231,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the inbound bandwidth and outbound bandwidth of a cloud computer, or the inbound bandwidth and outbound bandwidth for public network access of premium public bandwidth, along with their monitoring data.</para>
+        /// <para>Queries the inbound bandwidth and outbound bandwidth monitoring data of a cloud computer, or the public network access inbound bandwidth and outbound bandwidth monitoring data of a premium public bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24228,7 +24249,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the inbound bandwidth and outbound bandwidth of a cloud computer, or the inbound bandwidth and outbound bandwidth for public network access of premium public bandwidth, along with their monitoring data.</para>
+        /// <para>Queries the inbound bandwidth and outbound bandwidth monitoring data of a cloud computer, or the public network access inbound bandwidth and outbound bandwidth monitoring data of a premium public bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24574,7 +24595,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of image upgrade tasks.</para>
+        /// <para>Retrieves a list of image upgrade tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24640,7 +24661,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of image upgrade tasks.</para>
+        /// <para>Retrieves a list of image upgrade tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24706,7 +24727,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of image upgrade tasks.</para>
+        /// <para>Retrieves a list of image upgrade tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24724,7 +24745,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the list of image upgrade tasks.</para>
+        /// <para>Retrieves a list of image upgrade tasks.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -24742,13 +24763,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
+        /// <para>Queries the basic information of all recent cloud desktops and their corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>China site users should select Shanghai as the region. International site users should select Singapore.</description></item>
+        /// <item><description>China site users should select Shanghai as the site. International site users should select Singapore.</description></item>
         /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
         /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
         /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
@@ -24866,13 +24887,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
+        /// <para>Queries the basic information of all recent cloud desktops and their corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>China site users should select Shanghai as the region. International site users should select Singapore.</description></item>
+        /// <item><description>China site users should select Shanghai as the site. International site users should select Singapore.</description></item>
         /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
         /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
         /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
@@ -24990,13 +25011,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
+        /// <para>Queries the basic information of all recent cloud desktops and their corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>China site users should select Shanghai as the region. International site users should select Singapore.</description></item>
+        /// <item><description>China site users should select Shanghai as the site. International site users should select Singapore.</description></item>
         /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
         /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
         /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
@@ -25018,13 +25039,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</para>
+        /// <para>Queries the basic information of all recent cloud desktops and their corresponding usage duration records.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>China site users should select Shanghai as the region. International site users should select Singapore.</description></item>
+        /// <item><description>China site users should select Shanghai as the site. International site users should select Singapore.</description></item>
         /// <item><description>By default, both deleted and non-deleted cloud desktops are queried.</description></item>
         /// <item><description>Deleted cloud desktops can only be queried if they were deleted within the last three months.</description></item>
         /// <item><description>Sort conditions cannot be used together with other conditions.</description></item>
@@ -25052,7 +25073,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized endpoint. The access points are Shanghai or Singapore. Calls from other regions are not supported.</description></item>
+        /// <item><description>This operation uses a centralized endpoint. The access point is Shanghai or Singapore. Other regions are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25125,7 +25146,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized endpoint. The access points are Shanghai or Singapore. Calls from other regions are not supported.</description></item>
+        /// <item><description>This operation uses a centralized endpoint. The access point is Shanghai or Singapore. Other regions are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25198,7 +25219,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized endpoint. The access points are Shanghai or Singapore. Calls from other regions are not supported.</description></item>
+        /// <item><description>This operation uses a centralized endpoint. The access point is Shanghai or Singapore. Other regions are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25223,7 +25244,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This operation uses a centralized endpoint. The access points are Shanghai or Singapore. Calls from other regions are not supported.</description></item>
+        /// <item><description>This operation uses a centralized endpoint. The access point is Shanghai or Singapore. Other regions are not supported.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -25894,7 +25915,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about images.</para>
+        /// <para>Queries the details of images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -25992,7 +26013,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about images.</para>
+        /// <para>Queries the details of images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26090,7 +26111,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about images.</para>
+        /// <para>Queries the details of images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26108,7 +26129,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the information about images.</para>
+        /// <para>Queries the details of images.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26132,7 +26153,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
+        /// <item><description>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</description></item>
         /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
@@ -26226,7 +26247,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
+        /// <item><description>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</description></item>
         /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
@@ -26320,7 +26341,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
+        /// <item><description>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</description></item>
         /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
@@ -26346,7 +26367,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>After you run a command, the command is not guaranteed to succeed or produce the expected results. Check the actual execution results based on the response of this operation.</description></item>
+        /// <item><description>After you run a command, it does not necessarily succeed or produce the expected results. Check the actual execution results based on the response values returned by this operation.</description></item>
         /// <item><description>You can query execution information from the last two weeks. A maximum of 100,000 execution records are retained.</description></item>
         /// </list>
         /// </description>
@@ -26638,7 +26659,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price for changing the specifications of a monthly-subscribed unlimited-duration cloud computer or premium Internet bandwidth.</para>
+        /// <para>Queries the price for upgrading or downgrading a monthly subscription (unlimited duration) cloud computer or premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26724,7 +26745,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price for changing the specifications of a monthly-subscribed unlimited-duration cloud computer or premium Internet bandwidth.</para>
+        /// <para>Queries the price for upgrading or downgrading a monthly subscription (unlimited duration) cloud computer or premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26810,7 +26831,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price for changing the specifications of a monthly-subscribed unlimited-duration cloud computer or premium Internet bandwidth.</para>
+        /// <para>Queries the price for upgrading or downgrading a monthly subscription (unlimited duration) cloud computer or premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -26828,7 +26849,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the price for changing the specifications of a monthly-subscribed unlimited-duration cloud computer or premium Internet bandwidth.</para>
+        /// <para>Queries the price for upgrading or downgrading a monthly subscription (unlimited duration) cloud computer or premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27510,7 +27531,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets all properties of an office network, including its ID, name, status, and creation time.</para>
+        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27584,7 +27605,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets all properties of an office network, including its ID, name, status, and creation time.</para>
+        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27658,7 +27679,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets all properties of an office network, including its ID, name, status, and creation time.</para>
+        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27676,7 +27697,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Gets all properties of an office network, including its ID, name, status, and creation time.</para>
+        /// <para>Queries all properties of an office network, including the ID, name, status, and creation time.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27858,7 +27879,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a cloud computer policy.</para>
+        /// <para>Queries the details of cloud computer policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -27932,7 +27953,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a cloud computer policy.</para>
+        /// <para>Queries the details of cloud computer policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28006,7 +28027,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a cloud computer policy.</para>
+        /// <para>Queries the details of cloud computer policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28024,7 +28045,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the details of a cloud computer policy.</para>
+        /// <para>Queries the details of cloud computer policies.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28042,7 +28063,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the new purchase price of Elastic Desktop Service (EDS) products.</para>
+        /// <para>Queries the purchase price of Elastic Desktop Service products.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28156,7 +28177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the new purchase price of Elastic Desktop Service (EDS) products.</para>
+        /// <para>Queries the purchase price of Elastic Desktop Service products.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28270,7 +28291,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the new purchase price of Elastic Desktop Service (EDS) products.</para>
+        /// <para>Queries the purchase price of Elastic Desktop Service products.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28288,7 +28309,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Query the new purchase price of Elastic Desktop Service (EDS) products.</para>
+        /// <para>Queries the purchase price of Elastic Desktop Service products.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28746,6 +28767,234 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
+        /// <para>Queries printer event information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Security alerts are classified into two dimensions: alerts and anomalies. A security alert contains multiple anomaly events.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePrinterEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrinterEventsResponse
+        /// </returns>
+        public DescribePrinterEventsResponse DescribePrinterEventsWithOptions(DescribePrinterEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopName))
+            {
+                query["DesktopName"] = request.DesktopName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
+            {
+                query["EndUserIds"] = request.EndUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterDriver))
+            {
+                query["PrinterDriver"] = request.PrinterDriver;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterName))
+            {
+                query["PrinterName"] = request.PrinterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterRedirType))
+            {
+                query["PrinterRedirType"] = request.PrinterRedirType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePrinterEvents",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePrinterEventsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries printer event information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Security alerts are classified into two dimensions: alerts and anomalies. A security alert contains multiple anomaly events.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePrinterEventsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrinterEventsResponse
+        /// </returns>
+        public async Task<DescribePrinterEventsResponse> DescribePrinterEventsWithOptionsAsync(DescribePrinterEventsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopId))
+            {
+                query["DesktopId"] = request.DesktopId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.DesktopName))
+            {
+                query["DesktopName"] = request.DesktopName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
+            {
+                query["EndTime"] = request.EndTime;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserId))
+            {
+                query["EndUserId"] = request.EndUserId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndUserIds))
+            {
+                query["EndUserIds"] = request.EndUserIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.MaxResults))
+            {
+                query["MaxResults"] = request.MaxResults;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.NextToken))
+            {
+                query["NextToken"] = request.NextToken;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterDriver))
+            {
+                query["PrinterDriver"] = request.PrinterDriver;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterName))
+            {
+                query["PrinterName"] = request.PrinterName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterRedirType))
+            {
+                query["PrinterRedirType"] = request.PrinterRedirType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RegionId))
+            {
+                query["RegionId"] = request.RegionId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StartTime))
+            {
+                query["StartTime"] = request.StartTime;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribePrinterEvents",
+                Version = "2020-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribePrinterEventsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries printer event information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Security alerts are classified into two dimensions: alerts and anomalies. A security alert contains multiple anomaly events.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePrinterEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrinterEventsResponse
+        /// </returns>
+        public DescribePrinterEventsResponse DescribePrinterEvents(DescribePrinterEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribePrinterEventsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries printer event information.</para>
+        /// </summary>
+        /// 
+        /// <term><b>Description:</b></term>
+        /// <description>
+        /// <para>Security alerts are classified into two dimensions: alerts and anomalies. A security alert contains multiple anomaly events.</para>
+        /// </description>
+        /// 
+        /// <param name="request">
+        /// DescribePrinterEventsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribePrinterEventsResponse
+        /// </returns>
+        public async Task<DescribePrinterEventsResponse> DescribePrinterEventsAsync(DescribePrinterEventsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribePrinterEventsWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
         /// <para>Queries QoS rules.</para>
         /// </summary>
         /// 
@@ -28874,7 +29123,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve screen recording files from all regions.</para>
+        /// <para>Queries the list of screen recording files across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -28964,7 +29213,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve screen recording files from all regions.</para>
+        /// <para>Queries the list of screen recording files across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29054,7 +29303,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve screen recording files from all regions.</para>
+        /// <para>Queries the list of screen recording files across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29072,7 +29321,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieve screen recording files from all regions.</para>
+        /// <para>Queries the list of screen recording files across all regions.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29434,7 +29683,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud regions that are available for Elastic Desktop Service (EDS).</para>
+        /// <para>Queries the Alibaba Cloud regions supported by WUYING Workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29480,7 +29729,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud regions that are available for Elastic Desktop Service (EDS).</para>
+        /// <para>Queries the Alibaba Cloud regions supported by WUYING Workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29526,7 +29775,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud regions that are available for Elastic Desktop Service (EDS).</para>
+        /// <para>Queries the Alibaba Cloud regions supported by WUYING Workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29544,7 +29793,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the Alibaba Cloud regions that are available for Elastic Desktop Service (EDS).</para>
+        /// <para>Queries the Alibaba Cloud regions supported by WUYING Workspace.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29562,7 +29811,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the renewal price for an Elastic Desktop Service product.</para>
+        /// <para>Queries the renewal price of a Wuying product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29632,7 +29881,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the renewal price for an Elastic Desktop Service product.</para>
+        /// <para>Queries the renewal price of a Wuying product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29702,7 +29951,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the renewal price for an Elastic Desktop Service product.</para>
+        /// <para>Queries the renewal price of a Wuying product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -29720,7 +29969,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the renewal price for an Elastic Desktop Service product.</para>
+        /// <para>Queries the renewal price of a Wuying product.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -30328,7 +30577,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is a centralized API operation that can be called only through the service in the China (Shanghai) region.</description></item>
+        /// <item><description>This is a centralized operation that can be called only through the service in the China (Shanghai) region.</description></item>
         /// <item><description>You can query real-time statistics for up to 1 hour.</description></item>
         /// </list>
         /// </description>
@@ -30398,7 +30647,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is a centralized API operation that can be called only through the service in the China (Shanghai) region.</description></item>
+        /// <item><description>This is a centralized operation that can be called only through the service in the China (Shanghai) region.</description></item>
         /// <item><description>You can query real-time statistics for up to 1 hour.</description></item>
         /// </list>
         /// </description>
@@ -30468,7 +30717,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is a centralized API operation that can be called only through the service in the China (Shanghai) region.</description></item>
+        /// <item><description>This is a centralized operation that can be called only through the service in the China (Shanghai) region.</description></item>
         /// <item><description>You can query real-time statistics for up to 1 hour.</description></item>
         /// </list>
         /// </description>
@@ -30494,7 +30743,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>This is a centralized API operation that can be called only through the service in the China (Shanghai) region.</description></item>
+        /// <item><description>This is a centralized operation that can be called only through the service in the China (Shanghai) region.</description></item>
         /// <item><description>You can query real-time statistics for up to 1 hour.</description></item>
         /// </list>
         /// </description>
@@ -31562,7 +31811,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connection records of an authorized user to cloud computers in a cloud computer pool.</para>
+        /// <para>Queries the connection records of authorized users connecting to pooled cloud computers in a cloud computer pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31652,7 +31901,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connection records of an authorized user to cloud computers in a cloud computer pool.</para>
+        /// <para>Queries the connection records of authorized users connecting to pooled cloud computers in a cloud computer pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31742,7 +31991,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connection records of an authorized user to cloud computers in a cloud computer pool.</para>
+        /// <para>Queries the connection records of authorized users connecting to pooled cloud computers in a cloud computer pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31760,7 +32009,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the connection records of an authorized user to cloud computers in a cloud computer pool.</para>
+        /// <para>Queries the connection records of authorized users connecting to pooled cloud computers in a cloud computer pool.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31894,7 +32143,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the details of all authorized users in a cloud desktop group, including their usernames, email addresses, phone numbers, and the IDs of their authorized cloud desktops.</para>
+        /// <para>Queries the details of all authorized users of a shared cloud computer, including the username, email address, phone number, and authorized cloud computer ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -31972,7 +32221,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the details of all authorized users in a cloud desktop group, including their usernames, email addresses, phone numbers, and the IDs of their authorized cloud desktops.</para>
+        /// <para>Queries the details of all authorized users of a shared cloud computer, including the username, email address, phone number, and authorized cloud computer ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32050,7 +32299,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the details of all authorized users in a cloud desktop group, including their usernames, email addresses, phone numbers, and the IDs of their authorized cloud desktops.</para>
+        /// <para>Queries the details of all authorized users of a shared cloud computer, including the username, email address, phone number, and authorized cloud computer ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32068,7 +32317,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation queries the details of all authorized users in a cloud desktop group, including their usernames, email addresses, phone numbers, and the IDs of their authorized cloud desktops.</para>
+        /// <para>Queries the details of all authorized users of a shared cloud computer, including the username, email address, phone number, and authorized cloud computer ID.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32086,7 +32335,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the passwords for the accounts within a cloud computer image. For example, when the Chrome browser on the cloud computer queries the cached password, it requires the end user to enter the password for identity verification.</para>
+        /// <para>Queries the password of an account in a cloud computer image. For example, when querying the query cache of passwords in the Chrome browser on a cloud computer, the end user is required to enter this password to authenticate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32132,7 +32381,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the passwords for the accounts within a cloud computer image. For example, when the Chrome browser on the cloud computer queries the cached password, it requires the end user to enter the password for identity verification.</para>
+        /// <para>Queries the password of an account in a cloud computer image. For example, when querying the query cache of passwords in the Chrome browser on a cloud computer, the end user is required to enter this password to authenticate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32178,7 +32427,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the passwords for the accounts within a cloud computer image. For example, when the Chrome browser on the cloud computer queries the cached password, it requires the end user to enter the password for identity verification.</para>
+        /// <para>Queries the password of an account in a cloud computer image. For example, when querying the query cache of passwords in the Chrome browser on a cloud computer, the end user is required to enter this password to authenticate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32196,7 +32445,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the passwords for the accounts within a cloud computer image. For example, when the Chrome browser on the cloud computer queries the cached password, it requires the end user to enter the password for identity verification.</para>
+        /// <para>Queries the password of an account in a cloud computer image. For example, when querying the query cache of passwords in the Chrome browser on a cloud computer, the end user is required to enter this password to authenticate.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32214,7 +32463,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the virtual multi-factor authentication (MFA) device associated with an Active Directory (AD) account.</para>
+        /// <para>Queries the virtual MFA devices bound to AD accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32276,7 +32525,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the virtual multi-factor authentication (MFA) device associated with an Active Directory (AD) account.</para>
+        /// <para>Queries the virtual MFA devices bound to AD accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32338,7 +32587,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the virtual multi-factor authentication (MFA) device associated with an Active Directory (AD) account.</para>
+        /// <para>Queries the virtual MFA devices bound to AD accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32356,7 +32605,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the virtual multi-factor authentication (MFA) device associated with an Active Directory (AD) account.</para>
+        /// <para>Queries the virtual MFA devices bound to AD accounts.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32374,7 +32623,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones supported by Elastic Desktop Service (EDS) in a region.</para>
+        /// <para>Queries the zones supported by Alibaba Cloud Workspace in a specified Alibaba Cloud region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32424,7 +32673,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones supported by Elastic Desktop Service (EDS) in a region.</para>
+        /// <para>Queries the zones supported by Alibaba Cloud Workspace in a specified Alibaba Cloud region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32474,7 +32723,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones supported by Elastic Desktop Service (EDS) in a region.</para>
+        /// <para>Queries the zones supported by Alibaba Cloud Workspace in a specified Alibaba Cloud region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32492,7 +32741,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the zones supported by Elastic Desktop Service (EDS) in a region.</para>
+        /// <para>Queries the zones supported by Alibaba Cloud Workspace in a specified Alibaba Cloud region.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32798,7 +33047,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables specific cloud computers in a cloud computer share. After you call this operation to disable specific cloud computers, they enter the unavailable state.</para>
+        /// <para>Disables cloud computers in a shared cloud computer group. After a cloud computer is disabled, its status changes to unavailable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32848,7 +33097,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables specific cloud computers in a cloud computer share. After you call this operation to disable specific cloud computers, they enter the unavailable state.</para>
+        /// <para>Disables cloud computers in a shared cloud computer group. After a cloud computer is disabled, its status changes to unavailable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32898,7 +33147,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables specific cloud computers in a cloud computer share. After you call this operation to disable specific cloud computers, they enter the unavailable state.</para>
+        /// <para>Disables cloud computers in a shared cloud computer group. After a cloud computer is disabled, its status changes to unavailable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -32916,7 +33165,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Disables specific cloud computers in a cloud computer share. After you call this operation to disable specific cloud computers, they enter the unavailable state.</para>
+        /// <para>Disables cloud computers in a shared cloud computer group. After a cloud computer is disabled, its status changes to unavailable.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33686,7 +33935,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the list of shared cloud desktops and saves it as an XLSX file. Each shared cloud desktop record includes the shared cloud desktop ID and name, office network ID and name, shared cloud desktop template, and security policy name.</para>
+        /// <para>Exports the list of shared cloud computers to an XLSX file. Each record includes the shared cloud computer ID and name, office network ID and name, shared cloud computer template, security policy name, and other details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33772,7 +34021,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the list of shared cloud desktops and saves it as an XLSX file. Each shared cloud desktop record includes the shared cloud desktop ID and name, office network ID and name, shared cloud desktop template, and security policy name.</para>
+        /// <para>Exports the list of shared cloud computers to an XLSX file. Each record includes the shared cloud computer ID and name, office network ID and name, shared cloud computer template, security policy name, and other details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33858,7 +34107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the list of shared cloud desktops and saves it as an XLSX file. Each shared cloud desktop record includes the shared cloud desktop ID and name, office network ID and name, shared cloud desktop template, and security policy name.</para>
+        /// <para>Exports the list of shared cloud computers to an XLSX file. Each record includes the shared cloud computer ID and name, office network ID and name, shared cloud computer template, security policy name, and other details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -33876,7 +34125,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Exports the list of shared cloud desktops and saves it as an XLSX file. Each shared cloud desktop record includes the shared cloud desktop ID and name, office network ID and name, shared cloud desktop template, and security policy name.</para>
+        /// <para>Exports the list of shared cloud computers to an XLSX file. Each record includes the shared cloud computer ID and name, office network ID and name, shared cloud computer template, security policy name, and other details.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34347,7 +34596,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34430,7 +34679,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34513,7 +34762,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34536,7 +34785,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires after 10 minutes.</para>
+        /// <para>The cloud computer must be in the Running state. The ticket obtained by calling this operation expires in 10 minutes.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -34554,7 +34803,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the stream collaboration credentials for remote assistance or shared collaboration.</para>
+        /// <para>Retrieves the coordination flow ticket used for remote assistance or shared coordination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34612,7 +34861,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the stream collaboration credentials for remote assistance or shared collaboration.</para>
+        /// <para>Retrieves the coordination flow ticket used for remote assistance or shared coordination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34670,7 +34919,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the stream collaboration credentials for remote assistance or shared collaboration.</para>
+        /// <para>Retrieves the coordination flow ticket used for remote assistance or shared coordination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34688,7 +34937,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Get the stream collaboration credentials for remote assistance or shared collaboration.</para>
+        /// <para>Retrieves the coordination flow ticket used for remote assistance or shared coordination.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34706,7 +34955,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cloud computer share.</para>
+        /// <para>Retrieves the details of a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34752,7 +35001,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cloud computer share.</para>
+        /// <para>Retrieves the details of a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34798,7 +35047,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cloud computer share.</para>
+        /// <para>Retrieves the details of a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -34816,7 +35065,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the details of a cloud computer share.</para>
+        /// <para>Retrieves the details of a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35098,7 +35347,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hibernates cloud desktops.</para>
+        /// <para>Hibernates cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35144,7 +35393,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hibernates cloud desktops.</para>
+        /// <para>Hibernates cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35190,7 +35439,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hibernates cloud desktops.</para>
+        /// <para>Hibernates cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35208,7 +35457,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Hibernates cloud desktops.</para>
+        /// <para>Hibernates cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35226,7 +35475,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of files in the network disk and obtain the download link of the file.</para>
+        /// <para>Queries the file list in a cloud drive and retrieves download URLs for files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35310,7 +35559,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of files in the network disk and obtain the download link of the file.</para>
+        /// <para>Queries the file list in a cloud drive and retrieves download URLs for files.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -35394,7 +35643,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of files in the network disk and obtain the download link of the file.</para>
+        /// <para>Queries the file list in a cloud drive and retrieves download URLs for files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35412,7 +35661,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the list of files in the network disk and obtain the download link of the file.</para>
+        /// <para>Queries the file list in a cloud drive and retrieves download URLs for files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35430,7 +35679,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you use an Active Directory (AD) directory to connect to your enterprise AD, call this operation to retrieve user information from your enterprise AD.</para>
+        /// <para>Retrieves user information from an enterprise Active Directory (AD) when you use an AD directory to connect to your enterprise AD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35504,7 +35753,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you use an Active Directory (AD) directory to connect to your enterprise AD, call this operation to retrieve user information from your enterprise AD.</para>
+        /// <para>Retrieves user information from an enterprise Active Directory (AD) when you use an AD directory to connect to your enterprise AD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35578,7 +35827,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you use an Active Directory (AD) directory to connect to your enterprise AD, call this operation to retrieve user information from your enterprise AD.</para>
+        /// <para>Retrieves user information from an enterprise Active Directory (AD) when you use an AD directory to connect to your enterprise AD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -35596,7 +35845,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>If you use an Active Directory (AD) directory to connect to your enterprise AD, call this operation to retrieve user information from your enterprise AD.</para>
+        /// <para>Retrieves user information from an enterprise Active Directory (AD) when you use an AD directory to connect to your enterprise AD.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36062,7 +36311,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Active Directory (AD) accounts in an AD office network (formerly known as a workspace) that is connected to an AD domain.</para>
+        /// <para>Queries the AD account information obtained after an AD office network (formerly workspace) is connected to an AD domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36136,7 +36385,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Active Directory (AD) accounts in an AD office network (formerly known as a workspace) that is connected to an AD domain.</para>
+        /// <para>Queries the AD account information obtained after an AD office network (formerly workspace) is connected to an AD domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36210,7 +36459,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Active Directory (AD) accounts in an AD office network (formerly known as a workspace) that is connected to an AD domain.</para>
+        /// <para>Queries the AD account information obtained after an AD office network (formerly workspace) is connected to an AD domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36228,7 +36477,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries information about Active Directory (AD) accounts in an AD office network (formerly known as a workspace) that is connected to an AD domain.</para>
+        /// <para>Queries the AD account information obtained after an AD office network (formerly workspace) is connected to an AD domain.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36426,7 +36675,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the download URLs for transferred files.</para>
+        /// <para>Retrieves the download URLs of transfer files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36472,7 +36721,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the download URLs for transferred files.</para>
+        /// <para>Retrieves the download URLs of transfer files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36518,7 +36767,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the download URLs for transferred files.</para>
+        /// <para>Retrieves the download URLs of transfer files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36536,7 +36785,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves the download URLs for transferred files.</para>
+        /// <para>Retrieves the download URLs of transfer files.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -36847,7 +37096,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the Wuying terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36910,7 +37159,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the Wuying terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36973,7 +37222,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the Wuying terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -36996,7 +37245,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the Wuying terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
+        /// <para>After the device is locked, the status of the MFA device changes to locked (LOCKED), and the corresponding AD account cannot log on to the WUYING terminal because the MFA device cannot be authenticated. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37014,12 +37263,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Locks a multi-factor authentication (MFA) device that is in the NORMAL state.</para>
+        /// <para>Locks a virtual MFA device that is in Normal state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the <a href="https://help.aliyun.com/document_detail/206212.html">UnlockVirtualMFADevice</a> operation to unlock the device.</para>
+        /// <para>After the device is locked, its status changes to Locked. The corresponding AD account cannot log on to the WUYING terminal because MFA authentication fails. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37065,12 +37314,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Locks a multi-factor authentication (MFA) device that is in the NORMAL state.</para>
+        /// <para>Locks a virtual MFA device that is in Normal state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the <a href="https://help.aliyun.com/document_detail/206212.html">UnlockVirtualMFADevice</a> operation to unlock the device.</para>
+        /// <para>After the device is locked, its status changes to Locked. The corresponding AD account cannot log on to the WUYING terminal because MFA authentication fails. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37116,12 +37365,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Locks a multi-factor authentication (MFA) device that is in the NORMAL state.</para>
+        /// <para>Locks a virtual MFA device that is in Normal state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the <a href="https://help.aliyun.com/document_detail/206212.html">UnlockVirtualMFADevice</a> operation to unlock the device.</para>
+        /// <para>After the device is locked, its status changes to Locked. The corresponding AD account cannot log on to the WUYING terminal because MFA authentication fails. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37139,12 +37388,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Locks a multi-factor authentication (MFA) device that is in the NORMAL state.</para>
+        /// <para>Locks a virtual MFA device that is in Normal state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After a virtual MFA device is locked, its status changes to LOCKED. The Active Directory (AD) user who uses the virtual MFA device is unable to pass MFA and is therefore unable to log on to the client. You can call the <a href="https://help.aliyun.com/document_detail/206212.html">UnlockVirtualMFADevice</a> operation to unlock the device.</para>
+        /// <para>After the device is locked, its status changes to Locked. The corresponding AD account cannot log on to the WUYING terminal because MFA authentication fails. You can call <a href="~~UnlockVirtualMFADevice~~">UnlockVirtualMFADevice</a> to unlock the device.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37162,7 +37411,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates one or more cloud computers to a new office network.</para>
+        /// <para>Migrates cloud computers from the current office network (formerly known as workspace) to a new office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37220,7 +37469,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates one or more cloud computers to a new office network.</para>
+        /// <para>Migrates cloud computers from the current office network (formerly known as workspace) to a new office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37278,7 +37527,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates one or more cloud computers to a new office network.</para>
+        /// <para>Migrates cloud computers from the current office network (formerly known as workspace) to a new office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37296,7 +37545,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Migrates one or more cloud computers to a new office network.</para>
+        /// <para>Migrates cloud computers from the current office network (formerly known as workspace) to a new office network.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -37678,12 +37927,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic properties of an enterprise Active Directory (AD) office network, such as the office network name and domain names of the enterprise AD subdomains.</para>
+        /// <para>Modifies the basic properties of an AD office network (formerly workspace), such as the office network name and the domain name of the enterprise AD subdomain.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the <c>ERROR</c> or <c>REGISTERED</c> state. The parameters include <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
+        /// <para>Only AD office networks in the <c>ERROR</c> or <c>REGISTERING</c> state support modifications to domain name and DNS-related parameters, including <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37777,12 +38026,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic properties of an enterprise Active Directory (AD) office network, such as the office network name and domain names of the enterprise AD subdomains.</para>
+        /// <para>Modifies the basic properties of an AD office network (formerly workspace), such as the office network name and the domain name of the enterprise AD subdomain.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the <c>ERROR</c> or <c>REGISTERED</c> state. The parameters include <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
+        /// <para>Only AD office networks in the <c>ERROR</c> or <c>REGISTERING</c> state support modifications to domain name and DNS-related parameters, including <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37876,12 +38125,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic properties of an enterprise Active Directory (AD) office network, such as the office network name and domain names of the enterprise AD subdomains.</para>
+        /// <para>Modifies the basic properties of an AD office network (formerly workspace), such as the office network name and the domain name of the enterprise AD subdomain.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the <c>ERROR</c> or <c>REGISTERED</c> state. The parameters include <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
+        /// <para>Only AD office networks in the <c>ERROR</c> or <c>REGISTERING</c> state support modifications to domain name and DNS-related parameters, including <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37899,12 +38148,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the basic properties of an enterprise Active Directory (AD) office network, such as the office network name and domain names of the enterprise AD subdomains.</para>
+        /// <para>Modifies the basic properties of an AD office network (formerly workspace), such as the office network name and the domain name of the enterprise AD subdomain.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can modify parameters of domain names and Domain Name System (DNS) for enterprise AD office networks that are in the <c>ERROR</c> or <c>REGISTERED</c> state. The parameters include <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
+        /// <para>Only AD office networks in the <c>ERROR</c> or <c>REGISTERING</c> state support modifications to domain name and DNS-related parameters, including <c>DomainName</c>, <c>SubDomainName</c>, <c>DnsAddress.N</c>, and <c>SubDomainDnsAddress.N</c>.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37922,12 +38171,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the Internet access control policy on the office network or cloud computer granularity.</para>
+        /// <para>Modifies the public network access control policy at the office network or cloud computer granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.</para>
+        /// <para>You can set different public network access control policies at different granularities to achieve a composite policy effect. For example, you can access control policy at the office network granularity to deny public network access, and access control policy at the specified cloud computer granularity to allow public network access. The result is that all cloud computers in the office network are denied public network access except for the specified cloud computers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -37981,12 +38230,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the Internet access control policy on the office network or cloud computer granularity.</para>
+        /// <para>Modifies the public network access control policy at the office network or cloud computer granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.</para>
+        /// <para>You can set different public network access control policies at different granularities to achieve a composite policy effect. For example, you can access control policy at the office network granularity to deny public network access, and access control policy at the specified cloud computer granularity to allow public network access. The result is that all cloud computers in the office network are denied public network access except for the specified cloud computers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38040,12 +38289,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the Internet access control policy on the office network or cloud computer granularity.</para>
+        /// <para>Modifies the public network access control policy at the office network or cloud computer granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.</para>
+        /// <para>You can set different public network access control policies at different granularities to achieve a composite policy effect. For example, you can access control policy at the office network granularity to deny public network access, and access control policy at the specified cloud computer granularity to allow public network access. The result is that all cloud computers in the office network are denied public network access except for the specified cloud computers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38063,12 +38312,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modify the Internet access control policy on the office network or cloud computer granularity.</para>
+        /// <para>Modifies the public network access control policy at the office network or cloud computer granularity.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can set different Internet access control policies at different granularities to achieve the effect of composite policies. For example, you can disable the Internet access on the office network granularity and enable the Internet access on specific cloud computer granularity. The effect is that all cloud computers in the office network except the specified cloud computers are not allowed to access the Internet.</para>
+        /// <para>You can set different public network access control policies at different granularities to achieve a composite policy effect. For example, you can access control policy at the office network granularity to deny public network access, and access control policy at the specified cloud computer granularity to allow public network access. The result is that all cloud computers in the office network are denied public network access except for the specified cloud computers.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -38249,11 +38498,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Only custom desktop templates can be modified.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ModifyBundleRequest
         /// </param>
@@ -38315,11 +38559,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>
         /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Only custom desktop templates can be modified.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBundleRequest
@@ -38383,11 +38622,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
         /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Only custom desktop templates can be modified.</para>
-        /// </description>
-        /// 
         /// <param name="request">
         /// ModifyBundleRequest
         /// </param>
@@ -38405,11 +38639,6 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <summary>
         /// <para>Modifies a custom cloud computer template.</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>Only custom desktop templates can be modified.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// ModifyBundleRequest
@@ -39175,6 +39404,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["PortProxy"] = request.PortProxy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlert))
+            {
+                query["PrinterAlert"] = request.PrinterAlert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlertContent))
+            {
+                query["PrinterAlertContent"] = request.PrinterAlertContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlertTitle))
+            {
+                query["PrinterAlertTitle"] = request.PrinterAlertTitle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterRedirect))
             {
                 query["PrinterRedirect"] = request.PrinterRedirect;
@@ -39322,6 +39563,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Taskbar))
             {
                 query["Taskbar"] = request.Taskbar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreeScreen))
+            {
+                query["ThreeScreen"] = request.ThreeScreen;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsbRedirect))
             {
@@ -39773,6 +40018,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
             {
                 query["PortProxy"] = request.PortProxy;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlert))
+            {
+                query["PrinterAlert"] = request.PrinterAlert;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlertContent))
+            {
+                query["PrinterAlertContent"] = request.PrinterAlertContent;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterAlertTitle))
+            {
+                query["PrinterAlertTitle"] = request.PrinterAlertTitle;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PrinterRedirect))
             {
                 query["PrinterRedirect"] = request.PrinterRedirect;
@@ -39920,6 +40177,10 @@ namespace AlibabaCloud.SDK.Ecd20200930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Taskbar))
             {
                 query["Taskbar"] = request.Taskbar;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ThreeScreen))
+            {
+                query["ThreeScreen"] = request.ThreeScreen;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.UsbRedirect))
             {
@@ -40846,17 +41107,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a cloud desktop to subscription or pay-as-you-go.</para>
+        /// <para>Converts the billing method of cloud desktops to subscription or pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure you understand the billing methods for cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.</description></item>
-        /// <item><description>Ensure the cloud desktop is in the running or stopped state and has no overdue payments.</description></item>
-        /// <item><description>After you pay for the order, the system begins to convert the billing method. While the desktop is in the updating state, you cannot perform other operations, such as starting, stopping, or changing its configuration.
-        /// &lt;props=&quot;china&quot;&gt;
-        /// When you convert from subscription to pay-as-you-go, refund limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Convert Subscription to Pay-As-You-Go</a>.</description></item>
+        /// <item><description>Before you invoke this operation, make sure that you fully understand the billing methods of cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</description></item>
+        /// <item><description>When you invoke this operation, make sure that the cloud desktops are in the Running or Stopped state and that no overdue payments exist.</description></item>
+        /// <item><description>After the order is paid, the system starts to convert the billing method of the cloud desktops. During the conversion, the cloud desktops are in the Upgrade/Downgrade state and do not support other operations such as starting, stopping, or changing specifications.
+        /// &lt;props=&quot;china&quot;&gt;When you convert the billing method from subscription to pay-as-you-go, refund quota limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Switch from subscription to pay-as-you-go</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -40931,17 +41191,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a cloud desktop to subscription or pay-as-you-go.</para>
+        /// <para>Converts the billing method of cloud desktops to subscription or pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure you understand the billing methods for cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.</description></item>
-        /// <item><description>Ensure the cloud desktop is in the running or stopped state and has no overdue payments.</description></item>
-        /// <item><description>After you pay for the order, the system begins to convert the billing method. While the desktop is in the updating state, you cannot perform other operations, such as starting, stopping, or changing its configuration.
-        /// &lt;props=&quot;china&quot;&gt;
-        /// When you convert from subscription to pay-as-you-go, refund limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Convert Subscription to Pay-As-You-Go</a>.</description></item>
+        /// <item><description>Before you invoke this operation, make sure that you fully understand the billing methods of cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</description></item>
+        /// <item><description>When you invoke this operation, make sure that the cloud desktops are in the Running or Stopped state and that no overdue payments exist.</description></item>
+        /// <item><description>After the order is paid, the system starts to convert the billing method of the cloud desktops. During the conversion, the cloud desktops are in the Upgrade/Downgrade state and do not support other operations such as starting, stopping, or changing specifications.
+        /// &lt;props=&quot;china&quot;&gt;When you convert the billing method from subscription to pay-as-you-go, refund quota limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Switch from subscription to pay-as-you-go</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41016,17 +41275,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a cloud desktop to subscription or pay-as-you-go.</para>
+        /// <para>Converts the billing method of cloud desktops to subscription or pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure you understand the billing methods for cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.</description></item>
-        /// <item><description>Ensure the cloud desktop is in the running or stopped state and has no overdue payments.</description></item>
-        /// <item><description>After you pay for the order, the system begins to convert the billing method. While the desktop is in the updating state, you cannot perform other operations, such as starting, stopping, or changing its configuration.
-        /// &lt;props=&quot;china&quot;&gt;
-        /// When you convert from subscription to pay-as-you-go, refund limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Convert Subscription to Pay-As-You-Go</a>.</description></item>
+        /// <item><description>Before you invoke this operation, make sure that you fully understand the billing methods of cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</description></item>
+        /// <item><description>When you invoke this operation, make sure that the cloud desktops are in the Running or Stopped state and that no overdue payments exist.</description></item>
+        /// <item><description>After the order is paid, the system starts to convert the billing method of the cloud desktops. During the conversion, the cloud desktops are in the Upgrade/Downgrade state and do not support other operations such as starting, stopping, or changing specifications.
+        /// &lt;props=&quot;china&quot;&gt;When you convert the billing method from subscription to pay-as-you-go, refund quota limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Switch from subscription to pay-as-you-go</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41045,17 +41303,16 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Changes the billing method of a cloud desktop to subscription or pay-as-you-go.</para>
+        /// <para>Converts the billing method of cloud desktops to subscription or pay-as-you-go.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <list type="bullet">
-        /// <item><description>Before calling this operation, ensure you understand the billing methods for cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">billing overview</a>.</description></item>
-        /// <item><description>Ensure the cloud desktop is in the running or stopped state and has no overdue payments.</description></item>
-        /// <item><description>After you pay for the order, the system begins to convert the billing method. While the desktop is in the updating state, you cannot perform other operations, such as starting, stopping, or changing its configuration.
-        /// &lt;props=&quot;china&quot;&gt;
-        /// When you convert from subscription to pay-as-you-go, refund limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Convert Subscription to Pay-As-You-Go</a>.</description></item>
+        /// <item><description>Before you invoke this operation, make sure that you fully understand the billing methods of cloud desktops. For more information, see <a href="https://help.aliyun.com/document_detail/188395.html">Billing overview</a>.</description></item>
+        /// <item><description>When you invoke this operation, make sure that the cloud desktops are in the Running or Stopped state and that no overdue payments exist.</description></item>
+        /// <item><description>After the order is paid, the system starts to convert the billing method of the cloud desktops. During the conversion, the cloud desktops are in the Upgrade/Downgrade state and do not support other operations such as starting, stopping, or changing specifications.
+        /// &lt;props=&quot;china&quot;&gt;When you convert the billing method from subscription to pay-as-you-go, refund quota limits apply. For more information, see <a href="https://help.aliyun.com/document_detail/439964.html">Switch from subscription to pay-as-you-go</a>.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -41074,12 +41331,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared cloud computer group.</para>
+        /// <para>Modifies a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a shared cloud computer group, the system automatically provisions cloud computers in the group based on its auto scaling policy and end-user connections. All cloud computers in the group use the same cloud computer template and security policy. You can modify the group’s configuration as needed, such as the group name, cloud computer template, and associated policies.</para>
+        /// <para>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41225,12 +41482,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared cloud computer group.</para>
+        /// <para>Modifies a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a shared cloud computer group, the system automatically provisions cloud computers in the group based on its auto scaling policy and end-user connections. All cloud computers in the group use the same cloud computer template and security policy. You can modify the group’s configuration as needed, such as the group name, cloud computer template, and associated policies.</para>
+        /// <para>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41376,12 +41633,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared cloud computer group.</para>
+        /// <para>Modifies a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a shared cloud computer group, the system automatically provisions cloud computers in the group based on its auto scaling policy and end-user connections. All cloud computers in the group use the same cloud computer template and security policy. You can modify the group’s configuration as needed, such as the group name, cloud computer template, and associated policies.</para>
+        /// <para>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41399,12 +41656,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies a shared cloud computer group.</para>
+        /// <para>Modifies a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>After you create a shared cloud computer group, the system automatically provisions cloud computers in the group based on its auto scaling policy and end-user connections. All cloud computers in the group use the same cloud computer template and security policy. You can modify the group’s configuration as needed, such as the group name, cloud computer template, and associated policies.</para>
+        /// <para>After you create a shared cloud computer, the system performs automatic creation of the corresponding number of cloud computers in the shared cloud computer based on the scaling policy in Settings and the connection status of end users. These cloud computers use the same cloud computer template and security policy. In different scenarios, you can modify the shared cloud computer configurations as needed, including the shared cloud computer name, cloud computer template, and associated policies.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41422,12 +41679,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the hostname of a Windows cloud desktop in an AD workspace.</para>
+        /// <para>Modifies the hostname of a Windows cloud desktop in an AD office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can only modify the hostname of Windows cloud desktops in an AD workspace. Modifying the hostname rebuilds the cloud desktop.</para>
+        /// <para>Only the hostname of a Windows cloud desktop in an AD office network can be modified. After the hostname is modified, the cloud desktop is rebuilt.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41481,12 +41738,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the hostname of a Windows cloud desktop in an AD workspace.</para>
+        /// <para>Modifies the hostname of a Windows cloud desktop in an AD office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can only modify the hostname of Windows cloud desktops in an AD workspace. Modifying the hostname rebuilds the cloud desktop.</para>
+        /// <para>Only the hostname of a Windows cloud desktop in an AD office network can be modified. After the hostname is modified, the cloud desktop is rebuilt.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41540,12 +41797,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the hostname of a Windows cloud desktop in an AD workspace.</para>
+        /// <para>Modifies the hostname of a Windows cloud desktop in an AD office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can only modify the hostname of Windows cloud desktops in an AD workspace. Modifying the hostname rebuilds the cloud desktop.</para>
+        /// <para>Only the hostname of a Windows cloud desktop in an AD office network can be modified. After the hostname is modified, the cloud desktop is rebuilt.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41563,12 +41820,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the hostname of a Windows cloud desktop in an AD workspace.</para>
+        /// <para>Modifies the hostname of a Windows cloud desktop in an AD office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can only modify the hostname of Windows cloud desktops in an AD workspace. Modifying the hostname rebuilds the cloud desktop.</para>
+        /// <para>Only the hostname of a Windows cloud desktop in an AD office network can be modified. After the hostname is modified, the cloud desktop is rebuilt.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -41586,7 +41843,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a specified cloud desktop.</para>
+        /// <para>Renames a specified cloud computer to a new name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41644,7 +41901,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a specified cloud desktop.</para>
+        /// <para>Renames a specified cloud computer to a new name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41702,7 +41959,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a specified cloud desktop.</para>
+        /// <para>Renames a specified cloud computer to a new name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -41720,7 +41977,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the name of a specified cloud desktop.</para>
+        /// <para>Renames a specified cloud computer to a new name.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -42226,24 +42483,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the desktop type and expands the disks of a cloud desktop.</para>
+        /// <para>Changes the instance type of a cloud computer and expands the system cloud disk and data cloud disk of the cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation modifies the configuration of a cloud desktop, including its desktop type and disk sizes.</para>
+        /// <para>Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.</para>
         /// <list type="bullet">
-        /// <item><description>Before you modify the configuration, ensure you understand the supported desktop types and disk sizes. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud desktop specifications</a>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported desktop types.</description></item>
-        /// <item><description>When you call this operation, you must modify the desktop type, the system disk size, or the data disk size. This requires specifying at least one of the corresponding parameters: <c>DesktopType</c>, <c>RootDiskSizeGib</c>, or <c>UserDiskSizeGib</c>. Note the following:<list type="bullet">
-        /// <item><description>A desktop type includes vCPU, memory, and GPU configurations. You can change the desktop type but cannot modify these resources individually.</description></item>
-        /// <item><description>You cannot change a desktop type between general-purpose and non-general-purpose, or between graphics-accelerated and non-graphics-accelerated.</description></item>
-        /// <item><description>Both the system disk and the data disk support expansion, but not shrinking.</description></item>
-        /// <item><description>If the cloud desktop uses the subscription billing method, the system calculates the price difference based on the configuration change. You must pay the price difference, or you will receive a refund.</description></item>
-        /// <item><description>For the same cloud desktop, wait at least five minutes between configuration change operations.</description></item>
-        /// <item><description>The cloud desktop must be in the Stopped state.</description></item>
+        /// <item><description>Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud computer types</a>. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the instance types supported by cloud computers.</description></item>
+        /// <item><description>You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: <c>DesktopType</c>, <c>RootDiskSizeGib</c>, and <c>UserDiskSizeGib</c>. Take note of the following items:<list type="bullet">
+        /// <item><description>The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.</description></item>
+        /// <item><description>You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.</description></item>
+        /// <item><description>The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.</description></item>
+        /// <item><description>If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.</description></item>
+        /// <item><description>We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.</description></item>
+        /// <item><description>When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>This operation does not affect the personal data stored on the cloud desktop.</description></item>
+        /// <item><description>After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -42326,24 +42583,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the desktop type and expands the disks of a cloud desktop.</para>
+        /// <para>Changes the instance type of a cloud computer and expands the system cloud disk and data cloud disk of the cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation modifies the configuration of a cloud desktop, including its desktop type and disk sizes.</para>
+        /// <para>Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.</para>
         /// <list type="bullet">
-        /// <item><description>Before you modify the configuration, ensure you understand the supported desktop types and disk sizes. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud desktop specifications</a>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported desktop types.</description></item>
-        /// <item><description>When you call this operation, you must modify the desktop type, the system disk size, or the data disk size. This requires specifying at least one of the corresponding parameters: <c>DesktopType</c>, <c>RootDiskSizeGib</c>, or <c>UserDiskSizeGib</c>. Note the following:<list type="bullet">
-        /// <item><description>A desktop type includes vCPU, memory, and GPU configurations. You can change the desktop type but cannot modify these resources individually.</description></item>
-        /// <item><description>You cannot change a desktop type between general-purpose and non-general-purpose, or between graphics-accelerated and non-graphics-accelerated.</description></item>
-        /// <item><description>Both the system disk and the data disk support expansion, but not shrinking.</description></item>
-        /// <item><description>If the cloud desktop uses the subscription billing method, the system calculates the price difference based on the configuration change. You must pay the price difference, or you will receive a refund.</description></item>
-        /// <item><description>For the same cloud desktop, wait at least five minutes between configuration change operations.</description></item>
-        /// <item><description>The cloud desktop must be in the Stopped state.</description></item>
+        /// <item><description>Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud computer types</a>. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the instance types supported by cloud computers.</description></item>
+        /// <item><description>You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: <c>DesktopType</c>, <c>RootDiskSizeGib</c>, and <c>UserDiskSizeGib</c>. Take note of the following items:<list type="bullet">
+        /// <item><description>The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.</description></item>
+        /// <item><description>You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.</description></item>
+        /// <item><description>The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.</description></item>
+        /// <item><description>If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.</description></item>
+        /// <item><description>We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.</description></item>
+        /// <item><description>When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>This operation does not affect the personal data stored on the cloud desktop.</description></item>
+        /// <item><description>After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -42426,24 +42683,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the desktop type and expands the disks of a cloud desktop.</para>
+        /// <para>Changes the instance type of a cloud computer and expands the system cloud disk and data cloud disk of the cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation modifies the configuration of a cloud desktop, including its desktop type and disk sizes.</para>
+        /// <para>Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.</para>
         /// <list type="bullet">
-        /// <item><description>Before you modify the configuration, ensure you understand the supported desktop types and disk sizes. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud desktop specifications</a>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported desktop types.</description></item>
-        /// <item><description>When you call this operation, you must modify the desktop type, the system disk size, or the data disk size. This requires specifying at least one of the corresponding parameters: <c>DesktopType</c>, <c>RootDiskSizeGib</c>, or <c>UserDiskSizeGib</c>. Note the following:<list type="bullet">
-        /// <item><description>A desktop type includes vCPU, memory, and GPU configurations. You can change the desktop type but cannot modify these resources individually.</description></item>
-        /// <item><description>You cannot change a desktop type between general-purpose and non-general-purpose, or between graphics-accelerated and non-graphics-accelerated.</description></item>
-        /// <item><description>Both the system disk and the data disk support expansion, but not shrinking.</description></item>
-        /// <item><description>If the cloud desktop uses the subscription billing method, the system calculates the price difference based on the configuration change. You must pay the price difference, or you will receive a refund.</description></item>
-        /// <item><description>For the same cloud desktop, wait at least five minutes between configuration change operations.</description></item>
-        /// <item><description>The cloud desktop must be in the Stopped state.</description></item>
+        /// <item><description>Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud computer types</a>. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the instance types supported by cloud computers.</description></item>
+        /// <item><description>You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: <c>DesktopType</c>, <c>RootDiskSizeGib</c>, and <c>UserDiskSizeGib</c>. Take note of the following items:<list type="bullet">
+        /// <item><description>The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.</description></item>
+        /// <item><description>You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.</description></item>
+        /// <item><description>The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.</description></item>
+        /// <item><description>If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.</description></item>
+        /// <item><description>We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.</description></item>
+        /// <item><description>When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>This operation does not affect the personal data stored on the cloud desktop.</description></item>
+        /// <item><description>After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -42462,24 +42719,24 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the desktop type and expands the disks of a cloud desktop.</para>
+        /// <para>Changes the instance type of a cloud computer and expands the system cloud disk and data cloud disk of the cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation modifies the configuration of a cloud desktop, including its desktop type and disk sizes.</para>
+        /// <para>Changing the configurations of a cloud computer includes changing the instance type of the cloud computer and scaling up the disks of the cloud computer.</para>
         /// <list type="bullet">
-        /// <item><description>Before you modify the configuration, ensure you understand the supported desktop types and disk sizes. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud desktop specifications</a>. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported desktop types.</description></item>
-        /// <item><description>When you call this operation, you must modify the desktop type, the system disk size, or the data disk size. This requires specifying at least one of the corresponding parameters: <c>DesktopType</c>, <c>RootDiskSizeGib</c>, or <c>UserDiskSizeGib</c>. Note the following:<list type="bullet">
-        /// <item><description>A desktop type includes vCPU, memory, and GPU configurations. You can change the desktop type but cannot modify these resources individually.</description></item>
-        /// <item><description>You cannot change a desktop type between general-purpose and non-general-purpose, or between graphics-accelerated and non-graphics-accelerated.</description></item>
-        /// <item><description>Both the system disk and the data disk support expansion, but not shrinking.</description></item>
-        /// <item><description>If the cloud desktop uses the subscription billing method, the system calculates the price difference based on the configuration change. You must pay the price difference, or you will receive a refund.</description></item>
-        /// <item><description>For the same cloud desktop, wait at least five minutes between configuration change operations.</description></item>
-        /// <item><description>The cloud desktop must be in the Stopped state.</description></item>
+        /// <item><description>Before you change the configurations of a cloud computer, you must understand the instance types and disk sizes supported by cloud computers. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Cloud computer types</a>. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the instance types supported by cloud computers.</description></item>
+        /// <item><description>You must change at least one of the following configurations: instance type, system disk size, and data disk size of the cloud computer. You must specify at least one of the following parameters: <c>DesktopType</c>, <c>RootDiskSizeGib</c>, and <c>UserDiskSizeGib</c>. Take note of the following items:<list type="bullet">
+        /// <item><description>The instance type of a cloud computer includes the configurations of vCPUs, memory, and GPUs. You can only change an instance type to another. You cannot change only one of the configurations.</description></item>
+        /// <item><description>You cannot change a cloud computer between the General Office type and the non-General Office type. You cannot yet change a cloud computer between the Graphics type and the non-Graphics type.</description></item>
+        /// <item><description>The system disk and data disks of a cloud computer can only be scaled up and cannot be scaled down.</description></item>
+        /// <item><description>If the billing method of the cloud computer is subscription, the system calculates the price difference based on the configuration difference between the original cloud computer and the new cloud computer. You must make up for the price difference or receive a refund for the price difference.</description></item>
+        /// <item><description>We recommend that you do not change the configurations of a cloud computer twice within 5 minutes.</description></item>
+        /// <item><description>When you change the configurations of a cloud computer, the cloud computer must be in the Stopped state.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>This operation does not affect the personal data stored on the cloud desktop.</description></item>
+        /// <item><description>After you change the configurations of a cloud computer, the personal data on the cloud computer is not affected.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -42806,14 +43063,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the performance level of the system cloud disk or data cloud disk of a cloud computer.</para>
+        /// <para>Modifies the performance level (PL) of the system cloud disk or data cloud disk of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office cloud computers use ESSDs by default and support setting disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
+        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office specifications use ESSDs by default and support settings for disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
         /// <remarks>
-        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing disk performance levels.</para>
+        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing the disk performance level (PL).</para>
         /// </remarks>
         /// </description>
         /// 
@@ -42880,14 +43137,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the performance level of the system cloud disk or data cloud disk of a cloud computer.</para>
+        /// <para>Modifies the performance level (PL) of the system cloud disk or data cloud disk of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office cloud computers use ESSDs by default and support setting disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
+        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office specifications use ESSDs by default and support settings for disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
         /// <remarks>
-        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing disk performance levels.</para>
+        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing the disk performance level (PL).</para>
         /// </remarks>
         /// </description>
         /// 
@@ -42954,14 +43211,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the performance level of the system cloud disk or data cloud disk of a cloud computer.</para>
+        /// <para>Modifies the performance level (PL) of the system cloud disk or data cloud disk of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office cloud computers use ESSDs by default and support setting disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
+        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office specifications use ESSDs by default and support settings for disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
         /// <remarks>
-        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing disk performance levels.</para>
+        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing the disk performance level (PL).</para>
         /// </remarks>
         /// </description>
         /// 
@@ -42980,14 +43237,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the performance level of the system cloud disk or data cloud disk of a cloud computer.</para>
+        /// <para>Modifies the performance level (PL) of the system cloud disk or data cloud disk of a cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office cloud computers use ESSDs by default and support setting disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
+        /// <para>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office specifications use ESSDs by default and support settings for disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</para>
         /// <remarks>
-        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing disk performance levels.</para>
+        /// <para>Only Enterprise Graphics and High Frequency Office cloud computers support changing the disk performance level (PL).</para>
         /// </remarks>
         /// </description>
         /// 
@@ -43734,7 +43991,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the bandwidth of a premium bandwidth plan.</para>
+        /// <para>Modifies the bandwidth of a premium Internet bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43796,7 +44053,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the bandwidth of a premium bandwidth plan.</para>
+        /// <para>Modifies the bandwidth of a premium Internet bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43858,7 +44115,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the bandwidth of a premium bandwidth plan.</para>
+        /// <para>Modifies the bandwidth of a premium Internet bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -43876,7 +44133,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the bandwidth of a premium bandwidth plan.</para>
+        /// <para>Modifies the bandwidth of a premium Internet bandwidth plan.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44186,7 +44443,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies basic attributes of an office site (formerly a workspace), such as its name and whether to grant users local administrative permissions on their cloud computers.</para>
+        /// <para>Modifies the basic attributes of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to cloud computer users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44276,7 +44533,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies basic attributes of an office site (formerly a workspace), such as its name and whether to grant users local administrative permissions on their cloud computers.</para>
+        /// <para>Modifies the basic attributes of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to cloud computer users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44366,7 +44623,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies basic attributes of an office site (formerly a workspace), such as its name and whether to grant users local administrative permissions on their cloud computers.</para>
+        /// <para>Modifies the basic attributes of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to cloud computer users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44384,7 +44641,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies basic attributes of an office site (formerly a workspace), such as its name and whether to grant users local administrative permissions on their cloud computers.</para>
+        /// <para>Modifies the basic attributes of an office network (formerly workspace), such as the office network name and whether to grant local administrator permissions to cloud computer users.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -44998,7 +45255,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies cloud computer policies.</para>
+        /// <para>Modifies a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45276,7 +45533,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies cloud computer policies.</para>
+        /// <para>Modifies a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45554,7 +45811,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies cloud computer policies.</para>
+        /// <para>Modifies a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45572,7 +45829,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies cloud computer policies.</para>
+        /// <para>Modifies a cloud computer policy.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45590,7 +45847,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource bindings of a QoS rule.</para>
+        /// <para>Modifies the resource binding relationship of a rate limiting rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45656,7 +45913,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource bindings of a QoS rule.</para>
+        /// <para>Modifies the resource binding relationship of a rate limiting rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45722,7 +45979,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource bindings of a QoS rule.</para>
+        /// <para>Modifies the resource binding relationship of a rate limiting rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -45740,7 +45997,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Modifies the resource bindings of a QoS rule.</para>
+        /// <para>Modifies the resource binding relationship of a rate limiting rule.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -46228,7 +46485,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in templates, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
+        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -46363,7 +46620,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in templates, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
+        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -46498,7 +46755,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in templates, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
+        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -46523,7 +46780,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in templates, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
+        /// <para>Warning: To ensure compatibility with the logic for unset parameters and default upgrades in the template, this operation uses a full-parameter update logic. In other words, any parameter that is not specified is treated as being set to empty.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -47846,19 +48103,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves historical average monitoring metrics for a desktop resource over a specified date range.</para>
+        /// <para>Queries the historical average monitoring metrics of desktop resources within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves historical average monitoring metrics for desktop resources that meet specified criteria within a time range.</description></item>
-        /// <item><description>The <c>DataDate</c> and <c>EndDate</c> parameters specify the time range. If omitted, the query defaults to the previous day.</description></item>
-        /// <item><description>You can filter results by criteria such as desktop ID, name, and custom numeric ranges.</description></item>
-        /// <item><description>The response contains the details of each matching desktop resource and its corresponding average values.</description></item>
-        /// <item><description>Use the <c>PageNum</c> and <c>PageSize</c> pagination parameters to control the number of results returned.</description></item>
-        /// <item><description>Note: When using the <c>Ranges</c> parameter, ensure that you provide reasonable intervals. Unreasonable intervals can degrade query performance or lead to invalid results.</description></item>
+        /// <item><description>This operation retrieves the historical average monitoring metrics of desktop resources filtered by specified conditions within a given time period.</description></item>
+        /// <item><description>The <c>DataDate</c> and <c>EndDate</c> parameters define the query time range. The default value is the previous day.</description></item>
+        /// <item><description>Filtering by desktop ID and name is supported. You can also customize numeric ranges to further refine query results.</description></item>
+        /// <item><description>The response includes detailed information about each matching desktop resource and its corresponding average values.</description></item>
+        /// <item><description>The pagination parameters <c>PageNum</c> and <c>PageSize</c> allow you to control the amount of returned data to meet different display requirements.</description></item>
+        /// <item><description>Note: When using the <c>Ranges</c> parameter, ensure that the provided ranges are reasonable. Otherwise, query performance may be affected or invalid results may be returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -47935,19 +48192,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves historical average monitoring metrics for a desktop resource over a specified date range.</para>
+        /// <para>Queries the historical average monitoring metrics of desktop resources within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves historical average monitoring metrics for desktop resources that meet specified criteria within a time range.</description></item>
-        /// <item><description>The <c>DataDate</c> and <c>EndDate</c> parameters specify the time range. If omitted, the query defaults to the previous day.</description></item>
-        /// <item><description>You can filter results by criteria such as desktop ID, name, and custom numeric ranges.</description></item>
-        /// <item><description>The response contains the details of each matching desktop resource and its corresponding average values.</description></item>
-        /// <item><description>Use the <c>PageNum</c> and <c>PageSize</c> pagination parameters to control the number of results returned.</description></item>
-        /// <item><description>Note: When using the <c>Ranges</c> parameter, ensure that you provide reasonable intervals. Unreasonable intervals can degrade query performance or lead to invalid results.</description></item>
+        /// <item><description>This operation retrieves the historical average monitoring metrics of desktop resources filtered by specified conditions within a given time period.</description></item>
+        /// <item><description>The <c>DataDate</c> and <c>EndDate</c> parameters define the query time range. The default value is the previous day.</description></item>
+        /// <item><description>Filtering by desktop ID and name is supported. You can also customize numeric ranges to further refine query results.</description></item>
+        /// <item><description>The response includes detailed information about each matching desktop resource and its corresponding average values.</description></item>
+        /// <item><description>The pagination parameters <c>PageNum</c> and <c>PageSize</c> allow you to control the amount of returned data to meet different display requirements.</description></item>
+        /// <item><description>Note: When using the <c>Ranges</c> parameter, ensure that the provided ranges are reasonable. Otherwise, query performance may be affected or invalid results may be returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48024,19 +48281,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves historical average monitoring metrics for a desktop resource over a specified date range.</para>
+        /// <para>Queries the historical average monitoring metrics of desktop resources within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves historical average monitoring metrics for desktop resources that meet specified criteria within a time range.</description></item>
-        /// <item><description>The <c>DataDate</c> and <c>EndDate</c> parameters specify the time range. If omitted, the query defaults to the previous day.</description></item>
-        /// <item><description>You can filter results by criteria such as desktop ID, name, and custom numeric ranges.</description></item>
-        /// <item><description>The response contains the details of each matching desktop resource and its corresponding average values.</description></item>
-        /// <item><description>Use the <c>PageNum</c> and <c>PageSize</c> pagination parameters to control the number of results returned.</description></item>
-        /// <item><description>Note: When using the <c>Ranges</c> parameter, ensure that you provide reasonable intervals. Unreasonable intervals can degrade query performance or lead to invalid results.</description></item>
+        /// <item><description>This operation retrieves the historical average monitoring metrics of desktop resources filtered by specified conditions within a given time period.</description></item>
+        /// <item><description>The <c>DataDate</c> and <c>EndDate</c> parameters define the query time range. The default value is the previous day.</description></item>
+        /// <item><description>Filtering by desktop ID and name is supported. You can also customize numeric ranges to further refine query results.</description></item>
+        /// <item><description>The response includes detailed information about each matching desktop resource and its corresponding average values.</description></item>
+        /// <item><description>The pagination parameters <c>PageNum</c> and <c>PageSize</c> allow you to control the amount of returned data to meet different display requirements.</description></item>
+        /// <item><description>Note: When using the <c>Ranges</c> parameter, ensure that the provided ranges are reasonable. Otherwise, query performance may be affected or invalid results may be returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48055,19 +48312,19 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Retrieves historical average monitoring metrics for a desktop resource over a specified date range.</para>
+        /// <para>Queries the historical average monitoring metrics of desktop resources within a specified date range.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <h2>Request</h2>
+        /// <h2>Operation description</h2>
         /// <list type="bullet">
-        /// <item><description>This API retrieves historical average monitoring metrics for desktop resources that meet specified criteria within a time range.</description></item>
-        /// <item><description>The <c>DataDate</c> and <c>EndDate</c> parameters specify the time range. If omitted, the query defaults to the previous day.</description></item>
-        /// <item><description>You can filter results by criteria such as desktop ID, name, and custom numeric ranges.</description></item>
-        /// <item><description>The response contains the details of each matching desktop resource and its corresponding average values.</description></item>
-        /// <item><description>Use the <c>PageNum</c> and <c>PageSize</c> pagination parameters to control the number of results returned.</description></item>
-        /// <item><description>Note: When using the <c>Ranges</c> parameter, ensure that you provide reasonable intervals. Unreasonable intervals can degrade query performance or lead to invalid results.</description></item>
+        /// <item><description>This operation retrieves the historical average monitoring metrics of desktop resources filtered by specified conditions within a given time period.</description></item>
+        /// <item><description>The <c>DataDate</c> and <c>EndDate</c> parameters define the query time range. The default value is the previous day.</description></item>
+        /// <item><description>Filtering by desktop ID and name is supported. You can also customize numeric ranges to further refine query results.</description></item>
+        /// <item><description>The response includes detailed information about each matching desktop resource and its corresponding average values.</description></item>
+        /// <item><description>The pagination parameters <c>PageNum</c> and <c>PageSize</c> allow you to control the amount of returned data to meet different display requirements.</description></item>
+        /// <item><description>Note: When using the <c>Ranges</c> parameter, ensure that the provided ranges are reasonable. Otherwise, query performance may be affected or invalid results may be returned.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48092,14 +48349,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API operation queries the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Two business channels are supported: Enterprise Edition and Commercial Edition. By default, T-1 (yesterday) data statistics are used.</para>
+        /// <para>This API operation is used to query the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Enterprise Edition and Commercial Edition business channels are supported. By default, T-1 (yesterday) data statistics are used.</para>
         /// <list type="bullet">
         /// <item><description><b>BusinessChannel</b>: Enterprise Edition by default. Commercial Edition is optional.</description></item>
-        /// <item><description><b>StartDate &amp; EndDate</b>: Default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
+        /// <item><description><b>StartDate &amp; EndDate</b>: The default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
         /// <item><description><b>MetricName</b>: The name of the specific metric to query. Refer to the valid metric list provided in the documentation.</description></item>
-        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. Each range can have a minimum value, a maximum value, and whether to include border values.</description></item>
+        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. You can set the minimum value, maximum value, and whether to include border values for each range.
+        /// Settings:</description></item>
         /// </list>
-        /// <h2>Settings</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -48159,14 +48416,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API operation queries the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Two business channels are supported: Enterprise Edition and Commercial Edition. By default, T-1 (yesterday) data statistics are used.</para>
+        /// <para>This API operation is used to query the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Enterprise Edition and Commercial Edition business channels are supported. By default, T-1 (yesterday) data statistics are used.</para>
         /// <list type="bullet">
         /// <item><description><b>BusinessChannel</b>: Enterprise Edition by default. Commercial Edition is optional.</description></item>
-        /// <item><description><b>StartDate &amp; EndDate</b>: Default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
+        /// <item><description><b>StartDate &amp; EndDate</b>: The default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
         /// <item><description><b>MetricName</b>: The name of the specific metric to query. Refer to the valid metric list provided in the documentation.</description></item>
-        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. Each range can have a minimum value, a maximum value, and whether to include border values.</description></item>
+        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. You can set the minimum value, maximum value, and whether to include border values for each range.
+        /// Settings:</description></item>
         /// </list>
-        /// <h2>Settings</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -48226,14 +48483,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API operation queries the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Two business channels are supported: Enterprise Edition and Commercial Edition. By default, T-1 (yesterday) data statistics are used.</para>
+        /// <para>This API operation is used to query the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Enterprise Edition and Commercial Edition business channels are supported. By default, T-1 (yesterday) data statistics are used.</para>
         /// <list type="bullet">
         /// <item><description><b>BusinessChannel</b>: Enterprise Edition by default. Commercial Edition is optional.</description></item>
-        /// <item><description><b>StartDate &amp; EndDate</b>: Default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
+        /// <item><description><b>StartDate &amp; EndDate</b>: The default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
         /// <item><description><b>MetricName</b>: The name of the specific metric to query. Refer to the valid metric list provided in the documentation.</description></item>
-        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. Each range can have a minimum value, a maximum value, and whether to include border values.</description></item>
+        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. You can set the minimum value, maximum value, and whether to include border values for each range.
+        /// Settings:</description></item>
         /// </list>
-        /// <h2>Settings</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -48257,14 +48514,14 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// <term><b>Description:</b></term>
         /// <description>
         /// <h2>Operation description</h2>
-        /// <para>This API operation queries the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Two business channels are supported: Enterprise Edition and Commercial Edition. By default, T-1 (yesterday) data statistics are used.</para>
+        /// <para>This API operation is used to query the value distribution of a specific monitoring metrics (such as CPU usage or memory usage) within a specified date range. You can obtain more detailed statistics by defining custom value ranges. Enterprise Edition and Commercial Edition business channels are supported. By default, T-1 (yesterday) data statistics are used.</para>
         /// <list type="bullet">
         /// <item><description><b>BusinessChannel</b>: Enterprise Edition by default. Commercial Edition is optional.</description></item>
-        /// <item><description><b>StartDate &amp; EndDate</b>: Default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
+        /// <item><description><b>StartDate &amp; EndDate</b>: The default value is T-1, which is yesterday\&quot;s date. The format must be &quot;YYYY-MM-DD&quot;.</description></item>
         /// <item><description><b>MetricName</b>: The name of the specific metric to query. Refer to the valid metric list provided in the documentation.</description></item>
-        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. Each range can have a minimum value, a maximum value, and whether to include border values.</description></item>
+        /// <item><description><b>Ranges</b>: Allows you to define multiple custom value ranges for more granular data analytics. You can set the minimum value, maximum value, and whether to include border values for each range.
+        /// Settings:</description></item>
         /// </list>
-        /// <h2>Settings</h2>
         /// </description>
         /// 
         /// <param name="request">
@@ -48658,18 +48915,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces the image of one or more cloud computers.</para>
+        /// <para>Changes the image for one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is subject to the following limitations:</para>
+        /// <para>The change image operation has the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>For cloud computers in the China (Hong Kong) region and regions outside the Chinese mainland, you cannot switch to an image with a different operating system. For example, you cannot switch from a Windows image to a Linux image.</description></item>
-        /// <item><description>You cannot switch between GPU images and non-GPU images. Graphics-optimized cloud computers must use GPU images, and non-graphics cloud computers can only use non-GPU images.
-        /// Changing the image re-initializes the cloud computer\&quot;s system disk with the new image. This action has the following effects:</description></item>
-        /// <item><description>All data on the original system disk is erased. Any snapshots created from the original system disk become invalid, and the system automatically deletes them.</description></item>
-        /// <item><description>If the new image has a different operating system, all data on the data disk is erased. Snapshots created from the data disk become invalid, and the system automatically deletes them. If the new image has the same operating system, data on the data disk is retained and its snapshots remain usable.</description></item>
+        /// <item><description>Cloud computers in Hong Kong (China) and regions outside China do not support changing to an image of a different operating system (for example, changing from a Windows image to a Linux image).</description></item>
+        /// <item><description>Changing between GPU images and non-GPU images is not supported. Graphics-type cloud computers can only use GPU images, and non-graphics-type cloud computers can only use non-GPU images.
+        /// After the image is changed, the system uses the new image to initialize the system cloud disk of the cloud computer. The impacts are as follows:</description></item>
+        /// <item><description>Data on the original system cloud disk of the cloud computer is cleared. Snapshots created based on the original system cloud disk become unusable, and the system automatically deletes the related snapshots.</description></item>
+        /// <item><description>If the operating system of the image is changed, data on the original data cloud disk of the cloud computer is cleared, snapshots created based on the original data cloud disk become unusable, and the system automatically deletes the related snapshots. If the operating system of the image is not changed, data on the original data cloud disk is retained, and the related snapshots remain usable.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48732,18 +48989,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces the image of one or more cloud computers.</para>
+        /// <para>Changes the image for one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is subject to the following limitations:</para>
+        /// <para>The change image operation has the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>For cloud computers in the China (Hong Kong) region and regions outside the Chinese mainland, you cannot switch to an image with a different operating system. For example, you cannot switch from a Windows image to a Linux image.</description></item>
-        /// <item><description>You cannot switch between GPU images and non-GPU images. Graphics-optimized cloud computers must use GPU images, and non-graphics cloud computers can only use non-GPU images.
-        /// Changing the image re-initializes the cloud computer\&quot;s system disk with the new image. This action has the following effects:</description></item>
-        /// <item><description>All data on the original system disk is erased. Any snapshots created from the original system disk become invalid, and the system automatically deletes them.</description></item>
-        /// <item><description>If the new image has a different operating system, all data on the data disk is erased. Snapshots created from the data disk become invalid, and the system automatically deletes them. If the new image has the same operating system, data on the data disk is retained and its snapshots remain usable.</description></item>
+        /// <item><description>Cloud computers in Hong Kong (China) and regions outside China do not support changing to an image of a different operating system (for example, changing from a Windows image to a Linux image).</description></item>
+        /// <item><description>Changing between GPU images and non-GPU images is not supported. Graphics-type cloud computers can only use GPU images, and non-graphics-type cloud computers can only use non-GPU images.
+        /// After the image is changed, the system uses the new image to initialize the system cloud disk of the cloud computer. The impacts are as follows:</description></item>
+        /// <item><description>Data on the original system cloud disk of the cloud computer is cleared. Snapshots created based on the original system cloud disk become unusable, and the system automatically deletes the related snapshots.</description></item>
+        /// <item><description>If the operating system of the image is changed, data on the original data cloud disk of the cloud computer is cleared, snapshots created based on the original data cloud disk become unusable, and the system automatically deletes the related snapshots. If the operating system of the image is not changed, data on the original data cloud disk is retained, and the related snapshots remain usable.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48806,18 +49063,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces the image of one or more cloud computers.</para>
+        /// <para>Changes the image for one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is subject to the following limitations:</para>
+        /// <para>The change image operation has the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>For cloud computers in the China (Hong Kong) region and regions outside the Chinese mainland, you cannot switch to an image with a different operating system. For example, you cannot switch from a Windows image to a Linux image.</description></item>
-        /// <item><description>You cannot switch between GPU images and non-GPU images. Graphics-optimized cloud computers must use GPU images, and non-graphics cloud computers can only use non-GPU images.
-        /// Changing the image re-initializes the cloud computer\&quot;s system disk with the new image. This action has the following effects:</description></item>
-        /// <item><description>All data on the original system disk is erased. Any snapshots created from the original system disk become invalid, and the system automatically deletes them.</description></item>
-        /// <item><description>If the new image has a different operating system, all data on the data disk is erased. Snapshots created from the data disk become invalid, and the system automatically deletes them. If the new image has the same operating system, data on the data disk is retained and its snapshots remain usable.</description></item>
+        /// <item><description>Cloud computers in Hong Kong (China) and regions outside China do not support changing to an image of a different operating system (for example, changing from a Windows image to a Linux image).</description></item>
+        /// <item><description>Changing between GPU images and non-GPU images is not supported. Graphics-type cloud computers can only use GPU images, and non-graphics-type cloud computers can only use non-GPU images.
+        /// After the image is changed, the system uses the new image to initialize the system cloud disk of the cloud computer. The impacts are as follows:</description></item>
+        /// <item><description>Data on the original system cloud disk of the cloud computer is cleared. Snapshots created based on the original system cloud disk become unusable, and the system automatically deletes the related snapshots.</description></item>
+        /// <item><description>If the operating system of the image is changed, data on the original data cloud disk of the cloud computer is cleared, snapshots created based on the original data cloud disk become unusable, and the system automatically deletes the related snapshots. If the operating system of the image is not changed, data on the original data cloud disk is retained, and the related snapshots remain usable.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48836,18 +49093,18 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Replaces the image of one or more cloud computers.</para>
+        /// <para>Changes the image for one or more cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation is subject to the following limitations:</para>
+        /// <para>The change image operation has the following limits:</para>
         /// <list type="bullet">
-        /// <item><description>For cloud computers in the China (Hong Kong) region and regions outside the Chinese mainland, you cannot switch to an image with a different operating system. For example, you cannot switch from a Windows image to a Linux image.</description></item>
-        /// <item><description>You cannot switch between GPU images and non-GPU images. Graphics-optimized cloud computers must use GPU images, and non-graphics cloud computers can only use non-GPU images.
-        /// Changing the image re-initializes the cloud computer\&quot;s system disk with the new image. This action has the following effects:</description></item>
-        /// <item><description>All data on the original system disk is erased. Any snapshots created from the original system disk become invalid, and the system automatically deletes them.</description></item>
-        /// <item><description>If the new image has a different operating system, all data on the data disk is erased. Snapshots created from the data disk become invalid, and the system automatically deletes them. If the new image has the same operating system, data on the data disk is retained and its snapshots remain usable.</description></item>
+        /// <item><description>Cloud computers in Hong Kong (China) and regions outside China do not support changing to an image of a different operating system (for example, changing from a Windows image to a Linux image).</description></item>
+        /// <item><description>Changing between GPU images and non-GPU images is not supported. Graphics-type cloud computers can only use GPU images, and non-graphics-type cloud computers can only use non-GPU images.
+        /// After the image is changed, the system uses the new image to initialize the system cloud disk of the cloud computer. The impacts are as follows:</description></item>
+        /// <item><description>Data on the original system cloud disk of the cloud computer is cleared. Snapshots created based on the original system cloud disk become unusable, and the system automatically deletes the related snapshots.</description></item>
+        /// <item><description>If the operating system of the image is changed, data on the original data cloud disk of the cloud computer is cleared, snapshots created based on the original data cloud disk become unusable, and the system automatically deletes the related snapshots. If the operating system of the image is not changed, data on the original data cloud disk is retained, and the related snapshots remain usable.</description></item>
         /// </list>
         /// </description>
         /// 
@@ -48994,7 +49251,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unshare a folder on the network disk.</para>
+        /// <para>Unshares a folder in a cloud disk.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -49062,7 +49319,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unshare a folder on the network disk.</para>
+        /// <para>Unshares a folder in a cloud disk.</para>
         /// </summary>
         /// 
         /// <param name="tmpReq">
@@ -49130,7 +49387,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unshare a folder on the network disk.</para>
+        /// <para>Unshares a folder in a cloud disk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49148,7 +49405,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unshare a folder on the network disk.</para>
+        /// <para>Unshares a folder in a cloud disk.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49166,7 +49423,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes specified authorized users from a shared desktop group. After an authorized user is removed, that user can no longer connect to the cloud desktops in the group.</para>
+        /// <para>Removes specified authorized users from a shared cloud computer. Removed users can no longer connect to cloud computers within the shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49236,7 +49493,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes specified authorized users from a shared desktop group. After an authorized user is removed, that user can no longer connect to the cloud desktops in the group.</para>
+        /// <para>Removes specified authorized users from a shared cloud computer. Removed users can no longer connect to cloud computers within the shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49306,7 +49563,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes specified authorized users from a shared desktop group. After an authorized user is removed, that user can no longer connect to the cloud desktops in the group.</para>
+        /// <para>Removes specified authorized users from a shared cloud computer. Removed users can no longer connect to cloud computers within the shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49324,7 +49581,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Removes specified authorized users from a shared desktop group. After an authorized user is removed, that user can no longer connect to the cloud desktops in the group.</para>
+        /// <para>Removes specified authorized users from a shared cloud computer. Removed users can no longer connect to cloud computers within the shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49486,7 +49743,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews the subscription for a cloud computer pool.</para>
+        /// <para>Renews a subscription shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49552,7 +49809,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews the subscription for a cloud computer pool.</para>
+        /// <para>Renews a subscription shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49618,7 +49875,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews the subscription for a cloud computer pool.</para>
+        /// <para>Renews a subscription shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49636,7 +49893,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews the subscription for a cloud computer pool.</para>
+        /// <para>Renews a subscription shared cloud computer.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49790,7 +50047,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews one or more subscription-based WUYING Workspace instances.</para>
+        /// <para>Renews one or more monthly subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49864,7 +50121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews one or more subscription-based WUYING Workspace instances.</para>
+        /// <para>Renews one or more monthly subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49938,7 +50195,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews one or more subscription-based WUYING Workspace instances.</para>
+        /// <para>Renews one or more monthly subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49956,7 +50213,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews one or more subscription-based WUYING Workspace instances.</para>
+        /// <para>Renews one or more monthly subscription cloud computers.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -49974,7 +50231,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews subscription-based premium public bandwidth.</para>
+        /// <para>Renews subscription premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50044,7 +50301,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews subscription-based premium public bandwidth.</para>
+        /// <para>Renews subscription premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50114,7 +50371,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews subscription-based premium public bandwidth.</para>
+        /// <para>Renews subscription premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50132,7 +50389,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Renews subscription-based premium public bandwidth.</para>
+        /// <para>Renews subscription premium Internet bandwidth.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50346,13 +50603,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets cloud desktops in a shared cloud desktop group.</para>
+        /// <para>Resets cloud computers within a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to shared cloud desktops. It does not support resetting standard cloud desktops.</para>
+        /// <para>This operation applies only to resetting cloud computers within a shared cloud computer. It does not support resetting regular cloud computers.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -50427,13 +50684,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets cloud desktops in a shared cloud desktop group.</para>
+        /// <para>Resets cloud computers within a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to shared cloud desktops. It does not support resetting standard cloud desktops.</para>
+        /// <para>This operation applies only to resetting cloud computers within a shared cloud computer. It does not support resetting regular cloud computers.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -50508,13 +50765,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets cloud desktops in a shared cloud desktop group.</para>
+        /// <para>Resets cloud computers within a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to shared cloud desktops. It does not support resetting standard cloud desktops.</para>
+        /// <para>This operation applies only to resetting cloud computers within a shared cloud computer. It does not support resetting regular cloud computers.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -50533,13 +50790,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets cloud desktops in a shared cloud desktop group.</para>
+        /// <para>Resets cloud computers within a shared cloud computer.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
         /// <remarks>
-        /// <para>This operation applies only to shared cloud desktops. It does not support resetting standard cloud desktops.</para>
+        /// <para>This operation applies only to resetting cloud computers within a shared cloud computer. It does not support resetting regular cloud computers.</para>
         /// </remarks>
         /// </description>
         /// 
@@ -50563,7 +50820,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a NAS file system is created, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
+        /// <para>When you create a NAS file system, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50614,7 +50871,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a NAS file system is created, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
+        /// <para>When you create a NAS file system, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50665,7 +50922,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a NAS file system is created, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
+        /// <para>When you create a NAS file system, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50688,7 +50945,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>When a NAS file system is created, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
+        /// <para>When you create a NAS file system, the system automatically generates a mount point. By default, the mount point does not need to be modified. If the mount point is in an inactive state, you need to reset the mount point of the NAS file system.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -50890,7 +51147,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the permission for stream coordination operations.</para>
+        /// <para>Cancels the permissions for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -50948,7 +51205,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the permission for stream coordination operations.</para>
+        /// <para>Cancels the permissions for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51006,7 +51263,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the permission for stream coordination operations.</para>
+        /// <para>Cancels the permissions for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51024,7 +51281,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Cancels the permission for stream coordination operations.</para>
+        /// <para>Cancels the permissions for stream coordination operations.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51042,7 +51299,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PowerShell or Bat script on one or more cloud computers that run Windows.</para>
+        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run the Windows operating system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51112,7 +51369,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PowerShell or Bat script on one or more cloud computers that run Windows.</para>
+        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run the Windows operating system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51182,7 +51439,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PowerShell or Bat script on one or more cloud computers that run Windows.</para>
+        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run the Windows operating system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51200,7 +51457,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Runs a PowerShell or Bat script on one or more cloud computers that run Windows.</para>
+        /// <para>Executes a PowerShell or Bat script on one or more cloud computers that run the Windows operating system.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51218,12 +51475,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the verification code that is required when you bind an advanced office network to a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.</para>
+        /// <para>Retrieves a verification code required when adding a premium office network to a Cloud Enterprise Network (CEN) instance that belongs to a different Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;When adding a premium office network to a CEN instance that belongs to a different Alibaba Cloud account, call this operation first to obtain a verification code. After a successful call, the system sends the verification code to the phone number associated with the Alibaba Cloud account.
+        /// &lt;props=&quot;intl&quot;&gt;When adding a premium office network to a CEN instance that belongs to a different Alibaba Cloud account, call this operation first to obtain a verification code. After a successful call, the system sends the verification code to the email address associated with the Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51273,12 +51531,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the verification code that is required when you bind an advanced office network to a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.</para>
+        /// <para>Retrieves a verification code required when adding a premium office network to a Cloud Enterprise Network (CEN) instance that belongs to a different Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;When adding a premium office network to a CEN instance that belongs to a different Alibaba Cloud account, call this operation first to obtain a verification code. After a successful call, the system sends the verification code to the phone number associated with the Alibaba Cloud account.
+        /// &lt;props=&quot;intl&quot;&gt;When adding a premium office network to a CEN instance that belongs to a different Alibaba Cloud account, call this operation first to obtain a verification code. After a successful call, the system sends the verification code to the email address associated with the Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51328,12 +51587,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the verification code that is required when you bind an advanced office network to a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.</para>
+        /// <para>Retrieves a verification code required when adding a premium office network to a Cloud Enterprise Network (CEN) instance that belongs to a different Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;When adding a premium office network to a CEN instance that belongs to a different Alibaba Cloud account, call this operation first to obtain a verification code. After a successful call, the system sends the verification code to the phone number associated with the Alibaba Cloud account.
+        /// &lt;props=&quot;intl&quot;&gt;When adding a premium office network to a CEN instance that belongs to a different Alibaba Cloud account, call this operation first to obtain a verification code. After a successful call, the system sends the verification code to the email address associated with the Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51351,12 +51611,13 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Obtains the verification code that is required when you bind an advanced office network to a Cloud Enterprise Network (CEN) instance that belongs to another Alibaba Cloud account.</para>
+        /// <para>Retrieves a verification code required when adding a premium office network to a Cloud Enterprise Network (CEN) instance that belongs to a different Alibaba Cloud account.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You must call this operation to obtain the verification code that is required when you bind an advanced office network to a CEN instance that belongs to another Alibaba Cloud account. After you call this operation, the system sends a verification code to the email address associated with the Alibaba Cloud account to which the CEN instance belongs.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;When adding a premium office network to a CEN instance that belongs to a different Alibaba Cloud account, call this operation first to obtain a verification code. After a successful call, the system sends the verification code to the phone number associated with the Alibaba Cloud account.
+        /// &lt;props=&quot;intl&quot;&gt;When adding a premium office network to a CEN instance that belongs to a different Alibaba Cloud account, call this operation first to obtain a verification code. After a successful call, the system sends the verification code to the email address associated with the Alibaba Cloud account.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51670,7 +51931,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the status of a scheduled task for a cloud computer share, such as enabling or disabling it.</para>
+        /// <para>Sets the status of a scheduled task for a shared cloud computer, such as enabling or disabling the scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51724,7 +51985,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the status of a scheduled task for a cloud computer share, such as enabling or disabling it.</para>
+        /// <para>Sets the status of a scheduled task for a shared cloud computer, such as enabling or disabling the scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51778,7 +52039,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the status of a scheduled task for a cloud computer share, such as enabling or disabling it.</para>
+        /// <para>Sets the status of a scheduled task for a shared cloud computer, such as enabling or disabling the scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51796,7 +52057,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Sets the status of a scheduled task for a cloud computer share, such as enabling or disabling it.</para>
+        /// <para>Sets the status of a scheduled task for a shared cloud computer, such as enabling or disabling the scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -51814,12 +52075,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the cloud computer maintenance mode.</para>
+        /// <para>Sets the maintenance mode for cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</para>
+        /// <para>If you need to perform maintenance operations on a cloud computer and want to prevent end users from connecting to and using the cloud computer during this period, you can switch it to maintenance mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51869,12 +52130,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the cloud computer maintenance mode.</para>
+        /// <para>Sets the maintenance mode for cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</para>
+        /// <para>If you need to perform maintenance operations on a cloud computer and want to prevent end users from connecting to and using the cloud computer during this period, you can switch it to maintenance mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51924,12 +52185,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the cloud computer maintenance mode.</para>
+        /// <para>Sets the maintenance mode for cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</para>
+        /// <para>If you need to perform maintenance operations on a cloud computer and want to prevent end users from connecting to and using the cloud computer during this period, you can switch it to maintenance mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51947,12 +52208,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Set the cloud computer maintenance mode.</para>
+        /// <para>Sets the maintenance mode for cloud computers.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>If you need to perform some maintenance operations on the cloud computer and want to prohibit end user from connecting and using the cloud computer during this period, you can switch it to maintenance mode.</para>
+        /// <para>If you need to perform maintenance operations on a cloud computer and want to prevent end users from connecting to and using the cloud computer during this period, you can switch it to maintenance mode.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -51970,12 +52231,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the single sign-on (SSO) feature for an AD-based office network.</para>
+        /// <para>Enables or shuts down the single sign-on (SSO) feature for an AD-based office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has the same effect as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. Use the SetOfficeSiteSsoStatus operation instead.</para>
+        /// <para>This operation has the same function as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. We recommend that you use the <c>SetOfficeSiteSsoStatus</c> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52025,12 +52286,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the single sign-on (SSO) feature for an AD-based office network.</para>
+        /// <para>Enables or shuts down the single sign-on (SSO) feature for an AD-based office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has the same effect as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. Use the SetOfficeSiteSsoStatus operation instead.</para>
+        /// <para>This operation has the same function as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. We recommend that you use the <c>SetOfficeSiteSsoStatus</c> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52080,12 +52341,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the single sign-on (SSO) feature for an AD-based office network.</para>
+        /// <para>Enables or shuts down the single sign-on (SSO) feature for an AD-based office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has the same effect as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. Use the SetOfficeSiteSsoStatus operation instead.</para>
+        /// <para>This operation has the same function as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. We recommend that you use the <c>SetOfficeSiteSsoStatus</c> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52103,12 +52364,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Enables or disables the single sign-on (SSO) feature for an AD-based office network.</para>
+        /// <para>Enables or shuts down the single sign-on (SSO) feature for an AD-based office network.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>This operation has the same effect as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. Use the SetOfficeSiteSsoStatus operation instead.</para>
+        /// <para>This operation has the same function as <a href="~~SetOfficeSiteSsoStatus~~">SetOfficeSiteSsoStatus</a>. We recommend that you use the <c>SetOfficeSiteSsoStatus</c> operation.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52126,13 +52387,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads the metadata of a Security Assertion Markup Language (SAML) 2.0-based identity provider (IdP).</para>
+        /// <para>Uploads metadata for a SAML 2.0-based identity provider (IdP).</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// SetIdpMetadataRequest
@@ -52185,13 +52441,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads the metadata of a Security Assertion Markup Language (SAML) 2.0-based identity provider (IdP).</para>
+        /// <para>Uploads metadata for a SAML 2.0-based identity provider (IdP).</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// SetIdpMetadataRequest
@@ -52244,13 +52495,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads the metadata of a Security Assertion Markup Language (SAML) 2.0-based identity provider (IdP).</para>
+        /// <para>Uploads metadata for a SAML 2.0-based identity provider (IdP).</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// SetIdpMetadataRequest
@@ -52267,13 +52513,8 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Uploads the metadata of a Security Assertion Markup Language (SAML) 2.0-based identity provider (IdP).</para>
+        /// <para>Uploads metadata for a SAML 2.0-based identity provider (IdP).</para>
         /// </summary>
-        /// 
-        /// <term><b>Description:</b></term>
-        /// <description>
-        /// <para>You can call this operation only for workspaces of the Active Directory (AD) and convenience account types.</para>
-        /// </description>
         /// 
         /// <param name="request">
         /// SetIdpMetadataRequest
@@ -52730,12 +52971,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops one or more running cloud desktops. After a successful call, the specified cloud desktops enter the Stopped state.</para>
+        /// <para>Stops one or more running cloud computers. After the operation is called, the cloud computers enter the Stopped state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud desktops must be in the Running state.</para>
+        /// <para>The cloud computers must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52797,12 +53038,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops one or more running cloud desktops. After a successful call, the specified cloud desktops enter the Stopped state.</para>
+        /// <para>Stops one or more running cloud computers. After the operation is called, the cloud computers enter the Stopped state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud desktops must be in the Running state.</para>
+        /// <para>The cloud computers must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52864,12 +53105,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops one or more running cloud desktops. After a successful call, the specified cloud desktops enter the Stopped state.</para>
+        /// <para>Stops one or more running cloud computers. After the operation is called, the cloud computers enter the Stopped state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud desktops must be in the Running state.</para>
+        /// <para>The cloud computers must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -52887,12 +53128,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Stops one or more running cloud desktops. After a successful call, the specified cloud desktops enter the Stopped state.</para>
+        /// <para>Stops one or more running cloud computers. After the operation is called, the cloud computers enter the Stopped state.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>The cloud desktops must be in the Running state.</para>
+        /// <para>The cloud computers must be in the Running state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -53374,7 +53615,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a configuration group from resources.</para>
+        /// <para>Unbinds configuration groups from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53424,7 +53665,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a configuration group from resources.</para>
+        /// <para>Unbinds configuration groups from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53474,7 +53715,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a configuration group from resources.</para>
+        /// <para>Unbinds configuration groups from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -53492,7 +53733,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Unbinds a configuration group from resources.</para>
+        /// <para>Unbinds configuration groups from resources.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54350,7 +54591,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the ID of a Cloud Enterprise Network (CEN) instance and the ID of the Alibaba Cloud account to which the instance belongs and checks whether a CIDR block conflict exists between the routes of the instance and the IPv4 CIDR blocks of the associated office network.</para>
+        /// <para>Verifies whether the Cloud Enterprise Network (CEN) instance ID and the associated Alibaba Cloud account ID are correct, and whether CIDR block conflicts exist between the instance routes and the office network IPv4 CIDR block.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54408,7 +54649,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the ID of a Cloud Enterprise Network (CEN) instance and the ID of the Alibaba Cloud account to which the instance belongs and checks whether a CIDR block conflict exists between the routes of the instance and the IPv4 CIDR blocks of the associated office network.</para>
+        /// <para>Verifies whether the Cloud Enterprise Network (CEN) instance ID and the associated Alibaba Cloud account ID are correct, and whether CIDR block conflicts exist between the instance routes and the office network IPv4 CIDR block.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54466,7 +54707,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the ID of a Cloud Enterprise Network (CEN) instance and the ID of the Alibaba Cloud account to which the instance belongs and checks whether a CIDR block conflict exists between the routes of the instance and the IPv4 CIDR blocks of the associated office network.</para>
+        /// <para>Verifies whether the Cloud Enterprise Network (CEN) instance ID and the associated Alibaba Cloud account ID are correct, and whether CIDR block conflicts exist between the instance routes and the office network IPv4 CIDR block.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54484,7 +54725,7 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Verifies the ID of a Cloud Enterprise Network (CEN) instance and the ID of the Alibaba Cloud account to which the instance belongs and checks whether a CIDR block conflict exists between the routes of the instance and the IPv4 CIDR blocks of the associated office network.</para>
+        /// <para>Verifies whether the Cloud Enterprise Network (CEN) instance ID and the associated Alibaba Cloud account ID are correct, and whether CIDR block conflicts exist between the instance routes and the office network IPv4 CIDR block.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -54502,12 +54743,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Wakes up cloud computers.</para>
+        /// <para>Wakes up cloud computers from hibernation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only cloud computers that are in the Hibernated state can be waked up.</para>
+        /// <para>You can wake up only cloud computers that are in the Hibernated state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -54553,12 +54794,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Wakes up cloud computers.</para>
+        /// <para>Wakes up cloud computers from hibernation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only cloud computers that are in the Hibernated state can be waked up.</para>
+        /// <para>You can wake up only cloud computers that are in the Hibernated state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -54604,12 +54845,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Wakes up cloud computers.</para>
+        /// <para>Wakes up cloud computers from hibernation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only cloud computers that are in the Hibernated state can be waked up.</para>
+        /// <para>You can wake up only cloud computers that are in the Hibernated state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -54627,12 +54868,12 @@ namespace AlibabaCloud.SDK.Ecd20200930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Wakes up cloud computers.</para>
+        /// <para>Wakes up cloud computers from hibernation.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>Only cloud computers that are in the Hibernated state can be waked up.</para>
+        /// <para>You can wake up only cloud computers that are in the Hibernated state.</para>
         /// </description>
         /// 
         /// <param name="request">

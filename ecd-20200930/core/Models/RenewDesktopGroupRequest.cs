@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool.</para>
+        /// <para>The ID of the shared cloud computer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The renewal duration. The valid values of this parameter vary based on the <c>PeriodUnit</c> value.</para>
+        /// <para>The renewal duration. Valid values of this parameter are determined by the value of the <c>PeriodUnit</c> parameter.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you set <c>PeriodUnit</c> to <c>Month</c>, the valid values are 1, 2, 3, and 6.</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values are 1, 2, 3, and 6.</para>
         /// </description></item>
-        /// <item><description><para>If you set <c>PeriodUnit</c> to <c>Year</c>, the valid values are 1, 2, 3, 4, and 5.</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values are 1 to 5.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: 1.</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit of the renewal duration specified by the <c>Period</c> parameter.</para>
+        /// <para>The unit of the renewal duration, which is the unit of the <c>Period</c> parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions that are supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,6 +78,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The user ID of the resource ownership in the resale pattern. You do not need to specify this parameter if you are not using the resale pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1422724566551XXX</para>
+        /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }

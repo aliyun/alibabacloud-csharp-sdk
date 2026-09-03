@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyDesktopChargeTypeResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud desktops.</para>
+        /// <para>The cloud desktop IDs. If multiple cloud desktops are created in a single call, multiple cloud desktop IDs are returned.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the order.</para>
+        /// <para>The order ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>123456789</para>
@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The file transfer task ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>task_abc123</para>
+        /// </summary>
         [NameInMap("TaskId")]
         [Validation(Required=false)]
         public string TaskId { get; set; }

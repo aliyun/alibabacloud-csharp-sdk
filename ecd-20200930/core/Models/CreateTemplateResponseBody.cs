@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The template ID returned after the template is created.</para>
+        /// <para>The template ID returned after successful creation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>b-0cc7rx533*****</para>

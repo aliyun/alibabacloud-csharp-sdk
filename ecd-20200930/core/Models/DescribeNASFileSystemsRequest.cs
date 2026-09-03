@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

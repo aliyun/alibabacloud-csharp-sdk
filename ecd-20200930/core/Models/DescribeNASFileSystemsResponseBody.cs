@@ -17,9 +17,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DescribeNASFileSystemsResponseBodyFileSystems> FileSystems { get; set; }
         public class DescribeNASFileSystemsResponseBodyFileSystems : TeaModel {
             /// <summary>
-            /// <remarks>
-            /// <para>This field is not publicly available.</para>
-            /// </remarks>
+            /// <para>Indicates whether operations on user directories (adding users, deleting data) are supported.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>false</para>
             /// </summary>
             [NameInMap("AllowOperateUserDrive")]
             [Validation(Required=false)]
@@ -79,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreateTime { get; set; }
 
             /// <summary>
-            /// <para>The NAS file system description.</para>
+            /// <para>The description of the NAS file system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDescription</para>
@@ -138,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileSystemId { get; set; }
 
             /// <summary>
-            /// <para>The NAS file system name.</para>
+            /// <para>The name of the NAS file system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testNAS</para>
@@ -148,7 +149,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileSystemName { get; set; }
 
             /// <summary>
-            /// <para>The NAS file system status.</para>
+            /// <para>The status of the NAS file system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -198,7 +199,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MountTargetStatus { get; set; }
 
             /// <summary>
-            /// <para>The office network ID.</para>
+            /// <para>The office network ID (deprecated).</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-363353****</para>
@@ -208,7 +209,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The office network name.</para>
+            /// <para>The office network name (deprecated).</para>
             /// 
             /// <b>Example:</b>
             /// <para>test</para>
@@ -260,6 +261,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public bool? ProfileCompatible { get; set; }
 
+            /// <summary>
+            /// <para>The protocol type of the file system. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>NFS: NFS file protocol.</description></item>
+            /// <item><description>SMB: SMB file protocol.</description></item>
+            /// </list>
+            /// 
+            /// <b>Example:</b>
+            /// <para>SMB</para>
+            /// </summary>
             [NameInMap("ProtocolType")]
             [Validation(Required=false)]
             public string ProtocolType { get; set; }
@@ -309,7 +320,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? SupportAcl { get; set; }
 
             /// <summary>
-            /// <para>The zone.</para>
+            /// <para>The zone ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou-f</para>

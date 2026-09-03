@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyNetworkPackageBandwidthRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to enable the automatic payment feature.</para>
+        /// <para>Specifies whether to enable automatic payment.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,14 +20,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The maximum bandwidth of the premium bandwidth plan, in Mbit/s.</para>
+        /// <para>The bandwidth of the premium Internet bandwidth plan. Unit: Mbit/s.    </para>
         /// <list type="bullet">
-        /// <item><description><para>For subscription premium bandwidth, the valid range is 2 to 1000.</para>
-        /// </description></item>
-        /// <item><description><para>For pay-as-you-go premium bandwidth with pay-by-traffic billing, the valid range is 2 to 200.</para>
-        /// </description></item>
-        /// <item><description><para>For pay-as-you-go premium bandwidth with pay-by-bandwidth billing, the valid range is 2 to 1000.</para>
-        /// </description></item>
+        /// <item><description>If the premium bandwidth plan uses the subscription billing method, the valid values are 2 to 1000.</description></item>
+        /// <item><description>If the premium bandwidth plan uses the pay-as-you-go billing method and the metering method is pay-by-data-transfer (PayByTraffic), the valid values are 2 to 200.</description></item>
+        /// <item><description>If the premium bandwidth plan uses the pay-as-you-go billing method and the metering method is pay-by-bandwidth (PayByBandwidth), the valid values are 2 to 1000.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -39,7 +36,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the premium bandwidth plan.</para>
+        /// <para>The ID of the premium Internet bandwidth plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="t2167755.xdita#"></a>operation to query the list of regions supported by Elastic Desktop Service (EDS).</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -70,6 +67,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The user ID of the resource ownership in the reseller pattern. You do not need to specify this parameter if you are not using the reseller pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1422724566551XXX</para>
+        /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }

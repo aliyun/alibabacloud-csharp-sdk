@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeClientEventsRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud computer ID. If you do not specify this parameter, all cloud computers in the region are queried.</para>
+        /// <para>The cloud computer ID. If this parameter is not specified, all cloud computers in the region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-8fupvkhg0aayu****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the cloud computer. If you do not specify this parameter, events of all cloud computers in the region are queried.</para>
+        /// <para>The IP address of the cloud computer. If this parameter is not specified, events of all cloud computers in the region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10.10.<em>.</em></para>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The name of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Finance cloud computer</para>
         /// </summary>
         [NameInMap("DesktopName")]
         [Validation(Required=false)]
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The end time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, the current time is used.</para>
+        /// <para>The end time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If this parameter is not specified, the current time is used.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-31T06:32:31Z</para>
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The logon user information, which is a Resource Access Management (RAM) user ID or AD username. If you do not specify this parameter, events of all users in the region are queried.</para>
+        /// <para>The logon user information, which is a Resource Access Management (RAM) user ID or AD username. If this parameter is not specified, events of all users in the region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28961708130834****</para>
@@ -71,6 +71,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
+        /// <summary>
+        /// <para>The list of end user IDs.</para>
+        /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
@@ -86,16 +89,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EventType { get; set; }
 
         /// <summary>
-        /// <para>The combination of event types to query. You can specify multiple event types. The query results include events of all specified types.</para>
+        /// <para>The combination of event types to query. You can specify multiple event types. The query results include all events of the specified types.</para>
         /// </summary>
         [NameInMap("EventTypes")]
         [Validation(Required=false)]
         public List<string> EventTypes { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to include terminal information in the response.</para>
+        /// </summary>
         [NameInMap("FillHardwareInfo")]
         [Validation(Required=false)]
         public bool? FillHardwareInfo { get; set; }
 
+        /// <summary>
+        /// <para>The language type of the returned information.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>zh-CN</para>
+        /// </summary>
         [NameInMap("Language")]
         [Validation(Required=false)]
         public string Language { get; set; }
@@ -111,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Set this parameter to the value of NextToken returned in the previous API call.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>
@@ -121,7 +133,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office network to which the cloud computer belongs. If you do not specify this parameter, user events in all office networks in the region are queried.</para>
+        /// <para>The ID of the office network to which the cloud computer belongs. If this parameter is not specified, user events in all office networks in the region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-bh77qa8nmjot4****</para>
@@ -134,7 +146,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The name of the office network.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>R&amp;D office network</para>
         /// </summary>
         [NameInMap("OfficeSiteName")]
         [Validation(Required=false)]
@@ -152,7 +164,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The start time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If you do not specify this parameter, events are queried backward from the time specified by <c>EndTime</c>.</para>
+        /// <para>The start time. Specify the time in the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC+0. If this parameter is not specified, events are queried backward from the time specified by <c>EndTime</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2020-11-30T06:32:31Z</para>

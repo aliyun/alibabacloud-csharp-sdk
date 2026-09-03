@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ApplyCoordinationForMonitoringResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of coordination flow data.</para>
+        /// <para>The list of collaboration flow data.</para>
         /// </summary>
         [NameInMap("CoordinateFlowModels")]
         [Validation(Required=false)]
         public List<ApplyCoordinationForMonitoringResponseBodyCoordinateFlowModels> CoordinateFlowModels { get; set; }
         public class ApplyCoordinationForMonitoringResponseBodyCoordinateFlowModels : TeaModel {
             /// <summary>
-            /// <para>The coordination flow ID.</para>
+            /// <para>The collaboration flow ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>co-0sot77uale3****</para>
@@ -27,11 +27,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CoId { get; set; }
 
             /// <summary>
-            /// <para>The current coordination status.
-            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.COORDINATING  ]coordinating
-            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.TERMINATING  ] terminating
-            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.TERMINATED ]terminated
-            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.PENDING ]pending acceptance</para>
+            /// <para>The current collaboration status.
+            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.COORDINATING  ]Collaborating.
+            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.TERMINATING  ]Terminating.
+            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.TERMINATED ]Terminated.
+            /// [_single.resp.200.props.CoordinateFlowModels.items.CoordinateStatus.enum.PENDING ]Pending acceptance.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PENDING</para>

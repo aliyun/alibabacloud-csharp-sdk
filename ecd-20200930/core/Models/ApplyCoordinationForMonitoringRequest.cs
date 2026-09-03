@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ApplyCoordinationForMonitoringRequest : TeaModel {
         /// <summary>
-        /// <para>The access policy during the remote assistance procedure.</para>
+        /// <para>The access policy for the remote assistance procedure.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CoordinatePolicyType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user who initiates the coordination flow. This parameter is not required if the request is initiated by an administrator.</para>
+        /// <para>The ID of the end user who initiates the streaming collaboration. This parameter is not required if the administrator initiates the request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -73,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The username of the current user of the cloud computer.</para>
             /// <remarks>
-            /// <para>This field is required.</para>
+            /// <para>This parameter is required.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceName { get; set; }
 
             /// <summary>
-            /// <para>The properties of the cloud computer.</para>
+            /// <para>The cloud computer properties.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestProperty</para>

@@ -9,6 +9,12 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class UploadImageRequest : TeaModel {
+        /// <summary>
+        /// <para>The boot mode of the image.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>BIOS</para>
+        /// </summary>
         [NameInMap("BootMode")]
         [Validation(Required=false)]
         public string BootMode { get; set; }
@@ -44,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? EnableSecurityCheck { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the image is a GPU image.</para>
+        /// <para>Specifies whether the image is a GPU-type image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -79,11 +85,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <list type="bullet">
         /// <item><description>Auto: Alibaba Cloud detects the source operating system and assigns a license. In automatic mode, the system first checks whether an Alibaba Cloud official license is available for the <c>Platform</c> you specified and assigns it to the imported image. If no such license is available, the system switches to BYOL (Bring Your Own License) mode.</description></item>
         /// <item><description>Aliyun: Uses an Alibaba Cloud official license based on the <c>Platform</c> you specified.</description></item>
-        /// <item><description>BYOL: Uses the license that comes with the source operating system. When you use BYOL, make sure that your license key supports use on Alibaba Cloud.</description></item>
+        /// <item><description>BYOL: Uses the license that comes with the source operating system. When using BYOL, ensure that your license key supports use on Alibaba Cloud.</description></item>
         /// </list>
-        /// <para>Default value: Auto.</para>
+        /// <para>Default value: Auto</para>
         /// <remarks>
-        /// <para>Systems such as Windows 10 cannot be activated through Alibaba Cloud. Set <c>LicenseType</c> to BYOL for custom activation.</para>
+        /// <para>Systems such as Windows 10 cannot be activated through Alibaba Cloud. Set <c>LicenseType</c> to custom activation (BYOL).</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -138,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The system cloud disk size. Unit: GiB.</para>
         /// <remarks>
-        /// <para>The system cloud disk size cannot be smaller than the image file size.</para>
+        /// <para>The system cloud disk size cannot be smaller than the image file.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>

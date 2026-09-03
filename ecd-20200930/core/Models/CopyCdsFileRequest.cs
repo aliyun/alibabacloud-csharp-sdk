@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CopyCdsFileRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to automatically rename the file when a file with the same name exists in the destination folder.</para>
+        /// <para>Specifies whether to automatically rename the file when a file with the same name already exists in the destination folder.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -52,9 +52,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the personal drive (which can be obtained from the <c>UserId</c> response parameter of the <a href="https://help.aliyun.com/document_detail/2357237.html">DescribeCloudDriveUsers</a> operation) or the team space ID (which can be obtained from the <c>GroupId</c> response parameter of the <a href="https://help.aliyun.com/document_detail/609896.html">DescribeCloudDriveGroups</a> operation) at the copy destination.</para>
+        /// <para>The ID of the personal drive (which can be obtained from the UserId response parameter of the <a href="https://help.aliyun.com/document_detail/2357237.html">DescribeCloudDriveUsers</a> operation) or the team space ID (which can be obtained from the GroupId response parameter of the <a href="https://help.aliyun.com/document_detail/609896.html">DescribeCloudDriveGroups</a> operation) at the destination.</para>
         /// <remarks>
-        /// <para>If both <c>FileReceiverId</c> and <c>FileReceiverType</c> are empty, the file is copied to the personal drive where the file currently resides by default.</para>
+        /// <para>If both FileReceiverId and FileReceiverType are empty, the file is copied to the personal drive where the file currently resides by default.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileReceiverId { get; set; }
 
         /// <summary>
-        /// <para>The type of space to which the file belongs.</para>
+        /// <para>The type of the space to which the file belongs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>user</para>
@@ -85,7 +85,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent folder at the copy destination. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the folder. Set this parameter to <c>root</c> if you want to copy the file to the root directory.</para>
+        /// <para>The ID of the parent folder at the destination. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the folder. Set this parameter to <c>root</c> if you want to copy the file or folder to the root directory.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

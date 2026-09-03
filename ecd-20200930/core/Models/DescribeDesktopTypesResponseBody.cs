@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CpuCount { get; set; }
 
             /// <summary>
-            /// <para>The size of the data disk, in GiB.</para>
+            /// <para>The data cloud disk size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150</para>
@@ -36,6 +36,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DataDiskSize { get; set; }
 
+            /// <summary>
+            /// <para>The description of the NAS file system.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>newDescription</para>
+            /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
@@ -51,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopTypeId { get; set; }
 
             /// <summary>
-            /// <para>The availability of the specification. A value of <c>SUFFICIENT</c> indicates that the specification is in stock.</para>
+            /// <para>The specification status. A value of <c>SUFFICIENT</c> indicates that the specification resources are sufficient.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SUFFICIENT</para>
@@ -60,10 +66,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopTypeStatus { get; set; }
 
+            /// <summary>
+            /// <para>The environment ID. This parameter is not publicly available.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>adifa****</para>
+            /// </summary>
             [NameInMap("EnvId")]
             [Validation(Required=false)]
             public string EnvId { get; set; }
 
+            /// <summary>
+            /// <para>The environment type. This parameter is not publicly available.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Private</para>
+            /// </summary>
             [NameInMap("EnvType")]
             [Validation(Required=false)]
             public string EnvType { get; set; }
@@ -79,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? GpuCount { get; set; }
 
             /// <summary>
-            /// <para>The GPU memory size in MiB. This parameter is valid only for GPU-accelerated cloud desktops.</para>
+            /// <para>The GPU memory size. This parameter is meaningful only for GPU-accelerated cloud computers. Unit: MB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -89,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? GpuMemory { get; set; }
 
             /// <summary>
-            /// <para>The GPU memory size.</para>
+            /// <para>The GPU memory.</para>
             /// 
             /// <b>Example:</b>
             /// <para>16 GiB</para>
@@ -99,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GpuSpec { get; set; }
 
             /// <summary>
-            /// <para>The instance type family.</para>
+            /// <para>The instance family.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd.graphics</para>
@@ -109,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string InstanceTypeFamily { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of concurrent sessions that is supported by the cloud desktop specification.</para>
+            /// <para>The number of multi-sessions supported by the current specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>4</para>
@@ -119,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MaxSessionCount { get; set; }
 
             /// <summary>
-            /// <para>The memory size, in MiB.</para>
+            /// <para>The memory size. Unit: MiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>23552</para>
@@ -129,14 +147,21 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string MemorySize { get; set; }
 
             /// <summary>
-            /// <para>The purchase options for the specification.</para>
+            /// <para>The supported desktop type sale categories.</para>
+            /// </summary>
+            [NameInMap("SaleTypes")]
+            [Validation(Required=false)]
+            public List<string> SaleTypes { get; set; }
+
+            /// <summary>
+            /// <para>The list of billing methods for the specification.</para>
             /// </summary>
             [NameInMap("Scopes")]
             [Validation(Required=false)]
             public List<string> Scopes { get; set; }
 
             /// <summary>
-            /// <para>The inventory status.</para>
+            /// <para>The stock status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sufficient</para>
@@ -146,7 +171,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string StockState { get; set; }
 
             /// <summary>
-            /// <para>The size of the system disk, in GiB.</para>
+            /// <para>The system cloud disk size. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>150</para>

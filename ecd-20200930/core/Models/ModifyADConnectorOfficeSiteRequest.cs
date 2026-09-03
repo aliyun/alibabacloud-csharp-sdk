@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyADConnectorOfficeSiteRequest : TeaModel {
         /// <summary>
-        /// <para>The hostname of the domain controller. The hostname must comply with the naming conventions for hostnames in Windows.</para>
+        /// <para>The hostname of the domain controller. The hostname must comply with Windows hostname naming conventions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>beijing-ad01</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string AdHostname { get; set; }
 
         /// <summary>
-        /// <para>The hostname of the secondary domain controller.</para>
+        /// <para>The hostname of the backup domain controller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dc002</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BackupDCHostname { get; set; }
 
         /// <summary>
-        /// <para>The IP address of the DNS server corresponding to the secondary domain controller.</para>
+        /// <para>The DNS address of the backup domain controller.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.2.100</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BackupDns { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses of the DNS servers corresponding to the enterprise ADs. You can specify only one DNS IP address.</para>
+        /// <para>The IP address of the DNS server corresponding to the enterprise AD. Currently, only one IP address can be specified.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.<em>.</em></para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DnsAddress { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the enterprise AD system. You can register each domain name only once.</para>
+        /// <para>The domain name of the enterprise AD. The same domain name can be registered only once.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The password of the domain administrator. The username can be up to 64 characters in length.</para>
+        /// <para>The password of the domain administrator. The password can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testPassword</para>
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The username of the domain administrator. The username can be up to 64 characters in length.</para>
         /// <remarks>
-        /// <para>Specify the value of the sAMAccountName parameter instead of the value of the userPrincipalName parameter as the username.</para>
+        /// <para>Use sAMAccountName for the username. Do not use userPrincipalName.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -84,22 +84,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>Specifies whether to enable multi-factor authentication (MFA).</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -109,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? MfaEnabled { get; set; }
 
         /// <summary>
-        /// <para>The name of the organizational unit (OU) in the AD domain. You can call the <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> operation to obtain OUs.</para>
+        /// <para>The organizational unit (OU) of the AD domain. You can call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com/Domain Controllers</para>
@@ -130,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The office network name. The name must be 2 to 255 characters in length. It can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The office network name. The name must be 2 to 255 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>test</para>
@@ -140,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -151,7 +135,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The IP addresses of the DNS servers corresponding to the enterprise AD subdomains. You can specify only one DNS IP address. If you specify <c>SubDomainName</c> and leave this parameter empty, the value is the same as that of the enterprise AD domain.</para>
+        /// <para>The DNS address of the enterprise AD subdomain. Currently, only one address can be specified. If <c>SubDomainName</c> is specified but this parameter is not, the subdomain DNS defaults to the same value as the parent domain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>127.0.<em>.</em></para>
@@ -161,7 +145,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> SubDomainDnsAddress { get; set; }
 
         /// <summary>
-        /// <para>The name of the subdomain in the enterprise AD domain.</para>
+        /// <para>The domain name of the enterprise AD subdomain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>child.example.com</para>

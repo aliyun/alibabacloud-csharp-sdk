@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUserConnectionRecordsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The connection records.</para>
+        /// <para>The array of user connection records.</para>
         /// </summary>
         [NameInMap("ConnectionRecords")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectDuration { get; set; }
 
             /// <summary>
-            /// <para>The time when the end user disconnected from the cloud computer.</para>
+            /// <para>The connection end time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-02-27T20:03:13Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectEndTime { get; set; }
 
             /// <summary>
-            /// <para>The time when the end user connected to the cloud computer.</para>
+            /// <para>The connection start time.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-01-19T10:12:38Z</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectStartTime { get; set; }
 
             /// <summary>
-            /// <para>The ID of the connection record.</para>
+            /// <para>The connection record ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>528</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectionRecordId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud computer to which the end user connected.</para>
+            /// <para>The ID of the connected cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud computer to which the end user connected.</para>
+            /// <para>The name of the connected cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>demoComputer</para>
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The token that is used to start the next query.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2CC66B0A-BA3B-5D87-BFBE-11AAAD7A8E03</para>

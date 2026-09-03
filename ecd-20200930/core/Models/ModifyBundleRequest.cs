@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyBundleRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud computer template that you want to modify.</para>
+        /// <para>The cloud computer template ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BundleId { get; set; }
 
         /// <summary>
-        /// <para>The name of the new cloud computer template.</para>
+        /// <para>The new cloud computer template name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>newName</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BundleName { get; set; }
 
         /// <summary>
-        /// <para>The description of the new cloud computer template.</para>
+        /// <para>The new cloud computer template description.</para>
         /// 
         /// <b>Example:</b>
         /// <para>newDescription</para>
@@ -43,10 +43,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The new image ID. The new image must meet the following conditions:</para>
         /// <list type="bullet">
-        /// <item><description>The new image must be in the Available state.</description></item>
-        /// <item><description>The operating system of the new image must be the same as that of the original image.</description></item>
-        /// <item><description>The required disk size for the new image cannot be greater than that for the original image.</description></item>
-        /// <item><description>The GPU type of the new image must be the same as that of the original image.</description></item>
+        /// <item><description><para>The new image must be in the Available state.</para>
+        /// </description></item>
+        /// <item><description><para>The new image must have the same operating system as the original image.</para>
+        /// </description></item>
+        /// <item><description><para>The disk size required by the new image cannot be larger than that of the original image.</para>
+        /// </description></item>
+        /// <item><description><para>The GPU type of the new image must be the same as that of the original image.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -57,18 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The OS language. This parameter is available only for system images.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>en-US: American English</para>
-        /// </description></item>
-        /// <item><description><para>zh-HK: Traditional Chinese (Hong Kong)</para>
-        /// </description></item>
-        /// <item><description><para>zh-CN: Simplified Chinese.</para>
-        /// </description></item>
-        /// <item><description><para>ja-JP: Japanese</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The operating system language. Currently, only system images are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -78,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

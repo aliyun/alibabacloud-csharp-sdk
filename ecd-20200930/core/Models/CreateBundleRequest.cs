@@ -30,9 +30,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The instance type of the cloud computers. You can call the <a href="https://help.aliyun.com/document_detail/436974.html">DescribeBundles</a> operation to query cloud computer templates and obtain the instance types supported by the cloud computers from the <c>DesktopType</c> response parameter.</para>
+        /// <para>The cloud computer specifications. You can call <a href="https://help.aliyun.com/document_detail/436974.html">DescribeBundles</a> to query cloud computer templates and obtain the supported cloud computer specifications from the <c>DesktopType</c> parameter in the response.</para>
         /// <remarks>
-        /// <para>If you want the template to use a non-GPU-accelerated image, you can only select a non-GPU-accelerated instance type. If you want the template to use a GPU-accelerated image, you can only select a GPU-accelerated instance type.</para>
+        /// <para>Non-GPU images can only use non-GPU specifications, and GPU images can only use GPU specifications.</para>
         /// </remarks>
         /// <para>This parameter is required.</para>
         /// 
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the image.</para>
+        /// <para>The image ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -55,16 +55,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageId { get; set; }
 
         /// <summary>
-        /// <para>The OS language. This parameter is available only for system images. Valid values:</para>
+        /// <para>The operating system language. Currently, only system images are supported. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>zh-CN: Simplified Chinese</para>
-        /// </description></item>
-        /// <item><description><para>zh-HK: Traditional Chinese (Hong Kong)</para>
-        /// </description></item>
-        /// <item><description><para>en-US: American English</para>
-        /// </description></item>
-        /// <item><description><para>ja-JP: Japanese</para>
-        /// </description></item>
+        /// <item><description>zh-CN: Simplified Chinese.</description></item>
+        /// <item><description>zh-HK: Traditional Chinese (Hong Kong (China)).</description></item>
+        /// <item><description>en-US: English.</description></item>
+        /// <item><description>ja-JP: Japanese.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -75,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Language { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -86,37 +82,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The performance level (PL) of the system disk. When the cloud computer instance type that is specified by the DesktopType parameter is set to a graphical instance type or instance type with a high clock speed, you can set the performance level of the disks. For more information about the differences among disks at different PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">Enhanced SSDs</a>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>PL1</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>PL0</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>PL3</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>PL2</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The performance level of the system cloud disk. When the cloud computer specifications are set to graphics or high frequency, you can configure the cloud disk performance level. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>. Settings: standard SSD and ESSD cloud disks are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -126,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RootDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The size of the system disk. Unit: GiB. The value of this parameter must be consistent with the system disk size supported by the cloud computer instance type. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Overview</a>.</para>
+        /// <para>The system disk size. Unit: GiB. The supported system disk sizes correspond to the specifications. For more information, see <a href="https://help.aliyun.com/document_detail/188609.html">Overview of cloud computer specifications</a>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -137,37 +103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? RootDiskSizeGib { get; set; }
 
         /// <summary>
-        /// <para>The PL of the data disk. When the cloud computer instance type that is specified by the DesktopType parameter is set to a graphical instance type or instance type with a high clock speed, you can set the performance level of the disks. For more information about the differences among disks at different PLs, see <a href="https://help.aliyun.com/document_detail/122389.html">Enhanced SSDs</a>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>PL1</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>PL0</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>PL3</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>PL2</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The performance level of the data cloud disk. When the cloud computer specifications are set to graphics or high frequency, you can configure the cloud disk performance level. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSD cloud disks</a>. Settings: standard SSD and ESSD cloud disks are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL1</para>
@@ -177,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string UserDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The data disk sizes. You can configure only one data disk.</para>
+        /// <para>The list of data disk sizes. Currently, only one data disk can be configured.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

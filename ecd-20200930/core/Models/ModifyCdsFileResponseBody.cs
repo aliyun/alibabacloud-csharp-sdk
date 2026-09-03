@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether data is returned successfully.
+        /// <para>Indicates whether the data is returned successfully.
         /// [_single.resp.200.props.Data.enum. false]Failed to return data.</para>
         /// 
         /// <b>Example:</b>

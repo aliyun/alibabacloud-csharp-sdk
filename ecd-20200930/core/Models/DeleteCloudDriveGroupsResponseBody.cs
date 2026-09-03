@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteCloudDriveGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The result of the operation. A value of success indicates that the operation is successful. If the operation failed, an error message is returned.</para>
+        /// <para>The operation result. The value <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Data { get; set; }
 
         /// <summary>
-        /// <para>The error message returned. This parameter is not returned if the value of Code is <c>success</c>.</para>
+        /// <para>The error message. This parameter is not returned if Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the request was successful. Valid values: true: The request is successful. false: The request fails.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>

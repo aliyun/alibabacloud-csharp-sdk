@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>User logon event</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -130,7 +130,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Finance cloud computer</para>
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EventId { get; set; }
 
             /// <summary>
-            /// <para>The time when the event occurred.</para>
+            /// <para>The time when the event occurred. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-30T06:32:31Z</para>
@@ -210,7 +210,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the office network.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>R&amp;D office network</para>
             /// </summary>
             [NameInMap("OfficeSiteName")]
             [Validation(Required=false)]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The status of the event action. This field typically appears in <c>DESKTOP_DISCONNECT</c> and <c>GET_CONNECTION_TICKET</c> events. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>200: success.</description></item>
-            /// <item><description>A failure message is returned, such as FailedToGetConnectionTicket.</description></item>
+            /// <item><description>A failure message, such as FailedToGetConnectionTicket.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -250,18 +250,39 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string Status { get; set; }
 
+            /// <summary>
+            /// <para>The terminal information.</para>
+            /// </summary>
             [NameInMap("TerminalInfo")]
             [Validation(Required=false)]
             public DescribeClientEventsResponseBodyEventsTerminalInfo TerminalInfo { get; set; }
             public class DescribeClientEventsResponseBodyEventsTerminalInfo : TeaModel {
+                /// <summary>
+                /// <para>The terminal device model.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>wuying_mac_x86_64</para>
+                /// </summary>
                 [NameInMap("Model")]
                 [Validation(Required=false)]
                 public string Model { get; set; }
 
+                /// <summary>
+                /// <para>The terminal type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>Mac</para>
+                /// </summary>
                 [NameInMap("ProductName")]
                 [Validation(Required=false)]
                 public string ProductName { get; set; }
 
+                /// <summary>
+                /// <para>The terminal serial number.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>96c530bc-6095-4014-8bbc-d461b8ac****</para>
+                /// </summary>
                 [NameInMap("SerialNumber")]
                 [Validation(Required=false)]
                 public string SerialNumber { get; set; }
@@ -290,6 +311,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The total number of entries.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>15</para>
+        /// </summary>
         [NameInMap("TotalCount")]
         [Validation(Required=false)]
         public int? TotalCount { get; set; }

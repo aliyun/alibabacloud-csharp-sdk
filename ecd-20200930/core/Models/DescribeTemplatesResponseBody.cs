@@ -26,14 +26,26 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<DescribeTemplatesResponseBodyData> Data { get; set; }
         public class DescribeTemplatesResponseBodyData : TeaModel {
+            /// <summary>
+            /// <para>Indicates whether automatic payment is enabled for subscription orders.</para>
+            /// </summary>
             [NameInMap("AutoPay")]
             [Validation(Required=false)]
             public bool? AutoPay { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether auto-renewal is enabled for the subscription shared cloud computer.</para>
+            /// </summary>
             [NameInMap("AutoRenew")]
             [Validation(Required=false)]
             public bool? AutoRenew { get; set; }
 
+            /// <summary>
+            /// <para>The billing type of the cloud computer.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>PrePaid</para>
+            /// </summary>
             [NameInMap("ChargeType")]
             [Validation(Required=false)]
             public string ChargeType { get; set; }
@@ -81,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The template description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>My template</para>
+            /// <para>MyTemplate</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -98,7 +110,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GmtCreate { get; set; }
 
             /// <summary>
-            /// <para>The last modification time of the template (UTC).</para>
+            /// <para>The update time of the template (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-04-25T05:18:46.000+00:00</para>
@@ -127,10 +139,22 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ImageType { get; set; }
 
+            /// <summary>
+            /// <para>The subscription duration of the subscription shared cloud computer. This parameter takes effect only when ChargeType is set to PrePaid, and is required in that case. The unit is specified by PeriodUnit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("Period")]
             [Validation(Required=false)]
             public int? Period { get; set; }
 
+            /// <summary>
+            /// <para>The unit of the subscription billing duration. Billable methods use this parameter to specify the time unit.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Month</para>
+            /// </summary>
             [NameInMap("PeriodUnit")]
             [Validation(Required=false)]
             public string PeriodUnit { get; set; }
@@ -145,6 +169,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string PolicyGroupId { get; set; }
 
+            /// <summary>
+            /// <para>Indicates whether the cloud computer automatically switches to pay-as-you-go billing after the duration plan is exhausted.</para>
+            /// </summary>
             [NameInMap("PostPaidAfterUsedUp")]
             [Validation(Required=false)]
             public bool? PostPaidAfterUsedUp { get; set; }
@@ -160,14 +187,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ProductType { get; set; }
 
             /// <summary>
-            /// <para>The region-specific configuration parameters.</para>
+            /// <para>The region-related configuration parameters.</para>
             /// </summary>
             [NameInMap("RegionConfigList")]
             [Validation(Required=false)]
             public List<DescribeTemplatesResponseBodyDataRegionConfigList> RegionConfigList { get; set; }
             public class DescribeTemplatesResponseBodyDataRegionConfigList : TeaModel {
                 /// <summary>
-                /// <para>The number of vCPUs included in the cloud computer instance type.</para>
+                /// <para>The number of vCPUs included in the cloud computer specification.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4</para>
@@ -177,7 +204,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? CpuCount { get; set; }
 
                 /// <summary>
-                /// <para>The GPU memory information. This field is displayed only when the instance type is a graphics-accelerated type.</para>
+                /// <para>The GPU memory information. This field is displayed only when the specification is a graphics-accelerated type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>4GiB</para>
@@ -217,7 +244,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string RegionId { get; set; }
 
                 /// <summary>
-                /// <para>The cloud computer instance type ID.</para>
+                /// <para>The cloud computer specification ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>eds.enterprise_office.4c8g</para>
@@ -309,7 +336,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>test</para>
+                /// <para>8vCPUs16GiB</para>
                 /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
@@ -380,7 +407,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The template name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>My template 001</para>
+            /// <para>MyTemplate001</para>
             /// </summary>
             [NameInMap("TemplateName")]
             [Validation(Required=false)]
@@ -406,6 +433,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string TimerGroupId { get; set; }
 
+            /// <summary>
+            /// <para>The per-user usage duration plan.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>120</para>
+            /// </summary>
             [NameInMap("UserDuration")]
             [Validation(Required=false)]
             public string UserDuration { get; set; }
@@ -443,7 +476,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of rows per page.</para>
+        /// <para>The number of entries per page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -463,7 +496,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation was successful.</para>
+        /// <para>Indicates whether the operation is successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

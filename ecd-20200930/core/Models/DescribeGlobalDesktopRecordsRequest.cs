@@ -9,6 +9,14 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeGlobalDesktopRecordsRequest : TeaModel {
+        /// <summary>
+        /// <para>The business channel. Valid values:
+        /// Enterprise: Enterprise Edition.
+        /// Business: Business Edition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enterprise</para>
+        /// </summary>
         [NameInMap("BusinessChannel")]
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
@@ -30,12 +38,15 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopName { get; set; }
 
+        /// <summary>
+        /// <para>The list of cloud desktop statuses to include.</para>
+        /// </summary>
         [NameInMap("DesktopStatusList")]
         [Validation(Required=false)]
         public List<string> DesktopStatusList { get; set; }
 
         /// <summary>
-        /// <para>The cloud desktop specification. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported specification IDs for cloud desktops.</para>
+        /// <para>The cloud desktop specifications. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported specification IDs for cloud desktops.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eds.enterprise_office.2c4g</para>
@@ -67,6 +78,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
+        /// <summary>
+        /// <para>The list of cloud desktop statuses to exclude.</para>
+        /// </summary>
         [NameInMap("ExcludeDesktopStatusList")]
         [Validation(Required=false)]
         public List<string> ExcludeDesktopStatusList { get; set; }
@@ -82,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The sort field. If this parameter is not specified, results are sorted by creation time in descending order. Valid values:</para>
+        /// <para>The sort field. If not specified, results are sorted by creation time in descending order. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>uptime: sorts by cloud desktop uptime.</description></item>
         /// </list>
@@ -95,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderBy { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query. Paging starts from page 1.<br>Default value: 1.</para>
+        /// <para>The page number of the current page when using paging.<br>Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -115,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>Shanghai</description></item>
         /// <item><description>Singapore</description></item>
@@ -194,6 +208,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string SubPayType { get; set; }
 
+        /// <summary>
+        /// <para>The list of usernames.</para>
+        /// </summary>
         [NameInMap("UserNames")]
         [Validation(Required=false)]
         public List<string> UserNames { get; set; }

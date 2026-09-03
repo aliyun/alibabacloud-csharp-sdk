@@ -9,12 +9,20 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListOfficeSiteUsersRequest : TeaModel {
+        /// <summary>
+        /// <remarks>
+        /// <para>This parameter is not publicly available. You can only pass in <c>1</c> or leave it empty.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("AssignedInfo")]
         [Validation(Required=false)]
         public string AssignedInfo { get; set; }
 
         /// <summary>
-        /// <para>The query string for fuzzy matching.</para>
+        /// <para>The fuzzy query character string.</para>
         /// 
         /// <b>Example:</b>
         /// <para><em>jin</em></para>
@@ -23,17 +31,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Filter { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to return only users who are assigned cloud computers.</para>
+        /// </summary>
         [NameInMap("IncludeAssignedUser")]
         [Validation(Required=false)]
         public bool? IncludeAssignedUser { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page for a paged query.    </para>
         /// <list type="bullet">
-        /// <item><description><para>Maximum value: 100.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 10.</para>
-        /// </description></item>
+        /// <item><description>Maximum value: 100.    </description></item>
+        /// <item><description>Default value: 10.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -44,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token for the next page of results. Leave this empty for the first query. For subsequent queries, use the NextToken value from the previous response.</para>
+        /// <para>The pagination token. Leave this parameter empty for the first request or if no more results exist. If more results exist, set this parameter to the NextToken value returned by the previous API call.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -54,7 +63,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The path of the organizational unit (OU) in the AD domain.</para>
+        /// <para>The specified AD domain organizational unit (OU).</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com/Domain Controllers</para>
@@ -64,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OUPath { get; set; }
 
         /// <summary>
-        /// <para>The office network ID. Only office networks that use enterprise AD accounts are supported.</para>
+        /// <para>The office network ID. Only office networks based on enterprise AD accounts are supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -75,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions where WUYING Workspace is available.</para>
+        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,6 +94,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The sorting method.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>asc</para>
+        /// </summary>
         [NameInMap("SortType")]
         [Validation(Required=false)]
         public string SortType { get; set; }

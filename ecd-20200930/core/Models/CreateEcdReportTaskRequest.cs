@@ -9,13 +9,21 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateEcdReportTaskRequest : TeaModel {
+        /// <summary>
+        /// <para>The business channel. Valid values:
+        /// Enterprise: Enterprise Edition.
+        /// Business: Business Edition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enterprise</para>
+        /// </summary>
         [NameInMap("BusinessChannel")]
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
 
         /// <summary>
         /// <para>The list of filter conditions for query results. The filter condition objects have a logical AND (&amp;) relationship.
-        /// Each filter condition contains FilterKey and FilterValues, which represent the filter condition name and specific values.</para>
+        /// Each filter condition contains FilterKey and FilterValues, which specify the filter condition name and its values.</para>
         /// </summary>
         [NameInMap("FilterList")]
         [Validation(Required=false)]
@@ -27,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <item><description>Cloud computer report</description></item>
             /// </ol>
             /// <list type="bullet">
-            /// <item><description>KeyWord: automatic keyword recognition for cloud computers.</description></item>
+            /// <item><description>KeyWord: automatically identifies the cloud computer keyword.</description></item>
             /// <item><description>RegionId: the region ID.</description></item>
             /// <item><description>DesktopId: the cloud computer ID.</description></item>
             /// <item><description>DesktopName: the cloud computer name (fuzzy match).</description></item>
@@ -38,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <item><description>DesktopIP: the cloud computer IP address.</description></item>
             /// <item><description>SubPayType: the billing method.</description></item>
             /// <item><description>EndUserId: the username (fuzzy match).</description></item>
-            /// <item><description>ExpireTime: the expiration time in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</description></item>
+            /// <item><description>ExpireTime: the expiration time, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</description></item>
             /// <item><description>IncludeAssignedUser: specifies whether users are assigned.</description></item>
             /// <item><description>ResourceGroupId: the resource group ID.</description></item>
             /// <item><description>PolicyId: the policy ID.</description></item>
@@ -64,9 +72,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <item><description>ExpireTime</description></item>
             /// <item><description>IncludeAssignedUser</description></item>
             /// </list>
-            /// 
-            /// <b>Example:</b>
-            /// <para>Test cloud desktop name</para>
             /// </summary>
             [NameInMap("FilterValues")]
             [Validation(Required=false)]
@@ -88,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The report file name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test report name</para>
+        /// <para>TestReportName</para>
         /// </summary>
         [NameInMap("ReportFileName")]
         [Validation(Required=false)]

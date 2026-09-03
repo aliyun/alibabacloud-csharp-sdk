@@ -46,6 +46,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public int? Cpu { get; set; }
 
+            /// <summary>
+            /// <para>The creation time of the cloud desktop. The time is in the ISO 8601 standard (UTC).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2020-11-06T08:28Z</para>
+            /// </summary>
             [NameInMap("CreationTime")]
             [Validation(Required=false)]
             public string CreationTime { get; set; }
@@ -202,7 +208,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Platform { get; set; }
 
             /// <summary>
-            /// <para>The protocol type.</para>
+            /// <para>The protocol type. Valid values:</para>
             /// <list type="bullet">
             /// <item><description>HDX</description></item>
             /// <item><description>ASP</description></item>
@@ -226,7 +232,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The enterprise resource group name.</para>
+            /// <para>The enterprise resource group names.</para>
             /// </summary>
             [NameInMap("ResourceGroups")]
             [Validation(Required=false)]
@@ -282,7 +288,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string EndUserId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the session was created.</para>
+                /// <para>The session creation time.
+                /// The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2022-08-31T06:56:45Z</para>
@@ -294,7 +301,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The time when the cloud desktop status changed.</para>
+            /// <para>The UNIX timestamp of the cloud desktop status change. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1760583xxxx</para>

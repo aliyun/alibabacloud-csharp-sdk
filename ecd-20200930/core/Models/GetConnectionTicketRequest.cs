@@ -10,10 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetConnectionTicketRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies a custom user-mode application that is automatically launched after the credential is obtained.</para>
+        /// <para>Specifies a custom user-mode application that is automatically started after the credential is obtained.</para>
         /// <list type="bullet">
-        /// <item><description>appPath: String. The path of the application startup file. Example: <c>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</c>. Use double backslashes (\\) as path separators.</description></item>
-        /// <item><description>appParameter: String. The application startup parameters. Example: <c>&quot;meetingid 000 meetingname aaa&quot;</c>. Separate parameters with spaces.</description></item>
+        /// <item><description>appPath: a value of the String type that specifies the application startup file path, such as <c>&quot;C:\\Program Files (x86)\\000\\000.exe&quot;</c>. Use double backslashes (\\) as path separators.</description></item>
+        /// <item><description>appParameter: a value of the String type that specifies the application startup parameters, such as <c>&quot;meetingid 000 meetingname aaa&quot;</c>. Separate parameters with spaces.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CommandContent { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer for which you want to generate a connection credential. This parameter is required to generate the credential.</para>
+        /// <para>The ID of the cloud computer for which to generate a connection credential. This parameter is required to generate the credential.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -101,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The unique identifier of the client. If you use the Apsara Uni-manager client, you can view this parameter in the <b>About</b> dialog box on the client logon page.</para>
+        /// <para>The unique identifier of the client. If you use the Wuying client, you can view this parameter in the <b>About</b> dialog box on the client logon page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>28c80e90-f71e-4c23-93d6-1225329cf949</para>

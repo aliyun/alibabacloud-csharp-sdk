@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCloudDiskGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the enterprise cloud drive that you created.</para>
+        /// <para>The ID of the enterprise cloud disk that is created.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The group ID.</para>
+        /// <para>The configuration group ID.</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The team space name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test team 1</para>
+        /// <para>TestTeam1</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]

@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The office network name.</para>
+            /// <para>The name of the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestOfficeSite</para>
@@ -206,7 +206,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The end time of the session.</para>
+            /// <para>The end time of the session.
+            /// The time is displayed in UTC in the yyyy-MM-ddTHH:mm:ssZ format.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-28T02:31:43Z</para>
@@ -226,7 +227,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? SessionIdleTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the session.</para>
+            /// <para>The start time of the session.
+            /// The time is displayed in UTC in the ISO 8601 standard format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-01-28T02:31:43Z</para>

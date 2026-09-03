@@ -46,7 +46,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

@@ -10,9 +10,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeTemplatesRequest : TeaModel {
         /// <summary>
-        /// <para>The region filter condition for the template query. </para>
+        /// <para>The region filter condition for template queries.</para>
         /// <remarks>
-        /// <para>If this parameter is specified, region-specific configurations that do not match are excluded from the query results.</para>
+        /// <para>If this parameter is specified, the query results exclude configurations for regions that do not match.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -28,14 +28,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>default</para>
         /// </summary>
         [NameInMap("BizType")]
         [Validation(Required=false)]
         public string BizType { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer image ID. You can obtain the ID from the image management page. System images, custom images, and other image types are supported.</para>
+        /// <para>The cloud computer image ID. You can obtain the ID from the image management page. System images and custom images are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-dnz9xjgbm8*****</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Keyword { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page in a paged query. This parameter is used for paging.</para>
+        /// <para>The page number of the current page in a paged query. Paging starts from page 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -65,7 +65,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of rows per page in a paged query. This parameter is used for paging.</para>
+        /// <para>The maximum number of rows per page in a paged query. Paging is used to return results in batches.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -86,6 +86,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The list of template IDs to query.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>DescribeTemplates</para>
         /// </summary>
         [NameInMap("TemplateIds")]
         [Validation(Required=false)]
@@ -95,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The template name used for the query.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>My cloud desktop template 001</para>
+        /// <para>MyCloudComputerTemplate001</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]

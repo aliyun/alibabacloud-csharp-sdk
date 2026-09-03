@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the subscription cloud desktop.</para>
+        /// <para>The expiration time of the subscription cloud desktop. The time follows the ISO 8601 standard in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-31T15:59Z</para>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The list of tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud desktops for easier searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud desktops</a>.</para>
+        /// <para>The list of tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud desktops for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud desktops</a>.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]

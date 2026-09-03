@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopGroupSessionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results.</para>
+        /// <para>The token for the start of the next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The sessions.</para>
+        /// <para>The list of session data.</para>
         /// </summary>
         [NameInMap("Sessions")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string AccountType { get; set; }
 
             /// <summary>
-            /// <para>The IP address of the client.</para>
+            /// <para>The client IP address.</para>
             /// 
             /// <b>Example:</b>
             /// <para>172.21.XX.XX</para>
@@ -67,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ClientOS { get; set; }
 
             /// <summary>
-            /// <para>The version of the client.</para>
+            /// <para>The client version.</para>
             /// 
             /// <b>Example:</b>
             /// <para>7.8.0</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud computer share.</para>
+            /// <para>The name of the shared cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DemoCCGroup</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupName { get; set; }
 
             /// <summary>
-            /// <para>If the session status is Connected, it indicates the ID of the cloud computer that is currently connected. If the session status is Disconnected, it indicates the ID of the cloud computer that was last connected.</para>
+            /// <para>The cloud computer ID. If the session status is Connected, this value indicates the ID of the currently connected cloud computer. If the session status is Disconnected, this value indicates the ID of the most recently connected cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-g6t1ukbaea****</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DirectoryType { get; set; }
 
             /// <summary>
-            /// <para>The point in time when the end user applies for administrator assistance.</para>
+            /// <para>The point in time when the user requested administrator assistance. This value is a UNIX timestamp. Unit: milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1678794261000</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? EndUserApplyCoordinateTime { get; set; }
 
             /// <summary>
-            /// <para>The user ID of the terminal that connects to the session.</para>
+            /// <para>The ID of the end user connected to the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>
@@ -137,7 +137,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserId { get; set; }
 
             /// <summary>
-            /// <para>The end time of the most recent connection.</para>
+            /// <para>The end time of the most recent connection. Time format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-31 07:56:45</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string LastSessionEndTime { get; set; }
 
             /// <summary>
-            /// <para>The start time of the most recent connection.</para>
+            /// <para>The start time of the most recent connection. Time format: yyyy-MM-dd HH:mm:ss.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-08-31 06:56:45</para>
@@ -157,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string LastSessionStartTime { get; set; }
 
             /// <summary>
-            /// <para>The duration of the most recent session. Unit: seconds.</para>
+            /// <para>The duration of the most recent connection. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -167,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? LatestConnectionTime { get; set; }
 
             /// <summary>
-            /// <para>The office network ID.</para>
+            /// <para>The ID of the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-hangzhou+dir-8904****</para>
@@ -177,7 +177,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The office network name.</para>
+            /// <para>The name of the office network.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DemoOfficeNetwork</para>
@@ -197,7 +197,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The type of the session.</para>
+            /// <para>The session type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -207,7 +207,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? OwnType { get; set; }
 
             /// <summary>
-            /// <para>The protocol type supported by the rule.</para>
+            /// <para>The protocol type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ASP</para>
@@ -227,7 +227,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? SessionIdleTime { get; set; }
 
             /// <summary>
-            /// <para>The state of the session.</para>
+            /// <para>The session connection status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Connected</para>
@@ -237,14 +237,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SessionStatus { get; set; }
 
             /// <summary>
-            /// <para>Terminal Info</para>
+            /// <para>The terminal information.</para>
             /// </summary>
             [NameInMap("TerminalInfo")]
             [Validation(Required=false)]
             public DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo TerminalInfo { get; set; }
             public class DescribeDesktopGroupSessionsResponseBodySessionsTerminalInfo : TeaModel {
                 /// <summary>
-                /// <para>The type of the terminal.</para>
+                /// <para>The terminal device model.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>wuying_mac_x86_64</para>
@@ -264,7 +264,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ProductName { get; set; }
 
                 /// <summary>
-                /// <para>Terminal Serial Number</para>
+                /// <para>The terminal serial number.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>96c530bc-6095-4014-8bbc-d461b8ac****</para>
@@ -274,7 +274,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string SerialNumber { get; set; }
 
                 /// <summary>
-                /// <para>The terminal UUID.</para>
+                /// <para>The UUID of the terminal device.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>EBFDC7773BEBAD418A9F89429652****</para>
@@ -286,7 +286,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The total duration of the sessions. Unit: seconds.</para>
+            /// <para>The total connection duration. Unit: seconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>120</para>
@@ -298,7 +298,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The total number of sessions.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>15</para>

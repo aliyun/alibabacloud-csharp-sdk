@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RebuildDesktopsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The rebuild results.</para>
+        /// <para>The collection of rebuild results.</para>
         /// </summary>
         [NameInMap("RebuildResults")]
         [Validation(Required=false)]
         public List<RebuildDesktopsResponseBodyRebuildResults> RebuildResults { get; set; }
         public class RebuildDesktopsResponseBodyRebuildResults : TeaModel {
             /// <summary>
-            /// <para>The operation result. A value of <c>Success</c> indicates the rebuild was initiated. Otherwise, an error code is returned.</para>
+            /// <para>The rebuild result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
             /// 
             /// <b>Example:</b>
             /// <para>IncorrectDesktopStatus</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Code { get; set; }
 
             /// <summary>
-            /// <para>The desktop ID.</para>
+            /// <para>The cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The error message. This parameter is returned only if the value of <c>Code</c> is not <c>Success</c>.</para>
+            /// <para>The error message. This parameter is not returned when <c>Code</c> is <c>success</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>The current status of the desktop does not support this operation.</para>

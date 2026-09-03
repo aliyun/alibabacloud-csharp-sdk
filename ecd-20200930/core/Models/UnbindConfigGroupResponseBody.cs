@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class UnbindConfigGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>The IDs of the configuration groups.</para>
+        /// <para>The list of unbound configuration group IDs.</para>
         /// </summary>
         [NameInMap("GroupIds")]
         [Validation(Required=false)]
         public List<string> GroupIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AD0FF13D-FC7D-56AD-934F-91C8487*****</para>

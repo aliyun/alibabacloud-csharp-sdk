@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRecordFileResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the screen recording files.</para>
+        /// <para>The details of the recording files.</para>
         /// </summary>
         [NameInMap("RecordFiles")]
         [Validation(Required=false)]
         public List<DescribeRecordFileResponseBodyRecordFiles> RecordFiles { get; set; }
         public class DescribeRecordFileResponseBodyRecordFiles : TeaModel {
             /// <summary>
-            /// <para>The ID of the cloud desktop.</para>
+            /// <para>The Cloud Desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-7yulhw1g1attet7d2</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud desktop.</para>
+            /// <para>The name of the Cloud Desktop.</para>
             /// 
             /// <b>Example:</b>
             /// <para>fvt-ecd</para>
@@ -64,7 +64,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string EventName { get; set; }
 
                 /// <summary>
-                /// <para>The time when the event occurred.</para>
+                /// <para>The time when the event occurred. Unit: seconds.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>60</para>
@@ -86,7 +86,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The name of the screen recording file.</para>
+            /// <para>The name of the file.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Task3</para>
@@ -96,7 +96,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The file size. Unit: bytes.</para>
+            /// <para>The size of the file. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>139</para>
@@ -106,7 +106,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? FileSize { get; set; }
 
             /// <summary>
-            /// <para>The ID of the policy.</para>
+            /// <para>The ID of the control policy.</para>
             /// 
             /// <b>Example:</b>
             /// <para>pg-**</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyId { get; set; }
 
             /// <summary>
-            /// <para>The time when the screen recording ended. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</para>
+            /// <para>The time when the recording ended. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-18T06:02:25Z</para>
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? RecordExpire { get; set; }
 
             /// <summary>
-            /// <para>The time when the screen recording started. The time is in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format and is displayed in UTC.</para>
+            /// <para>The time when the recording started. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-12-18T06:02:25Z</para>
@@ -146,27 +146,23 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RecordStartTime { get; set; }
 
             /// <summary>
-            /// <para>The recording type. Valid values:</para>
+            /// <para>The type of the screen recording file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>alltime</c>: continuous screen recording.</para>
-            /// </description></item>
-            /// <item><description><para><c>period</c>: interval screen recording.</para>
-            /// </description></item>
-            /// <item><description><para><c>event</c>: event-triggered screen recording.</para>
-            /// </description></item>
-            /// <item><description><para><c>session</c>: session-based screen recording.</para>
-            /// </description></item>
+            /// <item><description>alltime: full-time recording.</description></item>
+            /// <item><description>period: interval recording.</description></item>
+            /// <item><description>event: event-based recording.</description></item>
+            /// <item><description>session: session recording.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
-            /// <para>period</para>
+            /// <para>0</para>
             /// </summary>
             [NameInMap("RecordType")]
             [Validation(Required=false)]
             public int? RecordType { get; set; }
 
             /// <summary>
-            /// <para>The ID of the region where the cloud desktop resides.</para>
+            /// <para>The region where the recorded Cloud Desktop is located.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -176,7 +172,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>The ID of the resource group.</para>
+            /// <para>The resource group ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>rg-f3s3dgt8dtb0vlqc8</para>
@@ -186,7 +182,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceGroupId { get; set; }
 
             /// <summary>
-            /// <para>The name of the resource group.</para>
+            /// <para>The resource group name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>resource</para>
@@ -196,12 +192,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The upload status of the screen recording file. Valid values:</para>
+            /// <para>The status of the screen recording file. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>0</c>: uploaded.</para>
-            /// </description></item>
-            /// <item><description><para><c>1</c>: uploading.</para>
-            /// </description></item>
+            /// <item><description>0: uploaded.</description></item>
+            /// <item><description>1: uploading.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -224,7 +218,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of records.</para>
+        /// <para>The total number of entries returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>

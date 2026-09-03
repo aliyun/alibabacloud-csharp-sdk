@@ -10,30 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateRAMDirectoryRequest : TeaModel {
         /// <summary>
-        /// <para>The method in which the cloud computer is connected.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>VPC</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Internet (default)</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Any</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The method allowed for connecting to cloud computers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Internet</para>
@@ -43,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopAccessType { get; set; }
 
         /// <summary>
-        /// <para>The directory name. The name must be 2 to 255 characters in length. It must start with a letter but cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The directory name. The name must be 2 to 255 characters in length and can contain letters and Chinese characters. The name must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), and hyphens (-).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -54,24 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to grant the local administrator permissions to users that are authorized to use cloud computers in the office network.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><!-- -->
-        /// 
-        /// <para>true</para>
-        /// <!-- -->
-        /// 
-        /// <para>(default)</para>
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><!-- -->
-        /// 
-        /// <para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Specifies whether to grant local administrator permissions to users who use cloud computers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -81,23 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? EnableAdminAccess { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable Internet access.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Specifies whether to enable public network access.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -107,7 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? EnableInternetAccess { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -118,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The vSwitch IDs. You can configure only one vSwitch.</para>
+        /// <para>The vSwitch ID. Only one vSwitch can be specified.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("VSwitchId")]

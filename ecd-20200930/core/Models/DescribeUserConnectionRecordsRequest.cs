@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUserConnectionRecordsRequest : TeaModel {
         /// <summary>
-        /// <para>The duration when the cloud desktop is connected, which is the minimum value for condition filtering.</para>
+        /// <para>The minimum value of the connection duration used as a filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectDurationFrom { get; set; }
 
         /// <summary>
-        /// <para>The duration when the cloud desktop is connected, which is the maximum value for condition filtering.</para>
+        /// <para>The maximum value of the connection duration used as a filter condition.</para>
         /// 
         /// <b>Example:</b>
         /// <para>100</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectDurationTo { get; set; }
 
         /// <summary>
-        /// <para>The time when the cloud desktop stops to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The minimum value of the connection end time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1631266200000</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectEndTimeFrom { get; set; }
 
         /// <summary>
-        /// <para>The time when the cloud desktop stops to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The maximum value of the connection end time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1631268000000</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectEndTimeTo { get; set; }
 
         /// <summary>
-        /// <para>The time when the cloud desktop starts to be connected, which is the minimum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The minimum value of the connection start time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1631239200000</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectStartTimeFrom { get; set; }
 
         /// <summary>
-        /// <para>The time when the cloud desktop starts to be connected, which is the maximum value for condition filtering. The value is a UNIX timestamp. Unit: milliseconds.</para>
+        /// <para>The maximum value of the connection start time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1631241000000</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? ConnectStartTimeTo { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer pool.</para>
+        /// <para>The cloud computer pool ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer.</para>
+        /// <para>The cloud computer ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-138dsptkrt00u****</para>
@@ -91,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the authorized user.</para>
+        /// <para>The authorized user ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -102,22 +102,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The type of the user account.</para>
-        /// <para>Valid values:</para>
+        /// <para>The type of user account system. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>SIMPLE: convenience account</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>AD_CONNECTOR: enterprise AD account</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
+        /// <item><description>SIMPLE: convenience account</description></item>
+        /// <item><description>AD_CONNECTOR: enterprise AD account</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,7 +116,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page. Maximum value: 100. Default value: 10.</para>
+        /// <para>The number of entries per page for a paged query.</para>
+        /// <para>Maximum value: 100.</para>
+        /// <para>Default value: 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -138,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. If this parameter is empty, all results are returned.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -148,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

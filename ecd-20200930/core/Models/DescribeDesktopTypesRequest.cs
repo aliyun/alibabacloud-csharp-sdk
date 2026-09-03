@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopTypesRequest : TeaModel {
         /// <summary>
-        /// <para>The scope of the instance types to query. Default value: <c>Public</c>.</para>
+        /// <para>The applicable scope of the specification. Default value: <c>Public</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Public</para>
@@ -19,6 +19,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string AppliedScope { get; set; }
 
+        /// <summary>
+        /// <para>The business channel. Valid values:
+        /// Enterprise: Enterprise Edition.
+        /// Business: Business Edition.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enterprise</para>
+        /// </summary>
         [NameInMap("BusinessChannel")]
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
@@ -34,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? CpuCount { get; set; }
 
         /// <summary>
-        /// <para>The ID of the desktop group to reconfigure. If you specify this parameter, the response returns only the instance types that are compatible with the specified group.</para>
+        /// <para>The ID of the shared cloud computer for which you want to change the specification. If this parameter is specified, the response includes compatibility information between the specification and the shared cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-abcdefg****</para>
@@ -44,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupIdForModify { get; set; }
 
         /// <summary>
-        /// <para>The ID of the WUYING Workspace to reconfigure. If you specify this parameter, the response returns only the instance types that are compatible with the specified workspace.</para>
+        /// <para>The ID of the cloud computer for which you want to change the specification. If this parameter is specified, the response includes compatibility information between the specification and the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -53,14 +61,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopIdForModify { get; set; }
 
+        /// <summary>
+        /// <para>The scenarios of the cloud computer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>office</para>
+        /// </summary>
         [NameInMap("DesktopScenario")]
         [Validation(Required=false)]
         public string DesktopScenario { get; set; }
 
         /// <summary>
-        /// <para>The ID of the instance type.</para>
+        /// <para>The specification ID.</para>
         /// <remarks>
-        /// <para>If you omit both the <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> parameters, the operation returns all available WUYING Workspace instance types.</para>
+        /// <para>If both <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> are left empty, information about all cloud computer specifications is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -71,14 +85,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopTypeId { get; set; }
 
         /// <summary>
-        /// <para>An array of instance type IDs.</para>
+        /// <para>The list of specification IDs.</para>
         /// </summary>
         [NameInMap("DesktopTypeIdList")]
         [Validation(Required=false)]
         public List<string> DesktopTypeIdList { get; set; }
 
         /// <summary>
-        /// <para>The number of vGPUs.</para>
+        /// <para>The number of GPU cores.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -97,14 +111,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string GpuDriverType { get; set; }
 
+        /// <summary>
+        /// <para>The GPU memory size. This parameter is meaningful only for GPU-accelerated cloud computers. Unit: MB.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>2048</para>
+        /// </summary>
         [NameInMap("GpuMemory")]
         [Validation(Required=false)]
         public int? GpuMemory { get; set; }
 
         /// <summary>
-        /// <para>The instance type family.</para>
+        /// <para>The instance family name.</para>
         /// <remarks>
-        /// <para>If you omit both the <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> parameters, the operation returns all available WUYING Workspace instance types.</para>
+        /// <para>If both <c>InstanceTypeFamily</c> and <c>DesktopTypeId</c> are left empty, information about all cloud computer specifications is returned.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -115,7 +135,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InstanceTypeFamily { get; set; }
 
         /// <summary>
-        /// <para>The memory size, in MiB.</para>
+        /// <para>The memory size. Unit: MiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>4096</para>
@@ -124,12 +144,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? MemorySize { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the office network to which the shared cloud computer belongs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou+os-c5cy7q578s8jc****</para>
+        /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The property by which to sort the results. If you omit this parameter, the results are sorted by creation time in descending order.</para>
+        /// <para>The field by which to sort the results. If this parameter is not specified, results are sorted by creation time in descending order.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Memory</para>
@@ -149,7 +175,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions that Elastic Desktop Service supports.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -160,7 +186,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The billing method of the instance types.</para>
+        /// <para>The billing method of the specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>FastBuy</para>
@@ -169,6 +195,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string Scope { get; set; }
 
+        /// <summary>
+        /// <para>The list of applicable scopes.</para>
+        /// </summary>
         [NameInMap("ScopeSet")]
         [Validation(Required=false)]
         public List<string> ScopeSet { get; set; }
@@ -184,7 +213,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SortType { get; set; }
 
         /// <summary>
-        /// <para>Filters for instance types that support at least the specified number of concurrent sessions. This parameter applies only to multi-session instance types.</para>
+        /// <para>The minimum number of multi-sessions supported by the specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -199,7 +228,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>无</para>
+        /// <para>cn-hangzhou-j</para>
         /// </summary>
         [NameInMap("ZoneId")]
         [Validation(Required=false)]

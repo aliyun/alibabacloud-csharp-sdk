@@ -21,6 +21,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The list of cloud computer IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SUCCEED</para>
         /// </summary>
         [NameInMap("DesktopIds")]
         [Validation(Required=false)]
@@ -76,6 +79,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The list of resource types. If empty, all resource types are queried.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public List<string> ResourceTypes { get; set; }
@@ -122,11 +131,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The list of scheduled tasks.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("TimerTypes")]
         [Validation(Required=false)]
         public List<string> TimerTypes { get; set; }
 
+        /// <summary>
+        /// <para>The list of Wuying server IDs.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>FAILED</para>
+        /// </summary>
         [NameInMap("WuyingServerIds")]
         [Validation(Required=false)]
         public List<string> WuyingServerIds { get; set; }

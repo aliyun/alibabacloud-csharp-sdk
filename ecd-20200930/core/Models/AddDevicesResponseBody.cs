@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class AddDevicesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution result. If the request was successful, <c>success</c> is returned. If the request failed, an error message is returned.</para>
+        /// <para>The execution result. The value <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The returned error message. This parameter is not returned if the value of Code is <c>success</c>.</para>
+        /// <para>The error message. This parameter is not returned if Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The parameter is not specified.</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>A87DBB05-653A-5E4B-B72B-5F4A1E07****</para>

@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetDesktopMaintenanceRequest : TeaModel {
         /// <summary>
-        /// <para>A list of cloud computer IDs for which you want to set maintenance mode. A maximum of 100 cloud computer IDs are supported.</para>
+        /// <para>The IDs of the cloud computers for which you want to set the maintenance mode. You can specify up to 100 cloud computer IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopIds")]
@@ -18,12 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopIds { get; set; }
 
         /// <summary>
-        /// <para>Enter or exit cloud computer maintenance mode.</para>
-        /// <para>Enumerated values:</para>
-        /// <list type="bullet">
-        /// <item><description>ENTER: The enters the maintenance mode.</description></item>
-        /// <item><description>EXIT: The exits the maintenance mode.</description></item>
-        /// </list>
+        /// <para>Specifies whether to enter or exit maintenance mode for the cloud computer.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -34,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Mode { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

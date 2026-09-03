@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRecordingsRequest : TeaModel {
         /// <summary>
-        /// <para>The cloud computer ID. If this parameter is not specified, the screen recording files on all cloud computers in the designated region will be queried.</para>
+        /// <para>The cloud computer ID. If you do not specify this parameter, all cloud computers in the region are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-hlh41mk78dugw****</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in the <c>YYYYMMDDhhmmss</c> format. The time must be in UTC+8.</para>
+        /// <para>The end time of the query. Specify the time in UTC+8 in the <c>YYYYMMDDhhmmss</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20230424004441</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <para>Maximum value: 100.</para>
         /// <para>Default value: 10.</para>
         /// 
@@ -42,12 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return a URL.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>true</description></item>
-        /// <item><description>false (default)</description></item>
-        /// </list>
+        /// <para>Specifies whether to return the URL.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -57,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? NeedSignedUrl { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <c>NextToken</c>.</para>
+        /// <para>The pagination token. Set this parameter to the NextToken value returned in the previous call to this operation. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</para>
@@ -77,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -98,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? SignedUrlExpireMinutes { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query. Specify the time in the ISO 8601 standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time must be in UTC+0.</para>
+        /// <para>The end time of the query. Specify the time in the ISO 8601 standard in UTC+0 in the <c>yyyy-mm-ddthh:mm:ssz</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-27T02:30:10Z</para>
@@ -108,7 +103,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string StandardEndTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the ISO 8601 standard in the <c>yyyy-mm-ddthh:mm:ssz</c> format. The time must be in UTC+0.</para>
+        /// <para>The start time of the query. Specify the time in the ISO 8601 standard in UTC+0 in the <c>yyyy-mm-ddthh:mm:ssz</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2025-01-27T02:20:10Z</para>
@@ -118,7 +113,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string StandardStartTime { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query. Specify the time in the <c>YYYYMMDDhhmmss</c> format. The time must be in UTC+8.</para>
+        /// <para>The start time of the query. Specify the time in UTC+8 in the <c>YYYYMMDDhhmmss</c> format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20230424000000</para>

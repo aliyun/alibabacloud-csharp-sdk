@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyTemplateResponseBody : TeaModel {
         /// <summary>
-        /// <para>The execution result. The value <c>success</c> indicates success. Otherwise, an error message is returned.</para>
+        /// <para>The execution result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ResetDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the shared cloud desktop.</para>
+        /// <para>The shared cloud computer ID.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you specify <c>DesktopId</c>, the system ignores <c>DesktopGroupId</c>.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>DesktopId</c> is empty, the system uses <c>DesktopGroupId</c> to retrieve the <c>DesktopId</c> of all cloud desktops in the shared cloud desktop group.</para>
-        /// </description></item>
+        /// <item><description>If DesktopId is specified, DesktopGroupId is ignored.</description></item>
+        /// <item><description>If DesktopId is empty, the system retrieves the DesktopId of all cloud computers within the shared cloud computer based on DesktopGroupId.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -26,14 +24,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>A list of shared cloud desktop group IDs.</para>
+        /// <para>The shared cloud computer IDs.</para>
         /// </summary>
         [NameInMap("DesktopGroupIds")]
         [Validation(Required=false)]
         public List<string> DesktopGroupIds { get; set; }
 
         /// <summary>
-        /// <para>A list of cloud desktop IDs. You can specify 1 to 100 IDs.</para>
+        /// <para>The cloud computer IDs. You can specify 1 to 100 IDs.</para>
         /// </summary>
         [NameInMap("DesktopId")]
         [Validation(Required=false)]
@@ -49,6 +47,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// <para>The timestamp of the last retry. Unit: milliseconds.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1699960800000</para>
+        /// </summary>
         [NameInMap("LastRetryTime")]
         [Validation(Required=false)]
         public long? LastRetryTime { get; set; }
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The billing method.</para>
         /// <remarks>
-        /// <para>This parameter applies only when resetting shared cloud desktops. If you leave it empty, the system resets all cloud desktops in the shared cloud desktop group, regardless of their billing method.</para>
+        /// <para>This parameter takes effect only for resetting shared cloud computers. If this parameter is left empty, all cloud computers of all billing methods within the shared cloud computer are reset.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -67,7 +71,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to list regions that support WUYING Workspace.</para>
+        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -78,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The scope of the reset operation. Set this parameter to reset either the image or the cloud desktop.</para>
+        /// <para>The reset scope. You can configure this parameter to specify whether to reset the image or the cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ALL</para>
@@ -88,7 +92,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResetScope { get; set; }
 
         /// <summary>
-        /// <para>The reset type. This determines whether to reset and which disks to reset.</para>
+        /// <para>The reset type, which determines whether to reset and the scope of cloud disks to reset.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

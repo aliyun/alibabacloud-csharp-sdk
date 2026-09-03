@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCloudDiskGroupsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of cloud drive team spaces.</para>
+        /// <para>The list of cloud disk team spaces.</para>
         /// </summary>
         [NameInMap("CloudDriveGroups")]
         [Validation(Required=false)]
         public List<DescribeCloudDiskGroupsResponseBodyCloudDriveGroups> CloudDriveGroups { get; set; }
         public class DescribeCloudDiskGroupsResponseBodyCloudDriveGroups : TeaModel {
             /// <summary>
-            /// <para>The time when the resource was created.</para>
+            /// <para>The creation time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-11T07:44:21Z</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The team space name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test team 1</para>
+            /// <para>TestTeam1</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total capacity of the cloud drive team space, in bytes.</para>
+            /// <para>The total capacity of the cloud disk team.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5368709120</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalSize { get; set; }
 
             /// <summary>
-            /// <para>The amount of space used, in bytes.</para>
+            /// <para>The used space size. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024000000</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The total number of items.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query. If NextToken is empty, no more results are available.</para>
+        /// <para>The token for the next query. If NextToken is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation succeeded. Valid values: true and false.</para>
+        /// <para>Indicates whether the operation is successful. Valid values: true: The operation is successful. false: The operation failed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

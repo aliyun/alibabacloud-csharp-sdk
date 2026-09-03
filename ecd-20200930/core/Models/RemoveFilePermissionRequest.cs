@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RemoveFilePermissionRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the enterprise drive.</para>
+        /// <para>The enterprise cloud disk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>user01</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</para>
+        /// <para>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team space.</para>
+        /// <para>The team space ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-1fbmvrc7ug5m7****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The users that you want to authorize to use the cloud disk.</para>
+        /// <para>The list of authorized users.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MemberList")]
@@ -80,11 +80,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
                 /// <summary>
                 /// <para>The object type.</para>
-                /// <para>Valid values:</para>
-                /// <list type="bullet">
-                /// <item><description>IT_Group: group.</description></item>
-                /// <item><description>IT_User: user.</description></item>
-                /// </list>
                 /// <para>This parameter is required.</para>
                 /// 
                 /// <b>Example:</b>
@@ -97,23 +92,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>You can set permissions by specifying roles or by customizing operation permissions. This field is used to set permissions by specifying roles. This field is mutually exclusive with <c>ActionList</c>.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>SystemFileEditorWithoutShareLink: the role that has the permissions to edit files but cannot share files.</description></item>
-            /// <item><description>SystemFileUploaderAndDownloaderWithShareLink: the role that has the permissions to upload, download, and share files.</description></item>
-            /// <item><description>SystemFileDownloader: the role that has the permissions to download files.</description></item>
-            /// <item><description>SystemFileEditorWithoutDelete: the role that has the permissions to edit files but cannot delete files.</description></item>
-            /// <item><description>SystemFileOwner: the role that has the permissions to collaborate with others.</description></item>
-            /// <item><description>SystemFileDownloaderWithShareLink: the role that has the permissions to download and share files</description></item>
-            /// <item><description>SystemFileUploaderAndViewer: the role that has the permissions to preview or upload files.</description></item>
-            /// <item><description>SystemFileViewer: the role that has the permissions to preview files.</description></item>
-            /// <item><description>SystemFileEditor: the role that has the permissions to edit files</description></item>
-            /// <item><description>SystemFileUploaderWithShareLink: the role that has the permissions to upload or share files.</description></item>
-            /// <item><description>SystemFileUploader: the role that has the permission to upload files.</description></item>
-            /// <item><description>SystemFileUploaderAndDownloader: the role that has the permissions to upload or download files.</description></item>
-            /// <item><description>SystemFileMetaViewer: the role that has the permissions to view files</description></item>
-            /// </list>
+            /// <para>Two methods are supported for setting permissions: specifying a role or customizing operation permissions. This parameter specifies the role-based permission and is mutually exclusive with <c>ActionList</c>. If both parameters are specified, this parameter takes precedence.</para>
             /// <para>This parameter is required.</para>
             /// 
             /// <b>Example:</b>
@@ -126,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

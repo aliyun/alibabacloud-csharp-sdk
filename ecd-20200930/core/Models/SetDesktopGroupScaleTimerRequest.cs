@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<SetDesktopGroupScaleTimerRequestScaleTimerInfos> ScaleTimerInfos { get; set; }
         public class SetDesktopGroupScaleTimerRequestScaleTimerInfos : TeaModel {
             /// <summary>
-            /// <para>The number of cloud computers to purchase. This is one of the scaling policy parameters. Valid values: 0 to 200.</para>
+            /// <para>The number of cloud computers to purchase, which is one of the scaling policy parameters. Valid values: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The duration for which a session is retained after disconnection. Unit: milliseconds. Valid values: 180000 (3 minutes) to 345600000 (4 days). A value of 0 indicates that the session is always retained.</para>
-            /// <para>When a session is disconnected because the user actively disconnects or because of other unexpected factors, the retention period starts from the time of disconnection. If the user does not reconnect to the session within the retention period, the session is logged off and all unsaved data is destroyed. If the user reconnects within the retention period, the user can still access the original session and the data that existed before the disconnection.</para>
+            /// <para>When a session is disconnected because the user actively disconnects or because of other unexpected factors, the timer starts from the moment of disconnection. If the user does not reconnect to the session within this retention duration, the session is logged off and all unsaved data is destroyed. If the user successfully reconnects within this retention duration, the user can still access the original session and the data that existed before the disconnection.</para>
             /// 
             /// <b>Example:</b>
             /// <para>180000</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? LoadPolicy { get; set; }
 
             /// <summary>
-            /// <para>The maximum number of cloud computers. This is one of the scaling policy parameters. Valid values: 0 to 200.</para>
+            /// <para>The maximum number of cloud computers, which is one of the scaling policy parameters. Valid values: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? MaxResAmount { get; set; }
 
             /// <summary>
-            /// <para>The minimum number of cloud computers. This is one of the scaling policy parameters. Valid values: 0 to 200.</para>
+            /// <para>The minimum number of cloud computers, which is one of the scaling policy parameters. Valid values: 0 to 200.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5</para>

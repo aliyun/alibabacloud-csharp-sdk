@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsRequest : TeaModel {
+        /// <summary>
+        /// <para>The business channel. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enterprise: Enterprise Edition.</description></item>
+        /// <item><description>Business: Business Edition.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enterprise</para>
+        /// </summary>
         [NameInMap("BusinessChannel")]
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
@@ -24,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ChargeType { get; set; }
 
         /// <summary>
-        /// <para>The cloud computer pool ID. If <c>DesktopId</c> is specified, <c>DesktopGroupId</c> is ignored. If <c>DesktopId</c> is empty, the system retrieves the <c>DesktopId</c> of all cloud computers in the cloud computer pool specified by <c>DesktopGroupId</c>.</para>
+        /// <para>The cloud computer pool ID. If <c>DesktopId</c> is specified, <c>DesktopGroupId</c> is ignored. If <c>DesktopId</c> is empty, the system retrieves the IDs of all cloud computers in the cloud computer pool specified by <c>DesktopGroupId</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dg-2i8qxpv6t1a03****</para>
@@ -64,7 +74,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopStatus { get; set; }
 
         /// <summary>
-        /// <para>The list of cloud computer statuses.</para>
+        /// <para>The cloud computer status list.</para>
         /// </summary>
         [NameInMap("DesktopStatusList")]
         [Validation(Required=false)]
@@ -114,7 +124,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> ExcludedEndUserId { get; set; }
 
         /// <summary>
-        /// <para>The expiration time of the subscription cloud computer.</para>
+        /// <para>The expiration time of the subscription cloud computer. The time follows the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2022-12-31T15:59:59Z</para>
@@ -124,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ExpiredTime { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to query enterprise resource group information.</para>
+        /// <para>Specifies whether to query resource group information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -170,6 +180,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> ImageId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to include automatic snapshot policy information in the response.</para>
+        /// </summary>
         [NameInMap("IncludeAutoSnapshotPolicy")]
         [Validation(Required=false)]
         public bool? IncludeAutoSnapshotPolicy { get; set; }
@@ -199,7 +212,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether there are multiple resources.</para>
+        /// <para>Specifies whether multiple resources exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -208,8 +221,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public bool? MultiResource { get; set; }
 
+        [NameInMap("NetworkInterfaceIp")]
+        [Validation(Required=false)]
+        public string NetworkInterfaceIp { get; set; }
+
         /// <summary>
-        /// <para>The pagination token for the next query. If this parameter is empty, no more results exist.</para>
+        /// <para>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -249,14 +266,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? OnlyDesktopGroup { get; set; }
 
         /// <summary>
-        /// <para>The operating system type.</para>
+        /// <para>The operating system types.</para>
         /// </summary>
         [NameInMap("OsTypes")]
         [Validation(Required=false)]
         public List<string> OsTypes { get; set; }
 
         /// <summary>
-        /// <para>The page number of the current page for a paged query.</para>
+        /// <para>The page number of the current page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -266,7 +283,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries per page for a paged query.</para>
+        /// <para>The maximum number of entries per page in a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -294,6 +311,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
+
+        [NameInMap("PublicIp")]
+        [Validation(Required=false)]
+        public string PublicIp { get; set; }
 
         /// <summary>
         /// <para>The Internet bandwidth throttling rule ID.</para>
@@ -327,7 +348,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The enterprise resource group ID.</para>
+        /// <para>The resource group ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>rg-4hsvzbbmqdzu3s****</para>
@@ -357,14 +378,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SubPayType { get; set; }
 
         /// <summary>
-        /// <para>The tags. A tag consists of a key-value pair and is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</para>
+        /// <para>The tags. A tag is a key-value pair that is used to mark resources. You can use tags to group and manage cloud computers for easy searching and batch operations. For more information, see <a href="https://help.aliyun.com/document_detail/203781.html">Use tags to manage cloud computers</a>.</para>
         /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeDesktopsRequestTag> Tag { get; set; }
         public class DescribeDesktopsRequestTag : TeaModel {
             /// <summary>
-            /// <para>The tag key. If you specify <c>Tag</c>, <c>Key</c> is required. The tag key cannot exceed 128 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, cannot contain <c>http://</c> or <c>https://</c>, and cannot consist of only spaces.</para>
+            /// <para>The tag key. If you specify <c>Tag</c>, <c>Key</c> is required. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>, contain <c>http://</c> or <c>https://</c>, or consist of only spaces.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestKey</para>
@@ -374,7 +395,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Key { get; set; }
 
             /// <summary>
-            /// <para>The tag value. The tag value cannot exceed 128 characters in length, cannot start with <c>aliyun</c> or <c>acs:</c>, and cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// <para>The tag value. The tag value can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>, or contain <c>http://</c> or <c>https://</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>TestValue</para>

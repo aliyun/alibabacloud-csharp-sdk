@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeUsersInGroupResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of authorized user information.</para>
+        /// <para>The list of authorized user information.</para>
         /// </summary>
         [NameInMap("EndUsers")]
         [Validation(Required=false)]
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// <para>The ID of the cloud desktop.</para>
+            /// <para>The ID of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud desktop.</para>
+            /// <para>The name of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testName</para>
@@ -56,6 +56,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            /// <summary>
+            /// <para>The new display name of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>Zhang San</para>
+            /// </summary>
             [NameInMap("DisplayNameNew")]
             [Validation(Required=false)]
             public string DisplayNameNew { get; set; }
@@ -101,7 +107,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserPhone { get; set; }
 
             /// <summary>
-            /// <para>The user remarks.</para>
+            /// <para>The remarks of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Note</para>
@@ -111,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserRemark { get; set; }
 
             /// <summary>
-            /// <para>The user account type.</para>
+            /// <para>The type of the user account system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SIMPLE</para>
@@ -121,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUserType { get; set; }
 
             /// <summary>
-            /// <para>Additional information.</para>
+            /// <para>The additional information.</para>
             /// </summary>
             [NameInMap("ExternalInfo")]
             [Validation(Required=false)]
@@ -150,7 +156,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The ID of the virtual cloud desktop assigned to the user.</para>
+            /// <para>The ID of the virtual cloud computer that corresponds to the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ud-i896ze8hazpvl****</para>
@@ -159,12 +165,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string UserDesktopId { get; set; }
 
+            /// <summary>
+            /// <para>The user principal name (UPN).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="mailto:alice@example.com">alice@example.com</a></para>
+            /// </summary>
             [NameInMap("UserPrincipalName")]
             [Validation(Required=false)]
             public string UserPrincipalName { get; set; }
 
             /// <summary>
-            /// <para>A list of user seat information.</para>
+            /// <para>The list of user seat information.</para>
             /// </summary>
             [NameInMap("UserSetPropertiesModels")]
             [Validation(Required=false)]
@@ -201,7 +213,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? PropertyType { get; set; }
 
                 /// <summary>
-                /// <para>An array of property values.</para>
+                /// <para>The array of property values.</para>
                 /// </summary>
                 [NameInMap("PropertyValues")]
                 [Validation(Required=false)]
@@ -254,7 +266,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The token to start the next query.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -264,7 +276,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The total number of authorized users in the cloud desktop group who meet the query conditions and are connected to a cloud desktop.</para>
+        /// <para>The total number of authorized users of the shared cloud computer that match the query conditions and are currently connected to a cloud computer.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -283,16 +295,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RequestId { get; set; }
 
+        /// <summary>
+        /// <para>The name of the user group.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>R&amp;D Team</para>
+        /// </summary>
         [NameInMap("UserGroupName")]
         [Validation(Required=false)]
         public string UserGroupName { get; set; }
 
+        /// <summary>
+        /// <para>The organizational unit path of the user.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>example.com</para>
+        /// </summary>
         [NameInMap("UserOuPath")]
         [Validation(Required=false)]
         public string UserOuPath { get; set; }
 
         /// <summary>
-        /// <para>The total number of authorized users in the cloud desktop group who meet the query conditions.</para>
+        /// <para>The total number of authorized users of the shared cloud computer that match the query conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

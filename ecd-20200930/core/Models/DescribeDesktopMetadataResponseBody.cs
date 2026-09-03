@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopMetadataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of the cloud desktops.</para>
+        /// <para>The cloud desktop details.</para>
         /// </summary>
         [NameInMap("Desktops")]
         [Validation(Required=false)]
         public List<DescribeDesktopMetadataResponseBodyDesktops> Desktops { get; set; }
         public class DescribeDesktopMetadataResponseBodyDesktops : TeaModel {
             /// <summary>
-            /// <para>The agents supported by the current cloud desktop.</para>
+            /// <para>The agents supported by the current cloud computer.</para>
             /// </summary>
             [NameInMap("AgentProviderList")]
             [Validation(Required=false)]
@@ -38,7 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ChargeType { get; set; }
 
             /// <summary>
-            /// <para>The time when the cloud desktop was created.</para>
+            /// <para>The time when the cloud desktop was created. The time is in the ISO 8601 standard (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-06T08:28Z</para>
@@ -48,7 +48,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The shared cloud desktop ID.</para>
+            /// <para>The shared cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-3uiojcc0j4kh7****</para>
@@ -68,7 +68,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The name of the cloud desktop.</para>
+            /// <para>The cloud desktop name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>testDesktopName</para>
@@ -78,16 +78,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The status of the cloud desktop. Valid values:</para>
+            /// <para>The cloud desktop status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description>Stopped</description></item>
-            /// <item><description>Starting</description></item>
-            /// <item><description>Rebuilding</description></item>
-            /// <item><description>Running</description></item>
-            /// <item><description>Stopping</description></item>
-            /// <item><description>Expired</description></item>
-            /// <item><description>Deleted</description></item>
-            /// <item><description>Pending</description></item>
+            /// <item><description>Stopped: stopped.</description></item>
+            /// <item><description>Starting: starting.</description></item>
+            /// <item><description>Rebuilding: rebuilding.</description></item>
+            /// <item><description>Running: running.</description></item>
+            /// <item><description>Stopping: stopping.</description></item>
+            /// <item><description>Expired: expired.</description></item>
+            /// <item><description>Deleted: deleted.</description></item>
+            /// <item><description>Pending: pending.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -108,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// <para>The time when the cloud desktop expires. This value is returned only for cloud desktops that use the subscription billable method.</para>
+            /// <para>The time when the cloud desktop expires. This value is returned only for cloud desktops that use the subscription billable method. The time format follows the ISO 8601 standard (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-12-31T15:59Z</para>
@@ -128,7 +128,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ImageId { get; set; }
 
             /// <summary>
-            /// <para>The local name of the region where the cloud desktop resides.</para>
+            /// <para>The local name of the region to which the cloud desktop belongs.</para>
             /// 
             /// <b>Example:</b>
             /// <para>华东2（上海）</para>
@@ -138,7 +138,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string LocalName { get; set; }
 
             /// <summary>
-            /// <para>The management status of the cloud desktop.</para>
+            /// <para>The management status of the cloud computer.</para>
             /// </summary>
             [NameInMap("ManagementFlags")]
             [Validation(Required=false)]
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ResourceGroupName { get; set; }
 
             /// <summary>
-            /// <para>The time when the cloud desktop was started.</para>
+            /// <para>The time when the cloud desktop was started. The time is in the ISO 8601 standard (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-06T08:31Z</para>

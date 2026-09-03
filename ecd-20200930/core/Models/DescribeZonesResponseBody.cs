@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The information about the zones.</para>
+        /// <para>The collection of zone information.</para>
         /// </summary>
         [NameInMap("Zones")]
         [Validation(Required=false)]

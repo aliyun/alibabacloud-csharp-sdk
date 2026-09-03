@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateRAMDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The RAM directory ID.</para>
+        /// <para>The ID of the RAM-type directory.</para>
         /// 
         /// <b>Example:</b>
         /// <para>dri-uf62w3qzt4aigvlcb****</para>

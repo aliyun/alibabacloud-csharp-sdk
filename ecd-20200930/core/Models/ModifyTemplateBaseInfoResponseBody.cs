@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? HttpStatusCode { get; set; }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned when Code is <c>success</c>.</para>
+        /// <para>The error message. This parameter is not returned if Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

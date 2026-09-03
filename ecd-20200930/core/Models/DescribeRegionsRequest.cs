@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRegionsRequest : TeaModel {
         /// <summary>
-        /// <para>The display name of the region, which varies based on the current language.</para>
+        /// <para>The display language of the business location. Default value: Chinese.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh</para>

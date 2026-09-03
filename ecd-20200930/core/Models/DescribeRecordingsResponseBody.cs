@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRecordingsResponseBody : TeaModel {
         /// <summary>
-        /// <para>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</para>
+        /// <para>The pagination token for the next query. If NextToken is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nbCQ7ar+fECeh1IuWQXi39R5eoJ68zWp99mTAKRRNRhw==</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The screen recording files.</para>
+        /// <para>The collection of cloud computer screen recording information.</para>
         /// </summary>
         [NameInMap("Recordings")]
         [Validation(Required=false)]
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The end time of the recording.</para>
+            /// <para>The end time of the recording. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-10T07:26:06Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndTime { get; set; }
 
             /// <summary>
-            /// <para>The end user IDs.</para>
+            /// <para>The list of end user IDs.</para>
             /// </summary>
             [NameInMap("EndUserIds")]
             [Validation(Required=false)]
@@ -81,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PolicyGroupId { get; set; }
 
             /// <summary>
-            /// <para>The size of the screen recording file. Unit: bytes.</para>
+            /// <para>The size of the recording file. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1742845</para>
@@ -91,16 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? RecordingSize { get; set; }
 
             /// <summary>
-            /// <para>The type of event that triggers the recording.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>byaction_cmd_ft: triggered by copy-paste or file transfer events.</description></item>
-            /// <item><description>period: triggered at scheduled intervals.</description></item>
-            /// <item><description>session: triggered by session lifecycle monitoring.</description></item>
-            /// <item><description>byaction_commands: triggered by copy-paste only.</description></item>
-            /// <item><description>alltime: continuous recording.</description></item>
-            /// <item><description>byaction_file_transfer: triggered by file transfer only.</description></item>
-            /// </list>
+            /// <para>The recording type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alltime</para>
@@ -117,7 +108,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SignedUrl { get; set; }
 
             /// <summary>
-            /// <para>The start time of the recording.</para>
+            /// <para>The start time of the recording. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-04-10T07:26:06Z</para>

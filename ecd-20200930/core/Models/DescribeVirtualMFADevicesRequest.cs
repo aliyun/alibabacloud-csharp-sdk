@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeVirtualMFADevicesRequest : TeaModel {
         /// <summary>
-        /// <para>The list of Active Directory (AD) account usernames.</para>
+        /// <para>The list of AD account usernames.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testuser</para>
@@ -19,6 +19,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public List<string> EndUserId { get; set; }
 
+        /// <summary>
+        /// <para>The fuzzy match query string character.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><em>jin</em></para>
+        /// </summary>
         [NameInMap("Filter")]
         [Validation(Required=false)]
         public string Filter { get; set; }
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. If a response is truncated, use the returned <c>NextToken</c> to retrieve the next page of results.</para>
+        /// <para>The pagination token. Set this parameter to the value of NextToken that was returned from the last call to this operation.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

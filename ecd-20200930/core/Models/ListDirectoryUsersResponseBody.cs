@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ListDirectoryUsersResponseBody : TeaModel {
         /// <summary>
-        /// <para>The token that is used to start the next query. If this parameter is empty, all results have been returned.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -30,14 +30,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>An array that consists of the users in the AD directory. If the AD directory contains only the Administrator and Guest users, an empty \<c>Users\\</c> array is returned.</para>
+        /// <para>The array of usernames in the AD directory. If the AD directory contains only the Administrator and Guest users and no other users, an empty Users array is returned.</para>
         /// </summary>
         [NameInMap("Users")]
         [Validation(Required=false)]
         public List<ListDirectoryUsersResponseBodyUsers> Users { get; set; }
         public class ListDirectoryUsersResponseBodyUsers : TeaModel {
             /// <summary>
-            /// <para>The number of assigned cloud desktops.</para>
+            /// <para>The number of assigned cloud computers.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2</para>
@@ -56,6 +56,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DisplayName { get; set; }
 
+            /// <summary>
+            /// <para>The new display name of the user.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>张三</para>
+            /// </summary>
             [NameInMap("DisplayNameNew")]
             [Validation(Required=false)]
             public string DisplayNameNew { get; set; }
@@ -81,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string EndUser { get; set; }
 
             /// <summary>
-            /// <para>The mobile phone number.</para>
+            /// <para>The phone number.</para>
             /// 
             /// <b>Example:</b>
             /// <para>130********</para>
@@ -90,6 +96,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string Phone { get; set; }
 
+            /// <summary>
+            /// <para>The user principal name (UPN).</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para><a href="mailto:alice@example.com">alice@example.com</a></para>
+            /// </summary>
             [NameInMap("UserPrincipalName")]
             [Validation(Required=false)]
             public string UserPrincipalName { get; set; }

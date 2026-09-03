@@ -9,16 +9,28 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopsInGroupRequest : TeaModel {
+        /// <summary>
+        /// <para>The end time of the custom time range.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>18</para>
+        /// </summary>
         [NameInMap("CustomEndTimePeriod")]
         [Validation(Required=false)]
         public long? CustomEndTimePeriod { get; set; }
 
+        /// <summary>
+        /// <para>The start time of the custom time range.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>8</para>
+        /// </summary>
         [NameInMap("CustomStartTimePeriod")]
         [Validation(Required=false)]
         public long? CustomStartTimePeriod { get; set; }
 
         /// <summary>
-        /// <para>The ID of the desktop group.</para>
+        /// <para>The ID of the shared cloud desktop.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return deleted desktops.</para>
+        /// <para>Specifies whether to ignore the deletion flag.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -39,13 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? IgnoreDeleted { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on a single page.</para>
-        /// <list type="bullet">
-        /// <item><description><para>Maximum value: 100.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 10.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The number of entries per page for a paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
@@ -55,7 +61,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that is used to start the next query. If this parameter is empty, all results are returned.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -75,7 +81,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PayType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

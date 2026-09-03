@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Result { get; set; }
 
         /// <summary>
-        /// <para>The ID of the transfer task.</para>
+        /// <para>The ID of the file transfer task.</para>
         /// 
         /// <b>Example:</b>
         /// <para>trt-msndfksm18fs****</para>

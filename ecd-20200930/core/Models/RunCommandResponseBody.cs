@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RunCommandResponseBody : TeaModel {
         /// <summary>
-        /// <para>The script execution ID. You can use this ID with the <a href="~~DescribeInvocations~~">DescribeInvocations</a> operation to query the script\&quot;s execution status.</para>
+        /// <para>The script execution ID. You can call <a href="~~DescribeInvocations~~">DescribeInvocations</a> and pass in this value to query the script execution status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>t-hz01qgsqj2n****</para>

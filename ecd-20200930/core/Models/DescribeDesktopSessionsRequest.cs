@@ -37,7 +37,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopName { get; set; }
 
         /// <summary>
-        /// <para>The end time of the query.</para>
+        /// <para>The end of the time range to query.
+        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-02-13T02:51:43Z</para>
@@ -66,6 +67,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string EndUserIdFilter { get; set; }
 
+        /// <summary>
+        /// <para>The list of end user IDs.</para>
+        /// </summary>
         [NameInMap("EndUserIds")]
         [Validation(Required=false)]
         public List<string> EndUserIds { get; set; }
@@ -128,6 +132,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The resource group ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>rg-f3s3dgt8dtb0vlqc8</para>
+        /// </summary>
         [NameInMap("ResourceGroupId")]
         [Validation(Required=false)]
         public string ResourceGroupId { get; set; }
@@ -143,7 +153,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SessionStatus { get; set; }
 
         /// <summary>
-        /// <para>The start time of the query.</para>
+        /// <para>The beginning of the time range to query.
+        /// Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2023-01-28T02:31:43Z</para>

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCloudDiskGroupDrivesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of cloud disk team drives.</para>
+        /// <para>The list of cloud disk team spaces.</para>
         /// </summary>
         [NameInMap("CloudDriveGroups")]
         [Validation(Required=false)]
         public List<DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups> CloudDriveGroups { get; set; }
         public class DescribeCloudDiskGroupDrivesResponseBodyCloudDriveGroups : TeaModel {
             /// <summary>
-            /// <para>The time the drive was created.</para>
+            /// <para>The creation time. The time is in the ISO 8601 standard in the UTC format: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-04-11T07:44:21Z</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DirectoryId { get; set; }
 
             /// <summary>
-            /// <para>The drive ID.</para>
+            /// <para>The space ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1234</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DriveId { get; set; }
 
             /// <summary>
-            /// <para>The team drive ID.</para>
+            /// <para>The team space ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cg-e70ga4ixp30ur****</para>
@@ -57,10 +57,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string GroupId { get; set; }
 
             /// <summary>
-            /// <para>The team drive name.</para>
+            /// <para>The team space name.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>Test team 1</para>
+            /// <para>TestTeam1</para>
             /// </summary>
             [NameInMap("GroupName")]
             [Validation(Required=false)]
@@ -77,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OrgId { get; set; }
 
             /// <summary>
-            /// <para>The status of the team drive.</para>
+            /// <para>The team space status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The total capacity of the cloud disk team drive.</para>
+            /// <para>The total capacity of the cloud disk team space.</para>
             /// 
             /// <b>Example:</b>
             /// <para>5368709120</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? TotalSize { get; set; }
 
             /// <summary>
-            /// <para>The used space size, in bytes.</para>
+            /// <para>The used space size. Unit: bytes.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1024000000</para>
@@ -109,7 +109,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The total number of results.</para>
+        /// <para>The total number of entries.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -119,7 +119,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? Count { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the start of the next query. An empty NextToken means no more results.</para>
+        /// <para>The token for the next query. If NextToken is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTA0MjA=</para>
@@ -139,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>Indicates whether the operation succeeded.</para>
+        /// <para>Indicates whether the operation was successful.</para>
         /// 
         /// <b>Example:</b>
         /// <para>True</para>

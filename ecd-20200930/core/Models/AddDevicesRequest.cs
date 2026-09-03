@@ -10,12 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class AddDevicesRequest : TeaModel {
         /// <summary>
-        /// <para>The type of the client.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description>1: hardware client.</description></item>
-        /// <item><description>2: software client.</description></item>
-        /// </list>
+        /// <para>The device type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -26,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? ClientType { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the devices. You can specify up to 200 IDs.</para>
+        /// <para>The list of device IDs. You can specify 1 to 200 device IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DeviceIds")]
@@ -34,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DeviceIds { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>

@@ -9,6 +9,16 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeEcdReportTasksRequest : TeaModel {
+        /// <summary>
+        /// <para>The business channel. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>Enterprise: Enterprise Edition.</description></item>
+        /// <item><description>Business: Business Edition.</description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Enterprise</para>
+        /// </summary>
         [NameInMap("BusinessChannel")]
         [Validation(Required=false)]
         public string BusinessChannel { get; set; }
@@ -27,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The number of entries per page. Maximum value: 200.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>20。</para>
+        /// <para>20</para>
         /// </summary>
         [NameInMap("PageSize")]
         [Validation(Required=false)]

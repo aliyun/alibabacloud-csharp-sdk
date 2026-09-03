@@ -9,24 +9,42 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyTemplateRequest : TeaModel {
+        /// <summary>
+        /// <para>Specifies whether automatic payment is enabled for the subscription order.</para>
+        /// </summary>
         [NameInMap("AutoPay")]
         [Validation(Required=false)]
         public bool? AutoPay { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to enable auto-renewal for the subscription cloud computer.</para>
+        /// </summary>
         [NameInMap("AutoRenew")]
         [Validation(Required=false)]
         public bool? AutoRenew { get; set; }
 
+        /// <summary>
+        /// <para>The billing method of the cloud computer.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PrePaid</para>
+        /// </summary>
         [NameInMap("ChargeType")]
         [Validation(Required=false)]
         public string ChargeType { get; set; }
 
+        /// <summary>
+        /// <para>The system cloud disk performance level.</para>
+        /// </summary>
         [NameInMap("DataDiskList")]
         [Validation(Required=false)]
         public List<ModifyTemplateRequestDataDiskList> DataDiskList { get; set; }
         public class ModifyTemplateRequestDataDiskList : TeaModel {
             /// <summary>
             /// <para>The performance level of the data cloud disk. Default value: <c>AutoPL</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>AutoPL</para>
             /// </summary>
             [NameInMap("PerformanceLevel")]
             [Validation(Required=false)]
@@ -57,7 +75,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The description of the template. The description must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The description must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
         /// <item><description>The description can contain Chinese characters, letters, digits, spaces, and special characters. Line breaks are supported.</description></item>
         /// </list>
         /// 
@@ -69,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer image. You can query the ID on the image management page. System images and custom images are supported.</para>
+        /// <para>The ID of the cloud computer image. You can query the ID on the Image Management page. System images and custom images are supported.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-gx2x1dhsmusr2****</para>
@@ -78,10 +96,39 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string ImageId { get; set; }
 
+        /// <summary>
+        /// <para>The subscription duration of the subscription cloud computer. This parameter takes effect and is required only when <c>ChargeType</c> is set to <c>PrePaid</c>. The unit is specified by <c>PeriodUnit</c>.</para>
+        /// <list type="bullet">
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values:<list type="bullet">
+        /// <item><description>1</description></item>
+        /// <item><description>2</description></item>
+        /// <item><description>3</description></item>
+        /// <item><description>6</description></item>
+        /// </list>
+        /// </description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values:<list type="bullet">
+        /// <item><description>1</description></item>
+        /// <item><description>2</description></item>
+        /// <item><description>3</description></item>
+        /// <item><description>4</description></item>
+        /// <item><description>5</description></item>
+        /// </list>
+        /// </description></item>
+        /// </list>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1</para>
+        /// </summary>
         [NameInMap("Period")]
         [Validation(Required=false)]
         public int? Period { get; set; }
 
+        /// <summary>
+        /// <para>The unit of the subscription duration for the subscription billing method.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Month</para>
+        /// </summary>
         [NameInMap("PeriodUnit")]
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
@@ -96,14 +143,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PolicyGroupId { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether to automatically switch to pay-as-you-go billing after the duration plan is used up.</para>
+        /// </summary>
         [NameInMap("PostPaidAfterUsedUp")]
         [Validation(Required=false)]
         public bool? PostPaidAfterUsedUp { get; set; }
 
         /// <summary>
-        /// <para>The region-specific template configurations. Multiple configurations are supported. The configuration that matches the specific region is used.</para>
+        /// <para>The region-specific template configurations. You can specify multiple configurations. The configuration that matches the specific region is used.</para>
         /// <remarks>
-        /// <para>A maximum of 20 region configurations are supported.</para>
+        /// <para>You can specify configurations for up to 20 regions.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("RegionConfigList")]
@@ -121,7 +171,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteId { get; set; }
 
             /// <summary>
-            /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</para>
+            /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cn-beijing</para>
@@ -161,7 +211,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SubnetId { get; set; }
 
             /// <summary>
-            /// <para>Specifies whether to enable cloud disk encryption.</para>
+            /// <para>Specifies whether to enable disk encryption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -171,7 +221,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnable { get; set; }
 
             /// <summary>
-            /// <para>The ID of the KMS key used when cloud disk encryption is enabled.</para>
+            /// <para>The ID of the KMS key used when disk encryption is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>a7b3c0c8-b3a2-4876-b1cc-116dddc9****</para>
@@ -193,7 +243,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceGroupId { get; set; }
 
         /// <summary>
-        /// <para>The tags of the cloud computer in key-value format. A maximum of 20 tags can be specified.</para>
+        /// <para>The tags of the cloud computer in key-value format. You can specify up to 20 tags.</para>
         /// </summary>
         [NameInMap("ResourceTagList")]
         [Validation(Required=false)]
@@ -221,14 +271,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         }
 
+        /// <summary>
+        /// <para>The site configuration management.</para>
+        /// </summary>
         [NameInMap("SiteConfigList")]
         [Validation(Required=false)]
         public List<ModifyTemplateRequestSiteConfigList> SiteConfigList { get; set; }
         public class ModifyTemplateRequestSiteConfigList : TeaModel {
+            /// <summary>
+            /// <para>The application control policy ID.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>bwr-5a5371e0*******</para>
+            /// </summary>
             [NameInMap("AppRuleId")]
             [Validation(Required=false)]
             public string AppRuleId { get; set; }
 
+            /// <summary>
+            /// <para>The site name.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>mainland</para>
+            /// </summary>
             [NameInMap("SiteId")]
             [Validation(Required=false)]
             public string SiteId { get; set; }
@@ -238,7 +303,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The type of the system cloud disk.</para>
         /// <remarks>
-        /// <para>Only high-frequency and GPU-accelerated cloud computer specifications support ESSD cloud disks.</para>
+        /// <para>Only high frequency and graphics cloud computer specifications support ESSD cloud disks.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -275,13 +340,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The name of the template. The name must meet the following requirements:</para>
         /// <list type="bullet">
-        /// <item><description>The name must be 2 to 126 characters in length and can contain letters and Chinese characters.</description></item>
-        /// <item><description>The name must start with a letter or a Chinese character. The name cannot start with <c>http://</c> or <c>https://</c>.</description></item>
+        /// <item><description>The name must be 2 to 126 characters in length.</description></item>
+        /// <item><description>The name must start with a letter or a Chinese character. It cannot start with <c>http://</c> or <c>https://</c>.</description></item>
         /// <item><description>The name can contain letters, digits, Chinese characters, colons (:), underscores (_), or hyphens (-). Periods (.) are not supported.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>My cloud desktop template 001</para>
+        /// <para>MyCloudComputerTemplate001</para>
         /// </summary>
         [NameInMap("TemplateName")]
         [Validation(Required=false)]
@@ -297,6 +362,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string TimerGroupId { get; set; }
 
+        /// <summary>
+        /// <para>The per-user usage duration plan.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>120</para>
+        /// </summary>
         [NameInMap("UserDuration")]
         [Validation(Required=false)]
         public int? UserDuration { get; set; }

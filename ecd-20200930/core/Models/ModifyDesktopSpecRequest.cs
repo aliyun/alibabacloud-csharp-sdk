@@ -11,6 +11,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ModifyDesktopSpecRequest : TeaModel {
         /// <summary>
         /// <para>Specifies whether to enable automatic payment.</para>
+        /// <para>Default value: true. Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>true: Automatic payment is enabled. Make sure that your Alibaba Cloud account balance is sufficient. Otherwise, abnormal orders may be generated.</description></item>
+        /// <item><description>false: Only an order is generated. Automatic payment is not enabled.</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -20,7 +25,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoPay { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud desktop.</para>
+        /// <para>The cloud computer ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-4543qyik164a4****</para>
@@ -30,11 +35,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The new desktop type. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported desktop types.</para>
+        /// <para>The target instance type. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the instance types supported by cloud computers.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>eds.general.2c4g</para>
+        /// <para>eds.general.2c8g</para>
         /// </summary>
         [NameInMap("DesktopType")]
         [Validation(Required=false)]
@@ -44,14 +49,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The promotion ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>50003308011****</para>
+        /// <para>500033080110596</para>
         /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to obtain a list of regions that Elastic Desktop Service supports.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the most recent region list.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -61,19 +66,25 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The user ID of the resource ownership in the reseller pattern. This parameter is not required in the non-reseller pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1422724566551XXX</para>
+        /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }
 
         /// <summary>
-        /// <para>A list of resource specification templates.</para>
+        /// <para>The resource specification templates.</para>
         /// </summary>
         [NameInMap("ResourceSpecs")]
         [Validation(Required=false)]
         public List<ModifyDesktopSpecRequestResourceSpecs> ResourceSpecs { get; set; }
         public class ModifyDesktopSpecRequestResourceSpecs : TeaModel {
             /// <summary>
-            /// <para>The ID of the cloud desktop.</para>
+            /// <para>The cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-4543qyik164a4****</para>
@@ -83,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The new size of the system disk, in GiB. The value must be a multiple of 10 in the range of 80 to 500.</para>
+            /// <para>The target system cloud disk size. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -93,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? RootDiskSizeGib { get; set; }
 
             /// <summary>
-            /// <para>The new size of the data disk, in GiB. The value must be a multiple of 10 in the range of 20 to 2,040.</para>
+            /// <para>The target data cloud disk size. Valid values: 80 to 500 GiB. The value must be a multiple of 10.</para>
             /// 
             /// <b>Example:</b>
             /// <para>20</para>
@@ -107,7 +118,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The resource type.</para>
         /// <remarks>
-        /// <para>This parameter is required only for cloud desktops that use the subscription billing method.</para>
+        /// <para>This parameter is not required for non-subscription cloud computers.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -118,7 +129,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The new size of the system disk, in GiB. The value must be a multiple of 10 in the range of 80 to 500.</para>
+        /// <para>The system cloud disk size after the change. Unit: GiB. Valid values: 80 to 500. The value must be a multiple of 10.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -128,7 +139,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? RootDiskSizeGib { get; set; }
 
         /// <summary>
-        /// <para>The performance level of the data disk.</para>
+        /// <para>The performance level (PL) of the data cloud disk. Default value: PL0.</para>
+        /// <para>Valid values:</para>
+        /// <list type="bullet">
+        /// <item><description>PL0</description></item>
+        /// <item><description>PL1</description></item>
+        /// <item><description>PL2</description></item>
+        /// <item><description>PL3</description></item>
+        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>PL0</para>
@@ -138,16 +156,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string UserDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The new size of the data disk, in GiB.</para>
+        /// <para>The data cloud disk size after the change. Unit: GiB.</para>
         /// <list type="bullet">
-        /// <item><description><para>For non-graphics-accelerated desktop types, the value must be a multiple of 10 in the range of 20 to 1,020.</para>
-        /// </description></item>
-        /// <item><description><para>For graphics-accelerated desktop types, the value must be a multiple of 10 in the range of 40 to 1,020.</para>
-        /// </description></item>
+        /// <item><description>For non-graphics cloud computers, valid values: 20 to 1020. The value must be a multiple of 10.</description></item>
+        /// <item><description>For graphics cloud computers, valid values: 40 to 1020. The value must be a multiple of 10.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
-        /// <para>40</para>
+        /// <para>100</para>
         /// </summary>
         [NameInMap("UserDiskSizeGib")]
         [Validation(Required=false)]

@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BusinessStatus { get; set; }
 
             /// <summary>
-            /// <para>The creation time.</para>
+            /// <para>The time when the plan was created. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-05-10T02:35:26Z</para>
@@ -59,6 +59,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <item><description>If the plan uses the subscription billing method, the actual expiration time is returned.</description></item>
             /// <item><description>If the plan uses the pay-as-you-go billing method, <c>2099-12-31T15:59:59Z</c> is returned.</description></item>
             /// </list>
+            /// <para>The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2099-12-31T15:59:59Z</para>
@@ -70,13 +71,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <summary>
             /// <para>The billing method of the premium Internet bandwidth plan.</para>
             /// <list type="bullet">
-            /// <item><description>If the parameter <c>PayType</c> is set to <c>PrePaid</c>, valid values:<list type="bullet">
-            /// <item><description>PayByBandwidth: pay-by-bandwidth.</description></item>
+            /// <item><description>If the parameter <c>PayType</c> is set to <c>PrePaid</c>, the valid value is:<list type="bullet">
+            /// <item><description>PayByBandwidth: billing by fixed bandwidth.</description></item>
             /// </list>
             /// </description></item>
-            /// <item><description>If the parameter <c>PayType</c> is set to <c>PostPaid</c>, valid values:<list type="bullet">
-            /// <item><description>PayByTraffic: pay-by-data-transfer.</description></item>
-            /// <item><description>PayByBandwidth: pay-by-bandwidth.</description></item>
+            /// <item><description>If the parameter <c>PayType</c> is set to <c>PostPaid</c>, valid values are:<list type="bullet">
+            /// <item><description>PayByTraffic: billing by data transfer.</description></item>
+            /// <item><description>PayByBandwidth: billing by fixed bandwidth.</description></item>
             /// </list>
             /// </description></item>
             /// </list>
@@ -149,7 +150,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string PayType { get; set; }
 
             /// <summary>
-            /// <para>The effective period of the reserved network bandwidth.</para>
+            /// <para>The effective period of the reserved network bandwidth. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-07-10T00:00:00Z</para>
@@ -178,14 +179,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string ReservationInternetChargeType { get; set; }
 
+            /// <summary>
+            /// <para>The tags.</para>
+            /// </summary>
             [NameInMap("Tags")]
             [Validation(Required=false)]
             public List<DescribeNetworkPackagesResponseBodyNetworkPackagesTags> Tags { get; set; }
             public class DescribeNetworkPackagesResponseBodyNetworkPackagesTags : TeaModel {
+                /// <summary>
+                /// <para>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestKey</para>
+                /// </summary>
                 [NameInMap("Key")]
                 [Validation(Required=false)]
                 public string Key { get; set; }
 
+                /// <summary>
+                /// <para>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>TestValue</para>
+                /// </summary>
                 [NameInMap("Value")]
                 [Validation(Required=false)]
                 public string Value { get; set; }
@@ -195,7 +211,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The token for the next query. If NextToken is empty, no more results exist.</para>
+        /// <para>The pagination token for the next query. If NextToken is empty, no more pages exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>

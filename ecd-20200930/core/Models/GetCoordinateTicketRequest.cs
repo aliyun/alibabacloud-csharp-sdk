@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class GetCoordinateTicketRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the stream collaboration. You can obtain the value of this parameter based on the value of <c>Coid</c> that is returned by the <c>ApplyCoordinationForMonitoring</c> operation.</para>
+        /// <para>The coordination flow ID. This value is the <c>Coid</c> returned by the <a href="~~ApplyCoordinationForMonitoring~~">ApplyCoordinationForMonitoring</a> operation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CoId { get; set; }
 
         /// <summary>
-        /// <para>The name of the convenience user account. If you initiate the request as an administrator, you do not need to specify this parameter.</para>
+        /// <para>The username of the end user. This parameter is not required on the administrator side.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/436773.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer connection task. The first time you initiate the request, you do not need to specify the ID of the cloud computer connection task. If no ticket is returned after you initiate the first request, you must specify the value of taskId that is returned for the first request in the subsequent request.</para>
+        /// <para>The cloud computer connection task ID. This parameter is not required for the first request. If the first request does not return a Ticket, specify the <c>TaskId</c> returned by the first request in subsequent requests.</para>
         /// 
         /// <b>Example:</b>
         /// <para>39cc15e5-6998-4b9f-9b2c-7a4cc3e2****</para>
@@ -52,20 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string TaskId { get; set; }
 
         /// <summary>
-        /// <para>The type of the user.</para>
-        /// <para>Set the value to TENANT_ADMIN.</para>
-        /// <list type="bullet">
-        /// <item><description><para>The value of</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <para>TENANT_ADMIN</para>
-        /// <!-- -->
-        /// 
-        /// <para>specifies an administrator.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The user type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

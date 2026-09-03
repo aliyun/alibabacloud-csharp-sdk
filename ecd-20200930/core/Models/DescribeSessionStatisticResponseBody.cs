@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Count { get; set; }
 
             /// <summary>
-            /// <para>The point in time.</para>
+            /// <para>The time point. UNIX timestamp, in milliseconds.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1690164443508</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The total number of entries returned.</para>
+        /// <para>The total count.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

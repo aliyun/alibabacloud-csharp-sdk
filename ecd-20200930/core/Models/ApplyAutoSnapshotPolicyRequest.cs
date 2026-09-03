@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ApplyAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud computers. You can specify 1 to 20 IDs.</para>
+        /// <para>The cloud computer IDs. You can specify 1 to 20 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the automatic snapshot policy.</para>
+        /// <para>The automatic snapshot policy ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -29,7 +29,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

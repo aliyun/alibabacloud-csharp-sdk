@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SetIdpMetadataResponseBody : TeaModel {
         /// <summary>
-        /// <para>The entity ID obtained after the IdP metadata file is parsed.</para>
+        /// <para>The entityID value obtained after parsing the IdP metadata file.</para>
         /// 
         /// <b>Example:</b>
         /// <para><a href="http://test****.cn/adfs/services/trust">http://test****.cn/adfs/services/trust</a></para>

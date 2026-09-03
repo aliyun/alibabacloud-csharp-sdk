@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The creation result.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>None.</para>
+        /// <para>success</para>
         /// </summary>
         [NameInMap("Message")]
         [Validation(Required=false)]

@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class BatchModifyEntitlementResponseBody : TeaModel {
         /// <summary>
-        /// <para>The collection of assignment results.</para>
+        /// <para>The assignment results.</para>
         /// </summary>
         [NameInMap("Entitlements")]
         [Validation(Required=false)]
         public BatchModifyEntitlementResponseBodyEntitlements Entitlements { get; set; }
         public class BatchModifyEntitlementResponseBodyEntitlements : TeaModel {
             /// <summary>
-            /// <para>The assignment results.</para>
+            /// <para>The assignment result details.</para>
             /// </summary>
             [NameInMap("AssignModels")]
             [Validation(Required=false)]
@@ -34,14 +34,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DesktopId { get; set; }
 
                 /// <summary>
-                /// <para>The user IDs (usernames) authorized for the cloud computer.</para>
+                /// <para>The user IDs (usernames) authorized to use the cloud computer.</para>
                 /// </summary>
                 [NameInMap("EndUserIds")]
                 [Validation(Required=false)]
                 public List<string> EndUserIds { get; set; }
 
                 /// <summary>
-                /// <para>The assignment result of a single cloud computer.</para>
+                /// <para>The assignment result for a single cloud computer.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>FINISHED</para>

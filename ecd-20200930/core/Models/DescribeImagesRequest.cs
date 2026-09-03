@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeImagesRequest : TeaModel {
         /// <summary>
-        /// <para>The instance type of the cloud computer. You can call the <a href="https://help.aliyun.com/document_detail/436816.html">DescribeDesktopTypes</a> operation to obtain the parameter value.</para>
+        /// <para>The cloud desktop specification. You can call <a href="https://help.aliyun.com/document_detail/436816.html">DescribeDesktopTypes</a> to obtain this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd.graphics.xlarge</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopInstanceType { get; set; }
 
         /// <summary>
-        /// <para>The image version.</para>
+        /// <para>The image version information.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0.0.3-R-20220616.133609</para>
@@ -30,23 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FotaVersion { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the images are GPU-accelerated images.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>true</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>false</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>Specifies whether the image is a GPU image.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -56,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? GpuCategory { get; set; }
 
         /// <summary>
-        /// <para>The version of the GPU driver.</para>
+        /// <para>The GPU driver version.</para>
         /// 
         /// <b>Example:</b>
         /// <para>417.22</para>
@@ -66,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GpuDriverVersion { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the images. You can specify one or more image IDs.</para>
+        /// <para>The image ID. You can specify one or more image IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>m-gx2x1dhsmusr2****</para>
@@ -86,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>The state of the image.</para>
+        /// <para>The image status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Available</para>
@@ -96,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageStatus { get; set; }
 
         /// <summary>
-        /// <para>The type of the image.</para>
+        /// <para>The image type.</para>
         /// 
         /// <b>Example:</b>
         /// <para>SYSTEM</para>
@@ -106,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageType { get; set; }
 
         /// <summary>
-        /// <para>The language of the OS.</para>
+        /// <para>The operating system language.</para>
         /// 
         /// <b>Example:</b>
         /// <para>en-US</para>
@@ -116,12 +100,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string LanguageType { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <list type="bullet">
-        /// <item><description><para>Maximum value: 100.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 10.</para>
-        /// </description></item>
+        /// <item><description>Maximum value: 100</description></item>
+        /// <item><description>Default value: 10</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -132,7 +114,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that determines the start point of the next query. If you do not specify this parameter, all results are returned.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that there is no next page.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -142,23 +124,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The type of the operating system of the images. Default value: <c>null</c>.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>Linux</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// </description></item>
-        /// <item><description><para>Windows</para>
-        /// <!-- -->
-        /// 
-        /// <!-- -->
-        /// 
-        /// <!-- --></description></item>
-        /// </list>
+        /// <para>The operating system type. Default value: <c>null</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Windows</para>
@@ -169,13 +135,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
         /// <summary>
         /// <para>The protocol type.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>HDX: High-definition Experience (HDX) protocol</para>
-        /// </description></item>
-        /// <item><description><para>ASP: in-house Adaptive Streaming Protocol (ASP) (recommended)</para>
-        /// </description></item>
-        /// </list>
         /// 
         /// <b>Example:</b>
         /// <para>ASP</para>
@@ -185,7 +144,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

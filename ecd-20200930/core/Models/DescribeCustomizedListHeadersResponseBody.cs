@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The key of the table header.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>system_data_disk</para>
+            /// <para>pay_type</para>
             /// </summary>
             [NameInMap("HeaderKey")]
             [Validation(Required=false)]

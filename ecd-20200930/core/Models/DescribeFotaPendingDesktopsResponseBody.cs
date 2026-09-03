@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The name of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>demo-computer</para>
+            /// <para>TestDesktop</para>
             /// </summary>
             [NameInMap("DesktopName")]
             [Validation(Required=false)]
@@ -62,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>windows</para>
+            /// <para>To be hidden</para>
             /// </summary>
             [NameInMap("FotaProject")]
             [Validation(Required=false)]
@@ -72,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The ID of the office network.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>cn-shanghai+dir-428216****</para>
+            /// <para>cn-hangzhou+dir-815419****</para>
             /// </summary>
             [NameInMap("OfficeSiteId")]
             [Validation(Required=false)]
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The ID of the end user that connects to the cloud computer.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>alice</para>
+                /// <para>end user id</para>
                 /// </summary>
                 [NameInMap("EndUserId")]
                 [Validation(Required=false)]

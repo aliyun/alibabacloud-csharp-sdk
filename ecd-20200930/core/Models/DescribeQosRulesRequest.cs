@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeQosRulesRequest : TeaModel {
         /// <summary>
-        /// <para>The network package ID.</para>
+        /// <para>The premium Internet bandwidth ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NetworkPackageId { get; set; }
 
         /// <summary>
-        /// <para>The QoS rule name.</para>
+        /// <para>The name of the QoS rule.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>Office network QoS rule</para>
         /// </summary>
         [NameInMap("QosRuleName")]
         [Validation(Required=false)]

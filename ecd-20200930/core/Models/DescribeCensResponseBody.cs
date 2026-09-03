@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCensResponseBody : TeaModel {
         /// <summary>
-        /// <para>Details of the CEN instances.</para>
+        /// <para>The details of the CEN instances.</para>
         /// </summary>
         [NameInMap("Cens")]
         [Validation(Required=false)]
         public List<DescribeCensResponseBodyCens> Cens { get; set; }
         public class DescribeCensResponseBodyCens : TeaModel {
             /// <summary>
-            /// <para>The ID of the CEN instance.</para>
+            /// <para>The CEN instance ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cen-3gwy16dojz1m65****</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CenId { get; set; }
 
             /// <summary>
-            /// <para>The time when the CEN instance was created.</para>
+            /// <para>The time when the CEN instance was created. The time is in the ISO 8601 standard (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-06-16T08:46Z</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The description of the CEN instance.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Production environment CEN</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Name { get; set; }
 
             /// <summary>
-            /// <para>The bandwidth plans that are bound to the CEN instance.</para>
+            /// <para>The list of bandwidth packages bound to the CEN instance.</para>
             /// </summary>
             [NameInMap("PackageIds")]
             [Validation(Required=false)]
             public List<DescribeCensResponseBodyCensPackageIds> PackageIds { get; set; }
             public class DescribeCensResponseBodyCensPackageIds : TeaModel {
                 /// <summary>
-                /// <para>The ID of the bandwidth plan that is bound to the CEN instance.</para>
+                /// <para>The ID of the bandwidth package bound to the CEN instance.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>cenbwp-4c2zaavbvh5f42****</para>
@@ -89,11 +89,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The tolerated level of CIDR block conflict.</para>
-            /// <para>Valid value:</para>
-            /// <list type="bullet">
-            /// <item><description>REDUCED: CIDR block conflicts are allowed, but the conflicting CIDR blocks cannot be identical.</description></item>
-            /// </list>
+            /// <para>The level of CIDR block overlap conflicts.</para>
             /// 
             /// <b>Example:</b>
             /// <para>REDUCED</para>
@@ -104,15 +100,6 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 
             /// <summary>
             /// <para>The status of the CEN instance.</para>
-            /// <para>Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description><para>Creating</para>
-            /// </description></item>
-            /// <item><description><para>Active</para>
-            /// </description></item>
-            /// <item><description><para>Deleting</para>
-            /// </description></item>
-            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>Active</para>
@@ -129,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public List<DescribeCensResponseBodyCensTags> Tags { get; set; }
             public class DescribeCensResponseBodyCensTags : TeaModel {
                 /// <summary>
-                /// <para>The key of the tag.</para>
+                /// <para>The tag key.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testKey</para>
@@ -139,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string Key { get; set; }
 
                 /// <summary>
-                /// <para>The value of the tag.</para>
+                /// <para>The tag value.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testValue</para>
@@ -153,7 +140,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The page number.</para>
+        /// <para>The current page number.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>

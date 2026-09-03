@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NetworkPackageId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office network. You can call <a href="https://help.aliyun.com/document_detail/216079.html">DescribeNetworkPackages</a> to obtain the ID of the office network associated with the premium Internet bandwidth plan.</para>
+        /// <para>The ID of the office network. You can call <a href="https://help.aliyun.com/document_detail/216079.html">DescribeNetworkPackages</a> to query the ID of the office network associated with the premium Internet bandwidth plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

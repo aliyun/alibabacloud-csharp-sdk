@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the file system uses a KMS-managed key to encrypt data stored on the file system. Encrypted data does not need to be decrypted during read and write operations.</para>
+        /// <para>Specifies whether to use a Key Management Service (KMS) managed key to encrypt data stored in the file system. Encrypted data does not need to be decrypted during read and write operations.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EncryptType { get; set; }
 
         /// <summary>
-        /// <para>The NAS file system name. The name must meet the following requirements: The name must be 2 to 128 characters in length and can contain letters and Chinese characters. The name must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, underscores (_), or hyphens (-).</para>
+        /// <para>The name of the NAS file system. The name must meet the following requirements: The name must be 2 to 128 characters in length and can contain letters and Chinese characters. The name must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, underscores (_), or hyphens (-).</para>
         /// 
         /// <b>Example:</b>
         /// <para>testNAS</para>
@@ -50,12 +50,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string OfficeSiteId { get; set; }
 
+        /// <summary>
+        /// <para>The protocol type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>ASP</para>
+        /// </summary>
         [NameInMap("ProtocolType")]
         [Validation(Required=false)]
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

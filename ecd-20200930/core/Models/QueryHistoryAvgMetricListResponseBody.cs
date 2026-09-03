@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class QueryHistoryAvgMetricListResponseBody : TeaModel {
         /// <summary>
-        /// <para>The list of average metric data.</para>
+        /// <para>The list of average values of monitoring metrics.</para>
         /// </summary>
         [NameInMap("AvgMetricList")]
         [Validation(Required=false)]
@@ -27,14 +27,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public float? AvgValue { get; set; }
 
             /// <summary>
-            /// <para>The billing method of the desktop. Valid values:</para>
+            /// <para>The billing method of the cloud desktop. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>PostPaid</c>: pay-as-you-go</para>
-            /// </description></item>
-            /// <item><description><para><c>PrePaid</c>: subscription</para>
-            /// </description></item>
+            /// <item><description>PostPaid: Pay-as-you-go.</description></item>
+            /// <item><description>PrePaid: Subscription.</description></item>
             /// </list>
-            /// <para>Default value: <c>PostPaid</c>.</para>
+            /// <para>Default value: PostPaid.</para>
             /// 
             /// <b>Example:</b>
             /// <para>PrePaid</para>
@@ -54,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? Cpu { get; set; }
 
             /// <summary>
-            /// <para>The desktop group ID.</para>
+            /// <para>The cloud desktop pool ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-bogo95eob5avnis9k</para>
@@ -64,7 +62,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para><b>The desktop ID.</b></para>
+            /// <para>The desktop ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-bx9i0nsjd3zmibnzq</para>
@@ -74,7 +72,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para><b>The desktop name.</b></para>
+            /// <para>The desktop name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>C-051</para>
@@ -84,24 +82,16 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopName { get; set; }
 
             /// <summary>
-            /// <para>The status of the desktop. Valid values:</para>
+            /// <para>The cloud desktop status. Valid values:</para>
             /// <list type="bullet">
-            /// <item><description><para><c>Stopped</c>: The desktop is stopped.</para>
-            /// </description></item>
-            /// <item><description><para><c>Starting</c>: The desktop is being started.</para>
-            /// </description></item>
-            /// <item><description><para><c>Rebuilding</c>: The desktop is being rebuilt.</para>
-            /// </description></item>
-            /// <item><description><para><c>Running</c>: The desktop is running.</para>
-            /// </description></item>
-            /// <item><description><para><c>Stopping</c>: The desktop is being stopped.</para>
-            /// </description></item>
-            /// <item><description><para><c>Expired</c>: The desktop has expired.</para>
-            /// </description></item>
-            /// <item><description><para><c>Deleted</c>: The desktop has been deleted.</para>
-            /// </description></item>
-            /// <item><description><para><c>Pending</c>: The desktop is in a pending state.</para>
-            /// </description></item>
+            /// <item><description>Stopped: Stopped.</description></item>
+            /// <item><description>Starting: Starting.</description></item>
+            /// <item><description>Rebuilding: Rebuilding.</description></item>
+            /// <item><description>Running: Running.</description></item>
+            /// <item><description>Stopping: Stopping.</description></item>
+            /// <item><description>Expired: Expired.</description></item>
+            /// <item><description>Deleted: Deleted.</description></item>
+            /// <item><description>Pending: Pending.</description></item>
             /// </list>
             /// 
             /// <b>Example:</b>
@@ -112,7 +102,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// <para>The desktop type.</para>
+            /// <para>The desktop specification.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eds.enterprise_office.8c16g</para>
@@ -122,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// <para>The IDs of the authorized end users.</para>
+            /// <para>The list of authorized users.</para>
             /// </summary>
             [NameInMap("EndUserIds")]
             [Validation(Required=false)]
@@ -149,7 +139,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ManagementFlag { get; set; }
 
             /// <summary>
-            /// <para>The memory size, in MB.</para>
+            /// <para>The memory size.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2048</para>
@@ -159,7 +149,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? Memory { get; set; }
 
             /// <summary>
-            /// <para>Whether the desktop is a multi-user shared desktop.</para>
+            /// <para>Indicates whether the cloud desktop is a multi-resource shared type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>true</para>
@@ -169,7 +159,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? MultiResource { get; set; }
 
             /// <summary>
-            /// <para>The type of the system image.</para>
+            /// <para>The system image type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Winserver2025</para>
@@ -189,14 +179,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
-            /// <para>A list of session details.</para>
+            /// <para>The list of session information.</para>
             /// </summary>
             [NameInMap("Sessions")]
             [Validation(Required=false)]
             public List<QueryHistoryAvgMetricListResponseBodyAvgMetricListSessions> Sessions { get; set; }
             public class QueryHistoryAvgMetricListResponseBodyAvgMetricListSessions : TeaModel {
                 /// <summary>
-                /// <para>The ID of the end user.</para>
+                /// <para>The end user ID.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testUser</para>
@@ -206,7 +196,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string EndUserId { get; set; }
 
                 /// <summary>
-                /// <para>The time when the session was created.</para>
+                /// <para>The time when the session was created. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>2026-04-17T14:51:53Z</para>
@@ -216,7 +206,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string EstablishmentTime { get; set; }
 
                 /// <summary>
-                /// <para>The external username of the end user.</para>
+                /// <para>The external username.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>testUserName</para>
@@ -226,7 +216,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string ExternalUserName { get; set; }
 
                 /// <summary>
-                /// <para>The nickname of the end user.</para>
+                /// <para>The nickname of the user.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>sz-sygc-07-03</para>
@@ -260,7 +250,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The total number of entries.</para>
+        /// <para>The total number of records that meet the conditions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>

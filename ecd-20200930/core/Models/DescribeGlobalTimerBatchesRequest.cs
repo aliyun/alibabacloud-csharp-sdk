@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. An empty value indicates that there are no more results.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -53,12 +53,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The list of resource types.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>cn-hangzhou</para>
+        /// </summary>
         [NameInMap("ResourceTypes")]
         [Validation(Required=false)]
         public List<string> ResourceTypes { get; set; }
 
         /// <summary>
-        /// <para>The region ID used for searching. Filters cloud desktop information for the specified region.</para>
+        /// <para>The region ID used to filter cloud desktop information for a specific region.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou</para>
@@ -68,13 +74,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SearchRegionId { get; set; }
 
         /// <summary>
-        /// <para>The type of task to query. Only scheduled tasks have batch information available.</para>
+        /// <para>The type of the task to query. Only scheduled tasks have batch information.</para>
         /// <list type="bullet">
         /// <item><description>TimerBoot: scheduled startup</description></item>
         /// <item><description>TimerShutdown: scheduled shutdown</description></item>
         /// <item><description>TimerReboot: scheduled restart</description></item>
         /// <item><description>TimerReset: scheduled reset</description></item>
-        /// <item><description>TimerMaintenance: scheduled maintenance</description></item>
+        /// <item><description>TimerMaintenance: scheduled maintenance mode</description></item>
         /// <item><description>TimerHibernate: scheduled hibernation</description></item>
         /// </list>
         /// 

@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The name of the cloud computer.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>demo-computer</para>
+        /// <para>testName</para>
         /// </summary>
         [NameInMap("DesktopName")]
         [Validation(Required=false)]
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the office network. You can call the <a href="https://help.aliyun.com/document_detail/216071.html">DescribeOfficeSites</a> operation to obtain the value of this parameter.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-shanghai+dir-428216****</para>
+        /// <para>cn-hangzhou+dir-363353****</para>
         /// </summary>
         [NameInMap("OfficeSiteId")]
         [Validation(Required=false)]

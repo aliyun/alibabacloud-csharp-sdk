@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeQosRulesResponseBody : TeaModel {
         /// <summary>
-        /// <para>A list of QoS rules.</para>
+        /// <para>The list of QoS rules.</para>
         /// </summary>
         [NameInMap("QosRules")]
         [Validation(Required=false)]
         public List<DescribeQosRulesResponseBodyQosRules> QosRules { get; set; }
         public class DescribeQosRulesResponseBodyQosRules : TeaModel {
             /// <summary>
-            /// <para>The number of associated cloud desktops.</para>
+            /// <para>The number of cloud computers in the pool.</para>
             /// 
             /// <b>Example:</b>
             /// <para>0</para>
@@ -26,12 +26,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             [Validation(Required=false)]
             public string DesktopCount { get; set; }
 
+            /// <summary>
+            /// <para>The number of cloud computer pools associated with the policy.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>1</para>
+            /// </summary>
             [NameInMap("DesktopGroupCount")]
             [Validation(Required=false)]
             public int? DesktopGroupCount { get; set; }
 
             /// <summary>
-            /// <para>The download bandwidth.</para>
+            /// <para>The downstream bandwidth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>
@@ -41,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Download { get; set; }
 
             /// <summary>
-            /// <para>The network package ID.</para>
+            /// <para>The premium Internet bandwidth ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>np-5cjh3sqs1ty3s02xq</para>
@@ -61,17 +67,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string QosRuleId { get; set; }
 
             /// <summary>
-            /// <para>The QoS rule name.</para>
+            /// <para>The name of the QoS rule.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Office network QoS rule</para>
             /// </summary>
             [NameInMap("QosRuleName")]
             [Validation(Required=false)]
             public string QosRuleName { get; set; }
 
             /// <summary>
-            /// <para>The upload bandwidth.</para>
+            /// <para>The upstream bandwidth.</para>
             /// 
             /// <b>Example:</b>
             /// <para>10</para>

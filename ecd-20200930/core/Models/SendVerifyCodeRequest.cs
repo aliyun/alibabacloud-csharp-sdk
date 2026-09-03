@@ -10,15 +10,13 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class SendVerifyCodeRequest : TeaModel {
         /// <summary>
-        /// <para>The information that is required to send the verification code, in JSON format. When you verify the CEN instance of another Alibaba Cloud account, you must provide the ID of the CEN instance and the ID of the Alibaba Cloud account to which the instance belongs.</para>
+        /// <para>The information required to send the verification code, in JSON format. When verifying a CEN instance, provide the CEN instance ID and the Alibaba Cloud account ID to which the CEN instance belongs.</para>
         /// <list type="bullet">
-        /// <item><description><para>CenId: the ID of the CEN instance.</para>
-        /// </description></item>
-        /// <item><description><para>CenOwnerId: the ID of the Alibaba Cloud account to which the CEN instance belongs.</para>
-        /// </description></item>
+        /// <item><description>CenId: the CEN instance ID. </description></item>
+        /// <item><description>CenOwnerId: the Alibaba Cloud account ID to which the CEN instance belongs.</description></item>
         /// </list>
         /// <remarks>
-        /// <para>If you own the CEN instance, skip this parameter. If you do not own the CEN instance, specify the ID of the Alibaba Cloud account that owns the CEN instance.</para>
+        /// <para>If the specified CenId belongs to the current Alibaba Cloud account, this parameter is not required. If the specified CenId belongs to a different Alibaba Cloud account, specify the Alibaba Cloud account ID of the owner.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -29,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ExtraInfo { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -40,11 +38,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The action that you want to perform by using the verification code.</para>
-        /// <para>Valid value:</para>
-        /// <list type="bullet">
-        /// <item><description>eds_cenID_securityverification: Use the verification code to verify the CEN instance.</description></item>
-        /// </list>
+        /// <para>The action associated with the verification code.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

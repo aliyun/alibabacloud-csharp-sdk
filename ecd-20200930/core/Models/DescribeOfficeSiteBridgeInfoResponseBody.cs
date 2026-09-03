@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DefaultUser { get; set; }
 
             /// <summary>
-            /// <para>The deployment time of the virtual bridge.</para>
+            /// <para>The deployment time of the virtual bridge. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-07T02:02:00Z</para>
@@ -97,7 +97,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DeployTime { get; set; }
 
             /// <summary>
-            /// <para>The expiration time of the virtual bridge.</para>
+            /// <para>The expiration time of the virtual bridge. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2026-03-18T00:00:00Z</para>
@@ -147,7 +147,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OfficeSiteName { get; set; }
 
             /// <summary>
-            /// <para>The start time of the virtual bridge.</para>
+            /// <para>The start time of the virtual bridge. The time is in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-11-07T02:02:00Z</para>

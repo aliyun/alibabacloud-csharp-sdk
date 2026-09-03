@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateADConnectorDirectoryResponseBody : TeaModel {
         /// <summary>
-        /// <para>The details of AD connectors.</para>
+        /// <para>The information about AD Connectors.</para>
         /// </summary>
         [NameInMap("AdConnectors")]
         [Validation(Required=false)]
         public List<CreateADConnectorDirectoryResponseBodyAdConnectors> AdConnectors { get; set; }
         public class CreateADConnectorDirectoryResponseBodyAdConnectors : TeaModel {
             /// <summary>
-            /// <para>The connection address.</para>
+            /// <para>The endpoint.</para>
             /// 
             /// <b>Example:</b>
             /// <para>127.0.XX.XX</para>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>3FE99D5E-93A1-493F-B1CB-0ABD4D05BEFF</para>

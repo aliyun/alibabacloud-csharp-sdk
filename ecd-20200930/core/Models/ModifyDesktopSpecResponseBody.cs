@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OrderId { get; set; }
 
         /// <summary>
-        /// <para>A list of order IDs.</para>
+        /// <para>The order IDs.</para>
         /// </summary>
         [NameInMap("OrderIds")]
         [Validation(Required=false)]

@@ -77,7 +77,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Context { get; set; }
 
             /// <summary>
-            /// <para>The time when the record was created.</para>
+            /// <para>The time when the record was created.
+            /// The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2023-08-03T08:27:29Z</para>
@@ -97,7 +98,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The cloud computer name.</para>
+            /// <para>The name of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DesktopName</para>
@@ -117,7 +118,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DisplayResultName { get; set; }
 
             /// <summary>
-            /// <para>The time when the task ended.</para>
+            /// <para>The time when the task ended.
+            /// The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2025-01-21T02:00:45Z</para>
@@ -137,6 +139,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string RegionId { get; set; }
 
             /// <summary>
+            /// <para>The ID of the resource parent.</para>
+            /// 
             /// <b>Example:</b>
             /// <para>p-xxx</para>
             /// </summary>
@@ -165,7 +169,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string TimerGroupId { get; set; }
 
             /// <summary>
-            /// <para>The timer record ID.</para>
+            /// <para>The ID of the scheduled record.</para>
             /// 
             /// <b>Example:</b>
             /// <para>t-xxx</para>

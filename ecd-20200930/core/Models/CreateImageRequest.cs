@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateImageRequest : TeaModel {
         /// <summary>
-        /// <para>Specify whether to clear user personal data. If set to <c>true</c>, the image clears all folders under <c>C:\\Users</c>, except <c>Administrator</c> and <c>Public</c>.</para>
+        /// <para>Specifies whether to clear personal user data. If this parameter is set to <c>true</c>, the created image clears data in all directories under <c>C:\\Users</c> except the <c>Administrator</c> and <c>Public</c> directories.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -19,12 +19,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public bool? AutoCleanUserdata { get; set; }
 
+        /// <summary>
+        /// <para>The list of data cloud disk snapshot IDs. To include data cloud disks when creating an image, specify the corresponding data cloud disk snapshot IDs. A maximum of 100 IDs are supported.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>[&quot;s-bp67acfmxazb4ph****&quot;, &quot;s-bp67acfmxazb5qh****&quot;]</para>
+        /// </summary>
         [NameInMap("DataSnapshotIds")]
         [Validation(Required=false)]
         public List<string> DataSnapshotIds { get; set; }
 
         /// <summary>
-        /// <para>The description of the image. The description must be 2 to 256 characters in length. It cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The description of the image. The description must be 2 to 256 characters in length and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>This is description.</para>
@@ -34,7 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The ID of the cloud computer.</para>
+        /// <para>The cloud computer ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-7w78ozhjcwa3u****</para>
@@ -54,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The name of the image. The name must be 2 to 128 characters in length. It must start with a letter or Chinese character. It cannot start with <c>http://</c> or <c>https://</c>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</para>
+        /// <para>The image name. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testImageName</para>
@@ -64,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageName { get; set; }
 
         /// <summary>
-        /// <para>This parameter is not available for use.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>deprecated</para>
@@ -74,7 +80,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ImageResourceType { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to view the list of regions that support WUYING Workspace.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -85,7 +91,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the snapshot.</para>
+        /// <para>The snapshot ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>s-2zefuwk8l6ytcgd3bf4o</para>
@@ -95,7 +101,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string SnapshotId { get; set; }
 
         /// <summary>
-        /// <para>A list of snapshot IDs.</para>
+        /// <para>The list of snapshot IDs.</para>
         /// </summary>
         [NameInMap("SnapshotIds")]
         [Validation(Required=false)]

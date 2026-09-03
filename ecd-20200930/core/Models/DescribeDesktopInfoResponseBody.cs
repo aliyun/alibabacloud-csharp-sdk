@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeDesktopInfoResponseBody : TeaModel {
         /// <summary>
-        /// <para>Basic desktop information.</para>
+        /// <para>The basic information of cloud computers.</para>
         /// </summary>
         [NameInMap("Desktops")]
         [Validation(Required=false)]
         public List<DescribeDesktopInfoResponseBodyDesktops> Desktops { get; set; }
         public class DescribeDesktopInfoResponseBodyDesktops : TeaModel {
             /// <summary>
-            /// <para>User connection status.</para>
+            /// <para>The connection status of the user.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Disconnected</para>
@@ -27,7 +27,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ConnectionStatus { get; set; }
 
             /// <summary>
-            /// <para>Desktop image version number.</para>
+            /// <para>The image version number of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.4.0-R-***</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CurrentAppVersion { get; set; }
 
             /// <summary>
-            /// <para>Desktop group ID.</para>
+            /// <para>The cloud computer pool ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>dg-3uiojcc0j4kh7****</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopGroupId { get; set; }
 
             /// <summary>
-            /// <para>Desktop ID.</para>
+            /// <para>The cloud computer ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-gx2x1dhsmucyy****</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The status of the cloud desktop.</para>
+            /// <para>The status of the cloud computer.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Running</para>
@@ -67,14 +67,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopStatus { get; set; }
 
             /// <summary>
-            /// <para>The management flag.</para>
+            /// <para>The management flags.</para>
             /// </summary>
             [NameInMap("ManagementFlag")]
             [Validation(Required=false)]
             public List<string> ManagementFlag { get; set; }
 
             /// <summary>
-            /// <para>Upgrade package size, in KB.</para>
+            /// <para>The size of the upgrade package, in KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>568533470</para>
@@ -84,7 +84,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public long? NewAppSize { get; set; }
 
             /// <summary>
-            /// <para>Desktop upgradable image version number.</para>
+            /// <para>The image version number to which the cloud computer can be upgraded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>1.6.0-R-***</para>
@@ -94,7 +94,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string NewAppVersion { get; set; }
 
             /// <summary>
-            /// <para>Description of the upgradable image version.</para>
+            /// <para>The description of the image version to which the cloud computer can be upgraded.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Test upgrade package 03-07</para>
@@ -104,7 +104,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ReleaseNote { get; set; }
 
             /// <summary>
-            /// <para>Desktop first startup time.</para>
+            /// <para>The time when the cloud computer was first started. The time is in the ISO 8601 standard (UTC).</para>
             /// 
             /// <b>Example:</b>
             /// <para>2020-11-06T08:31Z</para>
@@ -116,7 +116,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>Request ID.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>062B1439-709A-580E-85DF-CE97A1560565</para>

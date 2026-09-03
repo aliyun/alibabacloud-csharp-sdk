@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteNetworkPackagesRequest : TeaModel {
         /// <summary>
-        /// <para>List of public network premium bandwidth IDs. You can specify one or more IDs.</para>
+        /// <para>The IDs of the premium Internet bandwidth plans. You can specify one or more IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("NetworkPackageId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> NetworkPackageId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain a list of regions where WUYING Workspace is available.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,6 +28,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The user ID of resource ownership in the reseller pattern. This parameter is not required in the non-reseller pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1422724566551XXX</para>
+        /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }

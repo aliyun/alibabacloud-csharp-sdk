@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class RemoveFilePermissionShrinkRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the enterprise drive.</para>
+        /// <para>The enterprise cloud disk ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,17 +21,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the end user.</para>
+        /// <para>The user ID.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>user01</para>
+        /// <para>alice</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
         public string EndUserId { get; set; }
 
         /// <summary>
-        /// <para>The file ID. You can call the <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> operation to query the ID of the file.</para>
+        /// <para>The file ID. You can call <a href="https://help.aliyun.com/document_detail/2247622.html">ListCdsFiles</a> to query the ID of the file.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -42,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string FileId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the team space.</para>
+        /// <para>The team space ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-1fbmvrc7ug5m7****</para>
@@ -52,7 +52,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The users that you want to authorize to use the cloud disk.</para>
+        /// <para>The list of authorized users.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("MemberList")]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MemberListShrink { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions where Elastic Desktop Service (EDS) Enterprise is available.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

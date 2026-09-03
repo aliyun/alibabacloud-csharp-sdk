@@ -82,7 +82,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                     /// <para>The promotion description.</para>
                     /// 
                     /// <b>Example:</b>
-                    /// <para>New product launch with exclusive discounts.</para>
+                    /// <para>New product launch with exclusive discounts</para>
                     /// </summary>
                     [NameInMap("PromotionDesc")]
                     [Validation(Required=false)]
@@ -143,7 +143,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 /// <para>The rule description.</para>
                 /// 
                 /// <b>Example:</b>
-                /// <para>Get 15% off the list price for a one-year purchase.</para>
+                /// <para>Get a 15% discount off the list price for a one-year purchase</para>
                 /// </summary>
                 [NameInMap("Description")]
                 [Validation(Required=false)]

@@ -9,22 +9,40 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyOfficeSiteAttributeRequest : TeaModel {
+        /// <summary>
+        /// <para>The Authority URL of the identity authentication service.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para><a href="https://login.microsoftonline.com">https://login.microsoftonline.com</a></para>
+        /// </summary>
         [NameInMap("AuthorityHost")]
         [Validation(Required=false)]
         public string AuthorityHost { get; set; }
 
+        /// <summary>
+        /// <para>The client ID registered with the identity provider application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>a2c8f7e4-1b3d-4c5e-9f0a-6d7b8c9e****</para>
+        /// </summary>
         [NameInMap("ClientId")]
         [Validation(Required=false)]
         public string ClientId { get; set; }
 
+        /// <summary>
+        /// <para>The client secret registered with the identity provider application.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>sct-9f3e2d1c****</para>
+        /// </summary>
         [NameInMap("ClientSecret")]
         [Validation(Required=false)]
         public string ClientSecret { get; set; }
 
         /// <summary>
-        /// <para>The method for connecting to cloud computers.</para>
+        /// <para>The access method allowed when connecting to cloud computers.</para>
         /// <remarks>
-        /// <para>VPC connections use Alibaba Cloud PrivateLink, a free service. If you set this parameter to VPC or Any, PrivateLink is automatically activated.</para>
+        /// <para>The VPC connection method depends on the Alibaba Cloud PrivateLink service, which is free of charge. If this parameter is set to <c>VPC</c> or <c>Any</c>, the system automatically activates the PrivateLink service for you.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -34,12 +52,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string DesktopAccessType { get; set; }
 
+        /// <summary>
+        /// <para>The domain name of the enterprise AD.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>domain.local</para>
+        /// </summary>
         [NameInMap("DomainName")]
         [Validation(Required=false)]
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to grant cloud computer users local administrative permissions.</para>
+        /// <para>Specifies whether to grant local administrator permissions to cloud computer users.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -49,7 +73,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? EnableAdminAccess { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable two-factor authentication. This parameter is applicable to only office sites that use convenience accounts. If enabled, the system performs a security check during logon. If the system detects a risk, it sends a verification code to the email address that is associated with the account. The user must enter the correct verification code to log on.</para>
+        /// <para>This parameter applies only to convenience account-based office networks. Specifies whether secondary authentication is required during logon. If logon secondary authentication is enabled, the system checks whether the logon account has security risks when a convenience user logs on to the client. If a risk is detected, the system sends a verification code to the email address associated with the account. The convenience user can log on to the client only after passing the verification code check.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -59,7 +83,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? NeedVerifyLoginRisk { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to enable device verification. This feature is available only for office sites that use convenience accounts.</para>
+        /// <para>This parameter applies only to convenience account-based office networks. Specifies whether to enable device verification. For AD-based office networks, this parameter is empty.</para>
         /// 
         /// <b>Example:</b>
         /// <para>false</para>
@@ -69,7 +93,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? NeedVerifyZeroDevice { get; set; }
 
         /// <summary>
-        /// <para>The ID of the office site.</para>
+        /// <para>The office network ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -80,18 +104,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OfficeSiteId { get; set; }
 
         /// <summary>
-        /// <para>The name of the office site. The name must be 2 to 255 characters long. The name must start with a letter or a Chinese character, and cannot start with http\:// or https\://. It can contain digits, colons (:), underscores (_), and hyphens (-).<br>
-        /// This parameter is optional.<br></para>
+        /// <para>The office network name. The name must be 2 to 255 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), or hyphens (-).<br>Default value: empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>R&amp;D_Office_Network</para>
         /// </summary>
         [NameInMap("OfficeSiteName")]
         [Validation(Required=false)]
         public string OfficeSiteName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions where Elastic Desktop Service is available.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -101,10 +124,19 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The tenant ID of the identity provider.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>72f988bf-86f1-41af-91ab-2d7cd011****</para>
+        /// </summary>
         [NameInMap("TenantId")]
         [Validation(Required=false)]
         public string TenantId { get; set; }
 
+        /// <summary>
+        /// <para>The vSwitch ID. Only one vSwitch is supported.</para>
+        /// </summary>
         [NameInMap("VSwitchId")]
         [Validation(Required=false)]
         public List<string> VSwitchId { get; set; }

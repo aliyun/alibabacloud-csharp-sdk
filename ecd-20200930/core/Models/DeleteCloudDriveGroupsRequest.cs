@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DeleteCloudDriveGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk in Cloud Drive Service.</para>
+        /// <para>The enterprise network drive ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,14 +21,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the teams that you want to delete. You can delete multiple teams at a time.</para>
+        /// <para>The list of team space IDs.</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public List<string> GroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

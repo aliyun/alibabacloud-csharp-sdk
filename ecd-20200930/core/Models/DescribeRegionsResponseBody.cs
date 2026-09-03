@@ -10,17 +10,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRegionsResponseBody : TeaModel {
         /// <summary>
-        /// <para>The information about regions.</para>
+        /// <para>The region information array.</para>
         /// </summary>
         [NameInMap("Regions")]
         [Validation(Required=false)]
         public List<DescribeRegionsResponseBodyRegions> Regions { get; set; }
         public class DescribeRegionsResponseBodyRegions : TeaModel {
             /// <summary>
-            /// <para>The display name of the region, which varies based on the current language.</para>
+            /// <para>The display name of the region, which is converted based on the current language setting.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>华东1（杭州）</para>
+            /// <para>China (Hangzhou)</para>
             /// </summary>
             [NameInMap("LocalName")]
             [Validation(Required=false)]

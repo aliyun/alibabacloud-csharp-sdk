@@ -10,12 +10,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFlowMetricRequest : TeaModel {
         /// <summary>
-        /// <para>End Time. Supported formats:</para>
+        /// <para>The end time. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>UNIX timestamp: the number of milliseconds elapsed since January 1, 1970.</para>
-        /// </description></item>
-        /// <item><description><para>Format: YYYY-MM-DDThh:mm:ssZ.</para>
-        /// </description></item>
+        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</description></item>
+        /// <item><description>Format: YYYY-MM-DDThh:mm:ssZ.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -27,18 +25,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string EndTime { get; set; }
 
         /// <summary>
-        /// <para>The instance ID, which can be either a cloud computr ID or a premium public bandwidth plan ID.</para>
+        /// <para>The instance ID. The value can be a cloud computer ID or a premium public bandwidth plan ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Ecd-fwq23f13<b><b>ornp-6inxqsvcyv6z8</b></b></para>
+        /// <para>ecd-fwq23f13**** or np-6inxqsvcyv6z8****</para>
         /// </summary>
         [NameInMap("InstanceId")]
         [Validation(Required=false)]
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance type. You can select either cloud computer type or premium public bandwidth type. If you select cloud computer type, the <c>InstanceId</c> and <c>MetricType</c> must be filled in with a cloud computer ID and its corresponding traffic type. The same applies to premium public bandwidth.</para>
+        /// <para>The instance type. You can select the cloud computer type or the premium public bandwidth plan type. If you select the cloud computer type, set InstanceId and MetricType to the cloud computer ID and the traffic type of the cloud computer. The same rule applies to the premium public bandwidth plan type.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -49,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InstanceType { get; set; }
 
         /// <summary>
-        /// <para>The type of monitoring metric. Supports monitoring data for inbound and outbound bandwidth of cloud computers, as well as inbound and outbound bandwidth for public network access of premium public bandwidth.</para>
+        /// <para>The monitoring metric type. This parameter supports the inbound and outbound bandwidth of a cloud computer, and the public inbound and outbound bandwidth of a premium public bandwidth plan.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -60,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string MetricType { get; set; }
 
         /// <summary>
-        /// <para>The statistic period of monitoring data. Unit: seconds.</para>
+        /// <para>The statistical period of the monitoring data. Unit: seconds.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -71,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The Region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to obtain the list of Regions supported by Elastic Desktop Service (EDS).</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -82,12 +80,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>Start Time. Supported formats:</para>
+        /// <para>The start time. The following formats are supported:</para>
         /// <list type="bullet">
-        /// <item><description><para>UNIX timestamp: the number of milliseconds elapsed since January 1, 1970.</para>
-        /// </description></item>
-        /// <item><description><para>Format: YYYY-MM-DDThh:mm:ssZ.</para>
-        /// </description></item>
+        /// <item><description>UNIX timestamp: the number of milliseconds that have elapsed since January 1, 1970.</description></item>
+        /// <item><description>Format: YYYY-MM-DDThh:mm:ssZ.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 

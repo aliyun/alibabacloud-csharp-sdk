@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? AutoRenew { get; set; }
 
         /// <summary>
-        /// <para>A list of WUYING Workspace instance IDs. You can renew only instances purchased on a monthly basis.</para>
+        /// <para>The list of cloud computer IDs. Only monthly subscription cloud computers can be renewed.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -41,11 +41,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The renewal duration. Valid values depend on the value of <c>PeriodUnit</c>.</para>
+        /// <para>The renewal duration. Valid values of this parameter are determined by the value of the <c>PeriodUnit</c> parameter.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>PeriodUnit</c> is <c>Month</c>, valid values are 1, 2, 3, and 6.</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values are 1, 2, 3, and 6.</para>
         /// </description></item>
-        /// <item><description><para>If <c>PeriodUnit</c> is <c>Year</c>, valid values are 1 to 5.</para>
+        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values are 1 to 5.</para>
         /// </description></item>
         /// </list>
         /// <para>Default value: 1.</para>
@@ -58,7 +58,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The unit for the renewal duration, which applies to the <c>Period</c> parameter.</para>
+        /// <para>The unit of the renewal duration, which is the unit of the <c>Period</c> parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -78,7 +78,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to list the regions where WUYING Workspace is available.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -88,17 +88,23 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The user ID for resource ownership in the reselling pattern. You do not need to specify this parameter if you are not using the reselling pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1422724566551XXX</para>
+        /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }
 
         /// <summary>
         /// <remarks>
-        /// <para>This field is not available for public use.</para>
+        /// <para>This parameter is not publicly available.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
-        /// <para>null</para>
+        /// <para>Desktop</para>
         /// </summary>
         [NameInMap("ResourceType")]
         [Validation(Required=false)]

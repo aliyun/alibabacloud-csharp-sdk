@@ -10,14 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class ModifyAclEntriesRequest : TeaModel {
         /// <summary>
-        /// <para>The Internet access control policy.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>allow: allows access to the Internet.</para>
-        /// </description></item>
-        /// <item><description><para>disable: forbids access to the Internet.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The public network access control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -28,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Policy { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +32,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs (office network IDs or cloud computer IDs) to which the Internet access control policy is applicable.</para>
+        /// <para>The list of instance IDs for public network access control, which are office network IDs or cloud computer IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("SourceId")]
@@ -47,14 +40,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> SourceId { get; set; }
 
         /// <summary>
-        /// <para>The granularity to which the Internet access control policy is applicable.</para>
-        /// <para>Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>desktop: cloud computer granularity.</para>
-        /// </description></item>
-        /// <item><description><para>vpc: office network granularity.</para>
-        /// </description></item>
-        /// </list>
+        /// <para>The granularity of the public network access control policy.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

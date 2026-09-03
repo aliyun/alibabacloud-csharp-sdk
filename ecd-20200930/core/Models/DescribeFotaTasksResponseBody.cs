@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeFotaTasksResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operation result. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
+        /// <para>The result of the operation. A value of <c>success</c> indicates success. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>
@@ -69,7 +69,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? PendingDesktopCount { get; set; }
 
             /// <summary>
-            /// <para>The publish time of the upgrade version.</para>
+            /// <para>The release time of the upgrade version. The time is in the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2022-05-31T04:28:48Z</para>
@@ -82,14 +82,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The upgrade version description.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Fixed known issues and improved system stability</para>
             /// </summary>
             [NameInMap("ReleaseNote")]
             [Validation(Required=false)]
             public string ReleaseNote { get; set; }
 
             /// <summary>
-            /// <para>The size of the upgrade package. Unit: KB.</para>
+            /// <para>The size of the upgrade package, in KB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>568533470</para>
@@ -121,7 +121,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The error message. This parameter is not returned if Code is <c>success</c>.</para>
+        /// <para>The error message. This parameter is not returned when Code is <c>success</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>The parameter is not specified.</para>
@@ -131,7 +131,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Message { get; set; }
 
         /// <summary>
-        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that there are no more results.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</para>

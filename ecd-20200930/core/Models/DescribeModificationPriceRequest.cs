@@ -12,7 +12,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The peak Internet bandwidth. Unit: Mbit/s.</para>
         /// <remarks>
-        /// <para>If you use the pay-by-bandwidth billing method, the valid values range from 10 to 1000.</para>
+        /// <para>If you use the pay-by-fixed-bandwidth billing method, valid values are 10 to 1000.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -23,7 +23,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The instance ID. The value can be the ID of a monthly-subscribed (unlimited-duration) cloud computer or the ID of a premium Internet bandwidth instance.</para>
+        /// <para>The instance ID. The value can be the ID of a monthly subscription (unlimited duration) cloud computer or the ID of a premium Internet bandwidth instance.</para>
         /// 
         /// <b>Example:</b>
         /// <para>ecd-0gfv2z3sf95zvt****</para>
@@ -35,7 +35,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The resource specification.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>ResourceType</c> is set to <c>Desktop</c>, valid values include:</para>
+        /// <item><description><para>If ResourceType is set to Desktop, valid values include:</para>
         /// <list type="bullet">
         /// <item><description>ecd.basic.small</description></item>
         /// <item><description>ecd.basic.large</description></item>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <item><description>eds.general.16c32g</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description><para>If <c>ResourceType</c> is set to <c>NetworkPackage</c>, you do not need to specify this parameter.</para>
+        /// <item><description><para>If ResourceType is set to NetworkPackage, you do not need to specify this parameter.</para>
         /// </description></item>
         /// </list>
         /// 
@@ -79,7 +79,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -90,7 +90,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The user ID for resource ownership in the reseller pattern. You do not need to specify this parameter in non-reseller pattern.</para>
+        /// <para>The resource ownership user ID in the reseller pattern. You do not need to specify this parameter in non-reseller pattern.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1422724566551XXX</para>
@@ -117,7 +117,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The system cloud disk size. Unit: GiB.</para>
+            /// <para>The size of the system cloud disk. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>80</para>
@@ -127,7 +127,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public int? RootDiskSizeGib { get; set; }
 
             /// <summary>
-            /// <para>The data cloud disk size. Unit: GiB.</para>
+            /// <para>The size of the data cloud disk. Unit: GiB.</para>
             /// 
             /// <b>Example:</b>
             /// <para>100</para>
@@ -139,10 +139,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The resource type. The required parameters vary based on the resource type for which you want to query the specification change price:</para>
+        /// <para>The resource type. The required parameters vary based on the resource type for which you want to query the upgrade/downgrade price:</para>
         /// <list type="bullet">
-        /// <item><description>If <c>ResourceType</c> is set to <c>Desktop</c>, you must specify the <c>InstanceType</c>, <c>RootDiskSizeGib</c>, and <c>UserDiskSizeGib</c> parameters.</description></item>
-        /// <item><description>If <c>ResourceType</c> is set to <c>NetworkPackage</c>, you must specify the <c>Bandwidth</c> parameter.</description></item>
+        /// <item><description>If ResourceType is set to Desktop, you must specify the InstanceType, RootDiskSizeGib, and UserDiskSizeGib parameters.</description></item>
+        /// <item><description>If ResourceType is set to NetworkPackage, you must specify the Bandwidth parameter.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -153,7 +153,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ResourceType { get; set; }
 
         /// <summary>
-        /// <para>The performance level of the system cloud disk. You can configure the disk performance level in Settings when the cloud computer specification is set to graphics-accelerated or high frequency. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. standard SSD does not support performance level configuration.</para>
+        /// <para>The performance level (PL) of the system cloud disk. You can set the disk performance level when the cloud computer specification in Settings is Graphics or High Frequency. For more information about the differences between disk performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. standard SSD and ESSD have different performance levels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL0</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RootDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The system cloud disk size. Unit: GiB.</para>
+        /// <para>The size of the system cloud disk. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>80</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? RootDiskSizeGib { get; set; }
 
         /// <summary>
-        /// <para>The performance level of the data cloud disk. You can configure the disk performance level in Settings when the cloud computer specification is set to graphics-accelerated or high frequency. For more information about the differences between performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. standard SSD does not support performance level configuration.</para>
+        /// <para>The performance level (PL) of the data cloud disk. You can set the disk performance level when the cloud computer specification in Settings is Graphics or High Frequency. For more information about the differences between disk performance levels, see <a href="https://help.aliyun.com/document_detail/122389.html">ESSDs</a>. standard SSD and ESSD have different performance levels.</para>
         /// 
         /// <b>Example:</b>
         /// <para>PL0</para>
@@ -183,7 +183,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string UserDiskPerformanceLevel { get; set; }
 
         /// <summary>
-        /// <para>The data cloud disk size. Unit: GiB.</para>
+        /// <para>The size of the data cloud disk. Unit: GiB.</para>
         /// 
         /// <b>Example:</b>
         /// <para>50</para>

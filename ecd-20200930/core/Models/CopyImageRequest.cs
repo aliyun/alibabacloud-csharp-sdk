@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DestinationDescription { get; set; }
 
         /// <summary>
-        /// <para>The name of the new image created by the copy operation. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), or hyphens (-). It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</para>
+        /// <para>The name of the new image created by the copy operation. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

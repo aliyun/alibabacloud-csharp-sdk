@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The list of download URL information for the files.</para>
+        /// <para>The list of file download URL information.</para>
         /// </summary>
         [NameInMap("Urls")]
         [Validation(Required=false)]
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileId { get; set; }
 
             /// <summary>
-            /// <para>The name of the file.</para>
+            /// <para>The file name.</para>
             /// 
             /// <b>Example:</b>
             /// <para>document.txt</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string FileName { get; set; }
 
             /// <summary>
-            /// <para>The status of the file.</para>
+            /// <para>The file status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>DELETED</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Status { get; set; }
 
             /// <summary>
-            /// <para>The download URL of the file.</para>
+            /// <para>The file download URL.</para>
             /// 
             /// <b>Example:</b>
             /// <para><a href="http://xxsy-transfer.oss-cn-beijing.aliyuncs.com/xxxx">http://xxsy-transfer.oss-cn-beijing.aliyuncs.com/xxxx</a></para>

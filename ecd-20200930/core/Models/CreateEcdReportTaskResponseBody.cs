@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateEcdReportTaskResponseBody : TeaModel {
         /// <summary>
-        /// <para>The operation result. The value <c>success</c> indicates success. Otherwise, an error message is returned.</para>
+        /// <para>The operation result. The value <c>success</c> indicates that the operation is successful. Otherwise, an error message is returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>success</para>

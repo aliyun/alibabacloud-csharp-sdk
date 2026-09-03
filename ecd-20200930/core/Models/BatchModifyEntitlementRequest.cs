@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class BatchModifyEntitlementRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud computers for which you want to modify authorized users.</para>
+        /// <para>The IDs of the cloud computers for which you want to update authorized users.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
@@ -45,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxUserPerDesktop { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to preview the assignment. If set to true, the assignment is not actually performed.</para>
+        /// <para>Specifies whether to preview the assignment. If you set this parameter to true, the assignment is not actually performed.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -55,7 +55,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? Preview { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call DescribeRegions to query the regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call DescribeRegions to query the regions supported by Elastic Desktop Service (EDS).</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -68,9 +68,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The policy used when the ratio of cloud computers to users cannot be evenly matched. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description><para>AVERAGE: prioritizes assigning a cloud computer to each user. When the number of selected cloud computers and users cannot be evenly matched, the system prioritizes assigning a cloud computer to each user.</para>
+        /// <item><description><para>AVERAGE: Prioritizes assigning a cloud computer to each user. When the number of selected cloud computers and users cannot be evenly matched, the system prioritizes assigning a cloud computer to each user.</para>
         /// </description></item>
-        /// <item><description><para>CENTRAL: prioritizes assigning the specified number of cloud computers to users. When the number of selected cloud computers and users cannot be evenly matched, the system prioritizes assigning the specified number of cloud computers to users.</para>
+        /// <item><description><para>CENTRAL: Prioritizes assigning the specified number of cloud computers to users. When the number of selected cloud computers and users cannot be evenly matched, the system prioritizes assigning the specified number of cloud computers to users.</para>
         /// </description></item>
         /// </list>
         /// 

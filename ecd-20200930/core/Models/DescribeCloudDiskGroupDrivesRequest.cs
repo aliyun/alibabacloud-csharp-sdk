@@ -21,22 +21,20 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The team drive name.</para>
+        /// <para>The team space name.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Team 1</para>
+        /// <para>Team1</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The number of entries per page for paged queries.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <list type="bullet">
-        /// <item><description><para>Maximum: 100</para>
-        /// </description></item>
-        /// <item><description><para>Default: 20</para>
-        /// </description></item>
+        /// <item><description>Maximum value: 100</description></item>
+        /// <item><description>Default value: 20</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -47,7 +45,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token that marks the start of the next query. An empty NextToken means no more results.</para>
+        /// <para>The token for the next query. If NextToken is empty, no more results are available.</para>
         /// 
         /// <b>Example:</b>
         /// <para>MTA0MjA=</para>

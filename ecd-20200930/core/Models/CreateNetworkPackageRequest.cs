@@ -33,8 +33,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The bandwidth of the premium bandwidth plan. Unit: Mbit/s.    </para>
         /// <list type="bullet">
         /// <item><description>If the premium bandwidth plan uses the subscription billing method, the valid values are 2 to 1000.</description></item>
-        /// <item><description>If the premium bandwidth plan uses the pay-as-you-go billing method and the billing type is pay-by-data-transfer (PayByTraffic), the valid values are 2 to 200.</description></item>
-        /// <item><description>If the premium bandwidth plan uses the pay-as-you-go billing method and the billing type is pay-by-bandwidth (PayByBandwidth), the valid values are 2 to 1000.</description></item>
+        /// <item><description>If the premium bandwidth plan uses the pay-as-you-go billing method and the metering method is pay-by-data-transfer (PayByTraffic), the valid values are 2 to 200.</description></item>
+        /// <item><description>If the premium bandwidth plan uses the pay-as-you-go billing method and the metering method is pay-by-bandwidth (PayByBandwidth), the valid values are 2 to 1000.</description></item>
         /// </list>
         /// <para>This parameter is required.</para>
         /// 
@@ -45,6 +45,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public int? Bandwidth { get; set; }
 
+        /// <summary>
+        /// <remarks>
+        /// <para>This field is not publicly available.</para>
+        /// </remarks>
+        /// 
+        /// <b>Example:</b>
+        /// <para>PBKB1QbqEl2tslEuU6gRrLxvCFBU2M%2FVD0Eru6Oo%2FI9LTU3XQhvq3PGMWarE%2BPJdkNvCqT3blqlRSthNy4A%2BJQ%3D%3D</para>
+        /// </summary>
         [NameInMap("ChannelCookie")]
         [Validation(Required=false)]
         public string ChannelCookie { get; set; }
@@ -52,11 +60,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <summary>
         /// <para>The billable methods of the premium bandwidth plan.</para>
         /// <list type="bullet">
-        /// <item><description>If the parameter <c>PayType</c> is set to <c>PrePaid</c>, valid values:<list type="bullet">
+        /// <item><description>When the parameter <c>PayType</c> is set to <c>PrePaid</c>, the valid value is:<list type="bullet">
         /// <item><description>PayByBandwidth: billing by fixed bandwidth.</description></item>
         /// </list>
         /// </description></item>
-        /// <item><description>If the parameter <c>PayType</c> is set to <c>PostPaid</c>, valid values:<list type="bullet">
+        /// <item><description>When the parameter <c>PayType</c> is set to <c>PostPaid</c>, the valid values are:<list type="bullet">
         /// <item><description>PayByTraffic: billing by data transfer.</description></item>
         /// <item><description>PayByBandwidth: billing by fixed bandwidth.</description></item>
         /// </list>
@@ -94,8 +102,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The subscription duration of the premium bandwidth plan. This parameter takes effect and is required only when PayType is set to PrePaid. Valid values are determined by the PeriodUnit parameter.</para>
         /// <list type="bullet">
         /// <item><description>If PeriodUnit is set to Week, the valid value is 1.</description></item>
-        /// <item><description>If PeriodUnit is set to Month, valid values are 1, 2, 3, and 6.</description></item>
-        /// <item><description>If PeriodUnit is set to Year, valid values are 1, 2, and 3.</description></item>
+        /// <item><description>If PeriodUnit is set to Month, the valid values are 1, 2, 3, and 6.</description></item>
+        /// <item><description>If PeriodUnit is set to Year, the valid values are 1, 2, and 3.</description></item>
         /// </list>
         /// <para>Default value: 1.</para>
         /// 
@@ -117,7 +125,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PeriodUnit { get; set; }
 
         /// <summary>
-        /// <para>The promotion ID.</para>
+        /// <para>The promotion activity ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>23141</para>
@@ -137,18 +145,39 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The user ID of resource ownership in the reseller pattern. You do not need to specify this parameter if you are not using the reseller pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1422724566551XXX</para>
+        /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }
 
+        /// <summary>
+        /// <para>The tags. A maximum of 20 tags are supported.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<CreateNetworkPackageRequestTag> Tag { get; set; }
         public class CreateNetworkPackageRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

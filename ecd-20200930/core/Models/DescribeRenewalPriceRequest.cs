@@ -10,14 +10,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeRenewalPriceRequest : TeaModel {
         /// <summary>
-        /// <para>The instance ID. The value for this parameter depends on the resource type:</para>
+        /// <para>The instance ID. The value depends on the resource type (ResourceType) for which you want to query the renewal price:</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>ResourceType</c> is set to <c>Desktop</c>, set <c>InstanceId</c> to the cloud desktop ID.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>ResourceType</c> is set to <c>DesktopGroup</c>, set <c>InstanceId</c> to the desktop pool ID.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>ResourceType</c> is set to <c>Bandwidth</c>, set <c>InstanceId</c> to the premium bandwidth ID.</para>
-        /// </description></item>
+        /// <item><description>If <c>ResourceType</c> is set to <c>Desktop</c> (to query the renewal price of a cloud computer), set <c>InstanceId</c> to the cloud computer ID.</description></item>
+        /// <item><description>If <c>ResourceType</c> is set to <c>DesktopGroup</c> (to query the renewal price of a cloud computer pool), set <c>InstanceId</c> to the cloud computer pool ID.</description></item>
+        /// <item><description>If <c>ResourceType</c> is set to <c>Bandwidth</c> (to query the renewal price of premium Internet bandwidth), set <c>InstanceId</c> to the premium Internet bandwidth ID.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -28,19 +25,17 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string InstanceId { get; set; }
 
         /// <summary>
-        /// <para>The instance IDs. The values to provide depend on the resource type (<c>ResourceType</c>).</para>
+        /// <para>The instance IDs. The values depend on the resource type (ResourceType) for which you want to query the renewal price.</para>
         /// </summary>
         [NameInMap("InstanceIds")]
         [Validation(Required=false)]
         public List<string> InstanceIds { get; set; }
 
         /// <summary>
-        /// <para>The renewal duration. The valid values depend on the <c>PeriodUnit</c> parameter.</para>
+        /// <para>The renewal duration. Valid values of this parameter are determined by the value of <c>PeriodUnit</c>.</para>
         /// <list type="bullet">
-        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Month</c>, the valid values are 1, 2, 3, and 6.</para>
-        /// </description></item>
-        /// <item><description><para>If <c>PeriodUnit</c> is set to <c>Year</c>, the valid values are 1, 2, and 3.</para>
-        /// </description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Month</c>, valid values are 1, 2, 3, and 6.</description></item>
+        /// <item><description>If <c>PeriodUnit</c> is set to <c>Year</c>, valid values are 1, 2, and 3.</description></item>
         /// </list>
         /// <para>Default value: 1.</para>
         /// 
@@ -52,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Period { get; set; }
 
         /// <summary>
-        /// <para>The time unit for the <c>Period</c> parameter.</para>
+        /// <para>The unit of the renewal duration, which is the unit of the <c>Period</c> parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Month</para>
@@ -61,12 +56,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string PeriodUnit { get; set; }
 
+        /// <summary>
+        /// <para>The promotion ID.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>youhuiquan_promotion_option_id_for_blank</para>
+        /// </summary>
         [NameInMap("PromotionId")]
         [Validation(Required=false)]
         public string PromotionId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to get a list of regions supported by Elastic Desktop Service.</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Wuying Workspace.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -76,6 +77,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The user ID of the resource ownership user in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>1017457975738750</para>
+        /// </summary>
         [NameInMap("ResellerOwnerUid")]
         [Validation(Required=false)]
         public long? ResellerOwnerUid { get; set; }

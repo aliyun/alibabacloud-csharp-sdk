@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. This operation is not region-specific. Set this parameter to <c>cn-shanghai</c>.</para>
+        /// <para>The region ID. This feature is not region-specific. Set this parameter to <c>cn-shanghai</c>.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-shanghai</para>

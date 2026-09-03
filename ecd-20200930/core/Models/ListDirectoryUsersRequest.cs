@@ -11,7 +11,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
     public class ListDirectoryUsersRequest : TeaModel {
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not publicly available. You can only set this parameter to <c>1</c> or leave it empty.</para>
+        /// <para>This field is not available for use. You can only pass in <c>1</c> or leave it empty.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -33,7 +33,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The string for a fuzzy search. The operation returns all results that contain this string.</para>
+        /// <para>The fuzzy match query string. All results that contain this character string are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>alice</para>
@@ -43,7 +43,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Filter { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to return only users who are assigned cloud desktops.</para>
+        /// <para>Specifies whether to return only users who have been assigned cloud computers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -53,12 +53,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? IncludeAssignedUser { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page for a paged query.    </para>
         /// <list type="bullet">
-        /// <item><description><para>Maximum value: 100.</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 10.</para>
-        /// </description></item>
+        /// <item><description>Maximum value: 100.    </description></item>
+        /// <item><description>Default value: 10.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -69,7 +67,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The token used to start the next query. If this value is empty, no more results are available.</para>
+        /// <para>The pagination token for the next query. An empty value indicates that no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -79,7 +77,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The path of the organizational unit (OU) in the AD domain. You can call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain the OU path.</para>
+        /// <para>The organizational unit (OU) in the AD domain to which the user belongs. You can call <a href="https://help.aliyun.com/document_detail/311259.html">ListUserAdOrganizationUnits</a> to obtain this value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>example.com/Domain Controllers</para>
@@ -89,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string OUPath { get; set; }
 
         /// <summary>
-        /// <para>The region ID. To get a list of regions that WUYING Workspace supports, call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a>.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

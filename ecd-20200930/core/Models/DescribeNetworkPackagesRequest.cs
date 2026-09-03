@@ -34,7 +34,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the premium Internet bandwidth plans. You can specify 1 to 100 IDs.</para>
+        /// <para>The IDs of premium Internet bandwidth plans. You can specify 1 to 100 IDs.</para>
         /// 
         /// <b>Example:</b>
         /// <para>np-amtp8e8q1o9e4****</para>
@@ -44,7 +44,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> NetworkPackageId { get; set; }
 
         /// <summary>
-        /// <para>The token for the next query.</para>
+        /// <para>The pagination token for the next query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>caeba0bbb2be03f84eb48b699f0a4883</para>
@@ -64,14 +64,29 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string RegionId { get; set; }
 
+        /// <summary>
+        /// <para>The tags. A maximum of 20 tags are supported.</para>
+        /// </summary>
         [NameInMap("Tag")]
         [Validation(Required=false)]
         public List<DescribeNetworkPackagesRequestTag> Tag { get; set; }
         public class DescribeNetworkPackagesRequestTag : TeaModel {
+            /// <summary>
+            /// <para>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <c>aliyun</c> or <c>acs:</c>. The tag key cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestKey</para>
+            /// </summary>
             [NameInMap("Key")]
             [Validation(Required=false)]
             public string Key { get; set; }
 
+            /// <summary>
+            /// <para>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <c>acs:</c>. The tag value cannot contain <c>http://</c> or <c>https://</c>.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>TestValue</para>
+            /// </summary>
             [NameInMap("Value")]
             [Validation(Required=false)]
             public string Value { get; set; }

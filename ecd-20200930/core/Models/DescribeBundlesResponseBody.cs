@@ -10,14 +10,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeBundlesResponseBody : TeaModel {
         /// <summary>
-        /// <para>The cloud computer templates.</para>
+        /// <para>The list of cloud computer templates.</para>
         /// </summary>
         [NameInMap("Bundles")]
         [Validation(Required=false)]
         public List<DescribeBundlesResponseBodyBundles> Bundles { get; set; }
         public class DescribeBundlesResponseBodyBundles : TeaModel {
             /// <summary>
-            /// <para>The ID of the cloud computer template.</para>
+            /// <para>The cloud computer template ID.</para>
             /// 
             /// <b>Example:</b>
             /// <para>bundle_ecd_graphics.2xlarge_s15d15_win2019</para>
@@ -37,7 +37,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BundleName { get; set; }
 
             /// <summary>
-            /// <para>The type of the cloud computer template.</para>
+            /// <para>The cloud computer templatetype.</para>
             /// 
             /// <b>Example:</b>
             /// <para>SYSTEM</para>
@@ -47,7 +47,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string BundleType { get; set; }
 
             /// <summary>
-            /// <para>The time when the cloud computer template was created.</para>
+            /// <para>The time when the cloud computer template was created. The time is in the ISO 8601 standard in UTC.</para>
             /// 
             /// <b>Example:</b>
             /// <para>2021-09-30T06:09Z</para>
@@ -57,7 +57,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string CreationTime { get; set; }
 
             /// <summary>
-            /// <para>The category of the data disk.</para>
+            /// <para>The data cloud disk type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_efficiency</para>
@@ -70,14 +70,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             /// <para>The description of the cloud computer template.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>test</para>
+            /// <para>Template for daily office use</para>
             /// </summary>
             [NameInMap("Description")]
             [Validation(Required=false)]
             public string Description { get; set; }
 
             /// <summary>
-            /// <para>The instance type of the cloud computer.</para>
+            /// <para>The cloud computer specifications.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd.graphics.2xlarge</para>
@@ -87,7 +87,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopType { get; set; }
 
             /// <summary>
-            /// <para>The details of the cloud computer instance type.</para>
+            /// <para>The details of the cloud computer specifications.</para>
             /// </summary>
             [NameInMap("DesktopTypeAttribute")]
             [Validation(Required=false)]
@@ -136,7 +136,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             }
 
             /// <summary>
-            /// <para>The instance family of the cloud computer.</para>
+            /// <para>The cloud computer instance family.</para>
             /// 
             /// <b>Example:</b>
             /// <para>eds.general</para>
@@ -146,14 +146,14 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopTypeFamily { get; set; }
 
             /// <summary>
-            /// <para>Details of the disks.</para>
+            /// <para>The disk information.</para>
             /// </summary>
             [NameInMap("Disks")]
             [Validation(Required=false)]
             public List<DescribeBundlesResponseBodyBundlesDisks> Disks { get; set; }
             public class DescribeBundlesResponseBodyBundlesDisks : TeaModel {
                 /// <summary>
-                /// <para>The PL of the disk.</para>
+                /// <para>The disk performance level.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>PL0</para>
@@ -163,7 +163,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public string DiskPerformanceLevel { get; set; }
 
                 /// <summary>
-                /// <para>The size of the disk. Unit: GiB.</para>
+                /// <para>The disk size. Unit: GiB.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>150</para>
@@ -173,7 +173,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
                 public int? DiskSize { get; set; }
 
                 /// <summary>
-                /// <para>The type of the disk.</para>
+                /// <para>The disk type.</para>
                 /// 
                 /// <b>Example:</b>
                 /// <para>SYSTEM</para>
@@ -205,7 +205,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ImageName { get; set; }
 
             /// <summary>
-            /// <para>The status of the image.</para>
+            /// <para>The image status.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Available</para>
@@ -215,7 +215,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string ImageStatus { get; set; }
 
             /// <summary>
-            /// <para>The OS language of the image.</para>
+            /// <para>The language of the image operating system.</para>
             /// 
             /// <b>Example:</b>
             /// <para>en-US</para>
@@ -225,7 +225,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string Language { get; set; }
 
             /// <summary>
-            /// <para>The type of the OS.</para>
+            /// <para>The operating system type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows</para>
@@ -235,7 +235,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string OsType { get; set; }
 
             /// <summary>
-            /// <para>The OS.</para>
+            /// <para>The operating system platform information.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Windows Server 2019</para>
@@ -265,7 +265,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SessionType { get; set; }
 
             /// <summary>
-            /// <para>The inventory status of the cloud computer instance type. This parameter is returned only if you set the <c>CheckStock</c> parameter to <c>true</c>.</para>
+            /// <para>The stock status. This parameter is returned when <c>CheckStock</c> is set to <c>True</c>.</para>
             /// 
             /// <b>Example:</b>
             /// <para>Sufficient</para>
@@ -275,7 +275,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string StockState { get; set; }
 
             /// <summary>
-            /// <para>The category of the system disk.</para>
+            /// <para>The system cloud disk type.</para>
             /// 
             /// <b>Example:</b>
             /// <para>cloud_efficiency</para>
@@ -285,7 +285,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string SystemDiskCategory { get; set; }
 
             /// <summary>
-            /// <para>Indicates whether disk encryption is enabled.</para>
+            /// <para>Specifies whether to enable disk encryption.</para>
             /// 
             /// <b>Example:</b>
             /// <para>false</para>
@@ -295,7 +295,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public bool? VolumeEncryptionEnabled { get; set; }
 
             /// <summary>
-            /// <para>The ID of the Key Management Service (KMS) key that is used when disk encryption is enabled.</para>
+            /// <para>The ID of the KMS key used when disk encryption is enabled.</para>
             /// 
             /// <b>Example:</b>
             /// <para>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</para>
@@ -307,7 +307,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         }
 
         /// <summary>
-        /// <para>The token that is used for the next query. If this parameter is empty, all results have been returned.</para>
+        /// <para>The token for the next query. If NextToken is empty, no more results exist.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6lu3PTF6h3zE8egwlYuv8M8</para>
@@ -317,7 +317,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the request.</para>
+        /// <para>The request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>BCC854D8-5D1E-46D3-96EF-797A5DD36789</para>

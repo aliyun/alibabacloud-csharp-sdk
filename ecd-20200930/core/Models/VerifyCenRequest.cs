@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class VerifyCenRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The CEN instance ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,10 +21,12 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The Alibaba Cloud account to which the CEN instance belongs.</para>
+        /// <para>The Alibaba Cloud account ID to which the CEN instance belongs.</para>
         /// <list type="bullet">
-        /// <item><description>If you own the CEN instance, you can skip this parameter.</description></item>
-        /// <item><description>If you do not own the CEN instance, you must specify the ID of the account that owns the CEN instance.</description></item>
+        /// <item><description><para>If the specified CenId belongs to your Alibaba Cloud account, you do not need to configure this parameter.</para>
+        /// </description></item>
+        /// <item><description><para>If the specified CenId belongs to another Alibaba Cloud account, specify the ID of that Alibaba Cloud account.</para>
+        /// </description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -35,18 +37,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? CenOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IPv4 CIDR block of the associated office network.</para>
+        /// <para>The IPv4 CIDR block of the office network.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>47.100.XX.XX</para>
+        /// <para>192.168.0.0/16</para>
         /// </summary>
         [NameInMap("CidrBlock")]
         [Validation(Required=false)]
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +59,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The verification code. If you do not own the CEN instance, you must call the <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> operation to obtain a verification code.</para>
+        /// <para>The verification code. If the specified CenId belongs to another Alibaba Cloud account, you must first call <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> to obtain the verification code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12****</para>

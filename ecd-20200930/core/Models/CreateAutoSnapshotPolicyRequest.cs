@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateAutoSnapshotPolicyRequest : TeaModel {
         /// <summary>
-        /// <para>The cron expression for the recurring schedule.</para>
+        /// <para>The Cron expression for the scheduled snapshot creation.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -20,12 +20,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         [Validation(Required=false)]
         public string CronExpression { get; set; }
 
+        /// <summary>
+        /// <para>The cloud disk type.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>SYSTEM</para>
+        /// </summary>
         [NameInMap("DiskType")]
         [Validation(Required=false)]
         public string DiskType { get; set; }
 
         /// <summary>
-        /// <para>The name of the automatic snapshot policy. It can contain 2 to 128 English or Chinese characters. It must start with a letter or a Chinese character, and cannot start with <c>http://</c> or <c>https://</c>. It can contain digits, colons (:), underscores (_), or hyphens (-). Default value: empty.</para>
+        /// <para>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. Default value: empty.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -36,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string PolicyName { get; set; }
 
         /// <summary>
-        /// <para>The region ID. For more information, see <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to get a list of regions supported by WUYING Workspace.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -47,7 +53,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The retention period of the automatic snapshot, in days. Valid values: 1 to 180.</para>
+        /// <para>The retention period of automatic snapshots. Unit: days. Valid values: 1 to 180.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

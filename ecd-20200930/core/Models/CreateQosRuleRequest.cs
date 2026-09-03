@@ -10,25 +10,28 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateQosRuleRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud phones to include in this rule.</para>
+        /// <para>The list of cloud phones to associate.</para>
         /// </summary>
         [NameInMap("AuthAndroidId")]
         [Validation(Required=false)]
         public List<string> AuthAndroidId { get; set; }
 
+        /// <summary>
+        /// <para>The ID of the cloud computer pool for which the authorization takes effect.</para>
+        /// </summary>
         [NameInMap("AuthDesktopGroupId")]
         [Validation(Required=false)]
         public List<string> AuthDesktopGroupId { get; set; }
 
         /// <summary>
-        /// <para>The IDs of the cloud desktops to include in this rule.</para>
+        /// <para>The list of cloud computer IDs to associate.</para>
         /// </summary>
         [NameInMap("AuthDesktopId")]
         [Validation(Required=false)]
         public List<string> AuthDesktopId { get; set; }
 
         /// <summary>
-        /// <para>The maximum downstream bandwidth. Unit: Mbps.</para>
+        /// <para>The peak downstream bandwidth. Unit: Mbit/s.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +42,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Download { get; set; }
 
         /// <summary>
-        /// <para>The ID of the premium bandwidth plan.</para>
+        /// <para>The premium bandwidth ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -50,18 +53,18 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NetworkPackageId { get; set; }
 
         /// <summary>
-        /// <para>The name of the QoS rule.</para>
+        /// <para>The name of the rate limiting rule.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test</para>
+        /// <para>Office network rate limiting rule</para>
         /// </summary>
         [NameInMap("QosRuleName")]
         [Validation(Required=false)]
         public string QosRuleName { get; set; }
 
         /// <summary>
-        /// <para>The maximum upstream bandwidth. Unit: Mbps.</para>
+        /// <para>The peak upstream bandwidth. Unit: Mbit/s.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

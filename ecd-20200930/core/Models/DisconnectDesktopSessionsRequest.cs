@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DisconnectDesktopSessionsRequest : TeaModel {
         /// <summary>
-        /// <para>Specifies whether to perform precheck. If you perform precheck, the system does not disconnect from desktop sessions. Only the sessions that do not meet specific conditions are returned.</para>
+        /// <para>Specifies whether to perform a dry run. If a dry run is performed, the disconnect operation is not actually executed. Only the sessions that do not meet the execution conditions are returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? PreCheck { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</para>
+        /// <para>The region ID. Call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<DisconnectDesktopSessionsRequestSessions> Sessions { get; set; }
         public class DisconnectDesktopSessionsRequestSessions : TeaModel {
             /// <summary>
-            /// <para>The cloud desktop ID.</para>
+            /// <para>The ID of the cloud computer to which the end user is connected.</para>
             /// 
             /// <b>Example:</b>
             /// <para>ecd-90g15fkhsxxxn****</para>
@@ -49,7 +49,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
             public string DesktopId { get; set; }
 
             /// <summary>
-            /// <para>The end user ID.</para>
+            /// <para>The ID of the end user who is connected to the session.</para>
             /// 
             /// <b>Example:</b>
             /// <para>alice</para>

@@ -20,11 +20,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The download URL of the exported shared cloud desktop list file. The exported file contains the following details of shared cloud desktops:</para>
+        /// <para>The download URL of the exported shared cloud computer list file. The exported file contains the following details:</para>
         /// <list type="bullet">
-        /// <item><description>Shared cloud desktop ID/name</description></item>
+        /// <item><description>Shared cloud computer ID/name</description></item>
         /// <item><description>Office network ID/name</description></item>
-        /// <item><description>Shared cloud desktop template</description></item>
+        /// <item><description>Shared cloud computer template</description></item>
         /// <item><description>CPU/memory</description></item>
         /// <item><description>System cloud disk/data cloud disk</description></item>
         /// <item><description>Security policy name</description></item>

@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The result of copying the file.</para>
+        /// <para>The result of the file copy operation.</para>
         /// </summary>
         [NameInMap("CopyCdsFileModel")]
         [Validation(Required=false)]

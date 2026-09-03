@@ -28,7 +28,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>1</para>
+        /// <para>2</para>
         /// </summary>
         [NameInMap("ClientType")]
         [Validation(Required=false)]
@@ -39,7 +39,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>12OERSLDO7M3****</para>
+        /// <para>F9E52EDCCB2B****</para>
         /// </summary>
         [NameInMap("DeviceId")]
         [Validation(Required=false)]
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>alice</para>
+        /// <para>moli</para>
         /// </summary>
         [NameInMap("EndUserId")]
         [Validation(Required=false)]
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         /// <para>The ID of the region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by WUYING Workspace.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>cn-hangzhou</para>
+        /// <para>cn-shanghai</para>
         /// </summary>
         [NameInMap("Region")]
         [Validation(Required=false)]

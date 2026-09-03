@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class HibernateDesktopsRequest : TeaModel {
         /// <summary>
-        /// <para>The IDs of the cloud desktops. You can specify 1 to 20 cloud desktop IDs.</para>
+        /// <para>The cloud computer IDs. You can specify 1 to 100 IDs.</para>
         /// <para>This parameter is required.</para>
         /// </summary>
         [NameInMap("DesktopId")]
@@ -18,7 +18,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DesktopId { get; set; }
 
         /// <summary>
-        /// <para>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

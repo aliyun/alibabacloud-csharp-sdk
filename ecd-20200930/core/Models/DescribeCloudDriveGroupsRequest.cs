@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class DescribeCloudDriveGroupsRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the cloud disk in Cloud Drive Service.</para>
+        /// <para>The enterprise cloud drive ID.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -21,7 +21,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CdsId { get; set; }
 
         /// <summary>
-        /// <para>The workspace ID.</para>
+        /// <para>The office network ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cn-hangzhou+dir-jedbpr4sl9l37****</para>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryId { get; set; }
 
         /// <summary>
-        /// <para>The workspace name.</para>
+        /// <para>The office network name.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testDirectoryName</para>
@@ -41,14 +41,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DirectoryName { get; set; }
 
         /// <summary>
-        /// <para>The team space status. Valid values:</para>
-        /// <list type="bullet">
-        /// <item><description><para>enabled</para>
-        /// </description></item>
-        /// <item><description><para>disabled</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: enabled.</para>
+        /// <para>The team space status.</para>
         /// 
         /// <b>Example:</b>
         /// <para>enabled</para>
@@ -58,14 +51,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DriveStatus { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether the space is increased.</para>
-        /// <list type="bullet">
-        /// <item><description><para>binding: increased</para>
-        /// </description></item>
-        /// <item><description><para>unbound: not increased</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: null. The default value indicates that all spaces are queried.</para>
+        /// <para>Specifies whether a space is added. Default value: empty, which indicates that all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>binding</para>
@@ -78,31 +64,24 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DriveType { get; set; }
 
         /// <summary>
-        /// <para>The team ID.</para>
+        /// <para>The list of team space IDs.</para>
         /// </summary>
         [NameInMap("GroupId")]
         [Validation(Required=false)]
         public List<string> GroupId { get; set; }
 
         /// <summary>
-        /// <para>The team name for fuzzy search.</para>
+        /// <para>The team space name. Fuzzy match is supported.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>Test team 1</para>
+        /// <para>TestTeam1</para>
         /// </summary>
         [NameInMap("GroupName")]
         [Validation(Required=false)]
         public string GroupName { get; set; }
 
         /// <summary>
-        /// <para>The team type.</para>
-        /// <list type="bullet">
-        /// <item><description><para>org: organizational structure</para>
-        /// </description></item>
-        /// <item><description><para>directory: workspace</para>
-        /// </description></item>
-        /// </list>
-        /// <para>Default value: null. The default value indicates that all types of teams are queried.</para>
+        /// <para>The team type. Default value: empty, which indicates that all types are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>org</para>
@@ -112,12 +91,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string GroupType { get; set; }
 
         /// <summary>
-        /// <para>The number of entries to return on each page.</para>
+        /// <para>The number of entries per page for a paged query.</para>
         /// <list type="bullet">
-        /// <item><description><para>Valid values: 1 to 100</para>
-        /// </description></item>
-        /// <item><description><para>Default value: 20</para>
-        /// </description></item>
+        /// <item><description>Maximum value: 100.</description></item>
+        /// <item><description>Default value: 20.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -128,7 +105,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token that is used in the next request to retrieve a new page of results.</para>
+        /// <para>The pagination token. Set this parameter to the value of <c>NextToken</c> that was returned in the previous call. You do not need to set this parameter for the first request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>AAAAAV3MpHK1AP0pfERHZN5pu6lY3I2VNHLwy+nIoSXh****</para>
@@ -138,8 +115,8 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The ID of the parent node. If a parent node ID is specified, the subnodes are queried. If you set the value of this parameter to root, the root node is queried.</para>
-        /// <para>Default value: null. The default value indicates that all nodes are queried.</para>
+        /// <para>The ID of the parent node of the object to query. To query the root node, set this parameter to <c>root</c>.</para>
+        /// <para>Default value: empty, which indicates that all team spaces are queried.</para>
         /// 
         /// <b>Example:</b>
         /// <para>cg-e70ga4ixp30ur****</para>
@@ -149,7 +126,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ParentGroupId { get; set; }
 
         /// <summary>
-        /// <para>The region ID.</para>
+        /// <para>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>

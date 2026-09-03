@@ -9,13 +9,18 @@ using Tea;
 namespace AlibabaCloud.SDK.Ecd20200930.Models
 {
     public class CreateADConnectorOfficeSiteRequest : TeaModel {
+        /// <summary>
+        /// <para>The access attribute of the office network (workspace).</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>Private</para>
+        /// </summary>
         [NameInMap("AccessAttribute")]
         [Validation(Required=false)]
         public string AccessAttribute { get; set; }
 
         /// <summary>
-        /// <para>The domain controller hostname.
-        /// The hostname must comply with Windows hostname naming conventions.</para>
+        /// <para>The hostname of the domain controller. The hostname must comply with Windows hostname naming conventions.</para>
         /// 
         /// <b>Example:</b>
         /// <para>beijing-ad01</para>
@@ -45,8 +50,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string BackupDns { get; set; }
 
         /// <summary>
-        /// <para>The peak public bandwidth, specified in Mbit/s. The value can range from 0 to 200.<br>
-        /// If you omit this parameter or set it to 0, internet access is disabled.<br></para>
+        /// <para>The peak Internet bandwidth, in Mbit/s. Valid values: 0 to 200.<br>If you do not set this parameter or set it to 0, the Internet access feature is not enabled. Settings take effect immediately.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -56,7 +60,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public int? Bandwidth { get; set; }
 
         /// <summary>
-        /// <para>The ID of the CEN instance.</para>
+        /// <para>The instance ID of the Cloud Enterprise Network (CEN).</para>
         /// 
         /// <b>Example:</b>
         /// <para>cen-3gwy16dojz1m65****</para>
@@ -66,12 +70,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CenId { get; set; }
 
         /// <summary>
-        /// <para>The ID of the Alibaba Cloud account that owns the Cloud Enterprise Network (CEN) instance.</para>
+        /// <para>The Alibaba Cloud account ID of the Cloud Enterprise Network (CEN) instance owner.</para>
         /// <list type="bullet">
-        /// <item><description><para>If you do not specify <c>CenId</c>, or the specified CEN instance belongs to your Alibaba Cloud account, you do not need to specify this parameter.</para>
-        /// </description></item>
-        /// <item><description><para>If the specified CEN instance belongs to another Alibaba Cloud account, you must specify that account\&quot;s ID.</para>
-        /// </description></item>
+        /// <item><description>If CenId is not specified, or the specified CenId belongs to the current Alibaba Cloud account, you do not need to specify this parameter.</description></item>
+        /// <item><description>If the specified CenId belongs to another Alibaba Cloud account, specify the Alibaba Cloud account ID of that account.</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -82,14 +84,11 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? CenOwnerId { get; set; }
 
         /// <summary>
-        /// <para>The IPv4 CIDR block for the office site\&quot;s VPC. The system uses this IPv4 CIDR block to automatically create a VPC. We recommend that you use one of the following CIDR blocks or their subnets:</para>
+        /// <para>The IPv4 CIDR block of the office network VPC. The system uses automatic creation to provision a VPC based on the specified IPv4 CIDR block. Use one of the following CIDR blocks or their subnets as the IPv4 CIDR block:</para>
         /// <list type="bullet">
-        /// <item><description><para><c>10.0.0.0/12</c> (The subnet mask length must be 12 to 24 bits.)</para>
-        /// </description></item>
-        /// <item><description><para><c>172.16.0.0/12</c> (The subnet mask length must be 12 to 24 bits.)</para>
-        /// </description></item>
-        /// <item><description><para><c>192.168.0.0/16</c> (The subnet mask length must be 16 to 24 bits.)</para>
-        /// </description></item>
+        /// <item><description><c>10.0.0.0/12</c> (valid mask range: 12 to 24 bits)</description></item>
+        /// <item><description><c>172.16.0.0/12</c> (valid mask range: 12 to 24 bits)</description></item>
+        /// <item><description><c>192.168.0.0/16</c> (valid mask range: 16 to 24 bits)</description></item>
         /// </list>
         /// 
         /// <b>Example:</b>
@@ -100,9 +99,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string CidrBlock { get; set; }
 
         /// <summary>
-        /// <para>The method for connecting to cloud desktops.</para>
+        /// <para>The access method allowed when connecting to cloud computers.</para>
         /// <remarks>
-        /// <para>VPC connections are established using Alibaba Cloud PrivateLink, which is a free service. If you set this parameter to <c>VPC</c> or <c>Any</c>, PrivateLink is automatically enabled.</para>
+        /// <para>The VPC connection method depends on the Alibaba Cloud PrivateLink service, which is free of charge. If this parameter is set to <c>VPC</c> or <c>Any</c>, the system automatically activates the PrivateLink service for you.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -113,7 +112,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DesktopAccessType { get; set; }
 
         /// <summary>
-        /// <para>An array that contains the IP address of the DNS server for the enterprise AD. You can specify only one IP address.</para>
+        /// <para>The IP address of the DNS server corresponding to the enterprise AD. Currently, only one IP address is supported.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -124,7 +123,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> DnsAddress { get; set; }
 
         /// <summary>
-        /// <para>The domain name for the enterprise AD. Each domain name must be unique.</para>
+        /// <para>The domain name of the enterprise AD. The same domain name can be registered only once.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -135,7 +134,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainName { get; set; }
 
         /// <summary>
-        /// <para>The domain administrator\&quot;s password. The password cannot exceed 64 characters in length.</para>
+        /// <para>The password of the domain administrator. The password can be up to 64 characters in length.</para>
         /// 
         /// <b>Example:</b>
         /// <para>testPassword</para>
@@ -145,9 +144,9 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainPassword { get; set; }
 
         /// <summary>
-        /// <para>The domain administrator\&quot;s username. The username cannot exceed 64 characters in length.</para>
+        /// <para>The username of the domain administrator. The username can be up to 64 characters in length.</para>
         /// <remarks>
-        /// <para>Use the sAMAccountName, not the userPrincipalName.</para>
+        /// <para>Use the sAMAccountName format for the username. Do not use the userPrincipalName format.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -158,7 +157,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string DomainUserName { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to grant local administrator permissions to cloud desktop users. Default: true.</para>
+        /// <para>Specifies whether to grant local administrator permissions to users who use cloud computers.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -168,7 +167,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? EnableAdminAccess { get; set; }
 
         /// <summary>
-        /// <para>This parameter is deprecated. Use the <c>Bandwidth</c> parameter to manage internet access.</para>
+        /// <para>Specifies whether public network access is enabled. This parameter indicates whether the feature is active.</para>
         /// 
         /// <b>Example:</b>
         /// <para>true</para>
@@ -188,11 +187,10 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public bool? MfaEnabled { get; set; }
 
         /// <summary>
-        /// <para>The name of the office site. The name must be 2 to 255 characters in length. It must start with a letter or a Chinese character and cannot start with <c>http://</c> or <c>https://</c>. The name can contain digits, colons (:), underscores (_), and hyphens (-).<br>
-        /// This parameter is empty by default.<br></para>
+        /// <para>The name of the office network. The name must be 2 to 255 characters in length and can contain letters, digits, colons (:), underscores (_), and hyphens (-). The name must start with a letter or Chinese character and cannot start with <c>http://</c> or <c>https://</c>.<br>Default value: null.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>test</para>
+        /// <para>RD_Office_Network</para>
         /// </summary>
         [NameInMap("OfficeSiteName")]
         [Validation(Required=false)]
@@ -209,7 +207,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string ProtocolType { get; set; }
 
         /// <summary>
-        /// <para>The ID of the region. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service (EDS).</para>
+        /// <para>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</para>
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
@@ -220,7 +218,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public string RegionId { get; set; }
 
         /// <summary>
-        /// <para>The AD Connector type.</para>
+        /// <para>The AD Connector specification.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -230,7 +228,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public long? Specification { get; set; }
 
         /// <summary>
-        /// <para>The DNS address of the enterprise AD child domain. If you specify <c>SubDomainName</c> but not this parameter, the DNS address of the child domain is considered the same as that of the parent domain.</para>
+        /// <para>The DNS address of the enterprise AD subdomain. If <c>SubDomainName</c> is specified but this parameter is not, the subdomain DNS is considered the same as the parent domain DNS.</para>
         /// 
         /// <b>Example:</b>
         /// <para>192.168.XX.XX</para>
@@ -240,7 +238,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> SubDomainDnsAddress { get; set; }
 
         /// <summary>
-        /// <para>The domain name of the enterprise AD child domain.</para>
+        /// <para>The domain name of the enterprise AD subdomain.</para>
         /// 
         /// <b>Example:</b>
         /// <para>child.example.com</para>
@@ -257,7 +255,7 @@ namespace AlibabaCloud.SDK.Ecd20200930.Models
         public List<string> VSwitchId { get; set; }
 
         /// <summary>
-        /// <para>The verification code. If the <c>CenId</c> that you specify belongs to another Alibaba Cloud account, you must first call the <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> operation to obtain the verification code.</para>
+        /// <para>The verification code. If the specified CenId belongs to another Alibaba Cloud account, you must first call <a href="https://help.aliyun.com/document_detail/436847.html">SendVerifyCode</a> to obtain the verification code.</para>
         /// 
         /// <b>Example:</b>
         /// <para>12****</para>
