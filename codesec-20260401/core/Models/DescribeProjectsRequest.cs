@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>The pagination token. Do not specify this parameter or set it to an empty string for the first page. For subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</para>
+        /// <para>The pagination token. Do not specify this parameter or set it to an empty string for the first page. To retrieve subsequent pages, pass the nextToken value from the previous response without any modification. If the nextToken value in the response is empty, the last page has been reached.</para>
         /// 
         /// <b>Example:</b>
         /// <para>eyJ0IjoiMjAyNi0wNy0xNlQwNzo1MzozOC4wMjFaIiwiaSI6MTAwMDQ0OH0</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>The keyword for fuzzy match by project name or prompt.</para>
+        /// <para>The keyword used for fuzzy match by project name or prompt.</para>
         /// 
         /// <b>Example:</b>
         /// <para>project</para>

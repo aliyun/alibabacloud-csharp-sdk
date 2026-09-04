@@ -180,7 +180,7 @@ namespace AlibabaCloud.SDK.CodeSec20260401.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>Id of the request</para>
+        /// <para>The unique request ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>9A1F403F-0A85-5578-8B7C-55E3E9408659</para>
