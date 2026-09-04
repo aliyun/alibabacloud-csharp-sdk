@@ -47,6 +47,16 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RunConfigShrink { get; set; }
 
         /// <summary>
+        /// <para>Specifies whether to write the task artifacts to the user\&quot;s OSS bucket.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
+        [NameInMap("SaveArtifacts")]
+        [Validation(Required=false)]
+        public bool? SaveArtifacts { get; set; }
+
+        /// <summary>
         /// <para>The scheduling plan ID. When specified, the execution record is associated with the corresponding scheduled node, which facilitates aggregate query by scheduling dimension through aggregation.</para>
         /// 
         /// <b>Example:</b>
@@ -57,7 +67,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ScheduleId { get; set; }
 
         /// <summary>
-        /// <para>The Targets array. Each element is an object that contains InstanceId and SessionId.</para>
+        /// <para>An array of target objects. Each element contains an InstanceId and a SessionId.</para>
         /// </summary>
         [NameInMap("Targets")]
         [Validation(Required=false)]

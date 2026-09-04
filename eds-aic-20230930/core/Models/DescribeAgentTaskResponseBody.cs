@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public int? Count { get; set; }
 
         /// <summary>
-        /// <para>The message returned by the API.</para>
+        /// <para>The response message.</para>
         /// 
         /// <b>Example:</b>
         /// <para>Success.</para>
@@ -57,12 +57,83 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<DescribeAgentTaskResponseBodyTasks> Tasks { get; set; }
         public class DescribeAgentTaskResponseBodyTasks : TeaModel {
             /// <summary>
+            /// <para>The number of task artifacts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("ArtifactCount")]
+            [Validation(Required=false)]
+            public int? ArtifactCount { get; set; }
+
+            /// <summary>
+            /// <para>The list of uploaded task artifacts.</para>
+            /// </summary>
+            [NameInMap("Artifacts")]
+            [Validation(Required=false)]
+            public List<DescribeAgentTaskResponseBodyTasksArtifacts> Artifacts { get; set; }
+            public class DescribeAgentTaskResponseBodyTasksArtifacts : TeaModel {
+                /// <summary>
+                /// <para>The MIME type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>image/png</para>
+                /// </summary>
+                [NameInMap("ContentType")]
+                [Validation(Required=false)]
+                public string ContentType { get; set; }
+
+                /// <summary>
+                /// <para>The OSS pre-signed download URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/">https://bucket.oss-cn-hangzhou.aliyuncs.com/</a>...</para>
+                /// </summary>
+                [NameInMap("DownloadUrl")]
+                [Validation(Required=false)]
+                public string DownloadUrl { get; set; }
+
+                /// <summary>
+                /// <para>The file name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>screenshot.png</para>
+                /// </summary>
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <para>The file size in bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1024</para>
+                /// </summary>
+                [NameInMap("Size")]
+                [Validation(Required=false)]
+                public long? Size { get; set; }
+
+                /// <summary>
+                /// <para>The upload time in ISO 8601 format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2026-08-05T10:00:00+08:00</para>
+                /// </summary>
+                [NameInMap("UpdatedTime")]
+                [Validation(Required=false)]
+                public string UpdatedTime { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The current status of the task. Valid values:</para>
-            /// <para>PENDING: The task is being created.</para>
-            /// <para>RUNNING: The task is running.</para>
-            /// <para>COMPLETED: The task is completed.</para>
-            /// <para>FAILED: The task failed.</para>
-            /// <para>TIMEOUT: The task execution timed out.</para>
+            /// <list type="bullet">
+            /// <item><description>PENDING: The task is being created.</description></item>
+            /// <item><description>RUNNING: The task is running.</description></item>
+            /// <item><description>COMPLETED: The task is completed.</description></item>
+            /// <item><description>FAILED: The task failed.</description></item>
+            /// <item><description>TIMEOUT: The task execution timed out.</description></item>
+            /// </list>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>
@@ -71,6 +142,14 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string CurrentStatus { get; set; }
 
+            /// <summary>
+            /// <para>The source of the digest. Valid values:</para>
+            /// <list type="bullet">
+            /// <item><description>PROMPT_AUTO: auto-generated.</description></item>
+            /// <item><description>RESULT_AUTO: result refinement.</description></item>
+            /// <item><description>USER: user-edited.</description></item>
+            /// </list>
+            /// </summary>
             [NameInMap("DigestSource")]
             [Validation(Required=false)]
             public string DigestSource { get; set; }
@@ -109,6 +188,9 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
             [Validation(Required=false)]
             public string Steps { get; set; }
 
+            /// <summary>
+            /// <para>The task digest text, up to 25 characters.</para>
+            /// </summary>
             [NameInMap("TaskDigest")]
             [Validation(Required=false)]
             public string TaskDigest { get; set; }

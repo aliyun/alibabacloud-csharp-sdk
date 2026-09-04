@@ -58,20 +58,18 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public class RunAgentTaskResponseBodyTasks : TeaModel {
             /// <summary>
             /// <para>The current status of the task. Valid values:</para>
-            /// <list type="bullet">
-            /// <item><description>PENDING: The task is being created.</description></item>
-            /// <item><description>RUNNING: The task is running.</description></item>
-            /// <item><description>COMPLETED: The task is completed.</description></item>
-            /// <item><description>FAILED: The task failed.</description></item>
-            /// <item><description>TIMEOUT: The task timed out.</description></item>
-            /// <item><description>CALL_FOR_USER: Waiting for user operation.</description></item>
-            /// <item><description>PAUSING: The task is being paused.</description></item>
-            /// <item><description>PAUSED: The task is paused.</description></item>
-            /// <item><description>CANCELLING: The task is being canceled.</description></item>
-            /// <item><description>CANCELED: The task is canceled.</description></item>
-            /// <item><description>STOPPED: The task is stopped.</description></item>
-            /// <item><description>TIMEOUT: The task timed out.</description></item>
-            /// </list>
+            /// <para>PENDING: The task is being created.</para>
+            /// <para>RUNNING: The task is running.</para>
+            /// <para>COMPLETED: The task is completed.</para>
+            /// <para>FAILED: The task failed.</para>
+            /// <para>TIMEOUT: The task timed out.</para>
+            /// <para>CALL_FOR_USER: Waiting for user action.</para>
+            /// <para>PAUSING: The task is being paused.</para>
+            /// <para>PAUSED: The task is paused.</para>
+            /// <para>CANCELLING: The task is being canceled.</para>
+            /// <para>CANCELED: The task is canceled.</para>
+            /// <para>STOPPED: The task is stopped.</para>
+            /// <para>TIMEOUT: The task timed out.</para>
             /// 
             /// <b>Example:</b>
             /// <para>COMPLETED</para>

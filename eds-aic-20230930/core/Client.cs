@@ -19,11 +19,6 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         public Client(AlibabaCloud.OpenApiClient.Models.Config config): base(config)
         {
             this._endpointRule = "regional";
-            this._endpointMap = new Dictionary<string, string>
-            {
-                {"ap-southeast-1", "eds-aic.ap-southeast-1.aliyuncs.com"},
-                {"cn-shanghai", "eds-aic.cn-shanghai.aliyuncs.com"},
-            };
             CheckConfig(config);
             this._endpoint = GetEndpoint("eds-aic", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
         }
@@ -1984,6 +1979,166 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateAICloudPhoneWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSkillResponse
+        /// </returns>
+        public CreateAgentSkillResponse CreateAgentSkillWithOptions(CreateAgentSkillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileList))
+            {
+                query["FileList"] = request.FileList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IconKey))
+            {
+                query["IconKey"] = request.IconKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageOssKey))
+            {
+                query["PackageOssKey"] = request.PackageOssKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillDescription))
+            {
+                query["SkillDescription"] = request.SkillDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                query["SkillName"] = request.SkillName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillPackageUrl))
+            {
+                query["SkillPackageUrl"] = request.SkillPackageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentSkill",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSkillResponse
+        /// </returns>
+        public async Task<CreateAgentSkillResponse> CreateAgentSkillWithOptionsAsync(CreateAgentSkillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.FileList))
+            {
+                query["FileList"] = request.FileList;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IconKey))
+            {
+                query["IconKey"] = request.IconKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PackageOssKey))
+            {
+                query["PackageOssKey"] = request.PackageOssKey;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillDescription))
+            {
+                query["SkillDescription"] = request.SkillDescription;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillName))
+            {
+                query["SkillName"] = request.SkillName;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillPackageUrl))
+            {
+                query["SkillPackageUrl"] = request.SkillPackageUrl;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "CreateAgentSkill",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<CreateAgentSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSkillResponse
+        /// </returns>
+        public CreateAgentSkillResponse CreateAgentSkill(CreateAgentSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return CreateAgentSkillWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Creates a custom skill.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// CreateAgentSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// CreateAgentSkillResponse
+        /// </returns>
+        public async Task<CreateAgentSkillResponse> CreateAgentSkillAsync(CreateAgentSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await CreateAgentSkillWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -4740,6 +4895,126 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await CreateSystemPropertyTemplateWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes custom skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSkillResponse
+        /// </returns>
+        public DeleteAgentSkillResponse DeleteAgentSkillWithOptions(DeleteAgentSkillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIds))
+            {
+                query["SkillIds"] = request.SkillIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentSkill",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentSkillResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes custom skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSkillRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSkillResponse
+        /// </returns>
+        public async Task<DeleteAgentSkillResponse> DeleteAgentSkillWithOptionsAsync(DeleteAgentSkillRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIds))
+            {
+                query["SkillIds"] = request.SkillIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DeleteAgentSkill",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DeleteAgentSkillResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes custom skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSkillResponse
+        /// </returns>
+        public DeleteAgentSkillResponse DeleteAgentSkill(DeleteAgentSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DeleteAgentSkillWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Deletes custom skills.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DeleteAgentSkillRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DeleteAgentSkillResponse
+        /// </returns>
+        public async Task<DeleteAgentSkillResponse> DeleteAgentSkillAsync(DeleteAgentSkillRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DeleteAgentSkillWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -7520,7 +7795,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all change records of credits.</para>
+        /// <para>Queries all credit change records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7537,6 +7812,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTypes))
+            {
+                query["AgentTypes"] = request.AgentTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -7590,7 +7869,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all change records of credits.</para>
+        /// <para>Queries all credit change records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7607,6 +7886,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Common.ValidateModel(request);
             Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AgentTypes))
+            {
+                query["AgentTypes"] = request.AgentTypes;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.EndTime))
             {
                 query["EndTime"] = request.EndTime;
@@ -7660,7 +7943,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all change records of credits.</para>
+        /// <para>Queries all credit change records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -7678,7 +7961,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries all change records of credits.</para>
+        /// <para>Queries all credit change records.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9556,7 +9839,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of agent scheduled tasks.</para>
+        /// <para>Queries the execution records of an agent scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9622,7 +9905,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of agent scheduled tasks.</para>
+        /// <para>Queries the execution records of an agent scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9688,7 +9971,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of agent scheduled tasks.</para>
+        /// <para>Queries the execution records of an agent scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9706,7 +9989,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Queries the execution records of agent scheduled tasks.</para>
+        /// <para>Queries the execution records of an agent scheduled task.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -9896,6 +10179,174 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await DescribeScheduledTasksWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries skill information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSkillsResponse
+        /// </returns>
+        public DescribeSkillsResponse DescribeSkillsWithOptions(DescribeSkillsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
+            {
+                query["SkillId"] = request.SkillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusFilter))
+            {
+                query["StatusFilter"] = request.StatusFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSkills",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSkillsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries skill information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSkillsResponse
+        /// </returns>
+        public async Task<DescribeSkillsResponse> DescribeSkillsWithOptionsAsync(DescribeSkillsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Keyword))
+            {
+                query["Keyword"] = request.Keyword;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Language))
+            {
+                query["Language"] = request.Language;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageNumber))
+            {
+                query["PageNumber"] = request.PageNumber;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PageSize))
+            {
+                query["PageSize"] = request.PageSize;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillId))
+            {
+                query["SkillId"] = request.SkillId;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.StatusFilter))
+            {
+                query["StatusFilter"] = request.StatusFilter;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.Type))
+            {
+                query["Type"] = request.Type;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "DescribeSkills",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<DescribeSkillsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries skill information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSkillsResponse
+        /// </returns>
+        public DescribeSkillsResponse DescribeSkills(DescribeSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return DescribeSkillsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Queries skill information.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// DescribeSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// DescribeSkillsResponse
+        /// </returns>
+        public async Task<DescribeSkillsResponse> DescribeSkillsAsync(DescribeSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await DescribeSkillsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -12796,6 +13247,134 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await InstallMonitorAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs skills to instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSkillsResponse
+        /// </returns>
+        public InstallSkillsResponse InstallSkillsWithOptions(InstallSkillsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIds))
+            {
+                query["SkillIds"] = request.SkillIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InstallSkills",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InstallSkillsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs skills to instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSkillsResponse
+        /// </returns>
+        public async Task<InstallSkillsResponse> InstallSkillsWithOptionsAsync(InstallSkillsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIds))
+            {
+                query["SkillIds"] = request.SkillIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "InstallSkills",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<InstallSkillsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs skills to instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSkillsResponse
+        /// </returns>
+        public InstallSkillsResponse InstallSkills(InstallSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return InstallSkillsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Installs skills to instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// InstallSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// InstallSkillsResponse
+        /// </returns>
+        public async Task<InstallSkillsResponse> InstallSkillsAsync(InstallSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await InstallSkillsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>
@@ -17000,12 +17579,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the instance by reinstalling the operating system using its original image. Note: The reset operation will fail if the image that was used to create the Cloud Phone has since been deleted.</para>
+        /// <para>Resets cloud phone instances. A reset reinstalls the system using the image of the cloud phone. For example, the reset fails if the image used when the cloud phone was created has been deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can reset an instance (initialize its system) only when the instance is Active, Stopped, Abnormal, Backup Failed, or <b>Recover Failed</b>.</para>
+        /// <para>Resetting (initializing the system) is supported only when the instance is in the <b>Available, Stopped, Abnormal, Backup Failed, or Restore Failed</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17026,9 +17605,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreParamValidation))
             {
                 query["IgnoreParamValidation"] = request.IgnoreParamValidation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
             {
@@ -17037,6 +17624,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SettingResetType))
             {
                 query["SettingResetType"] = request.SettingResetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDataDiskSize))
+            {
+                query["TargetDataDiskSize"] = request.TargetDataDiskSize;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17059,12 +17650,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the instance by reinstalling the operating system using its original image. Note: The reset operation will fail if the image that was used to create the Cloud Phone has since been deleted.</para>
+        /// <para>Resets cloud phone instances. A reset reinstalls the system using the image of the cloud phone. For example, the reset fails if the image used when the cloud phone was created has been deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can reset an instance (initialize its system) only when the instance is Active, Stopped, Abnormal, Backup Failed, or <b>Recover Failed</b>.</para>
+        /// <para>Resetting (initializing the system) is supported only when the instance is in the <b>Available, Stopped, Abnormal, Backup Failed, or Restore Failed</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17085,9 +17676,17 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["AndroidInstanceIds"] = request.AndroidInstanceIds;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.AutoPay))
+            {
+                query["AutoPay"] = request.AutoPay;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.IgnoreParamValidation))
             {
                 query["IgnoreParamValidation"] = request.IgnoreParamValidation;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.PromotionId))
+            {
+                query["PromotionId"] = request.PromotionId;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaleMode))
             {
@@ -17096,6 +17695,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SettingResetType))
             {
                 query["SettingResetType"] = request.SettingResetType;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.TargetDataDiskSize))
+            {
+                query["TargetDataDiskSize"] = request.TargetDataDiskSize;
             }
             AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
             {
@@ -17118,12 +17721,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the instance by reinstalling the operating system using its original image. Note: The reset operation will fail if the image that was used to create the Cloud Phone has since been deleted.</para>
+        /// <para>Resets cloud phone instances. A reset reinstalls the system using the image of the cloud phone. For example, the reset fails if the image used when the cloud phone was created has been deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can reset an instance (initialize its system) only when the instance is Active, Stopped, Abnormal, Backup Failed, or <b>Recover Failed</b>.</para>
+        /// <para>Resetting (initializing the system) is supported only when the instance is in the <b>Available, Stopped, Abnormal, Backup Failed, or Restore Failed</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17141,12 +17744,12 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>Resets the instance by reinstalling the operating system using its original image. Note: The reset operation will fail if the image that was used to create the Cloud Phone has since been deleted.</para>
+        /// <para>Resets cloud phone instances. A reset reinstalls the system using the image of the cloud phone. For example, the reset fails if the image used when the cloud phone was created has been deleted.</para>
         /// </summary>
         /// 
         /// <term><b>Description:</b></term>
         /// <description>
-        /// <para>You can reset an instance (initialize its system) only when the instance is Active, Stopped, Abnormal, Backup Failed, or <b>Recover Failed</b>.</para>
+        /// <para>Resetting (initializing the system) is supported only when the instance is in the <b>Available, Stopped, Abnormal, Backup Failed, or Restore Failed</b> state.</para>
         /// </description>
         /// 
         /// <param name="request">
@@ -17347,6 +17950,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             {
                 query["RunConfig"] = request.RunConfigShrink;
             }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveArtifacts))
+            {
+                query["SaveArtifacts"] = request.SaveArtifacts;
+            }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
             {
                 query["ScheduleId"] = request.ScheduleId;
@@ -17426,6 +18033,10 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.RunConfigShrink))
             {
                 query["RunConfig"] = request.RunConfigShrink;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SaveArtifacts))
+            {
+                query["SaveArtifacts"] = request.SaveArtifacts;
             }
             if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.ScheduleId))
             {
@@ -19464,6 +20075,134 @@ namespace AlibabaCloud.SDK.Eds_aic20230930
         {
             AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
             return await UninstallMonitorAgentWithOptionsAsync(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls skills from instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallSkillsResponse
+        /// </returns>
+        public UninstallSkillsResponse UninstallSkillsWithOptions(UninstallSkillsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIds))
+            {
+                query["SkillIds"] = request.SkillIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UninstallSkills",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UninstallSkillsResponse>(CallApi(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls skills from instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallSkillsRequest
+        /// </param>
+        /// <param name="runtime">
+        /// runtime options for this request RuntimeOptions
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallSkillsResponse
+        /// </returns>
+        public async Task<UninstallSkillsResponse> UninstallSkillsWithOptionsAsync(UninstallSkillsRequest request, AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime)
+        {
+            AlibabaCloud.TeaUtil.Common.ValidateModel(request);
+            Dictionary<string, object> query = new Dictionary<string, object>(){};
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.InstanceIds))
+            {
+                query["InstanceIds"] = request.InstanceIds;
+            }
+            if (!AlibabaCloud.TeaUtil.Common.IsUnset(request.SkillIds))
+            {
+                query["SkillIds"] = request.SkillIds;
+            }
+            AlibabaCloud.OpenApiClient.Models.OpenApiRequest req = new AlibabaCloud.OpenApiClient.Models.OpenApiRequest
+            {
+                Query = AlibabaCloud.OpenApiUtil.Client.Query(query),
+            };
+            AlibabaCloud.OpenApiClient.Models.Params params_ = new AlibabaCloud.OpenApiClient.Models.Params
+            {
+                Action = "UninstallSkills",
+                Version = "2023-09-30",
+                Protocol = "HTTPS",
+                Pathname = "/",
+                Method = "POST",
+                AuthType = "AK",
+                Style = "RPC",
+                ReqBodyType = "formData",
+                BodyType = "json",
+            };
+            return TeaModel.ToObject<UninstallSkillsResponse>(await CallApiAsync(params_, req, runtime));
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls skills from instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallSkillsResponse
+        /// </returns>
+        public UninstallSkillsResponse UninstallSkills(UninstallSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return UninstallSkillsWithOptions(request, runtime);
+        }
+
+        /// <term><b>Summary:</b></term>
+        /// <summary>
+        /// <para>Uninstalls skills from instances.</para>
+        /// </summary>
+        /// 
+        /// <param name="request">
+        /// UninstallSkillsRequest
+        /// </param>
+        /// 
+        /// <returns>
+        /// UninstallSkillsResponse
+        /// </returns>
+        public async Task<UninstallSkillsResponse> UninstallSkillsAsync(UninstallSkillsRequest request)
+        {
+            AlibabaCloud.TeaUtil.Models.RuntimeOptions runtime = new AlibabaCloud.TeaUtil.Models.RuntimeOptions();
+            return await UninstallSkillsWithOptionsAsync(request, runtime);
         }
 
         /// <term><b>Summary:</b></term>

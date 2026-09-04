@@ -27,6 +27,75 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public List<DescribeScheduledTaskExecutionsResponseBodyExecutions> Executions { get; set; }
         public class DescribeScheduledTaskExecutionsResponseBodyExecutions : TeaModel {
             /// <summary>
+            /// <para>The number of task artifacts.</para>
+            /// 
+            /// <b>Example:</b>
+            /// <para>2</para>
+            /// </summary>
+            [NameInMap("ArtifactCount")]
+            [Validation(Required=false)]
+            public int? ArtifactCount { get; set; }
+
+            /// <summary>
+            /// <para>The list of uploaded task artifacts.</para>
+            /// </summary>
+            [NameInMap("Artifacts")]
+            [Validation(Required=false)]
+            public List<DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts> Artifacts { get; set; }
+            public class DescribeScheduledTaskExecutionsResponseBodyExecutionsArtifacts : TeaModel {
+                /// <summary>
+                /// <para>The MIME type.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>image/png</para>
+                /// </summary>
+                [NameInMap("ContentType")]
+                [Validation(Required=false)]
+                public string ContentType { get; set; }
+
+                /// <summary>
+                /// <para>The OSS pre-signed download URL.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para><a href="https://bucket.oss-cn-hangzhou.aliyuncs.com/">https://bucket.oss-cn-hangzhou.aliyuncs.com/</a>...</para>
+                /// </summary>
+                [NameInMap("DownloadUrl")]
+                [Validation(Required=false)]
+                public string DownloadUrl { get; set; }
+
+                /// <summary>
+                /// <para>The file name.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>screenshot.png</para>
+                /// </summary>
+                [NameInMap("Name")]
+                [Validation(Required=false)]
+                public string Name { get; set; }
+
+                /// <summary>
+                /// <para>The file size in bytes.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>1024</para>
+                /// </summary>
+                [NameInMap("Size")]
+                [Validation(Required=false)]
+                public long? Size { get; set; }
+
+                /// <summary>
+                /// <para>The upload time in ISO 8601 format.</para>
+                /// 
+                /// <b>Example:</b>
+                /// <para>2026-08-05T10:00:00+08:00</para>
+                /// </summary>
+                [NameInMap("UpdatedTime")]
+                [Validation(Required=false)]
+                public string UpdatedTime { get; set; }
+
+            }
+
+            /// <summary>
             /// <para>The end time.</para>
             /// 
             /// <b>Example:</b>
@@ -139,7 +208,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         }
 
         /// <summary>
-        /// <para>The maximum number of entries returned.</para>
+        /// <para>The maximum number of results returned in this request.</para>
         /// 
         /// <b>Example:</b>
         /// <para>20</para>
@@ -179,7 +248,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string RequestId { get; set; }
 
         /// <summary>
-        /// <para>The number of entries returned.</para>
+        /// <para>The number of results returned.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>

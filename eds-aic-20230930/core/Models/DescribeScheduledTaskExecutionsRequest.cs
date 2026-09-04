@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
 {
     public class DescribeScheduledTaskExecutionsRequest : TeaModel {
         /// <summary>
-        /// <para>The end time of the time range in ISO-8601 format.</para>
+        /// <para>The end time of the time range in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-06-12T23:59:59</para>
@@ -61,7 +61,7 @@ namespace AlibabaCloud.SDK.Eds_aic20230930.Models
         public string ScheduledId { get; set; }
 
         /// <summary>
-        /// <para>The start time of the time range in ISO-8601 format.</para>
+        /// <para>The start time of the time range in ISO 8601 format.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2026-06-01T00:00:00</para>
