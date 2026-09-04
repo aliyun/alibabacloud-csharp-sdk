@@ -23,30 +23,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
             {
                 {"ap-southeast-1", "cloudfw.ap-southeast-1.aliyuncs.com"},
                 {"cn-hangzhou", "cloudfw.cn-hangzhou.aliyuncs.com"},
-                {"cn-qingdao", "cloudfw.aliyuncs.com"},
-                {"cn-zhangjiakou", "cloudfw.aliyuncs.com"},
-                {"cn-huhehaote", "cloudfw.aliyuncs.com"},
-                {"cn-wulanchabu", "cloudfw.aliyuncs.com"},
-                {"cn-heyuan", "cloudfw.aliyuncs.com"},
-                {"cn-chengdu", "cloudfw.aliyuncs.com"},
-                {"ap-northeast-1", "cloudfw.aliyuncs.com"},
-                {"ap-southeast-5", "cloudfw.aliyuncs.com"},
                 {"ap-southeast-3", "cloudfw.ap-southeast-1.aliyuncs.com"},
-                {"cn-shenzhen", "cloudfw.aliyuncs.com"},
-                {"cn-beijing", "cloudfw.aliyuncs.com"},
-                {"cn-shanghai", "cloudfw.aliyuncs.com"},
-                {"cn-guangzhou", "cloudfw.aliyuncs.com"},
-                {"cn-hongkong", "cloudfw.aliyuncs.com"},
-                {"us-east-1", "cloudfw.aliyuncs.com"},
-                {"us-west-1", "cloudfw.aliyuncs.com"},
-                {"eu-west-1", "cloudfw.aliyuncs.com"},
-                {"eu-central-1", "cloudfw.aliyuncs.com"},
-                {"me-east-1", "cloudfw.aliyuncs.com"},
-                {"cn-shenzhen-finance-1", "cloudfw.aliyuncs.com"},
-                {"cn-shanghai-finance-1", "cloudfw.aliyuncs.com"},
-                {"cn-hangzhou-finance", "cloudfw.aliyuncs.com"},
-                {"cn-beijing-finance-1", "cloudfw.aliyuncs.com"},
-                {"cn-north-2-gov-1", "cloudfw.aliyuncs.com"},
             };
             CheckConfig(config);
             this._endpoint = GetEndpoint("cloudfw", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -38580,7 +38557,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation lists the Transport Layer Security (TLS) inspection certificate authority (CA) certificates.</para>
+        /// <para>Queries TLS inspection CA certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38630,7 +38607,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation lists the Transport Layer Security (TLS) inspection certificate authority (CA) certificates.</para>
+        /// <para>Queries TLS inspection CA certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38680,7 +38657,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation lists the Transport Layer Security (TLS) inspection certificate authority (CA) certificates.</para>
+        /// <para>Queries TLS inspection CA certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">
@@ -38698,7 +38675,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207
 
         /// <term><b>Summary:</b></term>
         /// <summary>
-        /// <para>This operation lists the Transport Layer Security (TLS) inspection certificate authority (CA) certificates.</para>
+        /// <para>Queries TLS inspection CA certificates.</para>
         /// </summary>
         /// 
         /// <param name="request">

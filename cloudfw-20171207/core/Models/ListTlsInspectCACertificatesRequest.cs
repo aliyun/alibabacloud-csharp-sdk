@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
 {
     public class ListTlsInspectCACertificatesRequest : TeaModel {
         /// <summary>
-        /// <para>The ID of the CA certificate.</para>
+        /// <para>The CA certificate ID.</para>
         /// 
         /// <b>Example:</b>
         /// <para>C3E91391-16CD-1BFC-A133-******D429</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public string CaCertId { get; set; }
 
         /// <summary>
-        /// <para>The page number for a paged query. The default value is 1.</para>
+        /// <para>The page number for paging. Default value: 1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Cloudfw20171207.Models
         public int? CurrentPage { get; set; }
 
         /// <summary>
-        /// <para>The maximum number of entries to return on each page for a paged query. The default value is 20.</para>
+        /// <para>The maximum number of entries per page for paging. Default value: 20.</para>
         /// 
         /// <b>Example:</b>
         /// <para>10</para>
