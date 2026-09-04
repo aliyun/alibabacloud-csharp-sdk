@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
 {
     public class ReadMessageListRequest : TeaModel {
         /// <summary>
-        /// <para>语言，默认为简体中文</para>
+        /// <para>The language. Default value: Simplified Chinese.</para>
         /// 
         /// <b>Example:</b>
         /// <para>zh-CN</para>
@@ -20,7 +20,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string AcceptLanguage { get; set; }
 
         /// <summary>
-        /// <para>系统参数，无需填写</para>
+        /// <para>A system parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -30,7 +30,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string AppName { get; set; }
 
         /// <summary>
-        /// <para>系统参数，无需填写</para>
+        /// <para>A system parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -40,7 +40,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string BizName { get; set; }
 
         /// <summary>
-        /// <para>系统参数，无需填写</para>
+        /// <para>A system parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -50,7 +50,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string CallerProtocol { get; set; }
 
         /// <summary>
-        /// <para>消息类目ID</para>
+        /// <para>Deprecated.</para>
         /// 
         /// <b>Example:</b>
         /// <para>1</para>
@@ -60,7 +60,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public long? ClassId { get; set; }
 
         /// <summary>
-        /// <para>系统参数，无需填写</para>
+        /// <para>A system parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string ClientSource { get; set; }
 
         /// <summary>
-        /// <para>消息内容，用于模糊搜索</para>
+        /// <para>The message content. This parameter is used for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;消息内容示例“</para>
@@ -80,7 +80,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string Content { get; set; }
 
         /// <summary>
-        /// <para>系统参数，无需填写</para>
+        /// <para>A system parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -89,26 +89,38 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         [Validation(Required=false)]
         public string Cookies { get; set; }
 
+        /// <summary>
+        /// <para>The group code.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>test</para>
+        /// </summary>
         [NameInMap("GroupCode")]
         [Validation(Required=false)]
         public string GroupCode { get; set; }
 
+        /// <summary>
+        /// <para>Specifies whether the messages are historical messages.</para>
+        /// 
+        /// <b>Example:</b>
+        /// <para>true</para>
+        /// </summary>
         [NameInMap("History")]
         [Validation(Required=false)]
         public string History { get; set; }
 
         /// <summary>
-        /// <para>栏位 nav代表控制台topbar</para>
+        /// <para>The location.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>/</para>
+        /// <para>nav</para>
         /// </summary>
         [NameInMap("Loc")]
         [Validation(Required=false)]
         public string Loc { get; set; }
 
         /// <summary>
-        /// <para>系统参数，无需填写</para>
+        /// <para>A system parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -118,7 +130,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public int? MaxResults { get; set; }
 
         /// <summary>
-        /// <para>系统参数，无需填写</para>
+        /// <para>A system parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -128,7 +140,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string NextToken { get; set; }
 
         /// <summary>
-        /// <para>分页查询页码</para>
+        /// <para>The page number for the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>2</para>
@@ -138,7 +150,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public int? Page { get; set; }
 
         /// <summary>
-        /// <para>分页查询大小</para>
+        /// <para>The page size for the paged query.</para>
         /// 
         /// <b>Example:</b>
         /// <para>5</para>
@@ -148,7 +160,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public int? PageSize { get; set; }
 
         /// <summary>
-        /// <para>系统参数，无需填写</para>
+        /// <para>A system parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -158,7 +170,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string SrcUrl { get; set; }
 
         /// <summary>
-        /// <para>消息状态，已读为1，未读为0</para>
+        /// <para>The message status. A value of 1 indicates read. A value of 0 indicates unread. A value of -1 indicates all. Default value: -1.</para>
         /// 
         /// <b>Example:</b>
         /// <para>0</para>
@@ -168,7 +180,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public int? Status { get; set; }
 
         /// <summary>
-        /// <para>系统参数，无需填写</para>
+        /// <para>A system parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
@@ -178,7 +190,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string TenantCode { get; set; }
 
         /// <summary>
-        /// <para>消息标题，用于模糊搜索</para>
+        /// <para>The message title. This parameter is used for fuzzy match.</para>
         /// 
         /// <b>Example:</b>
         /// <para>&quot;标题示例“</para>
@@ -188,7 +200,7 @@ namespace AlibabaCloud.SDK.Notifications20241225.Models
         public string Title { get; set; }
 
         /// <summary>
-        /// <para>系统参数，无需填写</para>
+        /// <para>A system parameter. You do not need to specify this parameter.</para>
         /// 
         /// <b>Example:</b>
         /// <para>/</para>
