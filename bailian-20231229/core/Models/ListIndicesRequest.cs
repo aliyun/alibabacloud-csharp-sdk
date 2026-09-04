@@ -10,7 +10,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 {
     public class ListIndicesRequest : TeaModel {
         /// <summary>
-        /// <para>The name of the knowledge base. You can use this parameter to search for a knowledge base by name. The name must be 1 to 20 characters in length and can contain characters in the Unicode letter category (including English letters, Chinese characters, and digits). The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
+        /// <para>The name of the knowledge base. You can use this parameter to search for a knowledge base by name. The name must be 1 to 20 characters in length and can contain characters in the Unicode letter category (including letters, Chinese characters, and digits). The name can also contain colons (:), underscores (_), periods (.), or hyphens (-).</para>
         /// <para>Default value: empty, which queries all knowledge bases in the specified workspace.</para>
         /// 
         /// <b>Example:</b>
@@ -31,7 +31,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string PageNumber { get; set; }
 
         /// <summary>
-        /// <para>The number of knowledge bases to display per page in a paging query. No maximum limit.
+        /// <para>The number of knowledge bases to display per page. No maximum limit.
         /// Default value: 10.</para>
         /// 
         /// <b>Example:</b>

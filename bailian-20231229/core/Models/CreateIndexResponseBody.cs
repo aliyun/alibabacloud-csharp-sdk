@@ -17,16 +17,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string Code { get; set; }
 
         /// <summary>
-        /// <para>The business data returned when the request succeeds.</para>
+        /// <para>The business data returned when the request is successful.</para>
         /// </summary>
         [NameInMap("Data")]
         [Validation(Required=false)]
         public CreateIndexResponseBodyData Data { get; set; }
         public class CreateIndexResponseBodyData : TeaModel {
             /// <summary>
-            /// <para>The knowledge base ID, also known as <c>IndexId</c>. This is the unique identifier of the created knowledge base.</para>
+            /// <para>The knowledge base ID, also known as <c>IndexId</c>, which is the unique identifier of the created knowledge base.</para>
             /// <remarks>
-            /// <para>Store this value properly. It is required for all subsequent API operations related to this knowledge base.</para>
+            /// <para>Store this value properly. It is used in all subsequent API operations related to this knowledge base.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>

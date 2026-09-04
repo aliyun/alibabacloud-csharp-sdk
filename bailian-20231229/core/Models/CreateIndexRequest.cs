@@ -18,16 +18,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The chunk size, which specifies the maximum number of characters per text chunk. When this length is exceeded:</para>
+        /// <para>The chunk size, which is the maximum number of characters per text chunk. When the text exceeds this length:</para>
         /// <list type="bullet">
-        /// <item><description><b>Intelligent chunking</b> (when <c>chunkMode</c> is not specified): The text is likely to be truncated.</description></item>
-        /// <item><description><b>Custom chunking</b> (when <c>chunkMode</c> is specified): The text is forcibly truncated.</description></item>
+        /// <item><description><b>Intelligent chunking</b> (<c>chunkMode</c> not specified): The text is likely to be truncated.</description></item>
+        /// <item><description><b>Custom chunking</b> (<c>chunkMode</c> specified): The text is forcibly truncated.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;
-        /// The chunk size, which specifies the maximum number of characters per text chunk. When this length is exceeded, the text is likely to be truncated.</para>
-        /// <para>Value range: [1-6000]. If not specified, the default value is 500.</para>
+        /// The chunk size, which is the maximum number of characters per text chunk. When the text exceeds this length, it is likely to be truncated.</para>
+        /// <para>Valid values: [1-6000]. If not specified, the default value is 500.</para>
         /// <remarks>
-        /// <para>If <c>ChunkSize</c> is set to a value less than 100, you must also set <c>OverlapSize</c>. You can also leave both parameters unspecified, and the system uses default values.</para>
+        /// <para>If <c>ChunkSize</c> is set to a value less than 100, you must also set <c>OverlapSize</c>. You can also leave both parameters unspecified, and the system uses the default values.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -39,10 +39,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// The structure of the data table (column names, types, etc.).</para>
+        /// The structure of the data table (column names, types, and so on).</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not pass this parameter.</para>
+        /// <para>This parameter is not available. Do not pass in a value.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("Columns")]
@@ -51,7 +51,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public class CreateIndexRequestColumns : TeaModel {
             /// <summary>
             /// <remarks>
-            /// <para>This parameter is not available. Do not pass this parameter.</para>
+            /// <para>This parameter is not available. Do not pass in a value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -70,7 +70,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             /// </list>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
             /// <remarks>
-            /// <para>This parameter is not available. Do not pass this parameter.</para>
+            /// <para>This parameter is not available. Do not pass in a value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -89,7 +89,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             /// </list>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
             /// <remarks>
-            /// <para>This parameter is not available. Do not pass this parameter.</para>
+            /// <para>This parameter is not available. Do not pass in a value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -104,11 +104,11 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             /// The field name. Must be consistent with the header of the data table created in Application Data.</para>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
             /// <remarks>
-            /// <para>This parameter is not available. Do not pass this parameter.</para>
+            /// <para>This parameter is not available. Do not pass in a value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
-            /// <para>School.</para>
+            /// <para>School</para>
             /// </summary>
             [NameInMap("Name")]
             [Validation(Required=false)]
@@ -126,7 +126,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             /// </list>
             /// <para>&lt;props=&quot;intl&quot;&gt;</para>
             /// <remarks>
-            /// <para>This parameter is not available. Do not pass this parameter.</para>
+            /// <para>This parameter is not available. Do not pass in a value.</para>
             /// </remarks>
             /// 
             /// <b>Example:</b>
@@ -140,7 +140,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>This parameter is not available. Do not pass this parameter.</para>
+        /// <para>This parameter is not available. Do not pass in a value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -151,18 +151,18 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string CreateIndexType { get; set; }
 
         /// <summary>
-        /// <para>The knowledge base description. The description can be up to 1000 characters in length.
+        /// <para>The knowledge base description. The description can be up to 200 characters in length and can contain Chinese and English characters.
         /// Default value: empty.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>The enterprise help document library includes important materials such as company policies and product catalogs.</para>
+        /// <para>The enterprise help document library includes important materials such as company policies and product catalogs</para>
         /// </summary>
         [NameInMap("Description")]
         [Validation(Required=false)]
         public string Description { get; set; }
 
         /// <summary>
-        /// <para>The list of files to import when creating the knowledge base. Specify file IDs here. We recommend importing no more than 10,000 files. For remaining files, call the <b>SubmitIndexAddDocumentsJob</b> operation to continue importing.</para>
+        /// <para>The list of files to import when creating the knowledge base. Specify file IDs. We recommend importing no more than 10,000 files. For remaining files, call the <b>SubmitIndexAddDocumentsJob</b> operation to continue importing.</para>
         /// </summary>
         [NameInMap("DocumentIds")]
         [Validation(Required=false)]
@@ -170,14 +170,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The embedding model used by the knowledge base. The embedding model transforms the original input prompt and knowledge text into numerical vectors for similarity comparison. The text-embedding-v4 model is a comprehensive upgrade over text-embedding-v3 in terms of language support, code snippet quantization, and vector dimensions selection, and is suitable for most scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/2842587.html">Vectorization</a>. Valid values:</para>
+        /// <para>The embedding model used by the knowledge base. The embedding model is used to transform the original input prompt and knowledge text into numerical vectors for similarity comparison. The text-embedding-v4 model is a comprehensive upgrade over text-embedding-v3 in terms of language support, code snippet quantization, and vector dimension selection, and is suitable for most scenarios. For more information, see <a href="https://help.aliyun.com/document_detail/2842587.html">Vectorization</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>text-embedding-v4</description></item>
         /// <item><description>text-embedding-v3</description></item>
         /// </list>
         /// <para>Default value: empty, which uses the text-embedding-v3 model.</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
-        /// <para>The embedding model used by the knowledge base. The embedding model transforms the original input prompt and knowledge text into numerical vectors for similarity comparison. The default text-embedding-v2 model (cannot be changed) supports Chinese, English, and multiple other languages, and performs normalization on vector results. For more information, see <a href="https://help.aliyun.com/document_detail/2842587.html">Vectorization</a>. Valid values:</para>
+        /// <para>The embedding model used by the knowledge base. The embedding model is used to transform the original input prompt and knowledge text into numerical vectors for similarity comparison. The default text-embedding-v2 model (cannot be changed) supports Chinese, English, and multiple other languages, and performs normalization on vector results. For more information, see <a href="https://help.aliyun.com/document_detail/2842587.html">Vectorization</a>. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>text-embedding-v2</description></item>
         /// </list>
@@ -210,14 +210,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <para>This parameter is required.</para>
         /// 
         /// <b>Example:</b>
-        /// <para>EnterpriseHelpDocLibrary.</para>
+        /// <para>EnterpriseHelpDocLibrary</para>
         /// </summary>
         [NameInMap("Name")]
         [Validation(Required=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// <para>The chunk overlap size, which specifies the number of overlapping characters between the current text chunk and the previous text chunk. Value range: [0-1024].</para>
+        /// <para>The chunk overlap size, which is the number of overlapping characters between the current text chunk and the previous text chunk. Valid values: [0-1024].</para>
         /// <para>If not specified, the default value is 100.</para>
         /// <remarks>
         /// <para><c>OverlapSize</c> must be less than <c>ChunkSize</c>. Otherwise, chunking exceptions occur.</para>
@@ -231,8 +231,8 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public int? OverlapSize { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not pass this parameter.</para>
-        /// <para>&lt;props=&quot;china&quot;&gt;A natural language instruction for fine-grained control of the reranking model\&quot;s behavior.
+        /// <para>&lt;props=&quot;intl&quot;&gt;This parameter is not yet available. Do not pass in a value.</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;Provides a natural language instruction to fine-tune the behavior of the reranking model.
         /// <notice>This parameter takes effect only when rerank_mode is set to &quot;custom&quot;.</para>
         /// </summary>
         [NameInMap("RerankInstruct")]
@@ -240,7 +240,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string RerankInstruct { get; set; }
 
         /// <summary>
-        /// <para>The similarity threshold. Only text chunks with similarity scores exceeding this value are recalled. This parameter filters the text chunks returned by the reranking model. Value range: [0.01-1.00].</para>
+        /// <para>The similarity threshold. Only text chunks with similarity scores exceeding this value are recalled. This parameter filters the text chunks returned by the reranking model. Valid values: [0.01-1.00].</para>
         /// <para>If not specified, the default value is 0.01.</para>
         /// 
         /// <b>Example:</b>
@@ -262,7 +262,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <item><description><para><b>custom</b>: Custom mode. The model\&quot;s ranking behavior is determined by the instruction in the rerank_instruct parameter.</para>
         /// </description></item>
         /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not pass this parameter.
+        /// <para>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not pass in a value.
         /// [_single.params.RerankMode.enum.similar: 相似模式。]similar: Similarity mode.
         /// [_single.params.RerankMode.enum.custom: 自定义模式。]custom: Custom mode.
         /// [_single.params.RerankMode.enum.qa:（默认值） 问答模式。]qa: (Default) Q&amp;A mode.
@@ -288,7 +288,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <list type="bullet">
-        /// <item><description>gte-rerank-hybrid: official reranking.</description></item>
+        /// <item><description>gte-rerank-hybrid: Official reranking.</description></item>
         /// <item><description>gte-rerank: gte-rerank reranking.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
@@ -303,7 +303,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// </remarks>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <remarks>
-        /// <para><c>gte-rerank-hybrid</c> and <c>gte-rerank</c> will no longer be updated and are not recommended.</para>
+        /// <para><c>gte-rerank-hybrid</c> and <c>gte-rerank</c> will no longer be updated. We do not recommend using them.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -315,11 +315,11 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The sentence separator, which takes effect only when <c>chunkMode</c>=<b>regex</b> (it does not take effect in other modes even if specified). You can pass a single regular expression (multiple expressions are not supported) to split files into small text chunks.</para>
-        /// <para>When using intelligent chunking (when <c>chunkMode</c> is not specified), keep the default empty value.</para>
+        /// <para>The sentence separator. This parameter takes effect only when <c>chunkMode</c>=<b>regex</b> (it does not take effect in other modes even if specified). You can pass in a single regular expression (multiple expressions are not supported) to split files into small text chunks.</para>
+        /// <para>When using intelligent chunking (<c>chunkMode</c> not specified), keep the default empty value.</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not pass this parameter.</para>
+        /// <para>This parameter is not available. Do not pass in a value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -354,7 +354,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <list type="bullet">
         /// <item><description>BUILT_IN: Vector data is hosted on the Alibaba Cloud Model Studio platform.</description></item>
         /// <item><description>ADB: AnalyticDB for PostgreSQL database. If you need advanced features such as database management, auditing, and monitoring, select ADB.<remarks>
-        /// <para>If you have not used ADB storage on Alibaba Cloud Model Studio before, go to the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/#/knowledge-base/create">Create Knowledge Base</a>&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/#/knowledge-base/create">Create Knowledge Base</a> page, select ADB-PG as the vector storage type, and complete authorization as prompted. If you pass ADB, you must specify the <c>SinkInstanceId</c> and <c>SinkRegion</c> parameters.</para>
+        /// <para>If you have not used ADB storage on Alibaba Cloud Model Studio before, go to the &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/#/knowledge-base/create">Create Knowledge Base</a>&lt;props=&quot;intl&quot;&gt;<a href="https://bailian.console.alibabacloud.com/#/knowledge-base/create">Create Knowledge Base</a> page, set the vector storage type to ADB-PG, and complete the authorization as prompted. If you pass in ADB, you must specify the <c>SinkInstanceId</c> and <c>SinkRegion</c> parameters.</para>
         /// </remarks>
         /// </description></item>
         /// </list>
@@ -369,18 +369,18 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <remarks>
-        /// <para>Notice: This parameter is required in the latest SDK. Otherwise, calling the SubmitIndexJob operation returns an error: Required parameter(data_sources) missing or invalid.</para>
+        /// <para>Notice: This parameter is required in the latest SDK version. Otherwise, calling the SubmitIndexJob operation returns the error: Required parameter(data_sources) missing or invalid.</para>
         /// </remarks>
         /// <para>The data source type. Valid values:</para>
         /// <list type="bullet">
-        /// <item><description>DATA_CENTER_CATEGORY: Category type. Imports all files under specified categories in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. Multiple categories can be imported simultaneously.</description></item>
-        /// <item><description>DATA_CENTER_FILE: File type. Imports specified files from &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. Multiple files can be imported simultaneously.</description></item>
+        /// <item><description>DATA_CENTER_CATEGORY: Category type. Imports all files under specified categories in &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. You can import multiple categories at the same time.</description></item>
+        /// <item><description>DATA_CENTER_FILE: File type. Imports specified files from &lt;props=&quot;china&quot;&gt;<a href="https://bailian.console.aliyun.com/?tab=app#/data-center">Application Data</a>&lt;props=&quot;intl&quot;&gt;<a href="https://modelstudio.console.alibabacloud.com/?tab=app#/data-center">Application Data</a>. You can import multiple files at the same time.</description></item>
         /// </list>
         /// <remarks>
         /// <para>If this parameter is set to DATA_CENTER_CATEGORY, you must specify the <c>CategoryIds</c> parameter. If this parameter is set to DATA_CENTER_FILE, you must specify the <c>DocumentIds</c> parameter.</para>
         /// </remarks>
         /// <remarks>
-        /// <para>To create an empty knowledge base, use an empty category that contains no files: set this parameter to DATA_CENTER_CATEGORY and pass the empty category ID in <c>CategoryIds</c>.</para>
+        /// <para>To create an empty knowledge base, use an empty category that contains no files: set this parameter to DATA_CENTER_CATEGORY and pass the empty category ID to <c>CategoryIds</c>.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -397,7 +397,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <para>The knowledge base type.</para>
         /// <para><b>Valid values:</b></para>
         /// <list type="bullet">
-        /// <item><description>unstructured: A document search or audio/video knowledge base. The default scenario for document search type is basic document Q&amp;A. &lt;props=&quot;china&quot;&gt;To create other scenarios, pass the knowledgeType and knowledgeScene parameters.</description></item>
+        /// <item><description>unstructured: A document search or audio/video knowledge base. The default scenario for the document search type is basic document Q&amp;A. &lt;props=&quot;china&quot;&gt;To create other scenarios, you must also pass the knowledgeType and knowledgeScene parameters.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
         /// <list type="bullet">
@@ -417,10 +417,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>Obtained by clicking the ID icon next to the table name on the Tables tab of <a href="https://bailian.console.aliyun.com/cn-beijing?tab=app#/connector/list">Data Connections</a> table connector. If the list contains multiple IDs, only the first one is used.</para>
+        /// <para>Obtained by clicking the ID icon next to the table name on the Tables tab of <a href="https://bailian.console.aliyun.com/cn-beijing?tab=app#/connector/list">Data Connection</a> table connector. If the list contains multiple IDs, only the first one is used.</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not pass this parameter.</para>
+        /// <para>This parameter is not available. Do not pass in a value.</para>
         /// </remarks>
         /// </summary>
         [NameInMap("TableIds")]
@@ -440,16 +440,16 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         /// <para>Enables custom chunking and specifies the chunking strategy. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>
         /// <para>Valid values (only one value can be passed at a time):</para>
         /// <list type="bullet">
-        /// <item><description><b>length</b>: Chunk by length. Strictly chunks according to the specified <c>ChunkSize</c> and <c>OverlapSize</c>. If these two parameters are not passed, the system uses default values (<c>ChunkSize</c> of 500 and <c>OverlapSize</c> of 100). Chunking by length does not support <c>Separator</c> (it does not take effect even if specified).</description></item>
-        /// <item><description><b>page</b>: Chunk by page. If <c>ChunkSize</c> is specified, it is also considered during chunking (if not passed, the default value of 500 is used). Chunking by page does not support <c>OverlapSize</c> or <c>Separator</c> (they do not take effect even if specified).</description></item>
-        /// <item><description><b>h1</b>: Chunk by first-level headings. If <c>ChunkSize</c> is specified, it is also considered during chunking (if not passed, the default value of 500 is used). Chunking by first-level headings does not support <c>OverlapSize</c> or <c>Separator</c> (they do not take effect even if specified).</description></item>
-        /// <item><description><b>h2</b>: Chunk by second-level headings. If <c>ChunkSize</c> is specified, it is also considered during chunking (if not passed, the default value of 500 is used). Chunking by second-level headings does not support <c>OverlapSize</c> or <c>Separator</c> (they do not take effect even if specified).</description></item>
-        /// <item><description><b>regex</b>: Chunk by regular expression. The <c>Separator</c> parameter must be specified. If <c>ChunkSize</c> is specified, it is also considered during chunking (if not passed, the default value of 500 is used). Chunking by regular expression does not support <c>OverlapSize</c> (it does not take effect even if specified).</description></item>
+        /// <item><description><b>length</b>: Chunk by length. Strictly chunks according to the specified <c>ChunkSize</c> and <c>OverlapSize</c>. If you do not pass in these two parameters, the system uses the default values (<c>ChunkSize</c> of 500 and <c>OverlapSize</c> of 100). Chunking by length does not support <c>Separator</c> (it does not take effect even if specified).</description></item>
+        /// <item><description><b>page</b>: Chunk by page. If <c>ChunkSize</c> is specified, it is also considered during chunking (if not specified, the default value of 500 is used). Chunking by page does not support <c>OverlapSize</c> or <c>Separator</c> (they do not take effect even if specified).</description></item>
+        /// <item><description><b>h1</b>: Chunk by first-level headings. If <c>ChunkSize</c> is specified, it is also considered during chunking (if not specified, the default value of 500 is used). Chunking by first-level headings does not support <c>OverlapSize</c> or <c>Separator</c> (they do not take effect even if specified).</description></item>
+        /// <item><description><b>h2</b>: Chunk by second-level headings. If <c>ChunkSize</c> is specified, it is also considered during chunking (if not specified, the default value of 500 is used). Chunking by second-level headings does not support <c>OverlapSize</c> or <c>Separator</c> (they do not take effect even if specified).</description></item>
+        /// <item><description><b>regex</b>: Chunk by regular expression. You must specify the <c>Separator</c> parameter. If <c>ChunkSize</c> is specified, it is also considered during chunking (if not specified, the default value of 500 is used). Chunking by regular expression does not support <c>OverlapSize</c> (it does not take effect even if specified).</description></item>
         /// </list>
         /// <para>If not specified, intelligent chunking is used by default.</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not pass this parameter.</para>
+        /// <para>This parameter is not available. Do not pass in a value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -476,7 +476,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string DatasourceCode { get; set; }
 
         /// <summary>
-        /// <para>Specifies whether to treat the first row of all xlsx and xls files as headers and concatenate them into each text chunk, preventing the large language model from treating headers as regular data rows.</para>
+        /// <para>Specifies whether to treat the first row of all xlsx and xls files as headers and append them to each text chunk, preventing the large language model from treating headers as regular data rows.</para>
         /// <remarks>
         /// <para>Enable this feature only when all imported files are in .xlsx or .xls format and contain headers. Otherwise, do not enable it.</para>
         /// </remarks>
@@ -500,17 +500,17 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;
-        /// The specific knowledge type, which further specifies the type of data processed by the knowledge base.
-        /// <notice>This parameter and knowledgeScene must be provided together or omitted together. They cannot be set independently. If both are omitted, the system uses default configurations based on structureType.</para>
+        /// The specific knowledge type that further specifies the data type processed by the knowledge base.
+        /// <notice>This parameter and knowledgeScene must be provided together or omitted together. They cannot be set individually. If both are omitted, the system uses the default configurations based on structureType.</para>
         /// <para><b>Settings constraint</b>: The value of this parameter must match the selected structureType and determines the active values for knowledgeScene.</para>
-        /// <para><b>Valid values</b>:</para>
+        /// <para><b>Valid values:</b></para>
         /// <list type="bullet">
         /// <item><description>document: Document search. Must be used with structureType: unstructured.</description></item>
         /// <item><description>table: Data query. Must be used with structureType: structured.</description></item>
         /// <item><description>image: Image-based Q&amp;A. Must be used with structureType: structured.</description></item>
         /// <item><description>multimedia: Audio/video search. Must be used with structureType: unstructured.</description></item>
         /// </list>
-        /// <para>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not pass this parameter.</para>
+        /// <para>&lt;props=&quot;intl&quot;&gt;This parameter is not available. Do not pass in a value.</para>
         /// 
         /// <b>Example:</b>
         /// <para>document</para>
@@ -520,7 +520,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string KnowledgeType { get; set; }
 
         /// <summary>
-        /// <para>The metadata extraction configuration. Metadata is a set of additional attributes related to unstructured data content. These attributes are integrated into text chunks as key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>
+        /// <para>The metadata extraction configuration. Metadata consists of additional attributes related to unstructured data content. These attributes are integrated into text chunks as key-value pairs. For more information, see <a href="https://help.aliyun.com/document_detail/2807740.html">Knowledge base</a>.</para>
         /// </summary>
         [NameInMap("metaExtractColumns")]
         [Validation(Required=false)]
@@ -530,7 +530,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             /// <para>The Chinese description of the metadata field. The description can be up to 1000 characters in length and can contain Chinese characters, letters, digits, underscores (_), hyphens (-), periods (.), and colons (:). Default value: empty.</para>
             /// 
             /// <b>Example:</b>
-            /// <para>AuthorName.</para>
+            /// <para>AuthorName</para>
             /// </summary>
             [NameInMap("Desc")]
             [Validation(Required=false)]
@@ -567,7 +567,7 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
             public bool? EnableSearch { get; set; }
 
             /// <summary>
-            /// <para>The metadata field. The field must be 1 to 50 characters in length and can contain only letters and underscores. If this parameter is specified, you must also specify the <c>Value</c> and <c>Type</c> parameters.</para>
+            /// <para>The metadata field. The field must be 1 to 50 characters in length and contain only letters or underscores. If this parameter is specified, you must also specify the <c>Value</c> and <c>Type</c> parameters.</para>
             /// 
             /// <b>Example:</b>
             /// <para>author</para>
@@ -606,10 +606,10 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The number of RCUs for the knowledge base (required only when pipelineCommercialType is set to enterprise). Value range: [1-200].</para>
+        /// <para>&lt;props=&quot;china&quot;&gt;The number of RCUs for the knowledge base (required only when pipelineCommercialType is set to enterprise). Valid values: [1-200].</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not pass this parameter.</para>
+        /// <para>This parameter is not available. Do not pass in a value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -621,14 +621,14 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
 
         /// <summary>
         /// <para>&lt;props=&quot;china&quot;&gt;</para>
-        /// <para>The <a href="https://help.aliyun.com/document_detail/2997110.html">specification type</a> of the knowledge base. Valid values:</para>
+        /// <para>The <a href="https://help.aliyun.com/document_detail/2997110.html">edition</a> of the knowledge base. Valid values:</para>
         /// <list type="bullet">
         /// <item><description>standard: Standard Edition.</description></item>
         /// <item><description>enterprise: Ultimate Edition.</description></item>
         /// </list>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not pass this parameter.</para>
+        /// <para>This parameter is not available. Do not pass in a value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
@@ -639,13 +639,13 @@ namespace AlibabaCloud.SDK.Bailian20231229.Models
         public string PipelineCommercialType { get; set; }
 
         /// <summary>
-        /// <para>&lt;props=&quot;china&quot;&gt;The rate limiting strategy for knowledge base dependent links (required only when pipelineCommercialType is set to enterprise).
+        /// <para>&lt;props=&quot;china&quot;&gt;The rate limiting strategy for the knowledge base dependency chain (required only when pipelineCommercialType is set to enterprise).
         /// Valid values:
-        /// downgrade: Downgrade processing (switch to lightweight link retrieval).
+        /// downgrade: Downgrade processing (switch to lightweight chain retrieval).
         /// If not specified, the default value is downgrade.</para>
         /// <para>&lt;props=&quot;intl&quot;&gt;</para>
         /// <remarks>
-        /// <para>This parameter is not available. Do not pass this parameter.</para>
+        /// <para>This parameter is not available. Do not pass in a value.</para>
         /// </remarks>
         /// 
         /// <b>Example:</b>
